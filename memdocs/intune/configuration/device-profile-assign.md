@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2023
+ms.date: 06/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -165,6 +165,8 @@ When you assign your policies and policies, apply the following general principl
   Typically, you statically assign devices into an Azure AD group if they're pre-registered in Azure AD, like with Windows Autopilot. Or, if you want to combine devices for a one-off, ad-hoc deployment. Otherwise, it might not be practical to statically assign devices into an Azure AD group.
 
 - Dynamic Azure AD user groups can be added to Included groups or Excluded groups.
+
+- Excluded groups can be groups with users or groups with devices.
 
 - Dynamic Azure AD device groups can be added to Included groups. But, there can be latency when populating the dynamic group membership. In latency-sensitive scenarios, use [filters](../fundamentals/filters.md) to target specific devices, and assign your policies to user groups.
 
