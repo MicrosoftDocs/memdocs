@@ -41,13 +41,11 @@ You might want to share (move or copy) a Cloud PC and its contents to:
 - Get a historical view of a Cloud PC (vs current) for eDiscovery.
 - Create a VHD that can be mounted on a physical device.
 
-Sharing Cloud PC restore points is in [public preview](../public-preview.md).
-
 ## Share a single restore point
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > select a device > select the ellipses (**...**) > **Share (preview)**.
-1. In the **Select restore point (preview)** area, select a **Subscription** and **Storage account**.
-1. Select **Share (preview)**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > select a device > select the ellipses (**...**) > **Share**.
+1. In the **Select restore point** area, select a **Subscription** and **Storage account**.
+1. Select **Share**.
 
 A folder is created in the storage account. The folder name is identical to the Cloud PC name. The folder contains a VHD copy of the Cloud PC device disk.
 
@@ -57,7 +55,7 @@ A folder is created in the storage account. The folder name is identical to the 
 ![Screenshot of bulk device actions.](./media/restore-bulk/bulk-device-actions.png)
 1. On the **Basics** page, select the following options:
     1. **OS**: Windows
-    1. **Device action**: Share Cloud PC restore point to storage (preview)
+    1. **Device action**: Share Cloud PC restore point to storage
     1. **Specify date and time**: Choose a date and time. This setting defines the Cloud PC restore point time that you’d like to share. The following options help determine exactly which restore point is used for each of the Cloud PCs you select.
     1. **Select restore point time range**: Choose one of the following options:
         - **Before specified date and time**: Share the closest Cloud PC restore point before the date and time you specified.
