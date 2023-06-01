@@ -191,6 +191,8 @@ items:
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
+      - name: Move a Cloud PC
+        href: move-cloud-pc.md
       - name: Set idle session time limits
         href: frontline-cloud-pc-session-time-limits.md
       - name: Restore a Cloud PC
