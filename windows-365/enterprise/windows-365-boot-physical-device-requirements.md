@@ -36,13 +36,14 @@ Follow these steps and requirements to setup shared physical devices for Windows
 
 ## Install Windows Insider Program Preview Build
 
-Each device must be running the **latest Dev Channel** Windows Insider Preview Build.
+Each device must be running the **latest Beta Channel** Windows Insider Preview Build.
 
 1. To install this build, follow the instructions in the [Get started with the Windows Insider Program article](/windows-insider/get-started).
-2. After installation, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices**.
-3. Select the device in the list > **Wipe** > **Wipe**. Don't select any of the boxes in the wipe confirmation box.
-4. The next time the device connects to the internet, it will be wiped. This process can take several minutes.
-5. Complete the Windows Autopilot steps in the next section.
+2. Install Windows Insider Program Preview Build.
+3. After installation, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices**.
+4. Select the device in the list > **Wipe** > **Wipe**. Don't select any of the boxes in the wipe confirmation box.
+5. The next time the device connects to the internet, it will be wiped. This process can take several minutes.
+6. Complete the Windows Autopilot steps in the next section.
 
 ## Register the physical device with Windows Autopilot
 
