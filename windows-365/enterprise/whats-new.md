@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Cloud PC on-demand restore points and copy to Azure Storage account are now generally available<!--43450254-->
 
-Cloud PC on-demand restore points and copy copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
+Cloud PC on-demand restore points and copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
 
 #### Shortpath for managed/private networks<!--44356711-->
 
