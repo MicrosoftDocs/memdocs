@@ -90,7 +90,7 @@ Follow these steps to configure tenant mapping using the Windows 365 GCC Setup T
 6. Confirm that you want to continue with your government account > **Next**.
 7. On the **Select feature to enable screen**, **Custom Images** is selected by default as there is no reason to run the Windows 365 GCC Setup Tool unless you need at least one of these features below.
  > [!NOTE]
-    > ANC includes the permissions for custom images.
+ > ANC includes the permissions for custom images.
 9. Select **Azure network connections** and then select the **Subscription**, **Virtual network**, and **Subnet** that you want to configure. Select **Next**.
 10. On the **Review settings** page, review the selections you made and select **Grant**.
 11. After setup is complete, you can close the tool.
