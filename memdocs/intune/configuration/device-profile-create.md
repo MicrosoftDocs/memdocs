@@ -65,6 +65,7 @@ This article:
 
 ## Create the profile
 
+To create the Profile, you need to be a **Global Administrator** or **Intune Service Administrator (also known as Intune Administrator)**. 
 Profiles are created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In this admin center, select **Devices**. You have the following options:
 
 :::image type="content" source="./media/device-profile-create/devices-overview.png" alt-text="Screenshot that shows how to select Devices to see what you can configure and manage in Microsoft Intune.":::
