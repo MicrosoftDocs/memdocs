@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/15/2022
+ms.date: 06/01/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -77,6 +77,8 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
 - **In grace period**: When a license/assignment change occurs for a user with a current Cloud PC, the Cloud PC object is marked as **In grace period**. Grace periods help admins avoid licensing/targeting mistakes that might cause users to lose access to their Cloud PC.
 
   With the nature of dynamic Azure AD groups, users can become unassigned to a provisioning policy or Windows 365 license. As license and provisioning policies are required for a Cloud PC to function, removing either or both will result in the end user losing access to their Cloud PC.
+
+  When a Cloud PC enters a grace period, an alert is triggered. The alert appears in the Microsoft Intune admin center as a pop-up notification. For more information about customizing alerts, including setting up e-mail notifications, see [Alerts in Windows 365](alerts.md).
 
   When a Cloud PC is in a grace period, the user can continue using the Cloud PC for seven days. After the seven day grace period expires, the user will be logged off the Cloud PC and they’ll lose access.
 
