@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 06/01/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Cloud PC on-demand restore points and copy to Azure Storage account are now generally available<!--43450254-->
 
-Cloud PC on-demand restore points and copy copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
+Cloud PC on-demand restore points and copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
 
 #### Shortpath for managed/private networks<!--44356711-->
 
@@ -85,6 +85,13 @@ For more information, see [Move Cloud PC](move-cloud-pc.md).
 #### Provide feedback button for admins (preview)<!--43853267-->
 
 A **Provide feedback** button is now available in several Windows 365 admin pages in the Intune admin center.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Admin alert when a Cloud PC enters the grace period<!--44188012-->
+
+Admins are now alerted when a Cloud PC enters the grace period. For more information about grace periods, see [Device management overview for Cloud PCs](device-management-overview.md). For information about how to view and customize alerts, see [Alerts in Windows 365](alerts.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 app

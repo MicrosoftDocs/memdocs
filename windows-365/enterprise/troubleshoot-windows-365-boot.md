@@ -68,7 +68,7 @@ This command shows all the Microsoft-maintained apps (like QuickAssist, Microsof
 - Windows 365 app version 1.1.162.0 or later.
 - Azure Virtual Desktop (HostApp) app version 1.2.4159. or later.
 
-Windows 365 Boot also requires that the physical device is in the **Dev channel of the Windows Insider Program**.
+Windows 365 Boot also requires that the physical device is in the **Beta channel of the Windows Insider Program**.
 
 ## Remove Windows 365 Boot from the physical device
 
