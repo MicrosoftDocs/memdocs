@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 06/01/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -54,7 +54,7 @@ Windows 365 uses a userless enrollment process. There's no pre-registering of re
 There are two ways to target ESP profiles with Cloud PCs:
 
 - Default ESP profiles targeting the **All devices** built-in virtual group.
-- Custom ESP profiles targeting the **All devices** built-in virtual group and using a filter based on the **enrollmentProfileName (Enrollment profile name)** property. For more information, see [Create a filter for all Cloud PCs from a specific provisioning policy](create-filter.md#create-a-filter-for-all-cloud-pcs-from-a-specific-provisioning-policy).
+- Custom ESP profiles targeting the **All devices** built-in virtual group and using a filter based on the **enrollmentProfileName (Enrollment profile name)** property. This filter is the only supported filter type for the custom ESP profile targeting scenario. For more information, see [Create a filter for all Cloud PCs from a specific provisioning policy](create-filter.md#create-a-filter-for-all-cloud-pcs-from-a-specific-provisioning-policy).
 
 Both targeting strategies are supported for Hybrid Azure AD join and Azure AD join identity types. For more information, see [Device join types](./identity-authentication.md#device-join-types).
 
