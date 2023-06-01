@@ -31,6 +31,10 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### TPM attestation isn't working on some platforms with Infineon SLB9672 discrete TPMs
+
+Platforms with the Infineon SLB9672 with firmware release 15.22 with EK certificate may fail with error message “Something happened, and TPM attestation timed out.” To resolve this issue, contact your OEM for an update.
+
 ### Kiosk device profile not auto logging in
 
 There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto sign-in enabled won't auto sign in. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After you enter this username with no password, it should take you to the desktop. This issue should be resolved in Windows 10 version 3C (March 2023) or higher or Windows 11 4B (April 2023) or higher.
@@ -225,3 +229,4 @@ Using PPKGs in combination with Windows Autopilot isn't recommended.
 [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
 
 [Troubleshooting Windows Autopilot](troubleshooting.md)
+
