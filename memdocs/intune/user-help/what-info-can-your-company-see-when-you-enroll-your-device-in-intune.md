@@ -71,9 +71,6 @@ Your organization can always see:
   - On corporate-owned devices, your organization can see all apps installed on the device. 
   - On corporate-owned devices with a work profile, which is limited to Android devices, your organization can only see the apps installed in your work profile.
 
- > [!NOTE]
- > Organizations cannot see all app inventory on Android Enterprise fully managed devices, corporate-owned work profile devices, and dedicated devices.  
- 
 ### What is a managed app? 
 An app is considered a **managed app** when it's installed in one of the following ways:  
  * You install it from the Company Portal app after your organization makes it available to you. 
