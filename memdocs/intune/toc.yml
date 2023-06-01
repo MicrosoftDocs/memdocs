@@ -804,6 +804,12 @@ items:
               href: ./protect/windows-10-feature-updates.md
             - name: Expedite updates policy
               href: ./protect/windows-10-expedite-updates.md
+            - name: Windows driver updates
+              items: 
+              - name: Driver updates overview
+                href: ./protect/windows-driver-updates-overview.md
+              - name: Driver updates policy
+                href: ./protect/windows-driver-updates-policy.md
             - name: Windows rollout options
               href: ./protect/windows-update-rollout-options.md
             - name: Windows Update compatibility reports
