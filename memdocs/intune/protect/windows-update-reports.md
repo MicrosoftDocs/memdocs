@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 06/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,7 +31,7 @@ ms.collection:
 - highseo
 ---
 
-# Intune reports for updates
+# Windows Update reports for Microsoft Intune
 
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)  and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
 
