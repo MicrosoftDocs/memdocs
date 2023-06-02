@@ -137,7 +137,7 @@ The default managed Universal Links are the following:
 | `http://web.microsoftstream.com/video/*;` `http://msit.microsoftstream.com/video/*;` `https://web.microsoftstream.com/video/*;` `https://msit.microsoftstream.com/video/*;` | Stream |
 | `http://*teams.microsoft.com/l/*;` `http://*devspaces.skype.com/l/*;` `http://*teams.live.com/l/*;` `http://*collab.apps.mil/l/*;` `http://*teams.microsoft.us/l/*;` `http://*teams-fl.microsoft.com/l/*;` `https://*teams.microsoft.com/l/*;` `https://*devspaces.skype.com/l/*;` `https://*teams.live.com/l/*;` `https://*collab.apps.mil/l/*;` `https://*teams.microsoft.us/l/*;` `https://*teams-fl.microsoft.com/l/*;` | Teams |
 | `http://tasks.office.com/*;` `https://tasks.office.com/*;` `http://to-do.microsoft.com/sharing*;` `https://to-do.microsoft.com/sharing*;` | ToDo |
-| `http://*.yammer.com/*;` `https://*.yammer.com/*;` | Yammer |
+| `http://*.yammer.com/*;` `https://*.yammer.com/*;` | Viva Engage |
 | `http://*.zoom.us/*;` `https://*.zoom.us/*;` | Zoom |
 
 If you don't want to allow the default managed Universal Links, you can delete them. You can also add Universal Links for third party or LOB apps.

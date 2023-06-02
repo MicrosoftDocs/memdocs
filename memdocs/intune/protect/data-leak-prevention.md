@@ -45,7 +45,7 @@ Intune app protection policies are independent of device management. App protect
 The following action plan can be used when you meet the following requirements:
 
 * Your company is ready to transition securely to the cloud.
-* Your company uses Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business, or Yammer.
+* Your company uses Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business, or Viva Engage.
 * Your company has licenses for Microsoft 365, Enterprise Mobility + Security (EMS), or Azure Information Protection.
 * Your company allows users to access company data from company-owned or personally-owned Windows, iOS/iPadOS, or Android devices.
 * Your company does not want to require enrollment of personally-owned devices in a device management service.
