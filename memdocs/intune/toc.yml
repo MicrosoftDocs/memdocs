@@ -564,7 +564,7 @@ items:
               href: ./protect/advanced-threat-protection-manage-android.md
             - name: Monitor Defender for Endpoint
               href: ./protect/advanced-threat-protection-monitor.md
-            - name: MDE Security Configuration Management
+            - name: Microsoft Defender for Endpoint Security Configuration Management
               href: ./protect/mde-security-integration.md
           - name: Firewall rule migration
             href: ./protect/endpoint-security-firewall-rule-tool.md  
@@ -808,8 +808,8 @@ items:
               href: ./protect/windows-update-rollout-options.md
             - name: Windows Update compatibility reports
               href: ./protect/windows-update-compatibility-reports.md
-            - name: Windows Update compliance reports
-              href: ./protect/windows-update-compliance-reports.md         
+            - name: Windows Update reports
+              href: ./protect/windows-update-reports.md         
         - name: Troubleshoot
           items:
           - name: Troubleshoot policies and profiles
