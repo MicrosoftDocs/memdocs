@@ -37,7 +37,7 @@ With Intune, you can deploy updates to Windows 10/11 devices by using policies f
 
 - [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
 - [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
-- [Windows Driver updates for Windows 10 and later](..protect/windows-driver-updates-overview.md)
+- [Windows Driver updates for Windows 10 and later](../protect/windows-driver-updates-overview.md)
 
 Reports for these policy types are available to help you monitor and troubleshoot update deployments, Intune supports the following report options:
 
