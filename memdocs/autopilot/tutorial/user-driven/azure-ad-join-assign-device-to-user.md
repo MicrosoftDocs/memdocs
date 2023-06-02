@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 7 of 7 - Assign Autopilot device to a user
-description: How to - Windows Autopilot user-driven Azure AD join - Step 7 of 7 - Assign Autopilot device to a user.
+title: Windows Autopilot user-driven Azure AD join - Step 7 of 8 - Assign Autopilot device to a user
+description: How to - Windows Autopilot user-driven Azure AD join - Step 7 of 8 - Assign Autopilot device to a user.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/02/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -29,6 +29,7 @@ Autopilot user-driven Azure AD join steps:
 - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 > [!div class="checklist"]
 > - **Step 7: Assign Autopilot device to a user (optional)**
+- Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
 For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
@@ -42,9 +43,8 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 ## Next step: Deploy the device
 
-At this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
-
-[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
+> [!div class="nextstepaction"]
+> [Step 8: Deploy the device](azure-ad-join-deploy-device.md)
 
 ## More information
 

@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 5 of 7 - Configure and assign the Enrollment Status Page (ESP)
-description: How to - Windows Autopilot user-driven Azure AD join - Step 5 of 7 - Configure and assign the Enrollment Status Page (ESP).
+title: Windows Autopilot user-driven Azure AD join - Step 5 of 8 - Configure and assign the Enrollment Status Page (ESP)
+description: How to - Windows Autopilot user-driven Azure AD join - Step 5 of 8 - Configure and assign the Enrollment Status Page (ESP).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/02/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -29,6 +29,7 @@ Autopilot user-driven Azure AD join steps:
 > - **Step 5: Configure and assign Autopilot Enrollment Status Page (ESP)**
 - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+- Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
 For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
 

@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign a user-driven Azure AD join Autopilot profile
-description: How to - Windows Autopilot user-driven Azure AD join - Step 6 of 7 - Create and assign a user-driven Azure AD join Autopilot profile.
+title: Windows Autopilot user-driven Azure AD join - Step 6 of 8 - Create and assign a user-driven Azure AD join Autopilot profile
+description: How to - Windows Autopilot user-driven Azure AD join - Step 6 of 8 - Create and assign a user-driven Azure AD join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/02/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -29,6 +29,7 @@ Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 6: Create and assign Autopilot profile**
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+- Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
 For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
 
@@ -98,11 +99,15 @@ To create a user-driven Azure AD join Autopilot profile, follow these steps:
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 
-> [!NOTE]
->
-> If you don't plan to assign a user to the device, at this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+If you don't plan to assign a user to the device,
 
-[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
+> [!div class="nextstepaction"]
+> [Step 8: Deploy the device](azure-ad-join-deploy-device.md)
+
+If you don't plan to assign a user to the device, then skip to **[Step 8: Deploy the device](azure-ad-join-deploy-device.md)**.
+
+> [!div class="nextstepaction"]
+> [Step 8: Deploy the device](azure-ad-join-deploy-device.md)
 
 ## More information
 
