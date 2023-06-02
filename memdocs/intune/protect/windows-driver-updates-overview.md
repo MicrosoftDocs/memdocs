@@ -270,8 +270,3 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 - [Create Windows driver update policy](../protect/windows-driver-updates-policy.md)
 - [Use Windows driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-update-policy)
-
-Also see:
-
-- Use [Windows update rings in Intune](../protect/windows-10-update-rings.md)
-- Use [Windows feature updates in Intune](..protect/windows-10-feature-updates.md)
