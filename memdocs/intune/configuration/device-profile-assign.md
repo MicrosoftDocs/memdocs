@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2023
+ms.date: 06/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -76,11 +76,15 @@ Be sure you have the correct role to assign policies and profiles. For more info
 - Use **[Filters](../fundamentals/filters.md)** to assign a policy based on rules you create. You can create filters for:
 
   - App configuration policies
+  - App protection policies
   - App assignments
   - Compliance policies
   - Device configuration profiles
 
-  For more information, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md).
+  For more information, go to:
+  
+  - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](../fundamentals/filters.md)
+  - [Platforms, policies, and app types supported by filters in Microsoft Intune](../fundamentals/filters-supported-workloads.md)
 
 - **[Policy sets](../fundamentals/policy-sets.md)** create a group or collection of existing apps and policies. When the policy set is created, you can assign the policy set from a single place in the Microsoft Intune admin center.
 
@@ -165,6 +169,8 @@ When you assign your policies and policies, apply the following general principl
   Typically, you statically assign devices into an Azure AD group if they're pre-registered in Azure AD, like with Windows Autopilot. Or, if you want to combine devices for a one-off, ad-hoc deployment. Otherwise, it might not be practical to statically assign devices into an Azure AD group.
 
 - Dynamic Azure AD user groups can be added to Included groups or Excluded groups.
+
+- Excluded groups can be groups with users or groups with devices.
 
 - Dynamic Azure AD device groups can be added to Included groups. But, there can be latency when populating the dynamic group membership. In latency-sensitive scenarios, use [filters](../fundamentals/filters.md) to target specific devices, and assign your policies to user groups.
 

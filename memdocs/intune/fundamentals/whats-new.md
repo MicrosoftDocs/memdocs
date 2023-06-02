@@ -1449,7 +1449,7 @@ For more information about these policies and reports, see:
 
 - [Feature updates policy](../protect/windows-10-feature-updates.md)
 - [Expedite quality updates policy](../protect/windows-10-expedite-updates.md)
-- [Windows Update compliance reports](../protect/windows-update-compliance-reports.md)
+- [Windows Update compliance reports](../protect/windows-update-reports.md)
 
 Applies to:  
 -  Windows 10/11
