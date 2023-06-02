@@ -54,7 +54,7 @@ In addition to the configurable short-term restore points, there are also four l
 
 ### On-demand manual restore point
 
-Manual restore points let administrators [create a restore point](create-manual-restore-point.md) whenever they want, for both a single Cloud PC and groups of Cloud PCs (using bulk actions). Manual restore points are  in [public preview](../public-preview.md).
+Manual restore points let administrators [create a restore point](create-manual-restore-point.md) whenever they want, for both a single Cloud PC and groups of Cloud PCs (using bulk actions).
 
 Among other uses, on-demand manual restore points are useful:
 
