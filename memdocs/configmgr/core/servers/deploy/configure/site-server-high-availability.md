@@ -285,6 +285,11 @@ The process to remove a site server in passive mode is the same as any site syst
 
 When you remove any other site system role, the site component manager (`sitecomp`) processes the request. When you remove a site server in passive mode, the failover manager processes the request. For status, monitor the **SMS_FAILOVER_MANAGER** component.
 
+After you have removed passive site server role, **SMS Provider** role is not automatically removed and you cannot remove the server from Configuration Manager, because it still has a role. You need to start Configuration Manager Setup from the site server and select **Site Maintenance** to remove **SMS Provider** role. 
+
+> [!NOTE]
+> Tenant attach will use the first **SMS Provider** server in the site. If you don't remove **SMS Provider** role from the server, tenant attach will continue to use it even though the server doesn't have a site server role any more. -->
+
 ## Next steps
 
 [Flowchart - Set up a site server in passive mode](passive-site-server-flowchart.md)
