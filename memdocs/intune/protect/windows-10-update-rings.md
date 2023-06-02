@@ -41,7 +41,12 @@ Windows update rings support [scope tags](../fundamentals/scope-tags.md). You ca
 
 The following prerequisites must be met to use Windows updates for Windows 10/11 devices in Intune.
 
-- Devices must:  
+- Devices must:
+
+  - Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+
+    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
+
   - Run Windows 10 version 1607 or later, or Windows 11.
   
   > [!NOTE]
@@ -196,11 +201,11 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
+There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more, see [Windows update reports](../protect/windows-update-reports.md).
 
 ## Next steps
 
 - Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
-- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows updates  
+- Use [Windows update reports](../protect/windows-update-reports.md) for Windows updates  
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution

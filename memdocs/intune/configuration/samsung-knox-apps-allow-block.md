@@ -3,12 +3,12 @@
 
 title: Microsoft Intune policy to allow/block apps for Samsung Knox
 titleSuffix:
-description: Create a custom profile to allow and block apps for Samsung Knox Standard devices.
+description: Create a custom profile to allow and block apps for Samsung Knox Standard Android device administrator devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -77,11 +77,11 @@ These settings can only be used by devices that run Samsung Knox Standard.
     - **Value**: Enter a list of the app package names you want to allow. You can use `;`, `:`, or `|` as a delimiter. For example, enter `package1;package2;`.
 
 8. **Save** your changes > **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, see [assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or device groups that will receive your profile. For more information on assigning profiles, go to [assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
