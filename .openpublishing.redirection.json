@@ -1422,6 +1422,11 @@
             "source_path": "memdocs/analytics/proactive-remediations.md",
             "redirect_url": "/mem/analytics/remediations",
             "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/intune/protect/windows-update-compliance-reports.md",
+            "redirect_url": "/mem/intune/protection/windows-update-reports",
+            "redirect_document_id": false            
         }
     ]
 }
