@@ -33,7 +33,7 @@ ms.collection:
 
 This article can help you use Microsoft Intune to create and manage Windows Driver updates policies for your Windows 10 and Windows 11 devices. These policies allow you to view the list of available driver updates that are applicable to the devices targeted by the policy, approve updates for deployment, or pause the deployment of individual updates. When driver updates are approved, Intune sends the assignments to Windows Update, which manages the update installation on devices based on the policy configuration.
 
-Before you create and deploy driver update policies, take time to [plan how you might deploy and manage Windows driver updates](../protect/windows-drivers-overview.md#plan-for-driver-updates) in your organization. Also review the [prerequisites](../protect/windows-drivers-overview.md#prerequisites) for using Windows driver updates ensure your tenant is configured to support them.
+Before you create and deploy driver update policies, take time to [plan how you might deploy and manage Windows driver updates](../protect/windows-driver-updates-overview.md#plan-for-driver-updates) in your organization. Also review the [prerequisites](../protect/windows-driver-updates-overview.md#prerequisites) for using Windows driver updates ensure your tenant is configured to support them.
 
 After you create driver update policies, plan to review them regularly for newly added driver updates. *Recommended* driver updates that are added to policies that support automatic approvals start to deploy without any intervention. However, any other new updates added to your policies won't install until an admin manually approves them.
 
@@ -56,7 +56,7 @@ Use the following procedure as a guide to create policies to manage driver updat
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Driver updates for Windows 10 and later (preview)**, and select **Create profile**.
 
-   :::image type="content" source="./media/windows-driver-updates-policy/view-update-list-1.png" alt-text="A screen capture of the admin center that shows the path to create a profile for Windows Driver Updates." lightbox="./media/windows-drivers-policy/view-update-list-1.png":::
+   :::image type="content" source="./media/windows-driver-updates-policy/view-update-list-1.png" alt-text="A screen capture of the admin center that shows the path to create a profile for Windows Driver Updates." lightbox="./media/windows-driver-updates-policy/view-update-list-1.png":::
 
 2. On the **Basics** page, enter the following properties:
 
@@ -262,4 +262,4 @@ On the *Manage driver* pane you can:
 ## Next steps
 
 - Use [Windows driver update overview](../protect/windows-driver-updates-overview.md)
-- Use [Windows driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-update-policy)
+- Use [Windows driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy)

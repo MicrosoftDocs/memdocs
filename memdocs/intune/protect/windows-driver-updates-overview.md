@@ -143,7 +143,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 ## Architecture
 
-:::image type="content" source="./media/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./media/windows-drivers-overview/wdum-architecture.png":::
+:::image type="content" source="./media/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./media/windows-driver-updates-overview/wdum-architecture.png":::
   
 **Windows Driver Update Management architecture**:
 
@@ -269,4 +269,4 @@ To help avoid issues that require rolling back a driver from large numbers of de
 ## Next steps
 
 - [Create Windows driver update policy](../protect/windows-driver-updates-policy.md)
-- [Use Windows driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-update-policy)
+- [Use Windows driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy)
