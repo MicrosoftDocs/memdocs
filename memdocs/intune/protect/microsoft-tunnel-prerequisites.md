@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -215,6 +215,8 @@ For more information, see [Configuring container networking with Podman](https:/
 
 - **Load balancers** *(Optional)*:  If you choose to add a load balancer, consult your vendors documentation for configuration details. Take into consideration network traffic and firewall ports specific to Intune and the Microsoft Tunnel.
 
+  The Tunnel server responds to *GET* requests with a static page. The response is used as a probe by load balancers as a way to check for the liveness of Tunnel server. The response is static and does not contain sensitive information.
+
 - **Per-app VPN and Top-level domain support** - Per-app-VPN use with internal use of local top-level domains is not supported by Microsoft Tunnel.
 
 ## Firewall
@@ -242,11 +244,9 @@ When creating the Server configuration for the tunnel, you can specify a differe
   - Additional storage endpoint urls: 
   - `*.blob.storage.azure.net`
 
-
-
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22, and graph.microsoft.com.
 
-- Configure firewall rules to support the configurations detailed in  [Microsoft Container Registry (MCR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/master/client-firewall-rules.md).
+- Configure firewall rules to support the configurations detailed in  [Microsoft Artifact Registry (MAR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/main/docs/client-firewall-rules.md).
 
 ## Proxy
 
@@ -348,6 +348,38 @@ The following details can help you configure an internal proxy when using Podmam
       :::image type="content" source="./media/microsoft-tunnel-prerequisites/review-results-for-port.png" alt-text="Screen shot of checking the port after modification.":::
 
       In this example, port 3128 is now associated with both *http_port-t* and *squid_port_t*. That result is expected. If your proxy port isn't listed when running the *sudo semanage port -l | grep "your_proxy_port"* command, then run the command to modify the port again, but the **-m** in the *semanage* command with **-a**: `sudo semanage port -a -t http_port_t -p tcp "your proxy port"`
+
+### Configure Podman to use the proxy to download image updates
+
+You can configure Podman to use the proxy to download (pull) updated images for Podman:
+
+1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
+
+   `systemctl edit --force mstunnel_monitor`  
+
+2. Add the following four lines to the file. Replace each instance of *[address]* with your proxy DN or address, and then save the file:
+
+   ```
+   [Service]
+   Environment="http_proxy=[address]"
+   Environment="https_proxy=[address]"
+   PassEnvironment=http_proxy, https_proxy
+   ```
+
+3. Next, run the following at the command prompt:
+
+   `systemctl restart mstunnel_monitor`
+
+4. Finally, run the following at the command prompt to confirm the configuration is successful:
+
+   `systemctl show mstunnel_monitor | grep http_proxy`
+
+   If configuration is successfully, the results will resemble the following information:
+   ```
+   Environment="http_proxy=address:port"
+   Environment="https_proxy=address:port"
+   PassEnvironment=http_proxy https_proxy
+   ```
 
 ### Update the proxy server in use by the tunnel server
 

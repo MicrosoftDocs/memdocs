@@ -119,7 +119,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
 
 - **Create and access LAPS policy** – To work with and view LAPS policies, your account must be assigned sufficient permissions from the Intune RBAC category for **Security baselines**. By default, these are included in the built-in role **Endpoint Security Manager**.  To use custom roles, ensure the custom role includes the rights from the *Security baselines* category.
 
-- **Rotate local Administrator password** – To use the Intune admin center to rotate a devices local admin account password, your account must be assigned the following Intune permissions:
+- **Rotate local Administrator password** – To use the Intune admin center to view or rotate a devices local admin account password, your account must be assigned the following Intune permissions:
 
   - Managed devices: **Read**
   - Organization: **Read**
@@ -178,6 +178,9 @@ The following built-in roles Azure AD roles have permission to recover LAPS pass
 ### What roles are needed to read LAPS metadata?
 
 The following built-in roles are supported to view metadata about LAPS including the device name, last password rotation, and next password rotation: Global Admin, Cloud Device Admin, Intune Service Admin, Helpdesk Admin, Security Reader, Security Admin, and Global Reader.
+
+### Why is the Local admin password button greyed out and inaccessible?
+Currently, access to this area requires the Rotate local Administrator password Intune permission. See [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 <!--  REMOVED until this is validated as accurate: 
 ### Are custom roles supported?

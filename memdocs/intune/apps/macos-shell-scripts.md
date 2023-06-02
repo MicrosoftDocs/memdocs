@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -41,7 +41,7 @@ Use shell scripts to extend device management capabilities in Intune, beyond wha
 
 Ensure that the following prerequisites are met when composing shell scripts and assigning them to macOS devices.
 
-- Devices are running macOS 10.13 or later.
+- Devices are running macOS 11.0 or later.
 - Devices are managed by Intune.
 - Devices are connected directly to the Internet. Connection through a proxy is not supported. 
 - Shell scripts begin with `#!` and must be in a valid location such as `#!/bin/sh` or `#!/usr/bin/env zsh`.
@@ -55,7 +55,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 - An end user is required to sign in to the device to execute scripts running as a signed-in user.
 - Root user privileges are required if the script requires making changes that a standard user account cannot.
 - Shell scripts will attempt to run more frequently than the chosen script frequency for certain conditions, such as if the disk is full, if the storage location is tampered with, if the local cache is deleted, or if the Mac device restarts.
-- Shell scripts that are running for longer than 15 minutes are stopped and reported as "failed".
+- Shell scripts that are running for longer than 60 minutes are stopped and reported as "failed".
 
 ## Create and assign a shell script policy
 

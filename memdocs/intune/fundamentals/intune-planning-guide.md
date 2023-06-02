@@ -141,6 +141,10 @@ Rules and settings are deployed using different policies. Some considerations:
 
   These categories will become your [scope tags](scope-tags.md).
 
+- Sometimes organizations need to use Distributed IT in systems where a large number of local admins connect to a single Intune tenant. For example, a large organization has a single Intune tenant. The organization has a large number of local admins, and each admin manages a specific system, region or location. Each admin needs to manage only their location, and not the entire organization.
+
+  One way to scale Microsoft Intune to support multiple local admins who manage their own users, devices, and create their own policies all within a single Microsoft Intune tenant is described in [Distributed IT environment with many admins in the same Microsoft Intune tenant](intune-scale-guidelines.md).
+
 - Many organizations separate groups by the device type, such as iOS/iPadOS, Android, or Windows devices. Some examples:
 
   - Distribute specific apps to specific devices. For example, deploy the Microsoft shuttle app to mobile devices in the Redmond network.

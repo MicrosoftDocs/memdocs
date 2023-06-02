@@ -62,7 +62,7 @@ The second consideration for securing your environment is to secure the Cloud PC
 
 All new Cloud PCs have the following security components enabled by default:
 
-- **vTPM**: Short for virtual Trusted Platform Module, a vTPM provides Cloud PCs their own dedicate TPM instance that acts as a secure vault for keys and measurements. For more information, see [vTPM](/azure/virtual-machines/trusted-launch#vtpm).
+- **vTPM**: Short for virtual Trusted Platform Module, a vTPM provides Cloud PCs their own dedicated TPM instance that acts as a secure vault for keys and measurements. For more information, see [vTPM](/azure/virtual-machines/trusted-launch#vtpm).
 - **Secure Boot**: Secure Boot is a feature that prevents the Windows operating system from booting if untrusted rootkits or boot kits are installed on the machine. For more information, see [secure boot](/azure/virtual-machines/trusted-launch#secure-boot).
 
 With both security components enabled, Windows 365 supports enabling the following Windows security features:

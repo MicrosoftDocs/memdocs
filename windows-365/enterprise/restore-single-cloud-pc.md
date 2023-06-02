@@ -36,7 +36,7 @@ You can use the Microsoft Intune admin center to restore a Cloud PC to a previou
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **All Cloud PCs** > choose the Cloud PC to restore.
 ![Screenshot of choose a Cloud PC](./media/restore-single-cloud-pc/choose-cloud-pc.png)
-2. Select **Restore (preview)** > under **Select restore point**, select the point that you want to restore the Cloud PC to > **Select**.
+2. Select **Restore** > under **Select restore point**, select the point that you want to restore the Cloud PC to > **Select**.
 ![Screenshot of selecting a restore point](./media/restore-single-cloud-pc/select-restore-point.png)
 3. In the confirmation dialog box, select **Restore**.
 
