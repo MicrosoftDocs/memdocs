@@ -31,7 +31,7 @@ ms.collection:
 - highseo
 ---
 
-# Intune compliance reports for updates
+# Windows Update reports for Microsoft Intune
 
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)  and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help you monitor and troubleshoot update deployments, Intune supports the following reporting options:
 
@@ -109,7 +109,7 @@ To Configure this setting for your devices, [Create a profile](../configuration/
   - Use the [Scope tags](../configuration/device-profile-create.md#scope-tags) and [Applicability rules](../configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.  Only Windows 10 version 1903 and later and Windows 11 are supported for these reports.
 
     > [!div class="mx-imgBorder"]
-    > ![Set the Scope to Windows updates](./media/windows-update-compliance-reports/whm-scope.png)
+    > ![Set the Scope to Windows updates](./media/windows-update-reports/whm-scope.png)
 
 When you complete the creation of the Windows health monitoring profile, the profile deploys to the assigned groups, and configuration of data collection is complete.
 
@@ -143,7 +143,7 @@ To use the report:
 
    - In the admin center, go to **Reports** > **Windows updates**. The default view displays the **Summary** tab:
      > [!div class="mx-imgBorder"]
-     > ![Enable data collection for Intune](./media/windows-update-compliance-reports/windows-updates-summary.png)
+     > ![Enable data collection for Intune](./media/windows-update-reports/windows-updates-summary.png)
 
 3. To open the **Windows 10 feature updates** report and view device details for a specific feature updates profile:
 
@@ -153,7 +153,7 @@ To use the report:
 
    - Select **Update status** and **Ownership** to refine the report.
      > [!div class="mx-imgBorder"]
-     > ![Review ownership](./media/windows-update-compliance-reports/windows-feature-updates-by-policy.png)
+     > ![Review ownership](./media/windows-update-reports/windows-feature-updates-by-policy.png)
   
    The following list identifies the columns that are available in the view:
    - **Devices** – The name of the device.
@@ -231,7 +231,7 @@ To use the report:
    - The initial view displays a per-profile summary of how many devices have alerts for each of your profiles with the version of Windows that the profile targets:
 
      > [!div class="mx-imgBorder"]
-     > ![Per-profile view](./media/windows-update-compliance-reports/update-failures-summary.png)
+     > ![Per-profile view](./media/windows-update-reports/update-failures-summary.png)
 
    - Selecting a profile opens a dedicated view that contains all active Alerts for that profile.
 
@@ -239,11 +239,11 @@ To use the report:
 
      - Select an *Alert Message* to open a pane that displays more details for that alert:
        > [!div class="mx-imgBorder"]
-       > ![Alert message details](./media/windows-update-compliance-reports/alert-message-details.png)
+       > ![Alert message details](./media/windows-update-reports/alert-message-details.png)
 
      - Select the device name to open the Device page:
        > [!div class="mx-imgBorder"]
-       > ![View the device page](./media/windows-update-compliance-reports/device-details.png)
+       > ![View the device page](./media/windows-update-reports/device-details.png)
 
 The following list identifies Alert Messages, and suggested remediation actions:
 

@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android and iOS/
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 06/01/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -103,31 +103,37 @@ The next decision is to determine if the devices are shared with many users or a
 
 ### Step 3 - Home screen and device experience
 
-So far, you selected the enrollment platform and device type. Next, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
+On Android Enterprise devices, you can configure the home screen and device experience. This feature isn't available for AOSP devices.
+
+In this step, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
 The following scenarios describe some commonly used scenarios:
 
 - **Scenario 1: Device wide access with multiple apps**
 
-  The device is enrolled in Intune as a **dedicated enrollment** device. Users have access to the apps and settings on the device. You can restrict users from different features, such as debugging, factory reset, and more.
+  The devices are enrolled in Intune as **dedicated devices**. Users have access to the apps and settings on the device. You can restrict users from different features, such as debugging, factory reset, and more.
 
-  To configure devices for this scenario, you deploy the apps to the devices, and then use device configuration policies to allow or block device features.
+  To configure devices for this scenario, you deploy the apps to the devices. Then, use device configuration policies to pin apps and allow or block device features.
 
   To get started, use the following links:
 
   1. [Add apps to Microsoft Intune](../apps/apps-add.md)
   2. [Allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md)
 
-  
-  **??** What about Microsoft Launcher app? If it doesn't apply to this scenario, we should state that info and why. ??
-  **a** Launcher isn't applicable in this scenario
+      **??** Which settings apply to this scenario? I added the following screen shot, but not sure if this is the correct setting. These settings also mention MHS. ??
 
-- **Scenario 2: Locked screen device with multiple pinned apps**
+      :::image type="content" source="./media/frontline-worker-overview/android-dedicated-device-kiosk-multi-app.png" alt-text="Screenshot that shows the dedicated device, kiosk mode, and multi app settings you select in a device configuration profile in Microsoft Intune.":::
 
-  For this scenario, you install the Intune Managed Home Screen, which allows you to customize managed device experience. You can pin apps, select a wallpaper, set icon positions, and more. This scenario is often used for **dedicated devices**, such as shared devices.
+- **Scenario 2: Locked screen device with pinned apps**
 
-  Only features added to the Managed Home Screen are available to end users. So, you can restrict end users from accessing settings and other device features.
-  
+  For this scenario, you install the Intune Managed Home Screen (MHS), which allows you to customize managed device experience. You can pin one app or many apps, select a wallpaper, set icon positions, and more. This scenario is often used for **dedicated devices**, such as shared devices.
+
+  What you need to know:
+
+  - Only features added to the Managed Home Screen are available to end users. So, you can restrict end users from accessing settings and other device features.
+  - When you pin one app or pin many apps to the MHS, only those apps open. They're the only apps users can access.  
+  - The Managed Home Screen (MHS) is the enterprise launcher you use. Don't install another enterprise launcher app.
+
   For more information on the MHS on dedicated devices, go to the [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060) blog post.
 
   To get started, use the following links:
@@ -138,39 +144,29 @@ The following scenarios describe some commonly used scenarios:
   > [!TIP]
   > If you're using this scenario, then configure the MHS using the app policy. Don't configure the MHS using a device configuration policy. The app policy has more configuration settings than the device configuration policy.
 
-- **Scenario 3: Locked screen device with one pinned app** 
+?? Are there scenarios where we recommend confgiuring the MHS using a device configuration policy? ??
 
-  **??** This whole scenario. I copied the text from scenario 2, but what's the other solution, besides MHS? ??
-  **a** scenario 1
+- **Scenario 3: Single app kiosk**
 
-  In this scenario, a single app is opened and it's the only app users can access. This is often used for kiosk devices.
+  A single app is assigned to the device. When the device starts, only this app opens. Users are locked to the single app and can't close the app, or do anything else on the devices. This scenario is used on devices dedicated to a specific use, like scanning inventory.  
 
-  Use the Managed Home Screen (MHS) for the enterprise launcher. You don't need to install another enterprise launcher app. Using the MHS, you pin one app.
+  What you need to know:
 
-  **??** The difference is that the single app can be closed in **Scenario 2** but not the launcher thus still restricting the end user from accessing settings.??
-  **a** there is no difference, in scenario 2 multiple apps are pinned to the MHS whereas in scenario 3 only one app is.  The reason I present the scenario this way is the "single app" kiosk is extreamly restrictive and doesn't allow admin to troubleshoot the device.  I'll add another scenario to address single app kiosk on Android Enterprise as well.
+  - This option is more restrictive and doesn't allow admins to troubleshoot the devices.
+  - An enterprise launcher isn't used.
+
+  To configure these devices, you create a device configuration policy that sets the device to single app kiosk mode. Then, you assign the app to the device.
 
   To get started, use the following links:
 
   1. [Add apps to Microsoft Intune](../apps/apps-add.md)
-  2. [Configure the Microsoft Managed Home Screen app](../apps/app-configuration-managed-home-screen-app.md)
+  2. Configure the device to be in [single app kiosk mode using a device configuration policy](../configuration/device-restrictions-android-for-work.md#device-experience):
 
-  > [!TIP]
-  > If you're using this scenario, then configure the MHS using the app policy. Don't configure the MHS using a device configuration policy. The app policy has more configuration settings than the device configuration policy.
-  > **??** Does this tip still apply to this scenario? In the word doc, it says to use a device config profile for scenario 3. If there's another option, we can add that too. ??
-  > **a** yes, identical
-
-- **Scenario 4: Single app kiosk** 
-In this scenario a single app is assigned to the device and when the device boots the app is lauched, thus making the device dedicated to a certain scenario such as scanning inventory.  Users are locked to the single app and may not close the app.
-
-
-[Android Enterprise device experience settings on organization owned devices](../configuration/device-restrictions-android-for-work.md#device-experience)
-
-Below are a few links to help you get started on your journey with scenario #2 as #1 and #3 are configuration settings within Intune device configuration profiles: 
+      :::image type="content" source="./media/frontline-worker-overview/android-dedicated-device-kiosk-single-app.png" alt-text="Screenshot that shows the dedicated device, kiosk mode, and single app settings you select in a device configuration profile in Microsoft Intune.":::
 
 ### Azure AD shared device mode for Android Enterprise dedicated devices
 
-Azure AD shared device mode (SDM) is another option for Android, specifically Android Enterprise **dedicated device** enrollments. Azure AD SDM offers an app and identity driven sign-in/sign-out experience that compliments **Scenario 1**, **Scenario 2**, and potentially **Scenario 3** (if MHS is used with a single app).
+Azure AD shared device mode (SDM) is another option for Android, specifically Android Enterprise **dedicated device** enrollments. Azure AD SDM offers an app and identity driven sign-in/sign-out experience that compliments **Scenario 1** and **Scenario 2**.
 
 Android enrollment as a shared device and Azure AD SDM are complimentary. For end users to have the full sign-in/sign-out experience, apps must support Azure AD SDM. Android enrollment as a shared device isn't dependent on Azure AD SDM. Azure AD SDM is an option on top of the Intune shared device enrollment.
 
@@ -180,14 +176,6 @@ For more information on Azure AD SDM, and to get started, go to:
 - [Enroll Android Enterprise dedicated devices into Azure AD Shared device mode - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/enroll-android-enterprise-dedicated-devices-into-azure-ad-shared/ba-p/1820093) blog post
 - [Intune supports sign out for apps not optimized with Azure AD shared device mode on AE 9+ - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/endpoint-manager-supports-sign-out-for-apps-not-optimized-with/ba-p/3034398) blog post
 - [Intune supports sign out for apps not optimized with Azure AD shared device mode on AE 9+ - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/endpoint-manager-supports-sign-out-for-apps-not-optimized-with/ba-p/3034398) blog post
-
-### What about?
-
-**??** 
-**a** out of scope for this
-
-- OEMConfig
-- Zebra
 
 ## iOS/iPadOS
 
@@ -212,8 +200,6 @@ For iPad devices, admins must pick one option - **Shared iPad** or **Azure AD sh
   ❌ If the device is an iOS device, then use Azure AD shared device mode.
 
   For more information on Shared iPads, go to [Shared iPad devices in Microsoft Intune](../enrollment/device-enrollment-shared-ipad.md).
-
-  **??** Should we say anything about user affinity? ??
 
 - **Azure AD shared device mode**
 
@@ -242,21 +228,20 @@ This section focuses on Shared iPads used by frontline workers, including decisi
 
 If you're not using Shared iPads, then you can skip this section.
 
-#### Step 1 - Use Automated Device Enrollment (ADE)
+#### Step 1 - Use Automated Device Enrollment (ADE) with Shared iPad
 
-For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile without user affinity**. ADE syncs the devices from Apple Business Manager or Apple School Manager.
+For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile**. ADE syncs the devices from Apple Business Manager or Apple School Manager.
 
-**??** Is this the correct first step? Do admins configure an ADE enrollment policy *and* a Shared iPad enrollment policy? Or, do they set up Shared iPad as the enrollment option? Maybe Shared iPad enrollment uses ADE 'behind-the-scenes'? ??
-**a** yes correct first step, they just need to create an enrollment profile selecting shared iPad in the profile as an option.
+From an Intune perspective, you configure the enrollment profile and assign the profile to the device. When you create the enrollment profile for Shared iPads, you select the following features:
 
-From an Intune perspective, you configure the enrollment profile and assign the profile to the device.
+1. **Enroll without user affinity**: This option doesn't associate the devices with a specific user. This option is required for Shared iPads.
+2. **Shared iPad**: This option enables Shared iPad on the device, and is required. It allows many users to sign in.
+
+
 
 For more information on ADE enrollment, and to get started, go to [Set up automated device enrollment in Intune](../enrollment/device-enrollment-program-enroll-ios.md).
 
 #### Step 2 - Guest access or Partitioned user access
-
-**??** This section depends on the question in step 1. ??
-**a** yes
 
 The next decision is to determine if the Shared iPads will be used for guest access or partitioned user access.
 
