@@ -33,7 +33,7 @@ This article describes known issues that can often be resolved with configuratio
 
 ### TPM attestation isn't working on some platforms with Infineon SLB9672 discrete TPMs
 
-Platforms with the Infineon SLB9672 with firmware release 15.22 with EK certificate may fail with error message “Something happened, and TPM attestation timed out.” To resolve this issue, contact your OEM for an update.
+Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK certificate may fail with error message **Something happened, and TPM attestation timed out.** To resolve this issue, contact your OEM for an update.
 
 ### Kiosk device profile not auto logging in
 
