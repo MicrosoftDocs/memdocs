@@ -114,7 +114,7 @@ Before you make the call, verify that you have already added the Callback URL to
 
 #### Add the information used to request the token
 
-1. Download Postman if you do not already have it installed. To download Postman, see [www.getpostman](https://www.getpostman.com).
+1. Download Postman if you do not already have it installed. To download Postman, see [www.getpostman.com](https://www.getpostman.com).
 2. Open Postman. Choose the HTTP operation **GET**.
 3. Paste the endpoint URL into the address. It should look something like:
 
