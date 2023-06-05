@@ -19,15 +19,7 @@ ms.localizationpriority: high
 > 
 > For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 14.x or later.  
 
-In the context of userless iOS/iPadOS devices, there is a difference between *supported* OS versions and *allowed* OS versions. *Supported* means that Intune supports userless devices running the three most recent iOS/iPadOS versions. All Intune MDM functionality that applies to userless devices, and all new eligible features, work on devices running iOS/iPadOS 16.x, 15.x, and 14.x.  
-
-*Allowed* means that Intune supports eligible features that the MDM protocol supports within three versions, but supporting those allowed OS versions doesn’t guarantee the reliability of OS features, the absence of bugs, nor the absence of issues on userless devices running nonsupported iOS/iPadOS versions. As usual, Intune doesn't support devices enrolled with user affinity or apps that rely on user sign-in. 
-
-**New userless enrollments and feature support**
-
-|**Userless supported versions**|**Userless allowed versions**|
-|:---|:---:|
-|Three most recent versions (N-2): iOS/iPadOS 14.x and later|Up to three versions below the supported version (N-5): iOS/iPadOS 11.x and later|
+In the context of userless iOS/iPadOS devices, there is a difference between *supported* OS versions and *allowed* OS versions. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://techcommunity.microsoft.com/t5/intune-customer-success/support-statement-for-supported-versus-allowed-ios-ipados/ba-p/3484657).  
 
 ### Android
 
