@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/17/2023
+ms.date: 06/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -232,8 +232,6 @@ The following permissions are available when creating custom roles.
 | Security baselines/Update | Update Security Baseline profiles. | 
 | Security tasks/Read | View security tasks. | 
 | Security tasks/Update | Update security tasks. | 
-| Telecom expenses/Read | View settings and status of telecom expense partner connector. | 
-| Telecom expenses/Update | Modify or activate telecom expense management partner connector. The telecom expense partner enables you to manage telecom expenses incurred from data usage on corporate-owned mobile devices. | 
 | Terms and conditions/Assign | Assign terms and conditions to Azure AD security groups. | 
 | Terms and conditions/Create | Create new terms and conditions. | 
 | Terms and conditions/Delete | Delete an existing terms and conditions. | 
