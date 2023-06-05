@@ -89,6 +89,16 @@ Applies to:
 
 ## Week of May 30, 2023  
 
+
+### Device management
+
+### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836 -->  
+To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune now differentiates Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
+
+With this change, you'll be able to improve policy targeting for MDE security configuration. For example, you can use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
+
+For more information about this change, see the Intune customer success blog [Support tip: Windows Server devices will now be identified as a new OS platform in Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-server-devices-will-now-be-identified-as-a/ba-p/3767773).
+
 ### Tenant administration  
 
 #### Organizational messages for Windows 11 now generally available<!-- 15272978 -->  
@@ -342,9 +352,8 @@ Once the devices receive the configuration, they automatically download the eSIM
 
 Applies to:
 
- - Windows 11
- - eSIM capable devices 
-
+- Windows 11
+- eSIM capable devices
 
 ## Week of May 1, 2023
 
@@ -353,7 +362,7 @@ Applies to:
 #### macOS shell scripts maximum running time limit<!-- 19396575 -->
 We have fixed an issue that caused Intune tenants with long-running shell scripts to not report back on the script run status. The macOS Intune agent stops any macOS shell scripts that run longer than 15 minutes. These scripts report as failed. The new behavior is enforced from macOS Intune agent version 2305.019.
 
-#### DMG app installation for macOS<!-- 13911806 -->
+#### DMG app installation for macOS<!-- 13911806 -->  
 The DMG app installation feature for macOS is now generally available. Intune supports **required** and **uninstall** assignment types for DMG apps. The Intune agent for macOS is used to deploy DMG apps. For related information, see [Deploy DMG-type applications to managed macOS devices](../fundamentals/whats-new-archive.md#deploy-dmg-type-applications-to-managed-macos-devices).
 
 #### Deprecation of Microsoft Store for Business and Education<!-- 19677954 -->
@@ -365,8 +374,7 @@ For related information, see [Plan for Change: Ending support for Microsoft Stor
 
 ### Device configuration
 
-#### Remote Help now supports conditional access capability<!--16108299 -->
-
+#### Remote Help now supports conditional access capability<!--16108299 -->  
 Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses.
 
 For more information, go to:
@@ -406,7 +414,6 @@ Applies to:
 
 - Windows 10
 - Windows 11
-
 
 ## Week of April 17, 2023 (Service release 2304)
 
@@ -1470,7 +1477,7 @@ For more information about these policies and reports, see:
 
 - [Feature updates policy](../protect/windows-10-feature-updates.md)
 - [Expedite quality updates policy](../protect/windows-10-expedite-updates.md)
-- [Windows Update compliance reports](../protect/windows-update-compliance-reports.md)
+- [Windows Update compliance reports](../protect/windows-update-reports.md)
 
 Applies to:  
 -  Windows 10/11
