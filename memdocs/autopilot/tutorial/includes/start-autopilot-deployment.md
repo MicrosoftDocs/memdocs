@@ -44,3 +44,9 @@ To start the Autopilot deployment process on the device, follow these steps:
      4. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
 
      5. Once network connectivity is established, the **Next** button should become available. Select **Next**.
+
+     6. At this point, the device may reboot to apply critical security updates. After it reboots, the Azure AD sign-in page should appear.
+
+    > [!NOTE]
+    >
+    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page depending on how the Autopilot profile was configured at the **Create and assign Autopilot profile** step.

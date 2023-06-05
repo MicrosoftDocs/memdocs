@@ -41,12 +41,6 @@ Once all of the configurations for the Windows Autopilot user-driven deployment 
 
 [!INCLUDE [Assignment tip](../includes/start-autopilot-deployment.md)]
 
-     6. At this point, the device may reboot to apply critical security updates. After it reboots, the Azure AD sign-in page should appear.
-
-    > [!NOTE]
-    >
-    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page depending on how the Autopilot profile was configured at the **Create and assign Autopilot profile** step.
-
 5. Once network connectivity has been established, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
 6. The Enrollment Status Page (ESP) should appear after signing in with the Azure AD credentials. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
