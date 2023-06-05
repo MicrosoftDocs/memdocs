@@ -36,7 +36,7 @@ You can use Remote Desktop Protocol (RDP) Shortpath for private networks with yo
 
 ## Requirements
 
-To use RDP Shortpath for public networks with Windows 365, you must meet these requirements:
+To use RDP Shortpath for private networks with Windows 365, you must meet these requirements:
 
 - Cloud PCs provisioned on the customer's private network. Private networks are supported with [Azure network connections](deployment-options.md). Microsoft hosted networks aren't supported.
 - Session Host (Cloud PC)
