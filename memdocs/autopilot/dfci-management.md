@@ -71,12 +71,12 @@ You can also [change existing DFCI settings](/intune/configuration/device-firmwa
 
 ## OEMs that support DFCI
 
-- [Microsoft Surface](/surface/surface-manage-dfci-guide)
 - Acer
 - Asus
-- Panasonic
-- Fujitsu
 - Dynabook
+- Fujitsu
+- [Microsoft Surface](/surface/surface-manage-dfci-guide)
+- Panasonic
 
 Other OEMs are pending.
 
