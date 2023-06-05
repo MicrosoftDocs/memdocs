@@ -42,9 +42,17 @@ Once all of the configurations for the Windows Autopilot user-driven deployment 
 
 [!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
 
-[!INCLUDE [Assignment tip](../includes/start-autopilot-deployment.md)]
+[!INCLUDE [Start Autopilot deployment](../includes/start-autopilot-deployment.md)]
+
+    > [!IMPORTANT]
+    >
+    > Make sure that the connected network has both connectivity to the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
 
 5. Once network connectivity has been established, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+
+    > [!IMPORTANT]
+    >
+    > Make sure the credentials entered in this screen are the **user's Azure AD credentials** and not the user's on-premises domain credentials.
 
 6. The Enrollment Status Page (ESP) should appear after signing in with the Azure AD credentials. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
@@ -61,6 +69,31 @@ Once all of the configurations for the Windows Autopilot user-driven deployment 
    > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
    > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
-7. Once **Account setup** and the user ESP process completes, the provisioning process completes, the ESP finishes, and the Desktop appears. At this point, the end-user can start using the device.
+7. When the **Account setup** phase of the ESP starts, the ESP will be temporarily dismissed and the Windows logon screen appears. At the Windows logon screen, sign in using the user's on-premises domain credentials.
+
+    > [!IMPORTANT]
+    >
+    > Make sure the credentials entered in this screen are the **user's on-premises domain credentials** and not the user's Azure AD credentials.
+
+8. Once the user signs in using their on-premises domain credentials, Windows will go through the initial user setup and sign-on screens. Once complete, the ESP reappears and the **Account setup** phase continues.
+
+9. If [Active Directory Federation Services (AD FS)](/windows-server/identity/active-directory-federation-services) isn't enabled on the on-premises domain:
+
+   1. An additional Azure AD sign-on windows will appear. If a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+
+        > [!IMPORTANT]
+        >
+        > Make sure the credentials entered in this screen are the **user's Azure AD credentials** and not the user's on-premises domain credentials.
+
+   2. After signing in using the Azure AD credentials, a **Stay signed in to all your apps** window appears. Make sure that **Allow my organization to manage my device** is selected and then select the **OK** button.
+
+   3. Once complete, an **You're all set!** window appears. Select the **Done** button to continue. The ESP will continue the **Account setup** phase.
+
+    > [!NOTE]
+    >
+    > The additional Azure AD sign-on windows won't appear if [Active Directory Federation Services (AD FS)](/windows-server/identity/active-directory-federation-services) is enabled on the on-premises domain.
+
+10. Once **Account setup** and the user ESP process completes, the provisioning process completes, and the ESP finishes.
+11. The Desktop appears. At this point, the end-user can start using the device.
 
 ## More information
