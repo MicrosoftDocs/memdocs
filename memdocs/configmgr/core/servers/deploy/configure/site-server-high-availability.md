@@ -288,7 +288,7 @@ When you remove any other site system role, the site component manager (`sitecom
 After you have removed passive site server role, **SMS Provider** role is not automatically removed and you cannot remove the server from Configuration Manager, because it still has a role. You need to start Configuration Manager Setup from the site server and select **Site Maintenance** to remove **SMS Provider** role. 
 
 > [!NOTE]
-> Tenant attach will use the first **SMS Provider** server in the site. If you don't remove **SMS Provider** role from the server, tenant attach will continue to use it even though the server doesn't have a site server role any more. -->
+> Tenant attach will use the first **SMS Provider** server in the site. If you don't remove the **SMS Provider** role from the server, tenant attach will continue to use it even though the server no longer has a site server role.
 
 ## Next steps
 
