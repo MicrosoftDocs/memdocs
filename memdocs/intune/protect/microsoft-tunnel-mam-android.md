@@ -255,59 +255,59 @@ The following are known issues or limitations for MAM Tunnel for Android.
 
 You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
-**Work around**: None.
+**Workaround**: None.
 
 ### Delivering trusted root certificates to Microsoft Edge on Android
 
 When unenrolled devices access resources protected by SSL/TLS certificates issued by an on-premises certificate authority (CA), the devices require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the on-premises endpoint (that is, web server, application web service). As a result, a browser (Microsoft Edge or third party browser), or application won't trust the endpoint without the necessary on-premises CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn't private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
 
-**Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use Microsoft Edge with Tunnel.
+**Workaround**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use Microsoft Edge with Tunnel.
 
 ### Line of business application using WebView and Intune SDK for Trusted root support, internal endpoints are unrenderable
 
-**Work around**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use LOB Apps with WebView on Tunnel.
+**Workaround**: Manually deploy and install the trusted root certificate on unenrolled Android devices that will use LOB Apps with WebView on Tunnel.
 
 ### Android fails to build the certificate chain when you use private certification authority
 
 When using WebView with [MAMCertTrustWebViewClient](https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/app/MAMCertTrustWebViewClient.html) in MAM to validate certificates, MAM delegates to Android to build a certificate chain from certificates provided by the admins and the server. If a server that uses private certificates provides the full chain to the connecting WebView but the admin deploys only the root certificate, Android may fail building the cert chain and will fail checking the server trust. This is because Android requires intermediate certificates to build the chain to an acceptable level.
 
-**Work around**: To ensure proper certificate validation, admins must deploy the root certificate and all intermediate certificates in Intune. If the root certificate along with all intermediate certificates are not deployed, Android can fail to build the certificate chain and fail to trust the server.
+**Workaround**: To ensure proper certificate validation, admins must deploy the root certificate and all intermediate certificates in Intune. If the root certificate along with all intermediate certificates are not deployed, Android can fail to build the certificate chain and fail to trust the server.
 
 ### Defender for Endpoint certificate error when using a TLS/SSL certificate from a private certificate authority
 
 When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
 
-**Work around**: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
+**Workaround**: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
 
 ### Microsoft Edge can't reach internal resources for a short time after being launched
 
 Immediately after Microsoft Edge opens, the browser attempts to connect to internal resources before successfully connecting to Tunnel. This behavior results in the browser reporting that the resource or destination URL is unavailable.
 
-**Work around**: Refresh the browser connection on the device. The resource becomes available after the connection to Tunnel is established.
+**Workaround**: Refresh the browser connection on the device. The resource becomes available after the connection to Tunnel is established.
 
 ### The three apps required to support Tunnel for unenrolled devices aren't visible in the Company Portal app on a device
 
 After Microsoft Edge, Microsoft Defender for Endpoint, and the Company Portal, are assigned to a device as *available with or without enrollment*, the targeted user can't find the apps in the Company Portal or at *portal.manage.microsoft.com*.
 
-**Work around**: Install all three apps manually from the Google Play store. You'll find links to all three apps on Google Play in this articles [Prerequisites](#prerequisites) section.
+**Workaround**: Install all three apps manually from the Google Play store. You'll find links to all three apps on Google Play in this articles [Prerequisites](#prerequisites) section.
 
 ### Error: "MSTunnel VPN is failed to start, contact your IT administrator for help"
 
 This error message can occur even though the tunnel is connected.
 
-**Work around**: This message can be ignored.
+**Workaround**: This message can be ignored.
 
 ### Error: Invalid Licensing, please contact administrator
 
 This error occurs when the version of Microsoft Defender for Endpoint doesn't support Tunnel.
 
-**Work around**: Install the supported version of Defender for Endpoint from [Microsoft Defender - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx&hl=en_US&gl=US&pli=1).
+**Workaround**: Install the supported version of Defender for Endpoint from [Microsoft Defender - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx&hl=en_US&gl=US&pli=1).
 
 ### Using multiple policies for Defender to configure different tunnel sites for different apps isn't supported
 
 Use of two or more app configuration policies for Microsoft Defender that specify different Tunnel Sites isn't supported and can result in a race condition that prevents successful use of Tunnel.
 
-**Work around**: Target each device with a single app configuration policy for Microsoft Defender, ensuring each unenrolled device is configured to use only one Site.
+**Workaround**: Target each device with a single app configuration policy for Microsoft Defender, ensuring each unenrolled device is configured to use only one Site.
 
 ### GCC High and FIPS support
 
