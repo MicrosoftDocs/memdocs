@@ -116,6 +116,7 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
    - *Per-App VPN (Android only)* is an optional setting. Select public or custom apps, to restrict the use of use the Tunnel VPN connection to these specified apps.
 
      > [!IMPORTANT]  
+     >
      > MAM Tunnel for Android doesn't support the use of *Always-on VPN*. When *Always-on VPN* is set to *Enable*, Tunnel does not connect successfully and sends connection failure notifications to the device user.
 
    - *Proxy* is an optional setting. Configure proxy settings to meet your on-premises network requirements.
