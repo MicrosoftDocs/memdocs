@@ -1094,9 +1094,6 @@ items:
             href: ./configuration/esim-device-configuration-download-server.md
           - name: eSIM bulk activation with activation codes
             href: ./configuration/esim-device-configuration.md
-        - name: Telecom expenses on Android, iOS/iPadOS
-          href: ./configuration/telecom-expenses-monitor.md
-          displayName: saaswedo datalert
 
       - name: Configuration profile settings lists
         items:
