@@ -120,7 +120,6 @@ The following Intune API permissions are available when adding an application th
   - **manage_partner_compliance_policy** - This API permission is used to manage partner compliance policies with Microsoft Intune. This API permission allows the app to send partner compliance policies and its Azure AD Group assignment to Microsoft Intune without a signed-in user. It is used by device compliance partners. For more information, see [Third party device compliance partners](../protect/device-compliance-partners.md).
   - **pfx_cert_provider** - This API permission is used to send PFX certificates to Intune for a specific user. Intune delivers the certificate to all devices enrolled by the user. For more information, see [PFX Import Powershell](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
   - **scep_challenge_provider** - This API permission is used to send SCEP challenges to Intune for certificate request validation. It is used by Certification Authority partners. For more information, see [Partner Certification Authority](../protect/certificate-authority-add-scep-overview.md).
-  - **send_data_usage** - This API permission is used to trigger policy changes for devices based on telecom expense management thresholds. It is used for telecom expense management partner integrations. For more information, see [Telecom expense management in Intune](../configuration/telecom-expenses-monitor.md).
   - **update_device_attributes** - This API permission is used to send device information to Intune from device compliance and mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md) and [Third party device compliance partners](../protect/device-compliance-partners.md).
   - **update_device_health** - This API permission is used to send device health and threat status information to Intune from mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
@@ -296,7 +295,6 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Apple Volume Purchase Program
   - Exchange Connector
   - Terms and Conditions
-  - Telecoms Expense Management
   - Cloud PKI
   - Branding
   - Mobile Threat Defense
@@ -314,7 +312,6 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Apple Volume Purchase Program
   - Exchange Connector
   - Terms and Conditions
-  - Telecoms Expense Management
   - Cloud PKI
   - Branding
   - Mobile Threat Defense
