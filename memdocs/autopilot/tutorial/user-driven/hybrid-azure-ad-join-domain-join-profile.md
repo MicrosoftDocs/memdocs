@@ -1,13 +1,13 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 9 - Create and assign a domain join profile
-description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 9 - Create and assign a domain join profile.
+title: Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 10 - Create and assign a domain join profile
+description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 8 of 10 - Create and assign a domain join profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/05/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -31,6 +31,7 @@ Autopilot user-driven hybrid Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 8: Configure and assign domain join profile**
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
+- Step 10: [Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
 For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
@@ -47,11 +48,10 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 > [!div class="nextstepaction"]
 > [Step 7: Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 
-> [!NOTE]
->
-> If you don't plan to assign a user to the device, at this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles that should run during Autopilot to the device group that the device is a member of. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
+If you don't plan to assign a user to the device, then skip to **[Step 10: Deploy the device](hybrid-azure-ad-join-deploy-device.md)**.
 
-[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
+> [!div class="nextstepaction"]
+> [Step 10: Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
 ## More information
 

@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 8 of 8 - Deploy the device
-description: How to - Windows Autopilot user-driven Azure AD join - Step 8 of 8 - Deploy the device.
+title: Windows Autopilot user-driven hybrid Azure AD join - Step 10 of 10 - Deploy the device
+description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 10 of 10 - Deploy the device.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,20 +18,23 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven Azure AD join: Deploy the device
 
-Autopilot user-driven Azure AD join steps:
-- Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md)
-- Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
-- Step 4: [Create a device group](azure-ad-join-device-group.md)
-- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
-- Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
-- Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+# User-driven hybrid Azure AD join: Deploy the device
+
+Autopilot user-driven hybrid Azure AD join steps:
+- Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
+- Step 2: [Install the Intune Connector](hybrid-azure-ad-join-intune-connector.md)
+- Step 3: [Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md)
+- Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
+- Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
+- Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
+- Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
+- Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
+- Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 > [!div class="checklist"]
-> - **Step 8: Deploy the device**
+> - **Step 10: Deploy the device**
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
 ## Deploy the device
 
