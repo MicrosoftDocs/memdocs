@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 06/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,8 @@ ms.collection:
 
 When you add Microsoft Tunnel for Mobile Application Management (MAM) to your tenant, you can use Microsoft Tunnel VPN Gateway with unenrolled Android devices to support MAM scenarios. With support for MAM, your unenrolled devices can use Tunnel to securely connect to your organization allowing users and apps safe access to your organizational data.
 
-Applies to:  
+Applies to:
+
 - Android Enterprise
 
 To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tunnel-configure.md) to support [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), you'll create and deploy three profiles that configure this support on your unenrolled devices:
@@ -83,11 +84,12 @@ To support using Tunnel for MAM, create and deploy the three profiles detailed i
 
 When all three are configured and deployed to the same groups, the app protection policy will automatically trigger Tunnel to connect to the VPN whenever Microsoft Edge is launched.
 
-In addition, you can configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). 
+In addition, you can configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA).
 
 ### App configuration policy for Microsoft Defender
 
 Create an App configuration policy to configure Microsoft Defender for Endpoint on the device for use as the tunnel client app.
+
 > [!NOTE]
 > Ensure only a single Defender app configuration policy targets the unenrolled device. Targeting more than 1 app configuration policy with different tunnel settings for Defender for Endpoint will create tunnel connection issues on the device.
 
@@ -111,10 +113,15 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
 
    - For *Site Name*, select an available site, and then click **OK**.
 
-   - *Per-App VPN (Android only)* is an optional setting.  Select public or custom apps, to restrict the use of use the Tunnel VPN connection to these specified apps.
-   - *Proxy* is an optional setting.  Configure proxy settings to meet your on-premises network requirements.  
+   - *Per-App VPN (Android only)* is an optional setting. Select public or custom apps, to restrict the use of use the Tunnel VPN connection to these specified apps.
+
+     > [!IMPORTANT]  
+     > MAM Tunnel for Android doesn't support the use of *Always-on VPN*. When *Always-on VPN* is set to *Enable*, Tunnel does not connect successfully and sends connection failure notifications to the device user.
+
+   - *Proxy* is an optional setting. Configure proxy settings to meet your on-premises network requirements.
+
      > [!NOTE]  
-     > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
+     > Proxy server configurations are not supported with versions of Android prior to version 10. For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
    When ready, select **Next** to continue.
 
@@ -153,7 +160,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
    You can also use this same policy to configure other configurations for Microsoft Edge in the *Microsoft Edge configuration settings* category. After any additional configurations for Microsoft Edge are ready, select **Next**.
 
-4. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure Active Directory groups that will receive this policy.   After configuring groups, select **Next**.
+4. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure Active Directory groups that will receive this policy. After configuring groups, select **Next**.
 
 5. On the *Review + Create* tab, select **Create** to complete creation of the policy and deploy the policy to the assigned groups.
 
@@ -164,7 +171,7 @@ The new policy will appear in the list of App configuration policies.
 Create an app protection policy to automatically start the Microsoft Tunnel VPN connection when the app is launched.
 
 > [!NOTE]  
-> When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the on-premises network routes available via the Microsoft Tunnel Gateway.  If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings.
+> When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the on-premises network routes available via the Microsoft Tunnel Gateway. If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **App protection policies** > **Create policy** > **Android**.
 
@@ -197,7 +204,7 @@ For more information about adding custom apps to policies, see the following art
 - [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md)
 - [How to create and assign app protection policies](../apps/app-protection-policies.md)
 
-To support LOB apps on your unenrolled devices, the apps must deploy as *available apps*  from within Microsoft Intune admin center. You can't use Intune to deploy apps as required apps to unenrolled devices.
+To support LOB apps on your unenrolled devices, the apps must deploy as *available apps* from within Microsoft Intune admin center. You can't use Intune to deploy apps as required apps to unenrolled devices.
 
 ### Use a trusted certificate profile
 
@@ -225,7 +232,7 @@ If your application requires SSL/TLS certificates issued by an on-premise or pri
 During configuration of the app configuration profile for an app that will use Tunnel for MAM, select the certificate profile that will be used:
 
 1. On the *Settings* tab of your app configuration profile, expand *Microsoft Tunnel for Mobile Application Management settings*.
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-certificates.png" alt-text="View of the Tunnel settings in an app configuration policy."  lightbox="./media/microsoft-tunnel-mam-android/settings-certificates.png":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-android/settings-certificates.png" alt-text="View of the Tunnel settings in an app configuration policy." lightbox="./media/microsoft-tunnel-mam-android/settings-certificates.png":::
 
 1. Configure the following options:
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
@@ -233,7 +240,7 @@ During configuration of the app configuration profile for an app that will use T
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven't configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
    1. If your app requires a trusted certificate, select **Root Certificate** to open the *Select Root Certificates* pane, and then select a trusted certificate profile to use.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the root certificate selectino pane."  lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-android/select-root-certificate.png" alt-text="View of the root certificate selectino pane." lightbox="./media/microsoft-tunnel-mam-android/select-root-certificate.png":::
 
    For information about configuring root certificate profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
 
@@ -249,7 +256,6 @@ You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunn
 
 **Work around**: None.
 
-<!-- restored for review: How does this change now that trusted certs are supported? -->
 ### Delivering trusted root certificates to Microsoft Edge on Android
 
 When unenrolled devices access resources protected by SSL/TLS certificates issued by an on-premises certificate authority (CA), the devices require the trusted certificate public keychain of the issuing CA to establish a chain of trust with the on-premises endpoint (that is, web server, application web service). As a result, a browser (Microsoft Edge or third party browser), or application won't trust the endpoint without the necessary on-premises CA keychain (trusted cert). For example, Microsoft Edge reports that the connection isn't private or is untrusted, and SSL or https connections aren't available. Users can ignore this warning and connect to the endpoint.
@@ -267,11 +273,10 @@ When using WebView with [MAMCertTrustWebViewClient](https://msintuneappsdk.githu
 **Work around**: To ensure proper certificate validation, admins must deploy the root certificate and all intermediate certificates in Intune. If the root certificate along with all intermediate certificates are not deployed, Android can fail to build the certificate chain and fail to trust the server.
 
 ### Defender for Endpoint certificate error when using a TLS/SSL certificate from a private certificate authority
+
 When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
 
 **Work around**: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
-
-<!--end of review section -->
 
 ### Microsoft Edge can't reach internal resources for a short time after being launched
 
