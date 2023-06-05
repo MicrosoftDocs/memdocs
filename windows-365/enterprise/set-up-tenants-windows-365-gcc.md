@@ -59,7 +59,7 @@ For both tenant mapping and granting permissions for custom images and/or connec
     - *Owner* role in your Azure Government subscription, AND
     - *Global Administrator* role in your Azure Government tenant (ending in onmicrosoft.us).
 - To meet [Licensing requirements](/windows-365/enterprise/requirements?tabs=government%2Cent#licensing-requirements).
-- (If applicable) The following information to apply permissions to setup the Azure network connection. The virtual network and subnet must already exist.
+- (If applicable) The following information to apply permissions to set up the Azure network connection. The virtual network and subnet must already exist.
     - Subscription ID.
     - Resource Group.
     - Virtual Network.
@@ -104,7 +104,7 @@ If you have issues running the Windows 365 GCC Setup Tool:
 
 The Windows 365 GCC Setup Tool can be run again after the initial setup. You might want to use the GCC Setup Tool again if you:
 
-- Didn't setup ANCs before, or
+- Didn't set up ANCs before, or
 - Want to expand the use of ANCs to other networks.
 
 #### Script alternative
