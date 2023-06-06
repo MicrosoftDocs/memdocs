@@ -276,7 +276,7 @@ These settings use the [experience policy CSP](/windows/client-management/mdm/po
 
 - **Internet sharing**: **Block** prevents Internet connection sharing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Phone reset**: **Block** prevents users from wiping or doing a factory reset on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **USB connection**: **Block** prevents access to syncing files through a USB connection or using developer tools on an HoloLens device. Changing this policy doesn't affect USB charging. When set to **Not configured** (default), Intune doesn't change or update this setting. USB charging isn't affected by this setting.
+- **USB connection**: **Block** prevents access to syncing files through a USB connection or using developer tools on a HoloLens device. Changing this policy doesn't affect USB charging. When set to **Not configured** (default), Intune doesn't change or update this setting. USB charging isn't affected by this setting.
 
   [Connectivity/AllowUSBConnection CSP](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 
@@ -679,7 +679,7 @@ For information about recent changes for Windows Telemetry, see [Changes to Wind
   - **Not configured**: (default): Intune doesn't change or update this setting. No setting is forced. Users choose the level that's submitted. By default, the OS might not share any data.
   - **Diagnostic data off**: (Not recommended). Review the *CSP System/AllowTelemetry* for details about this setting.
   - **Required**: Sends basic device information, including quality-related data, app compatibility, and other similar data to keep the device secure and up-to-date.
-  - **Enhanced (1903 and earlier)**: Additional insights, including how Windows, Windows Server, System Center, and apps are used, how they perform, advanced reliability data, and data from the *Required* level. When this option is deployed to a device that run Windows 1909 and later, the device is set to *Required*.
+  - **Enhanced (1903 and earlier)**: Additional insights, including how Windows, Windows Server, System Center, and apps are used, how they perform, advanced reliability data, and data from the *Required* level. When this option is deployed to a device that runs Windows 1909 and later, the device is set to *Required*.
   - **Optional**: All data necessary to identify and help to fix problems, plus data from the *Required* and *Enhanced* level.
 
   [System/AllowTelemetry CSP](/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
