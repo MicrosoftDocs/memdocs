@@ -12,7 +12,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-<!-- This include file is used in the VPN settings lists for all platforms in /configuration. -->
+<!-- This include file is used in the VPN settings lists for all platforms in /configuration. 5.18.2023 - mandia: MS Tunnel doesn't apply to macOS.-->
 
 Some Microsoft 365 services, such as Outlook, may not perform well using third party or partner VPNs. If you're using a third party or partner VPN, and experience a latency or performance issue, then remove the VPN.
 
@@ -26,5 +26,5 @@ For more information, go to:
 
 - [Overview: VPN split tunneling for Microsoft 365](/microsoft-365/enterprise/microsoft-365-vpn-split-tunnel)
 - [Using third-party network devices or solutions with Microsoft 365](/office365/troubleshoot/miscellaneous/office-365-third-party-network-devices)
-- [Alternative ways for security professionals and IT to achieve modern security controls in today’s unique remote work scenarios blog](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
+- [Alternative ways for security professionals and IT to achieve modern security controls in today's unique remote work scenarios blog](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
 - [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles)
