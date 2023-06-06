@@ -69,7 +69,6 @@ In this tutorial, we'll set up an Intune [app protection policy](../apps/app-pro
 
 4. The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. Configure the following options:
 
-   - For **Target to all app types**: Select **No**, and then for **App types**, select the checkbox for **Apps on unmanaged devices**.
    - Click **Select public apps**. In the Apps list, select **Microsoft Outlook**, and then choose **Select**. Microsoft Outlook now appears under *Public apps*.
 
    Click **Next** to continue.
