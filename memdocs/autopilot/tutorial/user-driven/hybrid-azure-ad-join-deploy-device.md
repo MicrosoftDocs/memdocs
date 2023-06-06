@@ -38,7 +38,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 ## Deploy the device
 
-Once all of the configurations for the Windows Autopilot user-driven deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to the device group that the device is a member of.
+Once all of the configurations for the Windows Autopilot user-driven hybrid Azure AD join deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to the device group that the device is a member of.
 
 [!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
 

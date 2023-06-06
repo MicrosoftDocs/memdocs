@@ -46,7 +46,7 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 ## Next step: Assign Autopilot device to a user (optional)
 
 > [!div class="nextstepaction"]
-> [Step 7: Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
+> [Step 9: Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 
 If you don't plan to assign a user to the device, then skip to **[Step 10: Deploy the device](hybrid-azure-ad-join-deploy-device.md)**.
 
