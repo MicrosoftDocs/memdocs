@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 06/06/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -218,10 +218,12 @@ These settings use the [EnterpriseCloudPrint policy CSP](/windows/client-managem
 
       [Settings policy CSP](/windows/client-management/mdm/policy-csp-settings)
 
-  - **Gaming**: **Block** prevents access to the Gaming area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
+  - **Gaming**: When set to **Block**, this setting:
+  
+    - Prevents access to the **Settings** app > **Gaming** area on the device. 
+    - On Windows 11 22H2 and later, it hides the **Settings** app > **System** > **Notifications** area on the device. Specifically, it adds the `ms-settings:quietmomentsgame` page to the [Settings/PageVisibilityList CSP](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist).
 
-    > [!WARNING]
-    > On Windows 11 22H2 and later, this setting will hide the whole Notifications page under the System category of the Settings app, as it adds `ms-settings:quietmomentsgame` page to [Settings/PageVisibilityList CSP](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist).
+    When set to **Not configured** (default), Intune doesn't change or update this setting.
     
   - **Ease of Access**: **Block** prevents access to the Ease of Access area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
   - **Privacy**: **Block** prevents access to the Privacy area of the Settings app on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
