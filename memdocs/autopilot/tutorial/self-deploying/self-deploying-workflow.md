@@ -57,6 +57,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 3: [Create a device group](self-deploying-device-group.md)
 > - Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
 > - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
+> - Step 6: [Deploy the device](self-deploying-deploy-device.md)
 
 > [!NOTE]
 >

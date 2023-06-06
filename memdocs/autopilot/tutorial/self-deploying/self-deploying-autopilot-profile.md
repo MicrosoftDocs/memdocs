@@ -27,6 +27,7 @@ Autopilot self-deploying mode steps:
 - Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
 > [!div class="checklist"]
 > - **Step 5: Create and assign Autopilot profile**
+- Step 6: [Deploy the device](self-deploying-deploy-device.md)
 
 For an overview of the Windows Autopilot self-deploying mode workflow, see [Windows Autopilot self-deploying overview](self-deploying-workflow.md#workflow)
 
@@ -83,13 +84,8 @@ To create a self-deploying mode Autopilot profile, follow these steps:
 
 ## Next step: Deploy the device
 
-At this point, the device is ready to be deployed. If desired, deploy any additional applications, policies, and profiles to the device group that the device is a member of which should run during Autopilot. Boot the device with a fresh install of Windows and the Autopilot deployment should begin.
-
-[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
-
-> [!NOTE]
->
-> Although a user isn't assigned to a device for Windows Autopilot self-deploying mode, for testing purposes, assigning at least one policy and at least one application to users is still recommended since User ESP still runs when a user first signs into the device.
+> [!div class="nextstepaction"]
+> [Step 6: Deploy the device](self-deploying-deploy-device.md)
 
 ## More information
 
