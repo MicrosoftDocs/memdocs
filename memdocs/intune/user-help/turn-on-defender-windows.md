@@ -33,9 +33,9 @@ ms.collection:
 
 # Turn on Microsoft Defender Antivirus to access company resources  
 
-Organizations want to ensure that devices accessing their resources are secured, so they may require you to use Microsoft Defender Antivirus and additional Windows Security features. Microsoft Defender Antivirus is an antivirus software that's included in Windows and can help protect your device from viruses, malware, and other threats. 
+Organizations want to ensure that devices accessing their resources are secured, so they may require you to use Microsoft Defender Antivirus and additional Windows Security features. Microsoft Defender Antivirus is an antivirus software that's included in Windows and can help protect your device from viruses, malware, and other threats while you're using it for work.  
 
-This article describe how to update your device settings to meet your organization's antivirus requirements and resolve access problems. 
+This article describes how to update your device settings to meet your organization's antivirus requirements and resolve access problems on your enrolled device. 
 
 ## Turn on Microsoft Defender Antivirus
 Complete the following steps to turn on Microsoft Defender Antivirus on your device. 
