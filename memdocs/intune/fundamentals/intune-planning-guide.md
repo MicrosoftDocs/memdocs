@@ -36,7 +36,7 @@ A successful Microsoft Intune deployment or migration starts with planning. This
 
 Intune gives organizations options to do what's best for them and the many different user devices. You can enroll devices in Intune for mobile device management (MDM) of Android, iOS/iPadOS, Linux, macOS, and Windows devices. You can also use app protection policies for mobile application management (MAM) that focuses on protecting app data.
 
-:::image type="content" source="./media/migration-guide/MDM-migration-guide-art.PNG" alt-text="Image shows the different steps to migration or move to Microsoft Intune.":::
+INSERT IMAGE
 
 This guide also:
 
