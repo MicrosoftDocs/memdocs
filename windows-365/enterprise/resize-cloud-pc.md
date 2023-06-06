@@ -67,7 +67,7 @@ Resizing isn’t supported for Cloud PCs provisioned through group-based license
 
 Resizing is only supported for Gen 2 Cloud PCs. If you try resizing a Gen 1 Cloud PC, the resize will no start and you will be notified that this happened due to the user having a Gen 1 Cloud PC. Reprovision the Gen 1 Cloud PC to convert it to a Gen 2 Cloud PC
 
-Downsizing from a 8vCPU Cloud PC that supports nested virtualization will disable nested virtualization support. Nested virtualization is only supported on 8vCPU Cloud PCs. 
+Downsizing may impact support for nested virtualization. For more information, see [Set up virtualization-based workloads support](nested-virtualizaiton.md).
 
 ## Resize a Cloud PC
 
