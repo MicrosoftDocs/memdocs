@@ -1652,6 +1652,9 @@ items:
     items: 
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
+    - name: Frontline worker (FLW)
+      displayName: android, ios, ipados
+      href: ./fundamentals/frontline-worker-overview.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
