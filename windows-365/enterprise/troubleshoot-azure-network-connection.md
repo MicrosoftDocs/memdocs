@@ -118,8 +118,6 @@ If this test fails, make sure that:
 
 This check is used for many infrastructure related issues that might be related to infrastructure that customers are responsible for. It can include errors such as internal service time outs or errors caused by customers deleting/changing Azure resources while checks are being run.  
 
-Sometimes, these service errors are intermittent and a retry will complete successfully. Other times there’s no further troubleshooting that can be performed without the help of support.  
-
 We suggest you retry the checks if you encounter this error. If it persists, contact support for help.  
 
 ## First party app permissions
