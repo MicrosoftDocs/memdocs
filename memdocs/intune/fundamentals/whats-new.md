@@ -237,6 +237,10 @@ Applies to:
 - Windows 11
 
 #### Create inbound and outbound network traffic rules for VPN profiles on Windows devices<!-- 17943658 -->  
+
+> [!NOTE]
+> This setting is coming in a future release, possibly the 2307 Intune release.
+
 You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
 
 In this VPN connection, you can use the **Apps and Traffic rules** settings to create network traffic rules.
