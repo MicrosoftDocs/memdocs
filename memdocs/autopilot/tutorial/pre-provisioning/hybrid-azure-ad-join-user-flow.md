@@ -103,7 +103,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
       > [!NOTE]
       >
-       Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using Active Directory Federation Services (ADFS) and single sign-on (SSO). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
+       Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
 
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 
