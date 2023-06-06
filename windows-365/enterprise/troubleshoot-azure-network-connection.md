@@ -98,7 +98,7 @@ This test attempts to resolve the domain name provided. For example, contoso.com
 - The subnet/vNet is routed correctly so that the Cloud PC can reach the DNS server provided.  
 - The Cloud PCs/virtual machines in the declared subnet can NSLOOKUP on the DNS server, and it responds with internal names.
 
-Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure tht these records are accessible through the vNet provided in your Azure network connection.
+Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure that these records are accessible through the vNet provided in your Azure network connection.
 
 ## Endpoint connectivity
 
