@@ -104,7 +104,7 @@ To install the script directly and capture the hardware hash from the local comp
    - WMI permissions are in place.
    - WMI is accessible through Windows Firewall on the remote computer.
 
-2. While OOBE is running, you can start uploading the hardware hash by opening a command prompt (Shift+F10 at the sign-in prompt), running the `Powershell` command, and then using the following commands:
+2. While OOBE is running, you can start uploading the hardware hash by opening a command prompt (Shift+F10 at the sign-in prompt), running the `PowerShell` command in the command prompt that opens, and then using the following PowerShell commands:
 
    ```powershell
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
