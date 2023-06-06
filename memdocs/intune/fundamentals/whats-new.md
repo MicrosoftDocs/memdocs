@@ -87,7 +87,7 @@ Applies to:
 
 - Android Enterprise 11.0 and newer
 
-## Week of May 30, 2023  
+## Week of May 29, 2023  
 
 
 ### Device management
