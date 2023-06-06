@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android and iOS/
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 06/06/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -228,7 +228,7 @@ This section focuses on Shared iPads used by frontline workers, including decisi
 
 If you're not using Shared iPads, then you can skip this section.
 
-#### Step 1 - Use Automated Device Enrollment (ADE) with Shared iPad
+#### Step 1 - Use Automated Device Enrollment (ADE), enable Shared iPad, and choose a temporary session type
 
 For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile**. ADE syncs the devices from Apple Business Manager or Apple School Manager.
 
@@ -236,34 +236,34 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
 1. **Enroll without user affinity**: This option doesn't associate the devices with a specific user. This option is required for Shared iPads.
 2. **Shared iPad**: This option enables Shared iPad on the device, and is required. It allows many users to sign in.
+3. **Require Shared iPad temporary session**: This setting determines if the Shared iPads will be used for guest access or partitioned user access.
 
+    - **Guest access**
 
+      **Yes** enables temporary sessions. Users sign in to the device as a guest. They don't enter a Managed Apple ID or password. All user data, login info, including browsing history, is deleted when the user signs out of the session.
 
-For more information on ADE enrollment, and to get started, go to [Set up automated device enrollment in Intune](../enrollment/device-enrollment-program-enroll-ios.md).
+      For example, in healthcare, a medical patient is assigned a shared iPad to check in or fill out forms.
 
-#### Step 2 - Guest access or Partitioned user access
+    - **Partitioned user access**
 
-The next decision is to determine if the Shared iPads will be used for guest access or partitioned user access.
+      **Not configure** uses partitioned user access. Use this option when an iPad is used by many users at different times. Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad.
 
-- **Guest access**
+      When the user signs out, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
 
-  Use this option for temporary sessions whers users sign into the device as a guest. They don't enter a Managed Apple ID or password. All user data, login info, including browsing history, is deleted when the user signs out of the session.
+      The number of users that can sign in also varies by the amount of storage on the device. So, it's recommended to plan accordingly and configure the enrollment profile to accommodate your needs.
 
-  For example, in healthcare, a medical patient is assigned a shared iPad to check in or fill out forms.
+You Shared iPad enrollment policy looks similar to the following policy:
 
-- **Partitioned user access**
+:::image type="content" source="./media/frontline-worker-overview/shared-ipad-ade-enrollment-policy.png" alt-text="Screenshot that shows Automated Device Enrollment (ADE) policy, Shared iPad enabled, and temporary sessions for Shared iPadOS frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/shared-ipad-ade-enrollment-policy.png":::
 
-  Use this option when an iPad is used by many users at different times. Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad.
+For more information on these features, and to get started, go to:
 
-  When the user signs out, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
+- [Set up automated device enrollment in Intune](../enrollment/device-enrollment-program-enroll-ios.md)
+- [Set up Shared iPad in Intune](../enrollment/device-enrollment-shared-ipad.md)
 
-  The number of users that can sign in also varies by the amount of storage on the device. So, it's recommended to plan accordingly and configure the enrollment profile to accommodate your needs.
+#### Step 2 - Home screen layout and device experience
 
-For more information on these options, go to [Set up Shared iPad in Intune](../enrollment/device-enrollment-shared-ipad.md).
-
-#### Step 3 - Home screen layout and device experience
-
-So far, you're using ADE enrollment and determined access. Next, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
+Next, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
 In Intune, you can create device configuration profiles that configure the home screen and run apps in kiosk mode.
 
@@ -276,6 +276,11 @@ For a list of all the device configuration settings, go to:
 
 ## Windows
 
+Windows has different devices and cloud services that can be used for frontline workers. They're also used globally and in many industries. This section focuses on Windows used by frontline workers. It includes decisions admins need to make, including determining how the device is used, and configuring the home screen & device experience.
+
+Windows kiosk: /configuration/kiosk-settings.md
+Windows shared: /configuration/shared-user-device-settings.md
+
 Windows 365 frontline
 cloud PC
 
@@ -283,6 +288,5 @@ cloud PC
 - https://learn.microsoft.com/windows-365/enterprise/introduction-windows-365-frontline
 
 ## Other MSFT services that do FLW
-
 
 ## Next steps
