@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Turn on Microsoft Defender Antivirus | Microsoft Docs
-description: Learn how to turn on Microsoft Defender Antivirus to access company resources.
+title: Turn on Microsoft Defender Antivirus on enrolled device | Microsoft Docs
+description: Learn how to turn on Microsoft Defender Antivirus to access company resources on an Intune-enrolled device. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 06/06/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -71,7 +71,8 @@ Complete the following steps to update your antivirus definitions.
 1. Select the **Start** menu.
 2. In the search bar, type **Windows Security**. Select the matching result. 
 3. Select **Virus & threat protection**.
-4. Under **Virus & threat protection updates**, select **Check for updates**. If you don't see this option on your screen, complete the first set of steps in [Turn on Real-time Protection](turn-on-defender-windows.md#turn-on-real-time-and-cloud-delivered-protection). Then try checking for updates again. 
+4. Under **Virus & threat protection updates**, select **Protection updates**.  
+5. Select **Check for updates**. If you don't see this option on your screen, complete the first set of steps under [Turn on real-time and cloud-delivered protection](turn-on-defender-windows.md#turn-on-real-time-and-cloud-delivered-protection). Then try checking for updates again. 
 
 ## Next steps  
 
