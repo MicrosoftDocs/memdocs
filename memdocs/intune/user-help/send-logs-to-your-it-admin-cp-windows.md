@@ -45,7 +45,7 @@ Complete the following steps to report a problem you're experiencing in-app or d
 2. Select **Help & support** > **Upload logs & contact support**.  
    
    > [!Note]	  
-   > After you click **Upload logs & contact support**, the Company Portal will  sends your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
+   > After you click **Upload logs & contact support**, the Company Portal will send your logs to Microsoft's support team. This step is a proactive one that makes it easier to troubleshoot and resolve problems that are escalated to Microsoft support. 
 
 3. When prompted to choose a program, select the Mail app or another preferred email app.   
    
