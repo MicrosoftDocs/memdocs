@@ -1,6 +1,16 @@
 {
     "redirections": [
         { 
+            "source_path": "memdocs/intune/user-help/enroll-your-device-with-telecom-expense-management-ios.md",
+            "redirect_url": "/mem/intune/user-help",
+            "redirect_document_id": false
+         },
+        { 
+            "source_path": "memdocs/intune/user-help/enroll-your-device-with-telecom-expense-management-android.md",
+            "redirect_url": "/mem/intune/user-help",
+            "redirect_document_id": false
+         },
+        { 
             "source_path": "memdocs/intune/configuration/telecom-expenses-monitor.md",
             "redirect_url": "/mem/intune/fundamentals/whats-new",
             "redirect_document_id": false
