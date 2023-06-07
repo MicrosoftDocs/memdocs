@@ -134,7 +134,7 @@ Pausing for more than a few minutes during enrollment might cause the Company Po
 10. You'll know that setup is complete when all items in the list show a green checkmark. Tap **Done**.   
 
 > [!Note]
-> If your organization monitors voice and data limits, or provides you with a company-owned device, you might have a few more steps to complete. If you're prompted to install the **Datalert** app, see [enrolling your device in telecom expense management](enroll-your-device-with-telecom-expense-management-ios.md). If your organization is part of Apple's Device Enrollment Program, find out [how to enroll your company-owned device](enroll-your-device-dep-ios.md).  
+> If your organization monitors voice and data limits, or provides you with a company-owned device, you might have a few more steps to complete. If your organization is part of Apple's Device Enrollment Program, find out [how to enroll your company-owned device](enroll-your-device-dep-ios.md).  
 
 ### Secure work-related apps and data  
 1. The **Download Microsoft Authenticator** screen appears (if you already have Authenticator, you won't see this screen so skip to step 2).  
