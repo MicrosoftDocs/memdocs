@@ -59,7 +59,7 @@ For this example, you'll configure MDM enrollment settings so that both corporat
 > [!IMPORTANT]
 > For Windows BYOD devices, the MAM user scope takes precedence if both the MAM user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users or the same groups of users. The device will not be MDM enrolled, and Microsoft Purview Information Protection policies will apply if you configured them.  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **Mobility (MDM and MAM)**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **All services** > **M365 Azure Active Directory** > **All services** > **Azure Active Directory** > **Mobility (MDM and MAM)**.  
 2. Select **Get a free Premium trial to use this feature**. Selecting this option will allow auto enrollment using the Azure Active Directory free Premium trial. 
 
     ![Screenshot highlighting the Premium trial banner for the Azure Active Directory free Premium trial in the Azure AD admin center.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
