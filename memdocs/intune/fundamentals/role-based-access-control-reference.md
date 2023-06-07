@@ -37,7 +37,8 @@ The following tables lists the built-in roles for Microsoft Intune. The tables a
 
 
 <!-- 
-# Save the below .ps1 file, which can be used to generate the markdown when permissions change or new roles are added:
+# Save the below .ps1 file, which can be used to generate the markdown when permissions change or new roles are added
+# ISE tends to popup the authentication better for Connect-MSGraph cmdlet
 
 ## Start of script
 # Import the required modules
