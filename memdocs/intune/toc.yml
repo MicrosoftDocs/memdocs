@@ -414,8 +414,8 @@ items:
                   href: ./apps/configure-microsoft-launcher.md
                 - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
-                - name: Configure Microsoft Edge for Windows
-                  href: ./apps/manage-edge-mam-windows.md                  
+                - name: Configure Microsoft Edge Windows MAM
+                  href: ./apps/configure-edge-mam-windows.md                  
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
                 - name: Configure Outlook
@@ -449,7 +449,7 @@ items:
                 - name: Data protection framework using app protection policies
                   href: ./apps/app-protection-framework.md
                 - name: MAM data protection for Windows apps
-                  href: ./apps/microsoft-edge-mam-windows.md                  
+                  href: ./apps/protect-edge-mam-windows.md                  
                 - name: Create app protection policies
                   items:
                   - name: General settings
@@ -459,7 +459,7 @@ items:
                     href: ./apps/app-protection-policy-settings-android.md
                   - name: iOS settings
                     href: ./apps/app-protection-policy-settings-ios.md
-                  - name: Windows settings for Microsoft Edge
+                  - name: Microsoft Edge setting for Windows apps
                     href: ./apps/app-protection-policy-settings-windows.md                    
                   - name: Conditional launch
                     href: ./apps/app-protection-policies-access-actions.md

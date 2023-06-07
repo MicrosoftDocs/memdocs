@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows app protection policy settings
+title: Windows app protection policy settings 
 titleSuffix: Microsoft Intune
 description: This topic describes the Windows app protection policy (APP) settings for Windows devices.
 keywords:
