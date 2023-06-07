@@ -33,7 +33,7 @@ ms.collection:
 ms.custom: intune-azure
 ---
 
-# MAM data protection for Windows apps
+# Data protection for Windows MAM
 <!-- Use Mobile Application Management for Microsoft Edge on unmanaged Windows  -->
 
 You can enable protected Mobile Application Management (MAM) access to org data via Microsoft Edge on personal Windows devices. This capability uses the following functionality:
