@@ -35,6 +35,106 @@ The following tables lists the built-in roles for Microsoft Intune. The tables a
 > [!NOTE]
 > This article was partially created with the help of artificial intelligence. Before publishing, an author reviewed and revised the content as needed. See [Our principles for using AI-generated content in Microsoft Learn](https://aka.ms/ai-content-principles).
 
+
+<!-- 
+# Save the below .ps1 file, which can be used to generate the markdown when permissions change or new roles are added:
+
+## Start of script
+# Import the required modules
+Install-Module Microsoft.Graph.Intune -ErrorAction SilentlyContinue
+Import-Module Microsoft.Graph.Intune -ErrorAction SilentlyContinue
+
+# Connect to Microsoft Graph
+$GraphCredentials = Connect-MSGraph
+
+# Retrieve the role definitions and permissions
+$RoleDefinitions = Get-DeviceManagement_RoleDefinitions
+$ResourceOperations = Get-DeviceManagement_ResourceOperations
+
+# Create an array to store the role details
+$Roles = @()
+
+# Iterate through each role definition
+foreach ($RoleDefinition in $RoleDefinitions) {
+    $RoleName = $RoleDefinition.displayName
+    $RoleDescription = $RoleDefinition.description
+
+    # Create an array to store the permission details for the role
+    $RolePermissions = @()
+
+    # Retrieve the permissions for the role
+    $Permissions = $RoleDefinition.RolePermissions.resourceActions.allowedResourceActions
+
+    # Iterate through each permission
+    foreach ($Permission in $Permissions) {
+        # Find the corresponding resource operation
+        $ResourceOperation = $ResourceOperations | Where-Object { $_.id -eq $Permission }
+
+        # Retrieve the permission and action details
+        $PermissionName = $ResourceOperation.resourceName
+        $Action = $ResourceOperation.actionName
+
+        # Create the permission object
+        $PermissionObject = [PSCustomObject]@{
+            Permission = $PermissionName
+            Action = $Action
+        }
+
+        $RolePermissions += $PermissionObject
+    }
+
+    # Create the role object with permissions
+    $RoleObject = [PSCustomObject]@{
+        Role = $RoleName
+        Description = $RoleDescription
+        Permissions = $RolePermissions | Sort-Object Permission
+    }
+
+    $Roles += $RoleObject
+}
+
+# Create the markdown file
+$MarkdownFilePath = "C:\Temp\IntuneRolePermissions.md"
+
+# Generate the markdown content
+$MarkdownContent = @"
+# Intune Role Permissions
+
+This document lists the roles and associated permissions in Microsoft Intune.
+
+## Roles
+
+"@
+
+foreach ($Role in $Roles) {
+    $RoleName = $Role.Role
+    $RoleDescription = $Role.Description
+
+    $MarkdownContent += "## $RoleName`n"
+    $MarkdownContent += "$RoleDescription`n"
+
+    $MarkdownContent += "| Permission | Action |`n"
+    $MarkdownContent += "| ---------- | ------ |`n"
+
+    foreach ($Permission in $Role.Permissions) {
+        $PermissionName = $Permission.Permission
+        $Action = $Permission.Action
+
+        $MarkdownContent += "| $PermissionName | $Action |`n"
+    }
+
+    $MarkdownContent += "`n"
+}
+
+# Save the markdown content to the file
+$MarkdownContent | Out-File -FilePath $MarkdownFilePath
+
+Write-Host "Markdown file has been generated at: $MarkdownFilePath"
+
+## End of script
+
+ -->
+
 ## Application Manager
 
 Application Managers manage mobile and managed applications, can read device information and can view device configuration profiles.
