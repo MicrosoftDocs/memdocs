@@ -87,7 +87,7 @@ Applies to:
 
 - Android Enterprise 11.0 and newer
 
-## Week of May 30, 2023  
+## Week of May 29, 2023  
 
 
 ### Device management
@@ -144,6 +144,15 @@ MAM reporting has been simplified and overhauled, and now uses Intune's newest r
 The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. For more information, see [Quiet time notification policies](../apps/app-office-policies.md#quiet-time-notification-policies).
 
 ### Device configuration
+
+#### Introducing enhanced chat in Remote Help<!-- 10602997 -->
+
+Introducing enhanced chat with Remote Help. With the new and enhanced chat you can maintain a continuous thread of all messages. This chat provides support for special characters and additional languages including Chinese and Arabic.
+
+For more information on Remote Help, go to [Remote Help](../fundamentals/remote-help.md).
+
+Applies to:
+Windows 10/11 
 
 #### Remote Help administrators can reference audit log sessions<!-- 9052185  -->  
 For Remote Help, in addition to existing session reports, administrators can now reference audit logs sessions created in Intune. This feature enables administrators to reference past events for troubleshooting and analyzing log activities.
@@ -237,6 +246,10 @@ Applies to:
 - Windows 11
 
 #### Create inbound and outbound network traffic rules for VPN profiles on Windows devices<!-- 17943658 -->  
+
+> [!NOTE]
+> This setting is coming in a future release, possibly the 2307 Intune release.
+
 You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
 
 In this VPN connection, you can use the **Apps and Traffic rules** settings to create network traffic rules.

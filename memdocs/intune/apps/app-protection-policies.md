@@ -78,12 +78,10 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Click **Next** to display the **Apps** page.  \
-    The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.
+    The **Apps** page allows you to choose which apps should be targeted by this policy. You must add at least one app.
 
     | Value/Option | Description |
     |:-------------|:-----------------------------------------------|
-    | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No** to target apps on specific devices types. For information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
-    |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
     | Target policy to | In the **Target policy to** dropdown box, choose to target your app protection policy to **All Apps**, **Microsoft Apps**, or **Core Microsoft Apps**.<p><ul><li>**All Apps** includes all Microsoft and partner apps that have integrated the Intune SDK.</li><li>**Microsoft Apps** includes all Microsoft apps that have integrated the Intune SDK.</li><li>**Core Microsoft Apps** includes the following apps: Edge, Excel, Office, OneDrive, OneNote, Outlook, PowerPoint, SharePoint, Teams, To Do, and Word.</li></ul></p>Next, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy.|
     | Public apps | If you do not want to select one of the pre-defined app groups, you can choose to target individual apps by selecting **Selected apps** in the **Target policy to** dropdown box. Click **Select public apps** to select public apps to target. |
     | Custom apps | If you do not want to select one of the pre-defined app groups, you can choose to target individual apps by selecting **Selected apps** in the **Target policy to** dropdown box. Click **Select custom apps** to select custom apps to target based on a Bundle ID. You cannot choose a custom app when targeting all public apps in the same policy. |
@@ -145,12 +143,10 @@ To see the effect of the changes immediately, the end user must sign out of the 
 
 3. Next to the section titled *Apps*, select **Edit**.
 
-4. The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.
+4. The **Apps** page allows you to choose which apps should be targeted by this policy. You must add at least one app.
     
     | Value/Option | Description |
     |:-------------|:-----------------------------------------------|
-    | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. Additional app configuration may be required for this setting. For more information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
-    |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
     | Public apps | In the **Target policy to** dropdown box, choose to target your app protection policy to **All public apps**, **Microsoft Apps**, or **Core Microsoft Apps**. Next, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy.<p>If needed, you can choose to target individual apps by clicking **Select public apps**. </p> |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
