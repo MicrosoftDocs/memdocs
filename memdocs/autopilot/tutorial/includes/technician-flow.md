@@ -18,7 +18,7 @@ Headings are driven by article context. -->
 
 [!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
 
-Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. This step is known as the technician flow.
+Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. For Windows Autopilot for pre-provisioned deployment, the Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals.  The first phase is known as the **technician flow** and is normally run by the IT department, OEM, or reseller. The second phase is known as the **user flow** and is normally run by the end-user.
 
 To start the technician flow, follow these steps:
 
@@ -34,27 +34,13 @@ To start the technician flow, follow these steps:
 
    - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet is required during the technician flow phase:
 
-     1. OOBE (out of box experience) begins and a screen asking for a country or region appears. Select the appropriate country or region, and then select **Yes**.
-
-     1. The keyboard screen appears to select a keyboard layout. Select the appropriate keyboard layout, and then select **Yes**.
-
-     1. An additional keyboard layouts screen appears. If needed, select additional keyboard layouts via **Add layout**, or select **Skip** if no additional keyboard layouts are needed.
-
-         > [!NOTE]
-         >
-         > When there's no network connectivity, the country/region and keyboard screens appear even if these screens have been set to hidden in the Autopilot profile. Because there was no network connectivity at this point, the device hasn't downloaded the Autopilot profile to know that these screens should have been hidden.
-
-     1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
-
-     1. Once network connectivity is established, the **Next** button should become available. Select **Next**.
-
-     1. At this point, the device may reboot. After it reboots, the Azure AD sign-in page should appear.
+    [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
     > [!NOTE]
     >
     > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page depending on how the Autopilot profile was configured at the **Create and assign Autopilot profile** step.
 
-1. At the Azure AD sign-in page, **DON'T** sign in or select **Next**/**Sign in**. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
+1. At the Azure AD sign-in page, **DON'T** sign in or select the **Next**/**Sign in** button. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
 1. From the **What would you like to do?** options screen:
 

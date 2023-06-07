@@ -54,9 +54,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
    - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet and a domain controller is required during the user flow phase of a hybrid Azure AD join:
 
-     1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
-
-     1. Once network connectivity is established, the **Next** button should become available. Select **Next**. After some time, the Enrollment Status Page (ESP) appears.
+    [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
     > [!IMPORTANT]
     >

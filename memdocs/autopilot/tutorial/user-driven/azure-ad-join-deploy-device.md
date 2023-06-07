@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/05/2023
+ms.date: 06/07/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -41,7 +41,7 @@ Once all of the configurations for the Windows Autopilot user-driven Azure AD jo
 
 To start the Autopilot deployment process on the device, follow these steps:
 
-1. Select a device that is part of the device group created in the previous **Create a device group** step.
+1. Select a device that is part of the device group created in the previous [Create a device group](azure-ad-join-device-group.md) step.
 
 1. If a wired network connection is available, connect the device to the wired network connection.
 
@@ -49,17 +49,15 @@ To start the Autopilot deployment process on the device, follow these steps:
 
 1. Once the device boots up, one of two things occurs depending on the state of network connectivity:
 
-   - If the device is connected to a wired network and has network connectivity, the Azure AD sign-in page appears.
+   - If the device is connected to a wired network and has network connectivity, the device may reboot to apply critical security updates (if available or applicable). After the reboot to apply critical security updates, the Azure AD sign-in page appears.
 
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet is required during the user flow phase of an Azure AD join:
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet is required:
 
-     1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
-
-     1. Once network connectivity is established, the **Next** button should become available. Select **Next**. After some time, the Azure AD sign-in page appears.
+    [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
     > [!NOTE]
     >
-    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step.
+    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page depending on how the Autopilot profile was configured at the **Create and assign Autopilot profile** step.
 
 1. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
@@ -70,10 +68,6 @@ To start the Autopilot deployment process on the device, follow these steps:
    - **Account setup** (User ESP)
 
     The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
-
-    > [!NOTE]
-    >
-    > The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available between the technician flow phase and the user flow phase.
 
     > [!NOTE]
     >

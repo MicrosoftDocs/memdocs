@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/05/2023
+ms.date: 06/07/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -44,7 +44,7 @@ Once all of the configurations for the Windows Autopilot user-driven hybrid Azur
 
 To start the Autopilot deployment process on the device, follow these steps:
 
-1. Select a device that is part of the device group created in the previous **Create a device group** step.
+1. Select a device that is part of the device group created in the previous [Create a device group](hybrid-azure-ad-join-device-group.md) step.
 
 1. If a wired network connection is available, connect the device to the wired network connection.
 
@@ -52,21 +52,19 @@ To start the Autopilot deployment process on the device, follow these steps:
 
 1. Once the device boots up, one of two things occurs depending on the state of network connectivity:
 
-   - If the device is connected to a wired network and has network connectivity, the Enrollment Status Page (ESP) appears.
+   - If the device is connected to a wired network and has network connectivity, the device may reboot to apply critical security updates (if available or applicable). After the reboot to apply critical security updates, the Azure AD sign-in page appears.
 
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet and a domain controller is required during the user flow phase of a hybrid Azure AD join:
+   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to both the Internet and a domain controller is required:
 
-     1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
-
-     1. Once network connectivity is established, the **Next** button should become available. Select **Next**. After some time, the Enrollment Status Page (ESP) appears.
+    [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
     > [!IMPORTANT]
     >
-    > Make sure that the connected network has both connectivity to the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
+    > Make sure that the connected network has connectivity to both the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
 
     > [!NOTE]
     >
-    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
+    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
 
 1. The ESP displays progress during the provisioning process across three phases:
 
@@ -76,7 +74,7 @@ To start the Autopilot deployment process on the device, follow these steps:
 
     The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
 
-    > [!NOTE]
+    > [!TIP]
     >
     > To view and hide detailed progress information in the ESP during the provisioning process:
     >
@@ -101,13 +99,13 @@ To start the Autopilot deployment process on the device, follow these steps:
       >
       > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
-      > [!NOTE]
-      >
-       Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
-
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 
    1. The **You're all set!** screen appears. Select **Done**.
+
+      > [!NOTE]
+      >
+      > Under certain circumstances, the Azure AD sign-in and subsequent pages may not appear and the end-user may be automatically signed into Azure AD. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
 
       > [!NOTE]
       >
