@@ -46,15 +46,7 @@ To start the Autopilot deployment process on the device, follow these steps:
 
 1. Select a device that is part of the device group created in the previous **Create a device group** step.
 
-1. If a wired network connection is available, connect the device to the wired network connection.
-
-1. Power on the device.
-
-1. Once the device boots up, one of two things occurs depending on the state of network connectivity:
-
-   - If the device is connected to a wired network and has network connectivity, the Azure AD sign-in page appears.
-
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet is required during the user flow phase of an Azure AD join:
+[!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
     [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 

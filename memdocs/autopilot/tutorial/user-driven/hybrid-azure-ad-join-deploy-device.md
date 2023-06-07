@@ -46,17 +46,7 @@ To start the Autopilot deployment process on the device, follow these steps:
 
 1. Select a device that is part of the device group created in the previous [Create a device group](hybrid-azure-ad-join-device-group.md) step.
 
-1. If a wired network connection is available, connect the device to the wired network connection.
-
-1. Power on the device.
-
-1. Once the device boots up, one of two things occurs depending on the state of network connectivity:
-
-   - If the device is connected to a wired network and has network connectivity, the device may reboot to apply critical security updates (if available or applicable). After the reboot to apply critical security updates, the Azure AD sign-in page appears.
-
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to both the Internet and a domain controller is required:
-
-    [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
+[!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
     > [!IMPORTANT]
     >
@@ -66,7 +56,9 @@ To start the Autopilot deployment process on the device, follow these steps:
     >
     > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
 
-1. The ESP displays progress during the provisioning process across three phases:
+1. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+
+1. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The ESP displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)

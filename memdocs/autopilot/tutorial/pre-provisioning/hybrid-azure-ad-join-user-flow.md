@@ -44,17 +44,9 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 Once the technician flow step of the pre-provisioning process completes successfully and the device is resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 
-1. If a wired network connection is available, connect the device to the wired network connection.
 
-1. Power on the device.
 
-1. Once the device boots up, one of two things occurs depending on the state of network connectivity:
-
-   - If the device is connected to a wired network and has network connectivity, the Enrollment Status Page (ESP) appears.
-
-   - If the device isn't connected to a wired network or if it doesn't have network connectivity, it prompts to connect to a network. Connectivity to the Internet and a domain controller is required during the user flow phase of a hybrid Azure AD join:
-
-    [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
+[!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
     > [!IMPORTANT]
     >
