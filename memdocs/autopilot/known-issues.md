@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 05/25/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -30,6 +30,10 @@ This article describes known issues that can often be resolved with configuratio
 > If you are experiencing issues with Autopilot with Co-management, see [Windows Autopilot with co-management](../configmgr/comanage/autopilot-enrollment.md).
 
 ## Known issues
+
+### TPM attestation isn't working on some platforms with Infineon SLB9672 discrete TPMs
+
+Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK certificate may fail with error message **Something happened, and TPM attestation timed out.** To resolve this issue, contact your OEM for an update.
 
 ### Kiosk device profile not auto logging in
 
@@ -118,11 +122,11 @@ Some devices may fail TPM attestation on Windows 11 during the pre-provisioning 
 
 ### Delete device record in Intune before reusing devices in self-deployment mode or Pre-Provisioning mode
 
-You have devices enrolled using Autopilot self-deployment mode or pre-provisioning mode. If you redeploy an Autopilot profile, it fails with a `0x80180014` error code.
+You have devices enrolled using Autopilot self-deployment mode or pre-provisioning mode. If you redeploy a device so that it reruns the Autopilot deployment again, it fails with a `0x80180014` error code.
 
 To resolve this error, use one of the following work around methods:
 
-- Delete the device record in Intune, and then redeploy the profile.
+- Delete the device record in Intune, and then redeploy the device so that it reruns the Autopilot deployment. For more information, see [Deregister a device](registration-overview.md#deregister-a-device).
 - Remove the device enrollment restriction for **Windows (MDM)** personally owned devices. For more information, see [Set enrollment restrictions in Microsoft Intune](../intune/enrollment/enrollment-restrictions-set.md).<!-- MEMDocs #2748 -->
 
 For more information on this issue, see [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md).
@@ -225,3 +229,4 @@ Using PPKGs in combination with Windows Autopilot isn't recommended.
 [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
 
 [Troubleshooting Windows Autopilot](troubleshooting.md)
+

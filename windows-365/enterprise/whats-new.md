@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/28/2023
+ms.date: 06/01/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,87 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of May 29, 2023 (Service release 2305)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cloud PC on-demand restore points and copy to Azure Storage account are now generally available<!--43450254-->
+
+Cloud PC on-demand restore points and copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
+
+#### Shortpath for managed/private networks<!--44356711-->
+
+Managed network RDP Shortpath is available for Windows 365. For more information about RDP Shortpath in Windows 365, see [Use RDP Shortpath for private networks with Windows 365 ](rdp-shortpath-private-networks.md).
+
+#### Move Cloud PC<!--43450234-->
+
+A new provisioning policy option lets you define a new region or ANC for the provisioning policy. When you initiate the move:
+
+1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shutdown.
+2. All such Cloud PCs will be moved to the new region or ANC.
+
+It may take several hours for the moves to complete.
+
+New Cloud PCs created by the provisioning policy will be created in the new region or ANC.
+
+For more information, see [Move Cloud PC](move-cloud-pc.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Provide feedback button for admins (preview)<!--43853267-->
+
+A **Provide feedback** button is now available in several Windows 365 admin pages in the Intune admin center.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Admin alert when a Cloud PC enters the grace period<!--44188012-->
+
+Admins are now alerted when a Cloud PC enters the grace period. For more information about grace periods, see [Device management overview for Cloud PCs](device-management-overview.md). For information about how to view and customize alerts, see [Alerts in Windows 365](alerts.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 app
+
+#### Windows 365 app supports dark mode<!--44828612-->
+
+The Windows 365 app now supports dark mode. End users have the option to set the Windows 365 app to light or dark mode, or to match system settings.
+
+#### Windows 365 app settings support for multiple monitors<!--44775534-->
+
+Users can now change multiple monitor setting in the Windows 365 app.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Government Azure Network Connection set up improvement<!--44237227-->
+
+During Azure network connection (ANC) creation or editing, instead of copying and pasting details (like Subscription ID, and VNET name) for the ANC, you can now select options from a drop down menu. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+
+<!-- ########################## -->
+## Week of May 22, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 Boot: users can sign in directly to their Cloud PC from their physical device (preview)<!--42936537-->
+
+Windows 365 Boot lets admins configure Windows 11 physical devices so that users can:
+
+- Avoid signing in to their physical device.
+- Sign in directly to their Windows 365 Cloud PC on their physical device.
+
+For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Using Intune, install the Windows 365 app on physical devices
+
+We’ve published a new help documentation article. For more information, see [Using Intune, install the Windows 365 app on physical devices](install-windows-365-app-intune.md).
 
 <!-- ########################## -->
 ## Week of April 24, 2023 (Service release 2304)

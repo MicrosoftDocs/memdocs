@@ -134,7 +134,7 @@ The following filter properties are always available to use with enrollment poli
 * Ownership 
 * Enrollment profile name 
 
-For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters can't be used with Android enrollment restrictions.  
+For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#managed-device-properties). Filters can't be used with Android enrollment restrictions.  
 
 ## Edit enrollment restrictions  
 

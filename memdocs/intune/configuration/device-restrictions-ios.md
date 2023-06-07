@@ -37,6 +37,10 @@ ms.collection:
 
 This article describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
+This feature applies to:
+
+- iOS/iPadOS
+
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your iOS/iPadOS devices.
 
 > [!TIP]
@@ -682,7 +686,7 @@ This feature applies to:
   - Users must sign in to the device with their Managed Apple ID and password.
   - The Guest account option isn't shown on the lock screen on the devices.
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS allows a Shared iPad user to sign in to the device with the Guest account. When the user signs out, none of the user’s data is saved or synced to iCloud.
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS allows a Shared iPad user to sign in to the device with the Guest account. When the user signs out, none of the user's data is saved or synced to iCloud.
 
 ## Show or hide apps
 

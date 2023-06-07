@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 05/25/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -86,11 +86,13 @@ The "A" characters at the end of the hash are effectively empty data. Each chara
 To fix this issue, the hash needs to be modified, then the new value tested, until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine. We're just looking for it to not throw the error "Invalid length for a Base-64 char array or string". 
 
 To test the base64, you can use the following PowerShell:
+
 ```powershell
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("DEVICE HASH"))
 ```
 
 So, as an example (this example isn't a device hash, but it's misaligned unpadded Base64 so it's good for testing):
+
 ```powershell
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("Q29udG9zbwAAA"))
 ```
@@ -98,12 +100,13 @@ So, as an example (this example isn't a device hash, but it's misaligned unpadde
 Now for the padding rules. The padding character is "=". The padding character can only be at the end of the hash, and there can only be a maximum of two padding characters. Here's the basic logic.
 
 - Does decoding the hash fail?
- - Yes: Are the last two characters "="?
-   - Yes: Replace both "=" with a single "A" character, then try again
-   - No: Add another "=" character at the end, then try again
- - No: That hash is valid
+  - Yes: Are the last two characters "="?
+    - Yes: Replace both "=" with a single "A" character, then try again
+    - No: Add another "=" character at the end, then try again
+- No: That hash is valid
 
 Looping the above logic on the previous example hash, we get the following permutations:
+
 - Q29udG9zbwAAA
 - Q29udG9zbwAAA=
 - Q29udG9zbwAAA==
@@ -115,7 +118,14 @@ Replace the collected hash with this new padded hash then try to import again.
 
 ## Autopilot profile not applied after reimaging to an older OS version
 
-If you enroll a device with Windows Update [KB5015878](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later on Windows 10 or with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later on Windows 11 and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **Fix pending** in the Autopilot devices page, which indicates that there was a hardware change on the device.
+If you enroll a device with one of the following Windows versions:
+
+- Windows 11 with Windows Update [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later
+- Windows 10 with Windows Update [KB5015878](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or later
+
+and then reimage to an older OS version, the Autopilot profile isn't applied. The device would need to be re-registered to complete a successful Autopilot deployment. You may see the message **Fix pending** or **Attention required** in the Autopilot devices page, which indicates that there was a hardware change on the device. When the link for the **Fix pending** status is selected, the following message appears:
+
+**We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.**
 
 ### Cause of Autopilot profile not applied after reimaging to an older OS version
 
@@ -123,13 +133,17 @@ The Autopilot profile not applying after a device is reimaged to an older OS ver
 
 ### Resolution of Autopilot profile not applied after reimaging to an older OS version
 
-When a device is reimaged to an older OS version after a hardware change on a device, deregister and re-register the device.
+When a device is reimaged to an older OS version after a hardware change on a device, deregister and re-register the device. For more information including how to deregister a device, see the following articles:
+
+- [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md)
+- [Deregister a device](registration-overview.md#deregister-a-device).
 
 ## Intune enrollment issues
 
-See [this knowledge base article](https://support.microsoft.com/help/4089533/troubleshooting-windows-device-enrollment-problems-in-microsoft-intune) for assistance with Intune enrollment issues. Common issues can include"
-- incorrect or missing licenses assigned to the user.
-- too many devices enrolled for the user.
+See [Troubleshooting Windows device enrollment errors in Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors) for assistance with Intune enrollment issues. Common issues can include:
+
+- Incorrect or missing licenses assigned to the user.
+- Too many devices enrolled for the user.
 
 Error code 80180018 is typically reported on an error page titled **Something went wrong**. This error means that the MDM enrollment failed.
 

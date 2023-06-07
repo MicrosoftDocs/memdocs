@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 06/06/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,11 +33,17 @@ ms.collection:
 
 Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPadOS devices. These settings are used to create and configure VPN connections to your organization's network. This article describes these settings. Some settings are only available for some VPN clients, such as Citrix, Zscaler, and more.
 
+This feature applies to:
+
+- iOS/iPadOS
+
 ## Before you begin
 
 - Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
 
 - [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
+
+- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), which supports split tunneling.
 
 > [!NOTE]
 >
@@ -90,8 +96,10 @@ Select the VPN connection type from the following list of vendors:
   Applies to the Microsoft Tunnel client app.
 
   > [!Important]
-  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
-  > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  >
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
+  >
+  > - On July 29, 2022, the standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
   > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
   >
   > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
@@ -114,7 +122,7 @@ Select the VPN connection type from the following list of vendors:
 - **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Azure Active Directory (AD) is used.
 - **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
-- **Authentication method**: Choose how devices authenticate to the VPN server. 
+- **Authentication method**: Choose how devices authenticate to the VPN server.
   - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) provides some guidance about certificate profiles.
   - **Username and password**: End users must enter a username and password to sign in to the VPN server.  
 
@@ -123,7 +131,7 @@ Select the VPN connection type from the following list of vendors:
 
   - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
-- **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud. 
+- **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud.
 
 - **Split tunneling**: **Enable** or **Disable** to let devices decide which connection to use, depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but uses the hotel's standard network for regular web browsing.
 
@@ -146,7 +154,7 @@ Select the VPN connection type from the following list of vendors:
 
   **When using F5 Access**, be sure to:
 
-  - Confirm you're using F5 BIG-IP 13.1.1.5 or later. 
+  - Confirm you're using F5 BIG-IP 13.1.1.5 or later.
   - Integrate BIG-IP with Intune for NAC. See the [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide.
   - Enable NAC in the VPN profile.
 
@@ -194,7 +202,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 - **Remote identifier**: Enter the network IP address, FQDN, UserFQDN, or ASN1DN of the IKEv2 server. For example, enter `10.0.0.3` or `vpn.contoso.com`. Typically, you enter the same value as the [**Connection name**](#base-vpn-settings) (in this article). But, it does depend on your IKEv2 server settings.
 
-- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate’s identity. The IKEv2 server may require the values to match so it can validate the client’s identity.
+- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate's identity. The IKEv2 server may require the values to match so it can validate the client's identity.
 
 - **Client Authentication type**: Choose how the VPN client authenticates to the VPN. Your options:
   - **User authentication** (default): User credentials authenticate to the VPN.
@@ -271,11 +279,14 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
 
 - **Integrity algorithm**:  Select the algorithm you want:
-    - SHA1-96
-    - SHA1-160
-    - SHA2-256 (default)
-    - SHA2-384
-    - SHA2-512
+  - SHA1-96
+  - SHA1-160
+  - SHA2-256 (default)
+  - SHA2-384
+  - SHA2-512
+
+  Also configure:
+
   - **Diffie-Hellman group**: Select the group you want. Default is group `2`.
   - **Lifetime** (minutes): Enter how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
 
@@ -302,24 +313,24 @@ These settings apply when you choose **Connection type** > **IKEv2**.
             - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, meaning it doesn't have access to internal resources, then it connects to the VPN on-demand. If the domain does resolve, meaning it already has access to internal resources, then it doesn't connect to the VPN.
 
               > [!NOTE]
-              > 
+              >
               > - If the **When users try to access these domains** setting is empty, then the device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain. The idea is that these DNS servers are public servers.
-              > 
-              >   The domains in the **When users try to access these domains** list are internal resources. Internal resources aren’t on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection’s DNS servers and the internal resource is available. 
-              > 
+              >
+              >   The domains in the **When users try to access these domains** list are internal resources. Internal resources aren't on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection's DNS servers and the internal resource is available.
+              >
               >   If the device is on the internal network, then the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network.
-              > 
+              >
               > - If the **When users try to access these domains** setting is populated, then the DNS servers on this list are used to resolve the domains in the list.
-              > 
+              >
               >   The idea is the opposite of the first bullet (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and the device connects to the VPN on-demand. Now the internal resources are available.
-              > 
+              >
               >   Remember this information only applies to domains in the **When users try to access these domains** list. All other domains are resolved with public DNS servers. When the device is connected to the internal network, the DNS servers in the list are accessible, and there's no need to connect to the VPN.
 
             - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
 
-            - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. For example, enter `https://probe.Contoso.com `. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
+            - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
 
-              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then the device connects to the VPN. 
+              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then the device connects to the VPN.
 
               The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and it connects to the VPN on-demand. Once the VPN connection is established, internal resources are available.
 
@@ -331,11 +342,11 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
       - **I want to restrict to**: In the **I want to do the following** setting, if you select **Establish VPN**, **Disconnect VPN**, or **Ignore**, then select the condition that the rule must meet. Your options:
 
-        - **Specific SSIDs**: Enter one or more wireless network names that the rule will apply. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
-        - **Specific search domains**: Enter one or more DNS domains that the rule will apply. For example, enter `contoso.com`.
+        - **Specific SSIDs**: Enter one or more wireless network names that the rule applies to. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
+        - **Specific search domains**: Enter one or more DNS domains that the rule applies to. For example, enter `contoso.com`.
         - **All domains**: Select this option to apply your rule to all domains in your organization.
 
-      - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. For example, enter `https://probe.Contoso.com `. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
+      - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
 
         For example, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
 
@@ -369,7 +380,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
       For more information, see [associated domains](device-features-configure.md#associated-domains).
 
-    - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain will use the public Internet even if the VPN is connected.
+    - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
 
     - **Block users from disabling automatic VPN**: Your options:
 
@@ -401,7 +412,7 @@ These settings apply to the following VPN connection types:
 
   For more information, see [associated domains](device-features-configure.md#associated-domains).
 
-- **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain will use the public Internet even if the VPN is connected.
+- **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
 
 ## Proxy
 

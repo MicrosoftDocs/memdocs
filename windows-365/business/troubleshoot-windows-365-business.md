@@ -58,7 +58,7 @@ When enabling the automatic enrollment of new Cloud PCs into Microsoft Intune th
 
 | Error | Troubleshooting steps |
 | --- | --- |
-| To complete the setup ask your administrator to resolve the following: - Update policy settings in Microsoft Endpoint Manager to enroll this device. | Check the Intune settings you may have previously set on your tenant. For more, see [Troubleshoot policies and profiles](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune). Once the issue has been fixed, either you or the user can reset the Cloud PC. |
+| To complete the setup ask your administrator to resolve the following: - Update policy settings in Microsoft Intune to enroll this device. | Check the Intune settings you may have previously set on your tenant. For more, see [Troubleshoot policies and profiles](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune). Once the issue has been fixed, either you or the user can reset the Cloud PC. |
 | To complete the setup ask your administrator to resolve the following: - Remove restrictions preventing Intune from allowing Windows enrollment.| You may have set up enrollment restrictions on your Intune tenant. For more information, see [Enrollment restrictions overview](/mem/intune/enrollment/enrollment-restrictions-set). Once the restrictions have been removed, either you or the user can reset the Cloud PC. |
 | To complete the setup ask your administrator to resolve the following:- Correct the configuration of the Mobile Device Management discovery URL in Intune.| Confirm that the MDM discovery URL is the default for Intune. Follow steps 1-4 to set it in [Configure automatic MDM enrollment](/mem/intune/enrollment/windows-enroll#configure-automatic-mdm-enrollment). Once the MDM discovery URL has been set to the default, either you or the user can reset the Cloud PC. |
 
@@ -76,7 +76,7 @@ Users who are assigned a Cloud PC must have an Intune license assigned to them t
 
 ### Path B. Turn off automatic MDM enrollment and Intune enrollment in Organization Settings
 
-If you don’t plan to use Microsoft Intune for your Cloud PC management, you must turn off automatic MDM enrollment and uncheck Enroll new Cloud PCs in Microsoft Endpoint Manager in Organization Settings.
+If you don’t plan to use Microsoft Intune for your Cloud PC management, you must turn off automatic MDM enrollment and uncheck Enroll new Cloud PCs in Microsoft Intune in Organization Settings.
 
 > [!IMPORTANT]
 > If you’re not the MDM administrator, don’t use either of the following procedures without first consulting with your IT admin. Only follow these procedures if Cloud PCs aren’t being set up. Any configuration changes could impact your management environment. If you need help, [contact Intune support](/mem/get-support).
@@ -91,7 +91,7 @@ If you don’t plan to use Microsoft Intune for your Cloud PC management, you mu
 
 #### Turn off the automatic enrollment of newly-created Cloud PCs
 1. In the [Windows 365 home page](https://windows365.microsoft.com), go to **Your organization's Cloud PCs", then select **Update organization settings**.
-2. On the righthand side, scroll down to **Microsoft Endpoint Manager** and unselect the checkbox.
+2. On the righthand side, scroll down to **Microsoft Intune** and unselect the checkbox.
 3. Click Save at the bottom.
 
 ## Reset your Cloud PCs
