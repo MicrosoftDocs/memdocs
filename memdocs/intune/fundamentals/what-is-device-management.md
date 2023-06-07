@@ -33,7 +33,7 @@ ms.collection:
 
 **Device management** enables organizations to administer and maintain devices, including virtual machines, physical computers, mobile devices, and IoT devices. Device management is a critical component of any organization's security strategy. It helps ensure that devices are secure, up-to-date, and compliant with organizational policies, with the goal of protecting the corporate network and data from unauthorized access.
 
-:::image type="content" source="./media/what-is-device-management/device-management-features-mdm-mam.png" alt-text="Image shows the features and benefits of modern device management using MDM and MAM with Microsoft Intune." lightbox="./media/what-is-device-management/device-management-features-mdm-mam.png":::
+:::image type="content" source="./media/what-is-device-management/device-management-features-mdm-mam.png" alt-text="Diagram that shows the features and benefits of modern device management using MDM and MAM with Microsoft Intune." lightbox="./media/what-is-device-management/device-management-features-mdm-mam.png":::
 
 As organizations support remote and hybrid workforces, it's more important than ever to have a solid device management strategy. Organizations must protect and secure their resources and data on any device.
 
