@@ -117,9 +117,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Email profiles aren't supported by Android devices)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|The Azure AD record is removed.|
 
-### Android Enterprise personally-owned devices with a work profile
+### Android Enterprise personally owned devices with a work profile
 
-Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
+Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally owned work profiles.
 
 ### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
  - The **Wipe** action is supported on Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
@@ -194,10 +194,10 @@ You can configure Intune to automatically remove devices that appear to be inact
 
 If a removed device checks in before its device certification expires, it will reappear in the admin center.
 
-The device clean up rule doesn't trigger a wipe or retire.
+The device clean-up rule doesn't trigger a wipe or retire.
 
 > [!IMPORTANT]
-> The device clean up rule doesn't trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
+> The device clean-up rule doesn't trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
 
 > [!NOTE]
 > Device cleanup rules aren't available for Jamf-managed devices.
