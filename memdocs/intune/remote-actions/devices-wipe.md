@@ -225,7 +225,7 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
 4. Select the device, and then select **Release from Organization**.
 
-5. Check **I understand this cannot be undone** and click on **Release**
+5. Check **I understand this cannot be undone**, and then select **Release**.
 
     ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
 
