@@ -42,19 +42,17 @@ Once all of the configurations for the Windows Autopilot user-driven hybrid Azur
 
 [!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
 
-To start the Autopilot deployment process on the device, follow these steps:
-
-1. Select a device that is part of the device group created in the previous [Create a device group](hybrid-azure-ad-join-device-group.md) step.
+To start the Autopilot deployment process on the device, select a device that is part of the device group created in the previous [Create a device group](hybrid-azure-ad-join-device-group.md) step and then follow these steps:
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-    > [!IMPORTANT]
-    >
-    > Make sure that the connected network has connectivity to both the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
+> [!IMPORTANT]
+>
+> Make sure that the connected network has connectivity to both the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
 
-    > [!NOTE]
-    >
-    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
+> [!NOTE]
+>
+> Additional screens such as License Terms, Privacy, Language, and Keyboard may appear depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
 
 1. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 

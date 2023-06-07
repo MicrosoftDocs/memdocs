@@ -42,17 +42,13 @@ Once all of the configurations for the Windows Autopilot user-driven Azure AD jo
 
 [!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
 
-To start the Autopilot deployment process on the device, follow these steps:
-
-1. Select a device that is part of the device group created in the previous **Create a device group** step.
+To start the Autopilot deployment process on the device, select a device that is part of the device group created in the previous [Create a device group](self-deploying-device-group.md) step, and then follow these steps:
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-    [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
-
-    > [!NOTE]
-    >
-    > Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step.
+> [!NOTE]
+>
+> Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step.
 
 1. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
