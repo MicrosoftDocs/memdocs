@@ -34,7 +34,7 @@ ms.collection:
 
 A successful Microsoft Intune deployment or migration starts with planning. This guide helps you plan your move or adoption of Intune as your unified endpoint management solution.
 
-:::image type="content" source="./media/intune-planning-guide/intune-planning-guide-steps-image.png" alt-text="Image shows the steps to plan your migration or move to Microsoft Intune, including licensing needs." lightbox="./media/intune-planning-guide/intune-planning-guide-steps-image.png":::
+:::image type="content" source="./media/intune-planning-guide/intune-planning-guide-steps-image.png" alt-text="Diagram that shows the steps to plan your migration or move to Microsoft Intune, including licensing needs." lightbox="./media/intune-planning-guide/intune-planning-guide-steps-image.png":::
 
 Intune gives organizations options to do what's best for them and the many different user devices. You can enroll devices in Intune for mobile device management (MDM) of Android, iOS/iPadOS, Linux, macOS, and Windows devices. You can also use app protection policies for mobile application management (MAM) that focuses on protecting app data.
 
