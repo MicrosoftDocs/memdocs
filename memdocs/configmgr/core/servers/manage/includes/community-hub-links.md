@@ -23,6 +23,6 @@ Share an item:
 
 Open a shared link:
 1. Open the link from a machine that has the Configuration Manager console installed.
-   - For example, use this link to share the [Configure Microsoft Edge Auto Update script](https://communityhub.microsoft.com/item/7200) (`https://communityhub.microsoft.com/item/7200`).
+   - For example, use this link to share the Configure Microsoft Edge Auto Update script.
 1. Select **Launch the Community hub** when prompted.
 1. The console opens directly to the script in the **Community hub** node.
