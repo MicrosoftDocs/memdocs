@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android and iOS/
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 06/07/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -48,7 +48,7 @@ When using Android devices for frontline workers, use the following steps. These
 
 There are other Android enrollment options available. This article focuses on the enrollment options commonly used for FLW. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 
-### Step 1 - Select your enrollment option
+### Step 1 - Select your enrollment option (Android)
 
 The first step is to determine the enrollment platform that's best for your organization and device needs. For FLW devices using the Android platform, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**. This section focuses on these enrollment options.
 
@@ -73,13 +73,13 @@ The first step is to determine the enrollment platform that's best for your orga
 > [!NOTE]
 > For Android device administrator (DA), Google is deprecating and reducing features. It's recommended that you move to Android Enterprise or AOSP.
 
-### Step 2 - Shared device or user associated device
+### Step 2 - Shared device or user associated device (Android)
 
 The next decision is to determine if the devices are shared with many users or assigned to a single user. This decision depends on your business needs and the end user requirements. It also impacts how these devices are enrolled and managed with Intune.
 
 - **Shared device**
 
-  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. Then, the process repeats.
+  With shared devices, a user gets the device, completes their tasks, and gives the device to another user.
 
   When using shared devices:
 
@@ -101,7 +101,7 @@ The next decision is to determine if the devices are shared with many users or a
 
   - If you're using AOSP, then you can enroll your devices as a **user-associated** device. Remember, these devices don't support Google Mobile Services (GMS).
 
-### Step 3 - Home screen and device experience
+### Step 3 - Home screen and device experience (Android)
 
 On Android Enterprise devices, you can configure the home screen and device experience. This feature isn't available for AOSP devices.
 
@@ -228,7 +228,7 @@ This section focuses on Shared iPads used by frontline workers, including decisi
 
 If you're not using Shared iPads, then you can skip this section.
 
-#### Step 1 - Use Automated Device Enrollment (ADE), enable Shared iPad, and choose a temporary session type
+#### Step 1 - Use Automated Device Enrollment (ADE), enable Shared iPad, and choose a temporary session type (iPadOS)
 
 For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile**. ADE syncs the devices from Apple Business Manager or Apple School Manager.
 
@@ -246,7 +246,7 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
     - **Partitioned user access**
 
-      **Not configure** uses partitioned user access. Use this option when an iPad is used by many users at different times. Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad.
+      **Not configured** uses partitioned user access. Use this option when an iPad is used by many users at different times. Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad.
 
       When the user signs out, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
 
@@ -261,7 +261,7 @@ For more information on these features, and to get started, go to:
 - [Set up automated device enrollment in Intune](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Set up Shared iPad in Intune](../enrollment/device-enrollment-shared-ipad.md)
 
-#### Step 2 - Home screen layout and device experience
+#### Step 2 - Home screen layout and device experience (iPadOS)
 
 Next, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
@@ -278,14 +278,96 @@ For a list of all the device configuration settings, go to:
 
 Windows has different devices and cloud services that can be used for frontline workers. They're also used globally and in many industries. This section focuses on Windows used by frontline workers. It includes decisions admins need to make, including determining how the device is used, and configuring the home screen & device experience.
 
-Windows kiosk: /configuration/kiosk-settings.md
-Windows shared: /configuration/shared-user-device-settings.md
-
 Windows 365 frontline
 cloud PC
 
 - https://www.microsoft.com/windows-365/frontline
 - https://learn.microsoft.com/windows-365/enterprise/introduction-windows-365-frontline
+
+
+### Step 1 - Select your enrollment option (Windows)
+
+The first step is to determine the enrollment platform that's best for your organization. For FLW devices using the Windows platform, you can use the **Windows automatic enrollment** or **Windows Autopilot** enrollment options. This section focuses on these enrollment options.
+
+- **Windows Autopilot** is the recommended option for FLW devices. You can ship the devices directly to the location without ever touching the devices. Using self-deploying mode, users just turn on the device, and the enrollment automatically starts.
+
+  ✔️ If you have have Azure AD Premium and you're getting new devices from an OEM, then use Windows Autopilot. You can use the Windows OEM version preinstalled on the devices to automatically enroll the devices. Other than turning on the device, no other end user interaction is required.
+
+  ?? Existing devices ??
+
+  ❌ Windows Autopilot requires Azure AD Premium.
+
+- **Windows automatic enrollment** requires someone to sign in with their Azure AD organization account during the out-of-box experience (OOBE). When they do, the enrollment starts. ?? If the devices are local and need to be sent to another location, then an admin or end user with elevated permissions at that location can sign in. ??
+
+  ✔️ If you have Azure AD Premium, and have new or existing devices, then Windows automatic enrollment is an option. For new devices purchased from an OEM, it's recommended to use **Windows Autopilot**.
+
+  ❌ Windows automatic enrollment requires Azure AD Premium.
+
+There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW. For more information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
+
+### Step 2 - Shared device or user associated device (Windows)
+
+The next decision is to determine if the devices are shared with many users or assigned to a single user. This decision depends on your business needs and the end user requirements. It also impacts how these devices are managed with Intune.
+
+These features are configured using device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment. So, know what the device is doing and its use case.
+
+- **Shared device**
+
+  Shared devices allow one user at a time. A user gets the device, completes their tasks, and gives the device to another user. End users sign in to these shared devices with their **Azure AD organization account** or a **guest account**. With this feature, you can delete account information and allow (or prevent) users from saving & viewing files locally.
+
+  ?? Need example ??
+
+  For more information on this feature, and to get started, go to:
+
+  - [Shared PC or multi-user Windows devices in Intune](../configuration/shared-user-device-settings-windows.md)
+  - [Shared PC or multi-user Windows devices in Intune - Settings list](../configuration/shared-user-device-settings.md)
+
+- **User associated device**
+
+  These devices have one user. This user associates the device with themselves, which typically happens when the user signs in during the Intune enrollment. The device is associated with the user's identity in Azure AD.
+
+  These devices are used in FLW scenarios where the device is only used by that user, such as ?? need example ??.
+
+  ?? Is this valid for Windows FLW devices? If yes, I feel like we need more. I can say there are hundreds of policies that can be configured, but that seems like too much. How do we narrow down this scope for FLW? Or, maybe we move this text to **Step 3-Scenario 1**? ??
+
+### Step 3 - Device experience and kiosk (Windows)
+
+On Windows devices, you can configure the home screen and device experience. In this step, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
+
+The following scenarios describe some commonly used scenarios:
+
+- **Scenario 1: Device wide access with multiple apps**
+
+  Users have access to the apps and settings on the device. You can restrict users from different features, such as debugging, factory reset, and more.
+
+  To configure devices for this scenario, you deploy the apps to the devices. Then, use device configuration policies to allow or block device features.
+
+  To get started, use the following links:
+
+  1. [Add apps to Microsoft Intune](../apps/apps-add.md)
+  2. [Apply features and settings on your devices using device profiles in Intune](../configuration//device-profiles.d)
+
+- **Scenario 2: Kiosk with one app or many apps**
+
+  For this scenario, you configure the device as a kiosk, which allows you to customize the device experience. You can pin one app or many apps, select a wallpaper, set icon positions, and more. This scenario is often used for dedicated devices, such as shared devices. You can create a Shared PC profile and configure it be a kiosk using the kiosk settings.
+
+  What you need to know:
+
+  - Only features added to the kiosk are available to end users. So, you can restrict end users from accessing settings and other device features.
+  - When you pin one app or pin many apps to the kiosk, only those apps open. They're the only apps users can access.
+  - A single app is assigned to the device. When the device starts, only this app opens. Users are locked to the single app and can't close the app, or do anything else on the devices. This scenario is used on devices dedicated to a specific use, like scanning inventory.  
+
+    What you need to know:
+
+    - This option is more restrictive and doesn't allow admins to troubleshoot the devices.
+    - An enterprise launcher isn't used.
+
+  To get started, use the following links:
+
+  1. [Add apps to Microsoft Intune](../apps/apps-add.md)
+  2. Create a [kiosk profile](/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../configuration/kiosk-settings.md).
+
+  To configure these devices, you create a device configuration policy that sets the device to single app kiosk mode. Then, you assign the app to the device.
 
 ## Other MSFT services that do FLW
 
