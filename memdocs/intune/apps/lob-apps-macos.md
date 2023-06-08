@@ -61,7 +61,7 @@ The .pkg file must satisfy the following requirements to successfully be deploye
 > In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Intune admin center. You can now upload *.pkg* files to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 > [!IMPORTANT]
-> The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. However, conversion of other formats, such as *.dmg* to *.pkg* is supported. For more information about converting non-pkg application types, see [How to deploy DMG or APP-format apps to Intune-managed Macs](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
+> The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. To deploy *.dmg* or *.app* files, see [Add a macOS DMG app to Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos-dmg).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
