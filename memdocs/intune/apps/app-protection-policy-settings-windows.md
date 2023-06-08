@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft Edge settings for Windows MAM
+title: Microsoft Edge app protection policy settings for Windows MAM
 titleSuffix: Microsoft Intune
 description: This topic describes the Microsft Edge app protection policy (APP) settings for MAM on Windows.
 keywords:
@@ -32,7 +32,7 @@ ms.collection:
 - highpri
 ---
 
-# Microsoft Edge settings for Windows MAM
+# Microsoft Edge app protection policy settings for Windows MAM
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 This article describes Microsft Edge app protection policy (APP) settings for MAM on Windows. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the Intune admin center (portal) when you make a new policy.

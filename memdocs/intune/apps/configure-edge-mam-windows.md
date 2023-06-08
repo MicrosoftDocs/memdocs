@@ -1,39 +1,39 @@
 ---
 # required metadata
 
-title: Configure Microsoft Edge Windows MAM
+title: Configure Microsoft Edge for Windows MAM
 titleSuffix: 
-description: Use Intune app protection and configuration policies with Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place. 
+description: Use Intune configuration policies with Microsoft Edge for Windows MAM to ensure corporate data is always accessed with safeguards in place. 
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 06/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
 ms.technology:
-ms.assetid: 3fb2f050-ec94-42ab-be05-c3d4101148bb
+ms.assetid: 
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: ilwu
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
 - tier1
 - M365-identity-device-management
-- Android
+- Windows
 - highpri
 ms.custom: intune-azure
 ---
 
-# Configure Microsoft Edge Windows MAM
+# Configure Microsoft Edge for Windows MAM
 
 Edge for iOS and Android is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is like what is offered in other Microsoft mobile apps.
 

@@ -63,7 +63,7 @@ Members of your organization (end-users) expect to have the following functional
 
 The following diagram provides the solution components and their primary function.
 
-*diagram to be finalized*
+:::image type="content" source="./media/protect-edge-mam-windows/protect-edge-mam-windows-01.png" alt-text="Solution components - MAM for Microsoft Edge on Windows" border="true" :::
 
 In the above diagram, key areas are included and also defined below based on the following list:
 A. Defender Client and Service: responsible for retrieving and syncing client health data on the unmanaged Windows 10 device

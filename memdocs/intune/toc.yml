@@ -414,7 +414,7 @@ items:
                   href: ./apps/configure-microsoft-launcher.md
                 - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
-                - name: Configure Microsoft Edge Windows MAM
+                - name: Configure Microsoft Edge for Windows MAM
                   href: ./apps/configure-edge-mam-windows.md                  
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
@@ -459,7 +459,7 @@ items:
                     href: ./apps/app-protection-policy-settings-android.md
                   - name: iOS settings
                     href: ./apps/app-protection-policy-settings-ios.md
-                  - name: Microsoft Edge settings for Windows MAM
+                  - name: Edge APP settings for Windows MAM
                     href: ./apps/app-protection-policy-settings-windows.md                    
                   - name: Conditional launch
                     href: ./apps/app-protection-policies-access-actions.md
