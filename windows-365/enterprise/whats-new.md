@@ -71,7 +71,7 @@ Windows 365 Enterprise is FedRAMP compliant. Except for FedRAMP, Windows 365 Ent
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Government
 
-### Windows 365 Government setup tool<!--43461105-->
+#### Windows 365 Government setup tool<!--43461105-->
 
 A new Windows 365 Government setup tool is now available. It replaces the PowerShell scripts that were used to setup tenant mapping and permissions. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
