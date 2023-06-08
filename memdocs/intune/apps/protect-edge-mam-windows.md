@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 06/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -120,18 +120,18 @@ To avoid sending health data for non-MAM users, the MAM Client will trigger the 
 
 ## Create Intune app protection policies
 
-App Protection Policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+App Protection Policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario.
 
 As an admin, you can configure how data is protected through APP. This configuration applies to the native Windows application interaction with the data. APP settings are segmented into three categories:
 -	**Data Protection** - These settings control how data can move into and out of an org context (account, document, location, services) for the user.
 <!-- -	**Access** - These settings control how the user must verify their identity before interacting with org data. -->
 -	**Health Checks** (Conditional Launch) - These settings controls the device conditions required to access org data and the remediation action(s) if the conditions are not met.
 
-The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for mobile app management. The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
-- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
+- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
 - **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
-- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, such as APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 
@@ -139,5 +139,5 @@ For more information on the available settings, see [Windows app protection poli
 
 ## Next steps
 
-- [What are app protection policies?](app-protection-policy.md) 
+- [What are app protection policies?](app-protection-policy.md)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
