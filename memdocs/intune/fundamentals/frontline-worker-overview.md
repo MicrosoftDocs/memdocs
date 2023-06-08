@@ -284,7 +284,6 @@ cloud PC
 - https://www.microsoft.com/windows-365/frontline
 - https://learn.microsoft.com/windows-365/enterprise/introduction-windows-365-frontline
 
-
 ### Step 1 - Select your enrollment option (Windows)
 
 The first step is to determine the enrollment platform that's best for your organization. For FLW devices using the Windows platform, you can use the **Windows automatic enrollment** or **Windows Autopilot** enrollment options. This section focuses on these enrollment options.
