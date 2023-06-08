@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2023
+ms.date: 06/08/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -61,6 +61,12 @@ Learn what new features are available in Windows 365 Enterprise.
 #### Microsoft 365 admin center: Windows 365 cloud PC advanced deployment guide<!--44563663-->
 
 The Advanced deployment guides page in the Microsoft 365 admin center has a new guide to help admins plan for, deploy, and scale Windows 365 Enterprise in their organization. This guide has a checklist of Cloud PC configuration tasks and includes best practices, tools, and recommendations based on the tenant's configuration.
+
+#### Windows 365 Enterprise can now be purchased by government customers <!--44276738-->
+
+Windows 365 Enterprise can now be purchased by customers with an existing Government Community Cloud (GCC) tenant. Such customers can use their Azure Commercial subscription if they want to use custom images and Azure network connections. (Previously, customers with a GCC tenant could only buy Windows 365 Government. An Azure Government subscription was required for custom images and Azure network connections.) Windows 365 Enterprise is a commercial product with commercial licensing terms and conditions.
+
+Windows 365 Enterprise is FedRAMP compliant. Except for FedRAMP, Windows 365 Enterprise doesn't offer the same compliance as Windows 365 Government. CJIS and IRS 1075 aren't supported in Windows 365 Enterprise.
 
 <!-- ########################## -->
 ## Week of May 29, 2023 (Service release 2305)
