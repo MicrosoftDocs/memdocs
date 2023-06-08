@@ -2,11 +2,11 @@
 # required metadata
 
 title: What is device management?
-description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune provides mobile device management and mobile application management for your organization. Read common scenarios, and use Intune to deploy Microsoft 365 in your environment. 
+description: Learn more about what device management means and how it can help organizations, including Microsoft 365 small & medium business, and enterprise. See a list of features and benefits, including mobile device management (MDM) and mobile application management (MAM), and learn about Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia 
 manager: dougeby 
-ms.date: 10/26/2022
+ms.date: 06/06/2023
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -33,18 +33,23 @@ ms.collection:
 
 **Device management** enables organizations to administer and maintain devices, including virtual machines, physical computers, mobile devices, and IoT devices. Device management is a critical component of any organization's security strategy. It helps ensure that devices are secure, up-to-date, and compliant with organizational policies, with the goal of protecting the corporate network and data from unauthorized access.
 
+:::image type="content" source="./media/what-is-device-management/device-management-features-mdm-mam.png" alt-text="Diagram that shows the features and benefits of modern device management using MDM and MAM with Microsoft Intune." lightbox="./media/what-is-device-management/device-management-features-mdm-mam.png":::
+
 As organizations support remote and hybrid workforces, it's more important than ever to have a solid device management strategy. Organizations must protect and secure their resources and data on any device.
+
+This article describes the features and benefits of device management, and how it can help organizations, including Microsoft 365 small & medium business, and enterprise. It also describes the different approaches to device management, including mobile device management (MDM) and mobile application management (MAM), and how Microsoft Intune can help.
 
 ## Features and benefits
 
 Device management solutions have the following features and benefits:
 
 - The toolset to manage devices, including the ability to deploy and update software, configure settings, enforce policies, and monitor with data and reports
-- The ability to administer virtual and physical devices, including remote administration
+- The ability to administer and manage virtual and physical devices, regardless of their physical location
 - Maintain a network of devices running common operating systems, including Windows, macOS, iOS/iPadOS, and Android
 - Automate policy management and deployment for apps, device features, security, and compliance
 - Optimize device features for business use
 - Provide a single point of management for devices, including the ability to manage devices from a central console
+- Secure and protect data on devices, including safeguards and measures to prevent unauthorized access
 
 With device management solutions, organizations can make sure that only authorized people and devices get access to proprietary information. Similarly, device users can feel at ease accessing work data from their phone, because they know their device meets their organization's security requirements.
 
@@ -75,9 +80,17 @@ For more information, go to:
 
 There are a couple of ways to approach device management.
 
-First, you can manage different aspects of devices using the features built in to Intune. This approach is called **mobile device management (MDM)**. Users "enroll" their devices, and use certificates to communicate with Intune. As an IT administrator, you push apps on devices, restrict devices to a specific operating system, block personal devices, and more. If a device is ever lost or stolen, you can also remove all data from the device.
+✔️ **Mobile device management (MDM)**
 
-In the second approach, you manage apps on devices. This approach is called **mobile application management (MAM)**. Users can use their personal devices to access organizational resources. When users open an app, such as Outlook or SharePoint, they can be prompted to authenticate. If a device is ever lost or stolen, you can remove all organization data from the Intune managed applications.
+First, you can manage different aspects of devices using the features built in to Intune. This approach is called mobile device management (MDM).
+
+Users "enroll" their devices, and use certificates to communicate with Intune. As an IT administrator, you push apps on devices, restrict devices to a specific operating system, block personal devices, and more. If a device is ever lost or stolen, you can also remove all data from the device.
+
+✔️ **Mobile application management (MAM)**
+
+In the second approach, you manage apps on devices. This approach is called mobile application management (MAM).
+
+Users can use their personal devices to access organizational resources. When users open an app, such as Outlook or SharePoint, they can be prompted to authenticate. If a device is ever lost or stolen, you can remove all organization data from the Intune managed applications.
 
 You can also use a combination of MDM and MAM together.
 
@@ -88,4 +101,7 @@ For more information, go to:
 
 ## Next steps
 
-When you're ready to get started with an MDM or MAM solution, walk through the different steps to set up Intune, enroll devices, and start creating policies. The [Microsoft Intune planning guide](intune-planning-guide.md) is a good resource.
+- [Microsoft Intune planning guide](intune-planning-guide.md)
+- [Manage user and group identities in Microsoft Intune](manage-identities.md)
+- [Manage your devices and control device features in Microsoft Intune](manage-devices.md)
+- [Manage your apps and app data in Microsoft Intune](manage-apps.md)
