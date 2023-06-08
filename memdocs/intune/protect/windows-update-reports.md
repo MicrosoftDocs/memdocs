@@ -362,7 +362,7 @@ To change the focus of this report to a different driver:
 
 2. The *Driver updates* pane displays a list of updates that are approved and applicable for at least one device from across all your driver update policies.
 
-3. On the Driver updates pane, select a driver, and then **OK** to return to the Windows 10 and later Driver updates report view that now shows information for the driver you selected.
+3. On the Driver updates pane, select a driver, and then **OK** to return to the Windows 10 and later Driver updates report view that now shows information for the driver you selected, and select **Generate again** to update the report.
 
 In the following screen capture, only four drivers remain applicable to devices with driver updates policy, and those four updates are different versions of the same driver update.
 
@@ -409,6 +409,7 @@ By selecting that policy and entry, you can then view more information about the
 - Intune Device ID
 
 This view is a useful place to identify and start investigation of driver update installation failures.
+
 
 ## Use Windows Update for Business reports
 

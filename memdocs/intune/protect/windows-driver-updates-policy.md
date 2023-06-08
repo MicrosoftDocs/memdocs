@@ -147,7 +147,7 @@ The driver list is divided into two tabs:
 
 - **Recommended drivers** – Recommended drivers are the best match for the 'required' driver updates that Windows Update can identify for a device. To be a recommended update, the OEM or driver publisher must mark the update as *required* and the update must be the most recent update version marked as required. These updates are the same ones available through Windows Update and are almost always the most current update version for a driver.
 
-  When an OEM releases a newer update version that qualifies to be the new recommended driver, it replaces the previous update as the recommended driver update. The older update version, if still applicable to a device in the policy, is reclassified as 'optional' and moves to the *Other drivers* tab. If the older version was previously approved, it remains approved.
+  When an OEM releases a newer update version that qualifies to be the new recommended driver, it replaces the previous update as the recommended driver update. If the older update version is still applicable to a device in the policy, it's moved to the *Other drivers* tab. If the older version was previously approved, it remains approved.
 
 - **Other drivers** – Other driver updates, are updates that are available from the original equipment manufacturer (OEM) aside from the current recommended driver update. These updates remain in a policy as long as they're newer than the driver version that's installed on at least one device with the policy.
 
