@@ -155,6 +155,17 @@ If a conflict occurs because a user is assigned more than one profile, Intune ap
 ## Removing device from management  
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune.  
 
+## Known issues  
+This section describes the current known issues with account driven Apple User Enrollment and Microsoft Intune.       
+
+### Enrollment fails because of enrollment SSO application   
+If the Microsoft Authenticator app is on the device before enrollment begins, enrollment will fail when the device user tries signing in with their work or school account in the Settings app. The message they receive says:  
+
+* Title: Sign In Failed  
+* Description: The Enrollment SSO application has been installed on the device.  
+
+To get around this issue, the device user must uninstall the Microsoft Authenticator app and restart enrollment.  
+
 ## Next steps  
 * For an overview of supported Apple User Enrollment features and management actions in Microsoft Intune, see [Overview of Apple User Enrollment in Microsoft Intune](ios-user-enrollment-supported-actions.md).  
 * For more details about Apple User Enrollment features and functionality, see [User Enrollment and MDM](https://support.apple.com/guide/deployment/user-enrollment-and-mdm-dep23db2037d/web) on the Apple support website.  
