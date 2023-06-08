@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 06/07/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,16 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of June 5, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Microsoft 365 admin center: Windows 365 cloud PC advanced deployment guide<!--44563663-->
+
+The Advanced deployment guides page in the Microsoft 365 admin center has a new guide to help admins plan for, deploy, and scale Windows 365 Enterprise in their organization. This guide has a checklist of Cloud PC configuration tasks and includes best practices, tools, and recommendations based on the tenant's configuration.
 
 <!-- ########################## -->
 ## Week of May 29, 2023 (Service release 2305)
