@@ -2,7 +2,7 @@
 # required metadata
 
 title: Microsoft Intune built-in roles reference
-description: Permissions reference for built-in roles for Microsoft Intune.
+description: Permissions reference for built-in roles for Microsoft Intune. 
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
