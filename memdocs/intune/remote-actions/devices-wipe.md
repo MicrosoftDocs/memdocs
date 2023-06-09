@@ -31,8 +31,6 @@ ms.collection:
 
 # Remove devices by using wipe, retire, or manually unenrolling the device
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 By using the **Retire** or **Wipe** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing. Users can also issue a remote command from the Intune Company Portal to devices that are enrolled in Intune.
 
 ## Wipe
@@ -55,7 +53,7 @@ The **Retain enrollment state and user account** option is only available for Wi
 
 MDM policies will be reapplied the next time the device connects to Intune.
 
-A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device cannot be recovered. The method that "Wipe" uses to remove data is simple file deletion, and the drive is BitLocker decrypted as part of this process. 
+A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device cannot be recovered. The method that "Wipe" uses to remove data is simple file deletion, and the drive is BitLocker decrypted as part of this process.
 
 ### Wiping a device
 
@@ -122,9 +120,10 @@ The following tables describe what data is removed, and the effect of the **Reti
 Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
 
 ### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
- - The **Wipe** action is supported on Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
 
- - The **Retire** action is supported on Android Enterprise Corporate-Owned Work Profile devices. When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
+- The **Wipe** action is supported on Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
+
+- The **Retire** action is supported on Android Enterprise Corporate-Owned Work Profile devices. When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
 
 
 ### macOS
