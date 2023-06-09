@@ -57,7 +57,7 @@ Some Intune features rely on components of GMS such as the Google Play store or 
 | Scenario  | Features  |
 |-----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Device compliance policies  | When creating or editing compliance policies for Android device administrator, all options listed under **Google Play Protect** are unavailable.  |
-| App protection policies (conditional launch)  | Google's **device integrity check**, **Require threat scan on apps**, and **Max Company Portal version age (days)** are device conditions that cannot be used for conditional launch.  |
+| App protection policies (conditional launch)  | **Google Play’s device integrity check**, **Require threat scan on apps**, and **Max Company Portal version age (days)** are device conditions that cannot be used for conditional launch.  |
 | Client apps  | Apps of type **Android** are not available. Use **Line-of-business app** instead to deploy and manage apps.  |
 | Mobile Threat Defense  | Work with your MTD vendor to understand if their solution is integrated with Intune, if it is available in the region of interest, and if it relies on GMS.  |
 

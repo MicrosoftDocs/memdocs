@@ -49,7 +49,7 @@ Administrators can incorporate the below configuration levels within their ring 
 
 Level 1 is the recommended minimum security configuration for mobile devices owned by the organization.
 
-The policies in level 1 enforce a reasonable data access level while minimizing the impact to users. This is done by enforcing password policies, a minimum operating system version, device integrity check, and disabling certain device functions (like USB file transfers).
+The policies in level 1 enforce a reasonable data access level while minimizing the impact to users. This is done by enforcing password policies, a minimum operating system version, Google Play's device integrity check, and disabling certain device functions (like USB file transfers).
 
 ### Device compliance
 
@@ -57,7 +57,7 @@ To simplify the table below, only configured settings are listed. Undocumented d
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Device Health | Device integrity check | Check basic integrity & certified devices | This setting configures Google's device integrity check on end-user devices. Basic integrity validates the integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity.<br>Basic integrity and certified devices validates the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. |
+| Device Health | Google Play's device integrity check | Check basic integrity & certified devices | This setting configures Google Play's device integrity check on end-user devices. Basic integrity validates the integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity.<br>Basic integrity and certified devices validates the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. |
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 9.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. For Android's latest recommendations, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). |
 | Device Properties | Minimum security patch level | Not configured | Android devices can receive monthly security patches, but the release is dependent on OEMs and/or carriers. Organizations should ensure that deployed Android devices do receive security updates before implementing this setting. For the latest patch releases, see [Android Security Bulletins](https://source.android.com/security/bulletin/). |
 | System Security | Require a password to unlock mobile devices | Require ||

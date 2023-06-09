@@ -385,9 +385,9 @@ Intune app protection policies for access will be applied in a specific order on
 
 When dealing with different types of settings, an app version requirement would take precedence, followed by Android operating system version requirement and Android patch version requirement. Then, any warnings for all types of settings in the same order are checked.
 
-### Intune app protection policies and Google's device integrity check for Android devices
+### Intune app protection policies and Google Play’s device integrity check for Android devices
 
-Intune app protection policies provide the capability for admins to require end-user devices to pass Google's device integrity check for Android devices. A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and is not configurable. Any IT admin configured action for the Google device integrity setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there is no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there is stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
+Intune app protection policies provide the capability for admins to require end-user devices to pass Google Play’s device integrity check for Android devices. A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and is not configurable. Any IT admin configured action for the Google device integrity setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there is no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there is stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
 
 ### Intune app protection policies and Google's Verify Apps API for Android devices
 
@@ -404,15 +404,15 @@ Intune leverages Google Play Protect Play Integrity APIs to add to our existing 
 - Devices with a system image built directly from the Android Open Source Program source files
 - Devices with a beta/developer preview system image
 
-See [Google's documentation on Google's [Play Integrity API](https://developer.android.com/google/play/integrity) for technical details.
+See Google's documentation on [Google's Play Integrity API](https://developer.android.com/google/play/integrity) for technical details.
 
-### Google's device integrity setting and the 'jailbroken/rooted devices' setting
+### Google Play’s device integrity check setting and the 'jailbroken/rooted devices' setting
 
-Google's device integrity checks require the end user being online, atleast for the duration of the time when the "roundtrip" for determining attestation results executes. If end user is offline, IT admin can still expect a result to be enforced from the **jailbroken/rooted devices** setting. That being said, if the end user has been offline too long, the **Offline grace period** value comes into play, and all access to work or school data is blocked once that timer value is reached, until network access is available. Turning on both settings allows for a layered approach to keeping end-user devices healthy which is important when end-users access work or school data on mobile.
+Google Play’s device integrity checks require the end user being online, atleast for the duration of the time when the "roundtrip" for determining attestation results executes. If end user is offline, IT admin can still expect a result to be enforced from the **jailbroken/rooted devices** setting. That being said, if the end user has been offline too long, the **Offline grace period** value comes into play, and all access to work or school data is blocked once that timer value is reached, until network access is available. Turning on both settings allows for a layered approach to keeping end-user devices healthy which is important when end-users access work or school data on mobile.
 
 ### Google Play Protect APIs and Google Play Services
 
-The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **device integrity check**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services.
+The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **Google Play’s device integrity check**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services.
 
 ## Next steps
 

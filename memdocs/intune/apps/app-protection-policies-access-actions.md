@@ -89,7 +89,7 @@ For Android, you'll be able to configure actions for the following settings usin
 - Min app version
 - Min patch version
 - Device manufacturer(s)
-- Device integrity check
+- Google Play’s device integrity check
 - Require threat scan on apps
 - Min Company Portal version
 - Max allowed device threat level

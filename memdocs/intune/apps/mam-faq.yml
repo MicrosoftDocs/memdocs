@@ -8,7 +8,7 @@ metadata:
   author: Erikre
   ms.author: erikre
   manager: dougeby
-  ms.date: 12/09/2020
+  ms.date: 06/09/2023
   ms.topic: faq
   ms.service: microsoft-intune
   ms.subservice: apps
@@ -204,9 +204,9 @@ sections:
           
           When dealing with different types of settings, an app version requirement would take precedence, followed by Android operating system version requirement and Android patch version requirement. Then, any warnings for all types of settings in the same order are checked.
           
-      - question: Intune App Protection Policies provide the capability for admins to require end user devices to pass Google's device integrity check for Android devices. How often is a new device integrity result sent to the service?
+      - question: Intune App Protection Policies provide the capability for admins to require end user devices to pass Google Play's device integrity check for Android devices. How often is a new Google Play’s device integrity check result sent to the service?
         answer: |
-           The Intune service will contact Google Play at a non-configurable interval determined by service load. Any IT admin configured action for the Google device integrity setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If the Google's device integrity result is compliant, no action is taken.  If the Google's device integrity result is non-compliant, the IT admin configured action will be taken immediately. If the request to the Google device integrity check fails for any reason, the cached result from the previous request will be used for up to 24 hours or the next device restart, which ever comes first. At that time Intune App Protection Policies will block access until a current result can be obtained.
+           The Intune service will contact Google Play at a non-configurable interval determined by service load. Any IT admin configured action for Google Play’s device integrity check setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If the Google's device integrity result is compliant, no action is taken.  If the Google's device integrity result is non-compliant, the IT admin configured action will be taken immediately. If the request to Google Play’s device integrity check check fails for any reason, the cached result from the previous request will be used for up to 24 hours or the next device restart, which ever comes first. At that time Intune App Protection Policies will block access until a current result can be obtained.
           
       - question: Intune App Protection Policies provide the capability for admins to require end user devices to send signals via Google's Verify Apps API for Android devices. How can an end user turn on the app scan so that they are not blocked from access due to this?
         answer: |
@@ -214,7 +214,7 @@ sections:
           
       - question: What does Google's Play Integrity API actually check on Android devices? What is the difference between the configurable values of 'Check basic integrity' and 'Check basic integrity & certified devices'?
         answer: |
-           Intune leverages Google Play Integrity API APIs to add to our existing root detection checks for unenrolled devices. Google has developed and maintained this API set for Android apps to adopt if they do not want their apps to run on rooted devices. The Android Pay app has incorporated this, for example. While Google does not share publicly the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices. These users can then be blocked from accessing, or their corporate accounts wiped from their policy enabled apps. 'Check basic integrity' tells you about the general integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity. 'Check basic integrity & certified devices' tells you about the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. Devices that will fail include the following:
+           Intune leverages Google Play Integrity APIs to add to our existing root detection checks for unenrolled devices. Google has developed and maintained this API set for Android apps to adopt if they do not want their apps to run on rooted devices. The Android Pay app has incorporated this, for example. While Google does not share publicly the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices. These users can then be blocked from accessing, or their corporate accounts wiped from their policy enabled apps. 'Check basic integrity' tells you about the general integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity. 'Check basic integrity & certified devices' tells you about the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. Devices that will fail include the following:
           
            - Devices that fail basic integrity
            - Devices with an unlocked bootloader
@@ -223,13 +223,13 @@ sections:
            - Devices with a system image built directly from the Android Open Source Program source files
            - Devices with a beta/developer preview system image
           
-           See [Google's documentation on device integrity](https://developer.android.com/google/play/integrity) for technical details.
+           See [Google's documentation on Play Integrity API](https://developer.android.com/google/play/integrity) for technical details.
           
-      - question: There are two similar checks in the Conditional Launch section when creating an Intune App Protection Policy for Android devices. Should I be requiring the 'device integrity check' setting or the 'jailbroken/rooted devices' setting?
+      - question: There are two similar checks in the Conditional Launch section when creating an Intune App Protection Policy for Android devices. Should I be requiring the 'Google Play's device integrity check' setting or the 'jailbroken/rooted devices' setting?
         answer: Google Play Integrity API checks require the end user being online, atleast for the duration of the time when the "roundtrip" for determining attestation results executes. If end user is offline, IT admin can still expect a result to be enforced from the 'jailbroken/rooted devices' setting. That being said, if the end user has been offline too long, the 'Offline grace period' value comes into play, and all access to work or school data is blocked once that timer value is reached, until network access is available. Turning on both settings allows for a layered approach to keeping end user devices healthy which is important when end users access work or school data on mobile. 
           
       - question: The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. What if Google Play Services are not allowed in the location where the end user may be?
-        answer: Both the 'device integrity check', and 'Threat scan on apps' settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services. 
+        answer: Both the 'Google Play's device integrity check', and 'Threat scan on apps' settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services. 
 
   - name: App experience on iOS
     questions: 
