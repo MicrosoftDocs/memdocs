@@ -95,6 +95,6 @@ landingContent:
           - text: Shutdown macOS and iOS/iPadOS devices
             url: device-shutdown.md
           - text: Erase data from macOS device
-            url: device-erase.md
+            url: device-wipe-macos.md
           - text: Disable Activation Lock
             url: device-activation-lock-disable.md
