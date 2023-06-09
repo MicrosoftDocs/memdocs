@@ -299,6 +299,7 @@ Organizations can modify their network stack preference by configuring the follo
 #### Set a proxy .pac file URL
 
 Organizations can specify a URL to a porxy auto-config (PAC) file for Microsoft Edge for Android.
+
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl |Specify a valid URL to a proxy .pac file.  <br>For example: `https://internal.site/example.pac` |
