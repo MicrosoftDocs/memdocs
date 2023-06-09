@@ -27,7 +27,7 @@ To check which devices support iOS 15 or iPadOS 15 (if applicable), see the foll
 - [Supported iPad models](https://support.apple.com/guide/ipad/supported-models-ipad213a25b2/15.0/ipados/15.0)
 
 > [!NOTE]
-> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. The minimum supported OS version will change to iOS 15/iPadOS 15 while the allowed OS version will change to iOS 12/iPadOS 12 and later. See [https://aka.ms/ADE_userless_support](https://aka.ms/ADE_userless_support) for more information.
+> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. The minimum supported OS version will change to iOS 15/iPadOS 15 while the allowed OS version will change to iOS 12/iPadOS 12 and later. See [this statement about ADE Userless support](https://aka.ms/ADE_userless_support) for more information.
 
 #### How can you prepare?
 
