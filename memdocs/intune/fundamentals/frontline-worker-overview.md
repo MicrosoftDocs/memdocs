@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android and iOS/
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 06/07/2023
+ms.date: 06/08/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -246,9 +246,9 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
     - **Partitioned user access**
 
-      **Not configured** uses partitioned user access. Use this option when an iPad is used by many users at different times. Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad.
+      **Not configured** uses partitioned user access. Use this option when an iPad is used by many authenticated users at different times.
 
-      When the user signs out, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
+      Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad. When the user signs out, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
 
       The number of users that can sign in also varies by the amount of storage on the device. So, it's recommended to plan accordingly and configure the enrollment profile to accommodate your needs.
 
@@ -278,16 +278,26 @@ For a list of all the device configuration settings, go to:
 
 Windows has different devices and cloud services that can be used for frontline workers. They're also used globally and in many industries. This section focuses on Windows used by frontline workers. It includes decisions admins need to make, including determining how the device is used, and configuring the home screen & device experience.
 
-Windows 365 frontline
-cloud PC
+You can use physical Windows devices or use Windows 365 cloud PCs:
 
-- https://www.microsoft.com/windows-365/frontline
-- https://learn.microsoft.com/windows-365/enterprise/introduction-windows-365-frontline
+- **Windows 365 cloud PCs** are virtual machines that are hosted in the Windows 365 service, and are accessible from anywhere, on from any device. They include a Windows desktop experience and are associated with a user. Basically, end users have their own PC in the cloud.
 
+  ✔️ These devices are ideal for frontline workers that need a Windows desktop experience, but don't need a physical device. For example, a call center worker that needs access to a Windows desktop app.
+
+  These devices enroll and Intune, and are managed like any other device, including configuration, apps, and updates.
+
+  For more information on Windows 365 cloud PCs, and to get started, go to:
+
+  - [Windows 365 Cloud PCs overview - Enterprise](/windows-365/enterprise/overview)
+  - [Windows 365 Cloud PCs overview - Small & medium business](/windows-365/business/get-started-windows-365-business)
+
+- Physical Windows devices
 
 ### Step 1 - Select your enrollment option (Windows)
 
 The first step is to determine the enrollment platform that's best for your organization. For FLW devices using the Windows platform, you can use the **Windows automatic enrollment** or **Windows Autopilot** enrollment options. This section focuses on these enrollment options.
+
+?? Are there other enrollment options for FLW? What enrollment option is available for orgs that don't have Azure AD Premium? GPO? ??
 
 - **Windows Autopilot** is the recommended option for FLW devices. You can ship the devices directly to the location without ever touching the devices. Using self-deploying mode, users just turn on the device, and the enrollment automatically starts.
 
@@ -309,13 +319,15 @@ There are other Windows enrollment options available. This article focuses on th
 
 The next decision is to determine if the devices are shared with many users or assigned to a single user. This decision depends on your business needs and the end user requirements. It also impacts how these devices are managed with Intune.
 
-These features are configured using device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment. So, know what the device is doing and its use case.
+These features are configured using device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment.
 
 - **Shared device**
 
   Shared devices allow one user at a time. A user gets the device, completes their tasks, and gives the device to another user. End users sign in to these shared devices with their **Azure AD organization account** or a **guest account**. With this feature, you can delete account information and allow (or prevent) users from saving & viewing files locally.
 
   ?? Need example ??
+
+  ?? Add info on guest accounts and partitioned user access, like in iPadOS? ??
 
   For more information on this feature, and to get started, go to:
 
@@ -334,6 +346,8 @@ These features are configured using device configuration profiles. When the prof
 
 On Windows devices, you can configure the home screen and device experience. In this step, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
+These features are configured using device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment.
+
 The following scenarios describe some commonly used scenarios:
 
 - **Scenario 1: Device wide access with multiple apps**
@@ -345,7 +359,9 @@ The following scenarios describe some commonly used scenarios:
   To get started, use the following links:
 
   1. [Add apps to Microsoft Intune](../apps/apps-add.md)
-  2. [Apply features and settings on your devices using device profiles in Intune](../configuration//device-profiles.d)
+  2. [Apply features and settings on your devices using device profiles in Intune](../configuration/device-profiles.md)
+
+?? This scenario is very broad and may not apply to FLW. ??
 
 - **Scenario 2: Kiosk with one app or many apps**
 
@@ -365,10 +381,29 @@ The following scenarios describe some commonly used scenarios:
   To get started, use the following links:
 
   1. [Add apps to Microsoft Intune](../apps/apps-add.md)
-  2. Create a [kiosk profile](/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../configuration/kiosk-settings.md).
+  2. Create a [kiosk profile](../configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../configuration/kiosk-settings.md).
 
   To configure these devices, you create a device configuration policy that sets the device to single app kiosk mode. Then, you assign the app to the device.
 
 ## Other MSFT services that do FLW
+
+**Microsoft 365 for frontline workers** is a licensing option that designed for frontline worker scenarios. It's ideal for a mobile workforce that primarily interacts with customers that also needs to stay connected to the rest of the organization. It interacts with other apps and services, including Microsoft Teams, Outlook, SharePoint, and more.
+
+For more information and to get started, go to:
+
+- [Get started with Microsoft 365 for frontline workers](/microsoft-365/frontline/flw-overview?view=o365-worldwide)
+- [Choose your scenarios for Microsoft 365 for frontline workers](/microsoft-365/frontline/flw-choose-scenarios)
+
+**Windows 365 Frontline** is a version of Windows 365 that provides a single license to provision some Cloud PC virtual machines. The idea is help organizations save costs. It's ideal for workers who share computing resources and don't require 24/7 dedicated Cloud PCs, including users who are:
+
+- On a rotation schedule
+- Working across time zones and regions
+- Part-time workers
+- Contingent staff
+
+For more information and to get started, go to:
+
+- [Windows 365 Frontline)](https://www.microsoft.com/windows-365/frontline)
+- [What is Windows 365 Frontline?](/windows-365/enterprise/introduction-windows-365-frontline)
 
 ## Next steps
