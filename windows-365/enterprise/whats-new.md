@@ -68,6 +68,13 @@ Windows 365 Enterprise can now be purchased by customers with an existing Govern
 
 Windows 365 Enterprise is FedRAMP compliant. Except for FedRAMP, Windows 365 Enterprise doesn't offer the same compliance as Windows 365 Government. CJIS and IRS 1075 aren't supported in Windows 365 Enterprise.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Government setup tool<!--43461105-->
+
+A new Windows 365 Government setup tool is now available. It replaces the PowerShell scripts that were used to setup tenant mapping and permissions. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+
 <!-- ########################## -->
 ## Week of May 29, 2023 (Service release 2305)
 
