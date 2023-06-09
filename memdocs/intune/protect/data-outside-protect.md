@@ -3,7 +3,7 @@
 
 title: Prevent unauthorized access to company data
 titleSuffix: Microsoft Intune
-description: Prevent unauthorized access to your company data when it is shared outside the company network using Microsoft Intune. 
+description: Prevent unauthorized access to your company data when it's shared outside the company network using Microsoft Intune. 
 keywords: Microsoft 365 M365 Azure Information Protection data protect outside network company data 
 ms.author: dougeby
 author: dougeby

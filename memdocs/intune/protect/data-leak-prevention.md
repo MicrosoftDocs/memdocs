@@ -32,13 +32,13 @@ ms.collection:
 ---
 # Prevent data leaks on non-managed devices using Microsoft Intune
 
-If you allow access to company data hosted by Microsoft 365, you can control how users share and save data without risking intentional or accidental data leaks. Microsoft Intune provides app protection policies that you set to secure your company data on user-owned devices. The devices do not need to be enrolled in the Intune service. 
+If you allow access to company data hosted by Microsoft 365, you can control how users share and save data without risking intentional or accidental data leaks. Microsoft Intune provides app protection policies that you set to secure your company data on user-owned devices. The devices don't need to be enrolled in the Intune service. 
 
-App protection policies set up with Intune also work on devices managed with a non-Microsoft device management solution. The personal data on the devices is not touched; only company data is managed by the IT department. 
+App protection policies set up with Intune also work on devices managed with a non-Microsoft device management solution. The personal data on the devices isn't touched; only company data is managed by the IT department. 
 
 You can set app protection policies for Office mobile apps on devices running Windows, iOS/iPadOS, or Android to protect company data. These policies let you set policies such as app-based PIN or company data encryption, or more advanced settings to restrict how your cut, copy, paste, and save-as features are used by users between managed and unmanaged apps. You can also remotely wipe company data without requiring users enroll devices.
 
-Intune app protection policies are independent of device management. App protection policies let you manage Office mobile apps on both unmanaged and Intune-managed devices, as well as device managed by non-Microsoft MDM solutions.
+Intune app protection policies are independent of device management. App protection policies let you manage Office mobile apps on both unmanaged and Intune-managed devices, and device managed by non-Microsoft MDM solutions.
 
 ## Before you begin
 
@@ -48,7 +48,7 @@ The following action plan can be used when you meet the following requirements:
 * Your company uses Microsoft 365 Exchange Online, SharePoint Online, OneDrive for Business, or Viva Engage.
 * Your company has licenses for Microsoft 365, Enterprise Mobility + Security (EMS), or Azure Information Protection.
 * Your company allows users to access company data from company-owned or personally-owned Windows, iOS/iPadOS, or Android devices.
-* Your company does not want to require enrollment of personally-owned devices in a device management service.
+* Your company doesn't want to require enrollment of personally-owned devices in a device management service.
 
 ## Action plan
 
