@@ -115,9 +115,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Email|N/A (Email profiles aren't supported by Android devices)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
 |Azure AD unjoin|The Azure AD record is removed.|The Azure AD record is removed.|
 
-### Android Enterprise personally-owned devices with a work profile
+### Android Enterprise personally owned devices with a work profile
 
-Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
+Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally owned work profiles.
 
 ### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
 
@@ -193,10 +193,10 @@ You can configure Intune to automatically remove devices that appear to be inact
 
 If a removed device checks in before its device certification expires, it will reappear in the admin center.
 
-The device clean up rule doesn't trigger a wipe or retire.
+The device clean-up rule doesn't trigger a wipe or retire.
 
 > [!IMPORTANT]
-> The device clean up rule doesn't trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
+> The device clean-up rule doesn't trigger a Bitlocker suspension when Bitlocker encryption is managed by Intune. To create a Bitlocker profile: [Manage BitLocker policy for Windows devices with Intune](../protect/encrypt-devices.md)
 
 > [!NOTE]
 > Device cleanup rules aren't available for Jamf-managed devices.
@@ -222,9 +222,9 @@ If you want to completely remove an Apple automated device enrollment (ADE) devi
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the device > **Retire**.
 3. Visit [business.apple.com](http://business.apple.com) and search for the device by its serial number.
-4. In the **Assigned to** menu, choose **Unassigned**.
+4. Select the device, and then select **Release from Organization**.
 
-5. Choose **Reassign**.
+5. Check **I understand this cannot be undone**, and then select **Release**.
 
     ![Screenshot for Apple reassign](./media/devices-wipe/apple-reassign.png)
 
