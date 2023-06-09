@@ -5,7 +5,7 @@ summary: "Official product documentation for Endpoint analytics in Microsoft End
 metadata:
   title: Endpoint analytics documentation
   description: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
-  ms.service: mem
+  ms.service: microsoft-intune
   ms.subservice: fundamentals
   ms.topic: landing-page
   author: smritib17
