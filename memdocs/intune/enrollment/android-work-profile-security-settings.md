@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android Enterprise security configurations for personally-owned work profile
+title: Android Enterprise security configurations for personally owned work profile
 titleSuffix: Microsoft Intune
 description: Learn the restrictions and settings suggested for Android Enterprise device basic and high security.
 keywords:
@@ -31,29 +31,29 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Android Enterprise personally-owned work profile security configurations
+# Android Enterprise personally owned work profile security configurations
 
 As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise work profile mobile users. For more information on each policy setting, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) and [Android Enterprise device settings to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
 
 When choosing your settings, be sure to review and categorize usage scenarios. Then, configure users following the guidance for the chosen security level. You can adjust the suggested settings based on the needs of your organization. Make sure to have your security team evaluate the threat environment, risk appetite, and impact to usability.
 
-For personally-owned work profile devices, there are two recommended security configuration frameworks:
+For personally owned work profile devices, there are two recommended security configuration frameworks:
 
-- [Personally-owned work profile enhanced security (level 2)](#personally-owned-work-profile-enhanced-security)
-- [Personally-owned work profile high security (level 3)](#personally-owned-work-profile-high-security)
+- [Personally owned work profile enhanced security (level 2)](#personally-owned-work-profile-enhanced-security)
+- [Personally owned work profile high security (level 3)](#personally-owned-work-profile-high-security)
 
 > [!Note]
 > Because of the settings available for personally-owned work profile devices, there is no basic security (level 1) offering. The available settings don't justify a difference between level 1 and level 2.
 
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
-## Personally-owned work profile enhanced security
+## Personally owned work profile enhanced security
 
 Level 2 is the recommended minimum security configuration for personal devices where users access work or school data. This configuration can apply to most mobile users. Some of the controls may impact user experience.
 
 ### Device compliance
 
-To simplify the table below, only configured settings are listed. Undocumented device compliance settings are not configured.
+To simplify the table below, only configured settings are listed. Undocumented device compliance settings aren't configured.
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
@@ -76,16 +76,16 @@ To simplify the table below, only configured settings are listed. Undocumented d
 
 ### Device restrictions
 
-To simplify the table below, only configured settings are listed. Undocumented device restrictions are not configured.
+To simplify the table below, only configured settings are listed. Undocumented device restrictions aren't configured.
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
 | Work profile settings | Copy and paste between work and personal profiles | Block ||
 | Work profile settings | Data sharing between work and personal profiles | Apps in work profile can handle sharing request from personal profile ||
-| Work profile settings | Work profile notifications while device locked | Not configured | Blocking this setting ensures sensitive data is not exposed in work profile notifications, which may impact usability. |
-| Work profile settings | Default app permissions | Device Default | Admins need to review and adjust the permissions granted by apps they are deploying. |
+| Work profile settings | Work profile notifications while device locked | Not configured | Blocking this setting ensures sensitive data isn't exposed in work profile notifications, which may impact usability. |
+| Work profile settings | Default app permissions | Device Default | Admins need to review and adjust the permissions granted by apps they're deploying. |
 | Work profile settings | Add and remove accounts | Block ||
-| Work profile settings | Contact sharing via Bluetooth | Enable | By default, access to work contacts is not available on other devices, like automobiles via Bluetooth integration. Enabling this setting improves hands free user experiences. However, the Bluetooth device may cache the contacts upon first connection. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
+| Work profile settings | Contact sharing via Bluetooth | Enable | By default, access to work contacts isn't available on other devices, like automobiles via Bluetooth integration. Enabling this setting improves hands free user experiences. However, the Bluetooth device may cache the contacts upon first connection. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
 | Work profile settings | Screen capture | Block ||
 | Work profile settings | Search work contacts from personal profile | Not configured | Blocking users from accessing work contacts from the personal profile may impact certain usability scenarios like text messaging and dialer experiences within the personal profile. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
 | Work profile settings | Allow widgets from work profile apps | Enable ||
@@ -108,12 +108,12 @@ To simplify the table below, only configured settings are listed. Undocumented d
 > [!Note]
 > When a personally-owned work profile is enabled, “One Lock” is configured by default to combine device and work profile passcodes. One Lock may be disabled to separate work profile and device passcodes if necessary, under work profile settings.
 
-## Personally-owned work profile high security
+## Personally owned work profile high security
 
 Level 3 is the recommended configuration for devices used by users or groups who are uniquely high risk. For example, users who handle highly sensitive data where unauthorized disclosure causes considerable material loss. An organization likely to be targeted by well-funded and sophisticated adversaries merit the additional constraints described below. This configuration expands upon the configuration in Level 2 by:
 
 - implementing mobile threat defense or Microsoft Defender for Endpoint.
-- restricting personally-owned work profile data scenarios.
+- restricting personally owned work profile data scenarios.
 - enacting stronger password policies.
 
 The policy settings enforced in level 3 include all the policy settings recommended for level 1. However, the settings listed below include only those that have been added or changed. These settings may have a slightly higher impact to users or applications. They enforce a level of security more appropriate for risks facing users with access to sensitive information on mobile devices.
@@ -122,8 +122,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both. |
-| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It is not necessary to deploy both.|
+| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both. |
+| Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both.|
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 11.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. See Android Enterprise Recommended requirements for Android's latest recommendations |
 | System Security | Number of days until password expires | 365 | Organizations may need to update this setting to match their password policy. |
 | System Security | Number of previous passwords to prevent use | 5 | Organizations may need to update this setting to match their password policy. |
@@ -133,8 +133,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Work profile settings | Work profile notifications while device locked | Block | Blocking this setting ensures sensitive data is not exposed in work profile notifications, which may impact usability. |
-| Work profile settings | Contact sharing via Bluetooth | Not configured | By default, access to work contacts is not available on other devices, like automobiles via Bluetooth integration. Enabling this setting improves hands free user experiences. However, the Bluetooth device may cache the contacts upon first connection. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
+| Work profile settings | Work profile notifications while device locked | Block | Blocking this setting ensures sensitive data isn't exposed in work profile notifications, which may impact usability. |
+| Work profile settings | Contact sharing via Bluetooth | Not configured | By default, access to work contacts isn't available on other devices, like automobiles via Bluetooth integration. Enabling this setting improves hands free user experiences. However, the Bluetooth device may cache the contacts upon first connection. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
 | Work profile settings | Search work contacts from personal profile | Block | Blocking users from accessing work contacts from the personal profile may impact certain usability scenarios like text messaging and dialer experiences within the personal profile. Organizations should consider balancing the usability scenarios with data protection concerns when implementing this setting. |
 | Work profile settings | Allow widgets from work profile apps | Not configured ||
 | Work profile settings | Number of sign-in failures before wiping the work profile | 5 | Organizations may need to update this setting to match their password policy. |
@@ -151,5 +151,5 @@ Administrators can incorporate the above configuration levels within their ring 
 
 1. [Configure device enrollment restrictions for personal devices](device-enrollment-restrictions.md)
 2. [Configure app configuration policies](android-app-configuration-policies.md)
-3. 🡺 **Configure security settings for personal devices** (*You are here*) )  
+3. 🡺 **Configure security settings for personal devices** (*You're here*) )  
 4. [Configure security settings for fully managed devices](android-fully-managed-security-settings.md)   

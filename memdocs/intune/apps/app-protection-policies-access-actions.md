@@ -35,14 +35,14 @@ ms.collection:
 
 Conditional launch actions within Intune app protection policies provide organizations the ability to block access or wipe org data when certain device or app conditions aren't met.
  
-You can explicitly choose to wipe your company's corporate data from the end user's device as an action to take for non-compliance by using these settings. For some settings, you'll be able to configure multiple actions, such as block access and wipe data based on different specified values.
+You can explicitly choose to wipe your company's corporate data from the end user's device as an action to take for noncompliance by using these settings. For some settings, you're able to configure multiple actions, such as block access and wipe data based on different specified values.
 
 ## Create an app protection policy using conditional launch actions
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App protection Policies**.
-3. Click **Create policy** and select the platform of the device for your policy. 
-4. Click **Configure required settings** to see the list of settings available to be configured for the policy. 
+3. Select **Create policy** and select the platform of the device for your policy. 
+4. Select **Configure required settings** to see the list of settings available to be configured for the policy. 
 5. By scrolling down in the Settings pane, you'll see a section titled **Conditional launch** with an editable table.
 
     ![Screenshot of the Intune app protection access actions](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
@@ -55,7 +55,7 @@ You can explicitly choose to wipe your company's corporate data from the end use
 The app protection policy settings table has columns for **Setting**, **Value**, and **Action**.
 
 ### iOS policy settings
-For iOS/iPadOS, you'll be able to configure actions for the following settings using the **Setting** dropdown:
+For iOS/iPadOS, you're able to configure actions for the following settings using the **Setting** dropdown:
 - Max PIN attempts
 - Offline grace period
 - Jailbroken/rooted devices
@@ -96,7 +96,7 @@ For Android, you'll be able to configure actions for the following settings usin
 - Disabled account
 - Require device lock
 
-By using the **Min Company Portal version**, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to set values to **Block access**, **Wipe data**, and **Warn** as possible actions when each value isn't met. The possible formats for this value follow the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. Given that some end users may not prefer a forced update of apps on the spot, the 'warn' option may be ideal when configuring this setting. The Google Play Store does a good job of only sending the delta bytes for app updates, but this can still be a large amount of data that the user may not want to utilize if they are on data at the time of the update. Forcing an update and thereby downloading an updated app could result in unexpected data charges at the time of the update. The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting will have no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app auto-updates on their device will likely not see any dialogs from this feature, given that they'll likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices.
+By using the **Min Company Portal version**, you can specify a specific minimum defined version of the Company Portal that is enforced on an end user device. This conditional launch setting allows you to set values to **Block access**, **Wipe data**, and **Warn** as possible actions when each value isn't met. The possible formats for this value follow the pattern *[Major].[Minor]*, *[Major].[Minor].[Build]*, or *[Major].[Minor].[Build].[Revision]*. Given that some end users may not prefer a forced update of apps on the spot, the 'warn' option may be ideal when configuring this setting. The Google Play Store does a good job of only sending the delta bytes for app updates, but this can still be a large amount of data that the user may not want to utilize if they are on data at the time of the update. Forcing an update and thereby downloading an updated app could result in unexpected data charges at the time of the update. The **Min Company Portal version** setting, if configured, will affect any end user who gets version 5.0.4560.0 of the Company Portal and any future versions of the Company Portal. This setting has no effect on users using a version of Company Portal that is older than the version that this feature is released with. End users using app autoupdates on their device will likely not see any dialogs from this feature, given that they'll likely be on the latest Company Portal version. This setting is Android only with app protection for enrolled and unenrolled devices.
 
 To use the **Device manufacturer(s)** setting, input a semi-colon separated list of Android manufacturers. These values aren't case-sensitive. Besides Intune Reporting, you can find the Android manufacturer of a device under the device settings. <br>
 Example input: *Manufacturer A;Manufacturer B* 
@@ -116,7 +116,7 @@ When conflicts arise between two app protection policies for configured values, 
 
 By default, the table will have populated rows as settings configured for **Offline grace period**, and **Max PIN attempts**, if the **Require PIN for access** setting is set to **Yes**.
  
-To configure a setting, select a setting from the dropdown under the **Setting** column. Once a setting is selected, the editable text box will become enabled under the **Value** column in the same row, if a value is required to be set. Also, the dropdown will become enabled under the **Action** column with the set of conditional launch actions applicable to the setting. 
+To configure a setting, select a setting from the dropdown under the **Setting** column. Once a setting is selected, the editable text box becomes enabled under the **Value** column in the same row, if a value is required to be set. Also, the dropdown becomes enabled under the **Action** column with the set of conditional launch actions applicable to the setting. 
 
 The following list provides the common list of actions:
 - **Block access** – Block the end user from accessing the corporate app.
@@ -127,7 +127,7 @@ In some cases, such as the **Min OS version** setting, you can configure the set
 
 ![Screenshot of app protection access actions - Min OS version](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions05.png)
 
-Once a setting is fully configured, the row will appear in a read-only view and be available to be edited at any time. In addition, the row will appear to have a dropdown available for selection in the **Setting** column. Settings that have already been configured and don't allow multiple actions won't be available for selection in the dropdown.
+Once a setting is fully configured, the row appears in a read-only view and be available to be edited at any time. In addition, the row appears to have a dropdown available for selection in the **Setting** column. Settings that have already been configured and don't allow multiple actions won't be available for selection in the dropdown.
 
 ## Next steps
 
