@@ -177,7 +177,7 @@ Supported platforms and profiles:
 
     - **Enable BitLocker after recovery information to store**
       - **Not configured** (*default*)  
-      - **Yes**
+      - **Yes** - By setting this to *Yes*, BitLocker recovery information will be saved to Active Directory Domain Services.
 
     - **Block the use of certificate-based data recovery agent (DRA)**
       - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.
@@ -311,7 +311,7 @@ Supported platforms and profiles:
 
       - **Enable BitLocker after recovery information to store**
         - **Not configured** (*default*)  
-        - **Yes**
+        - **Yes** - By setting this to *Yes*, BitLocker recovery information will be saved to Active Directory Domain Services.
 
       - **Block the use of certificate-based data recovery agent (DRA)**
         - **Not configured** (*default*) - Allow the use of DRA to be set up. Setting up DRA requires an enterprise PKI and Group Policy Objects to deploy the DRA agent and certificates.

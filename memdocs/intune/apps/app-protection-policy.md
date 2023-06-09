@@ -354,7 +354,7 @@ You can use the iOS/iPadOS share extension to open work or school data in unmana
 
 By default, Intune app protection policies will prevent access to unauthorized application content. In iOS/iPadOS, there is functionality to open specific content or applications using [Universal Links](https://developer.apple.com/ios/universal-links/).
 
-Users can disable an app's Universal Links by visiting them in Safari and selecting **Open in New Tab** or **Open**. In order to user Universal Links with Intune app protection policies, it's important to re-enable the universal links. The end user would need to do an **Open in** <***app name***> in Safari after long pressing a corresponding link. This should prompt any additional protected app to route all Universal Links to the protected application on the device.
+Users can disable an app's Universal Links by visiting them in Safari and selecting **Open in New Tab** or **Open**. In order to use Universal Links with Intune app protection policies, it's important to re-enable the universal links. The end user would need to do an **Open in** <***app name***> in Safari after long pressing a corresponding link. This should prompt any additional protected app to route all Universal Links to the protected application on the device.
 
 ### Multiple Intune app protection access settings for same set of apps and users
 
