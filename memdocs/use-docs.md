@@ -3,13 +3,13 @@ title: How to use Microsoft Endpoint Manager documentation
 titleSuffix: Microsoft Endpoint Manager
 description: Learn how to search, provide feedback about, and contribute to Microsoft Endpoint Manager documentation. This documentation also covers Configuration Manager, Intune, and Autopilot.
 ms.date: 11/11/2021
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.topic: how-to
 ms.localizationpriority: high
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: dougeby
+ms.author: dougeby
+manager: dansimp
 ms.collection: highpri
 ---
 

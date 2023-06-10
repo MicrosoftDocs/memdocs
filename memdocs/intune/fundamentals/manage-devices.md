@@ -11,7 +11,7 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/19/2023
 ms.topic: conceptual
-ms.service: mem
+ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:

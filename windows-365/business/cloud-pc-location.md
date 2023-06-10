@@ -50,10 +50,10 @@ To find out if Windows 365 can be purchased in your country/region, follow these
 When a Cloud PC license is assigned, it’s created in a particular geographic location. To find that location, follow these steps:
 
 1. In your internet browser, go to [Where your Microsoft customer data is stored article](/microsoft-365/enterprise/o365-data-locations).
-2. Find the country that corresponds to your billing address and select **Click to expand**.
+2. Find the country/region that corresponds to your billing address and select **Click to expand**.
 3. The **Exchange Online** row identifies the location that your Cloud PC is created by default. If there's no capacity in that location, your Cloud PC will be created in the nearest location with capacity.
 
-The billing address country doesn’t mean that the Cloud PC will necessarily reside in that country. Cloud PCs are created in the nearest supported location with available capacity. This location may or may not be  the billing address country.
+The billing address country/region doesn’t mean that the Cloud PC will necessarily reside in that country/region. Cloud PCs are created in the nearest supported location with available capacity. This location may or may not be  the billing address country/region.
 
 ## Next steps
 
