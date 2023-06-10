@@ -341,7 +341,7 @@ This feature applies to:
     - **Permitted URLs**: **Add** the URLs you want to allow. These URLs bypass Apple's web filter.
 
         > [!NOTE]
-        > The URLs you enter are the URLs you don't want evauluated by the Apple web filter. These URLs aren't a list of allowed web sites. To create a list of allowed websites, set the **Filter Type** to **Specific websites only**.
+        > The URLs you enter are the URLs you don't want evaluated by the Apple web filter. These URLs aren't a list of allowed web sites. To create a list of allowed websites, set the **Filter Type** to **Specific websites only**.
 
     - **Blocked URLs**: **Add** the URLs you want to stop from opening, regardless of the Apple web filter settings.
 
