@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 06/12/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -103,6 +103,13 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->
+
+<!-- ***********************************************-->
+## Windows 365 app
+
+### Windows 365 app will support Windows 365 Government environments<!--43305226-->
+
+In a future update, the Windows 365 app will support Windows 365 Government environments.
 
 ## Next steps
 
