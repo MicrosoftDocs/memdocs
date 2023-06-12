@@ -198,3 +198,6 @@ This article describes the settings you can configure.
 The profile is created, but it may not be doing anything. Be sure to [assign this profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 [Wired network settings for macOS devices](wired-network-settings-macos.md)
+
+## Additional resources
+[Extensible Authentication Protocol (EAP) for network access](windows-server/networking/technologies/extensible-authentication-protocol/network-access)
