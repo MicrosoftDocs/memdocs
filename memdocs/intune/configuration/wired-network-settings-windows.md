@@ -200,4 +200,4 @@ The profile is created, but it may not be doing anything. Be sure to [assign thi
 [Wired network settings for macOS devices](wired-network-settings-macos.md)
 
 ## Additional resources
-[Extensible Authentication Protocol (EAP) for network access](windows-server/networking/technologies/extensible-authentication-protocol/network-access)
+[Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
