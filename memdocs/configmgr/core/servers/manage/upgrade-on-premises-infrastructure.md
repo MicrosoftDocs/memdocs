@@ -203,12 +203,10 @@ When you have more than one Configuration Manager site in a hierarchy, each site
 
 Configuration Manager supports the in-place upgrade of SQL Server to the following versions:
 
+- SQL Server 2022 
 - SQL Server 2019
-
 - SQL Server 2017
-
 - SQL Server 2016
-
 - SQL Server 2014
 
 This support includes the upgrade of SQL Server Express to a newer version of SQL Server Express at secondary sites.
@@ -225,6 +223,7 @@ When you upgrade a site database from an earlier version of SQL Server, the data
 
 For more information about upgrading SQL Server, see the following SQL Server articles:
 
+- [Upgrade to SQL Server 2022](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2022)
 - [Upgrade to SQL Server 2019](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15)
 
 - [Upgrade to SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)
