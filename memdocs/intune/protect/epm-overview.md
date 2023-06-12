@@ -68,7 +68,7 @@ Endpoint Privilege Management has the following operating system requirements:
 > Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 >
 > Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
-> Devices can be either Intune managed or [co-managed](https://learn.microsoft.com/mem/configmgr/comanage/overview)
+> Endpoint Privilege Management is supported for Intune-managed devices, including [co-managed](https://learn.microsoft.com/mem/configmgr/comanage/overview) devices.
 
 ## Getting started with Endpoint Privilege Management
 
