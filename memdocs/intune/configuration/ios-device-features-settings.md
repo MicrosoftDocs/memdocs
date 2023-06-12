@@ -334,6 +334,9 @@ This feature applies to:
 
 ### Settings apply to: Automated device enrollment (supervised)
 
+> [!TIP]
+> These settings use Apple's Web Content Filter settings. For more information on these settings, see [Apple's Platform Deployment site](https://support.apple.com/guide/deployment/web-content-filter-payload-settings-depc77c9609/web) (opens Apple's web site).
+
 - **Filter Type**: Choose to allow specific web sites. Your options:
 
   - **Configure URLs**: Use Apple's built-in web filter that looks for adult terms, including profanity and sexually explicit language. This feature evaluates each web page as it's loaded, and identifies and blocks unsuitable content. You can also add URLs that you don't want checked by the filter. Or, block specific URLs, regardless of Apple's filter settings.
@@ -341,7 +344,7 @@ This feature applies to:
     - **Permitted URLs**: **Add** the URLs you want to allow. These URLs bypass Apple's web filter.
 
         > [!NOTE]
-        > The URLs you enter are the URLs you don't want evauluated by the Apple web filter. These URLs aren't a list of allowed web sites. To create a list of allowed websites, set the **Filter Type** to **Specific websites only**.
+        > The URLs you enter are the URLs you don't want evaluated by the Apple web filter. These URLs aren't a list of allowed web sites. To create a list of allowed websites, set the **Filter Type** to **Specific websites only**.
 
     - **Blocked URLs**: **Add** the URLs you want to stop from opening, regardless of the Apple web filter settings.
 
