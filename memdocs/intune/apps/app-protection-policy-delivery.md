@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 06/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,7 @@ ms.collection:
 
 # Understand App Protection Policy delivery timing
 
-Learn the different deployment windows for app protection policies to understand when changes should appear on your end-user devices.
+Learn about the different delivery timing for app protection policies to understand when changes should appear on your end-user devices.
 
 ## Delivery timing summary
 
@@ -46,6 +46,7 @@ App protection policy (APP) delivery depends on the license state and Intune ser
 |    User Not   Assigned App Protection Policies    |    Wait for   next retry interval.  App Protection isn't active for the user.    |    12 hours        |    Occurs when you   haven't assigned APP settings to the user.    |
 |    User Assigned App Protection Policies but app isn't defined in the App Protection Policies   |    Wait for   next retry interval.  App Protection isn't active for the user.    |    12 hours        |    Occurs when you   haven't added the app to APP.    |
 |    User   Successfully Registered for Intune MAM    |    App   Protection is applied per policy settings.    Updates occur based on retry interval    |    Intune   Service defined based on user load.    Typically 30 mins.     |    Occurs when   the user has successfully registered with the Intune service for APP   configuration.    |
+|    User successfully registered for MAM for Microsoft Edge on Windows devices    |    App protection is applied per policy settings. Updates occur based on retry interval.    |    Intune Service defined based on user load. Typically 30 mins.     |    Occurs when   the user has successfully registered with the Intune service for APP configuration on Windows device.    |
 
 > [!NOTE]
 > Retry intervals may require active app use to occur, meaning the app is launched and in use.  If the retry interval is 24 hours and the user waits 48 hours to launch the app, the Intune APP SDK will retry at 48 hours.
