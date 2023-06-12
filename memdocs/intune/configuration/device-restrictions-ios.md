@@ -44,7 +44,7 @@ This feature applies to:
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your iOS/iPadOS devices.
 
 > [!TIP]
-> These settings use Apple's MDM settings. For more information on these settings, see [Apple's mobile device management settings](https://support.apple.com/guide/mdm/welcome/web) (opens Apple's web site).
+> These settings use Apple's restriction settings. For more information on these settings, see [Apple's mobile device management settings site](https://support.apple.com/guide/deployment/restrictions-for-iphone-and-ipad-dep0f7dd3d8/web) (opens Apple's web site).
 
 ## Before you begin
 
