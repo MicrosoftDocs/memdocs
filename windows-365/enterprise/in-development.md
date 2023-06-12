@@ -102,7 +102,11 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
 
 <!-- ***********************************************-->
-<!--## Role-based access control-->
+## Security
+
+### Azure network connection least privilege update<!--44876259-->
+
+A new, more secure least privilege  will be implemented in a future update. When the update is released, customers must manually remove the old network contributor role from the resources where the ANC was created.
 
 <!-- ***********************************************-->
 ## Windows 365 app
