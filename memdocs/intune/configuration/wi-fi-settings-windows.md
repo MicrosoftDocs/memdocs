@@ -230,4 +230,4 @@ The profile is created, but may not be doing anything. Be sure to [assign the pr
 [Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms
 
 ## Additional resources
-[Extensible Authentication Protocol (EAP) for network access](windows-server/networking/technologies/extensible-authentication-protocol/network-access)
+[Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
