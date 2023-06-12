@@ -45,18 +45,18 @@ You can enable protected Mobile Application Management (MAM) access to org data 
 > [!NOTE]
 > For more information about MAM, see [Mobile Application Management (MAM) basics](../apps/app-management.md#mobile-application-management-mam-basics).
 
-Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user’s unmanaged assets on their device are not impacted by your organization's polices. This capability is available by using Microsoft Edge to access corporate data on Windows client devices.
+Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user’s unmanaged assets on their device aren't impacted by your organization's policies. This capability is available by using Microsoft Edge to access corporate data on Windows client devices.
 
 As the Intune admin, you need to have the following app management functionality:
 - Ability to deploy app protection policies to apps/users protected by the Intune APP SDK 
 - Ability to configure app Health Checks (aka Conditional Launch) and Access policies to apps/users protected by the Intune APP SDK 
 - Ability to define sites protected by Conditional Access and protection policy 
 - Ability to designate risk level for allowing end users to access corporate resource 
-- Ability to setup tenant-based connector for Mobile Threat Defense (MTD)  
+- Ability to set up tenant-based connector for Mobile Threat Defense (MTD)  
 - Ability to deploy a selective wipe command to protected applications 
 
 Members of your organization (end-users) expect to have the following functionality for their accounts:
-- Ability to login to Azure Active Directory (AAD) to access sites protected by Conditional Access 
+- Ability to log in to Azure Active Directory (AAD) to access sites protected by Conditional Access 
 - Ability to view health data on device, in the case where a device is considered unhealthy 
 - Ability to have access revoked to resources when a device remains unhealthy 
 - Ability to be informed, with clear remediation steps, when access is controlled by an administrator policy 
@@ -81,7 +81,7 @@ This MAM service syncs compliance state per user, per app, and per device to the
 > [!NOTE]
 > This MAM service uses the same conditional access compliance workflow that is used to [manage Microsoft Edge on iOS and Android devices](../apps/manage-microsoft-edge.md).
 
-When a change is detected, the the MAM service updates the device compliance state immediately. The service also includes MTD health state as part of the compliance state.
+When a change is detected, the MAM service updates the device compliance state immediately. The service also includes MTD health state as part of the compliance state.
 
 > [!NOTE]
 > The MAM service evaluates the MTD state in the service. This is done independently from the MAM client and client platform.
@@ -89,9 +89,9 @@ When a change is detected, the the MAM service updates the device compliance sta
 The MAM Client communicates the client heath state (or health metadata) to the MAM Service upon check-in. The health state includes any failure of APP Health Checks for **Block** or **Wipe** conditions. In addition, AAD guides end-users through remediation steps when they attempt to access a blocked CA resource.
 
 ### Apply Conditional Access
-Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Edge for Windows. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Microsoft Edge for Windows. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
-Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Edge for Windows, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
+Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Microsoft Edge for Windows, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
 
 >[!NOTE]
 > This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for Windows. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
@@ -103,14 +103,14 @@ With Conditional Access, you can also target on-premises sites that you have exp
 
 ## Threat Defense Health
 
-The health status of a personal owned device is verified before allowing access to your org data. MAM threat detection is tightly integrated with with Windows Defender. As part of CA, this service can block remote resource access and APP can block access (or remove local org data). Windows Defender provide a client device health assessment ("heartbeat") to the MAM service. This assessment supports both APP and CA gating of the flow and access to org data on personal unmanaged devices.
+The health status of a personal owned device is verified before allowing access to your org data. MAM threat detection is tightly integrated with Windows Defender. As part of CA, this service can block remote resource access and APP can block access (or remove local org data). Windows Defender provides a client device health assessment ("heartbeat") to the MAM service. This assessment supports both APP and CA gating of the flow and access to org data on personal unmanaged devices.
 
 > [!NOTE]
 > This MAM service uses the same threat defense health workflow that is used to [manage Microsoft Edge on iOS and Android devices](../apps/manage-microsoft-edge.md).
 
 As part of threat defense health, this MAM Service supports registration and heath state reporting for threat detection products. The health state includes the following details:
 -	User, app, and device identifiers
--	A pre-defined health state
+-	A predefined health state
 -	The time of last health state update
 
 > [!IMPORTANT]
@@ -125,7 +125,7 @@ App Protection Policies (APP) define which apps are allowed and the actions they
 As an admin, you can configure how data is protected through APP. This configuration applies to the native Windows application interaction with the data. APP settings are segmented into three categories:
 -	**Data Protection** - These settings control how data can move into and out of an org context (account, document, location, services) for the user.
 <!-- -	**Access** - These settings control how the user must verify their identity before interacting with org data. -->
--	**Health Checks** (Conditional Launch) - These settings controls the device conditions required to access org data and the remediation action(s) if the conditions are not met.
+-	**Health Checks** (Conditional Launch) - These settings controls the device conditions required to access org data and the remediation action(s) if the conditions aren't met.
 
 To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for mobile app management. The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
