@@ -43,7 +43,7 @@ Report a problem or error that occurs in the Intune Company Portal app for iOS/i
 You can access the reporting feature in Company Portal using any of these methods: 
 
 * When you receive an error message or alert, tap **Report**.  
-* Under the **More** tab of the Company Portal app, tap **Get Help**.  
+* Under the **More** tab of the Company Portal app, tap **Send Logs**.  
 * In the Company Portal app, shake your device, then tap **Send Diagnostic Report**. If the =diagnostics report prompt doesn't appear when you shake the device, open **Settings** > **Company Portal**, and turn on **Shake Gesture**.  
 
 ## Share diagnostic logs    
@@ -53,7 +53,7 @@ You can access the reporting feature in Company Portal using any of these method
 
 3. Use one of the following methods to initiate the upload:  
     * When you receive an error message, tap **Report**.   
-    * Tap **More** > **Get Help**. 
+    * Tap **More** > **Send Logs**. 
     * Shake your device. Then tap **Send Diagnostic Report**. 
 
 5. Wait while Company Portal uploads the logs.   
