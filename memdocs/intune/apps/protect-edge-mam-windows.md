@@ -61,17 +61,12 @@ Members of your organization (end-users) expect to have the following functional
 - Ability to have access revoked to resources when a device remains unhealthy 
 - Ability to be informed, with clear remediation steps, when access is controlled by an administrator policy 
 
-The following diagram provides the solution components and their primary function.
-
-:::image type="content" source="./media/protect-edge-mam-windows/protect-edge-mam-windows-01.png" alt-text="Solution components - MAM for Microsoft Edge on Windows" border="true" :::
-
-In the above diagram, key areas are included and also defined below based on the following list:
-A. Defender Client and Service: responsible for retrieving and syncing client health data on the unmanaged Windows 10 device
-B. Endpoint Manager Client and Service (Mobile Application Management (MAM), Mobile Threat Defense (MTD), and Endpoint Manager Admin Console)
-C. Microsoft Edge: web-browser on client device responsible for enforcing policy configuration and protection
-D. Azure Active Directory: responsible for authenticating user and enforcing compliance state
-E. Windows Defender Application Control (WDAC): responsible for identifying and attesting application integrity
-F. Web Account Manager (WAM): Windows framework responsible for all accounts on a device, including interfacing with identity providers (IDPs)
+Data protection for Windows MAM involves the following key areas:
+- **Defender Client and Service**: Responsible for retrieving and syncing client health data on the unmanaged Windows 10 device.
+- **Endpoint Manager Client and Service**: Mobile Application Management (MAM), Mobile Threat Defense (MTD), and Intune admin console.
+- **Microsoft Edge**: Web-browser on client device responsible for enforcing policy configuration and protection.
+- **Azure Active Directory**: Responsible for authenticating user and enforcing compliance state.
+- **Web Account Manager (WAM)**: Windows framework responsible for all accounts on a device, including interfacing with identity providers (IDPs).
 
 ## Conditional Access Compliance 
 Preventing data loss is a part of protecting your organizational data. Data loss prevention (DLP) is only effective if your org data cannot be accessed from any unprotected system or device. App Protection Conditional Access uses Conditional Access (CA) to ensure App Protection Policies (APP) are supported and enforced in a client application before allowing access to protected resources (such as org data).  APP CA will allow end-users with personal Windows devices to use APP managed applications, including Microsoft Edge, to access Azure AD resources without fully managing their personal device.
