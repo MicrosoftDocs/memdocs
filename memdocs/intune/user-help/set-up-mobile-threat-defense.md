@@ -45,7 +45,7 @@ The following MTD apps are commonly used on iOS devices. Select an app to open i
 * [ActiveShield](https://apps.apple.com/app/activeshield/id980234260)
 * [Microsoft Defender for Endpoint](https://apps.apple.com/app/microsoft-defender-atp/id1526737990)
 * [Lookout for Work](https://apps.apple.com/app/lookout-for-work/id997193468)
-* [Pradeo Security](https://apps.apple.com/app/pradeo-agent/id547979360)
+* [Pradeo Security](https://apps.apple.com)(opens Apple App Store)
 * [Harmony Mobile Protect](https://apps.apple.com/app/sandblast-mobile-protect/id1006390797)
 * [SEP Mobile](https://apps.apple.com/app/sep-mobile/id695620821)
 * [Sophos Intercept X for Mobile](https://apps.apple.com/app/sophos-mobile-security/id1086924662)
