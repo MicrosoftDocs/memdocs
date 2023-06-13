@@ -9,8 +9,8 @@ ms.author: mandia
 manager: dougeby
 ms.date: 02/28/2023
 ms.topic: overview
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.assetid: 
 

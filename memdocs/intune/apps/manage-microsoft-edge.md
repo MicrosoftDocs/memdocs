@@ -285,9 +285,6 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
 
 ### Switch network stack between Chromium and iOS 
-
-The layers of the network architecture are called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
-
 By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
 
 Organizations can modify their network stack preference by configuring the following setting.
@@ -298,6 +295,22 @@ Organizations can modify their network stack preference by configuring the follo
 
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
+
+#### Set a proxy .pac file URL
+
+Organizations can specify a URL to a porxy auto-config (PAC) file for Microsoft Edge for Android.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.proxyPacUrl |Specify a valid URL to a proxy .pac file.  <br>For example: `https://internal.site/example.pac` |
+
+#### PAC failed-open support 
+
+By default, Microsoft Edge for Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**ture** Allow network access |
 
 ## Data protection app configuration scenarios
 
@@ -430,6 +443,26 @@ Organizations can enable NTLM credential caching for particular web sites. For t
 |com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2` <br>`http://app.contoso.com/|https://expenses.contoso.com` <br><br>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list). |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO |Number of hours to cache credentials, default is 720 hours |
 
+## Additional app configuration for managed devices
+
+The following policies, originally configurable through managed apps app configuration policy, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
+
+As app configuration policies for managed devices needs device enrollment, any unified endpoint management (UEM) is supported. To find more policies under the MDM channel, see [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies). 
+
+|     MAM policy    |     MDM policy    |
+|---|---|
+|     com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL    |     EdgeNewTabPageCustomURL    |
+|     com.microsoft.intune.mam.managedbrowser.MyApps    |     EdgeMyApps    |
+|     com.microsoft.intune.mam.managedbrowser.defaultHTTPS       |     EdgeDefaultHTTPS    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     EdgeDisableShareUsageData    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     EdgeDisableShareBrowsingHistory    |
+|     com.microsoft.intune.mam.managedbrowser.disabledFeatures    |     EdgeDisabledFeatures    |
+|     com.microsoft.intune.mam.managedbrowser.enableKioskMode    |     EdgeEnableKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |     EdgeShowAddressBarInKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
+|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref        |     EdgeNetworkStackPref    |
+
 ## Deploy app configuration scenarios with Microsoft Intune
 
 If you are using Microsoft Intune as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
@@ -490,27 +523,6 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 You can retrieve logs from Microsoft Support by giving them the user's incident ID.  
 
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). 
-
-
-## Additional app configuration for managed devices
-
-The following policies, originally configurable through managed apps app configuration policy, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
-
-As app configuration policies for managed devices needs device enrollment, any unified endpoint management (UEM) is supported. To find more policies under the MDM channel, see [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies). 
-
-|     MAM policy    |     MDM policy    |
-|---|---|
-|     com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL    |     EdgeNewTabPageCustomURL    |
-|     com.microsoft.intune.mam.managedbrowser.MyApps    |     EdgeMyApps    |
-|     com.microsoft.intune.mam.managedbrowser.defaultHTTPS       |     EdgeDefaultHTTPS    |
-|     com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     EdgeDisableShareUsageData    |
-|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     EdgeDisableShareBrowsingHistory    |
-|     com.microsoft.intune.mam.managedbrowser.disabledFeatures    |     EdgeDisabledFeatures    |
-|     com.microsoft.intune.mam.managedbrowser.enableKioskMode    |     EdgeEnableKioskMode    |
-|     com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |     EdgeShowAddressBarInKioskMode    |
-|     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
-|     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
-|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref        |     EdgeNetworkStackPref    |
 
 ## Next steps
 

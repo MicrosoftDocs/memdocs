@@ -101,7 +101,6 @@ Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Win
 | Registration | FQDN | hm-iot-in-prod-prap01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prau01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
-| Intune | FQDN | All FQDNs at [Network endpoints for Microsoft Intune]( /mem/intune/fundamentals/intune-endpoints) | TCP | 80,443 | Not recommended | Required |
 | UDP connectivity via TURN | IP | 20.202.0.0/16 | UDP | 3478 | Not recommended | Required |
 | TURN connectivity | IP | 20.202.0.0/16 | TCP | 443 | Not recommended | Required |
 
