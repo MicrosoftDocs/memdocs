@@ -57,7 +57,7 @@ For example: A connected MTD app reports to the MTD vendor that a phone on your 
 
 ### Connector status
 
-One you add a Mobile Threat Defense connector to your tenant, the status will show one of the following states:
+Once you add a Mobile Threat Defense connector to your tenant, the status will show one of the following states:
 
 * **Unavailable**: Connector setup is not complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available**.
 * **Available**: Connectur setup is complete. Atleast 1 platform toggle must be turned on for this status to change to **Enabled**.
