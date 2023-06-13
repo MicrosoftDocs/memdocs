@@ -1,10 +1,10 @@
 ---
 title: Get started with Frontline worker devices in Microsoft Intune
-description: Learn how to manage frontline worker devices using Android and iOS/iPadOS devices in Microsoft Intune. Select the best enrollment option, configure the home screen, and more.
+description: Learn how to manage frontline worker devices using Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Select the best enrollment option, configure the home screen, and more.
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 06/08/2023
+ms.date: 06/13/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -23,18 +23,19 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Frontline worker device management for Android and iPadOS devices in Microsoft Intune
+# Frontline worker device management for Android, iPadOS, and Windows devices in Microsoft Intune
 
-A frontline worker (FLW) is a person that works in a critical or essential role. They're typically in direct contact with the public and customers. During a crisis or emergency, such as a pandemic or natural disaster, frontline workers are often at the forefront of the response effort, providing critical services and support. Some examples of frontline workers include healthcare, emergency responders, law enforcement, retail & food service, and transportation.
-
-This article provides guidance on managing and configuring devices that play a key role in running business operations.
-
-Frontline workers rely on process and/or devices to enable their productivity, like scanning concert tickets, medical patient wrist bands, and inventory scanning. If these devices fail, productivity and business can stop. These device types can be business or mission critical to operations.
+A frontline worker (FLW) is a person that works in an essential or critical role to your business. They're typically in direct contact with the public and customers. During a crisis or emergency, such as a pandemic or natural disaster, frontline workers are often at the forefront of the response effort, providing critical services and support. Some examples of frontline workers include healthcare, emergency responders, law enforcement, retail & food service, and transportation.
 
 This article applies to:
 
 - Android
 - iOS/iPadOS
+- Windows
+
+Frontline workers rely on process and/or devices to enable their productivity, like scanning concert tickets, medical patient wrist bands, and inventory scanning. If these devices fail, productivity and business can stop. These device types can be business or mission critical to operations.
+
+This article provides guidance on managing and configuring devices that play a key role in running business operations.
 
 ## Android
 
