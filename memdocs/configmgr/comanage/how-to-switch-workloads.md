@@ -37,7 +37,7 @@ You can configure different pilot collections for each of the co-management work
     - **Intune**: Switch this workload for all Windows devices enrolled in co-management.
 
 > [!NOTE]
-> When Pilot Intune is selected for Endpoint Protection and Device Configuration Policies, Intune will only deploy the policies and will not perform policy removal unpon unassignment. For policy removal from the device when the policy is unassigned, the workload must be switched to Intune.
+> When Pilot Intune is selected for Endpoint Protection and Device Configuration Policies, Intune will only deploy the policies and will not perform policy removal upon unassignment. For policy removal from the device when the policy is unassigned, the workload must be switched to Intune.
 
 4. Go to the **Staging** tab and change the **Pilot collection** for any of the workloads if needed.
   
