@@ -55,6 +55,15 @@ Intune uses a Mobile Threat Defense connector to create a channel of communicati
 
 For example: A connected MTD app reports to the MTD vendor that a phone on your network is currently connected to a network that is vulnerable to Man-in-the-Middle attacks. This information is categorized to an appropriate risk level of low, medium, or high. This risk level is then compared with the risk level allowances you set in Intune. Based on this comparison, access to certain resources of your choice can be revoked while the device is compromised.
 
+### Connector status
+
+One you add a Mobile Threat Defense connector to your tenant, the status will show one of the following states:
+
+* **Unavailable**: Connector setup is not complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available**.
+* **Available**: Connectur setup is complete. Atleast 1 platform toggle must be turned on for this status to change to **Enabled**.
+* **Enabled**: Connector setup is complete, and atleast 1 platform toggle is turned on for this connector. 
+* **Unresponsive**: Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.
+
 ## Data that Intune collects for Mobile Threat Defense
 
 If enabled, Intune collects app inventory information from both personal and corporate-owned devices and makes it available for MTD providers to fetch, such as Lookout for Work. You can collect an app inventory from the users of iOS devices.
