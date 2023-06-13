@@ -186,6 +186,8 @@ If you want to remove devices from the Intune admin center, you can delete them 
 
 You can configure Intune to automatically remove devices that appear to be inactive, stale, or unresponsive. These cleanup rules continuously monitor your device inventory so that your device records stay current. Devices deleted in this way are removed from Intune management. This setting affects all devices managed by Intune, not just specific ones.
 
+When a device clean-up rule runs, it deletes the device from Intune. At that point, the device will need to go through a re-enrollment process in order for it to show up in the console.
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device cleanup rules** > **Yes**.
 3. In the **Delete devices that haven't checked in for this many days** box, enter a number between 30 and 270.
