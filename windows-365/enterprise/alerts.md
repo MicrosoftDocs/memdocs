@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 9/26/2022
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -41,13 +41,13 @@ The Windows 365 Alerts system notifies you when specific events occur in your Cl
 
 ## View alerts
 
-To view the list of recent alerts, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts**.
+To view the list of recent alerts, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)**.
 
 ![Screenshot of view alerts](./media/alerts/view-alerts.png)
 
 ## Customize alert rule
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts** > **Alert rules**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)** > **Alert rules**.
     ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
 
 2. Select a rule in the list.
