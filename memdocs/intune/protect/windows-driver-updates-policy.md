@@ -257,7 +257,7 @@ On the *Manage driver* pane you can:
 
 - **Declined** – You can configure a driver update to be declined, which removes it from appearing as a new driver that needs review.
 
-  Setting an update to declined doesn’t remove it from the policy, and you can
+  Setting an update to declined doesn’t remove it from the policy, and you can change it back to *Approved* if you would like the update to deploy to applicable devices
 
 ## Next steps
 
