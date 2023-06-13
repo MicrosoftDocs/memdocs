@@ -47,13 +47,13 @@ Intune supports different enrollment options for Android devices, as shown in th
 
 When using Android devices for frontline workers, use the following steps. These steps help you determine the best enrollment option and the best device management experience for you and your end users.
 
-There are other Android enrollment options available. This article focuses on the enrollment options commonly used for FLW. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
+There are other Android enrollment options available. This section focuses on the enrollment options commonly used for FLW. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 
 ### Step 1 - Select your enrollment option (Android)
 
 The first step is to determine the enrollment platform that's best for your organization and device needs. For FLW devices using the Android platform, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**. This section focuses on these enrollment options.
 
-- **Android Enterprise** enrollment devices require and use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). Your organization and/or your end users own these devices (BYOD). They're also used in countries/regions that don't block GMS.
+- **Android Enterprise** enrollment devices require and support [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). Your organization and/or your end users own these devices (BYOD). They're also used in countries/regions that don't block GMS.
 
   ✔️ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
 
@@ -65,14 +65,14 @@ The first step is to determine the enrollment platform that's best for your orga
   - Don't support GMS.
   - Are used in countries that block GMS.
 
-  ✔️ If your devices meet these criteria, then use AOSP enrollment.
+  ✔️ If your devices meet these criteria, then use AOSP enrollment (provided devices are supported for AOSP management with Intune).
 
-  ❌ If these devices must use GMS and don't meet these criteria, then use Android Enterprise enrollment.
+  ❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
 
   To learn more about AOSP, go to [About the Android Open Source Project](https://source.android.com/) (opens Android's web site).
 
 > [!NOTE]
-> For Android device administrator (DA), Google is deprecating and reducing features. It's recommended that you move to Android Enterprise or AOSP.
+> For Android device administrator (DA), Google is deprecating and reducing features and if possible, it's recommended that you move to Android Enterprise or AOSP.
 
 ### Step 2 - Shared device or user associated device (Android)
 
@@ -86,11 +86,11 @@ The next decision is to determine if the devices are shared with many users or a
 
   - Know what the device is doing and its use case. Android device manufacturers (OEMs) offer different devices, some may be specialty and others may be more generic.
 
-    For example, there's device that's used for augmented or virtual reality. Typically, these specialty devices don't support GMS, which is a requirement for Android Enterprise enrollment. So, the natural enrollment path is AOSP.
+    For example, for devices that's used for augmented or virtual reality; typically, these specialty devices don't support GMS, which is a requirement for Android Enterprise enrollment. So, the natural enrollment path is AOSP.
 
-  - If you're using Android Enterprise shared devices, then you can enroll your devices as **dedicated devices**. These devices use Google Mobile Services (GMS) and aren't associated with a single or specific user.
+  - If you're using Android Enterprise shared devices, then you can enroll your devices as **dedicated devices**. These devices support Google Mobile Services (GMS) and aren't associated with a single or specific user.
 
-  - If you're using AOSP shared devices, then you can enroll your devices as **userless devices**. These devices don't use GMS and aren't associated with a single or specific user.
+  - If you're using AOSP shared devices, then you can enroll your devices as **userless devices**. These devices typically don't support GMS and aren't associated with a single or specific user.
 
 - **User associated device**
 
@@ -104,7 +104,7 @@ The next decision is to determine if the devices are shared with many users or a
 
 ### Step 3 - Home screen and device experience (Android)
 
-On Android Enterprise devices, you can configure the home screen and device experience. This feature isn't available for AOSP devices.
+On Android Enterprise corporate enrolled devices, you can configure the home screen and device experience. This feature isn't available for AOSP devices.
 
 In this step, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
@@ -112,9 +112,9 @@ The following scenarios describe some commonly used scenarios:
 
 - **Scenario 1: Device wide access with multiple apps**
 
-  The devices are enrolled in Intune as **dedicated devices**. Users have access to the apps and settings on the device. You can restrict users from different features, such as debugging, factory reset, and more.
+  The devices are enrolled in Intune as either **dedicated or fully managed devices**. Users have access to the apps and settings on the device. You can restrict users from different features, such as debugging, system applications, and more.
 
-  To configure devices for this scenario, you deploy the apps to the devices. Then, use device configuration policies to pin apps and allow or block device features.
+  To configure devices for this scenario, you deploy the apps to the devices. Then, use device configuration policies to deploy apps and allow or block device features.
 
   To get started, use the following links:
 
@@ -127,7 +127,7 @@ The following scenarios describe some commonly used scenarios:
 
 - **Scenario 2: Locked screen device with pinned apps**
 
-  For this scenario, you install the Intune Managed Home Screen (MHS), which allows you to customize managed device experience. You can pin one app or many apps, select a wallpaper, set icon positions, and more. This scenario is often used for **dedicated devices**, such as shared devices.
+  For this scenario, you install the Intune Managed Home Screen (MHS), which allows you to customize managed device experience. You can pin one app or many apps, select a wallpaper, set icon positions, require a PIN, and more. This scenario is often used for **dedicated devices**, such as shared devices.
 
   What you need to know:
 
@@ -149,11 +149,11 @@ The following scenarios describe some commonly used scenarios:
 
 - **Scenario 3: Single app kiosk**
 
-  A single app is assigned to the device. When the device starts, only this app opens. Users are locked to the single app and can't close the app, or do anything else on the devices. This scenario is used on devices dedicated to a specific use, like scanning inventory.  
+  A single app is assigned to the device. When the device starts, only this app opens. Users are locked to the single app and can't close the app, or do anything else on the devices, i.e. the device is has a single purpose. This scenario is used on devices dedicated to a specific use, like scanning inventory.  
 
   What you need to know:
 
-  - This option is more restrictive and doesn't allow admins to troubleshoot the devices.
+  - This option is more restrictive as the device is dedicated to only running a single application.
   - An enterprise launcher isn't used.
 
   To configure these devices, you create a device configuration policy that sets the device to single app kiosk mode. Then, you assign the app to the device.
@@ -169,7 +169,7 @@ The following scenarios describe some commonly used scenarios:
 
 Azure AD shared device mode (SDM) is another option for Android, specifically Android Enterprise **dedicated device** enrollments. Azure AD SDM offers an app and identity driven sign-in/sign-out experience that compliments **Scenario 1** and **Scenario 2**.
 
-Android enrollment as a shared device and Azure AD SDM are complimentary. For end users to have the full sign-in/sign-out experience, apps must support Azure AD SDM. Android enrollment as a shared device isn't dependent on Azure AD SDM. Azure AD SDM is an option on top of the Intune shared device enrollment.
+Android enrollment as a shared device and Azure AD SDM are complimentary. For end users to have the full sign-in/sign-out experience, apps must support the Microsoft Authentication Library (MSAL). Android enrollment as a shared device isn't dependent on Azure AD SDM. Azure AD SDM is an option on top of the Intune shared device enrollment.
 
 For more information on Azure AD SDM, and to get started, go to:
 
@@ -180,9 +180,9 @@ For more information on Azure AD SDM, and to get started, go to:
 
 ## iOS/iPadOS
 
-iPad devices are a popular device type for frontline workers (FLW). iPads are used in different scenarios and industries, including in field operations, office, and warehouse.
+iPad devices are a popular device type for frontline workers (FLW). iPads are used in different scenarios and industries, including in field operations, healthcare, aviation, and warehouse.
 
-This section focuses on iPad devices.
+**This section focuses on iPad devices.**
 
 For FLW iPad devices, there are two options available - **Shared iPad** or **Azure AD shared device mode**, as shown in the following image:
 
@@ -210,7 +210,7 @@ For iPad devices, admins must pick one option - **Shared iPad** or **Azure AD sh
 
   ✔️ If the device is an iOS device, then use Azure AD shared device mode.
 
-  ✔️ If the device is an iPad, then you can use Azure AD shared device mode. However, Shared iPad is also an option.
+  ✔️ If the device is an iPad, then you can use Azure AD shared device mode. Shared iPad is also an option, however Azure AD SDM is not supported when configuring for the natively supported Shared iPad.
 
   ❌ If you configured an iPad to be a Shared iPad in Intune, then don't use Azure AD shared device mode. It's not supported.
 
@@ -237,11 +237,11 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
 1. **Enroll without user affinity**: This option doesn't associate the devices with a specific user. This option is required for Shared iPads.
 2. **Shared iPad**: This option enables Shared iPad on the device, and is required. It allows many users to sign in.
-3. **Require Shared iPad temporary session**: This setting determines if the Shared iPads will be used for guest access or partitioned user access.
+3. **Require Shared iPad temporary session**: This setting determines if the Shared iPads will be used for guest access.
 
     - **Guest access**
 
-      **Yes** enables temporary sessions. Users sign in to the device as a guest. They don't enter a Managed Apple ID or password. All user data, login info, including browsing history, is deleted when the user signs out of the session.
+      **Yes** enables temporary sessions. Users sign in to the device as a guest. They don't enter a Managed Apple ID or password. All user data, login info, including browsing history, is deleted when the user signs out.
 
       For example, in healthcare, a medical patient is assigned a shared iPad to check in or fill out forms.
 
@@ -249,11 +249,11 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
       **Not configured** uses partitioned user access. Use this option when an iPad is used by many authenticated users at different times.
 
-      Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad. When the user signs out, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
+      Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps (the same set of apps across all users are only supported), data, and preferences are stored separately on the iPad. When the user locks their profile, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
 
       The number of users that can sign in also varies by the amount of storage on the device. So, it's recommended to plan accordingly and configure the enrollment profile to accommodate your needs.
 
-You Shared iPad enrollment policy looks similar to the following policy:
+Your Shared iPad enrollment policy looks similar to the following policy:
 
 :::image type="content" source="./media/frontline-worker-overview/shared-ipad-ade-enrollment-policy.png" alt-text="Screenshot that shows Automated Device Enrollment (ADE) policy, Shared iPad enabled, and temporary sessions for Shared iPadOS frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/shared-ipad-ade-enrollment-policy.png":::
 
@@ -266,7 +266,7 @@ For more information on these features, and to get started, go to:
 
 Next, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
-In Intune, you can create device configuration profiles that configure the home screen and run apps in kiosk mode.
+In Intune, you can create device configuration profiles that configure the home screen and which apps are displayed.
 
 For a list of the Shared iPad settings you can configure, go to [Configure settings for Shared iPads](../enrollment/device-enrollment-shared-ipad.md#configure-settings-for-shared-ipads).
 
