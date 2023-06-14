@@ -102,5 +102,5 @@ After you apply and deploy this policy, users will see a one-time MFA prompt whe
 >
 > The second device is required because the primary device can't receive calls or text messages during the provisioning process.
 >
-> Or you can configure [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass)
+> Alternatively, you can configure a [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass).
 
