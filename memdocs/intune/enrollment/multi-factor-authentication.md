@@ -100,4 +100,7 @@ After you apply and deploy this policy, users will see a one-time MFA prompt whe
 > - iOS/iPadOS devices enrolled via Apple automated device enrollment  
 > - macOS devices enrolled via Apple automated device enrollment  
 >
-> The second device is required because the primary device can't receive calls or text messages during the provisioning process.  
+> The second device is required because the primary device can't receive calls or text messages during the provisioning process.
+>
+> Or you can configure [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass)
+
