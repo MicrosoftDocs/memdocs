@@ -43,3 +43,15 @@ groups:
       title: iOS/iPadOS
     - id: macos
       title: macOS
+- id: flw-platforms
+  title: FLW OS platform
+  prompt: Select your platform
+  pivots:
+    - id: all
+      title: All platforms
+    - id: android
+      title: Android
+    - id: ios-ipados
+      title: iOS/iPadOS
+    - id: windows
+      title: Windows
