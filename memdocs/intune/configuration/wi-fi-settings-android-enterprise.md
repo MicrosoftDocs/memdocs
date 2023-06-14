@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/13/2022
+ms.date: 06/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -58,7 +58,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 - **Wi-Fi type**: Select **Basic**.
 - **Network name**: Enter a name for this Wi-Fi connection. End users see this name when they browse their device for available Wi-Fi connections. For example, enter **Contoso WiFi**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
-- **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection. 
+- **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection.
 
   When devices are connected to another preferred Wi-Fi connection, then they won't automatically connect to this Wi-Fi network. If devices fail to connect automatically when this setting is enabled, then disconnect the devices from any existing Wi-Fi connections.
 
@@ -93,7 +93,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
 - **Wi-Fi type**: Select **Enterprise**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
-- **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection. 
+- **Connect automatically**: **Enable** automatically connects to your Wi-Fi network when devices are in range. Select **Disable** to prevent or block this automatic connection.
 
   When devices are connected to another preferred Wi-Fi connection, then they won't automatically connect to this Wi-Fi network. If devices fail to connect automatically when this setting is enabled, then disconnect the devices from any existing Wi-Fi connections.
 
@@ -112,11 +112,11 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
       > [!NOTE]
       > Depending on your Android OS version and your Wi-Fi authentication infrastructure, the certificate requirements can vary. You may need to add your secure hash algorithm(s) (SHA) from the certificate used by your network policy server (NPS). Or, if your Radius or NPS server has a publicly signed certificate, then a root certificate may not be needed for validation.
-      > 
+      >
       > A good practice is to enter the **Radius server name** and add a **Root certificate for server validation**.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
@@ -137,7 +137,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
@@ -163,7 +163,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
@@ -197,20 +197,20 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
-    
+
     > [!NOTE]
     > When a device is marked as corporate during enrollment (organization-owned), policies control device features and settings. Users can be prevented from managing features and settings in the policy.
     > When a Wi-Fi policy is assigned to devices, then Wi-Fi is enabled, and users can be prevented from turning off Wi-Fi.
 
 ## Personally owned work profile
 
-### Basic
+### Basic (personally owned work profile)
 
 - **Wi-Fi type**: Select **Basic**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
 - **Hidden network**: Select **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Select **Disable** to show this network in the list of available networks on the device.
 
-### Enterprise
+### Enterprise (personally owned work profile)
 
 - **Wi-Fi type**: Select **Enterprise**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
@@ -221,7 +221,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.  
 
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
@@ -229,7 +229,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
   - **EAP-TTLS**: Also enter:
 
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 

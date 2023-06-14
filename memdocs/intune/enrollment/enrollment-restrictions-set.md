@@ -137,17 +137,13 @@ The following enrollment methods are authorized for corporate enrollment:
 
 > [!NOTE]
 > Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it. 
- 
 Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling (unless registered with Autopilot) because these methods don't offer the Intune administrator per-device control:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
  
 Intune also blocks personal devices using these enrollment methods:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).
-- [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
-
-> [!IMPORTANT]
-> Automatic MDM enrollment with Add Work Account from Windows Settings (Workplace Join) will fail if device is registered with Autopilot.
+- [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.  
 
 ## Limitations  
 
@@ -167,6 +163,7 @@ Intune also blocks personal devices using these enrollment methods:
 Select the type of enrollment restriction you want to apply and create the profile:   
  * [Create device platform enrollment restrictions](create-device-platform-restrictions.md)    
  * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
+
 
 
 
