@@ -34,18 +34,18 @@ ms.custom: intune-azure
 ---
 
 # Data protection for Windows MAM
-<!-- Use Mobile Application Management for Microsoft Edge on unmanaged Windows  -->
+<!-- Use Mobile Application Management on unmanaged Windows  -->
 
-You can enable protected Mobile Application Management (MAM) access to org data via Microsoft Edge on personal Windows devices. This capability uses the following functionality:
-- Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
-- Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
+You can enable protected Mobile Application Management (MAM) access to org data on personal Windows devices. This capability uses the following functionality:
+- Intune Application Configuration Policies (ACP) to customize the org user experience
+- Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy
 - Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Azure AD
 
 > [!NOTE]
 > For more information about MAM, see [Mobile Application Management (MAM) basics](../apps/app-management.md#mobile-application-management-mam-basics).
 
-Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user’s unmanaged assets on their device aren't impacted by your organization's policies. This capability is available by using Microsoft Edge to access corporate data on Windows client devices.
+Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user’s unmanaged assets on their device aren't impacted by your organization's policies. 
 
 As the Intune admin, you need to have the following app management functionality:
 - Ability to deploy app protection policies to apps/users protected by the Intune APP SDK 
@@ -84,7 +84,7 @@ When a change is detected, the MAM service updates the device compliance state i
 The MAM Client communicates the client heath state (or health metadata) to the MAM Service upon check-in. The health state includes any failure of APP Health Checks for **Block** or **Wipe** conditions. In addition, AAD guides end-users through remediation steps when they attempt to access a blocked CA resource.
 
 ### Apply Conditional Access
-Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Microsoft Edge for Windows. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Microsoft Edge for Windows, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
 
