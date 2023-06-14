@@ -21,7 +21,7 @@ ms.reviewer: mstewart,aaroncz
 The current branch of Configuration Manager introduces important changes from System Center 2012 Configuration Manager. This article identifies significant changes and new capabilities found in the original baseline version 1511 of Configuration Manager current branch. To learn about changes introduced in recent updates for Configuration Manager, see [What's new in Configuration Manager incremental versions](whats-new-incremental-versions.md).
 
 > [!NOTE]
-> Since October 2019, Configuration Manager is part of Microsoft Endpoint Manager. For more information, see [Microsoft Endpoint Configuration Manager FAQ](../../understand/microsoft-endpoint-manager-faq.yml).
+> Since October 2019, Configuration Manager is part of Microsoft Intune family of products. For more information, see [Microsoft Configuration Manager FAQ](../../understand/microsoft-endpoint-manager-faq.yml).
 
 The December 2015 release (version 1511) of Configuration Manager was the initial release of the current Configuration Manager product from Microsoft. It's typically referred to as Configuration Manager current branch. *Current branch* indicates this version supports incremental updates to the product. It also provides a way to distinguish between this release and previous releases of Configuration Manager.  
 

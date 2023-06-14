@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Enroll your Android Enterprise dedicated, fully managed, or corporate-owned with work profile devices
@@ -56,36 +57,35 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 
 Create a specially formatted NFC tag to provision NFC-supported devices running Android 8.0 or later. You can use your own app or any NFC tag-creation tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
 
-For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android versions 8.0 to 10.0. It's not supported with Android 11.0 or later. 
+For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
 
-## Enroll by using a token
+## Enroll by using a token  
 
-- For Android 8.0 and later devices, you can use the token value, such as `12345`, to enroll the device.
-- You can leverage QR code scanning when using the **afw#setup** enrollment method to enroll devices running Android 8.0 and later.  
-- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is only supported on devices running Android versions 8.0 to 10.0. It's not supported with Android 11.0 or later. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
+Enroll new or factory-reset devices by providing device users with the enrollment token to type or scan. When you're ready for enrollment, share the token directly with targeted users or post it to your organization's support site for easy retrieval. The token works for all Intune-licensed users and doesn't expire. This enrollment method can't be used with device enrollment manager accounts. 
 
-### Steps
+- For Android 8.0 and later devices, you can use the token value (example: `12345`) to enroll the device.  
+- When using the **afw#setup** enrollment method, you can scan the QR code to enroll devices running Android 8.0 and later.  
+- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
 
-1. Turn on your wiped device.
-2. On the **Welcome** screen, select your language.
-3. Connect to your **Wi-fi**, and then choose **NEXT**.
-4. Accept the Google Terms and conditions, and then choose **NEXT**.
+1. Turn on the device.  
+2. On the **Welcome** screen, select your language.  
+3. Connect to your wireless network, and then choose **NEXT**.  
+4. Accept the Google Terms and conditions, and then choose **NEXT**.  
 5. On the Google sign-in screen, enter **afw#setup** instead of a Gmail account, and then choose **NEXT**.
-6. Choose **INSTALL** for the **Android Device Policy** app.
-7. Continue installation of this policy. Some devices may require additional terms acceptance.
-8. On the **Enroll this device** screen, allow your device to scan the QR code. Or, choose to enter the token manually.
-9. Follow the on-screen prompts to complete enrollment.
+6. Choose **INSTALL** for the Android Device Policy app.  
+7. Continue to install the policy. Some devices may require additional terms acceptance.
+8. On the **Enroll this device** screen, allow your device to scan the QR code. Or, enter the token manually.
+9. Follow the on-screen prompts to complete enrollment. 
 
-## Enroll by using a QR code
+## Enroll by using a QR code  
 
-Scan the QR code from the enrollment profile to enroll devices running Android 8.0 and later.   
-
-> [!Note]
-> Browser zoom can cause devices to not be able to scan QR code. Increasing the browser zoom resolves the issue.
+Intune admins can scan the QR code directly from the enrollment profile to enroll a device.   
 
 1. After you wipe the device, tap the first screen you see repeatedly to launch the QR reader.    
-2. On devices running Android 8.0, you'll be prompted to install a QR reader. Devices running Android 9 and later are pre-installed with a QR reader.
-3. Use the QR reader to scan the enrollment profile QR code and then follow the on-screen prompts to enroll.  
+2. If prompted to, install a QR reader on your device. Devices running Android 9.0 and later are pre-installed with a QR reader.  
+3. Scan the enrollment profile QR code, and then follow the on-screen prompts to complete enrollment.  
+    > [!TIP]
+    > Browser zoom settings may prevent your device from scanning the QR code. Zoom in and try again if your device has difficulty scanning the code.   
 
 ## Enroll by using Google Zero Touch 
 
@@ -96,7 +96,7 @@ This section describes how to:
 * Create a zero-touch configuration in the zero-touch enrollment portal  
 
 ### Create zero-touch configuration in admin center        
-The zero-touch iframe gives you access to the zero-touch enrollment portal and zero-touch configurations in the Microsoft Endpoint Manager admin center. 
+The zero-touch iframe gives you access to the zero-touch enrollment portal and zero-touch configurations in the Microsoft Intune admin center. 
   
 To enable the iframe, you must first add the *update app sync* permission and enable enrollment for corporate-owned, fully managed devices. Once you enable the iframe, you can:  
 
@@ -110,7 +110,7 @@ Complete the steps in this section to enable the iframe. To create configuration
 #### Step 1: Add required permission   
 Add the *update app sync* permission.     
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 admin.
 2. Select **Tenant administration** > **Roles**. 
 3. Select your role from the list.  
@@ -167,7 +167,7 @@ Add a zero-touch configuration in the [zero-touch enrollment portal](https://par
     "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
         "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
     }
-}
+    }
 
  6. Enter your organization's name and support information, which is shown on screen while users set up their devices.   
  

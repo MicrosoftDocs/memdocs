@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Manage and use different device management features on Windows Holographic and HoloLens devices with Intune
@@ -166,4 +168,4 @@ Hello for Business is an alternative sign-in method that uses an Azure Active Di
 
 ## Next steps
 
-[Set up Intune](setup-steps.md).
+[Set up Intune](deployment-plan-setup.md).

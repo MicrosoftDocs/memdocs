@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/23/2022
+ms.date: 03/30/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -24,17 +24,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Network endpoints for Microsoft Intune  
 
-This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
+This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.
 
-As a cloud-only service, Intune doesn't require on-premises infrastructure such as servers or gateways.
+As a cloud-only service, Intune doesn't require an on-premises infrastructure such as servers or gateways.
 
 ## Access for managed devices  
 
@@ -44,10 +45,10 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols. Windows Information Protection uses port 444.
-- For some tasks (like downloading software updates for the classic pc agent), Intune requires unauthenticated proxy server access to manage.microsoft.com
+- For some tasks Intune requires unauthenticated proxy server access to manage.microsoft.com
 
 > [!NOTE]
-> The inspection of SSL traffic is not supported to 'manage.microsoft.com' endpoint.
+> The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com' or 'dm.microsoft.com' endpoints.
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
@@ -70,18 +71,27 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
-This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDN's that are covered as part of M365 Requirements. For reference this is the list of URL's returned, and the service they are tied to.
+This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDNs that are covered as part of M365 Requirements. For reference, this is the list of URLs returned, and the service they are tied to.
 
 |FQDN    |Associated Service      |
 |-----------|----------------|
 |*.manage.microsoft.com| Intune Service |
 |manage.microsoft.com| Intune Service |
-|*.delivery.mp.microsoft.com| Delivery Optimization |
-|*.prod.do.dsp.mp.microsoft.com| Delivery Optimization |
-|*.update.microsoft.com| Delivery Optimization |
-|*.windowsupdate.com| Delivery Optimization |
+|*.prod.do.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
+|*.windowsupdate.com| Windows Update and Delivery Optimization |
+|*.dl.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
+|*.update.microsoft.com| Windows Update and Delivery Optimization |
+|*.delivery.mp.microsoft.com| Windows Update and Delivery Optimization |
+|tsfe.trafficshaping.dsp.mp.microsoft.com| Windows Update and Delivery Optimization |
 |emdl.ws.microsoft.com| Delivery Optimization |
-|tsfe.trafficshaping.dsp.mp.microsoft.com| Delivery Optimization |
+|*.do.dsp.mp.microsoft.com| Delivery Optimization |
+|*.emdl.ws.microsoft.com| Delivery Optimization |
+|*.notify.windows.com| Push Notifications |
+|*.wns.windows.com| Push Notifications |
+|devicelistenerprod.microsoft.com| Windows Update for Business deployment service |
+|devicelistenerprod.eudb.microsoft.com| Windows Update for Business deployment service |
+|login.windows.net| Windows Update for Business deployment service |
+|payloadprod*.blob.core.windows.net| Windows Update for Business deployment service |
 |time.windows.com| NTP Sync |
 |www.msftconnecttest.com| NTP Sync |
 |www.msftncsi.com| NTP Sync |
@@ -96,12 +106,16 @@ This provides a convenient method to list and review all services required by In
 |euprodimedatasec.azureedge.net| Scripts & Win32 Apps |
 |naprodimedatahotfix.azureedge.net| Scripts & Win32 Apps |
 |naprodimedatapri.azureedge.net| Scripts & Win32 Apps |
-|naprodimedatasec.azureedge.net| Scripts & Win32 Apps |
-|*.notify.windows.com| Push Notifications |
-|*.wns.windows.com| Push Notifications |
-|*.dl.delivery.mp.microsoft.com| Delivery Optimization |
-|*.do.dsp.mp.microsoft.com| Delivery Optimization |
-|*.emdl.ws.microsoft.com| Delivery Optimization |
+|swda01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swda02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdb01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdb02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdc01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdc02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdd01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdd02-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdin01-mscdn.azureedge.net| Scripts & Win32 Apps |
+|swdin02-mscdn.azureedge.net| Scripts & Win32 Apps |
 |ekcert.spserv.microsoft.com| Autopilot Self-deploy |
 |ekop.intel.com| Autopilot Self-deploy |
 |ftpm.amd.com| Autopilot Self-deploy |
@@ -125,6 +139,13 @@ This provides a convenient method to list and review all services required by In
 |edge.skype.com| Remote Help |
 |remoteassistanceprodacs.communication.azure.com| Remote Help |
 |lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
+|fd.api.orgmsg.microsoft.com | Organizational messages |
+|ris.prod.api.personalization.ideas.microsoft.com | Organizational messages |
+|contentauthassetscdn-prod.azureedge.net | Organizational messages |
+|contentauthassetscdn-prodeur.azureedge.net | Organizational messages |
+|contentauthrafcontentcdn-prod.azureedge.net | Organizational messages |
+|contentauthrafcontentcdn-prodeur.azureedge.net | Organizational messages |
+
 
 The following tables list the ports and services that the Intune client accesses:
 
@@ -138,13 +159,13 @@ The following tables list the ports and services that the Intune client accesses
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location will be one of these three regions although your organization’s actual geographic location might be elsewhere.
+To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location will be one of these three regions although your organization’s actual geographic location might be elsewhere.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
-|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net |
+|AMSUA0601<br>AMSUA0602<br>AMSUA0101<br>AMSUA0102<br>AMSUA0201<br>AMSUA0202<br>AMSUA0401<br>AMSUA0402<br>AMSUA0501<br>AMSUA0502<br>AMSUA0601<br>AMSUA0701<br>AMSUA0702<br>AMSUA0801<br>AMSUA0901 | naprodimedatapri<br>naprodimedatasec<br>naprodimedatahotfix | naprodimedatapri.azureedge.net<br>naprodimedatasec.azureedge.net<br>naprodimedatahotfix.azureedge.net |
 | AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net |
-| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
+| AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
 
 ## Windows Push Notification Services (WNS)  
 
@@ -183,7 +204,7 @@ For more information, see [Use Apple products on enterprise networks](https://su
 
 ## Android port information
 
-Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](../enrollment/android-enroll.md). 
+Depending on how you choose to manage Android devices, you may need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](/mem/intune/fundamentals/deployment-guide-enrollment-android). 
 
 > [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as SafetyNet device attestation, Managing apps from the Google Play Store, 
@@ -207,6 +228,28 @@ Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to 
 
 For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).
 
+## Microsoft Defender for Endpoint
+
+For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements)
+
+Allow the following hostnames through your firewall to support Security Management for Defender for Endpoint.
+For communication between clients and the cloud service:
+- \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+
+> [!IMPORTANT]
+> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+
+## Microsoft Intune Endpoint Privilege Management
+
+Allow the following hostnames through your firewall to support Endpoint Privilege Management.
+
+For communication between clients and the cloud service:
+- \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales. 
+
+> [!IMPORTANT]
+> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+
+For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
 
 ## Related topics
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/30/2021
+ms.date: 04/09/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started; intro-hub-or-landing
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # What is Windows 365?
@@ -36,6 +38,8 @@ Windows 365 is available in two editions:
 
 - **Windows 365 Business** is made specifically for use in smaller companies (up to 300 seats) who want ready-to-use Cloud PCs with simple management options. For more information, see [Getting started with Windows 365 Business and Cloud PCs](./business/get-started-windows-365-business.md).
 - **Windows 365 Enterprise** is for larger companies who want unlimited seats for creating Cloud PCs. It includes options to create custom Cloud PCs based on device images that you create, more management options, and full integration with Microsoft Endpoint Manager. For more information, see [What is Windows 365 Enterprise?](./enterprise/overview.md).
+- **Windows 365 Government** is a service that spans across a regulated US Government Community Cloud (GCC) and a public facing cloud. For more information, see [What is Windows 365 Government?](./enterprise/introduction-windows-365-government.md)
+- **Windows 365 Frontline** helps organizations save costs by providing a single license to provision three Cloud PC virtual machines. For more information, see [What is Windows 365 Frontline?](./enterprise/introduction-windows-365-frontline.md)
 
 To learn about the differences between the two versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
 

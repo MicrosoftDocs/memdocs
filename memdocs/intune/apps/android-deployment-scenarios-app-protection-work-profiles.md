@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,6 +25,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - Android
 ms.custom: intune-azure;workProfilesUpdate
 
@@ -132,4 +133,4 @@ For example, customers in or have users in China can't use Android device manage
 Using Intune, both MAM and Android Enterprise personally-owned work profiles are available for your Android BYOD program. You can choose to use MAM and/or work profiles depending upon your business and usage requirements. In summary, use Android Enterprise personally-owned work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use MAM if you want to protect org data within applications.
 
 ## Next steps
-[Start using app protection policies](app-protection-policy.md), or [enroll your devices](../enrollment/android-enroll.md).
+[Start using app protection policies](app-protection-policy.md), or [enroll your devices](/mem/intune/fundamentals/deployment-guide-enrollment-android).

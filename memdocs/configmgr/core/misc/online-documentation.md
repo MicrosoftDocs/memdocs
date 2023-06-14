@@ -24,7 +24,7 @@ Welcome to the Configuration Manager documentation library. Find the documentati
 
 ### Online documentation
 
-View the online documentation for the current branch of Configuration Manager in [Microsoft Endpoint Configuration Manager documentation](/configmgr):  
+View the online documentation for the current branch of Configuration Manager in [Microsoft Configuration Manager documentation](/configmgr):  
 
 - [Introduction to Configuration Manager](../understand/introduction.md)  
 

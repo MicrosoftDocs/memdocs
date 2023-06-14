@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,6 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-azure
@@ -33,28 +34,28 @@ ms.custom: intune-azure
 
 # Configure Microsoft Launcher
 
-Microsoft Launcher is an Android application that lets users personalize their phone, stay organized on the go, and transfer from working from their phone to their PC. 
+Microsoft Launcher is an Android application that lets users personalize their phone, stay organized on the go, and transfer from working from their phone to their PC.
 
-On Android Enterprise fully managed devices, Launcher allows enterprise IT admins to customize managed device home screens by selecting the wallpaper, apps, and icon positions. This standardizes the look and feel of all managed Android devices across different OEM devices and system versions. 
+On Android Enterprise fully managed devices, Launcher allows enterprise IT admins to customize managed device home screens by selecting the wallpaper, apps, and icon positions. This standardizes the look and feel of all managed Android devices across different OEM devices and system versions.
 
-## How to configure the Microsoft Launcher app 
+## How to configure the Microsoft Launcher app
 
-Once the Microsoft Launcher application has been [added to Intune](../apps/apps-add.md), navigate to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Microsoft Launcher settings. 
+Once the Microsoft Launcher application has been [added to Intune](../apps/apps-add.md), navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **App configuration policies**. Add a configuration policy for **Managed devices** running **Android** and choose **Microsoft Launcher** as the associated app. Click on **Configuration settings** to configure the different available Microsoft Launcher settings.
 
-## Choosing a Configuration Settings Format 
+## Choosing a Configuration Settings Format
 
-There are two methods that you can use to define configuration settings for Microsoft Launcher: 
+There are two methods that you can use to define configuration settings for Microsoft Launcher:
 
-- **Configuration designer** allows you to configure settings with an easy-to-use UI that lets you toggle features on or off and set values. In this method, there are a few disabled configuration keys with value type BundleArray. These configuration keys can only be configured by entering JSON data. 
+- **Configuration designer** allows you to configure settings with an easy-to-use UI that lets you toggle features on or off and set values. In this method, there are a few disabled configuration keys with value type BundleArray. These configuration keys can only be configured by entering JSON data.
 
-- **JSON data** allows you to define all possible configuration keys using a JSON script. 
+- **JSON data** allows you to define all possible configuration keys using a JSON script.
 
 If you add properties with **Configuration Designer**, you can automatically convert these properties to JSON by selecting **Enter JSON data** from the **Configuration settings format** dropdown list as shown below.
 
    ![Configuration settings format - Use configuration designer](./media/configure-microsoft-launcher/configure-microsoft-launcher-01.png)
 
    > [!NOTE]
-   > Once properties are configured via the Configuration Designer, the JSON data will also be updated to only reflect these properties. To add additional configuration keys into the JSON Data, use the [JSON script example](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) to copy the necessary lines for each configuration key. 
+   > Once properties are configured via the Configuration Designer, the JSON data will also be updated to only reflect these properties. To add additional configuration keys into the JSON Data, use the [JSON script example](../apps/configure-microsoft-launcher.md#microsoft-launcher-configuration-example) to copy the necessary lines for each configuration key.
 
 When editing previously created app configuration policies, if complex properties have been configured, the edit process will display the JSON Data editor. All previously configured settings will be preserved and you can switch to use the configuration designer to modify supported settings.
 
@@ -196,8 +197,6 @@ In addition to the list of configurable settings listed in the Configuration Des
     ] 
 }
 ```
-
-
 
 ### Microsoft Launcher configuration example
 

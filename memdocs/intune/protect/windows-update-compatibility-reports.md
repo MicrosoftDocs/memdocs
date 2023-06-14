@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 12/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,21 +23,20 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # App and driver compatibility reports for Windows updates
 
-*This feature is in preview.*
-
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might impact your devices during or after an update:
 
-- **Windows feature update device readiness report (Preview)** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
+- **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 
-- **Windows feature update compatibility risks report (Preview)** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks impact the greatest number of devices in your organization.
+- **Windows feature update compatibility risks report** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks impact the greatest number of devices in your organization.
 
 To use these reports, you must first ensure that prerequisites are met and that devices are properly configured for data collection.
 
@@ -51,6 +50,8 @@ The Windows feature update device readiness and Windows feature update compatibi
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10/11 Virtual Desktop Access (VDA) per user
 
+Before using these reports, you must attest to having the required licenses on the [Windows data page](../protect/data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
+
 ### Devices
 
 To be eligible for the Windows feature update device readiness and Windows feature update compatibility risks reports, devices must:
@@ -60,10 +61,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 - Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 
-Additionally, you must [enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
-
-> [!NOTE]  
-> If your devices are currently enrolled in Desktop Analytics, then the Windows diagnostic data and processor configuration requirements are already met.
+Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
 
 ### Users
 
@@ -73,7 +71,7 @@ To view these reports, users must be assigned an Intune role with the **Managed 
 - Read Only Operator
 - Help Desk Operator
 
-In addition, to use the **Windows feature update device readiness report (preview)**, users must also have the **Roles** > **Read** permission. This permission is included in the following built-in roles:
+In addition, to use the **Windows feature update device readiness report**, users must also have the **Roles** > **Read** permission. This permission is included in the following built-in roles:
 
 - Endpoint Security Manager
 - Read Only Operator
@@ -82,15 +80,15 @@ In addition, to use the **Windows feature update device readiness report (previe
 
 ## Use the Windows feature update device readiness report
 
-The **Windows feature update device readiness report (preview)**  provides a device-level view of compatibility risks associated with an upgrade or update to a chosen version of Windows.
+The **Windows feature update device readiness report**  provides a device-level view of compatibility risks associated with an upgrade or update to a chosen version of Windows.
 
 > [!IMPORTANT]  
 > The insights in this report are specific to the target version of Windows you select when generating the report. To ensure accuracy of insights, confirm that your selected OS version matches the version of Windows you intend to deploy.
 
 To use this report:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report (Preview)**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
 3. Configure settings:
    - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
    - Click on **Select Scope (Tags)** and choose which devices should be in scope for this report.
@@ -134,15 +132,15 @@ For more information about the compatibility risks that impact a specific device
 
 ## Use the Windows feature update compatibility risks report
 
-The **Windows feature update compatibility risks report (preview)**  provides a summary view of the compatibility risks across your organization associated with an upgrade or update to a chosen version of Windows.
+The **Windows feature update compatibility risks report**  provides a summary view of the compatibility risks across your organization associated with an upgrade or update to a chosen version of Windows.
 
 > [!IMPORTANT]  
 > The insights in this report are specific to the target version of Windows you select when generating the report. To ensure accuracy of insights, confirm that your selected OS version matches the version of Windows you intend to deploy.
 
 To use this report:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report (Preview)**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
 3. Configure settings:
 
    - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
@@ -251,7 +249,7 @@ The data source for these reports is [Windows diagnostic data](/windows/privacy/
 
 When report data is exported to a .csv file, the exported data doesn't use the friendly names you're used to seeing in the online reports. Use the information below to map the data in the exported file into the meaning of the value:
 
-#### Windows feature update device readiness report (preview)
+#### Windows feature update device readiness report
 
 **Ownership**:
 
@@ -291,7 +289,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 > [!NOTE]  
 > When exported, the **sys req issues** column is represented as a comma-separated list of all values that apply to the device. For example, a value of "1, 2" means the device does not meet the processor family or the RAM requirement for the target OS version selected.
 
-#### Windows feature update compatibility risks report (preview)
+#### Windows feature update compatibility risks report
 
 **Asset Type**:
 

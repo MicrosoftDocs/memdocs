@@ -26,7 +26,8 @@ ms.reviewer: tisilver
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -64,7 +65,7 @@ Derived credentials are an implementation of the National Institute of Standards
 * Your mobile device
 * The Intune Company Portal app for iOS and iPadOS installed on your device   
 
-You'll also need to contact a Purebred agent or representative during setup.      
+You'll also need to contact a Purebred agent or representative during setup.  
 
 ## Enroll device  
 1. Open the Company Portal app for iOS/iPadOS on your mobile device and sign in with your work account.  
@@ -72,7 +73,7 @@ You'll also need to contact a Purebred agent or representative during setup.
 2. Write down the onscreen code.  
 
     ![Example image of Company Portal app with onscreen message and code.](./media/copy-code-intercede.png)  
-3. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. 
+3. Switch to your smart card-enabled device and go to https://microsoft.com/devicelogin. If you're a government employee signing in from another device, you'll need to change the settings on your device so that you're redirected to the government cloud for authentication. For more information about the setting changes you need to make, see [Troubleshoot iOS/iPadOS enrollment errors](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors#authentication-doesnt-redirect-to-the-government-cloud).  
 4. Enter the code you previously wrote down.  
 
     ![Example screenshot of the Company Portal website "Enter code" prompt.](./media/enter-code-intercede.png)   

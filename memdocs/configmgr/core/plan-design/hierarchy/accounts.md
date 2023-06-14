@@ -416,7 +416,7 @@ Create the account in any domain that provides the necessary access to resources
 #### Actions that require the network access account
 
 <!-- 4640345 -->
-The network access account is still required for the following actions:
+The network access account is still required for the following actions (including eHTTP & PKI scenarios):
 
 - Multicast. For more information, see [Use multicast to deploy Windows over the network](../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 
@@ -510,6 +510,9 @@ When expanding a standalone site to include a central administration site, this 
 The site server uses the **Site system installation account** to install, reinstall, uninstall, and set up site systems. If you set up the site system to require the site server to initiate connections to this site system, Configuration Manager also uses this account to pull data from the site system after it installs the site system and any roles. Each site system can have a different installation account, but you can set up only one installation account to manage all roles on that site system.
 
 This account requires local administrative permissions on the target site systems. Additionally, this account must have **Access this computer from the network** in the security policy on the target site systems.
+
+> [!IMPORTANT]
+> If you are specifying an account in a remote domain or forest, be sure to specify the domain FQDN before the user name, and not just the domain NetBIOS name.  For example, specify Corp.Contoso.com\UserName instead of just Corp\UserName.  This allows Configuration Manager to use Kerberos when the account is used to authenticate to the remote site system.  Using the FQDN often fixes authentication failures resulting from recent hardening changes around NTLM in Windows monthly updates.
 
 > [!TIP]
 > If you have many domain controllers and these accounts are used across domains, before you set up the site system, check that Active Directory has replicated these accounts.

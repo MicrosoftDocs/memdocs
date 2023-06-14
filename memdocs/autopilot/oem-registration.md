@@ -1,18 +1,19 @@
 ---
 title: Windows Autopilot OEM registration process
-description: How OEMs add devices to Windows Autopilot
+description: How OEMs add devices to Windows Autopilot.
 ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 05/25/2023
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
   - m365initiative-coredeploy
-ms.technology: itpro-deploy
+  - tier2
 ---
 
 # OEM registration
@@ -25,9 +26,10 @@ ms.technology: itpro-deploy
 
 ## Device registration process
 
-When you purchase devices from an OEM, that OEM can automatically register the devices with the Windows Autopilot. For the list of OEMs that support registration, see the "Participant device manufacturers and resellers" section of the [Windows Autopilot page](https://aka.ms/windowsautopilot).
+When you purchase devices from an OEM, that OEM can automatically register the devices with the Windows Autopilot. For the list of OEMs that support registration, see the **Participant device manufacturers and resellers** section of the [Windows Autopilot page](https://aka.ms/windowsautopilot).
 
-> [!Note]
+> [!NOTE]
+>
 > While the hardware hashes (also known as hardware IDs) are generated as part of the OEM device manufacturing process, these are not generally provided directly to customers or CSP partners. Instead, the OEM should register devices on the customer's behalf. In cases where devices are being registered by CSP partners, OEMs may provide PKID information to those partners to support the device registration process.
 
 OEMs must follow [device guidelines](autopilot-device-guidelines.md) for Windows Autopilot devices.

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Export your management log files  
-description: Learn how to export diagnostic log files to share with your support person.    
+title: Share management logs with support person | Microsoft Intune  
+description: Export Windows management log diagnostics to share with your support person for troubleshooting an enrolled device.      
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 01/23/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -26,16 +26,19 @@ ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
-# Export your management log files     
+# Report a device problem for Windows           
 
-**Applies to**  
-- Windows 10  
-- Windows 11  
+*Applies to*  
+- *Windows 10*  
+- *Windows 11*  
 
-Whenever an an error or event occurs on your device, the details of such events are recorded and saved to a document called a _diagnostic log_. Diagnostic logs can provide your support team with enough information to diagnose and fix problems on your device.  
+Export and share management log diagnostics with your support person to troubleshoot an error on your enrolled device. When an error or event occurs on your device, the details of it are recorded and saved to a document called a _diagnostic log_. Diagnostic logs can provide your support team with enough information to diagnose and resolve the error.  
+
+To share logs with your support person:   
 
 1. Open the **Settings** app on your device.  
 2. Go to **Accounts** > **Access work or school**.  

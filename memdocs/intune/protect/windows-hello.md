@@ -22,15 +22,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ms.reviewer: shpate
 ---
 
 # Manage Windows Hello for Business on devices at the time devices enroll with Intune 
 
-With Microsoft Intune, you can create a tenant-wide policy that configures use of Windows Hello for Business on Windows 10/11 devices at the time those devices enroll with Intune. This policy targets your entire organization and supports the Windows AutoPilot out-of-box-experience (OOBE). 
+With Microsoft Intune, you can create a tenant-wide policy that configures use of Windows Hello for Business on Windows 10 or Windows 11 devices at the time those devices enroll with Intune. This policy targets your entire organization and supports the Windows Autopilot out-of-box-experience (OOBE). 
 
 For Windows 10/11 devices, use of [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) replaces the use of passwords with strong two-factor authentication on devices. This authentication consists of a user credential that’s tied to a device and uses a biometric or PIN.
 
@@ -73,7 +74,7 @@ END OLD -->
 
 ## Create a Windows Hello for Business policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Go to **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Hello for Business**. The Windows Hello for Business pane opens.
 

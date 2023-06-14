@@ -6,8 +6,8 @@ ms.date: 07/07/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.localizationpriority: high
 ---
@@ -89,4 +89,4 @@ Use the **Add filter** option on tables to display items that match your criteri
 
 ## Next steps
 
-- Use [Proactive remediations](proactive-remediations.md) to gather more data and take action on devices
+- Use [Remediations](remediations.md) to gather more data and take action on devices

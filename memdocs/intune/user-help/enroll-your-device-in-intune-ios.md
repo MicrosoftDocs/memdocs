@@ -23,11 +23,12 @@ searchScope:
 ROBOTS:  
 #audience: 
 
-ms.reviewer: tisilv
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 
@@ -61,7 +62,7 @@ If after enrollment your organization enforces a new security requirement, such 
 
 ## Prerequisites    
 
-* Device running iOS 13.0 and later.   
+* Device running iOS 14.0 and later.   
 * Install Company Portal app [from App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Maintain a Wi-Fi connection until all steps are complete.
 * Have access to Safari web browser on your device.

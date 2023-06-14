@@ -26,7 +26,8 @@ ms.reviewer: esmich
 ms.suite: ems  
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 # Enroll your device with Company Portal  
@@ -34,12 +35,11 @@ Enroll your personal or corporate-owned Android device with Intune Company Porta
 
 Company Portal supports devices running Android 8.0 and later, including devices secured by Samsung KNOX Standard 2.4 and later. To learn how to update your Android device, see [Check & update your Android version](https://support.google.com/android/answer/7680439).  
   
-</br>
 > [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o]
 
 > [!NOTE]
 > Samsung Knox is a type of security that certain Samsung devices use for additional 
-> protection outside of what native Android provides. To check if you have a Samsung Knox device,> go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
+> protection outside of what native Android provides. To check if you have a Samsung Knox device, go to **Settings** > **About device**. If you don't see **Knox version** listed there, you have a native Android device.  
 
 ## Install Company Portal app  
 Install the Intune Company Portal app [from Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). See [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md) for a list of stores that offer the app in People's Republic of China.

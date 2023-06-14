@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Deployment guide: Manage Linux devices in Microsoft Intune
@@ -66,7 +68,7 @@ You can enforce device compliance policies based on Linux distribution type, ver
 | Task | Detail | 
 | ---- | ------ | 
 | [Create a device compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a device compliance policy for Linux devices. |  
-| [Add custom compliance settings](../protect/actions-for-noncompliance.md) | With custom compliance settings, you can write your own Bash scripts to address compliance scenarios not yet included in the device compliance options built into Microsoft Intune. This article describes how to create, monitor, and troubleshoot custom compliance policies for Linux devices. Custom compliance settings require you to [create a custom script](../protect/compliance-custom-json.md) that identifies the settings and value pairs.|  
+| [Add custom compliance settings](../protect/compliance-use-custom-settings.md) | With custom compliance settings, you can write your own Bash scripts to address compliance scenarios not yet included in the device compliance options built into Microsoft Intune. This article describes how to create, monitor, and troubleshoot custom compliance policies for Linux devices. Custom compliance settings require you to [create a custom script](../protect/compliance-custom-script.md) that identifies the settings and value pairs.|  
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. Examples of actions include sending alerts, remotely locking devices, or retiring devices. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) conditional access policy| Set up a conditional access policy to protect and grant access to Microsoft 365 web apps in the Microsoft Edge browser for Linux. Conditional access blocks noncompliant devices from accessing protected work apps in Edge, and grants access to compliant devices. You must have a device compliance policy for conditional access to work with Linux devices. |        
 
@@ -88,7 +90,7 @@ As an Intune administrator, you don't need to do anything to enable enrollment f
 
 ## Next steps  
 
-* Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
+* Check out [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
 * Check out the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/microsoft-intune-blog/increase-security-enable-quality-collaboration-for-linux/ba-p/3640485) for the latest information and blogs about Linux desktop management.  
 

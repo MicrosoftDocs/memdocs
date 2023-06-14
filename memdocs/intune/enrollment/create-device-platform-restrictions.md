@@ -27,21 +27,16 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Create device platform restrictions   
 
-**Applies to**
-* Android  
-* iOS
-* macOS 
-* Windows 10
-* Windows 11 
-
-
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
+
+*Applies to: Android, iOS/iPadOS, macOS, Windows 10, Windows 11*    
 
 Create a device platform enrollment restriction policy to restrict devices from enrolling in Intune. Available restrictions include:  
 
@@ -50,7 +45,7 @@ Create a device platform enrollment restriction policy to restrict devices from 
 * Manufacturer
 * Ownership (personally-owned)
 
- You can create a new device platform restriction policy in the Microsoft Endpoint Manager admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
+ You can create a new device platform restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
 
 This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.  
 
@@ -64,7 +59,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 
 ## Create a device platform restriction   
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Go to **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.  
 3. Select the tab along the top of the page that corresponds with the platform you're configuring. Your options:  
 
@@ -82,7 +77,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
     - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer** (Android): Enter a comma-separated list of the manufacturers that you want to block. 
     - **Allow min/max range** (Android, Windows, iOS/iPadOS): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:  
-        - Windows supports major.minor.build.rev for Windows 10 and Windows 11.    
+        - Windows supports major.minor.build.rev for Windows 10 and Windows 11. Intune doesn't receive the revision number during enrollment so enter **0** for revision number. 
         - Android device administrator and Android Enterprise work profile support major.minor.rev.build.  
         - iOS/iPadOS supports major.minor.rev.  
 
@@ -139,7 +134,7 @@ The following filter properties are always available to use with enrollment poli
 * Ownership 
 * Enrollment profile name 
 
-For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters can't be used with Android enrollment restrictions.  
+For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#managed-device-properties). Filters can't be used with Android enrollment restrictions.  
 
 ## Edit enrollment restrictions  
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Configuration Domain Join settings for hybrid Azure AD joined devices in Microsoft Intune
@@ -44,7 +46,7 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -64,15 +66,15 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
     - **Domain name**: Enter the Fully Qualified Domain Name (FQDN) the devices are to join. For example, enter `americas.corp.contoso.com.`
     - **Organizational unit** (optional): Enter the full path ([distinguished name](/windows/win32/ad/object-names-and-identities#distinguished-name)) to the organizational unit (OU) the computer accounts are to be created. For example, enter `OU=Mine,DC=Contoso,DC=com`. Don't enter quotation marks. To use the well-known computer object container (CN=Computers, DC=Contoso, DC=Com), leave this property blank.
 
-      For more information and advice on this setting, see [Deploy hybrid Azure AD-joined devices](../../autopilot/windows-autopilot-hybrid.md).
+      For more information and advice on this setting, go to [Deploy hybrid Azure AD-joined devices](../../autopilot/windows-autopilot-hybrid.md).
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the device groups that will receive your profile. For more information about assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the device groups that will receive your profile. For more information about assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     If you need to join devices to different domains or OUs, create different device groups.
 

@@ -25,9 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Windows 10/11 device settings to upgrade editions or enable S mode in Intune
@@ -38,6 +38,10 @@ ms.collection:
 Microsoft Intune includes many settings to help manage and protect your devices. This article describes some of the settings to upgrade Windows client editions, or switch out of S mode on Windows 10 devices. These settings are created in an upgrade configuration profile in Intune that are pushed or deployed to devices.
 
 As part of your mobile device management (MDM) solution, use these settings to control the Windows client edition and Window 10 S mode options for your Windows devices.
+
+This feature applies to:
+
+- Windows 10
 
 For more information on this feature, see [Upgrade Windows 10/11 editions or enable S mode](edition-upgrade-configure-windows-10.md).
 

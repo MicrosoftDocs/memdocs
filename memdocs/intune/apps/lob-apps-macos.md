@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/13/2022
+ms.date: 05/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - macOS
 - highpri
@@ -40,26 +41,29 @@ Use the information in this article to help you add macOS line-of-business apps 
 
 > [!NOTE]
 > macOS LOB apps have a maximum size limit of 2 GB per app.
-> 
+>
+> macOS LOB apps need to have a logo. If they don't have a logo, they will not be displayed in the apps section.
+>
 > While users of macOS devices can remove some of the built-in macOS apps like Stocks, and Maps, you cannot use Intune to redeploy those apps. If end users delete these apps, they must go to the app store, and manually re install them.
 
 ## App requirements
+
 The .pkg file must satisfy the following requirements to successfully be deployed using Microsoft Intune.
 
 1. The .pkg file is a component package or a package containing multiple packages.
 2. The .pkg file does not contain a bundle or disk image or .app file.
-2. The .pkg file is signed using a "Developer ID Installer" certificate, obtained from an Apple Developer account.
-3. The .pkg file contains a payload. Packages without a payload will attempt to re-install as long as the app remains assigned to the group.
+3. The .pkg file is signed using a "Developer ID Installer" certificate, obtained from an Apple Developer account.
+4. The .pkg file contains a payload. Packages without a payload will attempt to re-install as long as the app remains assigned to the group.
 
 ## Select the app type
 
 > [!NOTE]
-> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Endpoint Manager admin center. You can now upload *.pkg* files to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Intune admin center. You can now upload *.pkg* files to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 > [!IMPORTANT]
 > The *.pkg* file must be signed using "Developer ID Installer" certificate, obtained from an Apple Developer account. Only *.pkg* files may be used to upload macOS LOB apps to Microsoft Intune. However, conversion of other formats, such as *.dmg* to *.pkg* is supported. For more information about converting non-pkg application types, see [How to deploy DMG or APP-format apps to Intune-managed Macs](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-deploy-dmg-or-app-format-apps-to-intune-managed-macs/ba-p/1503416).
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -104,10 +108,10 @@ You can use scope tags to determine who can see client app information in Intune
 
 1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
-> [!NOTE]
-> Uninstall intend will only be displayed for LOB apps created with **Install as managed** set to **Yes**. For more information review **App information section** earlier on this article.
+    > [!NOTE]
+    > Uninstall intend will only be displayed for LOB apps created with **Install as managed** set to **Yes**. For more information review **App information section** earlier on this article.
 
-2. Click **Next** to display the **Review + create** page. 
+2. Click **Next** to display the **Review + create** page.
 
 ## Step 4 - Review + create
 

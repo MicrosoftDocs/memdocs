@@ -2,7 +2,7 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 04/01/2022
+ms.date: 03/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -73,6 +73,17 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 > [!IMPORTANT]  
 > When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](size-and-scale-numbers.md).
+
+### SQL Server 2022: Standard, Enterprise
+
+Starting with current branch 2303, support is added for SQL server 2022 version.
+
+You can use this version of SQL Server for the following sites:
+
+- A central administration site
+- A primary site
+- A secondary site
+
 
 ### SQL Server 2019: Standard, Enterprise
 
@@ -172,6 +183,7 @@ The following table identifies the recommended compatibility levels for Configur
 
 |SQL Server version | Supported compatibility levels | Recommended level |
 |----------------|--------------------|--------|
+| SQL Server 2022 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2017 | 140, 130, 120, 110 | 140 |
 | SQL Server 2016 | 130, 120, 110 | 130 |

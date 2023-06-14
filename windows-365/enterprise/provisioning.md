@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Provisioning overview
@@ -47,7 +49,7 @@ At a high level, the full provisioning process looks like this:
 
 ## Provisioning policy objects
 
-A Windows 365 provisioning policy is an object in the Microsoft Endpoint Manager admin console that orchestrates the creation of a Cloud PC.
+A Windows 365 provisioning policy is an object in the Microsoft Intune admin center that orchestrates the creation of a Cloud PC.
 
 As the admin, you provide the following required information when creating a provisioning policy:
 
@@ -67,7 +69,7 @@ Changing these configurations won’t impact any previously provisioned Cloud PC
 
 ### Changes to provisioning policies
 
-After the provisioning a Cloud PC is complete, it doesn't reoccur unless you manually perform a [reprovision](reprovision-cloud-pc.md).
+After the provisioning of a Cloud PC is complete, it doesn't reoccur unless you manually perform a [reprovision](reprovision-cloud-pc.md).
 
 Changes made to any part of a provisioning policy don't trigger a reprovision. Such changes won’t be applied to previously provisioned Cloud PCs. Changes to a provisioning policy will only be applied to Cloud PCs that are provisioned or reprovisioned after the changes.
 
@@ -82,9 +84,7 @@ Removing the targeting of a provisioning policy that was used for successful Clo
 
 Provisioning policies are assigned to user groups so there’s the possibility of overlapping groups/users.
 
-If a user is assigned to more than one provisioning policy, provisioning will honor the first assigned provisioning policy and ignore all others. If one of the provisioning policies is modified and a Cloud PC is reprovisioned, the Cloud PC will be reprovisioned with the most recently changed provisioning policy.
-
-It’s best practice to avoid any policy targeting overlaps to ensure consistent provisioning.
+If a user is assigned to more than one provisioning policy, provisioning will honor the first assigned provisioning policy and ignore all others. It’s best practice to avoid any policy targeting overlaps to ensure consistent provisioning.
 
 ## Provisioning retry
 

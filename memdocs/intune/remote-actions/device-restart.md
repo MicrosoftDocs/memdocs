@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Remotely restart devices with Intune
@@ -44,6 +46,7 @@ The **Restart** device action causes the device you choose to be restarted (with
 - Android Enterprise dedicated devices - Supported on Android 8.0 and later
 - Android Enterprise fully managed devices - Supported on Android 8.0 and later
 - Android Enterprise corporate-owned with work profile devices - Not supported 
+- Android Open Source Project (AOSP) devices - Supported 
 - iOS/iPadOS - Supported
 
     > [!Note]  
@@ -53,7 +56,7 @@ The **Restart** device action causes the device you choose to be restarted (with
 
 ## Restart a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **All devices**.
 4. In the list of devices that you manage, select a device > **Restart** > **Yes**.
 

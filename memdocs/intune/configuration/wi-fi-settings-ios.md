@@ -24,14 +24,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune
 
 You can create a profile with specific WiFi settings, and then deploy this profile to your iOS/iPadOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
+
+This feature applies to:
+
+- iOS/iPadOS
 
 These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings.
 
@@ -42,7 +46,7 @@ This article describes these settings.
 Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
 >
 > These settings use the [Apple Wi-Fi payload](https://developer.apple.com/documentation/devicemanagement/wifi) (opens Apple's web site).
 

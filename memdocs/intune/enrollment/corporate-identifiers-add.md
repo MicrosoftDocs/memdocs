@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 02/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -20,14 +20,15 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 
 #ROBOTS:
 #audience:
-ms.reviewer: 
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Identify devices as corporate-owned
@@ -58,14 +59,14 @@ This feature is supported for the following platforms:
 | Platform | IMEI numbers | Serial numbers |
 |---|---|---|
 | Windows | Not supported | Not supported |
-| iOS/iPadOS | Supported in some cases. See Important below.  | Supported |
+| iOS/iPadOS | Supported in some cases. See Important note below.  | Supported |
 | macOS | Not supported | Supported |
 | Android device administrator, before Android v10 | Supported | Supported |
 | Android device administrator, Android v10 and later | Not supported | Not supported |
 | Android Enterprise personally-owned work profile, before Android 12 | Supported | Supported |
 | Android Enterprise personally-owned work profile, Android 12 and later | Not supported | Not supported |
-| Android Enterprise corporate-owned work profile | Not supported | Not Supported |
-| Android Enterprise fully managed | Not supported | Not Supported |
+| Android Enterprise corporate-owned work profile | Not supported | Not supported |
+| Android Enterprise fully managed | Not supported | Not supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
 
 <!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple's Automated Device Enrollment or Apple Configurator to have them appear as corporate-owned. -->
@@ -95,31 +96,31 @@ This .csv file when viewed in a text editor appears as:
 
 ### Upload a .csv list of corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers** > **Add** > **Upload CSV file**.
-
-2. In the **Add identifiers** blade, specify the identifier type: **IMEI** or **Serial**.
-
-3. Click the folder icon and specify the path to the list you want to import. Navigate to the .csv file, and choose **Add**. 
-
-4. If the .csv file contains corporate identifiers that are already in Intune, but have different details, the **Review duplicate identifiers** popup appears. Select the identifiers that you want to overwrite into Intune and choose **Ok** to add the identifiers. For each identifier, only the first duplicate will be compared.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Devices** > **Enroll devices**.
+3. Select **Corporate device identifiers**. 
+4. Select **Add** > **Upload CSV file**.  
+5. In **Add identifiers**, specify the identifier type: **IMEI** or **Serial**.  
+6. Select the folder icon and specify the path to the list you want to import. 
+7. Go to the .csv file, and then select **Add**. 
+8. The **Review duplicate identifiers** pop-up window appears if the CSV file contains corporate identifiers that are already in Intune, but have different details.  Select the identifiers that you want to overwrite into Intune and choose **Ok** to add the identifiers. Intune only compares the first duplicate of each identifier.    
 
 ## Manually enter corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers** > **Add** > **Enter manually**.
+1. Go to **Devices** > **Enroll devices**.  
+2. Select **Corporate device identifiers**.  
+3. Select > **Add** > **Enter manually**.  
+4. In **Add identifiers**, specify the identifier type: **IMEI** or **Serial**.  
+5. Enter the **Identifier** and **Details** for each identifier you want to add. When you're done entering identifiers, select **Add**.  
+6. The **Review duplicate identifiers** pop-up window appears if your entries contain corporate identifiers that are already in Intune, but have different details.  Select the identifiers that you want to overwrite into Intune and choose **Ok** to add the identifiers. Intune only compares the first duplicate of each identifier. 
 
-2. In the **Add identifiers** blade, specify the identifier type: **IMEI** or **Serial**.
-
-3. Enter the **Identifier** and **Details** for each identifier you want to add. When you're done entering identifiers, choose **Add**.
-
-5. If you entered corporate identifiers that are already in Intune, but have different details, the **Review duplicate identifiers** popup appears. Select the identifiers that you want to overwrite into Intune and choose **Ok** to add the identifiers. For each identifier, only the first duplicate will be compared.
-
-You can click **Refresh** to see new device identifiers.
+You can select **Refresh** to see new device identifiers.  
 
 Imported devices are not necessarily enrolled. Devices can have a state of either **Enrolled** or **Not contacted**. **Not contacted** means that the device has never communicated in with the Intune service.
 
 ## Delete corporate identifiers
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Corporate device identifiers**.
 2. Select the device identifiers you want to delete, and choose **Delete**.
 3. Confirm the deletion.
 
@@ -133,14 +134,15 @@ For detailed specifications about International Mobile Equipment Identifiers, se
 Devices properties display **Ownership** for each device record in Intune. As an admin, you can specify devices as **Personal** or **Corporate**.
 
 **To change device ownership:**
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device.
-2. Choose **Properties**.
-3. Specify **Device ownership** as **Personal** or **Corporate**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices**.  
+1. Select a device.  
+2. Choose **Properties**.  
+3. Specify **Device ownership** as **Personal** or **Corporate**.  
 
-   ![Device properties showing Device category and Device ownership options](./media/corporate-identifiers-add/device-properties.png)
+   :::image type="content" source="./media/corporate-identifiers-add/device-properties.png" alt-text="Screenshot of the Managed device properties showing Device category and Device ownership options.":::
 
 When a device's ownership type is changed from *Corporate* to *Personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
 
 When an iOS/iPad or Android device's ownership type is changed from *Personal* to *Corporate*, a push notification is sent through the Company Portal app to inform the devices user of this change.
 
-This setting can be found in the Microsoft Endpoint Manager by selecting **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).
+To access the setting in the admin center, go to **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).  

@@ -8,8 +8,8 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 09/14/2022
-ms.topic: reference
+ms.date: 06/12/2023
+ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
 ms.assetid: 
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18, references_regions
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # In development for Windows 365 Enterprise
@@ -54,36 +56,64 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-<!--## App management-->
+## Device management
 
+### Support for symmetric NAT with RDP Shortpath<!--43602619-->
+
+In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+### Group-based license support for Cloud PC resizing<!--41357690-->
+
+In a future update, both single and bulk resizing will support Cloud PCs that were provisioned with group-based licenses.
 
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-<!--
 ## End user experience
--->
+
+### Windows 365 web client keyboard shortcut redirection<!--43951825-->
+
+Windows 365 web client users will be able to use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC.
+
+<!-- ***********************************************-->
+## Miscellaneous
+
+### Windows 365 Government setup tool<!--43461105-->
+
+A new Windows 365 Government setup tool will replace the current PowerShell scripts that are used to setup tenant mapping and permissions.
+
+### Single sign on option per tenant (preview)<!--43751308-->
+
+Each tenant will be able to decide if you want to turn on Single Sign On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign on.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### End user manual connectivity check<!--37679345 --> 
+### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
-### Device history report – new information for Cloud PC performance<!--38310774  -->
+<!-- ***********************************************-->
+## Provisioning
 
-The device history report will have new information to help you evaluate Cloud PC performance:
+### New health check: UDP TURN (preview)<!--44505391-->
 
-- Top five processes impacting CPU spike times
-- Top five processes impacting RAM spike times
+A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
 
 <!-- ***********************************************-->
-<!-- ## Provisioning -->
+## Security
+
+### Azure network connection least privilege update<!--44876259-->
+
+A new, more secure least privilege  will be implemented in a future update. When the update is released, customers must manually remove the old network contributor role from the resources where the ANC was created.
 
 <!-- ***********************************************-->
-<!--## Role-based access control-->
+## Windows 365 app
+
+### Windows 365 app will support Windows 365 Government environments<!--43305226-->
+
+In a future update, the Windows 365 app will support Windows 365 Government environments.
 
 ## Next steps
 

@@ -27,10 +27,13 @@ ms.reviewer: annochiva
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
-# Store your personal FileVault key 
+# Store your personal FileVault key   
+
+*Applies to macOS*  
 
 Store a FileVault key for your personally encrypted macOS device. In addition to satisfying encryption requirements, storing your key in Intune enables you to: 
 

@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt-pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Zimperium Mobile Threat Defense connector with Intune
@@ -47,7 +47,7 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Zimperium Mobile Threat Defense subscription
 

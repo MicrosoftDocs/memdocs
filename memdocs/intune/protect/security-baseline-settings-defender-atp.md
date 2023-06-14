@@ -19,14 +19,14 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: laarrizz
+ms.reviewer: juidaewo
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
+ms.collection:
+- tier2
 - M365-identity-device-management
-- tier3
 zone_pivot_groups: atp-baseline-versions
 ---
 
@@ -54,8 +54,8 @@ When a new version of a baseline becomes available, it replaces the previous ver
 
 To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
 
-- [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
-- [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
+<!-- - [Compare baselines](../protect/security-baselines.md) to discover what's changed from version to version.  -->
+- [Change the baseline version for a profile](../protect/security-baselines-configure.md#update-baselines-that-use-the-previous-format) to update a profile to use the latest version of that baseline.
 
 ::: zone pivot="atp-december-2020"
 **Microsoft Defender for Endpoint baseline for December 2020 - version 6**  

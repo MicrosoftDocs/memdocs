@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,7 +17,10 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- intune-scenario
 ---
 
 # Guided scenario - Deploy Microsoft Edge for Mobile
@@ -59,7 +62,7 @@ This guided scenario will automatically enable **MyApps** to appear in the Micro
 We'll ask you about the workplace favorites your users need, and the filters you require for web browsing. Make sure you complete the following tasks before you continue:
 
 - Add users to Azure AD groups. For more information, see [Create a basic group and add members using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
-- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](../enrollment/device-enrollment.md).
+- Enroll iOS/iPadOS or Android devices in Intune. For more information, see [Device enrollment](/mem/intune/fundamentals/deployment-guide-enrollment).
 - Gather a list of workplace favorites to add in Microsoft Edge.
 - Gather a list of website filters to enforce in Microsoft Edge.
 

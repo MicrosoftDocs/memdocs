@@ -26,14 +26,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Data collection in Intune
 
 When users enroll their corporate or personal devices with Intune, Intune collects, processes, and shares some personal data to support business operations, conduct business with the customer and to support the service. Intune collects personal data from the following sources:
 
-- The administrators use of the Intune in the Microsoft Endpoint Manager admin center.
+- The administrators use of the Intune in the Microsoft Intune admin center.
 - End-user devices (when devices are enrolled for Intune management and during usage).
 - Customer accounts at third party services (per admin's instructions).
 - Diagnostic, performance, and usage information.
@@ -118,7 +120,7 @@ Required data collected by Intune may include, but isn't limited to:
 |         |   MAM enrollment status                        | Yes |
 | **Support information** |  Contact information (name, phone number, email address)   | No  |
 |         |   Email discussions with Microsoft support, product, and/or customer experience team members | No  |
-| **Tenant account information** (this data is available from the Microsoft Endpoint Manager admin console |   installedDeviceCount: The number of devices on which the application is installed.  | Yes |
+| **Tenant account information** (this data is available from the Microsoft Intune admin center |   installedDeviceCount: The number of devices on which the application is installed.  | Yes |
 |         |   Number of devices or users enrolled          | No  |
 |         |   Number of identified device platforms        | No  |
 |         |   Number of installed devices                  | No  |
@@ -134,9 +136,16 @@ Required data collected by Intune may include, but isn't limited to:
 
 ## Optional data
 
-Data in the optional category isn't essential to the product or service experience. Customers can control the collection of optional data. Intune enables customers to opt in or opt-out of optional data collection. Examples of the optional data consist of data Intune collects for diagnostics and telemetry. We think there are compelling reasons for people to share this optional data as it creates opportunities for new and richer experiences but we understand the importance to provide users the opportunity to make these choices for themselves.
+Data in the optional category isn't essential to the product or service experience. Customers can control the collection of optional data. Intune enables customers to opt in or opt-out of optional data collection. Examples of optional data consist of pseudonymized data that Intune collects for diagnostics and telemetry. We think there are compelling reasons for people to share this optional data as it creates opportunities for new and richer experiences and we understand the importance of providing users the opportunity to make these choices for themselves.
 
-Examples of the optional diagnostic data may include application usage data, error, and performance data. All diagnostic data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services is pseudonymized as defined in the *ISO/IEC 19944-1:2020 (section 8.3.3)* standard.
+Examples of the optional data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services fall into the following categories as defined by the [ISO/IEC 19944-1:2020 Information technology - Cloud computing - Cloud services and devices: Data flow, data categories](https://www.iso.org/standard/79573.html):
+
+-	Details about the device, its configuration and connectivity capabilities, and status. 
+-	Details about the usage of the device, operating system, applications, and services. 
+-	Details about the health of the device, operating system, apps, and drivers. 
+-	Software installation and update information on the device. 
+
+
 
 ## Certain End User Data or Content is never Collected
 
@@ -149,7 +158,7 @@ Intune doesn't collect nor allow an Admin to see the following data:
 - Calendar events
 - Photos, including those in a photo app or camera.
 
-For more information, see [Getting started enrolling devices](../enrollment/device-enrollment.md) and 
+For more information, see [Getting started enrolling devices](/mem/intune/fundamentals/deployment-guide-enrollment) and 
 
 For more information on the data types and definition, see [How Microsoft categorizes data for online services](https://www.microsoft.com/trust-center/privacy/customer-data-definitions).
 

@@ -56,6 +56,16 @@ Stores the current running task sequence deployment unique ID. It uses the same 
 
 `ABC20001`
 
+### <a name="SMSTSAppInstallNeeds"></a> _SMSTSAppInstallNeedsRetry
+
+Starting this Configuration Manager 2211 HFRU Kb 16643863 and above
+
+*Applies to the [Install Application](task-sequence-steps.md#BKMK_InstallApplication) step.*
+
+This value is set to true if the previous application failed to install and is required to be retried.
+
+This value is set to false otherwise.
+
 ### <a name="SMSTSAssetTag"></a> _SMSTSAssetTag
 
 *Applies to the [Set Dynamic Variables](task-sequence-steps.md#BKMK_SetDynamicVariables) step.*
@@ -540,6 +550,28 @@ Specifies the number of network adapters installed on the destination computer. 
 For example, if you set the **OSDAdapter0TCPIPNetbiosOptions** value for the first adapter, then you must configure all the values for that adapter.
 
 If you don't specify this value, the task sequence ignores all **OSDAdapter** values.
+
+### <a name="OSDAppInstallRetries"></a> OSDAppInstallRetries
+
+Starting this Configuration Manager 2211 HFRU Kb 16643863 and above
+
+*Applies to the [Install Application](task-sequence-steps.md#BKMK_InstallApplication) step.*
+
+(input)
+
+Specifies the number of times the task sequence step tries to install an application in the case of failure. The value must be specified to trigger a retry in the case of application installation failure. Application installation retry is attempted ONLY when 'Install Next Application on Failure' option is not selected on the task.
+
+Defaults to 0 and task sequence does not retry application installation by default. 
+
+### <a name="OSDAppInstallRetryTimeout"></a> OSDAppInstallRetryTimeout
+
+Starting this Configuration Manager 2211 HFRU Kb 16643863 and above
+
+*Applies to the [Install Application](task-sequence-steps.md#BKMK_InstallApplication) step.*
+
+(input)
+
+Specifies the time in milliseconds, that the task sequence should wait before retrying an application installation on failure. The value defaults to 30 seconds (30000 milliseconds). For example, specify a value of 45000 for a retry delay of 45 seconds.
 
 ### <a name="OSDApplyDriverBootCriticalContentUniqueID"></a> OSDApplyDriverBootCriticalContentUniqueID
 
@@ -1248,7 +1280,7 @@ _Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step
 
 _Applies to version 2203 and later._
 
-The frequency, in seconds, that the BitLocker action will poll the site database for recovery key escrow status. Minimum value is 15 seconds.
+The frequency, in seconds, that the BitLocker action will poll the site database for recovery key escrow status. Minimum value is 15 seconds. Default value is 300 seconds (5 minutes).
 
 ### OSDRecoveryKeyPollingTimeout
 <!--10454717-->
@@ -1256,7 +1288,7 @@ _Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step
 
 _Applies to version 2203 and later._
 
-The maximum number of seconds for the BitLocker action to wait for the recovery key to be escrowed to the site database. Minimum value is 30 seconds.
+The maximum number of seconds for the BitLocker action to wait for the recovery key to be escrowed to the site database. Minimum value is 30 seconds. Default value is 1800 seconds (30 minutes).
 
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
 

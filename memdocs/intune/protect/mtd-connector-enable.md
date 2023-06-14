@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 02/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Enable the Mobile Threat Defense connector in Intune
@@ -58,9 +58,9 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## To enable the Mobile Threat Defense connector
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, you must be an Azure *Global administrator* or be assigned the *Endpoint Security Manager* built-in admin role for Intune.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, you must be an Azure *Global administrator* or be assigned the *Endpoint Security Manager* built-in admin role for Intune. You may also use a custom role that includes the *Mobile Threat Defense* permission in Intune.
 
 3. On the **Mobile Threat Defense** pane, select **Add**.
 
@@ -72,15 +72,18 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## Mobile Threat Defense toggle options
 
-You can decide which MTD toggle options you need to enable according to your organization's requirements. Not all of the following options are supported by all Mobile Thread Defense partners:
+> [!NOTE]
+> Ensure your tenant's MDM Authority is set to Intune (and not SCCM) to see the full list of toggle options. 
 
-**MDM Compliance Policy Settings**
+You can decide which MTD toggle options you need to enable according to your organization's requirements. Not all of the following options are supported by all Mobile Threat Defense partners:
 
-- **Connect Android devices of version _\<supported versions>_ to _\<MTD partner name>_**: When you enable this option, you can have Android devices (on supported OS versions) reporting security risk back to Intune.
+**Compliance policy evaluation**
 
-- **Connect iOS devices version _\<supported versions>_ to _\<MTD partner name>_**: When you enable this option, you can have iOS devices (on supported OS versions) reporting security risk back to Intune.
+- **Connect Android devices version _\<supported versions>_ and above to _\<MTD partner name>_**: When you enable this option, compliance policies using the Device Threat Level rule for Android devices (on supported OS versions) will evaluate devices including data from this connector.
 
-- **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and will provide updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned). 
+- **Connect iOS/iPadOS devices version _\<supported versions>_ and above to _\<MTD partner name>_**: When you enable this option, compliance policies using the Device Threat Level rule for iOS/iPadOS devices (on supported OS versions) will evaluate devices including data from this connector.
+
+- **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and will provide updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals). 
 
   > [!NOTE]  
   > App Sync data is sent to Mobile Threat Defense partners at an interval based on device check-in, and should **not** be confused with the refresh interval for the [Discovered Apps report](../apps/app-discovered-apps.md#details-of-discovered-apps).
@@ -96,11 +99,11 @@ You can decide which MTD toggle options you need to enable according to your org
 
 - **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version. Details of the minimum supported version would be shared within the docs for the Mobile Threat Defense vendor.
 
-**App Protection Policy Settings**
+**App protection policy evaluation**
 
-- **Connect Android devices of version *\<supported versions>* to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector.
+- **Connect Android devices of version *\<supported versions>* to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the "Max allowed threat level" rule will evaluate devices including data from this connector.
 
-- **Connect iOS devices version *\<supported versions>* to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector.
+- **Connect iOS devices version *\<supported versions>* to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the "Max allowed threat level" rule will evaluate devices including data from this connector.
 
 To learn more about using Mobile Threat Defense connectors for Intune App Protection Policy evaluation, see [Set up Mobile Threat Defense for unenrolled devices](mtd-enable-unenrolled-devices.md).
 

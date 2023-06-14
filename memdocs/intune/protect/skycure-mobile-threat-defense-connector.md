@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Symantec Endpoint Protection Mobile connector
@@ -58,7 +58,7 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Symantec Endpoint Protection Mobile subscription
 

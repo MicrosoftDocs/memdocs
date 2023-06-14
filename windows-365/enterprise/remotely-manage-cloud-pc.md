@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/07/2022
+ms.date: 02/28/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Remotely manage Windows 365 devices
@@ -40,9 +42,18 @@ Cloud PCs support the following remote management actions:
 - Quick Scan
 - Full Scan
 - Update Windows Defender
-- [Reprovisioning](provisioning.md#reprovisioning) (this is a remote action specific to Cloud PC devices)
-- [Resize](resize-cloud-pc.md#resize-a-cloud-pc) (this is a remote action specific to Cloud PC devices)
+- [Reprovisioning](provisioning.md#reprovisioning) (this remote action is specific to Cloud PC devices)
+- [Resize](resize-cloud-pc.md#resize-a-cloud-pc) (this remote action is specific to Cloud PC devices)
 - [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics)
+- [Place Cloud PC Under Review](place-cloud-pc-under-review.md)
+
+## Windows 365 Frontline Cloud PCs
+
+Frontline Cloud PCs support remote actions like Enterprise Cloud PCs. One difference is that a Frontline Cloud PC power state can be on or off based on the end user. When a Frontline Cloud PC is on, remote actions are started immediately. If a Frontline Cloud PC is powered off, remote actions start as soon as the Cloud PC is powered on.
+
+You can view the power state for Frontline Cloud PCs in the Intune portal, using the Cloud PC Creation blade under Devices.
+
+You can remotely power on and off a Frontline Cloud PC. When you power on a Frontline Cloud PC, a license is automatically consumed. When you power off a Frontline Cloud PC, any user currently signed in will be signed off.
 
 <!-- ########################## -->
 ## Next steps

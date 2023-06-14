@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # macOS device settings to configure and use kernel and system extensions in Intune
@@ -37,6 +37,10 @@ ms.collection:
 > - macOS kernel extensions are being replaced with system extensions. For more information, see [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
 This article describes the different kernel and system extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage extensions on your devices.
+
+This feature applies to:
+
+- macOS
 
 To learn more about extensions in Intune, and any prerequisites, see [add macOS extensions](kernel-extensions-overview-macos.md).
 
@@ -133,7 +137,7 @@ This feature applies to:
   >
   > and note the output:
   >
-  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender for Endpoint Network Extension`
+  > E.g. `UBF8T346G9    com.microsoft.wdav.netext (101.04.48/101.04.48)    Microsoft Defender for Endpoint Network Extension`
   >
   > The first entry is the Team ID you need. `UBF8T346G9` in our example
 

@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Data security and sharing in Intune
@@ -63,7 +65,7 @@ For information about data shared with certain third parties, see the following 
 - [Data Google sends to Intune](data-google-sends-to-intune.md)
 - [Data Jamf Pro sends to Intune](data-jamf-sends-to-intune.md)
 
-### Microsoft Endpoint Configuration Manager data sharing
+### Microsoft Configuration Manager data sharing
 
 Microsoft Intune does not share any data with Configuration Manager. Configuration Manager is an on-premise product deployed, managed, and operated directly by the customer. The diagnostics and usage data that is collected by Configuration Manager are only to improve the installation experience, quality, and security of future releases.
 

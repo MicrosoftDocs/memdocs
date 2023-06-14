@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt-pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Use BlackBerry Protect Mobile with Intune
@@ -52,7 +52,7 @@ For more information about how to integrate BlackBerry UES with Microsoft Intune
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - BlackBerry UES account with access to UES management console 
 

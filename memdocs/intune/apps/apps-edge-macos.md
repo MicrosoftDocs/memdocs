@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 05/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - macOS
-- tier3
 ---
 
 # Add Microsoft Edge to macOS devices using Microsoft Intune
@@ -49,7 +49,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 You can add Microsoft Edge version 77 and later to Intune using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **App type** list under the **Microsoft Edge, version 77 and later**, select **macOS**.
 

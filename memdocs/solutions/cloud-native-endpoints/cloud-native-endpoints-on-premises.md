@@ -11,8 +11,8 @@ ms.author: mandia
 manager: dougeby
 ms.date: 10/05/2022
 ms.topic: conceptual
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
+  - intune-scenario
 ---
 
 # Cloud-native endpoints and on-premises resources

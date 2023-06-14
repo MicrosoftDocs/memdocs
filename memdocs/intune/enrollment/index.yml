@@ -13,7 +13,9 @@ metadata:
   ms.author: dougeby
   manager: dougeby
   ms.date: 08/07/2019
-  ms.collection: highpri
+  ms.collection:
+  - tier1
+  - highpri
 
 # linkListType: architecture | deploy | download | get-started | how-to-guide | learn | overview | quickstart | tutorial
 
@@ -45,11 +47,7 @@ landingContent:
           - text: Set up automatic enrollment for Windows 10/11 devices 
             url: quickstart-setup-auto-enrollment.md
           - text: Enroll your Windows 10/11 device
-            url: quickstart-enroll-windows-device.md
-      - linkListType: tutorial
-        links:
-          - text: Use Autopilot to enroll Windows devices
-            url: tutorial-use-autopilot-enroll-devices.md                 
+            url: quickstart-enroll-windows-device.md           
       - linkListType: how-to-guide
         links:
           - text: Intune enrollment methods for Windows devices          

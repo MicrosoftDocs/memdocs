@@ -56,7 +56,7 @@ To link to a markdown file in the same repo, use **file-relative links**. Use th
 
 Examples:
 
-- [Microsoft Endpoint Configuration Manager documentation](in-console-documentation.md)
+- [Microsoft Configuration Manager documentation](in-console-documentation.md)
 - [Assets in Desktop Analytics](../../desktop-analytics/about-assets.md)
 
 To link to a header in the same markdown file, find the section anchor and link using `#` (for example, `#blockquote`). Use the Docs Authoring Pack to help.

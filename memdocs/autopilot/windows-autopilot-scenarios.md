@@ -1,23 +1,19 @@
 ---
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, white glove, pre-provision
 ms.prod: windows-client
-ms.mktglfcycl: deploy
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
 ms.date: 11/17/2022
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - tier2
 ms.topic: conceptual
-ms.technology: itpro-deploy
 ---
-
 
 # Windows Autopilot scenarios and capabilities
 
@@ -42,7 +38,7 @@ The following Windows Autopilot scenarios are described in this guide:
 | Deploy devices to be automatically configured for shared use, as a kiosk, or as a digital signage device.| [Windows Autopilot self-deploying mode](self-deploying.md) |
 | Redeploy a device in a business-ready state.| [Windows Autopilot Reset](windows-autopilot-reset.md) |
 | Pre-provision a device with up-to-date applications, policies, and settings.| [Pre-provisioning](pre-provision.md) |
-| Deploy Windows 10/11 on an existing Windows 7 or 8.1 device | [Windows Autopilot for existing devices](existing-devices.md) |
+| Deploy Windows 10/11 on an existing Windows device | [Windows Autopilot for existing devices](existing-devices.md) |
 
 These scenarios are summarized in the following video.
 
@@ -52,13 +48,8 @@ These scenarios are summarized in the following video.
 
 ## Windows Autopilot capabilities
 
-### Windows Autopilot is self-updating during OOBE
-
-For Windows 10, version 1903 and later devices, Autopilot functional and critical updates automatically download during OOBE after:
-- The device is connected to a network.
-- The [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) are complete.
-
-You can't opt out of these Autopilot updates because they're required for Windows Autopilot deployment. Windows alerts the user that the device is checking for, downloading, and installing the updates.
+### Temporary Access Pass
+Organizations leveraging [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) can use this feature with Windows Autopilot Azure AD join user driven, pre-provisioning, and self-deploying mode for shared devices. Temporary Access Pass is not supported by the native Windows login credential provider so it requires the enablement of WebSign-in. To enable this feature in your organization you can follow the CSP details outlined in [Policy CSP - Authentication](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin). This feature is not supported with Windows Autopilot hybrid Azure AD join devices and is not applicable on self-deploying mode kiosks.
 
 ### Cortana voiceover and speech recognition during OOBE
 
@@ -85,3 +76,4 @@ With Windows Autopilot, you can configure the BitLocker encryption settings to b
 ## Related topics
 
 [Windows Autopilot: What's new](windows-autopilot-whats-new.md)
+

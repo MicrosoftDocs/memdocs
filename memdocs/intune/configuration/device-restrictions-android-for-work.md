@@ -26,9 +26,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune
@@ -58,7 +59,7 @@ This feature applies to:
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 
-Some settings aren't supported by all enrollment types. To see which settings are supported by the different enrollment types, sign into the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each setting is under a heading that indicates the enrollment types that can use the setting.
+Some settings aren't supported by all enrollment types. To see which settings are supported by the different enrollment types, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each setting is under a heading that indicates the enrollment types that can use the setting.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
 
@@ -66,9 +67,9 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 :::image type="content" source="./media/device-restrictions-android-for-work/work-profile-level.png" alt-text="Screenshot that shows the Android Enterprise application settings that apply at the corporate-owned work profile level in Microsoft Intune.":::
 
-### General
+## General
 
-#### Fully managed, dedicated, and corporate-owned work profile devices
+### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Screen capture (work profile-level)**: **Block** prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
 - **Camera (work profile-level)**: **Block** prevents access to the camera on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
@@ -95,16 +96,21 @@ For corporate-owned devices with a work profile, some settings only apply in the
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
 - **System update**: Choose an option to define how the device handles over-the-air updates. Your options
-  - **Device Default** (default): Use the device's default setting.
+  - **Device Default** (default): Use the device's default setting. By default, if the device is connected to Wi-Fi, is charging, and is idle, then the OS updates automatically. For app updates, the OS also validates if the app isn't running in the foreground.
   - **Automatic**: Updates are automatically installed without user interaction. Setting this policy immediately installs any pending updates.
   - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts users to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to users on the device.
-  - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts users to install. This window is also used to install updates for Play apps. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
+  - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts users to install.
+
+    This setting applies to operating system and Play Store app updates. Any maintenance window takes precedence over in-progress device changes.
+
+    Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
+
 - **Freeze periods for system updates**: Optional. When you set the **System update** setting to **Automatic**, **Postponed**, or **Maintenance window**, use this setting to create a freeze period:
 
   - **Start date**: Enter the start date in `MM/DD` format, up to 90 days long. For example, enter `11/15` to start the freeze period on November 15.
   - **End date**: Enter the end date in `MM/DD` format, up to 90 days long. For example, enter `01/15` to end the freeze period on January 15.
 
-  During this annual freeze period, all incoming system updates and security patches are blocked.
+  During this freeze period, all incoming system updates and security patches are blocked, including manually checking for updates.
 
   When a device's clock is outside the freeze period, the device continues to receive updates based on your **System update** setting.
 
@@ -114,7 +120,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer
 
-#### Fully managed and dedicated devices
+### Fully managed and dedicated devices
 
 - **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the main volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
 - **Factory reset**: **Block** prevents users from using the factory reset option in the device's settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use this setting on the device.
@@ -131,7 +137,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
 - **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show these suggestions when the app starts.
 
-#### Dedicated devices
+### Dedicated devices
 
 - **Power button menu**: **Block** hides the power options when users hold down the power button when in kiosk mode. Hiding these options prevents users from accidentally or intentionally shutting down devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when users hold down the power button on a device, they're shown power options, such as Restart and Power off.
 
@@ -169,7 +175,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer  
 
-#### Corporate-owned work profile devices  
+### Corporate-owned work profile devices  
 
 - **Contact sharing via Bluetooth (work profile-level)**: **Block** prevents users from sharing their work profile contacts with devices over Bluetooth. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts via Bluetooth.  
 
@@ -198,7 +204,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   [CrossProfileDataSharing](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#crossprofiledatasharing)
 
-### System security
+## System security
 
 - **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
 
@@ -218,7 +224,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - [CommonCriteriaMode](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#commoncriteriamode) in the Android Management API documentation.  
   - [Knox Deep Dive: Common Criteria Mode](https://www.samsungknox.com/blog/knox-deep-dive-common-criteria-mode) at samsungknox.com
 
-### Device experience
+## Device experience
 
 Use these settings to configure a kiosk-style experience on your dedicated devices, or to customize the home screen experiences on your fully managed devices. You can configure devices to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available.
 
@@ -439,9 +445,9 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
 End of comment -->
 
-### Device password
+## Device password
 
-#### Fully managed, dedicated, and corporate-owned work profile devices
+### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
   - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to something more secure than **Device default**.
@@ -492,39 +498,39 @@ End of comment -->
 
   [2.3.4 Advanced passcode management: Strong Authentication required timeout](https://developers.google.com/android/work/requirements#2.3.-advanced-passcode-management_1) (opens Android's web site)
 
-#### Fully managed and dedicated devices
+### Fully managed and dedicated devices
 
 - **Disable lock screen**: **Disable** blocks all Keyguard lock screen features from being used. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when the device is in lock screen, the OS might allow all the Keyguard features, such as camera, fingerprint unlock, and more.
 
-### Power settings
+## Power settings
 
-#### Fully managed, dedicated, and corporate-owned work profile devices
+### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Time to lock screen (work profile-level)**: Enter the maximum time a user can set until the device locks. For example, if you set this setting to `10 minutes`, then users can set the time from 15 seconds up to 10 minutes. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-#### Fully managed and dedicated devices
+### Fully managed and dedicated devices
 
 - **Screen on while device plugged in**: Choose which power sources cause the device's screen to stay on when plugged in.
 
-### Users and Accounts
+## Users and Accounts
 
-#### Fully managed, dedicated, and corporate-owned work profile devices
+### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Add new users**: **Block** prevents users from adding new users. Each user has a personal space on the device for custom Home screens, accounts, apps, and settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add other users to the device.
 - **User can configure credentials (work profile-level)**: **Block** prevents users from configuring certificates assigned to devices, even devices that aren't associated with a user account. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make it possible for users to configure or change their credentials when they access them in the keystore.
 
-#### Fully managed and dedicated devices
+### Fully managed and dedicated devices
 
 - **User removal**: **Block** prevents users from removing users. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove other users from the device.
 - **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add their personal Google account.
 
-#### Dedicated devices
+### Dedicated devices
 
 - **Account changes**: **Block** prevents users from updating or changing accounts when in kiosk mode. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to update user accounts on the device.
 
-### Applications
+## Applications
 
-#### Fully managed, dedicated, and corporate-owned work profile devices
+### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Allow installation from unknown sources**: **Allow** lets users turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. It allows users to side-load apps on the device using means other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on **Unknown sources**.
 
@@ -550,7 +556,7 @@ End of comment -->
 
 If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
 
-#### Dedicated devices
+### Dedicated devices
 
 - **Clear local data in apps not optimized for Shared device mode**: Add any app not optimized for shared device mode to the list. The app's local data will be cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later. 
 
@@ -561,9 +567,9 @@ If you want to enable side-loading, set the **Allow installation from unknown so
   
   All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization’s needs.
 
-### Connectivity
+## Connectivity
 
-#### Fully managed, dedicated, and corporate-owned work profile devices
+### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Always-on VPN  (work profile-level)**: **Enable** sets the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. Or, immediately connect when users lock their device, the device restarts, or the wireless network changes.
 
@@ -589,7 +595,7 @@ If you want to enable side-loading, set the **Allow installation from unknown so
 
 - **Lockdown mode**: **Enable** forces all network traffic to use the VPN tunnel. If a connection to the VPN isn't established, then the device won't have network access. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow traffic to flow through the VPN tunnel or through the mobile network.
 
-#### Fully managed and dedicated devices
+### Fully managed and dedicated devices
 
 - **Recommended global proxy**: **Enable** adds a global proxy to the devices. When enabled, HTTP and HTTPS traffic, including some apps on the device, use the proxy you enter. This proxy is only a recommendation. It's possible some apps won't use the proxy. **Not configured** (default) doesn't add a recommended global proxy.
 
@@ -608,7 +614,7 @@ If you want to enable side-loading, set the **Allow installation from unknown so
 
   For more information on this feature, see [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (opens an Android site).
 
-### Work profile password
+## Work profile password
 
 These settings apply to corporate-owned work profiles.
 
@@ -650,14 +656,14 @@ These settings apply to corporate-owned work profiles.
 
   [2.3.4 Advanced passcode management: Strong Authentication required timeout](https://developers.google.com/android/work/requirements#2.3.-advanced-passcode-management_1) (opens Android's web site)
 
-### Personal profile
+## Personal profile
 
 - **Camera**: **Block** prevents access to the camera during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the camera in the personal profile.
 - **Screen capture**: **Block** prevents screen captures during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
 - **Allow users to enable app installation from unknown sources in the personal profile**: Select **Allow** so users can install apps from unknown sources in the personal profile. It allows users to install apps from sources other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from installing apps from unknown sources in the personal profile.
 - **Type of restricted apps list**: Select **Allow apps** to create a list of Managed Google Play apps that are allowed and approved to install and run in the personal profile on the device. Select **Blocked apps** to create a list of Managed Google Play apps that are prohibited and prevented from installing and running in the personal profile on the device. When set to **Not configured** (default), Intune doesn't include a list of apps to allow or block.  
 
-### Custom support information
+## Custom support information
 
 Using these settings, you can customize some support messages shown to users, and show these messages in different languages.
 

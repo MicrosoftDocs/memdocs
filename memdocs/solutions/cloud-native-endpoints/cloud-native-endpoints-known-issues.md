@@ -3,16 +3,16 @@
 
 title: Common issues and resolutions with cloud-native endpoints
 titleSuffix: Microsoft Intune
-description: Learn more about the known and resolutions when using cloud-native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply. Local Administrator Password Solution (LAPS) isn't supported.
+description: Learn more about the known and resolutions when using cloud-native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 06/06/2023
 ms.topic: conceptual
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
+  - intune-scenario
 ---
 
 # Known issues and limitations with cloud-native endpoints
@@ -63,7 +64,7 @@ Cloud-native endpoints are joined to Azure AD, and don't exist in on-premises AD
 > [!IMPORTANT]
 > The Azure AD Connect device writeback feature tracks devices that are registered in Azure AD. These devices are shown in on-premises AD as registered devices.
 >
-> Azure AD Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication. 
+> Azure AD Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication.
 >  
 > For information on scenarios supported with device writeback, go to [Azure AD Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
 
@@ -86,7 +87,7 @@ The following list includes common features and services that might use machine 
   - Won't work if the apps use machine account authentication.
   - Won't work if the apps access resources that are secured with groups that include only machine accounts.
 
-  **Recommendation**: 
+  **Recommendation**:
   - If your Win32 apps use machine authentication, then update the app to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
   - Check the authentication and identities of your applications and kiosk devices. Update the authentication and identities to use user account-based security.
 
@@ -145,25 +146,13 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
   Instead of doing what you've always done, focus on what you actually want to achieve.
 
-## Local Administrator Password Solution (LAPS) aren't supported
-
-Currently, cloud-native endpoints don't support the [Microsoft Local Administrator Password Solution (LAPS)](/defender-for-identity/cas-isp-laps) (opens another Microsoft website).
-
-LAPS manages local administrator account passwords for domain-joined devices. Passwords are randomized and stored in on-premises AD, and protected by ACLs. So, only eligible users can read the password or request a password reset.
-
-Microsoft will release an update to provide LAPS for Azure AD joined devices (no ETA). When it's released, you can use it to manage local administrator account passwords on cloud-native endpoints.
-
-**Resolution**: 
-
-Azure AD joined devices use Azure AD to configure users and groups that will have local administrator privileges. For more information and guidance, go to [How to manage local administrators on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin).
-
 ## Synchronized user accounts can't complete first sign-in
 
 Synchronized user accounts are on-premises AD domain users that are synchronized to Azure AD using Azure AD Connect.
 
 Currently, synchronized user accounts with passwords that have **User must change password at next logon** configured can't complete a first-time sign-in to a cloud-native endpoint.
 
-**Resolution**: 
+**Resolution**:
 
 Use Password Hash Sync and Azure AD connect, which forces the **force password change at logon** attribute to sync.
 

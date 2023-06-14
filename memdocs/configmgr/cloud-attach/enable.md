@@ -6,8 +6,8 @@ ms.date: 08/15/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
@@ -33,7 +33,11 @@ By using the recommended default settings, your eligible devices will be cloud a
     - Devices are eligible if they meet the [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites). These devices are listed in the built-in **Co-management Eligible Devices** collection. <!--12377291-->
     - This option is the only one currently available for China21Vianet (Azure China Cloud).
 - Enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
-- Enables automatic upload of all your devices to Microsoft Endpoint Manager admin center ([tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json))
+- Enables automatic upload of all your devices to Microsoft Intune admin center ([tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json))
+- Enables Uploading of Microsoft Defender for Endpoint data for [reporting](../tenant-attach/deploy-antivirus-policy.md#bkmk_mdereports) on devices uploaded to Microsoft Intune admin center
+
+> [!IMPORTANT]
+> When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. [Tenant attach data collection](../tenant-attach/data-collection.md) article summarizes the data that is sent.
 
 > [!Note]
 > Ensure that prerequisites for each of the cloud attach features are met. For more information about prerequisites, see, [prerequisites for tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [prerequisites for Endpoint analytics](../../analytics/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites).
@@ -47,7 +51,7 @@ Use the following steps to cloud attach your environment with the default settin
    - Azure Public Cloud
    - Azure US Government Cloud
    - Azure China Cloud
-      - Endpoint analytics and device upload to Microsoft Endpoint Manager admin center can't be enabled for Azure China Cloud
+      - Endpoint analytics and device upload to Microsoft Intune admin center can't be enabled for Azure China Cloud
 
 1. Select **Sign In**. Sign into your account when prompted.
 1. Ensure that **Use default settings (recommended)** is selected, then choose **Next** and **Yes** when the app registration notice appears.  
@@ -65,13 +69,13 @@ Use the following steps to cloud attach your environment with custom settings:
    - Azure Public Cloud
    - Azure US Government Cloud
    - Azure China Cloud
-      - Endpoint analytics and device upload to Microsoft Endpoint Manager admin center can't be enabled for Azure China Cloud
+      - Endpoint analytics and device upload to Microsoft Intune admin center can't be enabled for Azure China Cloud
 1. Select **Sign In**. Sign into your account when prompted.
 1. Choose the **Customize settings** option to enable cloud features individually.
 1. By default, Configuration Manager uses your credentials to register an app in your Azure AD tenant. This app to authorize synchronization of data between your on-premises site and Intune. To use an app that you already created, select  **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. For more information, see [Import a previously created Azure AD application](#bkmk_aad_app).
 
 1. Choose **Next** to continue. You may also be prompted to confirm Azure AD application registration. Select **Yes** to confirm the app registration.
-1. The **Devices** section of the **Configure Upload** page, enables [tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json). Tenant attach uploads your Configuration Manager devices to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) cloud-based console. You can take certain actions on uploaded devices such as run queries, run scripts, install apps, or display an event timeline for the device.
+1. The **Devices** section of the **Configure Upload** page, enables [tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json). Tenant attach uploads your Configuration Manager devices to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) cloud-based console. You can take certain actions on uploaded devices such as run queries, run scripts, install apps, or display an event timeline for the device.
 
    **Select which devices to upload to Microsoft Endpoint Manager** has the following two options:
    - **All devices managed my Microsoft Endpoint Configuration Manager (recommended)**: Upload all devices
@@ -85,6 +89,8 @@ Use the following steps to cloud attach your environment with custom settings:
 
      > [!IMPORTANT]
      > When this checkbox is cleared, [settings in Intune need to be configured](use-intune-rbac.md) too.
+
+1. Check the option to **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center** if you want to use [Endpoint Security reports in Intune admin center](../tenant-attach/deploy-antivirus-policy.md#bkmk_mdereports)
 
 1. Select **Next** to get to the **Enablement** page for [co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json). Co-management simplifies management by enrolling devices into Intune and allowing you to lift selected [workloads](../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) to the cloud. For instance, you can choose to enable workloads for [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) so only trusted users can access organizational resources on trusted devices using trusted apps.
 

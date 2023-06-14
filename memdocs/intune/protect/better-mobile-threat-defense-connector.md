@@ -26,9 +26,9 @@ ms.reviewer: aanavath
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Better Mobile Threat Defense connector with Intune
@@ -61,7 +61,7 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 
 - Azure Active Directory Premium
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Better Mobile Threat Defense subscription
 

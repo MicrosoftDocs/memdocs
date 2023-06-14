@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,6 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - M365-identity-device-management
 - Android
 ---
@@ -41,7 +42,7 @@ You can use an Intune app configuration policy to configure Google Chrome for An
 
 ## Add the Google Chrome app to Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add** then add the **Managed Google Play** app.
 3. Go to Managed Google Play, search with **Google Chrome** and approve.
 
@@ -53,7 +54,7 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
 ## Add app configuration for managed AE devices
 
-1. From the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
+1. From the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 2. Set the following details:
     - **Name** - The name of the profile that appears in the portal.
     - **Description** - The description of the profile that appears in the portal.
@@ -80,7 +81,7 @@ For additional details about adding a Managed Google Play app to Intune, see [Ma
 
     ![Common settings](./media/apps-configure-chrome-android/common-settings.png)
 
-    The above settings create bookmarks and block access to all URLs except `baidu.com`, `yahoo.com`, `chromium.org`, and `chrome://`.
+    The above settings create bookmarks and block access to all URLs except `baidu.com`, `youtube.com`, `chromium.org`, and `chrome://`.
 
 5. Click **OK** and **Add** to add your configuration policy to Intune.
 6. Assign this configuration policy to a user group. For more information, see [Assign apps to groups with Microsoft Intune](apps-deploy.md).

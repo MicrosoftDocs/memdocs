@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2022
+ms.date: 01/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Enable the Mobile Threat Defense connector in Intune for unenrolled devices
@@ -42,6 +42,7 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - MVISION Mobile (Android,iOS/iPadOS)
+> - SentinelOne (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
@@ -66,7 +67,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 ## To enable the MTD connector
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a 3rd party Mobile Threat Defense vendor, you must be a Global administrator.
 
@@ -74,11 +75,12 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 4. Choose your MTD solution as the **Mobile Threat Defense connector to setup** from the drop-down list.
 
-    <!-- ![MTD setup in Intune](PLACEHOLDER, need a new screenshot of this page) -->
-
 5. Enable the toggle options according to your organization's requirements. Toggle options visible will vary depending on the MTD partner.
 
 ## Mobile Threat Defense toggle options
+
+> [!NOTE]
+> Ensure your tenant's MDM Authority is set to Intune (and not SCCM) to see the full list of toggle options. 
 
 You can decide which MTD toggle options you need to enable according to your organization's requirements. Here are more details:
 

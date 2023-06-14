@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Add VPN settings on macOS devices in Microsoft Intune
@@ -34,6 +34,10 @@ ms.collection:
 This article shows you the Intune settings you can use to configure VPN connections on devices running macOS.
 
 Depending on the settings you choose, not all values in the following list are configurable.
+
+This feature applies to:
+
+- macOS
 
 ## Before you begin
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/20/2022
+ms.date: 05/02/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier1
 ---
 
 # Troubleshooting
@@ -36,7 +38,7 @@ This article provides suggestions for troubleshooting Windows 365 issues.
 
 For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Endpoint Manager](/mem/get-support). Support is included as part of your Windows 365 subscription.
 
-Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows client](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Endpoint Manager admin center](/mem/get-support).
+Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows client](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Intune admin center](/mem/get-support).
 
 ## Audio and video redirection not working
 
@@ -46,7 +48,7 @@ After the installation, the optimizations to redirect audio and video to your lo
 
 ## Conditional access
 
-Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Endpoint Manager admin center or Azure Active Directory.
+Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Intune admin center or Azure Active Directory.
 
 Any conditional access policy that you apply will affect:
 
@@ -97,7 +99,7 @@ For suggested remediations on, see [Troubleshoot provisioning errors](provisioni
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions).
 
 ## Video playback improvements
 
@@ -105,9 +107,33 @@ You can improve video playback performance on your Cloud PCs by using multimedia
 
 For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, ChromeOS, Linux.
 
-For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
+For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection) and [Troubleshoot multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-multimedia-redirection).
 
-MMR is in [public preview](../public-preview.md) for Windows 365 Cloud PCs.
+## Your organization hasn’t assigned you a Cloud PC
+
+When accessing windows365.microsoft.com, the user receives a message "Your organization hasn't assigned you a Cloud PC".
+
+**Possible cause**: To have access to a Cloud PC, a user must be assigned a license and a provisioning policy must be created.
+
+**Troubleshooting steps**: Make sure that:
+
+1. The user has been assigned a Windows 365 license. For more information, see [Assign licenses](assign-licenses.md) and [Windows 365 plans and pricing](https://www.microsoft.com/windows-365/enterprise?rtc=1).
+2. You’ve created a provisioning policy that includes the user. For more information, see [Create provisioning policies]( /windows-365/enterprise/create-provisioning-policy).
+
+## Performance decreases with nested virtualization
+
+Some users may experience a decline in their 4vCPU Cloud PC performance when using nested virtualization.
+
+**Troubleshooting steps:**
+
+- [Reprovision](reprovision-cloud-pc.md) the Cloud PC, or
+- Uninstall Hyper-V on the Cloud PC.  
+
+## Windows 365 Frontline user message: Your Cloud PC should be available soon
+
+If you've reached the maximum number of active user sessions in your tenant, any more users who try to start a user session will see a  message in the end user portal that says: "Your Cloud PC should be available soon".
+
+**Troubleshooting steps**: Use the [utilization report](report-cloud-pc-utilization.md) to estimate the right amount of license for your organization.
 
 <!-- ########################## -->
 ## Next steps

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - Windows
 - highpri
@@ -43,7 +44,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 ## Select the app type
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **Line-of-business app**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -52,7 +53,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 ### Select the app package file
 
-1. In the **Add app** pane, click **Select app package file**. 
+1. In the **Add app** pane, click **Select app package file**.
 2. In the **App package file** pane, select the browse button. Then, select a Windows installation file with the extension **.msi**, **.appx**, or **.appxbundle**.
    The app details will be displayed.
 
@@ -84,7 +85,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
 
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. Click **Select scope tags** to optionally add scope tags for the app. 
+1. Click **Select scope tags** to optionally add scope tags for the app.
 2. Click **Next** to display the **Assignments** page.
 
 ## Step 3 - Assignments

@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Export Cloud PC names
@@ -37,7 +39,7 @@ You can export the Cloud PC name of every Cloud PC on your tenant.
 3. Enter **Y** in all confirmation dialogs.
 4. Wait for the installation to finish then close PowerShell.
 5. Open a text editor like Visual Studio Code.
-6. In a new file past the following script:
+6. In a new file paste the following script:
 ```
 param(
     [Parameter(Mandatory)]

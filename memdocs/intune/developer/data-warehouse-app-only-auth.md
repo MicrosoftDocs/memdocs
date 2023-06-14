@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 03/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Intune Data Warehouse application-only authentication
@@ -48,7 +48,7 @@ The following process uses a private method to process and convert an app key. T
 
 In this section, you provide details about the Web app you would like to point to at Intune. A web app is a client-server application. The server provides the web app, which includes the UI, content, and functionality. This type of app is separately maintained on the Web. You use Intune to grant a web app access to Intune. The data flow is initiated by the web app. 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select  **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **App registrations**.
 3. Click **New registration** to display the **Register an application** pane.
 4. In the **Register an application** pane, add your app details:
@@ -117,12 +117,12 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
 
     ``` csharp
      using System.Security;
-     using Microsoft.IdentityModel.Clients.ActiveDirectory;
+     using Microsoft.Identity.Client;
      using System.Configuration;
     ``` 
 
 	> [!NOTE]
-	> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+	> You must use the Microsoft Authentication Library (MSAL). For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 11. After the <code>Main</code> method, add the following private method to process and convert the app key:
 
@@ -143,7 +143,7 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
     ```
 
 12. In the **Solution Explorer**, right-click on **References**, then select **Manage NuGet Packages**.
-13. Search for *Microsoft.IdentityModel.Clients.ActiveDirectory* and install the related Microsoft NuGet package.
+13. Search for *Microsoft.Identity.Client* and install the related Microsoft NuGet package.
 14. In **Solution Explorer** select and open the *App.config* file.
 15. Add the <code>appSettings</code> section so that the xml appears as follows:
 

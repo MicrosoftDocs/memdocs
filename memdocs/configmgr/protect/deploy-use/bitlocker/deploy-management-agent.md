@@ -158,13 +158,13 @@ Use the following logs to monitor and troubleshoot:
 
 ### Client logs
 
-- MBAM event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM.  For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Client event logs](../../tech-ref/bitlocker/client-event-logs.md).
+- MBAM event log: in the Windows Event Viewer, browse to **Applications and Services** > **Microsoft** > **Windows** > **MBAM**.  For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Client event logs](../../tech-ref/bitlocker/client-event-logs.md).
 
-- **BitlockerManagementHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
+- **BitlockerManagementHandler.log** and **BitlockerManagement_GroupPolicyHandler.log** in client logs path, `%WINDIR%\CCM\Logs` by default
 
 ### Management point logs (recovery service)
 
-- Recovery service event log: in the Windows Event Viewer, browse to Applications and Services > Microsoft > Windows > MBAM-Web. For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Server event logs](../../tech-ref/bitlocker/server-event-logs.md).
+- Recovery service event log: in the Windows Event Viewer, browse to **Applications and Services** > **Microsoft** > **Windows** > **MBAM-Web**. For more information, see [About BitLocker event logs](../../tech-ref/bitlocker/about-event-logs.md) and [Server event logs](../../tech-ref/bitlocker/server-event-logs.md).
 
 - Recovery service trace logs: `<Default IIS Web Root>\Microsoft BitLocker Management Solution\Logs\Recovery And Hardware Service\trace*.etl`
 

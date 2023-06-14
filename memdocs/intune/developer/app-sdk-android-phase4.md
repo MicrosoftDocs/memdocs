@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 03/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -25,9 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - Android
-- tier3
 ms.custom: intune-classic
 ---
 
@@ -38,9 +38,10 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
-## Stage 4: MAM Integration Essentials 
+## Stage 4: MAM Integration Essentials
 
 ## Stage Goals
+
 - Enable MAM Strict Mode.
 - Register for critical notifications from the SDK.
 - Implement and register an authentication callback to provide AAD tokens from MSAL to the SDK.
@@ -49,20 +50,20 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 - (Recommended) Incorporate MAM logging into your app.
 - (Recommended) Learn how to use the SDK diagnostic dialog.
 
-
 ## Background
+
 Now that you have the Intune App SDK downloaded, integrated into your build, and successfully performing class and method replacements, it's time to make the essential code changes to start enforcing app protection policy settings for MAM-protected accounts.
 
 This stage will instruct you on how to hook into the SDK's logging, invoke a diagnostics dialog, enable MAM Strict Mode to identify possible integration bugs, register for notifications from the SDK, and most importantly, how to register an account for Intune MAM to start receiving policy.
 
-
 ## MAM Strict Mode
-MAM Strict Mode can identify potential bugs in your application's integration of the Intune App SDK. 
+
+MAM Strict Mode can identify potential bugs in your application's integration of the Intune App SDK.
 These integration bugs may result in failures to properly apply app protection policy and leave corporate data unprotected.
 As a result, usage of MAM Strict Mode is *required*.
 
-MAM Strict Mode looks for anomalies in your application's usage of MAM APIs and MAM-restricted platform APIs. 
-Loosely patterned after Android's StrictMode, MAM Strict Mode runs a predefined set of checks that raise runtime errors when they fail. 
+MAM Strict Mode looks for anomalies in your application's usage of MAM APIs and MAM-restricted platform APIs.
+Loosely patterned after Android's StrictMode, MAM Strict Mode runs a predefined set of checks that raise runtime errors when they fail.
 MAM Strict Mode isn't intended to be left enabled in production builds; instead, use it in your app's internal development, debug, and/or dogfood builds.
 
 To enable MAM Strict Mode, call
@@ -70,7 +71,8 @@ To enable MAM Strict Mode, call
 ```java
 MAMStrictMode.enable();
 ```
- early in application initialization (for example, `Application.onCreate`). 
+
+ early in application initialization (for example, `Application.onCreate`).
 
 When a MAM Strict Mode check fails, try to determine whether it is a
 real issue that can be fixed in your app or a false positive.
@@ -80,8 +82,9 @@ This will allow us to make sure we agree with the false positive determination a
 To suppress false positives, disable the failing check following the instructions below.
 
 ### Handling Violations
+
 When a check fails, it runs a [MAMStrictViolationHandler].
-The default handler throws an `Error`, which is expected to crash the app. 
+The default handler throws an `Error`, which is expected to crash the app.
 This is to make failures as noisy as possible and fits with the intention that strict mode shouldn't be enabled in production builds.
 
 If your app would like to handle violations differently, it can supply its own handler by calling:
@@ -93,9 +96,10 @@ MAMStrictMode.global().setHandler(handler);
 where `handler` implements `MAMStrictViolationHandler`.
 
 ### Suppressing Checks
+
 If a check fails in a situation where your app is doing nothing
 incorrect, report it as mentioned above.
-In the meantime, it may be necessary to disable the check encountering a false positive, at least while waiting for an updated SDK. 
+In the meantime, it may be necessary to disable the check encountering a false positive, at least while waiting for an updated SDK.
 The check which failed will be shown in the error raised by the default handler, or will be passed to a custom handler if set.
 
 Although suppressions can be done globally, temporarily disabling per-thread at the specific call site is preferred.
@@ -103,7 +107,9 @@ The following examples show various ways to disable [MAMStrictCheck.IDENTITY_NO_
 attempt is made to protect a file which doesn't exist).
 
 #### Per-Thread Temporary Suppression
+
 This is the preferred suppression mechanism.
+
 ```java
 try (StrictScopedDisable disable = MAMStrictMode.thread().disableScoped(MAMStrictCheck.IDENTITY_NO_SUCH_FILE)) {
     // Perform the operation which raised a violation here
@@ -112,18 +118,21 @@ try (StrictScopedDisable disable = MAMStrictMode.thread().disableScoped(MAMStric
 ```
 
 #### Per-Thread Permanent Suppression
+
 ```java
 MAMStrictMode.thread().disable(MAMStrictCheck.IDENTITY_NO_SUCH_FILE);
 ```
 
 #### Global (Process-Wide) Suppression
+
 ```java
 MAMStrictMode.global().disable(MAMStrictCheck.IDENTITY_NO_SUCH_FILE);
 ```
 
 ## Register for notifications from the SDK
+
 The Intune App SDK issues many different types of notifications to inform applications of time-sensitive management operations.
-Your application can register for, and take action when receiving, any of these notifications. 
+Your application can register for, and take action when receiving, any of these notifications.
 
 For example, whenever an IT administrator issues a selective wipe command for a device, the Intune service sends down a notification to the SDK, which is passed along to your application as `WIPE_USER_DATA`.
 Your application can listen for this notification and control what data is wiped; or it can rely on the SDK's default wipe behavior.
@@ -132,8 +141,8 @@ Many of the notifications are optional.
 Depending on the SDK features your application uses, some notifications may be required.
 See [Register for Notifications from the SDK] in [Stage 7: App Participation Features] for details on how to register for notifications, which notifications the SDK delivers, and how to handle specific notification types.
 
-
 ## Registering for App Protection Policy
+
 When admins create App Protection Policies, they target these policies to specific accounts in their organization.
 On the client, the SDK needs to know which account is using the application so it can retrieve that account's policy and enforce the settings appropriately.
 Your app is responsible for providing the SDK with this account information.
@@ -145,6 +154,7 @@ However, currently only one account can be enrolled, or have app protection poli
 On Android, this single-managed-account limitation is device-wide.
 
 ### Registration vs Enrollment
+
 **Registration** is the process where your app informs the SDK that a new account is in use.
 The SDK contains functions your app must call for registering and unregistering accounts.
 
@@ -159,14 +169,15 @@ If one account is already enrolled for your application, when it registers anoth
 > Learn more in the Appendix at [MDM and MAM enrollment].
 
 ### Implementing registration
+
 > [!CAUTION]
 > If your app does not integrate MSAL (strongly recommended), see [Default Enrollment] in the [Appendix] instead of continuing this section.
 
 Your app must make three code changes to successfully register an account:
 
-1. The app _must_ implement and register an instance of the [MAMServiceAuthenticationCallback] interface. The callback instance must be registered in the `onCreate()` (or `onMAMCreate()`) method of the Application subclass.
+1. The app *must* implement and register an instance of the [MAMServiceAuthenticationCallback] interface. The callback instance must be registered in the `onCreate()` (or `onMAMCreate()`) method of the Application subclass.
 
-2. When an account is created and the user successfully signs in with MSAL, the app _must_ call [registerAccountForMAM].
+2. When an account is created and the user successfully signs in with MSAL, the app *must* call [registerAccountForMAM].
 
 3. When an account is removed, the app should call [unregisterAccountForMAM] to remove the account from Intune management.
 
@@ -186,6 +197,7 @@ The `MAMEnrollmentManager` instance returned is guaranteed not to be null.
 The API methods fall into two categories: **authentication** and **account registration**.
 
 ### MAMEnrollmentManager and Authentication
+
 The SDK frequently communicates with the Intune service: for enrolling registered accounts, for getting updates to App Protection Policy settings, and for getting pending admin actions, like selectively wiping protected data inside your app.
 To successfully communicate with the Intune service, the SDK requires fresh access tokens from apps that have integrated MSAL.
 
@@ -273,6 +285,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     > However, it is strongly recommended as it can help enrollments and app protection policy check-ins complete in a timely manner.
 
 #### Authentication Implementation Notes
+
 - Apps are encouraged to acquire AAD tokens **prior to** calling [registerAccountForMAM].
 After registering an account, apps will receive a callback to the [MAMServiceAuthenticationCallback] interface on a different thread.
 Providing a valid token in that callback allows enrollment to proceed.
@@ -288,6 +301,7 @@ If a token isn't provided, the callback may still be called at the next check-in
 - Support for sovereign clouds requires providing the authority.
 
 ### MAMEnrollmentManager and Registration
+
 Whenever the app adds an account, it must register the account with the SDK.
 Likewise, whenever the app removes an account, it should unregister that account to indicate that the app should no longer apply policy for that account.
 If the account was enrolled in the MAM service, the account will be unenrolled and the app will be wiped.
@@ -321,6 +335,7 @@ Periodic enrollment retries for the account will be stopped.
 The SDK provides the status of unenrollment requests asynchronously via notification.
 
 #### Registration Implementation Notes
+
 - The registration methods are idempotent.
 For example, [registerAccountForMAM] will only register an account and attempt to enroll the app if the account isn't already registered, and [unregisterAccountForMAM] will only unregister an account if it is currently registered.
 Subsequent calls are no-ops, so there's no harm in calling these methods more than once.
@@ -337,10 +352,12 @@ If the provided account isn't registered, this method will return **null**.
 If the account is registered, this method will return the account's status as one of the members of the [MAMEnrollmentManager.Result] enumeration.
 
 ### Sovereign Cloud Registration
+
 Azure supports multiple physically isolated clouds, known as Sovereign or National Clouds.
 If your application is [sovereign cloud aware], it **must** provide the `authority` parameter to `registerAccountForMAM()`.
 
 #### MSAL Guidance
+
 For MSAL, set `multiple_clouds_supported` to `true` in the [MSAL configuration file].
 
 ``` json
@@ -350,6 +367,7 @@ For MSAL, set `multiple_clouds_supported` to `true` in the [MSAL configuration f
 ```
 
 ### Registration Result and status codes
+
 When an account is first registered, it begins in the `PENDING` state, indicating that the initial MAM service enrollment attempt is incomplete.
 After the enrollment attempt finishes, a notification will be sent with one of the Result codes in the table below.
 In addition, the [getRegisteredAccountStatus] method will return the account's status so the app can always determine if that account has app protection policies enforced.
@@ -367,9 +385,9 @@ If the enrollment attempt fails, the account's status may change over time as th
 | `PENDING` | The initial enrollment attempt for the account is in progress.  The app can block access to corporate data until the enrollment result is known, but isn't required to do so. |
 | `COMPANY_PORTAL_REQUIRED` | The account is licensed for Intune, but the app can't be enrolled until the Company Portal app is installed on the device. The Intune App SDK will attempt to block access to the app for the given account and direct them to install the Company Portal app (see below for details). |
 
-
 ## (Recommended) Logging
-Logging should be initialized early to get the most value out of logged data. 
+
+Logging should be initialized early to get the most value out of logged data.
 `Application.onMAMCreate()` is typically the best place to initialize logging.
 
 To receive MAM logs in your app, create a [Java Handler](https://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) and add it to the [MAMLogHandlerWrapper].
@@ -400,14 +418,16 @@ public interface MAMLogHandlerWrapper {
 ```
 
 > [!NOTE]
-> PII stands for "personally identifiable information" and may include data like usernames and UPNs. 
+> PII stands for "personally identifiable information" and may include data like usernames and UPNs.
 > You are strongly encouraged to exclude such personal information in your own production logs.
 > See the [Microsoft Privacy Policy] for more detail.
 
 ## (Recommended) Diagnostics Information
+
 The Intune Company Portal app has multiple options for gathering diagnostic information.
 The Company Portal includes UI that:
-- Enables end users to gather Company Portal logs. 
+
+- Enables end users to gather Company Portal logs.
 - Displays device and account metadata.
 - Includes per-app information about current MAM policy.
 
@@ -435,7 +455,7 @@ Execute the following tests to validate the integration.
 
 Execute the following test first to get familiar with the complete end user experience of policy application within your app:
 
-1. Create an Android App Protection Policy in the MEM console (see [Creating a test Android app protection policy] in Stage 1 for details). For this test, configure the policy:
+1. Create an Android App Protection Policy in the Microsoft Intune admin center (see [Creating a test Android app protection policy] in Stage 1 for details). For this test, configure the policy:
     - Under Data Protection, set "Screen capture and Google Assistant" to "Block".
     - Under Access Requirements, leave the default settings. Notably, "PIN for Access" should be "Require".
 2. Ensure the App Protection Policy is targeted to your application. You'll likely need to manually add the package name in the policy creation wizard.
@@ -462,7 +482,7 @@ Execute the following tests to more thoroughly validate how other App Protection
 ### Data Protection Tests
 
 The following tests cover specific data protection settings configured within the App Protection Policy.
-When you change the App Protection Policy settings in the Microsoft Endpoint Manager console, the client won't immediately update.
+When you change the App Protection Policy settings in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), the client won't immediately update.
 See [Quickly testing with changing policy] for tips on speeding up testing.
 
 For these tests:
@@ -475,7 +495,7 @@ For these tests:
 6. Log in to the other managed app with the managed test account.
 
 
-| Scenario | App Protection Policy Setting | Test Steps | 
+| Scenario | App Protection Policy Setting | Test Steps |
 | - | - | - |
 | Screenshot | "Screen capture and Google Assistant" set to "Block" | 1. Navigate to all pages in your app. <br> 2. Attempt to take a screenshot on each page. <br> 3. Confirm that screenshots are blocked or the image saved is fully blank. |
 | Copy text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text to copy, skip. <br> 1. Navigate to all pages in your app that have copyable text. <br> 2. Copy text. <br> 3. Switch to the unmanaged app. <br> 4. Attempt to paste in the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Navigate to the other managed app. <br> 7. Attempt to paste in the managed app. <br> 8. Confirm the paste is allowed. |
@@ -553,7 +573,7 @@ Following the [First Policy Application Test] steps above, you may run into the 
 
 #### After logging in with a managed account, I am not prompted to install the Company Portal (step 7).
 
-First, visit the admin console and double check that the App Protection Policy is targeted to your test account.
+First, visit the Intune admin center and double check that the App Protection Policy is targeted to your test account.
 
 Second, double check your source code for calls to `registerAccountForMAM` and implementation of `MAMServiceAuthenticationCallback`. 
 If this former isn't called at the right time and/or the latter didn't properly provide a valid token, you won't see the Company Portal prompt.
@@ -574,7 +594,7 @@ Double check your source code's implementation of the `MAMServiceAuthenticationC
 Are there other SDK-integrated applications on your test device? 
 The app PIN is shared between all managed apps, and the SDK has a global timer to prevent end users from being prompted for the PIN on every managed app launch or resume.
 
-Otherwise, visit the admin console and double check that the App Protection Policy has app PIN enabled and is targeted to your test account.
+Otherwise, visit the Intune admin center and double check that the App Protection Policy has app PIN enabled and is targeted to your test account.
 
 As a last resort, restarting your device will reset the PIN timer.
 If the PIN screen doesn't show after restarting your device, it's likely not configured properly in the policy.
@@ -582,7 +602,7 @@ If the PIN screen doesn't show after restarting your device, it's likely not con
 #### I did see the Get Access screen, but screenshots are still allowed (step 12).
 
 While policy is being retrieved, the wrong policy is being applied. 
-First, visit the admin console and double check that the App Protection Policy does disable screenshots and is targeted to your test account. 
+First, visit the Intune admin center and double check that the App Protection Policy does disable screenshots and is targeted to your test account. 
 Second, use the diagnostic console (described above) to check the policy that's been pulled down for your app. 
 If both policies confirm that screenshots should be blocked, check your Gradle build plugin configuration to ensure that MAM replacements are being made.
 
@@ -612,7 +632,7 @@ Also check logs or debug to verify the `MAMEnrollmentManager.Result`.
 #### My app can share data to an unmanaged app
 
 Confirm that "Send org data to other apps" set to "Policy managed apps".
-Check the Microsoft Endpoint Manager console to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].
@@ -627,7 +647,7 @@ Check the policy targeting the other app; if it has "Receive data from other app
 #### My app can receive data from an unmanaged app
 
 Confirm that "Receive data from other apps" set to "Policy managed apps".
-Check the Microsoft Endpoint Manager console to confirm the policy is configured and targeted correctly.
+Check the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to confirm the policy is configured and targeted correctly.
 Check the client [Diagnostics Information] to confirm the SDK has received the configured policy.
 
 Next, if policy is configured and retrieved correctly, check if *any- policies are being enforced: [My app isn't receiving or enforcing any policies].

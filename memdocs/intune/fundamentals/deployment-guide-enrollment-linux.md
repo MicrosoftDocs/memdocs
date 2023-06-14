@@ -23,22 +23,23 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 
-# Deployment guide: Enroll Linux desktop devices in Microsoft Intune
+# Enrollment guide: Enroll Linux desktop devices in Microsoft Intune
 
 Linux devices can be enrolled in Intune. Once they're enrolled, they receive the policies you create. Users can use the Microsoft Edge browser to access organization resources.
 
-This article includes an overview of the administrator and user tasks to enroll Linux devices.
+This article includes an overview of the administrator and user tasks required to enroll Linux devices.  
 
 ## Before you begin
 
-For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
+For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, see [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md). 
 
 ## Linux enrollment
 
@@ -47,12 +48,12 @@ Use for personal/BYOD and organization-owned devices running Linux.
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You use Ubuntu Desktop. | ✔️ |
+| You use Ubuntu Desktop (20.04 or 22.04 LTS on x86/64). | ✔️ |
 | You use Ubuntu Server. | ❌  |
 | Devices are owned by the organization or school. | ✔️ |
 | Devices are personal or BYOD. | ✔️  |
 | You have new or existing devices. | ✔️ |
-| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ❌ <br/><br/> Bulk enrollment is not supported today. Each device needs to be enrolled using the Microsoft Intune App |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ❌ <br/><br/> The enrollment requires a user to sign in with an organization account. |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> It might be possible to enroll Linux devices in Intune that are already enrolled in another MDM provider. This scenario hasn't been tested by Microsoft. |
@@ -65,7 +66,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 Other than having Intune setup, there are minimal administrator tasks with Linux enrollment.
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- Intune admins don't do anything to enable Linux enrollment in the Microsoft Endpoint Manager admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Linux**.
+- Intune admins don't do anything to enable Linux enrollment in the Microsoft Intune admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Linux**.
 
 ## End user tasks
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 05/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,14 +26,15 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Android Enterprise device settings list to allow or restrict features on personally owned devices using Intune
 
-This article describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+This article describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, control security, and more.
 
 This feature applies to:
 
@@ -73,7 +74,30 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **App configuration policies**).
 
-- **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.  
+- **Add and remove accounts**: This setting allows or prevents accounts from being added in the work profile, including Google accounts. Your options:
+
+  - **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
+
+    In a previous release, this setting was named **Not configured**.
+
+  - **Allow all account types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
+
+    You can also configure:
+
+    - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains in the following format:
+
+      ```csv
+      contoso.com
+      microsoft.com
+      ```
+
+      Or, add the domains individually using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
+
+    This setting requires:
+
+    - Google Play app version 80970100 or higher
+
+  - **Block all account types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
 
   > [!NOTE]
   > On personally owned devices with a work profile (BYOD) and corporate owned devices with work profile (COPE), Google accounts can't be added to the **Settings** app > **Accounts** > **Work**.
@@ -135,7 +159,7 @@ These password settings apply to the work profile password on personally owned d
 - **Password complexity**: Use this setting to set the password complexity requirements. Your options:
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
-  - **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
   - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
 
@@ -158,10 +182,9 @@ These password settings apply to the work profile password on personally owned d
   >
   >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
   >
-  >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
+  >     For Android Enterprise 12+ devices, it's recommended to configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
-  > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
 
 #### Android 11 and earlier
 
@@ -208,7 +231,7 @@ These password settings apply to the device password on personally owned devices
 - **Password complexity**: Use this setting to set the password complexity requirements. Your options:
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
-  - **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+  - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
   - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
   - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
 
@@ -231,10 +254,9 @@ These password settings apply to the device password on personally owned devices
   >
   >     If you change an existing policy with the **Required password type** and **Minimum password length** settings that already configured, then Android Enterprise 12+ devices will automatically use the **Password complexity** setting with the **High** complexity.
   >
-  >     For Android Enterprise 12+ devices, it's recommended to create a new policy and configure the **Password complexity** setting.
+  >     For Android Enterprise 12+ devices, it's recommended to configure the **Password complexity** setting.
   > 
   > - If the **Required password type** and **Minimum password length** settings aren't changed from the default values in a policy, then no password policy is automatically applied to newly enrolled Android Enterprise 12+ devices.
-  > - The **Password complexity** setting will be enforced in the December release of the Company Portal app.
 
 ### Android 11 and earlier
 

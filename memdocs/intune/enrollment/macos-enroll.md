@@ -21,14 +21,15 @@ ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 #ROBOTS:
 #audience:
 
-ms.reviewer: tisilver
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Set up enrollment for macOS devices in Intune
@@ -88,8 +89,8 @@ The token is then automatically escrowed to Microsoft Intune. You can use a comm
 ### Monitor bootstrap escrow status  
 You can monitor the escrow status for any enrolled Mac in the admin center. The *Bootstrap token escrowed* hardware property reports whether or not the bootstrap token has been escrowed in Intune. Intune reports **Yes** when the token has been successfully escrowed and **No** when the token has not been escrowed. 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
-2. Select **Devices** > **macOS**. All macOS devices are shown in a table. 
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Go to **Devices** > **macOS**. All macOS devices are shown in a table. 
 3. Select a device. 
 4. Select **Hardware**. 
 5. In your hardware details, scroll down to **Conditional access** > **Bootstrap token escrowed**.  
@@ -155,12 +156,17 @@ Intune automatically turns on supervision for user-approved devices running macO
 The device user signs in to the Company Portal app to initiate enrollment. Company Portal then opens the device's system preferences and prompts the user to install the management profile. Company Portal provides in-app instructions to help users find the profile. Users go to **System Preferences** > **Profiles** to  approve the management profile installation. Device users that don't provide approval during enrollment can return to system preferences later to give approval.  
 
 ### Find out if device is user approved  
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **All devices**.
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**.  
 3. Choose a macOS device.
 4. From the side menu, select **Hardware**.  
 5. Check the value next to **User approved enrollment**.  
 
+## Back up and restore with Apple Migration Assistant  
+Use Apple Migration Assistant to back up and restore a macOS device. You can use the tool to back up a Mac and restore its app data on a new device. It's important to know:  
+- The management profile on the original Mac is not backed up. The device is sent a new management profile as the new Mac re-enrolls. This happens on Macs that go through Apple automated device enrollment and Macs that don't go through automated device enrollment.  
+- Company Portal app credentials might be restored on the new Mac after it goes through Migration Assistant and enrolls. If this happens, we recommend that you or the device user completes the following steps to clear app data: 
+  1. Sign out of the Company Portal app.  
+  2. Sign in to the app or Company Portal website.  
 
 ## Next steps
 

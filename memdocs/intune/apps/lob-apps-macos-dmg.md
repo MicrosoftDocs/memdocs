@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2022
+ms.date: 05/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,27 +27,26 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - macOS
 - highpri
 ---
 
-# Add a macOS DMG app to Microsoft Intune 
+# Add a macOS DMG app to Microsoft Intune
+
+Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple’s website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
 
 > [!NOTE]
-> The feature is in public preview. 
-
-Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple’s website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac). 
-
-> [!NOTE]
-> The DMG file must contain one or more files with .app extensions. DMG files containing other types of installer files will not be installed. 
+> The DMG file must contain one or more files with .app extensions. DMG files containing other types of installer files will not be installed.
 
 ## Prerequisites
 
 The following prerequisites must be met before a macOS DMG app is installed on macOS devices.
+
 - Devices are managed by Intune.
 - DMG app is smaller than 2GB in size.
-- The [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md) is installed. 
+- The [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md) is installed.
 
 ## Important considerations for deploying DMG apps
 
@@ -55,8 +54,12 @@ A single DMG should only contain a single application file or multiple applicati
 
 It is not recommended that multiple apps that are not dependent on each other are installed using the same DMG file. If multiple independent apps are deployed using the same DMG app, failure to install one app will cause other apps to be re-installed. In this case, monitoring reports consider the DMG installation a failure as well.
 
+> [!NOTE]
+> You can update apps of type **macOS apps (DMG)** deployed using Intune. Edit a DMG app that is already created in Intune by uploading the update for the app with the same bundle identifier as the original DMG app. In addition, you must use the Microsoft Intune agent for macOS version 2304.039 or greater.
+
 ## Select the app type
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the **Other** app types, select **macOS app (DMG)**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -64,6 +67,7 @@ It is not recommended that multiple apps that are not dependent on each other ar
 ## Step 1 – App information
 
 Select the app package file:
+
 1. In the **Add app** pane, click **Select app package file**.
 2. In the **App package file** pane, select the browse button. Then, select a macOS DMG file with the extension *.dmg*. The app details will be displayed.
 3. When you're finished, select **OK** on the **App package file** pane to add the app.
@@ -103,14 +107,15 @@ You can use detection rules to choose how an app installation is detected on a m
 **Included apps**: Provide the apps that are contained in the uploaded file. Included app bundle IDs and build numbers are used for detecting and monitoring app installation status of the uploaded file. Included apps list should only contain the application(s) installed by the uploaded file in **Applications** folder on Macs. Any other type of file that is not an application or an application that is not installed to **Applications** folder should be excluded from the **Included apps** list. If **Included apps** list contains files that are not applications or if all the listed apps are not installed, app installation status does not report success.
 
 > [!NOTE]
+>
 > - The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file. 
 > - Mac Terminal can be used to lookup and confirm the included app details of an installed app.
 >   For example, to look up the bundle ID and build number of Company Portal, run the following:
-> 
+>
 >   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier```
-> 
+>
 >   Then, run the following:
-> 
+>
 >   ```defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString```
 >
 > - Alternatively, the `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of a mounted DMG file on a Mac.
@@ -129,8 +134,10 @@ You can select the **Required** or **Uninstall** group assignments for the app. 
 > A macOS app deployed using Intune agent will not automatically be removed from the device when the device is retired. The app and data it contains will remain on the device. It is recommended that the app is removed prior to retiring the device.
 
 1. For the specific app, select an assignment type:
-  - **Required**: The app is installed to `/Applications/` directory on devices in the selected groups.
-  - **Uninstall**: The app is uninstalled from `/Applications/` directory on devices in the selected groups.
+
+    - **Required**: The app is installed to `/Applications/` directory on devices in the selected groups.
+    - **Uninstall**: The app is uninstalled from `/Applications/` directory on devices in the selected groups.
+
 2. Click **Next** to display the **Review + create** page.
 
 ## Step 6 – Review + create
@@ -154,8 +161,6 @@ The app you have created appears in the apps list where you can assign it to the
 
 - **"Available for enrolled devices" assignment type is not available**: Only **Required** and **Uninstall** assignment types are currently supported. 
 - **"Collect logs" action is unavailable during preview**: Log collection feature on macOS apps (DMG) is unavailable during preview. 
-- **Errors might not show details during preview**: Some errors you encounter may only show "Failed" status with an error code and not provide additional details.
-- **App upgrade fails to install**: Updating an app that has the same bundle ID or same name as an existing app in Applications folder fails to install. 
 - **DMG apps report once after deployment**: Assigned DMG apps report back on initial deployment only. These apps will not report back again during preview.
 - **Some DMG apps may display a warning to end-users on launch**: Apps downloaded from the internet and deployed using Intune may show a warning to end-users when launched. End-users can click "Open" on the dialog to continue opening the app.
 
@@ -163,7 +168,6 @@ The app you have created appears in the apps list where you can assign it to the
 
 - **Some app icons may not display immediately after installation**: Some app icons may take some time after installation to start displaying on the installed device.
 - **Monitoring reports only show error code**: failed app installations only show an error code in "device status" monitoring reports. To show error details, refresh the browser window or refer to the table in the Troubleshooting section.
-
 
 ## Troubleshooting
 

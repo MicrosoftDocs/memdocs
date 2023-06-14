@@ -23,12 +23,12 @@ The `ReleaseLocks` Windows Management Instrumentation (WMI) class method, in Con
 
 ```  
 SInt32 ReleaseLocks(  
-    string ObjectRelPath[]   
+    string ObjectRelPaths[]   
 );  
 ```  
 
 #### Parameters  
- `ObjectRelPath`  
+ `ObjectRelPaths`  
  Data type: `String` Array  
 
  Qualifiers: [in]  

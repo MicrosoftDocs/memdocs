@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Factory reset a device in Intune Company Portal  | Microsoft Docs
+title: Reset device in Intune Company Portal  | Microsoft Docs
 description: Describes what happens after you reset a device in the Intune Company Portal app for iOS and includes the steps for how to do it. 
 keywords:
 author: lenewsad
@@ -26,7 +26,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 

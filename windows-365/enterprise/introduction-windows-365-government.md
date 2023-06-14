@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/11/2022
+ms.date: 06/08/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # What is Windows 365 Government?
@@ -34,11 +36,11 @@ Windows 365 Government is a cloud-based service that automatically creates virtu
 
 Windows 365 Government customers are government agencies or public entities that qualify to use services hosted in GCC and GCC High. The services in the GCC and GCC High clouds must meet specific requirements and pass rigorous audit reviews before customers are allowed to use them.
 
-For GCC environments, users that access Windows 365 Government Cloud PCs have an identity in the public cloud while the underlying resources and content are secured in a regulated US government cloud.
+For GCC environments, users that access Windows 365 Government Cloud PCs have an identity in the public cloud while the underlying resources and content are secured in a regulated US government cloud. GCC customers that don't require underlying resources and content to be secured in a regulated US government cloud can purchase use Windows 365 Enterprise.
 
 Windows 365 Government supports this scenario in a secure, scalable, and transparent manner. It provides flexibility to administrators to manage users in the public cloud, resources in the government cloud, and the dynamic relationship between the two.
 
-Windows 365 Government is available GCC and GCC High customers in the US, as well as contractors (in US entities) holding or processing data on behalf of US government agencies.
+Windows 365 Government is available for GCC and GCC High customers in the US, as well as contractors (in US entities) holding or processing data on behalf of US government agencies.
 
 For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Windows 365 Government](https://aka.ms/win365).
 
@@ -46,8 +48,6 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 
 The following features are not yet supported for Windows 365 GCC or GCCH.
 
-- Configure installed language and region for provisioning Cloud PCs
-- Digital forensics and placing a Cloud PC under review
 - Unified dashboard
 - Virtualization-based workloads
 - Endpoint analytics support (this is supported in GCC)
@@ -56,6 +56,11 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Windows 365 System based alerting on Microsoft Endpoint Manager for Cloud PCs
 - User initiated feedback in End User Portal and Windows 365 Web Client
 - Resize VM
+- Citrix HDX Plus for Windows 365
+- Windows 365 app
+- Multimedia redirection for improved video playback
+- Microsoft Dev Box
+- Convert Windows 365 licenses to higher level licenses
 
 ## Next steps
 

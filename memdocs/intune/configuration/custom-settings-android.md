@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Add custom settings to Android devices in Microsoft Intune
-description: Add or create a custom profile for Android devices to create a WiFi profile with a pre-shared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices in Microsoft Intune
+title: Add custom settings to Android DA devices in Microsoft Intune
+description: Add or create a custom profile for Android devices in Microsoft Intune. Create a WiFi profile with a preshared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/10/2021
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -22,12 +22,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use custom settings for Android devices in Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your Android devices using a "custom profile". Custom profiles are a feature in Intune. They are designed to add device settings and features that aren't built in to Intune.
+Using Microsoft Intune, you can add or create custom settings for your Android devices using a "custom profile". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.
 
 This feature applies to:
 
@@ -49,7 +51,7 @@ This article shows you how to create a custom profile for Android devices.
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following settings:
 
@@ -68,7 +70,7 @@ This article shows you how to create a custom profile for Android devices.
     - **Name**: Enter a unique name for the OMA-URI setting so you can easily find it.
     - **Description**: Enter a description that gives an overview of the setting, and any other important details.
     - **OMA-URI**: Enter the OMA-URI you want to use as a setting.
-    - **Data type**: Select the data type you'll use for this OMA-URI setting. Your options:
+    - **Data type**: Select the data type for this OMA-URI setting. Your options:
 
       - String
       - String (XML file)

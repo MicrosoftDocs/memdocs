@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 05/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,20 +25,21 @@ search.appverid:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
+- tier2
+- M365-identity-device-management
 
 ---
 
 # Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)
 
-You can import custom and third party/partner ADMX and ADML templates into the Endpoint Manager admin center. Once imported, you can create a device configuration policy using these settings, and then assign the policy to your managed devices.
+You can import custom and third party/partner ADMX and ADML templates into the Intune admin center. Once imported, you can create a device configuration policy using these settings, and then assign the policy to your managed devices.
 
 This feature applies to:
 
 - Windows 11
 - Windows 10
 
-This article shows you how to import custom ADMX and ADML files in the Endpoint Manager admin center. For more information on administrative templates in Intune, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
+This article shows you how to import custom ADMX and ADML files in the Intune admin center. For more information on administrative templates in Intune, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
 
 > [!TIP]
 > The settings catalog has many settings natively built-in to Intune, including Google Chrome. For more information, go to:
@@ -58,20 +59,28 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - Currently, only `en-us` ADML files are supported.
 
-- Some ADMX files may have dependency prerequisites. Import any dependency ADMX files first. For example, to import Mozilla Firefox ADMX and ADML files, you:
+- Some ADMX files have dependency prerequisites. Import any dependency ADMX files first. If you upload an ADMX file without the dependency, an error message will list the missing namespace.
+
+  For example, to import Mozilla Firefox ADMX and ADML files, you:
 
   1. Import the `mozilla.admx` and `mozilla.adml` files. Make sure the status shows **Available**.
   2. Import the `firefox.admx` and `firefox.adml` files.
 
   If you upload `firefox.admx` before `mozilla.adml`, then the import will fail.
+  
+  To see if your ADMX has a dependency, open the ADMX file in a text editor and look for `using prefix` in the `policyNamespaces` node. Any dependencies will be listed. 
+  
+  In the following example, the`kerberos.admx` file requires the `Windows.admx` file:
+  
+```xml
+ <policyNamespaces>
+    <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
+    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+  </policyNamespaces>
+```
 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
-  
-  > [!TIP]
-  > 
-  > - To see any namespace dependencies, open the ADMX file and search for `using prefix`. Any dependencies will be listed.
-  > - If you upload an ADMX file without the dependency, an error message will list the missing namespace.
-  
+
 - Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
 
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
@@ -95,10 +104,12 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 
 ## Add the ADMX and ADML files
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Import ADMX** > **Import**:
 
-    :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Intune admin center.":::
+    
+    Alternatively, you can also import from **Devices** > **Windows** > **Configuration profiles** > **Import ADMX**.
 
 3. Upload your files:
 
@@ -115,18 +126,18 @@ When the import completes, your ADMX templates are shown in the list. You can al
 - See the upload **Status**.
 - **Delete** an imported template.
 
-:::image type="content" source="./media/administrative-templates-import-custom/imported-templates-refresh-delete.png" alt-text="Screenshot that shows how to refresh and delete imported custom ADMX and ADML administrative templates in Microsoft Intune and Endpoint Manager admin center.":::
+:::image type="content" source="./media/administrative-templates-import-custom/imported-templates-refresh-delete.png" alt-text="Screenshot that shows how to refresh and delete imported custom ADMX and ADML administrative templates in Microsoft Intune and Intune admin center.":::
 
 ## Create a profile using your imported files
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
     - **Profile**: Select **Templates** > **Imported Administrative templates (Preview)**:
 
-      :::image type="content" source="./media/administrative-templates-import-custom/select-imported-administrative-templates.png" alt-text="Screenshot that shows how to select imported administrative templates to create a device configuration profile using the imported ADMX settings in Microsoft Intune and Endpoint Manager admin center.":::
+      :::image type="content" source="./media/administrative-templates-import-custom/select-imported-administrative-templates.png" alt-text="Screenshot that shows how to select imported administrative templates to create a device configuration profile using the imported ADMX settings in Microsoft Intune and Intune admin center.":::
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

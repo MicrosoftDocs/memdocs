@@ -12,7 +12,7 @@ items:
     href: sign-in-to-the-company-portal.md
   - name: Update Intune Company Portal 
     href: install-a-new-version-of-the-company-portal-app.md
-  - name: Device password requirements
+  - name: Add device password, PIN, or passcode    
     href: password-does-not-meet-it-administrator-requirements.md
   - name: Install mobile threat defense app
     href: set-up-mobile-threat-defense.md
@@ -48,10 +48,16 @@ items:
       href: reset-device-company-portal-android.md
     - name: Sync device 
       href: sync-device-android.md  
+    - name: Turn off battery optimization   
+      href: turn-off-battery-optimization-android.md      
     - name: Turn on verbose logging
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
     - name: Turn off Microsoft data collection
       href: turn-off-microsoft-usage-data-collection-android.md
+  - name: Microsoft Intune app for Android  
+    items: 
+    - name: Check compliance status      
+      href: check-compliance-microsoft-intune-app-android.md  
   - name: Microsoft Intune app for AOSP 
     items:
     - name: Check device compliance 
@@ -119,9 +125,7 @@ items:
   - name: Get help
     items:
     - name: Report a problem 
-      href: send-logs-to-your-it-admin-by-email-android.md
-    - name: Share diagnostic details  
-      href: send-logs-to-microsoft-android.md
+      href: send-logs-to-your-it-admin-by-email-android.md  
 - name: iOS/iPadOS device management
   items:
   - name: Enrollment
@@ -186,10 +190,8 @@ items:
       href: you-need-to-resolve-a-threat-found-by-zips-ios.md
   - name: Get help
     items:
-    - name: Retrieve iOS/iPadOS logs
-      href: retrieve-ios-app-logs.md
-    - name: Report a problem 
-      href: send-errors-to-your-it-admin-ios.md
+    - name: Retrieve app logs
+      href: retrieve-ios-app-logs.md  
     - name: Share app logs 
       href: send-logs-to-microsoft-ios.md
 - name: Linux device management
@@ -292,7 +294,7 @@ items:
     items:
     - name: Report problems in Company Portal
       href: send-logs-to-your-it-admin-cp-windows.md
-    - name: Export Company Portal diagnostic logs
+    - name: Export management logs for device troubleshooting  
       href: send-logs-to-your-it-admin-settings-windows.md
     - name: Troubleshoot enrollment problems
       href: troubleshoot-your-windows-10-device-windows.md
@@ -317,3 +319,7 @@ items:
     href: reset-your-passcode-cpwebsite.md
   - name: Reset used, lost, stolen device
     href: reset-device-company-portal-website.md
+- name: Reference   
+  items:
+  - name: Company Portal device password messages  
+    href: intune-company-portal-password-message-reference.md 

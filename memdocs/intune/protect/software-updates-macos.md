@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 04/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,16 +23,15 @@ ms.reviewer: beflamm
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Manage macOS software update policies in Intune
 
-You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../enrollment/macos-enroll.md#user-approved-enrollment). For macOS, devices that enroll through one of the following methods are supervised:
-
-- [Automated Device Enrollment (ADE)](https://deploy.apple.com/) (using either Apple Business Manager, or Apple School Manager)
+You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../enrollment/macos-enroll.md#user-approved-enrollment).
 
 This feature applies to:
 
@@ -56,7 +55,10 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
 ## Configure the policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+    > [!TIP]  
+    > For more information on managing software updates and the update experience on devices, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/en-am/guide/deployment/depafd2fad80/1/web/1.0) at Apple's Platform Deployment site.
 
 2. Select **Devices** > **Update policies for macOS** > **Create profile**.
 
@@ -72,11 +74,18 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
       - **Download only**: Download the software update without installing it.
 
-      - **Install immediately**: Download the software update and trigger the restart countdown notification.
+      - **Install immediately**: Download the software update and trigger the restart countdown notification. This action is recommended for userless devices. 
 
-      - **Notify only**: Download the software update and notify the user through the App Store.
+      - **Notify only**: Download the software update and notify the user through System Settings.
 
-      - **Install later**: Download the software update and install it later.
+      - **Install later**: Download the software update and install it later. This action is not available for major OS upgrades.
+
+        When you configure *Install later* for *All other updates (OS, built-in-apps), the following additional settings are available:
+
+        - **Max User Deferrals**:  
+        When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
+
+        - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
       - **Not configured**: No action taken on the software update.
 
@@ -170,17 +179,17 @@ The *Restrictions* category contains the following settings that can be used to 
 
 - *Enforced Software Update Delay*:  Sets how many days to delay a software update on the device. With this restriction in place, the user doesn’t see a software update until the specified number of days after the software update release date. This value is used by *Force Delayed App Software Updates* and *Force Delayed Software Updates*.
 
-- *Force Delayed App Software Updates*:  If true, delays user visibility of non-OS Software Updates. Requires a supervised device. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
+- *Force Delayed App Software Updates*:  If true, delays user visibility of non-OS Software Updates for built-in software like Safari, XProtect, and Gatekeeper. Requires a supervised device. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
 
 - *Enforced Software Update Non OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay an app software update on the device. When this restriction is in place, the user sees a non-OS software update only after the specified delay after the release of the software. This value controls the delay for Force Delayed App Software Updates.
 
 - *Force Delayed Major Software Updates*:  If set to true, delays user visibility of major upgrades to OS Software.
 
-- *Enforced Software Update Major OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a major software upgrade on the device. When this restriction is in place, the user sees a software upgrade only after the specified delay after the release of the software upgrade. This value controls the delay for *Force Delayed Major Software Updates*.
+- *Enforced Software Update Major OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a major software upgrade on the device. Major software upgrades are new major OS releases; for example, macOS 12 Monterrey and macOS 13 Ventura. When this restriction is in place, the user sees a software upgrade only after the specified delay after the release of the software upgrade. This value controls the delay for *Force Delayed Major Software Updates*.
 
 - *Force Delayed Software Updates*:  If true, delays user visibility of software updates. In macOS, seed build updates are allowed, without delay. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
 
-- *Enforced Software Update Minor OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a minor OS software update on the device. When this restriction is in place, the user sees a software update only after the specified delay after the release of the software update. This value controls the delay for *Force Delayed Software Updates*.
+- *Enforced Software Update Minor OS Deferred Install Delay*:  This restriction allows the admin to set how many days to delay a minor OS software update on the devices. Minor software updates are intermediate updates that are released between major OS upgrades; for example, macOS 13.1 and macOS 13.2. When this restriction is in place, the user sees a software update only after the specified delay after the release of the software update. This value controls the delay for *Force Delayed Software Updates*.
 
 The Software Update category contains the following settings that can be used to configure the user experience for macOS software update options on devices (**Devices** > **macOS** > **Device configuration** > **Settings catalog** > **System Updates** > **Software Update**):
 
@@ -200,11 +209,9 @@ The Software Update category contains the following settings that can be used to
 
 - *Restrict Software Update Require Admin To Install*:  If true, restrict app installations to admin users. This key has the same function as the Restrict Store Require Admin To Install setting in the App Store category.
 
-For more information on managing software updates, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) at Apple's Platform Deployment site.
-
 ## Monitor for update installation failures on devices
 
-In the Microsoft Endpoint Manager admin center, go to **Devices** > **Monitor** > **Installation status for macOS devices**.
+In the Microsoft Intune admin center, go to **Devices** > **Monitor** > **Installation status for macOS devices**.
 
 Intune displays a list of supervised macOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because macOS devices only return information about installation failures.
 

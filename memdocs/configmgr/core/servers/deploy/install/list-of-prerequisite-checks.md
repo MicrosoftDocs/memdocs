@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 04/11/2022
+ms.date: 12/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -223,6 +223,12 @@ The RDC library is registered on the Configuration Manager site server.
 Verifies the Windows Installer version.
 
 When this check fails, setup wasn't able to verify the version, or the installed version doesn't meet the minimum requirement of Windows Installer 4.5.
+
+### Microsoft Store for Business deprecation alert
+
+*Applies to: Central administration site, primary site*
+
+Starting in 2211, if you have a Microsoft Store for Business Connector configured, you will see this warning while performing the upgrade. This is in conjunction with the deprecation announcement made [here](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 ### Minimum .NET Framework version for Configuration Manager console
 
@@ -655,7 +661,7 @@ The device management point is also deprecated. It's a management point that you
 
 Starting in version 2103, this check warns about the presence of the [Log Analytics connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context). (This feature is called the *OMS Connector* in the Azure Services wizard.)
 
-Starting in version 2107, this connector is removed from the product. This check will be an error that blocks upgrade.<!-- 9649296 -->
+<!-- Starting in version 2107, this connector is removed from the product. This check will be an error that blocks upgrade.--> <!-- 9649296 -->
 
 ### Check if the site uses Upgrade Readiness cloud service connector
 
@@ -702,7 +708,7 @@ The Configuration Manager computer is a member of a Windows domain.
 ### Desktop Analytics is being retired
 
 <!--14840670--> 
-Desktop Analytics will be retired on November 30, 2022. Check out the new reports in the Microsoft Endpoint Manager admin center. For more information see: https://go.microsoft.com/fwlink/?linkid=2186861.
+Desktop Analytics will be retired on November 30, 2022. Check out the new reports in the Microsoft Intune admin center. For more information see: https://go.microsoft.com/fwlink/?linkid=2186861.
 
 <!--14840670-->
 
@@ -759,6 +765,14 @@ When you install site roles that require HTTPS, configure IIS site bindings on t
 *Applies to: central administration site*
 
 There are discovery records that are no longer valid. These records will be marked for deletion.
+
+### Network Access Account (NAA) account usage alert 
+
+*Applies to: central administration site, Primary site*
+
+If your site is configured with NAA account, you'll see this warning. To improve the security of distribution points configured with NAA account, review the existing accounts and their relevant permissions. If it has more than minimal required permission, then remove and add a minimal permission account. Don't configure any administrator level permission accounts on the NAA. If the site server is configured with HTTPS / EHTTP, it recommended removing NAA account, which is unused.
+
+For more information, see the description of this [permissions-for-the-network-access-account](../../../plan-design/hierarchy/accounts.md#permissions-for-the-network-access-account).
 
 ### Network access protection (NAP) is no longer supported
 

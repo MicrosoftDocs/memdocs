@@ -25,12 +25,19 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Manage Cloud PCs
 
-As an admin, you can manage Cloud PCs in your organization in various ways:
+You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 365 admin center or windows365.microsoft.com. Each supports several remote management actions. However, to use these remote actions, you must have either of the following Azure Active Directory (Azure AD) role-based access roles:
+
+   - Global administrator
+   - Windows 365 administrator
+
+As a user with one of the above admin roles assigned, you can manage Cloud PCs in your organization in various ways:
 
 ## windows365.microsoft.com
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Privacy and personal data in Windows 365
+title: Privacy and data in Windows 365
 titleSuffix:
-description: Learn about privacy and personal data in Windows 365.
+description: Learn about privacy and data in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2022
+ms.date: 12/07/2022
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Privacy, customer data, and customer content in Windows 365

@@ -2,13 +2,13 @@
 # required metadata
 
 title: Device features and settings in Microsoft Intune
-description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Intune admin center. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 03/20/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,14 +27,13 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection:
-  - M365-identity-device-management
-  - highpri
-  - highseo
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
-
-[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
@@ -42,12 +41,11 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 Some profile examples include:
 
-- On Windows 10/11 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
-- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 - Allow or prevent access to bluetooth on the device.
 - Create a WiFi or VPN profile that gives different devices access to your corporate network.
 - Manage software updates, including when they're installed.
 - Run an Android device as dedicated kiosk device that can run one app, or run many apps.
+- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
@@ -263,15 +261,6 @@ This feature supports:
 
 - Android Enterprise (OEMConfig)
 
-## PowerShell scripts
-
-[PowerShell scripts](../apps/intune-management-extension.md) use the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
-
-This feature supports:
-
-- Windows 11
-- Windows 10
-
 ## Preference file
 
 [Preference files](preference-file-settings-macos.md) on macOS devices include information about apps. For example, you can use preference files to control web browser settings, customize apps, and more.
@@ -309,6 +298,21 @@ This feature supports:
 - Windows 11
 - Windows 10
 - Windows Holographic for Business
+
+## Shell scripts
+
+On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a custom device configuration profile, and deploying the policy to your devices. With Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
+
+On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md), and then deploy these scripts to your macOS devices.
+
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+
+This feature supports:
+
+- Linux
+- macOS
+- Windows 11
+- Windows 10
 
 ## Update policies
 

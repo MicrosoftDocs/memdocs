@@ -2,13 +2,9 @@
 metadata:
   title: Windows Autopilot FAQ
   description: This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
-  keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-  ms.prod: w10
-  ms.mktglfcycl: deploy
+  ms.prod: windows-client
+  ms.technology: itpro-deploy
   ms.localizationpriority: medium
-  ms.sitesec: library
-  ms.pagetype: deploy
-  audience: itpro
   author: frankroj
   ms.author: frankroj
   ms.reviewer: jubaptis
@@ -17,10 +13,11 @@ metadata:
   ms.collection:
     - M365-modern-desktop
     - highpri
+    - tier1
   ms.topic: faq
 title: Windows Autopilot FAQ
 summary: |
-  *Applies to:*
+  **Applies to:**
   
   - Windows 11
   - Windows 10
@@ -149,7 +146,7 @@ sections:
       - question: |
           Is there a limit to the number of devices that can be listed in the CSV file?
         answer: |
-          Yes. The CSV file can only contain 1,000 devices to apply to a single profile. If more than 1,000 devices need to be applied to a profile, the devices need to be uploaded through multiple CSV files.
+          Yes. The CSV file can only contain 500 devices to apply to a single profile. If more than 500 devices need to be applied to a profile, the devices need to be uploaded through multiple CSV files.
 
       - question: |
           Does Microsoft have any recommendations on how an OEM should provide the CSV file to their customers?
@@ -311,7 +308,7 @@ sections:
       - question: |
           What is co-management?
         answer: |
-          Co-management enables you to concurrently manage Windows 10 or later devices by using both Microsoft Endpoint Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
+          Co-management enables you to concurrently manage Windows 10 or later devices by using both Microsoft Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
 
           When a Windows device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
@@ -325,7 +322,7 @@ sections:
         answer: |
           No. It's not required, but you can use it together with Autopilot in the following scenarios:
 
-          - [Co-management?](../configmgr/comanage/overview.md)
+          - [Co-management](../configmgr/comanage/overview.md)
           - [Autopilot for existing devices](existing-devices.md)
 
   - name: Features
@@ -370,6 +367,11 @@ sections:
   - name: General
     questions:
       - question: |
+          Which manufacturers are enabled for pre-population of username and automatic re-enrollment of pre-provisioning devices? 
+        answer: |
+          Current manufacturers enabled for this change are Dell, HP, Lenovo and Microsoft Surface. We are working to other manufacturers and will update this list once they are onboarded.
+
+      - question: |
           If I wipe the machine and restart, will I still receive Windows Autopilot?
         answer: |
           Yes. If the device is still registered for Autopilot and is running a supported version of Windows, it will receive the Autopilot experience.
@@ -389,7 +391,7 @@ sections:
       - question: |
           Does Windows Autopilot work after MBR or image reinstallation?
         answer: |
-          Yes. For more information, see [Windows Autopilot motherboard replacement scenario guidance](autopilot-mbr.md).
+          Yes. For more information, see [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
 
       - question: |
           What does this error message mean? This user isn't authorized to enroll, error code 801c0003.
@@ -404,7 +406,7 @@ sections:
       - question: |
           Where is Windows Autopilot data stored?
         answer: |
-          Windows Autopilot data is stored in the United States (US). It's not stored in a sovereign cloud, even when the Azure AD tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
+          Windows Autopilot data is stored within the European Union (EU). It's not stored in a sovereign cloud, even when the Azure AD tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
 
       - question: |
           Why is Windows Autopilot data stored in the US and not in a sovereign cloud?
@@ -442,7 +444,7 @@ sections:
           2. Hidden special characters in CSV files. To avoid this issue, after creating your CSV file, open it in Notepad to look for hidden characters, trailing spaces, or other corruptions.
 
       - question: |
-          Is Autopilot supported in all regions/countries?
+          Is Autopilot supported in all countries/regions?
         answer: |
           Autopilot only supports customers using global Azure. Global Azure doesn't include the following three entities:
           
@@ -450,7 +452,8 @@ sections:
           - Azure China 21Vianet
           - Azure Government
           
-          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot.
+          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot. 
+          While Autopilot is available in global tenants, users in China may experience poor connectivity and high latency when deploying due to ISP-related issues. If you are experiencing these issues when deploying in the region, please contact your local ISP for support.
 
       - question: |
           Why does TPM provisioning/attestation take longer during the first boot on a device?

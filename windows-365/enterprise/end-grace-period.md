@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 9/03/2021
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # End grace period for Cloud PCs
@@ -37,7 +39,7 @@ There may be situations where you don't want to wait seven days for the grace pe
 ## End grace period
 
 1. Ending the grace period is a destructive action. Before ending the grace period, notify your users to be sure that they're fully aware of the impact.
-2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **All Cloud PCs**.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **All Cloud PCs**.
 ![Screenshot of all Cloud PCs](./media/end-grace-period/all-cloud-pcs.png)
 3. In the **Status** column of the list, select **In grace period** > **End grace period** > **Yes**.
     > [!Important]

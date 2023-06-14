@@ -27,17 +27,21 @@ items:
     href: end-of-support.md
   - name: Customer permissions
     href: customer-permissions.md  
-  - name: Device configuration with MEM
+  - name: Device configuration with Intune
     href: device-configuration.md
   - name: What is Windows 365 Government
     href: introduction-windows-365-government.md
+  - name: What is Windows 365 Frontline
+    href: introduction-windows-365-frontline.md
   - name: Security
     items:
     - name: Windows 365 security
       href: security.md
     - name: Encryption
       href: encryption.md
-  - name: Privacy and personal data
+    - name: ANC domain credential life cycle
+      href: azure-network-connection-domain-credential.md
+  - name: Privacy and data
     href: privacy-personal-data.md
 - name: How-to guides
   items:
@@ -45,12 +49,16 @@ items:
       items:
       - name: Planning guide
         href: planning-guide.md
+      - name: Deployment options
+        href: deployment-options.md
       - name: Requirements
         items:
         - name: Requirements
           href: requirements.md
         - name: Network requirements
           href: requirements-network.md
+      - name: Azure Firewall
+        href: azure-firewall-windows-365.md
       - name: Cloud PC role-based access control
         href: role-based-access.md
       - name: Intune role-based access control
@@ -89,6 +97,16 @@ items:
         items:
         - name: Set up tenants for Windows 365 Government
           href: set-up-tenants-windows-365-gcc.md
+      - name: Windows 365 Boot
+        items:
+        - name: Windows 365 Boot overview
+          href: windows-365-boot-overview.md
+        - name: Windows 365 Boot guided scenario
+          href: windows-365-boot-guide.md
+        - name: Physical device requirements
+          href: windows-365-boot-physical-device-requirements.md
+        - name: Restrict access to physical device
+          href: windows-365-boot-restrict-user-access-physical-device.md
       - name: Citrix HDX Plus for Windows 365
         items:
         - name: Requirements
@@ -141,6 +159,8 @@ items:
         href: app-overview.md
       - name: Assign apps
         href: assign-apps.md
+      - name: Install Windows 365 app
+        href: install-windows-365-app-intune.md
       - name: Microsoft Teams
         items:
         - name: Teams on Cloud PCs
@@ -165,20 +185,30 @@ items:
         href: remotely-manage-cloud-pc.md
       - name: RDP Shortpath for public networks 
         href: rdp-shortpath-public-networks.md
+      - name: RDP Shortpath for private networks  
+        href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
+      - name: Move a Cloud PC
+        href: move-cloud-pc.md
+      - name: Set idle session time limits
+        href: frontline-cloud-pc-session-time-limits.md
       - name: Restore a Cloud PC
         items:
         - name: Overview
           href: restore-overview.md
         - name: Configure restore points and users
           href: restore-configure.md
+        - name: Manually create restore points
+          href: create-manual-restore-point.md
         - name: Restore a single Cloud PC
           href: restore-single-cloud-pc.md
         - name: Bulk restore multiple Cloud PCs
           href: restore-bulk.md
+        - name: Share restore points to a storage account
+          href: share-restore-points-storage.md
       - name: End grace period
         href: end-grace-period.md
       - name: Digital forensics
@@ -203,6 +233,8 @@ items:
         href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
+      - name: Windows Updates and Windows 365 Frontline
+        href: windows-update-frontline-cloud-pc.md
     - name: End-user experience
       items:
       - name: End-user hardware requirements
@@ -231,6 +263,10 @@ items:
       href: troubleshoot-citrix-hdx-plus.md
     - name: Windows 365 app
       href: troubleshoot-windows-365-app.md
+    - name: Windows 365 Boot
+      href: troubleshoot-windows-365-boot.md
+    - name: Windows 365 Boot known issues
+      href: windows-365-boot-known-issues.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell

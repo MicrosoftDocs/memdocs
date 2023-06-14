@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/25/2022
+ms.date: 03/06/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Change organizational default settings
@@ -39,7 +41,7 @@ By default, new Cloud PCs are created with the following settings:
 
 You can change these defaults by following these steps:
 
-1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an Azure Active Directory (Azure AD) Global Administrator account.
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an account that has either a Global Administrator or Windows 365 Administrator role.
 2. Select **Your organization’s Cloud PCs** > **Update organization settings**.
 3. Select your preferred option for the following settings:
     - **Account type**: Standard User or Local Administrator.

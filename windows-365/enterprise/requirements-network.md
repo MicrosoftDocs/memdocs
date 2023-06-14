@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2022 
+ms.date: 05/02/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Network requirements
@@ -54,7 +56,7 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 ### [Windows 365 Government](#tab/government)
 
-All of the Windows 365 Enterprise requirements apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
+All of the Windows 365 Enterprise **General network requirements** apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
 
 #### Azure Active Directory joined Cloud PCs
 
@@ -116,7 +118,7 @@ You must allow traffic in your Azure network configuration to the following serv
   - preu02.prod.cpcgateway.trafficmanager.net
   - prap01.prod.cpcgateway.trafficmanager.net
   - prau01.prod.cpcgateway.trafficmanager.net
-- Cloud PC communication endpoints
+- Cloud PC communication endpoints\*
   - endpointdiscovery.cmdagent.trafficmanager.net
   - registration.prna01.cmdagent.trafficmanager.net
   - registration.preu01.cmdagent.trafficmanager.net
@@ -132,11 +134,18 @@ You must allow traffic in your Azure network configuration to the following serv
   - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
 
+\* The CMD Agent is required for the Windows 365 service. It performs core infrastructure functions such as domain join, initial config setup, data monitoring, and remediation.
+
 All endpoints connect over port 443.
 
 ### [Windows 365 Government](#tab/gov)
 
-You must allow traffic in your Azure network configuration to the service URLs and ports listed in this section. All endpoints connect over port 443 unless specified otherwise.
+You must allow traffic in your Azure network configuration to:
+
+- The service URLs and ports listed in this section.
+- The endpoints for Microsoft Intune and Azure Virtual Desktop.
+
+All endpoints connect over port 443 unless specified otherwise.
 
 - GCC: [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 - GCC: [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
@@ -147,13 +156,8 @@ You must allow traffic in your Azure network configuration to the service URLs a
 
 | Address:Port | Required for |
 | --- | --- | --- |
-| 168.63.129.16:80 | GCC, GCCH |
-| 168.63.129.16:32526 | GCC, GCCH |
-| 168.63.129.16:53 | GCC, GCCH |
-| https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net | GCCH |
-| https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net | GCC |
-| TBD cmd agents / hermes related endpoint | |
-| 168.63.129.16:80 | GCC, GCCH |
+| `https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net` | GCCH |
+| `https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net` | GCC |
 | cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
 | cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
 
@@ -177,10 +181,16 @@ You must allow traffic in your Azure network configuration to the service URLs a
 | Address:Port | Required for |
 | --- | --- | --- |
 | login.microsoftonline.us | GCCH |
-| enterpriseregistration.microsoftonline.us:443 | GCCH |
 | login.live.com:443 | GCCH, GCC |
 | login.microsoftonline.com:443 | GCC |
-| enterpriseregistration.windows.net:443 | GCC |
+| global.azure-devices-provisioning.us (port 443 and 5671) | GCC, GCCH |
+| hm-iot-in-ghp-ghp01.azure-devices.us (port 443 and 5671) | GCCH |
+| hm-iot-in-gcp-gcp01.azure-devices.us (port 443 and 5671) | GCC |
+| endpointdiscovery.ghp.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
+| endpointdiscovery.gcp.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
+| registration.ghp01.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
+| registration.gcp01.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
+|
 
 #### Azure Virtual Device-dependent URLs
 
@@ -195,10 +205,14 @@ You must allow traffic in your Azure network configuration to the service URLs a
 
 | Address:Port | Required for |
 | --- | --- | --- |
-|  download.microsoft.com:443 | GCCH, GCC |
+| download.microsoft.com:443 | GCCH, GCC |
 | software-download.microsoft.com:443 | GCCH, GCC |
 
 ---
+
+### Use FQDN tags for endpoints through Azure Firewall
+
+Windows 365 fully qualified domain name (FQDN) tags make it easier to grant access to Windows 365 required service endpoints through an Azure firewall. For more information, see [Use Azure Firewall to manage and secure Windows 365 environments](azure-firewall-windows-365.md).
 
 ### Remote Desktop Protocol (RDP) broker service endpoints
 

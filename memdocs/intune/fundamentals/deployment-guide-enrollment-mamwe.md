@@ -23,10 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
-  - highseo
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune
@@ -58,7 +59,7 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You want to configure specifics apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
+| You want to configure specific apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
 | Devices are personal or BYOD. | ✔️ |
 | You have new or existing devices. | ✔️ |
 | Need to manage a few devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -73,7 +74,9 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 This task list provides an overview. For more specific information, see [Microsoft Intune app management](../apps/app-management.md).
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../apps/apps-supported-intune-apps.md) or [configure your apps](../apps/app-configuration-policies-overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../apps/app-protection-policy-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
+
+- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../apps/apps-supported-intune-apps.md) or [configure your apps](../apps/app-configuration-policies-overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../apps/app-protection-policy-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
+
 - Tell users how to get different apps. For example, you can:
 
   - Direct users to the Company Portal web site at `portal.manage.microsoft.com`. When they sign in with their organization credentials, they see a list of apps, including required apps. They can get apps from this site.

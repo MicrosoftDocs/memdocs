@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -51,7 +52,7 @@ Use App protection policies with the iOS **Open-in management** feature to prote
 ## Configure user UPN setting for Microsoft Intune or third-party EMM
 Configuring the user UPN setting is **required** for devices that are managed by Intune or a third-party EMM solution to identify the enrolled user account for the sending *policy managed app* when transferring data to an iOS managed app. The UPN configuration works with the app protection policies you deploy from Intune. The following procedure is a general flow on how to configure the UPN setting and the resulting user experience:
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [create and assign an app protection policy](app-protection-policies.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [create and assign an app protection policy](app-protection-policies.md) for iOS/iPadOS. Configure policy settings per your company requirements and select the iOS apps that should have this policy.
 
 2. Deploy the apps and the email profile that you want managed through Intune or your third-party MDM solution using the following generalized steps. This experience is also covered by *Example 1*.
 
@@ -60,23 +61,22 @@ Configuring the user UPN setting is **required** for devices that are managed by
       **key** = IntuneMAMUPN, **value** = <username@company.com>
 
       Example: ['IntuneMAMUPN', 'janellecraig@contoso.com']
-      
-     > [!NOTE]
-     > In Intune, the App Configuration policy enrollment type must be set to **Managed Devices**.
-     > Additionally, the app needs to be either installed from the Intune Company Portal (if set as available) or pushed as required to the device. 
 
      > [!NOTE]
-     > Deploy IntuneMAMUPN app configuration settings to the target managed app which sends data. Adding the app configuration key to the receiving app is optional. 
-     
+     > In Intune, the App Configuration policy enrollment type must be set to **Managed Devices**.
+     > Additionally, the app needs to be either installed from the Intune Company Portal (if set as available) or pushed as required to the device.
+
+     > [!NOTE]
+     > Deploy IntuneMAMUPN app configuration settings to the target managed app which sends data. Adding the app configuration key to the receiving app is optional.
+
      > [!NOTE]
      > Currently, there is no support for enrolling with a different user on an app if there is a MDM enrolled account on the same device. 
 
 4. Deploy the **Open-in management** policy using Intune or your third-party MDM provider to enrolled devices.
 
-
 ### Example 1: Admin experience in Intune or third-party MDM console
 
-1. Go to the admin console of Intune or your third-party MDM provider. Go to the section of the console in which you deploy application configuration settings to enrolled iOS devices.
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or your third-party MDM provider. Go to the section of the admin center in which you deploy application configuration settings to enrolled iOS devices.
 
 2. In the Application Configuration section, enter the following setting for each *policy managed app* that will transfer data to iOS managed apps:
 
@@ -94,8 +94,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | String | %upn% |
 
 > [!NOTE]  
-> For Outlook for iOS/iPadOS, if you deploy a managed devices App Configuration Policy with the option "Using configuration designer" and enable **Allow only work or school accounts**, the configuration key IntuneMAMUPN is configured automatically behind the scenes for the policy. More details can be found in the FAQ section in [New Outlook for iOS and Android App Configuration Policy Experience – General App Configuration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
-
+> For Outlook for iOS/iPadOS, if you deploy a managed devices App Configuration Policy with the option "Using configuration designer" and enable **Allow only work or school accounts**, the configuration key IntuneMAMUPN is configured automatically behind the scenes for the policy. More details can be found in the FAQ section in [New Outlook for iOS and Android App Configuration Policy Experience – General App Configuration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481).
 
 ### Example 2: End-user experience
 

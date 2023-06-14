@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create WiFi profile with pre-shared key in Microsoft Intune
-description: Use a custom profile to create a Wi-Fi profile with a pre-shared key, and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
+title: Create WiFi profile with preshared key in Microsoft Intune
+description: Use a custom profile to create a Wi-Fi profile with a preshared key, and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,12 +26,14 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
-# Use a custom device profile to create a WiFi profile with a pre-shared key in Intune
+# Use a custom device profile to create a WiFi profile with a preshared key in Intune
 
-Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi profile using a pre-shared key. To create the profile, use the **Custom device profiles** feature within Intune. This article also includes some examples of how to create an EAP-based Wi-Fi profile.
+Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi profile using a preshared key. To create the profile, use the **Custom device profiles** feature within Intune. This article also includes some examples of how to create an EAP-based Wi-Fi profile.
 
 This feature applies to:
 
@@ -42,19 +44,19 @@ This feature applies to:
 
 > [!IMPORTANT]
 >
-> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile works as expected.
-> - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text, so it's your responsibility to protect the key.
+> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
+> - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
 
 ## Before you begin
 
-- It may be easier to copy the code from a computer that connects to that network, as described later in this article.
+- It may be easier to copy the code from a computer that connects to that network, as described in [Create the XML file from an existing Wi-Fi connection](#create-the-xml-file-from-an-existing-wi-fi-connection) (in this article).
 - You can add multiple networks and keys by adding more OMA-URI settings.
 - For iOS/iPadOS, use Apple Configurator on a Mac station to set up the profile.
 - PSK requires a string of 64 hexadecimal digits, or a passphrase of 8 to 63 printable ASCII characters. Some characters, such as asterisk ( * ), aren't supported.
 
 ## Create a custom profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -91,11 +93,11 @@ This feature applies to:
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     > [!NOTE]
     > This policy can only be assigned to user groups.
@@ -165,7 +167,6 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 ### EAP-based Wi-Fi profile example
 
 The following example includes the XML code for an EAP-based Wi-Fi profile: The example is provided to show proper format and provide more details. It's only an example, and isn't intended as a recommended configuration for your environment.
-
 
 ```xml
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
@@ -256,7 +257,7 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
 3. Run `netsh wlan show profiles`. The names of all the profiles are listed.
 4. Run `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. This command creates a file named `Wi-Fi-YourProfileName.xml` in c:\Wifi.
 
-    - If you're exporting a Wi-Fi profile that includes a pre-shared key, add `key=clear` to the command:
+    - If you're exporting a Wi-Fi profile that includes a preshared key, add `key=clear` to the command:
   
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 

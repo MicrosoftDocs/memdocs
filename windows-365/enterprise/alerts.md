@@ -25,12 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Alerts in Windows 365
 
-The Windows 365 Alerts system notifies you when specific events occur in your Cloud PC environment, like connection, provisioning, or image upload failures. By default, these alerts appear in the Microsoft Endpoint manager admin center as pop-up notifications (you can also turn on email notifications). You can customize the built-in alert rules:
+The Windows 365 Alerts system notifies you when specific events occur in your Cloud PC environment, like connection, provisioning, or image upload failures. By default, these alerts appear in the Microsoft Intune admin center as pop-up notifications (you can also turn on email notifications). You can customize the built-in alert rules:
 
 - Set conditions and thresholds for triggering alerts.
 - Define the severity of alerts.
@@ -39,13 +41,13 @@ The Windows 365 Alerts system notifies you when specific events occur in your Cl
 
 ## View alerts
 
-To view the list of recent alerts, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)**.
+To view the list of recent alerts, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)**.
 
 ![Screenshot of view alerts](./media/alerts/view-alerts.png)
 
 ## Customize alert rule
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)** > **Alert rules**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)** > **Alert rules**.
     ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
 
 2. Select a rule in the list.

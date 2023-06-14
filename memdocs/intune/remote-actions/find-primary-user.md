@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Find the primary user of an Intune device
@@ -34,7 +36,7 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 
 ## Find a device's primary user
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > choose a device.
 3. On the **Overview** page, you can see the primary user listed.
 
@@ -42,18 +44,19 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 
 For Windows 10 devices that are Azure AD Joined or Hybrid Azure AD Joined, the primary user of a device can be updated.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a Windows device > **Properties** > **Change primary user**.
 3. Select a new user and choose **Select**.
 
 After the primary user is updated, it will also be updated in Intune and Azure AD device blades.
 
 >[!NOTE]
-
->- Supported on Windows devices only. Enrollment is required to set a new primary user on iOS and Android devices. 
->- Updates to the primary user across Endpoint Manager and Azure AD can take up to 10 minutes to be reflected.
+>- Supported on Windows devices only. Enrollment is required to assign a new primary user on iOS and Android devices. 
+>- Supported on Azure AD Joined and Hybrid Azure AD Joined devices only. Not supported on devices that are Azure AD Registered only.
+>- To be assigned as the Primary user, the user must be licensed for Intune.
+>- Updates to the primary user across Intune and Azure AD can take up to 10 minutes to be reflected.
 >- Changing the primary user of the device does not make any changes to local group membership such as adding or removing users from the "Administrators" local group.
->- Changing the primary user does not change the "Enrolled by" user. 
+>- Changing the primary user does not change the "Enrolled by" user in Intune. 
 >- To change or remove the Primary user of a device requires the permission **Managed devices/Set primary user**.
 
 

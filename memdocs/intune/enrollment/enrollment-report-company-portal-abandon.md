@@ -26,14 +26,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Incomplete user enrollments report
 
-This report tells you where in the Company Portal enrollment process users are not completing the enrollment process.
+This Microsoft Intune report tells you where in the Company Portal enrollment process users are not completing the enrollment process.  
 
-To see the report, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then select **Devices** > **Monitor* > **Incomplete user enrollments**.  
+To see the report, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then select **Devices** > **Monitor* > **Incomplete user enrollments**.  
 
 Using this information, you can update your onboarding documents to help users complete enrollment. For example, if many users are quitting at the Terms of Use, you might investigate that area and make it more intuitive for users.
 
@@ -118,4 +120,4 @@ The following tables list the user actions that indicate enrollment is incomplet
 
 ## Next steps
 
-After checking on your incomplete enrollment rates, you can review the [enrollment options](enrollment-options.md) to see if you can make any changes to improve enrollment.
+After checking on your incomplete enrollment rates, you can review the [enrollment options](/mem/intune/enrollment/device-enrollment) to see if you can make any changes to improve enrollment.

@@ -25,8 +25,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; 
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Device Firmware Configuration Interface (DFCI) profile settings in Microsoft Intune
@@ -214,9 +215,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Wake settings
 
-> [!WARNING]
-> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to physically open the device and replace the hardware storage.
-
 - **Wake on LAN**: Wake on LAN allows a network administrator to remotely wake a device in sleep mode using the LAN.
 
   Your options:
@@ -225,7 +223,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: UEFI (BIOS) allows waking a device using the LAN.
   - **Disabled**: UEFI (BIOS) prevents waking a device using the LAN.
 
-- **Wake on power**: Wake on power allows a network administrator to remotely wake a device in sleep mode when it's connected to a power source. Your options:
+- **Wake on power**: When the device is connected to a power source, this setting manages if eligible devices can be automatically started from hibernation or powered-off states. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might prevent waking a device when it's connected to a power source.
   - **Enabled**: UEFI (BIOS) allows waking a device when it's connected to a power source.

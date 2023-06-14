@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 04/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,8 +27,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Assign apps to groups with Microsoft Intune
@@ -59,13 +60,13 @@ The following table lists the various options for *assigning* apps to users and 
 >
 > To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
 > 
-> *Available assignments* are only valid for user groups, not device groups.
+> For almost all app types and platforms, *Available assignments* are only valid when assigning to user groups, not device groups. Win32 apps can be assigned to either user or device groups.
 > 
-> If Managed Google Play Pre-Production track apps are assigned as required on Android Enterprise personally-owned work profile devices, they will not install on the device. To work around this, create two identical user groups and assign the pre-production track as "available" to one and "required" to the other. The result will be that the pre-production track successfully deploys to the device. 
+> If managed Google Play pre-production track apps are assigned as required on Android Enterprise personally-owned work profile devices, they will not install on the device. To work around this, create two identical user groups and assign the pre-production track as "available" to one and "required" to the other. The result will be that the pre-production track successfully deploys to the device. 
 
 ## Assign an app
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. In the **Apps** pane, select the app you want to assign.
 4. In the **Manage** section of the menu, select **Properties**.
@@ -82,25 +83,38 @@ The following table lists the various options for *assigning* apps to users and 
      > - To configure what happens to managed apps when devices are no longer managed, you can select the intended setting under **Uninstall on device removal**. For more information, see [App uninstall setting for iOS/iPadOS managed apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
      > - If you have created an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app is run, the VPN connection is opened. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-ios.md).
      > - To configure whether a required iOS/iPadOS app is installed as a removable app by end users, you can select the setting under **Install as removable**. 
-	 >
+     > - To configure a way to prevent the iCloud backup of the managed iOS/iPadOS app, you can click on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
+	  >
+     > **For macOS apps only**: 
+     > - To configure a way to prevent the iCloud backup of the managed macOS app, you can click on one of the following settings after adding a group assignment - VPN, or Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
+	  >
      > **For Android apps only**: 
-	 > - If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
+	  > - If you deploy an Android app as **Available with or without enrollment**, reporting status will only be available on enrolled devices.
      >
      > **For Available for enrolled devices**: 
-	 > - The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
+	  > - The app is only displayed as available if the user logged into the Company Portal is the primary user who enrolled the device and the app is applicable to the device.
 
-7. To select the groups of users that are affected by this app assignment, select **Included Groups**.
-8. After you have selected one or more groups to include, select **Select**.
-9. In the **Assign** pane, select **OK** to complete the included groups selection.
-10. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
-11. If you have chosen to exclude any groups, in **Select groups**, select **Select**.
-12. In the **Add group** pane, select **OK**.
-13. In the app **Assignments** pane, select **Save**.
+8. To select the groups of users that are affected by this app assignment, select **Included Groups**.
+9. After you have selected one or more groups to include, select **Select**.
+10. In the **Assign** pane, select **OK** to complete the included groups selection.
+11. If you want to exclude any groups of users from being affected by this app assignment, select **Exclude Groups**.
+12. If you have chosen to exclude any groups, in **Select groups**, select **Select**.
+13. In the **Add group** pane, select **OK**.
+14. In the app **Assignments** pane, select **Save**.
 
 The app is now assigned to the groups that you selected. For more information about including and excluding app assignments, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 
 > [!Tip]
 > Intune supports assigning apps to nested groups too. For example, if you assigned an app to the "Engineering Global" group and have "Engineering APAC", "Engineering EMEA" and "Engineering US" nested as child groups, the members of those child groups will also be targeted with the assignment.
+
+## Prevent iCloud app backup setting for iOS/iPadOS and macOS apps
+
+Admins will have the option to no longer backup managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS and managed App Store apps on macOS devices, for both user and device licensed VPP/non-VPP apps. macOS LOB apps won’t support this setting. This functionality will include both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices. Preventing the backup of the specified managed apps will ensure that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If you configure the new setting for new/existing apps in your tenant, managed apps can and will be re-installed for devices, but Intune will no longer allow them to be backed up.
+
+> [!NOTE]
+> While we don't expect managed apps on devices to backup data to iCloud, note that data saved locally for managed apps may not be available after a backup and restore.
+
+For existing devices, when **Prevent iCloud app backup** is set to **Yes** for an app/apps, the new behavior will be automatically updated for all required App Store/LOB apps (with or without VPP). Required apps previously installed on devices will be automatically re-configured for all devices once the setting value is saved to **Yes**. Available apps will require the user to re-download the available app from the Company Portal app or the [Company Portal website](https://portal.manage.microsoft.com). Additionally, depending on the app’s configurations and licensing, a sync between Intune and the device may be needed. 
 
 ## How conflicts between app intents are resolved
 
@@ -139,12 +153,12 @@ The information in the following table can help you understand the resulting int
 
 ## Managed Google Play app deployment to unmanaged devices
 
-For unenrolled Android devices, you can use Managed Google Play to deploy store apps and line-of-business (LOB) apps to users. Once deployed, you can use [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam) to manage the applications. Managed Google Play apps targeted as **Available with or without enrollment** will appear in the Play Store app on the end user's device, and not in the Company Portal app. End user will browse and install apps deployed in this manner from the Play app. Because the apps are being installed from managed Google Play, the end user will not need to alter their device settings to allow app installation from unknown sources, which means the devices will be more secure. If the app developer publishes a new version of an app to Play that was installed on a user's device, the app will be automatically updated by Play. 
+For unenrolled Android devices, you can use managed Google Play to deploy store apps and line-of-business (LOB) apps to users. Once deployed, you can use [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam) to manage the applications. Managed Google Play apps targeted as **Available with or without enrollment** will appear in the Play Store app on the end user's device, and not in the Company Portal app. End user will browse and install apps deployed in this manner from the Play app. Because the apps are being installed from managed Google Play, the end user will not need to alter their device settings to allow app installation from unknown sources, which means the devices will be more secure. If the app developer publishes a new version of an app to Play that was installed on a user's device, the app will be automatically updated by Play. 
 
 Steps to assign a Managed Google Play app to unmanaged devices:
 
 1. Connect your Intune tenant to managed Google Play. If you have already done this in order to manage Android Enterprise personally owned, dedicated, fully managed, or corporate-owned work profile devices, you do not need to do it again.
-2. Add apps from managed Google Play to your Intune console.
+2. Add apps from managed Google Play to your Intune admin center.
 3. Target managed Google Play apps as **Available with or without enrollment** to the desired user group. **Required** and **Uninstall** app targeting are not supported for non-enrolled devices.
 4. Assign an App Protection Policy to the user group.
 5. User logs in any protected app.
@@ -155,9 +169,10 @@ Steps to assign a Managed Google Play app to unmanaged devices:
 
 6. The end user can expand the context menu within the Play Store app and switch between their personal Google account (where they see their personal apps), and their work account (where they will see store and LOB apps targeted to them). End users install the apps by tapping Install in the Play Store app.
 
-When an APP selective wipe is issued in the Intune console, the work account will be automatically removed from the Play Store app and the end user will from that point no longer see work apps in the Play Store app catalog. When the work account is removed from a device, apps installed from the Play Store will remain installed on the device and will not uninstall. 
+When an APP selective wipe is issued in the Intune admin center, the work account will be automatically removed from the Play Store app and the end user will from that point no longer see work apps in the Play Store app catalog. When the work account is removed from a device, apps installed from the Play Store will remain installed on the device and will not uninstall. 
 
 ## App uninstall setting for iOS managed apps
+
 For iOS/iPadOS devices, you can choose what happens to managed apps on unenrolling the device from Intune or removing the management profile using **Uninstall on device removal** setting. This setting only applies to apps after the device is enrolled and apps are installed as managed. The setting cannot be configured for web apps or web links. Only data protected by Mobile Application Management (MAM) is removed after retirement by an App Selective Wipe.
 
 Default values for the setting are prepopulated for new assignments as follows:

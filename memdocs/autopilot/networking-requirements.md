@@ -1,14 +1,9 @@
 ---
 title: Windows Autopilot networking requirements
 description: Inform yourself about networking requirements for Windows Autopilot deployment.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, Autopilot, ztd, zero-touch, partner, msfb, intune
 ms.technology: itpro-deploy
 ms.prod: windows-client
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
@@ -17,6 +12,7 @@ ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier1
 ms.topic: conceptual
 ms.custom: 
   - CI 116757
@@ -71,6 +67,12 @@ Once authenticated, Azure AD will trigger enrollment of the device into the Intu
 - [Intune network configuration requirements and bandwidth](../intune/fundamentals/network-bandwidth-use.md)
 - [Network endpoints for Microsoft Intune](../intune/fundamentals/intune-endpoints.md)
 
+### Autopilot automatic device diagnostics collection
+
+For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network. Diagnostics are available for 28 days before they are removed. 
+
+For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
+
 ### Windows Update
 
 During the OOBE process and after the Windows OS configuration, the Windows Update service retrieves needed updates. If there are problems connecting to Windows Update, see [Windows Update troubleshooting](/windows/deployment/update/windows-update-troubleshooting).
@@ -106,11 +108,11 @@ If the device can't send diagnostic data, the Autopilot process still continues.
 
 Windows must be able to tell that the device can access the internet. For more information, see [Network Connection Status Indicator (NCSI)](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#14-network-connection-status-indicator).
 
-`www.msftconnecttest.com` must be resolvable via DNS and accessible via HTTP.
+`*.msftconnecttest.com` must be resolvable via DNS and accessible via HTTP.
 
 ### Windows Notification Services (WNS)
 
-This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store.
+This service is used to enable Windows to receive notifications from apps and services. For more information, see [Microsoft Store](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services#26-microsoft-store).
 
 If the WNS services aren't available, the Autopilot process will still continue without notifications.
 
@@ -143,6 +145,9 @@ For each firmware TPM provider, make sure that the appropriate URL is accessible
 - Intel: `https://ekop.intel.com/ekcertservice`
 - Qualcomm: `https://ekcert.spserv.microsoft.com/EKCertificate/GetEKCertificate/v1`
 - AMD: `https://ftpm.amd.com/pki/aia`
+
+### Proxy settings 
+Deploying proxy settings for Windows Autopilot should be configured on the proxy server itself. Implementing proxy settings via Intune policy is not fully supported as it may cause issues and unexpected behavior with privileged access deployments. 
 
 ## Next steps
 

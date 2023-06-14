@@ -23,14 +23,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Bundle IDs for built-in iOS and iPadOS apps you can use in Intune
 
 When you configure features on iOS/iPadOS devices, you can also add the built-in apps on these devices. This article lists the bundle IDs of some common built-in iOS/iPadOS apps. To find the bundle ID of other apps, contact your software vendor. See Apple's list of [iOS/iPadOS bundle IDs](https://support.apple.com/guide/deployment/bundle-ids-for-native-ios-and-ipados-apps-depece748c41/1/web/1.0) (opens Apple's web site).
+
+This feature applies to:
+
+- iOS/iPadOS
 
 > [!TIP]
 > On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"'`.

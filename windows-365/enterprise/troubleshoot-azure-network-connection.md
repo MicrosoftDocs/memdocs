@@ -25,12 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Troubleshoot Azure network connections
 
-The Azure network connection (ANC) periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you'll see error messages in the Microsoft Endpoint Manager admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
+The Azure network connection (ANC) periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you'll see error messages in the Microsoft Intune admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
 
 ## Active Directory domain join
 
@@ -96,7 +98,7 @@ This test attempts to resolve the domain name provided. For example, contoso.com
 - The subnet/vNet is routed correctly so that the Cloud PC can reach the DNS server provided.  
 - The Cloud PCs/virtual machines in the declared subnet can NSLOOKUP on the DNS server, and it responds with internal names.
 
-Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure tht these records are accessible through the vNet provided in your Azure network connection.
+Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure that these records are accessible through the vNet provided in your Azure network connection.
 
 ## Endpoint connectivity
 
@@ -116,8 +118,6 @@ If this test fails, make sure that:
 
 This check is used for many infrastructure related issues that might be related to infrastructure that customers are responsible for. It can include errors such as internal service time outs or errors caused by customers deleting/changing Azure resources while checks are being run.  
 
-Sometimes, these service errors are intermittent and a retry will complete successfully. Other times there’s no further troubleshooting that can be performed without the help of support.  
-
 We suggest you retry the checks if you encounter this error. If it persists, contact support for help.  
 
 ## First party app permissions
@@ -129,7 +129,7 @@ These permissions can be viewed and modified by Azure admins who hold such permi
 If any of these permissions are revoked, this check will fail. Make sure that the following permissions are granted to the Windows 365 application service principal:
 
 - [Reader](/azure/role-based-access-control/built-in-roles#reader) role on the Azure subscription.
-- [Owner](/azure/role-based-access-control/built-in-roles#owner) role on the specified resource group.
+- [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor) role on the specified resource group.
 - [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor) role on the virtual network.
 
 The role assignment on the subscription will be granted to the Cloud PC service principal.  

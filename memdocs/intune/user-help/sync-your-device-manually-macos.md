@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2022
+ms.date: 02/02/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -26,17 +26,19 @@ ms.reviewer: kakyker
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
 # Manually sync macOS device with Intune  
 
-You can force your personal Mac to sync with Intune for the latest updates, requirements, and communications from your organization. The Intune Company Portal app regularly syncs devices when they're connected to Wi-Fi. However, if you ever need to disconnect for an extended period of time, you can use the Company Portal sync feature to reconnect and bring your device up-to-date.  
+You can force your enrolled Mac to sync with Intune for the latest updates, requirements, and communications from your organization. The Intune Company Portal app regularly syncs devices when they're connected to Wi-Fi. However, if you ever need to disconnect for an extended period of time, you can use the Company Portal *sync* action to reconnect and bring your device up-to-date.  
  
 Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
-The sync feature is not available on corporate-owned devices. Contact your support person for help with syncing a corporate-owned Mac.     
+>[!TIP]
+> The Intune Company Portal app is required for this feature. If you're trying to sync a Mac that's owned by your organization, and it doesn't have the Company Portal app, contact your support person for help. They will need to facilitate the sync on their end.          
 
 ## Sync personal Mac  
 
@@ -55,7 +57,7 @@ The sync feature is not available on corporate-owned devices. Contact your suppo
 
 5. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
 
-     ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)
+     ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)  
 
 ## Next steps
 Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task. 

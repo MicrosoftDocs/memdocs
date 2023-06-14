@@ -1,13 +1,9 @@
 ---
 title: Windows Autopilot User-Driven Mode
 description: With Windows Autopilot user-driven mode, you can configure devices to deploy to a ready-to-use state without requiring help from IT personnel.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: windows-client
-ms.mktglfcycl: deploy
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
@@ -16,14 +12,14 @@ ms.date: 11/17/2022
 ms.collection: 
   - M365-modern-desktop
   - highpri
+  - tier1
 ms.topic: how-to
-ms.technology: itpro-deploy
 ---
 
 
 # Windows Autopilot user-driven mode
 
-*Applies to:*
+**Applies to:**
 
 Currently supported versions of:
 
@@ -56,23 +52,23 @@ The steps of the user-driven process are as follows:
 
 1. After connecting to a network, the device downloads a Windows Autopilot profile. The profile defines the settings used for the device. For example, define the prompts suppressed during OOBE.
 
-1. Windows checks for critical OOBE updates. If updates are available, they're automatically installed. If necessary, the device restarts.
+2. Windows checks for critical OOBE updates. If updates are available, they're automatically installed. If necessary, the device restarts.
 
-1. The user is prompted for Azure AD credentials. This customized user experience shows the Azure AD tenant name, logo, and sign-in text.
+3. The user is prompted for Azure AD credentials. This customized user experience shows the Azure AD tenant name, logo, and sign-in text.
 
-1. The device joins Azure AD or Active Directory, depending on the Windows Autopilot profile settings.
+4. The device joins Azure AD or Active Directory, depending on the Windows Autopilot profile settings.
 
-1. The device enrolls to Intune or another configured MDM service. Depending on your organizational needs, this enrollment occurs either:
+5. The device enrolls to Intune or another configured MDM service. Depending on your organizational needs, this enrollment occurs either:
 
     - During the Azure AD-join process using MDM auto-enrollment.
 
     - Before the Active Directory-join process.
 
-1. If configured, it displays the [enrollment status page](enrollment-status.md) (ESP).
+6. If configured, it displays the [enrollment status page](enrollment-status.md) (ESP).
 
-1. After the device configuration tasks complete, the user is signed into Windows using the credentials they previously provided. If the device restarts during the device ESP process, the user must reenter their credentials. These details don't persist after restart.
+7. After the device configuration tasks complete, the user is signed into Windows using the credentials they previously provided. If the device restarts during the device ESP process, the user must reenter their credentials. These details don't persist after restart.
 
-1. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
+8. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
 
 If any issues are found during this process, see [Windows Autopilot troubleshooting](troubleshooting.md).
 
@@ -87,13 +83,13 @@ To complete a user-driven deployment using Windows Autopilot, follow these prepa
 
 1. Make sure that the users who will be performing user-driven mode deployments can join devices to Azure AD. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) in the Azure AD documentation.
 
-1. Create an Autopilot profile for user-driven mode with the desired settings.
+2. Create an Autopilot profile for user-driven mode with the desired settings.
 
     - In Intune, this mode is explicitly chosen when you create the profile.
 
     - In Microsoft Store for Business and Partner Center, user-driven mode is the default.
 
-1. If you use Intune, create a device group in Azure AD, and assign the Autopilot profile to that group.
+3. If you use Intune, create a device group in Azure AD, and assign the Autopilot profile to that group.
 
 For each device that you'll deploy using user-driven deployment, these extra steps are needed:
 
@@ -118,7 +114,7 @@ For each device that you'll deploy using user-driven deployment, these extra ste
 
 Windows Autopilot requires that devices be Azure AD-joined. If you have an on-premises Active Directory environment, you can join devices to your on-premises domain. To join the devices, configure Autopilot devices to be [hybrid-joined to Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-> [!Tip]
+> [!TIP]
 > As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure AD-joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
 >
 > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](../configmgr/core/clients/deploy/plan/client-installation-methods.md) for alternative options for installing the client.<!-- CMADO-10205503 -->
@@ -152,7 +148,7 @@ In addition to these core requirements for user-driven hybrid Azure AD-join, the
 
   - It needs to communicate with the domain controller to authenticate the user.
 
-### User-driven mode for hybrid Azure AD join with VPN support (preview)
+### User-driven mode for hybrid Azure AD join with VPN support
 
 Devices joined to Active Directory require connectivity to an Active Directory domain controller for many activities. These activities include validating the user's credentials when they sign-in, and applying group policy settings. The Autopilot user-driven process for hybrid Azure AD-joined devices validates that the device can contact a domain controller by pinging that domain controller.
 
@@ -196,15 +192,15 @@ Next, confirm that you can use Intune to deploy the VPN configuration and its re
     Get-VpnConnection -AllUserConnection
     ```
 
-1. Attempt to manually start the VPN connection.
+2. Attempt to manually start the VPN connection.
 
     ```command
     RASDIAL.EXE "ConnectionName"
     ```
 
-1. Sign out of Windows. Verify that you can see the "VPN connection" icon on the Windows sign-in page.
+3. Sign out of Windows. Verify that you can see the "VPN connection" icon on the Windows sign-in page.
 
-1. Move the device off the internal network and try to establish the connection using the icon on the Windows sign-in page. Sign into an account that doesn't have cached credentials.
+4. Move the device off the internal network and try to establish the connection using the icon on the Windows sign-in page. Sign into an account that doesn't have cached credentials.
 
 For VPN configurations that automatically connect, the validation steps may be different.
 

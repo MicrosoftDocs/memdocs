@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # macOS endpoint protection settings in Intune
@@ -145,7 +145,7 @@ Use the firewall to control connections per-application, rather than per-port. U
 
 - **Do not allow user to override Gatekeeper**
 
-  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.
+  Prevents users from overriding the Gatekeeper setting, and prevents users from Control-clicking to install an app. When enabled, users can't Control-click any app to install it.
 
   - **Not configured** (*default*) - Users can Control-click to install apps.
   - **Yes** - Prevents users from using Control-click to install apps.

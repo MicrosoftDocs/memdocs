@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/10/2022
+ms.date: 12/05/2022
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Microsoft Teams on a Cloud PC
@@ -61,59 +63,6 @@ Media optimization for Microsoft Teams is only available for the Windows and mac
 > [!NOTE]
 > Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You can also sign out and in again to your Cloud PC to gain the same result.
 
-## Known issues and limitations
-
-The following are known issues and limitations:
-
-- Video calling
-  - Only one video stream from an incoming camera or screen share stream is supported. When there's an incoming screen share, that screen share is shown, instead of the video of the dominant speaker.
-  - Sharing outgoing camera and screen simultaneously isn’t supported. You can only share your desktop or webcam, not both at the same time.
-  - Incoming and outgoing video stream resolution is limited to 720p resolution.
-
-- Audio calling
-  - Teams doesn't switch to use the last audio device that a user selected, if the device is disconnected, and then reconnected.
-  - Shared system audio while presenting your desktop isn’t supported.
-
-- Sharing
-  - Give control and take control: Supported during a PowerPoint sharing session. Not supported during a screen sharing or application sharing session.
-
-- General calling and meetings
-  - Creation of Live events isn’t possible. You can attend Live events.
-
-- macOS
-  - Audio devices can't be configured from the Teams app, and the client automatically uses the default client audio device. To switch audio devices, configure settings from the client audio preferences instead.
-
-The following calling and meeting features aren't supported:
-
-- Video calling
-  - Video 3x3 gallery view
-  - Dynamic video call quality
-
-- Sharing
-  - Sharing applications
-  - Sharing local client desktop
-
-- General calling and meetings
-  - Live reactions (Like, Heart, Applause, Laugh and Surprised)
-  - QOS setting for Teams
-  - Support for http proxies
-  - Remote volume control support
-
-### Teams doesn't auto-update
-
-In some cases, Microsoft Teams doesn't automatically update on a Cloud PC.
-
-#### Troubleshooting steps
-
-1. On the Cloud PC, navigate to **Settings** > **App** > **Apps and features**.
-2. Search for Microsoft Teams.
-3. Uninstall **Microsoft Teams** and **Teams Machine-Wide Installer**.
-4. [Download the latest 64-bit version of Microsoft Teams](https://statics.teams.cdn.office.net/production-windows-x64/1.5.00.11865/Teams_windows_x64.msi).
-5. Open a command prompt and install the Teams client using the following command: `msiexec.exe /I %Filepath to the downloaded Teams MSI% ALLUSERS=1`
-6. Restart the Cloud PC. If the Teams Client doesn't automatically install after these steps, check if this registry key is set: `HKEY_CURRENT_USER\Software\Microsoft\Office\Teams\PreventInstallationFromMsi`.
-
-The Teams client is now installed with automatic updates turned on.
-
 ## Collect Teams logs for Microsoft support
 
 If you encounter issues with the Teams desktop app in your Windows 365 environment, collect client logs on the Cloud PC under
@@ -135,4 +84,6 @@ For information on contacting Microsoft Teams support, see [Microsoft 365 admin 
 <!-- ########################## -->
 ## Next steps
 
-[Assign apps to a Cloud PC](assign-apps.md)
+[Assign apps to a Cloud PC](assign-apps.md).
+
+Learn about known issues, limitations, and how to log issues at [Troubleshoot Teams on Azure Virtual Desktop](/azure/virtual-desktop/troubleshoot-teams).

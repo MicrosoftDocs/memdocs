@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Resource performance report
@@ -45,7 +47,7 @@ Before you can use this report, you'll need to [enroll your Cloud PC devices in 
 
 ## Use the Resource performance report
 
-To get to the **Resource performance** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Resource performance**.
+To get to the **Resource performance** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Resource performance**.
 
 ![Screenshot of using the resource performance report](./media/report-resource-performance/resource-performance-report.png)
 

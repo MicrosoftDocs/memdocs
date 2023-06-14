@@ -27,7 +27,8 @@ ms.reviewer: jeyang
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Install Company Portal app in People's Republic of China
@@ -53,6 +54,6 @@ If the app stores listed above are unavailable, you can download [Microsoft Intu
 After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 
 
 > [!Note]
-> Google Mobile Services (GMS) and Android Enterprise are not available in China. In regions or countries where GMS is not available, use device administrator to enroll devices in Intune. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).   
+> Google Mobile Services (GMS) and Android Enterprise are not available in China. In countries/regions where GMS is not available, use device administrator to enroll devices in Intune. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).   
 
 Still need help? Contact your support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

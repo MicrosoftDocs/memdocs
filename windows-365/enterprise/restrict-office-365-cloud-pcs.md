@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Restrict Office 365 services to Cloud PCs
@@ -35,7 +37,7 @@ Administrators can deny access to Office 365 services on any device other than a
 This article describes how to limit access to Office 365 services. You can use the same strategy with any cloud service that uses Azure Active Directory as the authentication source.
 
 1. Create an Azure AD security group to manage which users are controlled by the new policy. Add to this group all the Cloud PC users who will be subjected to the new policy. Only users in this group will be restricted to using Cloud PCs when accessing Office 365 services. If you want to change a user’s access, you can just remove them from this group.
-2. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional Access** > **New Policy**.
+2. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional Access** > **New Policy**.
     ![Create conditional access policy screen shot](./media/restrict-office-365-cloud-pcs/create-conditional-policy.png)
 3. Type a **Name** for your new Conditional Access policy. For example, “Restrict Office 365 access to CPCs”.
 4. Select **0 users or workload identities selected** > **Include** > **Select users and groups** > **Users and groups** > select the Azure AD security group that you created > **Select**.
@@ -61,6 +63,9 @@ This article describes how to limit access to Office 365 services. You can use t
     ![Block access screen shot](./media/restrict-office-365-cloud-pcs/block-access.png)
 10. Select **On** (under **Enable policy**). This policy will restrict users from accessing Office 365 services on non-Cloud PC devices. You may want to select **Report-only** to monitor the policy and build confidence prior to enforcing it.
 11. Select **Create** to complete the creation of policy.
+
+>[!NOTE]
+>If you have configured a provisioning policy to **Use single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
 
 ## Other devices
 

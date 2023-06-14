@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 01/06/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -25,18 +25,27 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Remotely manage Windows 365 Business Cloud PCs
 
 You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 365 admin center or windows365.microsoft.com. Each supports several remote management [actions](#remote-management-actions).
-To use these remote actions, you must have either of the following Azure Active Directory (Azure AD) role-based access roles:
 
-- [Global Administrator]( /azure/active-directory/roles/permissions-reference#global-administrator)
-- [Windows 365 Administrator]( /azure/active-directory/roles/permissions-reference#windows-365-administrator)
+## Permissions
 
-## Remotely manage Cloud PCs on windows.365.microsoft.com
+To use these remote actions, you must have the appropriate Azure Active Directory (Azure AD) role-based access roles.
+
+| Admin actions | Roles required for windows365.microsoft.com | Roles required for Microsoft 365 admin center |
+| --- | --- | --- |
+| Windows 365 Business remote management actions (like reset, restart, and so on) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR <br> - [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [Global Reader](/azure/active-directory/roles/permissions-reference#global-reader) (this grants access to the admin center) |
+| License administration (assignment and removal of licenses from a user) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) |
+
+The person who signed up for Microsoft online services automatically becomes a Global admin.
+
+## Remotely manage Cloud PCs on windows365.microsoft.com
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com).
 2. Select **Your organization’s Cloud PCs**.

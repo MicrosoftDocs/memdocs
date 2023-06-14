@@ -27,7 +27,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # What information can my organization see when I enroll my device?
@@ -103,7 +104,7 @@ Your organization can put a missing, corporate-owned iPhone or iPad into *manage
 Your organization can require you to install a mobile threat defense (MTD) app. If you're required to install an MTD app on your device:   
 
 * Corporate-owned device: Your organization can view details about all apps on the device. 
-* Personal-owned device: Your organization can only view the details of your managed apps.  
+* Personal-owned device: Your organization can't see any data, such as texts, emails, and pictures, in your personal apps. The MTD app does report information about your apps, such as name and version, to your organization. Your organization can view all the details about managed apps.
 
 For more information about mobile threat defense, see [Install mobile threat defense app](set-up-mobile-threat-defense.md).  
 

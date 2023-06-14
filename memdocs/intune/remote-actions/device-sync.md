@@ -23,9 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - tier3
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Sync devices to get the latest policies and actions with Intune
@@ -41,14 +41,12 @@ The **Sync** device action forces the selected device to immediately check in wi
 
 ## Sync a device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Select **Devices** > **All devices**.
 3. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
 4. To confirm, select **Yes**.
 
-To see the status of the sync action, choose **Devices** > **Monitor** > **Device actions**.
-
-You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 ## Retryable error codes
 

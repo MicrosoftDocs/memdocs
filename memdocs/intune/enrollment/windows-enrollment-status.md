@@ -21,14 +21,15 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 #ROBOTS:
 #audience:
 
-ms.reviewer: ericor
+ms.reviewer: jubaptis
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 
@@ -59,7 +60,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ## Create new profile 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
 2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 3. Select **Create**.
 4. In **Basics**, enter the following properties:  
@@ -82,15 +83,9 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
        - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
        - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.  
  
-     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Your options:
-       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. So subsequent users who sign in don't see the ESP. 
-       - **Yes**: The enrollment status page is only shown on devices that go through the out-of-box experience (OOBE).   
-
-
-
-       > [!TIP]
-       > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
-
+     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Use this setting to stop the enrollment status page from reappearing to every new user who signs into the device. Your options:  
+       - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.  
+       - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It is not shown to subsequent users who sign into the device.   
 
      - **Block device use until all apps and profiles are installed**: Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device. 
@@ -106,8 +101,15 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
  
       - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:  
          - **All**: All assigned apps must be installed before users can use their devices.  
-         - **Selected**: Select-apps must be installed before users can use their devices. Choose this option to select from your managed apps.  
- 
+         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings. 
+
+      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](../../autopilot/pre-provision.md). This setting is only available if you've added *blocking apps* and only applies to devices going through pre-provisioning. Your options:  
+         - **No**: An attempt will be made to install the blocking apps. Autopilot deployment will fail if a blocking app fails to install. No attempt is made to install non-blocking apps. When the end user receives the resealed device and signs in for the first time, the ESP will attempt to install the non-blocking apps. 
+         - **Yes**: An attempt will be made to install all required apps. Autopilot deployment will fail if a blocking app fails to install. If a non-blocking app that's targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP will reattempt to install the apps that it couldn't in the technician phase. This is the default setting for pre-provisioned deployments.   
+         
+         > [!TIP] 
+         >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you’re using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.    
+         
 6. Select **Next**.   
 7. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.   
 
@@ -128,9 +130,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 Intune applies the default profile to all users and all devices when no other ESP profiles are available to assign. You can configure the default profile to show or hide the ESP.      
  
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.  
-2. Select the **Default** profile in the table.  
+1. Select the default profile.  
 3. Select **Properties**. 
 4. Go to the **Settings** section and select **Edit**.  
 5. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
@@ -160,9 +160,7 @@ To prioritize your profiles:
 
 Specify the apps that must be installed before the user can exit the ESP. You can choose up to 100 apps.   
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-3. Choose a profile > **Settings**.
+1. Choose an enrollment status page profile, and then select **Settings**.
 4. Choose **Yes** for **Show app and profile installation progress**.
 5. Choose **Yes** for **Block device use until all apps and profiles are installed**.
 6. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
@@ -229,11 +227,12 @@ The ESP tracks the installation of apps deployed in a device context, and includ
 
   - Per machine line-of-business (LoB) MSI apps
   - LoB store apps where installation context = device 
-  - Offline store apps where installation context = device 
-  - Win32 applications for Windows 10, version 1903 and later, and Windows 11.    
+  - Win32 applications for Windows 10, version 1903 and later, and Windows 11.
+  - Winget application installed during Windows Autopilot
+
 
   > [!NOTE]
-  > It's preferable to deploy the offline-licensed Microsoft Store for Business apps. Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.  
+  > Don't mix LOB and Win32 apps. Both LOB (MSI) and Win32 installers use TrustedInstaller, which doesn't allow simultaneous installations. If the OMA DM agent starts an MSI installation, the Intune Management Extension plugin starts a Win32 app installation by using the same TrustedInstaller. In this situation, Win32 app installation fails and returns an **Another installation is in progress, please try again later** error message. In this situation, ESP fails. Therefore, don't mix LOB and Win32 apps in any type of Autopilot enrollment.  
 
 ### Account setup
 
@@ -265,6 +264,8 @@ It also tracks the following types of apps when they're assigned to all devices,
   - Per machine LoB MSI apps   
   - LoB store apps, online store apps, and offline store apps 
 
+Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning if you're using Hybrid Azure AD join.   
+
 ### Known issues
 
 This section lists the known issues for the enrollment status page.  
@@ -274,7 +275,7 @@ This section lists the known issues for the enrollment status page.
 - A reboot during device setup forces the user to enter their credentials before the account setup phase. User credentials aren't preserved during reboot. Instruct the device users to enter their credentials to continue to the account setup phase.  
 - The ESP always times out on devices running Windows 10, version 1903 and earlier, and
 enrolled via the *Add work and school account* option. The ESP waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
-- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-prem AD connector time to create the new device record to Azure AD.  
+- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Azure AD.  
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase

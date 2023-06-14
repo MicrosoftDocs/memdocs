@@ -25,10 +25,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
-# Use RDP Shortpath for public networks (preview) with Windows 365  
+# Use RDP Shortpath for public networks with Windows 365  
 
 You can now use Remote Desktop Protocol (RDP) Shortpath for public networks with your Windows 365 Cloud PCs. RDP Shortpath for public networks can provide another connection path for improved Cloud PC connectivity, especially in suboptimal network conditions.
 
@@ -44,15 +46,15 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
     - To the public IP addresses assigned to NAT gateway or the Azure Firewall in an Azure Hosted Network Scenario.
     - For a Microsoft Hosted network scenario, all public IP spaces.
 
-## Enable the preview of RDP Shortpath for public networks
+## Enable RDP Shortpath for public networks
 
-To participate in the public preview for RDP Shortpath for public networks, visit the following Azure Virtual Desktop documentation page and follow the instructions:
+To enable RDP Shortpath for public networks, visit the following Azure Virtual Desktop documentation page and follow the instructions:
 
-[Enabling the preview of RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public#enabling-the-preview-of-rdp-shortpath-for-public-networks).
+[Enable RDP Shortpath for public networks](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks).
 
 ## Verify UDP connectivity
 
-UDP connectivity can be checked within the “Connection Information” section of a Remote session. For more information, see [Verify your network connectivity]( /azure/virtual-desktop/shortpath-public#verify-your-network-connectivity).
+UDP connectivity can be checked within the “Connection Information” section of a Remote session. For more information, see [Verify RDP Shortpath is working](/azure/virtual-desktop/configure-rdp-shortpath?tabs=public-networks#verify-rdp-shortpath-is-working).
 
 ## RDP Shortpath benefits
 
@@ -62,7 +64,7 @@ RDP Shortpath builds on the TCP connection and provides, when possible, another 
 
 ![Diagram of RDP Shortpath process](./media/rdp-shortpath-public-networks/rdp-shortpath-diagram.png)
 
-For more information about RDP Shortpath benefits, see [Key benefits](/azure/virtual-desktop/shortpath-public#key-benefits).
+For more information about RDP Shortpath benefits, see [Key benefits](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks#key-benefits).
 
 ## RDP Shortpath connection process
 
@@ -85,8 +87,8 @@ The RDP Shortpath for public networks may not work with Cloud PCs in the followi
 - Any network that restricts UDP access or limits access to specific ports or IP ranges.
 - Where Carrier Grade NAT (CGN) is used. Where the network shares a public IP address with other networks.
 
-For more technical details on these scenarios, see [General recommendations](/azure/virtual-desktop/shortpath-public#general-recommendations).
+For more technical details on these scenarios, see [How RDP Shortpath works](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks#how-rdp-shortpath-works).
 
 ## Next steps
 
-For complete information, see [Azure Virtual Desktop RDP Shortpath for public networks (preview)](/azure/virtual-desktop/shortpath-public).
+For complete information, see [Azure Virtual Desktop RDP Shortpath for public networks](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks).

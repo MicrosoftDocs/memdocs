@@ -9,9 +9,9 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 04/19/2023
 ms.topic: conceptual
-ms.service: mem
+ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -26,8 +26,9 @@ search.appverid:
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Manage your devices and control device features in Microsoft Intune
@@ -36,15 +37,17 @@ Managing devices is a significant part of any endpoint management strategy and s
 
 Enter Microsoft Intune. Intune is a cloud-based service that can control devices through policy, including security policies. For more information on Intune and its benefits, go to [What is Microsoft Intune?](what-is-intune.md).
 
+:::image type="content" source="./media/manage-devices/manage-devices-with-intune.png" alt-text="Diagram that shows organization owned and personal devices in the Microsoft Intune admin center and using compliance policies and Conditional Access for resource access." lightbox="./media/manage-devices/manage-devices-with-intune.png":::
+
 The goal of any organization that's managing devices is to secure devices and the data they access. This task includes organization owned devices and personally owned devices that access your organization resources.
 
-From a service perspective, Intune uses Azure Active Directory (AD) for device storage and permissions. Using the [Microsoft Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
+From a service perspective, Intune uses Azure Active Directory (AD) for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your devices.
 
 ## Manage organization owned and personal devices
 
-Many organizations allow personally owned devices to access organization resources, including email, attend meetings, and so on. There are different options available and these options depend on how strict your organization is.
+Many organizations allow personally owned devices to access organization resources, including email, meetings, and so on. There are different options available and these options depend on how strict your organization is.
 
 You can require personal devices be enrolled in your organization's device management services. On these personal devices, your admins can deploy policies, set rules, configure device features, and more. Or, you can use app protection policies that focus on protecting app data, such as Outlook, Teams, and Sharepoint. You can also use a combination of device enrollment and app protection policies.
 
@@ -80,9 +83,9 @@ For more specific information by platform, go to:
 
 Device compliance is a significant part of managing devices. Your organization will want to set password/PIN rules and check for security features on these devices. You'll want to know which devices don't meet your rules. This task is where compliance comes in.
 
-You can create compliance policies that block simple passwords, require a firewall, set the minimum OS version, and more. You can use these policies and built-in reporting to see non-compliant devices and see the non-compliant settings on these devices. This information gives you an idea of the overall health of the devices accessing your organization resources.
+You can create compliance policies that block simple passwords, require a firewall, set the minimum OS version, and more. You can use these policies and built-in reporting to see noncompliant devices and see the noncompliant settings on these devices. This information gives you an idea of the overall health of the devices accessing your organization resources.
 
-Conditional access is a feature of Azure AD. With conditional access, you can enforce compliance. For example, if a device doesn't meet your compliance rules, then you can block access to organization resources, including Outlook, SharePoint, Teams, and more. Conditional access helps your organization secure your data and protect your devices.
+Conditional Access is a feature of Azure AD. With Conditional Access, you can enforce compliance. For example, if a device doesn't meet your compliance rules, then you can block access to organization resources, including Outlook, SharePoint, Teams, and more. Conditional Access helps your organization secure your data and protect your devices.
 
 For more information, go to:
 
@@ -122,7 +125,7 @@ In Intune, some common security tasks include:
 
   For more specific information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
 
-- **Use Security Baselines** on your Windows devices. Security baselines are pre-configured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
+- **Use Security Baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
   If you're not sure where to start, then look at Security Baselines and the built-in guided scenarios.
 
@@ -139,7 +142,7 @@ In Intune, some common security tasks include:
   - [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
   - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
-- **Manage devices remotely** using the Endpoint Manager admin center. You can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
+- **Manage devices remotely** using the Intune admin center. You can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
   For more information, go to [Remote actions in Intune](../remote-actions/device-management.md).
 

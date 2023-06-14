@@ -24,9 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-- M365-identity-device-management
+ms.collection:
 - tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for Windows 10/11 devices in Intune
@@ -228,3 +228,6 @@ For any settings not available in Intune, you can export Wi-Fi settings from ano
 The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
 [Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms
+
+## Additional resources
+[Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)

@@ -26,7 +26,8 @@ ms.reviewer: ilwu
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 
@@ -37,7 +38,7 @@ Enroll your personal Linux device in Microsoft Intune to get secure access to wo
 ## System requirements  
 Enrollment is supported on devices with:  
 
-* Ubuntu Desktop 22.04 or 20.04 LTS
+* Ubuntu Desktop 22.04 or 20.04 LTS (physical or Hyper-V machine with x86/64 CPUs)
 * A GNOME graphical desktop environment (automatically included with Ubuntu Desktop 22.04 and 20.04 LTS)  
 
 We recommend enabling encryption when you first install Ubuntu Desktop on your device. Your organization may require your device to be encrypted, and it's easiest to encrypt the device during OS installation. 
@@ -63,6 +64,9 @@ Follow these steps to register your personal Linux device on your organization's
    1. If instructed to, update the settings on your device to meet your organization's security requirements.   
    2.  An on-screen confirmation appears when your device is enrolled and ready-to-use for work. You can begin using your device for work right away. 
    3. Sign in to Microsoft Edge with your work or school account to access your org's internal websites.   
+
+> [!NOTE]
+> Ubuntu on WSL2 is not a supported scenario.  
 
 ## Next steps
 As long as your device meets your organization's requirements, it will continue to have work access. Your organization may limit access if the Intune app flags your device as noncompliant. You can view and resolve all compliance issues in the Microsoft Intune app. For more information, see [Check status on Linux devices](check-status-linux.md).  

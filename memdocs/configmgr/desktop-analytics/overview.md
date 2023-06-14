@@ -33,7 +33,7 @@ Use Desktop Analytics with Configuration Manager to:
 
 - Deploy Windows 10 to pilot and production-managed devices
 
-:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Endpoint Manager admin center." lightbox="media/portal-home.png":::
+:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Intune admin center." lightbox="media/portal-home.png":::
 
 The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
 
@@ -95,7 +95,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     - [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator) and [Owner](/azure/role-based-access-control/built-in-roles#owner)
     - [Contributor](/azure/role-based-access-control/built-in-roles#contributor)
 
-- [Set up Intune](../../intune/fundamentals/setup-steps.md) for your organization.
+- [Set up Intune](../../intune/fundamentals/deployment-plan-setup.md) for your organization.
 
 - A supported version of Configuration Manager.
 
@@ -151,7 +151,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
-- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center.
+- At least one Intune license for you as the administrator to access the Microsoft Intune admin center.
 
 - Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.yml).
 

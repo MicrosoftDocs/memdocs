@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2021
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,13 +24,15 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Add macOS system and kernel extensions in Intune
 
 > [!NOTE]
-> macOS kernel extensions are being replaced with system extensions. For more information, see [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
+> macOS kernel extensions are being replaced with system extensions. For more information, go to [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
 On macOS devices, you can add kernel extensions and system extensions. Both kernel extensions and system extensions allow users to install app extensions that extend the native capabilities of the operating system. Kernel extensions execute their code at the kernel level. System extensions run in a tightly controlled user-space.
 
@@ -40,7 +42,7 @@ This article describes system extensions and kernel extensions. It also shows yo
 
 ## System extensions
 
-System extensions run in the user space, and don’t access the kernel. The goal is to increase security, provide more end user control, and limit kernel level attacks. These extensions can be:
+System extensions run in the user space, and don't access the kernel. The goal is to increase security, provide more end user control, and limit kernel level attacks. These extensions can be:
 
 - Driver extensions, including drivers to USB, network interface cards (NIC), serial controllers, and human interface devices (HID)
 - Network extensions, including content filters, DNS proxies, and VPN clients
@@ -48,7 +50,7 @@ System extensions run in the user space, and don’t access the kernel. The goal
 
 System extensions are included in an app's bundle, and installed from the app.
 
-For more information on system extensions, see [system extensions](https://developer.apple.com/documentation/systemextensions) (opens Apple's web site).
+For more information on system extensions, go to [system extensions](https://developer.apple.com/documentation/systemextensions) (opens Apple's web site).
 
 ## Kernel extensions
 
@@ -58,10 +60,10 @@ For example, you have a virus scanning program that scans your device for malici
 
 With this feature, administrators can allow users to override kernel extensions, add team identifiers, and add specific kernel extensions in Intune.
 
-For more information on kernel extensions, see [kernel extensions](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (opens Apple's web site).
+For more information on kernel extensions, go to [kernel extensions](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (opens Apple's web site).
 
 > [!IMPORTANT]
-> Kernel extensions don't work on macOS devices with the M1 chip, which are macOS devices running on Apple silicon. This behavior is a known issue, with no ETA. It's possible you can get them to work, but it's not recommended. For more information, see [Kernel extensions in macOS](https://support.apple.com/guide/deployment/system-and-kernel-extensions-in-macos-depa5fb8376f/web) (opens Apple's web site).
+> Kernel extensions don't work on macOS devices with the M1 chip, which are macOS devices running on Apple silicon. This behavior is a known issue, with no ETA. It's possible you can get them to work, but it's not recommended. For more information, go to [Kernel extensions in macOS](https://support.apple.com/guide/deployment/system-and-kernel-extensions-in-macos-depa5fb8376f/web) (opens Apple's web site).
 >
 > For any macOS devices running 10.15 and newer, we recommend using [system extensions](#system-extensions) (in this article). If you use the kernel extensions settings, then consider excluding macOS devices with M1 chips from receiving the kernel extensions profile.
 
@@ -90,14 +92,14 @@ For more information on kernel extensions, see [kernel extensions](https://devel
 > [!NOTE]
 > Apple released information regarding signing and notarization for all software. On macOS 10.14.5 and newer, kernel extensions deployed through Intune don't have to meet Apple's notarization policy.
 >
-> For information on this notarization policy, and any updates or changes, see the following resources:
+> For information on this notarization policy, and any updates or changes, go to the following resources:
 >
 > - [Notarizing your app before distribution](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (opens Apple's web site) 
 > - [Prepare for changes to kernel extensions in macOS High Sierra](https://support.apple.com/en-us/HT208019) (opens Apple's web site)
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -117,11 +119,11 @@ For more information on kernel extensions, see [kernel extensions](https://devel
     - [macOS](kernel-extensions-settings-macos.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 

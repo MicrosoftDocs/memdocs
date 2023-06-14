@@ -22,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: chrisbal
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier3
 ---
 
 

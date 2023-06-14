@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Network endpoints for US government deployments - Microsoft Intune
-titleSuffix: 
+title: Network endpoints for US government deployments
+titleSuffix: Microsoft Intune
 description: Review US government endpoints for Intune.
 keywords:
 author: Smritib17
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # US government endpoints for Microsoft Intune
@@ -36,13 +38,16 @@ This page lists the US Government, US Government Community (GCC) High, and Depar
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
 - The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols
-- For some tasks (like downloading software updates), Intune requires unauthenticated proxy server access to manage.microsoft.com
+- For some tasks (like downloading software updates), Intune requires unauthenticated proxy server access to manage.microsoft.us
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md#windows-auto-enrollment-and-device-registration).  
+> [!NOTE]
+> The inspection of SSL traffic is not supported on 'manage.microsoft.us' endpoint.
+
+For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
 The following tables list the ports and services that the Intune client accesses:
 
@@ -55,7 +60,15 @@ The following tables list the ports and services that the Intune client accesses
 - Azure portal: https:\//portal.azure.us/ 
 - Microsoft 365: https:\//portal.office365.us/ 
 - Intune Company Portal: https:\//portal.manage.microsoft.us/ 
-- Microsoft Endpoint Manager admin center: https:\//endpoint.microsoft.us/
+- Microsoft Intune admin center: https:\//intune.microsoft.us/
+## Network requirements for PowerShell scripts and Win32 apps  
+
+If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
+
+|Azure Scale Unit (ASU) | Storage name | CDN |
+| --- | --- |--- |
+|FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
+
 
 ## Partner service endpoints that Intune depends on:
 - Azure AD Sync service: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.svc

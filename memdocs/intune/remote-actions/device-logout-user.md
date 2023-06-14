@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
+ms.collection:
+- tier2
 - M365-identity-device-management
-- tier3
 ---
 
 # Logout the current user on Intune-managed iOS/iPadOS devices
@@ -47,7 +47,7 @@ The **Logout current user** action logs out the current user on a shared iPad de
 
 ## How to log out the current user
 
-1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
 2. Choose an iOS/iPadOS device > **...** > **Logout current user**.
 
 ## Next steps

@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/08/2022
+ms.date: 03/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -25,9 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - Android
-- tier3
 ms.custom: intune-classic
 ---
 
@@ -58,7 +58,7 @@ This stage of the SDK guide overviews the MSAL integration process as it relates
 
 To simplify the Intune App SDK integration process, **Android app developers are strongly encouraged to fully integrate and test MSAL before downloading the Intune App SDK.**
 The Intune App SDK integration process *does* require code changes around MSAL token acquisition.
-It will be significantly easier to test the Intune-specific token acquisition changes if you've already confirmed your app's original token acquisition implementation works as expected.
+It will be significantly easier to test the Intune-specific token acquisition changes if you have already confirmed your app's original token acquisition implementation works as expected.
 
 To learn more about AAD, see [What is Azure Active Directory?]
 
@@ -79,7 +79,7 @@ This guide describes how to:
 
 - Add MSAL as a dependency to your Android application.
 - Create an MSAL configuration file.
-- Configure your application's `AndoridManifest.xml`.
+- Configure your application's `AndroidManifest.xml`.
 - Add code to acquire a token.
 
 ### Brokered Authentication
@@ -118,7 +118,7 @@ These settings include:
 | Setting | Description | Required for MSAL? | Required by Intune? |
 | - | - | - | - |
 | `ClientID`             | The AAD ClientID (also known as the "Application ID") for your app. <br> There's no default `ClientID`. Use the `ClientID` from [Register your Application with AAD] for your app. |  Yes | No |
-| `Authority`            | The AAD authority to issue a token. <br> By default, this value is the AAD public environment. If overridden, the AAD authority entered will issue the token for your application, which allows authentication to non-default environments, such as Sovereign clouds. | No | If your application requires a non-default authority, yes. **Most apps should not set the Authority parameter.** |
+| `Authority`            | The AAD authority to issue a token. <br> By default, this value is the AAD public environment. If overridden, the AAD authority entered will issue the token for your application, which allows authentication to nondefault environments, such as Sovereign clouds. | No | If your application requires a nondefault authority, yes. **Most apps should not set the Authority parameter.** |
 | `SkipBroker`           | Boolean value for altering the default MSAL SSO behavior. <br> By default, this value is "false". | No | If your app doesn't support brokered authentication/device-wide SSO, yes and set `SkipBroker` to "true". **Most apps should not set the SkipBroker parameter.** |
 | `NonBrokerRedirectURI` | [AAD redirect URI] to use in broker-less cases. By default, this value isn't present. | No | If the `SkipBroker` setting is set to "true" and your app requires a redirect URI, yes. **Most apps should not set the NonBrokerRedirectURI parameter.** |
 
@@ -128,7 +128,6 @@ These settings include:
 For more detail on non-Intune-specific MSAL configuration options, see [Android Microsoft Authentication Library configuration file].
 
 For more detail on Sovereign clouds, see [Use MSAL in a national cloud environment].
-
 
 ## Exit Criteria
 
@@ -201,4 +200,4 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [give your app access to the Intune app protection service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
 
 <!-- Other Microsoft links -->
-[Microsoft Endpoint Manager admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
+[Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431

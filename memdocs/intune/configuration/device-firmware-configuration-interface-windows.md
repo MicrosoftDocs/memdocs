@@ -24,12 +24,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
  
 # Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune
 
-When you use Intune to manage Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, see [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
+When you use Intune to manage Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, see [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/).
 
 DFCI enables Windows to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface).
 
@@ -46,7 +48,7 @@ When you reinstall an older Windows version, install a separate OS, or format th
 
 ## Before you begin
 
-- The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update you install. Work with your device vendors to determine [the manufacturers that support DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci), or the firmware version needed to use DFCI.
+- The device manufacturer must have DFCI added to their UEFI firmware in the manufacturing process, or as a firmware update you install. Work with your device vendors to determine [the manufacturers that support DFCI](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci), or the firmware version needed to use DFCI.
 
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/cloud-solution-provider), or registered directly by the OEM. 
 
@@ -91,7 +93,7 @@ This profile includes the DFCI settings you configure.
 > [!TIP]
 > Configuring and assigning DFCI profiles can lock the device beyond repair. So, pay attention to the values you configure.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -133,7 +135,7 @@ The next time the device syncs with Intune, Windows receives the DFCI settings. 
 
 If you want to change existing DFCI settings on devices that are in use, you can. In your existing DFCI profile, change the settings, and save your changes. Since the profile is already assigned, the new DFCI settings take effect when:
 
-1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, see [when devices get a policy, profile, or app updates](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, see [when devices get a policy, profile, or app updates](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 2. To enforce the new settings, reboot the device [remotely](../remote-actions/device-restart.md) or locally.
 
 You can also [signal devices to check in](../remote-actions/device-sync.md). After a successful sync, [signal to reboot](../remote-actions/device-restart.md).
@@ -151,7 +153,7 @@ Some settings are in a logical category, like **Microphones and Speakers**. Ther
 - With every sync with the Intune service after the first sync, the following behavior happens in a loop:
 
   - Intune applies the category setting (Microphones and Speakers) since it's not compliant. The granular setting (Microphones) becomes non-compliant.
-  - Intune applies the granular setting (Microphones) since it's not compliant. The category setting (Microphones and Speakers) becomes non-complaint.
+  - Intune applies the granular setting (Microphones) since it's not compliant. The category setting (Microphones and Speakers) becomes non-compliant.
 
 To avoid this looping behavior, configure the category setting **or** the granular settings.
 

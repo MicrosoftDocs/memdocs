@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 03/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -25,9 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier3
 - M365-identity-device-management
 - Android
-- tier3
 ms.custom: intune-classic
 ---
 
@@ -51,7 +51,7 @@ This guide is for Android developers who are looking to add support for Microsof
 Before you start integrating the Intune App SDK into your Android application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
 - [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
-  and where to find these features in the Microsoft Endpoint Manager console.  
+  and where to find these features in the Microsoft Intune admin center.  
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Android app protection policy settings] describes each Android setting in detail.
   Your app will support these settings by integrating the SDK.
@@ -104,9 +104,9 @@ Initially integrating and testing as single-identity will help ensure proper int
 
 ### Does my application have or need App Configuration settings?
 
-Android supports [application-specific management configurations] that apply to applications deployed under Android Enterprise management modes. Admins can configure these [application configuration policies for managed Android Enterprise devices] in Microsoft Endpoint Manager.
+Android supports [application-specific management configurations] that apply to applications deployed under Android Enterprise management modes. Admins can configure these [application configuration policies for managed Android Enterprise devices] in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Intune also supports application configurations that apply to SDK-integrated applications, regardless of device management mode. Admins can configure these [application configuration policies for managed apps] in Microsoft Endpoint Manager.
+Intune also supports application configurations that apply to SDK-integrated applications, regardless of device management mode. Admins can configure these [application configuration policies for managed apps] in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 The Intune App SDK supports both types of application configuration and provides a single API for accessing configurations from both channels. If your application has or will support either of these types of application configuration, you'll need to follow [Stage 6: App Configuration].
 
@@ -125,7 +125,7 @@ Android supports [backup and restore] functionality to preserve data and persona
 
 Intune also supports backup and restore functionality for SDK-integrated applications, to ensure corporate data can't be leaked through a restore. 
 
-If your app supports this functionality, it must take code changes to protect corporate data during restore. 
+If your app supports this functionality, it must take code changes to protect corporate data during restore.
 See [Policy for protecting backup data] in [Stage 7: App Participation Features].
 
 ### Does my application have resources that should be protected by Conditional Access?
@@ -160,8 +160,8 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 
 ### Android versions
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 32 (Android 12L).
-In order to target Android API 31-32 (Android 12-12L), you must use Intune App SDK `v8.0.0` or later.
+The SDK fully supports Android API 28 (Android 9.0) through Android API 33 (Android 13).
+In order to target Android API 33 (Android 13), you must use Intune App SDK `v9.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).
@@ -191,12 +191,12 @@ To create a new account:
 
 ### App protection policy configuration
 
-[Create and assign app protection policies] in the Microsoft Endpoint Manager admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Endpoint Manager.
+[Create and assign app protection policies] in the Microsoft Intune admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Endpoint Manager.
 
 Before you test app protection policy settings within your own application, it's helpful to familiarize yourself with how these settings behave inside other SDK-integrated applications.
 
 > [!TIP]
-> If your app isn't listed in the Microsoft Endpoint Manager portal, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.  
+> If your app isn't listed in the Microsoft Intune admin center, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.  
 > You must target your app with app protection policy and deploy the policy to a user to successfully test your integration.  
 > Even if policy is targeted and deployed, your app will not properly enforce policies until it has successfully integrated the SDK.
 

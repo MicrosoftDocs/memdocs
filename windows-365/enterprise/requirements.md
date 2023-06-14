@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/21/2022
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Requirements for Windows 365
@@ -80,12 +82,13 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 
 ## Licensing requirements
 
-- You must have an Intune license so that you can use Intune to manage the devices.
-- Users must have licenses for Windows, Intune, Azure AD, and Windows 365 to use their Cloud PC.
+- You must have an Intune license to use Intune to manage the devices.
+- Users must have licenses for Windows E3, Intune, Azure AD P1, and Windows 365 to use their Cloud PC.
 
 ## Management requirements
 
-You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
+- You must use [Microsoft Intune admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
+- You must have a Windows 365 Enterprise license to manage Cloud PC configurations.
 
 ## Role and identity requirements
 
@@ -118,10 +121,14 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Japan East
 - Norway
   - Norway East
+- South Africa
+  - South Africa North
 - South America
-  - Brazil South
+  - Brazil South (Restricted, request your Commercial Executive to engage Deal Manager for exception)
 - South Korea
   - Korea Central
+- Sweden
+  - Sweden Central
 - Switzerland
   - Switzerland North
 - UAE
@@ -135,13 +142,60 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - East US
   - East US 2
 - US West
-  - West US 2 (Restricted, contact support)
+  - West US 2 (Restricted)
+  - West US 3
+
+### [Windows 365 Frontline](#tab/frontline)
+
+- Asia
+  - East Asia
+  - Southeast Asia
+- Australia
+  - Australia East
+- Brazil
+  - Brazil South (Restricted)
+- Canada
+  - Canada Central
+- European Union
+  - North Europe
+  - West Europe
+- France
+  - France Central
+- India
+  - Central India
+- Japan
+  - Japan East
+- Norway
+  - Norway East
+- South Africa
+  - South Africa North
+- South America
+  - Brazil South (Restricted, request your Commercial Executive to engage Deal Manager for exception)
+- South Korea
+  - Korea Central
+- Sweden
+  - Sweden Central
+- Switzerland
+  - Switzerland North
+- UAE
+  - UAE North
+- United Kingdom
+  - UK South
+- US Central
+  - Central US
+  - South Central US
+- US East
+  - East US
+  - East US 2
+- US West
+  - West US 2 (Restricted)
   - West US 3
 
 ### [Windows 365 Government](#tab/gov)
 
-- US Gov Virginia
-- US Gov Arizona
+- US Government
+  - Arizona
+  - Virginia
 
 ---
 

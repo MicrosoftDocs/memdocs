@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 03/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -26,9 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
+ms.collection:
+- tier2
 - M365-identity-device-management
-- tier3
 ---
 
 # Collect diagnostics from a Windows device
@@ -49,13 +49,13 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 The *Collect diagnostics* remote action is supported for:
 
-- Intune or co-managed devices.
-- Windows 10 version 1909 and later.
+- Intune or co-managed devices
+- Windows 10 version 1909 and later
 - Windows 11
-- Microsoft HoloLens 2 2004 and later.
-- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions.
-- Corporate-owned devices.
-- Devices that are online and able to communicate with the service during diagnostics. 
+- Microsoft HoloLens 2 2004 and later
+- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions
+- Corporate-owned devices
+- Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
 > For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
@@ -64,7 +64,7 @@ The *Collect diagnostics* remote action is supported for:
 
 To use the *Collect diagnostics* action:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Devices** > **Windows** > select a supported device.
 3. On the device’s **Overview** page, select **…** >  **Collect diagnostics** > **Yes**. A pending notification appears on the device’s **Overview** page.
 4. To see the status of the action, select **Device diagnostics monitor**.
@@ -78,10 +78,10 @@ To use the *Collect diagnostics* action:
 
 To view the diagnostics collected after an Autopilot failure:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Monitor** > **Autopilot deployments (preview)**.
-3. In the middle pane, select a device.
-4. On the right hand **Properties** pane, under **Device Diagnostics**, select **Download**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+2. Navigate to **Devices** > **Windows Devices**.
+3. Select a device.
+4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.
 
 ## Data collected
@@ -99,6 +99,7 @@ This list below is the same order as the diagnostic zip.  Each collection contai
 Registry Keys:
 
 - HKLM\SOFTWARE\Microsoft\CloudManagedUpdate
+- HKLM\SOFTWARE\Microsoft\EPMAgent
 - HKLM\SOFTWARE\Microsoft\IntuneManagementExtension
 - HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
 - HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
@@ -128,6 +129,7 @@ Commands:
 - %windir%\system32\netsh.exe wlan show profiles
 - %windir%\system32\netsh.exe wlan show wlanreport
 - %windir%\system32\ping.exe -n 50 localhost
+- %windir%\system32\pnputil.exe /enum-drivers
 - %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
 - %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
 
@@ -146,48 +148,56 @@ Event Viewers:
 - Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
 - Microsoft-Windows-WinRM/Operational
 - Microsoft-Windows-WMI-Activity/Operational
+- Microsoft-Windows-AppXDeployment/Operational
+- Microsoft-Windows-AppXDeploymentServer/Operational
 - Setup
 - System
 
 Files:
 
-- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
-- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+- %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\\*.etl
+- %ProgramFiles%\Microsoft EPM Agent\Logs\\\*.*
+- %ProgramData%\Microsoft\IntuneManagementExtension\Logs\\\*.*
 - %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-- %ProgramData Microsoft Update Health Tools\Logs\*.etl
+- %ProgramData%\USOShared\logs\system\\*.etl
+- %ProgramData Microsoft Update Health Tools\Logs\\*.etl
 - %temp%\MDMDiagnostics\battery-report.html
 - %temp%\MDMDiagnostics\energy-report.html
 - %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
 - %temp%\MDMDiagnostics\msinfo32.log
-- %windir%\ccm\logs\*.log
-- %windir%\ccmsetup\logs\*.log
+- %windir%\ccm\logs\\*.log
+- %windir%\ccmsetup\logs\\*.log
 - %windir%\logs\CBS\cbs.log
-- %windir%\logs\measuredboot\*.*
-- %windir%\Logs\WindowsUpdate\*.etl
+- %windir%\logs\measuredboot\\\*.*
+- %windir%\logs\Panther\unattendgc\setupact.log
+- %windir%\logs\SoftwareDistribution\ReportingEvent\measuredboot\\*.log
+- %windir%\logs\WindowsUpdate\\*.etl
+- %windir%\system32\config\systemprofile\AppData\Local\mdm\\\*.log
 - %windir%\temp\%computername%*.log
 - %windir%\temp\officeclicktorun*.log
+- %TEMP%\winget\defaultstate*.log
 
 ## Disable device diagnostics
 
 The **Collect diagnostics** remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
-     :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled.":::
+     :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled." lightbox="./media/collect-diagnostics/disable-device-diagnostics.png":::
 
 ## Disable Autopilot automatic collection of diagnostics
 <!--1895390-->
 
 Autopilot automatic diagnostic capture is enabled by default. You can disable Autopilot automatic diagnostic capture by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 2. Navigate to **Tenant administration** > **Device diagnostics**.
 3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
-     :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled.":::
+     :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled." lightbox="./media/collect-diagnostics/disable-autopilot-diagnostics.png":::
 
 ## Known issues with device diagnostics
 

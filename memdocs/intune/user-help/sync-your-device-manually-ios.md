@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/27/2021
+ms.date: 04/05/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -26,7 +26,8 @@ ms.reviewer: kakyker
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -44,7 +45,7 @@ If you recently made changes to your device settings, you may need to manually c
 
 2. Tap **Device** and then select your device.  
 
-3. Tap **Check status**. Company Portal will check your device to confirm that it's meeting your organization's policy requirements. Once the check is complete, the device settings status will tell you if you have access to company resources. 
+3. Tap **Check status**. Company Portal checks your device to confirm that it's meeting your organization's policy requirements. Once the check is complete, the device settings status tells you if you have access to company resources. 
 
 
 Still need help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

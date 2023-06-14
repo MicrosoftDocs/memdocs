@@ -1,12 +1,12 @@
 ### YamlMime:Landing
 
 title: Configuration Manager hotfixes and update rollups
-summary: Knowledge Base articles for Microsoft Endpoint Configuration Manager hotfixes, update rollups, and change list articles for new releases. 
+summary: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and change list articles for new releases. 
 
 metadata:
   title: Configuration Manager hotfixes
   titleSuffix: Configuration Manager
-  description: Knowledge Base articles for Microsoft Endpoint Configuration Manager hotfixes, update rollups, and change list articles for new releases.
+  description: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and change list articles for new releases.
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: landing-page
@@ -17,6 +17,20 @@ metadata:
   ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2303
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 16900870 Summary of changes in 2303
+            url: 2303/16900870.md
+  - title: Configuration Manager 2211
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 15582417 Summary of changes in 2211
+            url: 2211/15582417.md
+          - text: 16643863 Update rollup for Configuration Manager version 2211
+            url: 2211/16643863.md
   - title: Configuration Manager 2207
     linkLists:
       - linkListType: overview
