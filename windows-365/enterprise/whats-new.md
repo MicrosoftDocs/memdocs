@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/08/2023
+ms.date: 06/15/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,16 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of June 12, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: High-level architecture diagram<!--45049183-->
+
+We’ve published a new help documentation article. For more information, see [High-level architecture diagram](high-level-architecture.md).
 
 <!-- ########################## -->
 ## Week of June 5, 2023
