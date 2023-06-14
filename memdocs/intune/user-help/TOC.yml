@@ -272,7 +272,7 @@ items:
     items:
     - name: Install apps from Company Portal
       href: install-apps-cpapp-windows.md
-    - name: Sync your device manually
+    - name: Sync device 
       href: sync-your-device-manually-windows.md
     - name: Check device access
       href: check-device-access-windows-cpapp.md

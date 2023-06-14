@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Sync your Windows device manually  
+# Sync enrolled device for Windows 10 or later    
 
 **Applies to**  
 - Windows 10  
@@ -79,11 +79,11 @@ Sync devices running Windows 10 or later.
 
     * If your screen shows the **Access work or school** option, go to [Access work or school](#access-work-or-school-steps) in this article.  
 
-     ![Example image of Settings app > Account settings highlighting the Access work or school option with a red rectangle.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+      ![Example image of Settings app > Account settings highlighting the Access work or school option with a red rectangle.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
     * If your screen shows the **Work access** option, go to [Work access steps](#work-access-steps) in this article.  
 
-     ![Example image of Settings app > Account settings highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
+      ![Example image of Settings app > Account settings highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
 
 #### Access work or school steps  
 
