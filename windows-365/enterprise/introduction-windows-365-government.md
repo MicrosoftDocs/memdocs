@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/08/2023
+ms.date: 07/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -57,7 +57,6 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - User initiated feedback in End User Portal and Windows 365 Web Client
 - Resize VM
 - Citrix HDX Plus for Windows 365
-- Windows 365 app
 - Multimedia redirection for improved video playback
 - Microsoft Dev Box
 - Convert Windows 365 licenses to higher level licenses
