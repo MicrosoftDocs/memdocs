@@ -60,7 +60,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
 ## Create a device platform restriction   
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Go to **Devices**, Uner policies click on **Enrollment device platform restrictions**.  
+2. Go to **Devices** and under **Policies**, select **Enrollment device platform restrictions**.  
 3. Select the tab along the top of the page that corresponds with the platform you're configuring. Your options:  
 
     * **Android restrictions**
