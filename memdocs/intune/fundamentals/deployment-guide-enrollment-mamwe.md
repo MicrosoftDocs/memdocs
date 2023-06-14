@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/15/2022
+ms.date: 06/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -39,15 +39,14 @@ MAM is available on the following platforms:
 
 - Android
 - iOS/iPadOS
-- Windows
+
+> [!NOTE]
+> To deploy or assign apps to Windows devices, the Windows devices must be enrolled in Microsoft Intune. For any additional requirements, including supported app types, go to [Windows 10/11 app deployment using Microsoft Intune](../apps/apps-windows-10-app-deploy.md).
 
 This article provides recommendations on when to use MAM. It also includes an overview of the administrator and user tasks. For more specific information on MAM, see [Microsoft Intune app management](../apps/app-management.md).
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
-
-> [!IMPORTANT]
-> Mobile Application Management (MAM) is deprecated for Windows. After December 2022 customers will not be able to configure any new Microsoft Information Protection (WIP) policies for devices registered via MAM without enrollment. This does not apply to devices enrolled in MAM.
 
 ## Before you begin
 
@@ -74,7 +73,6 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 This task list provides an overview. For more specific information, see [Microsoft Intune app management](../apps/app-management.md).
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
-- To deploy or assign apps to Windows devices, the Windows devices must be enrolled in Microsoft Intune. For any additional requirements, including supported app types, go to [Windows 10/11 app deployment using Microsoft Intune](../apps/apps-windows-10-app-deploy.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), [add your apps](../apps/apps-supported-intune-apps.md) or [configure your apps](../apps/app-configuration-policies-overview.md). When the apps are on the device, the apps are considered "managed" by Intune. After you add or configure the app, create an [app protection policy](../apps/app-protection-policy-settings-ios.md). For example, create a policy that allows or blocks features within the app, such as copy and paste.
 - Tell users how to get different apps. For example, you can:
 
