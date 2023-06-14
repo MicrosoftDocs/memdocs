@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad  
 manager: dougeby
-ms.date: 06/13/2023
+ms.date: 06/14/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -35,12 +35,13 @@ ms.collection:
 > [!TIP]
 > There are a variety of MTD apps on the market. Your organization should tell you which one to use. If you're prompted to install an MTD app and you're not immediately redirected to set up or install the app, contact your IT support person for help. This article also provides the links to store listings.   
 
-As part of your organization's security requirements, you might be required to install a mobile threat defense (MTD) vendor app. This type of app detects and alerts you to threats on your device, such as suspicious apps, networks, or OS vulnerabilities.  
-
-If you don't have the required MTD app, you'll be blocked from signing in to protected, managed apps (such as Microsoft Excel or OneDrive) with your work or school account. In this article, you'll learn [how to set up an MTD app](set-up-mobile-threat-defense.md#set-up-mtd-app) and regain access.    
+Your organization might require you to install a mobile threat defense (MTD) app on any personal device you're using for work. This type of app detects and alerts you to threats, such as suspicious apps, networks, or operating system vulnerabilities. If you don't have the required MTD app, you are blocked from signing in to apps such as Microsoft Excel or OneDrive with your work or school account. In this article, you'll learn how to facilitate and set up an MTD app and regain access.    
 
 ## MTD apps for Apple devices 
-The following MTD apps are commonly used on iOS devices. Select an app to open its listing in the App Store.   
+
+After you receive the prompt to install the MTD app, the system should direct you to your organization's required MTD app. If you aren't redirected but the app name is given, you can install the app directly from the Apple App Store. If no name is given, contact your IT support person for help. 
+
+The following MTD apps are commonly used on Apple devices. Select an app to open its listing in the App Store.   
 
 * [ActiveShield](https://apps.apple.com/app/activeshield/id980234260)
 * [Microsoft Defender for Endpoint](https://apps.apple.com/app/microsoft-defender-atp/id1526737990)
@@ -53,6 +54,8 @@ The following MTD apps are commonly used on iOS devices. Select an app to open i
 * [Zimperium MTD](https://apps.apple.com/app/zimperium-zips/id1030924459)  
 
 ## MTD apps for Android 
+After you receive the prompt to install the MTD app, the system should direct you to your organization's required MTD app. If you aren't redirected but the app name is given, you can install the app directly from the Google Play Store. If no name is given, contact your IT support person for help. 
+
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
 
 * [Active Shield Enterprise](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) 
@@ -68,19 +71,23 @@ The following MTD apps are commonly used on Android devices. Select an app to op
 
 ## Information your organization can see   
 
-Your organization can't see any data, such as texts, emails, and pictures, in your personal apps. Your organization can see general app information reported by the MTD app, including:   
+Your organization can't see data such as texts, emails, and pictures from your personal apps. MTD apps do report general app information, which is visible to your organization and includes:    
 
 * App name  
 * App ID: The unique name that identifies the app in Google Play.  
 * App version and short version number: The specific release numbers for an app.  
 * App bundle and dynamic size: The amount of space an app uses on your device. 
 
-Support for reporting varies by MTD vendor.  
+The level of reporting varies by MTD vendor.  
 
 ## Set up MTD app 
-When you sign in to a protected work app, you are prompted to install a mobile threat defense (MTD) app. Follow the onscreen steps to register your device and install the MTD app. If you're prompted to install an MTD app but aren't sure which one to install, contact your IT support person for help.   
+This section describes the onscreen setup experience for Apple and Android devices, which includes: 
 
-This section describes the device registration, [iOS setup](set-up-mobile-threat-defense.md#ios-setup), and [Android setup](set-up-mobile-threat-defense.md#android-setup) experience. These steps are supplemental and not meant to replace the onscreen instructions. 
+* Device registration  
+* App installation instructions for Apple devices  
+* App installation instructions for Android devices  
+  
+These steps are supplemental and not meant to replace the onscreen instructions. Refer to the onscreen experience or contact your support person for information that's specific to your organization's policies and requirements. 
 
 ### Device registration  
 Device registration is necessary to confirm your identity and connect your school or work account to your device. If you're on a nonregistered device, the onscreen prompts guide you through registration before you install the MTD app. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
