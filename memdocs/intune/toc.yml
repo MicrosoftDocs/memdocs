@@ -416,8 +416,6 @@ items:
                   href: ./apps/configure-microsoft-launcher.md
                 - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
-                - name: Configure Microsoft Edge for Windows MAM
-                  href: ./apps/configure-edge-mam-windows.md                  
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
                 - name: Configure Outlook
