@@ -81,16 +81,15 @@ Your organization can't see data such as texts, emails, and pictures from your p
 The level of reporting varies by MTD vendor.  
 
 ## Set up MTD app 
-This section describes the onscreen setup experience for Apple and Android devices, which includes: 
+This section describes the onscreen mobile threat defense setup experience for Apple and Android devices, which includes: 
 
-* Device registration  
-* App installation instructions for Apple devices  
-* App installation instructions for Android devices  
+* Device registration   
+* App installation, with instructions for Apple and Android devices 
   
-These steps are supplemental and not meant to replace the onscreen instructions. Refer to the onscreen experience or contact your support person for information that's specific to your organization's policies and requirements. 
+Refer to the prompts and steps onscreen for details specific to your organization.  
 
 ### Device registration  
-Device registration is necessary to confirm your identity and connect your school or work account to your device. If you're on a nonregistered device, the onscreen prompts guide you through registration before you install the MTD app. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
+Register your device to confirm your identity and connect your school or work account to your device. If you're on a nonregistered device, follow the onscreen prompts to register your device before you install the MTD app. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 ### iOS setup  
 These steps begin on the **Get access** screen, which appears after you sign in to a protected work app.  
