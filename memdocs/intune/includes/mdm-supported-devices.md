@@ -16,16 +16,16 @@ ms.localizationpriority: high
 
 > [!NOTE]
 > Intune requires iOS 14.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
-> 
+>
 > For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 14.x or later.  
 
-In the context of userless iOS/iPadOS devices, there is a difference between *supported* OS versions and *allowed* OS versions. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://techcommunity.microsoft.com/t5/intune-customer-success/support-statement-for-supported-versus-allowed-ios-ipados/ba-p/3484657).  
+In the context of userless iOS/iPadOS devices, there's a difference between *supported* OS versions and *allowed* OS versions. For more information, see [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://techcommunity.microsoft.com/t5/intune-customer-success/support-statement-for-supported-versus-allowed-ios-ipados/ba-p/3484657).  
 
 ### Android
 
 - Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
-- Android open source project devices (AOSP) supported devices :[requirements](..\fundamentals\android-os-project-supported-devices.md)
+- Android open source project device: [requirements](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
@@ -51,7 +51,7 @@ In the context of userless iOS/iPadOS devices, there is a difference between *su
   For more information about managing devices running Windows 10 LTSC 2019, see [What's new in Windows 10 Enterprise LTSC 2019](/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
 - Windows 10 version 1709 (RS3) and later, Windows 8.1 RT, PCs running Windows 8.1 (Sustaining mode)
- 
+
 - Windows Holographic for Business
 
   For more information about managing devices running Windows Holographic for Business, see [Windows Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
@@ -61,7 +61,6 @@ In the context of userless iOS/iPadOS devices, there is a difference between *su
 - Windows 10 Teams (Surface Hub)
 
   For more information about managing devices running Windows 10 Teams, see [Manage Surface Hub with MDM](/surface-hub/manage-settings-with-mdm-for-surface-hub)
-
 
 > [!NOTE]
 > Not all Windows editions support all available operating system features being configured through MDM. For more information, see the [Windows configuration service provider reference docs](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Each CSP highlights which Windows editions are supported.

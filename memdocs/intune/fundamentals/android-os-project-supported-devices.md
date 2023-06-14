@@ -33,7 +33,7 @@ ms.collection:
 
 # Android Open Source Project Supported Devices
 
-Before setting up Microsoft Intune for Android Open Source Project devices, ensure you are using a supported device. 
+Before setting up Microsoft Intune for Android Open Source Project devices, ensure you're using a supported device.
 
 ## Intune for Android Open Source Supported Devices
 
