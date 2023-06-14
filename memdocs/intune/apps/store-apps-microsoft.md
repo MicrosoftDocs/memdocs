@@ -170,16 +170,16 @@ Some **Store Group Policies** may affect app deployments from the Microsoft Stor
 
 The following table provides details about how app deployment may be affected by **Store Group Policies**:
 
-|     Store Group   Policies    |     Desired   setting    |
-|---|---|
-|     Store\Disable all apps from the Microsoft   Store     | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
-|     Store\Turn off Automatic Download and   Install of updates    | **Not configured** or **Disabled**. Set to **Disabled** if you need to prevent end users from blocking the scenario.          |
-|     Desktop App Installer\Enable App Installer   Microsoft Store Source    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
-|     Desktop App Installer\Enable App Installer    | **Not configured** or **Enabled**. Set to **Enabled** if wish to prevent end users from blocking the scenario.          |
-|     Store\Turn off the Store application    | **Not configured** or **Disabled**. Set to **Disabled** if you need to prevent end users from blocking the scenario.          |
+|     Store Group   Policies    |     Desired   setting    | Impact | Note
+|---|---|---|---|
+|     Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Disable all apps from Microsoft Store | **Not configured** or **Enabled** | **Disabled** turns off the launch of all apps from the Microsoft Store that came pre-installed or were downloaded. | Settings this policy to **Disabled** will disable the launch of all Microsoft Store apps. |
+|     Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Turn off Automatic Download and Install of updates    | **Not configured** or **Disabled** | If you disable this setting, the automatic download and installation of app updates is enabled. | |
+|     Computer Configuration\Policies\Administrative Templates\Windows Components\Desktop App Installer\Enable App Installer Microsoft Store Source | **Not configured** or **Enabled** | If you enable or do not configure this setting, the Microsoft Store source for Windows Package Manager will be available and can be removed. | |
+|     Computer Configuration\Policies\Administrative Templates\Windows Components\Desktop App Installer\Enable App Installer | **Not configured** or **Enabled** | If you enable or do not configure this setting, users will be able to use the Windows Package Manager. | |
+|     Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Turn off the Store application | **Not configured** or **Disabled** | If you disable or don't configure this setting, access to the Store application is allowed. | Enabling this setting will block the Microsoft Store entirely.  This will also stop the Microsoft Store from applying security related updates to built-in Windows Apps. |
 
 > [!NOTE]
-> If you would like to block installation of arbitrary applications from the Store application by the end user without blocking the Intune and Windows Package Manager store integration, set **Store\Only display the private store within the Microsoft Store** to **Enabled**.
+> If you would like to block installation of arbitrary applications from the Store application by the end user without blocking the Intune and Windows Package Manager store integration, set **Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Only display the private store within the Microsoft Store** to **Enabled**.
 
 ## Unsupported functionality for Microsoft Store apps
 
