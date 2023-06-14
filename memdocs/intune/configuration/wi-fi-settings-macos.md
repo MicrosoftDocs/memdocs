@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 06/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -91,7 +91,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **EAP-TLS**: Also enter:
 
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
@@ -118,7 +118,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **PEAP**: Also enter:
 
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are presented to the server. They authenticate the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
