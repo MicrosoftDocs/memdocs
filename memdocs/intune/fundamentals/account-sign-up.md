@@ -54,7 +54,7 @@ If you already have a work or school account, **sign in** with that account and 
 
 After you sign up for a new subscription, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
 
-After completing the sign-up process you are directed to the Microsoft 365 admin center, used to add users and assign them licenses. If you only have cloud-based accounts using your default onmicrosoft.com domain name, then you can go ahead and add users and assign licenses at this point. However, if you plan to use your organization's [custom domain name](custom-domain-name-configure.md) or [synchronize user account information](users-add.md#sync-active-directory-and-add-users-to-intune) from on-premises Active Directory, then you can close that browser window.
+After completing the sign-up process you are directed to the Microsoft 365 admin center to add users and assign them licenses. If you only have cloud-based accounts using your default onmicrosoft.com domain name, then you can go ahead and add users and assign licenses at this point. However, if you plan to use your organization's [custom domain name](custom-domain-name-configure.md) or [synchronize user account information](users-add.md#sync-active-directory-and-add-users-to-intune) from on-premises Active Directory, then you can close that browser window.
 
 ## Sign in to Microsoft Intune
 
@@ -65,7 +65,7 @@ By default, your account must have one of the following permissions in Azure AD:
 - Global Administrator
 - Intune Service Administrator (also known as Intune Administrator)
 
-To grant access to administer the service for users with other permissions, then See [Role Based Access Control](role-based-access-control.md)
+To grant access to administer the service for users with other permissions, see [Role Based Access Control](role-based-access-control.md)
 
 ### Intune Admin portal URL
 
