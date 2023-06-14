@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Manually sync your Windows device | Microsoft Docs
-description: Sync your Windows devices using the Company Portal app, the Start menu, the task bar, or the Settings app.
+title: Sync enrolled device for Windows | Microsoft Docs
+description: Sync your enrolled device using the Company Portal app, the Start menu, the task bar, or the Settings app.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -36,13 +36,13 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-Syncing forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, you can manually sync to get any updates you missed when you return.   
+Sync the enrolled device you're using for work to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, you can manually sync the device when you return to get any updates you missed. 
  
 Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
 You can start a sync from the Company Portal app, desktop taskbar or Start menu, and from the device Settings app. Company Portal app functionality is supported on Windows 10 devices running the Creator's Update (1703) or later, and Windows 11.  
 
-All Windows devices can be synced from the device Settings app.  
+All devices running Windows can be synced from the Settings app.  
 
 ## Sync from Company Portal app for Windows
 Complete these steps to sync your Windows 10/11 device.  
@@ -64,40 +64,26 @@ You can also access the sync control outside of the app, from your device's desk
 
     ![Screenshot of the Windows taskbar on a device's desktop. Company Portal app icon was selected and shows a menu with options "Pin to taskbar," "Close window," and "Sync this device" action.](./media/sync-device-from-start-menu-1807.png)  
 
-3. Select **Sync this device**. The Company Portal app opens to the **Settings** page and initiates your sync.  
+3. Select **Sync this device**. The **Settings** page opens in the Company Portal app and the sync begins.  
 
-## Sync from Settings app 
-Complete these steps to manually sync your Microsoft HoloLens and Windows 10 desktop devices from the Settings app.  
+## Sync from Settings app  
+Complete these steps to manually sync devices from the system Settings app.  
 
-### Windows 10 desktop  
+### Windows 10   
+Sync devices running Windows 10 or later.   
 1. On your device, select **Start** > **Settings**.
 
-2. Select **Accounts**.
+2. Select **Accounts**.  
 
-    ![Choosing Accounts on the Settings page](./media/win10pc-sync-2-settings-accounts.png)  
+3. Select the option that matches your onscreen experience.  
 
-3. Multiple versions of Windows 10 exist for desktops. Compare your screen to the screenshots below to determine which set of steps to follow. 
+    * If your screen shows the **Access work or school** option, go to [Access work or school](#access-work-or-school-steps) in this article.  
 
-    * If your screen reads **Access work or school**, skip to the steps in [Access work or school](#access-work-or-school-steps).
+     ![Example image of Settings app > Account settings highlighting the Access work or school option with a red rectangle.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-    ![Access work or school option in settings app](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+    * If your screen shows the **Work access** option, go to [Work access steps](#work-access-steps) in this article.  
 
-    * If your screen reads **Work access**, skip to the steps under [Work access](#work-access-steps).  
-
-    ![Choosing work access as the account type](./media/win10pc-sync-3-work-access.png)
-
-### Microsoft HoloLens  
-These instructions apply to HoloLens devices running the Windows 10 Anniversary Update (also known as RS1).  
-
-1. Open the Settings app on your device.  
-
-2. Select **Accounts** > **Work Access**.  
-
-    ![Screenshot HoloLens settings app, accounts link highlighted](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
-
-3. Select your connected account > **Sync**.  
-
-    ![Screenshot HoloLens settings app, sync button highlighted](./media/RS1_holoLens_SyncRS1_Sync_08.png)   
+     ![Example image of Settings app > Account settings highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
 
 #### Access work or school steps  
 
@@ -126,6 +112,20 @@ These instructions apply to HoloLens devices running the Windows 10 Anniversary 
 3. Select **Sync**. The button remains disabled until the sync is complete.
 
     ![Choosing the Sync button](./media/win10pc-sync-5-tap-sync.png)  
+
+### Microsoft HoloLens  
+Sync HoloLens devices running the Windows 10 Anniversary Update (also known as RS1) or later.  
+
+1. Open the Settings app on your device.  
+
+2. Select **Accounts**. 
+
+    ![Screenshot HoloLens settings app, accounts link highlighted](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
+3. Select **Work Access**.  
+
+3. Find your connected account, and then select **Sync**.  
+
+    ![Screenshot HoloLens settings app, sync button highlighted](./media/RS1_holoLens_SyncRS1_Sync_08.png)   
     
 ## Next steps  
 

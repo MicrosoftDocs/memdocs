@@ -1,5 +1,15 @@
 {
     "redirections": [
+        {
+            "source_path": "memdocs/intune/user-help/set-or-change-your-passcode-ios.md",
+            "redirect_url": "/mem/intune/user-help/password-does-not-meet-it-administrator-requirements",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/set-your-pin-or-password-android.md",
+            "redirect_url": "/mem/intune/user-help/password-does-not-meet-it-administrator-requirements",
+            "redirect_document_id": false
+        }, 
         { 
            "source_path": "memdocs/intune/enrollment/ios-user-enrollment.md",
            "redirect_url": "/mem/intune/enrollment/apple-user-enrollment-with-company-portal",

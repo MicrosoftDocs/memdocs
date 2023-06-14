@@ -77,9 +77,7 @@ items:
     - name: Encrypt your device
       href: encrypt-your-device-android.md
     - name: Fix encryption problems
-      href: your-device-appears-encrypted-but-cp-says-otherwise-android.md
-    - name: Set your PIN or password
-      href: set-your-pin-or-password-android.md
+      href: your-device-appears-encrypted-but-cp-says-otherwise-android.md  
     - name: Set lock time
       href: set-the-amount-of-time-before-your-device-is-locked-android.md
     - name: Install VPN
@@ -162,8 +160,6 @@ items:
       href: enroll-your-device-with-telecom-expense-management-ios.md
   - name: Update device settings
     items:
-    - name: Set or change your passcode
-      href: set-or-change-your-passcode-ios.md
     - name: Reconnect a compromised iOS device
       href: how-to-reconnect-a-compromised-ios-device.md
     - name: An existing company email account was found
