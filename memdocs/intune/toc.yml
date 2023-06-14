@@ -449,7 +449,7 @@ items:
                 - name: Data protection framework using app protection policies
                   href: ./apps/app-protection-framework.md
                 - name: Data protection for Windows MAM
-                  href: ./apps/protect-edge-mam-windows.md                  
+                  href: ./apps/protect-edge-mam-windows.md                   
                 - name: Create app protection policies
                   items:
                   - name: General settings
