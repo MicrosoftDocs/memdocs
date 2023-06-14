@@ -88,7 +88,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 
 Intune app protection policies platform support aligns with Office mobile application platform support for Android and iOS/iPadOS devices. For details, see the **Mobile apps** section of [Office System Requirements](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg). 
 
-In addition, you can create app protection policies for Windows devices. For details, see [App protection experience for Windows devices]().
+Preview: In addition, you can create app protection policies for Windows devices. For details, see [App protection experience for Windows devices]().
 
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies on Android.  
@@ -416,16 +416,13 @@ Google Play Protect's SafetyNet API checks require the end user being online, at
 
 The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **SafetyNet device attestation**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services.
 
-## App protection experience for Windows devices
+## Preview: App protection experience for Windows devices
 
-There are two categories of policy settings: *Data protection* and *Health Checks*. The term ***policy-managed app*** refers to Microsoft Edge, which can be configured using app protection policies.
-
-> [!IMPORTANT]
-> Use [Microsoft Edge](../apps/manage-microsoft-edge.md) for your protected Intune browser experience.
+There are two categories of policy settings: *Data protection* and *Health Checks*. The term ***policy-managed app*** refers to apps that are configured with app protection policies.
 
 ### Data protection
 
-For Microsoft Edge, the **Data protection** settings will be enforced by the application. The **Data protection** settings impact the org data and context. As the admin, you can control the movement of data into and out of the context of org protection. The org context is defined by documents, services, and sites accessed by the specified org account. The following policy settings help control external data received into the org context and org data sent out of the org context. For more information, see [Data protection for Windows MAM](../apps/protect-edge-mam-windows.md).
+The **Data protection** settings impact the org data and context. As the admin, you can control the movement of data into and out of the context of org protection. The org context is defined by documents, services, and sites accessed by the specified org account. The following policy settings help control external data received into the org context and org data sent out of the org context. For more information, see [Data protection for Windows MAM](../apps/protect-edge-mam-windows.md).
 
 ### Health Checks
 
