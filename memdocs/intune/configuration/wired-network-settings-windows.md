@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 06/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,7 +46,7 @@ This article describes the settings you can configure.
 
 ## Wired Network
 
-- **Authentication mode**: Select how the profile authenticates with the network. If you’re using certificate authentication, make sure the certificate type matches the authentication type.
+- **Authentication mode**: Select how the profile authenticates with the network. If you're using certificate authentication, make sure the certificate type matches the authentication type.
 
   Your options:
 
@@ -86,7 +86,7 @@ This article describes the settings you can configure.
   - **EAP-TLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window shown on user devices when they connect to this network.
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server. This certificate authenticates the connection.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
     - **Client Authentication** - **Authentication method**: Select the authentication method used by your device clients. Your options:
       - **SCEP certificate**: Select an existing SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
       - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
@@ -99,7 +99,7 @@ This article describes the settings you can configure.
   - **EAP-TTLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.
-    - **Root certificates for server validation**: Select an existing trusted root certificate profile used to authenticate the network connection.
+    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
     - **Client Authentication** - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the network connection. Also enter:
@@ -129,7 +129,7 @@ This article describes the settings you can configure.
 
     - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.  
 
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile used to authenticate the network connection.  
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.  
 
     - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -200,4 +200,5 @@ The profile is created, but it may not be doing anything. Be sure to [assign thi
 [Wired network settings for macOS devices](wired-network-settings-macos.md)
 
 ## Additional resources
+
 [Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)
