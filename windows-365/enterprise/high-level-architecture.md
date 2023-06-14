@@ -32,6 +32,6 @@ ms.collection:
 
 # High-level architecture for Windows 365
 
-This reference architecture shows options for integrating Microsoft Intune in your Azure environment with Azure Active Directory.  
+This reference shows the high-level architecture for Windows 365.
 
 :::image type="content" source="media/high-level-architecture/architecture-diagram.png" alt-text="High-level architectural diagram for Windows 365"  lightbox="media/high-level-architecture/architecture-diagram.png" :::
