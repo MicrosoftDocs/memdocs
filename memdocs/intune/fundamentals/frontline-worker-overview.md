@@ -66,23 +66,29 @@ For example, devices that are used for augmented or virtual reality typically do
 
 **Android Enterprise vs. AOSP**:
 
-- **Android Enterprise** enrollment devices require and support [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). These devices are also used in countries/regions that allow GMS.
+# [Android Enterprise](#tab/ae)
 
-  ✔️ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
+**Android Enterprise** enrollment devices require and support [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). These devices are also used in countries/regions that allow GMS.
 
-  ❌ If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment isn't supported. Instead, look into AOSP enrollment.
+✔️ If the device is GMS enabled and is in the [Android Enterprise recommended list](https://www.android.com/enterprise/recommended/) (opens Android's web site), then use Android Enterprise enrollment.
 
-- **AOSP** enrollment devices don't offer or include Google Mobile Services (GMS). These devices:
+❌ If these devices are used in a country/region that blocks GMS, then Android Enterprise enrollment isn't supported. Instead, look into AOSP enrollment.
 
-  - Can be specialty devices, such as augmented or virtual reality devices.
-  - Don't support GMS.
-  - Are used in countries that block GMS.
+# [AOSP](#tab/aosp)
 
-  ✔️ If your devices meet these criteria, then use AOSP enrollment. Make sure your devices are supported for AOSP management with Intune. For a list of supported devices, go to [Supported operating systems and browsers in Intune - Android](supported-devices-browsers.md#android).
+**AOSP** enrollment devices don't offer or include Google Mobile Services (GMS). These devices:
 
-  ❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
+- Can be specialty devices, such as augmented or virtual reality devices.
+- Don't support GMS.
+- Are used in countries that block GMS.
 
-  To learn more about AOSP, go to [About the Android Open Source Project](https://source.android.com/) (opens Android's web site).
+✔️ If your devices meet these criteria, then use AOSP enrollment. Make sure your devices are supported for AOSP management with Intune. For a list of supported devices, go to [Supported operating systems and browsers in Intune - Android](supported-devices-browsers.md#android).
+
+❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
+
+To learn more about AOSP, go to [About the Android Open Source Project](https://source.android.com/) (opens Android's web site).
+
+---
 
 > [!NOTE]
 > For Android device administrator (DA), Google is deprecating and reducing features. If possible, it's recommended that you move to Android Enterprise or AOSP.
@@ -144,11 +150,11 @@ The following scenarios describe some commonly used scenarios:
 
         This scenario configures the MHS using the device configuration policy settings you enter. For this scenario, don't configure the MHS using an app policy.
 
-        :::image type="content" source="./media/frontline-worker-overview/android-dedicated-device-kiosk-multi-app.png" alt-text="Screenshot that shows the dedicated device, kiosk mode, and multi app settings you select in a device configuration profile in Microsoft Intune.":::
+        :::image type="content" source="./media/frontline-worker-overview/android-dedicated-device-kiosk-multi-app.png" alt-text="Screenshot that shows the dedicated device, kiosk mode, and multi app settings you select in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-dedicated-device-kiosk-multi-app.png":::
 
       - If you use **Fully managed** enrollment, then use the **Device experience** > **Fully managed** settings:
 
-        :::image type="content" source="./media/frontline-worker-overview/android-fully-managed-kiosk.png" alt-text="Screenshot that shows the fully managed device settings you select in a device configuration profile in Microsoft Intune.":::
+        :::image type="content" source="./media/frontline-worker-overview/android-fully-managed-kiosk.png" alt-text="Screenshot that shows the fully managed device settings you select in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-fully-managed-kiosk.png":::
 
 - **Scenario 2: Locked screen device with pinned apps**
 
@@ -189,7 +195,7 @@ The following scenarios describe some commonly used scenarios:
   1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the app is added, you create an app policy that deploys the app to the devices.
   2. Create a device configuration restrictions policy that [allows or restricts features using Intune](../configuration/device-restrictions-android-for-work.md). Use the **Device experience** > **Dedicated device** > **Kiosk mode** settings:
 
-      :::image type="content" source="./media/frontline-worker-overview/android-dedicated-device-kiosk-single-app.png" alt-text="Screenshot that shows the dedicated device, kiosk mode, and single app settings you select in a device configuration profile in Microsoft Intune.":::
+      :::image type="content" source="./media/frontline-worker-overview/android-dedicated-device-kiosk-single-app.png" alt-text="Screenshot that shows the dedicated device, kiosk mode, and single app settings you select in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-dedicated-device-kiosk-single-app.png":::
 
 ### Azure AD shared device mode for Android Enterprise dedicated devices
 
@@ -347,19 +353,25 @@ The first step is to determine the enrollment platform that's best for your orga
 
 ?? Are there other enrollment options for FLW? What enrollment option is available for orgs that don't have Azure AD Premium? GPO? ??
 
-- **Windows Autopilot** is the recommended option for FLW devices. You can ship the devices directly to the location without ever touching the devices. With self-deploying mode, users just turn on the device, and the enrollment automatically starts.
+# [Windows Autopilot](#tab/autopilot)
 
-  ✔️ If you have Azure AD Premium and you're getting new devices from an OEM, then use Windows Autopilot. You can use the Windows OEM version preinstalled on the devices to automatically enroll the devices. Other than turning on the device, no other end user interaction is required.
+**Windows Autopilot** is the recommended option for FLW devices. You can ship the devices directly to the location without ever touching the devices. With self-deploying mode, users just turn on the device, and the enrollment automatically starts.
 
-  ?? Existing devices ??
+✔️ If you have Azure AD Premium and you're getting new devices from an OEM, then use Windows Autopilot. You can use the Windows OEM version preinstalled on the devices to automatically enroll the devices. Other than turning on the device, no other end user interaction is required.
 
-  ❌ Windows Autopilot requires Azure AD Premium.
+?? Existing devices ??
 
-- **Windows automatic enrollment** requires someone to sign in with their Azure AD organization account during the out-of-box experience (OOBE). When they do, the enrollment starts. ?? If the devices are local and need to be sent to another location, then an admin or end user with elevated permissions at that location can sign in. ??
+❌ Windows Autopilot requires Azure AD Premium.
 
-  ✔️ If you have Azure AD Premium, and have new or existing devices, then Windows automatic enrollment is an option. For new devices purchased from an OEM, it's recommended to use **Windows Autopilot**.
+# [Windows automatic enrollment](#tab/automatic)
 
-  ❌ Windows automatic enrollment requires Azure AD Premium.
+**Windows automatic enrollment** requires someone to sign in with their Azure AD organization account during the out-of-box experience (OOBE). When they do, the enrollment starts. ?? If the devices are local and need to be sent to another location, then an admin or end user with elevated permissions at that location can sign in. ??
+
+✔️ If you have Azure AD Premium, and have new or existing devices, then Windows automatic enrollment is an option. For new devices purchased from an OEM, it's recommended to use **Windows Autopilot**.
+
+❌ Windows automatic enrollment requires Azure AD Premium.
+
+---
 
 > [!NOTE]
 > There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
@@ -406,7 +418,7 @@ The following scenarios describe some commonly used scenarios:
   To get started, use the following links:
 
   1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration restrictions policy that [allows or restricts features using Intune](../configuration/device-restrictions-windows-10). There are hundreds of settings available for you to configure.
+  2. Create a device configuration restrictions policy that [allows or restricts features using Intune](../configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure.
 
       :::image type="content" source="./media/frontline-worker-overview/windows-device-restrictions.png" alt-text="Screenshot that shows the device restrictions settings for Windows devices in Microsoft Intune.":::
 
@@ -429,7 +441,7 @@ The following scenarios describe some commonly used scenarios:
   1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
   2. Create a [kiosk profile](../configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../configuration/kiosk-settings.md):
 
-      :::image type="content" source="./media/frontline-worker-overview/windows-kiosk-single-app.png" alt-text="Screenshot that shows the kiosk device configuration profile settings for Windows devices in Microsoft Intune.":::
+      :::image type="content" source="./media/frontline-worker-overview/windows-kiosk-single-app.png" alt-text="Screenshot that shows the kiosk device configuration profile settings for Windows devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/windows-kiosk-single-app.png":::
 ::: zone-end
 
 ## Other MSFT services that do FLW
