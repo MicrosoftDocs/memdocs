@@ -77,11 +77,11 @@ Sync devices running Windows 10 or later.
 
 3. Select the option that matches your onscreen experience.  
 
-    * If your screen shows the **Access work or school** option, go to [Access work or school](#access-work-or-school-steps) in this article.  
+    * If your screen shows the **Access work or school** option, jump to [Access work or school steps](#access-work-or-school-steps) in this article.  
 
       ![Example image of Settings app > Account settings highlighting the Access work or school option with a red rectangle.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-    * If your screen shows the **Work access** option, go to [Work access steps](#work-access-steps) in this article.  
+    * If your screen shows the **Work access** option, jump to [Work access steps](#work-access-steps) in this article.  
 
       ![Example image of Settings app > Account settings highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
 
@@ -91,7 +91,7 @@ Sync devices running Windows 10 or later.
 
     ![Screenshot showing Access work or school option](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-2. Select the account that has a briefcase icon next to it. If you don't see this account at all, your company may have configured your settings a different way. Instead, select the account that has a Microsoft logo next to it.
+2. Select your work account, which shows the email address associated with your work account, and a briefcase icon or Microsoft logo. 
 
      ![Choose your account name next to the briefcase or Microsoft logo](./media/win10pc-rs1-sync-info-button.png)
 
@@ -101,32 +101,19 @@ Sync devices running Windows 10 or later.
 
 #### Work access steps
 
-1. Select **Work access**.
-
-    ![Choosing work access as the account type](./media/win10pc-sync-3-work-access.png)
-
-2. Under **Enroll in to device management**, select the name of your company.
-
-    ![Choosing the company name for device management](./media/win10pc-sync-4-tap-com-name.png)
-
-3. Select **Sync**. The button remains disabled until the sync is complete.
-
-    ![Choosing the Sync button](./media/win10pc-sync-5-tap-sync.png)  
+1. Select **Work access**.  
+2. Under **Enroll in to device management**, select the account that's associated with your workplace.  
+3. Choose **Sync**. The button remains inactive until the sync is complete.  
 
 ### Microsoft HoloLens  
 Sync HoloLens devices running the Windows 10 Anniversary Update (also known as RS1) or later.  
 
 1. Open the Settings app on your device.  
 
-2. Select **Accounts**. 
-
-    ![Screenshot HoloLens settings app, accounts link highlighted](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
+2. Select **Accounts**.  
 3. Select **Work Access**.  
+4. Find your connected account, and then select **Sync**.  
 
-3. Find your connected account, and then select **Sync**.  
-
-    ![Screenshot HoloLens settings app, sync button highlighted](./media/RS1_holoLens_SyncRS1_Sync_08.png)   
-    
 ## Next steps  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
