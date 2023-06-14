@@ -25,11 +25,7 @@ In the context of userless iOS/iPadOS devices, there is a difference between *su
 
 - Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
-- Android open source project devices (AOSP) supported devices
-  - RealWear devices (Firmware 11.2 or later)
-  - HTC Vive Focus 3 (Firmware: FOTA 5.2 - 3.0.999.624)
-  - Meta Quest 2 (Open Beta - US Only)
-  - Meta Quest Pro (Open Beta - US Only)
+- Android open source project devices (AOSP) supported devices :[requirements](..\fundamentals\android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux

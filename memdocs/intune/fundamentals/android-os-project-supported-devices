@@ -3,7 +3,7 @@
 
 title: Android Open Source Project Supported Devices
 titleSuffix: 
-description: Lists Android open source project supported devices
+description: Lists Android open source project devices (AOSP) supported devices
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -36,6 +36,7 @@ ms.collection:
 Before setting up Microsoft Intune for Android Open Source Project devices, ensure you are using a supported device. 
 
 ## Intune for Android Open Source Supported Devices
+
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |
 | HTC     | HTC Vive Focus 3   | 5.2 - 3.0.999.624    | AR/VR Headset  |                    |
@@ -47,3 +48,4 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 | Realwear| HMT-1              | 11.2                | AR/VR Headset  |                    |
 | Realwear| HMT-1Z1            | 11.2                | AR/VR Headset  |                    |
 | Realwear| Navigator500       | 11.2                | AR/VR Headset  |                    |
+
