@@ -21,7 +21,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-zone_pivot_groups: os-platforms
+zone_pivot_groups: flw-platforms
 ---
 
 # Frontline worker device management for Android, iPadOS, and Windows devices in Microsoft Intune
@@ -38,7 +38,7 @@ Frontline workers rely on process and/or devices to enable their productivity, l
 
 This article provides guidance on managing and configuring frontline worker (FLW) devices using Intune.
 
-::: zone pivot="android"
+::: zone pivot="all,android"
 ## Android
 
 Android devices are in almost every industry across the globe, including healthcare, aviation, construction, manufacturing, logistics, and government. They're commonly used by frontline workers in these industries.
@@ -213,7 +213,7 @@ Azure AD SDM is a feature of Azure AD. It's not an Intune feature. For more info
 - [Intune supports sign out for apps not optimized with Azure AD shared device mode on AE 9+ - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/endpoint-manager-supports-sign-out-for-apps-not-optimized-with/ba-p/3034398) blog post
 ::: zone-end
 
-::: zone pivot="ipados"
+::: zone pivot="all,ios-ipados"
 ## iOS/iPadOS
 
 iPad devices are a popular device type for frontline workers (FLW). iPads are used in different scenarios and industries, including in field operations, healthcare, aviation, warehouse, data entry, digital forms, and presentations.
@@ -321,20 +321,20 @@ For a list of all the device configuration settings, go to:
 - [iOS and iPadOS device settings to allow or restrict features](../configuration/device-restrictions-ios.md)
 ::: zone-end
 
-::: zone pivot="windows"
+::: zone pivot="all,windows"
 ## Windows
 
 Windows has different devices and cloud services that can be used for frontline workers. They're also used globally and in many industries.
 
-You can use physical Windows devices or use Windows 365 cloud PCs.
+You can use physical Windows devices or use Windows 365 Cloud PCs.
 
-**Windows 365 cloud PCs** are virtual machines that are hosted in the Windows 365 service, and are accessible from anywhere & from any device. They include a Windows desktop experience and are associated with a user. Basically, end users have their own PC in the cloud.
+**Windows 365 Cloud PCs** are virtual machines that are hosted in the Windows 365 service, and are accessible from anywhere & from any device. They include a Windows desktop experience and are associated with a user. Basically, end users have their own PC in the cloud.
 
-✔️ These devices are ideal for frontline workers that need a Windows desktop experience, but don't need a physical device. For example, a call center worker that needs access to a Windows desktop app.
+✔️ Windows 365 Cloud PCs are ideal for frontline workers that need a Windows desktop experience, but don't need a physical device. For example, a call center worker that needs access to a Windows desktop app.
 
 These devices enroll in Intune, and are managed like any other device, including configuration, apps, and updates.
 
-For more information on Windows 365 cloud PCs, and to get started, go to:
+For more information on Windows 365 Cloud PCs, and to get started, go to:
 
 - [Windows 365 Cloud PCs overview - Enterprise](/windows-365/enterprise/overview)
 - [Windows 365 Cloud PCs overview - Small & medium business](/windows-365/business/get-started-windows-365-business)
@@ -383,15 +383,15 @@ These features are configured using device configuration profiles. When the prof
 
 - **User associated device**
 
-  These devices have one user. This user associates the device with themselves, which typically happens when the user signs in during the Intune enrollment. The device is associated with the user's identity in Azure AD.
+  These devices have one user. This user associates the device with themselves, which happens when the user signs in during the Intune enrollment. The device is associated with the user's identity in Azure AD.
 
-  These devices are used in FLW scenarios where the device is only used by that user. Some examples include personal computers for support staff, developer laptops, design computers for architects and graphic artists, and work-from-home setups.
+  These devices are used in FLW scenarios where the device is only used by that user. Some examples include personal computers for support staff, developer laptops, design computers for architects & graphic artists, and work-from-home setups.
 
 ### Step 3 - Device experience and kiosk (Windows)
 
 On Windows devices, you can configure the home screen and device experience. In this step, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
-Some examples of kiosk include self-service terminals in airports, retail stores, government offices, and other public spaces. These devices allow users to do specific tasks, like checking in for flights, accessing information, or completing transactions.
+Some examples of kiosks include self-service terminals in airports, retail stores, government offices, and other public spaces. These devices allow users to do specific tasks, like checking in for flights, accessing information, or completing transactions.
 
 These features are configured using device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment.
 
@@ -406,24 +406,23 @@ The following scenarios describe some commonly used scenarios:
   To get started, use the following links:
 
   1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration restrictions policy that [allows or restricts features on corporate-owned devices using Intune](../configuration/device-restrictions-windows-10). There are hundreds of settings available for you to configure.
+  2. Create a device configuration restrictions policy that [allows or restricts features using Intune](../configuration/device-restrictions-windows-10). There are hundreds of settings available for you to configure.
 
       :::image type="content" source="./media/frontline-worker-overview/windows-device-restrictions.png" alt-text="Screenshot that shows the device restrictions settings for Windows devices in Microsoft Intune.":::
 
 - **Scenario 2: Kiosk with one app or many apps**
 
-  For this scenario, you configure the device as a kiosk, which allows you to customize the device experience. For example, you can use the device in a lobby so customers can see your product catalog. Or, use the device to show visual content as a digital sign. For more information, go to [Configure kiosks and digital signs on Windows desktop editions](/windows/configuration/kiosk-methods) (opens another Microsoft web site).
+  For this scenario, you configure the device as a kiosk, which allows you to customize the device experience.
 
-  You can pin one app or many apps, select a wallpaper, set icon positions, and more. This scenario is often used for dedicated devices, such as shared devices. You can create a Shared PC profile and configure it be a kiosk using the kiosk settings.
+  For example, you can use the device in a lobby so customers can see your product catalog. Or, use the device to show visual content as a digital sign. For more information, go to [Configure kiosks and digital signs on Windows desktop editions](/windows/configuration/kiosk-methods) (opens another Microsoft web site).
+
+  You can pin one app or many apps, select a wallpaper, set icon positions, and more. This scenario is often used for dedicated devices, such as shared devices. You can create a Shared PC profile and configure it be a kiosk using the kiosk settings in Intune.
 
   **What you need to know**:
 
   - Only features added to the kiosk are available to end users. So, you can restrict end users from accessing settings and other device features.
   - When you pin one app or pin many apps to the kiosk, only those apps open. They're the only apps users can access.
-  - A single app is assigned to the device. When the device starts, only this app opens. Users are locked to the single app and can't close the app, or do anything else on the devices. This scenario is used on devices dedicated to a specific use, like scanning inventory.
-
-    - This option is more restrictive and doesn't allow admins to troubleshoot the devices.
-    - An enterprise launcher isn't used.
+  - A single app is assigned to the device. When the device starts, only this app opens. Users are locked to the single app and can't close the app, or do anything else on the devices. This scenario is used on devices dedicated to a specific use, like airport terminals.
 
   To get started, use the following links:
 

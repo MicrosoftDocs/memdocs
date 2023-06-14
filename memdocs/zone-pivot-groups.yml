@@ -33,9 +33,18 @@ groups:
       title: April 2020
     - id: atp-march-2020
       title: March 2020
-
-- id: os-platforms
-  title: OS platforms
+- id: apple-enterprise-sso
+  title: Enterprise single sign-on platform
+  prompt: Select your platform
+  pivots:
+    - id: all
+      title: All platforms
+    - id: ios-ipados
+      title: iOS/iPadOS
+    - id: macos
+      title: macOS
+- id: flw-platforms
+  title: FLW OS platform
   prompt: Select your platform
   pivots:
     - id: all
@@ -44,9 +53,5 @@ groups:
       title: Android
     - id: ios-ipados
       title: iOS/iPadOS
-    - id: ipados
-      title: iPadOS
-    - id: macos
-      title: macOS
     - id: windows
       title: Windows

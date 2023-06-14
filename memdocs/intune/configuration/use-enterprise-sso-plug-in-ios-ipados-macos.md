@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-zone_pivot_groups: os-platforms
+zone_pivot_groups: apple-enterprise-sso
 ---
 
 # Deploy the Microsoft Enterprise SSO plug-in for Apple Devices
