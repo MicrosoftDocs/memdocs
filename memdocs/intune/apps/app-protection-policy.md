@@ -395,7 +395,7 @@ Intune App Protection Policies provide the capability for admins to require end-
 
 ### Google's Play Integrity API
 
-Intune leverages Google Play Protect Play Integrity APIs to add to our existing root detection checks for unenrolled devices. Google has developed and maintained this API set for Android apps to adopt if they do not want their apps to run on rooted devices. The Android Pay app has incorporated this, for example. While Google does not share publicly the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices. These users can then be blocked from accessing, or their corporate accounts wiped from their policy enabled apps. **Check basic integrity** tells you about the general integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity. **Check basic integrity & certified devices** tells you about the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. Devices that will fail include the following:
+Intune leverages Google's Play Integrity APIs to add to our existing root detection checks for unenrolled devices. Google has developed and maintained this API set for Android apps to adopt if they do not want their apps to run on rooted devices. The Android Pay app has incorporated this, for example. While Google does not share publicly the entirety of the root detection checks that occur, we expect these APIs to detect users who have rooted their devices. These users can then be blocked from accessing, or their corporate accounts wiped from their policy enabled apps. **Check basic integrity** tells you about the general integrity of the device. Rooted devices, emulators, virtual devices, and devices with signs of tampering fail basic integrity. **Check basic integrity & certified devices** tells you about the compatibility of the device with Google's services. Only unmodified devices that have been certified by Google can pass this check. Devices that will fail include the following:
 
 - Devices that fail basic integrity
 - Devices with an unlocked bootloader
@@ -406,13 +406,13 @@ Intune leverages Google Play Protect Play Integrity APIs to add to our existing 
 
 See Google's documentation on [Google's Play Integrity API](https://developer.android.com/google/play/integrity) for technical details.
 
-### Google Play’s device integrity check setting and the 'jailbroken/rooted devices' setting
+### Play integrity verdict setting and the 'jailbroken/rooted devices' setting
 
-Google Play’s device integrity checks require the end user being online, atleast for the duration of the time when the "roundtrip" for determining attestation results executes. If end user is offline, IT admin can still expect a result to be enforced from the **jailbroken/rooted devices** setting. That being said, if the end user has been offline too long, the **Offline grace period** value comes into play, and all access to work or school data is blocked once that timer value is reached, until network access is available. Turning on both settings allows for a layered approach to keeping end-user devices healthy which is important when end-users access work or school data on mobile.
+Play integrity verdict requires the end user to be online, at least for the duration of the time when the "roundtrip" for determining attestation results executes. If end user is offline, IT admin can still expect a result to be enforced from the **jailbroken/rooted devices** setting. That being said, if the end user has been offline too long, the **Offline grace period** value comes into play, and all access to work or school data is blocked once that timer value is reached, until network access is available. Turning on both settings allows for a layered approach to keeping end-user devices healthy which is important when end-users access work or school data on mobile.
 
 ### Google Play Protect APIs and Google Play Services
 
-The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **Google Play’s device integrity check**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services.
+The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **Play integrity verdict**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services.
 
 ## Next steps
 

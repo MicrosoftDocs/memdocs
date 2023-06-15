@@ -93,7 +93,7 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 > [!IMPORTANT]
 > Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
-- **Google Play’s device integrity check**  
+- **Play integrity verdict**  
   Enter the level of Google's [Play Integrity](https://developer.android.com/google/play/integrity) that must be met. Your options:
 
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
