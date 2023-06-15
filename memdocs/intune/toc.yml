@@ -420,7 +420,7 @@ items:
                   href: ./apps/company-portal-app.md
                 - name: Configure Microsoft Launcher
                   href: ./apps/configure-microsoft-launcher.md
-                - name: Configure Microsoft Edge
+                - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
@@ -463,6 +463,8 @@ items:
                     href: ./apps/app-protection-policy-settings-android.md
                   - name: iOS settings
                     href: ./apps/app-protection-policy-settings-ios.md
+                  - name: Windows settings
+                    href: ./apps/app-protection-policy-settings-windows.md                    
                   - name: Conditional launch
                     href: ./apps/app-protection-policies-access-actions.md
                   - name: Data transfer exceptions
