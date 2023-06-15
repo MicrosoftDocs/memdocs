@@ -53,7 +53,7 @@ If you select the most common application format (Win32), you must encapsulate t
 
 ### .MSI  
 
-MSI format installers are supported by both the Line of Business and Windows app (win32) options within Intune. The latter is more enhanced for app dependencies.  
+Both the Line of Business and Windows app (win32) options within Intune support MSI format installers. The latter is more enhanced for app dependencies.  
 
 ### MSIX  
 
