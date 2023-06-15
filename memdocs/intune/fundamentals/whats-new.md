@@ -69,6 +69,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of June 12, 2023
 
+### Device management
+
+#### New Devices from HTC and Pico supported on Microsoft Intune for Android Open Source Devices<!-- 24271568 -->
+
+Microsoft Intune for Android open source project devices (AOSP) now supports the following devices:
+
+- HTC Vive XR Elite
+- Pico Neo 3 Pro
+- Pico 4
+
+For more information, go to:
+
+- [Operating systems and browsers supported by Microsoft Intune](../fundamentals/supported-devices-browsers.md)
+
+- [Android Open Source Project Supported Devices](../fundamentals/android-os-project-supported-devices.md)
+
+Applies to:
+
+- Microsoft Intune (AOSP)
+
 ### App management
 
 #### Microsoft Store for Business or Microsoft Store for Education<!-- 24250535 wndraft wnready -->
