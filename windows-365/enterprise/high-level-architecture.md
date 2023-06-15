@@ -34,4 +34,4 @@ ms.collection:
 
 This reference shows the high-level architecture for Windows 365.
 
-:::image type="content" source="media/high-level-architecture/architecture-diagram.png" alt-text="High-level architectural diagram for Windows 365"  lightbox="media/high-level-architecture/architecture-diagram.png" :::
+:::image type="content" source="media/high-level-architecture/architecture-diagram.png" alt-text="High-level architectural diagram for Windows 365."  lightbox="media/high-level-architecture/architecture-diagram.png" :::
