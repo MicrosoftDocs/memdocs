@@ -23,11 +23,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: esmich
+ms.reviewer: esmich
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser 
-ms.collection: 
+ms.collection:
+- tier3
 ---
 
 # Set a device passcode on iOS device  

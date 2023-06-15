@@ -2,14 +2,16 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 12/16/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to use the Configuration Manager console
@@ -195,6 +197,20 @@ The **Documentation** node in the **Community** workspace includes information a
 ### Troubleshooting connection errors
 
 The **Documentation** node has no explicit proxy configuration. It uses any OS-defined proxy in the **Internet Options** control panel applet. To retry after a connection error, refresh the **Documentation** node.
+
+## <a name="bkmk_dark"></a> Dark theme for the console
+<!--9070525-->
+*(Introduced in version 2203)*
+
+Starting in version 2203, the Configuration Manager console offers a dark theme. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme. As of version 2303, the main screen of the console and delete secondary site wizards adhere to the dark theme.  
+
+:::image type="content" source="./media/9070525-console-dark-theme.png" alt-text="Screenshot of the Configuration Manager using the dark theme for the console. The 'Switch console theme' option is displayed in the upper right corner of the image.":::
+
+### Known issue
+
+- Console restart is required on doing the theme switch, as the node navigation pane might not properly render when you move to a new workspace.
+- Currently, there are locations in the console that may not display the dark theme correctly. We are continuosly working to improve the dark theme. 
+
 
 ## Connect via Windows PowerShell
 

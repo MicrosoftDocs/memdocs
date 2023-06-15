@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,7 +18,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Deploying apps using Intune on the GCC High and DoD Environments 
@@ -26,7 +28,7 @@ ms.collection: M365-identity-device-management
 Microsoft Intune can be used by tenant administrators to distribute apps to their workforce. The workforce is the company employee, the users of the apps. There are many types of apps that can be deployed from Intune on GCC High or DoD environments. If an administrator needs to upload and distribute a Windows app intended for a GCC High or DoD audience that is custom-made, created by third-party vendors, or as an offline app downloaded from the [Microsoft Store for Business](https://businessstore.microsoft.com/store), the admin can choose to distribute it as a [line-of-business app](apps-add.md#app-types-in-microsoft-intune).  
 
 > [!NOTE]
-> For commercial environments, a tenant admin can sync their Microsoft Store for Business (MSFB) with Intune, however for GCC High and DoD environments, this service is not available. Admins in this situation must deploy an app by uploading directly to Intune. To get the oflline version of the desired app, an actual commercial account will have to be used to log in to MSFB to download the package, and this is currently the only work-around for GCC high and DOD environments.
+> For commercial environments, a tenant admin can sync their Microsoft Store for Business (MSFB) with Intune, however for GCC High and DoD environments, this service is not available. Admins in this situation must deploy an app by uploading directly to Intune. To get the offline version of the desired app, an actual commercial account will have to be used to log in to MSFB to download the package, and this is currently the only work-around for GCC high and DOD environments.
 
 ## Add line-of-business apps using Intune 
 

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 09/16/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -27,7 +27,8 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 # Install and share apps on your device  
@@ -41,39 +42,30 @@ Install apps on your device from the Company Portal app for Windows.
 ## Install apps
 
 1. Open the Company Portal app and sign in with your work or school account.  
-
-    ![The Company Portal app for Windows home page.](./media/RS1_AppDetailsPage_Installed_03.png)
 2. Find and install apps from any of the following sections of the Company Portal app:  
 
     * **Home**: Select from a list of your organization's featured apps.  
     * **Show all**: From the **Home page** > **Apps** section, click **Show all** to view all available apps.  
-    * **All apps**: Select this page in the navigation pane to see all available apps, including installed and featured. View, sort, and filter the apps. Search results are sorted automatically by relevancy.  
+    * **Apps**: Select this page in the navigation pane to see all available apps, including installed and featured. View, sort, and filter the apps. Search results are sorted automatically by relevancy.  
     * **App categories**: Select this page in the navigation pane to choose apps based on type or function. Apps are sorted under categories such as **Featured**, **Education**, and **Productivity**.  
     * **Search for apps**: A static search bar sits in the app's navigation pane. To find your available apps, search by app name or publisher.  
 
+   >[!NOTE]
+   >You can select and install multiple apps in bulk. From the **Apps** tab of the Company Portal for Windows, select the multi-select view button on the top right corner of the page. Then, select the checkbox next to each app and select the **Install Selected** button to start installation. All selected apps will install at the same time without requiring you to right-click each app or navigate to each app's page.
+
 3. Select an app.   
-4. On the apps details page, click **Install**. After installation is done, you'll see an **Installed** status.  
-
-    ![The Company Portal app for Windows, select app, App details page.](./media/RS1_AppDetailsPage_Installed_02.png)  
-    
-    ![The Company Portal app for Windows, app details page, "Installed" status showing after app is installed. Install button changes to read Reinstall.](./media/RS1_AppDetailsPage_Installed_01.png)    
-
+4. On the apps details page, click **Install**. After installation is done, the app status changes to **Installed**.  
 > [!IMPORTANT]
 > If a required app fails to install and your organization makes it available for you to manually install, select **Retry**. It could take up to ten minutes to see the updated status. If you select **Retry** again during this time and get an error, that's okay. Continue to wait the ten minutes for an updated status.   
 
 ## Share apps  
 Share and recommend apps to your work or school contacts. The following steps describe how to share a link directly from Company Portal.
 
-1. In Company Portal, right-click or press and hold on any app to open its [context menu](/windows/uwp/design/controls-and-patterns/menus).  
+1. In Company Portal, right-click or press and hold the app to open the [context menu](/windows/uwp/design/controls-and-patterns/menus).  
+2. Select **Share**.  
+3. Select a single contact or select another program, such as OneNote, to share the app link with a group of people. The recipient receives a link and a message to view the app's details. The link opens the Company Portal app details page. 
 
-    ![The Company Portal app for Windows, front page, showing a list of Apps and devices. The clickable "Share" context menu is visible on top of the example app's icon. ](./media/1808_ShareContext_CP_Windows.png)  
-
-2. Select **Share**.
-3. Choose from individual contacts or select another program, such as OneNote, to send to a group. If you don't see an app you want to use, select **Get apps in Store** to see other available apps.  
-
-    ![Image of the Company Portal app for Windows, Share apps pop-up page. highlighting contacts and apps. ](./media/1808_ShareApps_CP_Windows.png) 
-
-After you share, the recipient will receive a link and a message to view the app's details. The link opens the Company Portal **App details** page. 
+If you don't see an app you want to use, select **Get apps in Store** to see other available apps.  
 
 ## Optional and required apps
 Apps are assigned to you by your organization. Your organization will require you to have some apps and will make other apps optional. To find out which apps are required versus optional, go to **Installed apps** and look under the column **Required by your organization**.  

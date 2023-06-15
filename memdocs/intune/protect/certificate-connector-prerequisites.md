@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Prerequisites for the Certificate Connector for Microsoft Intune
@@ -56,7 +58,7 @@ Requirements for the computer where you install the connector software:
 
 Requirements for PKCS certificate templates:
 
-- Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to auto enroll the certificate.
+- Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to enroll the certificate.
 - The certificate templates must be added to the Certification Authority (CA).
 
 > [!NOTE]
@@ -151,6 +153,10 @@ To use SCEP with a Microsoft CA, you’ll need to add NDES to the server that ho
 - Member of the **IIS_IUSRS** group.
 
 For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../protect/certificates-scep-configure.md#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
+
+### Azure Active Directory User
+
+When configuring the connector, you'll need to use a user account that: is either a Global Admin or Intune Admin, has an Intune license assigned, and must be a synchronized account from your local Active Directory.
 
 ## Next steps
 

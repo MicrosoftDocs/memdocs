@@ -7,12 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
-ms.topic: conceptual
+ms.date: 06/14/2023
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.reviewer: tycast
 ms.technology:
 
 # optional metadata
@@ -20,11 +19,14 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for Windows 10/11 devices in Intune
@@ -70,7 +72,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WPA/WPA2-Personal**: A more secure option, and is commonly used for Wi-Fi connectivity. For more security, you can also enter a pre-shared key password or network key.
 
-    - **Pre-shared key** (PSK): Optional. Shown when you choose **WPA/WPA2-Personal** as the security type. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value. Enter a string between 8-64 characters. If your password or network key is 64 characters, enter hexadecimal characters.
+    - **Pre-shared key** (PSK): Optional. Shown when you choose **WPA/WPA2-Personal** as the security type. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value. Enter an ASCII string that is 8-63 characters long or use 64 hexadecimal characters.
 
       > [!IMPORTANT]
       > The PSK is the same for all devices you target the profile to. If the key is compromised, it can be used by any device to connect to the Wi-Fi network. Keep your PSKs secure to avoid unauthorized access.
@@ -148,7 +150,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **EAP-TLS**: Also enter:
 
     - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.
-    - **Root certificates for server validation**: Select the trusted root certificate profile used to authenticate the connection.
+    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **SCEP certificate**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
@@ -158,7 +160,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **EAP-TTLS**: Also enter:
 
     - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.
-    - **Root certificates for server validation**: Select the trusted root certificate profile used to authenticate the connection.
+    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
@@ -182,7 +184,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
     - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.  
 
-    - **Root certificate for server validation**: Select the trusted root certificate profile used to authenticate the connection.  
+    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.  
 
     - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
 
@@ -225,7 +227,8 @@ For any settings not available in Intune, you can export Wi-Fi settings from ano
 
 The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-## More resources
+[Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms
 
-- [Windows 8.1 Wi-Fi settings](wi-fi-settings-import-windows-8-1.md)
-- [Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms
+## Additional resources
+
+[Extensible Authentication Protocol (EAP) for network access](/windows-server/networking/technologies/extensible-authentication-protocol/network-access)

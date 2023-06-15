@@ -1,18 +1,18 @@
 ---
-title: "CheckDuplicateShareName Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use CheckDuplicateShareName class to determine if the specified share name has been used by another package.
+title: CheckDuplicateShareName Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 305f9dc9-acb0-415d-bc10-369a7f1c8e63
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CheckDuplicateShareName Method in Class SMS_Package
 The `CheckDuplicateShareName` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines if the specified share name has been used by another package.  

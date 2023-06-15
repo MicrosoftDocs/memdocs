@@ -1,18 +1,18 @@
 ---
-title: "SMS_TaskSequence_ReleaseStateStoreAction Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_ReleaseStateStoreAction Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents a task sequence action. It notifies the state migration point of completion of a capture or restore action.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 6b438f2e-3db0-4dd5-8267-87c58aa7d45b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence_ReleaseStateStoreAction Server WMI Class
 The `SMS_TaskSequence_ReleaseStateStoreAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that notifies the state migration point of completion of a capture or restore action.  

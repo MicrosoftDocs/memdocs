@@ -1,17 +1,17 @@
 ---
-title: "Configuration Manager Schedules"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configuration Manager Schedules
+description: The SMS_ScheduleToken WMI class is an abstract parent class for the SMS_ST_ schedule token classes that handle the scheduling of events with differing frequencies.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 030ee838-5a53-45d0-8fd0-d797743d7630
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Schedules
 In Configuration Manager, scheduling information is configured by using schedule tokens. The `SMS_ScheduleToken` Windows Management Instrumentation (WMI) class is an abstract parent class for the SMS_ST_ schedule token classes that handle the scheduling of events with differing frequencies such as daily, weekly, and monthly.  

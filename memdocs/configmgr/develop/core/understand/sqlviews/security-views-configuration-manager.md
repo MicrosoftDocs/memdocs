@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 29422d6c-2235-4365-a8b5-cde12b48d55b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Security views in Configuration Manager

@@ -2,14 +2,16 @@
 title: Create configuration baselines
 titleSuffix: Configuration Manager
 description: Create configuration baselines in Configuration Manager that you can deploy to a collection.
-ms.date: 01/10/2022
+ms.date: 03/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: mestew
-manager: dougeby
-ms.author: mstewart
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Create configuration baselines in Configuration Manager
 
@@ -81,10 +83,11 @@ You can add evaluation of custom configuration baselines as a compliance policy 
 
 To include custom configuration baselines as part of compliance policy assessment, do the following:
 
-- Create and deploy a compliance policy to a user collection with a rule to [**Include configured baselines in compliance policy assessment**](#bkmk_CA).
-- Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a device collection.
+- Create and deploy a compliance policy to a *user* collection with a rule to [**Include configured baselines in compliance policy assessment**](#bkmk_CA).
+- Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a *device* collection.
 
 > [!IMPORTANT]
+> - The configuration baseline must be deployed to a *device* collection. Baselines deployed to *user* collections aren't honored when these settings are used. <!--13139787,13783318 --> 
 > - When targeting devices that are co-managed, ensure you meet the [co-management prerequisites](../../comanage/overview.md#prerequisites). Co-managed clients ignore service windows for remediation when their compliance policies workload is managed by Intune. <!--12439085, 12412748-->
 > - For devices managed by Configuration Manager, the client honors the service window for compliance policy remediation. To ignore the service window and remediate immediately, select **Check compliance** in the **Software Center**. <!--12439085, 12412748-->
 

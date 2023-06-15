@@ -1,19 +1,18 @@
 ---
-title: "Create Software Distribution Packages for Mobile Devices"
-titleSuffix: "Configuration Manager"
+title: Create Software Distribution Packages for Mobile Devices
+titleSuffix: Configuration Manager
 description: How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 3becb7a9-cf6b-432b-85e7-a0087df0dbb6
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
 Configuration Manager device management enables mobile device software distribution to mobile devices. Packages, programs, and advertisements for mobile devices are much the same as those for computer clients. For detailed information about creating packages, programs and advertisements, see the following topics:  

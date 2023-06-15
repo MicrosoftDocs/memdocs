@@ -1,18 +1,18 @@
 ---
-title: "SMS_PendingRegistrationRecord Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the SMS_PendingRegistrationRecord Windows Management Instrumentation (WMI) class, in Configuration Manager, that describes hardware conflicts between two computers.
+title: SMS_PendingRegistrationRecord Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c1e1b321-2d60-490e-a9ae-83f370f5cc88
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PendingRegistrationRecord Server WMI Class
 The `SMS_PendingRegistrationRecord` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes hardware conflicts between two computers.  

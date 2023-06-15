@@ -1,18 +1,18 @@
 ---
-title: "Client Framework and Data Transfer Classes"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Client Framework and Data Transfer Classes
+titleSuffix: Configuration Manager
+description: This section describes the CCM framework and data transfer classes in Configuration Manager for the client.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 939d7728-0e5c-4d98-8a70-0ffcfe41f479
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Client Framework and Data Transfer Client WMI Classes
 This section describes the Client Configuration Manager (CCM) framework and data transfer classes in Configuration Manager for the client.  

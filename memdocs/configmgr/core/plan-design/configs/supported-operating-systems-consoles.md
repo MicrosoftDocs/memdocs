@@ -6,10 +6,12 @@ ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Supported OS versions for Configuration Manager consoles
@@ -31,8 +33,6 @@ Configuration Manager supports the installation of the console on the following 
 - **Windows 11** (x64): Pro, Enterprise
 
 - **Windows 10** (x86, x64): Pro, Enterprise
-
-- **Windows 8.1** (x86, x64): Professional, Enterprise
 
 For more information about the Configuration Manager console, see the following articles:
 

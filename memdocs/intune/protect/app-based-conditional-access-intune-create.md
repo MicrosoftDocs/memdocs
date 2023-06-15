@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Set up app-based Conditional Access policy with Intune
+title: Set up app-based Conditional Access policies with Intune
 titleSuffix: Microsoft Intune
-description: Learn how to create an app-based Conditional Access policy with Intune.
+description: Create Conditional Access policies that work with Intune app protection policies
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/30/2021
+ms.date: 04/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Set up app-based Conditional Access policies with Intune
@@ -42,38 +44,26 @@ Before you can use app-based Conditional Access policies, you need to have [Intu
 
 Conditional Access is an Azure Active Directory (Azure AD) technology. The Conditional Access node you access from *Intune* is the same node that you access from *Azure AD*. Because it's the same node, you don't need to switch between Intune and Azure AD to configure policies.
 
-Before you can create Conditional Access policies from the Microsoft Endpoint Manager admin center, you must have an Azure AD Premium license.
+Before you can create Conditional Access policies from the Microsoft Intune admin center, you must have an Azure AD Premium license.
 
 ### To create an app-based Conditional Access policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Select **Endpoint security** > **Conditional access** > **New policy**.
 
-3. Enter a policy **Name**, and then under *Assignments*, select **Users and groups**. Use the Include or Exclude options to add your groups for the policy, and select **Done**.
+3. Enter a policy **Name**, and then under *Assignments*, select **Users or workload identities**, and apply the policy to *Users and groups*. Use the Include or Exclude options to add your groups for the policy.
 
-4. Select **Cloud apps or actions**, and choose which apps to protect. For example, choose **Select apps**, and select **Office 365 (preview)**.
+4. Select **Cloud apps or actions**, and apply the policy to *Cloud apps*. Use the Include or Exclude options to select the apps to protect. For example, choose **Select apps**, and select **Office 365 (preview)**.
 
-   Select **Done** to save your changes.
+5. Select **Conditions** > **Client apps** to apply the policy to apps and browsers. For example, select **Yes**, and then select the checkboxes for enable **Browser** and **Mobile apps and desktop clients**.
 
-5. Select **Conditions** > **Client apps** to apply the policy to apps and browsers. For example, select **Yes**, and then enable **Browser** and **Mobile apps and desktop clients**.
+6. Under *Access controls*, select **Grant** to apply Conditional Access based on a device compliance status. For example, select **Grant access** > **Require approved client app** and **Require app protection policy**, then select **Require one of the selected controls**.
 
-   Select **Done** to save your changes.
-
-6. Under *Access controls*, select **Grant** to apply Conditional Access based on device compliance. For example, select **Grant access** > **Require approved client app** and **Require app protection policy** then select **Require one of the selected controls**
-
-   Choose **Select** to save your changes.
-
-7. For **Enable policy**, select **On**, and then select **Create** to save your changes.
-
-
-
-
+7. For **Enable policy**, select **On**, and then select **Create** to save your changes. By default, *Enable policy* is set to *Report-only*.
 
 ## Next steps
-[Block apps that don't have modern authentication](app-modern-authentication-block.md)
 
-## See also
-
-[Protect app data with app protection policies](../apps/app-protection-policies.md)
-[Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
+- [Block apps that don't have modern authentication](app-modern-authentication-block.md)
+- [Protect app data with app protection policies](../apps/app-protection-policies.md)
+- Learn about [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)

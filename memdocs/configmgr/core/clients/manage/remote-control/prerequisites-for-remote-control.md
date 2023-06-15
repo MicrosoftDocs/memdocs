@@ -2,14 +2,16 @@
 title: Remote control prerequisites
 titleSuffix: Configuration Manager
 description: Get the prerequisites for remote control in Configuration Manager.
-ms.date: 12/07/2021
+ms.date: 03/18/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Prerequisites for remote control in Configuration Manager
@@ -62,7 +64,7 @@ For more information, see [Configure role-based administration](../../../servers
 Remote tools aren't supported for clients that are connected remotely. For example, you can't remote control a client that communicates with the site through a cloud management gateway (CMG). For more information about the network ports required for remote tools, see [Ports used in Configuration Manager](../../../plan-design/hierarchy/ports.md#BKMK_PortsConsole-Client).
 
 > [!TIP]
-> For tenant-attached devices, remote tools are available in the Microsoft Endpoint Manager admin center. For more information, see [Support for remote tools](../cmg/supported-configurations.md#bkmk_note3).
+> For tenant-attached devices, remote tools are available in the Microsoft Intune admin center. For more information, see [Support for remote tools](../cmg/supported-configurations.md#bkmk_note3).
 
 ## Next steps
 

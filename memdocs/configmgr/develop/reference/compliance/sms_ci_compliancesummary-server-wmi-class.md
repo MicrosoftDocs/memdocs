@@ -1,18 +1,18 @@
 ---
-title: "SMS_CI_ComplianceSummary Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CI_ComplianceSummary Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 134d40db-3d25-4ff4-904f-3282c301d9c8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_CI_ComplianceSummary server class.
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CI_ComplianceSummary Server WMI Class
 The `SMS_CI_ComplianceSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a compliance summary for a baseline configuration item.  

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage devices with endpoint security in Microsoft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security node to view devices and manage them in Microsoft Endpoint Manager. 
+description: Learn how Security Administrators can use the Endpoint Security node to view devices and manage them in Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 04/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,21 +23,24 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ms.reviewer: mattcall
 
 ---
 
 # Manage devices with endpoint security in Microsoft Intune
 
-As a security administrator, use the *All devices* view in the Microsoft Endpoint Manager admin center to review and manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD), including devices managed by:
+As a security administrator, use the *All devices* view in the Microsoft Intune admin center to review and manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD), including devices managed by:
 - Intune
 - Configuration Manager
 - [Co-management](/configmgr/comanage/overview) *(by both Intune and Configuration Manager)*
 
 Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
 
- To find the view, open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
+ To find the view, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
 
 The initial *All devices* view displays your devices and includes key information about each:
 
@@ -47,13 +50,13 @@ The initial *All devices* view displays your devices and includes key informatio
 - When the device last checked in
 - And more
 
-![All device view in the admin center](./media/endpoint-security-manage-devices/all-device-view.png)
+:::image type="content" source="./media/endpoint-security-manage-devices/all-device-view.png" alt-text="The all device view in the admin center." lightbox="./media/endpoint-security-manage-devices/all-device-view.png":::
 
 While viewing device details, you can select a device to drill-in for more information.
 
 ## Available details by management type
 
-When viewing devices in the Microsoft Endpoint Manager admin center, consider how the device is managed. The management source affects the information that’s presented in the admin center and which actions are available to manage the device.
+When viewing devices in the Microsoft Intune admin center, consider how the device is managed. The management source affects the information that’s presented in the admin center and which actions are available to manage the device.
 
 Consider the following fields:
 
@@ -61,13 +64,13 @@ Consider the following fields:
 
   - **MDM**  - These devices are managed by Intune. Compliance data is collected and reported by Intune to the admin center.
 
-  - **ConfigMgr** – These devices appear in the Microsoft Endpoint Manager admin center when you use *tenant attach* to add the devices you manage with Configuration Manager. To be managed, the device must run the Configuration Manager client and be:
+  - **ConfigMgr** – These devices appear in the Microsoft Intune admin center when you use *tenant attach* to add the devices you manage with Configuration Manager. To be managed, the device must run the Configuration Manager client and be:
 
     - In a Workgroup (Azure AD joined and otherwise)
     - Domain Joined
     - Hybrid Azure AD Joined (joined to the AD and Azure AD)
 
-    Compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Endpoint Manager admin center.
+    Compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Intune admin center.
 
     For more information, see [Enable tenant attach](/configmgr/tenant-attach/device-sync-actions) in the Configuration Manager documentation.
 
@@ -85,17 +88,16 @@ Consider the following fields:
 
 ## Review a devices policy
 
-While viewing the list of devices, you can select a device to drill-in for more information about it by opening that device’s *Overview* page.
+To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, you can view the [**Device configuration report**](../fundamentals/reports.md#device-configuration-report-operational). Both *endpoint security* and *security baseline* policies are device configuration policies.
 
-From the Overview page of a device, you can then select **Endpoint security configuration** to view the endpoint security policies that apply to that device. Policy details are available for devices managed by MDM and Intune.
-
+To view the report, select a device and then select **Device configuration**, which is found below the *Monitor* category.
+  
 ![View endpoint security policy details](./media/endpoint-security-manage-devices/view-policy-details.png)
 
-Devices that are managed by Configuration Manager don’t display policy details. To view additional information for these devices, use the Configuration Manager console.
-
+Devices that are managed by Configuration Manager don’t display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
 ## Remote actions for devices
 
-Remote actions are actions you can start or apply to a device from the Microsoft Endpoint Manager admin center. When you view details for a device, you can access remote actions that apply to the device.
+Remote actions are actions you can start or apply to a device from the Microsoft Intune admin center. When you view details for a device, you can access remote actions that apply to the device.
 
 Remote actions display across the top of the devices *Overview* page. Actions that can’t display because of limited space on your screen are available by selecting the ellipsis on the right side:
 

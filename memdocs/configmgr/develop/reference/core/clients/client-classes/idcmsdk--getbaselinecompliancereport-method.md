@@ -1,18 +1,18 @@
 ---
+description: "Learn how to use the IDCMSDK::GetBaselineComplianceReport method to retrieve the cached discovery report for the specified configuration item baseline."
 title: "IDCMSDK::GetBaselineComplianceReport"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1f865cb8-b8eb-414d-891a-4028bd0df477
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # IDCMSDK::GetBaselineComplianceReport Method
 The `IDCMSDK::GetBaselineComplianceReport` method, in Configuration Manager, retrieves the cached discovery report for the specified configuration item baseline.  

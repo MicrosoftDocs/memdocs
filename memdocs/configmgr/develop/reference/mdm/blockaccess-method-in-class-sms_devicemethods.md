@@ -1,18 +1,18 @@
 ---
-title: "BlockAccess Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: BlockAccess Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d659f70b-c01f-41ab-8f65-1af181a07c9d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn about the simplified syntax, parameters, return values, and requirement for the BlockAccess method.
+ms.reviewer: mstewart,aaroncz 
 ---
 # BlockAccess Method in Class SMS_DeviceMethods
 The `BlockAccess` Windows Management Instrumentation (WMI) class method, in Configuration Manager, blocks the Exchange ActiveSync device from accessing Exchange.  

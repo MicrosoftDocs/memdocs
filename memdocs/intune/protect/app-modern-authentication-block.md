@@ -3,12 +3,12 @@
 
 title: Block apps with no modern authentication on Intune
 titleSuffix: Microsoft Intune
-description: Learn about applications and modern authentication (ADAL) using Microsoft Intune.
+description: Learn about applications and modern authentication (MSAL) using Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -21,20 +21,20 @@ ms.assetid: 73db3070-d033-40fb-a8f1-58b9d198021e
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrisgre
+ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, has-adal-ref
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
-# Block apps that don't use modern authentication (ADAL)
+# Block apps that don't use modern authentication (MSAL)
 
 > [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API has been deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 App-based Conditional Access with app protection policies rely on applications using [modern authentication](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a), which is an implementation of OAuth2. Most current Office mobile and desktop applications use modern authentication. However, there are third-party apps and older Office apps that use other authentication methods, like basic authentication and forms-based authentication.
 

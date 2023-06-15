@@ -1,18 +1,18 @@
 ---
-title: "CCM_Policy_Assignment2 Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the CCM_Policy_Assignment2 class to represent a policy assignment in Configuration Manager.
+title: CCM_Policy_Assignment2 Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2375c0fc-3867-4c96-8665-e4fd6adec600
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy_Assignment2 Client WMI Class
 In Configuration Manager, the `CCM_Policy_Assignment2` class is a client Windows Management Instrumentation (WMI) class that represents a policy assignment.  

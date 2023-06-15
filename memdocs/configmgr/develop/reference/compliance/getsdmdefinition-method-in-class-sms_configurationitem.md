@@ -1,18 +1,18 @@
 ---
-title: "GetSDMDefinition Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to retrieve the System Definition Model (SDM) definition of the configuration item in XML format using GetSDMDefinition class method.
+title: GetSDMDefinition Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b2daf3d7-2073-48c5-be2d-1aef24c70f93
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetSDMDefinition Method in Class SMS_ConfigurationItem
 The `GetSDMDefinition` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the System Definition Model (SDM) definition of the configuration item in XML format.  

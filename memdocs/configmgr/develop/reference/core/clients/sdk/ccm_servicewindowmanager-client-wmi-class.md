@@ -1,18 +1,18 @@
 ---
-title: "CCM_ServiceWindowManager Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Article detailing how to use CCM_ServiceWindowManager in Configuration Manager to manage service windows on the client computer.
+title: CCM_ServiceWindowManager Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: f8196309-a790-430c-88fb-d9f23be24a2d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_ServiceWindowManager Client WMI Class
 The `CCM_ServiceWindowManager` WMI class is a client class, in Configuration Manager, manages service windows on the client computer.  

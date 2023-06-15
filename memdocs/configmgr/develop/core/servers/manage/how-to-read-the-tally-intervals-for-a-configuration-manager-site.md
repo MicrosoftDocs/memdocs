@@ -1,18 +1,18 @@
 ---
-title: "Read the Tally Intervals for a Site"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Read the Tally Intervals for a Site
+titleSuffix: Configuration Manager
+description: In Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file SMS_COMPONENT_STATUS_SUMMARIZER object Summary_Intervals embedded property list.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 856f0bb5-25cd-4c54-b452-6a0d6acc7500
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Read the Tally Intervals for a Configuration Manager Site
 In Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file `SMS_COMPONENT_STATUS_SUMMARIZER` object `Summary_Intervals` embedded property list.  

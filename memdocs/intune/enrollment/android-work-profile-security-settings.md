@@ -26,12 +26,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Android Enterprise personally-owned work profile security configurations
 
-As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise work profile mobile users. For more information on each policy setting, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile).
+As part of the [Android Enterprise security configuration framework](android-configuration-framework.md), apply the following settings for Android Enterprise work profile mobile users. For more information on each policy setting, see [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) and [Android Enterprise device settings to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md).
 
 When choosing your settings, be sure to review and categorize usage scenarios. Then, configure users following the guidance for the chosen security level. You can adjust the suggested settings based on the needs of your organization. Make sure to have your security team evaluate the threat environment, risk appetite, and impact to usability.
 
@@ -145,4 +147,9 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 ## Next steps
 
-Administrators can incorporate the above configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
+Administrators can incorporate the above configuration levels within their ring deployment methodology for testing and production use by importing the sample [Android Enterprise Security Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AndroidEnterprise) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples). 
+
+1. [Configure device enrollment restrictions for personal devices](device-enrollment-restrictions.md)
+2. [Configure app configuration policies](android-app-configuration-policies.md)
+3. 🡺 **Configure security settings for personal devices** (*You are here*) )  
+4. [Configure security settings for fully managed devices](android-fully-managed-security-settings.md)   

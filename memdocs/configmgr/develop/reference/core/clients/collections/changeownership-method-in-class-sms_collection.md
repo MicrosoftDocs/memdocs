@@ -1,18 +1,18 @@
 ---
-title: "ChangeOwnership Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ChangeOwnership Method
+description: Learn how the ChangeOwnership Windows Management Instrumentation (WMI) class method, in Configuration Manager, changes ownership of the devices.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 41613023-d4e2-4933-a05a-ba84743c3b2b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ChangeOwnership Method in Class SMS_Collection
 The `ChangeOwnership` Windows Management Instrumentation (WMI) class method, in Configuration Manager, changes ownership of the devices.  

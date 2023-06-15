@@ -20,12 +20,14 @@ ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ROBOTS: NOINDEX
 #audience:
 
-#ms.reviewer: ilwu
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Reset the passcode on Windows devices using Intune
@@ -79,7 +81,7 @@ Set the value for this CSP to **True**.
 
 ## Reset the passcode
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Select **Devices**, and then select **All devices**.
 3. Select the device you want to reset the passcode. In the device properties, select **Reset passcode**.
 4. Select **Yes** to confirm. The passcode is generated, and is displayed in the portal for the next seven days.

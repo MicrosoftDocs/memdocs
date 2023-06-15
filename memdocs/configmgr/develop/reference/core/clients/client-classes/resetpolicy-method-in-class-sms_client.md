@@ -1,18 +1,18 @@
 ---
-title: "ResetPolicy Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to reset the policy on a client resulting in the next policy request receiving a full policy in Configuration Manager.
+title: ResetPolicy Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c6f4411d-b917-4767-8f8b-3e165edbb9eb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ResetPolicy Method in Class SMS_Client
 In Configuration Manager, the `ResetPolicy` method, resets the policy on a client. As a result, the next policy request will receive a full policy instead of merely the change in policy since the last policy request.  
@@ -44,7 +44,7 @@ UInt32 ResetPolicy(
  A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
 
 ## Remarks  
- Indiscriminate calling of this method could have adverse affects. For example, if you purge the existing policy (`ulFlags` = 1) software distribution programs could be run more than once. If the request is for full policy (`ulFlags` = 0), you could generate unnecessary network traffic.  
+ Indiscriminate calling of this method could have adverse effects. For example, if you purge the existing policy (`ulFlags` = 1) software distribution programs could be run more than once. If the request is for full policy (`ulFlags` = 0), you could generate unnecessary network traffic.  
 
 ## Requirements  
 

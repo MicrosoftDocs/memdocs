@@ -1,18 +1,18 @@
 ---
-title: "SMS_ImagePackage Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ImagePackage Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that serves as the unit of distribution for image source files. The image source files are used to deploy a valid operating system.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 64961afc-3dca-4223-a626-80a80c3664b0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ImagePackage Server WMI Class
 The `SMS_ImagePackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for image source files that are used to deploy a valid operating system, for example, Windows 10, in WIM format to a client computer.  

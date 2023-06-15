@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/02/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Get Windows 365 audit logs by using PowerShell
@@ -50,7 +52,7 @@ To get audit log events for up to seven days for your Windows 365 tenant, follow
 2. Verify the installation by running this command:```Get-InstalledModule Microsoft.Graph```
 3. To get all Cloud PC Graph endpoints, run this command: ```Get-Command -Module Microsoft.Graph* *virtualEndpoint*```
 
-### Sign in as test user
+### Sign in 
 
 1. Run either of these two commands:
     - ```Connect-MgGraph -Scopes "CloudPC.ReadWrite.All"```
@@ -62,9 +64,15 @@ To get audit log events for up to seven days for your Windows 365 tenant, follow
 
 You can view audit data in multiple ways.
 
-#### List audit events
+#### Get entire list of audit events, including the audit actor
 
-To see a list of audit events, use the following command:
+To get the entire list of audit events including the actor (person who performed the action), use the following command:
+
+```Get-MgDeviceManagementVirtualEndpointAuditEvent | Select-Object -Property Actor,ActivityDateTime,ActivityType,ActivityResult -ExpandProperty Actor | Format-Table UserId, UserPrincipalName, ActivityType, ActivityDateTime, ActivityResult```
+
+#### Get a list of audit events
+
+To get a list of audit events without the audit actor, use the following command:
 
 ```Get-MgDeviceManagementVirtualEndpointAuditEvent```
 
@@ -74,14 +82,7 @@ To get only the top N events, use the following parameters: ```Get-MgDeviceManag
 
 #### Get a single event by event ID
 
-You can use the following command to a single event: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
-
-#### Get audit actor
-
-You can also find out who performed an audit event by running the following commands:
-
-```$res=Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```dotnetcli
-```$res.Actor```
+You can use the following command to get a single audit event, where you'll need to provide the {event ID}: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
 
 <!-- ########################## -->
 ## Next steps

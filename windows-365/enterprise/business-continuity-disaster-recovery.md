@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 05/09/2023
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier1
 ---
 
 # Business continuity and disaster recovery overview
@@ -33,11 +35,11 @@ ms.collection: M365-identity-device-management
 Windows 365 provides highly resilient user cloud pcs, including:
 
 - 99.9% highly available Windows 365 Cloud PC user sessions as defined in the [Windows 365 SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
-- Locally Redundant Storage (LRS) with data object resiliency of 11 9s.
+- Disk storage with data object resiliency of 11 9s.
 - Automated in-zone disaster recovery for compute.
 - Recovery Point Objective (RPO) of ~0.
 
-Windows 365 is part of Microsoft 365 and seamlessly uses Windows and Microsoft 365 solutions, features, and tools. This helps to make sure that user data and user context are portable and resilient. Important optional Windows and Microsoft 365 solutions include:
+Windows 365 is part of Microsoft 365 and seamlessly uses Windows and Microsoft 365 solutions, features, and tools. This integration helps to make sure that user data and user context are portable and resilient. Important optional Windows and Microsoft 365 solutions include:
 
 - OneDrive
 - OneDrive for Business
@@ -49,7 +51,7 @@ Using these Windows and Microsoft 365 solutions preserves user context and user 
 
 ## Data Resilience
 
-If there's a larger disruption, like a full zone or region outage, LRS storage makes sure that data objects on the Cloud PC OS disks are 99.999999999% resilient against data loss, over a given year.
+If there's a larger disruption, like a full zone or region outage, the disk storage provided makes sure that data objects on the Cloud PC OS disks are 99.999999999% resilient against data loss, over a given year.
 
 ## Automated in-zone Disaster Recovery for Compute
 
@@ -64,7 +66,7 @@ Azure automatically identifies compute failures and automatically moves the user
 
 If a user is actively using a session, there may be a slight disruption to the user while the service is restored. After restoration, the user must restore the connection by signing into their Cloud PC session again. If an in-zone failure occurs while the user is signed in and actively using their Cloud PC session, the user will lose access until the system is restored.
 
-Storage systems are separate from compute functions, and use storage redundancy to help deliver Windows 365 disaster recovery with an RPO of ~0. Automated Windows 365 disaster recovery is based on an up-to-date copy of the OS disk, with an RPO of ~0. Therefore, the process of recovery starts automatically because there is no need to accept the data loss associated with a past point-in-time recovery.
+Storage systems are separate from compute functions, and use storage redundancy to help deliver Windows 365 disaster recovery with an RPO of ~0. Automated Windows 365 disaster recovery is based on an up-to-date copy of the OS disk, with an RPO of ~0. Therefore, the process of recovery starts automatically because there's no need to accept the data loss associated with a past point-in-time recovery.
 
 ## OneDrive, OneDrive for Business and OneDrive with Known Folder Move
 
@@ -88,7 +90,7 @@ For an overview of Windows Settings, see [Windows Settings overview](/azure/acti
 
 The Cloud PC management service includes:
 
-- [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+- [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 - [Cloud PC end user portal](https://Windows365.microsoft.com)
 
 The Cloud PC Management Service has a regionally redundant architecture that is designed to be highly available, with a target uptime of 99.99%. If there's a Management Service outage, the service has the following target objectives:

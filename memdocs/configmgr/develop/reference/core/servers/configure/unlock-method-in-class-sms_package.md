@@ -1,18 +1,18 @@
 ---
-title: "Unlock Method in Class SMS_Package"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Unlock Method in Class SMS_Package
+titleSuffix: Configuration Manager
+description: A Windows Management Instrumentation class method that sets the source site to the current site, unlocking the package.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 6fc6f46e-757d-420f-b6d5-701745f07601
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Unlock Method in Class SMS_Package
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the package.  

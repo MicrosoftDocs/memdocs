@@ -2,14 +2,16 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 01/11/2022
+ms.date: 03/20/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About client settings in Configuration Manager
@@ -171,8 +173,9 @@ Select **Schedule** to create the default schedule for configuration baseline de
 
 Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items.
 
+## Script Execution Timeout (seconds)
 
-
+Starting in version 2207, you can define a **Script Execution Timeout (seconds)**. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds. <!--14120481-->
 ## Computer agent  
 
 ### User notifications for required deployments
@@ -458,7 +461,7 @@ Choose one of the following options for this setting:
 > [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
-Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
+Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter `/AllowMetered`. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
@@ -676,7 +679,7 @@ _Applies to version 2103 and later_
 
 Enable this option for Software Center to use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
 
-If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device. Clients download the WebView2 redistributable installation file from the management point. The installer is over 100 MB in size. If you need to enable this setting on a large number of clients, and are concerned about the effect of network usage, predeploy the WebView2 runtime as an application. Use the software distribution features of Configuration Manager to better control the content distribution and timing of software installation.<!-- 12769440 -->
+If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device. The installer is over 100 MB in size. If you need to enable this setting on a large number of clients, and are concerned about the effect of network usage, predeploy the WebView2 runtime as an application. Use the software distribution features of Configuration Manager to better control the content distribution and timing of software installation.<!-- 12769440 -->
 
 > [!NOTE]
 > - If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
@@ -862,8 +865,6 @@ Use this setting to specify the period of time for the previous setting. You can
 
 Set this option to **Yes** to allow clients to use delta content files. This setting allows the Windows Update Agent on the device to determine what content is needed and selectively download it.
 
-- Before enabling this client setting, ensure Delivery Optimization is configured appropriately for your environment. For more information, see [Windows Delivery Optimization](../../../sum/deploy-use/optimize-windows-10-update-delivery.md#windows-delivery-optimization) and the [Delivery Optimization client setting](#delivery-optimization).
-
 - This client setting replaces **Enable installation of Express installation files on clients**. Set this option to **Yes** to allow clients to use express installation files. For more information, see [Manage Express installation files for Windows 10 updates](../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
 - When this option is set, delta download is used for all Windows update installation files, not just express installation files.
@@ -963,6 +964,15 @@ Use this setting to configure [Dynamic Update for Windows](https://techcommunity
 - **Yes** - Enables Dynamic Update.
 - **No** - Disables Dynamic Update.
 
+### <a name="bkmk_fserv"></a>Enable features introduced via servicing are off by default.
+
+<!--16834520-->
+To learn more about the settings: “Enable features introduced via servicing are off by default”, please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
+
+- **Not Configured** - The default value, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
+  - Enable features introduced via servicing are off by default on all supported versions of Windows 11 22621.1344 or later.
+- **Yes** - Enables Feature Update, then all features available in the latest monthly quality update installed will be on.
+- **No** - Disables Feature Update, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
 
 ## State Messaging
 

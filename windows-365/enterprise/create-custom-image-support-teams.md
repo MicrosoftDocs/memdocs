@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/02/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,12 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Create a Cloud PC custom image that supports Microsoft Teams
 
-During the initial setup of your tenant, we recommend that you provision your Cloud PCs with the Windows 10/11 Enterprise + Microsoft 365 images available in the image gallery. This gives you the benefit of having all the Office applications optimized and pre-installed without the need for any extra level of configuration.
+During the initial setup of your tenant, we recommend that you provision your Cloud PCs with the Windows 10/11 Enterprise + Microsoft 365 images available in the image gallery. These images give you the benefit of having all the Office applications optimized and pre-installed without the need for any extra level of configuration.
 
 If you want to create custom images that don’t include the optimizations for Microsoft Teams, you'll need you perform the following steps in your custom image. These steps make sure your image has the correct registry settings and policies to support Teams.
 
@@ -40,7 +42,7 @@ The following steps are only needed when you aren’t using the Windows 365 gall
     - Name: IsWVDEnvironment
     - Type: DWORD
     - Value: 1
-2. Install the [latest Visual C++ runtime](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). This is required for the Teams WebRTC protocol redirection to work.
+2. Install the [latest Visual C++ runtime](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads). This runtime is required for the Teams WebRTC protocol redirection to work.
 3. Install the [WebRTC Redirector (websocket) plugin](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWNg9F). For instructions on how to install, see [Install the Teams WebSocket Service](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service). The plugin is required for Teams to function properly in a Cloud PC environment with the optimizations.
 
 > [!NOTE]
@@ -51,7 +53,7 @@ The following steps are only needed when you aren’t using the Windows 365 gall
 If you need to verify that Teams optimizations are working on a Cloud PC (for an end user, for example), tell the Cloud PC user to follow these steps:
 
 1. In Microsoft Teams, select the ellipses (**…**) in the menu bar > **About** > **Version**.
-2. Confirm that **WVD Media Optimized** is listed alongside the version. If it is,you’re ready to test the better experience.
+2. Confirm that **WVD Media Optimized** is listed alongside the version. If it is, you’re ready to test the better experience.
 
 If media optimizations loaded successfully, the audio devices and cameras available locally are listed in the device menu. If the menu shows **Remote audio**, follow these steps:
 

@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: c0d69334-75eb-408c-8828-94898cf134f5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for application management in Configuration Manager

@@ -26,10 +26,13 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Set up Lookout Mobile Endpoint Security integration with Intune
+
 With an environment that meets the [prerequisites](lookout-mobile-threat-defense-connector.md#prerequisites), you can integrate Lookout Mobile Endpoint Security with Intune. The information in this article will guide you in setting up integration and configuring important settings in Lookout for use with Intune.  
 
 > [!IMPORTANT]

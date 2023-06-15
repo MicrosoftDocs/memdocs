@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 01/06/2023
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
@@ -25,18 +25,27 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Remotely manage Windows 365 Business Cloud PCs
 
 You can remotely manage Windows 365 Business Cloud PCs by using the Microsoft 365 admin center or windows365.microsoft.com. Each supports several remote management [actions](#remote-management-actions).
-To use these remote actions, you must have either of the following Azure Active Directory (Azure AD) role-based access roles:
 
-- [Global Administrator]( /azure/active-directory/roles/permissions-reference#global-administrator)
-- [Windows 365 Administrator]( /azure/active-directory/roles/permissions-reference#windows-365-administrator)
+## Permissions
 
-## Remotely manage Cloud PCs on windows.365.microsoft.com
+To use these remote actions, you must have the appropriate Azure Active Directory (Azure AD) role-based access roles.
+
+| Admin actions | Roles required for windows365.microsoft.com | Roles required for Microsoft 365 admin center |
+| --- | --- | --- |
+| Windows 365 Business remote management actions (like reset, restart, and so on) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR <br> - [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [Global Reader](/azure/active-directory/roles/permissions-reference#global-reader) (this grants access to the admin center) |
+| License administration (assignment and removal of licenses from a user) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference#windows-365-administrator) and [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) | - [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) <br>OR<br>- [License Administrator](/azure/active-directory/roles/permissions-reference#license-administrator) |
+
+The person who signed up for Microsoft online services automatically becomes a Global admin.
+
+## Remotely manage Cloud PCs on windows365.microsoft.com
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com).
 2. Select **Your organization’s Cloud PCs**.
@@ -56,15 +65,15 @@ To use these remote actions, you must have either of the following Azure Active 
 ## Remotely manage Cloud PCs by using the Microsoft 365 admin center
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com).
-2. In the left navigation select **Users** -> **Active users**.
+2. In the left navigation, select **Users** -> **Active users**.
 3. Select the user whose Cloud PC you want to manage.
 4. Select **Devices**.
 5. Select the Cloud PC you want to manage.
-6. Select the action that you want to perform .
+6. Select the action that you want to perform.
 
 ## Remote management actions
 
-The following remote actions are supported on winodws365.microsoft.com and the Microsoft 365 admin center:
+The following remote actions are supported on windows365.microsoft.com and the Microsoft 365 admin center:
 
 **Change account type**: Change the role of a user on their Cloud PC. Options include Standard User and Local Administrator. For the role change to take effect, the user must sign out of Windows on their Cloud PC and sign back in. Alternatively, the admin can remotely restart the Cloud PC, but the user may lose any unsaved data.
 
@@ -76,11 +85,13 @@ The following remote actions are supported on winodws365.microsoft.com and the M
 - Removes all apps and locally stored files.
 - Removes changes made to settings.
 
+For Windows 365 Business users, it’s not possible to upgrade their Windows 10 Cloud PC to Windows 11 and retain their data and settings. Instead, to upgrade them to a Windows 11 Cloud PC, you must use the **Reset** remote action and choose Windows 11. Reset is a destructive action that removes all the user's data and settings from their Cloud PC.
+
 **Restart**: Restart a user’s Cloud PC on their behalf.
 
 ## Grant remote action permissions to another user
 
-If you want to grant remote action permissions to another user, you can assign the Windows 365 Administrator role to them. This role is scoped to performing actions that can alter the state of a Cloud PC. This role cannot manage users, licenses, or billing.
+If you want to grant remote action permissions to another user, you can assign the Windows 365 Administrator role to them. This role is scoped to performing actions that can alter the state of a Cloud PC. This role can't manage users, licenses, or billing.
 
 To assign a Windows 365 Administrator role to a user:
 
@@ -91,7 +102,7 @@ To assign a Windows 365 Administrator role to a user:
 5. Scroll down to the **Devices** section.
 6. Select **Windows 365 Administrator** > **Save changes**.
 
-You can also assign the Windows 365 admin role through the Microsoft 365 Admin Center and Azure Active Directory.
+You can also assign the Windows 365 Administrator role through the Microsoft 365 Admin Center and Azure Active Directory.
 
 ## Next steps
 

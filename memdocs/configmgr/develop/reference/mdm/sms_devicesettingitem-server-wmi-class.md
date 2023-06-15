@@ -1,18 +1,18 @@
 ---
-title: "SMS_DeviceSettingItem Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_DeviceSettingItem Class
+titleSuffix: Configuration Manager
+description: The SMS_DeviceSettingItem WMI class provides the functionality to create a device setting configuration item in the database.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 4381d1a1-ad59-4746-a8db-55d08e446dc2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DeviceSettingItem Server WMI Class
 The `SMS_DeviceSettingItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides the functionality to create a device setting configuration item in the database.  

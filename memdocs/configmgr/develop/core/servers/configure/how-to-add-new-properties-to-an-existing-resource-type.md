@@ -1,18 +1,18 @@
 ---
-title: Add New Properties to an Existing Resource Type"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Add New Properties to an Existing Resource Type
+titleSuffix: Configuration Manager
+description: Learn how to add a property to the resource class when the Data Discovery Manager detects that your data discovery record contains a property that doesn't exist.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 55c3b4fc-7f44-4c5f-8bc5-a97bc0c4bab6
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add New Properties to an Existing Resource Type
 In Configuration Manager, when the Data Discovery Manager (DDM) detects that your data discovery record (DDR) contains a property that does not exist in the resource class, the property is added to the resource class. Depending on the data type of the new property, previous instances of the resource will contain either a zero or an empty string ("") for the value of the new property. You should specify all the class properties when you update an existing resource class. However, do not include the seven properties that the DDM creates for you. When the DDM creates a new resource class, it adds these additional properties to the class:  

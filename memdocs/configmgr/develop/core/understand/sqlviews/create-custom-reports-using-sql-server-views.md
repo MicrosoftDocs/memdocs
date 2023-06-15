@@ -6,12 +6,13 @@ ms.date: 06/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms:assetid: 5741ada8-449c-45af-85e1-2e68abf96440
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms: "assetid: 5741ada8-449c-45af-85e1-2e68abf96440"
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Creating custom reports by using SQL Server views in Configuration Manager

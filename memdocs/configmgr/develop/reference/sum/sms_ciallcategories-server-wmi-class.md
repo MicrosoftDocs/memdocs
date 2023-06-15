@@ -1,18 +1,18 @@
 ---
-title: "SMS_CIAllCategories Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CIAllCategories Class
+titleSuffix: Configuration Manager
+description: Lists all SMS_CategoryInstance Server WMI Class or SMS_UpdateCategoryInstance Server WMI Class object instances for a given SMS_ConfigurationItem object.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 57b6120e-a157-4bd4-8b52-8ebc31b4b41f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CIAllCategories Server WMI Class
 The `SMS_CIAllCategories` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all of the SMS_CategoryInstance Server WMI Class or [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md) object instances for a given SMS_ConfigurationItem object.  

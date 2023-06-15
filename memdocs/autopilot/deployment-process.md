@@ -1,25 +1,21 @@
 ---
 title: Windows deployment process posters
-description: View and download Windows deployment process flows for Microsoft Endpoint Configuration Manager and Windows Autopilot.
-ms.audience: itpro
-keywords: upgrade, in-place, configuration, deploy
-ms.prod: w10
-ms.technology: windows
-ms.mktglfcycl: deploy
+description: View and download Windows deployment process flows for Microsoft Configuration Manager and Windows Autopilot.
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/16/2020
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: conceptual
+ms.collection: tier2
 ---
 
 # Windows Autopilot deployment process
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -32,4 +28,4 @@ Windows Autopilot deployment processes are summarized in the poster below. The p
 [![Deploy Windows with Autopilot.](media/windows10-autopilot-flowchart.png)](media/Windows10AutopilotFlowchart.pdf)
 
 > [!NOTE]
-> The Windows Autopilot for existing devices process is included in the [Microsoft Endpoint Configuration Manager deployment poster](/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager).
+> The Windows Autopilot for existing devices process is included in the [Microsoft Configuration Manager deployment poster](/windows/deployment/windows-10-deployment-posters#deploy-windows-10-with-microsoft-endpoint-configuration-manager).

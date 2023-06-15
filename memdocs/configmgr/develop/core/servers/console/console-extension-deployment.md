@@ -1,20 +1,21 @@
 ---
-title: "Console Extension Deployment"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Console extension deployment
+description: The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
-# Configuration Manager Console Extension Deployment
+
+# Configuration Manager console extension deployment
+
 The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.  
 
  When you deploy a Configuration Manager extension, you install the files in the following directories:  
@@ -27,6 +28,9 @@ The deployment of a typical Configuration Manager extension has to account for a
 |Nodes|%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin for the assembly<br /><br /> %*ProgramFiles*%Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Nodes for the node XML files|  
 |ManagementClasses|%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin for the assembly<br /><br /> %ProgramFiles%Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\ManagementClasses for the management classes XML files|  
 
+ > [!IMPORTANT]
+> Placing your assemblies and dependencies in the %ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin folder may create conflicts with other console extensions and prevent your extension from loading.
+ 
  You must also perform the following tasks during installing and uninstalling actions.  
 
 ## Custom Actions  
@@ -78,7 +82,7 @@ The deployment of a typical Configuration Manager extension has to account for a
 ### Installing a Custom Management Class  
  Copy the management class assembly to either %*ProgramFiles*%\ Microsoft Endpoint Manager\AdminConsole\bin or to your application's installation folder.  
 
- To install an custom management class XML file, copy the file to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\ManagementClasses folder. Because all custom management classes are placed in this folder, you must ensure that your XML file has a unique name. It is suggested that you use your company name as part of the file name.  
+ To install a custom management class XML file, copy the file to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\ManagementClasses folder. Because all custom management classes are placed in this folder, you must ensure that your XML file has a unique name. It is suggested that you use your company name as part of the file name.  
 
 ### Removing a Custom Management Class  
  To remove a custom management class, delete the custom management class XML file. If there are no other XML files in the folder then it is safe to remove the folder.  

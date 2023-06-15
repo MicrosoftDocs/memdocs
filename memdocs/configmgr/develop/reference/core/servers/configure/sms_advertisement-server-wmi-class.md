@@ -1,18 +1,18 @@
 ---
-title: "SMS_Advertisement Class"
-titleSuffix: "Configuration Manager"
-ms.date: "04/27/2017"
-ms.prod: "configuration-manager"
+title: SMS_Advertisement Class
+titleSuffix: Configuration Manager
+description: The SMS_Advertisement Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an advertisement.
+ms.date: 04/27/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 463bed7d-80e4-4fd9-a7d7-dfb10b538a43
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Advertisement server WMI class
 The `SMS_Advertisement` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an advertisement used to announce software package programs that are available for running on clients.  

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2021
+ms.date: 02/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,12 +24,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Expedite Windows quality updates in Microsoft Intune
-
-*This feature is in public preview.*
 
 With *Quality updates for Windows 10 and Later* policy, you can expedite the install of the most recent Windows 10/11 security updates as quickly as possible on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly servicing policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn’t deploy the update for some time.
 
@@ -39,7 +39,7 @@ Not all updates can be expedited. Currently, only Windows 10/11 security updates
 
 With expedited updates, you can speed installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
 
-To speed installation, expedite updates uses available services, like WNS and push notification channels, to deliver the message to devices that there's an expedited update to install. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
+To speed installation, expedite is able to check for expedited updates more frequently than the normal Windows Update scan frequency. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
 
 The actual time that a device starts to update depends on the device being online, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
@@ -60,57 +60,53 @@ The actual time that a device starts to update depends on the device being onlin
 
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update rings for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
+
+> [!IMPORTANT]
+> This feature is not supported on GCC and GCC High/DoD cloud environments.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
 **Licensing**:
 
-In addition to a license for Intune, your organization must have one of the following subscriptions:
+In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Update for Business deployment service:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
+
+Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
+
+If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 **Supported Windows 10/11 versions**:
 
 - Windows 10/11 versions that remain in support for Servicing, on x86 or x64 architecture
 
+Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
+
 **Supported Windows 10/11 editions**:
 
 - Professional
 - Enterprise
-- Pro Education
 - Education
+- Pro Education
+- Pro for Workstations
 
 **Devices must**:
 
-- Be [enrolled in Intune](../enrollment/device-enrollment.md) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
+- Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
-- Have access to the following endpoints:
+- Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).  
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-
-    - *.prod.do.dsp.mp.microsoft.com
-    - *.windowsupdate.com
-    - *.dl.delivery.mp.microsoft.com
-    - *.update.microsoft.com
-    - *.delivery.mp.microsoft.com
-    - tsfe.trafficshaping.dsp.mp.microsoft.com
-
-  - WUfB-DS
-
-    - devicelistenerprod.microsoft.com
-    - login.windows.net
-    - payloadprod*.blob.core.windows.net
-
+  - Windows Update for Business deployment service
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
-    - *.notify.windows.com
 
 - Be configured to get Quality Updates directly from the Windows Update service.
 
@@ -118,18 +114,32 @@ In addition to a license for Intune, your organization must have one of the foll
   - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
   - As an Admin, run the following PowerShell script:
 
-    `Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match "Microsoft Update Health Tools"}`
+   ``` PowerShell
+   $Session = New-Object -ComObject Microsoft.Update.Session
+   $Searcher = $Session.CreateUpdateSearcher()
+   $historyCount = $Searcher.GetTotalHistoryCount()
+   $list = $Searcher.QueryHistory(0, $historyCount) | Select-Object -Property "Title"
+   foreach ($update in $list)
+   {
+     if ($update.Title.Contains("4023057"))
+     {
+        return 1
+     }
+   }
+   return 0 
+   ```
+  If the script returns a 1, the device has UHS client. If the script returns a 0, the device doesn’t have UHS client.
 
-    Example results:  
-    :::image type="content" source="./media/windows-10-expedite-updates/example-wmi-query-results.png" alt-text="Example results for the WMI query":::
 
+
+ 
 **Device settings**:
 
 To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use Intune *Update rings for Windows 10 and later* policies to manage these settings.
 
 | Update ring setting       | Recommended value        |
 |---------------------------|-------------------------------------|
-| Servicing channel         | **Semi-Annual Channel**  <br><br> Expedite doesn't support additional channels at this time. |
+| Enable pre-release builds | This setting should be set to **Not configured**. Preview builds, including the Beta and Dev channels, are not supported with expedited updates. |
 | Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
 | Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
 
@@ -148,9 +158,9 @@ Before you can monitor results and update status for expedited updates, your Int
  
 ## Create and assign an expedited quality update
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Quality updates for Windows 10 and later (Preview)** > **Create profile**.
+2. Select **Devices** > **Quality updates for Windows 10 and later** > **Create profile**.
 
    :::image type="content" source="./media/windows-10-expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI":::
 
@@ -265,7 +275,7 @@ After a policy has been created you can monitor results, update status, and erro
 
 This report shows the current state of all devices in the profile and provides an overview of how many devices are in progress of installing an update, have completed the installation, or have an error.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
 
@@ -281,7 +291,7 @@ This report shows the current state of all devices in the profile and provides a
 
 This report can help you find devices with alerts or errors and can help you troubleshoot update issues.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
 
 2. Select **Devices** > **Monitor**.
 
@@ -312,4 +322,5 @@ This report can help you find devices with alerts or errors and can help you tro
 
 - Configure [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
 - Configure [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
+- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)

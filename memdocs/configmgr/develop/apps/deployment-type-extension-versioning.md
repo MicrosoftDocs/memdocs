@@ -1,18 +1,18 @@
 ---
-title: "Deployment Type Extension Versioning"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Deployment Type Extension Versioning
+description: Configuration Manager supports in-place versioning for minor upgrades and out-of-place versioning for major upgrades.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 33b69e99-dc7c-45dc-8291-362af08956b6
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Deployment Type Extension Versioning
 Configuration Manager supports in-place versioning for minor upgrades and out-of-place versioning for major upgrades.  

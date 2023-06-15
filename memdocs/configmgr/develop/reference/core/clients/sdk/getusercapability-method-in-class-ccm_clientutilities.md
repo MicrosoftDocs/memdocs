@@ -1,16 +1,18 @@
 ---
-title: "GetUserCapability Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetUserCapability Method
+titleSuffix: Configuration Manager
+description: The GetUserCapability WMI class method in Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: be25c931-3cc9-407d-b10e-b57b22a5b1c5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # GetUserCapability Method in Class CCM_ClientUtilities

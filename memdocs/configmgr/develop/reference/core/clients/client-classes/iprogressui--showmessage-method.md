@@ -1,17 +1,18 @@
 ---
-title: IProgressUI::ShowMessage
+title: "IProgressUI::ShowMessage"
 titleSuffix: Configuration Manager
-description: IProgressUI::ShowMessage method
+description: "IProgressUI::ShowMessage method"
 ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2b79dafd-c4ba-4832-88f7-62d2e6b4caf0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # IProgressUI::ShowMessage method

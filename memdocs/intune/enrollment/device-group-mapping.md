@@ -3,12 +3,12 @@
 
 title: Categorize devices into groups in Intune
 titleSuffix: Microsoft Intune
-description: Learn how to categorize devices into groups for easier management.
+description: Categorize Intune-managed devices into groups for easier management in the admin center.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/10/2021
+ms.date: 03/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,77 +21,72 @@ ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 #ROBOTS:
 #audience:
 
-#ms.reviewer: jieyang
+ms.reviewer: scotduff
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
 ---
 
 # Categorize devices into groups
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+**Applies to**:
+* Android
+* iOS/iPadOS
+* macOS
+* Windows 10
+* Windows 11
 
-To make managing devices easier, you can use Microsoft Intune device categories to automatically add devices to groups based on categories that you define.
+Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Intune admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
+ 
+This article describes how to configure and edit device categories.   
 
-Device categories use the following workflow:
-1. Create categories that users can choose from when they enroll their device.
-2. When users of iOS/iPadOS and Android devices enroll a device, they must choose a category from the list of categories you configured. To assign a category to a Windows device, users must use the Company Portal website.
-3. You can then deploy policies and apps to these groups.
+## Configure device categories
 
-You can create any device categories you want. For example:
-- Point-of-sale device
-- Demonstration device
-- Sales
-- Accounting
-- Manager
+You must be a Global Administrator or Intune Administrator to perform these steps.  
 
-## How to configure device categories
+### Before you begin  
 
-### Step 1: Create device categories in Intune
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **Device categories** > **Create device category** to add a new category.
-3. On the **Create device category** pane, enter a **Name** for the new category, and an optional **Description**.
-4. When you are done, select **Create**. You can see the new category in the list of categories.
+Decide if it's necessary to show the device category selection prompt to end users when they visit the Company Portal app or website. If you don't want the prompt to be visible, block it in a [customization profile](../apps/company-portal-app.md#device-categories) first, and then create your categories.       
 
-You'll use the device category name when you create Azure Active Directory (Azure AD) security groups in step 2.
+### Step 1: Create device category in Intune  
 
-### Step 2: Create Azure Active Directory security groups
-In this step, you'll create dynamic groups in the Azure portal, based on the device category and device category name.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Choose **Devices** > **Device categories**.
+3. Select **Create device category** to add a new category.
+4. Enter the name of the new category, such as `HR` and an optional description.
+5. Select **Next**.  
+6. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the category to specific IT groups. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+7. Select **Next**.  
+8. Select **Create**. The new category is added to your **Device categories** list.   
 
-To continue, refer to [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Azure AD documentation.
+You'll use the device category name when you create Azure Active Directory (Azure AD) security groups in the next step.  
 
-Use the information in this section to create a device group with an advanced rule, by using the **deviceCategory** attribute. For example: **device.deviceCategory -eq** "*the device category name you got from the Azure portal*".
+### Step 2: Create Azure AD security groups 
 
-After you configure device groups, and users enroll their device, they are presented with a list of the categories you configured. After they choose a category and finish enrollment, their device is added to the Active Directory security group that corresponds with the category they chose.
+To enable automatic grouping, you must create a dynamic group using attribute-based rules in Azure AD. For instructions, see [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Azure AD documentation. Create an advanced rule for your group using the **deviceCategory** attribute and the category name you created in Step 1 of this article. 
 
-### View the categories of devices that you manage
+For example, to create a rule that automatically groups devices belonging in the HR category, use the following rule syntax: `device.deviceCategory -eq "HR"`    
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices**.
+### View categories of all devices 
+To view the device category assigned to each device, go to **Devices** > **All devices**.
+The category is listed in the **Device category** column. To add the column to your table, select **Columns**, and then choose **Category** > **Apply**.  
 
-2. In the list of devices, examine the **Device category** column.
+When you delete a category, devices assigned to it appear as **Unassigned**.  
 
-If the **Device category** column isn't shown, select **Columns** > **Category** > **Apply**.
+### Change the category of a device  
+If you edit a category, be sure to update any Azure AD security groups that reference the category in their rules.  
 
-### Change the category of a device
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.  
+2. Select a device.  
+3. Select **Properties**.  
+4. Change the category listed under **Device category**.  
+5. Select **Save**.      
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device you want > **Properties**.
-2. On the next blade, you can change the **Device category** of the selected device to any of the category names you previously configured.
+## Best practices  
+Device categories are supported on devices running Android, iOS/iPadOS, macOS, and Windows. People with Windows devices must use the Company Portal website to select their category. The category prompt appears for all other platforms when the user signs in to the Company Portal app. Regardless of platform, any device user can sign in to portal.manage.microsoft.com at anytime and go to **My devices** to select a category. 
 
-## After you configure device groups
-
-When users of iOS/iPadOS and Android devices enroll their device, they must choose a category from the list of categories you configured. After they choose a category and finish enrollment, their device is added to the Intune device group, or the Active Directory security group that corresponds with the category they chose.
-
-Windows users should use the Company Portal website or the Company Portal app to select a category.
-
-Regardless of platform, your users can always go to portal.manage.microsoft.com after enrolling the device. Have the user access the Company Portal website, and go to **My Devices**. The user can choose an enrolled device listed on the page, and then select a category.
-
-After choosing a category, the device is automatically added to the corresponding group you created. If a device is already enrolled before you configure categories, the user sees a notification about the device on the Company Portal website. This lets the user know to select a category the next time they access the Company Portal app on iOS/iPadOS or Android.
-
-## Further information
-- You can edit a device category in the Azure portal, but you must manually update any Azure AD security groups that reference this category.
-
-- If you delete a category, devices assigned to it display the category name **Unassigned**.
+If an iOS/iPadOS or Android device is already enrolled before you configure categories, the user will receive a notification about the device the user owns on the Company Portal website. The notification informs them that they need to select a category the next time they're in the Company Portal app.    

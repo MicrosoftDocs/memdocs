@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 05/09/2023
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
@@ -25,14 +25,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Make a user a local admin
 
 The **User settings** page lets IT administrators manage various settings for the user. Currently, the only setting is the option of making the user a local admin in their Cloud PC.  
 
-When managing settings, keep the following in mind:
+When managing settings, keep the following points in mind:
 
 - The privileges can be applied before or after a Cloud PC is assigned.
 - Local administrator permissions apply at the user level.
@@ -41,7 +43,7 @@ When managing settings, keep the following in mind:
 
 ## Add a new setting
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...** > **User Settings** > **Add**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...** > **User Settings** > **Add**.
 ![Screenshot of add user setting](./media/assign-users-as-local-admin/user-settings.png)
 2. Under **Settings**, enter a **Name** for the setting and set **Enable Local admin** to **On**.
 3. Select **Next**.  
@@ -52,7 +54,7 @@ When managing settings, keep the following in mind:
 
 ## Edit a user setting
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
 2. The **User Settings** page shows the current settings.  
 3. Select the name of the user setting that you want to edit.
 4. The policy setting for **Enable Local Admin** and assigned groups appears.  
@@ -65,14 +67,14 @@ When managing settings, keep the following in mind:
 
 ## Delete a user setting
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
 2. On the **User settings** page, you can view the created settings.  
 3. Select the ellipses (**…**) > **Delete**.
 4. Select **Yes** on the confirmation pop up to delete the setting permanently.
 
 ## Conflict Resolution for Local Admin
 
-Because user setting policies are assigned to user groups, there’s a possibility of overlap for groups/users. If a user is assigned to more than one user setting policy, user settings will honor the most-recently created policy and ignore all others. The last time a policy was updated doesn't impact this priority. To make sure user settings are consistent and clear, avoid any policy targeting overlaps.
+Because user setting policies are assigned to user groups, there’s a possibility of overlap for groups/users. If a user is assigned to more than one user setting policy, user settings will honor the most-recently created policy and ignore all others. The last time a policy was updated doesn't affect this priority. To make sure user settings are consistent and clear, avoid any policy targeting overlaps.
 
 <!-- ########################## -->
 ## Next steps

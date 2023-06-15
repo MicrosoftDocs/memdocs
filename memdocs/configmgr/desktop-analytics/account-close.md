@@ -6,11 +6,12 @@ ms.date: 10/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # How to close your account
@@ -56,6 +57,8 @@ The Desktop Analytics data ages out based on your data retention policy for the 
 > [!Important]  
 > If you're using the Log Analytics workspace with other solutions, don't delete the workspace.
 
+> [Important]
+> After November 30, 2022 Administrators will no longer be able to access Desktop Analytics portal.
 ## Remove user and app access
 
 1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Global administrator** role. Go to **Azure Active Directory**.

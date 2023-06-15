@@ -1,18 +1,18 @@
 ---
-title: "ExportXml Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ExportXml Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d6d3f17e-75fc-48c6-b6ed-b7b0d6169f41
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn how the ExportXml Method exports task sequence XML in a format that is suitable to use on another site.
+ms.reviewer: mstewart,aaroncz 
 ---
 # ExportXml Method in Class SMS_TaskSequence
 The `ExportXml` Windows Management Instrumentation(WMI) class method, in Configuration Manager, exports task sequence XML in a format that is suitable to use on another site.  

@@ -2,14 +2,16 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 08/02/2021
+ms.date: 03/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Supported SQL Server versions for Configuration Manager
@@ -71,6 +73,17 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 > [!IMPORTANT]  
 > When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](size-and-scale-numbers.md).
+
+### SQL Server 2022: Standard, Enterprise
+
+Starting with current branch 2303, support is added for SQL server 2022 version.
+
+You can use this version of SQL Server for the following sites:
+
+- A central administration site
+- A primary site
+- A secondary site
+
 
 ### SQL Server 2019: Standard, Enterprise
 
@@ -170,6 +183,7 @@ The following table identifies the recommended compatibility levels for Configur
 
 |SQL Server version | Supported compatibility levels | Recommended level |
 |----------------|--------------------|--------|
+| SQL Server 2022 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
 | SQL Server 2017 | 140, 130, 120, 110 | 140 |
 | SQL Server 2016 | 130, 120, 110 | 130 |
@@ -181,7 +195,7 @@ To identify the SQL Server cardinality estimation compatibility level in use for
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-For more information on SQL Server Compact Edition (CE) compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
+For more information on SQL Server compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 

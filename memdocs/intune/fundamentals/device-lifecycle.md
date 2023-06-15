@@ -23,7 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
+- triage
 ---
 
 # Overview of the Microsoft Intune mobile device management (MDM) lifecycle
@@ -34,7 +37,7 @@ All devices that you manage have a *lifecycle*. Intune can help you manage this 
 
 ## Enroll
 
-Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and macOS). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](../enrollment/device-enrollment.md). You can also manage Windows PCs by enrolling them with Intune (MDM).
+Today's mobile device management (MDM) strategies deal with a variety of phones, tablets, and PCs (iOS/iPadOS, Android, Windows, and macOS). If you need to be able to manage the device, which is commonly the case for corporate-owned devices, the first step is to [set up device enrollment](/mem/intune/fundamentals/deployment-guide-enrollment). You can also manage Windows PCs by enrolling them with Intune (MDM).
 
 ## Configure
 

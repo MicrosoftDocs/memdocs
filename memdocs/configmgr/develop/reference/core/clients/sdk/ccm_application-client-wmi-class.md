@@ -1,18 +1,18 @@
 ---
-title: "CCM_Application Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_Application Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the CCM_Application Windows Management Instrumentation class is an SMS Provider server class that represents an application.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: e64823ec-48c0-4001-ba00-9ba5906a7336
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Application Client WMI Class
 The `CCM_Application` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.   

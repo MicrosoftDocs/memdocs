@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/11/2021
-ms.topic: conceptual
+ms.date: 06/06/2023
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -19,24 +19,35 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add VPN settings on iOS and iPadOS devices in Microsoft Intune
 
 Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPadOS devices. These settings are used to create and configure VPN connections to your organization's network. This article describes these settings. Some settings are only available for some VPN clients, such as Citrix, Zscaler, and more.
 
+This feature applies to:
+
+- iOS/iPadOS
+
 ## Before you begin
 
-Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+- Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
+
+- If you need these devices to access on-premises resources using modern authentication and Conditional Access, then you can use the [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), which supports split tunneling.
 
 > [!NOTE]
 >
-> - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
 >
 > - The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 >
@@ -47,22 +58,59 @@ Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.m
 Select the VPN connection type from the following list of vendors:
 
 - **Check Point Capsule VPN**
-- **Cisco Legacy AnyConnect**: Applicable to Cisco Legacy AnyConnect app version 4.0.5x and earlier.
-- **Cisco AnyConnect**: Applicable to [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) app version 4.0.7x and later.
+- **Cisco Legacy AnyConnect**
+
+  Applies to Cisco Legacy AnyConnect app version 4.0.5x and earlier.
+
+- **Cisco AnyConnect**
+
+  Applies to [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) app version 4.0.7x and later.
+
 - **SonicWall Mobile Connect**
-- **F5 Access Legacy**: Applicable to F5 Access app version 2.1 and earlier.
-- **F5 Access**: Applicable to F5 Access app version 3.0 and later.
-- **Palo Alto Networks GlobalProtect (Legacy)**: Applicable to Palo Alto Networks GlobalProtect app version 4.1 and earlier.
-- **Palo Alto Networks GlobalProtect**: Applicable to Palo Alto Networks GlobalProtect app version 5.0 and later.
+- **F5 Access Legacy**
+
+  Applies to F5 Access app version 2.1 and earlier.
+- **F5 Access**
+
+  Applies to F5 Access app version 3.0 and later.
+- **Palo Alto Networks GlobalProtect (Legacy)**
+
+  Applies to Palo Alto Networks GlobalProtect app version 4.1 and earlier.
+- **Palo Alto Networks GlobalProtect**
+
+  Applies to Palo Alto Networks GlobalProtect app version 5.0 and later.
 - **Pulse Secure**
 - **Cisco (IPSec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: To use Conditional Access, or allow users to bypass the Zscaler sign in screen, you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+- **Zscaler**
+
+  To use Conditional Access, or allow users to bypass the Zscaler sign-in screen, you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **NetMotion Mobility**
-- **IKEv2**: [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
-- **Microsoft Tunnel (standalone client)(preview)**: Applicable to the Microsoft Tunnel client app.
-- **Microsoft Tunnel (preview)** - Applicable to the preview version of the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
+- **IKEv2**
+
+  [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
+
+- **Microsoft Tunnel (standalone client)(preview)**
+
+  Applies to the Microsoft Tunnel client app.
+
+  > [!Important]
+  >
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
+  >
+  > - On July 29, 2022, the standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+  >
+  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
+
+- **Microsoft Tunnel**
+
+  Applies to the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
+
+  > [!Important]
+  > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
+  
 - **Custom VPN**
 
 > [!NOTE]
@@ -71,10 +119,10 @@ Select the VPN connection type from the following list of vendors:
 ## Base VPN settings
 
 - **Connection name**: End users see this name when they browse their device for a list of available VPN connections.
-- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Azure Active Directory (AD) is used.
+- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Azure Active Directory (AD) is used.
 - **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
-- **Authentication method**: Choose how devices authenticate to the VPN server. 
+- **Authentication method**: Choose how devices authenticate to the VPN server.
   - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) provides some guidance about certificate profiles.
   - **Username and password**: End users must enter a username and password to sign in to the VPN server.  
 
@@ -83,7 +131,7 @@ Select the VPN connection type from the following list of vendors:
 
   - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
-- **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud. 
+- **Excluded URLs** (Zscaler only): When connected to the Zscaler VPN, the listed URLs are accessible outside the Zscaler cloud.
 
 - **Split tunneling**: **Enable** or **Disable** to let devices decide which connection to use, depending on the traffic. For example, a user in a hotel uses the VPN connection to access work files, but uses the hotel's standard network for regular web browsing.
 
@@ -106,7 +154,7 @@ Select the VPN connection type from the following list of vendors:
 
   **When using F5 Access**, be sure to:
 
-  - Confirm you're using F5 BIG-IP 13.1.1.5 or later. 
+  - Confirm you're using F5 BIG-IP 13.1.1.5 or later.
   - Integrate BIG-IP with Intune for NAC. See the [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 guide.
   - Enable NAC in the VPN profile.
 
@@ -148,13 +196,13 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - **Yes, all apps**: Allows all CN app traffic to bypass the VPN​.
     - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`.
 
-  - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
+  - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign-on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
   - **Network address translation (NAT) keepalive interval (seconds)**: To stay connected to the VPN, the device sends network packets to remain active. Enter a value in seconds on how often these packets are sent, from 20-1440. For example, enter a value of `60` to send the network packets to the VPN every 60 seconds. By default, this value is set to `110` seconds.
   - **Offload NAT keepalive to hardware when device is asleep**: When a device is asleep, **Enable** (default) has NAT continuously send keep-alive packets so the device stays connected to the VPN. **Disable** turns off this feature.
 
 - **Remote identifier**: Enter the network IP address, FQDN, UserFQDN, or ASN1DN of the IKEv2 server. For example, enter `10.0.0.3` or `vpn.contoso.com`. Typically, you enter the same value as the [**Connection name**](#base-vpn-settings) (in this article). But, it does depend on your IKEv2 server settings.
 
-- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate’s identity. The IKEv2 server may require the values to match so it can validate the client’s identity.
+- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate's identity. The IKEv2 server may require the values to match so it can validate the client's identity.
 
 - **Client Authentication type**: Choose how the VPN client authenticates to the VPN. Your options:
   - **User authentication** (default): User credentials authenticate to the VPN.
@@ -168,7 +216,6 @@ These settings apply when you choose **Connection type** > **IKEv2**.
       - **ECDSA384**
       - **ECDSA521**
 
-  - **Username and password** (User authentication only): When users connect to the VPN, they're prompted for their username and password.
   - **Shared secret** (Machine authentication only): Allows you to enter a shared secret to send to the VPN server.
     - **Shared secret**: Enter the shared secret, also known as the pre-shared key (PSK). Be sure the value matches the shared secret configured on the VPN server.
 
@@ -232,81 +279,140 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     > If you set the encryption algorithm to `AES-128-GCM` or `AES-256-GCM`, then the `AES-256` default is used. This is a known issue, and will be fixed in a future release. There is no ETA.
 
 - **Integrity algorithm**:  Select the algorithm you want:
-    - SHA1-96
-    - SHA1-160
-    - SHA2-256 (default)
-    - SHA2-384
-    - SHA2-512
+  - SHA1-96
+  - SHA1-160
+  - SHA2-256 (default)
+  - SHA2-384
+  - SHA2-512
+
+  Also configure:
+
   - **Diffie-Hellman group**: Select the group you want. Default is group `2`.
   - **Lifetime** (minutes): Enter how long the security association stays active until the keys are rotated. Enter a whole value between `10` and `1440` (1440 minutes is 24 hours). Default is `1440`.
 
 ## Automatic VPN
 
-- **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching IP address or domain name. If there's a match, then the action you choose runs.
+- **Type of automatic VPN**: Select the VPN type you want to configure: On-demand VPN or per-app VPN:
 
-  For example, create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
+  - **Not configured** (default): Intune doesn't change or update this setting.
+  - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
 
-  - **Add**: Select this option to add a rule.
+    For example, you can create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
 
-  - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action. Your options:
+    - **On-demand rules** > **Add**: Select **Add** to add a rule. If there isn't an existing VPN connection, then use these settings to create an on-demand rule. If there's a match to your rule, then the device does the action you select.
 
-    - Establish VPN
-    - Disconnect VPN
-    - Evaluate each connection attempt
-    - Ignore
+      - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action you want the device to do. Your options:
 
-  - **I want to restrict to**: Select the condition that the rule must meet. Your options:
+        - **Establish VPN**: If there's a match between the device value and your on-demand rule, then the device connects to the VPN.
+        - **Disconnect VPN**: If there's a match between the device value and your on-demand rule, then the VPN connection is disconnected.
+        - **Evaluate each connection attempt**: If there's a match between the device value and your on-demand rule, then use the **Choose whether to connect** setting to decide what happens for *each* VPN connection attempt:
+          - **Connect if needed**: If the device is on an internal network, or if there's already an established VPN connection to the internal network, then the on-demand VPN won't connect. These settings aren't used.
 
-    - **Specific SSIDs**: Enter one or more wireless network names that the rule will apply. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
-    - **Specific DNS domains**: Enter one or more DNS domains that the rule will apply. For example, enter `contoso.com`.
-    - **All domains**: Select this option to apply your rule to all domains in your organization.
+            If there isn't an existing VPN connection, then for *each* VPN connection attempt, decide if users should connect using a DNS domain name. This rule only applies to domains in the **When users try to access these domains** list. All other domains are ignored.
 
-  - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
+            - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, meaning it doesn't have access to internal resources, then it connects to the VPN on-demand. If the domain does resolve, meaning it already has access to internal resources, then it doesn't connect to the VPN.
 
-    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPNs ability to connect to a site before the device connects to the target URL through the VPN.
+              > [!NOTE]
+              >
+              > - If the **When users try to access these domains** setting is empty, then the device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain. The idea is that these DNS servers are public servers.
+              >
+              >   The domains in the **When users try to access these domains** list are internal resources. Internal resources aren't on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection's DNS servers and the internal resource is available.
+              >
+              >   If the device is on the internal network, then the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network.
+              >
+              > - If the **When users try to access these domains** setting is populated, then the DNS servers on this list are used to resolve the domains in the list.
+              >
+              >   The idea is the opposite of the first bullet (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and the device connects to the VPN on-demand. Now the internal resources are available.
+              >
+              >   Remember this information only applies to domains in the **When users try to access these domains** list. All other domains are resolved with public DNS servers. When the device is connected to the internal network, the DNS servers in the list are accessible, and there's no need to connect to the VPN.
 
-- **Prevent users from disabling automatic VPN**: Your options:
+            - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
 
-  - **Not configured**: Intune doesn't change or update this setting.
-  - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
-  - **No**: Allows users to turn off automatic VPN.
+            - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
 
-  This setting applies to:  
-  - iOS 14 and newer
-  - iPadOS 14 and newer
+              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then the device connects to the VPN.
 
-- **Per-app VPN**: Enables per-app VPN by associating this VPN connection with an iOS/iPadOS app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+              The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and it connects to the VPN on-demand. Once the VPN connection is established, internal resources are available.
 
-  Per-app VPN isn't supported on IKEv2. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
+          - **Never connect**: For each VPN connection attempt, when users try to access the domains you enter, then the device never connects to the VPN.
 
-  - **Provider Type**: Only available for Pulse Secure and Custom VPN.
-  - When using iOS/iPadOS **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel). Set the **ProviderType** value to **app-proxy** for app-layer tunneling, or **packet-tunnel** for packet-layer tunneling. If you're not sure which value to use, check your VPN provider's documentation.
+            - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then a VPN connection isn't created. If they try to connect to a domain not in this list, then the device connects to the VPN.
 
-  - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established.
+        - **Ignore**: If there's a match between the device value and your on-demand rule, then a VPN connection is ignored.
 
-  - **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection. 
+      - **I want to restrict to**: In the **I want to do the following** setting, if you select **Establish VPN**, **Disconnect VPN**, or **Ignore**, then select the condition that the rule must meet. Your options:
 
-    For more information, see [associated domains](device-features-configure.md#associated-domains).
+        - **Specific SSIDs**: Enter one or more wireless network names that the rule applies to. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
+        - **Specific search domains**: Enter one or more DNS domains that the rule applies to. For example, enter `contoso.com`.
+        - **All domains**: Select this option to apply your rule to all domains in your organization.
 
-  - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain will use the public Internet even if the VPN is connected.
+      - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
 
-  - **Prevent users from disabling automatic VPN**: Your options:
+        For example, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
 
-    - **Not configured**: Intune doesn't change or update this setting.
-    - **Yes**: Prevents users from turning off the Connect On Demand toggle within the VPN profile settings. It forces users to keep per-app VPN or on-demand rules enabled and running.
-    - **No**: Allows users to turn off the Connect On Demand toggle, which disables per-app VPN and on-demand rules.
+    - **Block users from disabling automatic VPN**: Your options:
 
-    This setting applies to:  
-    - iOS 14 and newer
-    - iPadOS 14 and newer
+      - **Not configured**: Intune doesn't change or update this setting.
+      - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
+      - **No**: Allows users to turn off automatic VPN.
+
+      This setting applies to:
+
+      - iOS 14 and newer
+      - iPadOS 14 and newer
+
+  - **Per-app VPN**: Enables per-app VPN by associating this VPN connection with a specific app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the app software or program. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+
+    Per-app VPN isn't supported on an IKEv2 connection. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
+
+    - **Provider Type**: Only available for Pulse Secure and Custom VPN.
+
+      When using **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel):
+
+      - **app-proxy**: Select this option for app-layer tunneling.
+      - **packet-tunnel**: Select this option for packet-layer tunneling.
+
+      If you're not sure which option to use, then check your VPN provider's documentation.
+
+    - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established. For example, enter `contoso.com`.
+
+    - **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection.
+
+      For more information, see [associated domains](device-features-configure.md#associated-domains).
+
+    - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
+
+    - **Block users from disabling automatic VPN**: Your options:
+
+      - **Not configured**: Intune doesn't change or update this setting.
+      - **Yes**: Prevents users from turning off the Connect On Demand toggle within the VPN profile settings. It forces users to keep per-app VPN or on-demand rules enabled and running.
+      - **No**: Allows users to turn off the Connect On Demand toggle, which disables per-app VPN and on-demand rules.
+
+      This setting applies to:
+
+      - iOS 14 and newer
+      - iPadOS 14 and newer
 
 ## Per-app VPN
 
-These settings apply when you choose **Connection type** > **Microsoft Tunnel (standalone client) (preview)** or **Connection type** > **Microsoft Tunnel (preview)**.  
+These settings apply to the following VPN connection types:
 
-- **Per-app VPN**: **Enable** associates a specific to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+- **Microsoft Tunnel (standalone client) (preview)**
+- **Microsoft Tunnel**
+
+**Settings**:
+
+- **Per-app VPN**: **Enable** associates a specific app to this VPN connection. When the app runs, traffic automatically routes through the VPN connection. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
 
   For more information, see [Microsoft Tunnel for Intune](../protect/microsoft-tunnel-overview.md).
+
+- **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established. For example, enter `contoso.com`.
+
+- **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection.
+
+  For more information, see [associated domains](device-features-configure.md#associated-domains).
+
+- **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
 
 ## Proxy
 
@@ -318,6 +424,6 @@ If you use a proxy, then configure the following settings.
 
 ## Next steps
 
-The profile is created, but may not doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10](vpn-settings-windows-10.md) devices.

@@ -1,14 +1,7 @@
 items:
-- name: Microsoft Endpoint Manager
+- name: Endpoint management
   href: index.yml
-- name: Overview
-  expanded: true
-  items:
-  - name: Microsoft Endpoint Manager overview
-    href: endpoint-manager-overview.md
-  - name: Getting started with Microsoft Endpoint Manager
-    href: endpoint-manager-getting-started.md
-  - name: Getting started with cloud native Windows endpoints
-    href: cloud-native-windows-endpoints.md
-  - name: Get Support
-    href: get-support.md
+- name: Endpoint management overview
+  href: endpoint-manager-overview.md
+- name: Get Support
+  href: get-support.md

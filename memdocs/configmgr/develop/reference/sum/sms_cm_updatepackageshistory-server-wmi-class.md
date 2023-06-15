@@ -1,18 +1,18 @@
 ---
-title: "SMS_CM_UpdatePackagesHistory Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_CM_UpdatePackagesHistory Class
+titleSuffix: Configuration Manager
+description: The SMS_CM_UpdatePackagesHistory WMI class is used to get a list of all update packages.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d22e5e14-7035-4c8f-ad2a-1cf9475214f8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CM_UpdatePackagesHistory Server WMI Class
 The `SMS_CM_UpdatePackagesHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to get a list of all update packages.  

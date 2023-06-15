@@ -2,14 +2,16 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Internet access requirements
@@ -53,6 +55,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 - `download.visualstudio.microsoft.com`  
 
 - `sccmconnected-a01.cloudapp.net`  
+
+- `definitionupdates.microsoft.com`
 
 - `configmgrbits.azureedge.net`
 
@@ -175,6 +179,8 @@ If you use Configuration Manager to deploy and update Microsoft 365 Apps for ent
 - `officecdn.microsoft.com` to synchronize the software update point for Microsoft 365 Apps for enterprise client updates
 
 - `config.office.com` to create custom configurations for Microsoft 365 Apps for enterprise deployments
+
+-  `https://clients.config.office.net` and `https://go.microsoft.com/fwlink/?linkid=2190568` to support deploying updates for Microsoft 365 Apps for enterprise
 
 - `contentstorage.osi.office.net` to support the evaluation of Office add-in readiness<!-- MEMDocs#410 -->
 

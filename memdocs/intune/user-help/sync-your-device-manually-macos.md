@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manually sync your macOS device with Intune Company Portal
-description:  Sync your Mac from the Intune Company Portal to get the latest updates and requirements from your organization.  
+description:  Sync your personal Mac from the Intune Company Portal to get the latest updates and requirements from your organization.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/16/2021
+ms.date: 02/02/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -26,19 +26,23 @@ ms.reviewer: kakyker
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
 # Manually sync macOS device with Intune  
 
- A manual sync forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, the sync feature ensures that you can get any updates you missed when you return. 
+You can force your enrolled Mac to sync with Intune for the latest updates, requirements, and communications from your organization. The Intune Company Portal app regularly syncs devices when they're connected to Wi-Fi. However, if you ever need to disconnect for an extended period of time, you can use the Company Portal *sync* action to reconnect and bring your device up-to-date.  
  
 Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
-## Sync device 
+>[!TIP]
+> The Intune Company Portal app is required for this feature. If you're trying to sync a Mac that's owned by your organization, and it doesn't have the Company Portal app, contact your support person for help. They will need to facilitate the sync on their end.          
 
- To force a sync:  
+## Sync personal Mac  
+
+ To force a sync on your personal Mac:  
 
 1. Open the Company Portal app.
 
@@ -53,8 +57,10 @@ Syncing can also help resolve work-related downloads or other processes that are
 
 5. Wait while Company Portal confirms your device status. The status will update onscreen to tell you whether or not you meet your organization's security requirements. 
 
-     ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)
+     ![Screenshot of the Device details highlighting the loading bar.](./media/macos-sync-3-company-portal-2006.png)  
 
 ## Next steps
-Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task. Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Once you've completed these steps, check to see if your initial problem is resolved. If it's not, it may help to restart the stalled installation or task. 
+
+Still need help? Contact your support person. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's contact information.  
 

@@ -1,18 +1,18 @@
 ---
-title: "CreateCCR Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to create a client configuration request (CCR) for a particular resource in Configuration Manager.
+title: CreateCCR Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 2127929c-6a20-457d-a351-5c3262363430
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CreateCCR Method in Class SMS_Collection
 The `CreateCCR` Windows Management Instrumentation (WMI) class method creates a client configuration request (CCR) for a particular resource.  

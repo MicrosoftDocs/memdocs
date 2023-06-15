@@ -6,10 +6,12 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.technology: configmgr-client
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Manage clients over the internet with Configuration Manager

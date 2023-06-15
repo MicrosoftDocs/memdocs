@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use APIs to add third-party CAs for SCEP to Intune
@@ -89,7 +91,7 @@ Integrating the library into your products includes the following steps. These s
 7. Complete [integration testing](#integration-testing) (in this article), and address any issues
 8. Give written guidance to the customer that explains:
 
-   - How the SCEP Server needs to be onboarded in the Microsoft Endpoint Manager admin center
+   - How the SCEP Server needs to be onboarded in the Microsoft Intune admin center
    - How to get the Azure Application Identifier and Azure Application Key needed to configure the library
 
 ### Onboard SCEP server in Azure
@@ -291,7 +293,7 @@ Validating and testing that your solution is properly integrated with Intune is 
 1. Set up an [Intune trial account](../fundamentals/account-sign-up.md).
 2. Onboard the [SCEP Server in the Azure portal](#onboard-scep-server-in-azure) (in this article).
 3. [Configure the SCEP Server](certificates-scep-configure.md) with the IDs and key created when onboarding your SCEP server.
-4. [Enroll devices](../enrollment/device-enrollment.md) to test the scenarios in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
+4. [Enroll devices](/mem/intune/fundamentals/deployment-guide-enrollment) to test the scenarios in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
 5. [Create a Trusted Root Certificate profile](certificates-scep-configure.md) for your test Certificate Authority.
 6. Create SCEP profiles to test the scenarios listed in the [scenario testing matrix](https://github.com/Microsoft/Intune-Resource-Access/blob/develop/src/CsrValidation/doc/TestMatrix.csv).
 7. [Assign the profiles](../configuration/device-profile-assign.md) to users that enrolled their devices.
@@ -300,11 +302,11 @@ Validating and testing that your solution is properly integrated with Intune is 
 10. Confirm the Trusted Root Certificate are installed on all the devices.
 11. Confirm the SCEP Certificates for the assigned profiles are installed on all the devices.
 12. Confirm the properties of the installed certificates match the properties set in the SCEP profile.
-13. Confirm the issued certificates are properly listed in the Intune console
+13. Confirm the issued certificates are properly listed in the Intune admin center
 
 ## See also
 
 - [Add 3rd party CA overview](certificate-authority-add-scep-overview.md)
-- [Setup Intune](../fundamentals/setup-steps.md)
-- [Device enrollment](../enrollment/device-enrollment.md)
+- [Setup Intune](../fundamentals/deployment-plan-setup.md)
+- [Device enrollment](/mem/intune/fundamentals/deployment-guide-enrollment)
 - [Configure SCEP certificate profiles](certificates-profile-scep.md) (the Microsoft NDES Server\Connector setup isn't used for this scenario)

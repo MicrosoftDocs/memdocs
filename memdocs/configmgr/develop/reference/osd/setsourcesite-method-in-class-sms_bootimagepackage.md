@@ -1,18 +1,18 @@
 ---
-title: "SetSourceSite Method in SMS_BootImagePackage"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SetSourceSite Method in SMS_BootImagePackage
+titleSuffix: Configuration Manager
+description: A Windows Management Instrumentation class method that sets the code of the source site for the boot image package.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a24f8c3e-21cf-4d92-9561-a08398d92c2f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetSourceSite Method in Class SMS_BootImagePackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the code of the source site for the boot image package.  

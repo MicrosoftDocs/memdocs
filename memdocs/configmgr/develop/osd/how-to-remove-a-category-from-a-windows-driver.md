@@ -1,18 +1,18 @@
 ---
-title: "Remove a Category from a Windows Driver"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Remove a Category from a Windows Driver
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 85b50703-f51d-470b-9d9f-4d065c2bcb88
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn about how to remove a category from a Windows driver by modifying the CategoryInstance_UniqueIDs array property.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Remove a Category from a Windows Driver
 In Configuration Manager, you remove a category from a Windows driver by removing the unique identifier for the category from the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) `CategoryInstance_UniqueIDs` array property.  

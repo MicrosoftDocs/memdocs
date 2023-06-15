@@ -1,16 +1,17 @@
 ---
 title: "Configure Hardware Inventory Settings"
 titleSuffix: "Configuration Manager"
+description: "Set the Hardware Inventory Client Agent settings by modifying the necessary site control file settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 3ecabdc0-04e5-42ff-9578-97f9874698ad
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

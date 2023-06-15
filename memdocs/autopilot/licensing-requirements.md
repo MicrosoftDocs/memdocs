@@ -1,30 +1,26 @@
 ---
 title: Windows Autopilot licensing requirements
 description: Inform yourself about licensing requirements for Windows Autopilot deployment.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, Autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
-ms.mktglfcycl: deploy
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/16/2020
-ms.collection:
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection: 
   - M365-modern-desktop
-  - highpri
+  - tier2
 ms.topic: conceptual
 ms.custom: 
-- CI 116757
-- CSSTroubleshooting
+  - CI 116757
+  - CSSTroubleshooting
 ---
 
 # Windows Autopilot licensing requirements
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10

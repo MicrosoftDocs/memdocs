@@ -1,18 +1,18 @@
 ---
-title: "Conditional Actions"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to display Configuration Manager actions by specified conditions such as regular expressions, method calls, or security permissions.
+title: Conditional Actions
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: f9e46b28-e6dc-48c8-aa0e-24079774d129
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Conditional Actions
 Configuration Manager actions can be displayed according to specified conditions. The conditions are defined by the following:  

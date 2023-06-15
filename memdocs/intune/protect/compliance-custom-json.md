@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 10/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,23 +24,27 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
-# Custom compliance JSON files
+# Custom compliance JSON files for Microsoft Intune
 
-To support [custom settings for compliance](../protect/compliance-use-custom-settings.md), you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a PowerShell discovery script will evaluate for compliance on the device.
+To support [custom settings for compliance](../protect/compliance-use-custom-settings.md) for Microsoft Intune, you create a JSON file that identifies the settings and value pairs that you want to use for custom compliance. The JSON defines what a discovery script will evaluate for compliance on the device.
 
-You’ll upload the JSON file when you create a compliance policy that includes custom compliance settings. 
+You’ll upload the JSON file when you create a compliance policy that includes custom compliance settings.
 
 A correctly formatted JSON file must include the following information:
 
 - **SettingName** - The name of the custom setting to use for base compliance.
-- **Operator** - Represents a specific action that is used to build a compliance rule. For options, see the following list of supported operators.
-- **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list of supported DataTypes.
+- **Operator** - Represents a specific action that is used to build a compliance rule. For options, see the following list of *supported operators*.
+- **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list of *supported DataTypes*.
 - **Operand** - Represent the values that the operator works on.
 - **MoreInfoURL** - A URL that’s shown to device users so they can learn more about the compliance requirement when their device is noncompliant for a setting. You can also use this to link to instructions to help users bring their device into compliance for this setting.
 - **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state.
+
+You may include as many settings as you'd like in the JSON file, but the file must be no larger than 1 megabyte (MB).
 
 **Supported operators**:  
 - IsEquals
@@ -91,7 +95,7 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
 "Rules":[ 
     { 
        "SettingName":"BiosVersion",
-       "Operator":"GreaterThan",
+       "Operator":"GreaterEquals",
        "DataType":"Version",
        "Operand":"2.3",
        "MoreInfoUrl":"https://bing.com",

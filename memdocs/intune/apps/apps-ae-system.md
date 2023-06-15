@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 05/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,6 +26,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.collection:
+- tier2
 - M365-identity-device-management
 - Android
 ms.custom: intune-azure
@@ -39,7 +40,7 @@ Before you assign an Android Enterprise system app to a device, you must first e
 
 You can enable an Android Enterprise system app in Intune using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Other** types, select **Android Enterprise system app**.
 4. Click **Select**. The **Add app** steps are displayed.
@@ -58,6 +59,10 @@ The **Overview** blade of the app you've created is displayed.
 
 > [!NOTE]
 > You will need to work with the OEM of your device to find the package name of the app you would like to enable/disable.
+>
+> You cannot create an Android Enterprise system app when there is the same app in Managed Google Play in Intune.
+> 
+> The Notes section will not appear for an Android Enterprise system app and is not editable. 
 
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
 
@@ -65,7 +70,7 @@ The app you've created is displayed in the apps list, where you can assign it to
 
 You can disable an Android Enterprise system app in Intune using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. Select the system app from the app list.
 4. Change the assignment for this app to **Uninstalled** and save. 

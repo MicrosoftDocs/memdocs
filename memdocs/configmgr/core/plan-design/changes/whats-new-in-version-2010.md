@@ -6,10 +6,13 @@ ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ROBOTS: NOINDEX
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 2010 of Configuration Manager current branch
@@ -22,18 +25,18 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## Microsoft Endpoint Manager tenant attach
+## Microsoft Intune tenant attach
 
 ### Troubleshooting portal lists a user's devices based on usage
 <!--6974300-->
-The troubleshooting portal in [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
+The troubleshooting portal in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) allows you to search for a user and view their associated devices. Starting in this release, tenant attached devices that are assigned user device affinity automatically based on usage will now be returned when searching for a user.
 
 For more information, see [Tenant attach: ConfigMgr client details in the admin center](../../../tenant-attach/client-details.md#bkmk_list).
 
-### Enhancements to applications in Microsoft Endpoint Manager admin center
+### Enhancements to applications in Microsoft Intune admin center
 <!--7979972, 8227649-->
 
-We've made improvements to applications for tenant attached devices. Administrators can now do the following actions for applications in the Microsoft Endpoint Manager admin center:
+We've made improvements to applications for tenant attached devices. Administrators can now do the following actions for applications in the Microsoft Intune admin center:
 
 - **Uninstall** an application
 - **Repair** installation of an application
@@ -110,7 +113,7 @@ This release includes the following two scenarios:
 
 - **SQL Server Service Broker**: The service broker is a required configuration for the site database. Many of the core subsystems in Configuration Manager use the service broker.<!--7699463-->
 
-- **Client action health**: Monitor the health of the fast channel used for client actions. If your environment is tenant attached with devices uploaded, this feature helps you see potential issues with client actions from the Microsoft Endpoint Manager admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.<!--7699511-->
+- **Client action health**: Monitor the health of the fast channel used for client actions. If your environment is tenant attached with devices uploaded, this feature helps you see potential issues with client actions from the Microsoft Intune admin center. You can also use this feature for on-premises client actions. For example, CMPivot, run scripts, and device wake-up.<!--7699511-->
 
 For more information, see [Monitor scenario health](../../servers/manage/scenario-health.md).
 
@@ -235,7 +238,7 @@ Large task sequences cause problems with client processing. To further help mana
 
 - When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
 
-For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/reduce-task-sequence-policy-size.md).
 
 ### Analyze SetupDiag errors for feature updates
 
@@ -250,7 +253,7 @@ For more information, see [Manage Windows as a service](../../../osd/deploy-use/
 <!--7721999 & 8177793-->
 Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you could activate the Windows power plan for **High Performance**. Starting in this release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ## Protection
 
@@ -367,7 +370,7 @@ For more information, see the [Content library cleanup tool](../hierarchy/conten
 
 <!--7774961-->
 
-You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 

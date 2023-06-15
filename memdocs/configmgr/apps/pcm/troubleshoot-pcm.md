@@ -6,10 +6,12 @@ ms.date: 08/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: troubleshooting
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Troubleshoot Package Conversion Manager

@@ -2,14 +2,14 @@
 # required metadata
 title: Provide users a localized Windows experience on their Cloud PC
 titleSuffix:
-description: Learn how to provide a localized Windows experience for your end-users.
+description: Learn how to provide a localized Windows experience for your end users.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/03/2021
+ms.date: 05/19/2023
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,109 +25,36 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
-# Provide users a localized Windows experience
+# Provide a localized Windows experience
 
 For users to be productive on their Windows 365 Cloud PC, it's important for Windows to use a display language that they're comfortable with. Users can always change the display language themselves through the Settings app in Windows. But the Windows experience is more welcoming if the user sees the right language immediately, starting when they first sign in.
 
-To provide a localized Windows experience when users first sign in, there are two steps:
+There are two different ways to provide a localized Windows experience when users first sign in:
 
-1. [Create a custom device image with the languages installed](#create-a-custom-image-with-the-languages-installed).
-2. [Configure the default language using Group Policy](#configure-the-default-language-using-group-policy).
+- [Use a provisioning policy](use-provisioning-policy-default-display-language.md). If you plan on using a gallery image, you can select the language when you create the provisioning policy.
+- [Create a custom device image](create-custom-image-languages.md). If you plan on using a custom image and you manage your Cloud PCs through group policy, you can include the language as part of the custom image.
 
-Cloud PCs provisioned from this image will be fully configured to work in any of the installed languages, without any user action. When the user signs in to the Cloud PC, Group Policy will evaluate the device and set the appropriate pre-installed language as the user's preferred language for Windows.
+## URLs to allow
 
-## Create a custom image with the languages installed
+For both the provisioning policy and custom image options to set up the display languages, make sure to add the following URLs to your firewall allowlist:
 
-Creating a custom image with the languages installed is the best way to make sure that the desired languages are available on the Cloud PC when the user signs in.
-
-Before starting the custom image process, check if your language is supported by the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller) script. If:
-
-- The language you want to provide for your users is supported by the PowerShell script, follow the steps to [Add languages to Windows using a script and capture the image](#add-languages-to-windows-using-a-script-and-capture-the-image). Windows 10 custom images only.
-- The language you want to provide for your users isn't supported by the PowerShell script, follow the steps to [Add languages to Windows manually and capture the image](#add-languages-to-windows-manually-and-capture-the-image).
-
-### Add languages to Windows using a script and capture the image
-
-To add a language using the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) script:
-
-1. Sign in to the virtual machine you're customizing for use as the custom image.
-2. Complete one of the **Installation Options** described for the [Windows 365 Language Installer](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller/1.0.0.0) script.
-3. Run the script and enter the number corresponding to the language you'd like to install on the custom image.
-
-> [!NOTE]
-> You can use the script to install as many languages as you'd like on the custom image. To do so, run the script one time for each language.
-
-After you're done adding the desired languages and are ready to capture the image, follow the steps to [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
-
-### Add languages to Windows manually and capture the image
-
-To manually install the desired languages to your Windows 10/11 Enterprise custom image, follow the steps in [Add language packs to a Windows 10/11 multi-session image](/azure/virtual-desktop/language-packs) up to and including [finish customizing your image](/azure/virtual-desktop/language-packs#finish-customizing-your-image).
-
-> [!NOTE]
-> Though these instructions are written specifically for Windows 10/11 Enterprise multi-session, these same steps apply to Windows 10/11 Enterprise.
-
-### Upload the custom image
-
-To upload the custom image to the Windows 365 service, after you've captured the image as an Azure managed image, follow the steps in [Add or delete device images](add-device-images.md).
-
-## Configure the default language using Group Policy
-
-Now that the languages are installed on the image that users will receive, you must create a Group Policy to apply the correct pre-installed language as the default for your users.
-
-The following steps configure [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11)) to set the PreferredUILanguages Registry value and the Windows Regional Options. These options are then [targeted by security group](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v=ws.11)#item-level-targeting) to sets of users. Each security group and Group Policy object configures a single language as the default for those users. To cater for users with different language default requirements, you can use a single image with multiple languages and different Group Policy objects targeted to different groups of users.
-
-1. Create a security group in your Active Directory domain that will map a specific language to a specific set of users in that group.
-2. Add all Cloud PC users who should receive that language to this new security group.
-3. In Server Manager, open **Group Policy Management** and create a new Group Policy object linked to the Organization Unit (OU) or domain that will contain the Cloud PCs for those users.
-4. Right-click the new Group Policy object, and select **Edit...**
-5. Navigate to **User Configuration** > **Preferences** > **Windows Settings**, right-click **Registry**, and select **New** > **Registry Item**.
-6. Enter the following details in the **General** tab. Here is an example that shows Spanish (Spain) with language code es-ES:
-    - Action: Replace
-    - Hive: HKEY_CURRENT_USER
-    - Key Path: Control Panel\Desktop
-    - Value name: PreferredUILanguages
-    - Value type: REG_SZ
-    - Value data: [Language/region tag]. For example, **ar-SA** for Arabic (Saudi Arabia).
-    > [!Note]
-    > To find the language code for your desired language and region combination, see the [language pack list](/windows-hardware/manufacture/desktop/available-language-packs-for-windows#language-packs).
-7. Switch to the **Common** tab and check the following three options:
-    - **Run in logged-on user's security context (user policy option)**
-    - **Apply once and do not reapply**
-    > [!Note]
-    > This setting makes sure that users can change language options themselves later.
-    - **Item-level targeting**
-8. Select **Targeting...**, **New Item**, and **Security Group**.
-9. Select **...** next to the Group, search for the new security group, select the new security group, and hit **OK**.
-10. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
-11. In the "Group Policy Management Editor", navigate to **User Configuration** > **Preferences** > **Control Panel Settings**, right-click **Regional Options**, and select **New** > **Regional Options**.
-12. Under **User Locale**, select the language and region combination that matches the registry key you created above.
-13. After selecting your desired language and region combination from the dropdown, the dropdown menu may be underlined in red. This indicates that the selection isn't confirmed. Press the **F5** function key on your keyboard to confirm the selection, resulting in a green underlined dropdown menu.
-
-    Before hitting **F5**:
-
-    ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice hasn't been confirmed.](media/provide-localized-windows-experience/regional-option-selected-red-underline.png)
-
-    After hitting **F5**
-
-    ![An example of the "User Locale" dropdown menu with a red underline, indicating that the selected language choice has been confirmed. ](media/provide-localized-windows-experience/regional-option-selected-green-underline.png)
-
-14. Switch to the **Common** tab and check the following three options:
-    - **Run in logged-on user's security context (user policy option).**
-    - **Apply once and do not reapply.**
-    > [!Note]
-    > This setting makes sure that users can change language options themselves later.
-    - **Item-level targeting.**
-15. Select **Targeting..**, **New Item**, and **Security Group**.
-16. Select **...** next to the Group, search for the new security group, select the new security group, and select **OK**.
-17. Select **User in group**, then select **OK** and **OK** to complete the new registry process.
-
-You can perform these steps for each language you need to provide as the default language for users. If your users have both Cloud PCs and physical devices, you may want to apply [Group Policy loopback](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy) so these settings only affect users when they sign in to their Cloud PC.
-
-> [!NOTE]
-> Step 6 above uses the "Replace" command, setting the user's preferred language to just the one language defined in the registry item. If you create multiple Group Policy objects to assign different languages to users, make sure each user is only a member of a single security group that is being targeted.
+- Windows 11 21H2
+  - LanguagePack: https://software-download.microsoft.com/download/sg/22000.1.210604-1628.co_release_amd64fre_CLIENT_LOF_PACKAGES_OEM.iso
+  - FodToLP: https://download.microsoft.com/download/7/6/0/7600F9DC-C296-4CF8-B92A-2D85BAFBD5D2/Windows-10-1809-FOD-to-LP-Mapping-Table.xlsx
+- Windows 10 21H2 and 21H1
+  - LanguagePack: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/sg/19041.928.210407-2138.vb_release_svc_prod1_amd64fre_InboxApps.iso
+- Windows 10 1909
+  - LanguagePack: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_InboxApps.iso
 
 ## Next steps
 
-[Create a provisioning policy](create-provisioning-policy.md)
+[Use a provisioning policy](use-provisioning-policy-default-display-language.md) or [create a custom device image](create-custom-image-languages.md) to set up the display language.

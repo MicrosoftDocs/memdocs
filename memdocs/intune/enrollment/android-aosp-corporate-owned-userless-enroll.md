@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 09/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,12 +26,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
 ---
 
 # Set up Intune enrollment for Android (AOSP) corporate-owned userless devices    
-
-*This feature is in public preview.*  
 
 Set up enrollment in Microsoft Intune for corporate-owned, userless devices built on the Android Open Source Project (AOSP) platform. Intune offers an *Android (AOSP)* device management solution for corporate-owned Android devices that are:   
 
@@ -41,15 +41,12 @@ Set up enrollment in Microsoft Intune for corporate-owned, userless devices buil
 
 This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work. 
 
-> [!IMPORTANT]
-> This feature is in [public preview](../fundamentals/public-preview.md).  
-
 ## Prerequisites
 
 To enroll and manage AOSP devices, you must have:
 
 * An active Microsoft Intune tenant. 
-* RealWear devices, updated to Firmware 11.2 or later.  
+* [A supported device.](../fundamentals/supported-devices-browsers.md#android)   
 
 You must also: 
 
@@ -64,7 +61,7 @@ Create an enrollment profile to enable enrollment on devices.
 > [!TIP]
 > Intune also generates a token in plain text form, but that one can't be used to enroll devices.   
 
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
+1.	Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
 2.	Select **Create** and fill out the required fields.
     - **Name**: Type a name to use when assigning the profile to the dynamic device group.  
     - **Description**: Add a profile description (optional).  
@@ -96,7 +93,13 @@ Another way to find the token is:
 2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
 3. Select **View enrollment token**.  
 
-The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
+The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.
+
+You can also export the enrollment profile JSON file. To create a JSON file:
+
+1. Go to **Corporate-owned, userless devices**.
+2. From the list, select your enrollment profile.
+3. Select **Token > Export**.   
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
@@ -105,7 +108,7 @@ The token appears as a QR code. During device setup, when prompted to, scan the 
 ### Replace token  
 Generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.  
 3. Choose the profile that you want to work with.
 4. Select **Token** > **Replace token**.
@@ -120,7 +123,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 
  Revoking a token does not affect devices that are already enrolled.
 
-1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1.	Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**.
 2.	Choose the profile that you want to work with.
 3.	Select **Token** > **Revoke token** > **Yes**.   
@@ -132,7 +135,7 @@ Dynamic device groups are configured to automatically add and remove devices bas
 
 Complete the following steps to create a dynamic Azure AD device group for devices enrolled with an Android (AOSP) corporate-owned, userless enrollment profile.  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
     - **Group type**: Security
     - **Group name**: Type an intuitive name (like Factory 1 devices)
@@ -148,7 +151,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
 5. Choose **Add query** > **Create**.  
 
 
-### Enroll devices    
+## Enroll devices via QR code   
 After you set up and assign the Android (AOSP) enrollment profiles, you can enroll devices via QR code. 
 
 1. Turn on your new or factory-reset device.  
@@ -158,14 +161,17 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 > [!TIP]
 > To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**. Select your enrollment profile, and then select **Tokens**. 
 
-3. Follow the on-screen prompts to finish enrolling and registering the device. 
+3. Follow the on-screen prompts to finish enrolling and registering the device. During setup, Intune automatically installs and opens the apps that are needed for enrollment. Those apps include:  
 
-The Microsoft Intune and Microsoft Authenticator apps automatically install and open on the device, which allows the device to be enrolled. You'll be locked in the enrollment process until it's complete.  
+    *  Microsoft Authenticator app  
+    *  Microsoft Intune app  
+    *  Intune Company Portal app  
 
+To use JSON to enroll devices, refer to instructions provided by the device manufacturer.
 ## After enrollment 
 
-### Update Microsoft Intune and Microsoft Authenticator  
-The Intune app automatically installs available app updates for itself and Authenticator. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
+### App updates    
+The Microsoft Intune app automatically installs available app updates for itself, Authenticator, and Company Portal. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
 
 ### Manage devices remotely    
 
@@ -189,7 +195,7 @@ To find out which version of the Microsoft Intune app or Microsoft Authenticator
 3. Find your app and then look in the **Application Version** column for the version number.  
 
 ### Troubleshooting + Support     
-Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigation menu to:
+Go to **Troubleshooting + Support** in the Microsoft Intune admin center to:
 
 * See a list of Android (AOSP) devices enrolled by a user
 * Enable troubleshooting of Android (AOSP) devices the same way you can troubleshoot other user devices. 
@@ -207,7 +213,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-*  Device compliance reporting is not available for for Android (AOSP).   
+*  Device compliance reporting is not available for Android (AOSP).   
 
 * Android (AOSP) management is not supported in these environments:  
     * Intune for Government Community Cloud (GCC) High and Department of Defense (D0D)  

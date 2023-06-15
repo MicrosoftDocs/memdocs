@@ -6,11 +6,12 @@ ms.date: 07/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Desktop Analytics data privacy
@@ -33,7 +34,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
 :::image type="content" source="media/da-data-flow.png" alt-text="Diagram illustrating flow of diagnostic data from devices.":::
 
-1. You sign in to the Microsoft Endpoint Manager admin center, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
+1. You sign in to the Microsoft Intune admin center, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
 
 2. You connect Configuration Manager and enroll devices.
 
@@ -82,7 +83,7 @@ For more information about related privacy aspects, see the following articles:
 
 - [Diagnostic Data Viewer overview](/windows/privacy/diagnostic-data-viewer-overview)
 
-- [Licensing terms and documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31)
+- [Licensing terms and documentation](https://www.microsoft.com/licensing/terms)
 
 - [Log Analytics data security](/azure/azure-monitor/logs/data-security)
 

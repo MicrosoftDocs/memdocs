@@ -1,5 +1,215 @@
 {
     "redirections": [
+        { 
+           "source_path": "memdocs/intune/enrollment/ios-user-enrollment.md",
+           "redirect_url": "/mem/intune/enrollment/apple-user-enrollment-with-company-portal",
+           "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/autopilot/autopilot-mbr.md",
+            "redirect_url": "/mem/autopilot/autopilot-motherboard-replacement",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/enrollment/tutorial-use-autopilot-enroll-devices.md",
+            "redirect_url": "/mem/autopilot/tutorial/autopilot-scenarios",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/policy-map-between-basic-mobility-security-intune.md",
+            "redirect_url": "/mem/intune/fundamentals/migrate-to-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-drive-adoption.md",
+            "redirect_url": "/mem/intune/protect/conditional-access",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide-configure-policies.md",
+            "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/migration-guide.md",
+            "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/introduction-intune-government.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-govt-service-description",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-apps-ios.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-ios",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-mam-apps-ios.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-ios",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-apps-windows.md",
+            "redirect_url": "/mem/intune/user-help/install-apps-cpapp-windows",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-apps-android.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-android",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-educate.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-planning-guide",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/ios-enroll.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/android-enroll.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-android",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/enrollment-method-capab.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-windows",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md",
+            "redirect_url": "/mem/intune/configuration/use-enterprise-sso-plug-in-ios-ipados-macos",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/enrollment/ios-ipados-framework-deployment-methodology.md",
+            "redirect_url": "/mem/intune/enrollment/ios-ipados-configuration-framework",
+            "redirect_document_id": false
+        },  
+        {
+            "source_path": "memdocs/intune/enrollment/device-enrollment.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/framework-deployment-methodology.md",
+            "redirect_url": "/mem/intune/enrollment/android-configuration-framework",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/windows-enrollment-methods.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/enrollment-options.md",
+            "redirect_url": "/mem/intune/enrollment/device-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/enrollment/device-management-capabilities.md",
+            "redirect_url": "/mem/intune/enrollment/device-enrollment",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/send-errors-to-your-it-admin-ios.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-microsoft-ios",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/send-logs-to-microsoft-android.md",
+            "redirect_url": "/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/endpoint-manager-getting-started.md",
+            "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/developer/app-sdk-android.md",
+            "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/developer/app-sdk-android-testing-guide.md",
+            "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-company-portal-messages.md",
+            "redirect_url": "/mem/intune/user-help/sign-in-to-the-company-portal",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/your-device-is-noncompliant-cant-evaluate.md",
+            "redirect_url": "/mem/intune/user-help/",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-update-your-company-portal-app-windows.md",
+            "redirect_url": "/mem/intune/user-help/install-a-new-version-of-the-company-portal-app",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-devices-to-get-work-done",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/how-to-set-the-period-before-your-android-device-is-locked.md",
+            "redirect_url": "/mem/intune/user-help/set-the-amount-of-time-before-your-device-is-locked-android",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/how-to-reconnect-a-compromised-android-device.md",
+            "redirect_url": "/mem/intune/user-help/your-device-is-rooted-and-you-cant-connect-android",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/how-to-encrypt-your-windows-device.md",
+            "redirect_url": "https://support.microsoft.com/windows/turn-on-device-encryption-0c453637-bc88-5f74-5105-741561aae838",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/fundamentals/end-user-mam-apps-android.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-android",
+            "redirect_document_id": true
+        }, 
+        {
+            "source_path": "memdocs/intune/configuration/vpn-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/email-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/device-restrictions-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/custom-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/store-apps-windows-phone-8-1.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/lob-apps-windows-phone.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },      
         {
             "source_path": "memdocs/intune/user-help/set-or-change-your-password-windows.md",
             "redirect_url": "https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf",
@@ -180,7 +390,7 @@
         },
         {
             "source_path": "memdocs/intune/user-help/you-get-an-error-while-using-the-company-portal-app-ios.md",  
-            "redirect_url": "/mem/intune/user-help/send-errors-to-your-it-admin-ios",  
+            "redirect_url": "/mem/intune/user-help/send-logs-to-microsoft-ios",  
             "redirect_document_id": false
         },
         {
@@ -754,6 +964,11 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-deployment.md",
+            "redirect_url": "/mem/autopilot/tutorial/existing-devices/setup-autopilot-profile",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/configmgr/hotfix/2103/KB9603111.md",
             "redirect_url": "/mem/configmgr/hotfix/2103/9603111",
             "redirect_document_id": false
@@ -924,15 +1139,20 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "windows-365/end-user-access-cloud-pc.md",
-            "redirect_url":"/windows-365/enterprise/end-user-access-cloud-pc",
+            "source_path": "windows-365/enterprise/end-user-access-cloud-pc.md",
+            "redirect_url":"windows-365/end-user-access-cloud-pc",
             "redirect_document_id": false
         },
         {
-            "source_path": "windows-365/end-user-hardware-requirements.md",
-            "redirect_url":"/windows-365/enterprise/end-user-hardware-requirements",
+            "source_path": "windows-365/enterprise/end-user-hardware-requirements.md",
+            "redirect_url":"windows-365/end-user-hardware-requirements",
             "redirect_document_id": false
-        },
+        },                
+        {
+            "source_path": "windows-365/business/get-users-started.md",
+            "redirect_url":"/windows-365/get-users-started",
+            "redirect_document_id": false
+        },                        
         {
             "source_path": "windows-365/get-cloud-pc-audit-logs-using-powershell.md",
             "redirect_url":"/windows-365/enterprise/get-cloud-pc-audit-logs-using-powershell",
@@ -1087,6 +1307,126 @@
             "source_path": "memdocs/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager.md",
             "redirect_url": "/mem/configmgr/core/plan-design/hierarchy/state-messages",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/configmgr/sum/deploy-use/uup-preview.md",
+            "redirect_url": "/mem/configmgr/sum/index",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "windows-365/enterprise/on-premises-network-connections.md",
+            "redirect_url": "/windows-365/enterprise/azure-network-connections",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/create-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/create-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/edit-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/edit-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/delete-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/delete-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/troubleshoot-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/troubleshoot-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/get-users-started.md",
+            "redirect_url":"/windows-365/end-user-access-cloud-pc",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/remote-actions/remote-assist-mobile-devices.md",
+            "redirect_url": "/mem/intune/remote-actions/remote-help",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/analytics/productivity-score.md",
+            "redirect_url": "/mem/analytics/adoption-score",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-known-issues.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-on-premises.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-overview.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/protect/context/pr-context.yml",
+            "redirect_url": "/mem/intune/protect",
+            "redirect_document_id": false
+        },        
+        {
+            "source_path": "memdocs/cloud-native-windows-endpoints.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/setup-steps.md",
+            "redirect_url": "/mem/intune/fundamentals/deployment-plan-setup",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/configmgr/core/understand/what-happened-to-sccm.md",
+            "redirect_url": "/mem/configmgr/core/understand/introduction",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/fundamentals/premium-add-ons.md",
+            "redirect_url": "/mem/intune/fundamentals/intune-add-ons",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/remote-actions/remote-help.md",
+            "redirect_url": "/mem/intune/fundamentals/remote-help",
+            "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/configmgr/core/understand/microsoft-endpoint-manager-faq.yml",
+            "redirect_url": "/mem/configmgr/core/understand/configuration-manager-faq",
+            "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/intune/remote-actions/device-erase.md",
+            "redirect_url": "/mem/intune/remote-actions/device-wipe-macos.md",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/analytics/proactive-remediations.md",
+            "redirect_url": "/mem/analytics/remediations",
+            "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/intune/protect/windows-update-compliance-reports.md",
+            "redirect_url": "/mem/intune/protection/windows-update-reports",
+            "redirect_document_id": false            
         }
     ]
 }

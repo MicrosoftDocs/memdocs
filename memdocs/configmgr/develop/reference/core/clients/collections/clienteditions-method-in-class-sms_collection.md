@@ -1,18 +1,18 @@
 ---
-title: "ClientEditions Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to retrieve a list of client editions and whether the DeviceOwner property may be edited using CLientEditions class method.
+title: ClientEditions Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 030dee48-575c-40fe-b402-920426271329
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ClientEditions Method in Class SMS_Collection
 The `ClientEditions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves a list of client editions and whether the `DeviceOwner` property may be edited.  

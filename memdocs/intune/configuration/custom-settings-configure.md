@@ -2,17 +2,16 @@
 # required metadata
 
 title: Use custom device settings in Microsoft Intune
-description: Add or create a profile to use custom settings for Windows 8.1, Windows 10/11 client, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
+description: Add or create a profile to use custom settings for Windows 10/11 client, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Create a profile with custom settings in Intune
@@ -34,7 +35,7 @@ Microsoft Intune includes many built-in settings to control different features o
 This feature applies to:
 
 - Android device administrator
-- Android Enterprise personally-owned devices with a work profile
+- Android Enterprise personally owned devices with a work profile
 - iOS/iPadOS
 - macOS
 - Windows 10/11
@@ -47,7 +48,7 @@ This article shows you how to create a custom profile for Android device adminis
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -93,8 +94,7 @@ This article shows you how to create a custom profile for Android device adminis
 
 In the following example, the **Connectivity/AllowVPNOverCellular** setting is enabled. This setting allows a Windows client device to open a VPN connection when on a cellular network.
 
-> [!div class="mx-imgBorder"]
-> ![Example of a custom policy containing VPN settings in Intune and Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)
+:::image type="content" source="./media/custom-settings-configure/custom-policy-example.png" alt-text="Screenshot that shows an example of a custom policy containing VPN settings in Intune.":::
 
 ## Next steps
 

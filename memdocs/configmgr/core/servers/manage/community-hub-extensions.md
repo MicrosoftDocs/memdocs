@@ -2,19 +2,25 @@
 title: Console extensions from Community hub
 titleSuffix: Configuration Manager
 description: Learn about managing Community hub console extensions for Configuration Manager
-ms.date: 12/01/2021
+ms.date: 10/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Console extensions from Community hub
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in March 2023, this feature of Configuration Manager is being removed. 
+All future versions, starting with 2303 will not have the Community hub node in the admin console. The Community hub node in older versions will be redirected to [deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
 When you use Configuration Manager version 2103 or later, you can download console extensions from the [Community hub](community-hub.md) and have it applied to all consoles connected to a hierarchy. The **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. Getting an extension from community hub doesn't make it immediately available. First, an administrator has to approve the extension for the site. Then console users can install the extension to their local console.
 

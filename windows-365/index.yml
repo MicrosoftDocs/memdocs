@@ -4,12 +4,12 @@ summary: Official product documentation for Windows 365
 
 metadata:
   services: service
-  ms.service: cloudpc
+  ms.service: windows-365
   ms.topic: hub-page
   author: erikjeMS
   ms.author: erikje
   manager: dougeby
-  ms.date: 10/04/2021
+  ms.date: 05/09/2023
 
 highlightedContent:
   items:
@@ -19,6 +19,9 @@ highlightedContent:
     - title: Compare Windows 365 Business and Enterprise
       itemType: overview
       url: business-enterprise-comparison.md
+    - title: Windows 365 approved partners
+      itemType: overview
+      url: partners.md
 
 # productDirectory section (optional)
 productDirectory:
@@ -45,10 +48,8 @@ additionalContent:
         links:
           - text: Microsoft Endpoint Manager documentation
             url: /mem/index
-          - text: Overview of Microsoft Endpoint Manager
+          - text: Overview of Microsoft Intune family
             url: /mem/endpoint-manager-overview
-          - text: Getting started with Microsoft Endpoint Manager
-            url: /mem/endpoint-manager-getting-started
           - text: Microsoft Endpoint Manager blog
             url: https://aka.ms/memblog
       - title: Microsoft 365

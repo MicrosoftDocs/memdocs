@@ -1,18 +1,18 @@
 ---
-title: "SMS_OSDeploymentKitSupportedPlatforms Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_OSDeploymentKitSupportedPlatforms Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SMS_OSDeploymentKitSupportedPlatforms Windows Management Instrumentation class is an SMS Provider server class that maps Assessment and Deployment Kit versions to supported platforms.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c3db4103-1728-4135-8273-db37f5bd5f8b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_OSDeploymentKitSupportedPlatforms Server WMI Class
 The `SMS_OSDeploymentKitSupportedPlatforms` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps Assessment and Deployment Kit (ADK) versions to supported platforms.  

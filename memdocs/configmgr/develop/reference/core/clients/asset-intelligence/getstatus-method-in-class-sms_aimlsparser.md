@@ -1,18 +1,18 @@
 ---
-title: "GetStatus Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetStatus Method
+titleSuffix: Configuration Manager
+description: The GetStatus Windows Management Instrumentation (WMI) class method is used to monitor the status of a previous call to the Import method.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 4c0d8a9a-e9a7-4be9-9691-a86cfb9233e0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetStatus Method in Class SMS_AIMLSParser
 The `GetStatus` Windows Management Instrumentation (WMI) class method, in Configuration Manager, which is used to monitor the status of a previous call to the `Import` method.  

@@ -1,18 +1,18 @@
 ---
-title: "OS Deployment Client COM Automation Classes"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: OS Deployment Client COM Automation Classes
+titleSuffix: Configuration Manager
+description: This section provides reference content for the operating system deployment task client COM automation classes in Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b341d3e6-8015-4718-b628-020e5a5d4914
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Operating System Deployment Client COM Automation Classes
 This section provides reference content for the operating system deployment task client COM automation classes in Configuration Manager.  

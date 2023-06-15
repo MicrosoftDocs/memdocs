@@ -1,18 +1,18 @@
 ---
-title: "SMS_ConfigurationPolicyBase Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ConfigurationPolicyBase Class
+titleSuffix: Configuration Manager
+description: The SMS_ConfigurationPolicyBase WMI class represents the base class for configuration policy.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7a8c1139-a0cc-4b5a-9173-9b849068cf16
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ConfigurationPolicyBase Server WMI Class
 The `SMS_ConfigurationPolicyBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the base class for configuration policy.  

@@ -2,14 +2,16 @@
 title: Integrate Windows Update for Business
 titleSuffix: Configuration Manager
 description: Use Windows Update for Business (WUfB) to keep Windows up-to-date for devices connected to the Windows Update service.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 10/20/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Integrate with Windows Update for Business

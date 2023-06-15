@@ -1,18 +1,18 @@
 ---
-title: "GetSequence Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetSequence Method
+titleSuffix: Configuration Manager
+description: The GetSequence Windows Management Instrumentation (WMI) class method gets a task sequence (SMS_TaskSequence Server WMI Class) from a task sequence package (SMS_TaskSequencePackage Server WMI Class.)
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9606ae78-67c2-4b74-9736-b152c5ee0ce9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetSequence Method in Class SMS_TaskSequencePackage
 The `GetSequence` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets a task sequence ([SMS_TaskSequence Server WMI Class](../../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) from a task sequence package ([SMS_TaskSequencePackage Server WMI Class](../../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)).  

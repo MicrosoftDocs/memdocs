@@ -1,18 +1,18 @@
 ---
-title: "GetFeatures Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetFeatures Method
+titleSuffix: Configuration Manager
+description: This article describes the Get Features Method in Class SMS_WhatsNewFeature. The syntax is detailed below.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8ad3467f-9726-4ede-ab1f-60991ea16ce2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetFeatures Method in Class SMS_WhatsNewFeature
 For internal use only.  

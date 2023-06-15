@@ -1,18 +1,18 @@
 ---
+description: Article describing the use of CreateCCRs in Configuration Manager to generate client configuration requests for the computers in the collection.
 title: CreateCCRs method in class SMS_Collection
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 4c3288fd-a973-4300-b9c5-475867c26fc5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CreateCCRs Method in Class SMS_Collection
 The `CreateCCRs` WMI class method, in Configuration Manager, generates client configuration requests (CCRs) for the computers in the collection.  

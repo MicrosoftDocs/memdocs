@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/26/2021
+ms.date: 03/03/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -26,22 +26,25 @@ ms.reviewer: jieyang
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Reset device passcode from Company Portal website
 
-If you lose your device PIN or password, you can use the [Company Portal website](https://portal.manage.microsoft.com) to reset it. 
+**Applies to**:  
+* Android   
+* iOS/iPadOS  
 
-The reset passcode option might not appear for a corporate-enrolled device. In this case, contact your company support to have it reset for you.  
+Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) on any device to access the *reset passcode* option. The reset passcode option can't be used on all corporate-owned devices. Contact your support person for help if the option is missing and you need to reset a device.  
 
-Passcode reset can't be used on the following types of enrolled devices:
-
-* Personally-owned device with a work profile, running Android 8.0 and later  
-* Android Enterprise dedicated device, running Android 8.0 and later  
-* Android device administrator device, running Android 8.0 and later  
-
-If you forget your passcode on one of these devices, you must reset it to factory settings.  
+>[!NOTE]
+> Passcode reset doesn't work on these types of devices:  
+> * Personal devices that have an Android work profile, running Android 8.0 and later  
+> * Dedicated Android Enterprise work devices, such as kiosks, running Android 8.0 and later  
+> * Devices utilizing Android device administrator, running Android 8.0 and later   
+> 
+> If you forget your passcode on one of these devices, the only way to regain access is to reset the whole device to factory settings. 
 
 ## Reset your passcode
 
@@ -70,10 +73,10 @@ If you forget your passcode on one of these devices, you must reset it to factor
 
    ![Example screenshot showing second reset passcode message. Includes link to learn more about setting a new passcode in the documentation, and individual buttons to reset passcode and cancel.](./media/iwp-reset-passcode-popup2-1808.png) 
 
-6. If you're resetting the passcode for an iOS device, its existing passcode will be removed. For Windows or Android devices, you'll be issued a temporary passcode to unlock the device and set a new passcode. 
+6. If you're resetting the passcode for an iOS device, its existing passcode will be removed. For Android devices, you'll be issued a temporary passcode to unlock the device and set a new passcode. 
 
    > [!NOTE]
-   > You can find the temporary password for Windows and Android devices in the Company Portal, under the device's details page. See the section [Set up a new passcode](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode) for more OS-specific passcode descriptions.  
+   > You can find the temporary password for Android devices in the Company Portal, under the device's details page. See the section [Set up a new passcode](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode) for more OS-specific passcode descriptions.  
    
 7. On your device, go to **Settings** and change the temporary passcode. 
 
@@ -86,9 +89,5 @@ This section describes the passcode reset and the temporary password behavior fo
 **Android**: Removes the existing passcode and creates a temporary passcode made up of letters and numbers.
 
 **iOS**: Removes the existing passcode and doesn't create a temporary passcode. If you use Touch ID to open your device or make purchases, you must set it up again.  
-
-**Windows 10 Mobile**: Removes the existing passcode and creates a temporary passcode made up of letters and numbers. If set up, Windows Hello facial recognition will still work with the device.
-
-**Windows Phone 8.1**: Removes the existing passcode and creates a temporary passcode made up of numbers.  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

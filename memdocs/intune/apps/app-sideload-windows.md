@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,14 +27,17 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
 ms.collection:
+- tier1
 - M365-identity-device-management
 - Windows
 ---
 # Sign line-of-business apps so they can be deployed to Windows devices with Intune
 
-As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices, including the Company Portal app. To deploy *.appx* apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority.
+As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices, including the Company Portal app. To deploy *.appx* apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority. This process is called sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. For example, an app that is internal to your company only.
 
  > [!NOTE]
+ > Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. Intune will no longer support Windows 8.1 sideloading.
+ > 
  > Windows 8.1 Desktop requires either an enterprise policy to enable sideloading or the use of Sideloading Keys (automatically enabled for domain-joined devices). For more information, see [Windows 8 sideloading](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet).
 
 ## Windows 10/11 sideloading
@@ -43,7 +46,7 @@ In Windows 10/11, sideloading is different than in earlier versions of Windows:
 
 - You can unlock a device for sideloading using an enterprise policy. Intune provides a device config policy called "Trusted app installation". Setting this to **allow** is all that is needed for devices that already trust the certificate used to sign the appx app.
 
-- Symantec Phone certificates and Sideloading License keys are not required. However if an on-premise certificate authority is not available then you may need to obtain a code signing certificate from a public certification authority. For more information, see [Introduction to Code Signing](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
+- Symantec Phone certificates and Sideloading License keys aren't required. However if an on-premises certificate authority isn't available then you may need to obtain a code signing certificate from a public certification authority. For more information, see [Introduction to Code Signing](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
 ### Code sign your app
 
@@ -53,13 +56,13 @@ The first step is to code sign your appx package. For details, see [Sign app pac
 
 Next, you must upload the signed appx file. For details, see [Add a Windows line-of-business app to Microsoft Intune](lob-apps-windows.md).
 
-If you deploy the app as required to users or devices then you do not need the Intune Company Portal app. However if you deploy the app as available to users, then they can either use the Company Portal app from the Public Microsoft Store, use the Company Portal app from the Private Microsoft Store for Business, or you will need to sign and manually deploy the Intune Company Portal app.
+If you deploy the app as required to users or devices then you don't need the Intune Company Portal app. However if you deploy the app as available to users, then they can either use the Company Portal app from the Public Microsoft Store, use the Company Portal app from the Private Microsoft Store for Business, or you'll need to sign and manually deploy the Intune Company Portal app.
 
 ### Upload the code-signing certificate
 
-If your Windows 10/11 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to Intune using the following steps:
+If your Windows 10/11 device doesn't already trust the certificate authority, then after you've signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to Intune using the following steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Tenant administration** > **Connectors and tokens** > **Windows enterprise certificates**.
 3. Select a file under **Code-signing certificate file**.
 4. Select your *.cer* file and click **Open**.
@@ -67,7 +70,7 @@ If your Windows 10/11 device does not already trust the certificate authority, t
 
 Now any Windows 10/11 Desktop & Mobile device with an appx deployment by the Intune service will automatically download the corresponding enterprise certificate and the application will be allowed to launch after installation.
 
-Intune only deploys the latest .cer file that was uploaded. If you have multiple appx files created by different developers that are not associated with your organization, then you will need to either have them provide unsigned appx files for signing with your certificate, or provide them the code signing certificate used by your organization.
+Intune only deploys the latest .cer file that was uploaded. If you have multiple appx files created by different developers that aren't associated with your organization, then you'll need to either have them provide unsigned appx files for signing with your certificate, or provide them with the code signing certificate used by your organization.
 
 ## How to renew the Symantec enterprise code-signing certificate
 
@@ -81,35 +84,35 @@ The Intune service can no longer deploy LOB apps for this platform once the exis
 
 Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 
-If the cert period has expired then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and re-upload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune in the Microsoft Endpoint Manager admin center.
+If the cert period has expired, then the appx files may stop launching. You should obtain a new .cer file and follow the instructions to code-sign each deployed appx file and reupload all appx files and the updated .cer file to the Windows Enterprise Certificates section of the Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Manually deploy Windows 10 Company Portal app
 
-If you do not want to provide access to the Microsoft Store, you can manually deploy the Windows 10 Company Portal app directly from Intune even if you haven't integrated Intune with the Microsoft Store for Business (MSFB). Alternatively, if you have integrated, then you could deploy the Company Portal app using [deploy apps using MSFB](store-apps-windows.md).
+If you don't want to provide access to the Microsoft Store, you can manually deploy the Windows 10 Company Portal app directly from Intune even if you haven't integrated Intune with the Microsoft Store for Business (MSFB). Alternatively, if you've integrated, then you could deploy the Company Portal app using [deploy apps using MSFB](store-apps-windows.md).
 
  > [!NOTE]
  > This option will require deploying manual updates each time an app update is released.
 
 1. Sign in to your account in the [Microsoft Store for Business](https://www.microsoft.com/business-store) and acquire the **offline license** version of the Company Portal app.  
 2. Once the app has been acquired, select the app in the **Inventory** page.  
-3. Select **Windows 10 all devices** as the **Platform**, then the appropriate **Architecture** and download. An app license file is not needed for this app.
+3. Select **Windows 10 all devices** as the **Platform**, then the appropriate **Architecture** and download. An app license file isn't needed for this app.
    ![Image of Windows 10 X86 Package details for Download](./media/app-sideload-windows/Win10CP-all-devices.png)
 4. Download all the packages under "Required Frameworks". This must be done for x86, x64, ARM, and ARM64 architectures – resulting in a total of 9 packages as shown below.
 
    ![Image of dependency files to Download ](./media/app-sideload-windows/Win10CP-dependent-files.png)
-5. Before uploading the Company Portal app to Intune, create a folder (e.g., C:&#92;Company Portal) with the packages structured in the following way:
+5. Before uploading the Company Portal app to Intune, create a folder (for example, C:&#92;Company Portal) with the packages structured in the following way:
    1. Place the Company Portal package into C:\Company Portal. Create a Dependencies subfolder in this location as well.  
       ![Image of Dependencies folder saved with APPXBUN file](./media/app-sideload-windows/Win10CP-Dependencies-save.png)
    2. Place the nine dependencies packages in the Dependencies folder.  
-      If the dependencies are not placed in this format, Intune will not be able to recognize and upload them during the package upload, causing the upload to fail with the following error.  
+      If the dependencies aren't placed in this format, Intune won't be able to recognize and upload them during the package upload, causing the upload to fail with the following error.  
       <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Return to Intune, then upload the Company Portal app as a new app. Deploy it as a required app to the desired set of target users.  
 
 See [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm) for more information about how Intune handles dependencies for Universal apps.  
 
-### How do I update the Company Portal on my users' devices if they have already installed the older apps from the store?
+### How do I update the Company Portal on my users' devices if they've already installed the older apps from the store?
 
-If your users have already installed the Windows 8.1 Company Portal apps from the Store, then they should be automatically updated to the new version with no action required from you or your user. If the update does not happen, ask your users to check that they have enabled autoupdates for Store apps on their devices.
+If your users have already installed the Windows 8.1 Company Portal apps from the Store, then they should be automatically updated to the new version with no action required from you or your user. If the update doesn't happen, ask your users to check that they have enabled autoupdates for Store apps on their devices.
 
 ### How do I upgrade my sideloaded Windows 8.1 Company Portal app to the Windows 10 Company Portal app?
 
@@ -125,13 +128,13 @@ Our recommended migration path is to delete the existing deployment for the Wind
 
 Otherwise, the Windows 10 Company Portal app needs to be appropriately updated and signed to ensure that the upgrade path is respected.  
 
-If the Windows 10 Company Portal app is signed and deployed in this way, you will need to repeat this process for each new app update when it is available in the store. The app will not automatically update when the store is updated.  
+If the Windows 10 Company Portal app is signed and deployed in this way, you'll need to repeat this process for each new app update when it's available in the store. The app won't automatically update when the store is updated.  
 
 Here's how you sign and deploy the app in this way:
 
-1. Download the [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/intunecpscript). This script requires the Windows SDK for Windows 10 to be installed on the host computer. To download the Windows SDK, see [Windows 10 SDK for Windows 10](https://go.microsoft.com/fwlink/?linkid=162443).
+1. Download the [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/intunecpscript). This script requires the Windows SDK for Windows 10 to be installed on the host computer. To download the Windows SDK, see [Windows SDK for Windows 11](https://developer.microsoft.com/windows/downloads/windows-sdk/).
 2. Download the Windows 10 Company Portal app from the Microsoft Store for Business, as detailed above.  
-3. Run the script with the input parameters detailed in the script header to sign the Windows 10 Company Portal app (extracted below). Dependencies do not need to be passed into the script. These are only required when the app is being uploaded to the Intune Admin Console.
+3. Run the script with the input parameters detailed in the script header to sign the Windows 10 Company Portal app (extracted below). Dependencies don't need to be passed into the script. These are only required when the app is being uploaded to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 |       Parameter       |                                                                    Description                                                                    |
 |-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|

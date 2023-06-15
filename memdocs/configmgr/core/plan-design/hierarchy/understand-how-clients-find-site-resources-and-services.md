@@ -6,10 +6,12 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How clients find site resources and services
@@ -104,7 +106,7 @@ The MP list is the preferred service location source for a client. It's a priori
 
 During installation of the client, the client uses the following rules to build its initial MP list:
 
-- Include management points specified during client installation. For example, when you use the **SMSMP** property or **/mp** parameter.
+- Include management points specified during client installation. For example, when you use the `SMSMP` property or `/mp` parameter.
 
 - Query AD DS for published management points. The client identifies management points from AD DS that are in its assigned site and the same product version.
 

@@ -12,6 +12,7 @@ metadata:
   ms.collection:
     - collection
     - highpri
+    - tier1
   author: dougeby
   ms.author: dougeby
   ms.date: 01/19/2022
@@ -164,5 +165,3 @@ landingContent:
         url: device-restrictions-windows-holographic.md                      
       - text: Windows 8.1
         url: device-restrictions-windows-8-1.md
-      - text: Windows Phone 8.1
-        url: device-restrictions-windows-phone-8-1.md

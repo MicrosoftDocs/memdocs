@@ -6,8 +6,8 @@ ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: troubleshooting
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.localizationpriority: high
 ---
@@ -29,16 +29,6 @@ This issue impacts custom client settings objects that include the **Computer Ag
 **Mitigation:**
 To properly configure devices governed by custom client settings for Endpoint analytics, manually set the **Enable Endpoint analytics data collection** setting to **No** and select **OK** to close the settings. Then, reopen the custom client settings and change the **Enable Endpoint analytics data collection** setting back to **Yes** and select **OK**. This change will force the custom client settings to update on targeted devices.
 
-### User experience blade not available in All Devices report for some devices
-
-When viewing the **Devices** > **All Devices** report in Intune, the **User experience** blade may not be available for some devices that are enrolled in Endpoint analytics.
-
-**Impacted devices:**
-This issue impacts co-managed devices. Devices enrolled only via Intune or only via Configuration Manager are not affected.
-
-**Workaround:**
-The User experience blade is available for all devices, including co-managed devices, within the Endpoint analytics solution. Navigate to **Startup performance** > **Device performance**, then click to drill down into a device.
-
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
 Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running Windows 10 version 1903 or later Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
@@ -59,9 +49,9 @@ Rollback transaction: XXXX
 
 **Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently used by Endpoint analytics and isn't transmitted to Microsoft.
 
-### Script requirements for proactive remediations
+### Script requirements for Remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
+If the option **Enforce script signature check** is enabled in the [Settings](remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
@@ -70,7 +60,7 @@ If the overview page shows a startup performance score of zero with a banner sho
 First, ensure devices meet the prerequisites:
 - [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
 - [Prerequisites for Configuration Manager managed devices](enroll-configmgr.md#bkmk_prereq)
-- [Prerequisites for Proactive remediations](proactive-remediations.md#bkmk_prereq)
+- [Prerequisites for Remediations](remediations.md#bkmk_prereq)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
@@ -81,7 +71,7 @@ For Intune or co-managed devices configured with the Intune data collection poli
 
 For Configuration Manager-managed devices:
 1. Ensure all devices you want to see performance data are [enrolled](enroll-configmgr.md#bkmk_cm_enroll).
-1. Check if the data upload from Configuration Manager to the Gateway Service was successful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site server.
+1. Check if the data upload from Configuration Manager to the Gateway Service was successful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site system hosting Service Connection Point role.
 1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.  
 1. Check if missing client devices are sending data to the site server by reviewing the **SensorEndpoint.log** file located in `C:\Windows\CCM\Logs\` on client devices. Look for *Message sent* messages.
 1. Check and resolve any errors occurring during processing of the boot events by reviewing the **SensorManagedProvider.log** file located in `C:\Windows\CCM\Logs\` on client devices.
@@ -161,10 +151,10 @@ The scripts exit with a code of 1 to signal to Intune that remediation should oc
 
 0x87D00321 is a script execution timeout error. This error typically occurs with machines that are connected remotely. A potential mitigation might be to only deploy to a dynamic collection of machines that have internal network connectivity.
 
-### What is the output size limit for proactive remediation scripts?
+### What is the output size limit for remediation scripts?
 
-The maximum allowed output size limit for proactive remediation scripts is 2048 characters.
+The maximum allowed output size limit for Remediation scripts is 2048 characters.
 
 ## Next steps
 
-Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
+Use [Remediations](remediations.md) to help fix common support issues before end-users notice issues.

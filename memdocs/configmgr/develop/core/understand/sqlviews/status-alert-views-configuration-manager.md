@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 40851148-f8ff-4959-b884-164fec0563e7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Status and alert views in Configuration Manager
@@ -340,6 +340,9 @@ The view can be joined to other views by using the **CI_ID**, **AssignmentID**, 
 
 Lists all software updates, by **CI_ID**, in software update deployments, listed by **AssignmentID**, and summarized state reported by targeted clients. The view includes the target collection ID and name; the time of the last summarization; the total number of client computers targeted; the count of client computers reporting unknown, not applicable, missing (required), and present (already installed) states; the number of clients that have installed the software update and failed to install the update; and so on. The view is also listed and described in the [Software Updates Views in Configuration Manager](software-updates-views-configuration-manager.md) topic.
 The view can be joined to other views by using the **CI_ID**, **AssignmentID**, and **CollectionID** columns.
+
+> [!NOTE]
+> This view has been deprecated, no longer generates summary data, and may be removed in the future.
 
 ### v_UpdateEnforcementSummaryPerCollection
 

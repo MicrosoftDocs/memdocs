@@ -1,18 +1,18 @@
 ---
-title: "Configuration Baseline Example 1"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Configuration Baseline Example 1
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 488ff3c1-2bc0-49a0-b925-ab6f41c9561f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: This Baseline Configuration Item Instance example references an application configuration item that checks whether the Configuration Manager client and Notepad are installed on systems that are running Windows XP SP2.
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Baseline Example 1
 The following Baseline Configuration Item Instance example references an application configuration item that checks whether the Configuration Manager client and Notepad.exe are installed on systems that are running Windows XP SP2.  

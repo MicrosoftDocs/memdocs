@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Deployment guide: Manage Android devices in Microsoft Intune
@@ -72,7 +74,7 @@ For more information about the security framework, see the articles listed in th
 
 | Task | Detail | 
 | ---- | ------ | 
-| [Learn about the Android Enterprise framework deployment methodology](../enrollment/framework-deployment-methodology.md)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |      
+| [Learn about the Android Enterprise framework deployment methodology](/mem/intune/enrollment/android-configuration-framework)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |      
 | [Configure device enrollment restrictions for personally owned devices](../enrollment/android-work-profile-security-settings.md)|Apply these restrictions to configure a basic or high security level for devices that are personally owned with work profile. | 
 | [Disallow personal accounts on Android Enterprise devices](../enrollment/android-app-configuration-policies.md) |Prevent people on work or school devices from signing into Microsoft apps with a personal account. |  
 |[Configure security settings for personally owned devices ](../enrollment/android-work-profile-security-settings.md)  | Apply these settings to configure a basic or high security level on devices that are personally owned with work profile. | 
@@ -207,7 +209,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.    
 
-* [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) 
+* [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) 
 * [Configure Slack to use Intune for enterprise mobility management (EMM) and app configuration](../apps/tutorial-configure-slack-enterprise-grid.md) 
 
 For the iOS/iPadOS version of this guide, see [Deployment guide: Manage iOS/iPadOS devices in Microsoft Intune](deployment-guide-platform-ios-ipados.md).

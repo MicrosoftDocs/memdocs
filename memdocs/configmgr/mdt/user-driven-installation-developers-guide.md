@@ -6,11 +6,12 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # User Driven Installation - Developers Guide
@@ -3973,7 +3974,7 @@ Table 84 provides information about the [DLLs](#DLLs) element.
 ##### Element Attributes  
  Table 86 lists the attributes of the [Error](#Error) element and provides a description of each.  
 
-###  
+### Table 86. Error Element Information 
 
 | **Attribute** |                                                                                                                                                                                      **Description**                                                                                                                                                                                       |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

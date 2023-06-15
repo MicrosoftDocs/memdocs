@@ -2,14 +2,16 @@
 title: Managing Surface driver updates
 titleSuffix: Configuration Manager
 description: Configuration Manager synchronizes Surface driver updates for deployment to Surface devices.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 04/15/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Manage Surface drivers with Configuration Manager

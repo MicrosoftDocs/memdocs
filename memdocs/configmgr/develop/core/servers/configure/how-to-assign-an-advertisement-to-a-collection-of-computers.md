@@ -1,18 +1,18 @@
 ---
-title: "Assign an Advertisement to a Collection of Computers"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the SMS_Advertisement class to assign an advertisement to a collection of computers.
+title: Assign an Advertisement to a Collection of Computers
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: fc94ef17-5ecf-44a9-9805-585ce5b8f402
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Assign an Advertisement to a Collection of Computers
 You can assign an advertisement to a collection by using the `SMS_Advertisement` class in Configuration Manager. Advertisements are closely tied to packages, programs and collections. For more information, see [Software Distribution Overview](../../../../develop/core/servers/configure/software-distribution-overview.md).  

@@ -1,18 +1,18 @@
 ---
-title: "SMS_G_System_SYSTEM Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent information about hardware inventory related to a client computer operating system with SMS_G_System_SYSTEM.
+title: SMS_G_System_SYSTEM Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 6627a103-4207-4c05-9fd6-ab0edf7d1c58
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_SYSTEM Server WMI Class
 The `SMS_G_System_SYSTEM` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about hardware inventory related to a client computer operating system.  

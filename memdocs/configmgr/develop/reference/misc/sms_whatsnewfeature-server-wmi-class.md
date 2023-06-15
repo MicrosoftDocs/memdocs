@@ -1,18 +1,18 @@
 ---
-title: "SMS_WhatsNewFeature Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_WhatsNewFeature Class
+titleSuffix: Configuration Manager
+description: The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9cf5d7ff-d13d-4e1d-9df9-3c644e709be4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_WhatsNewFeature Server WMI Class
 For internal use only.  

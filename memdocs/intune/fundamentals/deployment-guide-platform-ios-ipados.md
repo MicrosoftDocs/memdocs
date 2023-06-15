@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Deployment guide: Manage iOS/iPadOS devices in Microsoft Intune
@@ -72,7 +74,7 @@ For more information about the security framework, including specific recommenda
 
 | Task | Detail | 
 | ---- | ------ | 
-| [Learn about the iOS/iPadOS framework deployment methodology](../enrollment/ios-ipados-framework-deployment-methodology.md)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |       
+| [Learn about the iOS/iPadOS framework deployment methodology](/mem/intune/enrollment/ios-ipados-configuration-framework)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |       
 | [Disallow personal accounts for Microsoft apps on iOS/iPadOS devices](../enrollment/ios-ipados-app-configuration-policies.md) |Configure an app policy that prevents users from signing into a personal account on a work or school device. |  
 | [Configure device compliance security settings](../enrollment/ios-ipados-device-compliance-security-configurations.md)|Apply these security settings to configure a basic or high security level on personally owned and corporate owned devices. |  
 |[Configure device security settings for personal devices ](../enrollment/ios-ipados-personal-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on personally owned devices. | 
@@ -188,7 +190,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 ## Next steps  
 Check out these enrollment tutorials to learn how to do some of the top tasks in Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.    
 
-* [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) 
+* [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) 
 * [Use Apple corporate device enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune](../enrollment/tutorial-use-device-enrollment-program-enroll-ios.md)
 * [Protect Exchange Online email on managed devices](../protect/tutorial-protect-email-on-enrolled-devices.md)
 * [Protect Exchange Online email on unmanaged devices](../protect/tutorial-protect-email-on-unmanaged-devices.md)

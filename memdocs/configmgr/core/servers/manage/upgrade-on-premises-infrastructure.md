@@ -6,10 +6,12 @@ ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Upgrade on-premises infrastructure that supports Configuration Manager
@@ -67,6 +69,8 @@ Use the steps in this section for any of the following upgrade scenarios:
 #### Before upgrade
 
 - (_Windows Server 2012 or Windows Server 2012 R2 only_): Remove the System Center Endpoint Protection (SCEP) client. Windows Server now has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server.
+
+- (_Windows Server 2012 or Windows Server 2012 R2 only_): Install the latest Cumulative Update and uninstall Windows Management Framework 5.1 before attempting the upgrade.
 
 - Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
 
@@ -199,12 +203,10 @@ When you have more than one Configuration Manager site in a hierarchy, each site
 
 Configuration Manager supports the in-place upgrade of SQL Server to the following versions:
 
+- SQL Server 2022 
 - SQL Server 2019
-
 - SQL Server 2017
-
 - SQL Server 2016
-
 - SQL Server 2014
 
 This support includes the upgrade of SQL Server Express to a newer version of SQL Server Express at secondary sites.
@@ -221,6 +223,7 @@ When you upgrade a site database from an earlier version of SQL Server, the data
 
 For more information about upgrading SQL Server, see the following SQL Server articles:
 
+- [Upgrade to SQL Server 2022](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2022)
 - [Upgrade to SQL Server 2019](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15)
 
 - [Upgrade to SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)

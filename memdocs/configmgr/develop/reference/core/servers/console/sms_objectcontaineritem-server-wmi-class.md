@@ -1,18 +1,18 @@
 ---
-title: "SMS_ObjectContainerItem Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ObjectContainerItem Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that contains information about a Configuration Manager console folder item.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: bfa25626-733e-4023-98b2-e1ff3ee18255
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ObjectContainerItem Server WMI Class
 The `SMS_ObjectContainerItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about a Configuration Manager console folder item.  

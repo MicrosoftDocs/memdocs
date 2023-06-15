@@ -1,16 +1,17 @@
 ---
 title: "SMS_CM_UpdatePackTopLevelMonitoring Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that gets the top-level installation stages and status per site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b22bbfea-bf8e-4375-95b1-5fc2d021ded4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

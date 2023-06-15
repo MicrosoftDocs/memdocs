@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/31/2022
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Migrate to Microsoft Defender for Endpoint for the Microsoft Tunnel in Intune
@@ -31,38 +33,32 @@ If you use Microsoft Tunnel as a VPN gateway solution for Microsoft Intune, plan
 
 ## Platform support
 
-If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the Android standalone tunnel client app ends on January 31, 2022.
+If you've previously configured Microsoft Tunnel for iOS using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the iOS standalone tunnel client app ends by the end of July 29, 2022.
+
+Support for the Android standalone tunnel client app ended on January 31, 2022.
 
 The following device platforms support Microsoft Defender for Endpoint as the tunnel client app:
 
 - **Android Enterprise**:
   - Fully managed
   - Corporate-owned work profile
-  - Personally-owned work Profile
+  - Personally owned work Profile
 
   On June 14, 2021, Microsoft Defender for Endpoint became generally available as the Microsoft Tunnel client app for Android for use with the Microsoft Tunnel Gateway in Microsoft Intune.
 
   If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app before support for the Android standalone Tunnel client app ends on October 26, 2021.
 
-  When using Microsoft Defender for Endpoint to connect to Tunnel for Android, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile. If you don't intend to use any Defender functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
+  When using Microsoft Defender for Endpoint to connect to Tunnel for Android, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile. If you don't intend to use any Defender for Endpoint functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
 
-<!-- Hiding the following info box, but keeping it for historical context and in case these issues resurface in the future >
+- **iOS/iPadOS devices**:
 
-  > [!IMPORTANT]
-  > If you are using per-app VPN and also have Defender web protection enabled, you may experience connectivity issues for apps outside your per-app VPN list in the following scenarios, which may prevent devices from communicating with Intune:
-  > - You are using an internal proxy. In this case, you must disable web protection in the VPN profile by adding the **antiphishing** setting in the [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) section and entering a value of **0**.
-  > - You are using internal DNS servers. You must include the IP address of at least one publicly-accessible DNS server, like 1.1.1.1, in your Tunnel Gateway [server configurations](../protect/microsoft-tunnel-configure.md#create-a-server-configuration).
--->
+  On April 29, 2022, Microsoft Defender for Endpoint became available as the Microsoft Tunnel client app for iOS/iPadOS devices for use with the Microsoft Tunnel Gateway in Microsoft Intune.
 
-- **iOS/iPadOS devices (in public preview)**:
+  If you've previously configured Microsoft Tunnel for iOS/iPadOS using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app. Support for the iOS standalone Tunnel client app ends on July 29, 2022.
 
-  In January 2022, a preview version of Microsoft Defender for Endpoint became available as the Microsoft Tunnel client app for iOS/iPadOS devices for use with the Microsoft Tunnel Gateway in Microsoft Intune.
+  To configure the Microsoft Defender for Endpoint app to connect to Tunnel, you'll need to create a new VPN profile with the *Microsoft Tunnel* connection type.
 
-  The preview version of Microsoft Defender for Endpoint is available from the Apple app store. You can use Intune to deploy this app.
-
-  To configure the Microsoft Defender for Endpoint app to connect to Tunnel, you'll need to create a new VPN profile with the *Microsoft Tunnel (preview)* connection type.
-
-  When using Microsoft Defender for Endpoint to connect to Tunnel for iOS/iPadOS, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint. If you don't intend to use any Defender functionality, including web protection, use custom settings in the VPN profile and set the **TunnelOnly** setting to **True**.
+  When using Microsoft Defender for Endpoint to connect to Tunnel for iOS/iPadOS, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint. If you don't intend to use any Defender for Endpoint functionality, including web protection, use custom settings in the VPN profile and set the **TunnelOnly** setting to **True**.
 
 ## Changes introduced to support Defender for Endpoint
 
@@ -89,12 +85,14 @@ The following connection types are now available in VPN profiles:
     - A connection type of *Microsoft Tunnel (standalone client)* should no longer be created for Android. Existing VPN profiles with this connection type should be migrated to *Microsoft Tunnel* and you should use Defender for Endpoint as the Tunnel client app.
 
 - **iOS/iPadOS**:
-  - **Microsoft Tunnel (preview)**
-    - A VPN profile with this connection type configures the public preview version of the Microsoft Defender for Endpoint app to connect to Microsoft Tunnel Gateway.
+  - **Microsoft Tunnel**
+    - A VPN profile with this connection type configures the Microsoft Defender for Endpoint app to connect to Microsoft Tunnel Gateway.
+    - A connection type of *Microsoft Tunnel (standalone client) (preview)* should no longer be created for iOS/iPadOS. Existing VPN profiles with this connection type should be migrated to *Microsoft Tunnel*, which requires Defender for Endpoint as the Tunnel client app.
 
-  - **Microsoft Tunnel (standalone client) (preview)**
-    - A VPN profile with this connection type configures the standalone Tunnel client app to connect to Microsoft Tunnel Gateway.
+    > [!Note]
+    > On April 29, 2022, the *Microsoft Tunnel* connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
 
+    
 **End-user changes**:
 
 The Microsoft Defender for Endpoint app that you use as the Tunnel client app includes a new tab for the Microsoft Tunnel functionality.
@@ -111,19 +109,13 @@ The functionality that’s available in the Microsoft Defender for Endpoint app 
 
 - **Dashboard** – This tab displays a summary of the device’s overall health, app security status, web protection status, and Tunnel status.
 
-- **App security** (Android only) – On this tab, users can view the status of automatic scans on the device. Users can also uninstall the apps identified as threats and run a manual scan. This tab isn’t available when the VPN profile turns off the Defender functionality or the Defender functionality is turned off by a separate app configuration profile.
+- **App security** (Android only) – On this tab, users can view the status of automatic scans on the device. Users can also uninstall the apps identified as threats and run a manual scan. This tab isn’t available when the VPN profile turns off the Defender for Endpoint functionality or when the Defender for Endpoint functionality is turned off by a separate app configuration profile.
 
-- **Web Protection** – This tab displays the status of the feature enabled or disabled by administrators, and details of the feature described in the flip cards. This tab isn’t available when the VPN profile turns off the Defender functionality (iOS/iPadOS and Android) or the Defender functionality is turned off by a separate app configuration profile (Android).
+- **Web Protection** – This tab displays the status of the feature enabled or disabled by administrators, and details of the feature described in the flip cards. This tab isn’t available when the VPN profile turns off the Defender for Endpoint functionality (iOS/iPadOS and Android) or the Defender for Endpoint functionality is turned off by a separate app configuration profile (Android).
 
 Screenshot of the Defender for Endpoint app on Android:
 
 :::image type="content" source="./media/microsoft-tunnel-migrate-app/defender-app-android.png" alt-text="Screenshot of the Defender for Endpoint app on Android.":::
-
-<!--
-Screenshot of the Defender for Endpoint app on iOS/iPadOS:
-
-:::image type="content" source="./media/microsoft-tunnel-migrate-app/defender-app-ios.png" alt-text="Screenshot of the Defender for Endpoint app on iOS/iPadOS.":::
--->
 
 For information about license requirements for Microsoft Defender for Endpoint, see [Get Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/switch-to-microsoft-defender-prepare#get-microsoft-defender-for-endpoint).
 
@@ -137,16 +129,6 @@ Migrating to Microsoft Defender for Endpoint requires the following broad action
 2. Deploy Microsoft Defender for Endpoint to supported devices.
 3. Create new VPN profiles.
 4. Clean up your previous deployments.
-
-<!-- No longer needed due to fix made in early September, 2021, but retaining for history and in case issues arise again 
-
-> [!IMPORTANT]
->
-> If you use *Always-on VPN* with the standalone Tunnel client app today, during migration to Microsoft Defender for Endpoint:
->
-> - Set *Always-on VPN* to **Not configured** in profiles for **Microsoft Tunnel (standalone client)**, which is the old client app.
-> - Set *Always-on VPN* to **Enable** in profiles for **Microsoft Tunnel**, which is the new Microsoft Defender for Endpoint client app.
--->
 
 ### Deploy Defender for Endpoint for Android
 
@@ -167,7 +149,7 @@ Before you begin your migration to Defender for Endpoint, take the time to revie
 
 You'll use this information when you deploy new VPN profiles and the Defender for Endpoint app, to mirror your existing deployments.
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**. Locate the VPN profiles you use for Microsoft Tunnel for your Android devices. They display a connection type of *Microsoft Tunnel (standalone client)*. You’ll replace these profiles with new profiles that use the Defender for Endpoint app.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**. Locate the VPN profiles you use for Microsoft Tunnel for your Android devices. They display a connection type of *Microsoft Tunnel (standalone client)*. You’ll replace these profiles with new profiles that use the Defender for Endpoint app.
 
    1. Select each profile and then **Properties**.
 
@@ -187,9 +169,9 @@ To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft
 
 2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel**.
 
-   If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **defendertoggle** that is set to **0**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
+   If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **defendertoggle** that is set to **0**. This configuration disables the Defender for Endpoint functionality, leaving only the Tunnel capabilities.
 
-> [!NOTE]
+> [!NOTE]  
 > If you are using the Microsoft Defender for Endpoint app for Android, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
 
 ### Clean up previous deployments for Android
@@ -204,22 +186,20 @@ For deployments of the original Microsoft Tunnel app:
 
 ## Migrate iOS/iPadOS devices to Defender for Endpoint
 
-When you're ready to use the preview version of Microsoft Defender for Endpoint for iOS/iPadOS devices, migrate supported devices from the standalone tunnel client app to the new app. You can also deploy the new app to other devices that haven't previously used the Microsoft Tunnel.
-
-Use of the Defender for Endpoint as the Tunnel client app will eventually be required. This is because the standalone Tunnel client app will go away, and Defender for Endpoint app will then be the only supported Tunnel app.
+When you're ready to use the generally available version of Microsoft Defender for Endpoint for iOS/iPadOS devices, migrate supported devices from the standalone tunnel client app to the new app. You can also deploy the new app to other devices that haven't previously used the Microsoft Tunnel.
 
 Migrating to Defender for Endpoint requires the following broad actions, which are described in the following sections:
 
 1. Deploy Microsoft Defender for Endpoint to supported devices.
 2. Review and record your current Tunnel configurations.
-3. Create new VPN profiles that use *Microsoft Tunnel (preview)* as the connection type.
+3. Create new VPN profiles or reconfigure existing profiles to use *Microsoft Tunnel* as the connection type.
 4. Clean up your previous deployments.
 
 The server settings stay exactly the same regardless of the client you’re using.
 
-### Install the preview version of Defender for Endpoint
+### Install Microsoft Defender for Endpoint
 
-The preview version of Microsoft Defender for Endpoint with support for Microsoft Tunnel on iOS, is available from the Apple app store.
+Microsoft Defender for Endpoint with support for Microsoft Tunnel for iOS is available from the Apple app store.
 
 1. Locate and **Approve** the app in the Apple app store for your tenant, and then **Sync** it. For information on this process, see [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
 2. **Assign** the app to groups.
@@ -227,7 +207,7 @@ The preview version of Microsoft Defender for Endpoint with support for Microsof
 
 ### Review and record your current Tunnel configurations for iOS/iPadOS
 
-Before you begin your migration to Defender for Endpoint, use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to review and record the settings you currently use for the following Intune configurations:
+Before you begin your migration to Defender for Endpoint, use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to review and record the settings you currently use for the following Intune configurations:
 
 - **VPN profiles for Microsoft Tunnel (standalone client) (preview)**
 
@@ -241,23 +221,48 @@ Before you begin your migration to Defender for Endpoint, use the [Microsoft End
 
   2. From Properties, record the available values including those that are assigned as *required* or are assigned as *available*. This information will help you to create similar deployments for the Microsoft Defender for Endpoint app.
 
-### Create new VPN profiles for iOS/iPadOS
+### Manage VPN profiles for iOS/iPadOS
 
-To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft Tunnel Gateway, deploy new VPN profiles with the **Microsoft Tunnel (preview)** connection type. Editing the connection type of an existing profile isn’t supported.
+To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft Tunnel Gateway, deploy VPN profiles that use the **Microsoft Tunnel** connection type. During migration you can choose to edit your existing profiles to use the new connection type, or create new VPN profiles with the new connection type.
+
+#### Modify a VPN Profile for Microsoft Tunnel
+
+Use the following steps to modify a VPN profile to migrate devices from  the standalone tunnel client app to Microsoft Defender for Endpoint as the tunnel client app.
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to > **Devices** > **Configuration profiles** > **iOS/iPadOS**.
+2. Select the VPN profile you want to edit, and then select **Properties**, and then **Edit** the *Configuration settings*.
+3. On the *Configuration settings* page:
+
+   1. Review the current settings for each category. When you change the *Connection type* the profiles settings are cleared and you’ll need to restore them.
+   2. Change the *Connection type* from *Microsoft Tunnel (standalone client)(preview)* to **Microsoft Tunnel(preview)**.
+   3. Reenter the applicable settings for this VPN profile.
+
+      > [!IMPORTANT]  
+      > Even when a setting appears to remain configured and not cleared, reenter each setting to ensure the correct values are applied.
+
+   4. If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **TunnelOnly** that is set to **True**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
+
+4. Select **Review + save** to save the profile.
+5. After the profile redeploys, wait for devices to check in or force devices to sync to get the new policies.
+6. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
+
+#### Create a new VPN profile for Microsoft Tunnel
+
+Use the following steps to create a new VPN profile for devices that will use *Microsoft Defender for Endpoint* as the tunnel client app. When the profile is configured as a per-app VPN, the last step requires you to restart devices after they receive the VPN profile. To avoid this you can choose to [modify an existing VPN profile](#modify-a-vpn-profile-for-microsoft-tunnel) instead of creating and deploying a new one.
 
 1. Use the information from [Create a VPN Profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) to create and deploy new VPN profiles for your iOS/iPadOS devices.
 
-2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel (preview)**.
-If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **TunnelOnly** that is set to **True**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
+2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel**.
+If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **TunnelOnly** that is set to **True**. This configuration disables the Defender for Endpoint functionality, leaving only the Tunnel capabilities.
 
 3. After the profile deploys, wait for devices to check in or force devices to sync to get the new policies.
 
-4. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN Profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
+4. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
 
 5. If you’re using per-app VPN:
-   1. Wait at least 10 minutes after creating the new VPN profile. After 10 minutes you can then change the app deployment assignments from the *Microsoft Tunnel (standalone client) (preview)* VPN profile to the new VPN Profile for *Microsoft Tunnel (preview)*.
+   1. Wait at least 10 minutes after creating the new VPN profile. After 10 minutes you can then change the app deployment assignments from the *Microsoft Tunnel (standalone client) (preview)* VPN profile to the new VPN profile for *Microsoft Tunnel*.
 
-   2. For each app that is assigned as *available*, users must reinstall the app ***after the new VPN profile is installed on their device*** so that the VPN profile assignment can update. This can be done by going to Company Portal, going to **Apps**, tapping the app, and tapping **Install**.
+   2. After the new VPN profile deploys to a device, that device must restart before the new VPN profile is used. To restart a device, see [remotely restart devices with Intune](/intune/remote-actions/device-restart). 
 
 ## Next Steps
 

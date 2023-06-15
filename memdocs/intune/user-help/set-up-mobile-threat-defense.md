@@ -22,11 +22,12 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: aanavath  
+ms.reviewer: aanavath  
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser, contperf-fy21q1
-ms.collection: 
+ms.collection:
+- tier2
 ---  
 
 # Install mobile threat defense app  
@@ -45,7 +46,7 @@ The following MTD apps are commonly used on iOS devices. Select an app to open i
 * [Microsoft Defender for Endpoint](https://go.microsoft.com/fwlink/?linkid=2145949)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139367)
 * [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143272)
-* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
+* [Harmony Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139231)
 * [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139141)
 * [Sophos Intercept X for Mobile](https://go.microsoft.com/fwlink/?linkid=2143414)
 * [Wandera](https://go.microsoft.com/fwlink/?linkid=2143505)
@@ -59,7 +60,7 @@ The following MTD apps are commonly used on Android devices. Select an app to op
 * [Microsoft Defender for Endpoint (Enterprise)](https://go.microsoft.com/fwlink/?linkid=2144546)
 * [Lookout for Work](https://go.microsoft.com/fwlink/?linkid=2139453)
 * [Pradeo Security](https://go.microsoft.com/fwlink/?linkid=2143413)
-* [SandBlast Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
+* [Harmony Mobile Protect](https://go.microsoft.com/fwlink/?linkid=2139455)
 * [SEP Mobile (Symantec Endpoint Protection)](https://go.microsoft.com/fwlink/?linkid=2139454)
 * [Sophos Intercept X for Mobile](https://go.microsoft.com/fwlink/?linkid=2143273)
 * [Wandera](https://go.microsoft.com/fwlink/?linkid=2143506)

@@ -9,11 +9,11 @@ ms.topic: how-to
 
 
 ms.assetid: 3b07899b-2301-475b-9803-5ec5a82b5aa1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # How to create Configuration Manager reports

@@ -1,18 +1,18 @@
 ---
-title: "Resuscitate Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how the Resuscitate Windows Management Instrumentation (WMI) class method, in Configuration Manager, resuscitates site mapping.
+title: Resuscitate Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0a498907-c508-48e3-80af-53441619dbed
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Resuscitate Method in Class SMS_MigrationSiteMapping
 The `Resuscitate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, resuscitates site mapping.  

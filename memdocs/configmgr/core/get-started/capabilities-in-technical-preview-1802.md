@@ -6,11 +6,13 @@ ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Capabilities in Technical Preview 1802 for Configuration Manager
 
@@ -292,9 +294,9 @@ If you deploy applications as available to users, they can now browse and instal
 
 
 
-## Report on Windows AutoPilot device information
+## Report on Windows Autopilot device information
 <!-- 1351442 -->
-Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows AutoPilot](/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
+Windows Autopilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows Autopilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
 
 ### Prerequisites
 - This device information only applies to clients on Windows 10, version 1703, and later
@@ -303,7 +305,7 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
 1. In the Configuration Manager console, **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.
-2. Run the new report, **Windows AutoPilot Device Information** and view the results. 
+2. Run the new report, **Windows Autopilot Device Information** and view the results. 
 3. In the report viewer click the **Export** icon, and select **CSV (comma delimited)** option.
 4. After saving the file, upload the data to the Microsoft Store for Business and Education. For more information, see [add devices in Microsoft Store for Business and Education](/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
 

@@ -1,18 +1,18 @@
 ---
-title: "RunAuthListStatusSummarization Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use Configuration Manager RunAuthListStatusSummarization Windows Management Instrumentation (WMI) class method to update summarized results for a particular update group.
+title: RunAuthListStatusSummarization Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7b74264f-bdf5-4cd0-8ebd-a60e5c25ea0e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RunAuthListStatusSummarization Method in Class SMS_AuthorizationList
 The `RunAuthListStatusSummarization` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates summarized results for a particular update group.  

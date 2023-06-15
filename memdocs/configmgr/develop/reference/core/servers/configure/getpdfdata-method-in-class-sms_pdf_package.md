@@ -1,18 +1,18 @@
 ---
-title: "GetPDFData Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to produce SMS Package and Program Server class objects from a loaded package with GetPDFData.
+title: GetPDFData Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1c071dbe-d601-4448-8e8f-3bb29398cd8c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetPDFData Method in Class SMS_PDF_Package
 The `GetPDFData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, produces [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) and [SMS_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_program-server-wmi-class.md) objects from a loaded package definition file.  

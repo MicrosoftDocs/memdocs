@@ -10,9 +10,11 @@ _themes/
 
 # Visual Studio and VS Code files
 .vscode/*
+**/.vscode/**
 
 
 
 .openpublishing.build.mdproj
 .openpublishing.buildcore.ps1
 packages.config
+.DS_Store

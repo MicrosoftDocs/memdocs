@@ -6,10 +6,10 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 09/29/2021
+ms.date: 03/24/2023
 audience: Admin
 ms.topic: article
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Windows 365 Business sizing options
@@ -39,8 +41,7 @@ This table shows examples of the different sizes available for a Cloud PC.
 
 |CPUs, RAM, and storage|Example scenarios|Supported apps|
 |:-------------------------------------------------------------------------------|:----------------------------------|:----------------------------------|
-|1vCPU/2GB/64GB |Firstline workers, call centers, education/training/CRM access.|Office light (web-based), Microsoft Edge, OneDrive, lightweight line-of-business app (call center application – web-apps), Defender support. |
-|2vCPU/4GB/256GB<br/> 2vCPU/4GB/128GB<br/> 2vCPU/4GB/64GB |Mergers and acquisition, short-term and seasonal, customer services |Microsoft 365 Apps, Microsoft Teams light (Chat and Audio only), OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support.  |
+|2vCPU/4GB/256GB<br/> 2vCPU/4GB/128GB<br/> 2vCPU/4GB/64GB | Firstline workers, call centers, education/training/CRM access, mergers and acquisition, short-term and seasonal, customer services. |Microsoft 365 Apps, Microsoft Teams light (Chat and Audio only), OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support.  |
 |2vCPU/8GB/256GB<br/>2vCPU/8GB/128GB |Bring-your-own-PC, work from home, market researchers, government, consultants. |Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support.  |
 |4vCPU/16GB/512GB<br/>4vCPU/16GB/256GB<br/> 4vCPU/16GB/128GB|Finance, government, consultants, healthcare services, bring-your-own-PC, work-from-home. |Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, Power BI, Dynamics 365, OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support. |
 |8vCPU/32GB/512GB<br/>8vCPU/32GB/256GB<br/>8vCPU/32GB/128GB |Software developers, engineers, content creators, design, and engineering workstations. |Microsoft 365 Apps, Microsoft Teams, Outlook, Access, OneDrive, Adobe Reader, Microsoft Edge, Power BI, Visual Studio Code, line-of-business apps, Defender support.  |

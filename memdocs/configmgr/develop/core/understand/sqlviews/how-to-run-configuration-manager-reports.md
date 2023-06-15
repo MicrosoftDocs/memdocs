@@ -9,11 +9,11 @@ ms.topic: how-to
 
 
 ms.assetid: 2020b94b-fc6f-4a70-91fb-51df948b9cb1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # How to run Configuration Manager reports

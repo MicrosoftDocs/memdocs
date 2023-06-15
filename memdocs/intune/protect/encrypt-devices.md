@@ -2,12 +2,12 @@
 # required metadata
 title: Encrypt Windows devices with BitLocker in Intune 
 titleSuffix: Microsoft Intune
-description: Use policy from Microsoft Endpoint Manager admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
+description: Use policy from Microsoft Intune admin center to encrypt devices with the BitLocker built-in encryption method, and manage the recovery keys for those encrypted devices.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/06/2021
+ms.date: 03/01/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,9 +20,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Manage BitLocker policy for Windows devices with Intune
@@ -31,7 +33,7 @@ Use Intune to configure BitLocker Drive Encryption on devices that run Windows 1
 
 BitLocker is available on devices that run Windows 10/11. Some settings for BitLocker require the device have a supported TPM.
 
-Use one of the following policy types to configure BitLocker on your managed devices
+Use one of the following policy types to configure BitLocker on your managed devices:
 
 - **[Endpoint security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
 
@@ -61,7 +63,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ### Create an endpoint security policy for BitLocker
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Disk encryption** > **Create Policy**.
 
@@ -72,9 +74,6 @@ Use one of the following procedures to create the policy type you prefer.
    ![Select the BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-es.png)
 
 4. On the **Configuration settings** page, configure settings for BitLocker to meet your business needs.  
-
-   > [!TIP]
-   > If you want to enable BitLocker silently, you must use a Endpoint protection template as part of a device configuration profile and not an Endpoint security policy. See [Silently enable BitLocker on devices](#silently-enable-bitlocker-on-devices) in this article for additional prerequisites and the specific setting configurations you must use.
 
    Select **Next**.
 
@@ -90,7 +89,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 ### Create a device configuration profile for BitLocker
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -118,42 +117,118 @@ To view information about devices that receive BitLocker policy, see [Monitor di
 
 ### Silently enable BitLocker on devices
 
-You can use an *Endpoint protection* template as part of a *device configuration* profile to configure a BitLocker policy that automatically and silently enables BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn't a local Administrator on the device.
+You can configure a BitLocker policy to automatically and silently enable BitLocker on a device. That means that BitLocker enables successfully without presenting any UI to the end user, even when that user isn't a local Administrator on the device. You can use either the BitLocker profile from an endpoint security disk encryption policy, or the endpoint protection template from a device configuration policy.
 
-**Device Prerequisites**:
+Devices must meet the following prerequisites, receive applicable settings to silently enable BitLocker, and not have incompatible settings for TPM startup PIN or key.
+
+#### Device Prerequisites
 
 A device must meet the following conditions to be eligible for silently enabling BitLocker:
 
-- If end users log in to the devices as Administrators, the device must run Windows 10 version 1803 or later, or Windows 11.
-- If end users log in to the devices as Standard Users, the device must run Windows 10 version 1809 or later, or Windows 11.
+- If end users sign in to the devices as Administrators, the device must run Windows 10 version 1803 or later, or Windows 11.
+- If end users sign in to the devices as Standard Users, the device must run Windows 10 version 1809 or later, or Windows 11.
 - The device must be Azure AD Joined or Hybrid Azure AD Joined.
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
-- The BIOS mode must be set to Native UEFI only. 
+- The BIOS mode must be set to Native UEFI only.
 
-**BitLocker policy configuration**:
+#### Required settings to silently enable BitLocker
 
-The following two settings for *BitLocker base settings* must be configured in the BitLocker policy of a device configuration profile:
+Depending on the type of policy that you use to silently enable BitLocker, configure the following settings.
+
+**Endpoint security disk encryption policy** - Configure the following settings in the BitLocker profile:
+
+- **Hide prompt about third-party encryption** = *Yes*
+- **Allow standard users to enable encryption during Autopilot** = *Yes*
+- **Require Key File Creation** = *Allowed or Blocked*
+- **Recovery Password Creation** = *Allowed or Required*
+
+> [!WARNING]  
+> In the Endpoint Security policy, some of these settings are not visible if **Startup Authentication Required*,  **System Drive Recovery**, or **Fixed Drive Recovery** are set to *Not Configured* 
+
+**Device configuration policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
 - **Warning for other disk encryption** = *Block*.
 - **Allow standard users to enable encryption during Azure AD Join** = *Allow*
+- **User creation of recovery key** = *Allow or Do not allow 256-bit recovery key*
+- **User creation of recovery password** = *Allow or Require 48-digit recovery password*
 
-The BitLocker policy **must not require** use of a startup PIN or startup key. When a TPM startup PIN or startup key is *required*, BitLocker can't silently enable and requires interaction from the end user.  This requirement is met through the following four *BitLocker OS drive settings* in the same policy:
+> [!TIP]  
+> While the setting labels and options in the following two policy types are different from each other, they both apply the same configuration to Windows encryption CSPs that manage BitLocker on Windows devices.
 
-- **Compatible TPM startup** must be set to *Allowed* or *Required*
-- **Compatible TPM startup PIN** must not be set to *Require startup PIN with TPM*
-- **Compatible TPM startup key** must not be set to *Require startup key with TPM*
-- **Compatible TPM startup key and PIN** must not be set to *Require startup key and PIN with TPM*
+#### TPM startup PIN or key
 
-> [!NOTE]
-> Silent enablement of BitLocker will encrypt used disk space only.
+A device **must not be set to require** a startup PIN or startup key.
+
+When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies do not configure these settings.
+
+Following are the relevant settings for each profile type:
+
+**Endpoint security disk encryption policy** - In the BitLocker profile you'll find the following settings in the *BitLocker - OS Drive Settings* category when *BitLocker system drive policy* is set to *Configure*, and then *Startup authentication required* is set to *Yes*.
+
+- **Compatible TPM startup** - Configure this as *Allowed* or *Required*
+- **Compatible TPM startup PIN** - Configure this as *Blocked*
+- **Compatible TPM startup key** - Configure this as *Blocked*
+- **Compatible TPM startup key and PIN** - Configure this as *Blocked*
+
+**Device configuration policy** - In the endpoint protection template you'l find the following settings in the *Windows Encryption* category:
+
+- **Compatible TPM startup** - Configure this as *Allow TPM* or *Require TPM*
+- **Compatible TPM startup PIN** - Configure this as *Do not allow startup PIN with TPM*
+- **Compatible TPM startup key** - Configure this as *Do not allow startup Key with TPM*
+- **Compatible TPM startup key and PIN** - Configure this as *Do not allow startup Key and PIN with TPM*
+
+> [!WARNING]  
+> While neither the endpoint security or device configuration policies configure the TPM settings by default, some versions of the [security baseline for Microsoft Defender for Endpoint](../protect/security-baselines.md#available-security-baselines) will configure both *Compatible TPM startup PIN* and *Compatible TPM startup key* by default. These configurations might block silent enablement of BitLocker.
+>
+> If you deploy this baseline to devices on which you want to silently enable BitLocker, review your baseline configurations for possible conflicts. To remove conflicts, either reconfigure the settings in the baselines to remove the conflict, or remove applicable devices from receiving the baseline instances that configure TPM settings that block silent enablement of BitLocker.
+
+
+### Full disk vs Used Space only encryption 
+
+Three settings determine whether an OS drive will be encrypted using used space only or full disk encryption:
+- Whether the hardware of the device is [modern standby](/windows-hardware/design/device-experiences/modern-standby) capable
+- Whether silent enablement has been configured for BitLocker 
+  - ('Warning for other disk encryption' = Block or 'Hide prompt about third-party encryption' = Yes)
+- Configuration of the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) 
+  - (Enforce drive encryption type on operating system drives)
+
+Assuming that SystemDrivesEncryptionType has not been configured, the following is the expected behaviour. When silent enablement is configured on a modern standby device, the OS drive will be encrypted using used space only encryption. When silent enablement is configured on a device which is not capable of modern standby, the OS drive will be encrypted using full disk encryption. The result is the same whether you are using an [Endpoint Security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker) or a [Device Configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog as shown below.
+
+To verify whether the hardware is modern standby capable, run the following command from a command prompt:
+
+```console
+powercfg /a
+```
+If the device supports modern standby, it will show that Standby (S0 Low Power Idle) Network Connected is available
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_s0_possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 available.":::
+
+If the device does not support modern standby, such as a virtual machine, it will show that Standby (S0 Low Power Idle) Network Connected is not supported
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_nos0possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 un-available.":::
+
+To verify the encryption type, run the following command from an elevated (admin) command prompt:
+
+```console
+manage-bde -status c:
+```
+The 'Conversion Status' field will reflect the encryption type as either Used Space Only encrypted or Fully Encrypted.
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_usedspaceonly.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting fully encrypted.":::
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_fullyencrypted.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting used space only encryption.":::
+
+To change the disk encryption type between full disk encryption and used space only encryption, leverage the'Enforce drive encryption type on operating system drives' setting within settings catalog.
+
+:::image type="content" source="./media/encrypt-devices/docs_bl_settingscatalog_control_encryption.png" alt-text="Screenshot of Intune settings catalog displaying Enforce drive encryption type on operating system drives setting and drop-down list to select from full or used space only encryption types.":::
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Endpoint Manager admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached devices).
+Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Intune admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
 
 To be accessible, the device must have its keys escrowed to Azure AD.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 
@@ -178,16 +253,15 @@ IT admins need to have a specific permission within Azure Active Directory to be
 All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 > [!NOTE]
-> If you delete the Azure AD object for an Azure AD joined device protected by BitLocker, the next time that device syncs with Azure AD it will remove the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Azure AD joined devices is attached to the Azure AD computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
+> If you delete the Intune object for an Azure AD joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Azure AD joined devices is attached to the Azure AD computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
 
 ### View recovery keys for tenant-attached devices
 
-When you’ve configured the tenant attach scenario, Microsoft Endpoint Manager can display recovery key data for tenant attached devices.
+When you’ve configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
 
-- To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices:. See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
+- To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
 - To view the recovery keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related permissions for Configuration Manager of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission. For more information, see [Configure role-based administration for Configuration Manager](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
-
 
 ### Rotate BitLocker recovery keys
 
@@ -209,7 +283,7 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 #### To rotate the BitLocker recovery key
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **All devices**.
 
@@ -225,3 +299,4 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 - [Monitor disk encryption](../protect/encryption-monitor.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+- [BitLocker management for enterprises](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises), in the Windows security documentation

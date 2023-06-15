@@ -1,18 +1,18 @@
 ---
-title: "GetTsPolicies Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetTsPolicies Method
+titleSuffix: Configuration Manager
+description: The GetTsPolicies WMI class method gets all policies associated with the specified task sequence.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 764d08f6-3338-4e38-857a-bb7d6004f5ab
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetTsPolicies Method in Class SMS_TaskSequencePackage
 The `GetTsPolicies` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets all policies associated with the specified task sequence. The user must have rights to create media other than stand-alone.  

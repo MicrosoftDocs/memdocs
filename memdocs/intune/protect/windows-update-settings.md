@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title:  Windows for Business Update settings for Microsoft Intune
-description: WUfB settings for Windows 10 and Windows 11 devices that you can deploy using Intune.
+title: Windows Update settings you can manage with Intune Update Ring policies for Windows 10/11 devices. 
+description: View the settings for Windows Update that you can manage through Intune policy for Update rings.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 04/22/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,17 +23,17 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 
-# Windows update settings for Intune
+# Settings for Windows Update that you can manage through Intune policy for Update rings
 
-View the Windows 10 and Windows 11 Update settings that you can [configure and manage](windows-update-for-business-configure.md) with Microsoft Intune.  
+When you use Intune policies for *Update rings*, you're configuring the Windows settings that manage how and when devices will install Windows updates. If a Windows update setting has a Windows 10 or Windows 11 version dependency, the version dependency is noted in the settings details.
 
-When you configure settings for Windows update rings in Intune, you're configuring the Windows Update settings. If a Windows update setting has a Windows 10 or Windows 11 version dependency, the version dependency is noted in the settings details.  
+Following are the Windows Update settings for Windows 10 and Windows 11 Updates that you can [manage with update rings](windows-10-update-rings.md) with Microsoft Intune. 
 
 ## Update settings
 
@@ -142,7 +142,7 @@ User experience settings control the end-user experience for device restart and 
   - **Auto install and restart at scheduled time** - Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart.  
     Windows Update CSP: [Update/AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
-    This option supports additional settings.  
+    When set to *Auto install and restart at scheduled time*, you can configure the following settings:
 
     - **Automatic behavior frequency** - Use this setting to schedule when updates are installed, including the week, the day, and the time.  
       **Default**: Every week
@@ -158,19 +158,22 @@ User experience settings control the end-user experience for device restart and 
 
   - **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.  
 
-  - **Reset to default** - Restore the original auto update settings on machines that run the Windows 10 October 2018 Update or later, and that run Windows 11.  These original auto update settings allow Windows to use automatically determined active hours to schedule the best time to install updates and restart the system after it installs the updates.
+  - **Reset to default** - Restore the original auto update settings on machines that run the Windows 10 October 2018 Update or later, and that run Windows 11. When you *reset to default*, Windows will automatically determine active hours for the device. Using the active hours, Windows then schedules the best time to install updates and restart the system after updates install.
 
 - **Restart checks**  
   **Default**: Allow  
   Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
-  To skip these checks when you restart a device, select **Skip**.
+  - **Allow** - Perform restart checks: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.
+  - **Skip** - Will restrict updates to download and install outside of Active Hours. Updates will be allowed to start even if there is a signed-in user or the device is on battery power, providing there is more than 70% battery capacity. Windows will schedule the device to wake from sleep 1 hour after the [Active Hours End](/windows/client-management/mdm/policy-csp-update#activehoursend) time with a 60-minute random delay. Devices will reboot immediately after the updates are installed. If there are still pending updates, the device will continue to retry every hour for 4 hours.
+
+    This option is designed for education devices that remain in carts overnight that are left in sleep mode. It is not designed for 1:1 devices.
 
 - **Option to pause Windows updates**  
   **Default**: Enable  
   Windows Update CSP: [Update/SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
-  - **Enable** - Allow device users to pause the installation of an update for a number of days.  
+  - **Enable** - Allow device users to pause the installation of an update for a certain number of days.  
   - **Disable** - Prevent device users from pausing the installation of an update.  
 
 - **Option to check for Windows updates**  

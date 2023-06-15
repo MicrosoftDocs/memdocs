@@ -1,21 +1,21 @@
 ---
+description: Learn how to cancel an in-progress download of software updates during a deployment using the CancelDownload class method.
 title: CancelDownload method in class CCM_SoftwareUpdatesManager
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 890faba7-0382-4189-adc6-8ea16a9296da
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CancelDownload Method in Class CCM_SoftwareUpdatesManager
-The `CanceDownload` WMI class method, in Configuration Manager, cancels an in-progress download of software updates during a deployment.  
+The `CancelDownload` WMI class method, in Configuration Manager, cancels an in-progress download of software updates during a deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/08/2020
+ms.date: 02/07/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -28,7 +28,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Share Company Portal usage data with Microsoft     
@@ -50,6 +51,15 @@ Change your usage data preferences to turn usage data collection on or off.
 1. Open the **Settings** app.  
 2. Tap **Company Portal**.  
 3. Switch the **Usage Data** toggle to the off position (to stop usage and diagnostic data from being sent to Intune), or to the on position (to allow usage and diagnostic data to be sent to Intune).   
+
+## Enable or disable advanced logging
+
+The **Enable Advanced Logging** setting is available in the Intune Company Portal app for iOS/iPadOS devices. Device users can able to enable or disable advanced logging on a device. By turning on advanced logging, detailed log reports will be sent to Microsoft to troubleshoot issues. By default, the **Enable Advanced Logging** setting will be off. Device users should keep this setting off unless otherwise instructed by their organization's IT admin.
+
+To modify this setting on an iOS/iPadOS device:
+1. Open the **Settings** app.
+2. Find **Comp Portal**.
+3. Under **Diagnostics**, turn on or off the **Enable Advanced Logging** toggle.
 
 ## Next steps  
 

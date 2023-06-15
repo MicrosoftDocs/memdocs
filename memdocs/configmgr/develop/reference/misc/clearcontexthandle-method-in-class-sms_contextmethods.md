@@ -1,18 +1,18 @@
 ---
-title: "ClearContextHandle Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ClearContextHandle Method
+titleSuffix: Configuration Manager
+description: The ClearContextHandle method clears cached context data associated with the specified context handle.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c17604c0-fa60-4b94-b42a-07dcfe9a70a7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ClearContextHandle Method in Class SMS_ContextMethods
 The `ClearContextHandle` method, in Configuration Manager, clears cached context data that is associated with the specified context handle.  

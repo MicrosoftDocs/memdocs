@@ -6,11 +6,13 @@ ms.date: 01/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
@@ -23,17 +25,17 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## <a name="bkmk_mem"></a> Microsoft Endpoint Configuration Manager
+## <a name="bkmk_mem"></a> Microsoft Configuration Manager
 
 <!--4960084-->
 
-Configuration Manager is now part of Microsoft Endpoint Manager.
+Configuration Manager is now part of the Microsoft Intune family of products.
 
-![Microsoft Endpoint Configuration Manager](media/4960084-endpoint-manager-logo.png)
+![Microsoft Configuration Manager](media/4960084-endpoint-manager-logo.png)
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune with simplified licensing. Continue to make use of your existing Configuration Manager investments while you take advantage of the power of the Microsoft cloud at your own pace.
 
-The following Microsoft management solutions are all now part of the Microsoft Endpoint Manager brand:
+The following Microsoft management solutions are all now part of the Microsoft Intune family of products:
 
 - [Configuration Manager](/configmgr)
 - [Intune](/intune)
@@ -47,7 +49,7 @@ For more information, see the following posts from Brad Anderson, Microsoft corp
 - [Vision paper](https://aka.ms/MEMVisionPaper)
 - [Announcement summary video](https://youtu.be/GS7oNPInFuw)
 
-### What things change in Configuration Manager with Microsoft Endpoint Manager?
+### What things change in Configuration Manager?
 
 In version 1910, aside from the name change, Configuration Manager still functions the same. Some of the name changes might impact your use of the following components:
 
@@ -55,7 +57,7 @@ In version 1910, aside from the name change, Configuration Manager still functio
 
 - **Software Center**: Find the Software Center shortcut under the Windows Start menu in the **Microsoft Endpoint Manager** folder.
 
-![Microsoft Endpoint Manager Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
+![Microsoft Intune Start menu icons](media/microsoft-endpoint-manager-start-menu.png)
 
 Make sure to update any internal documentation that you maintain to include these new locations.
 
@@ -182,7 +184,7 @@ For more information, see the new article on how to [use the task sequence edito
 
 You can now run a task sequence with the high-performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high-performance power plan, which delivers maximum performance at the expense of higher power consumption.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ### Task sequence download on demand over the internet
 

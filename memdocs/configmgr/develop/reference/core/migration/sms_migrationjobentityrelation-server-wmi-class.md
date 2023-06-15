@@ -1,18 +1,18 @@
 ---
-title: "SMS_MigrationJobEntityRelation Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_MigrationJobEntityRelation Class
+titleSuffix: Configuration Manager
+description: In Configuration Manager, The SMS_MigrationJobEntityRelation WMI class is an SMS Provider server class that represents the relationship between each migration job and the objects that it contains.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 3ab60b66-864e-4851-8c8b-68a35f6302d8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_MigrationJobEntityRelation Server WMI Class
 The `SMS_MigrationJobEntityRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the relationship of between each migration job and the objects that it contains.  

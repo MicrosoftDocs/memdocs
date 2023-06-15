@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,14 +26,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Policies for Office apps
 
 Intune provides policies specifically for Microsoft Office apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. There are many policies for Office apps that you can add to Microsoft Intune and apply to groups of end users.
 
-Examples of just a few of the Office app polices include the following:
+Examples of just a few of the Office app policies include the following:
 - Microsoft Word: *Turn off Protected View for attachments opened from Outlook*
 - Microsoft Visio: *Block macros from running in Office files from the Internet*
 - Microsoft Project: *Allow Trusted Locations on the network*
@@ -53,7 +55,7 @@ You must meet the requirements to use policies for Office apps. For more informa
 
 After you set up Intune for your organization, you can create an Office app policy.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Policies for Office apps** > **Create**.
 3. Add the following values:
     - **Name:** Type a name (required) for your new policy.
@@ -65,6 +67,10 @@ After you set up Intune for your organization, you can create an Office app poli
 
    > [!TIP]
    > The **Policy configurations** pane provides the **Health status** for each policy.
+
+## Quiet time notification policies
+
+The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user work-related notifications received after work hours. You can find these settings in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
 ## Additional information
 

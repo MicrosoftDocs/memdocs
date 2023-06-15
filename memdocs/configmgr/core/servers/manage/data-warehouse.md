@@ -2,14 +2,16 @@
 title: Data warehouse
 titleSuffix: Configuration Manager
 description: Data warehouse service point and database for Configuration Manager
-ms.date: 08/02/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: sheetg
+author: sheetg09 
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # The data warehouse service point for Configuration Manager
@@ -58,7 +60,7 @@ When the site system role installs, it installs and configures the data warehous
 
   - SQL Server Always On failover cluster instance
 
-- If you use [distributed views](../../plan-design/hierarchy/database-replication.md#bkmk_distviews), install the data warehouse service point on the same server that hosts the CAS's database.
+- If you use [distributed views](../../plan-design/hierarchy/database-replication.md#distributed-views), install the data warehouse service point on the same server that hosts the CAS's database.
 
 For more information on SQL Server licensing, see the [product and licensing FAQ](../../understand/product-and-licensing-faq.yml).<!-- sms500967 -->
 
@@ -125,6 +127,19 @@ The data warehouse site system role includes the following reports, under the **
 - **List of Malware Detected - Historical**: View malware that has been detected in the organization.
 
 - **Software Distribution Summary - Historical**: A summary of software distribution for a specific advertisement and machine.
+
+## <a name="bkmk_exclude"></a> Exclude data warehouse reporting tables from synchronization
+<!--12441118-->
+(*Introduced in version 2203*)
+
+When you install the data warehouse, it synchronizes a set of default tables from the site database. These tables are required for data warehouse reports. While troubleshooting issues, you may want to stop synchronizing these default tables. Starting in version 2203, you can exclude one or more of these required tables from synchronization. To exclude tables from synchronization:
+
+1. From the **Administration** workspace, open **Site Configuration** > **Servers and Site System Roles**.
+1. Select the server where the data warehouse service point is installed.
+1. In the **Site System Roles** details pane, select the **Data Warehouse service point** role, then select **Properties**.
+1. On the **Synchronization settings** page, choose **Select tables**.
+1. In the **Database tables** window, deselect one or more tables of type **Required**.
+1. The console will prompt you to confirm the change, since some reports may no longer work correctly.
 
 ## Site expansion
 

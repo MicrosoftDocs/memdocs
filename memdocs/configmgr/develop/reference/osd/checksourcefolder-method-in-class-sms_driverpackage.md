@@ -1,18 +1,18 @@
 ---
-title: "CheckSourceFolder Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to check the state of an empty driver source folder with CheckSourceFolder class im Configuration Manager.
+title: CheckSourceFolder Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 6b72a1e3-42c3-4481-ab79-f1199d187a28
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CheckSourceFolder Method in Class SMS_DriverPackage
 The `CheckSourceFolder` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks the state of an empty driver source folder.  

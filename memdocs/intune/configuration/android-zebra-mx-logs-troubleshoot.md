@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 05/17/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Troubleshoot and see potential issues on Android Zebra devices in Microsoft Intune
@@ -38,7 +40,7 @@ This feature applies to:
 
 For example, you create a profile in StageNow to configure a device. When you create the StageNow profile, the last step generates a file for you test the profile. You consume this file with the StageNow app on the device.
 
-In another example, you create a profile in StageNow, and test it. In Intune, you add the StageNow profile, and then assign it to your Zebra devices. When checking the status of the assigned profile, the profile shows a high-level status.
+In another example, you create a profile in StageNow, and test it. In Intune, you add the StageNow profile, and then assign it to your Zebra devices. When you check the status of the assigned profile, the profile shows a high-level status.
 
 In both these cases, you can get more details from the StageNow log file, which is saved on the device every time a StageNow profile applies.
 
@@ -66,14 +68,14 @@ To get logs after the profile is deployed with Intune, end users can email you t
 
 ## Read the logs
 
-When looking at the logs, there's an error whenever you see the `<characteristic-error>` tag. Error details are written to the `<parm-error>` tag > `desc` property.
+When you look at the logs, there's an error whenever you see the `<characteristic-error>` tag. Error details are written to the `<parm-error>` tag > `desc` property.
 
 ## Error types
 
 Zebra devices include different error reporting levels:
 
 - The CSP isn't supported on device. For example, the device isn't a cellular device and doesn't have a cellular manager.
-- The MX or OSX version is mismatched. Each CSP is versioned. For a full support matrix, see [Zebra's documentation](http://techdocs.zebra.com/mx/) (opens Zebra's web site).
+- The MX or OSX version is mismatched. Each CSP is versioned. For a full support matrix, go to [Zebra's documentation](http://techdocs.zebra.com/mx/) (opens Zebra's web site).
 - The device reports another issue or error.
 
 ## Examples

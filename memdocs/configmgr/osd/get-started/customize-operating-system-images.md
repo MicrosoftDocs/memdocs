@@ -6,10 +6,12 @@ ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Customize operating system images with Configuration Manager
 

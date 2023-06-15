@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/02/2021
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Reprovision a Cloud PC
@@ -40,7 +42,7 @@ For information on when to use the **Reprovision** action, see [Reprovisioning](
 
 ## Reprovision a Cloud PC
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a Cloud PC device > **Reprovision**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a Cloud PC device > **Reprovision**.
 ![Screenshot of reprovision a Cloud PC](./media/reprovision-cloud-pc/reprovision.png)
 2. In the **Reprovision** box, select **Yes**. The reprovision process will begin.
 3. After the new Cloud PC is created, Windows 365 sends access information to the new user.

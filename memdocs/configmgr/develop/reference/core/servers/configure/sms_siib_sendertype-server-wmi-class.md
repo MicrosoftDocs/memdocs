@@ -1,18 +1,18 @@
 ---
-title: "SMS_SIIB_SenderType Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Article outlining the use of SMS_SIIB_SenderType in Configuration Manager to represent the sender type in Configuration Manager property pages.
+title: SMS_SIIB_SenderType Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1a2b53a2-4fa1-4671-baba-0e6fbfc63eb5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SIIB_SenderType Server WMI Class
 The `SMS_SIIB_SenderType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the sender type for the associated Configuration Manager console property pages.  

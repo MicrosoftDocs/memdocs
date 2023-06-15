@@ -2,14 +2,16 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 12/09/2021
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Site server high availability in Configuration Manager
@@ -101,7 +103,7 @@ The site content library must be on a remote network share. Both site servers ne
 
 Both site servers must use the same site database.
 
-- The database can be remote from each site server. The Configuration Manager setup process doesn't block installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups require this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode.<!-- SCCMDocs issue 1074 -->
+- The database can be remote from each site server. The Configuration Manager setup process doesn't block installation of the site server role on a computer with the Windows role for Failover Clustering. SQL Server Always On availability groups require this role, so previously you couldn't colocate the site database on the site server. With this change, you can create a highly available site with fewer servers by using an availability group and a site server in passive mode. Only an active server can be installed to a node in an Always On availability group. Passive servers must be installed to standalone servers that do not have any existing site roles on them.<!-- SCCMDocs issue 1074 -->
 
 - The SQL Server that hosts the site database can use a default instance, named instance, [failover cluster instance](use-a-sql-server-cluster-for-the-site-database.md), or an [availability group](sql-server-alwayson-for-a-highly-available-site-database.md).
 
@@ -130,6 +132,8 @@ Both site servers must use the same site database.
 ## Limitations
 
 - Only a single site server in passive mode is supported at each site.
+
+- Passive site servers cannot be installed to nodes in the Always On availability group hosting the Configuration Manager database and must be installed on standalone servers. Moving a passive site server into the Always On availability group after installation is not currently supported. 
 
 - A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->
 
@@ -218,6 +222,8 @@ Similarly as with backup and recovery, plan and practice your process to change 
     > - Tuesday: Promote the site server in passive mode to be the active site server.
     >
     > By Wednesday or Thursday, this action may cause *all* clients to upgrade, not just the pilot collection. This behavior can cause significant network usage and unexpected load on the distribution points.<!-- SCCMDocs-pr#4794 -->
+
+  - If you enable the pre-production client, review the known issue with site server high availability. For more information, see [Pre-production client and site server high availability](../../../clients/manage/upgrade/test-client-upgrades.md#pre-production-client-and-site-server-high-availability).<!-- 13846674 -->
 
 ### Process to promote the site server in passive mode to active mode
 

@@ -1,18 +1,18 @@
 ---
-title: "GetBusinessHours Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetBusinessHours Method
+titleSuffix: Configuration Manager
+description: A class method that gets the values for business hours.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d77b13b0-d410-4353-826c-58474e35c0a2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetBusinessHours Method in Class CCM_ClientUXSettings
 The `GetBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the values for business hours.   

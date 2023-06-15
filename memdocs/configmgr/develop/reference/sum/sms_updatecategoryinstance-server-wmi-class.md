@@ -1,16 +1,17 @@
 ---
 title: "SMS_UpdateCategoryInstance Class"
+description: The SMS_UpdateCategoryInstance class is an SMS Provider server class that represents a software-update-specific SMS_CategoryInstance Server WMI Class object available on the site.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: bc441b19-52b2-4004-9af3-f37a5e0529dd
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

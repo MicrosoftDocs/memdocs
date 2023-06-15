@@ -1,18 +1,18 @@
 ---
-title: "SMS_SiteInstallItem Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_SiteInstallItem Class
+titleSuffix: Configuration Manager
+description: The SMS_SiteInstallItem WMI class is an SMS Provider server class that represents the abstract base class of all site install item classes.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 54aeb316-ce9e-4e81-b06f-fb556d00b7cd
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SiteInstallItem Server WMI Class
 The `SMS_SiteInstallItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the abstract base class of all site install item classes.  

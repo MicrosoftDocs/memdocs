@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 10/12/2022
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Optimize Cisco Webex on a Windows 365 Cloud PC
@@ -42,7 +44,10 @@ To optimize Cisco Webex, you’ll need to:
 
 ## Requirements
 
-- **Windows Remote Desktop Client**: These instructions don't support connections through a web browser.
+These instructions don't support connections through a web browser.
+
+- **Windows 365 app for Windows**
+- **Windows Remote Desktop Client**
 - **Operating system**: Windows
 
 ## Install the Cisco Webex HVD client on the Cloud PC

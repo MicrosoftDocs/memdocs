@@ -9,11 +9,11 @@ ms.topic: how-to
 
 
 ms.assetid: e596b1be-c09e-4e44-a400-43345ab0f71b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # How to view the SQL statement for Configuration Manager reports

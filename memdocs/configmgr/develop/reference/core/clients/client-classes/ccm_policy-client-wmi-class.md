@@ -1,18 +1,18 @@
 ---
-title: "CCM_Policy Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use CCM_Policy Client Windows Management Instrumentation class in Configuration Manager to represent a client policy.
+title: CCM_Policy Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 41ae8c45-e00d-4d98-905d-e5a1303bdc30
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy Client WMI Class
 In Configuration Manager, the `CCM_Policy` class is a client Windows Management Instrumentation (WMI) class that represents a client policy.  

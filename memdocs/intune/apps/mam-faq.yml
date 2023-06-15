@@ -9,7 +9,7 @@ metadata:
   ms.author: erikre
   manager: dougeby
   ms.date: 12/09/2020
-  ms.topic: conceptual
+  ms.topic: faq
   ms.service: microsoft-intune
   ms.subservice: apps
   ms.localizationpriority: high
@@ -24,9 +24,8 @@ metadata:
   #ms.tgt_pltfrm:
   ms.custom: intune-azure
   ms.collection:
-    - M365-identity-device-management
-    - highpri
-    
+  - M365-identity-device-management
+  - tier2 
 title: Frequently asked questions about MAM and app protection
 summary: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.
 
@@ -36,18 +35,8 @@ sections:
     questions:
       - question: What is MAM?
         answer: |
-          [Intune mobile application management](app-lifecycle.md) refers to the suite of Intune management features that lets you publish, push, configure, secure, monitor, and update mobile apps for your users.
+          [MAM Overview](../apps/app-management.md#mobile-application-management-mam-basics)
           
-      - question: What are the benefits of MAM app protection?
-        answer: |
-          MAM protects an organization's data within an application. With MAM without enrollment (MAM-WE), a work or school-related app that contains sensitive data can be managed on almost any device, including personal devices in bring-your-own-device (BYOD) scenarios. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Intune-managed apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) available for public use.
-          
-      - question: What device configurations does MAM support?
-        answer: |
-          Intune MAM supports two configurations:
-          - **Intune MDM + MAM**: IT administrators can only manage apps using MAM and app protection policies on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-          
-          - **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using MAM and app protection policies on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with third-party EMM providers. To manage apps using MAM-WE, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Also, apps can be managed by Intune on devices enrolled with third-party Enterprise Mobility Management (EMM) providers or not enrolled with an MDM at all.
           
   - name: App protection policies
     questions: 
@@ -60,7 +49,7 @@ sections:
           
       - question: Is it possible to have both MDM and MAM policies applied to the same user at the same time, for different devices? For example, if a user could be able to access their work resources from their own MAM-enabled machine, but also come to work and use an Intune MDM-managed device. Are there any caveats to this idea?
         answer: |
-          If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the managed state. So when you create an app protection policy, next to Target to all app types, you'd select No. Then do any of the following:
+          If you apply a MAM policy to the user without setting the device management state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the device management state. So when you create an app protection policy, next to Target to apps on all device types, you'd select No. Then do any of the following:
           - Apply a less strict MAM policy to Intune managed devices, and apply a more restrictive MAM policy to non MDM-enrolled devices.
           -	Apply an equally strict MAM policy to Intune managed devices as to 3rd party managed devices.
           - Apply a MAM policy to unenrolled devices only.
@@ -79,7 +68,7 @@ sections:
           
           - The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
           
-          - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
+          - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
           
           - The end user must sign into the app using their Azure AD account.
           
@@ -138,10 +127,10 @@ sections:
 
       - question: How often will the user be prompted for the Intune PIN?
         answer: |
-           The IT admin can define the Intune app protection policy setting 'Recheck the access requirements after (minutes)' in the Intune admin console. This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen is shown again. However, important details about PIN that affect how often the user will be prompted are: 
+           The IT admin can define the Intune app protection policy setting 'Recheck the access requirements after (minutes)' in the Microsoft Intune admin center. This setting specifies the amount of time before the access requirements are checked on the device, and the application PIN screen is shown again. However, important details about PIN that affect how often the user will be prompted are: 
           
             - **The PIN is shared among apps of the same publisher to improve usability:** On iOS/iPadOS, one app PIN is shared amongst all apps **of the same app publisher**. On Android, one app PIN is shared amongst all apps.
-            - **The 'Recheck the access requirements after (minutes)' behavior  after a device reboot:** A "PIN timer" tracks the number of minutes of inactivity that determine when to show the Intune app PIN next. On iOS/iPadOS, the PIN timer is unaffected by device reboot. Thus, device restart has no effect on the number of minutes the user has been inactive from an iOS/iPadOS app with Intune PIN policy. On Android, the PIN timer is reset on device reboot. As such, Android apps with Intune PIN policy will likely prompt for an app PIN regardless of the 'Recheck the access requirements after (minutes)' setting value **after a device reboot**.  
+            - **The 'Recheck the access requirements after (minutes)' behavior after a device reboot:** A "PIN timer" tracks the number of minutes of inactivity that determine when to show the Intune app PIN next. On iOS/iPadOS, the PIN timer is unaffected by device reboot. Thus, device restart has no effect on the number of minutes the user has been inactive from an iOS/iPadOS app with Intune PIN policy. On Android, the PIN timer is reset on device reboot. As such, Android apps with Intune PIN policy will likely prompt for an app PIN regardless of the 'Recheck the access requirements after (minutes)' setting value **after a device reboot**.  
             - **The rolling nature of the timer associated with the PIN:** Once a PIN is entered to access an app (app A), and the app leaves the foreground (main input focus) on the device, the PIN timer gets reset for that PIN. Any app (app B) that shares this PIN will not prompt the user for PIN entry because the timer has reset. The prompt will show up again once the 'Recheck the access requirements after (minutes)' value is met again.
           
            For iOS/iPadOS devices, even if the PIN is shared between apps from different publishers, the prompt will show up again when the **Recheck the access requirements after (minutes)** value is met again for the app that is not the main input focus. So, for example, a user has app _A_ from publisher _X_ and app _B_ from publisher _Y_, and those two apps share the same PIN. The user is focused on app _A_ (foreground), and app _B_ is minimized. After the **Recheck the access requirements after (minutes)** value is met and the user switches to app _B_, the PIN would be required.
@@ -160,7 +149,7 @@ sections:
 
       - question: Why do I have to set a PIN twice on apps from same publisher?
         answer: |
-           MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the Intune APP SDK for iOS/iPadOS. Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS/iPadOS v. 7.1.12. <br><br> In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Therefore, if a device has applications with Intune SDK for iOS/iPadOS versions before 7.1.12 AND after 7.1.12 from the same publisher, they will have to set up two PINs. <br><br> That being said, the two PINs (for each app) are not related in any way i.e. they must adhere to the app protection policy that's applied to the app. As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may setup the same PIN twice. <br><br> This behavior is specific to the PIN on iOS/iPadOS applications that are enabled with Intune Mobile App Management. Over time, as applications adopt later versions of the Intune SDK for iOS/iPadOS, having to set a PIN twice on apps from the same publisher becomes less of an issue. Please see the note below for an example.
+           MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the Intune APP SDK for iOS/iPadOS. Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS/iPadOS v. 7.1.12. <br><br> In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Therefore, if a device has applications with Intune SDK for iOS/iPadOS versions before 7.1.12 AND after 7.1.12 from the same publisher, they will have to set up two PINs. <br><br> That being said, the two PINs (for each app) are not related in any way i.e. they must adhere to the app protection policy that's applied to the app. As such, *only* if apps A and B have the same policies applied (with respect to PIN), user may set up the same PIN twice. <br><br> This behavior is specific to the PIN on iOS/iPadOS applications that are enabled with Intune Mobile App Management. Over time, as applications adopt later versions of the Intune SDK for iOS/iPadOS, having to set a PIN twice on apps from the same publisher becomes less of an issue. Please see the note below for an example.
           
             >[!NOTE]
             > For example, if app A is built with a version prior to 7.1.12 and app B is built with a version greater than or equal to 7.1.12 from the same publisher, the end user will need to set up PINs separately for A and B if both are installed on an iOS/iPadOS device. <br><br> If an app C that has SDK version 7.1.9 is installed on the device, it will share the same PIN as app A. <br><br> An app D built with 7.1.14 will share the same PIN as app B. <br><br> If only apps A and C are installed on a device, then one PIN will need to be set. The same applies to if only apps B and D are installed on a device.
@@ -192,7 +181,7 @@ sections:
           
       - question: What is selective wipe for MAM?
         answer: |
-           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
+           Selective wipe for MAM simply removes company app data from an app. The request is initiated using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). To learn how to initiate a wipe request, see [How to wipe only corporate data from apps](apps-selective-wipe.md).
           
       - question: How quickly does selective wipe for MAM happen?
         answer:  If the user is using the app when selective wipe is initiated, the Intune App SDK checks every 30 minutes for a selective wipe request from the Intune MAM service. It also checks for selective wipe when the user launches the app for the first time and signs in with their work or school account.
@@ -206,17 +195,18 @@ sections:
   - name: App experience on Android
     questions: 
       - question: Why is the Company Portal app needed for Intune app protection to work on Android devices?
-        answer: Much of app protection functionality is built into the Company Portal app. Device enrollment is _not required_ even though the Company Portal app is always required. For MAM-WE, the end user just needs to have the Company Portal app installed on the device.
+        answer: |
+          [Company Portal app and Intune app protection](../apps/app-protection-policy.md#company-portal-app-and-intune-app-protection) 
 
       - question: How do multiple Intune app protection access settings that are configured to the same set of apps and users work on Android?
         answer: |
-          Intune app protection policies for access will be applied in a specific order on end user devices as they try to access a targeted app from their corporate account. In general, a block would take precedence, then a dismissible warning. For example, if applicable to the specific user/app, a minimum Android patch version setting that warns a user to take a patch upgrade will be applied after the minimum Android patch version setting that blocks the user from access. So, in the scenario where the IT admin configures the min Android patch version to 2018-03-01 and the min Android patch version (Warning only) to 2018-02-01, while the device trying to access the app was on a patch version 2018-01-01, the end user would be blocked based on the more restrictive setting for min Android patch version that results in blocked access. 
+          Intune app protection policies for access will be applied in a specific order on end user devices as they try to access a targeted app from their corporate account. In general, a block would take precedence, and then a dismissible warning. For example, if applicable to the specific user/app, a minimum Android patch version setting that warns a user to take a patch upgrade will be applied after the minimum Android patch version setting that blocks the user from access. So, in the scenario where the IT admin configures the min Android patch version to 2018-03-01 and the min Android patch version (Warning only) to 2018-02-01, while the device trying to access the app was on a patch version 2018-01-01, the end user would be blocked based on the more restrictive setting for min Android patch version that results in blocked access. 
           
           When dealing with different types of settings, an app version requirement would take precedence, followed by Android operating system version requirement and Android patch version requirement. Then, any warnings for all types of settings in the same order are checked.
           
       - question: Intune App Protection Policies provide the capability for admins to require end user devices to pass Google's SafetyNet Attestation for Android devices. How often is a new SafetyNet Attestation result sent to the service?
         answer: |
-           A new Google Play service determination will be reported to the IT admin at an interval determined by the Intune service. How often the service call is made is throttled due to load, thus this value is maintained internally and is not configurable. Any IT admin configured action for the Google SafetyNet Attestation setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If there is no data, access will be allowed depending on no other conditional launch checks failing, and Google Play Service "roundtrip" for determining attestation results will begin in the backend and prompt the user asynchronously if the device has failed. If there is stale data, access will be blocked or allowed depending on the last reported result, and similarly, a Google Play Service "roundtrip" for determining attestation results will begin and prompt the user asynchronously if the device has failed.
+           The Intune service will contact Google Play at a non-configurable interval determined by service load. Any IT admin configured action for the Google SafetyNet Attestation setting will be taken based on the last reported result to the Intune service at the time of conditional launch. If the Google SafetyNet Attestation result is compliant, no action is taken.  If the Google SafetyNet Attestation result is non-compliant, the IT admin configured action will be taken immediately. If the request to the Google SafetyNet Attestation fails for any reason, the cached result from the previous request will be used for up to 24 hours or the next device restart, which ever comes first. At that time Intune App Protection Policies will block access until a current result can be obtained.
           
       - question: Intune App Protection Policies provide the capability for admins to require end user devices to send signals via Google's Verify Apps API for Android devices. How can an end user turn on the app scan so that they are not blocked from access due to this?
         answer: |
@@ -254,9 +244,9 @@ sections:
 
       - question: How do multiple Intune app protection access settings that are configured to the same set of apps and users work on iOS?
         answer: |
-          Intune app protection policies for access will be applied in a specific order on end user devices as they try to access a targeted app from their corporate account. In general, a wipe would take precedence, followed by a block, then a dismissible warning. For example, if applicable to the specific user/app, a minimum iOS/iPadOS operating system setting that warns a user to update their iOS/iPadOS version will be applied after the minimum iOS/iPadOS operating system setting that blocks the user from access. So, in the scenario where the IT admin configures the min iOS/iPadOS operating system to 11.0.0.0 and the min iOS/iPadOS operating system (Warning only) to 11.1.0.0, while the device trying to access the app was on iOS/iPadOS 10, the end user would be blocked based on the more restrictive setting for min iOS/iPadOS operating system version that results in blocked access.
+          Intune app protection policies for access will be applied in a specific order on end user devices as they try to access a targeted app from their corporate account. In general, a wipe would take precedence, followed by a block, and then a dismissible warning. For example, if applicable to the specific user/app, a minimum iOS/iPadOS operating system setting that warns a user to update their iOS/iPadOS version will be applied after the minimum iOS/iPadOS operating system setting that blocks the user from access. So, in the scenario where the IT admin configures the min iOS/iPadOS operating system to 11.0.0.0 and the min iOS/iPadOS operating system (Warning only) to 11.1.0.0, while the device trying to access the app was on iOS/iPadOS 10, the end user would be blocked based on the more restrictive setting for min iOS/iPadOS operating system version that results in blocked access.
           
-          When dealing with different types of settings, an Intune App SDK version requirement would take precedence, then an app version requirement, followed by the iOS/iPadOS operating system version requirement. Then, any warnings for all types of settings in the same order are checked. We recommend the Intune App SDK version requirement be configured only upon guidance from the Intune product team for essential blocking scenarios.
+          When dealing with different types of settings, an Intune App SDK version requirement would take precedence, and then an app version requirement, followed by the iOS/iPadOS operating system version requirement. Then, any warnings for all types of settings in the same order are checked. We recommend the Intune App SDK version requirement be configured only upon guidance from the Intune product team for essential blocking scenarios.
                     
 additionalContent: |
 

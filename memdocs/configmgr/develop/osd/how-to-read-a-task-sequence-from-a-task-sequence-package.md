@@ -1,18 +1,18 @@
 ---
-title: "Read a Task Sequence from a Task Sequence Package"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Read a Task Sequence from a Task Sequence Package
+titleSuffix: Configuration Manager
+description: Read a task sequence from a task sequence package, in Configuration Manager, by calling the SMS_TaskSequencePackage method.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 222d153e-50d4-4572-b2b1-6a0d131c998b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Read a Task Sequence from a Task Sequence Package
 You read a task sequence from a task sequence package, in Configuration Manager, by calling the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class [GetSequence](../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md) method. GetSequence returns an [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) object that you can change and then put back in the package by using the [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method. For an example of using SetSequence, see [How to Create an Operating System Deployment Task Sequence Package](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-package.md).  

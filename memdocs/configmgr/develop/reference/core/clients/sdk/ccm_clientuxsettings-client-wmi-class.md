@@ -1,18 +1,18 @@
 ---
-title: "CCM_ClientUXSettings Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent a set of client UX utility methods in Configuration Manager with CCM_ClientUXSettings.
+title: CCM_ClientUXSettings Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 84cd8c38-f7d2-4c99-94d4-3d4c17ab7645
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_ClientUXSettings Client WMI Class
 The `CCM_ClientUXSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a set of client UX utility methods. .  

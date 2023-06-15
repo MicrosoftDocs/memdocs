@@ -6,11 +6,13 @@ ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
@@ -364,7 +366,7 @@ The [Enhanced HTTP site system](#bkmk_ehttp) feature also removes some dependenc
 
 These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
 
-For more information, see [Task sequences and the network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#BKMK_TSNetworkAccessAccount).
+For more information, see [Task sequences and the network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#task-sequences-and-the-network-access-account).
 
 
 ### Other improvements to OS deployment
@@ -391,7 +393,7 @@ For more information, see [Task sequences and the network access account](../../
  <!--SCCMDocs-pr issue 2671-->
  Both the **Enable BitLocker** and **Pre-provision BitLocker** steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. 
 
- For more information see [Enable BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker) and [Pre-provision BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker). 
+ For more information see [Enable BitLocker](../../../osd/understand/task-sequence-steps.md#enable-bitlocker) and [Pre-provision BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker). 
 
 #### Client provisioning mode isn't enabled with Windows 10 upgrade compatibility scan
  <!--SCCMDocs-pr issue 2812-->

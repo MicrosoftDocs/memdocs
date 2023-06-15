@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/06/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Intune Data Warehouse Collections
@@ -264,7 +266,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | windowsOsEdition             | Windows Operating System edition.                                                                                                                                                                              |
 
 > [!NOTE]
-> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#managed-device-properties).
 
 ## deviceTypes
 The **deviceType** entity represents the device type referenced by other data warehouse entities. The device type typically describes either the device model, manufacturer, or a combination of both.
@@ -325,7 +327,7 @@ The **deviceEnrollmentType** entity indicates how a device was enrolled. The enr
 | 6                | WindowsBulkUserless                | Windows 10 Bulk enrollment through   ICD with certificate.                               |
 | 7                | WindowsAutoEnrollment              | Windows 10 automatic enrollment.   (Add work account)                                    |
 | 8                | WindowsBulkAzureDomainJoin         | Windows 10 bulk Azure AD Join.                                                           |
-| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by AutoPilot or Group Policy.                       |
+| 9                | WindowsCoManagement                | Windows 10 co-management triggered   by Autopilot or Group Policy.                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Windows 10 Azure AD Join using   Device Auth.                                            |
 
 ## enrollmentActivities 

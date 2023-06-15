@@ -1,18 +1,18 @@
 ---
-title: "SMS_SettableSecuredCategory Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Article outlining the use of SMS_SettableSecuredCategory class to assign secured categories to select objects.
+title: SMS_SettableSecuredCategory Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 77b0c79e-0291-4988-8be5-01113494460c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SettableSecuredCategory Server WMI Class
 The `SMS_SettableSecuredCategory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the list of secured categories which the current user can assign to certain types of objects.  

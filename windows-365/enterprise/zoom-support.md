@@ -9,7 +9,7 @@ ms.author: erikje
 manager: dougeby
 ms.date: 12/01/2021
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Optimize Zoom on a Windows 365 Cloud PC
@@ -39,8 +41,12 @@ To optimize Zoom, you’ll need to install the Zoom VDI Client on the Cloud PC a
 
 ## Requirements
 
-- **Windows Remote Desktop Client**: These instructions don't support connections through a web browser.
+- **Windows 365 app for Windows**\*
+- **Windows Remote Desktop Client**\*
+- **Windows 365 app**
 - **Operating system**: Windows
+
+\* These don't support connections through a web browser.
 
 ## Install the Zoom VDI client on the Cloud PC
 

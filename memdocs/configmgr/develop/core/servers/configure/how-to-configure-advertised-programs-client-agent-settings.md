@@ -1,18 +1,18 @@
 ---
-title: "Configure Advertised Programs Client Agent Settings"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to configure software distribution advertised programs client agent settings in the site control file.
+title: Configure Advertised Programs Client Agent Settings
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 5a5ffe1b-6e82-480f-97e8-2840ba704170
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure Software Distribution Advertised Programs Client Agent Settings
 In Configuration Manager, the site control file maintains configuration for the configuration of the site. This topic shows how to configure software distribution advertised programs client agent settings in the site control file. For more information about reading from and writing to the site control file, see [About the site control file](../../understand/about-the-configuration-manager-site-control-file.md).  

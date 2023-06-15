@@ -21,12 +21,14 @@ ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 #ROBOTS:
 #audience:
 
-#ms.reviewer: aanavath
+ms.reviewer: aanavath
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Integrate Pradeo Mobile Threat Defense with Intune
@@ -43,7 +45,7 @@ Complete the following steps to integrate the Pradeo Mobile Threat Defense solut
 
 Before starting the process of integrating Pradeo with Intune, make sure you have the following:
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
 - Azure Active Directory admin credentials to grant the following permissions:
 
@@ -71,7 +73,7 @@ The Pradeo app authorization process follows:
 
 ## To set up Pradeo integration
 
-1. Go to [Pradeo Security console](https://www.pradeo-security.com) and sign in with your credentials.
+1. Go to [Pradeo Security console](https://pradeo-security.com/) and sign in with your credentials.
 
 2. Choose **Administration - Enterprise Mobility Management** from the menu.
 

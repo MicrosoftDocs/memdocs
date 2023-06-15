@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune
@@ -37,17 +39,17 @@ This feature applies to:
 - Windows 10
 - Windows Holographic for Business
 
-To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+To create kiosk profiles for other platforms, go to [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
 
 Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to groups in your organization.
 
-This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
+This article shows you how to run one app or many apps as a Windows kiosk device using a device configuration profile. For a list of all the settings, and what they do, go to [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -75,18 +77,18 @@ This article shows you how to create a device configuration profile. For a list 
         > [!NOTE]
         > Currently, multi-app kiosk is only supported on Windows 10. It's not supported on Windows 11.
 
-    For a list of all settings, and what they do, see:
+    For a list of all settings, and what they do, go to:
 
       - [Windows client kiosk settings](kiosk-settings-windows.md)
       - [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md)
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 

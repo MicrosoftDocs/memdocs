@@ -1,18 +1,18 @@
 ---
-title: "Delete a Package"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to delete a package in Configuration Manager using the SMS_Package class with the following example.
+title: Delete a Package
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 0ca0c411-c33e-444b-a96c-4279042fcda4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Delete a Package
 The following example shows how to delete a package in Configuration Manager by using the `SMS_Package` class.  

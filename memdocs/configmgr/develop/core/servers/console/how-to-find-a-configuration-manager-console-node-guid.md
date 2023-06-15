@@ -1,16 +1,18 @@
 ---
-title: "Find a Console Node GUID"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to determine the correct Globally Unique Identifiers (GUIDs) for a Configuration Manager console node.
+title: Find a Console Node GUID
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 80fd9154-6ec2-4586-bd9d-4cf88aa835a6
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to find a Configuration Manager console node GUID

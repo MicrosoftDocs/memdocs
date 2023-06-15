@@ -2,14 +2,16 @@
 title: Available third-party software update catalogs
 titleSuffix: Configuration Manager
 description: List of third-party update catalogs available for import into Configuration Manager
-ms.date: 08/02/2021
+ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: reference
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Available third-party software update catalogs
@@ -25,8 +27,8 @@ To make it easier to find custom catalogs, we're providing a list of links as a 
 |</br></br>Custom catalog provider|</br></br> URL|
 |--|--|
 |Adobe | Multiple catalogs are available from Adobe. </br>  https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/sccm.html |
-|Centero Software Manager| https://software-manager.com/csm-for-sccm-patch-management-solution |
-|Dell| *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://www.dell.com/support/article/sln311138/ </br></br> https://downloads.dell.com/Catalog/DellSDPCatalogPC.cab </br></br>ftp://ftp.dell.com/catalog/DellSDPCatalog.cab |
+|Centero Software Manager| https://centero.fi/centero-software-manager/product-editions/#csm-for-mecm |
+|Dell| *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://www.dell.com/support/article/sln311138/ </br></br> https://downloads.dell.com/Catalog/DellSDPCatalogPC.cab </br></br>https://downloads.dell.com/Catalog/DellSDPCatalog.cab |
 |Fujitsu| https://support.ts.fujitsu.com/GFSMS/globalflash/FJSVUMCatalogForSCCM.cab |
 |HP| *Partner catalog* available in the **Third-Party Software Update Catalogs** node <br> https://hpia.hpcloud.hp.com/downloads/sccmcatalog/HpCatalogForSms.latest.cab</br></br> `http://ftp.hp.com/pub/softlib/software/sms_catalog/HpCatalogForSms.latest.cab` |
 |Ivanti Patch for MEM | https://www.ivanti.com.au/products/patch-management-for-mem |
@@ -37,7 +39,7 @@ To make it easier to find custom catalogs, we're providing a list of links as a 
 
 ## Open this article from the Configuration Manager console
 <!--9989251-->
-Starting in Configuration Manager 2107, you can  choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node to get to this article. Right-clicking on **Third-Party Software Update Catalogs** node displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to to this page.  
+Starting in Configuration Manager 2107, you can  choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node to get to this article. Right-clicking on **Third-Party Software Update Catalogs** node displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to this page.  
 
 :::image type="content" source="./media/9989251-more-catalogs.png" alt-text="Screenshot of the Third-Party Software Update Catalogs node with the More Catalogs icon in the ribbon":::
 

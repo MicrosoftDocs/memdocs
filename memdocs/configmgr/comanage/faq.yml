@@ -3,15 +3,14 @@ metadata:
   title: FAQ for co-management
   titleSuffix: Configuration Manager
   description: Frequently asked questions (FAQ) about co-management.
-  author: aczechowski
-  ms.author: aaroncz
+  ms.author: gokarthi
+  author: gowdhamankarthikeyan
   ms.reviewer: crosorio
-  manager: dougeby
+  manager: apoorvseth
   ms.date: 01/26/2022
-  ms.topic: reference
+  ms.topic: faq
   ms.prod: configuration-manager
   ms.technology: configmgr-comanage
-  ms.collection: highpri
 
 title: Frequently asked questions about co-management
 summary: |
@@ -29,22 +28,22 @@ sections:
           
           Enabling co-management is completely transparent to the end user. There's no reboot, no agent installation, no interruption, and no user notification.
 
-          As an administrator, you can see co-managed devices in the Microsoft Endpoint Manager admin center. You can do remote actions from the admin center, and can benefit from insights with [Endpoint analytics](../../analytics/overview.md).
+          As an administrator, you can see co-managed devices in the Microsoft Intune admin center. You can do remote actions from the admin center, and can benefit from insights with [Endpoint analytics](../../analytics/overview.md).
 
           Co-managed devices could be transformed to Autopilot-provisioned devices next time the device is reset.
 
-          Consider using the Company Portal. It's the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices. Your users should get familiar with Company Portal as it will provide the integrated experience going forward. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).
+          Consider using the Company Portal. It's the cross-platform app portal experience for the Microsoft Intune family of products. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices. Your users should get familiar with Company Portal as it will provide the integrated experience going forward. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).
 
       - question: |
           Should I use co-management or tenant attach?
         answer: |
           Both! You can use them independently, but they work great together.
           
-          _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. You can enable co-management and not use tenant attach to upload devices to the Microsoft Endpoint Manager admin center.
+          _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. You can enable co-management and not use tenant attach to upload devices to the Microsoft Intune admin center.
 
-          _Tenant attach_ sets up synchronization between your Configuration Manager site and your Intune tenant. Then you can see Configuration Manager devices in the Microsoft Endpoint Manager admin center. This connection provides you with a single view for all devices that you manage with Microsoft Endpoint Manager. This web-based console may be beneficial in some scenarios that don't want to use the full Configuration Manager console, such as with help desk staff. You can also benefit from insights in [Endpoint analytics](../../analytics/overview.md). You can configure the site to upload devices to the Microsoft Endpoint Manager admin center and not enable co-management. However, those devices are still managed by ConfigMgr until you enable co-management.
+          _Tenant attach_ sets up synchronization between your Configuration Manager site and your Intune tenant. Then you can see Configuration Manager devices in the Microsoft Intune admin center. This connection provides you with a single view for all devices that you manage with Microsoft Intune and Configuration Manager. This web-based console may be beneficial in some scenarios that don't want to use the full Configuration Manager console, such as with help desk staff. You can also benefit from insights in [Endpoint analytics](../../analytics/overview.md). You can configure the site to upload devices to the Microsoft Intune admin center and not enable co-management. However, those devices are still managed by ConfigMgr until you enable co-management.
 
-          For more information on tenant attach and how to configure it, see [Microsoft Endpoint Manager tenant attach](../tenant-attach/device-sync-actions.md).
+          For more information on tenant attach and how to configure it, see [tenant attach](../tenant-attach/device-sync-actions.md).
 
       - question: |
           Can I co-manage Windows 365 Cloud PCs?
@@ -158,7 +157,7 @@ sections:
 
           - [Managing Patch Tuesday with Configuration Manager in a remote work world](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-patch-tuesday-with-configuration-manager-in-a-remote/ba-p/1269444)
 
-          - [Managing remote machines with cloud management gateway in Microsoft Endpoint Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895)
+          - [Managing remote machines with cloud management gateway in Microsoft Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895)
 
       - question: |
           Does co-management require a cloud management gateway (CMG)?
@@ -180,4 +179,4 @@ sections:
 
           In past versions, Configuration Manager blocked update packages to cloud-based content sources. This constraint was removed so you can distribute third-party software updates. Don't distribute to the CMG any updates that are available from Microsoft Updates.
 
-          Configuration Manager clients have native affinity when using a CMG to get updates directly from the Microsoft Updates cloud service. For more information on how CMG works with Microsoft Updates service and configuration guidance, see the blog post on [Managing remote machines with cloud management gateway in Microsoft Endpoint Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895).
+          Configuration Manager clients have native affinity when using a CMG to get updates directly from the Microsoft Updates cloud service. For more information on how CMG works with Microsoft Updates service and configuration guidance, see the blog post on [Managing remote machines with cloud management gateway in Microsoft Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895).

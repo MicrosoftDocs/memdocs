@@ -26,17 +26,21 @@ ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Rename device from the Company Portal app for Windows
+
 Rename a device to make it easier to recognize from other devices. The Company Portal app for Windows lets you rename the following types of connected devices:  
+
 * Windows 10
 * iOS
 * Android  
 
 ## Rename device from **Device details** page  
-Complete the following step to remove a device from the Company Portal **Device details** page. 
+
+Complete the following step to rename a device from the Company Portal **Device details** page. 
 
 1. Open the Company Portal app and go to **My Devices**.  
 
@@ -45,12 +49,13 @@ Complete the following step to remove a device from the Company Portal **Device 
 3. On the **Device details** page, go to the top, right-corner and select the **Rename** pencil icon.  
 
      ![Example screenshot of the Company Portal app for Windows, Device details page, highlighting the Rename pencil icon.](./media/1809_Rename_CPapp_Windows_icon.png) 
-4. Type in the new name and click **Rename**. The device name updates immediately in the app.  
+4. Type in the new name and select **Rename**. The device name updates immediately in the app.  
 
      ![Example screenshot of the Company Portal app for Windows, Device details page, Rename popup field.](./media/1808_RenameApp_Popup.png)  
 
 ## Rename device from device context menu  
-Complete the following step to remove a device through the [context menu](/windows/uwp/design/controls-and-patterns/menus) actions.  
+
+Complete the following step to rename a device through the [context menu](/windows/uwp/design/controls-and-patterns/menus) actions.  
 
 1. On the **Home** page of the Company Portal app, go to **My Devices**.
 
@@ -64,3 +69,13 @@ Complete the following step to remove a device through the [context menu](/windo
      ![Example screenshot of the Company Portal app for Windows, Home page. Rename popup field appears over device where user can type in new name and click Rename or Cancel.](./media/1808_RenameApp_Popup.png)  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+
+## Intune administrator resources
+
+Using the **Rename** action in the Company Portal website, you can modify the device name to a user-friendly and easily recognizable name. However, it's essential to note that this change only applies to the Company Portal and not to the **Device name** or the **Management name** in the Microsoft Intune admin center.
+
+For more information, go to:
+
+- [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
+- [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).

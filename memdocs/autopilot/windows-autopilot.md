@@ -1,28 +1,25 @@
 ---
 title: Overview of Windows Autopilot
-description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. 
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
-ms.mktglfcycl: deploy
+description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 11/12/2021
+manager: aaroncz
+ms.date: 11/17/2022
 ms.topic: article
 ms.collection: 
-- M365-modern-desktop
-- m365initiative-coredeploy
-- highpri
+  - M365-modern-desktop
+  - m365initiative-coredeploy
+  - highpri
+  - tier1
 ---
 
 # Overview of Windows Autopilot
 
-**Applies to**
+*Applies to:*
 
 - Windows 10
 - Windows 11
@@ -57,8 +54,8 @@ Once deployed, you can manage Windows devices with:
 
 - Microsoft Intune
 - Windows Update for Business
-- Microsoft Endpoint Configuration Manager
-- Other similar tools
+- Microsoft Configuration Manager
+- Other similar tools from 3rd parties
 
 ## Requirements
 
@@ -75,7 +72,6 @@ Windows Autopilot enables you to:
 
 - Automatically join devices to Azure Active Directory (Azure AD) or Active Directory (via Hybrid Azure AD Join). For more information about the differences between these two join options, see [Introduction to device management in Azure Active Directory](/azure/active-directory/device-management-introduction).
 - Auto-enroll devices into MDM services, such as Microsoft Intune ([*Requires an Azure AD Premium subscription for configuration*](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal)).
-- Restrict the Administrator account creation.
 - Create and auto-assign devices to configuration groups based on a device's profile.
 - Customize OOBE content specific to the organization.
 

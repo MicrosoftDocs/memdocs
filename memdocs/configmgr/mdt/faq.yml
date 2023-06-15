@@ -5,13 +5,12 @@ metadata:
   ms.date: 10/05/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-mdt
-  ms.topic: article
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  ms.topic: faq
+  author: BalaDelli
+  ms.author: baladell
+  manager: apoorvseth
   ms.localizationpriority: null
   ms.collection: openauth
-    
 title: Microsoft Deployment Toolkit frequently asked questions (FAQ)
 summary: This article provides frequently asked questions (FAQ) about the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
 

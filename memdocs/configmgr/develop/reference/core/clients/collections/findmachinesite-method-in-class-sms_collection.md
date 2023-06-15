@@ -1,18 +1,18 @@
 ---
-title: "FindMachineSite Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: FindMachineSite Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the FindMachineSite Windows Management Instrumentation class method gets site code information for a specific resource.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 19cf942a-a1e8-44de-b280-a66effd481d5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # FindMachineSite Method in Class SMS_Collection
 The `FindMachineSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets site code information for a specific resource.  

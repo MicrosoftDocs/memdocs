@@ -2,14 +2,16 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configuration Manager console changes and tips
@@ -19,6 +21,34 @@ ms.localizationpriority: medium
 Use the information below to find out about changes to the Configuration Manager console and tips for using the console:
 
 ## General tips
+
+### <a name="bkmk_2207"></a> Console improvements in version 2207
+
+*(Introduced in version 2207)*
+
+The following improvements were made to the console and user experience:
+
+- When using the search bar, the **Path** criteria is added whenever subfolders are included in the search. The **Path** criteria is informational and can't be edited.<!--14908615-->
+   :::image type="content" source="./media/14908615-search-path.png" alt-text="Screenshot of search bar with the path criteria.":::
+
+### <a name="bkmk_2203"></a> Console improvements in version 2203
+<!--12726153-->
+*(Introduced in version 2203)*
+
+The following improvements were made to the console and user experience:
+
+- When using temporary device nodes, device actions like **Run Scripts** are now available to make the experience in the console consistent.
+- Additional Management Insights rules now have click-through actions
+- Copy/paste is available for more objects from details panes.
+   - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications.
+- Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query. Closing the console will clear the cached query.
+- Added a search filter to the **Products** and **Classifications** tabs in the **Software Update Point Component Properties**. <!--10998089, 9575773-->
+- You can now exclude subcontainers when doing **Active Directory System Discovery** and **Active Directory User Discovery** in untrusted domains. <!--4655840, 9575773-->
+- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Azure Active Directory. <!--12433024, 9575773-->
+- Added the **Collection ID** to the collection summary details tab <!--12630582, 9575773-->
+- Increased the size of the **Membership Rules** pane in the **Properties** page for collections. <!--12947295, 9575773 -->
+- Added a **View Script** option for **Run PowerShell Script** steps when using the **View** action for a task sequence. <!--12498818, 9575773 -->
+- The console now offers a dark theme. For more information, see [How to use the console](admin-console.md#bkmk_dark).
 
 ### <a name="bkmk_csv"></a> Export to CSV
 <!--9663857-->
@@ -136,6 +166,15 @@ Your user account needs at least **Read** permission to these objects.
 For more information, see [Use the status system](use-status-system.md).
 
 ### Improvements to console search
+
+**Note:** The path criteria are not editable and they just show the search criteria.
+
+<!--11702416-->
+*(Introduced in version 2203)*
+- The default search will now include all subfolders. That is when you navigate to any node in the console, by default, search results will include items from that node as well as from all subfolders.
+- If you want to search only current node, select the **Current Node** button in the ribbon. The search results will then include items from current node only.
+- If you want to search all subfolders, select the **All Subfolders** button in the ribbon. The search results will then include items from current node as well as from all subfolders.
+
 <!--4640570-->
 *(Introduced in version 1910)*
 
@@ -318,6 +357,14 @@ When searching in a device collection, it doesn't search the keyword against all
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
 ## Software Library workspace
+
+### Folder support for software update nodes
+<!--3601129-->
+
+*(Introduced in version 2203)*
+
+You can organize software update groups and packages by using folders. This change allows for better categorization and management of software updates. For more information, see [Deploy software updates](../../../sum/deploy-use/deploy-software-updates.md#bkmk_folder).
+
 ### Improvements to console search
 <!--8325332, 9506942, 9506938, 9506934-->
 *(Introduced in version 2107)*
@@ -346,14 +393,14 @@ You can right-click and notify devices to run a software updates evaluation cycl
 <!--6601203-->
 *(Introduced in version 2010)*
 
-When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#export-and-import).
+When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/export-import-task-sequences.md).
 
 ### See task sequence size in the console
 
 <!--7645732-->
 *(Introduced in version 2010)*
 
-When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems. For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems. For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/reduce-task-sequence-policy-size.md).
 
 ### Order by program name in task sequence
 <!--4616810-->

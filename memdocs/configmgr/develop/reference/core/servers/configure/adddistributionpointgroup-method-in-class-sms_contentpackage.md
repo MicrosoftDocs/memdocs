@@ -1,18 +1,18 @@
 ---
-title: "AddDistributionPointGroup Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AddDistributionPointGroup Method
+titleSuffix: Configuration Manager
+description: The AddDistributionPointGroup Windows Management Instrumentation class method, in Configuration Manager, adds the content package to a set of distribution point groups.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ad858478-ae62-42be-ad8c-38d16c5c4d26
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDistributionPointGroup Method in Class SMS_ContentPackage
 The `AddDistributionPointGroup` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the content package to a set of distribution point groups.  

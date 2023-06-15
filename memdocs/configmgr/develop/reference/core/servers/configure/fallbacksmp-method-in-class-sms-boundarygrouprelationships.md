@@ -1,18 +1,18 @@
 ---
-title: "FallbackSMP Method"
-titleSuffix: "Configuration Manager"
-ms.date: "03/13/2017"
-ms.prod: "configuration-manager"
+description: Learn how to set the fallback time, in minutes, for a state migration point (SMP) using FallbackSMP.
+title: FallbackSMP Method
+titleSuffix: Configuration Manager
+ms.date: 03/13/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b2abf865-b98f-4e16-a836-1fc42ae2c348
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # FallbackSMP Method in Class SMS_BoundaryGroupRelationships
  The `FallbackSMP` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the fallback time, in minutes, for a state migration point (SMP). The default value is 120.  

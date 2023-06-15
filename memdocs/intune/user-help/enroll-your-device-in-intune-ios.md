@@ -23,11 +23,12 @@ searchScope:
 ROBOTS:  
 #audience: 
 
-ms.reviewer: tisilv
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier1
 ---
 
 
@@ -40,12 +41,12 @@ After your device is enrolled, it becomes *managed*. Your organization can assig
 > [!NOTE]
 > We do not sell any data collected by our service to any third parties for any reason.  
 
-To maintain access to work or school information from your device, you'll need to configure your device to match your organization's preferred settings. This article describes how to use Company Portal to enroll you device and maintain access requirements.  
+To maintain access to work or school information from your device, you'll need to configure your device to match your organization's preferred settings. This article describes how to use Company Portal to enroll your device and maintain access requirements.  
 </br>
 > [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
-> If you tried to access you work email in the Mail app, and received a prompt to get your device managed, you're in the right place. Follow the instructions below, which will help you regain access to your email and other work resources on your iOS device.  
+> If you tried to access your work email in the Mail app, and received a prompt to get your device managed, you're in the right place. Follow the instructions below, which will help you regain access to your email and other work resources on your iOS device.  
 
 
 ## What to expect from the Company Portal app  
@@ -59,11 +60,9 @@ After your device is enrolled, the Company Portal app will continue to make sure
 ### Setting notifications  
 If after enrollment your organization enforces a new security requirement, such as multi-factor authentication, the Company Portal app will notify you. You'll have the chance to adjust your settings so that you can continue to work from your device.  
 
-To learn more about enrollment, see [What happens when I install the Company Portal app and enroll my device?](./what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).  
-
 ## Prerequisites    
 
-* Device running iOS 11.0 and later.   
+* Device running iOS 14.0 and later.   
 * Install Company Portal app [from App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Maintain a Wi-Fi connection until all steps are complete.
 * Have access to Safari web browser on your device.
@@ -126,7 +125,7 @@ Pausing for more than a few minutes during enrollment might cause the Company Po
     
 6. Enter your device password. Then tap **Install**.    
 
-7. The next screen is a standard system warning about device management. To continue with installation, tap **Install**. If prompted to trust remote management, tap **Trust**.  
+7. The next screen is a standard system warning about device management. To continue with installation, tap **Install**. If you're prompted to trust remote management, tap **Trust**.  
 
 8. After installation is complete, tap **Done**. To verify that the profile was installed, go to your VPN and device management settings. You should see the profile listed under **Mobile Device Management**.   
 

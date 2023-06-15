@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 61c9b4be-4656-413a-8fb1-c6e72d89fbaa
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for status and alerts in Configuration Manager

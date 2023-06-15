@@ -1,18 +1,18 @@
 ---
-title: "RaiseWarningStatusMsg Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: RaiseWarningStatusMsg Method
+description: Learn how to use the RaiseWarningStatusMsg method in Configuration Manager to create a warning status message.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 979ac4c3-03b9-41b2-9a3d-371ccbe0695e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RaiseWarningStatusMsg Method in Class SMS_StatusMessage
 The `RaiseWarningStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a warning status message.  

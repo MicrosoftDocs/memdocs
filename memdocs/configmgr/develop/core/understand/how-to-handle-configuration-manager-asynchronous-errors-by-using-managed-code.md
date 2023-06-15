@@ -1,18 +1,18 @@
 ---
-title: "Handle Asynchronous Errors by Using Managed Code"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Handle Asynchronous Errors by Using Managed Code
+titleSuffix: Configuration Manager
+description: To handle a Configuration Manager error raised during an asynchronous query, test the RunWorkerCompletedEventArgs parameter Error Exception property passed to the SmsBackgroundWorker.QueryProcessorCompleted event handler.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 1a37a005-07cd-476e-a744-fa345f3232c7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using Managed Code
 To handle a Configuration Manager error that is raised during an asynchronous query, you test the `RunWorkerCompletedEventArgs` parameter [Error](/previous-versions/t1yswz5k(v=vs.90)) Exception property that is passed to the [SmsBackgroundWorker.QueryProcessorCompleted](/previous-versions/system-center/developer/cc143778(v=msdn.10)) event handler. If [Error](/previous-versions/t1yswz5k(v=vs.90)) is not `null`, an exception has occurred and you use [Error](/previous-versions/t1yswz5k(v=vs.90)) to discover the cause.  

@@ -8,9 +8,9 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 1/13/2022
-ms.topic: reference
-ms.service: cloudpc
+ms.date: 06/12/2023
+ms.topic: conceptual
+ms.service: windows-365
 ms.subservice: 
 ms.assetid: 
 
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18, references_regions
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # In development for Windows 365 Enterprise
@@ -49,57 +51,44 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 ## Monitor and troubleshoot
 ## Role-based access control
 ## Security
+## End-user experience
 
 -->
 
 <!-- ***********************************************-->
-## App management
-
-### Use conditional access to group Windows 365 and Azure Virtual Desktop app policies together <!-- 36360788 -->
-
-In a future update, you’ll be able to target Conditional Access (CA) policies to a single application that applies to both the Windows 365 and Azure Virtual Desktop apps.
-
-Currently, Windows 365 and Azure Virtual Desktop share a common framework for identity access by using Azure Active Directory (Azure AD) and security controls with CA policies. You can target CA policies to the Windows 365 app and this applies only to windows365.microsoft.com web client. To apply CA policies to the full Windows client and non-windows clients, you must assign CA policies to both the Windows 365 and Azure Virtual Desktop apps.  For more information, see [Assign a Conditional Access policy for Cloud PCs](set-conditional-access-policies.md).
-
-<!-- ***********************************************-->
 ## Device management
 
-### Support for Azure AD joined Cloud PCs<!-- 35060203-->
+### Support for symmetric NAT with RDP Shortpath<!--43602619-->
 
-Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These devices will run in a Microsoft-hosted network, so customers:
+In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-- Don’t need their own Azure infrastructure
-- Don’t need to create an on-premises network connection.
+### Group-based license support for Cloud PC resizing<!--41357690-->
 
-### Operating system end of support status for Cloud PCs<!--36852572 -->
+In a future update, both single and bulk resizing will support Cloud PCs that were provisioned with group-based licenses.
 
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
+<!-- ***********************************************-->
+<!--## Device provisioning-->
 
-### Configure installed language and region for provisioning Cloud PCs<!--37095808-->
+<!--***********************************************-->
+## End user experience
 
-When creating a provisioning policy, you’ll be able to configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States).
+### Windows 365 web client keyboard shortcut redirection<!--43951825-->
 
-### Point-in-time restore<!--37063579 -->
+Windows 365 web client users will be able to use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC.
 
-Administrators and users will be able to restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points will be available. Administrators will be able to:
+<!-- ***********************************************-->
+## Miscellaneous
 
-- Configure the restore point frequency
-- Grant or deny users restore permissions
-- Bulk restore
+### Windows 365 Government setup tool<!--43461105-->
+
+A new Windows 365 Government setup tool will replace the current PowerShell scripts that are used to setup tenant mapping and permissions.
+
+### Single sign on option per tenant (preview)<!--43751308-->
+
+Each tenant will be able to decide if you want to turn on Single Sign On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign on.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
-
-### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
-
-Intune’s remote action to Collect diagnostics will soon collect additional details from Windows 365 Cloud PCs.
-
-The new details for Windows 365 Cloud PCs include the following registry data:
-
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
-- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
-
-To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 ### End user manual connectivity check<!--37679345 -->
 
@@ -108,14 +97,23 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 <!-- ***********************************************-->
 ## Provisioning
 
-### New supported Azure regions: US Central and German West Central<!--37678838 -->
+### New health check: UDP TURN (preview)<!--44505391-->
 
-Two new Azure regions will be supported for Windows 365 Cloud PC provisioning: US Central and German West Central.
-
-For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
 
 <!-- ***********************************************-->
-<!--## Role-based access control-->
+## Security
+
+### Azure network connection least privilege update<!--44876259-->
+
+A new, more secure least privilege  will be implemented in a future update. When the update is released, customers must manually remove the old network contributor role from the resources where the ANC was created.
+
+<!-- ***********************************************-->
+## Windows 365 app
+
+### Windows 365 app will support Windows 365 Government environments<!--43305226-->
+
+In a future update, the Windows 365 app will support Windows 365 Government environments.
 
 ## Next steps
 

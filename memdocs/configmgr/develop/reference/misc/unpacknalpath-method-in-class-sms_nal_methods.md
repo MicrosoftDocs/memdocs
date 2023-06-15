@@ -1,18 +1,18 @@
 ---
-title: "UnPackNALPath Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: UnPackNALPath Method
+titleSuffix: Configuration Manager
+description: Decodes a network abstraction layer (NAL) path into its components.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 76960011-6155-4295-8c5c-d7181018011e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # UnPackNALPath Method in Class SMS_NAL_Methods
 The `UnPackNALPath` method, in Configuration Manager, decodes a network abstraction layer (NAL) path into its components.  

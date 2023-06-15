@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ms.reviewer: lacranda
 ---
 
@@ -49,6 +51,9 @@ Manual deletion of a certificate is a scenario that applies across platforms and
 
 In this scenario, after the certificate is deleted, the next time the device checks in with Intune it's found to be out of compliance as it is missing the expected certificate. Intune then issues a new certificate to restore the device to compliance. No other action is needed to restore the certificate.
 
+> [!NOTE]
+> SCEP certificates are [removed but not revoked](certificate-authority-add-scep-overview.md#removing-certificates) when using a third-party certification authority.
+
 ## Windows devices
 
 ### SCEP certificates
@@ -70,6 +75,7 @@ A root certificate is removed when:
 - A user unenrolls.
 - An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+- A certificate profile is removed from the group assignment.
 
 SCEP certificates *stay* on the device (certificates aren't revoked or removed) when:
 
@@ -257,4 +263,4 @@ PKCS certificates stay on the device (certificates aren't revoked or removed) wh
 
 ## Next steps
 
-[Use certificates for authentication](certificates-configure.md)
+[Use certificates for authentication](certificates-configure.md)  <!-- Test for second -->

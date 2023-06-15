@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # How to monitor app protection policies
@@ -42,11 +44,16 @@ There are three different places to monitor app protection policies:
 App protection data is retained for a minimum of 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. An *app instance* is a unique user + app + device. 
 
 > [!NOTE]
-> For more information, see [How to create and assign app protection policies](app-protection-policies.md).
+> For iOS 16 and later devices, the "Device Name" value in all app protection reports will be a generic device name.  For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
+
+> [!NOTE]
+> For more information, see [How to create and assign app protection policies](app-protection-policies.md). 
+
+
 
 ## Summary view
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Monitor** > **App protection status**.
 
 The following list provides details about app protection status: 
@@ -79,7 +86,7 @@ Users with devices that are flagged by the **Require threat scan on apps** condi
 
 ## Reporting view
 
-You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
+You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **Monitor** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
 
 ### User report
 
@@ -176,9 +183,8 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
     ![Screenshot of the Save report confirmation box](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune provides additional device reporting fields, including App Registration ID, Android manufacturer, model, and security patch version, as well as iOS/iPadOS model. In Intune, you access these fields by selecting **Apps** > **App protection status** > **App Protection Report: iOS/iPadOS, Android**. In addition, these parameters help you configure the **Allow** list for the device manufacturer (Android), the **Allow** list for the device model (Android and iOS/iPadOS), and the **minimum Android security patch version** setting.   
+> Intune provides additional device reporting fields, including App Registration ID, Android manufacturer, model, and security patch version, as well as iOS/iPadOS model. In Intune, you access these fields by selecting **Apps** > **Monitor** > **App protection status** > **App Protection Report: iOS/iPadOS, Android**. In addition, these parameters help you configure the **Allow** list for the device manufacturer (Android), the **Allow** list for the device model (Android and iOS/iPadOS), and the **minimum Android security patch version** setting.   
  
 ## See also
 - [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)
-- [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
-- [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
+- [Where to find work or school apps for iOS/iPadOS (user help)](../user-help/use-managed-apps-on-your-device-ios.md) 

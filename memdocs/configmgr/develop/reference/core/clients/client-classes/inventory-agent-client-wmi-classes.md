@@ -1,18 +1,18 @@
 ---
-title: "Inventory Agent Client WMI Classes"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Inventory Agent Client WMI Classes
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the inventory client agent classes can be broken into three categories.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 244dda2b-da12-4618-81f2-79e7f3306b31
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Inventory Agent Client WMI Classes
 In Configuration Manager, the inventory client agent classes can be broken into three categories:  

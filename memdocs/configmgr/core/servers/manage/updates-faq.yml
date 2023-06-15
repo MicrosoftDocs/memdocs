@@ -6,10 +6,10 @@ metadata:
   ms.date: 08/02/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
-  ms.topic: conceptual
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  ms.topic: faq
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
 
 title: In-console updates FAQ
 summary: |

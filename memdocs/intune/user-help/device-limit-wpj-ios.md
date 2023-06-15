@@ -3,7 +3,7 @@
 
 title: Registered iOS device limit has been reached
 titlesuffix: Intune Company Portal
-description:
+description: Steps to take if the limit of iOS devices you can register has been reached.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -26,7 +26,8 @@ ms.reviewer: elocholi
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # The limit of iOS devices you can register has been reached

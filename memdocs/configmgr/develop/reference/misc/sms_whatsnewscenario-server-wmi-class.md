@@ -1,18 +1,18 @@
 ---
-title: "SMS_WhatsNewScenario Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_WhatsNewScenario Class
+titleSuffix: Configuration Manager
+description: SMS_WhatsNewScenario Server WMI Class is for internal use only.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9dca5dc2-06e5-4714-8eed-8e3b4a0d7eab
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_WhatsNewScenario Server WMI Class
 For internal use only.  

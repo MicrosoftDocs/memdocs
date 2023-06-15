@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 03/30/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,9 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Install the Certificate Connector for Microsoft Intune
@@ -34,7 +35,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
 ## Download and install the connector software
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
@@ -64,6 +65,9 @@ To support your use of certificates with Intune, you can install the Certificate
    - **Close** - This option closes the connector installation without configuring the connector. If you choose to *Close* the install at this time, later you can run the **Certificate Connector for Microsoft Intune** wizard to launch the connector configuration program. By default, the wizard is found in *C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Intune*.
 
 After a connector installs, you can run the installation program again to uninstall the connector.
+
+> [!TIP]
+> The installer will attempt to install the .NET Framework 4.7.2. If you experience issues during this process you can choose to pre-install the .NET Framework using the [Microsoft .NET Framework 4.7.2 offline installer for Windows](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2)
 
 ## Configure the certificate connector
 
@@ -102,10 +106,12 @@ Use the following procedure to both configure a new connector and modify a previ
    - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
 4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, `http://proxy.contoso.com`.
+   > [!IMPORTANT]  
+   > Be sure to include the HTTP or HTTPS prefix. This is a change from the proxy configuration for previous versions of the connector.
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. This user account must be a Global Admin or an Intune Admin with an Intune license assigned and the user must be a synchronized account from your local Active Directory.
+6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. This user account must be a Global Admin or an Intune Admin with an Intune license assigned.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
@@ -126,7 +132,7 @@ After the configuration completes successfully and the wizard closes, the Certif
 > [!TIP]
 > It might be helpful to rename the connector to reference the server the connector is installed on. 
 > 
-> To rename the connector, in the Microsoft Endpoint Manager portal, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. Select the connector you want to rename. In **Name**, enter the name you want to use, and then select **save**.
+> To rename the connector, in the Microsoft Intune admin center, select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. Select the connector you want to rename. In **Name**, enter the name you want to use, and then select **save**.
 
 ## Modify the connector configuration
 
@@ -134,7 +140,7 @@ After you configure a Certificate Connector for Microsoft Intune on a server, yo
 
 ## Remove the connector
 
-To uninstall the Certificate Connector for Microsoft Intune form a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
+To uninstall the Certificate Connector for Microsoft Intune from a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
 ## Next steps
 
 Deploy:

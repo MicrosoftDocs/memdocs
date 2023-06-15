@@ -6,11 +6,12 @@ ms.date: 11/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Get support for Desktop Analytics
@@ -36,7 +37,7 @@ If the issue is more broadly for Configuration Manager than just analytics, go t
 
 To share your feedback about Desktop Analytics, select the **Send a Smile** icon at the top of the portal on the right side.
 
-![Send a Smile icon in the Microsoft Endpoint Manager admin center portal.](media/5451636-portal-feedback.png)
+![Send a Smile icon in the Microsoft Intune admin center.](media/5451636-portal-feedback.png)
 
 Choose one of the following options:
 

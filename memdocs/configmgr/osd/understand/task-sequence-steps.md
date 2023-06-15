@@ -2,14 +2,16 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 12/01/2021
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Task sequence steps
@@ -34,7 +36,7 @@ The rest of this article describes the other settings on the **Properties** tab 
 
 - **Disable this step**: The task sequence skips this step when it runs on a computer. The icon for this step is greyed out in the task sequence editor.  
 
-- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md#BKMK_TSGroups).  
+- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md#task-sequence-groups).
 
 - **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](using-task-sequence-variables.md#bkmk_access-condition). For more information about conditions, see [Task sequence editor - Conditions](task-sequence-editor.md#bkmk_conditions).
 
@@ -808,8 +810,7 @@ None of the following checks are selected by default in new or existing instance
 - **AC power plugged in**
 - **Network adapter connected**
   - **Network adapter is not wireless**
-
-Starting in version 2006, this step includes includes a check to determine if the device uses UEFI, **Computer is in UEFI mode**.<!--6452769-->
+- **Computer is in UEFI mode**<!--6452769-->
 
 Starting in version 2103, the task sequence progress displays more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements of this step, the user can select an option to **Inspect**. This action shows the checks that failed on the device. For more information, see [User experiences for OS deployment](user-experience.md#task-sequence-error).<!--8888218-->
 
@@ -835,7 +836,7 @@ Use the following task sequence variables with this step:
 - [_TS_CROSLANGUAGE](task-sequence-variables.md#TSCROSLANGUAGE)
 - [_TS_CRACPOWER](task-sequence-variables.md#TSCRACPOWER)
 - [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
-- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (starting in version 2006)
+- [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI)
 - [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
 - [_TS_CRTPMACTIVATED](task-sequence-variables.md#TSCRTPMACTIVATED) (starting in version 2111)
 - [_TS_CRTPMENABLED](task-sequence-variables.md#TSCRTPMENABLED) (starting in version 2111)
@@ -901,7 +902,7 @@ Verify that the device has a network adapter that's connected to the network. Yo
 
 #### Computer is in UEFI mode
 
-Starting in version 2006, determine whether the device is configured for UEFI or BIOS.
+Determine whether the device is configured for UEFI or BIOS.
 
 #### TPM 2.0 or above is enabled
 
@@ -1078,7 +1079,7 @@ If the task sequence fails to download a package, it starts to download the next
 
 <!-- SCCMDocs-pr #4202 -->
 
-If you configure the [task sequence properties](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
+If you configure the [task sequence properties](../deploy-use/manage-task-sequences-to-automate-tasks.md#advanced-tab) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
 
 #### Example use case
 
@@ -1093,9 +1094,9 @@ If you configure the [task sequence properties](../deploy-use/manage-task-sequen
   - Has a boot image referenced in its properties.
   - There are multiple instances of this task sequence, with different boot images as needed by architecture and language
 
-## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker
+## Enable BitLocker
 
-BitLocker drive encryption provides low-level encryption of the contents of a disk volume. Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.  
+BitLocker drive encryption provides low-level encryption of the contents of a disk volume. Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.
 
 To enable BitLocker on a drive while in Windows PE, use the [Pre-provision BitLocker](#BKMK_PreProvisionBitLocker) step.
 
@@ -1103,34 +1104,36 @@ This step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Disks**, and select **Enable BitLocker**.
 
-When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN**, the Trusted Platform Module (TPM) must be in the following state before you can run the **Enable BitLocker** step:  
+When you specify **TPM Only**, **TPM and Startup Key on USB**, or **TPM and PIN**, the Trusted Platform Module (TPM) must be in the following state before you can run the **Enable BitLocker** step:
 
-- Enabled  
-- Activated  
-- Ownership Allowed  
+- Enabled
+- Activated
+- Ownership Allowed
 
-Starting in version 2006, you can skip this step for computers that don't have a TPM or when the TPM isn't enabled. A new setting makes it easier to manage the task sequence behavior on devices that can't fully support BitLocker.<!--6995601-->
+You can skip this step for computers that don't have a TPM or when the TPM isn't enabled. This option makes it easier to manage the task sequence behavior on devices that can't fully support BitLocker.<!--6995601-->
 
 This step completes any remaining TPM initialization. The remaining actions don't require physical presence or reboots. The **Enable BitLocker** step transparently completes the following remaining TPM initialization actions, if necessary:
 
-- Create endorsement key pair  
-- Create owner authorization value and escrow to Active Directory, which must have been extended to support this value  
-- Take ownership  
-- Create the storage root key, or reset if already present but incompatible  
+- Create endorsement key pair
+- Create owner authorization value and escrow the recovery information
+- Take ownership
+- Create the storage root key, or reset if already present but incompatible
 
-If you want the task sequence to wait for the **Enable BitLocker** step to complete the drive encryption process, then select the **Wait** option. If you don't select the **Wait** option, the drive encryption process happens in the background. The task sequence immediately proceeds to the next step.  
+If you want the task sequence to wait for the **Enable BitLocker** step to complete the drive encryption process, then select the **Wait** option. If you don't select the **Wait** option, the drive encryption process happens in the background. The task sequence immediately proceeds to the next step.
 
-BitLocker can be used to encrypt multiple drives on a computer system, both OS and data drives. To encrypt a data drive, first encrypt the OS drive and complete the encryption process. This requirement is because the OS drive stores the key protectors for the data drives. If you encrypt the OS and data drives in the same task sequence, select the **Wait** option on the **Enable BitLocker** step for the OS drive.  
+BitLocker can be used to encrypt multiple drives on a computer system, both OS and data drives. To encrypt a data drive, first encrypt the OS drive and complete the encryption process. This requirement is because the OS drive stores the key protectors for the data drives. If you encrypt the OS and data drives in the same task sequence, select the **Wait** option on the **Enable BitLocker** step for the OS drive.
 
-If the hard drive is already encrypted, but BitLocker is disabled, then the **Enable BitLocker** step re-enables the key protectors and completes quickly. Re-encryption of the hard drive isn't necessary in this case.  
+If the hard drive is already encrypted, but BitLocker is disabled, then the **Enable BitLocker** step re-enables the key protectors and completes quickly. Re-encryption of the hard drive isn't necessary in this case.
 
 ### Variables for Enable BitLocker
 
-Use the following task sequence variables with this step:  
+Use the following task sequence variables with this step:
 
-- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
+- [OSDBitLockerPIN](task-sequence-variables.md#osdbitlockerpin)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#osdbitlockerrecoverypassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#osdbitlockerstartupkey)
+- [OSDRecoveryKeyPollingFrequency](task-sequence-variables.md#osdrecoverykeypollingfrequency) _(starting in version 2203)_
+- [OSDRecoveryKeyPollingTimeout](task-sequence-variables.md#osdrecoverykeypollingtimeout) _(starting in version 2203)_
 
 ### Cmdlets for Enable BitLocker
 
@@ -1143,26 +1146,26 @@ Manage this step with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 ### Properties for Enable BitLocker
 
-On the **Properties** tab for this step, configure the settings described in this section.  
+On the **Properties** tab for this step, configure the settings described in this section.
 
 #### Choose the drive to encrypt
 
-Specifies the drive to encrypt. To encrypt the current OS drive, select **Current operating system drive**. Then configure one of the following options for key management:  
+Specifies the drive to encrypt. To encrypt the current OS drive, select **Current operating system drive**. Then configure one of the following options for key management:
 
-- **TPM only**: Select this option to use only Trusted Platform Module (TPM).  
+- **TPM only**: Select this option to use only Trusted Platform Module (TPM).
 
-- **Startup Key on USB only**: Select this option to use a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer.  
+- **Startup Key on USB only**: Select this option to use a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer.
 
-- **TPM and Startup Key on USB**: Select this option to use TPM and a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer.  
+- **TPM and Startup Key on USB**: Select this option to use TPM and a startup key stored on a USB flash drive. When you select this option, BitLocker locks the normal boot process until a USB device that contains a BitLocker startup key is attached to the computer.
 
-- **TPM and PIN**: Select this option to use TPM and a personal identification number (PIN). When you select this option, BitLocker locks the normal boot process until the user provides the PIN.  
+- **TPM and PIN**: Select this option to use TPM and a personal identification number (PIN). When you select this option, BitLocker locks the normal boot process until the user provides the PIN.
 
-To encrypt a specific, non-OS data drive, select **Specific drive**. Then select the drive from the list.  
+To encrypt a specific, non-OS data drive, select **Specific drive**. Then select the drive from the list.
 
 #### Disk encryption mode
 
 <!--6995601-->
-Starting in version 2006, select one of the following encryption algorithms:
+Select one of the following encryption algorithms:
 
 - AES_128
 - AES_256
@@ -1181,19 +1184,34 @@ By default, this step only encrypts used space on the drive. This default behavi
 
 #### Choose where to create the recovery key
 
-To specify for BitLocker to create the recovery password and escrow it in Active Directory, select **In Active Directory**. This option requires that you extend Active Directory for BitLocker key escrow. BitLocker can then save the associated recovery information in Active Directory. Select **Do not create recovery key** to not create a password. Creating a password is the recommended option.  
+- **In Active Directory**: BitLocker creates the recovery password and escrows it in Active Directory. This option requires that you extend Active Directory for BitLocker key escrow. BitLocker can then save the associated recovery information in Active Directory.
+
+- **The Configuration Manager database**: Starting in version 2203, escrow the BitLocker recovery information for the OS volume to Configuration Manager. Use this option if you deploy policies for [BitLocker management](../../protect/plan-design/bitlocker-management.md). Use this option instead of Active Directory or waiting for the Configuration Manager client to receive BitLocker management policy after the task sequence. By escrowing the recovery information to Configuration Manager during the task sequence, it makes sure that the device is fully protected by BitLocker when the task sequence completes. This behavior allows for you to immediately recover the OS volume.<!--10454717-->
+
+  > [!NOTE]
+  > The client will only escrow its key to the Configuration Manager site if you configure one of the following options:
+  >
+  > - Create and use a certificate to encrypt the site database for BitLocker management.
+  >
+  > - Enable the BitLocker client management policy option to **Allow recovery information to be stored in plain text**.
+  >
+  > For more information, see [Encrypt recovery data in the database](../../protect/deploy-use/bitlocker/encrypt-recovery-data.md).
+
+To not create a password, select **Do not create recovery key** . Creating a password is the recommended option.
+
+> [!NOTE]
+> If Configuration Manager can't escrow the key, by default this task sequence step fails.
 
 #### Wait for BitLocker to complete the drive encryption process on all drives before continuing task sequence execution
 
-Select this option to allow BitLocker drive encryption to complete prior to running the next step in the task sequence. If you select this option, BitLocker encrypts the entire disk volume before the user is able to sign in to the computer.  
+Select this option to allow BitLocker drive encryption to complete prior to running the next step in the task sequence. If you select this option, BitLocker encrypts the entire disk volume before the user is able to sign in to the computer.
 
-The encryption process can take hours to complete when encrypting a large hard drive. Not selecting this option allows the task sequence to proceed immediately.  
+The encryption process can take hours to complete when encrypting a large hard drive. Not selecting this option allows the task sequence to proceed immediately.
 
 #### Skip this step for computers that do not have a TPM or when TPM is not enabled
 
 <!--6995601-->
-Starting in version 2006, select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is disabled for the **Enable BitLocker** step. If you enable this setting, and the device doesn't have a functional TPM, the task sequence engine logs an error to smsts.log and sends status message 11912. The task sequence continues past this step.
-
+Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is disabled for the **Enable BitLocker** step. If you enable this setting, and the device doesn't have a functional TPM, the task sequence engine logs an error to smsts.log and sends status message 11912. The task sequence continues past this step.
 
 ## <a name="BKMK_FormatandPartitionDisk"></a> Format and Partition Disk
 
@@ -1239,7 +1257,7 @@ In version 2010 and earlier, this number can't be larger than 99. In version 210
 
 <!--6610288-->
 
-Starting in version 2006, use a task sequence variable to specify the target disk to format. This variable option supports more complex task sequences with dynamic behaviors. For example, a custom script can detect the disk and set the variable based on the hardware type. Then you can use multiple instances of this step to configure different hardware types and partitions.
+Use a task sequence variable to specify the target disk to format. This variable option supports more complex task sequences with dynamic behaviors. For example, a custom script can detect the disk and set the variable based on the hardware type. Then you can use multiple instances of this step to configure different hardware types and partitions.
 
 If you select this property, enter a custom variable name. Add an earlier step in the task sequence to set the value of this custom variable to an integer value for the physical disk.
 
@@ -1302,14 +1320,16 @@ The applications must meet the following criteria:
 
 - If the application [checks for running executable files](../../apps/deploy-use/check-for-running-executable-files.md), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
 
+It's not supported to install applications during an OS deployment task sequence when the device also has policies assigned for [Windows Defender Application Control](../../protect/deploy-use/use-device-guard-with-configuration-manager.md). In this scenario, you can't use these applications after the task sequence completes. To work around this timing issue, [deploy the applications](../../apps/deploy-use/deploy-applications.md) after the task sequence completes.<!-- 13847501 -->
+
 > [!NOTE]
-> Starting in version 2107, there's a seven-minute delay before this step when the following conditions are true:
+> Starting in version 2107, when the following conditions are true, there's a seven-minute delay before this step:
 >
 > - The task sequence is running from standalone media.
 > - The previous step was **Restart Computer**.
 > - The current **Install Application** step doesn't _continue on error_.
 >
-> In versions 2103 and earlier, under these conditions the step would fail. The task sequence didn't properly evaluate that the app install was successful.<!-- 9849096 -->
+> In versions 2103 and earlier, the step would fail under these conditions. The task sequence didn't properly evaluate that the app install was successful.<!-- 9849096 -->
 
 When this step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of this step. Application dependencies aren't supported for stand-alone media.  
 
@@ -1709,7 +1729,7 @@ Select this option to have Sysprep automatically build a list of mass storage dr
 
 Select this option to prevent Sysprep from resetting the product activation flag.  
 
-#### Shutdown the computer after running this action
+#### Shut down the computer after running this action
 
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
@@ -1718,13 +1738,13 @@ The [Windows Autopilot for existing devices](../../../autopilot/existing-devices
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
-- Enable this option to shutdown the device after imaging. Then you can deliver the device to a user, who starts OOBE with Autopilot when they turn it on for the first time.  
+- Enable this option to shut down the device after imaging. Then you can deliver the device to a user, who starts OOBE with Autopilot when they turn it on for the first time.  
 
 
 
 ## <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker
 
-Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#BKMK_EnableBitLocker) step after the OS installs.
+Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#enable-bitlocker) step after the OS installs.
 
 > [!IMPORTANT]
 > Pre-provisioning BitLocker requires that the computer has a supported and enabled Trusted Platform Module (TPM).
@@ -1750,10 +1770,10 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 Specify the drive for which you want to enable BitLocker. BitLocker only encrypts the used space on the drive.  
 
-#### Disk encryption mode
+#### Disk encryption mode (Pre-provision BitLocker)
 
 <!--6995601-->
-Starting in version 2006, select one of the following encryption algorithms:
+Select one of the following encryption algorithms:
 
 - AES_128
 - AES_256
@@ -1762,16 +1782,14 @@ Starting in version 2006, select one of the following encryption algorithms:
 
 By default or if not specified, the step continues to use the default encryption method for the OS version. If the step runs on a version of Windows that doesn't support the specified algorithm, it falls back to the OS default. In this circumstance, the task sequence engine sends status message 11911.
 
-#### Use full disk encryption
+#### Use full disk encryption (Pre-provision BitLocker)
 
 <!--SCCMDocs-pr issue 2671-->
 By default, this step only encrypts used space on the drive. This default behavior is recommended, as it's faster and more efficient. If your organization requires encrypting the entire drive during setup, then enable this option. Windows Setup waits for the entire drive to encrypt, which takes a long time, especially on large drives.
 
-#### Skip this step for computers that do not have a TPM or when TPM is not enabled
+#### Skip this step for computers that do not have a TPM or when TPM is not enabled (Pre-provision BitLocker)
 
-Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is enabled for the **Pre-provision BitLocker** step. The step fails on a device without a TPM or a TPM that doesn't initialize. Starting in version 2006, if the device doesn't have a functional TPM, the task sequence engine logs a warning to smsts.log and sends status message 11912.
-
-
+Select this option to skip drive encryption on a computer that doesn't contain a supported or enabled TPM. For example, use this option when you deploy an OS to a virtual machine. By default, this setting is enabled for the **Pre-provision BitLocker** step. The step fails on a device without a TPM or a TPM that doesn't initialize. If the device doesn't have a functional TPM, the task sequence engine logs a warning to smsts.log and sends status message 11912.
 
 ## <a name="BKMK_ReleaseStateStore"></a> Release State Store
 

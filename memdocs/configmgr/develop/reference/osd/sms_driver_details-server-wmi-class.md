@@ -1,18 +1,18 @@
 ---
-title: "SMS_Driver_Details Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to describe the list of drivers that have been added to the boot image with SMS_Driver_Details embedded class.
+title: SMS_Driver_Details Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 269d8be5-2786-43e2-9313-555dadcab576
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Driver_Details Server WMI Class
 The `SMS_Driver_Details` Windows Management Instrumentation (WMI) class is an embedded class, in Configuration Manager, used by the [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md) class to describe the list of drivers that have been added to the boot image.  

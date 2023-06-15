@@ -6,11 +6,12 @@ ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Use the Company Portal app on co-managed devices
@@ -19,7 +20,7 @@ ms.collection: highpri
 
 <!--CMADO-3601237,INADO-4297660-->
 
-Starting in version 2006, the Company Portal is now the cross-platform app portal experience for Microsoft Endpoint Manager. By configuring co-managed devices to also use the Company Portal, you can provide a consistent user experience on all devices.
+Starting in version 2006, the Company Portal app is now the cross-platform app portal experience for Microsoft Intune family of products. By configuring co-managed devices to also use the Company Portal app, you can provide a consistent user experience on all devices.
 
 The Company Portal supports the following actions:
 
@@ -144,8 +145,6 @@ The following features of Software Center aren't currently available in the Comp
 - [App groups](../apps/deploy-use/create-app-groups.md)
 
 Other known issues:
-
-- If you deploy the same app from both Configuration Manager and Intune, it appears twice in the Company Portal.
 
 - When you search Company Portal, Intune apps always display before Configuration Manager apps.
 

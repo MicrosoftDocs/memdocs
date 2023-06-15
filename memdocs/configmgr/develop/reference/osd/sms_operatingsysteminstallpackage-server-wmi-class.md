@@ -1,18 +1,18 @@
 ---
-title: "SMS_OperatingSystemInstallPackage Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_OperatingSystemInstallPackage Class
+titleSuffix: Configuration Manager
+description: Serves as the unit of distribution for source files. The source files are used in a scripted installation of a valid operating system.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 74116a65-1ac4-48d2-bbeb-47e80a98ffdd
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_OperatingSystemInstallPackage Server WMI Class
 The `SMS_OperatingSystemInstallPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for source files that are used in a scripted installation of a valid operating system, for example, Windows Vista, on a client computer.  

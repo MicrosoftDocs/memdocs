@@ -7,23 +7,24 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
-ms.topic: conceptual
+ms.date: 11/17/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-ms.reviewer: mikedano, tycast
+ms.reviewer: mikedano, tycast, japoehlm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Email profile settings for devices running Windows 10/11 in Microsoft Intune
@@ -42,13 +43,14 @@ This article describes some of the settings you can configure. You can create a 
 
 ## Before you begin
 
-Create a [Windows 10/11 Email device configuration profile](email-settings-configure.md).
+- Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
+- Create a [Windows 10/11 Email device configuration profile](email-settings-configure.md).
 
 ## Email settings
 
 - **Email server**: Enter the host name of your Exchange server. For example, enter `outlook.office365.com`.
 - **Account name**: Enter the display name for the email account. This name is shown to users on their devices.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (AAD). Intune dynamically generates the username that's used by this profile. Your options:
+- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory. Intune dynamically generates the username that's used by this profile. Your options:
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
   - **Primary SMTP address**: Gets the name in email address format, such as `user1@contoso.com`.
   - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:  
@@ -60,7 +62,7 @@ Create a [Windows 10/11 Email device configuration profile](email-settings-confi
       When using **Custom** attributes, also enter:
       - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
-- **Email address attribute from AAD**: Intune gets this attribute from Azure Active Directory (AAD). Choose how the email address for the user is generated. Your options:
+- **Email address attribute from AAD**: Intune gets this attribute from Azure Active Directory. Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
   - **User principal name**: Uses the full principal name as the email address, such as `user1@contoso.com` or `user1`.
   - **Primary SMTP address**: Uses the primary SMTP address to sign in to Exchange, such as `user1@contoso.com`.
 

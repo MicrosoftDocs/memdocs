@@ -1,18 +1,18 @@
 ---
-title: "AddDistributionPoints Method in SMS_ImagePackage"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AddDistributionPoints Method in SMS_ImagePackage
+titleSuffix: Configuration Manager
+description: AddDistributionPoints Windows Management Instrumentation (WMI) class method adds the list of distribution points for the image package.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0beeb890-054c-488c-8fa2-e5c1302a7d72
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDistributionPoints Method in Class SMS_ImagePackage
 The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the list of distribution points for the image package.  

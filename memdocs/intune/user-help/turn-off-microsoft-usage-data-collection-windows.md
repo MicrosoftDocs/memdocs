@@ -26,7 +26,8 @@ ms.reviewer: priyar
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 
@@ -45,6 +46,8 @@ This article describes how to prevent Microsoft from collecting data about your 
 ## Allowing Microsoft data collection   
 
 When set to **Yes**, your in-app performance and usage data is automatically collected and shared with Microsoft. This type of data helps us improve the reliability and performance of Microsoft products. If you disable the usage data collection, your organization cannot change your preferences.    
+
+For more information about the data we collect, see [Optional diagnostic data from Intune Client apps](../protect/client-apps-optional-data.md).  
 
 ## Next steps  
 

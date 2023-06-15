@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the update package download status per site in Configuration Manager using  SMS_CM_UpdatePackDownloadMonitoring. 
 title: "SMS_CM_UpdatePackDownloadMonitoring Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -6,11 +7,11 @@ ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ab04d08b-25e3-444b-91c6-372d083bd8b0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

@@ -1,18 +1,18 @@
 ---
-title: "How to Define the Client-side Handler"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Define the Client-side Handler
+description: The custom client-side handler needs to implement a public COM interface and methods. The below methods will be called by the Configuration Manager client framework.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 259af33a-af65-4f80-b458-0414bba6f164
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Client-side Handler
 The custom client-side handler needs to implement a public COM interface and methods. The below methods will be called by the Configuration Manager client framework.  

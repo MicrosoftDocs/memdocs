@@ -6,10 +6,12 @@ ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Introduction to asset intelligence in Configuration Manager
@@ -17,7 +19,7 @@ ms.localizationpriority: medium
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454890 -->
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454890 --> For more information, see [Asset intelligence deprecation](deprecation.md).
 >
 > This deprecation plan doesn't include the [product lifecycle dashboard](product-lifecycle-dashboard.md).
 

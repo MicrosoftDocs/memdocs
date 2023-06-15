@@ -2,14 +2,16 @@
 title: Convert BIOS to UEFI
 titleSuffix: Configuration Manager
 description: Learn how to customize an OS deployment task sequence to prepare a FAT32 partition for transition to UEFI.
-ms.date: 10/01/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Task sequence steps to manage BIOS to UEFI conversion
@@ -84,7 +86,7 @@ Windows includes a simple conversion tool, **MBR2GPT**. It automates the process
     1. Add the **Run Command Line** step. Specify the command line for the MBR2GPT tool. When run in the full OS, configure it to covert the disk from MBR to GPT without modifying or deleting data. In **Command line**, enter the following command: `MBR2GPT.exe /convert /disk:0 /AllowFullOS`
 
     > [!TIP]
-    > You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full OS. Add a step to restart the computer to Windows PE before the step to run the MBR2GPT.EXE tool. Then remove the **/AllowFullOS** option from the command line.
+    > You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full OS. Add a step to restart the computer to Windows PE before the step to run the MBR2GPT.EXE tool. Then remove the `/AllowFullOS` option from the command line.
 
     For more information about the tool and available options, see [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 

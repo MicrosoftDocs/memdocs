@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns 
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 03/02/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -20,12 +20,14 @@ ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Device Compliance settings for iOS/iPadOS in Intune
@@ -98,12 +100,23 @@ For details about email profiles, see [configure access to organization email us
 - **Minimum OS build version**  
   *Supported for iOS 8.0 and later*
 
-  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device.
+  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to specify a minimum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `20E772520a`.
 
 - **Maximum OS build version**  
   *Supported for iOS 8.0 and later*
 
-  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device.
+  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `20E772520a`.
+
+## Microsoft Defender for Endpoint
+
+- **Require the device to be at or under the machine risk score**  
+
+  Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
+  - **Not configured** (*default*)
+  - **Clear**
+  - **Low**
+  - **Medium**
+  - **High**
 
 ## System Security
 

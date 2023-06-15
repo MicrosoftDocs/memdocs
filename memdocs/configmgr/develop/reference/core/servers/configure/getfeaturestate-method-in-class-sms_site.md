@@ -1,18 +1,18 @@
 ---
-title: "GetFeatureState Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: GetFeatureState Method
+titleSuffix: Configuration Manager
+description: A Windows Management Instrumentation class method that gets the enabled and disabled state of a feature.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 3350172b-3c4e-4cc5-af3e-cb94296ba052
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetFeatureState Method in Class SMS_Site
 The `GetFeatureState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the enabled/disabled state of a feature.  

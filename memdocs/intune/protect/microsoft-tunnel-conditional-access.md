@@ -22,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use Conditional Access with Microsoft Tunnel in Intune
@@ -37,16 +39,16 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
-2. Download the PowerShell script named **mst-CA-readiness.ps1** from aka.ms/mst-ca-provisioning.
+2. Download the PowerShell script named **mst-ca-provisioning.ps1** from aka.ms/mst-ca-provisioning.
 
-3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
+3. Using credentials that have the Azure Role permissions [equivalent to **Global Administrator**](/azure/active-directory/roles/permissions-reference#global-administrator), run the script from any location in your environment, to provision your tenant.
 
-   The script modifies your tenant by creating a service principle with the following details:
+   The script modifies your tenant by creating a service principal with the following details:
 
    - App ID: 3678c9e9-9681-447a-974d-d19f668fcd88
    - Name: Microsoft Tunnel Gateway
 
-   The addition of this service principle is required so you can select the tunnel cloud app while configuring Conditional Access policies. It's also possible to use Graph to add the service principle information to your tenant.
+   The addition of this service principal is required so you can select the tunnel cloud app while configuring Conditional Access policies. It's also possible to use Graph to add the service principal information to your tenant.
 
 4. After the script completes, you can use your normal process to create Conditional Access policies.
 
@@ -54,7 +56,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 If you'll use Conditional Access policy to limit user access, we recommend configuring this policy after you provision your tenant to support the Microsoft Tunnel Gateway cloud app, but before you install the Tunnel Gateway.
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional access** > **New policy**.
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint Security** > **Conditional access** > **New policy**.
 
 2. Specify a name for this policy.
 

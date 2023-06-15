@@ -1,18 +1,18 @@
 ---
-title: "InventoryActionStatus Client WMI Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: InventoryActionStatus Client WMI Class
+titleSuffix: Configuration Manager
+description: The InventoryActionStatus class is a client Windows Management Instrumentation (WMI) class that defines the status of an inventory action.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9d612110-8c01-4259-80b7-b160da8f66a8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # InventoryActionStatus Client WMI Class
 In Configuration Manager, the `InventoryActionStatus` class is a client Windows Management Instrumentation (WMI) class that defines the status of an inventory action.  

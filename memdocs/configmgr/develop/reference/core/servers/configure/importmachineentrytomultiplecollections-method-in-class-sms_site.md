@@ -6,14 +6,13 @@ ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
-
-
 ms.assetid: 3f516dae-a958-440e-9e7c-28de24bf2803
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # ImportMachineEntryToMultipleCollections method in class SMS_Site

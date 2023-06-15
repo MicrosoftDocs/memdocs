@@ -1,15 +1,17 @@
 ---
 title: Client health with co-management
 titleSuffix: Configuration Manager
-description: Maintain visibility of Configuration Manager client health from the Microsoft Endpoint Manager admin center.
+description: Maintain visibility of Configuration Manager client health from the Microsoft Intune admin center.
 ms.date: 11/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Client health with co-management
@@ -50,7 +52,7 @@ To get started with this feature, use the following steps:
 
 ### Review Configuration Manager client health in Intune
 
-1. Sign into the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the menu under **Troubleshooting + support**, go to the **Troubleshoot** page.
 

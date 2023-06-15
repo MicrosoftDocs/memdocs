@@ -13,10 +13,6 @@ items:
   href: cloud-pc-location.md
 - name: How-to guides
   items:
-  - name: Users
-    items:
-    - name: Get users started
-      href: get-users-started.md
   - name: Apps
     items:
     - name: Users installing apps
@@ -35,6 +31,8 @@ items:
       href: remotely-manage-business-cloud-pcs.md
     - name: Reset a user's password
       href: reset-user-password.md
+    - name: Restore a Cloud PC to an earlier state
+      href: restore-overview.md
 - name: Troubleshoot
   items:
   - name: Troubleshooting

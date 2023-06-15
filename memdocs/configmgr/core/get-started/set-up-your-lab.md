@@ -6,10 +6,12 @@ ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: Banreet
+manager: apoorvseth
+ms.author: banreetkaur
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Set up a Configuration Manager lab
@@ -19,16 +21,16 @@ ms.localizationpriority: medium
 Following the guidance in this topic will enable you to set up a lab for evaluating Configuration Manager with simulated real-life activities.  
 
 > [!NOTE]
-> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Windows and Office deployment and management lab kit](/microsoft-365/enterprise/modern-desktop-deployment-and-management-lab). 
+> Microsoft offers a pre-configured version of this lab using an evaluation version of Configuration Manager. For more information, see [Microsoft Intune and Configuration Manager evaluation lab kit](https://www.microsoft.com/evalcenter/evaluate-mem-evaluation-lab-kit). 
 
 ##  <a name="BKMK_LabCore"></a> Core components  
  Setting up your environment for Configuration Manager requires some core components to support the installation of Configuration Manager.    
 
 -   **The lab environment uses Windows Server 2012 R2**, into which we will install Configuration Manager.  
 
-     You can download an evaluation version of Windows Server 2012 R2 from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
+     You can download an evaluation version of Windows Server 2012 R2 from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2).  
 
-     Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. For more information, see [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
+    Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. For more information, see [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **The lab environment uses SQL Server 2012 SP2** for the site database.  
 
@@ -85,12 +87,12 @@ Once you have installed all of these components, there are additional steps you 
 
 -   Domain user: **ConfigUser**  
 
-     Under normal circumstances, you would not grant universal access to all users within your environment. You are doing so with this user in order to streamline bringing your lab online.  
+     Under normal circumstances, you wouldn't grant universal access to all users within your environment. You are doing so with this user in order to streamline bringing your lab online.  
 
 The next steps required to enable Configuration Manager clients to query Active Directory Domain Services to locate site resources are listed over the next procedures.  
 
 ##  <a name="BKMK_CreateSysMgmtLab"></a> Create the System Management container  
- Configuration Manager will not automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
+ Configuration Manager won't automatically create the required System Management container in Active Directory Domain Services when the schema is extended. Therefore, you will create this for your lab. This step will require you to [install ADSI Edit](/previous-versions/windows/it-pro/windows-server-2003/cc773354(v=ws.10)).
 
  Ensure that you are logged on as an account that has **Create All Child Objects** permission on the **System** Container in Active Directory Domain Services.  
 
@@ -333,7 +335,12 @@ Before you begin the installation, launch the  [Prerequisite Checker](../servers
 
 #### To download and install Configuration Manager:  
 
-1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of Configuration Manager.  
+1. Navigate to the [Evaluation Center](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager) page to download the newest evaluation version of Configuration Manager.  
+
+<!--
+> [!NOTE]
+> The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr 2203 Current Branch Eval exe here : ( https://aka.ms/MECM2203CB-Eval).
+-->
 
 2.  Decompress the download media into your predefined location.  
 

@@ -1,18 +1,18 @@
 ---
-title: "Add a Context Qualifier by Using Managed Code"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Add a Context Qualifier by Using Managed Code
+titleSuffix: Configuration Manager
+description: To add a context qualifier by using the managed SMS Provider, use the Context property which is a Dictionary object that holds context qualifiers.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: eef96176-cbf5-4163-bb81-047c22443527
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add a Configuration Manager Context Qualifier by Using Managed Code
 In Configuration Manager, to add a context qualifier by using the managed SMS Provider, use the [Context](/previous-versions/system-center/developer/cc147087(v=msdn.10)) property which is a `Dictionary` object that holds context qualifiers.  

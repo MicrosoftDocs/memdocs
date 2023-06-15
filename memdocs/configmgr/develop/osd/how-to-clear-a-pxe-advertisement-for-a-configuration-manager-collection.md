@@ -1,18 +1,18 @@
 ---
-title: "Clear a PXE Advertisement For a Collection"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Clear a PXE Advertisement For a Collection
+titleSuffix: Configuration Manager
+description: To clear a PXE advertisement for a Configuration Manager collection, you call the ClearLastNBSAdvForCollection Method in Class SMS_Collection
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: ed49e823-f076-42b8-957d-2132638aac32
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Clear a PXE Advertisement For a Configuration Manager Collection
 To clear a PXE advertisement for a Configuration Manager collection, you call the [ClearLastNBSAdvForCollection Method in Class SMS_Collection](../../develop/reference/core/clients/collections/clearlastnbsadvforcollection-method-in-class-sms_collection.md) method.  

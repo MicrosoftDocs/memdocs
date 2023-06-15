@@ -23,9 +23,11 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- intune-scenario
 ---
 
 # Common ways to use Microsoft Intune
@@ -82,7 +84,7 @@ As an administrator, you can require users to access Microsoft 365 from the Offi
 
 Many employees are mobile these days, making productivity on mobile devices an imperative to be competitive. These employees need seamless access to all corporate apps and data, at any time, wherever they are. You need to ensure that corporate data is secure and administrative costs are low.
 
-Intune offers [bulk provisioning and management solutions](../enrollment/device-enrollment.md) that are integrated with the major corporate device management platforms on the market today, including the Apple Device Enrollment Program and the Samsung Knox mobile security platform. Centralized authoring of device configurations with Intune helps make provisioning of corporate devices something that can be highly automated.
+Intune offers [bulk provisioning and management solutions](/mem/intune/fundamentals/deployment-guide-enrollment) that are integrated with the major corporate device management platforms on the market today, including the Apple Device Enrollment Program and the Samsung Knox mobile security platform. Centralized authoring of device configurations with Intune helps make provisioning of corporate devices something that can be highly automated.
 
 Picture this: hand an employee an unopened iPhone box. The employee powers it on and is walked through a corporate-branded setup flow where they must authenticate themselves. The iPhone is seamlessly configured with [security policies](../configuration/device-profiles.md).
 

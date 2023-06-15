@@ -1,11 +1,14 @@
 ---
-author: mestew
-ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
 ms.date: 09/29/2021
+ms.author: banreetkaur
+author: Banreet
+ms.collection: tier3
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ---
 <!--This file is currently used by deploy-firewall-policy.md, deploy-asr-policy.md, deploy-antivirus-policy.md, and atp-onboard.md-->
 

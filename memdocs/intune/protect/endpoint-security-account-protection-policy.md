@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage account protection settings with endpoint security policies in Microsoft Intune | Microsoft Docs
-description: Deploy policies for endpoint security account protection policies to devices you manage with  in Microsoft Endpoint Manager.
+description: Deploy policies for endpoint security account protection policies to devices you manage with  in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -23,7 +23,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
 ms.reviewer: mattcall
 
 ---
@@ -32,9 +35,9 @@ ms.reviewer: mattcall
 
 Use Intune endpoint security policies for account protection to protect the identity and accounts of your users and manage the built-in group memberships on devices.
 
-Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View [settings for account protection profiles](../protect/endpoint-security-asr-profile-settings.md).
+View [settings for account protection profiles](../protect/endpoint-security-account-protection-profile-settings.md).
 
 ## Prerequisites for Account protection profiles
 
@@ -79,6 +82,9 @@ The following are the configurations you can make:
 
 - **Local group**:  Select one or more groups from the drop-down. These groups will all apply the same Group and user action  to the users you assign.  You can create more than one grouping of local groups in a single profile and assign different actions and groups of users to each grouping of local groups.
 
+> [!NOTE]
+> The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [Managing administrator privileges using Azure AD groups](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-azure-ad-groups-preview) documentation. 
+
 - **Group and user action**: Configure the action to apply to the selected groups. This action will apply to the users you select for this same action and grouping of local accounts.  Actions you can choose include:
   - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy are not changed.
   - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy are not changed.
@@ -103,7 +109,7 @@ Choosing the Manual option can be helpful in scenarios where you want to manage 
 
 ### Conflicts
 
-If policies create a conflict for a group membership, the conflicting settings from each policy are not sent to the device. Instead, the conflict is reported for those policies in the Microsoft Endpoint Manager admin center. To resolve the conflict, reconfigure one or more policies.
+If policies create a conflict for a group membership, the conflicting settings from each policy are not sent to the device. Instead, the conflict is reported for those policies in the Microsoft Intune admin center. To resolve the conflict, reconfigure one or more policies.
 
 ### Reporting
 

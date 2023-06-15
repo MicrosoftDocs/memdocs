@@ -1,18 +1,18 @@
 ---
-title: "SMS_AutoStartSoftware Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_AutoStartSoftware Class
+description: The SMS_AutoStartSoftware class is a client Windows Management Instrumentation (WMI) class that enumerates software that starts automatically with the operating system.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0de5b1e8-b3e0-4c00-80d3-f9e35ffcb40f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AutoStartSoftware Client WMI Class
 The `SMS_AutoStartSoftware` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that enumerates software that starts automatically with, or immediately after, the operating system.  

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a Windows Network Boundary profile in Microsoft Intune
-description: Add a Windows Network Boundary profile to add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers on Windows 10/11 devices in Microsoft Intune. Sites in this boundary are trusted by Microsoft Defender Application Guard in Microsoft Edge.
+description: Add a Windows Network Boundary policy to add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers on Windows 10/11 devices in Microsoft Intune. Sites in this boundary are trusted by Microsoft Defender Application Guard in Microsoft Edge.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,16 +24,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use a network boundary to add trusted sites on Windows devices in Microsoft Intune
 
 When using Microsoft Defender Application Guard and Microsoft Edge, you can protect your environment from sites that aren't trusted by your organization. This feature is called a network boundary. It allows you to add network domains, IPV4 and IPv6 ranges, proxy servers, and more to your network boundary. Items in this boundary are trusted.
 
-In Intune, you can create a network boundary profile, and deploy the profile to your devices.
+In Intune, you can create a network boundary profile, and deploy this policy to your devices.
 
-For more information on using Microsoft Defender Application Guard in Intune, see [Windows client settings to protect devices using Intune](../protect/endpoint-protection-windows-10.md#microsoft-defender-application-guard).
+For more information on using Microsoft Defender Application Guard in Intune, go to [Windows client settings to protect devices using Intune](../protect/endpoint-protection-windows-10.md#microsoft-defender-application-guard).
 
 This feature applies to:
 
@@ -48,7 +50,7 @@ This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/poli
 
 ## Create the profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
@@ -79,11 +81,11 @@ This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/poli
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 

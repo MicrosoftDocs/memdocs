@@ -6,10 +6,12 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Boundary groups and distribution points
@@ -32,11 +34,11 @@ If you configure the content to distribute on-demand, and it isn't available on 
 
 The Configuration Manager client installer, ccmsetup, can get installation content from a local source or via a management point. Its initial behavior depends upon the command-line parameters you use to install the client:<!-- MEMDocs#286 -->
 
-- If you don't use either **/mp** or **/source** parameters, ccmsetup tries to get a list of management points from Active Directory or DNS.
+- If you don't use either `/mp` or `/source` parameters, ccmsetup tries to get a list of management points from Active Directory or DNS.
 
-- If you only specify **/source**, it forces the installation from the specified path. It doesn't discover management points. If it can't find ccmsetup.cab at the specified path, ccmsetup fails.
+- If you only specify `/source`, it forces the installation from the specified path. It doesn't discover management points. If it can't find ccmsetup.cab at the specified path, ccmsetup fails.
 
-- If you specify both **/mp** and **/source**, it checks the specified management points, and any it discovers. If it can't locate a valid management point, it falls back to the specified source path.
+- If you specify both `/mp` and `/source`, it checks the specified management points, and any it discovers. If it can't locate a valid management point, it falls back to the specified source path.
 
 For more information on these ccmsetup parameters, see [Client installation parameters and properties](../../../clients/deploy/about-client-installation-properties.md).
 

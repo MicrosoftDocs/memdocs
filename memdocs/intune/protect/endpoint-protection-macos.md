@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 08/15/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,11 +19,14 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # macOS endpoint protection settings in Intune
@@ -48,11 +51,11 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
   - **Not configured** (*default*)
   - **Yes**
 
-  When *Enable FileVault* is set to *Yes*, a personal recovery key is generated for the device during encryption and the following settings apply to that key:
+  When *Enable FileVault* is set to *Yes*, a personal recovery key is generated for the device during encryption, and the following settings apply to that key:
 
   - **Escrow location description of personal recovery key**
 
-    Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign in screen when prompted to enter their personal recovery key if a password is forgotten.
+    Specify a short message to the user that explains how and where they can retrieve their personal recovery key. This text is inserted into the message the user sees on their sign-in screen when prompted to enter their personal recovery key if a password is forgotten.
 
   - **Personal recovery key rotation**
 
@@ -88,6 +91,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     - **0** - Require devices to encrypt the next time a user signs in to the device.
     - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.
     - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.
+    - **Disable** - Disables the feature.
 
     The default for this setting depends on the configuration of *Disable prompt at sign out*. When *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Yes**, this setting defaults to **1** and a value of **Not configured** isn't an option.
 
@@ -113,12 +117,12 @@ Use the firewall to control connections per-application, rather than per-port. U
 
   **Apps allowed**: Configure a list of apps that are allowed to receive incoming connections.
 
-  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app. On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
   - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
   **Apps blocked**: Configure a list of apps that have incoming connections blocked.
 
-  - **Add apps by bundle ID**: Enter the [bundle ID](../configuration/bundle-ids-built-in-ios-apps.md) of the app. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+  - **Add apps by bundle ID**: Enter the *bundle ID* of the app. On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"`. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
   - **Add store app**: Select a store app you previously added in Intune. For more information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - **Enable stealth mode**
@@ -141,7 +145,7 @@ Use the firewall to control connections per-application, rather than per-port. U
 
 - **Do not allow user to override Gatekeeper**
 
-  Prevents users from overriding the Gatekeeper setting, and prevents users from Control clicking to install an app. When enabled, users can Control-click any app, and install it.
+  Prevents users from overriding the Gatekeeper setting, and prevents users from Control-clicking to install an app. When enabled, users can't Control-click any app to install it.
 
   - **Not configured** (*default*) - Users can Control-click to install apps.
   - **Yes** - Prevents users from using Control-click to install apps.

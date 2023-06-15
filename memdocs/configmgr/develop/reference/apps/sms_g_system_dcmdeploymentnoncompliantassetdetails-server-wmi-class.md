@@ -1,18 +1,18 @@
 ---
-title: "SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails Class
+description: Learn how to use the SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails class in Configuration Manager to set non-compliant asset details for a deployment.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c85cfe8c-5a8b-470b-b781-3421d4177bb7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails Server WMI Class
 The `SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents non-compliant asset details for a deployment.  

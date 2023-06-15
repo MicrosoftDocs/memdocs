@@ -1,18 +1,18 @@
 ---
-title: "SMS_ClientCommunicationConfig Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to control how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections.
+title: SMS_ClientCommunicationConfig Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a9007fe8-9150-40cc-9f37-6430e49718f4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ClientCommunicationConfig Server WMI Class
 The `SMS_ClientCommunicationConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that controls how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections.  

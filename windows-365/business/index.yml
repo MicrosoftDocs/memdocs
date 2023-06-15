@@ -4,12 +4,12 @@ summary: Official product documentation for Windows 365 Business
 
 metadata:
   services: service
-  ms.service: cloudpc
+  ms.service: windows-365
   ms.topic: hub-page
   author: erikjeMS
   ms.author: erikje
   manager: dougeby
-  ms.date: 10/04/2021
+  ms.date: 05/09/2023
 
 highlightedContent:
   items:

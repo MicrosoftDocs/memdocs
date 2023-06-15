@@ -1,18 +1,18 @@
 ---
+description: "Learn how to cancel a job in Configuration Manager using ICcmAlternateDownloadProvider::CancelJob method."
 title: "ICcmAlternateDownloadProvider : CancelJob"
-titleSuffix: "Configuration Manager"
-ms.date: "07/25/2017"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 07/25/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 51a8436a-a9ef-449f-aaa3-49bd9768bd54
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmAlternateDownloadProvider : CancelJob Method
 The **ICcmAlternateDownloadProvider::CancelJob** method, in Configuration Manager, cancels a job.  

@@ -2,14 +2,16 @@
 title: Prerequisite checker
 titleSuffix: Configuration Manager
 description: Learn how to use prerequisite checker to identify and fix problems that might block a site or site system role installation.
-ms.date: 12/01/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Prerequisite Checker for Configuration Manager
 
@@ -44,7 +46,7 @@ By default, the prerequisite checker tool is in one of the following locations:
 
 ## Copy to another computer
 
-1. In Windows Explorer, go to one of the **X64** source folders.
+1. In Windows Explorer, go to one of the `X64` source folders.
 
 1. Copy the following files to the destination folder on the other computer:
 
@@ -58,7 +60,7 @@ By default, the prerequisite checker tool is in one of the following locations:
 
 ## Run with default checks
 
-1. In Windows Explorer, go to one of the **X64** source folders.
+1. In Windows Explorer, go to one of the `X64` source folders.
 
 1. Run **prereqchk.exe** to start Prerequisite Checker.
 
@@ -77,7 +79,7 @@ In the Prerequisite Checker user interface, Prerequisite Checker creates a list 
 
 ## Run from a command prompt
 
-1. Open a Windows command prompt as an administrator and change directory to one of the **X64** source folders.
+1. Open a Windows command prompt as an administrator and change directory to one of the `X64` source folders.
 
 1. To start Prerequisite Checker and run all prerequisite checks on the server, run the following command: `prereqchk.exe /LOCAL`
 
@@ -91,65 +93,65 @@ There are four installation scenarios. The following list summarizes all of the 
 
 - **Central administration site (CAS)**
   - _Required_
-    - /CAS
-    - /SDK
-    - /SQL
+    - `/CAS`
+    - `/SDK`
+    - `/SQL`
   - _Optional_
-    - /EXPAND
-    - /INSTALLDIR
-    - /NOUI
-    - /SCP
-    - /SSBPORT
+    - `/EXPAND`
+    - `/INSTALLDIR`
+    - `/NOUI`
+    - `/SCP`
+    - `/SSBPORT`
 - **Primary site**
   - _Required_
-    - /PRI
-    - /SDK
-    - /SQL
+    - `/PRI`
+    - `/SDK`
+    - `/SQL`
   - _Optional_
-    - /DP
-    - /INSTALLDIR
-    - /JOIN
-    - /MP
-    - /NOUI
-    - /SCP
-    - /SSBPORT
+    - `/DP`
+    - `/INSTALLDIR`
+    - `/JOIN`
+    - `/MP`
+    - `/NOUI`
+    - `/SCP`
+    - `/SSBPORT`
 - **Secondary site**
   - _Required_
-    - /SEC
+    - `/SEC`
   - _Optional_
-    - /INSTALLDIR
-    - /INSTALLSQLEXPRESS
-    - /NOUI
-    - /SECUPGRADE
-    - /SOURCEDIR
-    - /SQLPORT
-    - /SSBPORT
+    - `/INSTALLDIR`
+    - `/INSTALLSQLEXPRESS`
+    - `/NOUI`
+    - `/SECUPGRADE`
+    - `/SOURCEDIR`
+    - `/SQLPORT`
+    - `/SSBPORT`
 - **Configuration Manager console**
-  - /ADMINUI
+  - `/ADMINUI`
 
 For more information on these options, see the following sections.
 
-### /AdminUI
+### `/AdminUI`
 
 _Applies to: Console_
 
 Required. This option verifies that the local computer meets the requirements for installing the Configuration Manager console. It doesn't check any server requirements. You can't combine this option with any other option.
 
-### /CAS
+### `/CAS`
 
 _Applies to: CAS_
 
-Required. This option verifies that the local server meets the requirements for the CAS. You can't combine it with the **/PRI** or **/SEC** options.
+Required. This option verifies that the local server meets the requirements for the CAS. You can't combine it with the `/PRI` or `/SEC` options.
 
-### /DP
+### `/DP`
 
 _Applies to: Primary_
 
 Optional. Specify the FQDN of the server to host the distribution point role, for example: `/PRI /DP dp01.contoso.com`
 
-This option verifies that the specified server meets the requirements for the distribution point site system role. This option can be used alone or with the **/PRI** option.
+This option verifies that the specified server meets the requirements for the distribution point site system role. This option can be used alone or with the `/PRI` option.
 
-### /Expand
+### `/Expand`
 
 _Applies to: CAS_
 
@@ -157,7 +159,7 @@ Optional. Specify the FQDN of a primary site, for example: `/CAS /EXPAND cmprima
 
 This option verifies that the referenced primary site meets the requirements to expand a hierarchy with a CAS.
 
-### /InstallDir
+### `/InstallDir`
 
 _Applies to: CAS, Primary, Secondary_
 
@@ -165,13 +167,13 @@ Optional. Specify the local installation path, for example `/InstallDir C:\Confi
 
 This option verifies the minimum disk space for site installation.
 
-### /InstallSQLExpress
+### `/InstallSQLExpress`
 
 _Applies to: Secondary_
 
 Optional. This option verifies that SQL Server Express can be installed on the specified secondary site server.
 
-### /Join
+### `/Join`
 
 _Applies to: Primary_
 
@@ -179,35 +181,35 @@ Optional. Specify the FQDN of the CAS server, for example, `/PRI /JOIN cas.conto
 
 This option verifies that the local server meets the requirements for connecting to the CAS server.
 
-### /MP
+### `/MP`
 
 _Applies to: Primary_
 
 Optional. Specify the FQDN of the server to host the management point role, for example: `/PRI /MP mp01.contoso.com`
 
-This option verifies that the specified server meets the requirements for the management point site system role. This option can be used alone or with the **/PRI** option.
+This option verifies that the specified server meets the requirements for the management point site system role. This option can be used alone or with the `/PRI` option.
 
-### /NoUI
+### `/NoUI`
 
 _Applies to: CAS, Primary, Secondary_
 
 Optional. This option starts the prerequisite checker without displaying the user interface. Specify this option before any other option in the command line.
 
-### /Pri
+### `/Pri`
 
 _Applies to: Primary_
 
-Required. This option verifies that the local server meets the requirements for a primary site. You can't combine it with the **/CAS** or **/SEC** options.
+Required. This option verifies that the local server meets the requirements for a primary site. You can't combine it with the `/CAS` or `/SEC` options.
 
-### /SCP
+### `/SCP`
 
 _Applies to: CAS, Primary_
 
 Optional. Specify the FQDN of the server to host the service connection point. This server may be the same as the site server.
 
-Starting in version 2111<!--11104731-->, this option verifies that the specified computer meets the requirements for the service connection point site system role. You can use this option alone or with the **/PRI** or **/CAS** options.
+Starting in version 2111<!--11104731-->, this option verifies that the specified computer meets the requirements for the service connection point site system role. You can use this option alone or with the `/PRI` or `/CAS` options.
 
-### /SDK
+### `/SDK`
 
 _Applies to: CAS, Primary_
 
@@ -215,29 +217,29 @@ Required. Specify the FQDN of the server to host the SMS Provider role. This ser
 
 This option verifies that the specified server meets the requirements for the SMS Provider.
 
-### /Sec
+### `/Sec`
 
 _Applies to: Secondary_
 
 Required. Specify the FQDN of the secondary site server, for example: `/SEC sec01.contoso.com`
 
-This option verifies that the specified server meets the requirements for the secondary site. You can't combine it with the **/CAS** or **/PRI** options.
+This option verifies that the specified server meets the requirements for the secondary site. You can't combine it with the `/CAS` or `/PRI` options.
 
-### /SecUpgrade
+### `/SecUpgrade`
 
 _Applies to: Secondary_
 
 Optional. Specify the FQDN of the secondary site server, for example: `/SECUPGRADE sec01.contoso.com`
 
-This option verifies that the specified server meets the requirements for the secondary site upgrade. You can't combine it with the **/CAS**, **/PRI**, or **/SEC** options.
+This option verifies that the specified server meets the requirements for the secondary site upgrade. You can't combine it with the `/CAS`, `/PRI`, or `/SEC` options.
 
-### /SourceDir
+### `/SourceDir`
 
 _Applies to: Secondary_
 
 Optional. This option verifies that the computer account of the secondary site can access the folder that hosts the source files for Configuration Manager setup.
 
-### /SQL
+### `/SQL`
 
 _Applies to: CAS, Primary_
 
@@ -245,13 +247,13 @@ Required. Specify the fully qualified domain name (FQDN) of the SQL Server, for 
 
 This option verifies that the specified server meets the requirements for SQL Server to host the Configuration Manager site database.
 
-### /SQLPort
+### `/SQLPort`
 
 _Applies to: Secondary_
 
 Optional. This option verifies that a firewall exception exists to allow communication for the SQL Server service port. It also checks that the port isn't in use by another named instance of SQL Server. The default port is 1433.
 
-### /SSBPort
+### `/SSBPort`
 
 _Applies to: CAS, Primary, Secondary_
 

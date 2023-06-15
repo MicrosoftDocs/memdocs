@@ -6,10 +6,12 @@ ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: how-to
-author: mestew
-manager: dougeby
-ms.author: mstewart
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Create configuration items for macOS X devices

@@ -1,18 +1,18 @@
 ---
-title: "SMS_SummarizerStatus Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_SummarizerStatus Class
+description: Learn how the SMS_SummarizerStatus class is an SMS Provider server class that identifies registered summarizers, without defining any specific status information.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: eb7a44f9-409d-4c6b-9902-ef94de634fd8
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SummarizerStatus Server WMI Class
 The `SMS_SummarizerStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that identifies registered summarizers, without defining any specific status information.  

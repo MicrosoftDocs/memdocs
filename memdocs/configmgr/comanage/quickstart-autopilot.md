@@ -6,10 +6,12 @@ ms.date: 11/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Windows Autopilot with co-management
@@ -18,7 +20,7 @@ Receiving a new Windows device is exciting. However, it can take time to configu
 
 Autopilot provides a simplified experience for both you and your users in the following situations:
 
-- Set up and preconfigure new Windows 10 or later devices
+- Set up and pre-configure new Windows 10 or later devices
 - Reset, recycle, and recover existing devices
 
 Autopilot reduces the time, resources, and complexity associated with deploying, managing, and retiring devices. At the same time, the experience for your users is streamlined and easy from first boot.
@@ -34,6 +36,9 @@ Windows Autopilot supports several scenarios, all of which are maximized with co
 In the following video, senior program manager Danny Guillory and principal program manager Andrew McMurray discuss and demo Windows Autopilot with co-management:
 
 > [!VIDEO https://aka.ms/docs/player?id=86b3188d-1f01-4655-b001-2274f072e910]
+
+> [!NOTE]
+> [Introducing Autopilot into co-management](./autopilot-enrollment.md). When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
 
 ## Benefits
 
@@ -68,7 +73,7 @@ Here are the steps for Autopilot for existing devices:
 
 ### Modernizing device provisioning for all types of workers
 
-With Autopilot, you can now provide a hands-free OS deployment to unmanned devices or shared devices using the self-deploying mode. This setup meets the needs of all your different types of workers. Also, the Windows Autopilot Reset function makes sure that reprovisioning of a device to a new user is simple and easy. This process simplifies what has traditionally been a difficult task when you have seasonal or contract workers.
+With Autopilot, you can now provide a hands-free OS deployment to unmanned devices or shared devices using the self-deploying mode. This setup meets the needs of all your different types of workers. Also, the Windows Autopilot Reset function makes sure that re-provisioning of a device to a new user is simple and easy. This process simplifies what has traditionally been a difficult task when you have seasonal or contract workers.
 
 ## Case study
 
@@ -83,6 +88,8 @@ Create satisfaction in your organization by creating a better user experience fo
 ## Configure
 
 For more information, see the following articles:
+
+- [Autopilot into co-management](./autopilot-enrollment.md)
 
 - [Create device groups](../../autopilot/enrollment-autopilot.md)
 

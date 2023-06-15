@@ -1,18 +1,18 @@
 ---
-title: "FallbackMP Method"
-titleSuffix: "Configuration Manager"
-ms.date: "03/13/2017"
-ms.prod: "configuration-manager"
+title: FallbackMP Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the FallbackMP Windows Management Instrumentation class method sets the fallback time in minutes for a management point with the default value of 120.
+ms.date: 03/13/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 37391107-7ff2-42a0-b468-17b12b68955a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # FallbackMP Method in Class SMS_BoundaryGroupRelationships
  The `FallbackMP` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the fallback time, in minutes, for a management point (MP). The default value is 120.

@@ -1,18 +1,18 @@
 ---
-title: "SetGlobalLoggingConfiguration Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to define the global logging configuration for the client with SetGlobalLoggingConfiguration method.
+title: SetGlobalLoggingConfiguration Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetGlobalLoggingConfiguration Method in Class SMS_Client
 The `SetGlobalLoggingConfiguration` method, in Configuration Manager, defines the global logging configuration for the client. This configuration represents either component-level logging or default logging if component-level logging is not defined.  

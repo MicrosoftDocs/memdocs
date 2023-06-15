@@ -1,18 +1,18 @@
 ---
-title: "AllowAccess Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: AllowAccess Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 898b0e12-ffc3-4650-bf2a-08817ac06ce3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: Learn about the simplified syntax, parameters, return values, and requirement of the AllowAccess method.
+ms.reviewer: mstewart,aaroncz 
 ---
 # AllowAccess Method in Class SMS_DeviceMethods
 The `AllowAccess` Windows Management Instrumentation (WMI) class method, in Configuration Manager, lets the Exchange ActiveSync device connect to Exchange.  

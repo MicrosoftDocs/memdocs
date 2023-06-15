@@ -2,14 +2,16 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 10/01/2021
+ms.date: 02/02/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to deploy clients to Windows computers in Configuration Manager
@@ -471,10 +473,10 @@ To assign the internet-based management point after you install the client, use 
 
 1. Open the **Configuration Manager** control panel on the client.  
 
-2. On the **Internet** tab, enter the fully qualified domain name (FQDN) of the internet-based management point as the **Internet FQDN**.  
+2. On the **Network** tab, enter the fully qualified domain name (FQDN) of the internet-based management point as the **Internet FQDN**.  
 
     > [!NOTE]  
-    > The **Internet** tab is available only if the client has a client PKI certificate.  
+    > The **Network** tab is available only if the client has a client PKI certificate.  
 
 3. If the client accesses the internet by using a proxy server, enter the proxy server settings.  
 

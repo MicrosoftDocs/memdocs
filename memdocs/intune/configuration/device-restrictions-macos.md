@@ -8,8 +8,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
-ms.topic: conceptual
+ms.date: 06/20/2022
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -25,18 +25,30 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # macOS device settings to allow or restrict features using Intune
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
 This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
+
+This feature applies to:
+
+- macOS
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
 
 > [!NOTE]
 > The user interface may not match the enrollment types in this article. The information in this article is correct. The user interface is being updated in an upcoming release.
+
+> [!TIP]
+> These settings use Apple's restriction settings. For more information on these settings, see [Apple's mobile device management settings site](https://support.apple.com/guide/deployment/restrictions-for-mac-depba790e53/1/web/1.0) (opens Apple's web site).
 
 ## Before you begin
 
@@ -54,18 +66,15 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
   This feature applies to:  
   - macOS 10.13 and newer  
 
-
 - **Block Game Center**: **Yes** disables Game Center, and the Game Center icon is removed from the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might make Game Center available to users.   
 
-  This feature applies to:    
+  This feature applies to:
   - macOS 10.13 and newer  
-
 
 - **Block multiplayer gaming in the Game Center**: **Yes** prevents multiplayer gaming when using Game Center. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to play multiplayer games. 
 
   This feature applies to:  
   - macOS 10.13 and newer  
-
 
 ## Built-in Apps
 
@@ -138,36 +147,41 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 - **Block screenshots and screen recording**: **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
 
-### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)  
+### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
 
-- **Defer software updates**: This setting lets you defer the visibility of software updates on devices for up to 90 days. For example, if Apple releases a macOS update on a specific date, it naturally shows on devices around the release date. This setting can hide the update so that users don't see it as soon as it's available.   
+- **Defer software updates**: This setting lets you defer the visibility of software updates on devices for up to 90 days. For example, if Apple releases a macOS update on a specific date, it naturally shows on devices around the release date. This setting can hide the update so that users don't see it as soon as it's available.
 
-  This setting doesn't control when updates are installed and doesn't impact scheduled updates. Seed build updates are allowed without delay. 
+  This setting doesn't control when updates are installed and doesn't impact scheduled updates. Seed build updates are allowed without delay.
 
-  To use this setting, select the software updates you want to delay. Your options: 
+  To use this setting, select the software updates you want to delay. Your options:
 
-  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might show newly released software updates to users as soon as they're released.    
-  - **Major OS software updates**: Major OS software updates, such as macOS 12, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of major OS software updates** field. Requires macOS 11.3 and newer. 
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might show newly released software updates to users as soon as they're released.
+  - **Major OS software updates**: Major OS software updates, such as macOS 12, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of major OS software updates** field. Requires macOS 11.3 and newer.
   - **Minor OS software updates**: Minor OS software updates, such as macOS 12.x, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of minor OS software updates** field. Requires macOS 11.3 and newer.  
-  - **Non-OS software updates**: Non-OS software updates, such as Safari updates, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of non OS software updates** field. Requires macOS 11.0 and later.    
+  - **Non-OS software updates**: Non-OS software updates, such as Safari updates, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of non OS software updates** field. Requires macOS 11.0 and later.
   
-  Then enter how long you want to delay each type of update, from 1-90 days. For example, if a macOS update is available on January 1, and **Delay visibility** is set to 5 days, then the update isn't shown as an available update. On the sixth day following the release, that update becomes available, and users are notified to update to the earliest version available when the delay was triggered. Your options: 
+  Then enter how long you want to delay each type of update, from 1-90 days. For example, if a macOS update is available on January 1, and **Delay visibility** is set to 5 days, then the update isn't shown as an available update. On the sixth day following the release, that update becomes available, and users are notified to update to the earliest version available when the delay was triggered. Your options:
 
-   - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually.  
+  - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually.  
   - **Delay visibility of major OS software updates**: Enter the number of days to delay all major OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.  
 
      This feature applies to:  
-    - macOS 11.3 and newer 
+    - macOS 11.3 and newer
 
-  - **Delay visibility of minor OS software updates**: Enter the number of days to delay all minor OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.    
-
-     This feature applies to:  
-    - macOS 11.3 and newer 
-
-  - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.   
+  - **Delay visibility of minor OS software updates**: Enter the number of days to delay all minor OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.
 
      This feature applies to:  
-    - macOS 11.0 and newer  
+    - macOS 11.3 and newer
+
+  - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.
+
+     This feature applies to:  
+    - macOS 11.0 and newer
+  
+  - **Allow activation lock**: **Yes**, enables Activation Lock on supervised macOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+     This feature applies to:  
+    - macOS 10.15 or later  
 
 ### Settings apply to: Automated device enrollment  
 
@@ -185,7 +199,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
 - **Students can automatically join Classroom class without prompting**: **Yes** lets students join a class without prompting the teacher. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might require teacher approval to join a class.  
 
-- **Block modification of wallpaper**: 
+- **Block modification of wallpaper**:
 **Yes** prevents users from changing the device wallpaper. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the wallpaper.  
 
   This feature applies to:  
@@ -201,8 +215,8 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 These settings use the [Passcode payload](https://developer.apple.com/documentation/devicemanagement/passcode) (opens Apple's web site).
 
 > [!IMPORTANT]
-> 
-> - On macOS devices running 10.14.2 and later (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced. If a passcode is required in at least one policy, then this behavior only occurs for the local machine user. 
+>
+> - On macOS devices running 10.14.2 and later (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced. If a passcode is required in at least one policy, then this behavior only occurs for the local machine user.
 >
 > - Any time the password policy is updated, all users running these macOS versions must change the password, even if the current password is compliant with the new requirements. For example, when your macOS device turns on after upgrading to a new major OS version such as Big Sur (macOS 11) or Monterey (macOS 12), users need to change the device password before they can sign in.
 
@@ -226,7 +240,7 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
   - **Prevent reuse of previous passwords**: Restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter 5 so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
   - **Maximum allowed sign-in attempts**: Enter the maximum number of times that users can consecutively try to sign in before the device locks users out, from 2-11. When this number is exceeded, the device is locked. We recommend not setting this value to a low number, such as `2` or `3`. It's common for users to enter the wrong password. We recommend setting to a higher value.
 
-    For example, enter `5` so users can enter the wrong password up to five times. After the fifth attempt, the device is locked. If you leave this value blank, or don't change it, then `11` is used by default.    
+    For example, enter `5` so users can enter the wrong password up to five times. After the fifth attempt, the device is locked. If you leave this value blank, or don't change it, then `11` is used by default.
 
     After six failed attempts, macOS automatically forces a time delay before a passcode can be entered again. The delay increases with each attempt. Set the **Lockout duration** to add a delay before the next passcode can be entered.
 
@@ -369,21 +383,21 @@ This feature applies to:
 
   - **Desktop folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Desktop folder.
+    - **Allow**: Allows the app to access files in the user's Desktop folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
 
   - **Documents folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Documents folder.
+    - **Allow**: Allows the app to access files in the user's Documents folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
 
   - **Downloads folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Downloads folder.
+    - **Allow**: Allows the app to access files in the user's Downloads folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
@@ -431,11 +445,13 @@ This feature applies to:
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, users might have access to apps you assign, and built-in apps.
-  - **Approved apps**: List the apps that users are allowed to install. Users must not install other apps. If users install apps that aren't allowed, then it's reported in Intune. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. 
+  - **Approved apps**: List the apps that users are allowed to install. Users must not install other apps. If users install apps that aren't allowed, then it's reported in Intune. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list.
   - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune.
 
 - **Apps list**: **Add** apps to your list:
   - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+
+    To find the bundle ID of a macOS app, you can open the Terminal app, and use AppleScript (`osascript -e 'id of app "AppName"'`).
 
     To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL. You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 

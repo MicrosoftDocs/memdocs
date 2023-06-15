@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -19,8 +19,9 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Add, assign, and monitor a Win32 app in Microsoft Intune
@@ -32,7 +33,7 @@ After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.
 To use Win32 app management, be sure you meet the following criteria:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
-- Devices must be joined or registered to Azure Active Directory (Azure AD) and be auto-enrolled. The Intune management extension supports devices that are Azure AD joined, Azure AD registered,  hybrid domain joined, or group policy enrolled. 
+- Devices must be joined or registered to Azure Active Directory (Azure AD) and be auto-enrolled. The Intune management extension supports devices that are Azure AD joined, Azure AD registered, hybrid domain joined, or group policy enrolled. 
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Azure AD join their Windows 10 device. The user must log on to the device by using their Azure AD user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
 - Windows application size is capped at 8 GB per app.
@@ -47,7 +48,7 @@ Much like a standard line-of-business (LOB) app, you can add a Win32 app to Micr
 
 The following steps help you add a Windows app to Intune:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
 3. On the **Select app type** pane, under the **Other** app types, select **Windows app (Win32)**.
 
@@ -122,9 +123,9 @@ On the **Program** page, configure the app installation and removal commands for
     > The Win32 app installation and uninstallation will happen under admin privilege (by default) when the app is set to install in user context and the user on the device has admin privileges.
     
 - **Device restart behavior**: Select one of the following options:
-    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes.
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
     - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
-    - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts.
+    - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Win32 app installation is allowed to complete without suppressing restarts. With this configuration, a hard reboot return code will notify the user that a restart of the device will be triggered in 120 minutes and a soft reboot return code will notify the user that a restart is required to finish the installation.
     - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
 
 - **Specify return codes to indicate post-installation behavior**: Add the return codes that are used to specify either app installation retry behavior or post-installation behavior. Return code entries are added by default during app creation. However, you can add more return codes or change existing return codes.
@@ -148,8 +149,8 @@ On the **Requirements** page, specify the requirements that devices must meet be
 - **Physical memory required (MB)**: Optionally, add the physical memory (RAM) required to install the app.
 - **Minimum number of logical processors required**: Optionally, add the minimum number of logical processors required to install the app.
 - **Minimum CPU speed required (MHz)**: Optionally, add the minimum CPU speed required to install the app.
-- **Configure additional requirement rules**: 
-    1. Select **Add** to display the **Add a Requirement rule** pane and configure more requirement rules. Select the **Requirement type** value to choose the type of rule that you'll use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts. 
+- **Configure additional requirement rules**:
+    1. Select **Add** to display the **Add a Requirement rule** pane and configure more requirement rules. Select the **Requirement type** value to choose the type of rule that you'll use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts.
         - **File**: When you choose **File** as the **Requirement type** value, the requirement rule must detect a file or folder, date, version, or size. 
             - **Path**: The full path of the folder that contains the file or folder to detect.
             - **File or folder**: The file or folder to detect.
@@ -160,7 +161,7 @@ On the **Requirements** page, specify the requirements that devices must meet be
             - **Value name**: The name of the registry value to detect. If this value is empty, the detection will happen on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.
             - **Registry key requirement**: Select the type of registry key comparison that's used to determine how the requirement rule is validated.
             - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
-        - **Script**: Choose **Script** as the **Requirement type** value when you can't create a requirement rule based on file, registry, or any other method available to you in the Intune console.
+        - **Script**: Choose **Script** as the **Requirement type** value when you can't create a requirement rule based on file, registry, or any other method available to you in the Microsoft Intune admin center.
             - **Script file**: For a rule based on a PowerShell script requirement, if the existing code is 0, we'll detect the standard output (STDOUT) in more detail. For example, we can detect STDOUT as an integer that has a value of 1.
             - **Run script as 32-bit process on 64-bit clients**: Select **Yes** to run the script in a 32-bit process on 64-bit clients. Select **No** (default) to run the script in a 64-bit process on 64-bit clients. 32-bit clients run the script in a 32-bit process.
             - **Run this script using the logged on credentials**: Select **Yes** to run the script by using the signed-in device credentials.
@@ -168,13 +169,13 @@ On the **Requirements** page, specify the requirements that devices must meet be
             - **Select output data type**: Select the data type used for determining a requirement rule match.
     2. When you're finished setting the requirement rules, select **OK**.
 
-Select **Next** to display the **Detection rules** page. 
+Select **Next** to display the **Detection rules** page.
 
 ## Step 4: Detection rules
 
 On the **Detection rules** pane, configure the rules to detect the presence of the app. You can choose to add multiple rules:
-    
-- **Rules format**: Select how the presence of the app will be detected. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app. You must choose at least one detection rule. 
+
+- **Rules format**: Select how the presence of the app will be detected. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app. You must choose at least one detection rule.
 
   > [!NOTE]
   > The conditions for *all* rules must be met to detect the app.
@@ -186,7 +187,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
         - **MSI product code**: Add a valid MSI product code for the app.
         - **MSI product version check**: Select **Yes** to verify the MSI product version in addition to the MSI product code.
     - **File**: Verify based on file or folder detection, date, version, or size.
-        - **Path**: Enter the full path of the folder that contains the file or folder to detect.
+        - **Path**: Enter the full path of the folder that contains the file or folder to detect. This should not include special characters such as **,** or **"**.
         - **File or folder**: Enter the file or folder to detect.
         - **Detection method**: Select the type of detection method used to validate the presence of the app.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
@@ -227,14 +228,14 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
 
    - **Run script as 32-bit process on 64-bit clients**: Select **Yes** to run the script in a 32-bit process on 64-bit clients. Select **No** (default) to run the script in a 64-bit process on 64-bit clients. 32-bit clients run the script in a 32-bit process.
 
-   - **Enforce script signature check**: Select **Yes** to verify that a trusted publisher has signed the script, which will allow the script to run with no warnings or prompts displayed. The script will run unblocked. Select **No** (default) to run the script with user confirmation without signature verification.
+   - **Enforce script signature check**: Select **Yes** to verify that a trusted publisher has signed the script, which will allow the script to run with no warnings or prompts displayed. The script will run unblocked. Select **No** (default) to run the script without signature verification.
     
    The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status is not installed. If the exit code is zero and STDOUT has data, the application detection status is installed. 
 
    > [!NOTE]
    > We recommend encoding your script as UTF-8. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
 
-The version of your Win32 app is displayed in the Microsoft Endpoint Manager admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
+The version of your Win32 app is displayed in the Microsoft Intune admin center. The app version is provided in the **All apps** list, where you can filter by Win32 apps and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Columns** > **Version** to display the app version in the app list.
 
 After you've added your rules, select **Next** to display the **Dependencies** page.
 
@@ -242,7 +243,7 @@ After you've added your rules, select **Next** to display the **Dependencies** p
 
 App dependencies are applications that must be installed before your Win32 app can be installed. You can require that other apps are installed as dependencies. 
 
-Specifically, the device must install the dependent apps before it installs the Win32 app. ​There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
+Specifically, the device must install the dependent apps before it installs the Win32 app. There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
 
 You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. 
 
@@ -250,7 +251,10 @@ Any Win32 app dependency needs to also be a Win32 app. It does not support depen
 
 When you're adding an app dependency, you can search based on the app name and publisher. Additionally, you can sort your added dependencies based on app name and publisher. Previously added app dependencies can't be selected in the list of added app dependencies. 
 
-You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app is not targeted to the user or device, Intune will install the app on the device to satisfy the dependency before installing your Win32 app.​ 
+You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app is not targeted to the user or device, Intune will install the app on the device to satisfy the dependency before installing your Win32 app.
+
+> [!NOTE]
+> The install status of a dependent app will be displayed within Intune if the app is targeted to the user or device.
 
 It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies does not follow a specific order at a dependency level.
 
@@ -267,19 +271,27 @@ After you've selected dependencies, select **Next** to display the **Scope tags*
 
 ### Understand additional dependency details
 
-The user will see Windows notifications indicating that dependent apps are being downloaded and installed as part of the Win32 app installation process. Additionally, when a dependent app is not installed, the user will commonly see one of the following notifications:
-- One or more dependent apps failed to be install​ed.
-- One or more dependent app requirements are not met​.
+The user will see Windows notifications indicating that dependent apps are being downloaded and installed as part of the Win32 app installation process. 
+
+#### Dependency limitations
+
+The following bulleted list provides additional clarity about dependency limitations:
+-	If an app has 100 dependencies, then the app graph has a total size of 101 (100 dependency apps + 1 parent app). 
+-	If an app has 3 dependencies, and one of the dependency apps has 2 dependencies, then the app graph has a total size of 6 (1 parent app + 3 dependency app + 2 dependency apps that are from another dependency app).
+-	If an app is a dependency for multiple app “graphs”, meaning that the dependency is somewhere in the dependency chain for some app graph, then all apps from all the separate graphs are summed to calculate the dependency size. For example, if graph A has 23 apps, graph B has 62 apps, and graph C has 20 apps, and app X exist as a dependency app somewhere in the dependency chain in all 3 graphs, then the total size of the graph is 103 (app X is only counted once), which surpasses the 100 limit restriction. 
+
+#### Dependency failures
+
+When a dependent app is not installed, the user will commonly see one of the following notifications:
+- One or more dependent apps failed to be installed.
+- One or more dependent app requirements are not met.
 - One or more dependent apps are pending a device reboot.
 
-If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).​
+If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).
 
-Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule.​ Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app.​ To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list.​ 
+Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule. Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
 
 ## Step 6: Supersedence
-
-> [!NOTE]
-> Win32 app supersedence is in public preview.
 
 When you supersede an application, you can specify which app will be updated or replaced. To update an app, disable the uninstall previous version option. To replace an app, enable the uninstall previous version option. There is a maximum of 10 updated or replaced apps, including references to other apps. For example, your app references another app. This other app references other apps, and so on. This scenario creates a graph of apps. All apps in the graph count toward the maximum value of 10.
 

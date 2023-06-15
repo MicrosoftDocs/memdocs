@@ -1,18 +1,18 @@
 ---
-title: "SMS_ST_RecurWeekly Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_ST_RecurWeekly Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents a schedule token for events, which occur at weekly intervals, for example, every third week on Wednesday.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7d2c87e0-ab18-4660-abb9-8d095efa5478
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ST_RecurWeekly Server WMI Class
 The `SMS_ST_RecurWeekly` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for events that occur at weekly intervals, for example, every third week on Wednesday.  

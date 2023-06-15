@@ -8,29 +8,34 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2021
-ms.topic: conceptual
+ms.date: 06/14/2023
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune
 
 You can create a profile with specific WiFi settings, and then deploy this profile to your iOS/iPadOS devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
+
+This feature applies to:
+
+- iOS/iPadOS
 
 These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings.
 
@@ -41,7 +46,7 @@ This article describes these settings.
 Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
 >
 > These settings use the [Apple Wi-Fi payload](https://developer.apple.com/documentation/devicemanagement/wifi) (opens Apple's web site).
 
@@ -101,7 +106,7 @@ Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configu
   - **EAP-TLS**: Also enter:
 
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server's certificate.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate. This certificate allows the client to trust the wireless network access server's certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
@@ -114,7 +119,7 @@ Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configu
   - **EAP-TTLS**: Also enter:
 
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server's certificate.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate. This certificate allows the client to trust the wireless network access server's certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
@@ -134,13 +139,13 @@ Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configu
   - **PEAP**: Also enter:
 
     - **Certificate server names**: **Add** one or more common names used in the certificates issued by your trusted certificate authority (CA) to your wireless network access servers. For example, add `mywirelessserver.contoso.com` or `mywirelessserver`. When you enter this information, you can bypass the dynamic trust window displayed on user's devices when they connect to this Wi-Fi network.
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. This certificate allows the client to trust the wireless network access server's certificate.
+    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate. This certificate allows the client to trust the wireless network access server's certificate.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
-      - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. 
+      - **Username and Password**: Prompt the user for a user name and password to authenticate the connection.
 
       - **Certificates**: Select the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 

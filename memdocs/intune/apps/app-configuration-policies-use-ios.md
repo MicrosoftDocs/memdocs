@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
+- tier1
 - M365-identity-device-management
 - iOS/iPadOS
 - highpri
@@ -40,7 +41,7 @@ Use app configuration policies in Microsoft Intune to provide custom configurati
 
 As the Microsoft Intune admin, you can control which user accounts are added to Microsoft Office applications on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. The supporting applications process the app configuration and remove and block unapproved accounts. The configuration policy settings are used when the app checks for them, typically the first time it is run.
 
-Once you add an app configuration policy, you can set the assignments for the app configuration policy. When you set the assignments for the policy, you can choose to include and exclude the groups of users for which the policy applies. When you choose to include one or more groups, you can choose to select specific groups to include or select built-in groups. Built-in groups include **All Users**,  **All Devices**, and **All Users + All Devices**. 
+Once you add an app configuration policy, you can set the assignments for the app configuration policy. When you set the assignments for the policy, you can choose to use a [filter](../fundamentals/filters.md) and to include and exclude the groups of users for which the policy applies. When you choose to include one or more groups, you can choose to select specific groups to include or select built-in groups. Built-in groups include **All Users**,  **All Devices**, and **All Users + All Devices**. 
 
 > [!NOTE]
 > Intune provides pre-created **All Users** and **All Devices** groups in the console with built-in optimizations for your convenience. It is highly recommended that you use these groups to target all users and all devices instead of any 'All users' or 'All devices' groups you may have created yourself.
@@ -57,11 +58,11 @@ Once you have selected the included groups for your application configuration po
 
 ## Create an app configuration policy
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose the **Apps** > **App configuration policies** > **Add** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
-    - **Name** - The name of the profile that appears in the Microsoft Endpoint Manager admin center.
-    - **Description** - The description of the profile that appears in the Microsoft Endpoint Manager admin center.
+    - **Name** - The name of the profile that appears in the Microsoft Intune admin center.
+    - **Description** - The description of the profile that appears in the Microsoft Intune admin center.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **iOS/iPadOS** as the **Platform**.
 5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
@@ -71,30 +72,36 @@ Once you have selected the included groups for your application configuration po
     - **Use configuration designer**
     - **Enter XML data**<br><br>
     For details about using the configuration designer, see [Use configuration designer](#use-configuration-designer). For details about entering XML data, see [Enter XML data](#enter-xml-data). 
-9. Click **Next** to display the **Assignments** page.
-10. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
+9. Click **Next** to display the **Scope tags** page.
+9. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+10. Click **Next** to display the **Assignments** page.
+11. On the **Assignments** page, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    ![Screenshot of Policy assignments Include tab](./media/app-configuration-policies-use-ios/app-config-policy01.png)
+    :::image type="content" alt-text="Screenshot of configuration policy assignments page" source="./media/app-configuration-policies-use-ios/app-config-policy01.png" :::
 
-11. Select **All users** in the dropdown box.
+12. Select **All users** in the dropdown box.
 
-    ![Screenshot of Policy assignments - All Users dropdown option](./media/app-configuration-policies-use-ios/app-config-policy02.png)
+    :::image type="content" alt-text="Screenshot of Policy assignments - All Users dropdown option" source="./media/app-configuration-policies-use-ios/app-config-policy02.png" ::: 
 
-12. Click **Select groups to exclude** to display the related pane.
+13. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
 
-    ![Screenshot of Policy assignments - Select groups to exclude pane](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+    :::image type="content" alt-text="Screenshot of Policy assignments - Edit filter" source="./media/app-configuration-policies-use-ios/app-config-policy02a.png" :::
 
-13. Choose the groups you want to exclude and then click **Select**.
+14. Click **Select groups to exclude** to display the related pane.
+
+    :::image type="content" alt-text="Screenshot of Policy assignments - Select groups to exclude pane" source="./media/app-configuration-policies-use-ios/app-config-policy03.png" :::
+
+15. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
     >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
 
-14. Click **Next** to display the **Review + create** page.
-15. Click **Create** to add the app configuration policy to Intune.
+16. Click **Next** to display the **Review + create** page.
+17. Click **Create** to add the app configuration policy to Intune.
 
 ## Use configuration designer
 
-Microsoft Intune provides configuration settings that are unique to an app. You can use the configuration designer for apps on devices that are enrolled or not enrolled in Microsoft Intune. The designer lets you configure specific configuration keys and values that helps you create the underlying XML. You must also specify the data type for each value. These settings are supplied to apps automatically when the apps are installed.
+Microsoft Intune provides configuration settings that are unique to an app. You can use the configuration designer for apps on devices that are enrolled or not enrolled in Microsoft Intune. The designer lets you configure specific configuration keys and values that help you create the underlying XML. You must also specify the data type for each value. These settings are supplied to apps automatically when the apps are installed.
 
 ### Add a setting
 
@@ -115,7 +122,7 @@ The \{\{ and \}\} characters are used by token types only and must not be used f
 
 As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts within the apps (if supported) on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
-| **Key** | **Values** |
+| Key | Values |
 |----|----|
 | IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: The only account allowed is the managed user account defined by the [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key.</li><li>**Disabled** (or any value that is not a case insensitive match to **Enabled**): Any account is allowed.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
@@ -135,7 +142,7 @@ On enrolled devices, organizations can require that the work or school account i
 
 For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy for each Microsoft app:
 
-| **Key** | **Values** |
+| Key | Values |
 |----|----|
 | IntuneMAMRequireAccounts | <ul><li>Enabled: The app requires the user to sign-in to the managed user account defined by the [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key to receive Org data.</li><li>Disabled (or any value that is not a case insensitive match to Enabled): No account sign-in is required</li></ul>  |
 | IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
@@ -216,16 +223,16 @@ Additionally, Intune supports the following token types in the property list:
 
 ## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 
-Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices even when users have downloaded the Company Portal from the App Store by using the following steps.
+Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS ADE devices even when users have downloaded the Company Portal from the App Store by using the following steps.
 
-1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All apps** > **Add**.
+1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All apps** > **Add** > **iOS Store App**.
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
 3. Create an app configuration policy with the XML below. More information on how to create an app configuration policy and enter XML data can be found at [Add app configuration policies for managed iOS/iPadOS devices](app-configuration-policies-use-ios.md).
 
     - **Use the Company Portal on an Automated Device Enrollment (ADE) device enrolled with user affinity**: 
     
         > [!NOTE]
-        > This process is not needed for iOS/iPadOS devices enrolling with ADE through Setup Assistant with modern authentication. Also, this is not needed for devices enrolling with ADE with user affinity if a VPP token is being used to send the Company Portal app to the device.
+        > When the enrollment profile has **"Install Company Portal"** set to yes, Intune pushes the application configuration policy below automatically as part of the initial enrollment process. This configuration should not be deployed manually to users or devices as this will cause a conflict with the payload already sent during enrollment, resulting on end-users being asked to download a new management profile after signing in to Company Portal (when they shouldn't, because there is a management profile already installed on these devices).
 
         ``` xml
         <dict>
@@ -238,7 +245,7 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
             </dict>
         </dict>
         ```
-    - **Use the Company Portal on a DEP device enrolled without user affinity (also known as Device Staging)**:
+    - **Use the Company Portal on a ADE device enrolled without user affinity (also known as Device Staging)**:
 
         > [!NOTE]
         > The user signing in to Company Portal is set as the primary user of the device.
@@ -250,14 +257,14 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
         </dict>
         ```    
 
-4. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already DEP enrolled.
+4. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already ADE enrolled.
 5. Tell end users to sign into the Company Portal app when it is automatically installed.
 
 > [!NOTE]
-> When you add an app configuration to allow the Company Portal app on DEP devices without user affinity, you may experience a `STATE Policy Error`. Unlike other app configurations, this situation does not apply every time the device checks in. Instead, this app configuration is meant to be a one-time operation to enable existing devices enrolled without user affinity to attain user affinity when a user signs into the Company Portal. This app configuration is removed from the policy in the background once it has been successfully applied. The policy assignment will exist, but it will not report "success" once the app configuration is removed in the background. Once the app configuration policy has applied to the device, you can unassign the policy.
+> When you add an app configuration to allow the Company Portal app on ADE devices without user affinity, you may experience a `STATE Policy Error`. Unlike other app configurations, this situation does not apply every time the device checks in. Instead, this app configuration is meant to be a one-time operation to enable existing devices enrolled without user affinity to attain user affinity when a user signs into the Company Portal. This app configuration is removed from the policy in the background once it has been successfully applied. The policy assignment will exist, but it will not report "success" once the app configuration is removed in the background. Once the app configuration policy has applied to the device, you can unassign the policy.
 
 ## Monitor iOS/iPadOS  app configuration status per device 
-Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
+Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  
 
 ## Additional information
 

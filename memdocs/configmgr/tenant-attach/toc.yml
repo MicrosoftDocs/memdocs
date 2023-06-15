@@ -3,8 +3,14 @@ items:
   href: index.yml
 - name: Deploy and use
   items:
+  - name: Prerequisites for tenant attach
+    href: prerequisites.md
+  - name: Enable cloud attach, versions 2111 and later
+    href: ../cloud-attach/enable.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
   - name: Enable tenant attach
     href: device-sync-actions.md
+  - name: Use Intune RBAC for tenant attach
+    href: ../cloud-attach/use-intune-rbac.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json   
   - name: Client details
     href: client-details.md
   - name: Install applications
@@ -17,6 +23,8 @@ items:
     href: scripts.md
   - name: BitLocker recovery keys
     href: bitlocker-recovery-keys.md
+  - name: Software updates
+    href: software-updates.md    
 - name: CMPivot for tenant attached devices
   items:
   - name: Launch CMPivot
@@ -25,7 +33,7 @@ items:
     href: cmpivot-overview-attached.md
   - name: CMPivot sample scripts
     href: cmpivot-samples-attached.md
-- name: Endpoint security for tenant attached devices (preview)
+- name: Endpoint security for tenant attached devices
   items:
   - name: Get started with endpoint security policies
     href: endpoint-security-get-started.md
@@ -33,9 +41,9 @@ items:
     href: atp-onboard.md
   - name: Create and deploy antivirus policy
     href: deploy-antivirus-policy.md  
-  - name: Create and deploy firewall policy
+  - name: Create and deploy firewall policy (preview)
     href: deploy-firewall-policy.md
-  - name: Create and deploy attack surface reduction policy
+  - name: Create and deploy attack surface reduction policy (preview)
     href: deploy-asr-policy.md     
 - name: Reference
   items:
@@ -69,4 +77,7 @@ items:
     href: troubleshoot-scripts.md
   - name: CMPivot
     href: troubleshoot-cmpivot.md
+  - name: Software updates
+    href: troubleshoot-software-updates.md    
+
 

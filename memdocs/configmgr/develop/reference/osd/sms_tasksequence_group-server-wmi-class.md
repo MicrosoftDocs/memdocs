@@ -1,18 +1,18 @@
 ---
-title: "SMS_TaskSequence_Group Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent a group of steps in a task sequence using SMS_TaskSequence_Group class in Configuration Manager.
+title: SMS_TaskSequence_Group Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 1f6c8938-6056-4057-9e28-3191ea9319d2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence_Group Server WMI Class
 The `SMS_TaskSequence_Group` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a group of steps in a task sequence.  

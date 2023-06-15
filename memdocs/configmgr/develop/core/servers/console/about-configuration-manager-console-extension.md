@@ -1,17 +1,17 @@
 ---
-title: "Configuration Manager Console Extension"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how the Configuration Manager console with an XML-based architecture can be easily extended.
+title: Configuration Manager Console Extension
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: ebfd3530-07f9-4d58-9e0a-f362c0e6dcd7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Console Extension
 The Configuration Manager console has an XML-based architecture that can be easily extended. The Configuration Manager console supports the following extensions:  

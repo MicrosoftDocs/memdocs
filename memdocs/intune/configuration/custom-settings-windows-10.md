@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,8 +25,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
 ---
 
 # Use custom settings for Windows 10/11 client devices in Intune
@@ -83,14 +84,14 @@ There's a complete list of all configuration service providers (CSPs) that Windo
 Not all settings are compatible with all Windows client versions. [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) tells you which versions are supported for each CSP.
 
 Additionally, Intune doesn't support all the settings listed in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
- 
+
 > [!NOTE]
 > For settings that were created by using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
 >
-> - Create, Read, and Update permissions in a Microsoft Endpoint Manager role-based access control (RBAC) role.
+> - Create, Read, and Update permissions in a Microsoft Intune role-based access control (RBAC) role.
 > - Intune Service Administrator.
 > - Global Administrator Azure Active Directory role.
-> 
+>
 > For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Next steps

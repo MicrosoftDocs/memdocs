@@ -6,13 +6,11 @@ metadata:
   ms.date: 07/10/2020
   ms.prod: configuration-manager
   ms.technology: configmgr-protect
-  ms.topic: conceptual
+  ms.topic: faq
   ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-  author: mestew
-  ms.author: mstewart
-  manager: dougeby
-  
-    
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
 title: Endpoint Protection client frequently asked questions
 summary: |
   *Applies to: Configuration Manager (current branch)*

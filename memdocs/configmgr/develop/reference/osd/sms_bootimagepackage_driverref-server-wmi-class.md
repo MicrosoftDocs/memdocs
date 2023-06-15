@@ -1,18 +1,18 @@
 ---
-title: "SMS_BootImagePackage_DriverRef Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_BootImagePackage_DriverRef Class
+titleSuffix: Configuration Manager
+description: An SMS Provider server class that represents the association between a boot image package and a referenced driver.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a1006a04-8bc9-4e2d-b6e6-7b968208140b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_BootImagePackage_DriverRef Server WMI Class
 The `SMS_BootImagePackage_DriverRef` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the association between a boot image package and a referenced driver.  

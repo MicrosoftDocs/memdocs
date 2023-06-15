@@ -1,18 +1,18 @@
 ---
-title: "SMS_ST_RecurMonthlyByWeekday Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent a schedule token for events that occur for a specific time interval using SMS_ST_RecurMonthlyByWeekday class.
+title: SMS_ST_RecurMonthlyByWeekday Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: efed0902-d5cc-40e1-82aa-d6ff893ee44e
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ST_RecurMonthlyByWeekday Server WMI Class
 The `SMS_ST_RecurMonthlyByWeekday` WMI class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for events that occur for a specific day of the week, on a given week of the month, at a given monthly interval, for example, the second Saturday of every month.  

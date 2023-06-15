@@ -1,18 +1,18 @@
 ---
-title: "GenerateCCRByName Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to generate a client configuration request by computer name using the GenerateCCRByName class method.
+title: GenerateCCRByName Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: aefc55aa-7a13-4cc2-a5a8-aaffcd7a8f6b
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GenerateCCRByName Method in Class SMS_Collecton
 The `GenerateCCRByName` Windows Management Instrumentation (WMI) class method generates a client configuration request by computer name.  

@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/01/2022
+ms.date: 06/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -22,14 +22,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection:
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # In development for Microsoft Intune
 
-To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. In addition to the information in this article:
+To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
 - If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
 - When a feature enters production, whether it's in preview or generally available, the feature description will move from this article to [What's new](whats-new.md).  
@@ -41,13 +43,7 @@ This article and the [What's new](whats-new.md) article are updated periodically
 > This article reflects our current expectations about Intune capabilities in an upcoming release. Dates and individual features might change. This article doesn't describe all features in development. It was last updated on the date shown under the title.
 
 You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
-<!-- **RSS feed**: Find out when this article is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us` -->
-
-<!--
-## What's coming to Intune in the Azure portal 
-## What's coming to Intune apps
-## Notices
--->
+<!-- **RSS feed**: Find out when this article is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us` -->
 
 <!-- Common categories:  
 ## App management
@@ -58,153 +54,148 @@ You can use RSS to be notified when this article is updated. For more informatio
 ## Intune apps
 ## Monitor and troubleshoot
 ## Role-based access control
-
+## Tenant administration
+## Notices
 -->
 
 <!-- ***********************************************-->
 
 ## App management
 
-### Password complexity for Android devices<!-- 9321870 -->
-The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn't meet the minimum password requirement, you'll be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. 
+### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
+Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
-This feature targets devices that operate on Android 11+. For devices that operate on Android 10 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
+### View app report for Android Enterprise corporate-owned devices<!-- 2055436  -->  
+You'll be able to view a report containing all apps found on a device for Android Enterprise corporate-owned scenarios, including system apps. This report will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor** > **Discovered apps**. You'll see **Application Name** and **Version** for all apps detected as installed on the device.
 
-### Improvements to Win32 App Log collection<!-- 9978316 -->
-Win32 App Log collection via Intune Management Extension has moved to the Windows 10 device diagnostic platform, reducing time to collect logs from 1-2 hours to 5 minutes.  We've also increased the size from 60mb to 250mb.  Along with performance improvements, the app logs will also be available under the **Device diagnostics monitor** action for each device, as well as the managed app monitor. For information about how to collect diagnostics, see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md) and [Troubleshooting Win32 app installations with Intune](/troubleshoot/mem/intune/troubleshoot-win32-app-install).
+### Advanced application management<!-- 10986080  -->  
+Advanced application management provides you with an enterprise catalog of applications that are easily accessible. It also provides application update capabilities. The enterprise catalog is planned to be available in public preview in late Q2 2023. The application update capabilities are planned to be available in early Q3 2023.
 
-### Advanced logging setting in Company Portal app<!-- 12859998 -->
-A new **Enable Advanced Logging** setting will be available in the Intune Company Portal app for iOS and macOS. Device users will be able to enable or disable advanced logging on a device. By turning on advanced logging, detailed log reports will be sent to Microsoft to troubleshoot issues. By default, the **Enable Advanced Logging** setting will be off. Device users should keep this setting off unless otherwise instructed by their organization's IT admin.
+### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
+Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
-<!-- ***********************************************-->
+### Uninstall Win32 apps in the Company Portal<!-- 5145748 -->  
+*The time frame for the release of this update is still being determined.*
+
+Users will be able to uninstall Win32 apps in the Company Portal. If a Win32 app can be uninstalled by the user, the user will be able to select **Uninstall** for the Win32 app in the Company Portal. For more information about Win32 apps, go to [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
+
+You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
+
+- **ICCID**
+- **IMEI**
+- **MEID**
+- **Phone number**
+
+These fields will default to using labels returned by the device, such as:  *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
+
+Applies to:  
+- **iOS/iPadOS**
+
+<!-- *********************************************** -->
 
 ## Device configuration
 
-### On Android Enterprise, use the Connect Automatically setting on enterprise Wi-Fi profiles<!-- 10697036 -->
+### Intelligent recommendations within Intune Security Baselines<!-- 11127203 -->
+We're adding tailored insights powered by Machine Learning models that help choose the right security settings from Security Baselines for your organization. These recommendations are based on best practices that similar organizations have adopted. Navigate to **Endpoint security** > **Security baselines**. Creating and editing the workflow these insights will be available for you in the form of a light bulb.
 
-On Android Enterprise devices, you can create Wi-Fi profiles that include common enterprise Wi-Fi settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned work profile** > **Wi-Fi** for profile type > **Enterprise** for Wi-Fi type).
+### New settings available in the Apple settings catalog<!-- 19951554  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-You can configure the **Connect automatically** setting that automatically connects to your Wi-Fi network when devices are in range.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
-To see the settings you can currently configure, go to [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices](../configuration/wi-fi-settings-android-enterprise.md).
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Denied Bundle Identifiers
 
 Applies to:
 
-- Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise corporate owned dedicated devices (COSU)
+- iOS/iPadOS
+- macOS
 
-### New macOS settings in the Settings Catalog<!-- 12987685 -->
+**Login > Login Window Behavior**:
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. When you create a Settings Catalog policy, there are new settings available for macOS devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog (preview)** for profile type).
+- Disable FDE Auto Login
 
-New settings include:
+Applies to:
 
-- Accounts > Caldav:
-  - Cal DAV Account Description
-  - Cal DAV Host Name
-  - Cal DAV Password
-  - Cal DAV Port
-  - Cal DAV Principal URL
-  - Cal DAV Username
-  - Cal DAV Use SSL
+- macOS
 
-- Accounts > Carddav:
-  - Card DAV Account Description
-  - Card DAV Host Name
-  - Card DAV Password
-  - Card DAV Port
-  - Card DAV Principal URL
-  - Card DAV Username
-  - Card DAV Use SSL
+**Networking > Network Usage Rules**:
 
-- Networking > Domains > Email Domains
+- SIM Rules
 
-- Printing > Printing:
-  - Allow Local Printers
-  - Default Printer
-    - Device URI
-    - Display Name
-  - Footer Font Name
-  - Footer Font Size
-  - Print Footer
-  - Print MAC Address
-  - Require Admin To Add Printers
-  - Show Only Managed Printers
-  - User Printer List
-    - Device URI
-    - Display Name
-    - Location
-    - Model
-    - PPD URL
-    - Printer Locked
+Applies to:
 
-- Profile Removal Password > Removal Password
+- iOS/iPadOS
 
-- Proxies > Global HTTP Proxy:
-  - Proxy Captive Login Allowed
-  - Proxy PAC Fallback Allowed
-  - Proxy PAC URL
-  - Proxy Password
-  - Proxy Server
-  - Proxy Server Port
-  - Proxy Type
-  - Proxy Username
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874  -->  
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
-<!-- ***********************************************-->
+Some Asus devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+For more information about DFCI profiles, go to:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/mem/autopilot/dfci-management)
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+<!-- *********************************************** -->
 
 ## Device enrollment
 
-### Enforce Azure AD terms of use with Microsoft Intune or Microsoft Intune Enrollment cloud apps<!-- 12522105 -->
-Use the Microsoft Intune cloud app or Microsoft Intune Enrollment cloud app to enforce a conditional access, Azure AD Terms of Use policy on iOS and iPadOS devices during automated device enrollment.  Both apps will ensure that users accept the terms of use before enrolling if required by your conditional access policy. This functionality will be available when you select Setup Assistant with modern authentication as the authentication method.  
+### Apple Account Driven User Enrollment available for iOS/iPadOS 15+ devices<!-- 14161683  -->  
+Intune will support Apple Account Driven User Enrollment, a new and improved variation of Apple User Enrollment for iOS/iPadOS 15+ devices. The new option will utilize just-in-time-registration, which eliminates the need for the Company Portal app during enrollment. Device users can initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. You can continue to target iOS/iPadOS devices using the existing profile-based User Enrollment method with Company Portal. Devices running iOS/iPadOS, version 14.8.1 and earlier will be unaffected by this update and can also continue to use the existing method.
 
-<!-- ***********************************************-->
+<!-- *********************************************** -->
 
 ## Device management
 
-### Create terms of use for Android (AOSP) user-associated devices<!-- 8506575 -->
-Require Android (AOSP) users to accept your organization's terms and conditions before using the Intune Company Portal app. This feature will be available for corporate-owned, user-associated devices only. For more information about creating terms of use in Intune, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).
+### Update to Endpoint Privilege Management reports<!-- 17727222  -->  
+Intune's Endpoint Privilege Management (EPM) reports will support exporting the full reporting payload to a CSV file. This feature will allow you to export all events from an elevation report in Intune.
 
-### Support for Audio Alert on Android Dedicated (COSU) devices<!-- 10567852 -->
-You'll be able to use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise dedicated device.
+### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
+A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You'll also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
 
-For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
-
-<!-- ***********************************************-->
+<!-- *********************************************** -->
 
 ## Device security
 
-### Manage the app inventory data for iOS/iPadOS devices that Intune sends to third-party MTD partners<!-- 10722315 -->
+### Microsoft Defender for Endpoint Settings Management enhancements<!-- 14743017, 15319901, 18713045, 18713050 -->
+Microsoft Defender for Endpoint Settings Management will expand platform support for Linux Servers and macOS channel. This applies to the Linux and macOS Antivirus policy templates found in **Endpoint Security** > **Antivirus**. In addition, onboarding devices to Microsoft Defender for Endpoint settings management will be simplified to no longer have Azure AD Hybrid Join be a management prerequisite for existing and new policies. You'll also be able to create, edit, and find all Intune Endpoint Security policies through the Microsoft Defender for Endpoint portal.
 
-You’ll soon have more control over the application inventory data for personally-owned iOS/iPadOS devices that Intune sends to your chosen third-party Mobile Threat Defense (MTD) partner. You’ll configure what data is sent with a new setting that’s available when you configure the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector). The new setting is **Send full application inventory data on personally-owned iOS/iPadOS Devices**.
+<!-- *********************************************** -->
 
-For personally-owned iOS/iPadOS devices:
-
-- When set to **On**: If your MTD partner syncs app data and requests a list of the iOS/iPadOS applications from Intune, that list includes unmanage apps (those not deployed through Intune) in addition to those deployed through Intune.  This is the current behavior.
-- When set to **Off**: Data on unmanaged apps won’t be provided, and the MTD partner only receives details about apps that were deployed through Intune.
-
-For corporate devices, data about managed and unmanaged apps continues to be included with requests for app data by your MTD vendor.  
-
-<!-- ***********************************************-->
+<!-- ## Intune apps -->
+<!-- *********************************************** -->
 
 ## Monitor and troubleshoot
 
-### Remote help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
+### Microsoft Intune troubleshooting pane is now generally available<!-- 18099474 -->
+The Intune troubleshooting pane is now generally available.  It will provide details about user's devices, policies, applications, and status. The troubleshooting pane will include the following information:
+- A summary of policy, compliance, and application deployment status.
+- Support for exporting, filtering, and sorting all reports.
+- Support to filter by excluding policies and applications.
+- Support to filter to a user's single device.
+- Details about available device diagnostics and disabled devices.
+- Details about offline devices that haven't checked-in to the service for three or more days.
 
-The remote help page in the Microsoft Endpoint Manager admin center is moving and will be directly under **Tenant administration** instead of **Connectors and tokens**. 
+You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. 
 
-For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
+<!-- *********************************************** -->
 
-<!-- ***********************************************-->
+<!-- ## Role-based access control -->
+<!-- *********************************************** -->
 
-## Scripting
-
-### Intune Data Warehouse updates<!-- 9370034 -->
-
-The `applicationInventory` entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
-
-<!-- ***********************************************-->
+<!-- ## Tenant administration -->
+<!-- *********************************************** -->
 
 ## Notices
 

@@ -1,16 +1,18 @@
 ---
-title: "About Maintenance Windows"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: About Maintenance Windows
+titleSuffix: Configuration Manager
+description: Use Maintenance Windows article provides more information about Configuration Manager maintenance Windows.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: efbb6dc8-cb1c-4513-95a4-eb3a8c3936b2
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About Maintenance Windows

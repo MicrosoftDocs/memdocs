@@ -1,17 +1,17 @@
 ---
-title: "Configuration Manager Console Nodes"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use XML to define nodes and their content, which you see in the Configuration Manager console.
+title: Configuration Manager Console Nodes
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 725d0da7-7e9b-4a53-a68f-41074e851646
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Console Nodes
 Configuration Manager uses XML to define the nodes and their content, that you see in the Configuration Manager console. New nodes can be added anywhere in the existing node hierarchy.  

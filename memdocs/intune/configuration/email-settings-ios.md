@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 11/17/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,12 +19,14 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: beflamm, tycast
+ms.reviewer: beflamm, tycast, japoehlm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add e-mail settings for iOS and iPadOS devices in Microsoft Intune
@@ -39,10 +41,11 @@ This article describes all the email settings available for devices running iOS/
 
 ## Before you begin
 
-Create an [iOS/iPadOS e-mail device configuration profile](email-settings-configure.md).
+- Deploy your email app. For more information, go to [Configure email apps](email-settings-configure.md).
+- Create an [iOS/iPadOS e-mail device configuration profile](email-settings-configure.md).
 
 > [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
+> These settings are available for all enrollment types. For more information on the enrollment types, see [iOS/iPadOS enrollment](/mem/intune/fundamentals/deployment-guide-enrollment-ios-ipados).
 >
 > These settings use the [Apple ExchangeActiveSync payload](https://developer.apple.com/documentation/devicemanagement/exchangeactivesync) (opens Apple's web site).
 
@@ -61,7 +64,7 @@ Create an [iOS/iPadOS e-mail device configuration profile](email-settings-config
       - **Custom**: Get the attributes from a custom domain name. Also enter:
         - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
-- **Email address attribute from AAD**: Choose how the email address for the user is generated. Your options:
+- **Email address attribute from AAD**: Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
   - **User principal name**: Use the full principal name as the email address, such as `user1@contoso.com` or `user1`.
   - **Primary SMTP address**: Use the primary SMTP address to sign in to Exchange, such as `user1@contoso.com`.
 - **Authentication method**: Choose how users to authenticate to the email server. Your options:
@@ -94,7 +97,7 @@ Create an [iOS/iPadOS e-mail device configuration profile](email-settings-config
 ## Exchange ActiveSync profile configuration
 
 > [!IMPORTANT]
-> Configuring these settings deploys a new profile to the device, even when an existing email profile is updated to include these settings. Users are prompted to enter their Exchange ActiveSync account password. These settings take affect when the password is entered.
+> Configuring these settings deploys a new profile to the device, even when an existing email profile is updated to include these settings. Users are prompted to enter their Exchange ActiveSync account password. These settings take effect when the password is entered.
 
 - **Exchange data to sync**: When using Exchange ActiveSync, choose the Exchange services that are synced on the device: Calendar, Contacts, Reminders, Notes, and Email. Your options:
   - **All data** (default): Sync is enabled for all services.
@@ -150,7 +153,7 @@ Create an [iOS/iPadOS e-mail device configuration profile](email-settings-config
 
     - **Force per-message encryption**: Per-message encryption allows users to choose which emails are encrypted before being sent.
 
-      **Enable** shows the per-message encryption option when creating a new email. Users can then choose to opt-in or opt-out of per-message encryption. If the **Encrypt by default** setting is also enabled, enabling per-message encryption allows users to opt out of encryption per message.
+      **Enable** shows the per-message encryption option when creating a new email. Users can then choose to opt in or opt-out of per-message encryption. If the **Encrypt by default** setting is also enabled, enabling per-message encryption allows users to opt out of encryption per message.
 
       **Disable** (default) prevents the per-message encryption option from showing. If the **Encrypt by default** setting is also disabled, enabling per-message encryption allows users to opt in to encryption per message.
 

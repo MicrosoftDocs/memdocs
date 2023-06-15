@@ -1,6 +1,6 @@
 ---
-author: mestew
-ms.author: mstewart
+author: smritib17
+ms.author: smbhardwaj
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 1. Choose from the following options:
    - **All cloud-managed devices**: Creates an [Intune data collection policy](../settings.md#bkmk_profile) assigned to all Windows 10 1903 or later devices which are either Intune managed or co-managed.
    -  **Selected devices**: Creates and assigns the policy to devices which you select.
-   - **I'll choose later**: Doesn't deploy a policy to devices. Proactive remediations can still be used, but any reports that rely on analytics data will be empty.
+   - **I'll choose later**: Doesn't deploy a policy to devices. Remediations can still be used, but any reports that rely on analytics data will be empty.
 1. Click **Start**. This will automatically assign a configuration profile to collect boot performance data from all eligible devices. You can [change assigned devices](../settings.md#bkmk_profile) later. It may take up to 24 hours for startup performance data to populate from your Intune enrolled devices after they reboot.
 
 > [!Important]  

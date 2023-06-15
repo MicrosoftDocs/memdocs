@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 12/18/2020
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -21,8 +21,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
-ms.reviewer: samyada
+ms.collection:
+- tier3
+- M365-identity-device-management
+ms.reviewer: laarrizz        
 
 ---
 
@@ -32,7 +34,7 @@ View the *Antivirus* profile settings you can configure for Microsoft Defender f
 
 Learn about using [Endpoint security policies](../protect/endpoint-security-policy.md) in Intune.
 
-**Microsoft Defender for Endpoint**
+## Microsoft Defender for Endpoint
 
 - **Real-time protection**  
   Require Defender on macOS devices to use the real-time Monitoring functionality. Real-time monitoring locates and stops malware from installing or running on your device. You can turn off this setting for a short time before it turns back on automatically.

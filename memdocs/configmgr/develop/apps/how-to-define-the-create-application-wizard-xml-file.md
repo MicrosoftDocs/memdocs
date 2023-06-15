@@ -1,18 +1,18 @@
 ---
-title: "How to Define the Create Application Wizard XML File"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Define the Create Application Wizard XML File
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 5e09cee5-b251-42d0-b927-e1d6019f3695
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+description: How to create a custom deployment technology XML File for the Create Application Wizard/.
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Create Application Wizard XML File
 To define the custom deployment technology XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the Create Application Wizard should be named, CreateApp_\<*TechnologyID*>.xml.  

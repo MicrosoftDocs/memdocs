@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Android device administrator enrollment
@@ -53,13 +55,13 @@ For more information about Google's Android Enterprise features, see these artic
 ## Set up device administrator enrollment
 
 1. To prepare to manage mobile devices, you must set the mobile device management (MDM) authority to **Microsoft Intune**. See [Set the MDM authority](../fundamentals/mdm-authority-set.md) for instructions. You set this item only once, when you are first setting up Intune for mobile device management.
-2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose > **Devices** > **Android** > **Android enrollment** > **Personal and corporate-owned devices with device administration privileges** > **Use device administrator to manage devices**.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose > **Devices** > **Android** > **Android enrollment** > **Personal and corporate-owned devices with device administration privileges** > **Use device administrator to manage devices**.
 3. [Tell your users how to enroll their devices](../user-help/enroll-device-android-company-portal.md).  
 
 After a user has enrolled, you can begin managing their devices in Intune, including [assigning compliance policies](../protect/compliance-policy-create-android.md), [managing apps](../apps/app-management.md), and more.
 
 For information about other user tasks, see these articles:
-- [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md)
+- [Resources about the end-user experience with Microsoft Intune](/mem/intune/fundamentals/intune-planning-guide)
 - [Using your Android device with Intune](../user-help/why-enroll-android-device.md)
 
 

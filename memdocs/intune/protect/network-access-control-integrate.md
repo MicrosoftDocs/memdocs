@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/08/2021
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -25,17 +25,26 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Network access control (NAC) integration with Intune
- 
+
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
-> A new NAC service was released in July 2021 and many of our NAC partners are transitioning to this new service. Currently, the following NAC partner product supports the new NAC service:
-> 
+> A new NAC service (CR service) was released in July 2021 and many of our NAC partners are transitioning to this new service. While we have extended the timeline for supporting the legacy NAC service through **December 31, 2023**, we recommend you to migrate to the new CR serivce to avoid service disruption.Currently, the following NAC partner product supports the new NAC service:
+>
 > - Cisco ISE 3.1 and later
+> - Citrix Gateway 13.0-84.11 and later
+> - Citrix Gateway 13.1-12.50 and later
+> - F5 BIG-IP Access Policy Manager 14.1.5.2 and later
+> - F5 BIG-IP Access Policy Manager 15.1.7 and later
+> - F5 BIG-IP Access Policy Manager 16.1.3.1 and later
+> - F5 BIG-IP Access Policy Manager 17.0 and later
+> - Ivanti Connect Secure 9.1R16 and later
 >
 > Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
 
@@ -63,7 +72,7 @@ The following list is an overview on how NAC integration works when integrated w
 
 ![Conceptual image of how NAC works with Intune](./media/network-access-control-integrate/ca-intune-common-ways-2.png)
 
-1. Register the NAC partner solution with Azure Active Directory (AAD), and grant delegated permissions to the Intune NAC API.
+1. Register the NAC partner solution with Azure Active Directory (Azure AD), and grant delegated permissions to the Intune NAC API.
 2. Configure the NAC partner solution with the appropriate settings including the Intune discovery URL.
 3. Configure the NAC partner solution for certificate authentication.
 4. User connects to corporate Wi-Fi access point or makes a VPN connection request.
@@ -81,39 +90,40 @@ The following list is an overview on how NAC integration works when integrated w
 >
 > NAC Solutions are permitted to make as many of the device-specific queries as required.  However the broad unfiltered queries may be throttled. The NAC solution should be configured to only submit the *all non-compliant devices* queries, at most, once every four hours. Queries made more frequently will receive an http 503 error from the Intune service.
 
-## Use NAC for VPN on your iOS/iPadOS devices
+## Enable NAC
 
-NAC is available on the following VPNs without enabling NAC in the VPN profile:
+To enable use of NAC and the *compliance retrieval service* that became available in July 2021, reference your NAC product's most recent documentation for enabling NAC integration with Intune. This integration might require you to make changes after you upgrade to their new NAC product or version.
 
-- NAC for Cisco Legacy AnyConnect
-- F5 Access Legacy
-- Citrix VPN
-- Cisco AnyConnect, if:
-    - You are using Cisco ISE 3.1 or later
-    - You are using certificate-based authentication and have included the Intune device ID in the subject alternative name of the authentication certificate
+The compliance retrieval service requires certificate-based authentication and the use of the *Intune device ID* as the subject alternative name of the certificates. For Simple Certificate Enrollment Protocol (SCEP) and Private and public key pair (PKCS) certificates, you can add an attribute of the **URI** type with a value defined by your NAC provider. For example, your NAC provider's instructions might say to include `IntuneDeviceId://{{DeviceID}}`as the **Subject alternative name**.
 
-NAC is also supported for Cisco AnyConnect, Citrix SSO, and F5 Access by enabling NAC in the VPN profile.
+Other NAC products might require you include a device ID when using NAC with iOS VPN profiles.
 
-### To enable NAC for Cisco AnyConnect for iOS
+To learn more about certificate profiles, see: [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md)
 
-- Integrate ISE with Intune for NAC as described in the link below.
-- If using Cisco ISE 3.1 or later:
-    - Use certificate-based authentication for your AnyConnect VPN
-    - Include a subject alternative name entry in the authentication certificate profile with a **URI** attribute with a value of `{{DeviceId}}`
-- If using an earlier version of Cisco ISE, in the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
+## Data shared with NAC partners
 
-### To enable NAC for Citrix SSO
+The specific device properties that are shared with NAC partners depend on the version of the NAC API the NAC product uses. Contact your NAC partner for more information on which version of the NAC or Compliance Retrieval API your NAC product uses.
 
-- Use Citrix Gateway 12.0.59 or higher.  
-- Users must have Citrix SSO 1.1.6 or later installed.
-- [Integrate NetScaler with Intune for NAC](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html) as described in the Citrix product documentation.
-- In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
+Also, the data returned will be limited if:
+- The device isn't enrolled in Intune. In this case, no information other than that the device isn't managed by Intune will be shared with the NAC product.
+- The OS prevents the specific device property from being shared with Microsoft. Intune will share empty values back to the NAC product for data properties not shared with Intune by the OS.
 
-### To enable NAC for F5 Access
-
-- Use F5 BIG-IP 13.1.1.5 or later.
-- Integrate BIG-IP with Intune for NAC, using the guide at the **Integrate F5 BIG-IP Access Policy Manager with Intune**
-- In the VPN profile, select **Base settings** > **Enable Network Access Control (NAC)** > select **I agree**.
+| Device property | Available in NAC 1.0 | Available in NAC 1.1 | Available in NAC 1.3 | Available in Compliance Retrieval/NAC 2.0 |
+|--|--|--|--|--|
+| Compliance state | Yes | Yes | Yes | Yes |
+| Managed by Intune | Yes | Yes | Yes | Yes |
+| Personal or corporate ownership | No | Yes | Yes | No |
+| MAC address | Yes | Yes | Yes | No |
+| Serial number | Yes | Yes | Yes | No |
+| IMEI | Yes | Yes | Yes | No |
+| UDID | Yes | Yes | Yes | No |
+| MEID | Yes | Yes | Yes | No |
+| OS version | Yes | Yes | Yes | No |
+| Device model | Yes | Yes | Yes | No |
+| Manufacturer | Yes | Yes | Yes | No |
+| Azure Active Directory device ID | Yes | Yes | Yes | No |
+| Last contact time with Intune | Yes | Yes | Yes | No |
+| Intune device ID | No | No | No | Yes |
 
 
 ## Next steps
@@ -121,5 +131,5 @@ NAC is also supported for Cisco AnyConnect, Citrix SSO, and F5 Access by enablin
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/UEM-MDM-Server-Integration/b_MDM_UEM_Servers_CiscoISE/chapter.html#task_og1_5zx_cqb)
 - [Integrate Citrix Gateway with Intune](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrate F5 BIG-IP Access Policy Manager with Intune](https://techdocs.f5.com/en-us/edge-client-7-1-8/big-ip-access-policy-manager-edge-client-and-application-configuration-7-1-8/configuring-access-policy-manager-for-mdm-applications.html)
-- [Integrate HP Aruba ClearPass with Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
+- [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads/documents/RmlsZTowMTg2ZmY0Yy05MGE5LTExZWItODRiZC0yZjM5OWFjNzc5YTY%3D)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.10.0.0/secRMMIntune.pdf)

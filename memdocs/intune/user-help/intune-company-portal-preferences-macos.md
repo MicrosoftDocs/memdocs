@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 02/07/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -26,7 +26,8 @@ ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 # Manage Company Portal preferences for macOS 
@@ -46,6 +47,15 @@ The single sign-on extension configures your work or school account so that you 
 This setting enables Microsoft to collect data about your Intune Company Portal usage. When the checkbox is selected, your in-app performance and usage data is automatically anonymized and shared with Microsoft to help improve the reliability and performance of our products. Your organization doesn't have control over the collection of this data and cannot change your preference.  
 
 To turn off data collection in Company Portal, clear the checkbox next to **Allow Microsoft to collect usage data**.  
+
+## Enable or disable advanced logging
+
+The **Enable Advanced Logging** setting is available in the Intune Company Portal app for macOS devices. Device users can able to enable or disable advanced logging on a device. By turning on advanced logging, detailed log reports will be sent to Microsoft to troubleshoot issues. By default, the **Enable Advanced Logging** setting will be off. Device users should keep this setting off unless otherwise instructed by their organization's IT admin.
+
+To modify this setting on an macOS device:
+1. Open the Company Portal app.
+2. Go to the menu bar and select **Company Portal** > **Preferences**. 
+3. Under **Advanced logging**, modify the checkbox next to **Turn on advanced logging**.
 
 ## Next steps  
 

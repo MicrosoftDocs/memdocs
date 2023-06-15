@@ -1,16 +1,17 @@
 ---
 title: "UpdatePackageSiteState Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the UpdatePackageSiteState Windows Management Instrumentation class method updates the package installation state of the site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 5c597141-bccd-4c52-a1d6-767a82e77019
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

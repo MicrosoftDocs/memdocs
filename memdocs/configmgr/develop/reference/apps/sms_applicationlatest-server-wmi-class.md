@@ -1,18 +1,18 @@
 ---
-title: "SMS_ApplicationLatest Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent an application in Configuration Manager using SMS_ApplicationLatest class.
+title: SMS_ApplicationLatest Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 51447f4f-dc60-428e-9ce7-25abdea37b7c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ApplicationLatest Server WMI Class
 The `SMS_ApplicationLatest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.  
@@ -429,7 +429,7 @@ Class SMS_ApplicationLatest : SMS_ConfigurationItemLatestBaseClass
 
  Qualifiers: [enumeration, read]  
 
- Whether this application requires a user logon to setup. Possible values are:  
+ Whether this application requires a user logon to set up. Possible values are:  
 
 |Value|Logon required?|  
 |-|-|  

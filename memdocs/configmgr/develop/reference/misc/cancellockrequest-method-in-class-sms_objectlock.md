@@ -1,18 +1,18 @@
 ---
-title: "CancelLockRequest Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CancelLockRequest Method
+titleSuffix: Configuration Manager
+description: The CancelLockRequest Windows Management Instrumentation (WMI) class method cancels a lock request.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: c64dc0cb-82a6-40e2-8a27-ae1490105b94
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CancelLockRequest Method in Class SMS_ObjectLock
 The `CancelLockRequest` Windows Management Instrumentation (WMI) class method, in Configuration Manager, cancels a lock request.  

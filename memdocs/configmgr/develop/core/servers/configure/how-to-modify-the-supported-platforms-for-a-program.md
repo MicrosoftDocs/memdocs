@@ -1,18 +1,18 @@
 ---
-title: "Modify the Supported Platforms for a Program"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Modify the Supported Platforms for a Program
+titleSuffix: Configuration Manager
+description: Add supported platforms to a package by obtaining specific instances of the SMS_Package and SMS_Program classes.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 58f4f08b-bc7f-4e6e-989c-39769f0f3f12
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Modify the Supported Platforms for a Program
 Your application can add supported platforms to a package, in Configuration Manager, by obtaining specific instances of the `SMS_Package` and `SMS_Program` classes and then adding an instance of the `SMS_OS_Details` class to the `SupportedOperatingSystems` property.  

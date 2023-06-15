@@ -8,24 +8,25 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 06/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: maholdaa
+ms.reviewer: maholdaa, tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
 
 # Add Wi-Fi settings for devices running Android device administrator in Microsoft Intune
@@ -57,7 +58,7 @@ Create an [Android device administrator Wi-Fi device configuration profile](wi-f
 
   - **EAP-TLS**: Also enter:
 
-    - **Server Trust** - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network. It authenticates the connection.
+    - **Server Trust** - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Client Authentication** - **Client certificate for client authentication (Identity certificate)**: Choose the SCEP or PKCS client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
 
@@ -65,7 +66,7 @@ Create an [Android device administrator Wi-Fi device configuration profile](wi-f
 
   - **EAP-TTLS**: Also enter:
 
-    - **Server Trust** - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network. It authenticates the connection.
+    - **Server Trust** - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Client Authentication**: Choose an **Authentication method**. Your options:
 
@@ -83,7 +84,7 @@ Create an [Android device administrator Wi-Fi device configuration profile](wi-f
 
   - **PEAP**: Also enter:
 
-    - **Server Trust** - **Root certificate for server validation**: Choose an existing trusted root certificate profile. This certificate is presented to the server when the client connects to the network. It authenticates the connection.
+    - **Server Trust** - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
     - **Client Authentication**: Choose an **Authentication method**. Your options:
 

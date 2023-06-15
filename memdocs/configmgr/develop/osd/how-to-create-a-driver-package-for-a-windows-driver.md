@@ -1,18 +1,18 @@
 ---
-title: "Create a Driver Package for a Windows Driver"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a Driver Package for a Windows Driver
+titleSuffix: Configuration Manager
+description: In Configuration Manager, to create a package for an operating system deployment driver, first create a SMS_DriverPackage Server WMI Class object. To add a driver to the package, call the AddDriverContent Method in Class SMS_DriverPackage.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: c4e64b28-2159-4286-b1ef-4935c7e07e14
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Driver Package for a Windows Driver in Configuration Manager
 You create a package for an operating system deployment driver, in Configuration Manager, by creating a [SMS_DriverPackage Server WMI Class](../../develop/reference/osd/sms_driverpackage-server-wmi-class.md) object. To add a driver to the package, you call the [AddDriverContent Method in Class SMS_DriverPackage](../../develop/reference/osd/adddrivercontent-method-in-class-sms_driverpackage.md).  

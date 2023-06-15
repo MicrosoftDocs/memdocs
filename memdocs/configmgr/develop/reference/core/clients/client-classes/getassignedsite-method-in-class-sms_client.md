@@ -1,18 +1,18 @@
 ---
-title: "GetAssignedSite Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the GetAssignedSite method to get the current assigned site of the client in Configuration Manager.
+title: GetAssignedSite Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 62374585-a938-4b1f-8f59-1e7509b39727
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetAssignedSite Method in Class SMS_Client
 In Configuration Manager, the `GetAssignedSite` method gets the current assigned site of the client.  

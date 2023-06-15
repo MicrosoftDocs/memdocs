@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 4a68faf9-29c7-458b-b3ef-fb99aad5ee7d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for power management in Configuration Manager

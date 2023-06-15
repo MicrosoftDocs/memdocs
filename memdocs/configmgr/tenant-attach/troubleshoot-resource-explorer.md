@@ -1,24 +1,26 @@
 ---
 title: Troubleshooting resource explorer
 titleSuffix: Configuration Manager
-description: Troubleshooting resource explorer for Configuration Manager tenant attach
+description: Troubleshooting resource explorer for Intune tenant attach
 ms.date: 01/25/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Troubleshoot resource explorer for devices uploaded to the admin center
 <!--6479284-->
 *Applies to: Configuration Manager (current branch)*
 
-Use the following to troubleshoot resource explorer for ConfigMgr devices in the Microsoft Endpoint Manager admin center:
+Use the following to troubleshoot resource explorer for ConfigMgr devices in the Microsoft Intune admin center:
 
-## Common errors from the Microsoft Endpoint Manager admin center
+## Common errors from the Microsoft Intune admin center
 
 ### <a name="bkmk_intune"></a> You don’t have access to view this information
 <!--7980141-->
@@ -33,7 +35,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Verify the account has **Read** permission for the device's **Collection** in Configuration Manager.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
+1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
@@ -47,7 +49,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 ### <a name="bkmk_sync"></a> The site information hasn't yet synchronized
 
-**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Endpoint Manager admin center. 
+**Error message:** The site information hasn't yet synchronized from Configuration Manager to the Microsoft Intune admin center. 
 
 **Possible causes:**
 - This error typically occurs when newly onboarding to tenant attach. Wait an hour for the information to synchronize.
@@ -89,7 +91,7 @@ Use the following to troubleshoot resource explorer for ConfigMgr devices in the
 
 ### <a name="bkmk_import"></a> Newly imported inventory classes fail to load
 <!--9391319, -->
-**Scenario:** New hardware inventory classes are imported. You can see the newly imported classes in **Resource Explorer** from the Configuration Manager console. When you open **Resource explorer** from Microsoft Endpoint Manager admin center, the newly imported class doesn't have data and **Failed** appears at the bottom of the results pane.
+**Scenario:** New hardware inventory classes are imported. You can see the newly imported classes in **Resource Explorer** from the Configuration Manager console. When you open **Resource explorer** from Microsoft Intune admin center, the newly imported class doesn't have data and **Failed** appears at the bottom of the results pane.
 
 **Workaround:** The current workaround is to restart the `SMS_Executive` service on the provider machine for which the [administration service](../develop/adminservice/overview.md) handles service requests. You can determine where your administration service is by reviewing the **CMGatewayNotification.log** and looking for your server in the URL.
 

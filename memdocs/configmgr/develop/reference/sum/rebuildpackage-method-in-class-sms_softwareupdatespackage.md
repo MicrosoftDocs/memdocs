@@ -1,18 +1,18 @@
 ---
 title: RebuildPackage method in class SMS_SoftwareUpdatesPackage
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: The RebuildPackage WMI class method brings the software updates package to its expected state if files are found to be corrupt or have been deleted.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0cc4b1e3-7e96-45fe-a1c5-e012aa1af8b3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RebuildPackage Method in Class SMS_SoftwareUpdatesPackage
 The `RebuildPackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, brings the software updates package to its expected state if files are found to be corrupt or have been deleted.  

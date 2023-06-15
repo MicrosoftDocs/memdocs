@@ -1,19 +1,18 @@
 ---
-title: "SMS_CIRelation Class"
-titleSuffix: "Configuration Manager"
+title: SMS_CIRelation Class
+titleSuffix: Configuration Manager
 description: Learn about the SMS_CIRelation Server Windows Management Instrumentation (WMI) Class.
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 9afb280d-716b-40ae-90bb-0c543b4ac9c7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CIRelation Server WMI Class
 The `SMS_CIRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines the relationship between two configuration items, for example, the superseding of one item by another.  

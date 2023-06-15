@@ -1,18 +1,18 @@
 ---
-title: "VerifySignature Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: VerifySignature Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the VerifySignature WMI class method verifies the data signature.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a9e9ab89-6b46-4e90-ac0f-c038bd5c9fec
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # VerifySignature Method in Class CCM_SoftwareCatalogUtilities
 The `VerifySignature` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that verifies the data signature.   

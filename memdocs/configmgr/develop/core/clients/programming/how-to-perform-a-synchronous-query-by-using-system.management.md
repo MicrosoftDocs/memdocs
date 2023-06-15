@@ -1,4 +1,5 @@
 ---
+description: Learn how to run a synchronous query in Configuration Manager using ManagementObjectSearcher object.
 title: "Perform a Synchronous Query by Using System.Management"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -6,11 +7,11 @@ ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 015c0e0a-3ef1-4c12-8796-7dc184ea584c
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

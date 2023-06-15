@@ -2,13 +2,13 @@
 # required metadata
 
 title: Device features and settings in Microsoft Intune
-description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Intune admin center. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 03/20/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,8 +27,10 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection:
-  - M365-identity-device-management
-  - highpri
+- tier1
+- M365-identity-device-management
+- highpri
+- highseo
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
@@ -39,12 +41,11 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 Some profile examples include:
 
-- On Windows 10/11 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
-- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 - Allow or prevent access to bluetooth on the device.
 - Create a WiFi or VPN profile that gives different devices access to your corporate network.
 - Manage software updates, including when they're installed.
 - Run an Android device as dedicated kiosk device that can run one app, or run many apps.
+- On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
@@ -66,6 +67,7 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -131,6 +133,7 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -258,15 +261,6 @@ This feature supports:
 
 - Android Enterprise (OEMConfig)
 
-## PowerShell scripts
-
-[PowerShell scripts](../apps/intune-management-extension.md) use the Intune Management Extension to upload your PowerShell scripts in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
-
-This feature supports:
-
-- Windows 11
-- Windows 10
-
 ## Preference file
 
 [Preference files](preference-file-settings-macos.md) on macOS devices include information about apps. For example, you can use preference files to control web browser settings, customize apps, and more.
@@ -274,6 +268,9 @@ This feature supports:
 This feature supports:
 
 - macOS
+
+> [!TIP]
+> macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
 ## Settings catalog
 
@@ -285,6 +282,7 @@ On macOS, you can configure Microsoft Edge version 77 and newer using the settin
 
 This feature supports:
 
+- iOS/iPadOS
 - macOS
 - Windows 11
 - Windows 10
@@ -300,6 +298,21 @@ This feature supports:
 - Windows 11
 - Windows 10
 - Windows Holographic for Business
+
+## Shell scripts
+
+On Linux devices, you can [add existing Bash scripts](../configuration/device-profiles.md) to customize settings and features on these devices. This concept is similar to creating a custom device configuration profile, and deploying the policy to your devices. With Linux, you're using existing Bash scripts to configure features and settings that aren't built into Intune.
+
+On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md), and then deploy these scripts to your macOS devices.
+
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+
+This feature supports:
+
+- Linux
+- macOS
+- Windows 11
+- Windows 10
 
 ## Update policies
 
@@ -334,6 +347,7 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
@@ -352,13 +366,15 @@ This feature supports:
 
 ## Wired networks
 
-[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS desktop computers. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
+[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS and Windows desktop computers and devices. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
 
-When you assign the profile, macOS desktop users get access to your corporate wired network without having to configure it themselves.
+When you assign the profile, users get access to your corporate wired network without having to configure it themselves.
 
 This feature supports:
 
 - macOS
+- Windows 11
+- Windows 10
 
 ## Zebra Mobility Extensions (MX)
 

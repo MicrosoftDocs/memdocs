@@ -6,10 +6,10 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 05/09/2023
 audience: Admin
 ms.topic: how-to
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier1
 ---
 
 # Install apps
@@ -43,7 +45,7 @@ Some apps may require that the user have administrator privileges. To change a u
 
 ## Default apps
 
-The following apps are pre-installed on Windows 365 Business Cloud PCs when they are created:
+The following apps are pre-installed on Windows 365 Business Cloud PCs when they're created:
 
 - [Microsoft 365 Apps for Enterprise](/mem/intune/apps/apps-add-office365) (formerly Office 365 Pro Plus)
 - Microsoft Teams

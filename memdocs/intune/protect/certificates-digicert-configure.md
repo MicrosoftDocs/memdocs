@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/29/2021
+ms.date: 03/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -19,17 +19,19 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier3
+- M365-identity-device-management
 ---
-# Set up the Certificate Connector for DigiCert PKI Platform
+# Set up the Certificate Connector for Microsoft Intune to support the DigiCert PKI Platform
 
-Use the Certificate Connector for Microsoft Intune to issue PKCS certificates from DigiCert PKI Platform to Intune-managed devices. You can use the connector with only a DigiCert certification authority (CA), or with both a DigiCert CA and a Microsoft CA.
+You can use the *Certificate Connector for Microsoft Intune* to issue PKCS certificates from DigiCert PKI Platform to Intune-managed devices. The certificate connector works with either a DigiCert certification authority (CA) only, or with both a DigiCert CA and a Microsoft CA.
 
 > [!TIP]
 > DigiCert acquired Symantec's Website Security and related PKI Solutions business. For more information about this change, see the [Symantec technical support article](https://support.symantec.com/en_US/article.INFO4722.html).
@@ -49,7 +51,8 @@ If you'll use the connector with only the DigiCert CA, you can use the instructi
 You'll need the following to support use of a DigiCert CA:
 
 - **An active subscription at the DigiCert CA** - The subscription is required to get a registration authority (RA) certificate from the DigiCert CA.
-- **Certificate Connector for Microsoft Intune** - The certificate connector has its own prerequisites. For information about the certificate connector, see:
+- **Certificate Connector for Microsoft Intune** - You'll be instructed to install and configure the certificate connector later in this article. To help you plan for the connectors prerequesites in advance, see the following articles:  
+
   - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md).
   - [Prerequisites](certificate-connector-prerequisites.md).
   - [Installation and configuration](certificate-connector-install.md).
@@ -91,7 +94,7 @@ You'll need the following to support use of a DigiCert CA:
 
 3. Open the request.csr file in Notepad and copy the CSR content that's in the following format:
 
-   ``` 
+   ```
    -----BEGIN NEW CERTIFICATE REQUEST-----
    MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
    …
@@ -147,101 +150,36 @@ You'll need the following to support use of a DigiCert CA:
    g. Record a copy the RA certificate thumbprint without any spaces. The following is an example of the thumbprint:
 
       `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
+  
+      Later, after you install the Certificate Connector for Microsoft Intune, you'll use this value to update three .config files for the connector.
 
     > [!NOTE]
     > For assistance in getting the RA certificate from the DigiCert CA, contact [DigiCert customer support](mailto:enterprise-pkisupport@digicert.com).
 
-## Prepare to install the Certificate Connector for Microsoft Intune
+## Configure the certificate connector to support DigiCert
 
-> [!TIP]
-> This section applies if you'll use Intune Certificate Connector with only a DigiCert CA. If you use Intune Certificate Connector with a Microsoft CA and want to add DigiCert CA support, skip ahead to [Configure the connector to support DigiCert](#configure-the-connector-to-support-digicert).
+1. Use the information at [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md) to first download and then install and configure the Certificate Connector for Microsoft Intune:
 
-1. Choose one of the Windows operating system versions from the following list and install it on a computer:
-   * Windows Server 2012 R2 Datacenter
-   * Windows Server 2012 R2 Standard
-   * Windows Server 2016 Datacenter
-   * Windows Server 2016 Standard
+   - During installation step **2** of the connector install procedure, select the options for **PKCS** and optionally for **Certificate revocation**.
+   - After you complete the connector installation and configuration procedure, return to this procedure to continue.
 
-2. Create a user with administrative privileges and use it to complete the following steps.
+2. Configure the connector to support DigiCert by modifying three *.config* files for the connector, and then restarting their related services:
 
-3. Check for the latest Windows updates and install them if available. After you install Windows updates, restart the computer.
+   1. On the server where the connector installed, go to *%ProgramFiles%\Microsoft Intune\PFXCertificateConnector\ConnectorSvc*. (By default, the Certificate Connector for Microsoft Intune installs to %ProgramFiles%\Microsoft Intune\PFXCertificateConnector.)
 
-4. Install .NET Framework 3.5:
+   2. Use a simple text editor like Notepad.exe to update the *RACertThumbprint* key value in the following three files. Replace the value in the files with the value you copied during step **6.g.** of the procedure in the [preceding section](#install-the-digicert-ra-certificate):
 
-   a. Open **Control Panel** > **Programs and Features** > **Turn Windows features on or off**.
+      - Microsoft.Intune.ConnectorsPkiCreate.exe.config
+      - Microsoft.Intune.ConnectorsPkiRevoke.exe.config
+      - Microsoft.Intune.ConnectorsPkiCreateLegacy.exe.config
 
-   b. Select **.NET Framework 3.5** and install it.
+     For example, locate the entry in each file that is similar to `<add key="RACertThumbprint" value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>`, and replace `EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5` with the new *RA Cert Thumbprint* value.
 
-## Install the Certificate Connector for Microsoft Intune for use with DigiCert
+   3. Run **services.msc**  and stop and then restart the following three services:
 
-
-<!-- PENDING REVISIONS -->
-
-
-> [!TIP]
-> If you use the certificate connector with a Microsoft CA and want to add DigiCert CA support, skip ahead to [Configure the connector to support DigiCert](#configure-the-connector-to-support-digicert).
-
-Download the latest Intune Certificate Connector version from the Intune administration portal and follow these instructions.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **+ Add**.
-
-3. Click *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
-
-   ![Download the connector software](./media/certificates-digicert-configure/connector-download.png)
-
-4. On the server where you want to install the connector, run **NDESConnectorSetup.exe** with elevated privileges.
-
-5. On the **Installation Options** page, select **PFX Distribution**.
-
-   ![Select PFX Distribution](./media/certificates-digicert-configure/digicert-ca-connector-install.png)
-
-   > [!IMPORTANT]
-   > If you'll use the Intune Certificate Connector to issue certificates from a Microsoft CA and a DigiCert CA, select **SCEP and PFX Profile Distribution**.
-
-6. Use the default selections to finish setting up the connector.
-
-## Configure the connector to support DigiCert
-
-<!-- PENDING REVISIONS -->
-
-
-By default, Intune Certificate Connector is installed in **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc**.
-
-1. In the **NDESConnectorSvc** folder, open the **NDESConnector.exe.config** file in Notepad.
-
-   a. Update the `RACertThumbprint` key value with the certificate thumbprint value that you copied in the previous section. For example:
-
-      ```
-      <add key="RACertThumbprint"
-      value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
-      ```
-
-   b. Save and close the file.
-
-2. Open **services.msc**:
-
-   a. Select **Intune Connector Service**.
-
-   b. Stop the service and then start the service.
-
-   c. Close the service's window.
-
-## Set up the Intune administrator account  
-
-> [!TIP]
-> If you use Intune Certificate Connector with a Microsoft CA and want to add DigiCert CA support, skip ahead to [Create a trusted certificate profile](#create-a-trusted-certificate-profile).
- 
-1. Open the NDES Connector user interface from **%ProgramFiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe**.
-
-2. On the **Enrollment** tab, select **Sign In**.
-
-3. Provide your Intune tenant admin credentials.
-
-4. Select **Sign In**, and then select **OK** to confirm a successful enrollment. You can then close the NDES Connector user interface.
-
-   ![NDES Connector interface with "Successfully enrolled" message](./media/certificates-digicert-configure/certificates-digicert-configure-connector-configure.png)
+      - PFX Revoke Certificate Connector for Microsoft Intune (PkiRevokeConnectorSvc)
+      - PFX Create Certificate Connector for Microsoft Intune (PkiCreateConnectorSvc)
+      - PFX Create Legacy Connector for Microsoft Intune (PfxCreateLegacyConnectorSvc)
 
 ## Create a trusted certificate profile
 
@@ -257,7 +195,7 @@ The PKCS certificates you'll deploy for Intune managed devices must be chained w
 
    d. Select **Download root certificate** to download the trusted root certificate.
 
-2. Create a trusted certificate profile in the Microsoft Endpoint Manager admin center portal. For detailed guidance, see [To create a trusted certificate profile](../protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
+2. Create a trusted certificate profile in the Microsoft Intune admin center. For detailed guidance, see [To create a trusted certificate profile](../protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile). Be sure to assign this profile to devices that will receive certificates. To assign the profile to groups, see [Assign device profiles](../configuration/device-profile-assign.md).
 
    After you create the profile, it appears in the list of profiles in the **Device configuration – Profiles** pane, with a profile type of **Trusted certificate**.  
 
@@ -277,7 +215,7 @@ The certificate profile OID is associated with a certificate profile template in
 
 ## Create a PKCS certificate profile
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 
@@ -293,13 +231,13 @@ The certificate profile OID is associated with a certificate profile template in
    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later.
    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
-6. In **Configuration settings**, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through Intune Certificate Connector.
+6. In **Configuration settings**, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through the Certificate Connector for Microsoft Intune.
 
    |PKCS certificate parameter | Value | Description |
    | --- | --- | --- |
-   | Certificate authority | pki-ws.symauth.com | This value must be the DigiCert CA base service FQDN without trailing slashes. If you aren't sure whether this is the correct base service FQDN for your DigiCert CA subscription, contact DigiCert customer support. <br><br>*With the change from Symantec to DigiCert, this URL remains unchanged*. <br><br> If this FQDN is incorrect, Intune Certificate Connector won't issue PKCS certificates from the DigiCert CA.| 
-   | Certificate authority name | Symantec | This value must be the string **Symantec**. <br><br> If there's any change to this value, Intune Certificate Connector won't issue PKCS certificates from the DigiCert CA.|
-   | Certificate template name | Certificate profile OID from the DigiCert CA. For example: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| This value must be a certificate profile OID [obtained in the previous section](#get-the-certificate-profile-oid) from the DigiCert CA certificate profile template. <br><br> If Intune Certificate Connector can't find a certificate template associated with this certificate profile OID in the DigiCert CA, it won't issue PKCS certificates from the DigiCert CA.|
+   | Certificate authority | pki-ws.symauth.com | This value must be the DigiCert CA base service FQDN without trailing slashes. If you aren't sure whether this is the correct base service FQDN for your DigiCert CA subscription, contact DigiCert customer support. <br><br>*With the change from Symantec to DigiCert, this URL remains unchanged*. <br><br> If this FQDN is incorrect, the certificate connector won't issue PKCS certificates from the DigiCert CA.| 
+   | Certificate authority name | Symantec | This value must be the string **Symantec**. <br><br> If there's any change to this value, the certificate connector won't issue PKCS certificates from the DigiCert CA.|
+   | Certificate template name | Certificate profile OID from the DigiCert CA. For example: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| This value must be a certificate profile OID [obtained in the previous section](#get-the-certificate-profile-oid) from the DigiCert CA certificate profile template. <br><br> If the certificate connector can't find a certificate template associated with this certificate profile OID in the DigiCert CA, it won't issue PKCS certificates from the DigiCert CA.|
 
    ![Selections for CA and certificate template](./media/certificates-digicert-configure/certificates-digicert-pkcs-example.png)
 
@@ -310,33 +248,18 @@ The certificate profile OID is associated with a certificate profile template in
 
 8. On the *Overview* page of the new profile, select **Assignments** and configure an appropriate group that will receive this profile. At least one user or device must be part of the assigned group.
 
-After you complete the previous steps, Intune Certificate Connector will issue PKCS certificates from the DigiCert CA to Intune-managed devices in the assigned group. These certificates will be available in the **Personal** store of the **Current User** certificate store on the Intune-managed device.
+After you complete the previous steps, Certificate Connector for Microsoft Intune will issue PKCS certificates from the DigiCert CA to Intune-managed devices in the assigned group. These certificates will be available in the **Personal** store of the **Current User** certificate store on the Intune-managed device.
 
 ### Supported attributes for the PKCS certificate profile
 
 |Attribute | Intune supported formats | DigiCert Cloud CA supported formats | result |
 | --- | --- | --- | --- |
 | Subject name |Intune supports the subject name in following three formats only: <br><br> 1. Common name <br> 2. Common name that includes email <br> 3. Common name as email <br><br> For example: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | The DigiCert CA supports more attributes.  If you want to select more attributes, they must be defined with fixed values in the DigiCert certificate profile template.| We use common name or email from the PKCS certificate request. <br><br> Any mismatch in attribute selection between the Intune certificate profile and the DigiCert certificate profile template results in no certificates issued from the DigiCert CA.|
-| SAN | Intune supports only the following SAN field values: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (encoded value) | The DigiCert Cloud CA also supports these parameters. If you want to select more attributes, they must be defined with fixed values in the DigiCert certificate profile template. <br><br> **AltNameTypeEmail**: If this type isn't found in the SAN, Intune Certificate Connector uses the value from **AltNameTypeUpn**.  If **AltNameTypeUpn** is also not found in the SAN, then Intune Certificate Connector uses the value from the subject name if it's in email format.  If the type is still not found, Intune Certificate Connector fails to issue the certificates. <br><br> Example: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn**: If this type is not found in the SAN, Intune Certificate Connector uses the value from **AltNameTypeEmail**. If **AltNameTypeEmail** is also not found in the SAN, then Intune Certificate Connector uses the value from subject name if it's in email format. If the type is still not found, Intune Certificate Connector fails to issue the certificates.  <br><br> Example: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: If this type isn't found in the SAN, Intune Certificate Connector fails to issue the certificates. <br><br> Example: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  The value of this field is supported only in encoded format (hexadecimal value) by the DigiCert CA. For any value in this field, Intune Certificate Connector converts it to base64 encoding before it submits the certificate request. *Intune Certificate Connector doesn't validate whether this value is already encoded or not.* | None |
+| SAN | Intune supports only the following SAN field values: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (encoded value) | The DigiCert Cloud CA also supports these parameters. If you want to select more attributes, they must be defined with fixed values in the DigiCert certificate profile template. <br><br> **AltNameTypeEmail**: If this type isn't found in the SAN, the certificate connector uses the value from **AltNameTypeUpn**.  If **AltNameTypeUpn** is also not found in the SAN, then the certificate connector uses the value from the subject name if it's in email format.  If the type is still not found, the certificate connector fails to issue the certificates. <br><br> Example: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn**: If this type is not found in the SAN, the certificate connector uses the value from **AltNameTypeEmail**. If **AltNameTypeEmail** is also not found in the SAN, then the certificate connector uses the value from subject name if it's in email format. If the type is still not found, the certificate connector fails to issue the certificates.  <br><br> Example: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: If this type isn't found in the SAN, the certificate connector fails to issue the certificates. <br><br> Example: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  The value of this field is supported only in encoded format (hexadecimal value) by the DigiCert CA. For any value in this field, the certificate connector converts it to base64 encoding before it submits the certificate request. *Certificate Connector for Microsoft Intune doesn't validate whether this value is already encoded or not.* | None |
 
 ## Troubleshooting
-<!-- PENDING REVISIONS -->
 
-Intune Certificate Connector service logs are available in **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs** on the NDES Connector machine. Open the logs in [SvcTraceViewer](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) and search for exceptions or error messages.
-
-| Issue/error message | Resolution steps |
-| --- | --- |
-| Unable to sign in with the Intune tenant admin account on NDES Connector UI. | This can happen when the on-premises certificate connector isn't enabled in the Microsoft Endpoint Manager admin center. To resolve this issue: <br><br> 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. <br> 3. Locate the certificate connector and ensure it's enabled. <br><br> After you complete the previous steps, try to sign in with the same Intune tenant admin account in the NDES Connector UI. |
-| NDES Connector certificate could not be found. <br><br> System.ArgumentNullException: Value can't be null. | Intune Certificate Connector shows this error if the Intune tenant administrator account has never signed in to the NDES Connector UI. <br><br> If this error persists, restart Intune Service Connector. <br><br> 1. Open **services.msc**. <br> 2. Select **Intune Connector Service**. <br> 3. Right-click and select **Restart**.|
-| NDES Connector - IssuePfx -Generic Exception: <br> System.NullReferenceException: Object reference not set to an instance of an object. | This error is transient. Restart Intune Service Connector. <br><br> 1. Open **services.msc**. <br> 2. Select **Intune Connector Service**. <br> 3. Right-click and select **Restart**. |
-| DigiCert Provider - Failed to get DigiCert policy. <br><br>"The operation has timed out." | Intune Certificate Connector received an operation time-out error while communicating with the DigiCert CA. If this error continues to occur, increase the connection time-out value and try again. <br><br> To increase the connection time-out: <br> 1. Go to the NDES Connector computer. <br>2. Open the **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** file in Notepad. <br> 3. Increase the time-out value for the following parameter: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Restart the Intune Certificate Connector service. <br><br> If the issue persists, contact DigiCert customer support. |
-| DigiCert Provider - Failed to get client certificate. | Intune Certificate Connector failed to retrieve the resource authorization certificate from the Local Machine-Personal certificate store. To resolve this issue, install the resource authorization certificate in the Local Machine-Personal certificate store along with its private key. <br><br> The resource authorization certificate must be obtained from the DigiCert CA. For more details, contact DigiCert customer support. | 
-| DigiCert Provider - Failed to get DigiCert policy. <br><br>"The request was aborted: Could not create SSL/TLS secure channel." | This error occurs under the following scenarios: <br><br> 1. The Intune Certificate Connector service doesn't have permissions to read the resource authorization certificate along with its private key from the Local Machine-Personal certificate store. To resolve this issue, check the connector service's running context account in services.msc. The connector service must run under the NT AUTHORITY\SYSTEM context. <br><br> 2. The PKCS certificate profile in the Intune admin portal might be configured with an invalid base service FQDN for the DigiCert CA. The FQDN is similar to **pki-ws.symauth.com**. To resolve this issue, check with DigiCert customer support whether the URL is correct for your subscription. <br><br> 3. Intune Certificate Connector fails to authenticate with the DigiCert CA through the resource authorization certificate because it can't retrieve the private key. To resolve this issue, install the resource authorization certificate along with its private key in the Local Machine-Personal certificate store. <br><br> If the issue persists, contact DigiCert customer support. |
-| DigiCert Provider - Failed to get DigiCert policy. <br><br>"A request element is not understood." | Intune Certificate Connector failed to get the DigiCert certificate profile template, because the client profile OID doesn't match the Intune certificate profile. In another case, Intune Certificate Connector can't find the certificate profile template that's associated with the client profile OID in the DigiCert CA. <br><br> To resolve this issue, obtain the correct Client Profile OID from the DigiCert Certificate template in the DigiCert CA. Then update the PKCS certificate profile in the Intune admin portal. <br><br> Obtain the client profile OID from the DigiCert CA: <br> 1. Sign in to the DigiCert CA admin portal. <br> 2. Select **Manage Certificate Profiles**. <br> 3. Select the certificate profile that you want to use. <br> 4. Get the certificate profile OID. It looks similar to the following example: <br> `Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109` <br><br> Update the PKCS certificate profile with the correct certificate Profile OID: <br>1. Sign in to the Intune admin portal. <br> 2. Go to the PKCS certificate profile and select **Edit**. <br> 3. Update the certificate profile OID in the field for the certificate template name. <br> 4. Save the PKCS certificate profile. |
-| DigiCert Provider - Policy verification failed. <br><br> The attribute doesn't fall under the DigiCert supported certificate template attributes list. | The DigiCert CA shows this message when there's a discrepancy between the DigiCert certificate profile template and the Intune certificate profile. This issue likely happened due to attribute mismatch in **SubjectName** or **SubjectAltName**. <br><br> To resolve this issue, select Intune supported attributes for **SubjectName** and **SubjectAltName** in the DigiCert certificate profile template. For more information, see the Intune supported attributes in the **Certificate Parameters** section. |
-| Some user devices are not receiving PKCS certificates from the DigiCert CA. | This issue happens when the user UPN contains special characters like an underscore (example: `global_admin@intune.onmicrosoft.com`). <br><br> The DigiCert CA doesn't support special characters in **mail_firstname** and **mail_lastname**. <br><br> The following steps help resolve this issue: <br><br> 1. Sign in to the DigiCert CA admin portal. <br> 2. Go to **Manage Certificate Profiles**. <br> 3. Select the certificate profile used for Intune. <br> 4. Select the **Customize options** link. <br> 5. Select the **Advanced options** button. <br> 6. Under **Certificate fields – Subject DN**, add a **Common Name (CN)** field and delete the existing **Common Name (CN)** field. Add and delete operations must be performed together. <br> 7. Select **Save**. <br><br> With the preceding change, the DigiCert certificate profile requests **"CN=\<upn\>"** instead of **mail_firstname** and **mail_lastname**. |
-| User manually deleted already deployed certificate from the device. | Intune redeploys the same certificate during the next check-in or policy enforcement. In this case, NDES Connector doesn't receive a PKCS certificate request. |
-| Digicert profile shows error for a device that was previously working and the certificate is not currently present on the device | Digicert may not issue a duplicate certificate to a specific host name. If the certificate is no longer on the device revoke the previously issued certificate in the Digicert admin console. This includes if the certificate was removed from the device and if the device was factory reset. On the next check-in or policy enforcement the device will receive a new certificate from Digicert. 
+Logs for the Certificate Connector for Microsoft Intune are available as Event logs on the server where the connector is installed. These logs provide details about the connectors operation, and can be used to identify problems with the certificate connector and operations.  For more information, see [Logging](../protect/certificate-connector-overview.md#logging).
 
 ## Next steps
 

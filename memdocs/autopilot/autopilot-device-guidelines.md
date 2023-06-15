@@ -1,25 +1,23 @@
 ---
 title: Windows Autopilot device guidelines
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
-ms.mktglfcycl: deploy
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 2/1/2022
-ms.collection: M365-modern-desktop
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection:
+  - M365-modern-desktop
+  - tier2
 ms.topic: troubleshooting
 ---
 
 # Windows Autopilot device guidelines
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -48,4 +46,4 @@ The following best practices ensure that devices can easily be provisioned as pa
 ## Next steps
 
 [Windows Autopilot customer consent](registration-auth.md)<br>
-[Motherboard replacement scenario guidance](autopilot-mbr.md)<br>
+[Motherboard replacement scenario guidance](autopilot-motherboard-replacement.md)<br>

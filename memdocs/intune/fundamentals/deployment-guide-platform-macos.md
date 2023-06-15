@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Deployment guide: Manage macOS devices in Microsoft Intune
@@ -123,7 +125,7 @@ As you set up apps and app policies, think about your organization's requirement
 | Task | Detail | 
 | ---- | ------ | 
 |[Add Intune Company Portal app ](../apps/apps-company-portal-macos.md)|Learn how to get Company Portal on devices or instruct users how to do it on their own. | 
-|[Add Microsoft Edge](../apps/manage-microsoft-edge.md) | Add and assign Microsoft Edge in Intune. | 
+|[Add Microsoft Edge](../apps/apps-edge-macos.md) | Add and assign Microsoft Edge in Intune. | 
 |[Add Microsoft 365 ](../apps/apps-add-office365-macos.md)| Add and assign Microsoft 365 apps in Intune. | 
 |[Add line-of-business apps ](../apps/lob-apps-macos.md)| Add and assign macOS line-of-business (LOB) apps in Intune.| 
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
@@ -143,13 +145,13 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 ## Next steps  
 
-* Check out [Walk through Intune in Microsoft Endpoint Manager](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
+* Check out [Walk through Intune admin center](tutorial-walkthrough-endpoint-manager.md) for a tutorial about how to navigate and use Intune. Tutorials are 100 – 200 level content for people new to Intune or a specific scenario.   
 
 * For tutorials about app deployment, see the following Microsoft Tech Community blogs written by the Intune Support Team:  
 
     *  [Deploying macOS apps with the Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-intune-scripting-agent/ba-p/2298072).  
 
-    * [Deploying Microsoft 365 Apps for Mac with Microsoft Endpoint Manager - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
+    * [Deploying Microsoft 365 Apps for Mac with Microsoft Intune - A Deep Dive](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-endpoint/ba-p/2243040)
 
 
 * For other versions of this guide, see:   

@@ -6,11 +6,12 @@ ms.date: 08/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # PKI certificate requirements for Configuration Manager
@@ -35,7 +36,7 @@ For more information, see the following articles:
 
 ### Secure Hash Algorithm 2 (SHA-2) certificates
 
-Issue new server and client authentication certificates that are signed with SHA-2, which includes SHA-256 and SHA-512. All internet-facing services should use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.
+Issue new server and client authentication certificates that are signed with SHA-2, which includes SHA-256 and SHA-512. All internet-facing services should use an SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase an SHA-2 certificate.
 
 Windows doesn't trust certificates signed with SHA-1. For more information, see [Windows Enforcement of SHA1 certificates](https://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 
@@ -204,12 +205,18 @@ Certificate requirements:
 This certificate has two purposes:
 
 - It authenticates the distribution point to an HTTPS-enabled management point before the distribution point sends status messages.
+
+    > [!NOTE]
+    > When you configure all management points for HTTPS, then HTTPS-enabled distribution points must use a PKI-issued certificate. Don't use self-signed certificates on distribution points when management points use certificates. Issues may occur otherwise. For example, distribution points won't sent state messages.<!-- 13860499 -->
+
 - A PXE-enabled distribution point sends this certificate to computers. If the task sequence includes client actions like client policy retrieval or sending inventory information, the computer can connect to an HTTPS-enabled management point during the OS deployment process.
 
-This certificate is only used during the OS deployment process. It isn't installed on the client. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
-
-> [!NOTE]
-> The requirements for this certificate are the same as the client certificate for boot images. Because the requirements are the same, you can use the same certificate file.
+    > [!NOTE]
+    > For this PXE scenario, this certificate is only used during the OS deployment process. It isn't installed on the client. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
+    >
+    > The requirements for this certificate are the same as the client certificate for task sequence media. Because the requirements are the same, you can use the same certificate file.
+    >
+    > The certificate that you specify to HTTPS-enable a distribution point applies to all content distribution operations, not just OS deployment.
 
 Certificate requirements:
 
@@ -275,13 +282,13 @@ Certificate requirements:
 
 By default, Configuration Manager looks for computer certificates in the Personal store in the Computer certificate store.
 
-### Boot images for deploying operating systems
+### Task sequence media for deploying operating systems
 
-The certificate is used if the task sequence includes client actions like client policy retrieval or sending inventory information. It allows the computer to connect to an HTTPS-enabled management point during the OS deployment process.
+This certificate is used by an OSD task sequence and allows the computer to connect to an HTTPS-enabled management point and distribution point during the OS deployment process. Connections to the management point and to the distribution point may include such actions such as client policy retrieval from the management point and downloading of content from the distribution point.
 
-This certificate is only used during the OS deployment process. It isn't used to install the client or installed on the device. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
+This certificate is only used during the OS deployment process. It isn't used as part of the client installation properties when the the client is installed during the **Setup Windows and ConfigMgr** task nor is it installed on the device. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
 
-When you have an environment that's HTTPS-only, the boot image must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. The client can automatically generate a certificate when the device is joined to Active Directory, or you can install a client certificate by using another method.
+When you have an environment that's HTTPS-only, the task sequence media must have a valid certificate. This certificate allows the device to communicate with the site and for the deployment to continue. After the task sequence completes, when the device is joined to Active Directory, the client can automatically generate a PKI certificate via a GPO, or you can install a PKI certificate by using another method.
 
 > [!NOTE]
 > The requirements for this certificate are the same as the server certificate for site systems with the distribution point role. Because the requirements are the same, you can use the same certificate file.
@@ -294,13 +301,19 @@ Certificate requirements:
 
 - The **Enhanced Key Usage** value must contain `Client Authentication (1.3.6.1.5.5.7.3.2)`
 
-- There are no specific requirements for the certificate **Subject Name** or **Subject Alternative Name** (SAN) fields. You can use the same certificate for all boot images.
+- There are no specific requirements for the certificate **Subject Name** or **Subject Alternative Name** (SAN) fields. You can use the same certificate for all task sequence media.
 
 - The private key must be exportable.
 
 - Maximum supported key length is 2,048 bits.
 
-Export this certificate in a Public Key Certificate Standard (PKCS #12) format. You need to know the password, so that you can import the certificate to the boot image properties.
+Export this certificate in a Public Key Certificate Standard (PKCS #12) format. You need to know the password, so that you can import the certificate when creating the task sequence media.
+
+> [!IMPORTANT]
+>
+> Boot images don't contain PKI certificates to communicate with the site. Instead, boot images use the PKI certificate added to the task sequence media to communicate with the site.
+
+For more information on adding a PKI certificate to task sequence media, see [Create bootable media](../../../osd/deploy-use/create-bootable-media.md#process) and [Create prestaged media](../../../osd/deploy-use/create-prestaged-media.md#process).
 
 ### macOS client computers
 

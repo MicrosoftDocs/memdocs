@@ -2,12 +2,14 @@
 title: Site size and performance guidelines
 titleSuffix: Configuration Manager
 description: Site size-related performance test results, methodology, and guidance.
-author: aczechowski
-ms.author: aaroncz
+author: Banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.topic: conceptual
 ms.date: 04/13/2021
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configuration Manager site size and performance guidelines

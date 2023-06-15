@@ -6,10 +6,12 @@ ms.date: 06/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 2103 of Configuration Manager current branch
@@ -25,11 +27,11 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## Microsoft Endpoint Manager tenant attach
+## Microsoft Intune tenant attach
 
-### Display all applications for a device in Microsoft Endpoint Manager admin center
+### Display all applications for a device in Microsoft Intune admin center
 <!--8795301-->
-The **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center now displays more applications from Configuration Manager. Displayed applications include applications that are:
+The **Applications** view for a tenant attached device in Microsoft Intune admin center now displays more applications from Configuration Manager. Displayed applications include applications that are:
 - Deployed to the device
 - Deployed to a user that's logged in to the device, primary user of the device, and applications previously installed for the user
 
@@ -45,15 +47,15 @@ For more information, see [antivirus policies](../../../tenant-attach/deploy-ant
 
 ### User discovery prerequisite simplification
 <!--8126836 -->
-The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Endpoint Manager admin center** was simplified. The hybrid identity needs to be discovered by one of the following discovery methods instead of both:
+The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Intune admin center** was simplified. The hybrid identity needs to be discovered by one of the following discovery methods instead of both:
 - Azure Active Directory user discovery
 - Active Directory user discovery
 
-For more information, see [Tenant attach prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+For more information, see [Tenant attach prerequisites](../../../tenant-attach/prerequisites.md).
 
 ### Application details
 <!--8364465-->
-When tenant attach is enabled, the applications pane in the Microsoft Endpoint Manager admin center will show an **Error Description** if the application status is **Failed**.
+When tenant attach is enabled, the applications pane in the Microsoft Intune admin center will show an **Error Description** if the application status is **Failed**.
 
 For more information on the error code and troubleshooting steps, see [Application installation common error codes reference](../../../tenant-attach/app-install-error-reference.md).
 
@@ -110,7 +112,7 @@ You can now exclude OUs from [Active Directory User Discovery](../../servers/dep
 
 Starting in version 2010, you can view dependency relationships between collections in a graphical format. The relationships for a collection were presented as two hierarchical trees, one for dependents and the other for dependencies. In this release, you can view both parent and child relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
 
-For more information, see [Manage collections: View collection relationships](../../clients/manage/collections/manage-collections.md#improvements-in-version-2103).
+For more information, see [View collection relationships](../../clients/manage/collections/view-relationships.md#improvements-in-version-2103).
 
 ### Improvements to query preview
 <!--8680235-->

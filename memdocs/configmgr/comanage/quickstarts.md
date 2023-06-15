@@ -6,10 +6,12 @@ ms.date: 11/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Cloud connecting with co-management
@@ -34,7 +36,7 @@ In the following video, Microsoft corporate vice president Brad Anderson introdu
 |-|-|-|
 | <a name="bkmk_ca"></a>**Conditional access with device compliance** | Control user access to corporate resources based on compliance rules from Intune. | [![Thumbnail of conditional access video.](media/thumbnail-conditional-access.png)](quickstart-conditional-access.md) |
 | <a name="bkmk_remote"></a>**Remote actions from Intune** | Run remote actions from Intune for co-managed devices. For example, wipe and reset a device and maintain enrollment and account. | [![Thumbnail of remote actions video.](media/thumbnail-remote-action.png)](quickstart-remote-actions.md) |
-| <a name="bkmk_client-health"></a>**Configuration Manager client health** | Maintain visibility of Configuration Manager client health from the Microsoft Endpoint Manager admin center. | [![Thumbnail of client health video.](media/thumbnail-client-health.png)](quickstart-client-health.md) |
+| <a name="bkmk_client-health"></a>**Configuration Manager client health** | Maintain visibility of Configuration Manager client health from the Microsoft Intune admin center. | [![Thumbnail of client health video.](media/thumbnail-client-health.png)](quickstart-client-health.md) |
 | <a name="bkmk_hybrid-aad"></a>**Azure Active Directory (Azure AD)** | With Azure AD you can take advantage of improved productivity for your users and security for your resources, across both cloud and on-prem environments. | [![Thumbnail of hybrid Azure AD video.](media/thumbnail-azure-ad.png)](quickstart-hybrid-aad.md) |
 | <a name="bkmk_autopilot"></a>**Windows Autopilot** | Reduce time, resources, and complexity associated with deploying, managing, and retiring or recycling devices. Autopilot also creates a better experience for end users. | [![Thumbnail of Windows Autopilot video.](media/thumbnail-autopilot.png)](quickstart-autopilot.md) |
 

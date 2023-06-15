@@ -6,10 +6,12 @@ ms.date: 11/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Remote actions with co-management
@@ -38,7 +40,7 @@ For more information on these actions, see [Available remote actions](#available
 
 ## Case studies
 
-The global consulting firm Avanade regularly uses remote actions to manage the devices used by their 30,000 employees. In a [blog post](https://www.microsoft.com/microsoft-365/blog/2018/02/07/the-future-is-on-the-other-side-of-this-bridge/), the CIO of Avanade noted:
+The global consulting firm Avanade regularly uses remote actions to manage the devices used by their 30,000 employees. In a blog post, the CIO of Avanade noted:
 
 > *Our immediate win from having the Intune functionality was the ability to remotely reset Windows on a machine. This is important to us for lost or stolen machines, which is more common in our highly mobile workforce.*
 > *This is functionality that we otherwise would have had to build and maintain in a custom ConfigMgr package.*
@@ -63,7 +65,7 @@ Use these remote actions from Intune once you [enable co-management](how-to-enab
 
 - **Wipe**: This action restores a device to its factory default settings. If you choose the option to **Retain enrollment state and user account**, then the user data is kept. Otherwise the drive is securely erased.
 
-- **Delete**: If you want to remove devices from the Microsoft Endpoint Manager admin center, delete them from the specific device pane. The next time the device checks in, it removes any organizational data stored on it.
+- **Delete**: If you want to remove devices from the Microsoft Intune admin center, delete them from the specific device pane. The next time the device checks in, it removes any organizational data stored on it.
 
 For more information, see [Remove devices by using wipe, retire, or manually unenrolling the device](../../intune/remote-actions/devices-wipe.md).
 

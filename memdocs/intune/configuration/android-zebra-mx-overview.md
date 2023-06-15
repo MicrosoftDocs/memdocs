@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 09/07/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Use and manage Zebra devices with Zebra Mobility Extensions in Microsoft Intune
@@ -67,7 +69,7 @@ If Google Play isn't available, download the [Microsoft Intune Company Portal fo
 
 "Sideloading" is when you don't use Google Play to install an app. To sideload the Company Portal app, use StageNow.
 
-The following steps provide an overview. For specific details, see Zebra's documentation. [Enroll in an MDM using StageNow](http://techdocs.zebra.com/stagenow/3-1/Profiles/enrollmdm/) (opens Zebra's web site) may be a good resource.
+The following steps provide an overview. For specific details, see Zebra's documentation. [Enroll in an MDM using StageNow](https://techdocs.zebra.com/stagenow/5-7/Profiles/enrollmdm/) (opens Zebra's web site) may be a good resource.
 
 1. In StageNow, create a profile for **Enroll in an MDM**.
 2. In **Deployment**, choose to download the MDM agent file.
@@ -104,11 +106,11 @@ Continue to publish the profile, and consume it with the StageNow app on the dev
 
 After completing the first two steps, the Company Portal app is installed on the device. The device is ready to be enrolled in to Intune.
 
-[Enroll Android devices](../enrollment/android-enroll.md) lists the steps. If you have many Zebra devices, you may want to use a [device enrollment manager (DEM) account](../enrollment/device-enrollment-manager-enroll.md). Using a DEM account also removes the option to unenroll from the Company Portal app, so that users can't unenroll the device as easily.
+[Enroll Android devices](/mem/intune/fundamentals/deployment-guide-enrollment-android) lists the steps. If you have many Zebra devices, you may want to use a [device enrollment manager (DEM) account](../enrollment/device-enrollment-manager-enroll.md). Using a DEM account also removes the option to unenroll from the Company Portal app, so that users can't unenroll the device as easily.
 
 ## Step 4: Create a device management profile in StageNow
 
-Use StageNow to create a profile that configures the settings you want to manage on the device. For specific details, see Zebra's documentation. [Profiles](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (opens Zebra's website) may be a good resource.
+Use StageNow to create a profile that configures the settings you want to manage on the device. For specific details, see Zebra's documentation. [Profiles](https://techdocs.zebra.com/stagenow/5-7/stagingprofiles/) (opens Zebra's website) may be a good resource.
 
 When you create the profile in StageNow, on the last step, select **Export to MDM**. This step generates an XML file. Save this file. You need it in a later step.
 
@@ -137,7 +139,7 @@ After you test the file, the next step is to deploy the profile to devices using
 
 In Intune, create a device configuration profile:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 

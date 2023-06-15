@@ -1,18 +1,18 @@
 ---
-title: "ReDistributePackage Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ReDistributePackage Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, The ReDistributePackage WMI class method redistributes a package to all of the member distribution points.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 0eda3c97-28a6-481c-8af4-6dfbd7942bf7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ReDistributePackage Method in Class SMS_DistributionPointGroup
 The `ReDistributePackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, redistributes a package to all of the member distribution points.  

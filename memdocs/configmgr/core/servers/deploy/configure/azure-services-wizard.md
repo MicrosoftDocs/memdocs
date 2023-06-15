@@ -6,10 +6,12 @@ ms.date: 08/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure Azure services for use with Configuration Manager
@@ -43,6 +45,10 @@ Configure the following Azure services using this wizard:
     > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. This feature was deprecated in November 2020. It's removed from Configuration Manager in version 2107. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).<!-- 9649296 -->
 
 - **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
+
+- **Administration Service Management**: When configuring Azure Services, for enhanced security you can select Administration Service Management option. Selecting this option allows administrators to segment their admin privileges between [cloud management](../../../clients/manage/cmg/overview.md) and [administration service](../../../../develop/adminservice/overview.md). By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Azure Active Directory. *(version 2207 or later)*
+    > [!NOTE]
+    > Only CMG VMSS customers can enable administrative service management option. This option is not applicable for classic CMG customers. 
 
 ### Service details
 
@@ -260,6 +266,9 @@ Starting in version 2006, the Configuration Manager console displays notificatio
 To mitigate both cases, renew the secret key.
 
 For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
+
+> [!NOTE]
+> You need to have at least the "Cloud Application Administrator" Azure AD role assigned to be able to renew the key.
 
 ### Renew key for created app
 

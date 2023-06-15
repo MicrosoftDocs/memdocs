@@ -1,18 +1,18 @@
 ---
-title: "Modify Advertisement Properties"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Modify Advertisement Properties
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the following example shows how to modify an existing advertisement by using the SMS_Advertisement class and class properties.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 343783ae-0951-47cc-896e-bf74420fcb22
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Modify Advertisement Properties
 The following example shows how to modify an existing advertisement, in Configuration Manager, by using the `SMS_Advertisement` class and class properties.  

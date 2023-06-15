@@ -1,18 +1,18 @@
 ---
-title: "ResolvePendingRegistrationRecord Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ResolvePendingRegistrationRecord Method
+titleSuffix: Configuration Manager
+description: The ResolvePendingRegistrationRecord Windows Management Instrumentation (WMI) class method resolves any conflicts for the pending registration records.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ec646177-2beb-4b90-a6ff-00384dd40859
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ResolvePendingRegistrationRecord Method in Class SMS_PendingRegistrationRecord
 The `ResolvePendingRegistrationRecord` Windows Management Instrumentation (WMI) class method, in Configuration Manager, resolves any conflicts for the pending registration records.  

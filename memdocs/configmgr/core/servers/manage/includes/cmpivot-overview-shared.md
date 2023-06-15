@@ -1,12 +1,12 @@
 ---
-author: mestew
-ms.author: mstewart
+ms.author: gokarthi
+author: gowdhamankarthikeyan
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 08/02/2021
 ms.localizationpriority: medium
 ---
-<!--This file is shared by the CMPivot overview articles for both Microsoft Endpoint Manager tenant attach and Configuration Manager-->
+<!--This file is shared by the CMPivot overview articles for both Microsoft Intune tenant attach and Configuration Manager-->
 
 ## Queries
 
@@ -259,7 +259,7 @@ Scalar functions can be used in expressions. Currently the following scalar func
 ## <a name="bkmk_onprem_only"></a> Additional entities, operators, and functions for CMPivot from Configuration Manager
 
 > [!Important]
-> These items aren't supported when you run CMPivot from Microsoft Endpoint Manager admin center.
+> These items aren't supported when you run CMPivot from Microsoft Intune admin center.
 
 |Type|Item|Description|
 |--|--|---|

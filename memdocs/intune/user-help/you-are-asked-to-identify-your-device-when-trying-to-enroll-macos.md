@@ -2,7 +2,7 @@
 # required metadata
 
 title: You need to identify your macOS device when trying to enroll | Microsoft Docs
-description:
+description: If you are trying to enroll your macOS device in Intune, and are asked to identify your device, at least one of your devices has already been enrolled and assigned to your account using a method other than the Company Portal app.
 keywords:
 author: lenewsad
 
@@ -28,7 +28,8 @@ ms.reviewer: elocholi
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
-ms.collection: 
+ms.collection:
+- tier2
 ---
 
 

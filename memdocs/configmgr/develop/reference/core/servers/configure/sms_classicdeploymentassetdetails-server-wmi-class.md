@@ -1,18 +1,18 @@
 ---
-title: "SMS_ClassicDeploymentAssetDetails Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent asset level details about classic software distribution deployments using SMS_ClassicDeploymentAssetDetails class.
+title: SMS_ClassicDeploymentAssetDetails Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ea789cfb-050d-4901-a79d-2a0df24efaa1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ClassicDeploymentAssetDetails Server WMI Class
 The `SMS_ClassicDeploymentAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents asset level details about classic software distribution deployments.  

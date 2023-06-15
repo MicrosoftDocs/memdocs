@@ -1,27 +1,24 @@
 ---
 title: Windows Autopilot customer consent
 description: Learn how a cloud service provider (CSP) partner or an OEM can get customer authorization to register Windows Autopilot devices on the customer's behalf.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.technology: windows
-ms.prod: w10
-ms.mktglfcycl: deploy
+ms.technology: itpro-deploy
+ms.prod: windows-client
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: frankroj
+ms.author: frankroj
 ms.reviewer: jubaptis
-manager: dougeby
-ms.date: 12/16/2020
-ms.collection: M365-modern-desktop
+manager: aaroncz
+ms.date: 11/17/2022
+ms.collection:
+  - M365-modern-desktop
+  - tier2
 ms.topic: reference
 ---
 
 
 # Windows Autopilot customer consent
 
-**Applies to**
+*Applies to:*
 
 - Windows 11
 - Windows 10
@@ -82,7 +79,8 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 Each OEM has a unique link to provide to their respective customers, which the OEM can request from Microsoft via msoemops@microsoft.com.
 
 1. OEM emails link to their customer.
-2. Customer with Microsoft Store for Business (MSfB) global administrator privileges clicks the link in the email, which takes them directly to the following MSfB page:
+2. Customer signs into [Microsoft 365 admin center](https://portal.office.com/adminportal) using a cloud-native account (for example, [domain].onmicrosoft.com) with global administrator privileges.
+3. Customer selects the link in the email, which takes them directly to the following page:
 
     ![Screencap of Accept partner invitation page.](images/csp6.png)
 
@@ -91,12 +89,12 @@ Each OEM has a unique link to provide to their respective customers, which the O
 
     ![Screencap of MSfB permission required page.](images/csp7.png)
 
-3. Customer selects the **Yes** checkbox, followed by the **Accept** button, and they're done. Authorization happens instantaneously.
+4. Customer selects the **Yes** checkbox, followed by the **Accept** button, and they're done. Authorization happens instantaneously.
 
     > [!NOTE]
     > Once this process has completed, it is not currently possible for an administrator to remove an OEM. To remove an OEM or revoke their permissions, send a request to msoemops@microsoft.com
 
-4. The OEM can use the Validate Device Submission Data API to verify the consent has completed. This API is discussed in the latest version of the [API Whitepaper, p. 14ff](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx).
+5. The OEM can use the Validate Device Submission Data API to verify the consent has completed. This API is discussed in the latest version of the [API Whitepaper, p. 14ff](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx).
 
     > [!NOTE]
     > This link is only accessible by Microsoft Device Partners. As discussed in this article, it's a best practice recommendation for OEM partners to run the API check to confirm they've received customer consent before attempting to register devices. This check can help avoid errors in the registration process.

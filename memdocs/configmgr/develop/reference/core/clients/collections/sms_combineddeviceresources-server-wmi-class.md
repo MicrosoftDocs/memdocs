@@ -1,19 +1,18 @@
 ---
-title: "SMS_CombinedDeviceResources Class"
-titleSuffix: "Configuration Manager"
+title: SMS_CombinedDeviceResources Class
+titleSuffix: Configuration Manager
 description: Details of the SMS_CombinedDeviceResources WMI class
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 751f3d1d-5fbe-4d98-aa44-81a4b52969b5
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CombinedDeviceResources Server WMI Class
 The `SMS_CombinedDeviceResources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all the device and user resources in the system.  

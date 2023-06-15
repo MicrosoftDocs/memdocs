@@ -2,12 +2,12 @@
 # required metadata
 
 title: Import Wi-Fi settings for Windows devices in Microsoft Intune
-description: Export Wi-Fi settings from a Windows device as an XML file using the network shell (netsh wlan) command. Then, import this file in Intune to create a Wi-Fi profile for devices running Windows 8.1, Windows 10/11, and Windows Holographic for Business.
+description: Export Wi-Fi settings from a Windows device as an XML file using the network shell (netsh wlan) command. Then, import this file in Intune to create a Wi-Fi profile for devices running Windows 10/11 and Windows Holographic for Business.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 09/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -23,10 +23,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Import Wi-Fi settings for Windows devices in Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 On Windows devices, you can export Wi-Fi settings to an XML file, and then import these settings in Intune. Using these imported settings, you can create a Wi-Fi profile, and then deploy it to your devices.
 
@@ -51,7 +55,7 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 1. Create a local folder for the exported Wi-Fi profiles, such as **c:\WiFi**.
 2. Open a command prompt as an administrator.
 3. Run the `netsh wlan show profiles` command. Note the name of the profile you'd like to export. In this example, the profile name is **ContosoWiFi**.
-4. Run the `netsh wlan export profile name="ProfileName" folder=c:\Wifi` command. This command creates a Wi-Fi profile file named **Wi-Fi-*ProfileName*.xml** in your target folder. In our example, the file name is **Wi-Fi-ContosoWiFi.xml**.
+4. Run the `netsh wlan export profile name="ContosoWiFi" folder=c:\Wifi` command. This command creates a Wi-Fi profile file named **Wi-Fi-ContosoWiFi.xml** in your target folder.
 
 > [!IMPORTANT]
 >
@@ -64,7 +68,7 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 
 ## Import the Wi-Fi settings into Intune
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 

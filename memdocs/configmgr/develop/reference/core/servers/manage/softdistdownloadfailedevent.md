@@ -1,18 +1,18 @@
 ---
-title: "SoftDistDownloadFailedEvent"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SoftDistDownloadFailedEvent
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the SoftDistDownloadFailedEvent message is raised when a download for a package fails. It appears in Package Status in the Configuration Manager console.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8ab548ad-ebec-48cc-b0dc-5541b17044f9
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SoftDistDownloadFailedEvent
 In Configuration Manager, the `SoftDistDownloadFailedEvent` message is raised when a download for a package fails. It appears in **Package Status** in the Configuration Manager console.  

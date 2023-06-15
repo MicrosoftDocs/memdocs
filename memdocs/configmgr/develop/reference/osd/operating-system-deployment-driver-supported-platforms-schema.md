@@ -1,18 +1,18 @@
 ---
-title: "OS Deployment Driver Supported Platforms Schema"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to use the OS Deployment Driver Supported Platforms Schema to check which operating systems are compatible.
+title: OS Deployment Driver Supported Platforms Schema
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b45c883b-d9c3-4c88-a7c9-f38b421d475a
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Operating System Deployment Driver Supported Platforms Schema
 The following reference section documents the XML schema that is used to specify the platforms that are supported by an operating system deployment driver in Microsoft Configuration Manager.  

@@ -1,18 +1,18 @@
 ---
-title: "SMS_Windows10Dashboard Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_Windows10Dashboard Class
+titleSuffix: Configuration Manager
+description: The SMS_Windows10Dashboard Server WMI class is available for internal use only.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: d5234925-8951-45ab-89d4-e5b9f582e800
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Windows10Dashboard Server WMI Class
 For internal use only.  

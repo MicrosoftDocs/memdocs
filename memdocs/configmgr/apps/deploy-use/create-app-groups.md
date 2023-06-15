@@ -2,14 +2,16 @@
 title: Create application groups
 titleSuffix: Configuration Manager
 description: Create a group of applications that you can send to a user or device collection as a single deployment in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 03/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Create application groups
@@ -71,15 +73,15 @@ Starting in version 2111, you can use the following [app approval](app-approval.
 
 - From the Configuration Manager console, when you select a device, there's a new action in the **Device** group of the ribbon to **Install Application Group**. For more information, see [Install applications for a device](install-app-for-device.md).
 
-- When you enable tenant attach, you can view status and take actions on app groups from the Microsoft Endpoint Manager admin center. For more information, see [Install an application from the admin center](../../tenant-attach/applications.md).
+- When you enable tenant attach, you can view status and take actions on app groups from the Microsoft Intune admin center. For more information, see [Install an application from the admin center](../../tenant-attach/applications.md).
 
 ## Known issues
 
 - The following deployment options may not work: alerts, phased deployment, repair.
 - You can't use application groups with the **Install Application** task sequence step.
 - You can't export or import app groups.
-- Don't include in the group any apps that require restart, or the group deployment may fail.
-- In 2107 and earlier, if you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a small change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 --> Starting in version 2111, you can't delete an app that's part of an app group.
+- In version 2103 and earlier, don't include in the group any apps that require restart, or the group deployment may fail.
+- In version 2107 and earlier, if you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a small change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 --> Starting in version 2111, you can't delete an app that's part of an app group.
 - In most scenarios, user categories on the app group don't display as filters in Software Center. If the app group is deployed as available to a user collection, the categories display.<!-- 12425254 -->
 
 ## PowerShell

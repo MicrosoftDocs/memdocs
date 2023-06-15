@@ -1,18 +1,18 @@
 ---
-title: "Application Configuration Item Example 2"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Application Configuration Item Example 2
+description: In Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: f359d17d-d2dc-4b34-9e1b-5c5c1d5fe060
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Application Configuration Item Example 2
 In Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.  

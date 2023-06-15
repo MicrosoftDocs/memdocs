@@ -6,10 +6,12 @@ ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Create queries in Configuration Manager
 
@@ -88,7 +90,7 @@ This section contains example WQL queries that you can use in your hierarchy or 
 
 ### Computers that run Windows 10
 
-Use the following query to return the NetBIOS name and operating system version of all computers that run Windows 7.  
+Use the following query to return the NetBIOS name and operating system version of all computers that run Windows 10.  
 
 ``` WQL
 select SMS_R_System.NetbiosName,  

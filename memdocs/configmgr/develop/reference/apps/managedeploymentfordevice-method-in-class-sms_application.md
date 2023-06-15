@@ -1,18 +1,18 @@
 ---
-title: "ManageDeploymentForDevice Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ManageDeploymentForDevice Method
+titleSuffix: Configuration Manager
+description: The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 08f1bef3-64b5-483a-8db9-95965e79b8ed
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ManageDeploymentForDevice Method in Class SMS_Application
 > [!WARNING]

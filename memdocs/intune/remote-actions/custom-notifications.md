@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 08/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -25,7 +25,9 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 
-ms.collection: M365-identity-device-management
+ms.collection:
+- tier2
+- M365-identity-device-management
 ---
 
 # Send custom notifications in Intune
@@ -36,15 +38,10 @@ Custom notification messages include a short title and a message body of 500 cha
 
 ### What the notification looks like on an iOS/iPadOS device
 
-If you have the Company Portal app open on an iOS/iPadOS device, the notification resembles the following screenshot:
+If you have the Company Portal app open on an iOS/iPadOS device, and the device is locked, then the  notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
-> ![Company Portal iOS/iPadOS Test notification](./media/custom-notifications/105046-1.png)
-
-If the device is locked, the notification resembles the following screenshot:
-
-> [!div class="mx-imgBorder"]
-> ![Locked Device iOS/iPadOS Test notification](./media/custom-notifications/105046-2.png)
+> ![Locked Device iOS/iPadOS Custom notification](./media/custom-notifications/locked-device-custom-notif.png)
 
 ### What the notification looks like on an Android device
 
@@ -85,14 +82,14 @@ If you have the Company Portal app open on an Android device, the notification r
 
 - Intune sends messages to the users' Company Portal app or the Microsoft Intune app, which then creates the push notification. Users don't need to be signed into the app for the notification to be pushed on the device, but the device must have been enrolled by the targeted user.
 - Intune, the Company Portal app, and the Microsoft Intune app, can't guarantee delivery of a custom notification. Custom notifications might show up after several hours of delay, if at all, so they shouldn't be used for urgent messages.
-- Custom notification messages from Intune appear on devices as standard push notifications. If the Company Portal app is open on an iOS/iPadOS device when it receives the notification, the notification displays in the app instead of as a system push notification.  
+- Custom notification messages from Intune appear on devices as standard push notifications. If the Company Portal app is open on an iOS/iPadOS device when it receives the notification, the notification displays in the app instead of as a system push notification. The user will need to go to the Notifications tab and pull-to-refresh to see the notification.  
 - Custom notifications can be visible on lock screens on both iOS/iPadOS and Android devices depending on device settings.  
 - On Android devices, other apps might have access to the data in your custom notifications. Don't use them for sensitive communications.  
 - Users of a device that was recently unenrolled, or users that were removed from a group, might still receive a custom notification that is later sent to that group.  Likewise, if you add a user to a group after a custom notification was sent to the group, it's possible for the newly added use to receive that previously sent notification message.  
 
 ## Send a custom notification to groups
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and go to **Tenant administration** > **Custom notifications**.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and go to **Tenant administration** > **Custom notifications**.  
 
 2. On the Basics tab, specify the following, and then select **Next** to continue.  
    - **Title** – Specify a title for this notification. Titles are limited to 50 characters.  
@@ -112,7 +109,7 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 ## Send a custom notification to a single device
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has permissions to create and send notifications, and then go to **Devices** > **All devices**.
 
 2. Double-click the name of the managed device to which you want to send a notification, to open that devices *Overview* page.
 
@@ -125,14 +122,13 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 5. Select **Send** to send the custom notification to the device. Unlike notifications you send to groups, you don't configure an assignment or review the message before sending it.  
 
-Intune processes the message immediately. The only confirmation that the message was sent is the Intune notification you'll receive in the console, which displays the text of the message you sent.  
-
+Intune processes the message immediately. The only confirmation that the message was sent is the Intune notification you'll receive in the admin center, which displays the text of the message you sent.  
 
 ## Receive a custom notification
 
 On a device, users see custom notification messages that are sent by Intune as a standard push notification from the Company Portal app or the Microsoft Intune app. These notifications are similar to the push notifications users receive from other apps on the device.  
 
-On iOS/iPadOS devices, if the Company Portal app is open when the notification is received, the notification displays in the app instead of being a push notification.  
+On iOS/iPadOS devices, if the Company Portal app is open when the notification is received, the notification displays in the app instead of being a push notification. The user will need to go to the Notifications tab and pull-to-refresh to see the notification.  
 
 The notification remains until the user dismisses it.  
 

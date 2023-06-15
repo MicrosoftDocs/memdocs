@@ -1,11 +1,14 @@
 ---
-author: mestew
-ms.author: mstewart
+author: Banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
-ms.date: 01/06/2022
+ms.date: 07/11/2022
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 
@@ -14,7 +17,7 @@ ms.date: 01/06/2022
 
 During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. Don't share or reuse Azure AD applications across multiple hierarchies. If you have multiple hierarchies, create separate Azure AD applications for each.
 
-From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-management Configuration Wizard** in versions 2103 and earlier), select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
+From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-management Configuration Wizard** in versions 2103 and earlier), select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Intune Endpoint Manager center**. This option will prompt you to specify the following information for your Azure AD app:
 
 - Azure AD tenant name
 - Azure AD tenant ID
@@ -48,4 +51,4 @@ Using a previously created application during onboarding to tenant attach requir
 
 - The imported application needs to be configured as follows:
    - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
-   -  Has a valid application ID URI and secret
+   -  Has a valid application ID URI and secret.

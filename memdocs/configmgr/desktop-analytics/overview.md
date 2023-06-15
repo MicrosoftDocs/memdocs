@@ -6,11 +6,12 @@ ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: overview
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # What is Desktop Analytics?
@@ -32,7 +33,7 @@ Use Desktop Analytics with Configuration Manager to:
 
 - Deploy Windows 10 to pilot and production-managed devices
 
-:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Endpoint Manager admin center." lightbox="media/portal-home.png":::
+:::image type="content" source="media/portal-home.png" alt-text="Screenshot of the Desktop Analytics home page in the Microsoft Intune admin center." lightbox="media/portal-home.png":::
 
 The following video is a session from Ignite 2019, which includes more information on Desktop Analytics:
 
@@ -94,7 +95,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
     - [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator) and [Owner](/azure/role-based-access-control/built-in-roles#owner)
     - [Contributor](/azure/role-based-access-control/built-in-roles#contributor)
 
-- [Set up Intune](../../intune/fundamentals/setup-steps.md) for your organization.
+- [Set up Intune](../../intune/fundamentals/deployment-plan-setup.md) for your organization.
 
 - A supported version of Configuration Manager.
 
@@ -106,10 +107,10 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > - Use different Commercial IDs and Azure AD tenants.
   > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 days after you disconnect a hierarchy for the portal to reflect changes.
 
-- Devices running Windows 7, Windows 8.1, or Windows 10.
+- Devices running Windows 10.
 
     > [!IMPORTANT]
-    > Starting in July 2021, Desktop Analytics supports the Windows diagnostic data processor configuration. This configuration is only for supported versions of Windows 10. Data for Windows 7, Windows 8, and earlier versions of Windows 10 will only show in Desktop Analytics until January 31, 2022. For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->
+    > Starting in July 2021, Desktop Analytics supports the Windows diagnostic data processor configuration. This configuration is only for supported versions of Windows 10. For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->
     >
     > Desktop Analytics doesn't support Windows 11.<!-- 10797955 --> For information about Windows 11 hardware readiness, Microsoft recommends that you enable tenant attach and [Endpoint analytics](../../analytics/overview.md).
 
@@ -136,7 +137,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [Internet endpoints to enable data sharing](enable-data-sharing.md#endpoints).
 
 > [!IMPORTANT]
-> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries (European Economic Area [EEA], Switzerland, and the United Kingdom):
+> Microsoft has a strong commitment to providing the tools and resources that put you in control of your privacy. As a result, Microsoft doesn't collect the following data from devices located in European countries/regions (European Economic Area [EEA], Switzerland, and the United Kingdom):
 >
 > - Windows diagnostic data from Windows 8.1 devices
 > - App usage data for Windows 7
@@ -150,7 +151,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > [!NOTE]
   > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
-- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center.
+- At least one Intune license for you as the administrator to access the Microsoft Intune admin center.
 
 - Devices enrolled in Desktop Analytics need a valid Configuration Manager license. For more information, see [Configuration Manager licensing](../core/understand/product-and-licensing-faq.yml).
 

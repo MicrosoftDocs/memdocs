@@ -7,9 +7,9 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/05/2022
+ms.date: 05/09/2023
 ms.topic: overview
-ms.service: cloudpc
+ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- tier2
 ---
 
 # Data encryption in Windows 365
@@ -39,15 +41,19 @@ To help you protect your organization's data, Windows 365 Enterprise and Busines
 This storage layer encryption provides the following benefits:
 
 - When persisting data to the cloud, data at rest on your Microsoft-hosted Cloud PC's disk is automatically encrypted.
-- Windows 365 Cloud PC disks are encrypted transparently using 256-bit Advanced Encryption Standard (AES) encryption, a modern block cipher, and is FIPS 140-2 compliant. The encryption at this layer doesn't impact Cloud PC performance.
+- Windows 365 Cloud PC disks are encrypted transparently using 256-bit Advanced Encryption Standard (AES) encryption, a modern block cipher, and is FIPS 140-2 compliant. The encryption at this layer doesn't affect Cloud PC performance.
 - The encryption is applied to every Cloud PC in every region at no extra cost.
 
 The following Windows 365 Enterprise and Business objects are automatically encrypted-at-rest with platform-managed keys:
-  - Disks
-  - Snapshots
-  - Images
+
+- Disks
+- Snapshots
+- Images
 
 Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
+
+>[!NOTE]
+>BitLocker is not supported as an encryption option for Windows 365 Cloud PCs. For more information, see [using Windows 10 virtual machines in Intune](https://go.microsoft.com/fwlink/?linkid=2188944).
 
 ## Encryption of data in transit
 

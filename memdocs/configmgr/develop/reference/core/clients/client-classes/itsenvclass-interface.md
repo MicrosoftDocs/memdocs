@@ -1,18 +1,18 @@
 ---
-title: "ITSEnvClass Interface"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent the operating system deployment task sequencing environment with ITSEnvClass.
+title: ITSEnvClass Interface
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 86e27290-3dea-492a-aeaf-46e67b745670
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ITSEnvClass Interface
 The `ITSEnvClass` automation interface, in Configuration Manager, represents the operating system deployment task sequencing environment. This interface inherits from `IDispatch`.  

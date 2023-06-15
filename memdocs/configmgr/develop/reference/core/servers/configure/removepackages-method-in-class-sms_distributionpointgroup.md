@@ -1,18 +1,18 @@
 ---
-title: "RemovePackages Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: RemovePackages Method
+titleSuffix: Configuration Manager
+description: In Configuration Manager, the RemovePackages WMI class method removes a set of packages from this distribution point group.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 03006525-fa62-4259-b9e3-0382159d61f7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # RemovePackages Method in Class SMS_DistributionPointGroup
 The `RemovePackages` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes a set of packages from this distribution point group.  

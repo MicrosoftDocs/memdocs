@@ -6,14 +6,13 @@ ms.date: 04/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-
-
-ms:assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms: "assetid: c424bd2b-f6ea-466c-91ca-c9550d94d9db"
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Application management views in Configuration Manager
