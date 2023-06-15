@@ -110,12 +110,13 @@ When creating a duplicate, you'll give the copy a new name. The copy is made wit
 
 The following policy types support duplication:
 
-- Antivirus
-- Disk encryption
-- Firewall
-- Endpoint detection and response
-- Attack surface reduction
 - Account protection
+- Application Control (preview)
+- Antivirus
+- Attack surface reduction
+- Disk encryption
+- Endpoint detection and response
+- Firewall
 
 After creating the new policy, review and edit the policy to make changes to its configuration.
 
