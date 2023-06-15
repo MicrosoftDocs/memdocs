@@ -69,7 +69,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of June 12, 2023
 
-<<<<<<< HEAD
 ### Device management
 
 #### HTC Vive XR Elite supported on Microsoft Intune for Android Open Source Devices<!-- 24271568 -->
@@ -85,7 +84,7 @@ For more information, go to:
 Applies to:
 
 - Microsoft Intune (AOSP)
-=======
+
 ### App management
 
 #### Microsoft Store for Business or Microsoft Store for Education<!-- 24250535 wndraft wnready -->
@@ -95,7 +94,6 @@ For more information, see the following resources:
 - [Update to Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-intune-integration-with-the-microsoft-store-on-windows/ba-p/3585077)
 - [Embracing the Future of Microsoft Store with Intune: A Step-by-Step Guide](https://www.youtube.com/watch?v=c534X9yMvDo)
 - [Embracing the Future of Microsoft Store with Intune for Education: A Step-by-Step Guide](https://www.youtube.com/watch?v=Heoi0RuClQM)
->>>>>>> 505ff4f8f3b5941f8271d9faf08236db1ad5c4c5
 
 ## Week of June 5, 2023
 
