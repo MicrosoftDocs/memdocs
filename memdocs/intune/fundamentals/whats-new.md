@@ -71,9 +71,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management
 
-#### HTC Vive XR Elite supported on Microsoft Intune for Android Open Source Devices<!-- 24271568 -->
+#### New Devices from HTC and Pico supported on Microsoft Intune for Android Open Source Devices<!-- 24271568 -->
 
-Microsoft Intune for Android open source project devices (AOSP) now supports HTC Vive XR Elite.
+Microsoft Intune for Android open source project devices (AOSP) now supports the following devices:
+
+- HTC Vive XR Elite
+- Pico Neo 3 Pro
+- Pico 4
 
 For more information, go to:
 

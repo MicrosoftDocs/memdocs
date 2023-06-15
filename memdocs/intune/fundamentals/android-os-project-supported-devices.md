@@ -19,7 +19,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: Priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -48,4 +48,3 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 | Realwear| HMT-1              | 11.2                | AR/VR Headset  |                    |
 | Realwear| HMT-1Z1            | 11.2                | AR/VR Headset  |                    |
 | Realwear| Navigator500       | 11.2                | AR/VR Headset  |                    |
-
