@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/08/2023
+ms.date: 06/15/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -53,6 +53,16 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of June 12, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: High-level architecture diagram<!--45049183-->
+
+We’ve published a new help documentation article. For more information, see [High-level architecture diagram](high-level-architecture.md).
+
+<!-- ########################## -->
 ## Week of June 5, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -73,7 +83,7 @@ Windows 365 Enterprise is FedRAMP compliant. Except for FedRAMP, Windows 365 Ent
 
 #### Windows 365 Government setup tool<!--43461105-->
 
-A new Windows 365 Government setup tool is now available. It replaces the PowerShell scripts that were used to setup tenant mapping and permissions. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+A new Windows 365 Government setup tool is now available. It replaces the PowerShell scripts that were used to set up tenant mapping and permissions. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
 <!-- ########################## -->
 ## Week of May 29, 2023 (Service release 2305)
@@ -93,7 +103,7 @@ Managed network RDP Shortpath is available for Windows 365. For more information
 
 A new provisioning policy option lets you define a new region or ANC for the provisioning policy. When you initiate the move:
 
-1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shutdown.
+1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shut down.
 2. All such Cloud PCs will be moved to the new region or ANC.
 
 It may take several hours for the moves to complete.
