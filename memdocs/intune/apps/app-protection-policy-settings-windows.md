@@ -3,7 +3,7 @@
 
 title: Microsoft Edge app protection policy settings for Windows MAM
 titleSuffix: Microsoft Intune
-description: This topic describes the Microsft Edge app protection policy (APP) settings for MAM on Windows.
+description: This topic describes the Microsoft Edge app protection policy (APP) settings for MAM on Windows.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -48,7 +48,7 @@ The **Data protection** settings impact the org data and context. As the admin, 
 |------|----------|-------|
 | **Receive data from** | Select one of the following options to specify the sources org users can receive data from:<br><ul><li>**All sources**: Org users can open data from any account, document, location, or application into the org context.</li><li>**No sources**: Org users cannot open data from external accounts, documents, locations, or applications into the org context. **NOTE**: For Microsoft Edge, **No sources** controls file upload behavior either via drag and drop or the file open dialog. Local file viewing and sharing files between sites/tabs will be blocked.</li></ul><br><br> | **All sources** |
 | **Send org data to** | Select one of the following options to specify the destinations org users can send data to:<br><ul><li>**All destinations**: Org users can send org data to any account, document, location, or application.</li><li>**No destinations**: Org users cannot send org data to external accounts, documents, locations, or applications from the org context. **NOTE**: For Microsoft Edge, **No destinations** controls file download, **Share**, and **Add to Collections** only. This means sharing files between sites/tabs will be blocked.</li></ul><br><br> | **All destinations** |
-| **Allow cut, copy, and paste for** | Select one of the following options to specify the sources and destinations org users can cut or copy or paste org data:<br><ul><li>**Any destination and any source**: Org users can paste data from and cut/copy data to any account, document, location, or application.</li><li>**No destination or source**: Org users cannot cut, copy or paste data to or from external accounts, documents, locations or applications from or into the org context. **NOTE**: For Microsoft Edge, **No destination or source** blocks cut, copy, and paste behavior within the web content only. cut, copy, and paste is disabled from all web content, but not application controls including the address bar.</li></ul><br><br> | **Any destination and any source** |
+| **Allow cut, copy, and paste for** | Select one of the following options to specify the sources and destinations org users can cut or copy or paste org data:<br><ul><li>**Any destination and any source**: Org users can paste data from and cut/copy data to any account, document, location, or application.</li><li>**No destination or source**: Org users cannot cut, copy or paste data to or from external accounts, documents, locations or applications from or into the org context. **NOTE**: For Microsoft Edge, **No destination or source** blocks cut, copy, and paste behavior within the web content only. Cut, copy, and paste are disabled from all web content, but not application controls, including the address bar.</li></ul><br><br> | **Any destination and any source** |
 
 ### Functionality
 | Setting | How to use | Default value |
