@@ -83,7 +83,7 @@ Windows 365 Enterprise is FedRAMP compliant. Except for FedRAMP, Windows 365 Ent
 
 #### Windows 365 Government setup tool<!--43461105-->
 
-A new Windows 365 Government setup tool is now available. It replaces the PowerShell scripts that were used to setup tenant mapping and permissions. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+A new Windows 365 Government setup tool is now available. It replaces the PowerShell scripts that were used to set up tenant mapping and permissions. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
 
 <!-- ########################## -->
 ## Week of May 29, 2023 (Service release 2305)
@@ -103,7 +103,7 @@ Managed network RDP Shortpath is available for Windows 365. For more information
 
 A new provisioning policy option lets you define a new region or ANC for the provisioning policy. When you initiate the move:
 
-1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shutdown.
+1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shut down.
 2. All such Cloud PCs will be moved to the new region or ANC.
 
 It may take several hours for the moves to complete.
