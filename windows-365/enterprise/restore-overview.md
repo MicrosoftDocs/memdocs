@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/09/2022
+ms.date: 06/15/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -67,13 +67,13 @@ Only administrators can create a manual restore point, and each Cloud PC can hav
 
 For short- and long-term restore points, as time passes and a new restore point is added, the oldest restore point is removed.
 
-Each Cloud PC can have one manual restore point. If you create another manual restore point for a Cloud PC that already has a manual restore point, the existing restore point will be overwritten by the new restore point. If not overwritten, a manual restore point expires in approximately 28 days. Manual restore points have an expiration date shown when they are created.
+Each Cloud PC can have one manual restore point. If you create another manual restore point for a Cloud PC that already has a manual restore point, the existing restore point is overwritten by the new restore point. If not overwritten, a manual restore point expires in approximately 28 days. Manual restore points have an expiration date shown when they'e created.
 
 [!INCLUDE [Restore risks and best practices](../includes/restore-risks-best-practices.md)]
 
 ## Disaster recovery
 
-When a restore is started, the virtual infrastructure used for the Cloud PC remains the same. If the infrastructure is unavailable, but appropriate alternate infrastructure is available in the same Azure region, then the Cloud PC is automatically placed in the available infrastructure. This automation makes sure that, in the case of a disaster recovery scenario in an Azure zone, that the Cloud PC is resilient through recovery to a different Zone in the region. The recovery to an alternate infrastructure is automatic. There is nothing required of the administrator or user other than to start the restore.
+When a restore is started, the virtual infrastructure used for the Cloud PC remains the same. If the infrastructure is unavailable, but appropriate alternate infrastructure is available in the same Azure region, then the Cloud PC is automatically placed in the available infrastructure. This automation makes sure, for a disaster recovery scenario in an Azure zone, that the Cloud PC is resilient through recovery to a different Zone in the region. The recovery to an alternate infrastructure is automatic. There's nothing required of the administrator or user other than to start the restore.
 
 <!-- ########################## --> 
 ## Next steps
