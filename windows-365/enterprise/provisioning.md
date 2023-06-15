@@ -78,7 +78,7 @@ If a provisioning policy name is changed, it doesn't update the Cloud PC name un
 ### Deleting a provisioning policy
 A provisioning policy can only be [deleted](delete-provisioning-policy.md) if it’s not assigned to any Azure AD groups.
 
-Removing the targeting of a provisioning policy that was used for successful Cloud PC provisioning puts the Cloud PCs into a grace period. When the grace period expires, the Cloud PCs is deleted automatically.
+Removing the targeting of a provisioning policy that was used for successful Cloud PC provisioning puts the Cloud PCs into a grace period. When the grace period expires, the Cloud PCs are deleted automatically.
 
 ### Provisioning policy conflict resolution
 
@@ -106,7 +106,7 @@ The [**Reprovision**](reprovision-cloud-pc.md) remote action lets admins reprovi
 
 The **Reprovision** action can also be used when a Cloud PC is in a **Failed provisioning** state in the Windows 365 provisioning node. You can think of reprovisioning as a similar process to resetting a physical device.
 
-When a reprovision is triggered, the Cloud PC is deleted and recreated as a new Cloud PC. All user data, applications, customizations, and the like is deleted.
+When a Cloud PC is reprovisioned, the Cloud PC is deleted and recreated as a new Cloud PC. All user data, applications, customizations, and the like are deleted.
 
 The Cloud PC will be reprovisioned to the current configured settings in the provisioning policy that is targeting the user's Azure AD group. If the image referenced by the policy has changed, or if any other changes to the policy have been made, the reprovisioned Cloud PC uses the new settings.
 
