@@ -72,7 +72,7 @@ Microsoft recommends reviewing and categorizing usage scenarios, and then config
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Intune App Protection Policy Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
 > [!NOTE]
-> Preview: When using MAM for Windows, see app protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md) and [Data protection for Windows MAM](../apps/protect-edge-mam-windows.md).
+> Preview: When using MAM for Windows, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
 ### Conditional Access Policies
 

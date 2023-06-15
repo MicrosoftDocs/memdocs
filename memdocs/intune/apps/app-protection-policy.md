@@ -422,11 +422,11 @@ There are two categories of policy settings: *Data protection* and *Health Check
 
 ### Data protection
 
-The **Data protection** settings impact the org data and context. As the admin, you can control the movement of data into and out of the context of org protection. The org context is defined by documents, services, and sites accessed by the specified org account. The following policy settings help control external data received into the org context and org data sent out of the org context. For more information, see [Data protection for Windows MAM](../apps/protect-edge-mam-windows.md).
+The **Data protection** settings impact the org data and context. As the admin, you can control the movement of data into and out of the context of org protection. The org context is defined by documents, services, and sites accessed by the specified org account. The following policy settings help control external data received into the org context and org data sent out of the org context. 
 
 ### Health Checks
 
-Health checks allow you to configure conditional launch capabilities. To do this, you must set the health check conditions for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to access your org data. Then select the **Action** you want to take if users do not meet your conditionals. In some cases, multiple actions can be configured for a single setting. For more information, see [Conditional Access Compliance](../apps/protect-edge-mam-windows.md#conditional-access-compliance).
+Health checks allow you to configure conditional launch capabilities. To do this, you must set the health check conditions for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to access your org data. Then select the **Action** you want to take if users do not meet your conditionals. In some cases, multiple actions can be configured for a single setting.
 
 ## Next steps
 
