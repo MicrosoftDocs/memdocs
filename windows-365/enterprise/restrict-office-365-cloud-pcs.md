@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 06/15/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -37,12 +37,12 @@ Administrators can deny access to Office 365 services on any device other than a
 This article describes how to limit access to Office 365 services. You can use the same strategy with any cloud service that uses Azure Active Directory as the authentication source.
 
 1. Create an Azure AD security group to manage which users are controlled by the new policy. Add to this group all the Cloud PC users who will be subjected to the new policy. Only users in this group will be restricted to using Cloud PCs when accessing Office 365 services. If you want to change a user’s access, you can just remove them from this group.
-2. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional Access** > **New Policy**.
+2. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional access** > **Create new policy**.
     ![Create conditional access policy screen shot](./media/restrict-office-365-cloud-pcs/create-conditional-policy.png)
 3. Type a **Name** for your new Conditional Access policy. For example, “Restrict Office 365 access to CPCs”.
-4. Select **0 users or workload identities selected** > **Include** > **Select users and groups** > **Users and groups** > select the Azure AD security group that you created > **Select**.
+4. Select **0 users and groups selected** > **Include** > **Select users and groups** > **Users and groups** > select the Azure AD security group that you created > **Select**.
     ![Select group screen shot](./media/restrict-office-365-cloud-pcs/select-group.png)
-5. Select **No cloud apps, actions, or authentication contexts selected** > **Include** > **Select apps** > search for and select **Office 365** > **Select**.
+5. Select **No cloud apps, actions, or authentication contexts selected** > **Include** > **Select apps** > **None** (under **Select**) > search for and select **Office 365** > **Select**.
     ![Select apps to include](./media/restrict-office-365-cloud-pcs/include-apps.png)
 6. Select **Exclude** > **None** (under **Select excluded cloud apps**) > search for and select **Azure Virtual Desktop** and **Windows 365** apps > **Select**.
     ![Select apps to exclude](./media/restrict-office-365-cloud-pcs/exclude-apps.png)
@@ -59,7 +59,7 @@ This article describes how to limit access to Office 365 services. You can use t
    ![Configure filtering devices](./media/restrict-office-365-cloud-pcs/filter-devices-configure.png)
 
     You can set more options in this policy as needed, but such additions are outside the scope of this article.
-9. Select **0 controls selected** (under *Grant** > **Block Access** >**Select**.
+9. Select **0 controls selected** (under **Grant**) > **Block Access** >**Select**.
     ![Block access screen shot](./media/restrict-office-365-cloud-pcs/block-access.png)
 10. Select **On** (under **Enable policy**). This policy will restrict users from accessing Office 365 services on non-Cloud PC devices. You may want to select **Report-only** to monitor the policy and build confidence prior to enforcing it.
 11. Select **Create** to complete the creation of policy.
@@ -71,11 +71,12 @@ This article describes how to limit access to Office 365 services. You can use t
 
 This sample policy can be extended to meet other use cases, like also permitting access to Office 365 services from users' mobile and tablet devices. To do so, make the following changes to the policy:
 
-1. Select **Device Platforms**.
+1. On the policy page, select the text under **Conditions** > **Not configured** (under **Device Platforms**).
 2. Select **Yes** to turn on the configuration option.
 3. Select **Include** > **Any device**.
 4. Select **Exclude** > **Android** and **iOS**.
 5. Select **Done** to set the filter.
+6. Select **Save**.
 
 <!-- ########################## -->
 ## Next steps

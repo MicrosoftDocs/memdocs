@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 09/29/2021
+ms.date: 06/15/2023
 audience: Admin
 ms.topic: article
 ms.service: windows-365
@@ -91,7 +91,7 @@ If you don’t plan to use Microsoft Intune for your Cloud PC management, you mu
 
 #### Turn off the automatic enrollment of newly-created Cloud PCs
 1. In the [Windows 365 home page](https://windows365.microsoft.com), go to **Your organization's Cloud PCs", then select **Update organization settings**.
-2. On the righthand side, scroll down to **Microsoft Intune** and unselect the checkbox.
+2. On the righthand side, scroll down to **Microsoft Intune** and unselect the **Enroll new Cloud PCs in Microsoft Intune** checkbox.
 3. Click Save at the bottom.
 
 ## Reset your Cloud PCs
