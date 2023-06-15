@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 06/21/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,12 +67,138 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of June 19, 2023 (Service release 2306)
+
+### App management
+
+#### MAM for Microsoft Edge for Business [Preview]<!-- 12394345 -->  
+You can now enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability uses the following functionality:
+
+- Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
+- Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
+- Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Azure AD
+
+For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog<!-- 19951554 -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Denied Bundle Identifiers
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+**Login > Login Window Behavior**:
+
+- Disable FDE Auto Login
+
+Applies to:
+
+- macOS
+
+**Networking > Network Usage Rules**:
+
+- SIM Rules
+
+Applies to:
+
+- iOS/iPadOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874 -->  
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+
+Some Asus devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
+
+For more information about DFCI profiles, go to:
+
+- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/mem/autopilot/dfci-management)
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+#### Saaswedo Datalert telecom expense management is removed in Intune <!-- 23616707  -->  
+In Intune, you could manage telecom expenses using Saaswedo's Datalert telecom expense management. This feature is removed from Intune. This removal includes:
+
+- The **Telecom Expense Management** connector
+
+- **Telecom expenses** RBAC category
+  - **Read** permission
+  - **Update** permission
+
+For more information from Saaswedo, go to [The datalert service is unavailable](https://www.saaswedo.com/datalert-service-unavailable) (opens Saaswedo's web site).
+
+Applies to:
+
+- Android
+- iOS/iPadOS
+
+### Device security
+
+#### Update to Endpoint Privilege Management reports<!-- 17727222 -->  
+Intune's Endpoint Privilege Management (EPM) reports now support exporting the full reporting payload to a CSV file. With this change you can now export all events from an elevation report in Intune.
+
+#### Endpoint Privilege Managements run with elevated access option now available on the top-level menu for Windows 11<!-- 17749664  -->
+
+The Endpoint Privilege Management option to *Run with elevated access* is now available as a top-level right-click option on Windows 11 devices. Previous to this change, standard users were not able to view the elevated access prompt on Windows 11 devices.
+
+[Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+
+Applies to:
+
+- Windows 11
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 23027634, 21159364, 21234187, 21237641, 20771088  -->  
+The following protected apps are now available for Microsoft Intune:
+
+- Idenprotect Go by Apply Mobile Ltd (Android)
+- LiquidText by LiquidText, Inc. (iOS)
+- MyQ Roger: OCR scanner PDF by MyQ spol. s r.o.
+- CiiMS GO by Online Intelligence (Pty) Ltd
+- Vbrick Mobile by Vbrick Systems
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+#### Microsoft Intune troubleshooting pane is now generally available<!-- 18099474 -->  
+The Intune troubleshooting pane is now generally available.  It will provide details about user's devices, policies, applications, and status. The troubleshooting pane includes the following information:
+
+- A summary of policy, compliance, and application deployment status.
+- Support for exporting, filtering, and sorting all reports.
+- Support to filter by excluding policies and applications.
+- Support to filter to a user’s single device.
+- Details about available device diagnostics and disabled devices.
+- Details about offline devices that haven't checked-in to the service for three or more days.
+
+You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**.
+
+#### Updated troubleshoot + support pane in Intune<!-- 16240430  -->  
+The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Azure Active Directory, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
+
+#### Download mobile app diagnostics<!-- 22139638  -->  
+Now generally available, access user-submitted mobile app diagnostics in the Intune admin center, including app logs sent through Company Portal apps, which include Windows, iOS, Android, Android ASOP, and MacOS. In addition, you can retrieve app protection logs via Microsoft Edge. For more information, see [Company Portal app logs](../apps/company-portal-app.md#app-logs) and [Use Edge for iOS and Android to access managed app logs](../apps/manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
+
 ## Week of June 12, 2023
 
 ### Device management
 
-#### New Devices from HTC and Pico supported on Microsoft Intune for Android Open Source Devices<!-- 24271568 -->
-
+#### New Devices from HTC and Pico supported on Microsoft Intune for Android Open Source Devices<!-- 24271568 -->  
 Microsoft Intune for Android open source project devices (AOSP) now supports the following devices:
 
 - HTC Vive XR Elite
@@ -120,7 +246,6 @@ Applies to:
 - Android Enterprise 11.0 and newer
 
 ## Week of May 29, 2023  
-
 
 ### Device management
 
