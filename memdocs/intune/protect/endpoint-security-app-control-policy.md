@@ -83,11 +83,11 @@ The following devices are supported when enrolled with Intune:
   - AVD devices are supported to use Application Control policies
 
 - **Co-managed devices**:
-  - To support [co-managed](../../configmgr/comanage/workloads.md)devices, set the slider for *Endpoint Protection* slider to *Intune*.
+  - To support [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
 
 ### Windows Defender Application Control
 
-See [Windows edition and licensing requirements](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control#windows-edition-and-licensing-requirements) in *About application control for Windows* in the Windows Security documentation.
+See [Windows edition and licensing requirements](/windows/security/threat-protection/windows-defender-application-control#windows-edition-and-licensing-requirements) in *About application control for Windows* in the Windows Security documentation.
 
 ### Role based access controls
 
@@ -121,7 +121,7 @@ Intune’s endpoint security Application Control policies are an implementation 
 
 - You can turn off this policy be editing the Managed Installer policy. Turning off the policy prevents subsequent apps from being tagged with the managed installer. Apps that were previously installed and tagged remain tagged. The only way to remove their managed installer tag is to use a clean-up script.
 
-[Learn more about how Intune set the managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) In the Windows Security documentation.
+[Learn more about how Intune set the managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
 ### Add a managed installer to your tenant
 
