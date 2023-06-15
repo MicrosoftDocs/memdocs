@@ -121,7 +121,7 @@ Intune’s endpoint security Application Control policies are an implementation 
 
 - You can turn off this policy be editing the Managed Installer policy. Turning off the policy prevents subsequent apps from being tagged with the managed installer. Apps that were previously installed and tagged remain tagged. The only way to remove their managed installer tag is to use a clean-up script.
 
-[Learn more about how Intune set the managed installer](windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) In the Windows Security documentation.
+[Learn more about how Intune set the managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) In the Windows Security documentation.
 
 ### Add a managed installer to your tenant
 
@@ -162,8 +162,6 @@ When you create an Application Control policy, you must choose a **Configuration
 - **Built-in controls** – This option is the simplest path to configure, yet remains a powerful choice. With the built-in controls, you can easily approve all apps that are installed by a managed installer, and allow trust of Windows components and store apps.
 
   More details about these options are available from the UI when creating a policy, and also detailed in the following procedure that walks you through creating a policy.
-
-
 
 After you create an [Application Control policy](#create-an-application-control-policy), you can expand the scope of that policy by creating [supplemental policies](#use-supplemental-policy) that add additional rules in XML format to that original policy. When you use supplemental policies, the original policy is referred to as the base policy.
 
@@ -250,7 +248,7 @@ As a result of these deployments, both supplemental policies could modify both i
 
 1. Use the Windows Defender Application Control Wizard or PowerShell cmdlets to generate an Application Control policy in XML format.
 
-   To learn about the Wizard, see [aka.ms/wdacWizard](aka.ms/wdacWizard) or [Microsoft WDAC Wizard](https://webapp-wdac-wizard.azurewebsites.net/) at webapp-wdac-wizard.azurewbsites.net.
+   To learn about the Wizard, see ***aka.ms/wdacWizard*** or [Microsoft WDAC Wizard](https://webapp-wdac-wizard.azurewebsites.net/) at webapp-wdac-wizard.azurewbsites.net.
 
    When you create a policy in XML format, it must reference the *Policy ID* of the base policy.
 
@@ -385,4 +383,4 @@ If setting Configuration Manager as the Managed Installer is desired, you can al
 
 ## Next Steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy#create-an-endpoint-security-policy.md)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
