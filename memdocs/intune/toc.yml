@@ -544,18 +544,21 @@ items:
                 href: ./protect/endpoint-security-policy.md
               - name: Use reusable settings groups
                 href: ./protect/reusable-settings-groups.md
-              - name: Antivirus
-                href: ./protect/endpoint-security-antivirus-policy.md
-              - name: Disk encryption
-                href: ./protect/endpoint-security-disk-encryption-policy.md
-              - name: Firewall
-                href: ./protect/endpoint-security-firewall-policy.md
-              - name: Endpoint detection and response
-                href: ./protect/endpoint-security-edr-policy.md
-              - name: Attack surface reduction
-                href: ./protect/endpoint-security-asr-policy.md
               - name: Account protection
                 href: ./protect/endpoint-security-account-protection-policy.md
+              - name: Antivirus
+                href: ./protect/endpoint-security-antivirus-policy.md
+              - name: Application Control
+                href: ./protect/endpoint-security-app-control-policy.md
+              - name: Attack surface reduction
+                href: ./protect/endpoint-security-asr-policy.md
+              - name: Disk encryption
+                href: ./protect/endpoint-security-disk-encryption-policy.md
+              - name: Endpoint detection and response
+                href: ./protect/endpoint-security-edr-policy.md
+              - name: Firewall
+                href: ./protect/endpoint-security-firewall-policy.md
+
           - name: Microsoft Defender for Endpoint
             items:
             - name: Microsoft Defender for Endpoint
