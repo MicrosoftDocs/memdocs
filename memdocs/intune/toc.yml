@@ -106,7 +106,13 @@ items:
       displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/intune-planning-guide.md
     - name: Supported operating systems and browsers
-      href: ./fundamentals/supported-devices-browsers.md
+      items:
+      - name: Supported operating systems and browsers
+        displayName: software updates, android, ios, ipados
+        href: ./fundamentals/supported-devices-browsers.md
+      - name: Android Open Source Project Supported Devices
+        displayName: software updates, android open source project, supported devices
+        href: ./fundamentals/android-os-project-supported-devices.md    
     - name: Software updates admin checklists
       items:
       - name: BYOD and personal devices
