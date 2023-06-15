@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2023
+ms.date: 06/15/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -87,6 +87,8 @@ The environment in the diagram was set up using the following Azure Firewall app
 The Windows365 tag includes the required Azure Virtual Desktop (AVD) endpoints, except those with non-standard ports that need to be entered manually (see the Network rules section).
 
 The Windows365 tag doesn't include Intune. The MicrosoftIntune tag can be used separately.
+
+The Windows365 FQDN tag includes all required endpoints except those listed as *Required* in separate rows of this document, which must be configured separately. FQDN tags are different from a service tag. For example, the WindowsVirtualDesktop service tag only includes the IP addresses that *.wvd.microsoft.com resolves to.
 
 ## Network rules
 
