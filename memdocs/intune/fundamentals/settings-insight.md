@@ -32,7 +32,7 @@ ms.collection:
 
 # Settings insight
 
-Settings insight are tailored insights powered by a Machine Learning model. This article explains how Settings insight works. Settings insight is currently available within Intune security baselines.
+Settings insight is tailored insights powered by a Machine Learning model. This article explains how Settings insight works. Settings insight is currently available within Intune security baselines.
 
 A security baseline comprises a set of expert recommended configurations to secure devices, apps, and services. Settings insight adds insights to security baselines giving you confidence in configurations that are successfully adopted by similar organizations.
 
@@ -77,7 +77,7 @@ Model execution and performance are actively monitored to ensure quality and rel
 
 ## Why some settings may not have insights
 
-Settings insights are powered by machine learning and heavily rely on the underlying data used to make recommendations. For reliable recommendations, we have set considerable guardrails in place to only show recommendations when we have sufficient data to support them. If the admin doesn't see recommendations for certain settings, it could mean we didn't have sufficient data to provide an insight. However, this could change over a period as more data becomes available.  
+Settings insight is powered by machine learning and heavily relies on underlying data used to make recommendations. For reliable recommendations, we have set considerable guardrails in place to only show recommendations when we have sufficient data to support them. If the admin doesn't see recommendations for certain settings, it could mean we didn't have sufficient data to provide an insight. However, this could change over a period as more data becomes available.  
 
 > [!NOTE]
 > A phased rollout system is in place for release recommendations. If a tenant is new or part of a later release schedule, the admin might not be able to see recommendations for any of the settings until the recommendations are fully deployed.
