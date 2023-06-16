@@ -56,6 +56,13 @@ Learn what new features are available in Windows 365 Enterprise.
 ## Week of June 12, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Windows 365 Government support for virtualization-based workloads<!--45086869-->
+
+Virtualization-based workloads are now supported in Windows 365 Government environments. For more information, see [Set up virtualization-based workloads on your Cloud PC](nested-virtualization.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Documentation
 
 #### New documentation article: High-level architecture diagram<!--45049183-->
