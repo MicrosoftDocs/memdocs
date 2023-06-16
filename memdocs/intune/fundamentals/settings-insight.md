@@ -59,7 +59,9 @@ This feature is in [public preview](../fundamentals/public-preview.md)
 4. On the **Basics** tab, specify the **Name**, and **Description** properties.
 5. Select **Next** to go to the next tab.
 6. On the **Configuration settings** tab, view the groups of **Settings** that are available. You can expand a group to view the settings in that group, and the default values for those settings. Insights are available beside some settings with a lighbulb icon.
-7. You can also view these insights while editing a Profile.  
+    :::image type="content" source="./media/settings-insight/createprofile-settingsinsight.png" alt-text="Settings insight shown while creating a profile" lightbox="./media/settings-insight/createprofile-settingsinsight.png":::
+7. You can also view these insights while editing a Profile.
+    :::image type="content" source="./media/settings-insight/editprofile-settingsinsight.png" alt-text="Settings insight shown while editing a profile" lightbox="./media/settings-insight/editprofile-settingsinsight.png":::
 
 ## Models used to categorize organizations
 
@@ -86,5 +88,5 @@ Settings insight is powered by machine learning and heavily relies on underlying
 
 For more information about security baselines, go to:
 
-- [security baselines](../protect/security-baselines.md)
+- [Security baselines](../protect/security-baselines.md)
 - [Create security baseline profiles in Microsoft Intune](../protect/security-baselines-configure.md)
