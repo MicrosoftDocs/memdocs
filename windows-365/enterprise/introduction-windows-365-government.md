@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/08/2023
+ms.date: 06/15/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -49,7 +49,6 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 The following features are not yet supported for Windows 365 GCC or GCCH.
 
 - Unified dashboard
-- Virtualization-based workloads
 - Endpoint analytics support (this is supported in GCC)
 - Windows 365 Security baseline
 - RDP Shortpath for public networks
