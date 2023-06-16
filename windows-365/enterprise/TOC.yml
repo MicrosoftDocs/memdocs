@@ -13,6 +13,8 @@ items:
   items:
   - name: Architecture
     href: architecture.md
+  - name: Architecture diagram
+    href: high-level-architecture.md
   - name: Identity and authentication
     href: identity-authentication.md
   - name: Lifecycle
