@@ -105,6 +105,9 @@ items:
     - name: Planning guide
       displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/intune-planning-guide.md
+    - name: Settings insight
+      displayName: configuration, settings, insight, security baselines
+      href: ./fundamentals/settings-insight.md
     - name: Supported operating systems and browsers
       items:
       - name: Supported operating systems and browsers
