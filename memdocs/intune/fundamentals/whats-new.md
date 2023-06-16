@@ -83,7 +83,7 @@ For more information, see [Preview: App protection policy settings for Windows](
 
 ### Device configuration
 
-#### New settings available in the Apple settings catalog<!-- 19951554 -->  
+#### New settings available in the Apple settings catalog<!-- 19951554  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
@@ -92,14 +92,12 @@ A new setting is available in the Settings Catalog. In the [Microsoft Intune adm
 
 - Denied Bundle Identifiers
 
-Applies to:
+**Full Disk Encryption > FileVault**:
 
-- iOS/iPadOS
-- macOS
-
-**Login > Login Window Behavior**:
-
-- Disable FDE Auto Login
+- Output path
+- Username
+- Password
+- UseKeyChain
 
 Applies to:
 
@@ -145,6 +143,22 @@ Applies to:
 
 - Android
 - iOS/iPadOS
+
+### Device management
+
+#### New endpoint security Application Control policy in preview<!-- 15711976 -->  
+As a public preview, you can use a new endpoint security policy category, Application Control. Endpoint security Application Control policy includes:
+
+- Policy to set the Intune Management Extension as a tenant-wide managed installer. When enabled as a managed installer, apps you deploy thru Intune (after enablement of Managed Installer) to Windows devices will be tagged as being installed by Intune. This tag becomes useful when you use Application Control policies to manage which apps you want to allow or block from running on your managed devices.
+
+- Application Control policies that are an implementation of Defender Application Control (WDAC). With Endpoint security Application Control policies, it's easy to configure policy that allows trusted apps to run on your managed devices. Trusted apps are apps like those that are installed by a managed installer or from the App store. In addition to built-in trust settings, these policies also support custom XML for application control so you can allow other apps from other sources to run to meet your organizations requirements.
+
+To get started with using this new policy type, see [Manage approved apps for Windows devices with Application Control policy and Managed Installers for Microsoft Intune](../protect/endpoint-security-app-control-policy.md)
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 ### Device security
 
