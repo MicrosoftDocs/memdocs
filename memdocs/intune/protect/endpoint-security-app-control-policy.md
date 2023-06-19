@@ -149,6 +149,7 @@ Before the policy has any effect, you must create and deploy an Application Cont
 
 For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
+
 ### Remove the Intune Management Extension as a managed installer
 
 Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
@@ -312,7 +313,7 @@ To aid this optimization, WDAC policy and the Intune management Extension are co
 
 - For Intune EDU tenants, the Intune Management Extension is automatically set as a Managed Installer. This configuration is automatic and can’t be changed.
 
-## Delete Application Control policy
+## Delete an Application Control policy
 
 As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windows 10) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune#remove-wdac-policies-on-windows-10-1903) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
 
