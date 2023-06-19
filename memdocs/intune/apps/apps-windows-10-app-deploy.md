@@ -61,6 +61,7 @@ Specific app types are supported based on the version of Windows 10 that your us
 | LOB: APPX/MSIX | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB Offline | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | MSFB Online | Yes | Yes | Yes | Yes | Yes | Yes | RS4+ | No | Yes | Yes |
+| [Microsoft Store app (new)](store-apps-microsoft.md) | No | Yes | Yes | Yes | Yes | Yes | No | No | No | No |
 | Web Apps | Yes | Yes | Yes | Yes | Yes | Yes | Yes<sup>2 | Yes<sup>2 | Yes | Yes<sup>2 |
 | Store Link | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
 | Microsoft Edge | No | Yes | Yes | Yes | Yes | 19H2+<sup>3 | No | No | No | No |

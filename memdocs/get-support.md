@@ -10,8 +10,8 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 08/31/2022
 ms.topic: how-to
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -23,7 +23,7 @@ ms.reviewer: hipethe
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic
+ms.custom: 
 ms.collection:
   - M365-identity-device-management
   - tier1
@@ -73,7 +73,6 @@ The following information can help you choose the correct focus:
   - Endpoint analytics for Intune devices
 
 - **Configuration Manager**:
-  - Desktop Analytics
   - Endpoint analytics for Configuration Manager devices
   - Tenant attach for Configuration Manager devices
 

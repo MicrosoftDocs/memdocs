@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/03/2021
+ms.date: 06/15/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -66,14 +66,15 @@ In these steps, you’ll use the Enrollment Profile Name and Device Model device
     1. **Filter name** = "All UX Engineering Cloud PC devices"
     2. **Description** = "A filter containing all UX Engineering Cloud PC devices"
     3. **Platform** = "Windows 10 and later"
-3. On the **Rules** page, enter the following:
+    4. Select **Next**.
+1. On the **Rules** page, enter the following:
     1. **Property** = "enrollmentProfileName (Enrollment profile name)"
     2. **Operator** = "Equals"
     3. **Value** = "UX Engineering"
-4. To validate that it works, select **Preview devices**.
-5. After the validation completes, select **Next**.
-6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
-7. On the **Review + create** page, select **Create**.
+1. To validate that it works, select **Preview**.
+1. After the validation completes, select **Next**.
+1. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
+1. On the **Review + create** page, select **Create**.
 
 ## Create a filter for all Cloud PCs with a specific configuration
 
@@ -82,18 +83,19 @@ For the example below, we use 2 vCPU and 4 GB RAM as the configuration. Anywhere
 In these steps, you'll use the Model device property to create the filter.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant Administration** > **Filters**.
-2. Select **Create**, then enter the following:
+2. Select **Create** > **Managed devices**, then enter the following:
     1. **Filter name** = "All 2vCPU/4GB RAM Cloud PCs"
     2. **Description** = "A filter containing all Cloud PCs with the 2vCPU/4GB RAM configuration"
     3. **Platform** = "Windows 10 and later"
-3. On the **Rules** page, enter the following:
+    5. Select **Next**.
+1. On the **Rules** page, enter the following:
     1. **Property** = "model (Model)"
     2. **Operator** = "Contains"
     3. **Value** = "2vCPU/4GB"
-4. To validate that it works, select **Preview devices**.
-5. After the validation completes, select **Next**.
-6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
-7. On the **Review + create** page, select **Create**.
+1. To validate that it works, select **Preview**.
+1. After the validation completes, select **Next**.
+1. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
+1. On the **Review + create** page, select **Create**.
 
 Once you've created the filter, you can use the filter in the assignment page in [supported policies](/mem/intune/fundamentals/filters-supported-workloads).
 

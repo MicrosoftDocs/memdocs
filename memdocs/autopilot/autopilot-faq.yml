@@ -444,7 +444,7 @@ sections:
           2. Hidden special characters in CSV files. To avoid this issue, after creating your CSV file, open it in Notepad to look for hidden characters, trailing spaces, or other corruptions.
 
       - question: |
-          Is Autopilot supported in all regions/countries?
+          Is Autopilot supported in all countries/regions?
         answer: |
           Autopilot only supports customers using global Azure. Global Azure doesn't include the following three entities:
           
