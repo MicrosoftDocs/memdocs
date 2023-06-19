@@ -144,6 +144,11 @@ Applies to:
 - Android
 - iOS/iPadOS
 
+#### Settings insight within Intune Security Baselines<!-- 11127203  -->  
+The [Settings insight](../fundamentals/settings-insight.md) feature adds insights to security baselines giving you confidence in configurations that have been successfully adopted by similar organizations.
+
+Navigate to **Endpoint security** > **Security baselines** . While creating and editing the workflow these insights will be available for you in the form of a light bulb.
+
 ### Device management
 
 #### New endpoint security Application Control policy in preview<!-- 15711976 -->  
@@ -159,6 +164,11 @@ Applies to:
 
 - Windows 10
 - Windows 11
+
+#### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->  
+With this release, Endpoint analytics is available to tenants in Government cloud.
+
+Learn more about Endpoint analytics [here](https://learn.microsoft.com/en-us/mem/analytics/).
 
 ### Device security
 
