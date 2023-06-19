@@ -40,6 +40,7 @@ Microsoft Defender for Endpoint works with devices that run:
 - iOS/iPadOS
 - Windows 10
 - Windows 11
+- macOS
 - Windows Server 2008 R2
 - Windows Server 2012 R2
 - Windows Server 2016

@@ -312,6 +312,14 @@ By default, Microsoft Edge for Android will block network access with invalid or
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**ture** Allow network access |
 
+#### iOS Website data store
+
+As there is only one persistent website data store in Edge for iOS, by default the website data store is always statically used only by personal account. Work or school account cannot use the website data store, which causes the browsing data expect cookies lost after each session ends. Organizations can make the website data store used by work or school account so the browsing data will be persisted for a better users experience.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** (default) The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** The website data store will be used by work or school account first regardless of the sign-in order |
+
 ## Data protection app configuration scenarios
 
 Edge for iOS and Android supports app configuration policies for the following data protection settings when the app is managed by Microsoft Intune with a managed apps App Configuration Policy applied to the work or school account that is signed into the app:

@@ -146,7 +146,24 @@ After an update releases, it rolls out to tenants over the following days. This 
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
+ > [!IMPORTANT]  
+  > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week. 
 
+
+### June 12, 2023
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:ef5c23cc4c56263732124be7215f01a0904b5abaf78f5f033672d139205fcc3a
+
+- **serverImageDigest**: sha256:1b11852378c1a0f0f595d76d841dafe4d23cc962b296eae365629c5c31adcc9a
+
+Changes in this release:
+
+- Minor bug fixes
+- Agent container fixes
+
+  
 ### April 3, 2023
 
 Image hash values:

@@ -73,7 +73,6 @@ The following information can help you choose the correct focus:
   - Endpoint analytics for Intune devices
 
 - **Configuration Manager**:
-  - Desktop Analytics
   - Endpoint analytics for Configuration Manager devices
   - Tenant attach for Configuration Manager devices
 
