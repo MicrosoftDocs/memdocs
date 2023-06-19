@@ -30,6 +30,9 @@ These issues and other end-user experience problems persist because IT doesn't h
 
 **Endpoint analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
 
+> [!IMPORTANT]
+> Endpoint analytics is now available to tenants in Government cloud.
+
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 You can enroll devices via Configuration Manager or Microsoft Intune.
@@ -112,7 +115,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 |-----------|-----------|
 | `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
 
-> [!Important]  
+>[!Important]  
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 ## Next steps
