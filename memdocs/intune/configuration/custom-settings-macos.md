@@ -38,7 +38,7 @@ ms.collection:
 
 Using Microsoft Intune, you can add or create custom settings for your macOS devices using a "custom profile". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune. These settings must be in an `.xml` or `.mobileconfig` file.
 
-The Intune settings catalog has many macOS settings, and more are continually added. Before you create a custom profile, look for the settings in the [Settings Catalog](../configuration/settings-catalog.md). It's possible you won't need a custom profile.
+The Intune settings catalog has many macOS settings, and more are continually added. Before you create a custom profile, look for the settings in the [Settings Catalog](../configuration/settings-catalog.md). It's possible you don't need a custom profile.
 
 This feature applies to:
 
@@ -59,10 +59,10 @@ This feature applies to:
 
 When you configure the profile, enter the following settings:
 
-- **Configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status.
-- **Deployment channel**: Select the channel you want to use to deploy your configuration profile. If you send the profile down the wrong channel, deployment could fail. After you select a channel and save the profile, the channel can't be changed. To select a different channel, create a new profile.
+- **Configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status in the Intune admin center.
+- **Deployment channel**: Select the channel you want to use to deploy your configuration profile. If you send the profile to the wrong channel, deployment could fail. After you select a channel and save the profile, the channel can't be changed. To select a different channel, create a new profile.
 
-  User-targeted payloads won't apply to devices enrolled without user affinity. For more information on whether a payload can be used for a device configuration profile or a user configuration profile, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on the Apple Developer website.
+  User-targeted payloads don't apply to devices enrolled without user affinity. For more information on whether a payload can be used for a device configuration profile or a user configuration profile, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's developer website).
 
 - **Configuration profile file**: Browse to the `.xml` or `.mobileconfig` file you created. The max file size is `1000000` bytes (just under 1 MB). The imported file is shown. You can also **Remove** a file after it's been added.
 
