@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 06/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,7 +77,7 @@ Use the following procedure as a guide to create policies to manage driver updat
 
      When you set a policy for automatic approvals, you must configure the following setting that creates a deferral period for the automatically approved updates:
 
-     - **Make updates available after (days)** – This setting is a deferral period that delays when Windows Update begins to deploy and install the new recommended update that was automatically added to the policy with a status of *Approved*. The delay supports from zero to 30 days and starts from the day the update is added to the policy, not from the date the update was made available or published by the OEM. The deferral is intended to provide you with time to identify and if necessary pause deployment of the new recommended update.
+     - **Make updates available after (days)** – This setting is a deferral period that delays when Windows Update begins to deploy and install the new recommended update that was automatically added to the policy with a status of *Approved*. The delay supports from zero to 30 days and starts from the day the update is added to the policy, not from the date the update was made available or published by the OEM. The deferral is intended to provide you with time to identify and if necessary, pause deployment of the new recommended update.
 
     For example, consider a driver update policy that uses automatic approvals and has a deferral of three days. On June 1, WUfB-DS identifies a new recommended driver update that applies to devices with this policy and adds the update to the policy as approved. Due to the deferral period of three days, Windows Update waits to offer this update to any device until June 4, three days after it was added to the policy. If the deferral was set to zero days, Windows Update would begin installing the update on devices immediately.
 
@@ -97,9 +97,9 @@ Use the following procedure as a guide to create policies to manage driver updat
 
 Over time, the list of driver updates available in a Windows driver update policy can change. The following events can introduce changes to the available driver updates:
 
-- **Device assignments**: If the device assignment for a policy changes, the driver updates that are available through the policy can change to reflect the devices now assigned the policy. Changing device assignments can add driver updates or new versions of updates to the policy and remove updates from the policy when they no longer apply to any device assigned that policy.
+- **Device assignments**: If the device assignment for a policy changes, the driver updates that are available through the policy can change to reflect the devices now assigned to the policy. Changing device assignments can add driver updates or new versions of updates to the policy and remove updates from the policy when they no longer apply to any device assigned to that policy.
 - **Driver updates age out**: Once all applicable devices have installed a driver update version, that version is no longer applicable to install on a device with that policy, and the update is removed from the policies driver lists.
-- **New driver update versions are available**: When an OEM releases driver update version that supersedes a driver update found in a policy, the new update is added to that policy.
+- **New driver update versions are available**: When an OEM releases a driver update version that supersedes a driver update found in a policy, the new update is added to that policy.
 
   - For policies with automatic approval:
 
@@ -119,7 +119,7 @@ For more information on manually approving updates, see [Manage the status of dr
 When you review the list of driver update policies in the admin center, you can identify policies that have had new drivers added to them by reviewing the **Drivers to review** column for indications of new updates that need review.
 
 > [!NOTE]  
-> An exception to this are new *recommended driver* updates that are added to a policy set for automatic approval. Recommended driver updates that are the newest or latest recommended driver update are added to the policy and approved automatically, and never have their status set to *Needs review*.
+> An exception to this is new *recommended driver* updates that are added to a policy set for automatic approval. Recommended driver updates that are the newest or latest recommended driver update are added to the policy and approved automatically, and never have their status set to *Needs review*.
 
 To look for policies that have new driver updates pending a review, in the admin center go to **Devices** > **Windows 10 and later updates** > **Driver Updates** tab.
 
@@ -141,7 +141,7 @@ While viewing the Windows driver update policy list, you can view details about 
 You can use the *driver list* to review the driver updates that WUfB-DS identifies as applicable for one or more devices that receive that policy. From the list, you can view and manage the approval status of each update.
 
 > [!TIP]  
-> The driver list is not a record of the driver versions currently installed on devices assigned to the policy. Instead, it is a list of driver updates identified by and collected by WUfB-DS, that can be installed on devices to upgrade their existing drivers to a newer version. Intune does not collect inventory of installed drivers.
+> The driver list is not a record of the driver versions currently installed on devices assigned to the policy. Instead, it is a list of driver updates identified by and collected by WUfB-DS, which can be installed on devices to upgrade their existing drivers to a newer version. Intune does not collect an inventory of installed drivers.
 
 The driver list is divided into two tabs:
 
@@ -149,12 +149,12 @@ The driver list is divided into two tabs:
 
   When an OEM releases a newer update version that qualifies to be the new recommended driver, it replaces the previous update as the recommended driver update. If the older update version is still applicable to a device in the policy, it's moved to the *Other drivers* tab. If the older version was previously approved, it remains approved.
 
-- **Other drivers** – Other driver updates, are updates that are available from the original equipment manufacturer (OEM) aside from the current recommended driver update. These updates remain in a policy as long as they're newer than the driver version that's installed on at least one device with the policy.
+- **Other drivers** – Other driver updates are updates that are available from the original equipment manufacturer (OEM) aside from the current recommended driver update. These updates remain in a policy as long as they're newer than the driver version that's installed on at least one device with the policy.
 
   These updates can include:
-  - A previously recommended update superseded by a newer update version
+  - A previously recommended update was superseded by a newer update version
   - Firmware updates
-  - Driver updates that the OEM doesn't intend to be installed on all devices by default
+  - Optional driver updates, or updates that the OEM doesn't intend to be installed on all devices by default
   
   These updates can be managed and deployed through policies for Windows driver updates, but not through classic client Windows Update for Business (WUfB) policies.
 
@@ -171,12 +171,12 @@ For comparison, the following screen capture shows the contents of the *Other dr
 
 :::image type="content" source="./media/windows-driver-updates-policy/other-drivers.png " alt-text="A screen capture that shows the other drivers tab of a policy." lightbox="./media/windows-driver-updates-policy/other-drivers.png":::
 
-Each driver list displays the following details for updates in the policy. Most of the following details are based on information obtained from the driver update from the OEM:
+Each driver list displays the following details for updates in the policy. Most of the following details are based on information obtained from the driver update from the OEM or driver manufacturer:
 
-- **Driver name** – The driver update name. It's not uncommon for subsequent versions of an update from an OEM to have identical names. Use the update *Version* and *Release date* to differentiate between update instances.
-- **Version** - The update version as provided by the OEM.
-- **Manufacturer** – The OEM of the driver update.
-- **Driver class** - The driver class is determined from the details authored by the driver publisher, and usually represents the drivers hardware class. This information isn't always easily determined or consistent across updates from different OEM sources. When a driver's class can't be identified, it's assigned to the *Other* hardware class.
+- **Driver name** – The driver update name. It's not uncommon for subsequent versions of an update from an OEM or manufacturer to have identical names. Use the update *Version* and *Release date* to differentiate between update instances.
+- **Version** - The update version as provided by the OEM or manufacturer.
+- **Manufacturer** – The manufacturer of the driver update.
+- **Driver class** - The driver class is determined from the details authored by the driver publisher, and usually represents the drivers hardware class. This information isn't always easily determined or consistent across updates from different OEM sources or manufacturers. When a driver's class can't be identified, it's assigned to the *Other* hardware class.
 - **Release date** – The date the OEM made this driver update available.
 - **Status** – The current status of the driver update in this policy. You can modify the status for individual updates by selecting the name of the driver update from the list. There are four status options available for updates:
 
@@ -199,7 +199,7 @@ Select the update from the driver list to open its *Manage driver* pane. In the 
 
 :::image type="content" source="./media/windows-driver-updates-policy/manage-driver-pane.png" alt-text="A screen capture that shows the Manage driver pane." lightbox="./media/windows-driver-updates-policy/manage-driver-pane.png":::
 
-On the *Manage driver* pane you can:
+On the *Manage driver* pane, you can:
 
 1. Confirm the name of the driver update.
 2. View the update’s status. The update in the screen capture has a status of *Needs review*.
@@ -243,11 +243,11 @@ On the *Manage driver* pane you can:
   >
   > This behavior applies when manually setting an update as *Approved* in policies with manual approval, and in policies with automatic approval. In policies with automatic approval, this includes the manual approval of an update on the *other updates* list, or when reapproving a recommended update that was paused.
 
-- **Paused** – When an update is set to *Paused*, it's put on hold and isn't deployed to any more devices through this policy until its status is manually changed back to Approved. Pausing an update doesn't roll back a completed installation of the update, but can stop an active install of an update that is currently underway.
+- **Paused** – When an update is set to *Paused*, it's put on hold and isn't deployed to any more devices through this policy until its status is manually changed back to Approved. Pausing an update doesn't roll back a completed installation of the update but can stop an active install of an update that is currently underway.
 
   When you pause the most recent version of an approved update, Windows Update no longer makes that update available to devices the next time they scan for updates. However, if the policy has an earlier update version for the same driver that remains approved, Windows Update begins to install that older version on applicable devices.
 
-  Consider the following scenario: You have a policy with automatic approvals, for which the recommended update for the device’s printer is *version 3*. This driver update is successful on all devices where it has installed and has been available for longer than the policies new driver deferral period.
+  Consider the following scenario: You have a policy with automatic approvals, for which the recommended update for the device’s printer is *version 3*. This driver update is successful on all devices where it has been installed and has been available for longer than the policies new driver deferral period.
 
   - Before all devices install the *version 3* update, a newer version of the update is released, which is *version 4*. The new driver update version 4 is a recommended driver, which is automatically approved in the policy.
 
@@ -257,7 +257,7 @@ On the *Manage driver* pane you can:
 
 - **Declined** – You can configure a driver update to be declined, which removes it from appearing as a new driver that needs review.
 
-  Setting an update to declined doesn’t remove it from the policy, and you can change it back to *Approved* if you would like the update to deploy to applicable devices
+  Setting an update to declined doesn’t remove it from the policy, and you can change it back to *Approved* if you would like the update to deploy to applicable devices.
 
 ## Next steps
 
