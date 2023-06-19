@@ -149,6 +149,40 @@ Before the policy has any effect, you must create and deploy an Application Cont
 
 For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
+### Remove the Intune Management Extension as a managed installer
+
+Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
+
+#### Turn off the Intune Management Extension policy (required)
+
+The following configuration is required to stop adding the Intune Management Extension as a managed installer to your devices.
+
+1. In the admin center, go to **Endpoint security (Preview)**, select the **Managed installer** tab, and then select the **Managed installer – Intune Management Extension** policy.
+
+2. Edit the policy, and change **Set managed installer** to **Off**, and save the policy.
+
+New devices won’t be configured with the Intune Management Extension as a managed installer. This doesn’t remove the Intune Management Extension as managed installer from devices that have already been configured to use it.
+
+#### Remove the Intune Management Extension as a managed installer on devices (optional)
+
+As an optional clean-up step, you can run a script to remove the Intune Management Extension as a managed installer on devices that have already installed it.  This is optional as this configuration has no effect on devices unless you also use application control policies that reference the managed installer.
+
+1. Download the **CatCleanIMEOnly.ps1** PowerShell script. This script is available at [https://aka.ms/intune_WDAC/CatCleanIMEOnly](https://aka.ms/intune_WDAC/CatCleanIMEOnly) from *download.microsoft.com*.
+
+2. Run this script on devices that have set the Intune Management Extension as a managed installer. This script removes only the Intune Management Extension as a managed installer.
+
+To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
+
+#### Remove all AppLocker policies from a device (optional)
+
+To remove *all* Windows AppLocker policies from a device, you can use the **CatCleanAll.ps1** PowerShell script. This script removes not only the Intune Management Extension as a managed installer, but *all* managed installers as well as *all* policies based on Windows AppLocker from a device. Before using this script, be sure you understand your organizations use of AppLocker policies.
+
+1. Download the CatCleanAll.ps1 PowerShell script. This script is available at [https://aka.ms/intune_WDAC/CatCleanAll]( https://aka.ms/intune_WDAC/CatCleanAll) from *download.microsoft.com*.
+
+2. Run this script on devices that have set the Intune Management Extension as a managed installer. This script removes only the Intune Management Extension as a managed installer.
+
+To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
+
 ## Get started with Application Control policies
 
 With Intune's endpoint security Application Control policies, you can manage which apps on your managed Windows devices are allowed to run. Any apps that aren’t explicitly allowed to run by a policy are blocked from running unless you’ve configured the policy to use an Audit mode. With audit mode, the policy allows all apps to run and logs the details about them locally on the client.
@@ -278,7 +312,7 @@ To aid this optimization, WDAC policy and the Intune management Extension are co
 
 - For Intune EDU tenants, the Intune Management Extension is automatically set as a Managed Installer. This configuration is automatic and can’t be changed.
 
-## Delete an Application Control policy
+## Delete Application Control policy
 
 As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windows 10) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune#remove-wdac-policies-on-windows-10-1903) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
 
@@ -292,15 +326,6 @@ As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windo
 
 This sequence prevents anything from being blocked and fully removes the WDAC policy on the next reboot.
 
-<!--
-## Remove managed installer tags from apps
-
-On a device, you can remove the tags used by WDAC policies and Intune Application Control policies by running one of the following PowerShell scripts. These scripts are hosted on *download.microsoft.com*:
-
-- **CatCleanIMEOnly.ps1** – This script removes the tag for only Intune Managed Installer, and is available at [https://aka.ms/intune_WDAC/CatCleanIMEOnly](https://aka.ms/intune_WDAC/CatCleanIMEOnly).
-
-- **CatCleanAll.ps1** – This script removes all tags for WDAC from all applications on the device, and is available at [https://aka.ms/intune_WDAC/CatCleanAll](https://aka.ms/intune_WDAC/CatCleanAll).
--->
 ## Monitor Application Control policies and the managed installer
 
 After devices are assigned Application Control and Managed installer policies, you can view policy details within the admin center.
