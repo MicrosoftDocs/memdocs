@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2023
+ms.date: 06/19/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,9 +53,9 @@ If a device doesn't check in to get the policy or profile after the first notifi
 
 | Platform | Refresh cycle|
 | --- | --- |
+| Android | About every 8 hours |
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
-| Android | About every 8 hours |
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
@@ -63,11 +63,13 @@ If devices recently enroll, then the compliance, non-compliance, and configurati
 
 | Platform | Frequency |
 | --- | --- |
-| iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |  
-| macOS | Every 15 minutes for 1 hour, and then around every 8 hours | 
-| Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
+| Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+| iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+| macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+| Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+
+For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
 At any time, users can open the Company Portal app, **Devices** > **Check Status** or **Settings** > **Sync** to immediately check for policy or profile updates. For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
