@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 06/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,7 +66,7 @@ Message details include:
  * Delete  
  * Update (edit)  
  
- To access audit logs, go to **Tenant administration** > **Audit logs**. Available logs are shown in the table. Select **Filter** to filter logs by category. The category for organizational messages is **Other**. 
+ To access audit logs, go to **Tenant administration** > **Audit logs**. Available logs are shown in the table. Select **Filter** to filter logs by category. The category for organizational messages is **OrganizationalMessage**. 
  
  For more information about audit logs, see [Use audit logs to track and monitor events in Microsoft Intune](../fundamentals/monitor-audit-logs.md).    
 
