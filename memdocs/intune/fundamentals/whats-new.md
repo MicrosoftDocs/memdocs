@@ -168,7 +168,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->  
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about Endpoint analytics [here](https://learn.microsoft.com/en-us/mem/analytics/).
+Learn more about Endpoint analytics [here](https://learn.microsoft.com/mem/analytics/).
 
 ### Device security
 
