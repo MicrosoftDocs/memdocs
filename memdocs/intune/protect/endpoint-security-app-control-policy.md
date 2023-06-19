@@ -119,7 +119,7 @@ Intune’s endpoint security Application Control policies are an implementation 
 
 - Because there's no retroactive tagging, all apps on your devices that were deployed before enabling the managed installer aren't tagged. If you apply a WDAC policy, you must include explicit configurations to allow these untagged apps to run.
 
-- You can turn off this policy be editing the Managed Installer policy. Turning off the policy prevents subsequent apps from being tagged with the managed installer. Apps that were previously installed and tagged remain tagged. The only way to remove the managed installer tag is to use a [clean-up script](#remove-managed-installer-tags-from-apps).
+- You can turn off this policy be editing the Managed Installer policy. Turning off the policy prevents subsequent apps from being tagged with the managed installer. Apps that were previously installed and tagged remain tagged. The only way to remove the managed installer tag is to use a clean-up script.  <!-- [clean-up script](#remove-managed-installer-tags-from-apps)  -->
 
 [Learn more about how Intune set the managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
@@ -292,6 +292,7 @@ As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windo
 
 This sequence prevents anything from being blocked and fully removes the WDAC policy on the next reboot.
 
+<!--
 ## Remove managed installer tags from apps
 
 On a device, you can remove the tags used by WDAC policies and Intune Application Control policies by running one of the following PowerShell scripts. These scripts are hosted on *download.microsoft.com*:
@@ -299,7 +300,7 @@ On a device, you can remove the tags used by WDAC policies and Intune Applicatio
 - **CatCleanIMEOnly.ps1** – This script removes the tag for only Intune Managed Installer, and is available at [https://aka.ms/intune_WDAC/CatCleanIMEOnly](https://aka.ms/intune_WDAC/CatCleanIMEOnly).
 
 - **CatCleanAll.ps1** – This script removes all tags for WDAC from all applications on the device, and is available at [https://aka.ms/intune_WDAC/CatCleanAll](https://aka.ms/intune_WDAC/CatCleanAll).
-
+-->
 ## Monitor Application Control policies and the managed installer
 
 After devices are assigned Application Control and Managed installer policies, you can view policy details within the admin center.
