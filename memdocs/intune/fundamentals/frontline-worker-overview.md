@@ -64,8 +64,6 @@ Make sure know what the device is doing and its use case. Android device manufac
 
 For example, devices that are used for augmented or virtual reality typically don't support GMS, which is a requirement for Android Enterprise enrollment. So, the natural enrollment path is AOSP.
 
-**Android Enterprise vs. AOSP**:
-
 # [Android Enterprise](#tab/ae)
 
 **Android Enterprise** enrollment devices require and support [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site). These devices are also used in countries/regions that allow GMS.
