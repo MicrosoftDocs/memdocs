@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 06/20/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -236,8 +236,6 @@ You can view the following list of permissions in the Microsoft Intune admin cen
 - **Security tasks**
   - Read
   - Update
-- **Telecom expenses**
-  - Read
 - **Terms and conditions**
   - Read
 - **Windows Enterprise Certificate**
