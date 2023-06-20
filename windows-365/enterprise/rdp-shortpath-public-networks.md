@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2022
+ms.date: 06/15/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -43,7 +43,7 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
   - STUN server IP ranges on UDP port 3478.
 - Client PC Network  
   - UDP outbound:  
-    - To the public IP addresses assigned to NAT gateway or the Azure Firewall in an Azure Hosted Network Scenario.
+    - To the public IP addresses assigned to Network Address Translation (NAT) gateway or the Azure Firewall in an Azure Hosted Network Scenario.
     - For a Microsoft Hosted network scenario, all public IP spaces.
 
 ## Enable RDP Shortpath for public networks
@@ -80,12 +80,12 @@ When you use RDP Shortpath, the connection with the Cloud PC proceeds as follows
 
 ## Known issues
 
-The RDP Shortpath for public networks may not work with Cloud PCs in the following scenarios:
+The RDP Shortpath for public networks may not work with Cloud PCs where:
 
-- Where double NAT is in place. For example, if the traffic is routed through a Secure Web Gateway (SWG) or proxy where the connection is Natted twice (first, on egress from Azure and, second, from the VPN/SWG endpoint.)
-- Where the connection is routed through an internet proxy or other inspection device.
+- Double NAT is in place. For example, if the traffic is routed through a Secure Web Gateway (SWG) or proxy where the connection uses a NAT twice (first, on egress from Azure and, second, from the VPN/SWG endpoint.)
+- The connection is routed through an internet proxy or other inspection device.
 - Any network that restricts UDP access or limits access to specific ports or IP ranges.
-- Where Carrier Grade NAT (CGN) is used. Where the network shares a public IP address with other networks.
+- Carrier Grade NAT (CGN) is used. Where the network shares a public IP address with other networks.
 
 For more technical details on these scenarios, see [How RDP Shortpath works](/azure/virtual-desktop/rdp-shortpath?tabs=public-networks#how-rdp-shortpath-works).
 
