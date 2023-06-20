@@ -90,7 +90,9 @@ A new setting is available in the Settings Catalog. In the [Microsoft Intune adm
 
 **Authentication > Extensible Single Sign On (SSO)**:
 
+- Authentication Method
 - Denied Bundle Identifiers
+- Registration Token
 
 **Full Disk Encryption > FileVault**:
 
