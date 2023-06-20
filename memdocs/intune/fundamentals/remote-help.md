@@ -398,6 +398,7 @@ Updates for Remote Help are released periodically. When we update Remote Help, y
 ### June 20, 2023
 
 Version: 4.2.1424.0
+
 With Remote Help 4.2.1424.0, a new in-session connection mode feature provides users with a way to seamlessly switch between full control and view-only modes during a remote assistance session.
 
 ### May 1, 2023
