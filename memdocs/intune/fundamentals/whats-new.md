@@ -67,6 +67,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of June 19, 2023
+
+### Device management<!-- 10602971 -->
+
+#### Introducing in-session connection mode switch in Remote Help<!-- 10602971 wndraft -->
+
+In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature provides the ability to effortlessly transition between full control and view-only modes, granting flexibility and convenience.
+
+For more information on Remote Help, go to [Remote Help](../fundamentals/remote-help.md).
+
+Applies to:
+Windows 10/11
+
+
 ## Week of June 12, 2023
 
 ### Device management
