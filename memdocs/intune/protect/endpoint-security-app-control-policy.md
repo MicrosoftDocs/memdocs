@@ -405,7 +405,7 @@ You may have noticed other instances of the Application Control policy in the In
 
 From the Windows Application Control Docs, prior to Windows 10 1903, Application Control only supported a single active on a system at any given time. This significantly limits customers in situations where multiple policies with different intents would be useful.
 
-Beginning with Windows 10 version 1903, WDAC supports **only** up to 32 active policies on a device before running into boot issues. [Learn more about the Known Issue here](windows/security/threat-protection/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active). To avoid unintended device impact as a result of more than 32 active policies, you can:
+Beginning with Windows 10 version 1903, WDAC supports **only** up to 32 active policies on a device before running into boot issues. [Learn more about the Known Issue here](/windows/security/threat-protection/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active). To avoid unintended device impact as a result of more than 32 active policies, you can:
 
 1.	Use [CITool.exe](/windows/security/threat-protection/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting#1---gather-wdac-diagnostic-data) on the device to inventory policy count prior to deploying any new WDAC policies to that device. 
 2.	Consider [merging multiple WDAC policies](/windows/security/threat-protection/windows-defender-application-control/merge-windows-defender-application-control-policies#merge-multiple-wdac-policy-xml-files-together) prior to deployment if that meets your organization’s needs.
