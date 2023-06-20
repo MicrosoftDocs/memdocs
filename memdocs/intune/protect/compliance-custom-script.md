@@ -84,7 +84,7 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 ## Sample discovery script for Linux
 
 > [!NOTE]  
-> Discovery scripts in Linux are run in the User's context and as such they cannot check for System level settings that require elevation. An example of this is the state/hash of the `/etc/sudoers` file.
+> Discovery scripts in Linux are run in the User's context and as such they cannot check for System level settings that require elevation. An example of this is the `state/hash` of the `/etc/sudoers` file.
 
 Discovery scripts for Linux must be POSIX-compliant shell scripts, such as Bash. However, the scripts can call more complex interpreters from inside the script, like Python. To successfully use other interpreters, they must be correctly installed and configured on the devices in advance of receiving the discovery script.  
 
@@ -100,7 +100,7 @@ The following are examples of syntax that is compliant vs not compliant:
     }
   ```
 
-   For example, `["$a = foo]` - Use of a single equal sign for a string comparison is POSIX-compliant.
+   For example, `[ "$a" = foo ]` - Use of a single equal sign for a string comparison is POSIX-compliant.
 
 - Not compliant:
 
@@ -110,7 +110,7 @@ The following are examples of syntax that is compliant vs not compliant:
     }
   ```
 
-   For example, `["$a == foo]` - Use of a double equal sign for a string comparison isn't POSIX-compliant.
+   For example, `[ "$a" == foo ]` - Use of a double equal sign for a string comparison isn't POSIX-compliant.
 
 For more information, the following guides might be of use:
 

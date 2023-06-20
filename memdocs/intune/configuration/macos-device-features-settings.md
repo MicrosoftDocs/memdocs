@@ -38,6 +38,10 @@ Intune includes built-in settings to customize features on your macOS devices. F
 
 Use these features to control macOS devices as part of your mobile device management (MDM) solution.
 
+This feature applies to:
+
+- macOS
+
 This article describes these settings. It also lists the steps to get the IP address, path, and port of AirPrint printers using the Terminal app (emulator). For more information on device features, go to [Add iOS/iPadOS or macOS device feature settings](device-features-configure.md).
 
 > [!NOTE]
@@ -197,7 +201,7 @@ For more information on these settings, see [Content Caching payload settings](h
 
 - **Share content with other caches**: When your network has more than one content cache, the content caches on other devices automatically become peers. These devices can consult and share cached software. 
 
-  When a requested item isn’t available on one content cache, it checks its peers for the item. If the item is available, it’s downloaded from the content cache on the peer device. If it’s still not available, the content cache downloads the item from:
+  When a requested item isn't available on one content cache, it checks its peers for the item. If the item is available, it's downloaded from the content cache on the peer device. If it's still not available, the content cache downloads the item from:
 
   - A parent IP address, if any are configured
   
@@ -290,7 +294,7 @@ This setting applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
-  - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple’s Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
+  - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
 
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements.
 
@@ -358,7 +362,7 @@ This setting applies to:
 - **Block password changes** (Kerberos only): **Yes** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.  
 - **Enable local password sync** (Kerberos only): Choose **Yes** to sync your users' local passwords to Azure AD. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Azure AD. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
 
-- **Delay Kerberos extension setup** (Kerberos only): When set to **Yes**, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might immediately prompt the user to set up the Kerberos extension.
+- **Delay Kerberos extension setup** (Kerberos only): When set to **Yes**, the user isn't prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might immediately prompt the user to set up the Kerberos extension.
 
   This feature applies to:
   
@@ -397,7 +401,7 @@ This setting applies to:
 
 - **Kerberos extension use** (Kerberos only): Select how other processes use the Kerberos Extension credential. Your options: 
   - **Always**: The extension credential is always used if the SPN is listed in **Domains**. It's not used if the calling app isn't listed in **App Bundle IDs**. 
-  - **When not specified**: The extension credential is only used when another credential isn’t entered by the caller, and the SPN is listed in Domains. It's not used if the calling app isn't listed in **App Bundle IDs**. 
+  - **When not specified**: The extension credential is only used when another credential isn't entered by the caller, and the SPN is listed in Domains. It's not used if the calling app isn't listed in **App Bundle IDs**. 
   - **Kerberos default**: Intune doesn't change or update this setting. By default, the OS uses the default Kerberos processes for selecting credentials. This option is the same as not configuring this setting.
 
   This feature applies to:
@@ -427,7 +431,7 @@ This setting applies to:
 - **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
 - **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
-- **Preferred KDCs** (Kerberos only): Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery.
+- **Preferred KDCs** (Kerberos only): Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don't respond, then the device uses DNS discovery.
 
   This feature applies to:
   

@@ -73,7 +73,7 @@ landingContent:
       - text: Device guidelines
         url: autopilot-device-guidelines.md
       - text: Motherboard replacement guidance
-        url: autopilot-mbr.md
+        url: autopilot-motherboard-replacement.md
 
   # Card (optional)
   - title: Administer Windows Autopilot

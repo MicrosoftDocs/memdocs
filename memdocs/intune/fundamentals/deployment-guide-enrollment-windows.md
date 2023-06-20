@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 06/07/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -140,7 +140,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
 
 - **Organization-owned devices**: Users turn on the device, step through the out-of-box experience (OOBE), and sign in with their work or school account (example: `user@contoso.com`). This step joins the device in Azure AD, and the device is considered organization-owned. The device is fully managed, regardless of who's signed in. Users can open the **Settings** app and go to **Accounts** > **Access work or school** to confirm that their work account is connected. 
 
- If users sign in with a personal account during the OOBE, they can still join the devices to Azure AD using the following steps:
+  If users sign in with a personal account during the OOBE, they can still join the devices to Azure AD using the following steps:
 
   1. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
   2. In **Alternate actions**, select **Join this device to Azure Active Directory**, and enter the information they're asked.

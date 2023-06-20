@@ -46,8 +46,6 @@ The **Sync** device action forces the selected device to immediately check in wi
 3. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
 4. To confirm, select **Yes**.
 
-To see the status of the sync action, choose **Devices** > **Monitor** > **Device actions**.
-
 You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 ## Retryable error codes

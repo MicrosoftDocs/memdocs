@@ -49,9 +49,9 @@ Rollback transaction: XXXX
 
 **Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently used by Endpoint analytics and isn't transmitted to Microsoft.
 
-### Script requirements for proactive remediations
+### Script requirements for Remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](proactive-remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
+If the option **Enforce script signature check** is enabled in the [Settings](remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
@@ -60,7 +60,7 @@ If the overview page shows a startup performance score of zero with a banner sho
 First, ensure devices meet the prerequisites:
 - [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
 - [Prerequisites for Configuration Manager managed devices](enroll-configmgr.md#bkmk_prereq)
-- [Prerequisites for Proactive remediations](proactive-remediations.md#bkmk_prereq)
+- [Prerequisites for Remediations](remediations.md#bkmk_prereq)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
 1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
@@ -151,10 +151,10 @@ The scripts exit with a code of 1 to signal to Intune that remediation should oc
 
 0x87D00321 is a script execution timeout error. This error typically occurs with machines that are connected remotely. A potential mitigation might be to only deploy to a dynamic collection of machines that have internal network connectivity.
 
-### What is the output size limit for proactive remediation scripts?
+### What is the output size limit for remediation scripts?
 
-The maximum allowed output size limit for proactive remediation scripts is 2048 characters.
+The maximum allowed output size limit for Remediation scripts is 2048 characters.
 
 ## Next steps
 
-Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
+Use [Remediations](remediations.md) to help fix common support issues before end-users notice issues.

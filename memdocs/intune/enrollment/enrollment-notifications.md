@@ -47,7 +47,8 @@ Enrollment notifications are supported on these devices:
 * Android devices in bring-your-own-device (BYOD) scenarios    
 * iOS/iPadOS devices in BYOD scenarios      
 * Macs   
-* Devices running Windows 10/11, excluding hybrid Azure AD-joined devices      
+* Devices running Windows 10/11, excluding hybrid Azure AD-joined devices
+* Autopilot devices, excluding userless scenarios such as Windows Autopilot for pre-provisioned deployment    
 
 ## Example  
 The following example image shows what an enrollment notification looks like to a device user.    
@@ -69,7 +70,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 ## Create an enrollment notification  
 
 > [!TIP]
-> Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks.  
+> Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks, but only for HTTPS links.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Go to **Devices** > **Enroll device** and select the platform you're creating notifications for. Your options:  

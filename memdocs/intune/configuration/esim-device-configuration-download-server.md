@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/08/2023
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: hejimenez
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -135,15 +135,15 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
     :::image type="content" source="./media/esim-device-configuration/create-profile-configuration-settings.png" alt-text="Configuration settings tab in the Create Profile process.":::
 
-- In the **Download Servers** area:
+    - In the **Download Servers** area:
 
-  - **1 - Auto Enable**: It indicates whether the discovered profile must be automatically enabled after installation. The default value of the dropdown list is *Enable*. Select **Auto Enable** if the eSIM profile should be automatically enabled (independently of any other eSIM profiles stored in eUICC).
+      - **1 - Auto Enable**: It indicates whether the discovered profile must be automatically enabled after installation. The default value of the dropdown list is *Enable*. Select **Auto Enable** if the eSIM profile should be automatically enabled (independently of any other eSIM profiles stored in eUICC).
 
-  - **2 - Server Name**: It's the fully qualified domain name of the SM-DP+ server that is used for profile discovery. For example, *smdp.example.com* (do not include *https://*)
+      - **2 - Server Name**: It's the fully qualified domain name of the SM-DP+ server that is used for profile discovery. For example, *smdp.example.com* (do not include *https://*)
 
-  - **3 - Display Local UI**: Determines whether eSIM settings can be viewed and changed in the Settings app on the eSIM capable devices that are being provisioned. True if available, false otherwise. If **Display Local UI** is set to Disabled, **Auto Enable** must be checked.
+      - **3 - Display Local UI**: Determines whether eSIM settings can be viewed and changed in the Settings app on the eSIM capable devices that are being provisioned. True if available, false otherwise. If **Display Local UI** is set to Disabled, **Auto Enable** must be checked.
 
-  - Enter the Server Name, select the desired settings, and then select **Next**.
+    - Enter the Server Name, select the desired settings, and then select **Next**.
 
 8. In the **Scope tags** tab, add the required tags, and select **Next**.
 

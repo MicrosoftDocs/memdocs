@@ -15,7 +15,6 @@ ms.collection:
 ms.topic: conceptual
 ---
 
-
 # Windows Autopilot scenarios and capabilities
 
 *Applies to:*
@@ -52,14 +51,6 @@ These scenarios are summarized in the following video.
 ### Temporary Access Pass
 Organizations leveraging [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) can use this feature with Windows Autopilot Azure AD join user driven, pre-provisioning, and self-deploying mode for shared devices. Temporary Access Pass is not supported by the native Windows login credential provider so it requires the enablement of WebSign-in. To enable this feature in your organization you can follow the CSP details outlined in [Policy CSP - Authentication](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin). This feature is not supported with Windows Autopilot hybrid Azure AD join devices and is not applicable on self-deploying mode kiosks.
 
-### Windows Autopilot is self-updating during OOBE
-
-For Windows 10, version 1903 and later devices, Autopilot functional and critical updates automatically download during OOBE after:
-- The device is connected to a network.
-- The [critical driver and Windows zero-day patch (ZDP) updates](/windows-hardware/customize/desktop/windows-updates-during-oobe) are complete.
-
-You can't opt out of these Autopilot updates because they're required for Windows Autopilot deployment. Windows alerts the user that the device is checking for, downloading, and installing the updates.
-
 ### Cortana voiceover and speech recognition during OOBE
 
 In Windows 10, version 1903 and later, Cortana voiceover and speech recognition during OOBE is DISABLED by default. This default applies to all Windows Pro, Education, and Enterprise editions.
@@ -85,3 +76,4 @@ With Windows Autopilot, you can configure the BitLocker encryption settings to b
 ## Related topics
 
 [Windows Autopilot: What's new](windows-autopilot-whats-new.md)
+

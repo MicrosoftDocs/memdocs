@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 05/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,9 +41,9 @@ This feature applies to:
 
 The Intune templates are 100% cloud-based, are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI. They offer a straight-forward way to configure the settings, and find the settings you want:
 
-- The **Windows settings** are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML.
+- The **Windows settings** are similar to group policy (GPO) settings in on-premises Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML.
 
-- The **Office and Microsoft Edge** settings are ADMX-ingested, and use the same Office administrative template files and Microsoft Edge administrative template files that you would download in on-premises environments.
+- The **Office, Microsoft Edge, and Visual Studio** settings are ADMX-ingested, and use the same administrative template files that you would download in on-premises environments.
 
 - You can import custom and third party ADMX and ADML files. For more information, including the steps, go to [Import custom or partner ADMX files](administrative-templates-import-custom.md).
 
@@ -85,6 +85,7 @@ This article lists the steps to create a template for Windows client devices, an
     :::image type="content" source="./media/administrative-templates-windows/administrative-templates-choose-computer-user-configuration.png" alt-text="Apply ADMX template settings to users and devices in Microsoft Intune and Intune admin center.":::
 
     > [!NOTE]
+    >
     > If you're using the **Settings catalog**, then select **Add settings**, and expand **Administrative Templates**. Select any setting to see what you can configure.
     > 
     > :::image type="content" source="./media/administrative-templates-windows/settings-catalog-administrative-templates.png" alt-text="Expand administrative templates in Settings catalog in Microsoft Intune and Intune admin center.":::

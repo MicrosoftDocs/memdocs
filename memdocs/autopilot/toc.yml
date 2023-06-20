@@ -235,4 +235,4 @@ items:
         - name: Device guidelines
           href: autopilot-device-guidelines.md
         - name: Motherboard replacement
-          href: autopilot-mbr.md
+          href: autopilot-motherboard-replacement.md

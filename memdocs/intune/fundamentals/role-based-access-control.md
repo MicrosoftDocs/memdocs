@@ -79,6 +79,7 @@ You can create your own roles with custom permissions. For more information abou
 | Compliance Administrator | None | Read only |
 | Compliance Data Administrator | None | Read only |
 | Global Reader (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
+| Helpdesk administrator (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
 | Reports Reader | Read Only| None |
 
 > [!TIP]
@@ -108,6 +109,7 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 - Assign permissions and scope tags only apply to the objects (like policies or apps) in that role's assignment Scope (Groups). Assign permissions and scope tags don't apply to objects in other role assignments unless the other assignment specifically grants them.
 - Other permissions (such as Create, Read, Update, Delete) and scope tags apply to all objects of the same type (like all policies or all apps) in any of the user's assignments.
 - Permissions and scope tags for objects of different types (like policies or apps), don't apply to each other. A Read permission for a policy, for example, doesn't provide a Read permission to apps in the user's assignments.
+- In case of no scope tags and some scope tags assigned from different assignments, user will only be able to see devices that are part of some scope tags and will not be able to see all devices. 
 
 ## Next steps
 - [Assign a role to a user](assign-role.md)

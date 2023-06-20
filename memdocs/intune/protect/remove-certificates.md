@@ -75,6 +75,7 @@ A root certificate is removed when:
 - A user unenrolls.
 - An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+- A certificate profile is removed from the group assignment.
 
 SCEP certificates *stay* on the device (certificates aren't revoked or removed) when:
 

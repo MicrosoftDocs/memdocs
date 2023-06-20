@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/05/2023
+ms.date: 05/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -83,7 +83,7 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 ## Licensing requirements
 
 - You must have an Intune license to use Intune to manage the devices.
-- Users must have licenses for Windows, Intune, Azure AD, and Windows 365 to use their Cloud PC.
+- Users must have licenses for Windows E3, Intune, Azure AD P1, and Windows 365 to use their Cloud PC.
 
 ## Management requirements
 
@@ -121,8 +121,6 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Japan East
 - Norway
   - Norway East
-- Qatar
-  - Qatar Central
 - South Africa
   - South Africa North
 - South America
@@ -169,8 +167,6 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
   - Japan East
 - Norway
   - Norway East
-- Qatar
-  - Qatar Central (Restricted)
 - South Africa
   - South Africa North
 - South America

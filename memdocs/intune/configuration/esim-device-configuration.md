@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: rashok
+ms.reviewer: hejimenez
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,7 +29,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Configure eSIM cellular profiles in Intune (public preview)
+# Configure eSIM cellular profiles using imported activation codes in Intune (public preview)
 
 eSIM is an embedded SIM chip, and lets you connect to the Internet over a cellular data connection on an eSIM-capable device, such as the [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). With an eSIM, you don't need to get a SIM card from your mobile operator. As a global traveler, you can also switch between mobile operators and data plans to always stay connected.
 
@@ -40,16 +40,31 @@ This feature applies to:
 - Windows 11
 - Windows 10
 
-In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
+In Intune, you can bulk activate eSIM codes using the following options:
 
-To deploy eSIM to your devices using Intune, the following are needed:
+- **Option 1 - Import activation codes (this article)**
 
-- **eSIM capable devices**, such as the Surface LTE: See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Or, see a list of [some of the known eSIM capable devices](#esim-capable-devices) (in this article).
-- **Windows 10 Fall creators update PC** (1709 or later) that is enrolled and MDM managed by Intune
-- **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
+  In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
+
+- **Option 2 - Use an eSIM download server with the Settings Catalog**
+
+  For more information on this option, go to [Configure eSIM download server using Microsoft Intune](esim-device-configuration-download-server.md).
+
+This article describes how to import the activation codes in bulk, and then deploy these codes to your eSIM-capable devices. This feature is in [public preview](../fundamentals/public-preview.md).
 
 > [!NOTE]
 > You can create a custom OMA-URI profile using the [eUICCs CSP](/windows/client-management/mdm/euiccs-csp). Be sure to deploy one custom profile for each device. The profile must include the device ICCID and matching activation code from the carrier for each device.
+
+## Prerequisites
+
+To deploy eSIM to your devices using Intune, the following are needed:
+
+- **eSIM capable devices**, such as the Surface LTE: See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+
+  If you're unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, go to [Use an eSIM to get a cellular data connection on your Windows client device](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+
+- **Windows 10 Fall creators update PC** (1709 or later) that is enrolled and MDM managed by Intune
+- **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
 
 ## Deploy eSIM to devices - overview
 
@@ -61,11 +76,6 @@ To deploy eSIM to devices, an Administrator completes the following tasks:
 4. Monitor the deployment
 
 This article guides you through these steps.
-
-## eSIM capable devices
-
-If you’re unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows client device](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
-
 ## Step 1: Add cellular activation codes
 
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:

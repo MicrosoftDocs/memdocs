@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/02/2023
+ms.date: 05/25/2023
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,7 +36,6 @@ Microsoft Intune provides the cloud infrastructure, the cloud-based mobile devic
 
 > [!NOTE]
 > Microsoft Intune is a single, integrated endpoint management platform for managing all your endpoints. The Microsoft Intune admin center integrates Microsoft Configuration Manager and Microsoft Intune.
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
 In this tutorial, you will:
 > [!div class="checklist"]

@@ -80,7 +80,6 @@ In addition to a license for Intune, your organization must have one of the foll
 
 Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
 
-
 If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 **Supported Windows 10/11 versions**:
@@ -103,26 +102,11 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
-- Have access to the following endpoints:
+- Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).  
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-
-    - *.prod.do.dsp.mp.microsoft.com
-    - *.windowsupdate.com
-    - *.dl.delivery.mp.microsoft.com
-    - *.update.microsoft.com
-    - *.delivery.mp.microsoft.com
-    - tsfe.trafficshaping.dsp.mp.microsoft.com
-
-  - WUfB-DS
-
-    - devicelistenerprod.microsoft.com
-    - devicelistenerprod.eudb.microsoft.com
-    - login.windows.net
-    - payloadprod*.blob.core.windows.net
-
+  - Windows Update for Business deployment service
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
-    - *.notify.windows.com
 
 - Be configured to get Quality Updates directly from the Windows Update service.
 

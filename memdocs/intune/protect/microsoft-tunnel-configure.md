@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2023
+ms.date: 05/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -136,8 +136,12 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
 2. To start the server installation, run the script as **root**.  For example, you might use the following command line: `sudo chmod +x ./mstunnel-setup`. The script always installs the [most recent version](../protect/microsoft-tunnel-upgrade.md#microsoft-tunnel-update-history) of Microsoft Tunnel.
 
+   To see detailed console output during the tunnel and installation agent enrollment process:  
+   1. Run `export mst_verbose_log="true"` before you run the *./mstunnel-setup* script. To confirm verbose logging is enabled, run `export`.
+   2. After setup completes, edit the environment file **/etc/mstunnel/env.sh** to add a new line: ` mst_verbose_log="true"`. After adding the line, run `mst-cli server restart` to restart the server.
+
    > [!IMPORTANT]
-   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following comands to add *intune_env=FXP* to the command line:
+   > **For the U.S. government cloud**, the command line must reference the government cloud environment. To do so, run the following commands to add *intune_env=FXP* to the command line:
    >
    > 1. Run `sudo chmod +x ./mstunnel-setup`
    > 2. Run `sudo intune_env=FXP ./mstunnel-setup`

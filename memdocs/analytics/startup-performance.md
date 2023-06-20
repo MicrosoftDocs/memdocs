@@ -84,4 +84,4 @@ The **Startup performance** page has reporting tabs that provide support for the
 ## Next steps
 
 - Use the [Work from anywhere report](work-from-anywhere.md).
-- Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.
+- Use [Remediations](remediations.md) to help fix common support issues before end-users notice issues.

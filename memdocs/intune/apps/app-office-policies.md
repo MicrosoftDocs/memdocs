@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -67,6 +67,10 @@ After you set up Intune for your organization, you can create an Office app poli
 
    > [!TIP]
    > The **Policy configurations** pane provides the **Health status** for each policy.
+
+## Quiet time notification policies
+
+The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user work-related notifications received after work hours. You can find these settings in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
 ## Additional information
 

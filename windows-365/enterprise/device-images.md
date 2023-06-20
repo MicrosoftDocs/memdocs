@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2022
+ms.date: 05/19/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -38,7 +38,6 @@ Windows 365 uses both default and custom operating system images to automaticall
 
 Both marketplace and custom images must meet the following requirements:
 
-- Windows 10 Enterprise version 20H2 or later.
 - Windows 11 Enterprise 21H2 or later.
 - Generation 2 images.
     > [!Note]

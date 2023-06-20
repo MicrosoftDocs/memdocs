@@ -337,18 +337,6 @@ No user identifiable information is collected.
 
 For more known issues, go to the [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../protect/microsoft-tunnel-mam-ios.md#known-issues).
 
-- Proxy servers must have a public DNS record or they must be configured using the IP address.
-
-- When you evaluate trusted certificates for protected web servers, SANs (Subject Alternative Names) aren't honored. Only common names are honored.
-
-- If the app doesn't manage the identity **and** the identity is delegated to the Microsoft Tunnel for MAM iOS SDK, then to change the logged in account, the app must manually call into the **Intune App SDK for iOS** to deregister the account.
-
-  For more information on deregistering the account, go to [Microsoft Intune App SDK for iOS developer guide](app-sdk-ios.md#deregister-user-accounts).
-
-  The app identity is managed in a separate keychain. So if you want to use a different user account to sign in and connect to the Tunnel Gateway server, then you must reset the device. Uninstalling and reinstalling the app isn't enough to change the user account.
-
-- Trusted root certificate validation only works for endpoints. It doesn't validate the VPN server.
-
 ## Next steps
 
 [Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../protect/microsoft-tunnel-mam-ios.md)

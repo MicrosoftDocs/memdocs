@@ -2,12 +2,12 @@
 # required metadata
 
 title: Public preview overview in Microsoft Intune
-description: Learn about public preview features in Microsoft Intune, and see an example. See a list of limitations, restrictions, and more in Microsoft Intune admin center.
+description: Learn about public preview features in Microsoft Intune, and see an example. See a list of limitations, restrictions, and more in the Microsoft Intune admin center.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2022
+ms.date: 05/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,11 +32,11 @@ ms.collection:
 
 # Public preview in Microsoft Intune
 
-Microsoft Intune releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a “Preview” basis. You can test and use these features in production environments and scenarios, and provide feedback.
+Microsoft Intune releases features in "public preview". These features are being actively developed, and may not be complete. They're made available on a "Preview" basis. You can test and use these features in production environments and scenarios, and provide feedback.
 
 Preview features have a **(preview)** tag in the Microsoft Intune admin center:
 
-:::image type="content" source="./media/public-preview/preview-example.png" alt-text="Sample public preview tag in Microsoft Intune admin center and Microsoft Intune.":::
+:::image type="content" source="./media/public-preview/preview-example.png" alt-text="Screenshot that shows the sample public preview tag in Microsoft Intune admin center and Microsoft Intune.":::
 
 ## What you need to know
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/12/2023
+ms.date: 05/04/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -81,6 +81,17 @@ These settings apply to Android Enterprise personally owned devices with a work 
     In a previous release, this setting was named **Not configured**.
 
   - **Allow all account types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
+
+    You can also configure:
+
+    - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains in the following format:
+
+      ```csv
+      contoso.com
+      microsoft.com
+      ```
+
+      Or, add the domains individually using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
 
     This setting requires:
 

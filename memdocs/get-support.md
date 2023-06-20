@@ -10,8 +10,8 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 08/31/2022
 ms.topic: how-to
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -23,7 +23,7 @@ ms.reviewer: hipethe
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic
+ms.custom: 
 ms.collection:
   - M365-identity-device-management
   - tier1
@@ -73,7 +73,6 @@ The following information can help you choose the correct focus:
   - Endpoint analytics for Intune devices
 
 - **Configuration Manager**:
-  - Desktop Analytics
   - Endpoint analytics for Configuration Manager devices
   - Tenant attach for Configuration Manager devices
 
@@ -161,7 +160,7 @@ When presented, you can run automated tests or diagnostics where applicable, and
 The **Contact Support** option is available after you provide some basic keywords on the *Search for solutions* pane. You can use this pane to file an online support ticket for a supported service.
 
 > [!IMPORTANT]  
-> For technical support with third-party products that work with Intune (like Saaswedo, Cisco, or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
+> For technical support with third-party products that work with Intune (like Cisco or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
 
 :::image type="content" source="./media/get-support/contact-support.png" alt-text="Screenshot that shows how to select the contact support icon in the Intune admin center.":::
 

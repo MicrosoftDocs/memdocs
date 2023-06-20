@@ -38,6 +38,10 @@ ms.collection:
 
 This article describes the different kernel and system extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage extensions on your devices.
 
+This feature applies to:
+
+- macOS
+
 To learn more about extensions in Intune, and any prerequisites, see [add macOS extensions](kernel-extensions-overview-macos.md).
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
@@ -133,7 +137,7 @@ This feature applies to:
   >
   > and note the output:
   >
-  > E.g. `UBF8T346G9	com.microsoft.wdav.netext (101.04.48/101.04.48)	Microsoft Defender for Endpoint Network Extension`
+  > E.g. `UBF8T346G9    com.microsoft.wdav.netext (101.04.48/101.04.48)    Microsoft Defender for Endpoint Network Extension`
   >
   > The first entry is the Team ID you need. `UBF8T346G9` in our example
 
