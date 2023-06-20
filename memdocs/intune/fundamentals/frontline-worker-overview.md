@@ -44,13 +44,17 @@ This article provides guidance on managing and configuring frontline worker (FLW
 
 Before deployment, there are several questions to consider when making the decision of how to manage a fleet of rugged or FLW devices:
 
-•	Will these devices shared?
-•	With whom will the devices be shared with?
-•	How will the end user become productive when they pick up a device to work with?
-•	How is user switching and hand-off of the device handled?
-•	What environments will these devices be utilized in?
-•	Do these devices need to be connected at all times or is there an offline scenario to consider?
-•	Are these devices mission and/or business critical?
+- Will these devices shared?
+
+  If yes, then <>
+  If no, then <>
+
+- With whom will the devices be shared with?
+- How will the end user become productive when they pick up a device to work with?
+- How is user switching and hand-off of the device handled?
+- What environments will these devices be utilized in?
+- Do these devices need to be connected at all times or is there an offline scenario to consider?
+- Are these devices mission and/or business critical?
 
 Once the questions above are answered, the next stage is to identify the platforms and scenarios to be implemented.
 
@@ -141,6 +145,8 @@ The next decision is to decide if the devices are shared with many users or assi
 
 ### Step 3 - Home screen and device experience (Android)
 
+This step is optional and depends on your business scenario. But, if these devices will be shared by many users, then it's recommended to utilize the home screen and device experience features in Intune.
+
 On Android Enterprise devices, you can configure the Intune Manged Home Screen (MHS) launcher to further control home screen and device experience. This feature isn't available for AOSP devices.
 
 In this step, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device. Remember, your organization owns these FLW devices. End users don't own these devices.
@@ -162,12 +168,10 @@ The following scenarios describe some commonly used scenarios:
 
   To get started, use the following links:
 
-  1. [Add apps to Intune](../apps/apps-add.md). If you're using **dedicated devices** enrollment, then also add the Managed Home Screen (MHS) app. When the apps are added, you create app policies that deploy the apps to the devices.
+  1. [Add apps to Intune](../apps/apps-add.md). If you're using **dedicated devices** enrollment with multi-app kiosk mode, then also add the Managed Home Screen (MHS) app. When the apps are added, you create app policies that deploy the apps to the devices. If you're using **dedicated devices** enrollment with kiosk mode not configured, then MHS isn't required or used. Multi-app is still used, but it's not locked into the MHS.
   2. Create a device configuration restrictions policy that [allows or restricts features using Intune](../configuration/device-restrictions-android-for-work.md).
 
       - If you use **dedicated devices** enrollment, then use the **Device experience** > **Dedicated device** settings:
-
-        **??** Which settings apply to this scenario? I added the following screenshot, but not sure if this is the correct setting. These settings require MHS. ??
 
         This scenario configures the MHS using the device configuration policy settings you enter. For this scenario, don't configure the MHS using an app policy.
 
@@ -322,7 +326,7 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
       Partitioned user access is the default behavior for Shared iPads. In Intune, **Not configured** uses this default behavior. Use this option when an iPad is used by many authenticated users at different times.
 
-      Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad. Only the same set of apps across all users support partitioned user access. ?? Is this last sentence true? The original comment said "it", so wanted to confirm what's meant by "it". ??
+      Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad. Only the same set of apps across all users support partitioned user access.
 
       When the user locks their profile, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
 
@@ -385,6 +389,8 @@ The first step is to determine the enrollment platform that's best for your orga
 
 ?? Are there other enrollment options for FLW? What enrollment option is available for orgs that don't have Azure AD Premium? GPO? ??
 
+can also use /enrollment/windows-bulk-enroll.md, which used a packaging file with WCD.
+
 # [Windows Autopilot](#tab/autopilot)
 
 **Windows Autopilot** is the recommended option for FLW devices. You can ship the devices directly to the location without ever touching the devices. With self-deploying mode, users just turn on the device, and the enrollment automatically starts.
@@ -397,7 +403,9 @@ The first step is to determine the enrollment platform that's best for your orga
 
 # [Windows automatic enrollment](#tab/automatic)
 
-**Windows automatic enrollment** requires someone to sign in with their Azure AD organization account during the out-of-box experience (OOBE). When they do, the enrollment starts. ?? If the devices are local and need to be sent to another location, then an admin or end user with elevated permissions at that location can sign in. ??
+Delete this whole section. Automatic enrollment is not a common enrollment option for FLW devices.
+
+**Windows automatic enrollment** requires someone to sign in with their Azure AD organization account during the out-of-box experience (OOBE). When they do, the enrollment starts.
 
 ✔️ If you have Azure AD Premium, and have new or existing devices, then Windows automatic enrollment is an option. For new devices purchased from an OEM, it's recommended to use **Windows Autopilot**.
 
@@ -442,6 +450,8 @@ These features are configured using device configuration profiles. When the prof
 The following scenarios describe some commonly used scenarios:
 
 - **Scenario 1: Device wide access with multiple apps**
+
+  Move this to Win365 section.
 
   Users have access to the apps and settings on the device. You can restrict users from different features, such as simple passwords, features in the Settings app, and more.
 
