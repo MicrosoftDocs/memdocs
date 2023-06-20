@@ -32,38 +32,46 @@ ms.collection:
 
 # Resize a Cloud PC (preview)
 
-The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, vCPU, and storage size to meet the user’s needs. Resizing is important for users that need to:
+The **Resize** remote action, which preserves user and disk data, lets you:
 
-- Upgrade a Windows 365 Enterprise Cloud PC’s RAM, vCPU, and storage size to meet the user’s needs.
-- Downgrade the RAM and vCPU of a Cloud PC.
+- Upgrade the RAM, CPU, and storage size of a Cloud PC.
+- Downgrade the RAM and CPU of Cloud PC. Resizing doesn't let you downsize disk space.
 
-Resizing gives admins the flexibility to upgrade/downgrade the following specifications without having to provision Cloud PCs from scratch:
+These operations don't require reprovisioning of the Cloud PC.
 
-- Increase the RAM and vCPUs when a user requires CPU intensive applications.
-- Increase the disk space for file storing.
-- Decrease the RAM and vCPUs when a user doesn't need to run CPU intensive applications.
+You might consider resizing a Cloud PC when a user needs:
 
-Resizing doesn't let you downsize disk space.
+- Higher RAM and VCPU cores to run CPU intensive applications.
+- More disk space for file storing.
+- Less RAM and vCPU cores to run their current workload applications.
 
-Resizing preserves user data. Users will be able to access all of their data after the resizing is finished.
+Resizing supports:
+
+- Both direct and group-based licenses.
+- Bulk and single device operations.
 
 ## Requirements
 
-To resize a Cloud PC, the admin must have any of the following built in Azure Active Directory (Azure AD) roles:
+To resize a Cloud PC, the admin must certain built-in Azure Active Directory (Azure AD) roles.
 
-- Global Admin
-- Intune Service Admin
-- Intune Reader + Cloud PC Admin roles
+- For a Cloud PC provisioned with a direct assigned license, at least one of the following roles
+  - Global Admin
+  - Intune Service Admin
+  - Intune Reader + Cloud PC Admin roles
+  - Intune Reader + Windows 365 Admin
+- For a Cloud PC provisioned with a group-based license, at least one of the following roles
+  - Global Admin
+  - Intune Service Admin
+  - Intune Reader + Windows 365 Admin
+  - In addition to one of the previous three roles, a role with Azure AD group read/write membership and licensing permissions, like the Windows 365 Admin role.
 
 Alternatively, you can assign a custom role that includes the permissions of these built-in roles.
 
-In order to use **Resize** there should be a license of the appropriate target SKU available that isn't assigned to any user.
+In order to use **Resize** there must available licenses appropriate for the resized Cloud PC configuration.
 
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node
 
 The **Resize** remote action is supported for paid, preview, and trial licenses.
-
-Resizing isn’t supported for Cloud PCs provisioned through group-based licenses.
 
 Downsizing may impact support for nested virtualization. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
