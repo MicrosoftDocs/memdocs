@@ -79,7 +79,7 @@ To support using Tunnel for MAM, create and deploy the three profiles detailed i
 
 When all three are configured and deployed to the same groups, the app protection policy will automatically trigger Tunnel to connect to the VPN whenever Microsoft Edge is launched.
 
-In addition, you can configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). 
+In addition, you can configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with Microsoft Edge and with your with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). By default, Microsoft Edge supports trusted root certificates. For LOB apps, you [use the MAM SDK](#configure-line-of-business-applications) to add support for trusted root certificates.
 
 ### App configuration policy for Microsoft Defender
 
@@ -256,11 +256,10 @@ When using WebView with [MAMCertTrustWebViewClient](https://msintuneappsdk.githu
 **Work around**: To ensure proper certificate validation, admins must deploy the root certificate and all intermediate certificates in Intune. If the root certificate along with all intermediate certificates are not deployed, Android can fail to build the certificate chain and fail to trust the server.
 
 ### Defender for Endpoint certificate error when using a TLS/SSL certificate from a private certificate authority
+
 When Microsoft Tunnel Gateway server uses a TLS/SSL certificate issued by a private (on-premises) CA, Microsoft Defender for Endpoint generates a certificate error when attempting to connect.
 
 **Work around**: Manually install the corresponding trusted root certificate of the private certificate authority on the Android device. A future update of the Defender for Endpoint app will provide support and remove the need to manually install the trusted root certificate.
-
-<!--end of review section -->
 
 ### Microsoft Edge can't reach internal resources for a short time after being launched
 
