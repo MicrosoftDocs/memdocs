@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 06/14/2023
+ms.date: 06/20/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -24,7 +24,7 @@ ms.collection:
 zone_pivot_groups: flw-platforms
 ---
 
-# Frontline worker device management for Android, iOS, iPadOS, and Windows devices in Microsoft Intune
+# Frontline worker device management for Android, iOS/iPadOS, and Windows devices in Microsoft Intune
 
 A frontline worker (FLW) is a person that works in an essential or critical role to your business. They're typically in direct contact with the public and customers. During a crisis or emergency, such as a pandemic or natural disaster, frontline workers are often at the forefront of the response effort, providing critical services and support. Some examples of frontline workers include healthcare, emergency responders, law enforcement, retail & food service, and transportation.
 
