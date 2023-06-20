@@ -50,8 +50,8 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 > [!NOTE]
 > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com' or 'dm.microsoft.com' endpoints.
 >
-> > [!NOTE]
-> Allow HTTP Partial response is required for Scripts & Win32 Apps emdpoints
+> [!NOTE]
+> **Allow HTTP Partial response** is required for Scripts & Win32 Apps emdpoints.
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
