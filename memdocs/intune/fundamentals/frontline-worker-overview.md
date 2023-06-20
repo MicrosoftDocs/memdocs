@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 06/14/2023
+ms.date: 06/20/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -24,7 +24,7 @@ ms.collection:
 zone_pivot_groups: flw-platforms
 ---
 
-# Frontline worker device management for Android, iOS, iPadOS, and Windows devices in Microsoft Intune
+# Frontline worker device management for Android, iOS/iPadOS, and Windows devices in Microsoft Intune
 
 A frontline worker (FLW) is a person that works in an essential or critical role to your business. They're typically in direct contact with the public and customers. During a crisis or emergency, such as a pandemic or natural disaster, frontline workers are often at the forefront of the response effort, providing critical services and support. Some examples of frontline workers include healthcare, emergency responders, law enforcement, retail & food service, and transportation.
 
@@ -34,13 +34,14 @@ This article applies to:
 - iPadOS devices owned by the organization and enrolled in Intune
 - Windows devices owned by the organization and enrolled in Intune
 
-Frontline workers also rely on devices to enable their productivity such as scanning concert tickets or patient wrist bands in healthcare or scanning inventory.  Those who utilize devices may be in a position where if those devices fail, productivity stops as does business operations for the worker and as a result, these types of devices may be categorized as mission critical.
+Frontline workers also rely on devices to enable their productivity, such as scanning concert tickets, scanning patient wrist bands in healthcare, or scanning inventory. Those who utilize devices may be in a position where if those devices fail, productivity stops as does business operations for the worker and as a result, these types of devices may be categorized as mission critical.
 
-The following content provides guidance on managing and configuring devices where devices play a key role in running business operations.  These end units are an extension of the operator who rely on device to be productive running day-to-day business operations.
+The following content provides guidance on managing and configuring devices where devices play a key role in running business operations. These end units are an extension of the operator who rely on device to be productive running day-to-day business operations.
 
 This article provides guidance on managing and configuring frontline worker (FLW) devices using Intune.
 
 **Defining a baseline**
+
 Before deployment, there are several questions to consider when making the decision of how to manage a fleet of rugged or FLW devices:
 
 •	Will these devices shared?
@@ -51,7 +52,7 @@ Before deployment, there are several questions to consider when making the decis
 •	Do these devices need to be connected at all times or is there an offline scenario to consider?
 •	Are these devices mission and/or business critical?
 
-Once the questions above are answered the next stage will be to identify the platforms and scenarios to be implemented.
+Once the questions above are answered, the next stage is to identify the platforms and scenarios to be implemented.
 
 ::: zone pivot="all,android"
 ## Android
@@ -78,8 +79,6 @@ For FLW devices using the Android platform, you should use **Android Enterprise*
 Make sure know what the device is doing and its use case. Android device manufacturers (OEMs) offer different devices, some may be specialty and others may be more generic.
 
 For example, devices that are used for augmented or virtual reality typically don't support GMS, which is a requirement for Android Enterprise enrollment. So, the natural enrollment path is AOSP.
-
-**Android Enterprise vs. AOSP**:
 
 # [Android Enterprise](#tab/ae)
 
@@ -114,7 +113,7 @@ The next decision is to decide if the devices are shared with many users or assi
 
 - **Shared device - no user association**
 
-  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. They don't sign in to the device, they typically sign into apps manually.
+  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. They don't sign in to the device. They typically manually sign into apps.
 
   When using shared devices:
 
@@ -153,7 +152,13 @@ The following scenarios describe some commonly used scenarios:
   The devices are enrolled in Intune as **dedicated devices** or **fully managed devices**. Users have access to the apps and settings on the device. Using policy settings, you can restrict users from different features, such as debugging, system applications, and more.
 
   To configure devices for this scenario, you deploy the apps to the devices using application configuration policies. Then, use device configuration policies to allow or block device features.
-  - TIP: there are two methods to configure the Intune Managed Home Screen, 1. Device configurtaion policy 2. Application configuration policies.  Application configuration policies support a larger range of configuration, use application configuration polices when more settings options are desired.  To learn more please visit: https://learn.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-overview
+
+  > [!TIP]
+  > There are two methods to configure the Intune Managed Home Screen:
+  > 1. Device configurtaion policy
+  > 2. Application configuration policies
+  > 
+  > Application configuration policies support a larger range of configuration. So, use application configuration polices when more settings options are desired. For more information on app configuration policies, go to [App configuration policies in Intune](../apps/app-configuration-policies-overview.md).
 
   To get started, use the following links:
 
