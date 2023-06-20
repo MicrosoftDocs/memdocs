@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/19/2021
+ms.date: 06/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: angerobe
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +33,7 @@ ms.collection:
 
 # Sign up or sign in to Microsoft Intune
 
-This topic tells system administrators how you can sign up for an Intune account.
+This article tells system administrators how you can sign up for an Intune account.
 
 Before you sign up for Intune, determine whether you already have a Microsoft Online Services account, Enterprise Agreement, or equivalent volume licensing agreement. A Microsoft volume licensing agreement or other Microsoft cloud services subscription like Microsoft 365 usually includes a work or school account.
 
@@ -44,17 +44,17 @@ If you already have a work or school account, **sign in** with that account and 
 
 ## How to sign up for Intune
 
-1. Visit the [Intune Sign-up page](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
+1. Visit the [Intune Sign up page](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
-:::image type="content" source="./media/account-sign-up/account-sign-up-site.png" alt-text="Screenshot of the Microsoft Intune Trial account signup web page":::
+   :::image type="content" source="./media/account-sign-up/account-sign-up-site.png" alt-text="Screenshot of the Microsoft Intune Trial account sign up web page.":::
 
-2. On the Sign-up page, sign in or sign up to manage a new subscription of Intune.
+2. On the Sign up page, sign in or sign up to manage a new subscription of Intune.
 
 ## Post sign up considerations
 
-After you sign up for a new subscription, you receive an email message that contains your account information at the email address that you provided during the sign-up process. This email confirms your subscription is active.
+After you sign up for a new subscription, you receive an email message that contains your account information at the email address that you provided during the sign up process. This email confirms your subscription is active.
 
-After completing the sign-up process you are directed to the Microsoft 365 admin center, used to add users and assign them licenses. If you only have cloud-based accounts using your default onmicrosoft.com domain name, then you can go ahead and add users and assign licenses at this point. However, if you plan to use your organization's [custom domain name](custom-domain-name-configure.md) or [synchronize user account information](users-add.md#sync-active-directory-and-add-users-to-intune) from on-premises Active Directory, then you can close that browser window.
+After completing the sign up process, you're directed to the Microsoft 365 admin center to add users and assign them licenses. If you only have cloud-based accounts using your default onmicrosoft.com domain name, then you can go ahead and add users and assign licenses at this point. However, if you plan to use your organization's [custom domain name](custom-domain-name-configure.md) or [synchronize user account information](users-add.md#sync-active-directory-and-add-users-to-intune) from on-premises Active Directory, then you can close that browser window.
 
 ## Sign in to Microsoft Intune
 
@@ -65,7 +65,7 @@ By default, your account must have one of the following permissions in Azure AD:
 - Global Administrator
 - Intune Service Administrator (also known as Intune Administrator)
 
-To grant access to administer the service for users with other permissions, then See [Role Based Access Control](role-based-access-control.md)
+To grant access to administer the service for users with other permissions, see [Role Based Access Control](role-based-access-control.md)
 
 ### Intune Admin portal URL
 
