@@ -34,9 +34,25 @@ This article applies to:
 - iPadOS devices owned by the organization and enrolled in Intune
 - Windows devices owned by the organization and enrolled in Intune
 
-Frontline workers rely on process and/or devices to enable their productivity, like scanning concert tickets, medical patient wrist bands, and inventory scanning. If these devices fail, productivity and business can stop. These device types can be business or mission critical to operations.
+Frontline workers also rely on devices to enable their productivity, such as scanning concert tickets, scanning patient wrist bands in healthcare, or scanning inventory. Those who utilize devices may be in a position where if those devices fail, productivity stops as does business operations for the worker and as a result, these types of devices may be categorized as mission critical.
+
+The following content provides guidance on managing and configuring devices where devices play a key role in running business operations. These end units are an extension of the operator who rely on device to be productive running day-to-day business operations.
 
 This article provides guidance on managing and configuring frontline worker (FLW) devices using Intune.
+
+**Defining a baseline**
+
+Before deployment, there are several questions to consider when making the decision of how to manage a fleet of rugged or FLW devices:
+
+•	Will these devices shared?
+•	With whom will the devices be shared with?
+•	How will the end user become productive when they pick up a device to work with?
+•	How is user switching and hand-off of the device handled?
+•	What environments will these devices be utilized in?
+•	Do these devices need to be connected at all times or is there an offline scenario to consider?
+•	Are these devices mission and/or business critical?
+
+Once the questions above are answered, the next stage is to identify the platforms and scenarios to be implemented.
 
 ::: zone pivot="all,android"
 ## Android
@@ -95,13 +111,13 @@ To learn more about AOSP, go to [About the Android Open Source Project](https://
 
 The next decision is to decide if the devices are shared with many users or assigned to a single user. This decision depends on your business needs and the end user requirements. It also impacts how these devices are enrolled and managed with Intune.
 
-- **Shared device**
+- **Shared device - no user association**
 
-  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. They don't sign in to the device.
+  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. They don't sign in to the device. They typically manually sign into apps.
 
   When using shared devices:
 
-  - If you're using Android Enterprise shared devices, then you can enroll your devices as **dedicated devices**. These devices support Google Mobile Services (GMS) and aren't associated with a single or specific user.
+  - If you're using Android shared devices and the devices support Android Enterprise enrollment, then you can enroll your devices as **dedicated devices**. These devices support Google Mobile Services (GMS) and aren't associated with a single or specific user.
 
     For more information, go to [Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
 
@@ -125,7 +141,7 @@ The next decision is to decide if the devices are shared with many users or assi
 
 ### Step 3 - Home screen and device experience (Android)
 
-On Android Enterprise devices, you can configure the home screen and device experience. This feature isn't available for AOSP devices.
+On Android Enterprise devices, you can configure the Intune Manged Home Screen (MHS) launcher to further control home screen and device experience. This feature isn't available for AOSP devices.
 
 In this step, consider what end users will be doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device. Remember, your organization owns these FLW devices. End users don't own these devices.
 
@@ -135,7 +151,14 @@ The following scenarios describe some commonly used scenarios:
 
   The devices are enrolled in Intune as **dedicated devices** or **fully managed devices**. Users have access to the apps and settings on the device. Using policy settings, you can restrict users from different features, such as debugging, system applications, and more.
 
-  To configure devices for this scenario, you deploy the apps to the devices using app policies. Then, use device configuration policies to allow or block device features.
+  To configure devices for this scenario, you deploy the apps to the devices using application configuration policies. Then, use device configuration policies to allow or block device features.
+
+  > [!TIP]
+  > There are two methods to configure the Intune Managed Home Screen:
+  > 1. Device configurtaion policy
+  > 2. Application configuration policies
+  > 
+  > Application configuration policies support a larger range of configuration. So, use application configuration polices when more settings options are desired. For more information on app configuration policies, go to [App configuration policies in Intune](../apps/app-configuration-policies-overview.md).
 
   To get started, use the following links:
 
@@ -199,7 +222,18 @@ The following scenarios describe some commonly used scenarios:
 
 Azure AD shared device mode (SDM) is another option for Android, specifically Android Enterprise **dedicated device** enrollments.
 
-Azure AD SDM offers an app and identity driven sign-in/sign-out experience that compliments **Scenario 1** and **Scenario 2** described at [Step 3 - Home screen and device experience (Android)](#step-3---home-screen-and-device-experience-android) (in this article).
+@Mandi source for the following two paragraphs: https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-shared-devices
+I feel we may want to add more to help people understand what SDM is before jumping into the how and why.
+
+**Supporting multiple users on devices designed for one user**
+Because mobile devices running iOS or Android were designed for single users, most applications optimize their experience for use by a single user. Part of this optimized experience means enabling single sign-on (SSO) across applications and keeping users signed in on their device. When a user removes their account from an application, the app typically doesn't consider it a security-related event. Many apps even keep a user's credentials around for quick sign-in. You may even have experienced this yourself when you've deleted an application from your mobile device and then reinstalled it, only to discover you're still signed in.
+
+**Automatic single sign-in and single sign-out**
+To allow an organization's employees to use its apps across a pool of devices shared by those employees, developers need to enable the opposite experience. Employees should be able to pick a device from the pool and perform a single gesture to "make it theirs" during their shift. At the end of their shift, they should be able to perform another gesture to sign out globally on the device, with all their personal and company information removed so they can return it to the device pool. Furthermore, if an employee forgets to sign out, the device should be automatically signed out at the end of their shift and/or after a period of inactivity.
+
+Azure AD enables these scenarios with a feature called shared device mode.
+
+Because Azure AD SDM offers an app and identity driven sign-in/sign-out experience, it compliments **Scenario 1** and **Scenario 2** described at [Step 3 - Home screen and device experience (Android)](#step-3---home-screen-and-device-experience-android) (in this article).
 
 **What you need to know**:
 
