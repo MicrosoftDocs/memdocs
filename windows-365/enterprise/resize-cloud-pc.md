@@ -75,17 +75,46 @@ The **Resize** remote action is supported for paid, preview, and trial licenses.
 
 Downsizing may impact support for nested virtualization. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
-## Resize a Cloud PC
+## Resize a single Cloud PC created with a direct assigned license
+
+When resizing Cloud PCs provisioned through direct assigned licenses the Windows 365 service will automatically take care of unassigning the old license and assigning the new license on behalf of the admin.
 
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
 ![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
-3. You’ll see a list with all the possible SKUs that you can upgrade to. You increase and decrease a Cloud PC’s specs (RAM/vCPU). You can only increase the OS disk storage. You can't decrease the OS disk storage. If you're downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
+3. You’ll see a list with all the possible SKUs that you can upgrade or downsize to based on teh licenses that you have available in your inventory. You can increase and decrease a Cloud PC’s RAM and vCPU. You can only increase the OS disk storage. If you're downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
 4. Select **Resize**.
-    - When you trigger a resize, the Cloud PC is rebooted and the user is immediately disconnected from their current session. Make sure the user saves all their work to avoid any potential data loss.
-    - If there are available licenses, the upgrade/downgrade will take place.
-    - If you have a combination of paid and trial licenses, the resize feature uses your paid licenses first. After these licenses run out, the resize operation uses your trial licenses.
-    - If there are no licenses in your inventory, the resizing will fail. You can contact your procurement admin to request more licenses. After the license has been purchased and added to the inventory in the Microsoft Admin Center, you can retry the resize operation.
+
+If there are available licenses, the upgrade/downgrade will take place.
+
+When resizing starts, the user is automatically disconnected from their Cloud PC and any unsaved work might be lost.
+
+Resizing can take from 15 to 20 minutes before the user can access their Cloud PC again. YOu can monitor the status in the Windows 365 provisioning blade. Users can see their Cloud PC status at http://windows365.microsoft.com.
+
+If you have a combination of paid and trial licenses, the resize feature uses your paid licenses first. After these licenses run out, the resize operation uses your trial licenses.
+
+If there are no licenses in your inventory, the resizing will fail. Contact your procurement admin to request more licenses. After the license has been purchased and added to the inventory in the Microsoft 365 admin center, you can retry the resize operation. Licenses can be purchased from various channels: EA, CSP, MCA, and Web Direct.
+
+## Resize a single Cloud PC created with a group-assigned license
+
+1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
+![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
+3. You’ll see a list with all the possible SKUs that you can upgrade or downsize to based on teh licenses that you have available in your inventory. You can increase and decrease a Cloud PC’s RAM and vCPU. You can only increase the OS disk storage. If you're downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
+4. Select **Resize**.
+5. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
+6. Select **Users** > search for the user name assigned to the Cloud PC and select it > **Groups**.
+7. Right-click the group that's assigned the old source license > **Remove** > **OK**.
+8. Select **Add memberships** > select the group that's assigned the new license matching the new specifications > **Select**. Make sure that the same provisioning policy that was used to provision the Cloud PC is assigned ot the new group.
+9. The users Cloud PC starts resizing, as you can see in the Windows 365 provisioning blade.
+
+The **Resize pending license** state has a duration of 48 hours. If the original license is removed but the new license isn't assigned within 48 hours, the device goes into a [grace period](device-management-overview.md).
+
+If the wrong target license is chosen, the Cloud PC is provisioned matching the configuration of that wrong license.
+
+If the original license isn't removed first, and the new license is assigned to the user, the new license is used to resize the current Cloud PC. In addition, the original license is used to provision another, new Cloud PC for the user.
+
+If the original license isn't removed, and the target license isn't assigned within 48 hours, the device returns to the **Provisioned** state.
 
 <!-- ########################## -->
 ## Next steps
