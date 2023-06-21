@@ -7,7 +7,7 @@ keywords:
 author: Smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/10/2023
+ms.date: 06/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,6 +46,8 @@ LG OTA is supported on the following devices:
 - [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
 - [Android Enterprise fully managed devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
 
+For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+
 The following aren't supported in public preview:
 
 - Graph assignment with inclusions/exclusions
@@ -62,6 +64,7 @@ The following aren't supported in public preview:
 
 - Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
+- For more information about which Zebra devices will work with the service based on the platform, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
 
 ## Process overview  
 
@@ -246,7 +249,7 @@ If devices are later removed from an assigned group after the deployment is crea
 
 After deployments are completed, you can view them from Devices > Android > Android FOTA deployments (Preview).  
 
-Reporting displays information for eligible devices only. For example, if you assign a deployment to a group containing non-Zebra devices, or Zebra devices that aren't enrolled with the LG OTA service, those devices aren't included in the Android FOTA deployments reports.
+Reporting displays information for eligible devices only and is currently refreshed every hour. For example, if you assign a deployment to a group containing non-Zebra devices, or Zebra devices that aren't enrolled with the LG OTA service, those devices aren't included in the Android FOTA deployments reports.
 
 Each deployment displays details related to:  
 
