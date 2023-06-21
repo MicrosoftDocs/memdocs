@@ -3,8 +3,7 @@ title: PowerShell scripts for Remediations
 titleSuffix: Microsoft Endpoint Manager
 description: PowerShell script reference for Remediations in Endpoint analytics.
 ms.date: 10/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: endpoint-analytics
 ms.topic: reference
 author: smritib17
 ms.author: smbhardwaj
@@ -15,7 +14,6 @@ ms.localizationpriority: high
 # PowerShell scripts for Remediations
 
 Use the following information to create script packages for [Remediations](remediations.md).
-
 
 ## <a name="bkmk_scripts"></a> Script descriptions
 
@@ -260,5 +258,5 @@ catch{
 ```
 
 ## Next steps
- 
+
 For information about deploying script packages, see [Remediations](remediations.md).

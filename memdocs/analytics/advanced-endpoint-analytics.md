@@ -3,8 +3,7 @@ title: What is advanced Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about advanced features in Endpoint analytics
 ms.date: 02/22/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: endpoint-analytics
 ms.topic: conceptual
 author: Smritib17
 ms.author: smbhardwaj
@@ -28,7 +27,7 @@ The Microsoft Intune Suite includes advanced features for Endpoint analytics, su
 The advanced features in Endpoint analytics are automatically integrated into the existing base Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
 
 ## Prerequisites
- 
+
 The advanced features in Endpoint analytics build on top of the existing base Endpoint analytics experience. You must [onboard and enroll your Intune-managed devices to Endpoint analytics](enroll-intune.md) to use the advanced features.
 
 > [!NOTE]
@@ -46,12 +45,12 @@ If your tenant has an Intune subscription that includes the base Endpoint analyt
 
 Currently, the highest functional subscription sets the Endpoint aAnalytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint Analytics for all enrolled devices.  
 
-## Enabling advanced features for Endpoint analytics 
+## Enabling advanced features for Endpoint analytics
 
 When license requirements are met, then advanced features in Endpoint analytics are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include advanced features in Endpoint analytics, your tenant will automatically revert to the base Endpoint analytics experience.  
 
 > [!NOTE]
-> It may take up to 48 hours after you buy licenses or start a trial to see advanced features in Endpoint analytics in your tenant. 
+> It may take up to 48 hours after you buy licenses or start a trial to see advanced features in Endpoint analytics in your tenant.
 
 ## Next Steps
 
@@ -60,4 +59,3 @@ For more information, go to:
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
 - [Enhanced device timeline](enhanced-device-timeline.md)  
-

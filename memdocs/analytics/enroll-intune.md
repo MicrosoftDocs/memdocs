@@ -25,12 +25,12 @@ Before you start this tutorial, make sure you have the following prerequisites:
 ### Intune device requirements
 
 - Intune enrolled or co-managed devices running the following operating systems and updates:
-   - Windows 10 version 1903 or later
-      - The cumulative update from July 2021 or later installed
-     - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
+  - Windows 10 version 1903 or later
+    - The cumulative update from July 2021 or later installed
+    - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
 
 - Windows devices must be Azure AD joined or hybrid Azure AD joined.
-   - Workplace joined or Azure AD registered devices aren't supported.
+  - Workplace joined or Azure AD registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Intune-managed devices
@@ -48,7 +48,7 @@ Devices enrolled in Endpoint analytics need a valid license for the use of Micro
 ### Endpoint analytics permissions
 
 - The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
-   - After you select **Start** for gathering data, other read-only roles can view the data.
+  - After you select **Start** for gathering data, other read-only roles can view the data.
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
 
