@@ -49,12 +49,12 @@ Before deployment, there are several questions to consider when making the decis
   If yes, then <>
   If no, then <>
 
-- With whom will the devices be shared with?
-- How will the end user become productive when they pick up a device to work with?
-- How is user switching and hand-off of the device handled?
-- What environments will these devices be utilized in?
-- Do these devices need to be connected at all times or is there an offline scenario to consider?
-- Are these devices mission and/or business critical?
+....I have flow charts created, however just answering these in case we don't use them...
+
+- With whom will the devices be shared with?  For example, will devices be part of a shared pool or assigned to users.  If part of a shared pool a shared device management strategy will apply.
+- How will the end user become productive when they pick up a device to work with?  For example, do users need to launch an app and sign-in or is the expectation to have one sign-in where all applications automatically sign in afterwards.  If this is the case, then Azure AD Shared Device mode will help acheive this goal.
+- How is user switching and hand-off of the device handled?  For example, if a shared device you may want users to sign out of apps and cradle the device for charging.  Again, a shared device mangement strategy will apply to this scenario.
+- What environments will these devices be utilized in?  For example, environmental conditions may require specific device types such as rugged devices that are able to handle rough handling and adverse environments.
 
 Once the questions above are answered, the next stage is to identify the platforms and scenarios to be implemented.
 
