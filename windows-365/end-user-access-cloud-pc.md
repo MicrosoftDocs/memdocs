@@ -68,7 +68,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ![Card menu.](business/media/get-started-windows-365-business/cloud-pc-gear.png)
 
-- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Endpoint Manager, Azure Active Directory, on the device, or in the Remote Desktop Apps.
+- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Intune, Azure Active Directory, on the device, or in the Remote Desktop Apps.
 - **Reset**:
   - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.

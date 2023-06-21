@@ -52,7 +52,7 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Endpoint analytics support (this is supported in GCC)
 - Windows 365 Security baseline
 - RDP Shortpath for public networks
-- Windows 365 System based alerting on Microsoft Endpoint Manager for Cloud PCs
+- Windows 365 System based alerting on Microsoft Intune for Cloud PCs
 - User initiated feedback in End User Portal and Windows 365 Web Client
 - Resize VM
 - Citrix HDX Plus for Windows 365

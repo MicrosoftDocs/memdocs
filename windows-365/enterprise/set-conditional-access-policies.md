@@ -46,7 +46,7 @@ By using Conditional Access policies, you can apply the right access controls wh
 Conditional Access policies aren't set for your tenant by default.  You can target CA policies to the Cloud PC first-party app by using either of the following platforms:
 
 - Azure. For more information, see [Azure AD Conditional Access](/azure/active-directory/conditional-access/).
-- Microsoft Endpoint Manager. The steps below explain this process. For more information, see [Learn about Conditional Access and Intune](/mem/intune/protect/conditional-access).
+- Microsoft Intune. The steps below explain this process. For more information, see [Learn about Conditional Access and Intune](/mem/intune/protect/conditional-access).
 
 No matter which method you use, the policies will be enforced on the Cloud PC End-user portal and the connection to the Cloud PC.
 
