@@ -32,7 +32,7 @@ ms.collection:
 
 # Device images overview
 
-Windows 365 uses both default and custom operating system images to automatically create the virtual Cloud PCs that you provide to your end users. The default images are available from the gallery in Microsoft Endpoint Manager as a part of creating your provisioning policy. You can also [upload custom images](add-device-images.md) that you create.
+Windows 365 uses both default and custom operating system images to automatically create the virtual Cloud PCs that you provide to your end users. The default images are available from the gallery in Microsoft Intune as a part of creating your provisioning policy. You can also [upload custom images](add-device-images.md) that you create.
 
 ## Image requirements
 
@@ -52,7 +52,7 @@ A custom image must also meet the following extra requirements:
 - Exist in an Azure subscription.
 - Is stored as a managed image in Azure.
 
-Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Endpoint Manager.
+Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
 ## Gallery images
 

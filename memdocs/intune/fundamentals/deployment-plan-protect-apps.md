@@ -38,7 +38,7 @@ Managing applications on devices in your organization is a central part to a sec
 
 When apps are used without restrictions, company and personal data can get intermingled. Company data can end up in locations like personal storage or transferred to apps beyond your purview and result in data loss. One of the primary reasons to use either **MAM without device enrollment** or **Intune MDM + MAM** is to help protect your organization's data.
 
-Microsoft Endpoint Manager supports two MAM configurations:
+Microsoft Intune supports two MAM configurations:
 
 - **[MAM without device management](#mam-without-device-management)**
 - **[MAM with device management](#mam-with-device-management)**
@@ -251,7 +251,7 @@ The APP data protection configuration framework is organized into three distinct
 
 Basic app protection in Intune (level 1) is the minimum data protection configuration for an enterprise mobile device. This configuration replaces the need for basic Exchange Online device access policies by requiring a PIN to access work or school data, encrypting the work or school account data, and providing the capability to selectively wipe the school or work data. However, unlike Exchange Online device access policies, the below App Protection Policy settings apply to all the apps selected in the policy, thereby ensuring data access is protected beyond mobile messaging scenarios.
 
-The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default data protection and access requirements settings when creating an App Protection Policy within Microsoft Endpoint Manager.
+The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default data protection and access requirements settings when creating an App Protection Policy within Microsoft Intune.
 
 For specific data protection, access requirements, and conditional launch settings for basic app protection, go to the following topic:
 

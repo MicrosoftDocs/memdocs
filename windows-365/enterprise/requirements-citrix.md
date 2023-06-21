@@ -52,12 +52,12 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
 
 ## Microsoft requirements
 
-- Microsoft Endpoint Manager entitlement
-- Azure AD domain in the same tenant as Microsoft Endpoint Manager
-- Windows 365 Enterprise licenses in the same tenant as Microsoft Endpoint Manager
+- Microsoft Intune entitlement
+- Azure AD domain in the same tenant as Microsoft Intune
+- Windows 365 Enterprise licenses in the same tenant as Microsoft Intune
 - Azure admin account:
   - Azure AD Global Admin for required authorizations in Citrix Cloud.
-  - Intune Admin for enabling Citrix connector in Microsoft Endpoint Manager.
+  - Intune Admin for enabling Citrix connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
 ## Supported configurations
