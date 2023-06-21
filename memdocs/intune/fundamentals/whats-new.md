@@ -170,7 +170,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->  
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about [Endpoint analytics](../mem/analytics/index).
+Learn more about [Endpoint analytics](.../mem/analytics/index).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->  
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature provides the ability to effortlessly transition between full control and view-only modes, granting flexibility and convenience.
