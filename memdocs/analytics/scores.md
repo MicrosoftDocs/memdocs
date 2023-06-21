@@ -1,6 +1,6 @@
 ---
 title: Scores, baselines, and insights in Endpoint Analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Learn about scores, baselines, and insights in Endpoint Analytics
 ms.date: 07/07/2022
 ms.service: microsoft-intune

@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Enroll Configuration Manager devices
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
 ms.date: 05/03/2022
 ms.service: microsoft-intune
@@ -9,7 +9,7 @@ ms.topic: quickstart
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
-# Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
+# Customer intent: As an administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
 ms.localizationpriority: high
 ms.collection: highpri
 ---
@@ -26,14 +26,14 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
 - The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
-- [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
+- [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
 > [!IMPORTANT]  
 > If you have co-management enabled, enrolled devices that meet the Intune requirements will send required functional data directly to Microsoft public cloud. For more information, see [requirements for devices managed by Intune](overview.md#bkmk_intune_prereq).
 
 ### Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Proactive remediations has an additional licensing requirement, for more information see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Proactive remediations has an additional licensing requirement, for more information see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
 
 ## Endpoint analytics permissions
 
@@ -58,7 +58,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
-Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Starting in Configuration Manager 2111, cloud attaching your environment was simplified. You can use the recommended defaults to enable both Endpoint analytics and tenant attach at the same time. For more information, see [Enable cloud attach](..\configmgr\cloud-attach\enable.md).<!--10964629-->
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Starting in Configuration Manager 2111, cloud attaching your environment was simplified. You can use the recommended defaults to enable both Endpoint analytics and tenant attach at the same time. For more information, see [Enable cloud attach](..\configmgr\cloud-attach\enable.md).<!--10964629-->
 
 
 ### <a name="bkmk_cm_upload"></a> Enable data upload in Configuration Manager

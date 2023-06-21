@@ -1,6 +1,6 @@
 ---
 title: What is Endpoint analytics?
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Overview for Endpoint analytics.
 ms.date: 11/15/2021
 ms.service: microsoft-intune
@@ -52,10 +52,10 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 
 - A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
 - The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
-- [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
-- [Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager](enroll-configmgr.md#bkmk_cm_upload).
+- [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
+- [Enable Endpoint analytics for devices uploaded to Microsoft Intune](enroll-configmgr.md#bkmk_cm_upload).
 
-### <a name="bkmk_prs_prereq"></a> Remediation scripting requires:
+### <a name="bkmk_prs_prereq"></a> Remediation scripting requirements
 
 Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](remediations.md#bkmk_prs) has the following requirements:
 
@@ -65,7 +65,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Remediation sc
 
 ## Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 Remediations also requires users of the devices to have one of the following licenses:
 
