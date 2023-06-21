@@ -64,7 +64,7 @@ The following aren't supported in public preview:
 
 - Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
-- For more information about which Zebra devices will work with the service based on the platform, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
+- For more information about which Zebra devices work with the service based on the platform, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
 
 ## Process overview  
 
@@ -118,7 +118,7 @@ Next, assign **Zebra Enrollment Manager** and **Zebra Common Transport Layer** a
 
 #### Enabling a Zebra package as a system app
 
-If you're planning to use LG OTA to update a device running on a version higher than Android 11, you need to enable an additional Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
+If you're planning to use LG OTA to update a device running on a version higher than Android 11, you need to enable another Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
 
 |Build|System app to be enabled|
 |--------|------------------------------|
@@ -230,7 +230,7 @@ If devices are later removed from an assigned group after the deployment is crea
 
 **Example**
 
-- You have a dynamic group, G, that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.  
+- You have a dynamic group G that contains three TC57 devices A, B, and C. Every time a new TC57 device is enrolled in your tenant, it's automatically added to the dynamic group. A, B, and C devices start off running firmware version v1.  
 - On January 1, you use Intune and LG OTA to create a deployment that runs as soon as possible, to update devices in G from v1 to v2. All three devices are now on v2.
 - On February 1, a new TC57 device, D, running firmware version v1, is enrolled in the tenant. D is automatically added to the group, and now there are four devices in group G. D isn't part of the January 1 deployment, so if you want to update D to v2, you need create a new deployment assigned to either D or G.
 - On February 15, you create a deployment that runs as soon as possible, to update devices in G to v3. Now, devices A, B, C, and D are all on v3.
@@ -293,12 +293,12 @@ By selecting the **More (…)** menu next to a deployment, or by selecting the d
 
 During public preview, you may need to disconnect and reconnect the Zebra connector. The following error message appears on the Android FOTA deployments page: "Something went wrong while communicating with Zebra. Try again later, or if this issue persists try disconnecting and reconnecting the Zebra connector in Tenant administration".
 
-We are aware of an issue where you may not be able to disconnect the Zebra connector from Tenant administration. To disconnect and reconnect, use the following steps:
+We're aware of an issue where you may not be able to disconnect the Zebra connector from Tenant administration. To disconnect and reconnect, use the following steps:
 
-1. Log in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) with your Intune tenant. Consent to all permissions, if requested.
+1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) with your Intune tenant. Consent to all permissions, if requested.
 1. In Graph Explorer, select POST from the drop-down list.
 1. Enter the following request into the URL field: 'https://graph.microsoft.com/beta/deviceManagement/zebraFotaConnector/disconnect'
-1. Keep the **Request Body** tab empty and select the **Run query** button. The results will appear in the Response window. 
-1. This will disconnect your Intune tenant from Zebra and existing deployments will not be affected.
+1. Keep the **Request Body** tab empty and select the **Run query** button. The results appear in the Response window.
+1. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
 1. Return to the Intune admin center and reconnect the Zebra connector.
 
