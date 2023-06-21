@@ -693,7 +693,7 @@ Applies to:
 - macOS 10.15 or later
 
 #### ServiceNow Integration is now Generally Available (GA)<!-- 18163832  -->  
-Now generally available, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature is available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed link the "Caller" identified in the incident with the user selected for Troubleshooting.
+Now generally available, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace. This new feature is available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**. The incidents shown have a direct link back to the source incident and show key information from the incident. All incidents listed link the "Caller" identified in the incident with the user selected for Troubleshooting.
 
 For more information, go to [Use the troubleshooting portal to help users at your company](service-now-integration.md).
 
