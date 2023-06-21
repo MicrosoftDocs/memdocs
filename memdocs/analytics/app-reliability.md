@@ -1,10 +1,10 @@
 ---
 title: Application reliability in endpoint analytics
 description: Get details about application reliability in endpoint analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 ms.date: 03/31/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj
@@ -21,9 +21,9 @@ The application reliability report provides insight into potential issues for de
 ## Prerequisites
 
 - Devices are enrolled in endpoint analytics.
-   - [Enroll Configuration Manager devices](enroll-configmgr.md)
-   - [Enroll Intune devices](enroll-intune.md)
-   - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
+  - [Enroll Configuration Manager devices](enroll-configmgr.md)
+  - [Enroll Intune devices](enroll-intune.md)
+  - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
 - Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 ## App reliability score
@@ -55,8 +55,9 @@ For each application in the report, the following data is provided:
 **Active devices (14 days)**: The total number of your tenant's enrolled devices that have launched this app at least once in the past 14 days.
 
 **Total usage duration (14 days)**: The cumulative usage duration of the application across all your tenant's enrolled devices over the past 14 days. **Engagement time** is used to determine usage duration. **Engagement time** is composed of both:
-   -  Interactive time: The time when the user is actively engaging with an application, such as browsing the web
-   - Keep-alive time: Time when the application is requesting a keep-alive from the OS, such as when  presenting a PowerPoint or watching a video.
+
+- Interactive time: The time when the user is actively engaging with an application, such as browsing the web
+- Keep-alive time: Time when the application is requesting a keep-alive from the OS, such as when  presenting a PowerPoint or watching a video.
 
 **Total crashes (14 days)**: The total number of application crash events reported across all enrolled devices in your tenant over the past 14 days.
 
@@ -66,8 +67,8 @@ For each application in the report, the following data is provided:
 
 > [!NOTE]
 > A maximum of 10 application crash events per application, per device, per day is used. This prevents excessive data collections from devices with severe application issues and helps prevent outlier devices from having undue influence over the reliability scores for individual applications.
-> 
-> Applications with an insignificant amount of foreground usage (about 10 minutes or fewer) on a particular device may not be captured. 
+>
+> Applications with an insignificant amount of foreground usage (about 10 minutes or fewer) on a particular device may not be captured.
 
 ### App performance details
 
@@ -87,7 +88,7 @@ The **Device performance** tab displays application reliability insights for eac
 
 Selecting a device name opens the **Application reliability** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
-> [!Note]
+> [!NOTE]
 > In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
 
 ## Known issues
@@ -102,6 +103,7 @@ Selecting a device name opens the **Application reliability** tab for that devic
 
 > [!IMPORTANT]
 > This isn't a common issue. Before proceeding the mitigation, verify that your missing devices:
+>
 > - Meet the [prerequisites](#prerequisites) for the **Application reliability** report
 > - Are actively being used
 > - Have had sufficient time to start reporting data

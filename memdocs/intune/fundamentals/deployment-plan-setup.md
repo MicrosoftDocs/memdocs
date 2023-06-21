@@ -138,7 +138,7 @@ For guidance, go to [Assign licenses](licenses-assign.md).
 
 ✔️ **Unlicensed admins**
 
-You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on.
+You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, global administrators, Azure AD administrators, and so on.
 
 For guidance, go to [Unlicensed admins](unlicensed-admins.md).
 
