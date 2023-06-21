@@ -1,8 +1,8 @@
 ---
 author: smritib17
 ms.author: smbhardwaj
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: include
 ms.date: 03/31/2022
 ms.localizationpriority: high
@@ -10,7 +10,7 @@ ms.localizationpriority: high
 <!--Don't apply H2 in this include file since they are context driven by article. Used in startup-performance.md, work-from-anywhere.md, app-reliability.md, and scores.md files -->
 ### Exported csv files display numerical values
 
-When reporting data is exported to a `.csv` file, the exported data doesn't use the friendly names you're used to seeing in the online reports. Use the information below to map the data in the exported file into the meaning of the value: 
+When reporting data is exported to a `.csv` file, the exported data doesn't use the friendly names you're used to seeing in the online reports. Use the information below to map the data in the exported file into the meaning of the value:
 
 **Application reliability report** </br>
 
@@ -34,6 +34,7 @@ When reporting data is exported to a `.csv` file, the exported data doesn't use 
 The `CoreBootTime`, `GPBootTime`, `CoreLogonTime`, `GPLogonTime`, `DesktopUsableTime`, `Median`, and `TimePerProcess` columns are integer values with a unit of **seconds**.
 
 **Work from anywhere report** </br>
+
 - Column name in `.csv` file: UpgradeEligibility </br>
 Report column name: Windows 11 readiness status </br>
 

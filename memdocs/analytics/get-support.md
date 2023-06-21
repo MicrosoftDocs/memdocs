@@ -3,8 +3,8 @@ title: Get support for Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get online and telephone support for Endpoint analytics
 ms.date: 09/22/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj
@@ -18,9 +18,8 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 Before contacting Microsoft Support, first review the following articles:
 
- - [Prerequisites](enroll-intune.md#bkmk_prereq)
- - [Troubleshoot Endpoint analytics](troubleshoot.md)
-
+- [Prerequisites](enroll-intune.md#bkmk_prereq)
+- [Troubleshoot Endpoint analytics](troubleshoot.md)
 
 ## Help and support
 
@@ -38,7 +37,6 @@ If the issue is more broadly for Intune than just Endpoint analytics, follow the
 To share your feedback about Endpoint analytics, select the **Send a Smile** icon at the top of the portal on the right side. Use the text box to provide your feedback and select **Submit feedback** when done.
 
 ![Send a Smile icon in Microsoft Endpoint Manager](media/endpoint-analytics-feedback.png)
-
 
 ## See also
 
