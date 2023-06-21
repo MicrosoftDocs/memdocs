@@ -3,7 +3,8 @@ title: Get support for Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get online and telephone support for Endpoint analytics
 ms.date: 09/22/2020
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj

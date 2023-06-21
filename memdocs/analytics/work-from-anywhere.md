@@ -3,7 +3,8 @@ title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
 ms.date: 03/31/2022
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj

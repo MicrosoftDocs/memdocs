@@ -3,7 +3,8 @@ title: Startup performance in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device startup performance in Endpoint Analytics
 ms.date: 03/31/2022
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj

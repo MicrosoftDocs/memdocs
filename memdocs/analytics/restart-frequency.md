@@ -3,7 +3,8 @@ title: Restart frequency in endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device restart frequency in endpoint analytics
 ms.date: 11/15/2021
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj

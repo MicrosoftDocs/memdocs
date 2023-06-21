@@ -1,9 +1,10 @@
 ---
 title: Anomaly detection in Endpoint Analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Learn about Anomaly detection as an advanced feature in Endpoint Analytics
 ms.date: 02/15/2023
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: Smritib17
 ms.author: smbhardwaj
@@ -34,7 +35,7 @@ Anomaly detection aims at addressing these problems by enabling IT admins with c
 
 ## Pre-requisites
 
-- Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+- Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 - Permissions: Anomaly detection uses built in [role permissions](overview.md#built-in-role-permissions)  
 

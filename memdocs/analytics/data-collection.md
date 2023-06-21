@@ -3,7 +3,8 @@ title: Endpoint analytics data collection
 titleSuffix: Microsoft Endpoint Manager
 description: Data collection information for Endpoint analytics.
 ms.date: 09/22/2020
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: reference
 author: smritib17
 ms.author: smbhardwaj

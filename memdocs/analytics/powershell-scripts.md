@@ -3,7 +3,8 @@ title: PowerShell scripts for Remediations
 titleSuffix: Microsoft Endpoint Manager
 description: PowerShell script reference for Remediations in Endpoint analytics.
 ms.date: 10/30/2020
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: reference
 author: smritib17
 ms.author: smbhardwaj

@@ -3,7 +3,8 @@ title: What is Endpoint analytics?
 titleSuffix: Microsoft Endpoint Manager
 description: Overview for Endpoint analytics.
 ms.date: 11/15/2021
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: overview
 author: smritib17
 ms.author: smbhardwaj

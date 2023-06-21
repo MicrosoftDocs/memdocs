@@ -3,7 +3,8 @@ title: Endpoint analytics settings
 titleSuffix: Microsoft Endpoint Manager
 description: Instructions for configuring settings in Endpoint analytics.
 ms.date: 11/15/2021
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: how-to
 author: smritib17
 ms.author: smbhardwaj

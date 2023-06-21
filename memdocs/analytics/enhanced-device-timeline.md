@@ -3,7 +3,8 @@ title: Enhanced device timeline in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about Enhanced device timeline as an advanced feature in Endpoint Analytics
 ms.date: 02/22/2023
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: Smritib17
 ms.author: smbhardwaj

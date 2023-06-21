@@ -3,7 +3,8 @@ title: Remediations
 titleSuffix: Microsoft Endpoint Manager
 description: Lear about how to use Remediations in Endpoint analytics.
 ms.date: 04/06/2023
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj

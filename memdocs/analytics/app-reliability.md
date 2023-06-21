@@ -1,9 +1,10 @@
 ---
 title: Application reliability in endpoint analytics
 description: Get details about application reliability in endpoint analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 ms.date: 03/31/2022
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj

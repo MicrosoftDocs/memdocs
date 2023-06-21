@@ -3,7 +3,8 @@ title: Troubleshooting Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Instructions for troubleshooting Endpoint analytics.
 ms.date: 10/05/2021
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: troubleshooting
 author: smritib17
 ms.author: smbhardwaj

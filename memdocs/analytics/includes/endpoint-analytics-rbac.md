@@ -1,7 +1,8 @@
 ---
 author: smritib17
 ms.author: smbhardwaj
-ms.service: endpoint-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: include
 ms.date: 10/23/2020
 ms.localizationpriority: medium
