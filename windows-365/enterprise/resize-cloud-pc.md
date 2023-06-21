@@ -89,7 +89,7 @@ If there are available licenses, the upgrade/downgrade will take place.
 
 When resizing starts, the user is automatically disconnected from their Cloud PC and any unsaved work might be lost.
 
-Resizing can take from 15 to 20 minutes before the user can access their Cloud PC again. YOu can monitor the status in the Windows 365 provisioning blade. Users can see their Cloud PC status at http://windows365.microsoft.com.
+Resizing can take from 15 to 20 minutes before the user can access their Cloud PC again. YOu can monitor the status in the Windows 365 provisioning blade. Users can see their Cloud PC status at https://windows365.microsoft.com.
 
 If you have a combination of paid and trial licenses, the resize feature uses your paid licenses first. After these licenses run out, the resize operation uses your trial licenses.
 
