@@ -46,7 +46,7 @@ The following steps are only needed when you aren’t using the Windows 365 gall
 3. Install the [WebRTC Redirector (websocket) plugin](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWNg9F). For instructions on how to install, see [Install the Teams WebSocket Service](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service). The plugin is required for Teams to function properly in a Cloud PC environment with the optimizations.
 
 > [!NOTE]
-> Don’t install the Microsoft Teams desktop application. If you want Microsoft Teams on the Cloud PC, install Microsoft 365 Apps + Teams by using Microsoft Endpoint Manager.
+> Don’t install the Microsoft Teams desktop application. If you want Microsoft Teams on the Cloud PC, install Microsoft 365 Apps + Teams by using Microsoft Intune.
 
 ## Verify that Teams optimizations loaded successfully
 

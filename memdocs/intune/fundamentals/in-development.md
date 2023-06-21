@@ -187,7 +187,7 @@ The Intune troubleshooting pane is now generally available.  It will provide det
 - Details about available device diagnostics and disabled devices.
 - Details about offline devices that haven't checked-in to the service for three or more days.
 
-You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. 
+You can find the troubleshooting pane in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**. 
 
 <!-- *********************************************** -->
 

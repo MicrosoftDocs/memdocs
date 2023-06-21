@@ -2,7 +2,7 @@
 # required metadata
 title: Resize a Cloud PC (preview) 
 titleSuffix:
-description: Learn how to resize a Cloud PC by using Microsoft Endpoint Manager.
+description: Learn how to resize a Cloud PC by using Microsoft Intune.
 keywords:
 author: ErikjeMS  
 ms.author: erikje

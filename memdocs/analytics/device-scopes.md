@@ -1,10 +1,10 @@
 ---
 title: Device scopes in Endpoint Analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Learn about Device scopes as an advanced feature in Endpoint Analytics
 ms.date: 02/22/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: Smritib17
 ms.author: smbhardwaj
@@ -28,7 +28,7 @@ Custom device scopes are supported on the following Endpoint analytics reports:
 
 ## Permissions  
 
-Custom device scopes use Intune Scope tags, hence other permissions are required for some actions. 
+Custom device scopes use Intune Scope tags, hence other permissions are required for some actions.
 To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
 
 - Endpoint Security Manager
@@ -42,7 +42,7 @@ To create custom device scopes, a user must have the **Roles/Read** [role permis
 > [!NOTE]
 > After custom device scopes are created, they can be used by other users who have access to Endpoint analytics.
 
-## Create and manage custom device scopes 
+## Create and manage custom device scopes
 
 You can create and manage custom device scopes by using the **Manage device scopes** menu in Endpoint analytics.  
 
@@ -66,7 +66,7 @@ Only the user who created the custom device scopes or a Global administrator can
 To delete custom device scopes:
 
 1. Open the **Manage device scopes** menu.
-2. Find the custom device scope you would like to delete and select the menu. 
+2. Find the custom device scope you would like to delete and select the menu.
 3. Select **Delete**.
 4. Select **Yes** to confirm.
 
@@ -75,19 +75,19 @@ To delete custom device scopes:
 
 ## Using custom device scopes
 
-Custom device scopes can be used in any supported Endpoint analytics report. To use a custom device scope: 
+Custom device scopes can be used in any supported Endpoint analytics report. To use a custom device scope:
 
 1. Ensure that the device scope you would like to use is active.
 2. Navigate to a supported report in Endpoint analytics, such as **Startup performance**.
-3. Select **Device scope** menu in the page. 
-4. From the dropdown menu, select your desired custom device scope. 
-5. Select **Apply**. 
+3. Select **Device scope** menu in the page.
+4. From the dropdown menu, select your desired custom device scope.
+5. Select **Apply**.
 
 The page is automatically updated to show scores, data, and insights specific to the subset of devices defined by your chosen custom device scope. As you navigate through Endpoint analytics, your chosen device scope remains selected on all supported reports and pages.
 
 To return to viewing all devices, navigate to the **Device scope** menu, select **All Devices** from the dropdown menu, and select **Apply**.  
 
-## Limitations 
+## Limitations
 
 - You can save up to 100 custom device scopes, and up to 20 can be active at a time.  
 
