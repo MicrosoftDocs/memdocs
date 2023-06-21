@@ -40,11 +40,11 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-> [!NOTE]
->
-> Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step.
-
 1. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+
+  > [!NOTE]
+  >
+  > Additional screens such as License Terms, Privacy, Language, and Keyboard screens may appear before the Enrollment Status Page (ESP) depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step.
 
 1. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
@@ -56,11 +56,9 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran during the [Technician flow](azure-ad-join-technician-flow.md).
 
-    > [!NOTE]
-    >
-    > The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available between the technician flow phase and the user flow phase.
+    The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available between the technician flow phase and the user flow phase.
 
-    > [!NOTE]
+    > [!TIP]
     >
     > To view and hide detailed progress information in the ESP during the provisioning process:
     >

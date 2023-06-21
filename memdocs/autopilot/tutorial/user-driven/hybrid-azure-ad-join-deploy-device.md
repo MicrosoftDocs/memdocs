@@ -50,13 +50,13 @@ To start the Autopilot deployment process on the device, select a device that is
 >
 > Make sure that the connected network has connectivity to both the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
 
-> [!NOTE]
->
-> Additional screens such as License Terms, Privacy, Language, and Keyboard may appear depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
+4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
-1. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+  > [!NOTE]
+  >
+  > Before the Azure AD sign-in page appears, additional screens such as License Terms, Privacy, Language, and Keyboard screens may appear depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step.
 
-1. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The ESP displays progress during the provisioning process across three phases:
+5. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The ESP displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)
@@ -71,17 +71,17 @@ To start the Autopilot deployment process on the device, select a device that is
     > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
     > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
-1. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
+6. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
    1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign on.
-   2. Enter the on-premises domain credentials for the end-user.
-   3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
+   1. Enter the on-premises domain credentials for the end-user.
+   1. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
     > [!IMPORTANT]
     >
     > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Azure AD end-user credentials to attempt to sign into the device at this step.
 
-1. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
+7. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
 
    1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials and then select the **Next** button.
 
@@ -101,6 +101,6 @@ To start the Autopilot deployment process on the device, select a device that is
       >
       > If the device is left alone with no interaction during the **Account setup** phase of the ESP, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** of the ESP, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
 
-1. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
+8. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 
 ## More information

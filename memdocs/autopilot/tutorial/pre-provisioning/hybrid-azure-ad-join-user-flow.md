@@ -64,7 +64,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran and completed during the [Technician flow](hybrid-azure-ad-join-technician-flow.md). The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available during the time frame that the technician flow ran and when the user flow runs after the device was delivered to the end-user.
 
-    > [!NOTE]
+    > [!TIP]
     >
     > To view and hide detailed progress information in the ESP during the provisioning process:
     >
