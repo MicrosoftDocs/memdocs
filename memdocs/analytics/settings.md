@@ -1,6 +1,6 @@
 ---
 title: Endpoint analytics settings
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Instructions for configuring settings in Endpoint analytics.
 ms.date: 11/15/2021
 ms.service: microsoft-intune
@@ -44,12 +44,12 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
 
 ### Configuration Manager data connector
 
-To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
+To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
 
 Once connected, you can [choose which devices you'd like to target](enroll-configmgr.md#bkmk_cm_enroll) for Endpoint analytics in the Configuration Manager console.
 
 > [!NOTE] 
-> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
+> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
 
 ### <a name="bkmk_consent"></a> Consent to share data
 

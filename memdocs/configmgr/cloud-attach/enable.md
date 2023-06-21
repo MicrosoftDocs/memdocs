@@ -80,7 +80,7 @@ Use the following steps to cloud attach your environment with custom settings:
    **Select which devices to upload to Microsoft Endpoint Manager** has the following two options:
    - **All devices managed my Microsoft Endpoint Configuration Manager (recommended)**: Upload all devices
    - **Specific Collection**: Upload a specific collection, including any subcollections.
-1. The **Endpoint Analytics** section of the **Configure Upload** page, enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for devices uploaded to Microsoft Endpoint Manager. Endpoint analytics reports focus on the quality of the experience you're delivering to your users and helps you identify issues to proactively make improvements.
+1. The **Endpoint Analytics** section of the **Configure Upload** page, enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for devices uploaded to Microsoft Intune. Endpoint analytics reports focus on the quality of the experience you're delivering to your users and helps you identify issues to proactively make improvements.
 
    Ensure the **Enable Endpoint Analytics for devices uploaded to Microsoft Endpoint Manager** option is selected to enable Endpoint Analytics.
 

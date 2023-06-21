@@ -32,15 +32,15 @@ ms.collection:
 
 # Privacy, customer data, and customer content in Windows 365
 
-Windows 365 is a cloud-based service that lets you provision and manage Cloud PC for your users. You manage the Cloud PCs with the rest of your devices by using Microsoft Endpoint Manager (Windows 365 Enterprise) or a self-serviced experience (Windows 365 Business). This documentation provides details on data platform and privacy compliance for Windows 365. Unless otherwise specified, the term Windows 365 in this document refers to both Windows 365 Enterprise and the Windows 365 Business. Where the details below differ, each product is called out individually.
+Windows 365 is a cloud-based service that lets you provision and manage Cloud PC for your users. You manage the Cloud PCs with the rest of your devices by using Microsoft Intune (Windows 365 Enterprise) or a self-serviced experience (Windows 365 Business). This documentation provides details on data platform and privacy compliance for Windows 365. Unless otherwise specified, the term Windows 365 in this document refers to both Windows 365 Enterprise and the Windows 365 Business. Where the details below differ, each product is called out individually.
 
 ## Windows 365 data sources and purpose
 
 Windows 365 provides its service to customers by gathering and using data from the sources listed below. These sources provide a comprehensive view of the devices that Windows 365 manages.
 
 - [Microsoft Windows Enterprise](/windows/resources/) - for managing the device setup experience, managing connections to other services, and operational support for IT pros.
-- [Microsoft Endpoint Manager](/mem/endpoint-manager-overview) – for device and app management, data security, and device configurations.
-- [Endpoint Analytics](/mem/analytics/overview) – part of Microsoft Endpoint manager, specifically for analytical insights about device and app usage.
+- [Microsoft Intune product family](/mem/endpoint-manager-overview) – for device and app management, data security, and device configurations.
+- [Endpoint analytics](/mem/analytics/overview) – part of the Microsoft Intune product family, specifically for analytical insights about device and app usage.
 - [Microsoft 365 apps for enterprise](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans?rtc=1) – for management of Microsoft 365 Apps.
 
 To protect and maintain enrolled devices, Windows 365 processes and copies data from online services and data pipelines configured by the customer to Windows 365. After data is integrated from these services into Windows 365, the [Product Terms](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/all) and [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) applicable to Windows 365 also applies to the data. Windows 365 ensures appropriate data confidentiality, security, and resilience. Windows 365 employs extra internal privacy and security measures to ensure proper handling of personal data.
@@ -68,7 +68,7 @@ When a user is removed from Windows 365, Windows 365 keeps non-alert personal da
 
 For more information on data retention, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
 
-Windows 365 defaults to Microsoft Endpoint Manager’s standard practice to [audit, export, or delete personal data](/mem/intune/protect/privacy-data-audit-export-delete).
+Windows 365 defaults to Microsoft Intune’s standard practice to [audit, export, or delete personal data](/mem/intune/protect/privacy-data-audit-export-delete).
 
 Personal data is processed in the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms](https://www.microsoft.com/licensing/docs).
 
