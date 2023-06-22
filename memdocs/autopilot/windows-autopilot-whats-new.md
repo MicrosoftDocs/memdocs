@@ -17,6 +17,10 @@ ms.topic: conceptual
 
 # Windows Autopilot: What's new
 
+## Remove Windows Autopilot registration with one click
+
+Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device from the Autopilot devices blade in Intune. This means that you can now remove the Autopilot registration of a device without needing to delete the record in Intune. If the device is still active in Intune, the deletion will just remove the registration, but it will continue to be managed. To use this feature, navigate to the Autopilot devices blade in Intune through __Devices__ > __Windows Devices__ > __Windows Enrollment__ > __Windows Autopilot devices__, select the device you wish to remove and then click on the __Delete__.
+
 ## Device rename occurs during technician phase for pre-provisioning 
 
 Starting in 2303, a new functional change forces the device rename to occur during the technician phase for pre-provisioning for Azure AD join devices. After the technician selects the provision button, we'll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, for Windows 10, install quality update [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or newer. For Windows 11, install quality update [KB5023778](https://support.microsoft.com/topic/march-28-2023-kb5023778-os-build-22621-1485-preview-d490bb51-492e-410c-871f-50ad01b0f765) or newer.
@@ -59,8 +63,6 @@ Starting in September 2022, the Intune Connector for Active Directory (ODJ conne
 
 ## Enroll to co-management from Windows Autopilot
 <!-- 11300628 -->
-<!-- 2205 -->
-
 With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](../configmgr/comanage/overview.md), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
 If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
@@ -118,3 +120,4 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 [What's new in Microsoft Intune](../intune/fundamentals/whats-new.md)
 
 [What's new in Windows client](/windows/whats-new/)
+
