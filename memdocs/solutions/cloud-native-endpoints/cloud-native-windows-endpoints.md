@@ -11,8 +11,8 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 06/06/2023
 ms.topic: conceptual
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 

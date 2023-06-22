@@ -33,10 +33,10 @@ ms.collection:
 
 # Mobile Threat Defense integration with Intune
 
-Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
-
 > [!NOTE]
 > This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
+
+Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
@@ -54,6 +54,15 @@ Typically, companies are proactive in protecting PCs from vulnerabilities and at
 Intune uses a Mobile Threat Defense connector to create a channel of communication between Intune and your chosen MTD vendor. Intune MTD partners offer intuitive, easy to deploy applications for mobile devices. These applications actively scan and analyze threat information to share with Intune. Intune can use the data for either reporting or enforcement purposes.
 
 For example: A connected MTD app reports to the MTD vendor that a phone on your network is currently connected to a network that is vulnerable to Man-in-the-Middle attacks. This information is categorized to an appropriate risk level of low, medium, or high. This risk level is then compared with the risk level allowances you set in Intune. Based on this comparison, access to certain resources of your choice can be revoked while the device is compromised.
+
+### Connector status
+
+Once you add a Mobile Threat Defense connector to your tenant, the status will show one of the following states:
+
+* **Unavailable**: Connector setup is not complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available**.
+* **Available**: Connectur setup is complete. Atleast 1 platform toggle must be turned on for this status to change to **Enabled**.
+* **Enabled**: Connector setup is complete, and atleast 1 platform toggle is turned on for this connector. 
+* **Unresponsive**: Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.
 
 ## Data that Intune collects for Mobile Threat Defense
 

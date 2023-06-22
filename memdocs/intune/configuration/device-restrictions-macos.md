@@ -47,6 +47,9 @@ These settings are added to a device configuration profile in Intune, and then a
 > [!NOTE]
 > The user interface may not match the enrollment types in this article. The information in this article is correct. The user interface is being updated in an upcoming release.
 
+> [!TIP]
+> These settings use Apple's restriction settings. For more information on these settings, see [Apple's mobile device management settings site](https://support.apple.com/guide/deployment/restrictions-for-mac-depba790e53/1/web/1.0) (opens Apple's web site).
+
 ## Before you begin
 
 Create a [macOS device restrictions configuration profile](device-restrictions-configure.md).

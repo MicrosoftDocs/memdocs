@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 06/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -92,7 +92,7 @@ You can access Windows 365 Cloud PCs from your Linux OS devices by using:
   - [HP](https://h20195.www2.hp.com/v2/GetDocument.aspx?docname=c07051097)
   - [IGEL](https://www.igel.com/igel-solution-family/)
 
-  Third-party Linux client solutions can't be managed by using Microsoft Endpoint Manager. The partner provides a separate management tool for Linux devices.
+  Third-party Linux client solutions can't be managed by using Microsoft Intune. The partner provides a separate management tool for Linux devices.
 
 <!-- ########################## -->
 ## Next steps

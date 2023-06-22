@@ -105,8 +105,17 @@ items:
     - name: Planning guide
       displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/intune-planning-guide.md
+    - name: Settings insight
+      displayName: configuration, settings, insight, security baselines
+      href: ./fundamentals/settings-insight.md
     - name: Supported operating systems and browsers
-      href: ./fundamentals/supported-devices-browsers.md
+      items:
+      - name: Supported operating systems and browsers
+        displayName: software updates, android, ios, ipados
+        href: ./fundamentals/supported-devices-browsers.md
+      - name: Android Open Source Project Supported Devices
+        displayName: software updates, android open source project, supported devices
+        href: ./fundamentals/android-os-project-supported-devices.md    
     - name: Software updates admin checklists
       items:
       - name: BYOD and personal devices
@@ -213,9 +222,11 @@ items:
         - name: Create a custom role
           href: ./fundamentals/create-custom-role.md
         - name: Use scope tags to determine what admins can see
-          href: ./fundamentals/scope-tags.md
+          href: ./fundamentals/scope-tags.md       
         - name: Distributed IT environment with many admins in the same Intune tenant
           href: ./fundamentals/intune-scale-guidelines.md
+        - name: Built-in roles permissions reference
+          href: ./fundamentals/role-based-access-control-reference.md 
 
     - name: Manage apps
       items:
@@ -412,7 +423,7 @@ items:
                   href: ./apps/company-portal-app.md
                 - name: Configure Microsoft Launcher
                   href: ./apps/configure-microsoft-launcher.md
-                - name: Configure Microsoft Edge
+                - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
@@ -455,6 +466,8 @@ items:
                     href: ./apps/app-protection-policy-settings-android.md
                   - name: iOS settings
                     href: ./apps/app-protection-policy-settings-ios.md
+                  - name: Windows settings
+                    href: ./apps/app-protection-policy-settings-windows.md                    
                   - name: Conditional launch
                     href: ./apps/app-protection-policies-access-actions.md
                   - name: Data transfer exceptions
@@ -542,18 +555,21 @@ items:
                 href: ./protect/endpoint-security-policy.md
               - name: Use reusable settings groups
                 href: ./protect/reusable-settings-groups.md
-              - name: Antivirus
-                href: ./protect/endpoint-security-antivirus-policy.md
-              - name: Disk encryption
-                href: ./protect/endpoint-security-disk-encryption-policy.md
-              - name: Firewall
-                href: ./protect/endpoint-security-firewall-policy.md
-              - name: Endpoint detection and response
-                href: ./protect/endpoint-security-edr-policy.md
-              - name: Attack surface reduction
-                href: ./protect/endpoint-security-asr-policy.md
               - name: Account protection
                 href: ./protect/endpoint-security-account-protection-policy.md
+              - name: Antivirus
+                href: ./protect/endpoint-security-antivirus-policy.md
+              - name: Application Control
+                href: ./protect/endpoint-security-app-control-policy.md
+              - name: Attack surface reduction
+                href: ./protect/endpoint-security-asr-policy.md
+              - name: Disk encryption
+                href: ./protect/endpoint-security-disk-encryption-policy.md
+              - name: Endpoint detection and response
+                href: ./protect/endpoint-security-edr-policy.md
+              - name: Firewall
+                href: ./protect/endpoint-security-firewall-policy.md
+
           - name: Microsoft Defender for Endpoint
             items:
             - name: Microsoft Defender for Endpoint
@@ -1094,9 +1110,6 @@ items:
             href: ./configuration/esim-device-configuration-download-server.md
           - name: eSIM bulk activation with activation codes
             href: ./configuration/esim-device-configuration.md
-        - name: Telecom expenses on Android, iOS/iPadOS
-          href: ./configuration/telecom-expenses-monitor.md
-          displayName: saaswedo datalert
 
       - name: Configuration profile settings lists
         items:

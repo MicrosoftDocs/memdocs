@@ -81,7 +81,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 ### Google Play Protect
 
 > [!IMPORTANT]
-> Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
+> Devices operating in countries/regions where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
 - **Google Play Services is configured**  
   Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices.
