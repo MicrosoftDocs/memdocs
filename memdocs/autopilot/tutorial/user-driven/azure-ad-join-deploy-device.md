@@ -53,7 +53,7 @@ To start the Autopilot deployment process on the device, select a device that is
 
     The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
 
-    > [!NOTE]
+    > [!TIP]
     >
     > To view and hide detailed progress information in the ESP during the provisioning process:
     >

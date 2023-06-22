@@ -57,7 +57,7 @@ To start the technician flow, select a device that is part of the device group c
 
    For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of **User flow**.
 
-   > [!NOTE]
+   > [!TIP]
    >
    > To view and hide detailed progress information in the ESP during the provisioning process:
    >
