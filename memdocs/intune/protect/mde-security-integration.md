@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Intune to manage Microsoft Defender for Endpoint Security on devices not enrolled with Microsoft Intune 
-description: Use Intune profiles to manage security settings for Microsoft Defender for Endpoint on devices that register in your Azure Active Directory. 
+title: Use Intune to manage Microsoft Defender for Endpoint security settings on devices not enrolled with Microsoft Intune 
+description: Use Intune profiles to manage security settings for Microsoft Defender for Endpoint on devices suppoted by Defender that don't enroll with Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2023
+ms.date: 07/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,13 +27,21 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-ms.reviewer: mattcall
+ms.reviewer: laarrizz
+
+zone_pivot_groups: mde-attach-preview
 
 ---
 
+<!--  PIVOTS in use:
+    - id: mdssc-ga
+      title: Generally Available
+    - id: mdssc-preview
+      title: Public Preview
+-->
 # Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
 
-With Microsoft Defender for Endpoint, you can now deploy security configurations from Microsoft Intune directly to your onboarded devices without requiring a full Microsoft Intune device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Intune service can receive security configurations for Microsoft Defender for Endpoint directly from Intune.
+With Microsoft Defender for Endpoint, you can  deploy policies from Microsoft Intune to manage the   security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings configuration*.
 
 When devices are managed through this capability:
 
