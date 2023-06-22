@@ -45,9 +45,9 @@ When you use Microsoft Defender for Endpoint, you can  deploy policies from Micr
 
 >[!NOTE]
 >
-> Begining in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects teh capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
+> Begining in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
 >
-> You can opt-in to the public preview by enabling the use of **Preview features** from within the [Microsoft 365 Defender portal](https://sip.security.microsoft.com/homepage). For more information on this, see [Microsoft Defender for Endpoint preview features](/microsoft-365/security/defender-endpoint/preview?view=o365-worldwide) in the Defender documentation.
+> You can opt-in to the public preview by enabling the use of **Preview features** from within the [Microsoft 365 Defender portal](https://sip.security.microsoft.com/homepage). For more information on this, see [Microsoft Defender for Endpoint preview features](/microsoft-365/security/defender-endpoint/preview) in the Defender documentation.
 
 ::: zone pivot="mdssc-ga"
 
@@ -199,7 +199,7 @@ To use security settings management, you need:
 
 The following diagram is a conceptual representation of the Microsoft Defender for Endpoint security configuration management solution.
 
-::: zone pivot="mdssc-preview"
+::: zone pivot="mdssc-ga"
 
 :::image type="content" alt-text="Conceptual representation of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture.png":::
 
@@ -214,7 +214,7 @@ zone pivot="mdssc-preview"
 :::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
-2. A trust is established between each device and Azure AD:
+2. A registration is established for each device in Azure AD:
    - If a device has an existing trust, that trust is used.
    - For devices that haven't been registered, a synthetic device identity is created in Azure AD to enable the device to retrieve policies. When a device with a synthetic registration has a full Azure AD registration created for it, the synthetic registration is removed and the devices management continues on uninterrupted by using the full registration.
    - For devices that were previously fully registered, like a Hybrid Join device, the existing registration is used.
@@ -282,9 +282,8 @@ zone pivot="mdssc-ga"
 |                    | Firewall    | Firewall                    | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 |                    | Firewall    | Firewall Rules              | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 
-
 ::: zone-end
-zone pivot="mdssc-preview"
+::: zone pivot="mdssc-preview"
 
 | Platform  | Endpoint security policy | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
 |-------|---------|----------|-----------|----------|
@@ -303,7 +302,7 @@ zone pivot="mdssc-preview"
 
 ::: zone-end
 
-**Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
+**Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization. The following are descriptions of the policies that support security settings management:
 
 - **Antivirus** policies manage the security configurations found in Microsoft Defender for Endpoint. See  [antivirus](/mem/intune/protect/endpoint-security-antivirus-policy) policy for endpoint security.
 - **Attack surface reduction** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. For more information, see [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation, and [attack surface reduction](/mem/intune/protect/endpoint-security-asr-policy) policy for endpoint security.
