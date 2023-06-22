@@ -103,6 +103,13 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 1. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 
+> [!NOTE]
+>
+> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment such as:
+>
+> - Language/Region or Keyboard screens before the Azure AD sign-in page.
+> - Privacy screen when the User ESP/Account setup begins but before the Windows sign on screen appears.
+
 ## More information
 
 [!INCLUDE [More information user flow](../includes/more-info-user-flow.md)]

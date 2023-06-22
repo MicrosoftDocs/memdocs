@@ -24,10 +24,6 @@ To start the technician flow, select a device that is part of the device group c
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-> [!NOTE]
->
-> Additional screens such as License Terms, Privacy, Language, and Keyboard may appear before the Azure AD sign-in page depending on how the Autopilot profile was configured at the **Create and assign Autopilot profile** step.
-
 1. At the Azure AD sign-in page, **DON'T** sign in or select the **Next**/**Sign in** button. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
 1. From the **What would you like to do?** options screen:

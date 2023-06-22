@@ -44,6 +44,10 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 [!INCLUDE [Technician flow](../includes/technician-flow.md)]
 
+> [!NOTE]
+>
+> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment appear such as the Language/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
+
 ## Next step: User flow
 
 > [!div class="nextstepaction"]
