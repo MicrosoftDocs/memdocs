@@ -40,15 +40,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 
 > [!IMPORTANT]
 >
-> The user flow hybrid portion of the Azure AD join process requires connectivity to both the Internet and a domain controller.
+> The user flow portion of the hybrid Azure AD join process requires connectivity to both the Internet and a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as a VPN that has connectivity to a domain controller is required.
 
 Once the technician flow step of the pre-provisioning process completes successfully and the device is resealed, the device can be delivered to the end-user. The end-user then completes the normal Windows Autopilot user-driven process. This final step is know as the user flow and involves the following steps:
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
-
-      > [!IMPORTANT]
-      >
-      > Make sure that the connected network has both connectivity to the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
 
 4. Once the Autopilot process begins, the Enrollment Status Page (ESP) appears. The ESP displays progress during the provisioning process across three phases:
 
