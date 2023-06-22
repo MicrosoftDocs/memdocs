@@ -1,6 +1,6 @@
 ---
 title: Quickstart - Enroll Intune devices
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
 ms.date: 05/03/2022
 ms.prod: configuration-manager
@@ -9,7 +9,7 @@ ms.topic: quickstart
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
-# Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Intune devices into Endpoint analytics so that I can gain insights into the user experience.
+# Customer intent: As a Microsoft Intune administrator, I want to enroll Intune devices into Endpoint analytics so that I can gain insights into the user experience.
 ms.localizationpriority: high
 ms.collection: highpri
 ---
@@ -25,12 +25,12 @@ Before you start this tutorial, make sure you have the following prerequisites:
 ### Intune device requirements
 
 - Intune enrolled or co-managed devices running the following operating systems and updates:
-   - Windows 10 version 1903 or later
-      - The cumulative update from July 2021 or later installed
-     - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
+  - Windows 10 version 1903 or later
+    - The cumulative update from July 2021 or later installed
+    - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
 
 - Windows devices must be Azure AD joined or hybrid Azure AD joined.
-   - Workplace joined or Azure AD registered devices aren't supported.
+  - Workplace joined or Azure AD registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Intune-managed devices
@@ -43,12 +43,12 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 ### Licensing prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Remediations has an extra licensing requirement, for more information, see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Remediations has an extra licensing requirement, for more information, see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
 
 ### Endpoint analytics permissions
 
 - The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
-   - After you select **Start** for gathering data, other read-only roles can view the data.
+  - After you select **Start** for gathering data, other read-only roles can view the data.
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
 

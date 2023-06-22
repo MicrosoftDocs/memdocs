@@ -905,7 +905,7 @@ Validation steps depend on the type of notifications your app has registered for
 > [!TIP]
 > See [Quickly testing with changing policy] to speed up this process.
 
-`MANAGEMENT_REMOVED`, `WIPE_USER_DATA`, `WIPE_USER_AUXILIARY_DATA`, `WIPE_COMPLETED` notifications can all be triggered by [issuing a selective wipe] from Microsoft Endpoint Manager.
+`MANAGEMENT_REMOVED`, `WIPE_USER_DATA`, `WIPE_USER_AUXILIARY_DATA`, `WIPE_COMPLETED` notifications can all be triggered by [issuing a selective wipe] from Microsoft Intune.
 
 ### Validating custom themes
 

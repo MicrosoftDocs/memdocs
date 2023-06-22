@@ -88,7 +88,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 
 Intune app protection policies platform support aligns with Office mobile application platform support for Android and iOS/iPadOS devices. For details, see the **Mobile apps** section of [Office System Requirements](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg). 
 
-Preview: In addition, you can create app protection policies for Windows devices. For details, see [App protection experience for Windows devices]().
+Preview: In addition, you can create app protection policies for Windows devices. For details, see [App protection experience for Windows devices](#preview-app-protection-experience-for-windows-devices).
 
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies on Android.  
@@ -219,7 +219,7 @@ By default, there can only be one **Global** policy per tenant. However, you can
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy will override these settings.
 
 > [!NOTE]
-> The policy settings in the OneDrive Admin Center are no longer being updated. Microsoft Endpoint Manager may be used instead. For more information, see [Control access to features in the OneDrive and SharePoint mobile apps](/onedrive/control-access-to-mobile-app-features).
+> The policy settings in the OneDrive Admin Center are no longer being updated. Microsoft Intune may be used instead. For more information, see [Control access to features in the OneDrive and SharePoint mobile apps](/onedrive/control-access-to-mobile-app-features).
 
 ## App protection features
 

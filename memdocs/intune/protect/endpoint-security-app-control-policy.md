@@ -149,7 +149,6 @@ Before the policy has any effect, you must create and deploy an Application Cont
 
 For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
-
 ### Remove the Intune Management Extension as a managed installer
 
 Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
@@ -313,7 +312,7 @@ To aid this optimization, WDAC policy and the Intune management Extension are co
 
 - For Intune EDU tenants, the Intune Management Extension is automatically set as a Managed Installer. This configuration is automatic and can’t be changed.
 
-## Delete an Application Control policy
+## Delete Application Control policy
 
 As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windows 10) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune#remove-wdac-policies-on-windows-10-1903) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
 
@@ -406,9 +405,11 @@ You may have noticed other instances of the Application Control policy in the In
 
 From the Windows Application Control Docs, prior to Windows 10 1903, Application Control only supported a single active on a system at any given time. This significantly limits customers in situations where multiple policies with different intents would be useful.
 
-- Beginning with Windows 10 version 1903, WDAC supports up to 32 active policies on a device.
+Beginning with Windows 10 version 1903, WDAC supports **only** up to 32 active policies on a device before running into boot issues. [Learn more about the Known Issue here](/windows/security/threat-protection/windows-defender-application-control/operations/known-issues#boot-stop-failure-blue-screen-occurs-if-more-than-32-policies-are-active). To avoid unintended device impact as a result of more than 32 active policies, you can:
 
-See [Use multiple Windows Defender Application Control Policies (Windows 10) - Windows security | Microsoft Docs](/windows/security/threat-protection/windows-defender-application-control/deploy-multiple-windows-defender-application-control-policies) to identify what happens when there are multiple base and supplemental policies in play on the same device.
+1.	Use [CITool.exe](/windows/security/threat-protection/windows-defender-application-control/operations/wdac-debugging-and-troubleshooting#1---gather-wdac-diagnostic-data) on the device to inventory policy count prior to deploying any new WDAC policies to that device. 
+2.	Consider [merging multiple WDAC policies](/windows/security/threat-protection/windows-defender-application-control/merge-windows-defender-application-control-policies#merge-multiple-wdac-policy-xml-files-together) prior to deployment if that meets your organization’s needs.
+3.	Redesign the WDAC policy plan for your organization to reduce the number of policies needed to ensure security and productivity. 
 
 ### Does the Managed Installer opt-in capability for my tenant set apps installed from Configuration Manager with the appropriate tag?
 

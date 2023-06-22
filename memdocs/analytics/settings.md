@@ -1,10 +1,10 @@
 ---
 title: Endpoint analytics settings
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Instructions for configuring settings in Endpoint analytics.
 ms.date: 11/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: how-to
 author: smritib17
 ms.author: smbhardwaj
@@ -24,32 +24,32 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 
 ### <a name="bkmk_profile"></a> Intune data collection policy
 
-To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information: 
+To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information:
 
-  - **Platform**: Select **Windows 10 and later**
+- **Platform**: Select **Windows 10 and later**
   
-  - **Profile**: Select **Windows health monitoring**
+- **Profile**: Select **Windows health monitoring**
   
-  - **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
-   
-  - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    
-  - In **Configuration Settings**:
-   
-       - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 or later devices
-    
-       - **Scope**: Select **Endpoint analytics**. Windows updates scope is not used by endpoint analytics.
+- **Name**: Enter a descriptive name for the profile, like **Intune data collection policy**
 
-  - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+- **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+- In **Configuration Settings**:
+
+  - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 or later devices
+
+  - **Scope**: Select **Endpoint analytics**. Windows updates scope is not used by endpoint analytics.
+
+- Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
 ### Configuration Manager data connector
 
-To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
+To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
 
 Once connected, you can [choose which devices you'd like to target](enroll-configmgr.md#bkmk_cm_enroll) for Endpoint analytics in the Configuration Manager console.
 
 > [!NOTE] 
-> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
+> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
 
 ### <a name="bkmk_consent"></a> Consent to share data
 
