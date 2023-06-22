@@ -156,7 +156,7 @@ Navigate to **Endpoint security** > **Security baselines** . While creating and 
 #### New endpoint security Application Control policy in preview<!-- 15711976 -->  
 As a public preview, you can use a new endpoint security policy category, Application Control. Endpoint security Application Control policy includes:
 
-- Policy to set the Intune Management Extension as a tenant-wide managed installer. When enabled as a managed installer, apps you deploy thru Intune (after enablement of Managed Installer) to Windows devices will be tagged as being installed by Intune. This tag becomes useful when you use Application Control policies to manage which apps you want to allow or block from running on your managed devices.
+- Policy to set the Intune Management Extension as a tenant-wide managed installer. When enabled as a managed installer, apps you deploy through Intune (after enablement of Managed Installer) to Windows devices will be tagged as being installed by Intune. This tag becomes useful when you use Application Control policies to manage which apps you want to allow or block from running on your managed devices.
 
 - Application Control policies that are an implementation of Defender Application Control (WDAC). With Endpoint security Application Control policies, it's easy to configure policy that allows trusted apps to run on your managed devices. Trusted apps are apps like those that are installed by a managed installer or from the App store. In addition to built-in trust settings, these policies also support custom XML for application control so you can allow other apps from other sources to run to meet your organizations requirements.
 
@@ -170,7 +170,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->  
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about Endpoint analytics [here](https://learn.microsoft.com/mem/analytics/).
+Learn more about [Endpoint analytics](/mem/analytics/).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->  
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature provides the ability to effortlessly transition between full control and view-only modes, granting flexibility and convenience.
@@ -187,8 +187,7 @@ Applies to:
 Intune's Endpoint Privilege Management (EPM) reports now support exporting the full reporting payload to a CSV file. With this change you can now export all events from an elevation report in Intune.
 
 #### Endpoint Privilege Managements run with elevated access option now available on the top-level menu for Windows 11<!-- 17749664  -->
-
-The Endpoint Privilege Management option to *Run with elevated access* is now available as a top-level right-click option on Windows 11 devices. Previous to this change, standard users were not able to view the elevated access prompt on Windows 11 devices.
+The Endpoint Privilege Management option to *Run with elevated access* is now available as a top-level right-click option on Windows 11 devices. Previous to this change, standard users were required to click *Show more options* to view the *Run with elevated access* prompt on Windows 11 devices.
 
 [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
@@ -693,7 +692,7 @@ Applies to:
 - macOS 10.15 or later
 
 #### ServiceNow Integration is now Generally Available (GA)<!-- 18163832  -->  
-Now generally available, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace.  This new feature is available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**.  The list of incidents shown have a direct link back to the source incident and show key information from the incident.  All incidents listed link the "Caller" identified in the incident with the user selected for Troubleshooting.
+Now generally available, you can view a list of ServiceNow incidents associated with the user you've selected in the Intune Troubleshooting workspace. This new feature is available under **Troubleshooting + Support** > select a user > **ServiceNow Incidents**. The incidents shown have a direct link back to the source incident and show key information from the incident. All incidents listed link the "Caller" identified in the incident with the user selected for Troubleshooting.
 
 For more information, go to [Use the troubleshooting portal to help users at your company](service-now-integration.md).
 
@@ -701,7 +700,7 @@ For more information, go to [Use the troubleshooting portal to help users at you
 
 With more permissions administrators can control delivery of content created and deployed from Organizational messages and the delivery of content from Microsoft to users.
 
-The **Update organizational message control** RBAC permission for organizational messages, determines who can change the Organizational Messages toggle to allow or block Microsoft direct messages. This permission is also added to the **Organizational Messages Manager** built-in role.
+The **Update organizational message control** RBAC permission for organizational messages determines who can change the Organizational Messages toggle to allow or block Microsoft direct messages. This permission is also added to the **Organizational Messages Manager** built-in role.
 
 Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
 
@@ -1368,7 +1367,7 @@ The Microsoft Intune app for Android now shows a grace period status to account 
 
 
 #### Software update policies for macOS are now generally available<!-- 12393100 -->   
-Software update policies for macOS devices are now generally available. This general availability applies to supervised devices running macOS 12 (Monterey) and later. We will continue to add improvements to this feature going forward.  
+Software update policies for macOS devices are now generally available. This general availability applies to supervised devices running macOS 12 (Monterey) and later. We'll continue to add improvements to this feature going forward.  
 
 For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/software-updates-macos.md).
 
