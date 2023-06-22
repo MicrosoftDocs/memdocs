@@ -40,7 +40,12 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 
 > [!NOTE]
 >
-> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment appear such as the Language/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
+> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment before the Azure AD sign-in page such as:
+>
+> - Language/Country/Region.
+> - Keyboard.
+> - License Terms.
+
 ## Next step: User flow
 
 > [!div class="nextstepaction"]

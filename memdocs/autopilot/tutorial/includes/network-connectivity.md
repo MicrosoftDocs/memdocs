@@ -36,7 +36,7 @@ Headings are driven by article context. -->
 
          > [!NOTE]
          >
-         > When there's no network connectivity, the country/region and keyboard screens appear even if these screens have been set to hidden in the Autopilot profile. Because there was no network connectivity at this point, the device hasn't downloaded the Autopilot profile to know what settings to use. These settings need to be specified in order for the following network connectivity screens to work properly.
+         > When there's no network connectivity, the device can't downloaded the Autopilot profile to know what country/region and keyboard settings to use. For this reason, when there's no network connectivity, the country/region and keyboard screens appear even if these screens have been set to hidden in the Autopilot profile. These settings need to be specified in these screens in order for the network connectivity screens that follow to work properly.
 
      1. The **Let's connect you to a network** screen appears. At this screen, either plug the device into a wired network (if available), or select and connect to a wireless Wi-Fi network.
 

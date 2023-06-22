@@ -40,9 +40,9 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-1. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
-1. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
+5. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)
@@ -61,13 +61,13 @@ Once the technician flow step of the pre-provisioning process completes successf
     > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
     > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
-1. Once **Account setup** and the user ESP process completes, the provisioning process completes, the ESP finishes, and the Desktop appears. At this point, the end-user can start using the device.
+6. Once **Account setup** and the user ESP process completes, the provisioning process completes, the ESP finishes, and the Desktop appears. At this point, the end-user can start using the device.
 
 > [!NOTE]
 >
 > Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may during the Autopilot deployment appear such as:
 >
-> - Language/Region or Keyboard screens before the Azure AD sign-in page.
+> - Language/Country/Region or Keyboard screens before the Azure AD sign-in page.
 > - Privacy screen when the User ESP/Account setup begins but before the user is automatically signed in.
 
 ## More information

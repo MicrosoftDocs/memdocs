@@ -64,9 +64,9 @@ To start the Autopilot deployment process on the device, select a device that is
 
 > [!NOTE]
 >
-> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may during the Autopilot deployment such as:
+> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment such as:
 >
-> - Language/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
+> - Language/Country/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
 > - Privacy screen when the User ESP/Account setup begins but before the user is automatically signed in.
 
 ## More information

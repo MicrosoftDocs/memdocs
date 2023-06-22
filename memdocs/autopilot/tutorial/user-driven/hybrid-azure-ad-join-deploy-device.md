@@ -46,9 +46,9 @@ To start the Autopilot deployment process on the device, select a device that is
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-  > [!IMPORTANT]
-  >
-  > Make sure that the connected network has connectivity to both the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
+    > [!IMPORTANT]
+    >
+    > Make sure that the connected network has connectivity to both the Internet and to a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as VPN is required to establish connectivity to a domain controller. The VPN needs to connect to a network that has connectivity to a domain controller during the ESP.
 
 4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
@@ -99,7 +99,7 @@ To start the Autopilot deployment process on the device, select a device that is
 >
 > 1. Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment such as:
 >
->     - Language/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
+>     - Language/Country/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
 >     - Privacy screen when the User ESP/Account setup begins but before the Windows sign on screen appears.
 >
 > 1. If the device is left alone with no interaction during the **Account setup** phase of the ESP, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** of the ESP, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
