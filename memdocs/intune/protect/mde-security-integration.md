@@ -209,7 +209,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 4. Defender for Endpoint reports the status of the policy back to Microsoft Intune.
 
 ::: zone-end
-zone pivot="mdssc-preview"
+::: zone pivot="mdssc-preview"
 
 :::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png":::
 
@@ -266,7 +266,7 @@ Microsoft Intune includes several methods and policy types to manage the configu
 
 When you deploy an endpoint security policy that’s supported for both *Defender for Endpoint security settings configuration* and *Microsoft Intune*, a single instance of that policy can be processed by devices supported through security settings management (Microsoft Defender), and by devices that are managed by either Intune or Configuration Manager.
 
-zone pivot="mdssc-ga"
+::: zone pivot="mdssc-ga"
 
 | Platform  | Endpoint security policy | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
 |-----------|--------------------------|---------|--------------------------------------------------------|-------------------|
@@ -485,14 +485,14 @@ Most initial provisioning flows are typically completed by an Administrator of b
 
 ### Active Directory joined devices
 
-zone pivot="mdssc-ga"
+::: zone pivot="mdssc-ga"
 
 Devices that are joined to Active Directory use their **existing infrastructure** to complete the Hybrid Azure Active Directory join process. While the Defender for Endpoint component starts this process, the join action uses your Federation provider or Azure Active Directory Connect (Azure AD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
 
 To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
 
 ::: zone-end
-zone pivot="mdssc-preview"
+::: zone pivot="mdssc-preview"
 
 Devices that are joined to Active Directory use their **existing infrastructure** to complete the Hybrid Azure Active Directory join process.
 
