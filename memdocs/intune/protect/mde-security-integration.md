@@ -73,6 +73,9 @@ When you manage devices through security settings management as part of the publ
 
 - You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the Intune user interface for device views, policy management, and reports for security settings management.
 
+  To find guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content. 
+  - 
+
 - Devices get their assigned policies based on their Azure AD device object. A device that isn’t already registered in Azure Active Directory is joined as part of this solution.
 
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft 365 Defender portal.
@@ -201,7 +204,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 
 ::: zone pivot="mdssc-ga"
 
-:::image type="content" alt-text="Conceptual representation of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture.png":::
+:::image type="content" alt-text="Conceptual representation of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture.png" lightbox="./media/mde-security-integration/mde-architecture.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
 2. A trust is established between each device and Azure AD. When a device has an existing trust, it uses that trust. When devices haven't registered, a new trust is created.
@@ -211,7 +214,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 ::: zone-end
 ::: zone pivot="mdssc-preview"
 
-:::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png":::
+:::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png" lightbox="./media/mde-security-integration/mde-architecture-2.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
 2. A registration is established for each device in Azure AD:
@@ -234,7 +237,7 @@ You can use the Microsoft 365 Defender *Device inventory* to confirm a device is
 
 You can also confirm a device has enrolled in *security settings management* successfully by confirming that the device-side panel or device page display **MDE Enrollment status** as **Success**.
 
-:::image type="content" source="./media/mde-security-integration/defender-enrollment-validation.png" alt-text="A screenshot of a devices security settings management enrollment status on the device page in the Microsoft 365 Defender portal.":::
+:::image type="content" source="./media/mde-security-integration/defender-enrollment-validation.png" alt-text="A screenshot of a devices security settings management enrollment status on the device page in the Microsoft 365 Defender portal." lightbox="./media/mde-security-integration/defender-enrollment-validation.png":::
 
 If the **MDE Enrollment** status doesn’t display **Success**, make sure you’re looking at a device that was updated and is in scope for security settings management. (You configure the scope on the Enforcement scope page while configuring security settings management.)
 
@@ -242,7 +245,7 @@ If the **MDE Enrollment** status doesn’t display **Success**, make sure you’
 
 In the Microsoft Intune admin center, go to the All Devices page. Devices enrolled with security settings management appear here as in the Defender portal. In the admin center, the devices Managed by field should display MDE.
 
-:::image type="content" source="./media/mde-security-integration/intune-enrollment-validation.png" alt-text="A screenshot of the device page in the Intune admin center with the Managed by status of the device highlighted.":::
+:::image type="content" source="./media/mde-security-integration/intune-enrollment-validation.png" alt-text="A screenshot of the device page in the Intune admin center with the Managed by status of the device highlighted." lightbox="./media/mde-security-integration/intune-enrollment-validation.png" :::
 
 > [!TIP]
 >
@@ -252,7 +255,7 @@ In the Microsoft Intune admin center, go to the All Devices page. Devices enroll
 
 On the *All devices* page In the Microsoft Azure portal, you can view device details.
 
-:::image type="content" source="./media/mde-security-integration/azure-enrollment-validation.png" alt-text="A screenshot of the All device page in the Microsoft Azure portal with an example device highlighted.":::
+:::image type="content" source="./media/mde-security-integration/azure-enrollment-validation.png" alt-text="A screenshot of the All device page in the Microsoft Azure portal with an example device highlighted." lightbox="./media/mde-security-integration/azure-enrollment-validation.png":::
 
 To ensure that all devices enrolled in Defender for Endpoint security settings configuration receive policies, we recommend creating a dynamic Azure AD group based on the **MDEManaged** label. With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
 
@@ -328,7 +331,7 @@ In Microsoft Defender for Endpoint portal, as a security admin, your account nee
 
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
-   :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft 365 Defender portal.":::
+   :::image type="content" source="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Configure Pilot mode for Endpoint settings management in the Microsoft 365 Defender portal." lightbox="./media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" :::
 
    > [!TIP]
    >
@@ -344,7 +347,7 @@ In the Microsoft Intune admin center, your account need permissions equal to End
 
 2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
 
-   :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Intune admin center.":::
+   :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Intune admin center." lightbox="./media/mde-security-integration/enable-mde-settings-management-mem.png" :::
 
    When you set this option to *On*, all devices in the platform scope for Microsoft Defender for Endpoint that aren't managed by Microsoft Intune qualify to onboard to Microsoft Defender for Endpoint.
 
@@ -358,7 +361,7 @@ In some environments, it might be desired to use security settings management wi
 
 To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
 
-:::image type="content" source="./media/mde-security-integration/disable-configuration-manager-toggle.png" alt-text="Screen shot of the Defender portal showing the Manage Security settings using Configuration Manager toggle set to Off.":::
+:::image type="content" source="./media/mde-security-integration/disable-configuration-manager-toggle.png" alt-text="Screen shot of the Defender portal showing the Manage Security settings using Configuration Manager toggle set to Off." lightbox="./media/mde-security-integration/disable-configuration-manager-toggle.png" :::
 
 ## Create Azure AD Groups
 
@@ -458,7 +461,7 @@ Devices managed by this capability check-in with Microsoft Intune every 90 minut
 
 You can manually sync a device on-demand from the [Microsoft 365 Defender portal](https://security.microsoft.com/). Sign-in to the portal and go to **Devices**. Select a device that is managed by Microsoft Defender for Endpoint, and then select the **Policy sync** button:  
 
-:::image type="content" source="./media/mde-security-integration/policy-sync-from-mde.png" alt-text="Manually sync devices managed by Microsoft Defender for Endpoint." lightbox="./media/mde-security-integration/policy-sync-from-mde.png":::
+:::image type="content" source="./media/mde-security-integration/policy-sync-from-mde.png" alt-text="Manually sync devices managed by Microsoft Defender for Endpoint." lightbox="./media/mde-security-integration/policy-sync-from-mde.png"  lightbox="./media/mde-security-integration/policy-sync-from-mde.png" :::
 
 The Policy sync button only appears for devices that are successfully managed by Microsoft Defender for Endpoint.
 
@@ -519,4 +522,7 @@ Security settings management won't work for a device that has PowerShell *Langua
 
 ## Next steps
 
-[Monitor Defender for Endpoint](../protect/advanced-threat-protection-monitor.md)
+[Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
+::: zone pivot="mdssc-preview"
+[Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
+::: zone-end
