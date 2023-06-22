@@ -187,8 +187,7 @@ Applies to:
 Intune's Endpoint Privilege Management (EPM) reports now support exporting the full reporting payload to a CSV file. With this change you can now export all events from an elevation report in Intune.
 
 #### Endpoint Privilege Managements run with elevated access option now available on the top-level menu for Windows 11<!-- 17749664  -->
-
-The Endpoint Privilege Management option to *Run with elevated access* is now available as a top-level right-click option on Windows 11 devices. Previous to this change, standard users weren't able to view the elevated access prompt on Windows 11 devices.
+The Endpoint Privilege Management option to *Run with elevated access* is now available as a top-level right-click option on Windows 11 devices. Previous to this change, standard users were required to click *Show more options* to view the *Run with elevated access* prompt on Windows 11 devices.
 
 [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
