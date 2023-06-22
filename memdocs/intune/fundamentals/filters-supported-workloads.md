@@ -143,6 +143,7 @@ You can use filters for some common app policies on the following platforms. For
 
   - Android device administrator
   - Android Enterprise
+  - AOSP
   - iOS/iPadOS
   - macOS
   - Windows 10 and later
@@ -218,6 +219,16 @@ You can use filters for some common app policies on the following platforms. For
 | Endpoint detection and response | N/A |
 | Firewall | N/A |
 | Security Baselines | N/A |
+
+### AOSP
+
+| Profile type | Supported |
+| --- | --- |
+| **Device configuration profile** | &nbsp; |
+| Device restrictions | ✔️ |
+| PKCS certificate | ✔️ |
+| SCEP certificate | ✔️ |
+| Trusted certificate | ✔️ |
 
 ### iOS/iPadOS
 
