@@ -84,9 +84,9 @@ For more information, see [Preview: App protection policy settings for Windows](
 
 ### Device configuration
 
-#### Android (AOSP) now supports assignment filters<!-- 7591220 -->
+#### Android (AOSP) supports assignment filters<!-- 7591220 -->
 
-Android (AOSP) now supports assignment filters. When you create a filter for Android (AOSP), you can use the following properties:
+Android (AOSP) supports assignment filters. When you create a filter for Android (AOSP), you can use the following properties:
 
 - DeviceName
 - Manufacturer
