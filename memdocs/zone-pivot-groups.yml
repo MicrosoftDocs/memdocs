@@ -50,4 +50,4 @@ groups:
     - id: mdssc-ga
       title: Generally Available
     - id: mdssc-preview
-      title: Public Preview
+      title: Opt-in Public Preview
