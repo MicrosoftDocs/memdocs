@@ -122,11 +122,19 @@ Security settings management isn't yet supported with Government clouds. For mor
 
 When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. Security settings management fully supports this scenario with the following requirements:
 
-- Azure Active Directory Connect (AAD Connect) must be synchronized to the tenant that is used from Microsoft Defender for Endpoint.
-- Hybrid Azure Active Directory Join must be configured in your environment (either through Federation or AAD Connect Sync).
-- AAD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join).
-- AAD Connect rules for sync [must be modified for Server 2012 R2](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt#instructions-for-applying-computer-join-rule-in-aad-connect) (when support for Server 2012 R2 is needed).
+- Azure Active Directory Connect (Azure AD Connect) must be synchronized to the tenant that is used from Microsoft Defender for Endpoint.
+- Hybrid Azure Active Directory Join must be configured in your environment (either through Federation or Azure AD Connect Sync).
+- Azure AD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join).
+- Azure AD Connect rules for sync [must be modified for Server 2012 R2](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt#instructions-for-applying-computer-join-rule-in-aad-connect) (when support for Server 2012 R2 is needed).
 - All devices must register in the Azure Active Directory of the tenant that hosts Microsoft Defender for Endpoint. Cross-tenant scenarios aren't supported.
+
+> [!NOTE]
+>
+> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device.
+>
+> If the device was part of a dynamic Azure AD group, the policy targeting the device will be resolved within 48 hours. However, if the device was targeted as part of a static Azure AD group, administrators will need to go back and retarget the device.
+>
+> This is a known issue with Azure AD.
 
 ### Connectivity requirements
 
@@ -420,7 +428,9 @@ For the list of policy and profile combinations supported for security settings 
 
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-6. On the **Configuration settings** page, select the settings you want to manage with this profile. To learn more about a setting, expand its information dialog and select the *Learn more* link to view the CSP information for the setting in the on-line documentation.
+6. On the **Configuration settings** page, select the settings you want to manage with this profile.
+
+   To learn more about a setting, expand its *information* dialog and select the **Learn more** link to view the on-line Configuration Service Provider (CSP) documentation or related details, for that setting.
 
    When you're done configuring settings, select **Next**.
 
