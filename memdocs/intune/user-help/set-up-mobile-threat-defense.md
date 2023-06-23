@@ -34,17 +34,16 @@ ms.collection:
 
 **Applies to:**
 * iOS/iPadOS
-* Android 
+* Android
 
-> [!TIP]
-> There are a variety of MTD apps on the market. Your organization should tell you which one to use. If you're prompted to install an MTD app and you're not immediately redirected to the app or given the name of the app to install on your own, contact your IT support person for help. 
-
-Your organization can require you to install a mobile threat defense app on personal devices used for work or school. An MTD app helps keep your data safe by detecting and alerting you to threats on your device, like suspicious apps or networks, and operating system vulnerabilities. In this article, you'll learn how to set up and activate an MTD app so that you can satisfy your organization's requirement and access work apps.    
+Install a mobile threat defense (MTD) app on the personal device you use for work or school. MTD apps help keep your device safe by detecting and alerting you to threats, like suspicious apps or networks, and operating system vulnerabilities. In this article, you'll learn how to set up and activate an MTD app so that you can satisfy your organization's security requirement and access work apps.    
 
 ## Step 1: Install MTD app    
-Install your organization's preferred mobile threat defense (MTD) app on your device. After you sign into a work app, the **Get access** screen appears and prompts you to install the MTD app. If you're prompted to install an MTD app but aren't given the name or redirected to the app store listing, contact your IT support person for help,     
+>[!NOTE] An additional step, called *device registration*, happens prior to app installation on devices that aren't registered. Registration is required to confirm your identity and connect your school or work account to your device. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
-An additional step, called *device registration*, is required for nonregistred devices. Registration is where you confirm your identity and connect your school or work account to your device. Follow the onscreen prompts to register before you install the MTD app. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network). 
+Install your organization's preferred mobile threat defense (MTD) app on your device. Your organization chooses the MTD app you need to use. If the app name or listing isn't provided to you during enrollment or app setup, contact your IT support person for help. 
+
+For example, some organizations prompt for the MTD app during device enrollment.
 
 The following MTD apps are commonly used on Apple devices. Select an app to open its listing in the App Store.   
 
@@ -71,10 +70,10 @@ The following MTD apps are commonly used on Android devices. Select an app to op
 * [Zimperium MTD](https://play.google.com/store/apps/details?id=com.zimperium.zips)
 
 ## Step 2: Activate MTD app 
-Return to the **Get access** screen where you were first prompted to install the MTD app. The following sections describe the steps for iOS and Android devices. 
+Return to the **Get access** screen where you were first prompted to install the MTD app. Complete the following steps to activate the app on your iOS or Android device.  
 
 ### Activation for iOS app  
-1. On the Get access screen, select **Open**.  
+1. Open the MTD app.  
 2. The MTD app asks for permission to open Microsoft Authenticator. Select **Open**. 
 3. Select your work account and sign in. 
 4. Wait while the MTD app scans your device for security threats. 
@@ -83,11 +82,10 @@ Return to the **Get access** screen where you were first prompted to install the
     * Go to the MTD app and [check for existing threats](#resolving-a-threat) you may have missed in the first scan. Follow the in-app guidance to resolve the threat. Then try accessing your work app again.   
 
 ### Activation for Android app  
-1. On the Get access screen, select **Open**.    
-3. The MTD app asks for your permission to access certain areas of your device, should it need to. In order for this app to work properly, you must **Allow** access to contacts. Requested permissions vary across MTD vendors.  
-4. Select your work account and sign in.    
-5. Wait while the MTD app scans your device for security threats.  
-6.Return to the school or work app that you were originally trying to access, and then sign in. At this point, your organization might prompt you to configure other app security requirements, such as creating a PIN.  
+1. Open the MTD app.    
+2. Review and grant permissions, as needed, to the MTD app. Permissions vary by MTD app.  
+3. Wait while the MTD app scans your device for security threats. If the scan doesn't happen automatically, initiate   
+4.Return to the school or work app that you were originally trying to access, and then sign in. At this point, your organization might prompt you to configure other app security requirements, such as creating a PIN.  
 7. You should now have access to the app. If you're still blocked:  
     * On the **Get access** screen, select **Recheck**.  
     * Go to the MTD app and check for existing threats. Complete the recommended steps to resolve the threat and regain access.  
