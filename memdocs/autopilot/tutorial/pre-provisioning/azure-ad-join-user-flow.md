@@ -54,21 +54,19 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available between the technician flow phase and the user flow phase.
 
-    > [!TIP]
-    >
-    > To view and hide detailed progress information in the ESP during the provisioning process:
-    >
-    > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-    > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
-
 6. Once **Account setup** and the user ESP process completes, the provisioning process completes, the ESP finishes, and the Desktop appears. At this point, the end-user can start using the device.
 
-> [!NOTE]
->
-> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may during the Autopilot deployment appear such as:
->
-> - Language/Country/Region or Keyboard screens before the Azure AD sign-in page.
-> - Privacy screen when the User ESP/Account setup begins but before the user is automatically signed in.
+# User-flow tips
+
+- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may during the Autopilot deployment appear such as:
+
+  - Language/Country/Region or Keyboard screens before the Azure AD sign-in page.
+  - Privacy screen when the User ESP/Account setup begins but before the user is automatically signed in.
+
+- To view and hide detailed progress information in the ESP during the provisioning process:
+
+  - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+  - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
 ## More information
 

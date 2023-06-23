@@ -34,13 +34,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Deploy the device
 
-> [!TIP]
->
-> Although a user isn't assigned to a device for Windows Autopilot self-deploying mode, for testing purposes, assigning at least one policy and at least one application to users is still recommended since User ESP still runs when a user first signs into the device.
-
-Once all of the configurations for the Windows Autopilot user-driven Azure AD join deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
-
-[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
+Once all of the configurations for the Windows Autopilot self-deploying deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
 
 To start the Autopilot deployment process on the device, select a device that is part of the device group created in the previous [Create a device group](self-deploying-device-group.md) step, and then follow these steps:
 
@@ -54,19 +48,21 @@ To start the Autopilot deployment process on the device, select a device that is
 
     The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP. For Windows Autopilot self-deploying mode, only the Device ESP and its related two related phases (**Device preparation** and **Device setup**) run. User ESP and **Account setup** don't run until after the Windows Autopilot self-deploying deployment is complete and a user signs in.
 
-    > [!TIP]
-    >
-    > To view and hide detailed progress information in the ESP during the provisioning process:
-    >
-    > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-    > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
-
 5. Once **Device setup** and the device ESP process completes, the Windows Autopilot self-deploying deployment is complete, and the Windows sign-on screen appears.
 
 6. At this point, the end-user can sign into the device using their Azure AD credentials. When the user signs in, the user ESP and **Account setup** phase runs. Once user ESP and **Account setup** completes, the provisioning process completes, the Desktop appears, and the end-user can start using the device.
 
-> [!NOTE]
->
-> Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step, the Keyboard screen may appear at the start of the deployment.
+## Deployment tips
+
+- Before starting the Autopilot deployment, you may want to have at least one type of policy and at least one application assigned to the device(s). These assignments ensure proper testing of the Autopilot deployment the Device ESP phase. It may also prevent possible issues when there are either no policies or no applications assigned to the device.
+
+- Although a user isn't assigned to a device for Windows Autopilot self-deploying mode and user ESP doesn't run until after the Windows Autopilot self-deploying deployment completes and a user signs in, for testing purposes, assigning at least one policy and at least one application to users is still recommended.
+
+- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step, the Keyboard screen may appear at the start of the deployment.
+
+- To view and hide detailed progress information in the ESP during the provisioning process:
+
+  - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+  - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
 ## More information

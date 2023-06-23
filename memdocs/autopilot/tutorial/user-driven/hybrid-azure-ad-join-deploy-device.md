@@ -40,8 +40,6 @@ For an overview of the Windows Autopilot user-driven hybrid Azure AD join workfl
 
 Once all of the configurations for the Windows Autopilot user-driven hybrid Azure AD join deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
 
-[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
-
 > [!IMPORTANT]
 >
 > The hybrid Azure AD join process requires connectivity to both the Internet and a domain controller. If the connected network doesn't have connectivity to a domain controller, a solution such as a VPN that has connectivity to a domain controller is required.
@@ -64,10 +62,7 @@ To start the Autopilot deployment process on the device, select a device that is
 
     > [!TIP]
     >
-    > To view and hide detailed progress information in the ESP during the provisioning process:
-    >
-    > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-    > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
+    > 
 
 7. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
@@ -93,13 +88,25 @@ To start the Autopilot deployment process on the device, select a device that is
 
 9. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 
-> [!NOTE]
->
-> 1. Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment such as:
->
->     - Language/Country/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
->     - Privacy screen when the User ESP/Account setup begins but before the Windows sign on screen appears.
->
-> 1. If the device is left alone with no interaction during the **Account setup** phase of the ESP, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** of the ESP, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
+## Deployment tips
+
+- Before starting the Autopilot deployment, you may want to have:
+
+  - At least one type of policy and at least one application assigned to the device(s).
+  - At least one type of policy and at least one application assigned to the user(s).
+
+    These assignments ensure proper testing of the Autopilot deployment during both the Device ESP phase and User ESP phase of the ESP. It may also prevent possible issues when there are either no policies or no applications assigned to the device(s) or the user(s).
+
+- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment such as:
+
+  - Language/Country/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
+  - Privacy screen when the User ESP/Account setup begins but before the Windows sign on screen appears.
+
+- If the device is left alone with no interaction during the **Account setup** phase of the ESP, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** of the ESP, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
+
+- To view and hide detailed progress information in the ESP during the provisioning process:
+
+  - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+  - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
 ## More information

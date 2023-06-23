@@ -16,8 +16,6 @@ pre-provisioning/hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-[!INCLUDE [Assignment tip](../includes/assignment-tip.md)]
-
 Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. For Windows Autopilot for pre-provisioned deployment, the Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals.  The first phase is known as the **technician flow** and is normally run by the IT department, OEM, or reseller. The second phase is known as the **user flow** and is normally run by the end-user.
 
 To start the technician flow, select a device that is part of the device group created in the previous **Create a device group** step, and then follow these steps:
@@ -41,10 +39,6 @@ To start the technician flow, select a device that is part of the device group c
 
    - A QR code containing a unique identifier for the device. This code can be used to look up the device in Intune to perform actions such as verifying configurations, make any necessary changes, etc.
 
-      > [!NOTE]
-      >
-      > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. The Autopilot team has published to GitHub an [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune using the Graph API.
-
 7. Validate that the information in the **Windows Autopilot Configuration** screen is correct. Once all information has been confirmed as correct, select **Provision** (Windows 10) or **Next** (Windows 11) to begin the provisioning process.
 
 8. The device may reboot, followed by the Enrollment Status Page (ESP) appearing. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
@@ -57,13 +51,6 @@ To start the technician flow, select a device that is part of the device group c
 
    For technician flow of the Windows Autopilot for pre-provisioned deployment, only the first two Device ESP phases of **Device preparation** and **Device setup** run. The last User ESP phase of **Account setup** will run during the next step of **User flow**.
 
-   > [!TIP]
-   >
-   > To view and hide detailed progress information in the ESP during the provisioning process:
-   >
-   > - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-   > - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
-
 9. Once **Device setup** and the device ESP process completes, a status screen is displayed showing whether the provisioning process either succeeded of failed:
 
     - If the pre-provisioning process completes successfully, a success status screen appears with information about the deployment. Information presented includes the previously presented information of organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
@@ -73,10 +60,6 @@ To start the technician flow, select a device that is part of the device group c
       > [!IMPORTANT]
       >
       > Outside of testing scenarios, if the intention is to deliver the device to an end-user, **DON'T** turn the device back on at this point. Instead, deliver the device to the end-user where they perform the last step of **User flow**.
-
-      > [!NOTE]
-      >
-      > The technician flow inherits behavior from [self-deploying mode](../self-deploying/self-deploying-workflow.md). Self-deploying mode uses the Enrollment Status Page (ESP) to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before applications and configurations are done applying. If the Enrollment Status Page (ESP) is disabled, the **Reseal** button may appear before applications and configurations are done applying. Disabling the ESP may advertently allow proceeding to the user flow before technician flow provisioning is complete. The success status screen validates that enrollment was successful, not that the technician flow is necessarily complete. For this reason, it's recommended not to disable the Enrollment Status Page (ESP). Instead enable the Enrollment Status Page (ESP) as suggested in the **Configure and assign Autopilot Enrollment Status Page (ESP)** step.
 
     - If the pre-provisioning process fails, an error status screen appears with information about why the deployment failed including an error. The error screen also displays the previously presented information of organization name, Autopilot deployment profile name, QR code (Windows 10 only), and if applicable, assigned user. The elapsed time of the provisioning process is also provided.
 
