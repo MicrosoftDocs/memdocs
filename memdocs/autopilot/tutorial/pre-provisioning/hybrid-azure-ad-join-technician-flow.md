@@ -47,14 +47,14 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 ## Technician flow tips
 
 - Before starting the Autopilot deployment, you may want to have:<br>
-
+<br>
   - At least one type of policy and at least one application assigned to the device(s).
   - At least one type of policy and at least one application assigned to the user(s).
 
   These assignments ensure proper testing of the Autopilot deployment during both the Device ESP phase and User ESP phase of the ESP. It may also prevent possible issues when there are either no policies or no applications assigned to the device(s) or the user(s).
 
 - Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment before the Azure AD sign-in page such as:<br>
-
+<br>
   - Language/Country/Region.
   - Keyboard.
   - License Terms.
@@ -62,7 +62,7 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 - The QR codes can be scanned using a companion app. The app can be used to assign a user to the device. The Autopilot team has published to GitHub an [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune using the Graph API.
 
 - To view and hide detailed progress information in the ESP during the provisioning process:<br>
-
+<br>
   - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
   - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
 
