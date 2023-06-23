@@ -1,0 +1,18 @@
+---
+author: frankroj
+ms.author: frankroj
+manager: aaroncz
+ms.technology: itpro-deploy
+ms.prod: windows-client
+ms.topic: include
+ms.date: 06/23/2023
+ms.localizationpriority: medium
+---
+
+<!-- This file is shared by the following articles:
+
+pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
+
+Headings are driven by article context. -->
+
+- The technician flow inherits behavior from [self-deploying mode](../self-deploying/self-deploying-workflow.md). Self-deploying mode uses the Enrollment Status Page (ESP) to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before applications and configurations are done applying. If the Enrollment Status Page (ESP) is disabled, the **Reseal** button may appear before applications and configurations are done applying. Disabling the ESP may advertently allow proceeding to the user flow before technician flow provisioning is complete. The success status screen validates that enrollment was successful, not that the technician flow is necessarily complete. For this reason, it's recommended not to disable the Enrollment Status Page (ESP). Instead enable the Enrollment Status Page (ESP) as suggested in the **Configure and assign Autopilot Enrollment Status Page (ESP)** step.
