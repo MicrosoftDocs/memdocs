@@ -11,7 +11,10 @@ ms.localizationpriority: medium
 
 <!-- This file is shared by the following articles:
 
-pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
+pre-provisioning\azure-ad-join-technician-flow.md
+pre-provisioning\hybrid-azure-ad-join-technician-flow.md
+user-driven\azure-ad-join-deploy-device.md
+user-driven\hybrid-azure-ad-join-deploy-device.md
 
 Headings are driven by article context. -->
 

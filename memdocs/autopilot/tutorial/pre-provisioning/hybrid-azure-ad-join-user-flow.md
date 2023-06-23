@@ -82,17 +82,11 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 ## User-flow tips
 
-- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment such as:
+[!INCLUDE [Tips HAADJ screens](../includes/tips-haadj-screens.md)]
 
-  - Language/Country/Region or Keyboard screens before the Azure AD sign-in page.
-  - Privacy screen when the User ESP/Account setup begins but before the Windows sign on screen appears.
+[!INCLUDE [Tips HAADJ screen lock](../includes/tips-haadj-lock.md)]
 
-- If the device is left alone with no interaction during the **Account setup** phase of the ESP, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** of the ESP, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
-
-- To view and hide detailed progress information in the ESP during the provisioning process:
-
-  - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-  - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
+[!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]
 
 ## More information
 

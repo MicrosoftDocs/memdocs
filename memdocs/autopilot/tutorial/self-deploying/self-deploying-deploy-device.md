@@ -58,11 +58,8 @@ To start the Autopilot deployment process on the device, select a device that is
 
 - Although a user isn't assigned to a device for Windows Autopilot self-deploying mode and user ESP doesn't run until after the Windows Autopilot self-deploying deployment completes and a user signs in, for testing purposes, assigning at least one policy and at least one application to users is still recommended.
 
-- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step, the Keyboard screen may appear at the start of the deployment.
+- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step, the **Keyboard** screen may appear at the start of the deployment.
 
-- To view and hide detailed progress information in the ESP during the provisioning process:
-
-  - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-  - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
+[!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]
 
 ## More information

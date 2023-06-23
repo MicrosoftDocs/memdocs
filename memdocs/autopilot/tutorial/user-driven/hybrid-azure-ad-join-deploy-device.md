@@ -86,23 +86,12 @@ To start the Autopilot deployment process on the device, select a device that is
 
 ## Deployment tips
 
-- Before starting the Autopilot deployment, you may want to have:
+[!INCLUDE [Tips assignments](../includes/tips-assignments.md)]
 
-  - At least one type of policy and at least one application assigned to the device(s).
-  - At least one type of policy and at least one application assigned to the user(s).
+[!INCLUDE [Tips HAADJ screens](../includes/tips-haadj-screens.md)]
 
-    These assignments ensure proper testing of the Autopilot deployment during both the Device ESP phase and User ESP phase of the ESP. It may also prevent possible issues when there are either no policies or no applications assigned to the device(s) or the user(s).
+[!INCLUDE [Tips HAADJ screen lock](../includes/tips-haadj-lock.md)]
 
-- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md) step, additional screens may appear during the Autopilot deployment such as:
+[!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]
 
-  - Language/Country/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
-  - Privacy screen when the User ESP/Account setup begins but before the Windows sign on screen appears.
-
-- If the device is left alone with no interaction during the **Account setup** phase of the ESP, the device may enter the Windows lock screen. If the device does enter the Windows lock screen during **Account setup** of the ESP, unlock the device by selecting <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard, entering the on-premises domain credentials for the end-user, and then selecting <kbd>ENTER</kbd> on the keyboard. Unlocking the device should go back to the Enrollment Status Page (ESP) and display the current progress of **Account setup**.
-
-- To view and hide detailed progress information in the ESP during the provisioning process:
-
-  - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
-  - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
-.
 ## More information
