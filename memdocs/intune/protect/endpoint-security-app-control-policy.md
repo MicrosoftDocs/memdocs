@@ -183,7 +183,7 @@ To remove *all* Windows AppLocker policies from a device, you can use the **CatC
 
 2. Run this script on devices that have set the Intune Management Extension as a managed installer. This script removes only the Intune Management Extension as a managed installer.
 
-3. Please restart the the Intune Management Extension service for the above changes to take effect. 
+3. Please restart the Intune Management Extension service for the above changes to take effect. 
 
 To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
 
