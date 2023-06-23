@@ -133,9 +133,9 @@ The following procedure guides you through adding the Intune Management Extensio
 
 2. Select **Add**, and then **Yes** to confirm the addition of the Intune Management Extension as a managed installer.
 
-3. After adding the Managed installer, you may need to wait up to 10 minutes before the new policy is added to your tenant. Select **Refresh** to update the admin center periodically, until it's available.
+3. After adding the Managed installer, in some rare cases, you may need to wait up to 10 minutes before the new policy is added to your tenant. Select **Refresh** to update the admin center periodically, until it's available.
 
-   The policy is ready when Intune displays a managed installer policy with the name **Managed installer – Intune Management Extension** with the status of **Active**.
+   The policy is ready in the service when Intune displays a managed installer policy with the name **Managed installer – Intune Management Extension** with the status of **Active**. From the client side, you may need to wait up to an hour for the policy to start getting delivered.
 
    :::image type="content" source="./media/endpoint-security-app-control-policy/managed-installer-policy.png" alt-text="A screenshot of the Application control pane, with the managed installer policy present, and active." lightbox="./media/endpoint-security-app-control-policy/managed-installer-policy.png":::
 
@@ -143,7 +143,7 @@ The following procedure guides you through adding the Intune Management Extensio
 
    - **Settings**: Editing the policy settings opens the *Opt-out for managed installer* pane, where you can change the value for **Set managed installer** between **On** and **Off**. When you add the installer, the setting *Set managed installer* defaults to *On*. Before changing the configuration, be sure to review the behavior detailed on the pane for *On* and *Off*.
 
-   - **Scope tags**: You can add and modify scope tags that are assigned to this policy.
+   - **Scope tags**: You can add and modify scope tags that are assigned to this policy. This allows you to specify which admins can view the policy details. 
 
 Before the policy has any effect, you must create and deploy an Application Control policy to specify rules for which apps can run on your Windows devices.
 
@@ -350,9 +350,11 @@ Report details include:
 
 - Succeeded - Devices that have successfully applied the policy.
 - Error - Devices with errors.
-- New devices – New devices identifies devices that have recently applied the policy. New devices can take up to 24 hours before accurate data becomes available for them.
+- New devices – New devices identifies devices that have recently applied the policy. 
 
   :::image type="content" source="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png" alt-text="This screen capture shows the managed installer Overview." lightbox="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png":::
+
+It can take up to 24 hours for the **Device status** and **Device status trend** sections to update in the Overview.
 
 While viewing the policy details, you can select **Device status** (below *Monitor*), to open a device-based view of the policy details. The *Device status* view displays the following details that you can use to identify problems should a device fail to successfully apply the policy:
 
@@ -360,6 +362,8 @@ While viewing the policy details, you can select **Device status** (below *Monit
 - User name
 - OS version
 - Managed installer status (*Succeeded* or *Error*)
+
+It can take several minutes for the device-based view of the policy details to update after the device actually recieves policy. 
 
 ### Application Control
 
