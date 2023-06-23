@@ -59,6 +59,8 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
   - Keyboard.
   - License Terms.
 
+  Blah
+
 - The QR codes can be scanned using a companion app. The app can be used to assign a user to the device. The Autopilot team has published to GitHub an [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune using the Graph API.
 
 - To view and hide detailed progress information in the ESP during the provisioning process:

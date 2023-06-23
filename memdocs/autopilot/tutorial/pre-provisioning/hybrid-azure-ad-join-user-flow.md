@@ -70,10 +70,6 @@ Once the technician flow step of the pre-provisioning process completes successf
 
    1. Once the credentials are entered, select the **Next** button.
 
-      > [!IMPORTANT]
-      >
-      > 
-
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 
    1. The **You're all set!** screen appears. Select **Done**.
