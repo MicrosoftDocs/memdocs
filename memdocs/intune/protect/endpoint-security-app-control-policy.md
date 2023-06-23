@@ -367,7 +367,7 @@ While viewing the policy details, you can select **Device status** (below *Monit
 - OS version
 - Managed installer status (*Succeeded* or *Error*)
 
-It can take several minutes for the device-based view of the policy details to update after the device actually recieves policy. 
+It can take several minutes for the device-based view of the policy details to update after the device actually receives the policy. 
 
 ### Application Control
 
