@@ -10,7 +10,6 @@ ms.author: smbhardwaj
 manager: dougeby
 # Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations so that I can fix common support issues before end-users notice issues.
 ms.localizationpriority: high
-ms.collection: highpri
 
 # optional metadata
 
@@ -23,7 +22,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
+- highpri
 - M365-identity-device-management
 ---
 
@@ -142,13 +141,13 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Remediations script settings page.](media/remediations/remediations-script-settings.png)](media/remediations/remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
-   - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts-remediation.md#bkmk_scripts).
+   - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts-remediation.md#script-descriptions).
    - **Enforce script signature check**: No
    - **Run script in 64-bit PowerShell**: No
 
-   For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
+   For information about enforcing script signature checks, see [Script requirements](#script-requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](filters.md). 
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](filters.md).
  
    >[!NOTE]
    > Don't mix user and device groups across include and exclude assignments.

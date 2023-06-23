@@ -55,23 +55,23 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 - [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 - [Enable Endpoint analytics for devices uploaded to Microsoft Intune](enroll-configmgr.md#bkmk_cm_upload).
 
-### <a name="bkmk_prs_prereq"></a> Remediation scripting requirements
+<!-- ### Remediation scripting requirements
 
-Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](remediations.md#bkmk_prs) has the following requirements:
+Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](../intune/fundamentals/remediations.md) has the following requirements:
 
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
   - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
-  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
+  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607). --> 
 
 ## Licensing Prerequisites
 
 Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
-Remediations also requires users of the devices to have one of the following licenses:
+<!-- Remediations also requires users of the devices to have one of the following licenses:
 
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows 10/11 Virtual Desktop Access (VDA) per user -->
 
 ## Permissions
 
