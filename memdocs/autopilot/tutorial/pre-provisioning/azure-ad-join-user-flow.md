@@ -56,7 +56,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 6. Once **Account setup** and the user ESP process completes, the provisioning process completes, the ESP finishes, and the Desktop appears. At this point, the end-user can start using the device.
 
-# User-flow tips
+## User-flow tips
 
 - Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md) step, additional screens may during the Autopilot deployment appear such as:
 
