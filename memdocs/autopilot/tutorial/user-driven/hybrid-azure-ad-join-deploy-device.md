@@ -60,10 +60,6 @@ To start the Autopilot deployment process on the device, select a device that is
 
     The first two phases of **Device preparation** and **Device setup** are part of the Device ESP while the final phase of **Account setup** is part of the User ESP.
 
-    > [!TIP]
-    >
-    > 
-
 7. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
    1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign on.
@@ -108,5 +104,5 @@ To start the Autopilot deployment process on the device, select a device that is
 
   - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
   - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
-
+.
 ## More information

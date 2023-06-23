@@ -56,27 +56,23 @@ Once the technician flow step of the pre-provisioning process completes successf
 
     For the user flow of Windows Autopilot for pre-provisioned deployment, the **Device setup** phase of the Device ESP and the **Account setup** phase of the User ESP runs. The **Device preparation** phase of the Device ESP doesn't run during the user flow since it already ran and completed during the [Technician flow](hybrid-azure-ad-join-technician-flow.md). The **Device setup** phase of the Device ESP runs again during the user flow in case any new or additional policies or applications assigned to the device became available during the time frame that the technician flow ran and when the user flow runs after the device was delivered to the end-user.
 
-    > [!TIP]
-    >
-    > 
-
 5. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
    1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign on.
    2. Enter the on-premises domain credentials for the end-user.
    3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
-    > [!IMPORTANT]
-    >
-    > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Azure AD end-user credentials to attempt to sign into the device at this step.
+    If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Azure AD end-user credentials to attempt to sign into the device at this step.
 
 6. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
 
-   1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials and then select the **Next** button.
+   1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials. If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+
+   1. Once the credentials are entered, select the **Next** button.
 
       > [!IMPORTANT]
       >
-      > If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+      > 
 
    1. The **Stay signed in to all your apps** screen appears. Make sure that the option **Allow my organization to manage my device** is selected, and then select **OK**.
 

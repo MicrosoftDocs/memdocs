@@ -67,4 +67,9 @@ To start the Autopilot deployment process on the device, select a device that is
   - Language/Country/Region, Keyboard, and License Terms screens before the Azure AD sign-in page.
   - Privacy screen when the User ESP/Account setup begins but before the user is automatically signed in.
 
+- To view and hide detailed progress information in the ESP during the provisioning process:
+
+  - Windows 10: To show details, next to the appropriate phase select **Show details**. To hide the details, next to the appropriate phase select **Hide details**.
+  - Windows 11: To show details, next to the appropriate phase select **∨**. To hide the details, next to the appropriate phase select **∧**.
+
 ## More information
