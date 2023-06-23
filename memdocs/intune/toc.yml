@@ -1849,10 +1849,10 @@ items:
       href: ./fundamentals/remote-help.md
     - name: Remediations
       items:
-      - name: Using remediations
+      - name: Use Remediations
         href: ./fundamentals/remediations.md
-      - name: Powershell scripts for remediations
-        href: ./fundamentals/powershell-scripts-remediation.md      
+      - name: Powershell scripts for Remediations
+        href: ./fundamentals/powershell-scripts-remediation.md
     - name: Using the Intune docs
       href: /mem/use-docs?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
     - name: Get support
