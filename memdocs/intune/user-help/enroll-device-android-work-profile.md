@@ -35,46 +35,41 @@ ms.collection:
 
 Enroll your personal Android device to get access to work or school email, apps, and other data. During enrollment, you'll set up an Android work profile, which separates the personal data on your device from your work data. If this type of setup is something you're required to do, your organization will let you know through their preferred communication channel or Intune Company Portal app. 
 
-After your profile is set up, your organization will manage the work-side of it, which consists of only the work files and work data. Your IT administrator can configure and enforce certain device-level settings on your device, such as requiring you to set a device PIN. They can't see any data in the apps on the personal side of your device.  
+After your profile is set up, your organization manages the work-side of it, which consists of work files and work data. Your IT administrator can configure and enforce certain device-level settings on your device, such as requiring you to set a device PIN. They can't see any data in the apps on the personal side of your device.  
 </br>
-> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI] 
 
-Find out more about [what happens when you create a work profile](what-happens-when-you-create-a-work-profile-android.md).
-
-## Create work profile and enroll device
-
-> [!NOTE]
-> To create a work profile on your device, you must be using the primary user account on your device. Creating a work profile on a secondary user account is not supported. 
+## Create work profile and enroll device  
+To create a work profile on your device, you must be using the primary user account on your device. Creating a work profile on a secondary user account is not supported. 
 
 1. Open the Company Portal app and sign in with your work or school account. If you haven't installed the free app, install it from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).  
 
-2. On the **Company Access Setup** screen, tap **BEGIN**.  
+2. Review the steps for setting up access. Then tap **BEGIN**.  
 
     ![Screenshot of Company Access Setup screen](./media/access-setup-work-profile-1911.png)  
 
-3. Review what your organization can and can't see. Then tap **CONTINUE**. 
+3. Review privacy information, including what your organization can and can't see on your device. Then tap **CONTINUE**. 
 
     ![Example image of Company Portal, We care about your privacy screen, highlighting the Continue button.](./media/android-privacy-screen-1911.png)  
 
-4. Review Google's terms for creating a work profile. Then tap **ACCEPT & CONTINUE**. The appearance of this screen will vary based on your device's Android version. 
+4. Read Google's terms for creating a work profile. Accept the terms to continue. The appearance of this screen varies based on OS version.  
 
     ![Screenshot of Google's work profile terms](./media/android-wp-05-1908.png)  
 
-5. Wait while your work profile is set up.  
+5. Wait while your work profile is set up. Select **Next** to return to the Company Portal app.      
 
     ![Screenshot of "Setting up work profile" screen.](./media/android-wp-05a-1908.png)  
 
-6. On devices running certain Android versions, you'll see another informational screen about the type of apps you need. Wait to be redirected and signed in to the Company Portal app.  
-
-    When you get to the **Company Access Setup** screen, check that your work profile is created. Then tap **CONTINUE**.  
+7. On the **Company Access Setup** screen, confirm your work profile was created. Then tap **CONTINUE**.  
 
     ![Screenshot of Company Access Setup showing work profile is created.](./media/work-profile-complete-1911.png)  
 
-8. Check that your work profile is active. Then tap **CONTINUE**. 
+8. Wait for your device to finish registering and setting up the profile.   
+8. On the **Company Access Setup** screen, confirm your work profile is active. Then tap **CONTINUE**. 
 
     ![Screenshot of Company Access Setup showing work profile is active.](./media/work-profile-active-1911.png)  
 
-9. Your organization might require you to update your device settings. Tap **RESOLVE** to adjust a setting. When you're done updating settings, tap **CONTINUE**.    
+9. Update your device settings to meet your organization's security requirements. Tap **RESOLVE** to open the setting on your device. When you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.    
 
     ![Example image of Company Portal, Update device settings screen, highlighting Resolve and Continue buttons.](./media/resolve-settings-1911.png) 
 
@@ -100,7 +95,6 @@ Work profile setup is supported in [countries and regions where Android Enterpri
 If the version of Google Play services on your device is outdated, you may be unable to enroll your device. [Open Google Play services](https://play.google.com/store/apps/details?id=com.google.android.gms)(opens Google Play) to check for and install available updates. For more information about how to update Android apps, see [Update your Android apps](https://support.google.com/googleplay/answer/113412)(opens Google Play Help). 
 
 ## Next steps  
+Install the apps you need for work or school. Switch to your work profile to see all available apps, and search for more apps in the work version of the Google Play store. For more information about how to access your work profile and use profile features, see [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md).  
 
-Now that your device is enrolled, you can install school or work apps on your device. Go to the managed Google Play store to find and install these apps. 
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Need additional help? Contact your IT support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account, and then go to **Helpdesk**.  
