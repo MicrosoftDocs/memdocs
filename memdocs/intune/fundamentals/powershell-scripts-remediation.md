@@ -16,7 +16,7 @@ ms.localizationpriority: high
 
 Use the following information to create script packages for [Remediations](remediations.md).
 
-## <a name="bkmk_scripts"></a> Script descriptions
+## Script descriptions
 
 This table shows the script names, descriptions, detections, remediations, and configurable items. Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`. These scripts can be copied from the next section in this article.
 
@@ -26,7 +26,7 @@ This table shows the script names, descriptions, detections, remediations, and c
 |**Clear stale certificates** </br>`Detect_Expired_User_Certificates.ps1` </br> `Remediate_Expired_User_Certificates.ps1`| Detects expired certificates issued by a CA in the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the detection script. </br> </br> Remediates by deleting expired certificates issued by a CA from the current user's personal store. </br> Specify the CA by changing the value for `$certCN` in the remediation script. </br> </br> Finds and deletes expired certificates issued by a CA from the current user's personal store. </br> </br> **Run the script using the logged-on credentials**: Yes|
 |**Update stale Group Policies** (built-in) </br>`Detect_stale_Group_Policies.ps1` </br> `Remediate_stale_GroupPolicies.ps1`| Detects if last Group Policy refresh is greater than `7 days` ago.  </br>This script package is included with Remediations, but a copy is provided if you want to change the threshold. Customize the seven day threshold by changing the value for `$numDays` in the detection script. </br></br>Remediates by running `gpupdate /target:computer /force` and `gpupdate /target:user /force`  </br> </br>Can help reduce network connectivity-related support calls when certificates and configurations are delivered via Group Policy. </br> </br> **Run the script using the logged-on credentials**: Yes|
 
-## <a name="bkmk_ps_scripts"></a> Check network certificates script package
+## Check network certificates script package
 
 This script package detects certificates issued by a CA in either the Machine's or User's personal store that are expired, or near expiry. The script remediates by raising a toast notification to the user.
 
