@@ -1,10 +1,10 @@
 ---
 title: PowerShell scripts for Remediations
 titleSuffix: Microsoft Intune
-description: PowerShell script reference for Remediations in Endpoint analytics.
+description: PowerShell script reference for Remediations.
 ms.date: 10/30/2020
 ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
+ms.subservice: fundamentals
 ms.topic: reference
 author: smritib17
 ms.author: smbhardwaj
