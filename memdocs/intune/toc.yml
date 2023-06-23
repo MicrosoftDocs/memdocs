@@ -1847,12 +1847,12 @@ items:
       href: ./fundamentals/service-now-integration.md
     - name: Use Remote Help
       href: ./fundamentals/remote-help.md
-  - name: Remediations
-    items:
-    - name: Using remediations
-      href: ./fundamentals/remediations.md
-    - name: Powershell scripts for remediations
-      href: ./fundamentals/powershell-scripts-remediation.md      
+    - name: Remediations
+      items:
+      - name: Using remediations
+        href: ./fundamentals/remediations.md
+      - name: Powershell scripts for remediations
+        href: ./fundamentals/powershell-scripts-remediation.md      
     - name: Using the Intune docs
       href: /mem/use-docs?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
     - name: Get support

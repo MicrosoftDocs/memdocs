@@ -117,11 +117,11 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 ### Copy the provided detection and remediation scripts
 
-1. Copy the scripts from the [PowerShell scripts](powershell-scripts-remediation.md#bkmk_ps_scripts) article.
+1. Copy the scripts from the [PowerShell scripts](powershell-scripts-remediation.md#powershell-scripts-for-remediations) article.
    - Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`.
-   - For a description of the scripts, see the [Script descriptions](powershell-scripts-remediation.md#bkmk_scripts).
+   - For a description of the scripts, see the [Script descriptions](powershell-scripts-remediation.md#script-descriptions).
 1. Save each script using the provided name. The name is also in the comments at the top of each script. Ensure the saved scripts are encoded in UTF-8.
-   - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts-remediation.md#bkmk_scripts).
+   - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts-remediation.md#script-descriptions).
 
 ### Deploy the script packages
 
@@ -136,7 +136,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
-    The detection script must use exit code `exit 1` if the target issue is detected. The remediation script won't run when there's any other exit code, including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts-remediation.md#bkmk_ps_scripts) for an example of exit code usage.
+    The detection script must use exit code `exit 1` if the target issue is detected. The remediation script won't run when there's any other exit code, including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Remediations script settings page.](media/remediations/remediations-script-settings.png)](media/remediations/remediations-script-settings.png#lightbox)
