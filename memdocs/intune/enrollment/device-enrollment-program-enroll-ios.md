@@ -213,7 +213,7 @@ Now that you've installed your token, you can create an enrollment profile for a
 5. Select **Next**.
 
     > [!IMPORTANT]
-    > If you make changes to existing enrollment profile settings, the new changes won't take effect on assigned devices until devices are reset back to factory settings and reactivated. Reactivation occurs when the Remote Management Payload is received on ADE devices. Renaming the device name template is the only change you can make that doesn't require a factory reset.  
+    > If you make changes to an existing enrollment profile, the new settings won't take effect on assigned devices, until devices are reset back to factory settings and reactivated. Activation happens only after a factory reset and afterwards the Remote Management payload is received on ADE devices. There is one expection though, changing the device name template setting, is the only change that will take efect on the device at the next checkin and wont require a factory reset.
 
 6. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
 
