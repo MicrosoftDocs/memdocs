@@ -23,7 +23,7 @@ There are two primary ways for you to set up co-management. It's important to un
 2. [Bootstrap the Configuration Manager client with modern provisioning](#bkmk_path2)  
 
 >[!Tip]
-> As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (AD) joined devices. Many customers confuse these two topics – the first is a management option, while the second is an identity option. See the blog post [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog aims to clarify Hybrid Azure AD Join and co-management, how they work together but are not the same thing.
+> As we talk with our customers that are using Microsoft Intune to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (AD) joined devices. Many customers confuse these two topics – the first is a management option, while the second is an identity option. See the blog post [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog aims to clarify Hybrid Azure AD Join and co-management, how they work together but are not the same thing.
 
 
 

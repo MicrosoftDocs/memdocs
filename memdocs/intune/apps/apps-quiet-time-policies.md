@@ -41,7 +41,7 @@ There are two quiet time policy types available. The following table describes e
 
 To create a quiet time policy, use the following steps:
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **Quiet Time** > **Policies**.
 3. Select **Create policy**.
 4. Select **Policy Type**. You can choose the **Date Range** or the **Days of the week** policy types. For more information, see, [Quiet time policy types](#quiet-time-policy-types).

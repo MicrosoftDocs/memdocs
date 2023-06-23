@@ -1145,7 +1145,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Block all notifications**  
 
 - **Windows Security Center icon in the system tray**  
-  **Default**: Not configured  
+  **Default**: Not configured
+  WindowsDefenderSecurityCenter CSP: [HideWindowsSecurityNotificationAreaControl](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#hidewindowssecuritynotificationareacontrol)
 
   Configure the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.  
   
@@ -1153,7 +1154,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Hide**  
 
 - **Clear TPM button**  
-  **Default**: Not configured  
+  **Default**: Not configured
+  WindowsDefenderSecurityCenter CSP: [DisableClearTpmButton](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disablecleartpmbutton)
 
   Configure the display of the Clear TPM button.  
   
@@ -1161,7 +1163,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Disable**  
 
 - **TPM firmware update warning**  
-  **Default**: Not configured  
+  **Default**: Not configured
+  WindowsDefenderSecurityCenter CSP: [DisableTpmFirmwareUpdateWarning](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disabletpmfirmwareupdatewarning)
   
   Configure the display of update TPM Firmware when a vulnerable firmware is detected.  
 

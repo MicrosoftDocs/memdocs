@@ -1,15 +1,24 @@
 ---
 title: Remediations
+<<<<<<< HEAD
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about how to use Remediations in Endpoint analytics.
+=======
+titleSuffix: Microsoft Intune
+description: Lear about how to use Remediations in Endpoint analytics.
+>>>>>>> 38b6a45ea80299b55ceb058c8cbaa72ad9389a62
 ms.date: 04/06/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
+<<<<<<< HEAD
 # Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
+=======
+# Customer intent: As an administrator, I want to enable and use remediations in Endpoint analytics so that I can fix common support issues before end-users notice issues.
+>>>>>>> 38b6a45ea80299b55ceb058c8cbaa72ad9389a62
 ms.localizationpriority: high
 ms.collection: highpri
 ---
@@ -23,7 +32,8 @@ Remediations in Endpoint analytics helps you fix common support issues before en
 
 In this article, you learn how to:  
 
-> [!div class="checklist"]  
+> [!div class="checklist"]
+>
 > * Review prerequisites for Remediations
 > * Deploy a built-in script package
 > * Deploy a custom script package
@@ -42,7 +52,7 @@ Each script package consists of a detection script, a remediation script, and me
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 - Devices enrolled into Endpoint analytics.
-   - For more information, see [Enroll Configuration Manager managed devices](enroll-configmgr.md) and [Enroll Intune managed devices](enroll-intune.md).
+  - For more information, see [Enroll Configuration Manager managed devices](enroll-configmgr.md) and [Enroll Intune managed devices](enroll-intune.md).
 
 Whether enrolling devices via Intune or Configuration Manager, Remediation scripting has the following requirements:
 
@@ -68,13 +78,13 @@ Remediations requires the [licensing for Endpoint analytics](enroll-intune.md#bk
 
 - You can have up to 200 script packages.
 - A script package can contain a detection script only or both a detection script and a remediation script. 
-   - A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
+  - A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
 - Ensure the scripts are encoded in UTF-8.
   - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 - The maximum allowed output size limit is 2048 characters.
 - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
-   - Scripts built into Remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
-   - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
+  - Scripts built into Remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
+  - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
   - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
 - Don't put reboot commands in detection or remediations scripts. <!--13957089-->
 - Do not include any type of sensitive information in scripts (such as passwords)
@@ -105,10 +115,10 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 ### Copy the provided detection and remediation scripts
 
 1. Copy the scripts from the [PowerShell scripts](powershell-scripts.md#bkmk_ps_scripts) article.
-    - Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`.
-    - For a description of the scripts, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
+   - Script files whose names start with `Detect` are detection scripts. Remediation scripts start with `Remediate`.
+   - For a description of the scripts, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
 1. Save each script using the provided name. The name is also in the comments at the top of each script. Ensure the saved scripts are encoded in UTF-8.
-    - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts.md#bkmk_scripts).
+   - You can use a different script name, but it won't match the name listed in the [Script descriptions](powershell-scripts.md#bkmk_scripts).
 
 ### Deploy the script packages
 
@@ -175,7 +185,7 @@ The client retrieves policy for Remediation scripts at the following times:
 - After a restart of the device or Intune management extension service
 - After a user signs into the client
 - Once every 8 hours
-   - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. The schedule isn't altered by user sign ins.
+  - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. The schedule isn't altered by user sign ins.
 
 The client reports Remediation information at the following times:
 
