@@ -142,7 +142,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Remediations script settings page.](media/remediations/remediations-script-settings.png)](media/remediations/remediations-script-settings.png#lightbox)
 1. Finish the options on the **Settings** page with the following recommended configurations:
-   - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts.md#bkmk_scripts).
+   - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts-remediation.md#bkmk_scripts).
    - **Enforce script signature check**: No
    - **Run script in 64-bit PowerShell**: No
 
@@ -230,6 +230,6 @@ You can view the status of Remediations that have been assigned or run on-demand
 
 ## Next steps
 
-- Get the [PowerShell scripts](powershell-scripts.md) for Remediations.
-- Learn more about [PowerShell script security](../../configmgr/apps/deploy-use/learn-script-security.md).
+- Get the [PowerShell scripts](powershell-scripts-remediation.md) for Remediations.
 
+- Learn more about [PowerShell script security](../../configmgr/apps/deploy-use/learn-script-security.md).
