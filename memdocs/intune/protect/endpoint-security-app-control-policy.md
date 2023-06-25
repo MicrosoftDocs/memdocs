@@ -119,7 +119,7 @@ Intune’s endpoint security Application Control policies are an implementation 
 
 - Because there's no retroactive tagging, all apps on your devices that were deployed before enabling the managed installer aren't tagged. If you apply a WDAC policy, you must include explicit configurations to allow these untagged apps to run.
 
-- You can turn off this policy be editing the Managed Installer policy. Turning off the policy prevents subsequent apps from being tagged with the managed installer. Apps that were previously installed and tagged remain tagged. For information about manual clean-up of a managed installer after turning off the policy, see [Remove the Intune Management Extension as a managed installer](#remove-the-intune-management-extension-as-a-managed-installer) later in this article.
+- You can turn off this policy by editing the Managed Installer policy. Turning off the policy prevents subsequent apps from being tagged with the managed installer. Apps that were previously installed and tagged remain tagged. For information about manual clean-up of a managed installer after turning off the policy, see [Remove the Intune Management Extension as a managed installer](#remove-the-intune-management-extension-as-a-managed-installer) later in this article.
 
 [Learn more about how Intune set the managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
@@ -133,9 +133,9 @@ The following procedure guides you through adding the Intune Management Extensio
 
 2. Select **Add**, and then **Yes** to confirm the addition of the Intune Management Extension as a managed installer.
 
-3. After adding the Managed installer, you may need to wait up to 10 minutes before the new policy is added to your tenant. Select **Refresh** to update the admin center periodically, until it's available.
+3. After adding the Managed installer, in some rare cases, you may need to wait up to 10 minutes before the new policy is added to your tenant. Select **Refresh** to update the admin center periodically, until it's available.
 
-   The policy is ready when Intune displays a managed installer policy with the name **Managed installer – Intune Management Extension** with the status of **Active**.
+   The policy is ready in the service when Intune displays a managed installer policy with the name **Managed installer – Intune Management Extension** with the status of **Active**. From the client side, you may need to wait up to an hour for the policy to start getting delivered.
 
    :::image type="content" source="./media/endpoint-security-app-control-policy/managed-installer-policy.png" alt-text="A screenshot of the Application control pane, with the managed installer policy present, and active." lightbox="./media/endpoint-security-app-control-policy/managed-installer-policy.png":::
 
@@ -143,7 +143,7 @@ The following procedure guides you through adding the Intune Management Extensio
 
    - **Settings**: Editing the policy settings opens the *Opt-out for managed installer* pane, where you can change the value for **Set managed installer** between **On** and **Off**. When you add the installer, the setting *Set managed installer* defaults to *On*. Before changing the configuration, be sure to review the behavior detailed on the pane for *On* and *Off*.
 
-   - **Scope tags**: You can add and modify scope tags that are assigned to this policy.
+   - **Scope tags**: You can add and modify scope tags that are assigned to this policy. This allows you to specify which admins can view the policy details. 
 
 Before the policy has any effect, you must create and deploy an Application Control policy to specify rules for which apps can run on your Windows devices.
 
@@ -171,6 +171,8 @@ As an optional clean-up step, you can run a script to remove the Intune Manageme
 
 2. Run this script on devices that have set the Intune Management Extension as a managed installer. This script removes only the Intune Management Extension as a managed installer.
 
+3. Please restart the Intune Management Extension service for the above changes to take effect. 
+
 To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
 
 #### Remove all AppLocker policies from a device (optional)
@@ -180,6 +182,8 @@ To remove *all* Windows AppLocker policies from a device, you can use the **CatC
 1. Download the CatCleanAll.ps1 PowerShell script. This script is available at [https://aka.ms/intune_WDAC/CatCleanAll]( https://aka.ms/intune_WDAC/CatCleanAll) from *download.microsoft.com*.
 
 2. Run this script on devices that have set the Intune Management Extension as a managed installer. This script removes only the Intune Management Extension as a managed installer.
+
+3. Please restart the Intune Management Extension service for the above changes to take effect. 
 
 To run this script, you can use Intune to run [PowerShell scripts](../apps/intune-management-extension.md), or other methods of your choice.
 
@@ -350,9 +354,11 @@ Report details include:
 
 - Succeeded - Devices that have successfully applied the policy.
 - Error - Devices with errors.
-- New devices – New devices identifies devices that have recently applied the policy. New devices can take up to 24 hours before accurate data becomes available for them.
+- New devices – New devices identifies devices that have recently applied the policy. 
 
   :::image type="content" source="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png" alt-text="This screen capture shows the managed installer Overview." lightbox="./media/endpoint-security-app-control-policy/managed-installer-policy-overview.png":::
+
+It can take up to 24 hours for the **Device status** and **Device status trend** sections to update in the Overview.
 
 While viewing the policy details, you can select **Device status** (below *Monitor*), to open a device-based view of the policy details. The *Device status* view displays the following details that you can use to identify problems should a device fail to successfully apply the policy:
 
@@ -360,6 +366,8 @@ While viewing the policy details, you can select **Device status** (below *Monit
 - User name
 - OS version
 - Managed installer status (*Succeeded* or *Error*)
+
+It can take several minutes for the device-based view of the policy details to update after the device actually receives the policy. 
 
 ### Application Control
 
