@@ -50,7 +50,7 @@ To start the Autopilot deployment process on the device, select a device that is
 
 4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user.
 
-If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+   If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
 5. Once the credentials are entered, select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
@@ -65,8 +65,8 @@ If on-premises domain end-user credentials are different from Azure AD end-user 
 7. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
    1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign-on.
-   2. Enter the on-premises domain credentials for the end-user.
-   3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
+   1. Enter the on-premises domain credentials for the end-user.
+   1. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
       If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Azure AD end-user credentials to attempt to sign into the device at this step.
 

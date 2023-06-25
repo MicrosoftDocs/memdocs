@@ -59,10 +59,11 @@ Once the technician flow step of the pre-provisioning process completes successf
 5. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
    1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign-on.
-   2. Enter the on-premises domain credentials for the end-user.
-   3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
+   1. Enter the on-premises domain credentials for the end-user.
 
       If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that the **on-premises domain end-user credentials** are used to sign into the device at this step. Don't use the Azure AD end-user credentials to attempt to sign into the device at this step.
+
+   1. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
 6. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
 
