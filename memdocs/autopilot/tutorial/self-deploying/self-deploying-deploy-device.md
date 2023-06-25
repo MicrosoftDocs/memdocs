@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/07/2023
+ms.date: 06/26/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -24,7 +24,6 @@ Autopilot self-deploying mode steps:
 - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
 - Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)
 - Step 3: [Create a device group](self-deploying-device-group.md)
-
 - Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
 - Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
 > [!div class="checklist"]
@@ -56,7 +55,12 @@ To start the Autopilot deployment process on the device, select a device that is
 
 - Before starting the Autopilot deployment, you may want to have at least one type of policy and at least one application assigned to the device(s). These assignments ensure proper testing of the Autopilot deployment the Device ESP phase. It may also prevent possible issues when there are either no policies or no applications assigned to the device.
 
-- Although a user isn't assigned to a device for Windows Autopilot self-deploying mode and user ESP doesn't run until after the Windows Autopilot self-deploying deployment completes and a user signs in, for testing purposes, assigning at least one policy and at least one application to users is still recommended.
+- For Windows Autopilot self-deploying mode:
+
+  - Any user assigned to the device is ignored during the Windows Autopilot self-deploying deployment.
+  - User ESP doesn't run until after the Windows Autopilot self-deploying deployment completes and a user signs in.
+
+  However, for testing purposes, assigning at least one policy and at least one application to users is still recommended.
 
 - Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step, the **Keyboard** screen may appear at the start of the deployment.
 

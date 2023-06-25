@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/26/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -58,7 +58,7 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 5. Once the **Device setup** phase of the Device ESP is complete, user ESP begins and the **User setup** phase starts. The ESP is temporarily dismissed and the Windows sign-on screen appears:
 
-   1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign on.
+   1. Select <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> on the keyboard to initiate Windows sign-on.
    2. Enter the on-premises domain credentials for the end-user.
    3. Select <kbd>ENTER</kbd> on the keyboard to sign the end-user into the device.
 
@@ -78,7 +78,7 @@ Once the technician flow step of the pre-provisioning process completes successf
       >
       > Under certain circumstances, the Azure AD sign-in page may not appear and the end-user may be automatically signed into Azure AD. For example, if using [Active Directory Federation Services (ADFS)](/windows-server/identity/active-directory-federation-services) and [single sign-on (SSO)](/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings). If the end-user is automatically signed into Azure AD, then the Autopilot deployment will proceed on to the next step automatically.
 
-7. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
+7. Once **Account setup** and the user ESP process completes, the provisioning process completes and the ESP finishes. Select the **Sign out** button to dismiss the ESP and go to the Windows sign-on screen. At this point, the end-user can sign into the device using their on-premises domain end-user credentials and start using the device.
 
 ## User-flow tips
 

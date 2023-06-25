@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/07/2023
+ms.date: 06/26/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -46,7 +46,7 @@ The difference between an Azure AD join and a hybrid Azure AD join is that the h
 
 > [!TIP]
 >
-> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot does not use unattend.xml files.
+> For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an unattend.xml file. The unattend.xml file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot doesn't use unattend.xml files.
 
 To create a user-driven hybrid Azure AD join Autopilot profile, follow these steps:
 
