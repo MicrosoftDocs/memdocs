@@ -17,9 +17,19 @@ ms.topic: conceptual
 
 # Windows Autopilot: What's new
 
-## Remove Windows Autopilot registration with one click
+## One step removal of Windows Autopilot registration
 
-Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device from the Autopilot devices blade in Intune. This means that you can now remove the Autopilot registration of a device without needing to delete the record in Intune. If the device is still active in Intune, the deletion will just remove the registration, but it will continue to be managed. To use this feature, navigate to the Autopilot devices blade in Intune through __Devices__ > __Windows Devices__ > __Windows Enrollment__ > __Windows Autopilot devices__, select the device you wish to remove and then click on the __Delete__ button.
+Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that you can now remove the Autopilot registration of a device without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+
+1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+
+1. Select the device you wish to remove and then select **Delete** in the toolbar at the top.
 
 ## Device rename occurs during technician phase for pre-provisioning 
 
