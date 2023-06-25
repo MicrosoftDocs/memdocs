@@ -48,7 +48,9 @@ To start the Autopilot deployment process on the device, select a device that is
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user. If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user.
+
+If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
 5. Once the credentials are entered, select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
@@ -70,7 +72,9 @@ To start the Autopilot deployment process on the device, select a device that is
 
 8. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
 
-   1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials. If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+   1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials.
+
+   If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
    1. Once the credentials are entered, select the **Next** button.
 

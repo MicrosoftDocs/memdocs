@@ -66,7 +66,9 @@ Once the technician flow step of the pre-provisioning process completes successf
 
 6. The Enrollment Status Page (ESP) appears again and the **Account setup** phase of the user ESP continues.
 
-   1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials. If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
+   1. After a short period of time, the Azure AD sign-in page may appear. Sign in with the end-user's Azure AD credentials.
+   
+   If on-premises domain end-user credentials are different from Azure AD end-user credentials, make sure that **Azure AD end-user credentials** are used to sign in at this step. Don't use on-premises credentials to sign in at this step.
 
    1. Once the credentials are entered, select the **Next** button.
 
