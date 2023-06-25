@@ -55,8 +55,8 @@ To start the Autopilot deployment process on the device, select a device that is
 
 - Before starting the Autopilot deployment, you may want to have at least one type of policy and at least one application assigned to the device(s). These assignments ensure proper testing of the Autopilot deployment the Device ESP phase. It may also prevent possible issues when there are either no policies or no applications assigned to the device.
 
-- For Windows Autopilot self-deploying mode:  
-
+- For Windows Autopilot self-deploying mode:<br>
+<br>
   - Any user assigned to the device is ignored during the Windows Autopilot self-deploying deployment.
   - User ESP doesn't run until after the Windows Autopilot self-deploying deployment completes and a user signs in.
 

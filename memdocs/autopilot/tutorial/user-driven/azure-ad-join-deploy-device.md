@@ -35,9 +35,9 @@ For an overview of the Windows Autopilot user-driven Azure AD join workflow, see
 
 ## Deploy the device
 
-Once all of the configurations for the Windows Autopilot user-driven Azure AD join deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
-
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15DG8]
+
+Once all of the configurations for the Windows Autopilot user-driven Azure AD join deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
 
 To start the Autopilot deployment process on the device, select a device that is part of the device group created in the previous [Create a device group](azure-ad-join-device-group.md) step, and then follow these steps:
 
