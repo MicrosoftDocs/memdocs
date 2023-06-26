@@ -51,11 +51,11 @@ Cloud PCs support the following remote management actions:
 
 ## Windows 365 Frontline Cloud PCs
 
-Frontline Cloud PCs support remote actions like Enterprise Cloud PCs. One difference is that a Frontline Cloud PC power state is determined by the end user. When a Frontline Cloud PC is on, remote actions are started immediately. If a Frontline Cloud PC is powered off, remote actions start as soon as the Cloud PC is powered on. When a Cloud PC is powered on, it uses a license that can't be used by others. When the Cloud PC is powered off, the license is freed up for use by others.
+Frontline Cloud PCs support remote actions like Enterprise Cloud PCs. One difference is that a Frontline Cloud PC power state is determined by the end user. When a Frontline Cloud PC is on, remote actions are started immediately. If a Frontline Cloud PC is powered off, remote actions start as soon as the Cloud PC is powered on. When a Cloud PC is powered on, it uses a license that others can no longe ruse. When the Cloud PC is powered off, the license is freed up so others can use it.
 
 You can view the power state for Frontline Cloud PCs in the Intune portal on the devices **Properties** page.
 
-You can remotely power on and off a Frontline Cloud PC. When you power on a Frontline Cloud PC, a license is automatically consumed. When you power off a Frontline Cloud PC, any user currently signed in will be signed off. Unsaved data on the Cloud PC is lost.
+You can remotely power on and off a Frontline Cloud PC. When you power on a Frontline Cloud PC, a license is automatically consumed. When you power off a Frontline Cloud PC, any user currently signed in is signed off. Unsaved data on the Cloud PC is lost.
 
 <!-- ########################## -->
 ## Next steps
