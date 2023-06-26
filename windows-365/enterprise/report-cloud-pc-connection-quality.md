@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 07/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Cloud PC connection quality report (preview)
+# Cloud PC connection quality report
 
 The **Cloud PC connection quality** report helps you evaluate your users' connection experiences on their Cloud PCs.
 
@@ -67,7 +67,7 @@ You can see similar quality data on a per-Cloud PC basis:
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All Devices**.
 2. Select a device and then select **Performance (preview)**.
-3. You'll see **Connection quality (preview)**. Under this chart, select **View report** to see more connection data specific to this Cloud PC.
+3. You'll see **Connection quality**. Under this chart, select **View report** to see more connection data specific to this Cloud PC.
 
 <!-- ########################## -->
 ## Next steps
