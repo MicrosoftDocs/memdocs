@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 07/05/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -37,6 +37,8 @@ You can remotely manage Cloud PCs in Intune just like any other managed device. 
 Cloud PCs support the following remote management actions:
 
 - Restart
+- Power On
+- Power Off
 - Sync
 - Rename
 - Quick Scan
@@ -49,11 +51,11 @@ Cloud PCs support the following remote management actions:
 
 ## Windows 365 Frontline Cloud PCs
 
-Frontline Cloud PCs support remote actions like Enterprise Cloud PCs. One difference is that a Frontline Cloud PC power state can be on or off based on the end user. When a Frontline Cloud PC is on, remote actions are started immediately. If a Frontline Cloud PC is powered off, remote actions start as soon as the Cloud PC is powered on.
+Frontline Cloud PCs support remote actions like Enterprise Cloud PCs. One difference is that a Frontline Cloud PC power state is determined by the end user. When a Frontline Cloud PC is on, remote actions are started immediately. If a Frontline Cloud PC is powered off, remote actions start as soon as the Cloud PC is powered on. When a Cloud PC is powered on, it uses a license that others can't use. When the Cloud PC is powered off, the license is freed up so others can use it.
 
-You can view the power state for Frontline Cloud PCs in the Intune portal, using the Cloud PC Creation blade under Devices.
+You can view the power state for Frontline Cloud PCs in the Intune portal on the devices **Properties** page.
 
-You can remotely power on and off a Frontline Cloud PC. When you power on a Frontline Cloud PC, a license is automatically consumed. When you power off a Frontline Cloud PC, any user currently signed in will be signed off.
+You can remotely power on and off a Frontline Cloud PC. When you power on a Frontline Cloud PC, a license is automatically consumed. When you power off a Frontline Cloud PC, any user currently signed in is signed off. Unsaved data on the Cloud PC is lost.
 
 <!-- ########################## -->
 ## Next steps
