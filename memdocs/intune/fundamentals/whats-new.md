@@ -67,7 +67,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
-## Week of June 26
+## Week of June 26, 2023
+
+### Device configuration
+
+#### On-demand remediation for a Windows device<!-- 14783338 -->
+
+A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
+
+For more information, go to:
+
+- [Remediations](../fundamentals/remediations.md)
 
 ### Device management
 
@@ -1584,7 +1594,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Scripts
 
 #### Preview PowerShell script package content in Endpoint Analytics<!-- 12930245 -->
-Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../analytics/powershell-scripts.md).
+Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../intune/fundamentals/powershell-scripts-remediation.md).
 
 ## Week of January 16, 2023
 
