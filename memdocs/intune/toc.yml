@@ -820,6 +820,12 @@ items:
               href: ./protect/windows-10-feature-updates.md
             - name: Expedite updates policy
               href: ./protect/windows-10-expedite-updates.md
+            - name: Windows driver updates
+              items: 
+              - name: Driver updates overview
+                href: ./protect/windows-driver-updates-overview.md
+              - name: Driver updates policy
+                href: ./protect/windows-driver-updates-policy.md
             - name: Windows rollout options
               href: ./protect/windows-update-rollout-options.md
             - name: Windows Update compatibility reports
@@ -1846,7 +1852,13 @@ items:
     - name: ServiceNow integration with Microsoft Intune
       href: ./fundamentals/service-now-integration.md
     - name: Use Remote Help
-      href: ./fundamentals/remote-help.md      
+      href: ./fundamentals/remote-help.md
+    - name: Remediations
+      items:
+      - name: Use Remediations
+        href: ./fundamentals/remediations.md
+      - name: Powershell scripts for Remediations
+        href: ./fundamentals/powershell-scripts-remediation.md
     - name: Using the Intune docs
       href: /mem/use-docs?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
     - name: Get support
