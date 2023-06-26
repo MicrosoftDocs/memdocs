@@ -71,6 +71,38 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device configuration
 
+#### Intune support for Zebra devices on Android 13<!-- 17192763 -->
+
+Zebra released support for Android 13 on their devices. You can read more at [Migrating to Android 13 - TechDocs](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
+
+**Temporary issues on Android 13**
+
+The Intune team thoroughly tested Android 13 on Zebra devices. Everything continues working as normal, except for the following two temporary issues for device administrator (DA) devices.
+
+For Zebra devices running Android 13 and enrolled with DA management:
+
+1. App installations don't happen silently. Instead, users get a notification from the Company Portal app (if they allow notifications) that asks for permission to allow the app installation. If a user doesn't accept the app installation when prompted, then the app doesn't installed. Users are prompted until they accept.
+
+2. New MX profiles don't apply to Android 13 devices and newly enrolled Android 13 devices don't receive configuration from MX profiles. MX profiles that previously applied to enrolled devices continue to apply.
+
+In a future update, these issues will be resolved and the behavior will return to how it was before.
+
+**Update devices to Android 13**
+
+You can use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+
+Before you migrate to Android 13, review [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
+
+**OEMConfig for Zebra devices on Android 13**
+
+OEMConfig for Zebra devices on Android 13 requires using Zebra's new **[Zebra OEMConfig Powered by MX OEMConfig app](https://play.google.com/store/apps/details?id=com.zebra.oemconfig.release)** (opens the Google Play store). This new app can also be used on Zebra devices running Android 11, but not earlier versions.
+
+For more information on this app, go to the [New Zebra OEMConfig app for Android 11 and later](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730) blog post. The Legacy Zebra OEMConfig app can only be used on Zebra devices running Android 11 and earlier.
+
+**Learn more**
+
+For more general information about Intune Android 13 support, go to the [Day Zero support for Android 13 with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/day-zero-support-for-android-13-with-microsoft-intune/ba-p/3601760) blog post.
+
 #### On-demand remediation for a Windows device<!-- 14783338 -->
 
 A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
@@ -82,15 +114,15 @@ For more information, go to:
 ### Device management
 
 #### Windows Driver update management in Intune is generally available<!-- 5584639  -->  
-Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device’s driver version. Driver update policies update automatically to add new updates as they are published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
+Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device's driver version. Driver update policies update automatically to add new updates as they are published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
 
 Update policies can be configured for one of two approval methods:
 
-- With *Automatic approval*, each new *recommended* driver that’s published by the driver manufacturer and added to the policy is automatically approved for deployment to applicable devices. Policies set for automatic approvals can be configured with a deferral period before the automatically approved updates are installed on devices. This deferral gives you time to review the driver and to pause its deployment if necessary.
+- With *Automatic approval*, each new *recommended* driver that's published by the driver manufacturer and added to the policy is automatically approved for deployment to applicable devices. Policies set for automatic approvals can be configured with a deferral period before the automatically approved updates are installed on devices. This deferral gives you time to review the driver and to pause its deployment if necessary.
 
 - With *manual approval*, all new driver updates are automatically added to the policy, but an admin must explicitly approve each update before Windows Update deploys it to a device. When you manually approve an update, you choose the date when Windows Update will begin to deploy it to your devices.
 
-To help you manage driver updates, you review a policy and decline an update you don’t want to install, indefinitely pause any approved update,  and reapprove a paused update to restart its deployment.
+To help you manage driver updates, you review a policy and decline an update you don't want to install, indefinitely pause any approved update,  and reapprove a paused update to restart its deployment.
 
 This release also includes [driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
@@ -250,7 +282,7 @@ The Intune troubleshooting pane is now generally available.  It will provide det
 - A summary of policy, compliance, and application deployment status.
 - Support for exporting, filtering, and sorting all reports.
 - Support to filter by excluding policies and applications.
-- Support to filter to a user’s single device.
+- Support to filter to a user's single device.
 - Details about available device diagnostics and disabled devices.
 - Details about offline devices that haven't checked-in to the service for three or more days.
 
