@@ -58,7 +58,7 @@ For all Intune-specific prerequisites and configurations needed to prepare your 
 > After you create an enrollment profile and assign it to users or groups, don't rename the enrollment profile. It can prevent future enrollments. If you need to change the name of the enrollment profile, then:
 >
 > 1. Create a new enrollment profile with the new name.
-> 2. Assign thew new profile to the your users & devices.
+> 2. Assign the new profile to the your users & devices.
 > 3. Delete the old profile.
 
 ## BYOD: Android Enterprise personally owned devices with a work profile
