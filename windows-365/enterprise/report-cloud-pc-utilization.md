@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 07/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Cloud PC utilization report (preview)
+# Cloud PC utilization report
 
 The Cloud PC utilization report helps you make sure that your licenses are assigned to active users. By reviewing Cloud PCs with low usage, you can decide if a Windows 365 license would better serve other users who might use these resources more often.
 
@@ -40,7 +40,7 @@ To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admi
 
 :::image type="content" source="./media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-cloud-pc-utilization/view-report.png":::
 
-## All Cloud PCs tab 
+## All Cloud PCs tab
 
 On the **All Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
 
