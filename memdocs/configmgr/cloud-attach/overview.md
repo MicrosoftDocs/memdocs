@@ -68,11 +68,11 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 :::image type="content" source="../../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../analytics/media/restart-frequency-tab.png":::
 
-## Remediation
+## Remediations
 
-[Remediation](../../intune/fundamentals/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediation helps you fix common support issues before end-users notice issues. You can use Remediation to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
+[Remediations](../../intune/fundamentals/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
 
-:::image type="content" source="../../intune/fundamentals/media/remediations/remediations-create.png" alt-text="Screenshot of Endpoint analytics Remediation in Intune admin center." lightbox="../../intune/fundamentals/media/remediations/remediations-create.png":::
+:::image type="content" source="../../intune/fundamentals/media/remediations/remediations-create.png" alt-text="Screenshot of Remediations in Intune admin center." lightbox="../../intune/fundamentals/media/remediations/remediations-create.png":::
 
 ## Co-management
 

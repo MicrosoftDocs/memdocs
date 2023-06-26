@@ -61,7 +61,7 @@ Whether enrolling devices via Intune or Configuration Manager, [**Remediation sc
 
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
   - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
-  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607). --> 
+  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607). -->
 
 ## Licensing Prerequisites
 
@@ -93,11 +93,11 @@ Use the following chart to see which built-in roles already have access to endpo
 |Read Only Operator||Yes|Read only|
 |Reports Reader|Yes||Read only|
 
-### Remediations permissions
+<!-- ### Remediations permissions
 
 For Remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Remediations.
 
-An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using Remediations for the first time.
+An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using Remediations for the first time. (removing this as part of moving Remediations to Intune)-->
 
 ## <a name="bkmk_endpoints"></a> Endpoints
 

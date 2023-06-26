@@ -67,6 +67,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of June 26, 2023
+
+### Device configuration
+
+#### On-demand remediation for a Windows device<!-- 14783338 -->
+
+A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
+
+For more information, go to:
+
+- [Remediations](../fundamentals/remediations.md)
+
 ## Week of June 19, 2023 (Service release 2306)
 
 ### App management
