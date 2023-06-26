@@ -57,12 +57,12 @@ To install the necessary modules to download the Autopilot profile(s) as a JSON 
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module AzureAD -Force
-    Install-Module Microsoft.Graph.Intune -Force
+    Install-Module Microsoft.Graph.Groups -Force
+    Install-Module Microsoft.Graph.Authentication -Force
     Install-Module WindowsAutopilotIntune -Force
 
-    Import-Module AzureAD
-    Import-Module Microsoft.Graph.Intune
+    Import-Module Microsoft.Graph.Groups
+    Import-Module Microsoft.Graph.Authentication
     Import-Module WindowsAutopilotIntune
     ```
 
@@ -79,7 +79,7 @@ Once the required modules are installed, the following steps can be taken to ver
 1. Copy the following command by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 
     ```powershell
-    Connect-MSGraph
+    Connect-MgGraph -scopes Group.ReadWrite.All, Device.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, GroupMember.ReadWrite.All
     ```
 
 1. Paste the command into the elevated PowerShell window and then select **Enter** on the keyboard to run the command.
