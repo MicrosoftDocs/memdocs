@@ -106,4 +106,4 @@ The built-in baseline of **All organizations (median)** doesn't currently have m
 ## Next steps
 
 - View [Startup performance](startup-performance.md)
-- Use [Remediations](remediations.md) to help fix common support issues before end-users notice issues.
+- Use [Remediations](../intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.
