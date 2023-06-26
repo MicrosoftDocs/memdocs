@@ -68,7 +68,7 @@ A few things to keep in mind:
         - **Azure network connection**: Select an ANC to use for this policy.
         - **Microsoft hosted network**: Select a **Geography** where you want your Cloud PCs provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
             - **Automatic (Recommended)**: The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. This automation decreases the chance of provisioning failure.
-            - A specific region: This opion makes sure that your Cloud PCs are only provisioned in the region that you choose.
+            - A specific region: This option makes sure that your Cloud PCs are only provisioned in the region that you choose.
 
 ### Select an ANC
 
@@ -81,7 +81,7 @@ To select an ANC, follow these steps:
 
 1. On the **General** page, for **Azure network connection**, select one or more ANCs. For more information about using multiple ANCs, see [Alternate ANCs](azure-network-connections.md#alternate-ancs).
 
-2. If you select more than one ANC, you can set the priority order for those ANCs. To do so, hover over an ANC > click and drag on the three dots > drag the ANC to a different position in the list.
+2. If you select more than one ANC, you can set the priority order for those ANCs. To do so, hover over an ANC > select and drag on the three dots > drag the ANC to a different position in the list.
 
   As long as the first ANC in the list is **Healthy**, it's always used for provisioning Cloud PCs using this policy. If the first ANC isn't healthy, the policy uses the next ANC in the list that is healthy.
 
