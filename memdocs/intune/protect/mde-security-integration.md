@@ -132,7 +132,7 @@ When a device that is domain joined creates a trust with Azure Active Directory,
 >
 > If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device.
 >
-> If the device was part of a dynamic Azure AD group, the policy targeting the device will be resolved within 48 hours. However, if the device was targeted as part of a static Azure AD group, administrators will need to go back and retarget the device.
+> If the device was part of a dynamic Azure AD group, the policy targeting the device will be resolved within a minimum of 48 hours. However, if the device was targeted as part of a static Azure AD group, administrators will need to go back and retarget the device.
 >
 > This is a known issue with Azure AD.
 
@@ -298,7 +298,9 @@ When you deploy an endpoint security policy that’s supported for both *Defende
 | Platform  | Endpoint security policy | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
 |-------|---------|----------|-----------|----------|
 | **Linux** | Antivirus | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) |  |
+|           | Antivirus | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) |  |
 | **macOS** | Antivirus | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+|           | Antivirus | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) |  |
 | **Windows 10, Windows 11, and Windows Server** | Antivirus | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 |  | Antivirus | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
 |  | Antivirus | Windows Security Experience | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
