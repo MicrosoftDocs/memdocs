@@ -105,6 +105,8 @@ items:
             href: tutorial/user-driven/azure-ad-join-autopilot-profile.md
           - name: Step 7 - Assign Autopilot device to a user (optional)
             href: tutorial/user-driven/azure-ad-join-assign-device-to-user.md
+          - name: Step 8 - Deploy the device
+            href: tutorial/user-driven/azure-ad-join-deploy-device.md
       - name: User-driven hybrid Azure AD join
         href: tutorial/user-driven/hybrid-azure-ad-join-workflow.md
         items:
@@ -126,6 +128,8 @@ items:
             href: tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile.md
           - name: Step 9 - Assign Autopilot device to a user (optional)
             href: tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user.md
+          - name: Step 10 - Deploy the device
+            href: tutorial/user-driven/hybrid-azure-ad-join-deploy-device.md
     - name: Windows Autopilot for pre-provisioned deployment
       items:
       - name: Pre-provisioned Azure AD join
@@ -188,6 +192,8 @@ items:
         href: tutorial/self-deploying/self-deploying-esp.md
       - name: Step 5 - Create and assign Autopilot profile
         href: tutorial/self-deploying/self-deploying-autopilot-profile.md
+      - name: Step 6 - Deploy the device
+        href: tutorial/self-deploying/self-deploying-deploy-device.md
     - name: Windows Autopilot deployment for existing devices
       items:
       - name: Windows Autopilot deployment for existing devices
