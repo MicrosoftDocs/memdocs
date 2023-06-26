@@ -81,7 +81,7 @@ The Intune team thoroughly tested Android 13 on Zebra devices. Everything contin
 
 For Zebra devices running Android 13 and enrolled with DA management:
 
-1. App installations don't happen silently. Instead, users get a notification from the Company Portal app (if they allow notifications) that asks for permission to allow the app installation. If a user doesn't accept the app installation when prompted, then the app doesn't installed. Users are prompted until they accept.
+1. App installations don't happen silently. Instead, users get a notification from the Company Portal app (if they allow notifications) that asks for permission to allow the app installation. If a user doesn't accept the app installation when prompted, then the app doesn't install. Users are prompted until they accept.
 
 2. New MX profiles don't apply to Android 13 devices and newly enrolled Android 13 devices don't receive configuration from MX profiles. MX profiles that previously applied to enrolled devices continue to apply.
 
@@ -102,6 +102,10 @@ For more information on this app, go to the [New Zebra OEMConfig app for Android
 **Learn more**
 
 For more general information about Intune Android 13 support, go to the [Day Zero support for Android 13 with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/day-zero-support-for-android-13-with-microsoft-intune/ba-p/3601760) blog post.
+
+Applies to:
+
+- Android
 
 #### On-demand remediation for a Windows device<!-- 14783338 -->
 
