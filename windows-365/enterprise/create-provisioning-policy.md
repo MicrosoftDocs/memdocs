@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 07/05/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -39,8 +39,15 @@ Cloud PCs are created and assigned to users based on provisioning policies. Thes
 
 A few things to keep in mind:
 
-- If a user in an assigned group doesn’t have a Cloud PC license assigned, Windows 365 won’t provision their Cloud PC.
-- For each Cloud PC license assigned to a user, only one provisioning policy is used to set up and configure the Cloud PC. The Windows 365 service always uses the first assigned policy to provision the Cloud PC.
+- Windows 365 Enterprise
+
+  - If a user in an assigned group doesn’t have a Cloud PC license assigned, Windows 365 won’t provision their Cloud PC.
+  - For each Cloud PC license assigned to a user, only one provisioning policy is used to set up and configure the Cloud PC. The Windows 365 service always uses the first assigned policy to provision the Cloud PC.
+
+- Windows 365 Frontline
+
+  - If you have more users in your Azure Active Directory (Azure AD) user group than the number of Cloud PCs available for the selected size, some users might not receive their Cloud PC.
+  - If you remove users from your Azure AD user group, their Cloud PC will automatically moved into a grace period.  
 
 ## Create a provisioning policy
 
@@ -50,7 +57,7 @@ A few things to keep in mind:
 2. On the **General** page, enter a **Name** and **Description** (optional) for the new policy.
 
    > [!TIP]
-   > Your provisioning policy name cannot contain the following characters: < > & | " ^
+   > Your provisioning policy name cannot contain the following characters: < > & | " ^ _
 
 3. On the  **General** page, select a **License type**:
     - **Enterprise**: Provision Cloud PCs for Windows 365 Enterprise.
@@ -90,7 +97,7 @@ To select an ANC, follow these steps:
 6. Optional. Select **Apply device name template** to create a Cloud PC naming template to use when naming all Cloud CPs that are provisioned with this policy. This naming template updates the NETBIOS name and does not affect the display name of the Cloud PC.  When creating the template, follow these rules:
     - Names must be between 5 and 15 characters.
     - Names can contain letters, numbers, and hyphens.
-    - Names can't include blank spaces.
+    - Names can't include blank spaces or underscores.
     - Optional. Use the %USERNAME:X% macro to add the first X letters of the username.
     - Required. Use the %RAND:Y% macro to add a random string of numbers, where Y equals the number of digits to add. Y must be 5 or more. Names must contain a randomized string.
   
@@ -104,7 +111,7 @@ To select an ANC, follow these steps:
     - **Microsoft Managed Desktop** is a cloud service that helps with device deployment, service management and operations, and security. For more information, see [What is Microsoft Managed Desktop?](/managed-desktop/intro/).
 8. Select **Next**.
 9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select**. Nested groups aren't currently supported.
-10. For Windows 365 Frontline, you must also select a Cloud PC size for each group in the policy. Choose **Select one** > select a size under **Available sizes** > **Select**. After you've selected a size for each group, select **Next**. 
+10. For Windows 365 Frontline, you must also select a Cloud PC size for each group in the policy. Choose **Select one** > select a size under **Available sizes** > **Select**. After you've selected a size for each group, select **Next**.
 11. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
 
 After the provisioning policy is created and assigned, Windows 365 automatically starts to provision Cloud PCs and assigns them to users in the assigned groups.
