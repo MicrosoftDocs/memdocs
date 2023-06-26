@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2023
+ms.date: 06/26/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -143,7 +143,7 @@ You can use filters for some common app policies on the following platforms. For
 
   - Android device administrator
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 10 and later
@@ -220,7 +220,7 @@ You can use filters for some common app policies on the following platforms. For
 | Firewall | N/A |
 | Security Baselines | N/A |
 
-### AOSP
+### Android (AOSP)
 
 | Profile type | Supported |
 | --- | --- |
@@ -356,7 +356,7 @@ The following features on managed devices don't support using filters:
 - Update policies for iOS/iPadOS
 - Feature updates for Windows
 - Enrollment notifications
-- Android AOSP platform workloads
+- Android (AOSP) platform workloads
 - Linux platform workloads
 - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers. These devices aren't enrolled in Intune.
 

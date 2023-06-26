@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/22/2023
+ms.date: 06/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -263,7 +263,7 @@ For more information, go to:
 
 Applies to:
 
-- Microsoft Intune (AOSP)
+- Android (AOSP)
 
 ### App management
 
@@ -1102,7 +1102,7 @@ For more information, go to [Operating systems and browsers supported by Microso
 
 Applies to:
 
-- Microsoft Intune (AOSP)  
+- Android (AOSP)  
 
 ### App management
 
@@ -1354,7 +1354,8 @@ For more information, go to [Operating systems and browsers supported by Microso
 
 Applies to:
 
-- Microsoft Intune (AOSP)
+- Android (AOSP)
+
 #### Introducing support for laser pointers in Remote Help<!-- 16108312 -->
 
 In Remote Help, you can now use a laser pointer when you're providing assistance on Windows.
@@ -1451,11 +1452,11 @@ Applies to:
 - Windows 10
 - Windows 11
 
-#### Support for Bulk Device Actions on devices running Android AOSP<!--15397458 -->
-You can now complete "Bulk Device Actions" for devices running Android AOSP. The bulk device actions supported on devices running AOSP are Delete, Wipe and Restart.
+#### Support for Bulk Device Actions on devices running Android (AOSP)<!--15397458 -->
+You can now complete "Bulk Device Actions" for devices running Android (AOSP). The bulk device actions supported on devices running Android (AOSP) are Delete, Wipe and Restart.
 
 Applies to:  
-- AOSP
+- Android (AOSP)
 
 #### Updated descriptions for iOS/iPadOS and macOS settings in the settings catalog<!-- 16360170 -->
 The settings catalog lists all the settings you can configure, and all in one place. For the iOS/iPadOS and macOS settings, for each setting category, the descriptions are updated to include more detailed information.
@@ -1524,7 +1525,7 @@ Applies to:
 ### Monitor and troubleshoot
 
 #### Download mobile app diagnostics in the Microsoft Intune admin center (public preview)<!-- 9353471 -->  
-Now in public preview, access user-submitted mobile app diagnostics in the admin center, including app logs sent through Company Portal app for Android, AOSP, or Windows, with support for iOS, macOS, and Microsoft Edge for iOS coming at a later date. For more information about accessing mobile app diagnostics for Company Portal, see [Configure Company Portal](../apps/company-portal-app.md#app-logs).
+Now in public preview, access user-submitted mobile app diagnostics in the admin center, including app logs sent through Company Portal app for Android, Android (AOSP), or Windows, with support for iOS, macOS, and Microsoft Edge for iOS coming at a later date. For more information about accessing mobile app diagnostics for Company Portal, see [Configure Company Portal](../apps/company-portal-app.md#app-logs).
 
 #### WinGet troubleshooting using diagnostic files<!-- 16724699 -->
 [WinGet](/windows/package-manager/winget/) is a command line tool that enables you to discover, install, upgrade, remove, and configure applications on Windows 10 and Windows 11 devices. When working with [Win32 app management in Intune](../apps/apps-win32-app-management.md), you can now use the following file locations to help troubleshoot WinGet:

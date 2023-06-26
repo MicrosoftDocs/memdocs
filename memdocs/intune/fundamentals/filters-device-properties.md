@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/22/2023
+ms.date: 06/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,7 +60,7 @@ You can use the following device properties in your managed device filter rules:
 
   - Android device administrator
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 11
@@ -77,7 +77,7 @@ You can use the following device properties in your managed device filter rules:
 
   - Android device administrator
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 11
@@ -95,7 +95,7 @@ You can use the following device properties in your managed device filter rules:
 
   - Android device administrator
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 11
@@ -113,7 +113,7 @@ You can use the following device properties in your managed device filter rules:
 
   - Android device administrator
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 11
@@ -131,7 +131,7 @@ You can use the following device properties in your managed device filter rules:
 
   - Android device administrator
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 11
@@ -150,7 +150,7 @@ You can use the following device properties in your managed device filter rules:
 
   - Android device administrator
   - Android Enterprise (Work profile only)
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
 
 - **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
@@ -163,7 +163,7 @@ You can use the following device properties in your managed device filter rules:
 
   - Android device administrator
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 11
@@ -182,7 +182,7 @@ You can use the following device properties in your managed device filter rules:
   This property applies to:
 
   - Android Enterprise
-  - AOSP
+  - Android (AOSP)
   - iOS/iPadOS
   - Windows 11
   - Windows 10
