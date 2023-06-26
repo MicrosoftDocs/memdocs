@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2023
+ms.date: 06/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,6 +66,40 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of June 26, 2023
+
+### Device configuration
+
+#### On-demand remediation for a Windows device<!-- 14783338 -->
+
+A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
+
+For more information, go to:
+
+- [Remediations](../fundamentals/remediations.md)
+
+### Device management
+
+#### Windows Driver update management in Intune is generally available<!-- 5584639  -->  
+Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device’s driver version. Driver update policies update automatically to add new updates as they are published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
+
+Update policies can be configured for one of two approval methods:
+
+- With *Automatic approval*, each new *recommended* driver that’s published by the driver manufacturer and added to the policy is automatically approved for deployment to applicable devices. Policies set for automatic approvals can be configured with a deferral period before the automatically approved updates are installed on devices. This deferral gives you time to review the driver and to pause its deployment if necessary.
+
+- With *manual approval*, all new driver updates are automatically added to the policy, but an admin must explicitly approve each update before Windows Update deploys it to a device. When you manually approve an update, you choose the date when Windows Update will begin to deploy it to your devices.
+
+To help you manage driver updates, you review a policy and decline an update you don’t want to install, indefinitely pause any approved update,  and reapprove a paused update to restart its deployment.
+
+This release also includes [driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
+
+To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../protect/windows-driver-updates-overview.md).
+
+Applies to:
+
+- Windows 10
+- Windows 11
 
 ## Week of June 19, 2023 (Service release 2306)
 
@@ -1560,7 +1594,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Scripts
 
 #### Preview PowerShell script package content in Endpoint Analytics<!-- 12930245 -->
-Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../analytics/powershell-scripts.md).
+Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../intune/fundamentals/powershell-scripts-remediation.md).
 
 ## Week of January 16, 2023
 
