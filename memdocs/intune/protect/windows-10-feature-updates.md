@@ -129,7 +129,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
      Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** Tab > **Feature Updates report**. Select the policy you created and then generate the report.
 
-  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-feature-updates-organizational-report).
+  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 feature updates (Organizational) report](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report).
   6. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
@@ -244,11 +244,11 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 
 There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. Windows update reports show details about your Windows 10 and Windows 11 devices side by side in the same report.
 
-To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
+To learn more, see [Intune compliance reports](../protect/windows-update-reports.md).
 
 ## Next steps
 
 - Use [Windows update rings in Intune](../protect/windows-10-update-rings.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
-- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows 10/11 updates
+- Use [Windows update reports](../protect/windows-update-reports.md) for Windows 10/11 updates
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution

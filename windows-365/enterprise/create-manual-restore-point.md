@@ -37,7 +37,7 @@ Cloud PC [restore points](restore-overview.md) can be manually created both sing
 ## Create a single manual restore point
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices** > select a device > **Restore points**.
-1. Select **Create Restore Points (preview)** > **Yes**.
+1. Select **Create Restore Points** > **Yes**.
 
 The new restore point will be created. It may take up to an hour or more for the new restore point to appear in the list of restore points. If a restore point already exists for this Cloud PC it will be overwritten by the new restore point. 
 
@@ -47,7 +47,7 @@ The new restore point will be created. It may take up to an hour or more for the
 ![Screenshot of bulk device actions.](./media/restore-bulk/bulk-device-actions.png)
 1. On the **Basics** page, select the following options:
     1. **OS**: Windows
-    1. **Device action**: Create Cloud PC manual restore point (preview)
+    1. **Device action**: Create Cloud PC manual restore point
 1. Select **Next**.
 1. On the **Devices** page, choose **Select devices to include**.
 1. In the **Select devices**, choose the Cloud PCs that you want to create manual restore points for > **Select** > **Next**.

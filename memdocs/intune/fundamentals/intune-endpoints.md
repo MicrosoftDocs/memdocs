@@ -45,10 +45,13 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols. Windows Information Protection uses port 444.
-- For some tasks Intune requires unauthenticated proxy server access to manage.microsoft.com
+- For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com.
 
 > [!NOTE]
 > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com' or 'dm.microsoft.com' endpoints.
+>
+> [!NOTE]
+> **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
@@ -71,7 +74,7 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
-This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDN's that are covered as part of M365 Requirements. For reference this is the list of URL's returned, and the service they are tied to.
+This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDNs that are covered as part of M365 Requirements. For reference, this is the list of URLs returned, and the service they are tied to.
 
 |FQDN    |Associated Service      |
 |-----------|----------------|
@@ -141,6 +144,11 @@ This provides a convenient method to list and review all services required by In
 |lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
 |fd.api.orgmsg.microsoft.com | Organizational messages |
 |ris.prod.api.personalization.ideas.microsoft.com | Organizational messages |
+|contentauthassetscdn-prod.azureedge.net | Organizational messages |
+|contentauthassetscdn-prodeur.azureedge.net | Organizational messages |
+|contentauthrafcontentcdn-prod.azureedge.net | Organizational messages |
+|contentauthrafcontentcdn-prodeur.azureedge.net | Organizational messages |
+
 
 The following tables list the ports and services that the Intune client accesses:
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 06/15/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -53,6 +53,46 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of June 12, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Windows 365 Government support for virtualization-based workloads<!--45086869-->
+
+Virtualization-based workloads are now supported in Windows 365 Government environments. For more information, see [Set up virtualization-based workloads on your Cloud PC](nested-virtualization.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: High-level architecture diagram<!--45049183-->
+
+We’ve published a new help documentation article. For more information, see [High-level architecture diagram](high-level-architecture.md).
+
+<!-- ########################## -->
+## Week of June 5, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Microsoft 365 admin center: Windows 365 cloud PC advanced deployment guide<!--44563663-->
+
+The Advanced deployment guides page in the Microsoft 365 admin center has a new guide to help admins plan for, deploy, and scale Windows 365 Enterprise in their organization. This guide has a checklist of Cloud PC configuration tasks and includes best practices, tools, and recommendations based on the tenant's configuration.
+
+#### Windows 365 Enterprise can now be purchased by government customers <!--44276738-->
+
+Windows 365 Enterprise can now be purchased by customers with an existing Government Community Cloud (GCC) tenant. Such customers can use their Azure Commercial subscription if they want to use custom images and Azure network connections. (Previously, customers with a GCC tenant could only buy Windows 365 Government. An Azure Government subscription was required for custom images and Azure network connections.) Windows 365 Enterprise is a commercial product with commercial licensing terms and conditions.
+
+Windows 365 Enterprise is FedRAMP compliant. Except for FedRAMP, Windows 365 Enterprise doesn't offer the same compliance as Windows 365 Government. CJIS and IRS 1075 aren't supported in Windows 365 Enterprise.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Government
+
+#### Windows 365 Government setup tool<!--43461105-->
+
+A new Windows 365 Government setup tool is now available. It replaces the PowerShell scripts that were used to set up tenant mapping and permissions. For more information, see [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
+
+<!-- ########################## -->
 ## Week of May 29, 2023 (Service release 2305)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -60,7 +100,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Cloud PC on-demand restore points and copy to Azure Storage account are now generally available<!--43450254-->
 
-Cloud PC on-demand restore points and copy copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
+Cloud PC on-demand restore points and copy to  an Azure Storage account have moved out of preview and into general availability. For more information, see [Create on-demand manual restore points for Cloud PCs](create-manual-restore-point.md) and [Share Cloud PC restore points to an Azure Storage Account](share-restore-points-storage.md).
 
 #### Shortpath for managed/private networks<!--44356711-->
 
@@ -70,7 +110,7 @@ Managed network RDP Shortpath is available for Windows 365. For more information
 
 A new provisioning policy option lets you define a new region or ANC for the provisioning policy. When you initiate the move:
 
-1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shutdown.
+1. All Cloud PCs in the provisioning policy that no longer match the updated region or ANC will be shut down.
 2. All such Cloud PCs will be moved to the new region or ANC.
 
 It may take several hours for the moves to complete.
@@ -85,6 +125,13 @@ For more information, see [Move Cloud PC](move-cloud-pc.md).
 #### Provide feedback button for admins (preview)<!--43853267-->
 
 A **Provide feedback** button is now available in several Windows 365 admin pages in the Intune admin center.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Admin alert when a Cloud PC enters the grace period<!--44188012-->
+
+Admins are now alerted when a Cloud PC enters the grace period. For more information about grace periods, see [Device management overview for Cloud PCs](device-management-overview.md). For information about how to view and customize alerts, see [Alerts in Windows 365](alerts.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 app
@@ -792,7 +839,7 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 
 #### Upload a custom image without an Azure network connection<!--8341750 -->
 
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription that provides the image.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Intune. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription that provides the image.
 
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
@@ -998,7 +1045,7 @@ _ldap._tcp.yourDomain.com -type SRV
 
 #### Windows 365 Administrator role<!--5827123-->
 
-The Windows 365 Administrator role is now available for admins by using role assignment in the Microsoft Intune admin center and Azure Active Directory (Azure AD) for Windows. With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Endpoint Manager. For more information, see [Role-based access control](role-based-access.md).
+The Windows 365 Administrator role is now available for admins by using role assignment in the Microsoft Intune admin center and Azure Active Directory (Azure AD) for Windows. With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Intune. For more information, see [Role-based access control](role-based-access.md).
 
 <!-- ########################## -->
 ## Week of October 4, 2021
@@ -1064,7 +1111,7 @@ For more information, see [Remoting connection report](report-remoting-connectio
 
 ### Windows 365 now generally available<!--10393594 -->
 
-Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that uses both the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
+Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that uses both the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Intune to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
 
 For more information about Windows 365, see [Windows 365](https://www.microsoft.com/windows-365?rtc=1).
 

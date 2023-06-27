@@ -1,6 +1,21 @@
 {
     "redirections": [
         { 
+            "source_path": "memdocs/intune/user-help/enroll-your-device-with-telecom-expense-management-ios.md",
+            "redirect_url": "/mem/intune/user-help",
+            "redirect_document_id": false
+         },
+        { 
+            "source_path": "memdocs/intune/user-help/enroll-your-device-with-telecom-expense-management-android.md",
+            "redirect_url": "/mem/intune/user-help",
+            "redirect_document_id": false
+         },
+        { 
+            "source_path": "memdocs/intune/configuration/telecom-expenses-monitor.md",
+            "redirect_url": "/mem/intune/fundamentals/whats-new",
+            "redirect_document_id": false
+         },        
+        { 
            "source_path": "memdocs/intune/enrollment/ios-user-enrollment.md",
            "redirect_url": "/mem/intune/enrollment/apple-user-enrollment-with-company-portal",
            "redirect_document_id": false
@@ -1421,6 +1436,21 @@
         {
             "source_path": "memdocs/analytics/proactive-remediations.md",
             "redirect_url": "/mem/analytics/remediations",
+            "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/intune/protect/windows-update-compliance-reports.md",
+            "redirect_url": "/mem/intune/protection/windows-update-reports",
+            "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/analytics/remediations.md",
+            "redirect_url": "/mem/intune/fundamentals/remediations",
+            "redirect_document_id": false            
+        },
+        {
+            "source_path": "memdocs/analytics/powershell-scripts.md",
+            "redirect_url": "/mem/intune/fundamentels/powershell-scripts-remediation",
             "redirect_document_id": false            
         }
     ]

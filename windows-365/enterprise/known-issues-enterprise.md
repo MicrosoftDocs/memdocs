@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 06/26/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -36,17 +36,11 @@ The following items are known issues for Windows 365 Enterprise.
 
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 
-## Windows doesn’t scan for software updates until the first time a user signs in<!--38212344-->
-
-While a Windows PC (physical or Cloud PC) sits idle before the first user signs in, Windows Update doesn’t scan for or install monthly quality patches. Without such scans, the PC might miss important security updates. Without the latest security updates, the device is exposed to security vulnerabilities.
-
- **Troubleshooting steps**: Make sure that a user signs in to new Cloud PCs as soon as possible.
-
 ## In-place Windows upgrade may change computer name
 
 Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
 
-**Troubleshooting steps**: Find and manage the Cloud PC in Microsoft Endpoint Manager by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
+**Troubleshooting steps**: Find and manage the Cloud PC in Microsoft Intune by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
 
 ## Windows 365 provisioning fails<!--38483005-->
 

@@ -173,7 +173,7 @@ In this section:
 
 - Grant local admins permission to create, update, delete within their own scope.
 
-- Use the **Settings Catalog** and **Security Baselines** to the maximum possible extent, instead of profiles created in the Configuration profiles list, to mitigate scale in the Microsoft Endpoint Manager admin center.
+- Use the **Settings Catalog** and **Security Baselines** to the maximum possible extent, instead of profiles created in the Configuration profiles list, to mitigate scale in the Microsoft Intune admin center.
 
 - In general, the central team should try to centrally monitor the content of configurations and replace lots of duplicate profiles where possible with a shared profile.
 

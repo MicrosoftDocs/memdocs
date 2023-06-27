@@ -505,6 +505,26 @@ In the context of sudo, run the following commands on your Linux server:
 
 In the context of sudo, run the following command on your Linux server to create a config file that will load the ip_tables into kernel during boot time: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
 
+### Manually load the tun module
+
+Some Linux distributions will not load the *tun* module by default, which is required by Tunnel.
+
+To validate the present of the *tun* module on the server, run:  `lsmod |grep tun`
+
+1. If *tun* isn't present, run the following to load the module into the kernel immediately, without a restart: `/sbin/modprobe tun`
+
+2. Rerun the validation to confirm the *tun* module is now loaded: `lsmod |grep tun`
+
+> [!IMPORTANT]
+> When updating the Tunnel server, a manually loaded *tun* module might not persist. This can require you to reload the module after the update is completed. After your server update is completed, review the server for the presence of the *tun* module.
+>
+> If not present, use the preceding steps to reload the module, with the additional step to restart the server after the module is loaded.
+
+#### Configure Linux to load tun at boot
+
+In the context of sudo, run the following command on your Linux server to create a config file that will load *tun* into kernel during boot time: `echo tun > /etc/modules-load.d/mstunnel_tun.conf`
+
+
 ## Next steps
 
 [Configure Microsoft Tunnel](microsoft-tunnel-configure.md)

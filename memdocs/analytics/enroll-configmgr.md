@@ -1,15 +1,15 @@
 ---
 title: Quickstart - Enroll Configuration Manager devices
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Configuration Manager devices into Endpoint analytics.
 ms.date: 05/03/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: quickstart
 author: smritib17
 ms.author: smbhardwaj
 manager: dougeby
-# Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
+# Customer intent: As an administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
 ms.localizationpriority: high
 ms.collection: highpri
 ---
@@ -26,19 +26,19 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 - A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
 - The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
-- [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
+- [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 
-> [!Important]  
+> [!IMPORTANT]  
 > If you have co-management enabled, enrolled devices that meet the Intune requirements will send required functional data directly to Microsoft public cloud. For more information, see [requirements for devices managed by Intune](overview.md#bkmk_intune_prereq).
 
 ### Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Proactive remediations has an additional licensing requirement, for more information see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md). Proactive remediations has an additional licensing requirement, for more information see, the [Endpoint analytics licensing requirements overview](overview.md#licensing-prerequisites).
 
 ## Endpoint analytics permissions
 
 - The [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) is required to [start gathering data](#bkmk_onboard).
-   - After clicking **Start** for gathering data, other read-only roles can view the data.
+  - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 [!INCLUDE [Endpoint analytics permissions information](includes/endpoint-analytics-rbac.md)]
 
@@ -58,7 +58,7 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
-Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Starting in Configuration Manager 2111, cloud attaching your environment was simplified. You can use the recommended defaults to enable both Endpoint analytics and tenant attach at the same time. For more information, see [Enable cloud attach](..\configmgr\cloud-attach\enable.md).<!--10964629-->
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Starting in Configuration Manager 2111, cloud attaching your environment was simplified. You can use the recommended defaults to enable both Endpoint analytics and tenant attach at the same time. For more information, see [Enable cloud attach](..\configmgr\cloud-attach\enable.md).<!--10964629-->
 
 
 ### <a name="bkmk_cm_upload"></a> Enable data upload in Configuration Manager
@@ -68,7 +68,7 @@ Before you enroll Configuration Manager devices, verify the [prerequisites](#bkm
 1. Select **CoMgmtSettingsProd** then click **Properties**.
 1. On the **Configure upload** tab, check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager**
 
-> [!Important]
+> [!IMPORTANT]
 > When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](#bkmk_cm_enable).
 
    :::image type="content" source="media/6051638-configure-upload-configmgr.png" alt-text="Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="media/6051638-configure-upload-configmgr.png":::
@@ -90,9 +90,8 @@ The **Enable Endpoint analytics data collection** setting is enabled by default 
 
 You may also modify the **Enable Endpoint analytics data collection** policy in custom client settings to configure a specific set of devices for local data collection. Don't forget to deploy or re-deploy your custom client setting after making changes.
 
-   > [!Important]
+   > [!IMPORTANT]
    > If you have an existing custom client agent setting that's been deployed to your devices, you'll need to update the [**Enable Endpoint analytics data collection**](data-collection.md#bkmk_datacollection) option in that custom setting and select **Ok** for it to take effect.
-
 
 ## <a name="bkmk_view"></a> View the Overview page
 

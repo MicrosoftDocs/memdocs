@@ -104,7 +104,7 @@ To install the script directly and capture the hardware hash from the local comp
    - WMI permissions are in place.
    - WMI is accessible through Windows Firewall on the remote computer.
 
-2. While OOBE is running, you can start uploading the hardware hash by opening a command prompt (Shift+F10 at the sign-in prompt) and using the following commands:
+2. While OOBE is running, you can start uploading the hardware hash by opening a command prompt (Shift+F10 at the sign-in prompt), running the `PowerShell` command in the command prompt that opens, and then using the following PowerShell commands:
 
    ```powershell
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -123,7 +123,7 @@ To install the script directly and capture the hardware hash from the local comp
    On first run, you're prompted to approve the required app registration permissions.
 
 > [!NOTE]
-> Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain sensitive information that only device owners should maintain, we recommend registering devices through Microsoft Endpoint Manager via a 4K hardware hash only for testing or other limited scenarios. In most cases, you should instead use the Microsoft Partner Center for Autopilot device registration.
+> Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain sensitive information that only device owners should maintain, we recommend registering devices through Microsoft Intune via a 4K hardware hash only for testing or other limited scenarios. In most cases, you should instead use the Microsoft Partner Center for Autopilot device registration.
 
 For more information about running the *Get-WindowsAutopilotInfo.ps1* script, see the script's help by using `Get-Help Get-WindowsAutopilotInfo`.
 
