@@ -91,6 +91,8 @@ For more information on filters, go to [Use filters when assigning your apps, po
 
 A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
 
+The **Run remediation** device action is rolling-out and may take a few weeks to reach all customers.
+
 For more information, go to:
 
 - [Remediations](../fundamentals/remediations.md)
@@ -130,6 +132,8 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Azure AD
 
 For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
+
+To participate in the public preview, [complete the opt-in form](https://aka.ms/MAMforWindowsPublic).
 
 ### Device configuration
 
