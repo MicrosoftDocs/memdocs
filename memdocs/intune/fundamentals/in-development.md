@@ -211,6 +211,9 @@ Later this year, Apple is expected to release iOS/iPadOS version 17. After the r
 
 For more information on this change, go to [Plan for change: Intune is moving to support iOS/iPadOS 15 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-15-and-later).
 
+> [!NOTE]
+> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
+
 Applies to:
 
 - iOS/iPadOS
