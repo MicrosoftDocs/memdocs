@@ -5,17 +5,13 @@ manager: aaroncz
 ms.technology: itpro-deploy
 ms.prod: windows-client
 ms.topic: include
-ms.date: 04/24/2023
+ms.date: 06/26/2023
 ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
 
-pre-provisioning/azure-ad-join-autopilot-profile.md
 pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md
-self-deploying/self-deploying-autopilot-profile.md
-user-driven/azure-ad-join-autopilot-profile.md
-user-driven/hybrid-azure-ad-join-autopilot-profile.md
 
 Headings are driven by article context. -->
 
@@ -43,7 +39,7 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
        - **Assigned**: The device has been assigned an Autopilot deployment profile.
 
-       - **Fix pending**:  When a hardware change occurs on a device, this status will display while Intune tries to register the new hardware. When selecting the link for the **Fix pending** status, the following message appears:
+       - **Fix pending**:  When a hardware change occurs on a device, this status displays while Intune tries to register the new hardware. When the link for the **Fix pending** status is selected, the following message appears:
 
           **We've detected a hardware change on this device. We're trying to automatically register the new hardware. You don't need to do anything now; the status will be updated at the next check in with the result.**
 
@@ -53,7 +49,7 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
            - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
            - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-mbr.md)
 
-       - **Attention required**: After a hardware change occurs on a device, if Intune is unable to register the new hardware, the device can't receive the Autopilot profile until the device is reset and the device re-registers. For more information on this status and how to deregister/re-register a device, see the following articles:
+       - **Attention required**: If Intune is unable to register the new hardware after a hardware change occurs on a device, the device can't receive the Autopilot profile until the device is reset and the device re-registers. For more information on this status and how to deregister/re-register a device, see the following articles:
 
          - [Autopilot profile not applied after reimaging to an older OS version](../../troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
          - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).

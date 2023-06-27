@@ -86,4 +86,4 @@ The **Startup performance** page has reporting tabs that provide support for the
 ## Next steps
 
 - Use the [Work from anywhere report](work-from-anywhere.md).
-- Use [Remediations](remediations.md) to help fix common support issues before end-users notice issues.
+- Use [Remediations](../intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.
