@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 06/27/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -356,7 +356,6 @@ The following features on managed devices don't support using filters:
 - Update policies for iOS/iPadOS
 - Feature updates for Windows
 - Enrollment notifications
-- Android (AOSP) platform workloads
 - Linux platform workloads
 - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers. These devices aren't enrolled in Intune.
 
