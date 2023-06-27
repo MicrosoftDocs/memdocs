@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 06/27/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,6 +72,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device configuration
 
+#### Android (AOSP) supports assignment filters<!-- 7591220 -->
+
+Android (AOSP) supports assignment filters. When you create a filter for Android (AOSP), you can use the following properties:
+
+- DeviceName
+- Manufacturer
+- Model
+- DeviceCategory
+- oSVersion
+- IsRooted
+- DeviceOwnership
+- EnrollmentProfileName
+
+For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
+
 #### On-demand remediation for a Windows device<!-- 14783338 -->
 
 A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
@@ -117,21 +132,6 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
 ### Device configuration
-
-#### Android (AOSP) supports assignment filters<!-- 7591220 -->
-
-Android (AOSP) supports assignment filters. When you create a filter for Android (AOSP), you can use the following properties:
-
-- DeviceName
-- Manufacturer
-- Model
-- DeviceCategory
-- oSVersion
-- IsRooted
-- DeviceOwnership
-- EnrollmentProfileName
-
-For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
 
 #### New settings available in the Apple settings catalog<!-- 19951554  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
