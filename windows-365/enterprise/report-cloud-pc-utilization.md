@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 04/06/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Cloud PC utilization report
+# Cloud PC utilization report (review)
 
 The Cloud PC utilization report helps you make sure that your licenses are assigned to active users. By reviewing Cloud PCs with low usage, you can decide if a Windows 365 license would better serve other users who might use these resources more often.
 
