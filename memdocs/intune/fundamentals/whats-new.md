@@ -91,6 +91,8 @@ For more information on filters, go to [Use filters when assigning your apps, po
 
 A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
 
+The **Run remediation** device action is rolling-out and may take a few weeks to reach all customers.
+
 For more information, go to:
 
 - [Remediations](../fundamentals/remediations.md)
