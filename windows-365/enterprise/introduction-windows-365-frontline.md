@@ -88,7 +88,7 @@ You can view your Cloud PCs on two pages:
 - **All devices**: Turn on the **Model** column to differentiate between Frontline Cloud PCs and others.
 - **All Cloud PCs**: This list can be filtered to show only Frontline Cloud PCs using the **PC type** filter.
 
-When inactive, Cloud PCs will be in a powered off state. You can confirm the power state of the Cloud PC in **Overview** page for a device.
+When inactive, Cloud PCs are in a powered off state. You can confirm the power state of the Cloud PC in **Overview** page for a device.
 
 For the best user experience, make sure to:
 

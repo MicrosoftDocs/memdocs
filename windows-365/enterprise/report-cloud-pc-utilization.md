@@ -63,7 +63,7 @@ This report helps you:
 - Understand your users’ utilization of their Frontline Cloud PCs
 - Make sure you have purchased the right number of licenses for your peak usage.
 
-By reviewing the maximum concurrent connections, you can decide if you require additional licenses to ensure your end users are not blocked using their Frontline Cloud PCs.
+By reviewing the maximum concurrent connections, you can decide if you require more licenses to ensure your end users aren't blocked using their Frontline Cloud PCs.
 
 On the **Frontline Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
 
@@ -72,7 +72,7 @@ On the **Frontline Cloud PCs** tab, the report shows the following data aggregat
 - Maximum concurrency limit.
 - Warnings for approaching and reaching the maximum concurrency limit.
 
-This report is specific to Windows 365 Frontline and does not apply to other Windows 365 plans. If no Windows 365 Frontline licenses have been purchased on your tenant, no data will be in the report.
+This report is specific to Windows 365 Frontline and doesn't apply to other Windows 365 plans. If no Windows 365 Frontline licenses have been purchased on your tenant, no data is in the report.
 
 ## Other reports
 
