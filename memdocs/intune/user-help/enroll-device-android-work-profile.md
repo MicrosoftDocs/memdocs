@@ -80,9 +80,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
 
 11. Your organization may require you to update the settings on your device. In the Company Portal app, review the list of settings you need to change. Then tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.    
 
-    ![Example image of Company Portal, Update device settings screen, highlighting Resolve and Continue buttons.](./media/resolve-settings-1911.png) 
-
-12. When setup is complete, you are sent back to the **Company Access Setup** screen, where you should see a green checkmark next to each enrollment task. Tap **DONE** to use your device.    
+12. When setup and enrollment is complete, you are sent back to the **Company Access Setup** screen where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
 
