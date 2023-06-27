@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2022
+ms.date: 06/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -91,11 +91,11 @@ Use one of the following procedures to create the policy type you prefer.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration profiles** > On the *Profiles* tab, select **Create profile**.
 
 3. Set the following options:
-   1. **Platform**: Windows 10/11
-   2. **Profile type**: Endpoint protection
+   1. **Platform**: **Windows 10 and later**
+   2. **Profile type**: Select **Templates** > **Endpoint protection**, and then select **Create**.
 
    ![Select your BitLocker profile](./media/encrypt-devices/select-windows-bitlocker-dc.png)
 
@@ -159,7 +159,7 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 
 A device **must not be set to require** a startup PIN or startup key.
 
-When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies do not configure these settings.
+When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device, and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies don't configure these settings.
 
 Following are the relevant settings for each profile type:
 
@@ -183,42 +183,42 @@ Following are the relevant settings for each profile type:
 > If you deploy this baseline to devices on which you want to silently enable BitLocker, review your baseline configurations for possible conflicts. To remove conflicts, either reconfigure the settings in the baselines to remove the conflict, or remove applicable devices from receiving the baseline instances that configure TPM settings that block silent enablement of BitLocker.
 
 
-### Full disk vs Used Space only encryption 
+### Full disk vs Used Space only encryption
 
-Three settings determine whether an OS drive will be encrypted using used space only or full disk encryption:
+Three settings determine whether an OS drive will be encrypted by encrypting the used space only, or by full disk encryption:
 - Whether the hardware of the device is [modern standby](/windows-hardware/design/device-experiences/modern-standby) capable
-- Whether silent enablement has been configured for BitLocker 
+- Whether silent enablement has been configured for BitLocker
   - ('Warning for other disk encryption' = Block or 'Hide prompt about third-party encryption' = Yes)
-- Configuration of the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) 
+- Configuration of the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp)
   - (Enforce drive encryption type on operating system drives)
 
-Assuming that SystemDrivesEncryptionType has not been configured, the following is the expected behaviour. When silent enablement is configured on a modern standby device, the OS drive will be encrypted using used space only encryption. When silent enablement is configured on a device which is not capable of modern standby, the OS drive will be encrypted using full disk encryption. The result is the same whether you are using an [Endpoint Security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker) or a [Device Configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog as shown below.
+Assuming that SystemDrivesEncryptionType hasn't been configured, the following is the expected behavior. When silent enablement is configured on a modern standby device, the OS drive is encrypted using the used space only encryption. When silent enablement is configured on a device that isn't capable of modern standby, the OS drive is encrypted using full disk encryption. The result is the same whether you're using an [Endpoint Security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker) or a [Device Configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog.
 
 To verify whether the hardware is modern standby capable, run the following command from a command prompt:
 
 ```console
 powercfg /a
 ```
-If the device supports modern standby, it will show that Standby (S0 Low Power Idle) Network Connected is available
+If the device supports modern standby, it shows that Standby (S0 Low Power Idle) Network Connected is available
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_s0_possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 available.":::
 
-If the device does not support modern standby, such as a virtual machine, it will show that Standby (S0 Low Power Idle) Network Connected is not supported
+If the device doesn't support modern standby, such as a virtual machine, it shows that Standby (S0 Low Power Idle) Network Connected isn't supported
 
-:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_nos0possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 un-available.":::
+:::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_nos0possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 unavailable.":::
 
 To verify the encryption type, run the following command from an elevated (admin) command prompt:
 
 ```console
 manage-bde -status c:
 ```
-The 'Conversion Status' field will reflect the encryption type as either Used Space Only encrypted or Fully Encrypted.
+The 'Conversion Status' field reflects the encryption type as either Used Space Only encrypted or Fully Encrypted.
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_usedspaceonly.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting fully encrypted.":::
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_fullyencrypted.png" alt-text="Screenshot of administrative command prompt showing output of manage-bde with conversion status reflecting used space only encryption.":::
 
-To change the disk encryption type between full disk encryption and used space only encryption, leverage the'Enforce drive encryption type on operating system drives' setting within settings catalog.
+To change the disk encryption type between full disk encryption and used space only encryption, use the'Enforce drive encryption type on operating system drives' setting within settings catalog.
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_settingscatalog_control_encryption.png" alt-text="Screenshot of Intune settings catalog displaying Enforce drive encryption type on operating system drives setting and drop-down list to select from full or used space only encryption types.":::
 
@@ -234,7 +234,7 @@ To be accessible, the device must have its keys escrowed to Azure AD.
 
 3. Select a device from the list, and then under *Monitor*, select **Recovery keys**.
 
-4. Hit **Show Recovery Key**. Selecting this will generate an audit log entry under 'KeyManagement' activity.
+4. Hit **Show Recovery Key**. Selecting this generates an audit log entry under 'KeyManagement' activity.
   
    When keys are available in Azure AD, the following information is available:
    - BitLocker Key ID
