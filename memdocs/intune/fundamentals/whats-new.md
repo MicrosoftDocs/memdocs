@@ -133,7 +133,7 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 
 For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
-To participate in the public preview, please [complete the opt-in form](https://aka.ms/MAMforWindowsPublic).
+To participate in the public preview, [complete the opt-in form](https://aka.ms/MAMforWindowsPublic).
 
 ### Device configuration
 
