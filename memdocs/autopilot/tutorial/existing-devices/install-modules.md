@@ -60,10 +60,12 @@ To install the necessary modules to download the Autopilot profile(s) as a JSON 
     Install-Module Microsoft.Graph.Groups -Force
     Install-Module Microsoft.Graph.Authentication -Force
     Install-Module WindowsAutopilotIntune -Force
+    install-module Microsoft.Graph.Identity.DirectoryManagement -Force
 
     Import-Module Microsoft.Graph.Groups
     Import-Module Microsoft.Graph.Authentication
     Import-Module WindowsAutopilotIntune
+    import-module Microsoft.Graph.Identity.DirectoryManagement
     ```
 
 4. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. You may need to select **Enter** a second time to run the last command in the code block. Once all the commands have run successfully, the required modules are installed.
