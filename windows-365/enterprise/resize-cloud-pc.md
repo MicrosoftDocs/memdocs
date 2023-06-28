@@ -140,7 +140,7 @@ Up to 5000 Cloud PCs can be resized at a time.
 6. On the **Devices** page, choose **Apply this action to the devices registered to its group members** > **Next**.
 7. Under **Select groups to include**, choose the groups containing the users who own the devices that you want to resize > **Next**.
 8. On the **Review + create** page, select **Create**. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
-9. Remove the users from the original source Azure AD group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target licence.
+9. Remove the users from the original source Azure AD group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
 10. Assign the target license to the new target Azure AD group. The resizing process now begins.
 
 ## Resizing details
