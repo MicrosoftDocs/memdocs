@@ -81,7 +81,7 @@ The following permissions are required to view this report:
 - SharedUseLicenseUsageReport
 - SharedUseServicePlans
 
-To assign these permions, go to **Tenant administration** > **Roles** > **Create** > **Windows 365 role**.
+To assign these permissions, go to **Tenant administration** > **Roles** > **Create** > **Windows 365 role**.
 
 ## Other reports
 
