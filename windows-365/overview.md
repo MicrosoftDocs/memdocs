@@ -41,7 +41,7 @@ Windows 365 is available in multiple editions:
 - **Windows 365 Government** is a service that spans across a regulated US Government Community Cloud (GCC) and a public facing cloud. For more information, see [What is Windows 365 Government?](./enterprise/introduction-windows-365-government.md)
 - **Windows 365 Frontline** helps organizations save costs by providing a single license to provision up to three Cloud PCs for non-concurrent use. These are meant for cases where the user needs Cloud PC access for a limited time per day. For more information, see [What is Windows 365 Frontline?](./enterprise/introduction-windows-365-frontline.md)
 
-To learn about the differences between the two versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
+To learn about the differences between the Business and Enterprise versions, see [Compare Windows 365 Business and Enterprise](business-enterprise-comparison.md).
 
 [!INCLUDE [What is a Cloud PC?](./includes/what-is-cloud-pc.md)]
 
