@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 07/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -42,6 +42,8 @@ Here you'll see some info to give you a quick idea of how your Cloud PCs are doi
 
 - **Provisioning** status: A summary of the Cloud PC state in your organization.
 - **Connection health**:  A summary of the Azure network connection health in your organization.  
+
+If you have more Frontline Cloud PCs provisioned than available licenses, a warning appears on this page. Also, you can't provision new Cloud PCs until you deprovision Cloud PCs to match the number allowed.
 
 ## All Cloud PCs page
 
