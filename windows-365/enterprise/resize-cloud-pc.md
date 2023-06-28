@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/30/2022
+ms.date: 07/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -133,7 +133,7 @@ Up to 5000 Cloud PCs can be resized at a time.
 ### Bulk resize a subset of Cloud PCs originally provisioned using group-based licenses
 
 1. Create a new target Azure AD group. Add the users from the source Azure AD group that you want to resize. Alternately, you can use existing Azure AD groups if you're mapping the groups to individual Windows 365 license types.
-2. Assign the existing provisioning policy targeting the original source Azure AD group to the new target Azure AD group - you only need to do this if you dont've have a discreate Azure AD group for your provisioning policy assignment. If you have discrete AD groups to manage your provisioning policy assignments, you can ommit this step.
+2. Assign the existing provisioning policy targeting the original source Azure AD group to the new target Azure AD group. You only need to do this if you don't have a discrete Azure AD group for your provisioning policy assignment. If you have discrete Azure AD groups to manage your provisioning policy assignments, you can omit this step.
 3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > **Bulk device actions** > **OS (Windows)** > **Select device type (Cloud PCs)** > **Device action (Resize)**.
 4. On the **Basics** page, select the **Source size** for the Cloud PCs to be resized.
 5. Select the **Target size** for the resized Cloud PCs > **Next**.
