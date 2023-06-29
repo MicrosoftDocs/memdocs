@@ -91,9 +91,6 @@ Driver updates are supported for the following Windows 10/11 editions:
 - Education
 - Pro for Workstations
 
-> [!NOTE]  
-> **Unsupported versions and editions**:  
-> *Windows 10/11 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 
 **Devices must**:
 
