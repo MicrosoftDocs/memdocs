@@ -123,10 +123,6 @@ Applies to:
 
 - iOS/iPadOS
 
-
-
-
-
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
@@ -192,14 +188,14 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 ### Added Support for Scope tags<!-- 16485280 iddraft  -->  
 You will be able to add scope tags when creating deployments using Zebra LifeGuard Over-the-Air integration (in public preview).
 
-### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998 -->
+### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998 -->  
 Today, Intune uses the Windows Device Health Attestation (DHA) service for Windows 10/11 Compliance policy - Device Health settings. Device health attestation is a reporting service used to ensure a device boots to a trusted state.
 
 Intune will be introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices. Windows 10 devices, and GCCH/DOD environments will continue to use DHA and are not impacted by this change.
 
 For more information, see [Network Endpoints](../fundamentals/intune-endpoints.md)
 
-### Intelligent recommendations within Intune Security Baselines<!-- 11127203 -->
+### Intelligent recommendations within Intune Security Baselines<!-- 11127203 -->  
 We're adding tailored insights powered by Machine Learning models that help choose the right security settings from Security Baselines for your organization. These recommendations are based on best practices that similar organizations have adopted. Navigate to **Endpoint security** > **Security baselines**. Creating and editing the workflow these insights will be available for you in the form of a light bulb.
 
 <!-- *********************************************** -->
@@ -232,13 +228,13 @@ A new device action that is in public preview allows you to run a proactive reme
 
 ## Device security
 
-### Endpoint Privilege Management support to manage elevation rules for child processes<!-- 15931887  -->
+### Endpoint Privilege Management support to manage elevation rules for child processes<!-- 15931887  -->  
 With [Endpoint Privilege Management](../protect/epm-overview.md) (EPM) you can manage which files and processes are allowed to *Run as Administrator*. When a process is elevated to run in the administrative context, any child processes it creates inherit that administrative context.
  
-Soon, EPM will support options that let you control the run context of those child processes. You’ll be able to allow a child process to always run elevated, run elevated only if a rule exists for the child process, or never run elevated (always run as a standard user). 
+Soon, EPM will support options that let you control the run context of those child processes. You’ll be able to allow a child process to always run as elevated, run as elevated only if a rule exists for the child process, or never run as elevated (always run as a standard user).
 
 ### Tamper protection support for Windows on Azure Virtual Desktop<!--15135590  -->
-Intune will soon support use of Tamper protection for Windows on Azure Virtual Desktop multi- session.  Support for Tamper protection requires onbarding to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied. 
+Intune will soon support use of Tamper protection for Windows on Azure Virtual Desktop multi- session.  Support for Tamper protection requires onboarding to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
 
 
 ### Microsoft Defender for Endpoint Settings Management enhancements<!-- 14743017, 15319901, 18713045, 18713050, 17757959, 17757967 -->  
