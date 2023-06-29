@@ -253,10 +253,6 @@ We’re working on the improvements for Intune compliance policies and reports w
 - Adding support for Linux
 - Providing more up-to-date and simplified reporting experience for the policy Overview.
 - Aligning the policy report experience with the experience for device configuration profiles.
-- Adding two new reports to the reporting node that will eventually replace the following reports that are available through *Devices* > *Monitor*. These new preview reports will support more capabilities than the current reports:
-
-  - Setting compliance
-  - Policy compliance
 
 For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
 
