@@ -63,9 +63,9 @@ Once you add a Mobile Threat Defense connector to your tenant, the status will s
 
 * **Not Set Up**: Connector setup is not complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available**
 
-* **Available**: Connector setup is complete. Atleast 1 platform toggle must be turned on for this status to change to **Enabled**.
+* **Available**: Connector setup is complete. At least 1 platform toggle must be turned on for this status to change to **Enabled**.
 
-* **Enabled**: Connector setup is complete, and atleast 1 platform toggle is currently turned on for this connector. 
+* **Enabled**: Connector setup is complete, and at least 1 platform toggle is currently turned on for this connector. 
 
 * **Unresponsive**: Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.
 
