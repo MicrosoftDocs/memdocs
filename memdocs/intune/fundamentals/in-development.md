@@ -258,6 +258,8 @@ We’re working on the improvements for Intune compliance policies and reports w
   - Setting compliance
   - Policy compliance
 
+For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
+
 <!-- ## Role-based access control -->
 <!-- *********************************************** -->
 
