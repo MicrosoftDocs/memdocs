@@ -190,7 +190,14 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 ### Added Support for Scope tags<!-- 16485280 iddraft  -->  
-You will be able to add scope tags when creating deployments using Zebra LifeGuard Over-the-Air integration (in public preview). 
+You will be able to add scope tags when creating deployments using Zebra LifeGuard Over-the-Air integration (in public preview).
+
+### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998 -->
+Today, Intune uses the Windows Device Health Attestation (DHA) service for Windows 10/11 Compliance policy - Device Health settings. Device health attestation is a reporting service used to ensure a device boots to a trusted state.
+
+Intune will be introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices. Windows 10 devices, and GCCH/DOD environments will continue to use DHA and are not impacted by this change.
+
+For more information, see [Network Endpoints](../fundamentals/intune-endpoints.md)
 
 ### Intelligent recommendations within Intune Security Baselines<!-- 11127203 -->
 We're adding tailored insights powered by Machine Learning models that help choose the right security settings from Security Baselines for your organization. These recommendations are based on best practices that similar organizations have adopted. Navigate to **Endpoint security** > **Security baselines**. Creating and editing the workflow these insights will be available for you in the form of a light bulb.
