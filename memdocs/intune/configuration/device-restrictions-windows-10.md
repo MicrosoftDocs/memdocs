@@ -1032,6 +1032,9 @@ These settings use the [defender policy CSP](/windows/client-management/mdm/poli
   [Defender/DaysToRetainCleanedMalware CSP](/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **CPU usage limit during a scan**: Limit the amount of CPU that scans are allowed to use, from `0` to `100` percent. By default, the OS might set it to 50%.
+
+  [Defender/AvgCPULoadFactor CSP](/windows/client-management/mdm/policy-csp-defender#avgcpuloadfactor)
+  
 - **Scan archive files**: **Enable** turns on Defender so it scans archive files, such as Zip or Cab files. Users can't turn off this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on this scanning, and allow users to change it.
 
   If you enable the setting, and then change it back to **Not configured**, then Intune leaves the setting in its previously configured state.

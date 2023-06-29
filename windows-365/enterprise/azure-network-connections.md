@@ -55,7 +55,7 @@ During provisioning, the Cloud PC is connected to the Azure subnet and joined to
 
 - On your network.
 - Registered to Azure AD.
-- Enrolled into Microsoft Endpoint Manager.
+- Enrolled into Microsoft Intune.
 - Ready to accept user sign-in requests.
 
 The ANC settings are applied to the Cloud PC only at the time of provisioning.

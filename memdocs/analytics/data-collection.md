@@ -1,10 +1,10 @@
 ---
 title: Endpoint analytics data collection
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Data collection information for Endpoint analytics.
 ms.date: 09/22/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: reference
 author: smritib17
 ms.author: smbhardwaj
@@ -36,7 +36,7 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the Intune admin center using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta&preserve-view=true). The maximum latency end to end is 96 hours.
   
-> [!Note]  
+> [!NOTE]  
 > When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](settings.md#bkmk_profile), or [enable device upload](../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the Intune admin center.
 
 ## <a name="bkmk_datacollection"></a> Data collection
@@ -63,7 +63,7 @@ Endpoint analytics data collection falls into the [optional](../intune/protect/p
   - **name:** Windows
   - **ver:** The version of the current OS.
 
-> [!Important]  
+> [!IMPORTANT]  
 > Our data handling policies are described in the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
 ## <a name="bkmk_stop"></a> Stop gathering data

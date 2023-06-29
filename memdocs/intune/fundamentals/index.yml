@@ -35,7 +35,7 @@ landingContent:
         url: in-development.md
     - linkListType: tutorial
       links: 
-      - text: Walkthrough Intune in Microsoft Endpoint Manager
+      - text: Walkthrough Microsoft Intune admin center
         url: tutorial-walkthrough-endpoint-manager.md 
     - linkListType: concept
       links:
