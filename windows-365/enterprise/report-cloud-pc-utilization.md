@@ -34,13 +34,6 @@ ms.collection:
 
 The Cloud PC utilization report helps you make sure that your licenses are assigned to active users. By reviewing Cloud PCs with low usage, you can decide if a Windows 365 license would better serve other users who might use these resources more often.
 
-## Requirements
-
-The following permissions are required to view this report:
-
-- SharedUseLicenseUsageReport
-- SharedUseServicePlans
-
 ## Use the Cloud PC utilization report
 
 To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with low utilization**).
@@ -72,6 +65,17 @@ This report helps you:
 
 By reviewing the maximum concurrent connections, you can decide if you need to purchase more licenses to ensure your end users aren't blocked from using their Frontline Cloud PCs.
 
+### Requirements
+
+The following permissions are required to view this report:
+
+- SharedUseLicenseUsageReport
+- SharedUseServicePlans
+
+To assign these permissions, go to **Tenant administration** > **Roles** > **Create** > **Windows 365 role**.
+
+### Report data
+
 On the **Frontline Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
 
 - Number of currently connected Frontline Cloud PCs.
@@ -82,8 +86,6 @@ On the **Frontline Cloud PCs** tab, the report shows the following data aggregat
 You can use the filter to switch between the Cloud PC sizes you have purchased.
 
 This report is specific to Windows 365 Frontline and doesn't apply to other Windows 365 plans. If no Windows 365 Frontline licenses have been purchased on your tenant, no data is in the report.
-
-To assign these permissions, go to **Tenant administration** > **Roles** > **Create** > **Windows 365 role**.
 
 ## Other reports
 
