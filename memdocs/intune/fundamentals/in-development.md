@@ -245,8 +245,18 @@ Microsoft Defender for Endpoint Settings Management will expand platform support
 <!-- ## Intune apps -->
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
-<!-- *********************************************** -->
+## Monitor and troubleshoot
+
+### Updates for compliance policies and reports<!-- 15425771, 15425624, 15425656  -->  
+We’re working on the improvements for Intune compliance policies and reports which include the following:
+
+- Adding support for Linux
+- Providing more up-to-date and simplified reporting experience for the policy Overview.
+- Aligning the policy report experience with the experience for device configuration profiles.
+- Adding two new reports to the reporting node that will eventually replace the following reports that are available through *Devices* > *Monitor*. These new preview reports will support more capabilities than the current reports:
+
+  - Setting compliance
+  - Policy compliance
 
 <!-- ## Role-based access control -->
 <!-- *********************************************** -->
