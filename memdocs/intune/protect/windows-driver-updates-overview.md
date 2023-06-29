@@ -91,7 +91,6 @@ Driver updates are supported for the following Windows 10/11 editions:
 - Education
 - Pro for Workstations
 
-
 **Devices must**:
 
 - Run a version of Windows 10/11 that remains in support.
