@@ -45,7 +45,7 @@ When you use Microsoft Defender for Endpoint, you can  deploy policies from Micr
 
 >[!NOTE]
 >
-> Begining in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
+> Beginning in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
 >
 > You can opt-in to the public preview by enabling the use of **Preview features** from within the [Microsoft 365 Defender portal](https://sip.security.microsoft.com/homepage). For more information on this, see [Microsoft Defender for Endpoint preview features](/microsoft-365/security/defender-endpoint/preview) in the Defender documentation.
 
