@@ -164,7 +164,7 @@ Devices with a state of **Resize not supported** won't be resized. The status me
 
 ## Resize with Step-up Licenses
 
-If you converted a Windows 365 Enterprise license subscription by purchasing [Step-up Licenses](https://download.microsoft.com/download/3/D/4/3D42BDC2-6725-4B29-B75A-A5B04179958B/Licensing_brief_PLT_Microsoft_Stepup_Licenses.pdf), you can migrate your users to the new license and preserve all user data by performing a bulk resize for those users.  
+If you converted a Windows 365 Enterprise license subscription by purchasing Microsoft Step-up Licenses, you can migrate your users to the new license and preserve all user data by performing a bulk resize for those users.  
 
 For example, let's say that you used a Step-up purchase to convert licenses from a Windows 365 Enterprise 2vCPU/4GB/128 GB subscription to a Windows 365 Enterprise 4vCPU/16GB/128 GB subscription. In this case, follow the steps under [Bulk resize Cloud PCs originally provisioned with group-based licenses](#bulk-resize-cloud-pcs-originally-provisioned-with-group-based-licenses). The Windows 365 2vCPU, 4GB, 128 GB is your base license, and the Windows 365 4vCPU/16GB/128 GB is your target license.  
 
