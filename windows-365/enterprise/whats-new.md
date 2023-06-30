@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Windows 365 Frontline is now generally available<!--43582253 -->
 
-Windows 365 Frontline has moved out of preview and into general availability. For more information, For more information, see [What is Windows 365 Frontline?](introduction-windows-365-frontline.md)
+Windows 365 Frontline has moved out of preview and into general availability. For more information, see [What is Windows 365 Frontline?](introduction-windows-365-frontline.md)
 
 #### Group-based license support for Cloud PC resizing<!--41357690-->
 
