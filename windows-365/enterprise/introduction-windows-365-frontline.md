@@ -37,7 +37,7 @@ Windows 365 Frontline is a version of [Windows 365](../overview.md) that helps o
 - Lets you provision up to three Cloud PCs.
 - Provides one concurrent session.
 
-Windows 365 Frontline is designed specifically for workers who don't need 24/7 access to their dedicated Cloud PCs. This system better supports organizations that are more elastic and distributed working across various devices. Frontline Cloud PCs can be helpful for users who are:
+Windows 365 Frontline is designed specifically for workers who don't need 24/7 access to their dedicated Cloud PCs. This system better supports organizations that are more elastic and distributed, working across various devices. Frontline Cloud PCs can be helpful for users who are:
 
 - On a rotation schedule.
 - Working across time zones and regions.
