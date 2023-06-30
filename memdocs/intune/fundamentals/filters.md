@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2023
+ms.date: 06/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,7 @@ This feature applies to:
 
   - Android device administrator
   - Android Enterprise
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 10/11
@@ -124,6 +125,7 @@ There are some general restrictions when creating filters:
       - **Managed devices**:
         - Android device administrator
         - Android Enterprise
+        - Android (AOSP)
         - iOS/iPadOS
         - macOS
         - Windows 10 and later
