@@ -90,7 +90,7 @@ The following tables describe what data is removed, and the effect of the **Reti
 ### iOS
 
 > [!IMPORTANT]
-> Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a Delete action.
+> Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a **Delete** action.
 
 |Data type|iOS|
 |-------------|-------|
