@@ -58,6 +58,10 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
+#### Windows 365 Frontline is now generally available<!--43582253 -->
+
+Windows 365 Frontline has moved out of preview and into general availability. For more information, For more information, see [What is Windows 365 Frontline?](introduction-windows-365-frontline.md)
+
 #### Group-based license support for Cloud PC resizing<!--41357690-->
 
 Both single and bulk resizing now support Cloud PCs that were provisioned with group-based licenses.
