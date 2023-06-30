@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2023
+ms.date: 07/05/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -62,10 +62,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-### Group-based license support for Cloud PC resizing<!--41357690-->
-
-In a future update, both single and bulk resizing will support Cloud PCs that were provisioned with group-based licenses.
-
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
@@ -108,12 +104,9 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 
 A new, more secure least privilege  will be implemented in a future update. When the update is released, customers must manually remove the old network contributor role from the resources where the ANC was created.
 
-<!-- ***********************************************-->
-## Windows 365 app
+<!-- ***********************************************
+## Windows 365 app-->
 
-### Windows 365 app will support Windows 365 Government environments<!--43305226-->
-
-In a future update, the Windows 365 app will support Windows 365 Government environments.
 
 ## Next steps
 
