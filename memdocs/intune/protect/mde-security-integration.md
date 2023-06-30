@@ -43,6 +43,14 @@ zone_pivot_groups: mde-attach-preview
 
 When you use Microsoft Defender for Endpoint, you can  deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings configuration*, and is also referred to as *security settings management*.
 
+::: zone pivot="mdssc-ga"
+**The following describes behavior that is generally available.**
+::: zone-end
+
+::: zone pivot="mdssc-preview"
+**The following describes behavior for the opt-in public preview.**
+::: zone-end
+
 >[!NOTE]
 >
 > Beginning in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
@@ -50,8 +58,6 @@ When you use Microsoft Defender for Endpoint, you can  deploy policies from Micr
 > You can opt-in to the public preview by enabling the use of **Preview features** from within the [Microsoft 365 Defender portal](https://sip.security.microsoft.com/homepage). For more information on this, see [Microsoft Defender for Endpoint preview features](/microsoft-365/security/defender-endpoint/preview) in the Defender documentation.
 
 ::: zone pivot="mdssc-ga"
-
-*The information in this article describes the generally available behavior for security settings configuration. If you have opted into the public preview, select **Opt-in Public Preview** at the top of this article to view content that describes the behaviors your tenant supports*
 
 When you manage devices through security settings management without participation in the public preview:
 
