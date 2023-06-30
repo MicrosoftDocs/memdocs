@@ -302,6 +302,7 @@ When you deploy an endpoint security policy that’s supported for both *Defende
 |                    | Firewall    | Firewall Rules              | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 
 ::: zone-end
+
 ::: zone pivot="mdssc-preview"
 
 | Platform  | Endpoint security policy | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
