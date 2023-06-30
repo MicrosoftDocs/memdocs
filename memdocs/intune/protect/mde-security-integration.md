@@ -51,6 +51,8 @@ When you use Microsoft Defender for Endpoint, you can  deploy policies from Micr
 
 ::: zone pivot="mdssc-ga"
 
+*The information in this article describes the generally available behavior for security settings configuration. If you have opted into the public preview, select **Opt-in Public Preview** at the top of this article to view content that describes the behaviors your tenant supports*
+
 When you manage devices through security settings management without participation in the public preview:
 
 - You use the Microsoft Intune admin center to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure AD groups
@@ -68,6 +70,8 @@ Applies to:
 
 ::: zone-end
 ::: zone pivot="mdssc-preview"
+
+*The information in this article describes behavior for the opt-in public preview. If you use security settings configuration but have not opted in to the public preview, select **Generally Available** at the top of this article to view content that describes the behaviors your tenant supports*
 
 When you manage devices through security settings management as part of the public preview:
 
