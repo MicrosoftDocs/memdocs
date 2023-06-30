@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2023
+ms.date: 06/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -189,7 +189,7 @@ Microsoft Defender for Endpoint supports several options to onboard devices. For
 
 ## Co-existence with Microsoft Configuration Manager
 
-In some environments it might be desired to use Security Management for Microsoft Defender for Endpoint with [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
+In some environments it might be desired to use Security Management for Microsoft Defender for Endpoint with devices managed by Configuration Manager. If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
 
 To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*.  Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
 
