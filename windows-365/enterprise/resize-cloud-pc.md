@@ -91,7 +91,6 @@ When resizing Cloud PCs provisioned through direct assigned licenses the Windows
 
 If there are available licenses, the resizing starts.
 
-
 ## Resize a single Cloud PC provisioned with a group-based license
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
@@ -163,7 +162,15 @@ If there are no licenses in your inventory, the resizing will fail. Contact your
 
 Devices with a state of **Resize not supported** won't be resized. The status message and details can help you identify the issue. You can still proceed with a bulk resize even if you have devices in the list that are marked as **Resize not supported**.
 
+## Resize with Step-up Licenses
 
+If you converted a Windows 365 Enterprise license subscription by purchasing Microsoft Step-up Licenses, you can migrate your users to the new license and preserve all user data by performing a bulk resize for those users.  
+
+For example, let's say that you used a Step-up purchase to convert licenses from a Windows 365 Enterprise 2vCPU/4GB/128 GB subscription to a Windows 365 Enterprise 4vCPU/16GB/128 GB subscription. In this case, follow the steps under [Bulk resize Cloud PCs originally provisioned with group-based licenses](#bulk-resize-cloud-pcs-originally-provisioned-with-group-based-licenses). The Windows 365 2vCPU, 4GB, 128 GB is your base license, and the Windows 365 4vCPU/16GB/128 GB is your target license.  
+
+When a Step-up conversion takes place, the stepped-up licenses show up in your inventory equaling the number of old licenses you chose to convert. If you Step-up 10 licenses of Windows 365 Enterprise 2vCPU/4GB/128 GB to 4vCPU/16 GB/128 GB, you end up with 10 more licenses of 4vCPU/16 GB/128 GB and 10 fewer licenses of 2vCPU/4GB/128 GB. These changes appear on the **Your Products** page in the Microsoft admin center.
+
+You have 90 days to migrate your users to the new 4vCPU/16 GB/128 GB licenses before they lose access to the Cloud PC provisioned with the original license. For more information about license life cycle states, see [What happens to my data and access when my subscription ends?](../subscription-ends.md)
 
 <!-- ########################## -->
 ## Next steps
