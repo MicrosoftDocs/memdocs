@@ -560,7 +560,6 @@ The following table contains the possible output when calling the `DeviceRunStat
 |   UniqueKustoKey   |
 |   DetectionScriptStatus   |
 |   RemediationScriptStatus   |
-|   PolicyId   |
 
 You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's output based on the following columns:
 - `PolicyId` **(required)**
@@ -672,7 +671,6 @@ The following table contains the possible output when calling the `FirewallStatu
 | FirewallStatus  |
 | FirewallStatus_loc   |
 | _ManagedBy   |
-| _ManagedBy_loc   |
 | UPN   |
 
 You can choose to filter the `FirewallStatus` report's output based on the following columns:
