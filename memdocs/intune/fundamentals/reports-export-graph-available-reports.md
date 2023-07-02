@@ -158,7 +158,7 @@ The following table contains the possible output when calling the `DeviceInstall
 | HexErrorCode    |
 
 You can choose to filter the `DeviceInstallStatusByApp` report's output based on the following columns:
-- `ApplicationId (Required)`
+- `ApplicationId` **(Required)**
 - `AppInstallState`
 - `HexErrorCode` (Used as ErrorCode)
 
@@ -177,7 +177,7 @@ The following table contains the possible output when calling the `UserInstallSt
 | NotApplicableCount    |
 
 You can choose to filter the `UserInstallStatusAggregateByApp` report's output based on the following column:
-- `ApplicationId (Required)`
+- `ApplicationId` **(Required)**
 
 ## DeviceCompliance report
 
