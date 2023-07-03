@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 06/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,7 @@ The information in this article can help you configure your infrastructure to su
 
 ## Prerequisites for using SCEP for certificates
 
-Before you continue, ensure you've [created and deployed a *trusted certificate* profile](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) to devices that will use SCEP certificate profiles. SCEP certificate profiles directly reference the trusted certificate profile that you use to provision devices with a Trusted Root CA certificate.
+Before you continue, ensure you've [created and deployed a *trusted certificate* profile](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) to devices that use SCEP certificate profiles. SCEP certificate profiles directly reference the trusted certificate profile that you use to provision devices with a Trusted Root CA certificate.
 
 - [Servers and server roles](#servers-and-server-roles)
 - [Accounts](#accounts)
@@ -65,10 +65,10 @@ To support SCEP, the following on-premises infrastructure must run on servers th
 
   If your CA runs Windows Server 2008 R2 SP1, you must [install the hotfix from KB2483564](https://support.microsoft.com/kb/2483564/).
 
-- **NDES server role** – To support using the Certificate Connector for Microsoft Intune with SCEP, you must configure the Windows Server that will host the certificate connector with the Network Device Enrollment Service (NDES) server role. The connector supports installation on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
+- **NDES server role** – To support using the Certificate Connector for Microsoft Intune with SCEP, you must configure the Windows Server that hosts the certificate connector with the Network Device Enrollment Service (NDES) server role. The connector supports installation on Windows Server 2012 R2 or later. In a later section of this article, we guide you through [installing NDES](#set-up-ndes).
 
   - The server that hosts NDES and the connector must be domain-joined and in the same forest as your Enterprise CA.
-  - Do not use NDES that's installed on the server that hosts the Enterprise CA. This configuration represents a security risk when the CA services internet requests, and installation of the connector isn't supported on the same server as your issuing Certification Authority (CA).
+  - Don't use NDES that's installed on the server that hosts the Enterprise CA. This configuration represents a security risk when the CA services internet requests, and installation of the connector isn't supported on the same server as your issuing Certification Authority (CA).
   - Internet Explorer Enhanced Security Configuration [must be disabled on the server that hosts NDES](/previous-versions/windows/it-pro/windows-server-2003/cc775800(v=ws.10)) and the Microsoft Intune Connector.
 
   To learn more about NDES, see [Network Device Enrollment Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831498(v=ws.11)) in the Windows Server documentation, and [Using a Policy Module with the Network Device Enrollment Service](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn473016(v=ws.11)). To learn how to configure high availability for NDES, see [High Availability](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso-cert#high-availability).
@@ -89,9 +89,9 @@ To allow devices on the internet to get certificates, you must publish your NDES
 
 - **Third-party reverse proxy** – When you use a third-party reverse proxy, ensure that the proxy supports a long URI get request. As part of the certificate request flow, the client makes a request with the certificate request in the query string. As a result, the URI length can be large, up to 40 kb in size.
 
-SCEP protocol limitations prevent use of pre-authentication. When you publish the NDES URL via a reverse proxy server you must have *Pre Authentication* set to *Passthrough*. Intune secures the NDES URL when you install the Intune Certificate connector, by installing an Intune-SCEP policy module on the NDES server. The module helps to secure the NDES URL by preventing certificates from being issued to invalid or digitally tampered certificate requests. This limits access to only Intune enrolled devices that you manage with Intune and that have well-formed certificate requests.
+SCEP protocol limitations prevent use of preauthentication. When you publish the NDES URL via a reverse proxy server, you must have *Pre Authentication* set to *Passthrough*. Intune secures the NDES URL when you install the Intune Certificate connector, by installing an Intune-SCEP policy module on the NDES server. The module helps to secure the NDES URL by preventing certificates from being issued to invalid or digitally tampered certificate requests. This limits access to only Intune enrolled devices that you manage with Intune and that have well-formed certificate requests.
 
-When an Intune SCEP certificate profile is delivered to a device, Intune generates a custom challenge blob that it encrypts and signs. The blob isn't readable by the device. Only the policy module and the Intune service can read and verify the challenge blob.  The blob includes details Intune expects will be provided by the device in its certificate signing request (CSR). For example, the expected *Subject* and *Subject Alternative Name* (SAN).
+When an Intune SCEP certificate profile is delivered to a device, Intune generates a custom challenge blob that it encrypts and signs. The blob isn't readable by the device. Only the policy module and the Intune service can read and verify the challenge blob.  The blob includes details that Intune expects to be provided by the device in its certificate signing request (CSR). For example, the expected *Subject* and *Subject Alternative Name* (SAN).
 
 The Intune policy module works to secure NDES in the following ways:
 
@@ -106,7 +106,7 @@ The Intune policy module works to secure NDES in the following ways:
 
 ### Accounts
 
-To configure the connector to support SCEP, you'll need an account that has permissions to configure NDES on the Windows Server and to manage your Certification Authority. For details, see [Accounts](../protect/certificate-connector-prerequisites.md#accounts) in the *Prerequisites for the Certificate Connector for Microsoft Intune* article.
+To configure the connector to support SCEP, use an account that has permissions to configure NDES on the Windows Server and to manage your Certification Authority. For details, see [Accounts](../protect/certificate-connector-prerequisites.md#accounts) in the *Prerequisites for the Certificate Connector for Microsoft Intune* article.
 
 ### Network requirements
 
@@ -120,7 +120,7 @@ The following certificates and templates are used when you use SCEP.
 
 |Object    |Details    |
 |----------|-----------|
-|**SCEP Certificate Template**         |Template you'll configure on your issuing CA used to fullfil the devices SCEP requests. |
+|**SCEP Certificate Template**         |Template that you configure on your issuing CA that's used to fullfil the devices SCEP requests. |
 |**Server authentication certificate** |Web Server certificate requested from your issuing CA or public CA.<br /> You install and bind this SSL certificate in IIS on the computer that hosts NDES.|
 |**Trusted Root CA certificate**       |To use a SCEP certificate profile, devices must trust your Trusted Root Certification Authority (CA). Use a *trusted certificate profile* in Intune to provision the Trusted Root CA certificate to users and devices. <br/><br/> **-**  Use a single Trusted Root CA certificate per operating system platform and associate that certificate with each trusted certificate profile you create. <br /><br /> **-**  You can use additional Trusted Root CA certificates when needed. For example, you might use additional certificates to provide a trust to a CA that signs the server authentication certificates for your Wi-Fi access points. Create additional Trusted Root CA certificates for issuing CAs.  In the SCEP certificate profile you create in Intune, be sure to specify the Trusted Root CA profile for the issuing CA.<br/><br/> For information about the trusted certificate profile, see [Export the trusted root CA certificate](certificates-trusted-root.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-trusted-root.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. |
 
@@ -144,7 +144,7 @@ For Android Enterprise, the version of encryption on a device determines whether
 
 The version of Android on a device can affect the available encryption type:
 
-- **Android 10 and later:** Devices installed with Android 10 or later by the OEM will use file-based encryption and won't require a PIN for SCEP to provision a certificate. Devices that upgrade to version 10 or later and begin to use file-based encryption might still require a PIN.
+- **Android 10 and later:** Devices installed with Android 10 or later by the OEM use file-based encryption and won't require a PIN for SCEP to provision a certificate. Devices that upgrade to version 10 or later and begin to use file-based encryption might still require a PIN.
 
 - **Android 8 to 9**: These versions of Android support the use of file-based encryption, but it’s not required. Each OEM chooses which encryption type to implement for a device. It’s also possible that OEM modifications will result in a PIN not being required even when full-disk encryption is in use.
 
@@ -159,7 +159,7 @@ For devices enrolled as Android Enterprise dedicated, password enforcement can p
 
 For devices that run 9.0 and later and receive a kiosk-mode policy, you can use a device compliance or device configuration policy to enforce the password requirement. View [Support Tip: New Google-based Compliance Screens for Kiosk Mode](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-new-google-based-compliance-screens-for-kiosk-mode/ba-p/2129719) from the Intune Support Team, to understand the device experience.
 
-For devices that run 8.x and earlier, you can also use a device compliance or device configuration policy to enforce the password requirement. However, to set up a PIN, you’ll need to manually enter the settings application on the device and configure the PIN.
+For devices that run 8.x and earlier, you can also use a device compliance or device configuration policy to enforce the password requirement. However, to set up a PIN, you need to manually enter the settings application on the device and configure the PIN.
 
 ## Configure the certification authority
 
@@ -174,9 +174,9 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
 1. Sign in to your issuing CA with a domain account with rights sufficient to manage the CA.
 
-2. Open the Certification Authority Microsoft Management Console (MMC). Either **Run** 'certsrv.msc' or in **Server Manager**, click **Tools**, and then click **Certification Authority**.
+2. Open the Certification Authority Microsoft Management Console (MMC). Either **Run** 'certsrv.msc' or in **Server Manager**, select **Tools**, and then **Certification Authority**.
 
-3. Select the **Certificate Templates** node, click **Action** > **Manage**.
+3. Select the **Certificate Templates** node, select **Action** > **Manage**.
 
 ### Create the SCEP certificate template
 
@@ -194,7 +194,7 @@ The following sections require knowledge of Windows Server 2012 R2 or later, and
 
    - **Subject Name**:
 
-     - Select **Supply in the request**. Security is enforced by the Intune policy module for NDES.
+     - Select **Supply in the request**. The Intune policy module for NDES enforces security.
 
        ![Template, subject name tab](./media/certificates-scep-configure/scep-ndes-subject-name.jpg)
 
@@ -264,7 +264,7 @@ On the server that hosts the certificate connector, use either the NDES server *
 
 1. On your Certificate Authority console, Right-click the CA name and select **Properties**.
 
-2. In **Security** tab, click **Add**.
+2. In **Security** tab, select **Add**.
 
 3. Grant **Issue and Manage Certificates** permission:
 
@@ -279,7 +279,7 @@ After you [create the SCEP certificate template](#create-the-scep-certificate-te
 
 By default, Intune uses the value configured in the template, but you can configure the CA to allow the requester to enter a different value, so that value can be set from within the Microsoft Intune admin center.
 
-Plan to use a validity period of five days or greater. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
+Plan to use a validity period of five days or greater. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed.
 
 > [!IMPORTANT]
 > For iOS/iPadOS and macOS, always use a value set in the template.

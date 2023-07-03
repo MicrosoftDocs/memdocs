@@ -35,7 +35,7 @@ This article lists and describes the different compliance settings you can confi
 
 For Linux, compliance settings are available from the [settings catalog](../configuration/settings-catalog.md) instead of from a pre-determined template as seen for other platforms. Therefore, when configuring a compliance policy for Linux you choose the settings you want to include in your policy by browsing the catalog and selecting them.
 
-In addition to the platform-specific compliance policy, devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Endpoint Manager admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
+In addition to the platform-specific compliance policy, devices are also governed by tenant-wide compliance policy settings. To manage the tenant-wide compliance policy settings in your tenant, sign in to Microsoft Intune admin center and go to **Endpoint security** > **Device compliance** > **Compliance policy settings**.
 
 To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
 

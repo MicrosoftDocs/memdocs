@@ -232,7 +232,7 @@ Your assigned-intune role requires **Device configurations** permissions to dele
 
 ## Additional information
 
-When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
+When you deploy shell scripts or custom attributes for macOS devices from Microsoft Intune, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
 
 ## Next steps
 

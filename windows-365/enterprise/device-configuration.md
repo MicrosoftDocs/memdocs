@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 06/16/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -37,4 +37,4 @@ After a Cloud PC is [provisioned](provisioning.md), you can manage it like any o
 <!-- ########################## -->
 ## Next steps
 
-For more information, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles) in the Microsoft Endpoint Manager documentation.
+For more information, see [Apply features and settings on your devices using device profiles](/mem/intune/configuration/device-profiles) in the Microsoft Intune documentation.

@@ -32,7 +32,7 @@ ms.collection:
 
 # Device management overview for Cloud PCs
 
-To manage your Cloud PCs, you’ll use Microsoft Intune, a service of [Microsoft Endpoint Manager](https://admin.microsoft.com/). Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices (including Cloud PCs). To sign in to Intune, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+To manage your Cloud PCs, you’ll use the [Microsoft Intune admin center](https://admin.microsoft.com/). Intune is a 100% cloud-based mobile device management (MDM) and mobile application management (MAM) provider for your apps and devices (including Cloud PCs). To sign in to Intune, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Cloud PC overview page
 
