@@ -45,10 +45,13 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols. Windows Information Protection uses port 444.
-- For some tasks Intune requires unauthenticated proxy server access to manage.microsoft.com
+- For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com.
 
 > [!NOTE]
 > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com' or 'dm.microsoft.com' endpoints.
+>
+> [!NOTE]
+> **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
@@ -62,16 +65,18 @@ To make it easier to configure services through firewalls, we have onboarded wit
 By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service. This provides the same list as the subnets indicated in the IP address table below.
 
 ```PowerShell
-(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
+(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
 ```
 
-By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and Autopilot.
+By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and dependent services.
 
 ```PowerShell
-(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
+(invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
-This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDNs that are covered as part of M365 Requirements. For reference, this is the list of URLs returned, and the service they are tied to.
+The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.  
+
+You will also need FQDNs that are covered as part of M365 Requirements. For reference, the following table is the list of URLs returned, and the service they are tied to.
 
 |FQDN    |Associated Service      |
 |-----------|----------------|

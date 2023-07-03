@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2023
+ms.date: 06/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -149,7 +149,11 @@ The following table can help you understand which policies that can configure Mi
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 
 - **Antivirus** policies manage the security configurations found in Microsoft Defender for Endpoint. See  [antivirus](/mem/intune/protect/endpoint-security-antivirus-policy) policy for endpoint security.
-- **Attack surface reduction** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. For more information, see [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation, and [attack surface reduction](/mem/intune/protect/endpoint-security-asr-policy) policy for endpoint security.
+- **Attack surface reduction** (ASR) policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run Windows 10, Windows 11, and Windows Server. For more information, see:
+  - [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
+  - [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+  - [Attack surface reduction](/mem/intune/protect/endpoint-security-asr-policy) policy for endpoint security, in the Intune documentation.
+  
 - **Endpoint detection and response** (EDR) policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats. See [endpoint detection and response](/mem/intune/protect/endpoint-security-edr-policy) policy for endpoint security.
 - **Firewall** policies focus on the Defender firewall on your devices. See [firewall](/mem/intune/protect/endpoint-security-firewall-policy) policy for endpoint security.
 - **Firewall Rules** configure granular rules for Firewalls, including specific ports, protocols, applications, and networks. See [firewall](/mem/intune/protect/endpoint-security-firewall-policy) policy for endpoint security.
@@ -185,7 +189,7 @@ Microsoft Defender for Endpoint supports several options to onboard devices. For
 
 ## Co-existence with Microsoft Configuration Manager
 
-In some environments it might be desired to use Security Management for Microsoft Defender for Endpoint with [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
+In some environments it might be desired to use Security Management for Microsoft Defender for Endpoint with devices managed by Configuration Manager. If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
 
 To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*.  Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
 
