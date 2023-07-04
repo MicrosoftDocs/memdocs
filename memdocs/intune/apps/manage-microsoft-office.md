@@ -165,7 +165,7 @@ This key can be used both by managed devices and managed apps.
 
 ### Enable/Disable Feed on Office for iOS and Android
 
-Admins can now enable/disable Microsoft365 Feed by configuring the below setting in the Intune portal. These app settings can be deployed using an [app configuration policy](https://learn.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-overview) in Intune.
+Admins can now enable/disable Microsoft365 Feed by configuring the below setting in the Intune portal. These app settings can be deployed using an [app configuration policy](app-configuration-policies-overview.md) in Intune.
 
 To manage these, you can use the following key:
 
