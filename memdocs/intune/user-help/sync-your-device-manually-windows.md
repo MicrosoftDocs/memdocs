@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 07/05/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -36,41 +36,39 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-Sync the enrolled device you're using for work to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, you can manually sync the device when you return to get any updates you missed. 
- 
-Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
+Sync the enrolled device you're using for work to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, you can manually sync the device when you return to get any updates you missed. Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
-You can start a sync from the Company Portal app, desktop taskbar or Start menu, and from the device Settings app. Company Portal app functionality is supported on Windows 10 devices running the Creator's Update (1703) or later, and Windows 11.  
+This article describes how to start a sync from the:
 
-All devices running Windows can be synced from the Settings app.  
+* Company Portal app
+* Desktop taskbar or Start menu
+* Settings app  
 
-## Sync from Company Portal app for Windows
-Complete these steps to sync your Windows 10/11 device.  
+## Sync from Company Portal app for Windows  
+Complete these steps to sync a device in the Company Portal app. You can sync devices running Windows 10 with the Creator's Update (1703) or later, and Windows 11.  
 
 1. Open the Company Portal app on your device.
 
 2. Select **Settings** > **Sync**.
 
-    ![Screenshot home page of Company Portal app, Settings highlighted](./media/RS1_homePage_settings_04.png)  
+    ![Screenshot home page of Company Portal app, highlighting Settings area.](./media/RS1_homePage_settings_04.png)  
     
-    ![Screenshot settings page of Company Portal app, Sync button highlighted](./media/RS1_settingspage_sync05.png)  
+    ![Screenshot settings page of Company Portal app, highlighting Sync button](./media/RS1_settingspage_sync05.png)  
 
 ## Sync from device taskbar or Start menu   
 
-You can also access the sync control outside of the app, from your device's desktop. This way is useful if you have the app pinned directly to your taskbar or Start menu, and want to quickly sync.  
+You can access the Company Portal syncing action from your device's desktop. This way is useful if you have the app pinned directly to your taskbar or Start menu, and want to quickly sync.  
 
 1. Find the Company Portal app icon in your taskbar or Start menu.  
 2. Right-click the app's icon so its menu (also referred to as a jump list) appears.  
 
     ![Screenshot of the Windows taskbar on a device's desktop. Company Portal app icon was selected and shows a menu with options "Pin to taskbar," "Close window," and "Sync this device" action.](./media/sync-device-from-start-menu-1807.png)  
 
-3. Select **Sync this device**. The **Settings** page opens in the Company Portal app and the sync begins.  
+3. Select **Sync this device**. The Company Portal app opens and the sync begins.  
 
-## Sync from Settings app  
-Complete these steps to manually sync devices from the system Settings app.  
-
-### Windows 10   
-Sync devices running Windows 10 or later.   
+## Sync from Settings app (Windows 10 or later)   
+Sync devices running Windows 10 or later from the system Settings app.  
+ 
 1. On your device, select **Start** > **Settings**.
 
 2. Select **Accounts**.  
@@ -85,7 +83,7 @@ Sync devices running Windows 10 or later.
 
       ![Example image of Settings app > Account settings highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
 
-#### Access work or school steps  
+### Access work or school steps  
 
 1. Select **Access work or school**.
 
@@ -99,21 +97,20 @@ Sync devices running Windows 10 or later.
 
 4. Select **Sync**. 
 
-#### Work access steps
+### Work access steps
 
 1. Select **Work access**.  
 2. Under **Enroll in to device management**, select the account that's associated with your workplace.  
 3. Choose **Sync**. The button remains inactive until the sync is complete.  
 
-### Microsoft HoloLens  
-Sync HoloLens devices running the Windows 10 Anniversary Update (also known as RS1) or later.  
+## Sync from Settings app (Microsoft HoloLens)    
+Sync HoloLens running the Windows 10 Anniversary Update (also known as RS1) or later from the system Settings app.  
 
 1. Open the Settings app on your device.  
-
 2. Select **Accounts**.  
 3. Select **Work Access**.  
 4. Find your connected account, and then select **Sync**.  
 
 ## Next steps  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For support information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Help & support**.  
