@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/09/2023
+ms.date: 06/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -80,7 +80,7 @@ When you delete a category, devices assigned to it appear as **Unassigned**.
 ### Change the category of a device  
 If you edit a category, be sure to update any Azure AD security groups that reference the category in their rules.  
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices**.  
 2. Select a device.  
 3. Select **Properties**.  
 4. Change the category listed under **Device category**.  
