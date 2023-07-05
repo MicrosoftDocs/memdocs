@@ -36,7 +36,7 @@ Set up secure, remote access to work emails, files, and apps on your personal Ma
 
 ## What to expect from the Company Portal app
 
-During initial setup, the Company Portal app requires you to sign in and authenticate yourself with your work account. Company Portal then informs you of any device settings you need to change to meet your organization's requirements. For example, your organization could require you to make your device PIN longer, or require you to update your operating system. After you enroll your device, Company Portal helps you maintain the secure work access. The app notifies you of new policies and requirements and gives you the chance to adjust your settings so that you can continue to work uninterrupted. 
+During initial setup, the Company Portal app requires you to sign in and authenticate with your work account. Company Portal then informs you of any device settings you need to change to meet your organization's requirements. For example, your organization could require you to make your device PIN longer, or require you to update your operating system. After you enroll your device, Company Portal helps you maintain the secure work access. The app notifies you of new policies and requirements and gives you the chance to adjust your settings so that you can continue to work uninterrupted. 
 
 For more information about the Company Portal app for macOS, see [What happens when I install the Company Portal app and enroll my device?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md)     
 
@@ -47,9 +47,6 @@ Your device must be running macOS 11 or later.
 > During installation and enrollment, you might be prompted to allow Company Portal to use confidential information that's stored in your keychain. These prompts are part of Apple security. When you get the prompt, type in your login keychain password and select **Always Allow**. If you press **Enter** or **Return** on your keyboard, the prompt will select **Allow**, which means you may continue to receive prompts.  
 
 ## Install Company Portal app  
-  > [!IMPORTANT]
-  > For the best setup experience, install the latest versions of Microsoft AutoUpdate and Company Portal. 
-
 1. Go to [Enroll My Mac](https://go.microsoft.com/fwlink/?linkid=853070).  
 2. Wait while the Company Portal installer .pkg file downloads. Open the installer when it's ready.
 3. On the **Introduction** page, select **Continue**.  
@@ -57,8 +54,11 @@ Your device must be running macOS 11 or later.
 5. Select **Agree** to agree to the terms of the software license agreement.  
 6. On the **Installation Type** page, select **Install**.  
 7. Enter your device password or registered fingerprint. Then select **Install Software**. 
-9. Wait for Company Portal to finish installing. On some devices, Microsoft AutoUpdate opens after installation finishes, and updates your existing Microsoft software. Wait for the updates to finish.
-11. Open the Company Portal app.  
+9. Wait for Company Portal to finish installing. 
+11. Open the Company Portal app.
+
+> [!IMPORTANT]
+> Microsoft AutoUpdate might open after enrollment and update your Microsoft software. After all updates are installed, open the Company Portal app. For the best setup experience, install the latest versions of Microsoft AutoUpdate and Company Portal.  
 
 ## Enroll your Mac  
 1. Sign in to the Company Portal app with your work or school account.  
@@ -93,7 +93,3 @@ To share your feedback and suggestions with Intune Company Portal app developers
 ## Updating the Company Portal app
 
 Updating the Company Portal app is done the same way as any other Office app, through Microsoft AutoUpdate for macOS. For more information, see [Update Office for Mac automatically](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
-
-
-
-
