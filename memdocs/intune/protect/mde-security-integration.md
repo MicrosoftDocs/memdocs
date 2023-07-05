@@ -390,7 +390,7 @@ Microsoft Defender for Endpoint supports several options to onboard devices. For
 
 ## Coexistence with Microsoft Configuration Manager
 
-In some environments, it might be desired to use security settings management with [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). If you use both, you need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
+In some environments it might be desired to use security settings management with devices managed by Configuration Manager. If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
 
 To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
 
