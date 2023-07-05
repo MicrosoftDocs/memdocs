@@ -156,8 +156,6 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
 
 ## Run a remediation script on-demand (preview)
 
-> [!NOTE]
-> While in public preview, run remediation is available at no additional cost. When run remediation becomes generally available, it will be available as [Intune add-ons](intune-add-ons.md) and require an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
 You can use the **Run remediation** device action to run a remediation script on-demand to a single Windows device.
 
 ### Prerequisites for running a remediation script on-demand
