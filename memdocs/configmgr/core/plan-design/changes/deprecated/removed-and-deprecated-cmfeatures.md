@@ -5,7 +5,7 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.date: 12/02/2022
+ms.date: 07/03/2023
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -45,7 +45,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 | The BitLocker management implementation for the [recovery service](../../../../protect/deploy-use/bitlocker/recovery-service.md) has changed. The legacy MBAM-based service is replaced by the messaging processing engine on the management point. | March 2021 | The first release after May 2022 |
 |Older style of console extensions that haven't been approved in the **Console Extension** node, will no longer be supported. For more information about new console extensions, see [Manage console extensions](../../../servers/manage/admin-console-extensions.md). <!--3555909-->|April 2021|TBD<sup>[Note 1](#bkmk_note1)</sup>|
 | Sites that allow HTTP client communication. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 --> | March 2021 | The first release after November 1, 2022 |
-|The geographical view in the **Site Hierarchy** node of the **Monitoring** workspace in the Configuration Manager console.<!--8116777-->|August 2020|TBD|
+|The geographical view in the **Site Hierarchy** node of the **Monitoring** workspace in the Configuration Manager console.<!--8116777-->|August 2020|The first release after October 2023|
 |The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway. Starting in version 2107, you can't create a traditional cloud distribution point.<!-- 10247883 -->|February 2019| The first release after October 5, 2022|
 |Cloud management gateway and cloud distribution point deployments with Azure Service Manager using a management certificate. For more information, see [Plan for CMG](../../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).|November 2018|The first release after October 5, 2022|
 

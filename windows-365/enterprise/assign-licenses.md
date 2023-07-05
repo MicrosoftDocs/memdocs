@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 07/05/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -38,7 +38,10 @@ Before a user can use a Cloud PC, you must assign a [Windows 365 license](https:
 - [Azure AD admin center](https://aad.portal.azure.com/) for group license assignments. For more information about group license assignments, see [Assign licenses to users by group membership in Azure Active Directory](/azure/active-directory/enterprise-users/licensing-groups-assign).
 - To assign direct licenses to a list of individual users, see [Assign licenses for Windows 365](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell) or see [Assign license](/graph/api/user-assignlicense) to perform through Graph  
 
-<!-- ########################## -->
-Next, check out the following article: 
+## Windows 365 Frontline
+
+This article doesn't apply to Windows 365 Frontline. Windows 365 Frontline licenses are managed directly in provisioning policies when assigning users in a targeted Azure Active Directory group.
+
+## Next steps
 
 [Create Azure network connection](create-azure-network-connection.md).

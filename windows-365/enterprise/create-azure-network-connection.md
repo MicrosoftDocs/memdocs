@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/03/2022
+ms.date: 07/05/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -39,8 +39,8 @@ You can have up to 10 ANCs per tenant.
 As part of the connection process, the Windows 365 service is granted the following permissions:
 
 - Reader permission on the Azure subscription.
-- Network contributor permission on the specified resource group.
-- Network contributor permission on the virtual network.
+- Windows365 Network Interface Contributor role on the specified resource group.
+- Windows365 Network User role on the virtual network.
 
 ## Requirements
 

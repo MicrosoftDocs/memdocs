@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 06/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -71,6 +71,9 @@ Microsoft recommends reviewing and categorizing usage scenarios, and then config
 
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Intune App Protection Policy Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
+> [!NOTE]
+> Preview: When using MAM for Windows, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
+
 ### Conditional Access Policies
 
 To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
@@ -102,7 +105,7 @@ The policies should include other Microsoft apps based on business need, additio
 
 Level 1 is the minimum data protection configuration for an enterprise mobile device. This configuration replaces the need for basic Exchange Online device access policies by requiring a PIN to access work or school data, encrypting the work or school account data, and providing the capability to selectively wipe the school or work data. However, unlike Exchange Online device access policies, the below App Protection Policy settings apply to all the apps selected in the policy, thereby ensuring data access is protected beyond mobile messaging scenarios.
 
-The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default data protection and access requirements settings when creating an App Protection Policy within Microsoft Endpoint Manager.  
+The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default data protection and access requirements settings when creating an App Protection Policy within Microsoft Intune.  
 
 #### Data protection
 

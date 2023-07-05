@@ -38,9 +38,9 @@ If the Citrix HDX Plus agent installation fails, the user can still connect to t
 
 While troubleshooting errors, make sure that the following steps have all been successful:
 
-- The users license state is synchronized from Citrix to Microsoft Endpoint Manager, including the users Azure Active Directory (Azure AD) user ID.
+- The users license state is synchronized from Citrix to Microsoft Intune, including the users Azure Active Directory (Azure AD) user ID.
   - The prerequisites have been met.
-  - The Citrix connector is enabled and healthy in Microsoft Endpoint Manager.
+  - The Citrix connector is enabled and healthy in Microsoft Intune.
   - The correct permissions have been set for the Citrix third-party apps in Azure AD. For more information on required permissions, see [Requirements for using Citrix HDX Plus for Windows 365 Enterprise](requirements-citrix.md).
   - The Azure AD user is added and discoverable  in the Citrix console.
 - The Citrix agent is downloaded on the Cloud PC.
