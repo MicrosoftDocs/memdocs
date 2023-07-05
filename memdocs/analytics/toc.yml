@@ -7,7 +7,7 @@ items:
     href: overview.md
   - name: Scores, baselines, and insights
     href: scores.md
-- name: Advanced Endpoint Analytics
+- name: Advanced Endpoint analytics
   items:
   - name: What is advanced Endpoint analytics?
     href: advanced-endpoint-analytics.md
@@ -35,8 +35,6 @@ items:
     href: work-from-anywhere.md
   - name: Endpoint analytics in Microsoft Adoption Score
     href: adoption-score.md
-  - name: Remediations
-    href: remediations.md
 - name: How-to guides
   items:
   - name: Manage settings
@@ -45,8 +43,6 @@ items:
     href: troubleshoot.md
 - name: Reference
   items:
-  - name: PowerShell scripts
-    href: powershell-scripts.md
   - name: Data collection
     href: data-collection.md
   - name: Get support

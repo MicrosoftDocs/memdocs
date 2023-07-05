@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/26/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -37,6 +37,18 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD
 ## Technician flow
 
 [!INCLUDE [Technician flow](../includes/technician-flow.md)]
+
+## Technician flow tips
+
+[!INCLUDE [Tips assignments](../includes/tips-assignments.md)]
+
+[!INCLUDE [Tips technician flow screens](../includes/tips-technician-flow-screens.md)]
+
+[!INCLUDE [Tips QR codes](../includes/tips-qr-codes.md)]
+
+[!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]
+
+[!INCLUDE [Tips technician flow inherit](../includes/tips-technician-flow-inherit.md)]
 
 ## Next step: User flow
 

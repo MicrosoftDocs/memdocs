@@ -1,10 +1,10 @@
 ---
 title: What is Endpoint analytics?
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Overview for Endpoint analytics.
 ms.date: 11/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: overview
 author: smritib17
 ms.author: smbhardwaj
@@ -30,40 +30,48 @@ These issues and other end-user experience problems persist because IT doesn't h
 
 **Endpoint analytics** aims to improve user productivity and reduce IT support costs by providing insights into the user experience. The insights enable IT to optimize the end-user experience with proactive support and to detect regressions to the user experience by assessing user impact of configuration changes.
 
+> [!IMPORTANT]
+> Endpoint analytics is now available to tenants in Government cloud.
+
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 You can enroll devices via Configuration Manager or Microsoft Intune.
 
 ### <a name="bkmk_intune_prereq"></a> To enroll devices via Intune requires:
+
 - Intune enrolled or co-managed devices running the following:
-   - Windows 10 version 1903 or later
-   - July 2021 cumulative update or later
-   - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
+  - Windows 10 version 1903 or later
+  - July 2021 cumulative update or later
+  - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
 - Windows devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
-   - After clicking **Start** for gathering data, other read-only roles can view the data.
+  - After clicking **Start** for gathering data, other read-only roles can view the data.
 
 ### <a name="bkmk_cm_prereq"></a> To enroll devices via Configuration Manager requires:
+
 - A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
 - The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
-- [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
-- [Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager](enroll-configmgr.md#bkmk_cm_upload).
+- [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
+- [Enable Endpoint analytics for devices uploaded to Microsoft Intune](enroll-configmgr.md#bkmk_cm_upload).
 
-### <a name="bkmk_prs_prereq"></a> Remediation scripting requires:
-Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](remediations.md#bkmk_prs) has the following requirements:
+<!-- ### Remediation scripting requirements
+
+Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](../intune/fundamentals/remediations.md) has the following requirements:
+
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
   - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
-  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
+  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607). -->
 
 ## Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
-Remediations also requires users of the devices to have one of the following licenses:
+<!-- Remediations also requires users of the devices to have one of the following licenses:
+
 - Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 - Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows 10/11 Virtual Desktop Access (VDA) per user -->
 
 ## Permissions
 
@@ -85,11 +93,11 @@ Use the following chart to see which built-in roles already have access to endpo
 |Read Only Operator||Yes|Read only|
 |Reports Reader|Yes||Read only|
 
-### Remediations permissions
+<!-- ### Remediations permissions
 
 For Remediations, the user needs permissions appropriate to their role under the **Device configurations** category.  Permissions in the **Endpoint Analytics** category aren't needed if the user only uses Remediations.
 
-An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using Remediations for the first time.
+An [Intune Service Administrator](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-service-administrator-permissions) is required to confirm licensing requirements before using Remediations for the first time. (removing this as part of moving Remediations to Intune)-->
 
 ## <a name="bkmk_endpoints"></a> Endpoints
 
@@ -112,7 +120,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 |-----------|-----------|
 | `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
 
-> [!Important]  
+>[!Important]  
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 ## Next steps

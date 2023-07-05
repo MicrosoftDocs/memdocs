@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/4/2021
+ms.date: 06/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -40,7 +40,7 @@ You can follow the below steps and create a dynamic group for any of the configu
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
-2. Select the **New Group** page, choose **Security** for **Group type**.
+2. On the **New Group** page, choose **Security** for **Group type**.
 3. Enter the following information:
     1. **Group name** = “All 2vCPU/4GB RAM Cloud PCs".
     2. **Group description** = “A dynamic device group containing all Cloud PCs with the 2vCPU/4GB RAM configuration.
