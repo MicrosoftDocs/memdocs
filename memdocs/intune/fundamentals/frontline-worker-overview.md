@@ -31,13 +31,13 @@ A frontline worker (FLW) is a person that works in an essential or critical role
 This article applies to:
 
 - Android devices owned by the organization and enrolled in Intune
-- iPadOS devices owned by the organization and enrolled in Intune
+- iOS and iPadOS devices owned by the organization and enrolled in Intune
 - Windows devices owned by the organization and enrolled in Intune
 
 > [!NOTE]
 > FLW devices are typically owned by the organization. End user personal devices can be used as FLW devices. Personal devices aren't covered in this article. This article focuses on corporate-owned devices.
 
-Frontline workers also rely on devices to enable their productivity, such as scanning concert tickets, scanning patient wrist bands in healthcare, or scanning inventory. If these devices fail, worker productivity and business operation can stop. Often, these types of devices can be categorized as mission critical.
+Frontline workers also rely on devices to enable their productivity, such as devices used to scan barcodes or devices utilized for field operations. If these devices fail, worker productivity and business operation can stop. Often, these types of devices can be categorized as mission critical.
 
 The article provides guidance on managing and configuring frontline worker (FLW) devices using Intune. These devices play a key role in running business operations. And, they're an extension of the operator who uses and relies on the device to be productive for day-to-day business operations.
 
@@ -119,7 +119,7 @@ The next decision is to decide if the devices are shared with many users or assi
 
 - **Shared device - No user association**
 
-  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. Typically, these users manually sign into apps; they don't sign in to the device.
+  With shared devices, a user gets the device, completes their tasks, and gives the device to another user. Typically, these users manually sign into apps; they don't sign into the device.
 
   When using shared devices:
 
