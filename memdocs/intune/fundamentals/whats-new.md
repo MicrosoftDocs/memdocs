@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/28/2023
+ms.date: 07/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,38 +68,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
-## Week of June 26, 2023
-
-### Device configuration
-
-#### Android (AOSP) supports assignment filters<!-- 7591220 -->
-
-Android (AOSP) supports assignment filters. When you create a filter for Android (AOSP), you can use the following properties:
-
-- DeviceName
-- Manufacturer
-- Model
-- DeviceCategory
-- oSVersion
-- IsRooted
-- DeviceOwnership
-- EnrollmentProfileName
-
-For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
-
-Applies to:
-
-- Android
-
-#### On-demand remediation for a Windows device<!-- 14783338 -->
-
-A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
-
-The **Run remediation** device action is rolling-out and may take a few weeks to reach all customers.
-
-For more information, go to:
-
-- [Remediations](../fundamentals/remediations.md)
+## Week of July 3, 2023
 
 ### Device management
 
@@ -134,6 +103,41 @@ Zebra released support for Android 13 on their devices. You can read more at [Mi
   The [Legacy Zebra OEMConfig app](https://play.google.com/store/apps/details?id=com.zebra.oemconfig.common) (opens the Google Play store) can only be used on Zebra devices running Android 11 and earlier.
 
 For more general information about Intune Android 13 support, go to the [Day Zero support for Android 13 with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/day-zero-support-for-android-13-with-microsoft-intune/ba-p/3601760) blog post.
+
+## Week of June 26, 2023
+
+### Device configuration
+
+#### Android (AOSP) supports assignment filters<!-- 7591220 -->
+
+Android (AOSP) supports assignment filters. When you create a filter for Android (AOSP), you can use the following properties:
+
+- DeviceName
+- Manufacturer
+- Model
+- DeviceCategory
+- oSVersion
+- IsRooted
+- DeviceOwnership
+- EnrollmentProfileName
+
+For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
+
+Applies to:
+
+- Android
+
+#### On-demand remediation for a Windows device<!-- 14783338 -->
+
+A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
+
+The **Run remediation** device action is rolling-out and may take a few weeks to reach all customers.
+
+For more information, go to:
+
+- [Remediations](../fundamentals/remediations.md)
+
+### Device management
 
 #### Windows Driver update management in Intune is generally available<!-- 5584639  -->  
 Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device's driver version. Driver update policies update automatically to add new updates as they are published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
