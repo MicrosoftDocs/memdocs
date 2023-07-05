@@ -70,7 +70,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of July 3, 2023
 
-#### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050   -->  
+#### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
 With [Defender for Endpoint security settings management](../protect/mde-security-integration.md) (security settings configuration), you can use Intune’s endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren’t enrolled with Intune.
 
 Now, you can opt-in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
