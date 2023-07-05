@@ -68,10 +68,10 @@ Your device must be running macOS 11 or later.
 
     ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/install-management-profile-macos-2006.png)  
 5. Your macOS system settings open in a new window. The management profile you just downloaded is shown.  
-    a. Select the profile to open it.  
-    b. Select **Install...**  
-    c. When asked to confirm installation, select **Install**.   
-    d. Enter your device password to allow the profile to enroll your device. Then select **Enroll**.  
+    1. Select the profile to open it.  
+    1. Select **Install...**  
+    1. When asked to confirm installation, select **Install**.   
+    1. Enter your device password to allow the profile to enroll your device. Then select **Enroll**.  
 6. Wait while the management profile installs and then enrolls your device. 
 7. Return to the Company Portal app and verify that there's a green checkmark next to **Install management profile**.  
 8. Your organization may require you to update your device settings. On the **Checking device settings** page, review the list of settings you need to change. Select **How to resolve this** to view related help documentation in a web browser.   
