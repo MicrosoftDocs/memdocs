@@ -274,10 +274,10 @@ On the *All devices* page In the Microsoft Azure portal, you can view device det
 
 :::image type="content" source="./media/mde-security-integration/azure-enrollment-validation.png" alt-text="A screenshot of the All device page in the Microsoft Azure portal with an example device highlighted." lightbox="./media/mde-security-integration/azure-enrollment-validation.png":::
 
-To ensure that all devices enrolled in Defender for Endpoint security settings configuration receive policies, we recommend creating a dynamic Azure AD group based on the one of the following:
+To ensure that all devices enrolled in Defender for Endpoint security settings configuration receive policies, we recommend creating a [dynamic Azure AD group](../fundamentals/groups-add.md) based on the devices’ OS Type. In addition, you can use one of the following options:
 
-- Use of the **managementType** attribute, when equal to **MDEManaged** or **MDEJoined**.
-- Use of other attributes like **deviceType** based on platform.
+- Use the **managementType** attribute, when equal to **MDEManaged** or **MDEJoined**.
+- Use other attributes like **deviceType** based on platform.
 
 With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
 
