@@ -9,7 +9,7 @@ ms.assetid: 2c6984bf-f2be-4e07-8c7c-579928d02cac
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to create a configuration manager object by using managed code, with included examples and links.
 ms.reviewer: mstewart,aaroncz 
