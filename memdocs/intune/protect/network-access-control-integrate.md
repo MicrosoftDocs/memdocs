@@ -45,6 +45,7 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - F5 BIG-IP Access Policy Manager 16.1.3.1 and later
 > - F5 BIG-IP Access Policy Manager 17.0 and later
 > - Ivanti Connect Secure 9.1R16 and later
+> - Aruba ClearPass with Microsoft Intune Extension v6 and later
 >
 > Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
 
