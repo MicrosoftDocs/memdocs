@@ -44,7 +44,7 @@ The advanced features in Endpoint analytics are included as an Intune-add on und
 
 If your tenant has an Intune subscription that includes the base Endpoint analytics product for all users and an add-on subscription that contains advanced features in Endpoint analytics for a subset of users, it's considered a mixed license scenario.
 
-Currently, the highest functional subscription sets the Endpoint aAnalytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint Analytics for all enrolled devices.  
+Currently, the highest functional subscription sets the Endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint Analytics for all enrolled devices.  
 
 ## Enabling advanced features for Endpoint analytics
 
