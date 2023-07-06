@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/10/2023
+ms.date: 07/07/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -25,7 +25,7 @@ ms.topic: how-to
 
 Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows to your existing devices. The apps you need for work can be automatically installed. If you manage Windows user data with OneDrive for Business, your data is synchronized, so users can resume working right away.
 
-_Windows Autopilot for existing devices_ lets you reimage and provision a Windows device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Azure Active Directory (Azure AD) or Active Directory (hybrid Azure AD join).
+**Windows Autopilot for existing devices** lets you reimage and provision a Windows device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Azure Active Directory (Azure AD) or Active Directory (hybrid Azure AD join).
 
 > [!NOTE]
 >
@@ -79,13 +79,14 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module AzureAD -Force
-    Install-Module Microsoft.Graph.Intune -Force
-    Install-Module WindowsAutopilotIntune -Force
+    Install-Module WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
+    Import-Module Microsoft.Graph.Groups
+    Import-Module Microsoft.Graph.Authentication
 
-    Import-Module AzureAD
-    Import-Module Microsoft.Graph.Intune
-    Import-Module WindowsAutopilotIntune
+    Import-Module WindowsAutopilotIntune -MinimumVersion 5.4.0
+    Import-Module Microsoft.Graph.Groups
+    Import-Module Microsoft.Graph.Authentication
+
     ```
 
 1. Enter the following commands and provide Intune administrative credentials:
@@ -93,7 +94,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
     Make sure the user account you specify has sufficient administrative rights.
 
     ```powershell
-    Connect-MSGraph
+    Connect-MgGraph -Scopes "DeviceManagementServiceConfig.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "Device.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All"
     ```
 
     Windows requests the user and password for your account with a standard Azure AD form. Type your username and password, and then select **Sign in**.
