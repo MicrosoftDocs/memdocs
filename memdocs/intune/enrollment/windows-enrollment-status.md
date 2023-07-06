@@ -148,7 +148,7 @@ If you assign a user or device more than one ESP profile, the profile with the h
  Intune applies profiles in the following order:  
 
 1. Intune applies the highest-priority profile assigned to the device (excluding the default ESP profile). 
-2. If no profiles are targeted at the device (exluding the default ESP profile), Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. In white glove and self-deploying scenarios, only profiles targeted at devices can be applied.   
+2. If no profiles are targeted at the device (excluding the default ESP profile), Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. Only profiles targeted at devices can be applied in white glove and self-deploying scenarios.   
 3. If no profiles are assigned to the device or user, Intune applies the default ESP profile.    
 
 To prioritize your profiles:  
