@@ -232,7 +232,7 @@ With [Endpoint Privilege Management](../protect/epm-overview.md) (EPM) you can m
 Soon, EPM will support options that let you control the run context of those child processes. You’ll be able to allow a child process to always run as elevated, run as elevated only if a rule exists for the child process, or never run as elevated (always run as a standard user).
 
 ### Tamper protection support for Windows on Azure Virtual Desktop<!--15135590  -->
-Intune will soon support use of Tamper protection for Windows on Azure Virtual Desktop multi- session.  Support for Tamper protection requires onboarding to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
+Intune will soon support use of Tamper protection for Windows on Azure Virtual Desktop multi-session. Support for Tamper protection requires onboarding to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
 
 
 ### Microsoft Defender for Endpoint Settings Management enhancements<!-- 14743017, 15319901, 18713045, 18713050, 17757959, 17757967 -->  
