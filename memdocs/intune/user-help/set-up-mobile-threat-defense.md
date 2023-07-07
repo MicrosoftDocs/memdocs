@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad  
 manager: dougeby
-ms.date: 06/20/2023
+ms.date: 07/07/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -41,9 +41,7 @@ Install a mobile threat defense (MTD) app on the personal device you use for wor
 ## Step 1: Install MTD app    
 >[!NOTE] An additional step, called *device registration*, happens prior to app installation on devices that aren't registered. Registration is required to confirm your identity and connect your school or work account to your device. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
-Install your organization's preferred mobile threat defense (MTD) app on your device. Your organization chooses the MTD app you need to use. If the app name or listing isn't provided to you during enrollment or app setup, contact your IT support person for help. 
-
-For example, some organizations prompt for the MTD app during device enrollment.
+Install your organization's preferred mobile threat defense (MTD) app on your device. Your organization chooses the MTD app you need to use. If the app name or listing isn't provided to you during enrollment or app setup, contact your IT support person to determine which app you need to use.  
 
 The following MTD apps are commonly used on Apple devices. Select an app to open its listing in the App Store.   
 
@@ -70,13 +68,13 @@ The following MTD apps are commonly used on Android devices. Select an app to op
 * [Zimperium MTD](https://play.google.com/store/apps/details?id=com.zimperium.zips)
 
 ## Step 2: Activate MTD app 
-Return to the **Get access** screen where you were first prompted to install the MTD app. Complete the following steps to activate the app on your iOS or Android device.  
+Complete the following steps to activate the MTD app on your iOS or Android device.  
 
 ### Activation for iOS app  
 1. Open the MTD app.  
 2. The MTD app asks for permission to open Microsoft Authenticator. Select **Open**. 
 3. Select your work account and sign in. 
-4. Wait while the MTD app scans your device for security threats. 
+4. Wait while the MTD app scans your device for security threats. If the scan doesn't happen automatically, you can start the scan yourself.  
 5. Return to the school or work app that you were originally trying to access, and then sign in. At this point, you may be prompted to complete other security and compliance requirements, such as creating a device PIN or encrypting your device. Follow the onscreen prompts to resolve pending requirements. If you're still blocked, you can:  
     * Go back to the **Get access** screen and select **Recheck**. Then try accessing your work app again.   
     * Go to the MTD app and [check for existing threats](#resolving-a-threat) you may have missed in the first scan. Follow the in-app guidance to resolve the threat. Then try accessing your work app again.   
@@ -84,11 +82,13 @@ Return to the **Get access** screen where you were first prompted to install the
 ### Activation for Android app  
 1. Open the MTD app.    
 2. Review and grant permissions, as needed, to the MTD app. Permissions vary by MTD app.  
-3. Wait while the MTD app scans your device for security threats. If the scan doesn't happen automatically, initiate   
-4.Return to the school or work app that you were originally trying to access, and then sign in. At this point, your organization might prompt you to configure other app security requirements, such as creating a PIN.  
-7. You should now have access to the app. If you're still blocked:  
-    * On the **Get access** screen, select **Recheck**.  
-    * Go to the MTD app and check for existing threats. Complete the recommended steps to resolve the threat and regain access.  
+3. Wait while the MTD app scans your device for security threats. If the scan doesn't happen automatically, you can start the scans yourself.
+4. Return to the Company Portal app or website.    
+    * Company Portal app: Select **CONFIRM DEVICE SETTINGS**.  
+    * Company Portal website: Select **Check status**.
+5. Now that you have the app set up, you should now be able to sign in to other work apps with your work account. If you're still blocked:
+    * Check the MTD app for threats and [resolve them](#resolving-a-threat).  
+    * Return to the Company Portal app and check for other compliance issues that need your attention. For more information, see [Check compliance in Company Portal app for Android](check-compliance-on-your-device-android.md).  
 
 ## Resolving a threat
 If a threat is detected and exceeds an acceptable threat level, your organization can either: 
@@ -106,14 +106,14 @@ To resolve a threat and regain access to work apps, complete the following steps
 
 ## Information your organization can see   
 
-Your organization can't see any data, such as texts, emails, and pictures, in your personal apps. The MTD app reports information about the apps on your device to your organization, including:  
+Your organization can't see any data, such as texts, emails, and pictures, in your personal apps. The MTD app reports information to your organization about work apps, including:  
 
 * App name  
 * App ID: The unique name that identifies the app in Google Play.  
 * App version and short version number: The specific release numbers for an app.  
 * App bundle and dynamic size: The amount of space an app uses on your device. 
 
-The actual information reported depends on the MTD vendor your organization uses.  
+The actual information reported depends on the MTD vendor your organization uses. For more information, contact your IT support person.  
 
 ## Get support
 Contact your IT support person for help with:
