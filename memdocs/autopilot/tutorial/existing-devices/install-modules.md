@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 07/07/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -57,15 +57,13 @@ To install the necessary modules to download the Autopilot profile(s) as a JSON 
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module Microsoft.Graph.Groups -Force
-    Install-Module Microsoft.Graph.Authentication -Force
-    Install-Module WindowsAutopilotIntune -Force
-    install-module Microsoft.Graph.Identity.DirectoryManagement -Force
-
+    Install-Module WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
     Import-Module Microsoft.Graph.Groups
     Import-Module Microsoft.Graph.Authentication
-    Import-Module WindowsAutopilotIntune
-    import-module Microsoft.Graph.Identity.DirectoryManagement
+
+    Import-Module WindowsAutopilotIntune -MinimumVersion 5.4.0
+    Import-Module Microsoft.Graph.Groups
+    Import-Module Microsoft.Graph.Authentication
     ```
 
 4. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. You may need to select **Enter** a second time to run the last command in the code block. Once all the commands have run successfully, the required modules are installed.
@@ -81,7 +79,7 @@ Once the required modules are installed, the following steps can be taken to ver
 1. Copy the following command by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 
     ```powershell
-    Connect-MgGraph -scopes Group.ReadWrite.All, Device.ReadWrite.All, DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All, GroupMember.ReadWrite.All
+    Connect-MgGraph -Scopes "DeviceManagementServiceConfig.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "Device.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All"
     ```
 
 1. Paste the command into the elevated PowerShell window and then select **Enter** on the keyboard to run the command.
