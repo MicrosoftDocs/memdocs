@@ -53,7 +53,7 @@ When you use Microsoft Defender for Endpoint, you can  deploy policies from Micr
 
 >[!NOTE]
 >
-> Beginning in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
+> Beginning in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the [opt-in public preview](), select the **Opt-in Public Preview** option.
 >
 > You can opt-in to the public preview by enabling the use of **Preview features** from within the [Microsoft 365 Defender portal](https://sip.security.microsoft.com/homepage). For more information on this, see [Microsoft Defender for Endpoint preview features](/microsoft-365/security/defender-endpoint/preview) in the Defender documentation.
 
@@ -81,7 +81,7 @@ Applies to:
 
 When you manage devices through security settings management as part of the public preview:
 
-- You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the Intune user interface for device views, policy management, and reports for security settings management.
+- You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
   To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
 
@@ -274,18 +274,20 @@ On the *All devices* page In the Microsoft Azure portal, you can view device det
 
 :::image type="content" source="./media/mde-security-integration/azure-enrollment-validation.png" alt-text="A screenshot of the All device page in the Microsoft Azure portal with an example device highlighted." lightbox="./media/mde-security-integration/azure-enrollment-validation.png":::
 
-To ensure that all devices enrolled in Defender for Endpoint security settings configuration receive policies, we recommend creating a [dynamic Azure AD group](../fundamentals/groups-add.md) based on the devices’ OS Type. In addition, you can use one of the following options:
-
-- Use the **managementType** attribute, when equal to **MDEManaged** or **MDEJoined**.
-- Use other attributes like **deviceType** based on platform.
-
-With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
-
-Also, when configuring  security settings management, if you intend to manage entire OS platform fleets using Microsoft Defender for Endpoint, by selecting **all devices** instead of **tagged devices** in the Microsoft Defender for Endpoint Enforcement Scope page, understand that any synthetic registrations are counted against Azure AD quotas the same as full registrations.
+To ensure that all devices enrolled in Defender for Endpoint security settings configuration receive policies, we recommend creating a [dynamic Azure AD group](../fundamentals/groups-add.md) based on the devices’ OS Type. With a dynamic group, devices that are managed by Defender for Endpoint are automatically added to the group without requiring admins to perform other tasks, like creating a new policy.
 
 > [!IMPORTANT]
 >
-> When using settings configuration behavior prior to joining the public preview, enrolled devices would use the following system labels (tags) of *MDEManaged* and *MDEJoined* to identify managed devices. With the changes introduced with the opt-in public preview, these system labels are no longer supported. Because dynamic groups that query for the system labels will cease to function properly, update the group queries to use the *managementType* attribute instead.
+> If you used security settings configuration prior to joining the public preview, review your Azure AD groups that rely on system labels and make changes that will identify the devices added after joining the public preview. Prior to the new opt-in public preview, enrolled devices would use the following system labels (tags) of *MDEManaged* and *MDEJoined* to identify managed devices. With the changes introduced with the opt-in public preview, these system labels are no longer supported and added to devices that enroll.
+
+With the behavior that is introduced with the public preview beginning in July of 2023, use the following guidance for your Dynamic groups:
+
+- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, WindowsServer, macOS, Linux) to ensure policy continues to be delivered for devices which change management types, for example during MDM enrollment.
+
+- If required, dynamic groups containing exclusively devices managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices managed by Defender for Endpoint via the security settings management functionality, and devices will only remain in this group while being managed by Defender for Endpoint.
+
+Also, when configuring security settings management, if you intend to manage entire OS platform fleets using Microsoft Defender for Endpoint, by selecting **all devices** instead of **tagged devices** in the Microsoft Defender for Endpoint Enforcement Scope page, understand that any synthetic registrations are counted against Azure AD quotas the same as full registrations.
+
 
 ::: zone-end
 
