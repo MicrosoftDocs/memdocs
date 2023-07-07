@@ -130,9 +130,10 @@ Security settings management isn't yet supported with Government clouds. For mor
 
 ### Active Directory requirements
 
-When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. Security settings management supports this scenario with the following requirements:
+When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. Security settings management fully supports this scenario with the following requirements:
 
 - Azure Active Directory Connect (Azure AD Connect) must be synchronized to the tenant that is used from Microsoft Defender for Endpoint.
+- Hybrid Azure Active Directory Join must be configured in your environment (either through Federation or Azure AD Connect Sync).
 - Azure AD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join).
 - Azure AD Connect rules for sync [must be modified for Server 2012 R2](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt#instructions-for-applying-computer-join-rule-in-aad-connect) (when support for Server 2012 R2 is needed).
 - All devices must register in the Azure Active Directory of the tenant that hosts Microsoft Defender for Endpoint. Cross-tenant scenarios aren't supported.
@@ -279,7 +280,7 @@ To ensure that all devices enrolled in Defender for Endpoint security settings c
 >
 > If you used security settings configuration prior to joining the public preview, review your Azure AD groups that rely on system labels and make changes that will identify the devices added after joining the public preview. Prior to the new opt-in public preview, enrolled devices would use the following system labels (tags) of *MDEManaged* and *MDEJoined* to identify managed devices. With the changes introduced with the opt-in public preview, these system labels are no longer supported and added to devices that enroll.
 
-With the behavior that is introduced with the public preview beginning in July of 2023, use the following guidance for your Dynamic groups:
+With the behavior that is introduced with the public preview in July of 2023, use the following guidance for your Dynamic groups:
 
 - (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, WindowsServer, macOS, Linux) to ensure policy continues to be delivered for devices which change management types, for example during MDM enrollment.
 
@@ -573,7 +574,6 @@ Security settings management won't work for a device that has PowerShell *Langua
 ## Next steps
 
 [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
-
 ::: zone pivot="mdssc-preview"
 [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
 ::: zone-end
