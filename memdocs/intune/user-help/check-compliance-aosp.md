@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 07/07/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -21,7 +21,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: 
+ms.reviewer: abigailstein
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -31,17 +31,15 @@ ms.collection:
 
 # Check compliance on your AOSP device  
 
-Refresh the device setting status in the Microsoft Intune app to:
+*Applies to Microsoft Intune app for AOSP*  
 
-* Recheck compliance on a device after setting changes.   
-* Get the latest compliance status on an enrolled device. 
+Use the Microsoft Intune app to remotely check the compliance status of an enrolled device, and confirm or resolve access issues caused by noncompliant settings. During a status check, the Intune app checks your device settings to make sure they meet your organization's requirements. If your device isn't compliant with requirements, your organization may limit or restrict it from accessing work resources until you make changes.  
 
-During a refresh, the Intune app does a compliance check. It verifies that the settings on your device meet your organization's requirements, and updates the device settings status to reflect the results. A device with a noncompliant status may be restricted from accessing work resources. You can resolve access issues by updating your device settings and refreshing the device settings status. 
-
-This article describes how to refresh the device settings status in the Intune app.  
+>[!TIP]
+> After you update the settings on a noncompliant device, start a compliance check to register the changes with the Intune app.   
 
 ## Check compliance  
-Complete these steps to check compliance on an enrolled device. 
+Complete these steps to check compliance and refresh the device settings status on an enrolled device. 
 
 1. Open the Microsoft Intune app for AOSP on your device.   
 
