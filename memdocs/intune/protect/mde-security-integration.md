@@ -83,8 +83,6 @@ When you manage devices through security settings management as part of the publ
 
 - You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
-  To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
-
 - Devices get their assigned policies based on their Azure AD device object. A device that isn’t already registered in Azure Active Directory is joined as part of this solution.
 
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft 365 Defender portal.
@@ -574,6 +572,3 @@ Security settings management won't work for a device that has PowerShell *Langua
 ## Next steps
 
 [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
-::: zone pivot="mdssc-preview"
-[Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
-::: zone-end
