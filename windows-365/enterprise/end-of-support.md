@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/30/2021
+ms.date: 06/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -42,7 +42,7 @@ A Windows 365 Cloud PC runs on the Windows OS and follows the [Microsoft Lifecyc
 
 ## Image status
 
-Windows 365 tracks end of support information in Microsoft Endpoint Manager on the **Provisioning policies** page under **Image status**. This column lets you know if the OS on the image used by each provisioning policy is supported or not.
+Windows 365 tracks end of support information in Microsoft Intune on the **Provisioning policies** page under **Image status**. This column lets you know if the OS on the image used by each provisioning policy is supported or not.
 
 | Image status | Gallery image | Custom image |
 | --- |--- | --- |

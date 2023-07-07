@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 title: Endpoint analytics documentation
-summary: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
+summary: "Official product documentation for Endpoint analytics in Microsoft Intune"
  
 metadata:
   title: Endpoint analytics documentation
-  description: "Official product documentation for Endpoint analytics in Microsoft Endpoint Manager"
+  description: "Official product documentation for Endpoint analytics in Microsoft Intune"
   ms.service: microsoft-intune
   ms.subservice: fundamentals
   ms.topic: landing-page
@@ -41,10 +41,6 @@ landingContent:
             url: enroll-intune.md
           - text: Enroll Configuration Manager devices
             url: enroll-configmgr.md
-      - linkListType: concept
-        links:
-          - text: Remediations
-            url: remediations.md
 
   # Card
   - title: Top tasks

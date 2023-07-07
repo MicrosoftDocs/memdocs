@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/25/2023
+ms.date: 06/05/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -71,11 +71,12 @@ You can also [change existing DFCI settings](/intune/configuration/device-firmwa
 
 ## OEMs that support DFCI
 
-- [Microsoft Surface](/surface/surface-manage-dfci-guide)
 - Acer
-- Panasonic
-- Fujitsu
+- Asus
 - Dynabook
+- Fujitsu
+- [Microsoft Surface](/surface/surface-manage-dfci-guide)
+- Panasonic
 
 Other OEMs are pending.
 

@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/26/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -43,6 +43,18 @@ For an overview of the Windows Autopilot for pre-provisioned deployment hybrid A
 > The technician flow portion of the hybrid Azure AD join process only requires connectivity to the Internet. It doesn't require connectivity to a domain controller. Connectivity to a domain controller to perform an on-premises domain join isn't needed until the next step of [User flow](hybrid-azure-ad-join-user-flow.md) is run.
 
 [!INCLUDE [Technician flow](../includes/technician-flow.md)]
+
+## Technician flow tips
+
+[!INCLUDE [Tips assignments](../includes/tips-assignments.md)]
+
+[!INCLUDE [Tips technician flow screens](../includes/tips-technician-flow-screens.md)]
+
+[!INCLUDE [Tips QR codes](../includes/tips-qr-codes.md)]
+
+[!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]
+
+[!INCLUDE [Tips technician flow inherit](../includes/tips-technician-flow-inherit.md)]
 
 ## Next step: User flow
 

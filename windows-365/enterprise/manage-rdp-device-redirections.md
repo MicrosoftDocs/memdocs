@@ -53,7 +53,7 @@ The following redirections can be managed by using the appropriate setting:
 
 There are two ways to manage these redirections:
 
-- Settings Catalog: Use a device configuration policy in Microsoft Endpoint Manager. Supports both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
+- Settings Catalog: Use a device configuration policy in Microsoft Intune. Supports both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
 - Group Policy Object (GPO): Use GPOs in Windows Server Active Directory. Supports hybrid Azure AD join Cloud PCs only.
 
 Follow the appropriate guidance to manage RDP device redirections.

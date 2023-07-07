@@ -10,7 +10,7 @@ ms.date: 07/21/2022
 <!-- 6010051, 15991492 -->
 
 > [!NOTE]
-> Microsoft Endpoint Manager has discontinued future investments in managing and deploying Windows Information Protection.
+> Microsoft Intune has discontinued future investments in managing and deploying Windows Information Protection.
 >
 > Support for the Windows Information Protection without enrollment scenario in Microsoft Intune has been removed.
 >

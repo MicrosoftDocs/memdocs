@@ -80,7 +80,7 @@ For more information on the available settings, see [Android app protection poli
 
 ## Utilize app configuration
 
-Office for iOS and Android supports app settings that allow unified endpoint management, like Microsoft Endpoint Manager, administrators to customize the behavior of the app.
+Office for iOS and Android supports app settings that allow unified endpoint management, like Microsoft Intune, administrators to customize the behavior of the app.
 
 App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the Intune App Protection Policy (APP) channel. Office for iOS and Android supports the following configuration scenarios:
 
@@ -97,7 +97,7 @@ Each configuration scenario highlights its specific requirements. For example, w
 > App configuration keys are case sensitive. Use the proper casing to ensure the configuration takes effect.
 
 > [!NOTE]
-> With Microsoft Endpoint Manager, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the App Protection Policy channel is referred to as a **Managed Apps** App Configuration Policy.
+> With Microsoft Intune, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the App Protection Policy channel is referred to as a **Managed Apps** App Configuration Policy.
 
 ## Only allow work or school accounts
 
@@ -108,7 +108,7 @@ You can learn more about configuring the org allowed accounts mode setting here:
 - [Android setting](app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-apps)
 - [iOS setting](app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-apps)
 
-This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Endpoint Manager, you need to consult with your UEM documentation on how to deploy these configuration keys.
+This configuration scenario only works with enrolled devices. However, any UEM provider is supported. If you are not using Microsoft Intune, you need to consult with your UEM documentation on how to deploy these configuration keys.
 
 ## General app configuration scenarios
 
@@ -162,6 +162,18 @@ To manage these, you can use the following key:
 |    com.microsoft.office.officemobile.TeamsApps.IsAllowed    |    **true** (default) enables Teams apps on Office for iOS and Android<br>**false** disables Teams apps on Office for iOS and Android    |
 
 This key can be used both by managed devices and managed apps.
+
+### Enable or disable Microsoft 365 Feed for iOS and Android
+
+Admins can now enable or disable the Microsoft 365 Feed by configuring the following setting in the Intune admin center. To deploy this app setting, use an [app configuration policy](app-configuration-policies-overview.md) in Intune.
+
+To manage the Microsoft 365 Feed, you can use the following key:
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.officemobile.Feed.IsAllowed    |    **true** (default) Feed is enabled for the tenant<br>**false** disables Feed for the tenant    |
+
+This key can be used by managed devices and managed apps.
 
 ## Next steps
 

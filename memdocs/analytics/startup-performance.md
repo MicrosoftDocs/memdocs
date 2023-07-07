@@ -1,10 +1,10 @@
 ---
 title: Startup performance in Endpoint Analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Get details about device startup performance in Endpoint Analytics
 ms.date: 03/31/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj
@@ -19,17 +19,19 @@ The startup performance score helps IT get users from power-on to productivity q
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 For devices enrolled via Intune, Startup performance insights are only available for:
+
 - Devices running an Enterprise, Professional, or Education edition of Windows 10 version 1903 or later.
-   - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
-   - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
-   - Long-term servicing channel (LTSC) and Home editions aren't currently supported.
+  - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+  - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
+  - Long-term servicing channel (LTSC) and Home editions aren't currently supported.
 - The devices must be Azure AD joined or hybrid Azure AD joined.
-   - Workplace joined machines aren't currently supported.
+  - Workplace joined machines aren't currently supported.
 
 For devices that do not meet the above criteria, you are able to [enroll via Configuration Manager](enroll-configmgr.md).
 
-> [!Important]
+> [!IMPORTANT]
 > Client devices require a restart to fully enable all analytics. <!--7698085--> The retention period for device boot and sign-in events is 29 days. If a device has not uploaded a boot or sign-in event in the past 29 days, it will not appear in the Startup performance report.
+
 ## <a name="bkmk_score"></a> Startup score
 
 [!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
@@ -73,9 +75,9 @@ The **Startup performance** page has reporting tabs that provide support for the
   > In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
 
 - **Startup processes**. Startup processes can negatively impact the user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab will show you which processes are impacting the sign-in "time to responsive desktop" phase, that is - keeping the CPU above 50% after the desktop has rendered. The table only lists processes that impact a minimum of 10 devices in your tenant. When reviewing startup processes, the following data calculations are displayed:
-   - **Device count**: The count of devices that experienced a delay to a responsive desktop from the process.
-   - **Median delay**: The median delay time of the process for the counted devices.
-   - **Total delay**: The sum of the delays for all of the counted devices.
+  - **Device count**: The count of devices that experienced a delay to a responsive desktop from the process.
+  - **Median delay**: The median delay time of the process for the counted devices.
+  - **Total delay**: The sum of the delays for all of the counted devices.
 
 ## Known issues
 
@@ -84,4 +86,4 @@ The **Startup performance** page has reporting tabs that provide support for the
 ## Next steps
 
 - Use the [Work from anywhere report](work-from-anywhere.md).
-- Use [Remediations](remediations.md) to help fix common support issues before end-users notice issues.
+- Use [Remediations](../intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.

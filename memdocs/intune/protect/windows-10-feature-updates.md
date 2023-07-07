@@ -235,7 +235,6 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 
 - Select **Delete** to delete the policy from Intune and remove it from devices.
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
-- Select **End user update status** to view information about the policy.
 
 > [!NOTE]
 > The End user update status Last Scanned Time value will return 'Not scanned yet' until an initial user logs on and Update Session Orchestrator (USO) scan is initiated. For more information on the Unified Update Platform (UUP) architecture and related components, see [Get started with Windows Update](/windows/deployment/update/windows-update-overview).

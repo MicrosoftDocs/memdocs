@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 06/26/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -63,6 +63,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 > - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
 > - Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
 > - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+> - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
 > [!NOTE]
 >
