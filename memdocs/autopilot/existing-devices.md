@@ -80,13 +80,14 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
     Install-Module WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
+    Install-Module Microsoft.Graph.Groups -Force
+    Install-Module Microsoft.Graph.Authentication -Force
+    Install-Module Microsoft.Graph.Identity.DirectoryManagement -Force
+
+    Import-Module WindowsAutopilotIntune -MinimumVersion 5.4
     Import-Module Microsoft.Graph.Groups
     Import-Module Microsoft.Graph.Authentication
-
-    Import-Module WindowsAutopilotIntune -MinimumVersion 5.4.0
-    Import-Module Microsoft.Graph.Groups
-    Import-Module Microsoft.Graph.Authentication
-
+    Import-Module Microsoft.Graph.Identity.DirectoryManagement
     ```
 
 1. Enter the following commands and provide Intune administrative credentials:
@@ -94,7 +95,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
     Make sure the user account you specify has sufficient administrative rights.
 
     ```powershell
-    Connect-MgGraph -Scopes "DeviceManagementServiceConfig.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "Device.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All"
+    Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
     ```
 
     Windows requests the user and password for your account with a standard Azure AD form. Type your username and password, and then select **Sign in**.
@@ -207,7 +208,8 @@ The name that's automatically assigned to the computer. This name follows the na
 Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format, and creates a directory for each profile on the current user's desktop:
 
 ```powershell
-Connect-MgGraph -Scopes "DeviceManagementServiceConfig.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "Device.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All" 
+
+Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
 $AutopilotProfile = Get-AutopilotProfile
 $AutopilotProfile | ForEach-Object {
     New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
