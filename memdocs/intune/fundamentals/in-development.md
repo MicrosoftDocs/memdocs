@@ -237,6 +237,7 @@ Intune will soon support use of Tamper protection for Windows on Azure Virtual D
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
+
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
