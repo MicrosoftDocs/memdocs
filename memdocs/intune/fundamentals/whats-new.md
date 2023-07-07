@@ -74,7 +74,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### Intune support for Zebra devices on Android 13<!-- 17192763 -->
 
-Zebra released support for Android 13 on their devices. You can read more at [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
+Zebra will be releasing support for Android 13 on their devices. You can read more at [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
 
 - **Temporary issues on Android 13**
 
@@ -86,11 +86,11 @@ Zebra released support for Android 13 on their devices. You can read more at [Mi
 
   2. New MX profiles don't apply to Android 13 devices. Newly enrolled Android 13 devices don't receive configuration from MX profiles. MX profiles that previously applied to enrolled devices continue to apply.
 
-  In a future update, these issues will be resolved and the behavior will return to how it was before.
+  In an update coming later in July, these issues will be resolved and the behavior will return to how it was before.
 
 - **Update devices to Android 13**
 
-  You can use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+  You will soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
 
   Before you migrate to Android 13, review [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
 
