@@ -53,7 +53,7 @@ When you use Microsoft Defender for Endpoint, you can  deploy policies from Micr
 
 >[!NOTE]
 >
-> Beginning in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the [opt-in public preview](), select the **Opt-in Public Preview** option.
+> Beginning in July of 2023, an opt-in public preview for security settings management is available. To view content that reflects the capabilities of the opt-in public preview, select the **Opt-in Public Preview** option.
 >
 > You can opt-in to the public preview by enabling the use of **Preview features** from within the [Microsoft 365 Defender portal](https://sip.security.microsoft.com/homepage). For more information on this, see [Microsoft Defender for Endpoint preview features](/microsoft-365/security/defender-endpoint/preview) in the Defender documentation.
 
@@ -83,8 +83,9 @@ When you manage devices through security settings management as part of the publ
 
 - You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
+  <!-- Pending Defender doc publication:
   To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
-
+  ->
 - Devices get their assigned policies based on their Azure AD device object. A device that isn’t already registered in Azure Active Directory is joined as part of this solution.
 
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft 365 Defender portal.
@@ -130,10 +131,9 @@ Security settings management isn't yet supported with Government clouds. For mor
 
 ### Active Directory requirements
 
-When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. Security settings management fully supports this scenario with the following requirements:
+When a device that is domain joined creates a trust with Azure Active Directory, this scenario is referred to as a *Hybrid Azure Active Directory Join* scenario. Security settings management supports this scenario with the following requirements:
 
 - Azure Active Directory Connect (Azure AD Connect) must be synchronized to the tenant that is used from Microsoft Defender for Endpoint.
-- Hybrid Azure Active Directory Join must be configured in your environment (either through Federation or Azure AD Connect Sync).
 - Azure AD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join).
 - Azure AD Connect rules for sync [must be modified for Server 2012 R2](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt#instructions-for-applying-computer-join-rule-in-aad-connect) (when support for Server 2012 R2 is needed).
 - All devices must register in the Azure Active Directory of the tenant that hosts Microsoft Defender for Endpoint. Cross-tenant scenarios aren't supported.
@@ -574,6 +574,11 @@ Security settings management won't work for a device that has PowerShell *Langua
 ## Next steps
 
 [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
+
+<!-- Pending Defender doc publication:
+
 ::: zone pivot="mdssc-preview"
 [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
 ::: zone-end
+
+-->
