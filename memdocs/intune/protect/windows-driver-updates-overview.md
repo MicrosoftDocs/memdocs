@@ -114,7 +114,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 To support reports for Windows Driver updates, you must enable the use of Windows diagnostic data in Intune. Its possible that diagnostic data is already enabled for other reports, like Windows Feature updates and Expedited Quality update reports.
 To enable the use of Windows diagnostic data:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=210943) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 2. Expand *Windows data* and ensure the setting **Enable features that require Windows diagnostic data in processor configuration** is toggled to **On**.
 
