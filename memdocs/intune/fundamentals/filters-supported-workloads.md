@@ -87,6 +87,7 @@ You can use filters for some common app policies on the following platforms. For
 | Microsoft Edge version 77 and newer | N/A |
 | Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
+| iOS/iPadOS web clip | ✔️ |
 | Line-of-business apps | ✔️ |
 | iOS/iPadOS volume purchase program (VPP) app | ✔️ |
 
@@ -110,6 +111,7 @@ You can use filters for some common app policies on the following platforms. For
 | Microsoft Edge version 77 and newer | ✔️ |
 | Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
+| Windows web link | ✔️ |
 | Line-of-business apps | ✔️ |
 | Windows app (Win32) | ✔️ |
 | Microsoft Store for Business | ✔️ |
