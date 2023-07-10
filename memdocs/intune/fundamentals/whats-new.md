@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2023
+ms.date: 07/10/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,6 +68,80 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of July 10, 2023
+
+### App management
+
+#### Updates to app configuration policy reporting<!-- 18098046  -->  
+As part of our continuing efforts to improve the Intune reporting infrastructure, there have been several user interface (UI) changes for app configuration policy reporting. The UI has been updated with the following changes:
+
+- There is no longer a **User status** tile or a **Not applicable device** tile on the **Overview** section of the **App configuration policies** workload.
+- There is no longer a **User install status** report on the **Monitor** section of the **App configuration policies** workload.
+- The **Device install status** report under the **Monitor** section of the **App configuration policies** workload no longer shows the **Pending state** in the **Status** column.
+
+You can find configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies**.
+
+## Week of July 3, 2023
+
+### Device management
+
+#### Intune support for Zebra devices on Android 13<!-- 17192763 -->
+
+Zebra will be releasing support for Android 13 on their devices. You can read more at [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
+
+- **Temporary issues on Android 13**
+
+  The Intune team thoroughly tested Android 13 on Zebra devices. Everything continues working as normal, except for the following two temporary issues for device administrator (DA) devices.
+
+  For Zebra devices running Android 13 and enrolled with DA management:
+
+  1. App installations don't happen silently. Instead, users get a notification from the Company Portal app (if they allow notifications) that asks for permission to allow the app installation. If a user doesn't accept the app installation when prompted, then the app doesn't install. Users will have a persistent notification in the notification drawer until they allow the installation.
+
+  2. New MX profiles don't apply to Android 13 devices. Newly enrolled Android 13 devices don't receive configuration from MX profiles. MX profiles that previously applied to enrolled devices continue to apply.
+
+  In an update coming later in July, these issues will be resolved and the behavior will return to how it was before.
+
+- **Update devices to Android 13**
+
+  You will soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+
+  Before you migrate to Android 13, review [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
+
+- **OEMConfig for Zebra devices on Android 13**
+
+  OEMConfig for Zebra devices on Android 13 requires using Zebra's new [Zebra OEMConfig Powered by MX OEMConfig app](https://play.google.com/store/apps/details?id=com.zebra.oemconfig.release) (opens the Google Play store). This new app can also be used on Zebra devices running Android 11, but not earlier versions.
+
+  For more information on this app, go to the [New Zebra OEMConfig app for Android 11 and later](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730) blog post.
+
+  The [Legacy Zebra OEMConfig app](https://play.google.com/store/apps/details?id=com.zebra.oemconfig.common) (opens the Google Play store) can only be used on Zebra devices running Android 11 and earlier.
+
+For more general information about Intune Android 13 support, go to the [Day Zero support for Android 13 with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/day-zero-support-for-android-13-with-microsoft-intune/ba-p/3601760) blog post.
+
+### Device security
+
+#### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
+With [Defender for Endpoint security settings management](../protect/mde-security-integration.md) (security settings configuration), you can use Intune’s endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren’t enrolled with Intune.
+
+Now, you can opt-in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
+
+- Intune’s endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings configurations.
+
+- Security settings configuration supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
+
+- For Windows devices, the Windows Security Experience profile is now supported with Security settings configuration.
+
+- A new onboarding workflow removes the Hybrid Azure AD Join prerequisite. Hybrid Azure AD Join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings configuration. With this change, those devices can now complete enrollment and start processing policies for security settings configuration.
+
+- Intune creates a synthetic registration in Azure AD for devices that can’t fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings configuration. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed form Azure AD in deference to the full registration.
+
+If you don’t opt-in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can’t deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile which is currently available for devices enrolled with Intune can’t be deployed to devices managed by Defender.
+
+Applies to:
+
+- Linux
+- macOS
+- Windows
+
 ## Week of June 26, 2023
 
 ### Device configuration
@@ -87,6 +161,10 @@ Android (AOSP) supports assignment filters. When you create a filter for Android
 
 For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
 
+Applies to:
+
+- Android
+
 #### On-demand remediation for a Windows device<!-- 14783338 -->
 
 A new device action that is in public preview allows you to run a remediation on-demand on a single Windows device. The **Run remediation** device action allows you to resolve issues without having to wait for a remediation to run on its assigned schedule. You will also be able to view the status of remediations under **Remediations** in the **Monitor** section of a device.
@@ -100,15 +178,15 @@ For more information, go to:
 ### Device management
 
 #### Windows Driver update management in Intune is generally available<!-- 5584639  -->  
-Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device’s driver version. Driver update policies update automatically to add new updates as they are published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
+Announcing the general availability of **Windows Driver update management** in Microsoft Intune. With driver update policies, you can view a list of driver updates that are recommended and applicable to your Windows 10 and Windows 11 device that are assigned to the policy. Applicable driver updates are those that can update a device's driver version. Driver update policies update automatically to add new updates as they are published by the driver manufacturer and remove older drivers that no longer apply to any device with the policy.
 
 Update policies can be configured for one of two approval methods:
 
-- With *Automatic approval*, each new *recommended* driver that’s published by the driver manufacturer and added to the policy is automatically approved for deployment to applicable devices. Policies set for automatic approvals can be configured with a deferral period before the automatically approved updates are installed on devices. This deferral gives you time to review the driver and to pause its deployment if necessary.
+- With *Automatic approval*, each new *recommended* driver that's published by the driver manufacturer and added to the policy is automatically approved for deployment to applicable devices. Policies set for automatic approvals can be configured with a deferral period before the automatically approved updates are installed on devices. This deferral gives you time to review the driver and to pause its deployment if necessary.
 
 - With *manual approval*, all new driver updates are automatically added to the policy, but an admin must explicitly approve each update before Windows Update deploys it to a device. When you manually approve an update, you choose the date when Windows Update will begin to deploy it to your devices.
 
-To help you manage driver updates, you review a policy and decline an update you don’t want to install, indefinitely pause any approved update,  and reapprove a paused update to restart its deployment.
+To help you manage driver updates, you review a policy and decline an update you don't want to install, indefinitely pause any approved update,  and reapprove a paused update to restart its deployment.
 
 This release also includes [driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
