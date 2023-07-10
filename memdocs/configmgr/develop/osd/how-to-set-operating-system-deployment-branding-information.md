@@ -9,7 +9,7 @@ ms.assetid: 95a1f0b7-2568-403f-bd24-43abc859eaf0
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to set operating system deployment branding information in the configuration manager by changing the property of the client agent component section.
 ms.reviewer: mstewart,aaroncz 
