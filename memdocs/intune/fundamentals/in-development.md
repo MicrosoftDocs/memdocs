@@ -84,15 +84,6 @@ Applies to:
 
 - macOS
 
-### Updates to app configuration policy reporting<!-- 18098046  -->  
-As part of our continuing efforts to improve the Intune reporting infrastructure, there will be several user interface (UI) changes for app configuration policy reporting. The UI will be updated with the following changes:
-
-- There will no longer be either a **User status** tile or a **Not applicable device** tile on the **Overview** section of the **App configuration policies** workload.
-- There will no longer be a **User install status** report on the **Monitor** section of the **App configuration policies** workload. 
-- The **Device install status** report under the **Monitor** section of the **App configuration policies** workload will no longer show the **Pending state** in the **Status** column.
-
-You can find configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies**.
-
 ### Default settings when adding Windows PowerShell scripts is changing<!-- 20986905  -->  
 In Intune, you can use policies to deploy Windows PowerShell scripts to your Windows devices (**Devices** > **Scripts** > **Add** > **Windows 10 and later**).
 
