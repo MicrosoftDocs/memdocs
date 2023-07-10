@@ -59,17 +59,14 @@ For example: A connected MTD app reports to the MTD vendor that a phone on your 
 
 Once you add a Mobile Threat Defense connector to your tenant, the status will show one of the following states:
 
-* **Unavailable**: Connector is/was deprovisioned. The MTD partner will need to talk to Intune to provision it once more.
-
-* **Not Set Up**: Connector setup is not complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available**
-
-* **Available**: Connector setup is complete. At least 1 platform toggle must be turned on for this status to change to **Enabled**.
-
-* **Enabled**: Connector setup is complete, and at least 1 platform toggle is currently turned on for this connector. 
-
-* **Unresponsive**: Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.
-
-* **Error**: Connector has an error code. Some MTD partners may choose to send this in an error case. 
+| Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
+|--------------|-----------|------------|------------|
+| **Unavailable**| Connector is/was deprovisioned. The MTD partner will need to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308)
+| **Not Set Up**| Connector setup is not complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | No | No
+| **Available**| Connector setup is complete. At least 1 platform toggle must be turned on for this status to change to **Enabled**. | No | No
+| **Enabled**| Connector setup is complete, and at least 1 platform toggle is currently turned on for this connector. | No | No
+| **Unresponsive**| Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.| No | No
+| **Error**| Connector has an error code. Some MTD partners may choose to send this in an error case. | No | No
 
 ## Data that Intune collects for Mobile Threat Defense
 
