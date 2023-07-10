@@ -21,7 +21,7 @@ The following sections can be used to help in troubleshooting issues you may com
 
 ### Custom client settings may incorrectly indicate Endpoint analytics data collection is enabled
 
-When you enable Endpoint analytics data upload in Configuration Manager, data collection is automatically enabled in your hierarchy's default client settings. Afterwards, any pre-existing custom [client settings](../memdocs/configmgr/core/clients/deploy/about-client-settings.md#computer-agent) that include the **Computer Agent** group of settings may appear to have the **Enable Endpoint analytics data collection** set to **Yes** in the Configuration Manager console, but this setting may not have been deployed to targeted devices.
+When you enable Endpoint analytics data upload in Configuration Manager, data collection is automatically enabled in your hierarchy's default client settings. Afterwards, any pre-existing custom [client settings](../../memdocs/configmgr/core/clients/deploy/about-client-settings.md#computer-agent) that include the **Computer Agent** group of settings may appear to have the **Enable Endpoint analytics data collection** set to **Yes** in the Configuration Manager console, but this setting may not have been deployed to targeted devices.
 
 **Impacted devices:**
 This issue impacts custom client settings objects that include the **Computer Agent** group of settings and were created and deployed prior to onboarding to Endpoint analytics. If you view Resultant Client Settings for devices targeted by such a custom client setting, you may find that Endpoint analytics data collection is not enabled.
@@ -48,11 +48,11 @@ ERROR - is NOT retyrable.
 Rollback transaction: XXXX
 ```
 
-**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../memdocs/configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently used by Endpoint analytics and isn't transmitted to Microsoft.
+**Mitigation:** To work around this issue, disable the collection of the [Browser Usage (SMS_BrowerUsage)](../../memdocs/configmgr/apps/deploy-use/deploy-edge.md#prerequisites-for-the-dashboard) hardware inventory class. This class isn't currently used by Endpoint analytics and isn't transmitted to Microsoft.
 
 ### Script requirements for Remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](../memdocs/intune/fundamentals/remediations.md) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
+If the option **Enforce script signature check** is enabled in the [Settings](../../memdocs/intune/fundamentals/remediations.md) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
@@ -62,7 +62,7 @@ First, ensure devices meet the prerequisites:
 
 - [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
 - [Prerequisites for Configuration Manager managed devices](enroll-configmgr.md#bkmk_prereq)
-- [Prerequisites for Remediations](../memdocs/intune/fundamentals/remediations.md)
+- [Prerequisites for Remediations](../../memdocs/intune/fundamentals/remediations.md)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
 
@@ -88,7 +88,7 @@ If your environment uses a proxy server, configure your proxy server to allow th
 > [!IMPORTANT]
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
-[!INCLUDE [Internet endpoints for Endpoint analytics](../memdocs/configmgr/core/plan-design/network/includes/internet-endpoints-endpoint-analytics.md)]
+[!INCLUDE [Internet endpoints for Endpoint analytics](../../memdocs/configmgr/core/plan-design/network/includes/internet-endpoints-endpoint-analytics.md)]
 
 ### Proxy server authentication
 
@@ -161,4 +161,4 @@ The maximum allowed output size limit for Remediation scripts is 2048 characters
 
 ## Next steps
 
-Use [Remediations](../memdocs/intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.
+Use [Remediations](../../memdocs/intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.
