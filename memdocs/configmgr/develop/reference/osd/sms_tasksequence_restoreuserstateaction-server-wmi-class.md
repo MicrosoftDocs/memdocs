@@ -9,7 +9,7 @@ ms.assetid: 616805c9-841d-44d4-b517-dcd4d57a13da
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequence_RestoreUserStateAction server class.
 ms.reviewer: mstewart,aaroncz 
