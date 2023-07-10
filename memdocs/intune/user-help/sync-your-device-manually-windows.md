@@ -77,11 +77,11 @@ Sync devices running Windows 10 or later from the system Settings app.
 
     * If your screen shows the **Access work or school** option, jump to [Access work or school steps](#access-work-or-school-steps) in this article.  
 
-      ![Example image of Settings app > Account settings highlighting the Access work or school option with a red rectangle.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+      ![Screenshot of the Settings app's account settings section highlighting the Access work or school option with a red rectangle.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
     * If your screen shows the **Work access** option, jump to [Work access steps](#work-access-steps) in this article.  
 
-      ![Example image of Settings app > Account settings highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
+      ![Screenshot of the account settings section highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
 
 ### Access work or school steps  
 
