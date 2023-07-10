@@ -15,11 +15,11 @@ ms.localizationpriority: high
 # What is advanced Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../memdocs/intune/fundamentals/intune-add-ons.md).
 
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 
-- **Custom device scopes** allow you to use [Scope tags](../intune/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices, such as devices you're responsible to manage, or devices belonging to a particular business group or assigned to a specific geographic region. For more information, see [Device scopes](device-scopes.md).
+- **Custom device scopes** allow you to use [Scope tags](../memdocs/intune/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices, such as devices you're responsible to manage, or devices belonging to a particular business group or assigned to a specific geographic region. For more information, see [Device scopes](device-scopes.md).
 
 - **Anomalies** monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. For more information, see [Anomaly detection](anomaly-detection.md).
 
@@ -38,7 +38,7 @@ The advanced features in Endpoint analytics build on top of the existing base En
 
 In addition to [license requirements](enroll-intune.md#licensing-prerequisites) for Endpoint analytics, an add-on license is required to use advanced features in Endpoint analytics.
 
-The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../memdocs/intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Mixed licensing scenarios
 

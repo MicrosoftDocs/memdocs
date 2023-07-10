@@ -82,6 +82,6 @@ For information about how to integrate and use automatic enrollment when provisi
 
 * [Windows Autopilot scenarios](../../autopilot/tutorial/autopilot-scenarios.md)  
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
-* [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
+* [Enable co-management in Configuration Manager](../../memdocs/configmgr/comanage/how-to-enable.md)  
 
 If you're not using automatic enrollment as part of your enrollment or provisioning solution, we recommend creating a domain name server (DNS) alias (known as a *CNAME* record type) that redirects enrollment requests to Intune servers. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).

@@ -46,7 +46,7 @@ ms.collection:
 
       For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
 
-    - **Membership type**: Choose how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
+    - **Membership type**: Choose how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](../memdocs/intune/fundamentals/groups-add.md).
 
     - **Owners**: Select users that own the group. Owners can also delete this group.
 
@@ -133,4 +133,4 @@ If you want all devices in the groups to automatically register to Autopilot, in
 
 After you have created a device group, you can configure and apply a Windows Autopilot deployment profile to each device in the group. Deployment profiles determine the deployment mode, and customize the OOBE for your end users. For more information, see [Configure deployment profiles](profiles.md).
 
-For more information about managing your Windows Autopilot devices, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md)
+For more information about managing your Windows Autopilot devices, see [What is Microsoft Intune device management?](../memdocs/intune/remote-actions/device-management.md)

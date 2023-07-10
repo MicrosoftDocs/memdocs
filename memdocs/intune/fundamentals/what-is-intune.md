@@ -88,15 +88,15 @@ Some key features and benefits of Intune include:
 
 Microsoft Intune integrates with other Microsoft products and services that focus on endpoint management, including:
 
-- **[Configuration Manager](../../configmgr/core/understand/introduction.md)** for on-premises endpoint management and Windows Server, including deploying software updates and managing data centers
+- **[Configuration Manager](../../memdocs/configmgr/core/understand/introduction.md)** for on-premises endpoint management and Windows Server, including deploying software updates and managing data centers
 
   You can use Intune and Configuration Manager together in a co-management scenario, use tenant attach, or use both. With these options, you get the benefits of the web-based admin center and can use other cloud-based features available in Intune.
 
   For more specific information, go to:
 
-  - [What is co-management](../../configmgr/comanage/overview.md)
-  - [Frequently asked questions about co-management](../../configmgr/comanage/faq.yml)
-  - [How to enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
+  - [What is co-management](../../memdocs/configmgr/comanage/overview.md)
+  - [Frequently asked questions about co-management](../../memdocs/configmgr/comanage/faq.yml)
+  - [How to enable tenant attach](../../memdocs/configmgr/tenant-attach/device-sync-actions.md)
 
 - **[Windows Autopilot](../../autopilot/windows-autopilot.md)** for modern OS deployment and provisioning
 

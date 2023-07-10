@@ -108,7 +108,7 @@ For each device that you'll deploy using user-driven deployment, these extra ste
   - If you use other methods, like Microsoft Store for Business or Partner Center, manually assign an Autopilot profile to the device.
 
 > [!TIP]
-> If the intended end-state of the device is co-management, you can configure device enrollment in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](../configmgr/comanage/autopilot-enrollment.md).<!-- Intune 11300628 -->
+> If the intended end-state of the device is co-management, you can configure device enrollment in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](../memdocs/configmgr/comanage/autopilot-enrollment.md).<!-- Intune 11300628 -->
 
 ## User-driven mode for hybrid Azure AD join
 
@@ -117,7 +117,7 @@ Windows Autopilot requires that devices be Azure AD-joined. If you have an on-pr
 > [!TIP]
 > As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure AD-joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
 >
-> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](../configmgr/core/clients/deploy/plan/client-installation-methods.md) for alternative options for installing the client.<!-- CMADO-10205503 -->
+> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process. See [Client installation methods in Configuration Manager](../memdocs/configmgr/core/clients/deploy/plan/client-installation-methods.md) for alternative options for installing the client.<!-- CMADO-10205503 -->
 
 ### Requirements for user-driven mode with hybrid Azure AD
 
@@ -213,6 +213,6 @@ For VPN configurations that automatically connect, the validation steps may be d
 
 [Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](windows-autopilot-hybrid.md)
 
-[How to enroll with Autopilot](../configmgr/comanage/autopilot-enrollment.md)
+[How to enroll with Autopilot](../memdocs/configmgr/comanage/autopilot-enrollment.md)
 
 [Try out Autopilot hybrid join over VPN in your Azure lab](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/trying-out-autopilot-hybrid-join-over-vpn-in-your-azure-lab/ba-p/1606723)

@@ -39,5 +39,5 @@ To share your feedback about Endpoint analytics, select the **Send a Smile** ico
 
 ## See also
 
-- [Find help for Configuration Manager](../configmgr/core/understand/find-help.md)
+- [Find help for Configuration Manager](../memdocs/configmgr/core/understand/find-help.md)
 - [Support for Microsoft Intune](../get-support.md)

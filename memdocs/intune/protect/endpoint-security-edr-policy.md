@@ -101,8 +101,8 @@ The following sections cover the required tasks:
 > [!TIP]
 > To learn more about using Microsoft Defender for Endpoint with Configuration Manager, see the following articles in the Configuration Manager content:
 >
-> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center](../../configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
-> - [Microsoft Intune tenant attach: Device sync and device actions](../../configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
+> - [Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center](../../memdocs/configmgr/core/get-started/2020/technical-preview-2003.md#bkmk_atp)
+> - [Microsoft Intune tenant attach: Device sync and device actions](../../memdocs/configmgr/core/get-started/2020/technical-preview-2002-2.md#bkmk_attach)
 
 ### Task 1: Install the update for Configuration Manager
 
@@ -114,7 +114,7 @@ Configuration Manager version 2002 requires an update to support use with Endpoi
 
 You’ll find this update as an *in-console update* for Configuration Manager 2002.
 
-To install this update, follow the guidance from [Install in-console updates](../../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
+To install this update, follow the guidance from [Install in-console updates](../../memdocs/configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
 
 After installing the update, return here to continue configuring your environment to support EDR policy from the Microsoft Intune admin center.
 
@@ -122,14 +122,14 @@ After installing the update, return here to continue configuring your environmen
 
 With Tenant attach you specify collections of devices from your Configuration Manager deployment to synchronize with the Microsoft Intune admin center. After collections synchronize, use the admin center to view information about those devices and to deploy EDR policy from Intune to them.  
 
-For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
+For more information about the Tenant attach scenario, see [Enable tenant attach](../../memdocs/configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
 #### Enable tenant attach when co-management hasn’t been enabled
 
 > [!TIP]
 > You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don’t need to enable co-management.
 
-If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
+If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../../memdocs/configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.
 2. In the ribbon, click **Configure co-management** to open the wizard.

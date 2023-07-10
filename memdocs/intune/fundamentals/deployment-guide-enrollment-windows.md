@@ -336,10 +336,10 @@ Clearly communicate the options users should choose on personal and organization
 
 If you use Configuration Manager, and want to continue to use Configuration Manager, then co-management enrollment is for you. Co-management manages Windows 10/11 devices using Configuration Manager and Microsoft Intune together. You cloud-attach your existing Configuration Manager environment to Intune. This enrollment option runs some workloads in Configuration Manager, and other workloads in Intune.
 
-For more specific information on co-management, see [What is co-management?](../../configmgr/comanage/overview.md).
+For more specific information on co-management, see [What is co-management?](../../memdocs/configmgr/comanage/overview.md).
 
 > [!NOTE]
-> Tenant attach is also an option when using Configuration Manager. You don't enroll devices, but you can upload your Configuration Manager devices to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Use the admin center to run some remote actions, see your on-premises servers, and get OS information. For more information, see [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
+> Tenant attach is also an option when using Configuration Manager. You don't enroll devices, but you can upload your Configuration Manager devices to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Use the admin center to run some remote actions, see your on-premises servers, and get OS information. For more information, see [enable tenant attach](../../memdocs/configmgr/tenant-attach/device-sync-actions.md).
 
 ---
 | Feature | Use this enrollment option when |
@@ -348,11 +348,11 @@ For more specific information on co-management, see [What is co-management?](../
 | You use Configuration Manager. | ✔️ <br/><br/> Configuration Manager can manage Windows Server. |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. |
 | Devices are enrolled in Intune. | ✔️ <br/><br/> You have devices you want to bring to co-management. Devices may have been enrolled using Windows Autopilot, or are direct from your hardware OEM. |
-| You have Azure AD Premium. | ✔️ <br/><br/>  Azure AD Premium may be required depending on your co-management configuration. For more specific information, see [Paths to co-management](../../configmgr/comanage/quickstart-paths.md). |
+| You have Azure AD Premium. | ✔️ <br/><br/>  Azure AD Premium may be required depending on your co-management configuration. For more specific information, see [Paths to co-management](../../memdocs/configmgr/comanage/quickstart-paths.md). |
 | You have remote workers. | ✔️ |
 | Devices are owned by the organization or school. | ✔️ |
 | Devices are personal or BYOD. | ✔️ |
-| You have new or existing devices. | ✔️ <br/><br/> For devices that aren't running Windows 10/11, such as Windows 7, you'll need to upgrade. For more specific information, see [Upgrade Windows 10 for co-management](../../configmgr/comanage/quickstart-upgrade-win10.md). |
+| You have new or existing devices. | ✔️ <br/><br/> For devices that aren't running Windows 10/11, such as Windows 7, you'll need to upgrade. For more specific information, see [Upgrade Windows 10 for co-management](../../memdocs/configmgr/comanage/quickstart-upgrade-win10.md). |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk, dedicated, or shared. | ✔️ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
@@ -363,15 +363,15 @@ For more specific information on co-management, see [What is co-management?](../
 
 ### Co-management administrator tasks
 
-The administrator tasks and requirements depend on the co-management option you choose. For more specific information, see [Paths to co-management](../../configmgr/comanage/quickstart-paths.md).
+The administrator tasks and requirements depend on the co-management option you choose. For more specific information, see [Paths to co-management](../../memdocs/configmgr/comanage/quickstart-paths.md).
 
 When setting up co-management, you choose to:
 
-- Automatically enroll existing Configuration Manager-managed devices to Intune. This option requires hybrid Azure AD joined devices. For more specific information, see [Tutorial: Enable co-management for existing Configuration Manager clients](../../configmgr/comanage/tutorial-co-manage-clients.md).
+- Automatically enroll existing Configuration Manager-managed devices to Intune. This option requires hybrid Azure AD joined devices. For more specific information, see [Tutorial: Enable co-management for existing Configuration Manager clients](../../memdocs/configmgr/comanage/tutorial-co-manage-clients.md).
 
 - Bring existing Intune enrolled Windows 10/11 devices to also be managed by Configuration Manager. In this situation, these devices aren't hybrid Azure AD joined devices. Meaning, the devices are registered in Azure AD. They're not registered in on-premises local Active Directory.
 
-  For more specific information, see [Tutorial: Enable co-management for new internet-based devices](../../configmgr/comanage/tutorial-co-manage-new-devices.md).
+  For more specific information, see [Tutorial: Enable co-management for new internet-based devices](../../memdocs/configmgr/comanage/tutorial-co-manage-new-devices.md).
 
 ### Co-management end user tasks
 

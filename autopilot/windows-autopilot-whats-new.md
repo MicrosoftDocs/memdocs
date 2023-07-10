@@ -42,7 +42,7 @@ A new toggle is available in the Enrollment Status Page (ESP) profile that allow
 
 ## New Microsoft Store apps now supported with the Enrollment Status Page
 
-The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../memdocs/intune/enrollment/windows-enrollment-status.md).
 
 
 ## Win32 App Supersedence ESP improvements
@@ -60,7 +60,7 @@ For more information on supported scenarios, see [Temporary Access Pass](windows
 
 Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and with Windows 11. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics may include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
+For more information, see [Collect diagnostics from a Windows device](../memdocs/intune/remote-actions/collect-diagnostics.md).
 
 ## Updates to Autopilot device targeting infrastructure
 
@@ -73,11 +73,11 @@ Starting in September 2022, the Intune Connector for Active Directory (ODJ conne
 
 ## Enroll to co-management from Windows Autopilot
 <!-- 11300628 -->
-With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](../configmgr/comanage/overview.md), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](../memdocs/configmgr/comanage/overview.md), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../memdocs/intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
 
-For more information, see [How to enroll to co-management with Autopilot](../configmgr/comanage/autopilot-enrollment.md).
+For more information, see [How to enroll to co-management with Autopilot](../memdocs/configmgr/comanage/autopilot-enrollment.md).
 
 ## Improvements to the enrollment status page
 <!-- 2202 -->
@@ -121,13 +121,13 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](../memdocs/intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
 ## Next steps
 
-[What's new in Microsoft Intune](../intune/fundamentals/whats-new.md)
+[What's new in Microsoft Intune](../memdocs/intune/fundamentals/whats-new.md)
 
 [What's new in Windows client](/windows/whats-new/)
 

@@ -81,10 +81,10 @@ If you currently don't use any MDM or mobile application management (MAM) provid
 
   Configuration Manager can:
 
-  - Manage [on-premises Windows Server and some client devices](../../configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
-  - Manage [partner or third party software updates](../../configmgr/sum/understand/software-updates-introduction.md).
-  - Create [custom task sequences](../../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying the Windows operating system.
-  - [Deploy and manage many app types](../../configmgr/apps/understand/introduction-to-application-management.md).
+  - Manage [on-premises Windows Server and some client devices](../../memdocs/configmgr/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
+  - Manage [partner or third party software updates](../../memdocs/configmgr/sum/understand/software-updates-introduction.md).
+  - Create [custom task sequences](../../memdocs/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) when deploying the Windows operating system.
+  - [Deploy and manage many app types](../../memdocs/configmgr/apps/understand/introduction-to-application-management.md).
 
 ## Currently use a third party MDM provider
 
@@ -172,25 +172,25 @@ If you currently use Configuration Manager, and want to use Intune, then you hav
 
 Tenant attach allows you to upload your Configuration Manager devices to your organization in Intune, also known as a "tenant". After you attach your devices, you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to run remote actions, like sync machine and user policy. You can also see your on-premises servers, and get OS information.
 
-Tenant attach is included with your [Configuration Manager co-management license](../../configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
+Tenant attach is included with your [Configuration Manager co-management license](../../memdocs/configmgr/core/understand/product-and-licensing-faq.yml) at no extra cost. It's the easiest way to integrate the cloud (Intune) with your on-premises Configuration Manager setup.
 
-For more information, see [enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
+For more information, see [enable tenant attach](../../memdocs/configmgr/tenant-attach/device-sync-actions.md).
 
 ### Option 2 - Set up co-management
 
 This option uses Configuration Manager for some workloads, and uses Intune for other workloads.
 
-1. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
+1. In Configuration Manager, set up [co-management](../../memdocs/configmgr/comanage/how-to-enable.md).
 2. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 
 Helpful information:
 
-- [What is co-management?](../../configmgr/comanage/overview.md)
-- [Co-management workloads](../../configmgr/comanage/workloads.md)
-- [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md)
-- [Configuration Manager product and licensing FAQ](../../configmgr/core/understand/product-and-licensing-faq.yml)
+- [What is co-management?](../../memdocs/configmgr/comanage/overview.md)
+- [Co-management workloads](../../memdocs/configmgr/comanage/workloads.md)
+- [Switch Configuration Manager workloads to Intune](../../memdocs/configmgr/comanage/how-to-switch-workloads.md)
+- [Configuration Manager product and licensing FAQ](../../memdocs/configmgr/core/understand/product-and-licensing-faq.yml)
 
 ### Option 3 - Move from Configuration Manager to Intune
 
@@ -207,12 +207,12 @@ This option is more work for administrators, but can create a more seamless expe
 
     Hybrid Azure AD support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
-2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
+2. In Configuration Manager, set up [co-management](../../memdocs/configmgr/comanage/how-to-enable.md).
 3. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
-4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
-5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
+4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../memdocs/configmgr/comanage/how-to-switch-workloads.md).
+5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../memdocs/configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
-    Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../../configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
+    Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../../memdocs/configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 
@@ -238,7 +238,7 @@ To manage your Windows client devices:
     - Set up [Microsoft 365 Business](/microsoft-365/business/set-up)
 
 2. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
-3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
+3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../memdocs/configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
 Devices are ready to be enrolled in Intune, and receive your policies.
 

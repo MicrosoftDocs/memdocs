@@ -360,7 +360,7 @@ To see a generated report of device state, you can use the following steps:
 2. Select **Devices** > **Monitor** > **Cloud attached devices** > **Reports** tab > **Co-Management Eligibility**.
 3. Select **Generate report** (or **Generate again**) to retrieve current data.
 
-For related information, see [What is co-management?](../../configmgr/comanage/overview.md).
+For related information, see [What is co-management?](../../memdocs/configmgr/comanage/overview.md).
 
 ## Antivirus agent status report (Organizational)
 
@@ -476,7 +476,7 @@ To see a generated report of device state, you can use the following steps:
 2. Select **Devices** > **Monitor** > **Cloud attached devices** > **Reports** tab >  **Co-Managed Workloads**.
 3. Select **Generate report** (or **Generate again**) to retrieve current data.
 
-For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
+For related information, see [What is co-management?](../../memdocs/configmgr/comanage/overview.md)
 
 ## Managed Apps report (Organizational)
 

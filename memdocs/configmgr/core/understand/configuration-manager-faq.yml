@@ -30,7 +30,7 @@ sections:
           The following Microsoft management solutions are all now part of the **Microsoft Intune** brand:
           
           - [Configuration Manager](../../index.yml)
-          - [Intune](../../../intune/index.yml)
+          - [Intune](../../../memdocs/intune/index.yml)
           - [Desktop Analytics](../../desktop-analytics/overview.md)
           - [Autopilot](../../../autopilot/enrollment-autopilot.md)
           
