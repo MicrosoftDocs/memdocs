@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/02/2023
+ms.date: 07/10/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -160,6 +160,7 @@ All endpoints connect over port 443 unless specified otherwise.
 | `https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net` | GCC |
 | cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
 | cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
+| *.infra.windows365.microsoft.us | GCC, GCCH |
 
 #### Intune-dependent URLs
 
