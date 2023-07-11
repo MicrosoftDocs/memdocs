@@ -83,6 +83,8 @@ When you manage devices through security settings management as part of the publ
 
 - You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
+  To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
+
 - Devices get their assigned policies based on their Azure AD device object. A device that isn’t already registered in Azure Active Directory is joined as part of this solution.
 
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft 365 Defender portal.
@@ -232,11 +234,10 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 :::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png" lightbox="./media/mde-security-integration/mde-architecture-2.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
-2. A registration is established for each device in Azure AD:
-   - If a device has an existing trust, that trust is used.
+2. Devices communicate with Intune. This enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
+3. A registration is established for each device in Azure AD:
+   - If a device was previously fully registered, like a Hybrid Join device, the existing registration is used.
    - For devices that haven't been registered, a synthetic device identity is created in Azure AD to enable the device to retrieve policies. When a device with a synthetic registration has a full Azure AD registration created for it, the synthetic registration is removed and the devices management continues on uninterrupted by using the full registration.
-   - For devices that were previously fully registered, like a Hybrid Join device, the existing registration is used.
-3. Devices use their Azure AD Identity to communicate with Intune. This identity enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
 4. Defender for Endpoint reports the status of the policy back to Microsoft Intune.
 
 > [!IMPORTANT]
@@ -420,7 +421,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
    - **MDEJoined** - Added to devices that are joined to the directory as part of this scenario.
    - **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
 
-   Instead, both the *MDEJoined* and *MDEManaged* labels are now only available as values for the **managementType** attribute.
+   Instead of using system labels, you can use the management type attribute, and configure it to **MicrosoftSense**.
 
    ::: zone-end
 
@@ -571,4 +572,11 @@ Security settings management won't work for a device that has PowerShell *Langua
 
 ## Next steps
 
-[Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
+- [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
+
+::: zone pivot="mdssc-preview"
+- [Manage endpoint security policies in Microsoft Defender for Endpoint](/::: zone pivot="mdssc-preview"
+[Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
+::: zone-end
+) in the Defender documentation.
+::: zone-end
