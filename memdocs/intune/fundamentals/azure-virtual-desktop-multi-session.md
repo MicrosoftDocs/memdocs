@@ -239,8 +239,8 @@ The following sections provide troubleshooting guidance for common issues.
 
 |Issue|Detail|
 |---------------|---------------------------------|
-|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you're using must be version 2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
-|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you're using isn't updated. The agent must be version 2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you're using must be version 1.0.2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you're using isn't updated. The agent must be version 1.0.2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
 
 ### Configuration issues
 

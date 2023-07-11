@@ -9,7 +9,7 @@ ms.assetid: 32db0107-f390-4324-9c36-e60976edf9eb
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to remove an action from an operating system deployment task sequence to delete the action from the sequence.
 ms.reviewer: mstewart,aaroncz 
