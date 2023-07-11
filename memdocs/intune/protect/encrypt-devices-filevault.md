@@ -150,6 +150,9 @@ To view information about devices that receive FileVault policy, see [Monitor di
 
 When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the device user.
 
+ > [!NOTE]
+ > A device that reports error code -2016341107 / 0x87d1138d generally means the end user has not accepted the FileVault prompt to begin encryption. 
+
 For managed devices, Intune can escrow a copy of the personal recovery key. Escrow of keys enables Intune administrators to rotate keys to help protect devices, and users to recover a lost or rotated personal recovery key.
 
 Intune escrows a recovery key when Intune policy encrypts a device, or after a user uploads their recovery key for device that they manually encrypted.
