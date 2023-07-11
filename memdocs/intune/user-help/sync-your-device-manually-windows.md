@@ -53,7 +53,7 @@ Complete these steps to sync a device in the Company Portal app. You can sync de
 
     ![Screenshot home page of Company Portal app, highlighting Settings area.](./media/RS1_homePage_settings_04.png)  
     
-    ![Screenshot settings page of Company Portal app, highlighting Sync button](./media/RS1_settingspage_sync05.png)  
+    ![Screenshot settings page of Company Portal app, highlighting Sync button.](./media/RS1_settingspage_sync05.png)  
 
 ## Sync from device taskbar or Start menu   
 
