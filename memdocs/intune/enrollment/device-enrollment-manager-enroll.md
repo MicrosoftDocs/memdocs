@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 07/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -88,7 +88,11 @@ The following types of Android Enterprise devices can't be set up via DEM:
 There are no users associated with a DEM-enrolled device, so apps can't be deployed as **Available**. 
 
 ### Apple Automated Device Enrollment  
-DEM isn't compatible with Apple Automated Device Enrollment (ADE).   
+DEM isn't compatible with Apple Automated Device Enrollment (ADE).
+
+### Android open source project (AOSP)
+AOSP does not support DEM accounts.
+
 
 ### Apple volume purchased apps  
 DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses. You can't use apps purchased through Apple VPP with Apple VPP user licenses, because of per-user Apple ID requirements for app management.  
