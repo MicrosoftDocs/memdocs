@@ -87,11 +87,11 @@ Sync devices running Windows 10 or later from the system Settings app.
 
 1. Select **Access work or school**.
 
-    ![Screenshot showing Access work or school option](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
+    ![Screenshot showing Access work or school option.](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
 2. Select your work account, which shows the email address associated with your work account, and a briefcase icon or Microsoft logo. 
 
-     ![Choose your account name next to the briefcase or Microsoft logo](./media/win10pc-rs1-sync-info-button.png)
+     ![Choose your account name next to the briefcase or Microsoft logo.](./media/win10pc-rs1-sync-info-button.png)
 
 3. Select **Info**. 
 
