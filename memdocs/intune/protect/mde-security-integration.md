@@ -234,11 +234,11 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 :::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png" lightbox="./media/mde-security-integration/mde-architecture-2.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
-2. A registration is established for each device in Azure AD:
+2. Devices use their Azure AD Identity to communicate with Intune. This identity enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
+3. A registration is established for each device in Azure AD:
    - If a device has an existing trust, that trust is used.
    - For devices that haven't been registered, a synthetic device identity is created in Azure AD to enable the device to retrieve policies. When a device with a synthetic registration has a full Azure AD registration created for it, the synthetic registration is removed and the devices management continues on uninterrupted by using the full registration.
    - For devices that were previously fully registered, like a Hybrid Join device, the existing registration is used.
-3. Devices use their Azure AD Identity to communicate with Intune. This identity enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
 4. Defender for Endpoint reports the status of the policy back to Microsoft Intune.
 
 > [!IMPORTANT]
