@@ -66,18 +66,11 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-## End user experience
+<!--## End user experience-->
 
-### Windows 365 web client keyboard shortcut redirection<!--43951825-->
-
-Windows 365 web client users will be able to use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC.
 
 <!-- ***********************************************-->
 ## Miscellaneous
-
-### Windows 365 Government setup tool<!--43461105-->
-
-A new Windows 365 Government setup tool will replace the current PowerShell scripts that are used to setup tenant mapping and permissions.
 
 ### Single sign on option per tenant (preview)<!--43751308-->
 

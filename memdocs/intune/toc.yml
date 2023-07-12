@@ -1540,7 +1540,7 @@ items:
 
       - name: Locks and passwords
         items:
-        - name: Lock device
+        - name: Remotely Lock device
           href: ./remote-actions/device-remote-lock.md
         - name: Reset passcode
           href: ./remote-actions/device-passcode-reset.md
