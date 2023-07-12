@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 07/17/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -55,7 +55,19 @@ Frontline Cloud PCs support remote actions like Enterprise Cloud PCs. One differ
 
 You can view the power state for Frontline Cloud PCs in the Intune portal on the devices **Properties** page.
 
-You can remotely power on and off a Frontline Cloud PC. When you power on a Frontline Cloud PC, a license is automatically consumed. When you power off a Frontline Cloud PC, any user currently signed in is signed off. Unsaved data on the Cloud PC is lost.
+You can remotely power on and off a Frontline Cloud PC. When you power on a Frontline Cloud PC, a license is automatically consumed. When you power off a Frontline Cloud PC:
+
+- Any user currently signed in is signed off.
+- Unsaved data on the Cloud PC is lost.
+
+You can also power on and power off Frontline Cloud PCs in bulk to help with: 
+
+- Run an update.
+- Apply an application across all Cloud PCs.
+- Make sure Cloud PCs are on for an incoming shift
+- Manage concurrency limits.
+
+Within the Intune portal, you can get to the bulk actions tab by going to **Devices**> **All devices** > **Bulk device actions**.  
 
 <!-- ########################## -->
 ## Next steps
