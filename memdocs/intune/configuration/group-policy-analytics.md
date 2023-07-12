@@ -165,7 +165,7 @@ Group Policy analytics can parse the following CSPs for MDM support:
 
 If your imported GPO has settings that aren't in the supported CSPs and Group Policies, then the settings may be listed in the **Unknown Settings** column. This behavior means the settings were identified in your GPO.
 
-While Group Policy analytics can parse the above CSP for MDM support details, here's [what you need to know with respect to migrating them](https://learn.microsoft.com/en-us/mem/intune/configuration/group-policy-analytics-migrate#what-you-need-to-know).
+Even though Group Policy analytics can parse the CSPs, there are some things you should know when migrating your imported GPOs. For more information, go to [Migrate your imported GPO to a Settings Catalog policy - What you need to know](group-policy-analytics-migrate.md#what-you-need-to-know).
 
 ## Group Policy migration readiness report
 
