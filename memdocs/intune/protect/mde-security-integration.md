@@ -178,7 +178,9 @@ With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defende
 - Amazon Linux 2  
 - Fedora 33 or higher
 
-*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enrol when they are missing the following filepath: `/sys/class/dmi/id/board_vendor`
+To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
+
+*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enrol when they are missing the following filepath: `/sys/class/dmi/id/board_vendor`. 
 
 
 **macOS**:
@@ -189,7 +191,9 @@ With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defende
 - macOS 12 (Monterey)
 - macOS 11 (Big Sur)
 
-*Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Azure AD before enrolling with security settings management receive a duplicate Device ID in Azure AD which is a synthetic registration.  When you create an Azure AD group for targeting policy, you must use the synthetic Device ID created by security settings management. In Azure AD the Join Type column for the synthetic Device ID  is blank.  
+To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for macOS*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-updates).
+
+*Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Azure AD before enrolling with security settings management receive a duplicate Device ID in Azure AD which is a synthetic registration.  When you create an Azure AD group for targeting policy, you must use the synthetic Device ID created by security settings management. In Azure AD the Join Type column for the synthetic Device ID  is blank.
 
 ::: zone-end
 
