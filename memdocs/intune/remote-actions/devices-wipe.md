@@ -35,7 +35,7 @@ By using the **Retire** or **Wipe** actions, you can remove devices from Intune 
 
 ## Wipe
 
-The **Wipe** action restores a device to its factory default settings. The user data is kept if you choose the **Retain enrollment state and user account** checkbox. Otherwise, all data, apps, and settings are removed.
+The **Wipe** device action restores a device to its factory default settings. The user data is kept if you choose the **Retain enrollment state and user account** checkbox. Otherwise, all data, apps, and settings are removed.
 
 |Wipe action|**Retain enrollment state and user account**|Removed from Intune management|Description|
 |:-------------:|:------------:|:------------:|------------|
@@ -79,17 +79,18 @@ A wipe is useful for resetting a device before you give the device to a new user
 
 If the device is on and connected, the **Wipe** action propagates across all device types in less than 15 minutes.
 
-### Android Enterprise personally owned devices with a work profile
+## Supported platforms for Wipe device action
 
-The **Wipe** action isn't supported on Android personally owned work profiles.
+**Wipe** is supported on the following platforms:
 
-### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
+- Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
+- Android Open Source Project (AOSP) devices
+- macOS
+- Windows
 
-The **Wipe** action is supported on Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
+**Wipe** isn't supported on:
 
-### Android Open Source Project (AOSP) devices
-
-The **Wipe** action is supported on AOSP devices (corporate-owned user-associated and userless devices).
+- Android Enterprise personally owned devices with a work profile
 
 ## Retire
 
