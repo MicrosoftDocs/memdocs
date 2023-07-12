@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 07/07/2023
+ms.date: 07/12/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -37,6 +37,10 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Create JSON file for Autopilot profile(s)
 
+> [!NOTE]
+>
+> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270)
+
 Once the proper modules have been installed to allow exporting of Autopilot profile(s) from Intune, the next step is to export the Autopilot profiles as JSON files. The JSON files are used to create a package in Configuration Manager.
 
 To export the Autopilot profiles as JSON files, follow these steps:
@@ -50,9 +54,10 @@ To export the Autopilot profiles as JSON files, follow these steps:
     ```powershell
     Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
     $AutopilotProfile = Get-AutopilotProfile
+    $targetDirectory = "C:\AutoPilot"
     $AutopilotProfile | ForEach-Object {
-    New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
-    $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+        New-Item -ItemType Directory -Path "$targetDirectory\$($_.displayName)"
+        $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "$targetDirectory\$($_.displayName)\AutopilotConfigurationFile.json"
     }
     ```
 
@@ -60,7 +65,7 @@ To export the Autopilot profiles as JSON files, follow these steps:
 
 1. Once signed into Intune, you may need to select **Enter** a second time to run the last command in the code block.
 
-1. Once all the commands have run successfully, the Autopilot profile(s) appears on the Desktop in a folder with the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own folder on the Desktop. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**.
+1. Once all the commands have run successfully, the Autopilot profile(s) appears in a subfolder under the folder specified by the `$targetDirectory` variable (by default `C:\AutoPilot`). The subfolder will have the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own folder on the Desktop. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**.
 
 > [!NOTE]
 >

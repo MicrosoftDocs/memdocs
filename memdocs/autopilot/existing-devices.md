@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 07/11/2023
+ms.date: 07/12/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -41,6 +41,10 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 > [!TIP]
 >
 > Using Autopilot for existing devices could be used as a method to convert existing hybrid Azure AD devices into Azure AD devices. Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+
+> [!NOTE]
+>
+> The PowerShell code snippets in this article were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270)
 
 ## Prerequisites
 
@@ -75,7 +79,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
 1. On an internet-connected Windows PC or server, open an elevated Windows PowerShell command window.
 
-1. Enter the following commands to install and import the necessary modules:
+2. Enter the following commands to install and import the necessary modules:
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
@@ -90,7 +94,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
     Import-Module Microsoft.Graph.Identity.DirectoryManagement
     ```
 
-1. Enter the following commands and provide Intune administrative credentials:
+3. Enter the following commands and provide Intune administrative credentials:
 
     Make sure the user account you specify has sufficient administrative rights.
 
@@ -205,15 +209,15 @@ The name that's automatically assigned to the computer. This name follows the na
 
 ## Create the JSON file
 
-Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format, and creates a directory for each profile on the current user's desktop:
+Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format. The Autopilot profile(s) appears in a subfolder under the folder specified by the `$targetDirectory` variable (by default `C:\AutoPilot`). The subfolder will have the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own folder on the Desktop. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**
 
 ```powershell
-
 Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
 $AutopilotProfile = Get-AutopilotProfile
+$targetDirectory = "C:\AutoPilot"
 $AutopilotProfile | ForEach-Object {
-    New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
-    $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+    New-Item -ItemType Directory -Path "$targetDirectory\$($_.displayName)"
+    $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "$targetDirectory\$($_.displayName)\AutopilotConfigurationFile.json"
 }
 ```
 
