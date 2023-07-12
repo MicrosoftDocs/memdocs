@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: brenduns
 author: Brenduns
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 07/12/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -23,7 +23,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Software updates admin checklist for managed Android Enterprise devices in Microsoft Intune
+# Software updates planning guide for managed Android Enterprise devices in Microsoft Intune
 
 Patches, major & minor updates, and new operating system versions are released frequently. Organizations must keep devices updated to get the latest security updates.
 
@@ -35,10 +35,10 @@ This article includes an admin checklist for enrolled and managed Android Enterp
 
 This article applies to:
 
-- Android Enterprise
+- Android Enterprise devices enrolled in Intune
 
 > [!TIP]
-> If your devices are personally owned, then go to the [software updates admin checklist for personal devices](software-updates-guide-personal-byod.md).
+> If your devices are personally owned, then go to the [software updates planning guide for personal devices](software-updates-guide-personal-byod.md).
 
 ## Before you begin
 
@@ -117,5 +117,6 @@ For more version information, go to [Supported operating systems and browsers in
 
 ## Next steps
 
-- [Software updates admin checklist and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
-- [Software updates admin checklist and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+- [Software updates planning guide and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
+- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+- [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)
