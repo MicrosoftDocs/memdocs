@@ -180,7 +180,7 @@ With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defende
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
 
-*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enrol when they are missing the following filepath: `/sys/class/dmi/id/board_vendor`. 
+*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they are missing the following filepath: `/sys/class/dmi/id/board_vendor`. 
 
 
 **macOS**:
