@@ -65,7 +65,7 @@ To export the Autopilot profiles as JSON files, follow these steps:
 
 1. Once signed into Intune, you may need to select **Enter** a second time to run the last command in the code block.
 
-2. Once all the commands have run successfully, the Autopilot profile(s) appears in a subfolder under the folder specified by the `$targetDirectory` variable (by default `C:\AutoPilot`). The subfolder will have the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**.
+1. Once all the commands have run successfully, the Autopilot profile(s) appears in a subfolder under the folder specified by the `$targetDirectory` variable. By default, the `$targetDirectory` variable is `C:\AutoPilot`, but it can be changed to another location if desired. The subfolder has the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**.
 
 > [!NOTE]
 >
