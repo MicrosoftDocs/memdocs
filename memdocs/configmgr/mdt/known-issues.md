@@ -8,7 +8,7 @@ ms.topic: article
 author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

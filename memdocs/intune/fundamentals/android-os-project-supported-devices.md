@@ -39,8 +39,8 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |
-| HTC     | HTC Vive Focus 3   | 5.2 - 3.0.999.624    | AR/VR Headset  |                    |
-| HTC     | HTC Vive XR Elite  | 5.2 - 3.0.999.624    | AR/VR Headset  |                    |
+| HTC     | HTC Vive Focus 3   | 5.2 - 5.0.999.624    | AR/VR Headset  |                    |
+| HTC     | HTC Vive XR Elite  | 4.0 - 1.0.999.350    | AR/VR Headset  |                    |
 | Meta    | Quest 2            | v49                 | AR/VR Headset  | Open Beta - US Only|
 | Meta    | Quest Pro          | v49                 | AR/VR Headset  | Open Beta - US Only|
 | PICO    | PICO Neo3 Pro/Eye     | PUI 4.8.19              | AR/VR Headset  |                    |

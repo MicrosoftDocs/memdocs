@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 07/07/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -48,7 +48,7 @@ To export the Autopilot profiles as JSON files, follow these steps:
 1. Copy the following commands by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 
     ```powershell
-    Connect-MSGraph
+    Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
     $AutopilotProfile = Get-AutopilotProfile
     $AutopilotProfile | ForEach-Object {
     New-Item -ItemType Directory -Path "~\Desktop\$($_.displayName)"
