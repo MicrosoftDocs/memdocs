@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2023
+ms.date: 07/12/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -154,7 +154,7 @@ For more information on scope tags, go to [RBAC and scope tags for distributed I
 
 ## Supported CSPs and group policies
 
-Group Policy analytics can parse the following CSPs:
+Group Policy analytics can parse the following CSPs for MDM support:
 
 - [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider)
 - [PassportForWork CSP](/windows/client-management/mdm/passportforwork-csp)
@@ -164,6 +164,8 @@ Group Policy analytics can parse the following CSPs:
 - [Group Policy Preferences](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn581922(v=ws.11)#group-policy-preferences-1)
 
 If your imported GPO has settings that aren't in the supported CSPs and Group Policies, then the settings may be listed in the **Unknown Settings** column. This behavior means the settings were identified in your GPO.
+
+While Group Policy analytics can parse the above CSP for MDM support details, here's [what you need to know with respect to migrating them](https://learn.microsoft.com/en-us/mem/intune/configuration/group-policy-analytics-migrate#what-you-need-to-know).
 
 ## Group Policy migration readiness report
 
