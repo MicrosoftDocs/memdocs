@@ -1080,20 +1080,24 @@ If you have integrated with IntuneSDK, `AppDelegate` class should be your `UIApp
 
 If you have already implemented all code and configuration changes to enable and handle MAM CA policy, ensure your application is able to handle MSAL response. The following delegate instance method should be part of your `AppDelegate` class to handle MSAL response:
 
-	func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-	        return MALOneAuth.handleMSALResponse(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
-	}
+```
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+	return MALOneAuth.handleMSALResponse(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
+}
+```
 
 If your application uses `SceneDelegate`, in that case instead of above instance method, add below delegate instance method in your `SceneDelegate` class:
 
-	func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-	    guard let urlContext = URLContexts.first else {
-	        return
-	    }
-	    let url = urlContext.url
-	    let sourceApp = urlContext.options.sourceApplication
-	    MALOneAuth.handleMSALResponse(url, sourceApplication: sourceApp)
-	}
+```
+func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+    guard let urlContext = URLContexts.first else {
+	return
+    }
+    let url = urlContext.url
+    let sourceApp = urlContext.options.sourceApplication
+    MALOneAuth.handleMSALResponse(url, sourceApplication: sourceApp)
+}
+```
 
 ### How can I troubleshoot my app?
 
