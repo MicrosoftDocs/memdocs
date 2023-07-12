@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 11/17/2022
+ms.date: 07/12/2023
 ms.topic: how-to
 ms.prod: windows-client
 ms.technology: itpro-deploy
