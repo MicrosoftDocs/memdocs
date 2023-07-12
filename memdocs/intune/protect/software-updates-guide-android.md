@@ -35,7 +35,7 @@ This article includes an admin checklist for enrolled and managed Android Enterp
 
 This article applies to:
 
-- Android Enterprise enrolled in Intune
+- Android Enterprise devices enrolled in Intune
 
 > [!TIP]
 > If your devices are personally owned, then go to the [software updates planning guide for personal devices](software-updates-guide-personal-byod.md).

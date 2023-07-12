@@ -25,15 +25,15 @@ ms.collection:
 
 # Software updates planning guide for managed macOS devices in Microsoft Intune
 
-Keeping your devices current with updates is critical. Admins must do what they can to reduce risk of security events, and reduce this risk with minimal disruption to the business & users. For macOS 12.4+ devices, you can use Intune manage device updates, including when devices are updated, and provide update status reporting for admins.
+Keeping your devices current with updates is critical. Admins must do what they can to reduce risk of security events, and reduce this risk with minimal disruption to the business & users.
 
-Intune has built-in policies that can manage software updates.
+Intune has built-in policies that can manage software updates. For macOS devices, you can use Intune to manage device updates, configure when devices are updated, and review the device update status.
 
 This article includes an admin guide for enrolled and managed macOS devices. Use this information to help manage software updates on your organization-owned devices.
 
 This article applies to:
 
-- macOS devices enrolled in Intune
+- macOS 12.4+ devices enrolled in Intune
 
 > [!TIP]
 > If your devices are personally owned, then go to the [software updates admin guide for personal devices](software-updates-guide-personal-byod.md).
@@ -51,7 +51,9 @@ To install updates faster and avoid delays, make sure the devices are:
 
 It's recommended you create policies that update your devices. It's not recommended to put this responsibility on end users.
 
-By default, users receive notifications and/or see the latest updates available on their devices (Settings > General > Software Updates). Users can choose to download and install updates whenever they want. They can also change the update behavior using the Automatic Updates feature on the device (Settings > Software Updates). These features change the way that macOS checks for and installs updates.
+By default, users receive notifications and/or see the latest updates available on their devices (Settings > General > Software Updates). Users can choose to download and install updates whenever they want.
+
+They can also change the update behavior using the Automatic Updates feature on the device (Settings > Software Updates):
 
 ?? We should replace this screenshot with one that has a white background. ??
 
@@ -65,19 +67,19 @@ When users install their own updates (instead of admins managing the updates), i
 
 - Users can disable checking for new updates entirely.
 
-- The default behavior is to not download and not install, which can lead to users ignoring update prompts.
-
 Because of these potential issues, Microsoft recommends that you evaluate your use case scenarios and deploy policies to manage the update experience to minimize risk and disruption to your business.
 
 For most macOS devices, Microsoft recommends the following steps:
 
-1. **Create a managed software update policy**: This policy forces updates to be downloaded and installed at a convenient time. Users aren't prompted and don't need to be using the device when the updates are installed.
+1. **[Create a managed software update policy](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed)**: This policy forces updates to be downloaded and installed at a convenient time. Users aren't prompted and don't need to be using the device when the updates are installed.
 
-    ?? Is the 2nd sentence true"? Based on the following section, there are screenshots that shows users being prompted. ??
+    ?? Is the 2nd sentence true? In Step 1, there are screenshots that shows users being prompted. ??
 
-2. **Create a Settings Catalog software update Policy**: This policy prevents end users from disabling update checks. It also configures the device to check for updates and prompt users regularly.
+2. **[Create a Settings Catalog software update policy](#-step-2---use-a-settings-catalog-policy-to-automatically-install-updates)**: This policy prevents end users from disabling update checks. It also configures the device to check for updates and prompt users regularly.
 
-3. **Configure and deploy Nudge**: This community tool prompts users quickly when an update is available. If the first two policies don't motivate end users to install updates, then Nudge reminds them.
+3. **[Configure and deploy Nudge](#-step-3---consider-using-the-nudge-community-tool)**: This community tool prompts users quickly when an update is available. If the first two policies don't motivate end users to install updates, then Nudge reminds them.
+
+This section focuses on these steps.
 
 ### ✔️ Step 1 - Use a software update policy to manage when updates are installed
 
@@ -101,7 +103,7 @@ For most organizations, Microsoft recommends you configure the following setting
   > [!NOTE]
   >
   > - On recent macOS builds, almost all updates show as **Configuration data files** or **All other updates**. The other update settings are mostly legacy updates for older builds of macOS.
-  > - The time specified in these settings is used by the Intune service. The time isn't the local device time. Be aware of this information when you configure a maintenance window for a global environment.
+  > - The time specified in these settings is used by the Intune service. The time isn't the local device time. Be aware of time differences when you configure a maintenance window, espeically for a global environment.
 
 - **Update policy schedule settings**
 
@@ -126,9 +128,11 @@ With these settings, this policy locks these settings so users can't change them
 
 ### ✔️ Step 2 - Use a settings catalog policy to automatically install updates
 
-This Intune policy manages **how** updates are installed. For example, you can configure the device to automatically install updates, including app updates, when they're available.
+This Intune policy manages **how** updates are installed.
 
-This settings catalog policy works with the [software update policy](#step-1---use-a-software-update-policy-to-manage-when-updates-are-installed). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
+For example, you can configure the device to automatically install updates, including app updates, when they're available.
+
+This settings catalog policy works with the [software update policy](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
 
 For more information on the settings catalog, including how to create a settings catalog policy, go to [Use the settings catalog to configure settings](../configuration/settings-catalog.md).
 
@@ -147,7 +151,7 @@ In your settings catalog policy, Microsoft recommends the following settings:
     - **Automatically Install MacOS Updates**: True
     - **Automatic Check Enabled**: True
 
-This policy locks these settings so users can't change them. On the device, the software update settings greyed out:
+This policy locks these settings so users can't change them. On the device, the software update settings are greyed out:
 
 :::image type="content" source="./media/software-updates-guide-macos/update-settings-with-settings-catalog-policy-macos.png" alt-text="The software update settings are greyed out after the Intune settings catalog update policy applies to a macOS Apple device.":::
 
@@ -165,9 +169,9 @@ There's also a [sample script and Intune configuration policy](https://github.co
 
 After the update policies are deployed, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can use the reporting feature to check the status of the updates.
 
-For each device, you can see its current state of updates. Devices > macOS then choose a device and select Update policies for macOS.
+For each device, you can see its current state of updates (Devices > macOS > select a device > Update policies for macOS):
 
-:::image type="content" source="./media/software-updates-guide-macos/intune-report-device-update-category-status.png" alt-text="A sample Nudge community tool message when a software update is available a macOS Apple device." lightbox="./media/software-updates-guide-macos/intune-report-device-update-category-status.png":::
+:::image type="content" source="./media/software-updates-guide-macos/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the udpate status of a macOS Apple device in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-macos/intune-report-device-update-category-status.png":::
 
 ## Next steps
 
