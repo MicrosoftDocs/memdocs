@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/11/2023
+ms.date: 07/12/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -57,7 +57,7 @@ Remove an enrolled device so that it's no longer managed by your organization. A
     ![Screenshot of Company Portal app, "Remove this device?" confirmation, highlighting the "OK" option.](./media/remove-device-from-company-portal-2101-03.png)  
 
 ## Disable Company Portal device management 
-Another way to remove your device from Intune is to disable the Company Portal app. After you disable the app, you can uninstall it. You can temporarily disable the app if you plan to use it again, but after you enable it again you must re-enroll your device.    
+Another way to remove your device from management is to disable the Company Portal app. Then you can uninstall the app from your device.    
 
 1. Sign in to Company Portal.   
 2. Tap the main menu.    
@@ -68,21 +68,26 @@ Another way to remove your device from Intune is to disable the Company Portal a
 
     ![Screenshot of Company Portal app, highlighting "Remove Company Portal" option in menu.](./media/remove-intune-company-portal-android-2101-02.png) 
 
-4. Tap **OK** to remove Company Portal and unenroll the device you're on.  
+4. Tap **OK** to remove Company Portal and unenroll the device you're on.   
 
-    ![Screenshot of Company Portal app,"Remove Company Portal?" confirmation, highlightin the "OK" option.](./media/remove-intune-company-portal-android-2101-03.png) 
+    ![Screenshot of Company Portal app,"Remove Company Portal?" confirmation, highlighting the "OK" option.](./media/remove-intune-company-portal-android-2101-03.png)  
+
+>![NOTE]
+> You can temporarily disable the app without uninstalling it if you plan to use it again. After you re-enable the app you must also re-enroll your device.  
 
 ## Uninstall the Company Portal app
 
-Company Portal is a device management app and can't be uninstalled until you remove your device from it. Once that's done, tap and hold the Company Portal app icon until you see **Uninstall**. Tap **Uninstall** to remove the app.    
+Company Portal is a device management app and can't be uninstalled until you remove your device from it. After you remove the device, tap and hold the Company Portal app icon until the app menu appears. Then tap **Uninstall** to remove the app.    
 
-Alternatively, go to device **Settings** > **Apps** and select **Company Portal** > **Uninstall**.  
+Alternatively, go to your device **Settings** > **Apps** and select **Company Portal** > **Uninstall**.  
 
 ## Remove the Company Portal app as a device administrator  
 
-As a last resort, you can remove your device and uninstall the app by removing Company Portal as device administrator. For example, if you declined the Microsoft terms of use while initially trying to sign in to the Company Portal app, all subsequent sign-in attempts are blocked.     
+As a last resort, you can remove the Company Portal app as a device administrator. Doing this will allow you to unenroll your device and uninstall the app.  
 
-Setting locations vary depending on the type of Android device you're using so follow the steps that align with your device.  
+>![TIP] If you decline the Microsoft terms of use when signing into the Company Portal app, all subsequent sign-in attempts will be blocked. Follow the steps in this section to remove the app as a device administrator, and then uninstall the app. If you didn't mean to decline the Mirosoft terms of use, you can reinstall the app and start over.
+
+Device administrator settings may appear differently on your device. Use the option that aligns with your device experience. 
 
 **Option 1**:  
 
