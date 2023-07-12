@@ -209,7 +209,7 @@ The name that's automatically assigned to the computer. This name follows the na
 
 ## Create the JSON file
 
-Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format. The Autopilot profile(s) appears in a subfolder under the folder specified by the `$targetDirectory` variable (by default `C:\AutoPilot`). The subfolder will have the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own folder on the Desktop. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**
+Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format. The Autopilot profile(s) appears in a subfolder under the folder specified by the `$targetDirectory` variable (by default `C:\AutoPilot`). The subfolder will have the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**
 
 ```powershell
 Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
