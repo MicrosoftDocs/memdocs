@@ -42,10 +42,6 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 >
 > Using Autopilot for existing devices could be used as a method to convert existing hybrid Azure AD devices into Azure AD devices. Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
-> [!NOTE]
->
-> The PowerShell code snippets in this article were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270)
-
 ## Prerequisites
 
 - A currently supported version of Microsoft Configuration Manager current branch.
@@ -76,6 +72,10 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 > [!TIP]
 >
 > To run the following commands on a computer running Windows Server 2012/2012 R2, first download and install the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616).
+
+> [!NOTE]
+>
+> The PowerShell code snippets in this article were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270)
 
 1. On an internet-connected Windows PC or server, open an elevated Windows PowerShell command window.
 
@@ -214,7 +214,7 @@ Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows Power
 ```powershell
 Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
 $AutopilotProfile = Get-AutopilotProfile
-$targetDirectory = "C:\AutoPilot"
+$targetDirectory = "C:\Autopilot"
 $AutopilotProfile | ForEach-Object {
     New-Item -ItemType Directory -Path "$targetDirectory\$($_.displayName)"
     $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "$targetDirectory\$($_.displayName)\AutopilotConfigurationFile.json"
