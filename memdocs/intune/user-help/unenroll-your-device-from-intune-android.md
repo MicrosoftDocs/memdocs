@@ -85,7 +85,7 @@ Alternatively, go to your device **Settings** > **Apps** and select **Company Po
 
 As a last resort, you can remove the Company Portal app as a device administrator. Doing this will allow you to unenroll your device and uninstall the app.  
 
->![TIP] 
+>[!TIP] 
 > If you decline the Microsoft terms of use when signing into the Company Portal app, all subsequent sign-in attempts will be blocked. Follow the steps in this section to remove the app as a device administrator, and then uninstall the app. If you didn't mean to decline the Microsoft terms of use, you can reinstall the app and start over.
 
 Device administrator settings may appear differently on your device. Use the option that aligns with your device experience. 
