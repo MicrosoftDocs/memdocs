@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 07/13/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -115,6 +115,10 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
+
+    > [!NOTE
+    > With Cisco AnyConnect in the personally owned work profile, there may be some extra steps for end users to complete the VPN connection. For more information, go to [VPN profiles - What successful VPN profiles look like](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles?tabs=android#what-successful-vpn-profiles-look-like).
+
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
@@ -170,31 +174,6 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-If you are using, Cisco Anyconnect VPN, follow the below steps to set up VPN connection for a Personally owned work profile. Since the Trusted Root and SCEP profiles are already installed on the device, you won't be prompted to install the SCEP certificates.
-
-1. You receive a notification to install the corporate VPN profile:
-   ![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/131980423/f0a2d359-1668-48f2-bddc-ffc6a7a6c884)
-
-2. If you do not get the notigivation, in the AnyConnect app tap the Change Settings button to enable the External Control option and click on notification displayed.
-
-![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/131980423/d2656716-ebe2-4d1c-ad86-1f43f24f5513)
-
-![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/131980423/e3c66bb9-7a85-4ba3-9d31-c1946223cca0)
-
-![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/131980423/7941f018-4282-4582-bbfe-d6911c3d1141)
-
-3. Select the SCEP certificate in the AnyConnect app:
-
-![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/131980423/7a1e5a3e-8a16-4be7-832d-1e3c96781cc5)
-
- Note: When using a device administrator-managed Android device, there may be multiple certificates because the certificates aren't revoked or removed when a certificate profile is changed or removed. In this scenario, select the newest certificate. It's usually the last certificate displayed in the list.
-
-This situation doesn't occur on Android Enterprise and Samsung Knox devices. For more information, see Manage Android work profile devices with Intune and Remove SCEP and PKCS certificates in Microsoft Intune.
-
-4. The VPN connection is successfully created.
-
-![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/131980423/adab76d3-bed1-4c0d-9407-521517d1e29f)
-
-
-
 You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows 10 and later](vpn-settings-windows-10.md).
+
+[Troubleshooting VPN profile issues in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles)
