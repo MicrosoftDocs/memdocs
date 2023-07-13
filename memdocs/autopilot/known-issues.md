@@ -31,6 +31,10 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Filtering Windows Autopilot devices not working as expected
+The Windows Autopilot devices blade within Intune may not work as expected if you are attempting to filter results. While we work on this issue, a workaround is to use the graph API to properly query and filter necessary devices.
+
+
 ### TPM attestation isn't working on some platforms with Infineon SLB9672 discrete TPMs
 
 Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK certificate may fail with error message **Something happened, and TPM attestation timed out.** To resolve this issue, contact your OEM for an update.
