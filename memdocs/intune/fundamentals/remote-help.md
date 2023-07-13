@@ -37,13 +37,6 @@ ms.collection:
 
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
-This feature applies to:  
-
-- Windows 10/11
-- Windows 11 on ARM64 devices
-- Windows 10 on ARM64 devices
-- Windows 365
-
 In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions.
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
@@ -84,7 +77,7 @@ The Remote Help app supports the following capabilities:
 
 - [Intune subscription](../fundamentals/licenses.md)
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
-- Windows 10/11
+- [Supported platforms and devices](#supported-platforms-and-devices)
 - The Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
 - The helpers' device must be enrolled in Intune
 
@@ -94,6 +87,15 @@ The Remote Help app supports the following capabilities:
 > - Remote Help is not supported on GCC, GCC High or DoD Tenants.
 > - You cannot establish a Remote Help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
+
+### Supported platforms and devices
+
+This feature applies to:  
+
+- Windows 10/11
+- Windows 11 on ARM64 devices
+- Windows 10 on ARM64 devices
+- Windows 365
 
 ### Network considerations
 
