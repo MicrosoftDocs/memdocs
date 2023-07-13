@@ -74,7 +74,7 @@ Use Intune Company Portal to enroll devices running on Windows 10, version 1607 
 
 ## Sync device to fix connection problems  
 
-After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync your Windows device manually](sync-your-device-manually-windows.md).     
+After enrolling, if you have trouble accessing work or school things, try syncing your device. For more information about syncing, see [Sync device](sync-your-device-manually-windows.md).     
 
 ## Enroll Windows 10, version 1511 and earlier device  
 Enroll devices running Windows 10, version 1511 and earlier. Company Portal doesn't support these versions, so setup is done in the Settings app.  
