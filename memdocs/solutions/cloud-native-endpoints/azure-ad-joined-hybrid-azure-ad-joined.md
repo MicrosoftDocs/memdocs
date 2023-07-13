@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 07/12/2023
+ms.date: 07/13/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
@@ -129,9 +129,10 @@ Consider the following scenarios:
 ### Common questions, answers, and scenarios
 
 This section answers common questions about Azure AD joined and hybrid Azure AD joined devices.
-#### Is hybrid Azure AD joined (HAADJ) meant to be a long term or end goal state for devices within an organization?
 
-No, HAADJ shouldn't be long term nor the end goal.
+#### Should hybrid Azure AD joined (HAADJ) be a long term or end goal state for devices?
+
+No, HAADJ shouldn't be long term nor the end goal for any organization.
 
 When you're not restricted or limited (technical, political, or regulatory reasons), your organization should be moving or planning on moving to Azure AD joined (AADJ) for your Windows endpoints.
 
@@ -173,9 +174,9 @@ On HAADJ endpoints, you can use on-premises group policies objects (GPO) or Intu
 
 For some guidance, go to [Deployment guide: Setup or move to Microsoft Intune](../../intune/fundamentals/deployment-guide-intune-setup.md).
 
-#### Which device join state is required for device compliance and/or conditional access?
+#### What device join states are required for device compliance and/or conditional access?
 
-With Microsoft Intune or co-management (Intune (cloud) + Configuration Manager (on-premises)), you can create [compliance policies](../../intune/protect/device-compliance-get-started.md). When combined with [conditional access](../../intune/protect/conditional-access.md), you can enforce your compliance policies on both HAADJ and AADJ endpoints.
+Both HAADJ and AADJ endpoints support [compliance policies](../../intune/protect/device-compliance-get-started.md) and [conditional access](../../intune/protect/conditional-access.md) when managed by Intune or co-managed by Intune and Configuration Manager.
 
 #### Are there limitations for HAADJ?
 
