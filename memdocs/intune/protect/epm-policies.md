@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,7 +57,6 @@ Before you can create Endpoint Privilege Management policies, you must license E
 ### About Windows elevation settings policy
 
 Use *Windows elevation settings policy* when you want to:
-<!-- To enable Endpoint Privilege Management (EPM) on a device, a *Windows elevation settings policy* must be assigned to it. This policy is necessary for EPM to be enabled, and includes the following uses: -->
 
 - **Enable Endpoint Privilege Management** on devices. By default, this policy enables EPM. When first enabled for EPM, a device provisions the components that collect usage data on elevation requests and that enforce elevation rules.
 
@@ -110,11 +109,15 @@ Each elevation rule:
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
-    >[!NOTE]
-    > For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md).
+- **Can manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the managed application creates.
 
-    >[!CAUTION]  
-    > We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. End users will automatically elevate these applications at *every* launch of that application.
+> [!NOTE]
+>
+> For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md).
+
+> [!CAUTION]
+>
+> We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. End users will automatically elevate these applications at *every* launch of that application.
 
 ### Reusable settings group
 
@@ -213,8 +216,14 @@ In addition to this policy, a device must also be assigned a Windows elevation s
        - *Business justification*: Require the user to enter a justification for running the file. There's no required format for the entry, however the user input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - *Windows authentication*: This option requires the user to authenticate using their organization credentials.
      - **Automatic**: This elevation type automatically runs the file in question with elevated permissions. Automatic elevation is transparent to the user, without prompting for confirmation or requiring justification or authentication by the user.
-      > [!CAUTION]
-      > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that are not well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
+
+     > [!CAUTION]
+     >
+     > Only use automatic elevation for files you trust. These files will automatically elevate without user interaction. Rules that are not well defined could allow unapproved applications to elevate. For more information on creating strong rules, see the [guidance for creating rules](../protect/epm-guidance-for-creating-rules.md).
+
+   - **Child process behavior**: By default, this option is set to *Require rule to elevate*, which requires the child process to match the same rule as process that creates it. Other options include:
+     - *Allow all child processes to run elevated*: This option should be used with caution as it allows applications to create child processes unconditionally.
+     - *Deny all*: This configuration prevents any child process from being created.
 
    *File information* is where you specify the details that identify a file that this rule applies to.
 

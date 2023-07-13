@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/07/2023
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,8 +87,11 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 - **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
   When you use Endpoint Privilege Management, there are two options for elevation behavior:
+
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
   - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
+
+  Each elevation rule can also set the elevation behavior for any child processes that the managed application creates. You can require a child processes to require its own rule before that child process can run in an elevated context, deny all child processes from running as elevated, or allow all child processes to run elevated.
 
 - **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received, and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
@@ -137,4 +140,3 @@ In addition to the dedicated roles, the following built-in roles for Intune also
 - [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
-
