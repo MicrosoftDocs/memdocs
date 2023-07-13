@@ -116,7 +116,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
 
-    > [!NOTE
+    > [!NOTE]
     > With Cisco AnyConnect in the personally owned work profile, there may be some extra steps for end users to complete the VPN connection. For more information, go to [VPN profiles - What successful VPN profiles look like](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles?tabs=android#what-successful-vpn-profiles-look-like).
 
   - **SonicWall Mobile Connect**
