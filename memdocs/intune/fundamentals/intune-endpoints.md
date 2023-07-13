@@ -44,7 +44,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 > [!NOTE]
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
-- The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols. Windows Information Protection uses port 444.
+- The endpoints in this article should be accessible via TCP port 80 and 443 via whatever method you use to allow access. Windows Information Protection uses port 444.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com.
 
 > [!NOTE]
