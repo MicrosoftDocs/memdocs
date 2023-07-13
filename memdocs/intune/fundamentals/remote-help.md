@@ -38,39 +38,43 @@ ms.collection:
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
 This feature applies to:  
+
 - Windows 10/11
+- Windows 11 on ARM64 devices
+- Windows 10 on ARM64 devices
+- Windows 365
 
 In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions.
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-The Remote Help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
+The Remote Help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren't enrolled. The app can also be deployed through Intune to your managed devices.
 
 ## Remote Help capabilities and requirements
 
 The Remote Help app supports the following capabilities:
 
-- **Enable Remote Help for your tenant** – By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
+- **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
-- **Use Remote Help with unenrolled devices** – Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
+- **Use Remote Help with unenrolled devices**: Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
-- **Requires Organization login** - To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can’t use Remote Help to assist users who aren’t members of your organization.
+- **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
-- **Conditional access** - Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help) 
+- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help) 
 
-- **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session. 
+- **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-    - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. This allows a helper to learn more about why the device isn't compliant.
- 
-    - Unenrolled devices are always reported as noncompliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
+  - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. This allows a helper to learn more about why the device isn't compliant.
 
-- **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access, like:
+  - Unenrolled devices are always reported as noncompliant. This is because until a device enrolls with Intune it can't receive policies from Intune and as such is unable to establish its compliance status.
+
+- **Role-based access control**: Admins can set RBAC rules that determine the scope of a helper's access, like:
   - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
   - The users that can only view a device, and which can request full control of the session while assisting others.
 
-- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer’s device that requires administrative permissions.
+- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer's device that requires administrative permissions.
 
-- **Monitor active Remote Help sessions, and view details about past sessions** – In the Microsoft Intune admin center you can view reports that include details about who helped who, on what device, and for how long. You’ll also find details about active sessions. An administrator can also reference audit log sessions created for Remote Help in Intune under **Tenant Administration** > **Audit Logs**.
+- **Monitor active Remote Help sessions, and view details about past sessions**: In the Microsoft Intune admin center you can view reports that include details about who helped who, on what device, and for how long. You'll also find details about active sessions. An administrator can also reference audit log sessions created for Remote Help in Intune under **Tenant Administration** > **Audit Logs**.
 
   For unenrolled devices, auditing and reporting about the Remote Help sessions is limited.
 
@@ -395,11 +399,14 @@ If a conditional access policy is configured as described above and if the devic
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+## July 13, 2023
+
+Version: 5.0.1045.0
+This version of Remote Help provides support for ARM64 devices including the Microsoft Surface Pro X and Parallels Desktop on macOS
 
 ### June 20, 2023
 
 Version: 4.2.1424.0
-
 With Remote Help 4.2.1424.0, a new in-session connection mode feature provides users with a way to seamlessly switch between full control and view-only modes during a remote assistance session.
 
 ### May 1, 2023
@@ -409,7 +416,7 @@ Version: 4.2.1270.0
 This version includes a minor update that enables future functionality.
 
 - Added support for slashes within the Remote Help URI (to enable future functionality)
- 
+
 ### March 27, 2023
 
 Version: 4.2.1167.0 - Changes in this release:
