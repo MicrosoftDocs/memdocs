@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/19/2023
+ms.date: 07/14/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -36,12 +36,12 @@ For users to be productive on their Windows 365 Cloud PC, it's important for Win
 
 There are two different ways to provide a localized Windows experience when users first sign in:
 
-- [Use a provisioning policy](use-provisioning-policy-default-display-language.md). If you plan on using a gallery image, you can select the language when you create the provisioning policy.
-- [Create a custom device image](create-custom-image-languages.md). If you plan on using a custom image and you manage your Cloud PCs through group policy, you can include the language as part of the custom image.
+- [Use a provisioning policy](use-provisioning-policy-default-display-language.md). If you plan on using a gallery image, you can select the language when you create the provisioning policy. When using this method to deploy language packs, the required content is automatically installed during the provisioning process. This content is downloaded from endpoints listed on the [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints) page. These Intune endpoints are already a requirement for Windows 365 operation, so they're accessible in your environment. Make sure TCP port 80 is open for these endpoints. As expolained by the Intune requirements, this port is used to download elements of the content.
+- [Create a custom device image](create-custom-image-languages.md). If you plan on using a custom image and you manage your Cloud PCs through group policy, you can include the language as part of the custom image. See the following section for the links to download content for this method of deployment.
 
-## URLs to allow
+## URLs to allow for custom image deployment
 
-For both the provisioning policy and custom image options to set up the display languages, make sure to add the following URLs to your firewall allowlist:
+For custom image deployments, you can download display languages from the following FQDNs:
 
 - Windows 11 21H2
   - LanguagePack: https://software-download.microsoft.com/download/sg/22000.1.210604-1628.co_release_amd64fre_CLIENT_LOF_PACKAGES_OEM.iso
