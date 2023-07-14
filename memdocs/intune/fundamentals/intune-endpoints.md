@@ -187,41 +187,41 @@ Ensure there are no firewall rules blocking outbound HTTPS/443 traffic to the en
 
 North America based locations
 
-- https://intunemaape1.eus.attest.azure.net
+- 'https://intunemaape1.eus.attest.azure.net'
 
-- https://intunemaape2.eus2.attest.azure.net
+- 'https://intunemaape2.eus2.attest.azure.net'
 
-- https://intunemaape3.cus.attest.azure.net
+- 'https://intunemaape3.cus.attest.azure.net'
 
-- https://intunemaape4.wus.attest.azure.net
+- 'https://intunemaape4.wus.attest.azure.net'
 
-- https://intunemaape5.scus.attest.azure.net
+- 'https://intunemaape5.scus.attest.azure.net'
 
-- https://intunemaape6.ncus.attest.azure.net
+- 'https://intunemaape6.ncus.attest.azure.net'
 
 Europe based locations
 
-- https://intunemaape7.neu.attest.azure.net
+- 'https://intunemaape7.neu.attest.azure.net'
 
-- https://intunemaape8.neu.attest.azure.net
+- 'https://intunemaape8.neu.attest.azure.net'
 
-- https://intunemaape9.neu.attest.azure.net
+- 'https://intunemaape9.neu.attest.azure.net'
 
-- https://intunemaape10.weu.attest.azure.net
+- 'https://intunemaape10.weu.attest.azure.net'
 
-- https://intunemaape11.weu.attest.azure.net
+- 'https://intunemaape11.weu.attest.azure.net'
 
-- https://intunemaape12.weu.attest.azure.net
+- 'https://intunemaape12.weu.attest.azure.net'
 
 Asia pacific locations
 
-- https://intunemaape13.jpe.attest.azure.net
+- 'https://intunemaape13.jpe.attest.azure.net'
 
-- https://intunemaape17.jpe.attest.azure.net
+- 'https://intunemaape17.jpe.attest.azure.net'
 
-- https://intunemaape18.jpe.attest.azure.net
+- 'https://intunemaape18.jpe.attest.azure.net'
 
-- https://intunemaape19.jpe.attest.azure.net
+- 'https://intunemaape19.jpe.attest.azure.net'
 
 ## Delivery Optimization port requirements  
 
