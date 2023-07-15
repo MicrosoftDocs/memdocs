@@ -47,7 +47,7 @@ _Windows Autopilot for existing devices_ lets you reimage and provision a Window
 - A currently supported version of Microsoft Configuration Manager current branch.
 - Assigned Microsoft Intune licenses.
 - Azure AD Premium.
-- A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an [OS image](../memdocs/configmgr/osd/get-started/manage-operating-system-images.md).
+- A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
 
 > [!NOTE]
 >
@@ -59,11 +59,11 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](../memdocs/intune/enrollment/windows-enrollment-status.md).
+1. Go to **Devices > Enroll Devices > Windows enrollment > Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
     :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
 
-1. Go to **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](../memdocs/intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
+1. Go to **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
     :::image type="content" source="images/mdm-config.png" alt-text="Configure MDM enrollment in Azure.":::
 
@@ -246,7 +246,7 @@ After you save the file, move it to a location for a Microsoft Configuration Man
     - Select **This package contains source files**
     - _Source folder_: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
 
-    For more information, see [Packages and programs in Configuration Manager](../memdocs/configmgr/apps/deploy-use/packages-and-programs.md).
+    For more information, see [Packages and programs in Configuration Manager](/mem/configmgr/apps/deploy-use/packages-and-programs).
 
 1. For the program, select the _Program Type_: **Don't create a program**
 
@@ -291,7 +291,7 @@ After you save the file, move it to a location for a Microsoft Configuration Man
 
 1. Complete the wizard with the default settings.
 
-For more information, see [How to create collections in Configuration Manager](../memdocs/configmgr/core/clients/manage/collections/create-collections.md).
+For more information, see [How to create collections in Configuration Manager](/mem/configmgr/core/clients/manage/collections/create-collections).
 
 ## Create a task sequence
 
@@ -305,7 +305,7 @@ For more information, see [How to create collections in Configuration Manager](.
 
     - A name for the task sequence. For example, **Autopilot for existing devices**.
     - Optionally add a description to better describe the task sequence.
-    - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](../memdocs/configmgr/core/plan-design/configs/support-for-windows-adk.md).
+    - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](/mem/configmgr/core/plan-design/configs/support-for-windows-adk).
 
 1. On the **Install Windows** page, select the Windows **Image package**. Then configure the following settings:
 
@@ -339,7 +339,7 @@ For more information, see [How to create collections in Configuration Manager](.
 
     > [!TIP]
     >
-    > Use offline image servicing to keep the image up to date with the latest Windows cumulative updates. For more information, see [Apply software updates to an image](../memdocs/configmgr/osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image).
+    > Use offline image servicing to keep the image up to date with the latest Windows cumulative updates. For more information, see [Apply software updates to an image](/mem/configmgr/osd/get-started/manage-operating-system-images#apply-software-updates-to-an-image).
 
 1. On the **Install applications** page, you can select applications to install during the task sequence. However, Microsoft recommends that you mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.  
 
@@ -349,15 +349,15 @@ For more information, see [How to create collections in Configuration Manager](.
 
 The Windows Autopilot for existing devices task sequence results in a device joined to Azure AD.
 
-For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](../memdocs/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md).
+For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
 If you edit the task sequence, it's similar to the default task sequence to apply an existing OS image. This task sequence includes the following extra steps:
 
 - **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
 
-- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](../memdocs/configmgr/osd/understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture).
+- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture).
 
-For more information on editing the task sequence, see [Use the task sequence editor](../memdocs/configmgr/osd/understand/task-sequence-editor.md) and [Task sequence steps](../memdocs/configmgr/osd/understand/task-sequence-steps.md).
+For more information on editing the task sequence, see [Use the task sequence editor](/mem/configmgr/osd/understand/task-sequence-editor) and [Task sequence steps](/mem/configmgr/osd/understand/task-sequence-steps).
 
 > [!NOTE]
 >
@@ -377,7 +377,7 @@ Next distribute all content required for the task sequence to distribution point
 
 1. When you're finished specifying content distribution, complete the wizard.
 
-For more information, see [Manage task sequences to automate tasks](../memdocs/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md).
+For more information, see [Manage task sequences to automate tasks](/mem/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks).
 
 ## Deploy the Autopilot task sequence
 

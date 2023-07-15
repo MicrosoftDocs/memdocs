@@ -64,14 +64,14 @@ User credentials are validated by Azure AD, and the device can also be joined to
 
 Once authenticated, Azure AD will trigger enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
 
-- [Intune network configuration requirements and bandwidth](../memdocs/intune/fundamentals/network-bandwidth-use.md)
-- [Network endpoints for Microsoft Intune](../memdocs/intune/fundamentals/intune-endpoints.md)
+- [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use)
+- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
 
 ### Autopilot automatic device diagnostics collection
 
 For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network. Diagnostics are available for 28 days before they are removed. 
 
-For more information, see [Collect diagnostics from a Windows device](../memdocs/intune/remote-actions/collect-diagnostics.md).
+For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 ### Windows Update
 
