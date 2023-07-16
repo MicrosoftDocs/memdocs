@@ -61,7 +61,7 @@ Be sure to [enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure
 2. Be sure to [assign the policy](device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy:
 
     - [Sync the policy in Intune](../remote-actions/device-sync.md)
-    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
+    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app-windows-10-or-later)  
 
 ## Check the Intune registry keys
 

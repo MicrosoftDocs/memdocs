@@ -9,7 +9,7 @@ ms.assetid: df3f9be7-c724-40f9-8d1e-368de8018bbd
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to create and start a configuration manager console node that displays available collections.
 ms.reviewer: mstewart,aaroncz 

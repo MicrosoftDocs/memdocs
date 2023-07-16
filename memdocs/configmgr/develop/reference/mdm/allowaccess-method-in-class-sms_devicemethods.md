@@ -9,7 +9,7 @@ ms.assetid: 898b0e12-ffc3-4650-bf2a-08817ac06ce3
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, parameters, return values, and requirement of the AllowAccess method.
 ms.reviewer: mstewart,aaroncz 

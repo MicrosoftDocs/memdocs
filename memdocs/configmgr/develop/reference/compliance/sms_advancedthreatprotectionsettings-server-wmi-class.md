@@ -9,7 +9,7 @@ ms.assetid: 276d3f64-bd9b-4112-b869-bdad7d8b6931
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: An overview of SMS_AdvancedThreatProtectionSettings Server WMI Class
 ms.reviewer: mstewart,aaroncz 
