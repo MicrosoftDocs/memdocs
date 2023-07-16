@@ -314,15 +314,15 @@ sections:
 
           For more information, see the following articles:
 
-          - [What is co-management?](../memdocs/configmgr/comanage/overview.md)
-          - [How to enroll with co-management when provision with Windows Autopilot](../memdocs/configmgr/comanage/autopilot-enrollment.md)
+          - [What is co-management?](/mem/configmgr/comanage/overview.md)
+          - [How to enroll with co-management when provision with Windows Autopilot](/mem/configmgr/comanage/autopilot-enrollment.md)
 
       - question: |
           Does Autopilot require Configuration Manager?
         answer: |
           No. It's not required, but you can use it together with Autopilot in the following scenarios:
 
-          - [Co-management](../memdocs/configmgr/comanage/overview.md)
+          - [Co-management](/mem/configmgr/comanage/overview.md)
           - [Autopilot for existing devices](existing-devices.md)
 
   - name: Features
