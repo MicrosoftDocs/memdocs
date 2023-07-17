@@ -55,7 +55,7 @@ The **Cloud management** metric measures the percent of PCs that have attached t
 
 Benefits of each cloud management type:<!--IN7207657-->
 
-|Benefits|[**Cloud management gateway (CMG)**](../memdocs/configmgr/core/clients/manage/cmg/overview.md)|[**Tenant attach**](../memdocs/configmgr/tenant-attach/device-sync-actions.md)|[**Co-management**](../memdocs/configmgr/comanage/overview.md)|[**Intune**](../memdocs/intune/fundamentals/what-is-intune.md)|
+|Benefits|[**Cloud management gateway (CMG)**](/mem/configmgr/core/clients/manage/cmg/overview)|[**Tenant attach**](/mem/configmgr/tenant-attach/device-sync-actions)|[**Co-management**](/mem/configmgr/comanage/overview)|[**Intune**](/mem/fundamentals/what-is-intune)|
 |---|---|---|---|---|
 | Manage your clients anywhere | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | View and take action on all Windows PCs from Microsoft Intune admin center| |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |

@@ -52,7 +52,7 @@ Rollback transaction: XXXX
 
 ### Script requirements for Remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](../../memdocs/intune/fundamentals/remediations.md) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
+If the option **Enforce script signature check** is enabled in the [Settings](/mem/fundamentals/remediations) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
@@ -62,7 +62,7 @@ First, ensure devices meet the prerequisites:
 
 - [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
 - [Prerequisites for Configuration Manager managed devices](enroll-configmgr.md#bkmk_prereq)
-- [Prerequisites for Remediations](../../memdocs/intune/fundamentals/remediations.md)
+- [Prerequisites for Remediations](/mem/fundamentals/remediations)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
 
@@ -161,4 +161,4 @@ The maximum allowed output size limit for Remediation scripts is 2048 characters
 
 ## Next steps
 
-Use [Remediations](../../memdocs/intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.
+Use [Remediations](/mem/fundamentals/remediations) to help fix common support issues before end-users notice issues.

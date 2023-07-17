@@ -13,6 +13,6 @@ ms.localizationpriority: medium
   - Permissions appropriate to the user's role under the **Endpoint Analytics**,  **Organization** or **School Administrator** categories.
 A read-only user would only need the **Read** permission under either category. An Intune administrator would typically need all permissions.
 
-  - **Read** under the **Help Desk Operator**, or **Endpoint Security Manager** [Intune roles](../../memdocs/intune/fundamentals/role-based-access-control.md).
+  - **Read** under the **Help Desk Operator**, or **Endpoint Security Manager** [Intune roles](/mem/fundamentals/role-based-access-control).
 
   - [**Reports Reader**](/azure/active-directory/roles/permissions-reference#reports-reader) Azure AD role.
