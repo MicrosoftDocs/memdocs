@@ -105,6 +105,9 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 
 | Domain/Name                       | Description                                           |
 |-----------------------------------|-------------------------------------------------------|
+|\*.alcdn.msauth.net|--|
+|\*.wcpstatic.microsoft.com|--|
+
 |\*.aria.microsoft.com             | Used for accessibility features within the app|
 |\*.events.data.microsoft.com      | Microsoft Telemetry Service |
 |\*.monitor.azure.com              | Required for telemetry and remote service initialization|
