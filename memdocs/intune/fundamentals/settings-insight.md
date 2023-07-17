@@ -63,7 +63,7 @@ This feature is now generally available.
 
 5. Select **Next** to go to the next tab.
 
-6. On the **Configuration settings** tab, view the groups of **Settings** that are available. You can expand a group to view the settings in that group, and the default values for those settings. Insights are available beside some settings with a lighbulb icon.
+6. On the **Configuration settings** tab, view the groups of **Settings** that are available. You can expand a group to view the settings in that group, and the default values for those settings. Insights are available beside some settings with a light bulb icon.
 
     :::image type="content" source="./media/settings-insight/createprofile-settingsinsight.png" alt-text="Settings insight shown while creating a profile" lightbox="./media/settings-insight/createprofile-settingsinsight.png":::
 
