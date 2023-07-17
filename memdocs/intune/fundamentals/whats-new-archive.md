@@ -160,7 +160,7 @@ Contact your device vendor or device manufacturer to ensure you get eligible dev
 For more information about DFCI profiles, go to:
 
 - [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/mem/autopilot/dfci-management)
+- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](/autopilot/dfci-management)
 
 Applies to:
 
@@ -2114,7 +2114,7 @@ Two Setup Assistant skip panes, previously released in Intune for public preview
 There is no change to functionality from the public preview release.
 
 #### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
-You can configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](../../autopilot/windows-autopilot.md) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+You can configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](/autopilot/windows-autopilot) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
 If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
 
@@ -3959,7 +3959,7 @@ The previous connectors remain in support but are no longer available for downlo
 
 #### Windows Autopilot diagnostics page (public preview)
 
-[Available settings](../enrollment/windows-enrollment-status.md) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#windows-autopilot-diagnostics-page). 
+[Available settings](../enrollment/windows-enrollment-status.md) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](/autopilot/windows-autopilot-whats-new.md#windows-autopilot-diagnostics-page). 
 
 ### Device management
 
@@ -7280,7 +7280,7 @@ Windows 10 feature update policies cannot be applied during the Autopilot out of
 ### Monitor and troubleshoot
 
 #### Windows Autopilot deployment reports (preview) <!-- 3856172   -->
-A new report details each device deployed through Windows Autopilot. For more information, see [Autopilot deployment report](../../autopilot/profiles.md#autopilot-deployments-report).
+A new report details each device deployed through Windows Autopilot. For more information, see [Autopilot deployment report](/autopilot/profiles.md#autopilot-deployments-report).
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -7518,10 +7518,10 @@ Applies to:
 ### Device management
 
 #### Edit device name value for Autopilot devices<!-- 2640074 -->
-You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](../../autopilot/add-devices.md#edit-autopilot-device-attributes).
+You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](/autopilot/add-devices.md#edit-autopilot-device-attributes).
 
 #### Edit Group Tag value for Autopilot devices<!-- 4816775   -->
-You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](../../autopilot/add-devices.md#edit-autopilot-device-attributes).
+You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](/autopilot/add-devices.md#edit-autopilot-device-attributes).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -8194,7 +8194,7 @@ You can set Device Enrollment Program profiles to skip the following Setup Assis
 For more information about Setup Assistant customization, see [Create an Apple enrollment profile for iOS ](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) and [Create an Apple enrollment profile for macOS ](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
 #### Add a user column to the Autopilot device CSV upload process<!-- 3823054 -->
-You can now add a user column to the CSV upload for Autopilot devices. This lets you bulk assign users at the time you import the CSV. For more information, see [Enroll Windows devices in Intune by using the Windows Autopilot](../../autopilot/enrollment-autopilot.md).
+You can now add a user column to the CSV upload for Autopilot devices. This lets you bulk assign users at the time you import the CSV. For more information, see [Enroll Windows devices in Intune by using the Windows Autopilot](/autopilot/enrollment-autopilot).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -8592,7 +8592,7 @@ To make it more intuitive, the **OrderID** attribute name on Autopilot devices h
 The Enrollment Status Page is now out of preview. For more information, see [Set up an enrollment status page](../enrollment/windows-enrollment-status.md).
 
 #### Intune user interface update - Autopilot enrollment profile creation<!-- 4593669 -->
-The user interface for creating an Autopilot enrollment profile has been updated to align with Azure user interface styles. For more information, see [Create an Autopilot enrollment profile](../../autopilot/profiles.md). Moving forward, additional Intune scenarios will be updated to this new UI style.
+The user interface for creating an Autopilot enrollment profile has been updated to align with Azure user interface styles. For more information, see [Create an Autopilot enrollment profile](/autopilot/profiles). Moving forward, additional Intune scenarios will be updated to this new UI style.
 
 #### Enable Autopilot Reset for all Windows devices<!-- 4225665 -->
 Autopilot Reset now works for all Windows devices, even those not configured to use the Enrollment Status Page. If an enrollment status page wasn't configured for the device during initial device enrollment, the device will go straight to the desktop after sign-in. It might take up to eight hours to sync and appear compliant in Intune. For more information, see [Reset devices with remote Windows Autopilot Reset](/windows/deployment/windows-autopilot/windows-autopilot-reset-remote).
@@ -9412,7 +9412,7 @@ To learn more about these settings, see [iOS](../configuration/device-restrictio
 ### Device enrollment
 
 #### Autopilot support for hybrid Azure Active Directory joined devices (Preview)<!-- 1048100-->
-You can now set up hybrid Azure Active Directory joined devices by using Autopilot. Devices must be joined to your organization's network to use the hybrid Autopilot feature. For more information, see [Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+You can now set up hybrid Azure Active Directory joined devices by using Autopilot. Devices must be joined to your organization's network to use the hybrid Autopilot feature. For more information, see [Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 This feature is rolling out across the user base over the next few days. Therefore, you might not be able to follow these steps until it rolls out to your account.
 
 #### Select apps tracked on the Enrollment Status Page<!-- 2531007 -->
@@ -9637,7 +9637,7 @@ For Samsung Knox Mobile Enrollment, Intune now supports enrolling devices to the
 - You can now configure a restart warning prompt for restarts that happen outside of work hours, which supports BYOD scenarios.
 
 #### Group Windows Autopilot-enrolled devices by correlator ID<!-- 2075110 -->
-Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal "OfflineAutopilotprofile-&#9001;correlator ID&#9002;". This allows arbitrary Azure AD dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](../../autopilot/enrollment-autopilot.md#windows-autopilot-for-existing-devices).
+Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal "OfflineAutopilotprofile-&#9001;correlator ID&#9002;". This allows arbitrary Azure AD dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](/autopilot/enrollment-autopilot.md#windows-autopilot-for-existing-devices).
 
 #### Intune app protection policies<!-- 2984657 -->
 Intune app protection policies allow you to configure various data protection settings for Intune protected apps, such as Microsoft Outlook and Microsoft Word. We've change the look and feel of these settings for both [iOS](../apps/app-protection-policy-settings-ios.md) and [Android](../apps/app-protection-policy-settings-android.md) to make it easier to find individual settings. There are three categories of policy settings:
@@ -9807,7 +9807,7 @@ You can control mobile device access to corporate resources using Conditional Ac
 You now have the option to run the Company Portal in Single App mode if you authenticate a user through the Company Portal instead of Setup Assistant during DEP enrollment. This option locks the device immediately after Setup Assistant completes so that a user must sign in to access the device. This process makes sure that the device completes onboarding and is not orphaned in a state without any user tied.
 
 #### Assign a user and friendly name to an Autopilot device<!--1346521 -->
-You can now [assign a user to a single Autopilot device](../../autopilot/enrollment-autopilot.md). Admins will also be able to give friendly names to greet the user when setting up their device with Autopilot.
+You can now [assign a user to a single Autopilot device](/autopilot/enrollment-autopilot). Admins will also be able to give friendly names to greet the user when setting up their device with Autopilot.
 Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 #### Use VPP device licenses to pre-provision the Company Portal during DEP enrollment<!-- 1608345 -->
@@ -9820,10 +9820,10 @@ A confirmation is now required to delete a Volume Purchase Program (VPP) token i
 You can [block Windows personal devices](../enrollment/enrollment-restrictions-set.md) from enrolling with [mobile device management](../enrollment/windows-enroll.md) in Intune. Devices enrolled with [Intune PC agent](./intune-legacy-pc-client.md) can't be blocked with this feature. This feature is rolling out over the next couple weeks so you might not see it immediately in the user interface.
 
 #### Specify machine name patterns in an Autopilot profile<!--1849855-->
-You can [specify a computer name template](../../autopilot/profiles.md) to generate and set the [computer name](/windows/client-management/mdm/accounts-csp) during Autopilot enrollment. Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
+You can [specify a computer name template](/autopilot/profiles) to generate and set the [computer name](/windows/client-management/mdm/accounts-csp) during Autopilot enrollment. Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 #### For Windows Autopilot profiles, hide the change account options on the company sign-in page and domain error page<!--1901669 -->
-There are [new Windows Autopilot profile options](../../autopilot/profiles.md) for admins to hide the change account options on the company sign-in and domain error pages. Hiding these options requires Company Branding to be configured in Azure Active Directory. 
+There are [new Windows Autopilot profile options](/autopilot/profiles) for admins to hide the change account options on the company sign-in and domain error pages. Hiding these options requires Company Branding to be configured in Azure Active Directory. 
 Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 ### macOS support for Apple Device Enrollment Program<!-- 747651 -->
@@ -10283,7 +10283,7 @@ See [Enable Defender for Endpoint with Conditional Access in Intune](../protect/
 Intune supports the ability to evaluate compliance on a user-less device, such as the Microsoft Surface Hub. Compliance policy can target specific devices. So compliance (and noncompliance) can be determined for devices that don't have an associated user.
 
 #### Delete Autopilot devices<!-- 1713650 -->
-Intune admins can [delete Autopilot devices](../../autopilot/add-devices.md#delete-autopilot-devices).
+Intune admins can [delete Autopilot devices](/autopilot/add-devices.md#delete-autopilot-devices).
 
 #### Improved device deletion experience<!--1832333 -->
 You're no longer be required to remove company data or factory reset a device before [deleting a device from Intune](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
@@ -11039,7 +11039,7 @@ As an Intune administrator, you can now specify a minimum and maximum version of
 Intune will continue to support enrolling Windows 8.1 PCs and phones. However, only Windows 10 versions can be set with minimum and maximum limits. To permit enrollment of 8.1 devices, leave the minimum limit empty.
 
 #### Alerts for Windows Autopilot unassigned devices <!-- 1631236 -->
-A new alert is available for Windows Autopilot unassigned devices on the **Microsoft Intune** > **Device enrollment** > **Overview** page. This alert shows how many devices from the Autopilot program do not have Autopilot deployment profiles assigned. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them. For more information, see [Enroll Windows devices using Windows Autopilot deployment program](../../autopilot/enrollment-autopilot.md).
+A new alert is available for Windows Autopilot unassigned devices on the **Microsoft Intune** > **Device enrollment** > **Overview** page. This alert shows how many devices from the Autopilot program do not have Autopilot deployment profiles assigned. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them. For more information, see [Enroll Windows devices using Windows Autopilot deployment program](/autopilot/enrollment-autopilot).
 
 
 #### Refresh button for Devices list   <!-- 1333581 -->
@@ -11222,7 +11222,7 @@ We have added support for certificate-based authentication (CBA) in the Company 
 Company apps that have been made available with or without enrollment on the Android Company Portal app can now be installed without a prompt to enroll.
 
 #### Windows Autopilot Deployment Program support in Microsoft Intune <!-- 747617  -->
-You can now use Microsoft Intune with Windows Autopilot Deployment Program to empower your users to provision their corporate devices without involving IT. You can customize the out-of-box experience (OOBE) and guide users to join their device to Azure AD and enroll in Intune. Working together, Microsoft Intune and Windows Autopilot eliminate the need to deploy, maintain, and manage operating system images. For details, see [Enroll Windows devices using Windows Autopilot deployment program](../../autopilot/enrollment-autopilot.md).
+You can now use Microsoft Intune with Windows Autopilot Deployment Program to empower your users to provision their corporate devices without involving IT. You can customize the out-of-box experience (OOBE) and guide users to join their device to Azure AD and enroll in Intune. Working together, Microsoft Intune and Windows Autopilot eliminate the need to deploy, maintain, and manage operating system images. For details, see [Enroll Windows devices using Windows Autopilot deployment program](/autopilot/enrollment-autopilot).
 
 #### Quickstart for device enrollment <!-- 1425655 --> 
 Quickstart is now available in **Device enrollment** and provides a table of references for managing platforms and configuring the enrollment process. A brief description of each item and links to documentation with step-by-step instructions provides useful documentation to simplify getting started.

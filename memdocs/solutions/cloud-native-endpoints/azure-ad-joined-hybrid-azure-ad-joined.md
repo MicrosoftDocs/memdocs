@@ -61,7 +61,7 @@ The endpoint is joined to Azure AD. It's not joined to an on-premises AD domain.
 
 To join Windows endpoints to Azure AD, you have some options:
 
-- **Use [Windows Autopilot](../../autopilot/index.yml)**. Windows Autopilot guides users through the Windows Out of Box Experience (OOBE). When users enter their work or school account, the endpoint joins Azure AD.
+- **Use [Windows Autopilot](/autopilot/index.yml)**. Windows Autopilot guides users through the Windows Out of Box Experience (OOBE). When users enter their work or school account, the endpoint joins Azure AD.
 
   All devices registered with Windows Autopilot are automatically considered organization owned devices. Windows Autopilot is one of the most adopted approaches to get organization devices joined to Azure AD and managed by IT.  
 

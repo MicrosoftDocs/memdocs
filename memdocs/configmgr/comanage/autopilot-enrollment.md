@@ -18,7 +18,7 @@ ms.collection: tier3
 
 <!-- Intune 11300628 -->
 
-When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app introduces component timing and policy delays.
+When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app introduces component timing and policy delays.
 
 Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
@@ -87,7 +87,7 @@ The following components are required to support Autopilot into co-management:
 
   - At least Windows 10, version 20H2, with the latest cumulative update
 
-- Register the device for Autopilot. For more information, see [Windows Autopilot registration overview](../../autopilot/registration-overview.md).
+- Register the device for Autopilot. For more information, see [Windows Autopilot registration overview](/autopilot/registration-overview).
 
   - Azure AD-joined only
 
@@ -99,7 +99,7 @@ The following components are required to support Autopilot into co-management:
 
   - [Enrollment status page profile](../../intune/enrollment/windows-enrollment-status.md), with the option to **Show app and profile configuration progress**
 
-  - [Windows Autopilot deployment profile](../../autopilot/profiles.md)
+  - [Windows Autopilot deployment profile](/autopilot/profiles)
 
 - Configuration Manager version 2111 or later, and the following features:
 
@@ -188,7 +188,7 @@ Investigate how the enrollment status page failed while waiting for Configuratio
 - The **Device setup** phase fails while waiting on the task sequence to complete. For more information, see [The task sequence doesn't complete](#the-task-sequence-doesnt-complete).
 
 > [!TIP]
-> For more information on troubleshooting Autopilot, see [Troubleshooting overview](../../autopilot/troubleshooting.md).
+> For more information on troubleshooting Autopilot, see [Troubleshooting overview](/autopilot/troubleshooting).
 
 ### The client installation doesn't complete
 
@@ -272,6 +272,6 @@ The enrollment status page tracks the task sequence as an app during the **Devic
 
 ## Next steps
 
-[Windows Autopilot scenarios and tutorials](../../autopilot/tutorial/autopilot-scenarios.md)
+[Windows Autopilot scenarios and tutorials](/autopilot/tutorial/autopilot-scenarios)
 
-[Windows Autopilot user-driven mode](../../autopilot/user-driven.md)
+[Windows Autopilot user-driven mode](/autopilot/user-driven)

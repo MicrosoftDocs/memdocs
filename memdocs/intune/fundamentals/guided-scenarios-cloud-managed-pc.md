@@ -54,7 +54,7 @@ You must supply your test device and test user in this guided scenario. Make sur
 
 - Set up a test user account in Azure Active Directory.
 - Create a test device running Windows 10, version 1903 or later.
-- (Optional) [Register the test device with Windows Autopilot](../../autopilot/add-devices.md#add-devices).
+- (Optional) [Register the test device with Windows Autopilot](/autopilot/add-devices#add-devices).
 - (Optional) Enable [branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 ## Step 2 - User
