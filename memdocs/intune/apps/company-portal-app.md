@@ -37,7 +37,7 @@ ms.collection:
 The Company Portal apps, Company Portal website, and Intune app on Android are where users access company data and can do common tasks. Common task may include enrolling devices, installing apps, and locating information (such as for assistance from your IT department). Additionally, they allow users to securely access company resources. The end-user experience provides several different pages, such as Home, Apps, App details, Devices, and Device details. To quickly find apps within the Company Portal, you can filter the apps on the Apps page.
 
 > [!NOTE]
-> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../memdocs/configmgr/comanage/company-portal.md).
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 >
 > The minimum supported version of the iOS Company Portal app is v4.16.0. If users are running v4.14.1 or below, they will be prompted for an update at login.
 
@@ -152,7 +152,7 @@ You can allow or block the device category prompt in Intune Company Portal.
 You can choose which additional app sources will be shown in Company Portal.
 
 > [!NOTE]
-> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](../../memdocs/configmgr/comanage/company-portal.md).
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
 The following table provides app source specific configuration details:
 

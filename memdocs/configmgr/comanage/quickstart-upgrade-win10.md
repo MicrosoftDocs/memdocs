@@ -26,7 +26,7 @@ In the following video, senior program manager Rob York and product marketing ma
 
 Among other platform advancements, Windows 10 and later supports auto-enrollment. This behavior makes a device automatically enroll to Intune when it joined Azure Active Directory (Azure AD).
 
-For more information, see [Enable Windows automatic enrollment](../../memdocs/intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment).
+For more information, see [Enable Windows automatic enrollment](../../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment).
 
 ## How to do it
 

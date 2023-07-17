@@ -59,7 +59,7 @@ Whether enrolling devices via Intune or Configuration Manager, Remediation scrip
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
 
   - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
-  - A [co-managed](../../memdocs/configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../../memdocs/configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
+  - A [co-managed](../../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
 
 ### Licensing
 
@@ -229,4 +229,4 @@ You can view the status of Remediations that have been assigned or run on-demand
 
 - Get the [PowerShell scripts](powershell-scripts-remediation.md) for Remediations.
 
-- Learn more about [PowerShell script security](../../memdocs/configmgr/apps/deploy-use/learn-script-security.md).
+- Learn more about [PowerShell script security](../../configmgr/apps/deploy-use/learn-script-security.md).

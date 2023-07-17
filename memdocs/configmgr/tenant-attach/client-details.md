@@ -38,7 +38,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 The user account accessing tenant attach features within the Microsoft Intune admin center needs the following permissions:
 
 - The **Read** permission for the device's **Collection** in Configuration Manager.
-- An [Intune role](../../memdocs/intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
+- An [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned to the user <!--7980141-->
 
 ## View ConfigMgr client details
 

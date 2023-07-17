@@ -63,11 +63,11 @@ Endpoint Privilege Management has the following operating system requirements:
 > [!IMPORTANT]
 > Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
 >
-> Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../memdocs/intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+> Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 >
 > Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
 > 
-> Endpoint Privilege Management is supported for Intune-managed devices, including [co-managed](../../memdocs/configmgr/comanage/overview.md) devices.
+> Endpoint Privilege Management is supported for Intune-managed devices, including [co-managed](../../configmgr/comanage/overview.md) devices.
 
 ## Getting started with Endpoint Privilege Management
 

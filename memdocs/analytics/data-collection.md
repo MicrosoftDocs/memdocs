@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # Endpoint analytics data collection
 
-This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. For more information on our data handling policies, see Intune's [Data storage and processing](../memdocs/intune/protect/privacy-data-store-process.md) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
+This article explains the data flow, data collection, and how to stop gathering data for Endpoint analytics. For more information on our data handling policies, see Intune's [Data storage and processing](../intune/protect/privacy-data-store-process.md) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
 
 ## <a name="bkmk_flow"></a>Data flow
 
@@ -22,7 +22,7 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 [![User experience data flow diagram](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
 
-1. An [Intune Service Administrator role](../memdocs/intune/fundamentals/role-based-access-control.md) [starts gathering data](enroll-intune.md#bkmk_onboard).
+1. An [Intune Service Administrator role](../intune/fundamentals/role-based-access-control.md) [starts gathering data](enroll-intune.md#bkmk_onboard).
 
     - For Intune-managed devices, this step configures the **Intune data collection** policy. By default, this policy is assigned to "All Devices". You can [change the assignment](settings.md#bkmk_set) at any time to a subset of devices or no devices at all.
 
@@ -32,16 +32,16 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
     - For Intune and co-managed devices with the assigned policy, devices send required functional data in near real time directly to the Microsoft Endpoint Management Service in the Microsoft public cloud where is processed every 24 hours. For more information, see [Endpoints required for Intune-managed devices](troubleshoot.md#endpoints-required-for-intune-managed-devices).
 
-    - For Configuration Manager-managed devices, data flows to the Microsoft Endpoint Management Service through the ConfigMgr [tenant attach](../memdocs/configmgr/tenant-attach/device-sync-actions.md) connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the connector sends data to the Gateway Service every hour. For more information, see [Tenant attach data collection](../memdocs/configmgr/tenant-attach/data-collection.md)
+    - For Configuration Manager-managed devices, data flows to the Microsoft Endpoint Management Service through the ConfigMgr [tenant attach](../configmgr/tenant-attach/device-sync-actions.md) connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the connector sends data to the Gateway Service every hour. For more information, see [Tenant attach data collection](../configmgr/tenant-attach/data-collection.md)
 
 1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the Intune admin center using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta&preserve-view=true). The maximum latency end to end is 96 hours.
   
 > [!NOTE]  
-> When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](settings.md#bkmk_profile), or [enable device upload](../memdocs/configmgr/tenant-attach/device-sync-actions.md#bkmk_edit) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the Intune admin center.
+> When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](settings.md#bkmk_profile), or [enable device upload](../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the Intune admin center.
 
 ## <a name="bkmk_datacollection"></a> Data collection
 
-Endpoint analytics data collection falls into the [optional](../memdocs/intune/protect/privacy-data-collect.md#optional-data) category. Below are some examples of the optional data collected for devices enrolled in endpoint analytics:
+Endpoint analytics data collection falls into the [optional](../intune/protect/privacy-data-collect.md#optional-data) category. Below are some examples of the optional data collected for devices enrolled in endpoint analytics:
 
 - Diagnostic, performance, and usage data tied to a user and/or device
   - **logOnId**
@@ -95,4 +95,4 @@ For more information about related privacy aspects, see the following articles:
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
 - [Trust Center](https://www.microsoft.com/trustcenter)
-- [Intune Data storage and processing](../memdocs/intune/protect/privacy-data-store-process.md)
+- [Intune Data storage and processing](../intune/protect/privacy-data-store-process.md)

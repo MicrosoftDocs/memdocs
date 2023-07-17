@@ -83,7 +83,7 @@ After you assign the policy and the device syncs, you can confirm the policy is 
     :::image type="content" source="./media/administrative-templates-update-office/admx-update-branch-registry-key.png" alt-text="Administrative template L_Updatebranch registry key example for Microsoft Office":::
 
     > [!TIP]
-    > [Manage Microsoft 365 Apps with Configuration Manager](../../memdocs/configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
+    > [Manage Microsoft 365 Apps with Configuration Manager](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they mean. The registry values are based on the distribution channel selected:
     >
     >- Monthly Channel                - value="Current"
     >- Monthly Channel (Targeted)     - value="Current"
@@ -103,7 +103,7 @@ At this point, the Intune policy is successfully applied to the device.
     - `UpdateChannel`: A dynamic key that changes, depending on the configured settings.
     - `CDNBaseUrl`: Set when Microsoft 365 installs on the device.
 
-3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](../../memdocs/configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they're set to.
+3. Look at the `UpdateChannel` value. The value tells you how frequently Office is updated. [Manage Microsoft 365 Apps with Configuration Manager](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel) lists the values, and what they're set to.
 
     Looking at the following example, you see `UpdateChannel` is set to `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, which is **monthly**:
 
@@ -181,7 +181,7 @@ Consider using the following steps to test your policy before deploying the poli
 
 ## Next steps
 
-[Update channel values for Microsoft 365 clients](../../memdocs/configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel)
+[Update channel values for Microsoft 365 clients](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel)
 
 [Overview of the Office cloud policy service for Microsoft 365 Apps](/deployoffice/overview-office-cloud-policy-service)
 

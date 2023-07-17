@@ -773,7 +773,7 @@ For more information, see [Intune App SDK for Android](../developer/app-sdk-andr
 
 #### Use Intune role-based access control (RBAC) for tenant attached devices <!-- 14996522 -->
 
-You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../memdocs/configmgr/cloud-attach/use-intune-rbac.md).
+You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../configmgr/cloud-attach/use-intune-rbac.md).
 
 ## Week of August 15, 2022 (Service release 2208)
 
@@ -2077,7 +2077,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device management
 
 #### Software updates page for tenant attached devices<!-- 13089257, 13035723 -->
-There's a new **Software updates** page for tenant attached devices. This page displays the status for software updates on a device. You can review which updates are successfully installed, failed, and are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting. For more information, see [Tenant attach: Software updates in the admin center](../../memdocs/configmgr/tenant-attach/software-updates.md).
+There's a new **Software updates** page for tenant attached devices. This page displays the status for software updates on a device. You can review which updates are successfully installed, failed, and are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting. For more information, see [Tenant attach: Software updates in the admin center](../../configmgr/tenant-attach/software-updates.md).
 
 #### Microsoft Defender for Endpoint support for App Sync on iOS/iPadOS<!-- 9768396 -->
 *Before you can use this capability you must opt in to a Microsoft Defender for Endpoint Preview. To opt in, contact `mdatpmobile@microsoft.com`.* 
@@ -2118,7 +2118,7 @@ You can configure device enrollment in Intune to enable co-management, which hap
 
 If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
 
-For more information, see [How to enroll to co-management with Autopilot](../../memdocs/configmgr/comanage/autopilot-enrollment.md).
+For more information, see [How to enroll to co-management with Autopilot](../../configmgr/comanage/autopilot-enrollment.md).
 
 ## Week of May 9, 2022
 
@@ -2202,7 +2202,7 @@ If you're still using the standalone tunnel app for iOS, plan to [migrate to the
 
 
 #### Attack surface reduction rules profile<!-- 8858871 -->
-The **Attack Surface Reduction Rules (ConfigMgr)** profile for tenant attached devices is now in public preview. For more information, see [Tenant attach: Create and deploy attack surface reduction policies](../../memdocs/configmgr/tenant-attach/deploy-asr-policy.md#bkmk_asr).
+The **Attack Surface Reduction Rules (ConfigMgr)** profile for tenant attached devices is now in public preview. For more information, see [Tenant attach: Create and deploy attack surface reduction policies](../../configmgr/tenant-attach/deploy-asr-policy.md#bkmk_asr).
 
 ### Device configuration
 
@@ -2632,7 +2632,7 @@ For information about Android requirements for implementing a freeze, see [Freez
 ### Device security
 
 #### Tenant attach: Antivirus profile<!-- 13425641 -->
-The Endpoint Security Microsoft Defender Anti-virus profile is now generally available. For more information, see [Tenant attach: Create and deploy Antivirus policies from the admin center](../../memdocs/configmgr/tenant-attach/endpoint-security-get-started.md).
+The Endpoint Security Microsoft Defender Anti-virus profile is now generally available. For more information, see [Tenant attach: Create and deploy Antivirus policies from the admin center](../../configmgr/tenant-attach/endpoint-security-get-started.md).
 
 ### Monitor and troubleshoot
 
@@ -2972,7 +2972,7 @@ Intune’s remote action to [*Collect diagnostics*](../remote-actions/collect-di
 For information about remote actions supported for Windows 365 devices, see [Remotely manage Windows 365 devices](/windows-365/enterprise/remotely-manage-cloud-pc).
 
 #### Tenant attach features are Generally Available (GA)<!--12976713 -->
-The following [tenant attach](../../memdocs/configmgr/tenant-attach/index.yml) features are now generally available:
+The following [tenant attach](../../configmgr/tenant-attach/index.yml) features are now generally available:
 - Client details
 - Applications
 - Device timeline
@@ -3318,7 +3318,7 @@ To view the keys, your Intune account must have the Intune RBAC permissions to v
 
 Users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a device* > **Recovery keys**.
 
-This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](../../memdocs/configmgr/hotfix/2107/11121541.md).
+This capability is supported with Configuration Manager sites that run version 2107 or later. For sites that run version 2107, you’ll need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
 #### BitLocker settings added to settings catalog<!-- 10956191 -->  
 We have added 9 [BitLocker settings that were previously only available in Group Policy (GP)](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md). The added settings include:  
@@ -3594,11 +3594,11 @@ When searching devices in **Devices** > **All devices**, you can now search by A
 #### Tenant attach: Device status for endpoint security policies
 <!--IN9264837 -->
 
-You can review the status of endpoint security policies for tenant attached devices. The **Device Status** page can be accessed for all endpoint security policy types for tenant-attached clients. For more information, see [Device status](../../memdocs/configmgr/tenant-attach/atp-onboard.md#device-status-preview) for the endpoint security policy types.
+You can review the status of endpoint security policies for tenant attached devices. The **Device Status** page can be accessed for all endpoint security policy types for tenant-attached clients. For more information, see [Device status](../../configmgr/tenant-attach/atp-onboard.md#device-status-preview) for the endpoint security policy types.
 
 #### Attack surface reduction profiles for Configuration Manager tenant attach<!--7323386   -->
 
-We’ve added two endpoint security profiles for *attack surface reduction* policy that you can use with devices you manage with [Configuration Manager tenant attach](../../memdocs/configmgr/tenant-attach/deploy-asr-policy.md). These profiles are in preview and manage the same settings as the similarly  named profiles you use for devices managed by Intune. You'll find these new profiles when you configure attack surface reduction policy for the *Windows 10 and later (ConfigMgr)* platform.
+We’ve added two endpoint security profiles for *attack surface reduction* policy that you can use with devices you manage with [Configuration Manager tenant attach](../../configmgr/tenant-attach/deploy-asr-policy.md). These profiles are in preview and manage the same settings as the similarly  named profiles you use for devices managed by Intune. You'll find these new profiles when you configure attack surface reduction policy for the *Windows 10 and later (ConfigMgr)* platform.
 
 The new profiles for tenant attach:
 
@@ -3607,7 +3607,7 @@ The new profiles for tenant attach:
 
 #### Expanded support for Windows Defender Security Center  for tenant attach devices<!-- 7323443   -->
 
-We’ve updated the *Windows Security experience (preview)* profile in endpoint security *Antivirus* policy to support additional settings for devices you manage with [Configuration Manager tenant attach](../../memdocs/configmgr/tenant-attach/deploy-antivirus-policy.md). 
+We’ve updated the *Windows Security experience (preview)* profile in endpoint security *Antivirus* policy to support additional settings for devices you manage with [Configuration Manager tenant attach](../../configmgr/tenant-attach/deploy-antivirus-policy.md). 
 
 Previously, this profile was limited to Tamper Protection for your tenant attached devices. The updated profile now includes settings for the Windows Defender Security Center. You can [use these new settings](../protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md) to manage the same details for tenant attached devices that you already manage with the similarly named profile for Intune managed devices.
 
@@ -4126,7 +4126,7 @@ Applies to:
 The new **Update cellular data plan (preview)** action lets you remotely activate the eSIM cellular plan on iOS/iPadOS devices that support it. This feature is currently in public preview. For more information, see [Update cellular data plan](../remote-actions/update-cellular-data-plan.md).
 
 ### Tenant attach: Offboarding<!-- CMADO7043245 INADO9412904 -->  
-While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard following a disaster recovery scenario where the on-premises environment was removed. To remove your Configuration Manager hierarchy from the Microsoft Intune admin center, select **Tenant administration**, **Connectors and tokens** then **Microsoft Endpoint Configuration Manager**. Choose the name of the site you would like to offboard, then select **Delete**. For more information, see [Enable tenant attach](../../memdocs/configmgr/tenant-attach/device-sync-actions.md#bkmk_offboard).
+While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard following a disaster recovery scenario where the on-premises environment was removed. To remove your Configuration Manager hierarchy from the Microsoft Intune admin center, select **Tenant administration**, **Connectors and tokens** then **Microsoft Endpoint Configuration Manager**. Choose the name of the site you would like to offboard, then select **Delete**. For more information, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md#bkmk_offboard).
 
 ### Device security
 
@@ -5680,21 +5680,21 @@ You can now rename a co-managed device that is Azure AD joined. For more informa
 
 #### Tenant attach: Device timeline in the admin center<!--7220536, CM7141381-->
 
-When Configuration Manager synchronizes a device to Microsoft Intune through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../memdocs/configmgr/tenant-attach/timeline.md).
+When Configuration Manager synchronizes a device to Microsoft Intune through tenant attach, you'll be able to see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems. For more information, see [Tenant attach: Device timeline in the admin center](../../configmgr/tenant-attach/timeline.md).
 
 #### <a name="bkmk_hinv"></a> Tenant attach: Resource explorer in the admin center<!--IN7220536, CM6479284 -->
 
-From the Microsoft Intune admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: Resource explorer in the admin center](../../memdocs/configmgr/tenant-attach/resource-explorer.md).
+From the Microsoft Intune admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer. For more information, see [Tenant attach: Resource explorer in the admin center](../../configmgr/tenant-attach/resource-explorer.md).
 
 #### Tenant attach: CMPivot from the admin center<!--IN7220536, CM6024392-->
 
 Bring the power of CMPivot to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
 
-For more information about CMPivot from the admin center, see [CMPivot prerequisites](../../memdocs/configmgr/tenant-attach/cmpivot-start.md), [CMPivot overview](../../memdocs/configmgr/tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../memdocs/configmgr/tenant-attach/cmpivot-samples-attached.md).
+For more information about CMPivot from the admin center, see [CMPivot prerequisites](../../configmgr/tenant-attach/cmpivot-start.md), [CMPivot overview](../../configmgr/tenant-attach/cmpivot-overview-attached.md), and [CMPivot sample scripts](../../configmgr/tenant-attach/cmpivot-samples-attached.md).
 
 #### Tenant attach: Run scripts from the admin center<!--7220536, CM6234688-->
 
-Bring the power of the Configuration Manager on-premises [Run scripts](../../memdocs/configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This feature gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../memdocs/configmgr/tenant-attach/scripts.md).
+Bring the power of the Configuration Manager on-premises [Run scripts](../../configmgr/apps/deploy-use/create-deploy-scripts.md) feature to the Microsoft Intune admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This feature gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment. For more information, see [Tenant attach: Run Scripts from the admin center](../../configmgr/tenant-attach/scripts.md).
 
 #### Tamper Protection policy for Tenant Attached devices in preview<!-- 7303958  -->
 
@@ -5891,7 +5891,7 @@ This user experience is improved. The listed settings are expanded by default to
 
 #### The Company Portal adds Configuration Manager application support<!-- 4297660 -->
 
-The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end-user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../memdocs/configmgr/comanage/company-portal.md).
+The Company Portal now supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end-user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -5959,7 +5959,7 @@ For more information about certificate connectors, including a list of connector
 
 #### Tenant attach: Install an application from the admin center <!-- IN7220536 CM6024389-->
 
-You can now initiate an application install in real time for a tenant attached device from the Microsoft Intune admin center. For more information, see [Tenant attach: Install an application from the admin center](../../memdocs/configmgr/tenant-attach/applications.md).
+You can now initiate an application install in real time for a tenant attached device from the Microsoft Intune admin center. For more information, see [Tenant attach: Install an application from the admin center](../../configmgr/tenant-attach/applications.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -6118,7 +6118,7 @@ For more information about corporate-owned with work profile preview, see the [s
 
 #### Tenant attach: ConfigMgr client details in the admin center (preview)<!-- 7552762 -->
 
-You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Intune admin center. For more information, see [Tenant attach: ConfigMgr client details in the admin center (preview)](../../memdocs/configmgr/tenant-attach/client-details.md).
+You can now see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the Microsoft Intune admin center. For more information, see [Tenant attach: ConfigMgr client details in the admin center (preview)](../../configmgr/tenant-attach/client-details.md).
 
 #### Updates to the remote lock action for macOS devices<!--7032805   -->
 
@@ -6143,7 +6143,7 @@ As a public preview, we're working on a PowerShell based tool that will migrate 
 
 As part of endpoint security in Intune, the [Endpoint detection and response (EDR) policies for use with devices managed by Configuration Manager](../protect/endpoint-security-edr-policy.md) are no longer in *preview* and are  now *Generally Available*.
 
-To use EDR policy with devices from a supported version of Configuration Manager, configure [Tenant attach for Configuration Manager](../../memdocs/configmgr/tenant-attach/device-sync-actions.md). After you complete the tenant attach configuration, you can deploy EDR policies to onboard devices managed by Configuration Manager to Microsoft Defender for Endpoint.
+To use EDR policy with devices from a supported version of Configuration Manager, configure [Tenant attach for Configuration Manager](../../configmgr/tenant-attach/device-sync-actions.md). After you complete the tenant attach configuration, you can deploy EDR policies to onboard devices managed by Configuration Manager to Microsoft Defender for Endpoint.
 
 #### Bluetooth settings are available in Device Control profiles for Endpoint security Attack surface reduction policy <!--7032084   -->
 
@@ -6779,7 +6779,7 @@ The export values are unchanged.
 You can now see the TPM version number on a device's hardware page ([Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > choose a device > **Hardware** > look under **System enclosure**).
 
 #### Microsoft Intune tenant attach: Device sync and device actions<!-- 6317104, CM3555758  -->
-Microsoft Intune is bringing together Configuration Manager and Intune into a single console. Starting in Configuration Manager version 2002, you can upload your Configuration Manager devices to the cloud service and take actions on them in the admin center. For more information, see [Microsoft Intune tenant attach: Device sync and device actions](../../memdocs/configmgr/tenant-attach/device-sync-actions.md). 
+Microsoft Intune is bringing together Configuration Manager and Intune into a single console. Starting in Configuration Manager version 2002, you can upload your Configuration Manager devices to the cloud service and take actions on them in the admin center. For more information, see [Microsoft Intune tenant attach: Device sync and device actions](../../configmgr/tenant-attach/device-sync-actions.md). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot

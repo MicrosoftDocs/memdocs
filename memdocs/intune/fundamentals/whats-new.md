@@ -1249,7 +1249,7 @@ The Microsoft Intune admin center has a new URL: [https://intune.microsoft.com](
 ### Tenant administration
 
 #### Add CMPivot queries to Favorites folder<!-- 16702226 -->
-You can add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition helps you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console aren't automatically added to your **Favorites** folder. You need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../memdocs/configmgr/tenant-attach/cmpivot-start.md).
+You can add your frequently used queries to a **Favorites** folder in CMPivot. CMPivot allows you to quickly assess the state of a device managed by Configuration Manager via Tenant Attach and take action. The functionality is similar to one already present in the Configuration Manager console. This addition helps you keep all your most used queries in one place. You can also add tags to your queries to help search and find queries. The queries saved in the Configuration Manager console aren't automatically added to your **Favorites** folder. You need to create new queries and add them to this folder. For more information about CMPivot, see [Tenant attach: CMPivot usage overview](../../configmgr/tenant-attach/cmpivot-start.md).
 
 ### Device enrollment
 
@@ -1457,7 +1457,7 @@ Recommendations include:
 
 To view recommendations, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**,  and select a *site* to view recommendations for that site.  Once selected, the *Recommendations* tab displays each insight along with a *Learn more* link. This link opens details on how to apply that recommendation.
 
-For more information, see [Enable Microsoft Intune tenant attach - Configuration Manager](../../memdocs/configmgr/tenant-attach/device-sync-actions.md).
+For more information, see [Enable Microsoft Intune tenant attach - Configuration Manager](../../configmgr/tenant-attach/device-sync-actions.md).
 
 ## Week of January 30, 2023
 
@@ -1694,7 +1694,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Scripts
 
 #### Preview PowerShell script package content in Endpoint Analytics<!-- 12930245 -->
-Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../memdocs/intune/fundamentals/powershell-scripts-remediation.md).
+Admins can now see a preview of a PowerShell script's content for proactive remediations. The content is displayed in a grayed-out box with scrolling capability. Admins can't edit the content of the script in the preview. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Endpoint analytics** > **Proactive remediations**. For related information, see [PowerShell scripts for Proactive remediations](../../intune/fundamentals/powershell-scripts-remediation.md).
 
 ## Week of January 16, 2023
 

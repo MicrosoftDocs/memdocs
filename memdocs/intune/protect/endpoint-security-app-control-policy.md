@@ -83,7 +83,7 @@ The following devices are supported when enrolled with Intune:
   - AVD devices are supported to use Application Control policies
 
 - **Co-managed devices**:
-  - To support [co-managed](../../memdocs/configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
+  - To support [co-managed](../../configmgr/comanage/workloads.md) devices, set the slider for *Endpoint Protection* slider to *Intune*.
 
 ### Windows Defender Application Control
 

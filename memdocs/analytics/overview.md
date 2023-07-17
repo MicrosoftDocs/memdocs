@@ -52,20 +52,20 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
 
 - A minimum of Configuration Manager version 2002 with [KB4560496 - Update rollup for Microsoft Configuration Manager version 2002](https://support.microsoft.com/help/4560496) or later
 - The Configuration Manager clients upgraded to version 2002 (including [KB4560496](https://support.microsoft.com/help/4560496)) or later
-- [Microsoft Intune tenant attach](../memdocs/configmgr/tenant-attach/device-sync-actions.md) enabled.
+- [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md) enabled.
 - [Enable Endpoint analytics for devices uploaded to Microsoft Intune](enroll-configmgr.md#bkmk_cm_upload).
 
 <!-- ### Remediation scripting requirements
 
-Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](../memdocs/intune/fundamentals/remediations.md) has the following requirements:
+Whether enrolling devices via Intune or Configuration Manager, [**Remediation scripting**](../intune/fundamentals/remediations.md) has the following requirements:
 
 - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
   - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
-  - A [co-managed](../memdocs/configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../memdocs/configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607). -->
+  - A [co-managed](../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607). -->
 
 ## Licensing Prerequisites
 
-Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../memdocs/intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../memdocs/configmgr/core/understand/learn-more-editions.md).
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Intune. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 <!-- Remediations also requires users of the devices to have one of the following licenses:
 
@@ -81,7 +81,7 @@ Devices enrolled in Endpoint analytics need a valid license for the use of Micro
 
 ### Built-in role permissions
 
-Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../memdocs/intune/fundamentals/role-based-access-control.md). <!--7567981-->
+Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
 
 |Role name|Azure Active Directory role|Intune role|Endpoint analytics permissions|
 |---|---|---|---|
@@ -109,8 +109,8 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics on Configuration Manager Server role. For more information, see [Configure the proxy for a site system server](../memdocs/configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
-| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics on Configuration Manager Server role only. For more information, see [Configure the proxy for a site system server](../memdocs/configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to Endpoint analytics on Configuration Manager Server role. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
+| `https://*.manage.microsoft.com` | Used to synch device collection and devices with Endpoint analytics on Configuration Manager Server role only. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 
 ### Endpoints required for Intune-managed devices
 

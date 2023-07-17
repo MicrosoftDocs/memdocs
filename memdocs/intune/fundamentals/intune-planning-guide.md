@@ -229,9 +229,9 @@ If your Windows devices are currently managed using Configuration Manager, you c
 
 For more information, go to:
 
-- [What is co-management](../../memdocs/configmgr/comanage/overview.md)
-- [Paths to co-management](../../memdocs/configmgr/comanage/quickstart-paths.md)
-- [Configuration Manager tenant attach](../../memdocs/configmgr/tenant-attach/device-sync-actions.md)
+- [What is co-management](../../configmgr/comanage/overview.md)
+- [Paths to co-management](../../configmgr/comanage/quickstart-paths.md)
+- [Configuration Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
 ✔️ **Task: Look at what you currently use for mobile device management**
 
@@ -249,7 +249,7 @@ Some considerations:
   - If you want to keep your existing infrastructure, and use Intune to help monitor your on-premises devices, then use tenant-attach. You get the benefit of using the Intune admin center, while still using Configuration Manager to manage devices.
   - If you want a pure cloud solution to manage devices, then move to Intune. Existing Configuration Manager users often prefer to continue using Configuration Manager with tenant attach or co-management.
 
-  For more information, go to [co-management workloads](../../memdocs/configmgr/comanage/workloads.md).
+  For more information, go to [co-management workloads](../../configmgr/comanage/workloads.md).
 
 ## Step 3 - Determine costs and licensing
 

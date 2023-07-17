@@ -25,7 +25,7 @@ When reviewing software updates in the admin center, you may run across some com
 
 **Error message:** You don’t have access to view this information. Make sure a proper user role is assigned from Intune.
 
-**Possible cause:** The user account needs an [Intune role](../../memdocs/intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information, and it resolves without intervention after a few minutes.
+**Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information, and it resolves without intervention after a few minutes.
 
 ### Unable to get software updates information
 
@@ -33,8 +33,8 @@ When reviewing software updates in the admin center, you may run across some com
 
 **Possible causes:**
 
-1. Verify that Configuration Manager's [role based access control](../../memdocs/configmgr/core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
-1. Verify the machine account of the [SMS Provider role](../../memdocs/configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider.md) for the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
+1. Verify that Configuration Manager's [role based access control](../../configmgr/core/understand/fundamentals-of-role-based-administration.md) for the admin user has the device in scope.
+1. Verify the machine account of the [SMS Provider role](../../configmgr/core/plan-design/hierarchy/plan-for-the-sms-provider.md) for the primary site (or standalone site) isn't a member of either the **Pre-Windows 2000 Compatible Access** or **Windows Authorization Access** (WAA) groups in on-premises Active Directory. For more information, see [Some applications and APIs require access to authorization information on account objects](/troubleshoot/windows-server/identity/apps-apis-require-access).
 
 **Error message 2:** Unable to get software updates information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.
 
@@ -45,7 +45,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
 1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Intune admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node and find your user account.
 
-    If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../../memdocs/configmgr/core/servers/deploy/configure/about-discovery-methods.md).
+    If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../../configmgr/core/servers/deploy/configure/about-discovery-methods.md).
 
 1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
 
@@ -53,7 +53,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
     - **Azure Active Directory User ID:** This value should be a GUID for this account in Azure AD.
     - **User Principal Name:** The format of this value is user@domain. For example, jqpublic@contoso.com.
 
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../../memdocs/configmgr/core/servers/deploy/configure/about-discovery-methods.md).
+    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../../configmgr/core/servers/deploy/configure/about-discovery-methods.md).
 
 ### Error loading your content
 
@@ -79,11 +79,11 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
 **Error message:** unexpected error occurred
 
-**Possible causes:** Unexpected errors are typically caused by either [service connection point](../../memdocs/configmgr/core/servers/deploy/configure/about-the-service-connection-point.md), [administration service](../../memdocs/configmgr/develop/adminservice/overview.md), or connectivity issues.
+**Possible causes:** Unexpected errors are typically caused by either [service connection point](../../configmgr/core/servers/deploy/configure/about-the-service-connection-point.md), [administration service](../../configmgr/develop/adminservice/overview.md), or connectivity issues.
 
 1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on both the central site and primary site that owns the device.
-1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../../memdocs/configmgr/develop/adminservice/overview.md#prerequisites).
+1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../../configmgr/develop/adminservice/overview.md#prerequisites).
 
 
 ### Configuration Manager doesn't meet the minimum version prerequisite

@@ -81,7 +81,7 @@ Microsoft Intune offers more granular settings and policies for devices classifi
 
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
-  - The [MDM Authority](mdm-authority-set.md) is set to Intune, even when using [co-management](../../memdocs/configmgr/comanage/overview.md) with Intune + Configuration Manager.
+  - The [MDM Authority](mdm-authority-set.md) is set to Intune, even when using [co-management](../../configmgr/comanage/overview.md) with Intune + Configuration Manager.
   - [Intune licenses are assigned](licenses-assign.md).
 
   For more information, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).

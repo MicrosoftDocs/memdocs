@@ -24,7 +24,7 @@ The **General** page in **Settings** allows you to see if Intune startup perform
 
 ### <a name="bkmk_profile"></a> Intune data collection policy
 
-To assign this setting to a subset of devices, [Create a profile](../memdocs/intune/configuration/device-profile-create.md#create-the-profile) with  the following information:
+To assign this setting to a subset of devices, [Create a profile](../intune/configuration/device-profile-create.md#create-the-profile) with  the following information:
 
 - **Platform**: Select **Windows 10 and later**
   
@@ -44,12 +44,12 @@ To assign this setting to a subset of devices, [Create a profile](../memdocs/int
 
 ### Configuration Manager data connector
 
-To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Intune tenant attach](../memdocs/configmgr/tenant-attach/device-sync-actions.md). 
+To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
 
 Once connected, you can [choose which devices you'd like to target](enroll-configmgr.md#bkmk_cm_enroll) for Endpoint analytics in the Configuration Manager console.
 
 > [!NOTE] 
-> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Intune tenant attach](../memdocs/configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
+> Some devices, such as non-Windows devices, are not eligible for Endpoint analytics, but may be eligible for [device actions with Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Including these devices in your targeted collection will have no effect on Endpoint Analytics.
 
 ### <a name="bkmk_consent"></a> Consent to share data
 

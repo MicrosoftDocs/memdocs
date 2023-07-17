@@ -37,11 +37,11 @@ The following metrics are weighted and used to compute the **Work from anywhere�
 :::image type="content" source="media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics" lightbox="media/8668496-work-from-anywhere-score.png":::
 
 > [!NOTE]
-> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../memdocs/intune/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
+> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
 
 ## Windows
 
-Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../memdocs/intune/protect/windows-10-feature-updates.md). For Configuration Manager devices, create a deployment plan using [Desktop Analytics](../memdocs/configmgr/desktop-analytics/overview.md). Your score is based on if these remediation actions have been completed or not.
+Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../intune/protect/windows-10-feature-updates.md). For Configuration Manager devices, create a deployment plan using [Desktop Analytics](../configmgr/desktop-analytics/overview.md). Your score is based on if these remediation actions have been completed or not.
 
 For information about the cost savings and benefits enabled by Windows, download the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
 
@@ -93,7 +93,7 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 
 > [!NOTE]
 >
-> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../memdocs/intune/remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune/remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
 > - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
 ## <a name="bkmk_np"></a> No commercial median
@@ -106,4 +106,4 @@ The built-in baseline of **All organizations (median)** doesn't currently have m
 ## Next steps
 
 - View [Startup performance](startup-performance.md)
-- Use [Remediations](../memdocs/intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.
+- Use [Remediations](../intune/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.

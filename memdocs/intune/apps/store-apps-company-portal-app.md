@@ -43,7 +43,7 @@ To manage devices and install apps, your users can install the Company Portal ap
  > If you download the Company Portal app, the option described in this article requires that you assign manual updates each time an app update is released. To deploy the Company Portal app for Windows 10 Autopilot provisioned devices, see [Add Windows 10 Company Portal app Autopilot devices](store-apps-company-portal-autopilot.md).
 
 > [!NOTE]
-> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../memdocs/configmgr/comanage/company-portal.md).
+> The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
 ## Configure settings to show offline apps
 

@@ -69,12 +69,12 @@ For more information about Intune and its benefits, go to:
 
 ### Cloud attach your on-premises Configuration Manager
 
-Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](../../memdocs/configmgr/comanage/quickstart-conditional-access.md), [running remote actions](../../memdocs/configmgr/comanage/quickstart-remote-actions.md), [using Windows Autopilot](../../memdocs/configmgr/comanage/quickstart-autopilot.md), and more.
+Many organizations use on-premises Configuration Manager to manage devices, including desktops and servers. You can cloud-attach your on-premises Configuration Manager to Microsoft Intune. When you cloud-attach, you get the benefits of Intune and the cloud, including [conditional access](../../configmgr/comanage/quickstart-conditional-access.md), [running remote actions](../../configmgr/comanage/quickstart-remote-actions.md), [using Windows Autopilot](../../configmgr/comanage/quickstart-autopilot.md), and more.
 
 For more information, go to:
 
-- [What is co-management](../../memdocs/configmgr/comanage/overview.md)
-- [Configuration Manager tenant attach](../../memdocs/configmgr/tenant-attach/device-sync-actions.md)
+- [What is co-management](../../configmgr/comanage/overview.md)
+- [Configuration Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
 ## Choose the device management solution that's right for you
 

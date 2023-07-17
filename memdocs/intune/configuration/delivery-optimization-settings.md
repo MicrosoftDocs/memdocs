@@ -98,7 +98,7 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 |[Delay background download Cache Server fallback (in seconds)](/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Specify a time in seconds (0-2592000) to delay the fallback from a Cache server to the HTTP source for a background content download. When the [Bandwidth](#bandwidth) setting for *Delay background HTTP download (in seconds)* is configured, that setting applies first to allow downloads from peers.    (0-2592000)   <br><br>**Default**: 0 <br><br>Policy CSP: [DODelayCacheServerFallbackBackground](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
 
 > [!NOTE]
-> When you install a Microsoft Connected Cache on a Configuration Manager distribution point, cloud-managed devices can use the on-premises cache. As long as the device can communicate with the server, the cache is available to deliver content to these devices. For more information, see [Microsoft Connected Cache in Configuration Manager](../../memdocs/configmgr/core/plan-design/hierarchy/microsoft-connected-cache.md).<!-- 8827227 -->
+> When you install a Microsoft Connected Cache on a Configuration Manager distribution point, cloud-managed devices can use the on-premises cache. As long as the device can communicate with the server, the cache is available to deliver content to these devices. For more information, see [Microsoft Connected Cache in Configuration Manager](../../configmgr/core/plan-design/hierarchy/microsoft-connected-cache.md).<!-- 8827227 -->
 
 ## Next steps
 
