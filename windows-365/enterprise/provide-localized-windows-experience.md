@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/19/2023
+ms.date: 07/17/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -43,6 +43,10 @@ There are two different ways to provide a localized Windows experience when user
 
 For both the provisioning policy and custom image options to set up the display languages, make sure to add the following URLs to your firewall allowlist:
 
+- All Windows versions
+  - http://*.delivery.mp.microsoft.com
+  - http://*.windowsupdate.com
+  - For more information, see [Microsoft Connected Cache content and services endpoints](/windows/deployment/do/delivery-optimization-endpoints).
 - Windows 11 21H2
   - LanguagePack: https://software-download.microsoft.com/download/sg/22000.1.210604-1628.co_release_amd64fre_CLIENT_LOF_PACKAGES_OEM.iso
   - FodToLP: https://download.microsoft.com/download/7/6/0/7600F9DC-C296-4CF8-B92A-2D85BAFBD5D2/Windows-10-1809-FOD-to-LP-Mapping-Table.xlsx
