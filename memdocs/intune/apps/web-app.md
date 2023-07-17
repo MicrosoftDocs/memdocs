@@ -55,7 +55,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **Select app type** pane, under the available **Other** types, select **Web link**.
+3. In the **Select app type** pane, under the **Other** types, select **Web link**. Other options include **iOS/iPadOS web clip**, **macOS web clip**, and **Windows web link**.
 4. Click **Select**. The **Add app** steps are displayed.
 5. On the **App information** page, add the following information:
     - **Name**:  Enter the name of the app as it is to be displayed in the company portal. 
