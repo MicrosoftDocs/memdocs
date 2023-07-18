@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 07/05/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -52,22 +52,24 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
         ![Delegated rights.](images/csp2.png)
 
         > [!NOTE]
+        >
         > Depending on your partner, they might request Delegated Admin Permissions (DAP) when requesting this consent. If possible, it's better to use the newer DAP-free process (shown in this document). If not, you can easily remove their DAP status either from Microsoft Admin Center or the Microsoft 365 admin portal. For more information, see [Obtain permissions to manage a customer's service or subscription](/partner-center/customers_revoke_admin_privileges).
 
-    6. Send the template above to the customer via email.
+    6. Send the template in the previous step to the customer via email.
 
-2. Customer with Microsoft Admin Center global administrator privileges clicks the link in email. The link takes them to the following Microsoft 365 admin center page:
+2. Customer with Microsoft Admin Center global administrator privileges selects the link in email. The link takes them to the following Microsoft 365 admin center page:
 
-    ![Screencap of Accept agreement and authorize partner page - delegated admin rights.](images/csp3a.png)
+    ![Screenshot of Accept agreement and authorize partner page - delegated admin rights.](images/csp3a.png)
 
-    The image above is what the customer will see if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
+    The above image is what the customer sees if they requested delegated admin rights (DAP). The page says what Admin roles are being requested. If the customer didn't request delegated admin rights, they would see the following page:
 
-    ![Screencap of Accept agreement and authorize partner page.](images/csp3b.png)
+    ![Screenshot of Accept agreement and authorize partner page.](images/csp3b.png)
 
     > [!NOTE]
-    > A user without global admin privileges who clicks the link will see a message similar to the following:
+    >
+    > A user without global admin privileges who selects the link sees a message similar to the following message:
 
-    ![Screencap of permission page.](images/csp4.png)
+    ![Screenshot of permission page.](images/csp4.png)
 
 3. Customer selects the **Yes** checkbox, followed by the **Accept** button. Authorization happens instantaneously.
 4. To check that the authorization request is complete, the CSP can check the **Customers** list in their MPC account. If the customer is in the list, the request is complete. For example:
@@ -76,30 +78,34 @@ For a CSP to register Windows Autopilot devices for a customer, the customer mus
 
 ## OEM authorization
 
-Each OEM has a unique link to provide to their respective customers, which the OEM can request from Microsoft via msoemops@microsoft.com.
+Each OEM has a unique link to provide to their respective customers, which the OEM can request from Microsoft via <msoemops@microsoft.com>.
 
 1. OEM emails link to their customer.
 2. Customer signs into [Microsoft 365 admin center](https://portal.office.com/adminportal) using a cloud-native account (for example, [domain].onmicrosoft.com) with global administrator privileges.
 3. Customer selects the link in the email, which takes them directly to the following page:
 
-    ![Screencap of Accept partner invitation page.](images/csp6.png)
+    ![Screenshot of Accept partner invitation page.](images/csp6.png)
 
     > [!NOTE]
-    > A user without global admin privileges who clicks the link will see a message similar to the following:
+    >
+    > A user without global admin privileges who selects the link sees a message similar to the following message:
 
-    ![Screencap of MSfB permission required page.](images/csp7.png)
+    ![Screenshot of MSfB permission required page.](images/csp7.png)
 
 4. Customer selects the **Yes** checkbox, followed by the **Accept** button, and they're done. Authorization happens instantaneously.
 
     > [!NOTE]
-    > Once this process has completed, it is not currently possible for an administrator to remove an OEM. To remove an OEM or revoke their permissions, send a request to msoemops@microsoft.com
+    >
+    > Once this process has completed, it isn't currently possible for an administrator to remove an OEM. To remove an OEM or revoke their permissions, send a request to <msoemops@microsoft.com>
 
-5. The OEM can use the Validate Device Submission Data API to verify the consent has completed. This API is discussed in the latest version of the [API Whitepaper, p. 14ff](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx).
-
-    > [!NOTE]
-    > This link is only accessible by Microsoft Device Partners. As discussed in this article, it's a best practice recommendation for OEM partners to run the API check to confirm they've received customer consent before attempting to register devices. This check can help avoid errors in the registration process.
+5. The OEM can use the Validate Device Submission Data API to verify the consent has completed.
 
     > [!NOTE]
+    >
+    > This API is discussed in the latest version of the [API Whitepaper, p. 14ff](https://devicepartner.microsoft.com/assets/detail/windows-autopilot-integration-with-oem-api-design-whitepaper-docx). This link is only accessible by Microsoft Device Partners. As discussed in this article, it's a best practice recommendation for OEM partners to run the API check to confirm they've received customer consent before attempting to register devices. This check can help avoid errors in the registration process.
+
+    > [!NOTE]
+    >
     > During the OEM authorization registration process, no delegated admin permissions are granted to the OEM.
 
 ## Summary

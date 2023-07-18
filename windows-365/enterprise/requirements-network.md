@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/02/2023
+ms.date: 07/10/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection:
 
 # Network requirements
 
-Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must follow the networking requirements listed below.
+Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must follow the networking requirements listed in this article.
 
 Each customer has its specific requirements based on the workload they use to pre-calculate the network requirements of their Cloud PC environment.  
 
@@ -63,7 +63,7 @@ All of the Windows 365 Enterprise **General network requirements** apply to [Win
 To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
-- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this will be a US Gov region.
+- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this is a US Gov region.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
@@ -160,6 +160,7 @@ All endpoints connect over port 443 unless specified otherwise.
 | `https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net` | GCC |
 | cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
 | cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
+| *.infra.windows365.microsoft.us | GCC, GCCH |
 
 #### Intune-dependent URLs
 
@@ -218,9 +219,9 @@ Windows 365 fully qualified domain name (FQDN) tags make it easier to grant acce
 
 Direct connectivity to Azure Virtual Desktop RDP broker service endpoints is critical for remoting performance to a Cloud PC. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints. We recommend that you use a direct path from your Azure virtual network to those endpoints.
 
-To make it easier to configure network security controls, use Azure Virtual Desktop service tags to identity those endpoints for direct routing using an [Azure Networking User Defined Route (UDR)](/azure/virtual-network/virtual-networks-udr-overview). A UDR will result in direct routing between your virtual network and the RDP broker for lowest latency. For more information about Azure Service Tags, see [Azure service tags overview](/azure/virtual-desktop/network-connectivity).
+To make it easier to configure network security controls, use Azure Virtual Desktop service tags to identity those endpoints for direct routing using an [Azure Networking User Defined Route (UDR)](/azure/virtual-network/virtual-networks-udr-overview). A UDR results in direct routing between your virtual network and the RDP broker for lowest latency. For more information about Azure Service Tags, see [Azure service tags overview](/azure/virtual-desktop/network-connectivity).
 
-Changing the network routes of a Cloud PC (at the network layer or at the Cloud PC layer like VPN) might break the connection between the Cloud PC and the Azure Virtual Desktop RDP broker. If so, the end user will be disconnected from their Cloud PC until a connection be re-established.
+Changing the network routes of a Cloud PC (at the network layer or at the Cloud PC layer like VPN) might break the connection between the Cloud PC and the Azure Virtual Desktop RDP broker. If so, the end user is disconnected from their Cloud PC until a connection be re-established.
 
 ## DNS requirements
 

@@ -160,7 +160,7 @@ The Microsoft Store supports Win32 app types including **.exe** and **.msi** ins
 In addition to user context, you can deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned *.appx* app is deployed in system context, the app will auto-install for each user that logs in. If an individual end user uninstalls the user context app, the app will still show as installed because it is still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps.
 
 > [!NOTE]
-> Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". Uninstalling all previous installations of the app from the device, and then re-installing the app to the device will resolve this.
+> Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". However, the app will still install correctly on the device.
 > 
 > UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store group policy is set to block auto-update.
 
