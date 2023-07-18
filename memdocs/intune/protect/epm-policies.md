@@ -104,12 +104,12 @@ Each elevation rule:
 - **Uses the file name (including extension) to identify the file the rule applies to.** The rule also supports optional conditions like a minimum build version, product name, or internal name. Optional conditions are used to further validate the file when elevation is attempted.
 - **Supports use of a certificate to validate the files integrity before it runs on a device.** Certificates can be added directly to a rule, or by using a reusable settings group. We recommend the use of reusable settings groups as they can be more efficient and simplify a future change to the certificate. For more information, see the next section [Reusable settings groups](#reusable-settings-group).
 - **Supports use of a file hash to validate the file.** A file hash is required for automatic rules. For user confirmed rules, you can choose to either use a certificate or a file hash, in which case the file hash becomes optional.
-- **Configures the files evaluation type.** Evaluation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for elevations.
+- **Configures the files elevation type.** Elevation type identifies what happens when an elevation request is made for the file. By default, this option is set to *User confirmed*, which is our recommendation for elevations.
 
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
-- **Can manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the managed application creates.
+- **Can manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
 
 > [!NOTE]
 >
