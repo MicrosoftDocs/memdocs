@@ -70,7 +70,7 @@ This scenario extends the Microsoft Intune Endpoint Security surface to devices 
 Applies to:
 
 - Windows 10
-- Windows 11
+- Windows 11 
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
@@ -303,43 +303,56 @@ Microsoft Intune includes several methods and policy types to manage the configu
 
 When you deploy an endpoint security policy that’s supported for both *Defender for Endpoint security settings configuration* and *Microsoft Intune*, a single instance of that policy can be processed by devices supported through security settings management (Microsoft Defender), and by devices that are managed by either Intune or Configuration Manager.
 
+Profiles for the *Windows 10 and later platform* are not supported for devices managed by security settings management.
+
 ::: zone pivot="mdssc-ga"
 
 | Endpoint security policy | Platform  | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
 |-----------|--------------------------|---------|--------------------------------------------------------|-------------------|
-| Account Protection      | Windows 10 and later   | *All profiles* |       | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Antivirus  | Windows 10, Windows 11, and Windows Server | Antivirus                   | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Antivirus          | Windows 10, Windows 11, and Windows Server  | Antivirus Exclusions        | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Antivirus           | Windows 10 and later | Windows Security Experience |    | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Application Control  | Windows 10 and later | *All profiles* |       | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Attack Surface Reduction | Windows 10 and later | *All profiles*          |  | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Attack Surface Reduction | Windows 10, Windows 11, and Windows Server | Attack Surface Reduction Rules  | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Disk Encryption | Windows 10 and later | *All profiles*                     |  | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Endpoint detection and response | Windows 10, Windows 11, and Windows Server | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Firewall    | Windows 10, Windows 11, and Windows Server | Firewall                    | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Firewall    | Windows 10, Windows 11, and Windows Server | Firewall Rules              | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server | Antivirus  | Antivirus                   | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server | Antivirus           | Antivirus Exclusions        | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Attack Surface Reduction  | Attack Surface Reduction Rules  | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Endpoint detection and response  | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Firewall     | Firewall                    | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server | Firewall   | Firewall Rules  | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 
 ::: zone-end
 
 ::: zone pivot="mdssc-preview"
 
-| Endpoint security policy | Platform  | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
-|-------|---------|----------|-----------|----------|
-| Antivirus | Linux   | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) |  |
-| Antivirus | Linux    | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) |  |
-| Antivirus | macOS   | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus | macOS   | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) |  |
-| Antivirus | Windows 10 and later   | *all profiles* |  | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus | Windows 10, Windows 11, and Windows Server | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus | Windows 10, Windows 11, and Windows Server | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus | Windows 10, Windows 11, and Windows Server | Windows Security Experience | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
-|Application Control      | Windows 10 and later | *All profiles* |       | ![Supported](./media/mde-security-integration/green-check.png)  |
-|Attack Surface Reduction | Windows 10 and later | *All profiles* |       | ![Supported](./media/mde-security-integration/green-check.png)  |
-|Attack Surface Reduction | Windows 10, Windows 11, and Windows Server |Attack Surface Reduction Rules |   ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Disk Encryption         |  Windows 10 and later | *All profiles*                     |  | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Endpoint detection and response | Windows 10, Windows 11, and Windows Server | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Firewall    | Windows 10, Windows 11, and Windows Server | Firewall                    | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
-| Firewall    | Windows 10, Windows 11, and Windows Server | Firewall Rules              | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+Following profiles are supported for each device type:
+
+### Linux
+
+The following policy types support the *Linux* platform.
+
+| Endpoint security policy | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
+|---------|----------|-----------|----------|
+| Antivirus                            | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+
+### macOS
+
+The following policy types support the *macOS* platform.
+
+| Endpoint security policy | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
+|---------|----------|-----------|----------|
+| Antivirus                            | Microsoft Defender Antivirus            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+
+### Windows 10, Windows 11, and Windows Server
+
+To support use with Microsoft Defender security settings management, your policies for Windows devices must use the *Windows 10, Windows 11, and Windows Server* platform. Each profile for the *Windows 10, Windows 11, and Windows Server* platform can apply to devices that are managed by Intune and to devices that are managed by security settings management.
+
+| Endpoint security policy | Profile | Defender for Endpoint security settings configuration  |  Microsoft Intune |
+|---------|----------|-----------|----------|
+| Antivirus              | Microsoft Defender Antivirus           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus              | Windows Security Experience            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+|Attack Surface Reduction |Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Firewall  | Firewall            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Firewall  | Firewall Rules      | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 
 ::: zone-end
 
