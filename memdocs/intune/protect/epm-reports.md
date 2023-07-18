@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/24/2023
+ms.date: 07/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,10 +59,7 @@ The *Elevation report* displays a list view with details about all reported elev
 - **Result** - Whether the elevation was successful.
 - **Date and time** - When the elevation request was made.
 
-If you select an entry in the report, Intune displays the **Elevation detail** pane. On this pane are more details about the elevation request and the file involved. These details include additional information that’s not available as columns in the default view. For example, the Elevation detail pane includes the following two entries that can help you understand when a detail in the report represents a *child process*, including which EPM rule and process created the child process:
-
-- **Process Type** = *Child Process*
-- **Origin**  =  *(EPM:`RuleName:Process`)*
+By selecting an entry in the report, you can drill in to view more details about the elevation request and the file involved.
 
 ## Managed elevation report
 
