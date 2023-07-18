@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -70,6 +70,12 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
+
+### Rules based on attributes gathered by PowerShell
+
+To help you build more accurate file detection rules, you can use the **Get-FileAttributes** PowerShell cmdlet. Available from the EpmTools PowerShell module, *Get-FileAttributes* can retrieve file attributes for a .exe file and extract its Publisher and CA certificates to a set location that you can use to populate Elevation Rule Properties for a particular application.
+
+For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
 ## Deploying rules created with Endpoint Privilege Management
 

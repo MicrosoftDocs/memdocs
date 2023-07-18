@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,7 +57,6 @@ Before you can create Endpoint Privilege Management policies, you must license E
 ### About Windows elevation settings policy
 
 Use *Windows elevation settings policy* when you want to:
-<!-- To enable Endpoint Privilege Management (EPM) on a device, a *Windows elevation settings policy* must be assigned to it. This policy is necessary for EPM to be enabled, and includes the following uses: -->
 
 - **Enable Endpoint Privilege Management** on devices. By default, this policy enables EPM. When first enabled for EPM, a device provisions the components that collect usage data on elevation requests and that enforce elevation rules.
 
@@ -112,6 +111,8 @@ Each elevation rule:
 
     >[!NOTE]
     > For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md).
+    >
+    > You can also use the `Get-FileAttributes` PowerShell cmdlet from the [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module). This cmdlet can retrieve file attributes for a .exe file and extract its Publisher and CA certificates to a set location that you can use to populate Elevation Rule Properties for a particular application.
 
     >[!CAUTION]  
     > We recommend automatic elevation be used sparingly, and only for trusted files that are business critical. End users will automatically elevate these applications at *every* launch of that application.
@@ -132,7 +133,7 @@ Deploy *Windows elevation settings policy* to users or devices to configure the 
 - Set default rules for elevation requests for any file that isn't managed by an Endpoint Privilege Management elevation rule on that device.
 - Configure what information EPM reports back to Intune.
 
-A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests.
+A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent which is responsible for processing the EPM policies.
 
 ### Create a Windows elevation settings policy
 
