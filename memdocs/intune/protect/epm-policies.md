@@ -109,7 +109,11 @@ Each elevation rule:
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
-- **Can manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
+- **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
+
+  - **Require rule to elevate** - Configure a child processes to require its own rule before that child process can run in an elevated context
+  - **Deny all** - All child processes launch without elevated context
+  - **Allow child processes to run elevated** - Configure a child process to always run elevated.
 
 > [!NOTE]
 >

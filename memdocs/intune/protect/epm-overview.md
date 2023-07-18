@@ -91,7 +91,10 @@ When you configure the *elevation settings* and *elevation rules* policies menti
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
   - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
 
-  Each elevation rule can also set the elevation behavior for any child processes that the elevated process creates. You can configure a child processes to require its own rule before that child process can run in an elevated context, require all child processes to run as a standard user (deny elevation), or allow all child processes to run elevated.
+  > [!NOTE]
+  >Each elevation rule can also set the elevation behavior for child processes that the elevated process creates.
+
+- **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM. This allows you to have granular control over any subprocesses that may be created by your elevated application.
 
 - **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received, and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
