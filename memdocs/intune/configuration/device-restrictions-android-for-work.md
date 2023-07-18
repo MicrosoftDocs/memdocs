@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/15/2022
+ms.date: 07/12/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -368,6 +368,14 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         > - On Android 10 devices, when users connect to a password protected Wi-Fi network using the Managed Home Screen, they're prompted for the password. If the device is connected to an unstable network, then the Wi-Fi network changes. This behavaior happens even when users enter the correct password.
 
       - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows users to pair devices over Bluetooth. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
+
+      > [!IMPORTANT]
+      > For devices running on Android 10+ and using Managed Home Screen, for Bluetooth pairing to successfully work on devices that require a pairing key, admins must enable the following Android system apps:
+      > - Android System Bluetooth
+      > - Android System Settings
+      > - Android System UI
+      >
+      > For more information on how to enable Android system apps, go to: [Manage Android Enterprise system apps](../apps/apps-ae-system.md#enable-a-system-app-in-intune)
 
       - **Flashlight access**: **Enable** shows the flashlight control on the Managed Home Screen, and allows users to turn the flashlight on or off. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the flashlight control on Managed Home Screen. It prevents users from using the flashlight while using the Managed Home Screen.
 

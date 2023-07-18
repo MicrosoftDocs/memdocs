@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 07/12/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -37,6 +37,10 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 ## Install required modules to obtain Autopilot profile(s) from Intune
 
+> [!NOTE]
+>
+> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270)
+
 After making sure there's a valid Autopilot profile, the next step is to download the existing Autopilot profiles from Intune as JSON files. The JSON files contain all of the information regarding the Intune tenant and the Autopilot profile. After the JSON files are downloaded from Intune, Configuration Manager packages that contain the JSON files are created. The Configuration Manager packages are then used to install the JSON file on the device during the Windows Autopilot deployment for existing devices task sequence.
 
 The JSON file is installed on the device to the offline Windows installation during the WinPE portion of the Configuration Manager task sequence. The JSON file makes the Autopilot profile available to Windows OOBE so that it can run the Autopilot deployment when Windows is started for the first time. The JSON file eliminates the need for Windows OOBE to have to first download the Autopilot profile from Intune.
@@ -57,13 +61,15 @@ To install the necessary modules to download the Autopilot profile(s) as a JSON 
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
-    Install-Module AzureAD -Force
-    Install-Module Microsoft.Graph.Intune -Force
-    Install-Module WindowsAutopilotIntune -Force
+    Install-Module WindowsAutopilotIntune -MinimumVersion 5.4.0 -Force
+    Install-Module Microsoft.Graph.Groups -Force
+    Install-Module Microsoft.Graph.Authentication -Force
+    Install-Module Microsoft.Graph.Identity.DirectoryManagement -Force
 
-    Import-Module AzureAD
-    Import-Module Microsoft.Graph.Intune
-    Import-Module WindowsAutopilotIntune
+    Import-Module WindowsAutopilotIntune -MinimumVersion 5.4
+    Import-Module Microsoft.Graph.Groups
+    Import-Module Microsoft.Graph.Authentication
+    Import-Module Microsoft.Graph.Identity.DirectoryManagement
     ```
 
 4. Paste the commands into the elevated PowerShell window and then select **Enter** on the keyboard to run the commands. You may need to select **Enter** a second time to run the last command in the code block. Once all the commands have run successfully, the required modules are installed.
@@ -79,7 +85,7 @@ Once the required modules are installed, the following steps can be taken to ver
 1. Copy the following command by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 
     ```powershell
-    Connect-MSGraph
+    Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
     ```
 
 1. Paste the command into the elevated PowerShell window and then select **Enter** on the keyboard to run the command.

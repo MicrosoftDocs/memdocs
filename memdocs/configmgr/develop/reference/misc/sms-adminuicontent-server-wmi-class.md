@@ -10,7 +10,7 @@ ms.assetid: c4bb10ba-7fad-4307-afc2-b0b4c7db7658
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 descriptions: Learn about the simplified syntax, methods, properties, and requirements of the SMS_AdminUIContent server class.
 ms.reviewer: mstewart,aaroncz 

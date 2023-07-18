@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 07/13/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -115,6 +115,10 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
+
+    > [!NOTE]
+    > With Cisco AnyConnect in the personally owned work profile, there may be some extra steps for end users to complete the VPN connection. For more information, go to [VPN profiles - What successful VPN profiles look like](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles?tabs=android#what-successful-vpn-profiles-look-like).
+
   - **SonicWall Mobile Connect**
   - **F5 Access**
   - **Pulse Secure**
@@ -171,3 +175,5 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows 10 and later](vpn-settings-windows-10.md).
+
+[Troubleshooting VPN profile issues in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-vpn-profiles)
