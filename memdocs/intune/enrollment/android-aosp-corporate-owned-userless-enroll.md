@@ -179,6 +179,9 @@ The following remote actions are available for Android (AOSP) devices:
 
 * Wipe  
 * Delete
+* Remote lock
+* Reset passcode
+* Restart
 
 You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
 
