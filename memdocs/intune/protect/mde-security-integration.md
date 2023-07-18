@@ -596,8 +596,8 @@ Security settings management won't work for a device that has PowerShell *Langua
 - [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
 
 ::: zone pivot="mdssc-preview"
-- [Manage endpoint security policies in Microsoft Defender for Endpoint](/::: zone pivot="mdssc-preview"
-[Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
+
+- [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
+
 ::: zone-end
-) in the Defender documentation.
-::: zone-end
+ 
