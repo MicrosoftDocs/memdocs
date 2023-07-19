@@ -61,7 +61,7 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Convert Windows 365 licenses to higher level licenses
 - System alerts and email notifications
 - Windows 365 Frontline
-- System alerts and email notifications
+- Admin feedback
 
 ## Next steps
 
