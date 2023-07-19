@@ -117,6 +117,8 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
+|\*.alcdn.msauth.net||
+|\*.wcpstatic.microsoft.com||
 
 ### Data and privacy
 
