@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Move a Cloud PC (preview) 
+title: Move a Cloud PC 
 titleSuffix:
 description: Learn how to move a Cloud PC by using Microsoft Intune.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/31/2023
+ms.date: 07/26/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -30,15 +30,13 @@ ms.collection:
 - tier2
 ---
 
-# Move a Cloud PC (preview)
+# Move a Cloud PC
 
-By editing a provisioning policy, you can move existing Cloud PCs from their current region or Azure network connection (ANC) to a new one. In preview, you can move up to 100 Cloud PCs at a time.
+By editing a provisioning policy, you can move existing Cloud PCs from their current region or Azure network connection (ANC) to a new one.
 
 The best time to perform moves is over the weekend to make sure the impact to users is minimized. Cloud PC's will be shutdown during the move process, so you should notify your users before the move so that they can save their work and sign-off.
 
 New Cloud PCs created by the edited provisioning policy are assigned to the new region or ANC.
-
-Moving a Cloud PC  in [public preview](..\public-preview.md).
 
 ## Move a Cloud PC
 
