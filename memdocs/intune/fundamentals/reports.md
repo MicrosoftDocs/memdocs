@@ -174,7 +174,7 @@ By selecting an entry, you can drill in for more detailed information about the 
 
 To generate a report that uses current data:
 
-1. Sign in to the Microsoft Intune admin center.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Settings compliance (preview)** tile.
 3. Use the drop-down to select which platforms the report will include.
 4. Select **Generate report
@@ -195,7 +195,7 @@ By selecting an entry, you can drill in for more detailed information about the 
 
 To generate a report that uses current data:
 
-1. Sign in to the Microsoft Intune admin center.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Policy compliance (preview)** tile.
 3. Use the drop-down to select which platforms the report will include.
 4. Select **Generate report**   (or **Generate again**) to generate the report using current data.
