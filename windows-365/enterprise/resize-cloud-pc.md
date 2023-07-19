@@ -172,6 +172,10 @@ When a Step-up conversion takes place, the stepped-up licenses show up in your i
 
 You have 90 days to migrate your users to the new 4vCPU/16 GB/128 GB licenses before they lose access to the Cloud PC provisioned with the original license. For more information about license life cycle states, see [What happens to my data and access when my subscription ends?](../subscription-ends.md)
 
+## Resize a Cloud PC flow diagram
+
+![Resize a Cloud PC diagram](./media/resize-cloud-pc/resize-cloud-pc-diagram.png)
+
 <!-- ########################## -->
 ## Next steps
 
