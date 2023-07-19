@@ -7,14 +7,14 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
-
+ 
 # optional metadata
 
 #ROBOTS:
