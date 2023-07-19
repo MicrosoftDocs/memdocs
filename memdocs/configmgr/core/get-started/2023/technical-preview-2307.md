@@ -2,7 +2,7 @@
 title: Technical preview 2307
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2307.
-ms.date: 07/15/2023
+ms.date: 07/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,6 +24,13 @@ This article introduces the features that are available in the technical preview
 Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
 The following sections describe the new features to try out in this version:
+
+[!INCLUDE [Windows 11 Edition Upgrade using Configuration Manager policy settings](includes/2307/17668419.md)]
+[!INCLUDE [Windows 11 Upgrade Readiness Dashboard](includes/2307/17668425.md)]
+[!INCLUDE [Option to schedule Script execution time](includes/2307/17668435.md)]
+[!INCLUDE [External service notification Run details from Azure Logic application](includes/2307/17668438.md)]
+[!INCLUDE [Maintenance window creation using PS cmdlet](includes/2307/17686942.md)]
+[!INCLUDE [Update Orchestrator Service (USO) for Windows 22H2 or later with windows native reboot experience](includes/2307/4316341.md)]
 
 ## Next steps
 
