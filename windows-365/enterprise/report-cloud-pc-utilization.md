@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 07/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -48,13 +48,14 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
   - **High time connected**: More than 80 hours.
   - **Average time connected**: 40-80 hours.
   - **Low time connected**: Less than 40 hours.
+  - **No active time connected**: Zero hours.
 - List of individual Cloud PCs with the following columns:
   - **Device name**
   - **Primary user UPN**
-  - **Total time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
-  - **Days since last sign in**
+  - **Active time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
+  - **Last active time**: Last time the user was active on the Cloud PC.
 
-You can use the filter options to see only data for a specific usage group.
+You can use the filter options to see results for specific **Active time connected** and **Last active time** values. These options can help you understand usage patterns and identify Cloud PCs that are under-utilized (for example, those that are listed when using the filter **Last active time: No sign in for 28 days or more**.)
 
 ## Frontline Cloud PCs tab
 
