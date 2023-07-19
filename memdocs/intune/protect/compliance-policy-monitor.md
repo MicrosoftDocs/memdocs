@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2022
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -187,11 +187,17 @@ The **Policy compliance** chart shows you the policies, and how many devices are
 
 :::image type="content" source="./media/compliance-policy-monitor/idc-8.png" alt-text="See a list of the policies, and how many compliant vs noncompliant devices for that policy.":::
 
+> [!TIP]
+> We recommend using a newer [Policy compliance (preview)](../fundamentals/reports.md#policy-compliance-preview) report that replaces this report and includes improved capabilities. Eventually, this older report version will be retired.
+
 ### Setting compliance
 
 The **Setting compliance** chart shows you all device compliance policy settings from all compliance policies, the platforms the policy settings are applied, and the number of noncompliant devices.
 
 :::image type="content" source="./media/compliance-policy-monitor/idc-10.png" alt-text="See a list of all the settings in the different policies.":::
+
+> [!TIP]
+> We recommend using a newer [Setting compliance (preview)](../fundamentals/reports.md#settings-compliance-preview) report that replaces this report and includes improved capabilities. Eventually, this older report version will be retired.
 
 ## View compliance reports
 
