@@ -138,9 +138,7 @@ items:
       - name: Create device configuration profile
         href: create-device-configuration-profile.md
     - name: User settings
-      items:
-      - name: Assign users as Local Admin
-        href: assign-users-as-local-admin.md
+      href: assign-users-as-local-admin.md
     - name: Security
       items:
       - name: Security guidelines 
