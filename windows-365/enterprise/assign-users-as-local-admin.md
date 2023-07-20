@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Assign user as a local admin for Windows 365
+title: User settings in Windows 365
 titleSuffix:
-description: Learn how to assign a user as a local admin for Windows 365.
+description: Learn about user settings in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 07/26/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -30,9 +30,13 @@ ms.collection:
 - tier2
 ---
 
-# Make a user a local admin
+# User settings
 
-The **User settings** page lets IT administrators manage various settings for the user. Currently, the only setting is the option of making the user a local admin in their Cloud PC.  
+The **User settings** page lets IT administrators manage the following settings for the user:
+
+- **Enable local admin**: If enabled, each user in the assigned groups is elevated to a local administrator of each of their own Cloud PCs.
+- **Enable users to reset their Cloud PCs**: If enabled, a **Reset** option is shown in the Windows 365 app and portal for users in the assigned groups. Resetting wipes and reprovisions the Cloud PC, deleting all user data and apps.
+- **Allow user to initiate restore service**: If enabled, each user in the assigned groups can restore their own Cloud PCs to any available backup version.
 
 When managing settings, keep the following points in mind:
 
@@ -45,21 +49,22 @@ When managing settings, keep the following points in mind:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...** > **User Settings** > **Add**.
 ![Screenshot of add user setting](./media/assign-users-as-local-admin/user-settings.png)
-2. Under **Settings**, enter a **Name** for the setting and set **Enable Local admin** to **On**.
-3. Select **Next**.  
-4. Under **Assignments**, choose **Select Groups**.
-5. Under **Select groups to include**, choose a group of users to get the settings > **Select**.  
-6. Select **Next**.
-7. On the **Review + save** page, select **Create**.  
+2. Under **Settings**, enter a **Name** for the setting.
+3. Select the boxes for the settings that you want to enable for the users.
+    - If you selected **Allow user ot initiate restore service**, also select an option for **Frequency of restore-point service**.
+5. Select **Next**.  
+6. Under **Assignments**, choose **Select Groups**.
+7. Under **Select groups to include**, choose a group of users to get the settings > **Select**.  
+8. Select **Next**.
+9. On the **Review + save** page, select **Create**.  
 
 ## Edit a user setting
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
 2. The **User Settings** page shows the current settings.  
-3. Select the name of the user setting that you want to edit.
-4. The policy setting for **Enable Local Admin** and assigned groups appears.  
-5. To change the name of the policy or to turn **Enable Local admin** on or off, select **Edit** next to **Settings**.
-6. Select **Next**.  
+3. Select the user setting that you want to edit.
+5. To change the name of the policy or to turn settings on or off, select **Edit** next to **Settings**.
+6. Under **Settings**, make any changes you want, and then select **Next**.  
 7. On the **Review + Save** page, select **Update**.  
 8. To edit assignments, select **Edit** next to **Assignments** > **Select Groups** to add another group. To remove existing groups, select the ellipses (**…**) > **Delete**.  
 9. Select **Next**.  
@@ -69,7 +74,7 @@ When managing settings, keep the following points in mind:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **...**  > **User Settings**.
 2. On the **User settings** page, you can view the created settings.  
-3. Select the ellipses (**…**) > **Delete**.
+3. Select the ellipses (**…**) in the row of the setting you want to delete > **Delete**.
 4. Select **Yes** on the confirmation pop up to delete the setting permanently.
 
 ## Conflict Resolution for Local Admin
