@@ -70,7 +70,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of July 24, 2023 (Service release 2307)
 
-<!-- ### App management -->
+### App management
+
+#### Intune supports new Google Play Android Management API<!-- 10982449 -->  
+Changes have been made to how Managed Google Play public apps are managed in Intune. These changes are to support [Google’s Android Management APIs](https://developers.google.com/android/management) (opens Google's web site).
+
+To learn more about changes to the admin and user experience, go to [Support Tip: Intune moving to support new Google Play Android Management API](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-intune-moving-to-support-new-google-play-android/ba-p/3849875).
+
+Applies to:
+
+- Android Enterprise
+
 
 ### Device configuration
 

@@ -60,17 +60,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## App management
-
-### Intune moving to support new Google Play Android Management API<!-- 10982449  -->  
-You will see several changes to how Managed Google Play public apps in Intune are managed. These changes are being made so we can adopt [Google’s Android Management APIs](https://developers.google.com/android/management) (opens Google's web site).
-
-To learn more about changes to the admin and user experience, go to [Support Tip: Intune moving to support new Google Play Android Management API](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-intune-moving-to-support-new-google-play-android/ba-p/3849875).
-
-Applies to:
-
-- Android Enterprise
-
 ### Deploy unmanaged PKG-type applications to managed macOS devices<!-- 17296091  -->  
 You will be able to upload and deploy unmanaged PKG-type applications to managed macOS devices using the Intune MDM agent for macOS devices. This feature enables you to deploy custom PKG installers, such as unsigned apps and component packages.
 
