@@ -71,7 +71,7 @@ Applies to:
 
 - Android Enterprise
 
-## Deploy unmanaged PKG-type applications to managed macOS devices<!-- 17296091  -->  
+### Deploy unmanaged PKG-type applications to managed macOS devices<!-- 17296091  -->  
 You will be able to upload and deploy unmanaged PKG-type applications to managed macOS devices using the Intune MDM agent for macOS devices. This feature enables you to deploy custom PKG installers, such as unsigned apps and component packages.
 
 You can add a PKG app in the Intune admin center: **Apps** > **macOS** > **Add** > **macOS app (PKG)** for app type.
@@ -140,59 +140,17 @@ You'll be able to view the service subscription fields on devices that have mult
 
 These fields will default to using labels returned by the device, such as:  *Primary*, *Secondary*, *CTSubscriptionSlotOne*, and *CTSubscriptionSlotTwo*. These returned labels may be displayed in the language of the local device that is reporting its inventory to Intune.
 
-Applies to:  
+Applies to:
+
 - **iOS/iPadOS**
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-### New settings available in the macOS settings catalog <!-- 24167142  -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
-
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.
-
-**Microsoft AutoUpdate (MAU)**:
-
-- Current Channel (Monthly)
-
-**Microsoft Defender > User interface preferences**:
-
-- Control sign-in to consumer version
-
-**Microsoft Office > Microsoft Outlook**:
-
-- Disable 'Do not send response'
-
-**User Experience > Dock**:
-
-- MCX Dock Special Folders
-
-Applies to:
-
-- macOS
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-### Added Support for Scope tags<!-- 16485280 iddraft  -->  
-You will be able to add scope tags when creating deployments using Zebra LifeGuard Over-the-Air integration (in public preview).
-
-### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998 -->  
-Today, Intune uses the Windows Device Health Attestation (DHA) service for Windows 10/11 Compliance policy - Device Health settings. Device health attestation is a reporting service used to ensure a device boots to a trusted state.
-
-Intune will be introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices. Windows 10 devices, and GCCH/DOD environments will continue to use DHA and are not impacted by this change.
-
-For more information, see [Network Endpoints](../fundamentals/intune-endpoints.md)
-
-### Intelligent recommendations within Intune Security Baselines<!-- 11127203 -->  
-We're adding tailored insights powered by Machine Learning models that help choose the right security settings from Security Baselines for your organization. These recommendations are based on best practices that similar organizations have adopted. Navigate to **Endpoint security** > **Security baselines**. Creating and editing the workflow these insights will be available for you in the form of a light bulb.
+<!-- ## Device configuration -->
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### Apple Account Driven User Enrollment available for iOS/iPadOS 15+ devices<!-- 14161683  -->  
-Intune will support Apple Account Driven User Enrollment, a new and improved variation of Apple User Enrollment for iOS/iPadOS 15+ devices. The new option will utilize just-in-time-registration, which eliminates the need for the Company Portal app during enrollment. Device users can initiate enrollment directly in the Settings app, resulting in a shorter and more efficient onboarding experience. You can continue to target iOS/iPadOS devices using the existing profile-based User Enrollment method with Company Portal. Devices running iOS/iPadOS, version 14.8.1 and earlier will be unaffected by this update and can also continue to use the existing method.
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
@@ -210,9 +168,6 @@ Applies to:
 
 - iOS/iPadOS
 
-### On-demand proactive remediation for a Windows device<!-- 14783338  -->  
-A new device action that is in public preview allows you to run a proactive remediation on-demand to a single Windows device. The **Run** remediation device action will allow you to resolve issues without having to wait for a proactive remediation to run on its assigned schedule. You'll also be able to view the status of proactive remediations under **Remediations** in the **Monitor** section of a device.
-
 <!-- *********************************************** -->
 
 ## Device security
@@ -221,9 +176,6 @@ A new device action that is in public preview allows you to run a proactive reme
 With [Endpoint Privilege Management](../protect/epm-overview.md) (EPM) you can manage which files and processes are allowed to *Run as Administrator*. When a process is elevated to run in the administrative context, any child processes it creates inherit that administrative context.
  
 Soon, EPM will support options that let you control the run context of those child processes. You’ll be able to allow a child process to always run as elevated, run as elevated only if a rule exists for the child process, or never run as elevated (always run as a standard user).
-
-### Tamper protection support for Windows on Azure Virtual Desktop<!--15135590  -->
-Intune will soon support use of Tamper protection for Windows on Azure Virtual Desktop multi-session. Support for Tamper protection requires onboarding to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
 
 <!-- *********************************************** -->
 
