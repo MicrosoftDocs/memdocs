@@ -29,7 +29,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Option to schedule Script runtime](includes/2307/17668435.md)]
 [!INCLUDE [External service notification Run details from Azure Logic application](includes/2307/17668438.md)]
 [!INCLUDE [Maintenance window creation using PS cmdlet](includes/2307/17686942.md)]
-[!INCLUDE [Update Orchestrator Service (USO) for Windows 22H2 or later with windows native reboot experience](includes/2307/4316341.md)]
+[!INCLUDE [Update Orchestrator Service (USO) for Windows11 22H2 or later with windows native reboot experience](includes/2307/4316341.md)]
 
 ## Next steps
 
