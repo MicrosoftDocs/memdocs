@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 07/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -70,6 +70,15 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
+
+### Controlling child process behavior
+
+Child process behavior allows you to control the context when a child process is created by a process elevated with EPM. This behavior allows you to further restrict processes which normally would be automatically delegated the context of it's parent process.
+
+Windows automatically delegates a the context of a parent to a child, so take special care in controlling the behavior for your allowed applications. Ensure you evaluate what is needed when you create elevation rules, and implement the principle of least privilege.
+
+>[!Note]
+>Changing the child process behavior may have compatiability issues with certain applications that expect the default Windows behavior. Make sure you thoroughly test applications when manipulating the child process behavior.
 
 ## Deploying rules created with Endpoint Privilege Management
 
