@@ -24,7 +24,6 @@ This article introduces the features that are available in the technical preview
 Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
 The following sections describe the new features to try out in this version:
-
 [!INCLUDE [Windows 11 Edition Upgrade using Configuration Manager policy settings](includes/2307/17668419.md)]
 [!INCLUDE [Windows 11 Upgrade Readiness Dashboard](includes/2307/17668425.md)]
 [!INCLUDE [Option to schedule Script execution time](includes/2307/17668435.md)]
