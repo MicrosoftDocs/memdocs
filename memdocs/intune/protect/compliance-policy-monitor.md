@@ -188,7 +188,7 @@ The **Policy compliance** chart shows you the policies, and how many devices are
 :::image type="content" source="./media/compliance-policy-monitor/idc-8.png" alt-text="See a list of the policies, and how many compliant vs noncompliant devices for that policy.":::
 
 > [!TIP]
-> We recommend using a newer [Policy compliance (preview)](../fundamentals/reports.md#policy-compliance-preview) report that replaces this report and includes improved capabilities. Eventually, this older report version will be retired.
+> We recommend using the newer [Policy compliance (preview)](../fundamentals/reports.md#policy-compliance-preview) report that replaces this report and includes improved capabilities. Eventually, this older report version will be retired.
 
 ### Setting compliance
 
@@ -197,11 +197,12 @@ The **Setting compliance** chart shows you all device compliance policy settings
 :::image type="content" source="./media/compliance-policy-monitor/idc-10.png" alt-text="See a list of all the settings in the different policies.":::
 
 > [!TIP]
-> We recommend using a newer [Setting compliance (preview)](../fundamentals/reports.md#settings-compliance-preview) report that replaces this report and includes improved capabilities. Eventually, this older report version will be retired.
+> We recommend using  the newer [Setting compliance (preview)](../fundamentals/reports.md#settings-compliance-preview) report that replaces this report and includes improved capabilities. Eventually, this older report version will be retired.
 
 ## View compliance reports
 
 In addition to using the charts on *Compliance status*, you can:
+
 * Go to **Reports** > **Device compliance** to view historical and organizational compliance reports
 * Go to **Devices** > **Monitor** to view operational reports as described below.
 
