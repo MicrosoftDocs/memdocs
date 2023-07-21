@@ -60,18 +60,7 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-### Deploy unmanaged PKG-type applications to managed macOS devices<!-- 17296091  -->  
-You will be able to upload and deploy unmanaged PKG-type applications to managed macOS devices using the Intune MDM agent for macOS devices. This feature enables you to deploy custom PKG installers, such as unsigned apps and component packages.
-
-You can add a PKG app in the Intune admin center: **Apps** > **macOS** > **Add** > **macOS app (PKG)** for app type.
-
-To deploy managed PKG-type apps, you can continue to [add macOS line-of-business (LOB) apps to Microsoft Intune](../apps/lob-apps-macos.md).
-
-For more information on the Intune MDM agent for macOS devices, go to [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md).
-
-Applies to:
-
-- macOS
+## App management
 
 ### Default settings when adding Windows PowerShell scripts is changing<!-- 20986905  -->  
 In Intune, you can use policies to deploy Windows PowerShell scripts to your Windows devices (**Devices** > **Scripts** > **Add** > **Windows 10 and later**).
@@ -89,25 +78,8 @@ Applies to:
 
 - Windows 10 and later (excluding Windows 10 Home)
 
-### New settings available for the iOS/iPadOS web clip app type<!-- 21084128  -->  
-In Intune, you can pin web apps to your iOS/iPadOS devices (**Apps** > **iOS/iPadOS** > **Add** > **iOS/iPadOS web clip**). When you add web clips, there are new settings available:
-
-- **Full screen**: If true, launches the web clip as a full-screen web app without a browser. There’s no URL or search bar, and no bookmarks.
-- **Ignore manifest scope**: If true, a full screen web clip can go to an external web site without showing Safari UI. Otherwise, Safari UI appears when going away from the web clip’s URL. This key has no effect when Full screen is set to false. Available in iOS 14 and later.
-- **Precomposed**: If true, prevents SpringBoard from adding "shine" to the icon.
-- **Target application bundle identifier**: Enter the application bundle identifier that specifies the application that opens the URL. Available in iOS 14 and later.
-
-For more information on the settings you can currently configure, go to [Add web apps to Microsoft Intune](../apps/web-app.md).
-
-Applies to:
-
-- iOS/iPadOS
-
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
-
-### View app report for Android Enterprise corporate-owned devices<!-- 2055436  -->  
-You'll be able to view a report containing all apps found on a device for Android Enterprise corporate-owned scenarios, including system apps. This report will be available in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Monitor** > **Discovered apps**. You'll see **Application Name** and **Version** for all apps detected as installed on the device.
 
 ### Advanced application management<!-- 10986080  -->  
 Advanced application management provides you with an enterprise catalog of applications that are easily accessible. It also provides application update capabilities. The enterprise catalog is planned to be available in public preview in late Q2 2023. The application update capabilities are planned to be available in early Q3 2023.
@@ -159,12 +131,7 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device security
-
-### Endpoint Privilege Management support to manage elevation rules for child processes<!-- 15931887  -->  
-With [Endpoint Privilege Management](../protect/epm-overview.md) (EPM) you can manage which files and processes are allowed to *Run as Administrator*. When a process is elevated to run in the administrative context, any child processes it creates inherit that administrative context.
- 
-Soon, EPM will support options that let you control the run context of those child processes. You’ll be able to allow a child process to always run as elevated, run as elevated only if a rule exists for the child process, or never run as elevated (always run as a standard user).
+<!-- ## Device security  -->
 
 <!-- *********************************************** -->
 
