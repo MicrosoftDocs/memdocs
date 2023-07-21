@@ -60,7 +60,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Windows 365 web client camera support (preview)<!--45017167-->
 
-Users will be able give their Cloud PC access to their local device's camera.
+Users can now give their Cloud PC access to their local device's camera.
 
 <!-- ########################## -->
 ## Week of July 3, 2023 (Service release 2306)
