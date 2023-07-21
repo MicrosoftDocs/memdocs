@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 07/11/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -86,7 +86,9 @@ Create an [AOSP device restrictions profile](device-restrictions-configure.md). 
 
 - **Block Bluetooth configuration**: Prevents users from configuring Bluetooth on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to configure Bluetooth.
 
-- **Allow users to turn on debugging features**: Permits users to access the debugging features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from using the debugging features on the device.  
+- **Allow users to turn on debugging features**: Permits users to access the debugging features on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from using the debugging features on the device.
+
+- **Block users from turning on unknown sources**: Prevents users from sideloading apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sideload apps from unknown sources.
 
 ## Next steps  
 

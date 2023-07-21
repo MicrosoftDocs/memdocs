@@ -84,15 +84,6 @@ Applies to:
 
 - macOS
 
-### Updates to app configuration policy reporting<!-- 18098046  -->  
-As part of our continuing efforts to improve the Intune reporting infrastructure, there will be several user interface (UI) changes for app configuration policy reporting. The UI will be updated with the following changes:
-
-- There will no longer be either a **User status** tile or a **Not applicable device** tile on the **Overview** section of the **App configuration policies** workload.
-- There will no longer be a **User install status** report on the **Monitor** section of the **App configuration policies** workload. 
-- The **Device install status** report under the **Monitor** section of the **App configuration policies** workload will no longer show the **Pending state** in the **Status** column.
-
-You can find configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies**.
-
 ### Default settings when adding Windows PowerShell scripts is changing<!-- 20986905  -->  
 In Intune, you can use policies to deploy Windows PowerShell scripts to your Windows devices (**Devices** > **Scripts** > **Add** > **Windows 10 and later**).
 
@@ -232,15 +223,12 @@ With [Endpoint Privilege Management](../protect/epm-overview.md) (EPM) you can m
 Soon, EPM will support options that let you control the run context of those child processes. You’ll be able to allow a child process to always run as elevated, run as elevated only if a rule exists for the child process, or never run as elevated (always run as a standard user).
 
 ### Tamper protection support for Windows on Azure Virtual Desktop<!--15135590  -->
-Intune will soon support use of Tamper protection for Windows on Azure Virtual Desktop multi- session.  Support for Tamper protection requires onboarding to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
-
-
-### Microsoft Defender for Endpoint Settings Management enhancements<!-- 14743017, 15319901, 18713045, 18713050, 17757959, 17757967 -->  
-Microsoft Defender for Endpoint Settings Management will expand platform support for Linux Servers and macOS channel. This applies to the Linux and macOS Antivirus policy templates found in **Endpoint Security** > **Antivirus**. In addition, onboarding devices to Microsoft Defender for Endpoint settings management will be simplified to no longer have Azure AD Hybrid Join be a management prerequisite for existing and new policies. You'll also be able to create, edit, and find all Intune Endpoint Security policies through the Microsoft Defender for Endpoint portal.
+Intune will soon support use of Tamper protection for Windows on Azure Virtual Desktop multi-session. Support for Tamper protection requires onboarding to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
 
 <!-- *********************************************** -->
 
 <!-- ## Intune apps -->
+
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot

@@ -86,9 +86,15 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 
 - **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
-  When you use Endpoint Privilege Management, there are two options for elevation behavior:
+  When you use Endpoint Privilege Management, there are a few options for elevation behavior:
+
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
   - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
+
+  > [!NOTE]
+  >Each elevation rule can also set the elevation behavior for child processes that the elevated process creates.
+
+- **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM. This allows you to have granular control over any subprocesses that may be created by your elevated application.
 
 - **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received, and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
@@ -162,4 +168,3 @@ For more information about each cmdlet, review the **readme.txt** file from the 
 - [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
-

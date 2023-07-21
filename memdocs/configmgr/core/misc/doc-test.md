@@ -6,7 +6,7 @@ ms.date: 07/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
-ms.localizationpriority: null
+ms.localizationpriority: low
 ROBOTS: NOINDEX
 author: Banreet
 ms.author: banreetkaur
