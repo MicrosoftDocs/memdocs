@@ -130,12 +130,12 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2307
 
-- [Windows 11 Edition Upgrade using Configuration Manager policy settings](2023/includes/2307/17668419.md)
-- [Windows 11 Upgrade Readiness Dashboard](2023/includes/2307/17668425.md)
-- [Option to schedule Script execution time](2023/includes/2307/17668435.md)
-- [External service notification Run details from Azure Logic application](2023/includes/2307/17668438.md)
-- [Maintenance window creation using PS cmdlet](2023/includes/2307/17686942.md)
-- [Update Orchestrator Service (USO) for Windows 22H2 or later with windows native reboot experience](2023/includes/2307/4316341.md)
+- [Windows 11 Edition Upgrade using Configuration Manager policy settings](2023/technical-preview-2307.md)
+- [Windows 11 Upgrade Readiness Dashboard](2023/technical-preview-2307.md)
+- [Option to schedule Script execution time](2023/technical-preview-2307.md)
+- [External service notification Run details from Azure Logic application](2023/technical-preview-2307.md)
+- [Maintenance window creation using PS cmdlet](2023/technical-preview-2307.md)
+- [Update Orchestrator Service (USO) for Windows 22H2 or later with windows native reboot experience](2023/technical-preview-2307.md)
 
 
 > [!NOTE]
