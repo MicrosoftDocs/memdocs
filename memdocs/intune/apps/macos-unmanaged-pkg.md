@@ -35,7 +35,7 @@ ms.collection:
 
 # Add an unmanaged macOS PKG app to Microsoft Intune (public preview)
 
-> [!NOTE ]
+> [!NOTE]
 > This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
 Use the information in this article to help you add an unmanaged macOS PKG app to Microsoft Intune. To deploy a managed PKG app, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune.](../apps/lob-apps-macos.md) 
@@ -60,7 +60,7 @@ The unmanaged macOS PKG app-type can install the following types of PKG apps:
 - Packages that install apps outside `/Applications/`
 - Custom packages with scripts
 
-> [!NOTE ]
+> [!NOTE]
 > These types of PKG apps may not successfully deploy using the managed LOB app-type.
 
 The containing app files can be listed under the **Included apps** section in the **Detection rules** tab in order, starting with the parent app to be used in reports.
