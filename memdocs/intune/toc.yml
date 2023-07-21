@@ -351,7 +351,9 @@ items:
                   - name: Intune management agent for macOS
                     href: ./apps/lob-apps-macos-agent.md
                   - name: Add a macOS DMG app
-                    href: ./apps/lob-apps-macos-dmg.md                    
+                    href: ./apps/lob-apps-macos-dmg.md         
+                  - name: Add an unmanaged macOS PKG app
+                    href: ./apps/macos-unmanaged-pkg.md                                  
                 - name: Win32 app management
                   items:
                   - name: Win32 app management overview
