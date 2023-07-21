@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/25/2023
+ms.date: 07/21/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -78,7 +78,7 @@ You can use the **Troubleshooting + support** pane to review a variety of manage
 
 ### Summary
 
-The **Summary** tab provides overall details for the user who are managed by Intune.
+The **Summary** tab provides overall details for the user who is managed by Intune.
 
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -91,7 +91,7 @@ The **Summary** tab provides overall details for the user who are managed by Int
 
 ### Devices
 
-Devices managed Intune.
+The **Devices** tab provides details for devices, such as OS, OS Version, Intune compliance, and last check-in.
 
 | Column           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -118,7 +118,7 @@ The **Groups** tab provides the group membership of all Azure AD groups for a sp
 
 ### Policy
 
-The policies applied to devices.
+The **Policy** tab provides the policies applied to devices, which include policy details, such as assignment, type, platform, and last modified.
 
 | Column      | Description                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -130,7 +130,7 @@ The policies applied to devices.
 
 ### Applications
 
-The managed applications on the device. 
+The **Applications** tab provides managed app install status, assigned, platform, type, and last modified.
 
 | Column    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -143,7 +143,7 @@ The managed applications on the device.
 
 ### App protection policy
 
-An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+The **App protection policy** tab provides the name, platform, and enrollment details for app protection policies. An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Column    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -153,7 +153,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 ### Updates
 
-The update report provides an overall view of updates that are deployed to users. This information also provides filtering, searching, paging, and sorting.
+The **Updates** tab provides an overall view of updates that are deployed to users. This information also provides filtering, searching, paging, and sorting.
 
 
 | Column    | Description                                                                           |
@@ -164,7 +164,7 @@ The update report provides an overall view of updates that are deployed to users
 
 ## Enrollment restrictions
 
-Enrollment restrictions are use to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
+The **Enrollment restrictions** tab provides the policy type, name, platform, and device limit. Enrollment restrictions are use to prevent (block) personally owned devices from enrolling, you will need to add the devices using corporate device identifiers, prior to enrollment.
 
 ### Properties
 
@@ -177,7 +177,7 @@ Enrollment restrictions are use to prevent (block) personally owned devices from
 
 ### Diagnostics
 
-Diagnostics for devices and applications.
+The **Diagnostics** tab provides the device name or application, platform, created date, and diagnostic log.
 
 > [!NOTE]
 > To collect and access diagnostics you must have the Collect diagnostics permission added to your role. For more information, see [Role-based administration control (RBAC) with Intune](role-based-access-control.md).
