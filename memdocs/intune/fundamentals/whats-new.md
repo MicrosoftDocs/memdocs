@@ -197,12 +197,26 @@ The following protected app is now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-<!-- ### Monitor and troubleshoot -->
+### Monitor and troubleshoot
+
+#### Updated reports for Setting compliance and Policy compliance are in public preview<!-- 15425624, 15425656  -->   
+We've released two new reports as a public preview for Intune device compliance. You can find these new preview reports in the Intune admin center at **Reports** > **Device compliance** > *Reports* tab:
+
+- [Setting compliance (preview)](../fundamentals/reports.md)
+- [Policy compliance (preview)](../fundamentals/reports.md)
+
+Both reports are new instances of existing reports, and deliver improvements over the older versions, including:  
+
+- Details for Linux settings and devices
+- Support for sorting, searching, filtering, exports, and paging views
+- Drill-down reports for deeper details, which are filtered based on the column you select. 
+- Devices are represented a single time, which is in contrast to the original reports which could count a device more than once if multiple users used that device
+
+Eventually, the [older report versions](../protect/compliance-policy-monitor.md#view-compliance-reports) that are still available in the admin center at *Devices > Monitor* will be retired.
+
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
-
-
 
 ## Week of July 10, 2023
 

@@ -141,7 +141,7 @@ Applies to:
 
 ## Monitor and troubleshoot
 
-### Updates for compliance policies and reports<!-- 15425771, 15425624, 15425656  -->  
+### Updates for compliance policies and reports<!-- 15425771  -->  
 We’re working on the improvements for Intune compliance policies and reports which include the following:
 
 - Adding support for Linux
