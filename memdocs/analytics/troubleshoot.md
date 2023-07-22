@@ -88,7 +88,7 @@ If your environment uses a proxy server, configure your proxy server to allow th
 > [!IMPORTANT]
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
-[!INCLUDE [Internet endpoints for Endpoint analytics](../../configmgr/core/plan-design/network/includes/internet-endpoints-endpoint-analytics.md)]
+[!INCLUDE [Internet endpoints for Endpoint analytics](../configmgr/core/plan-design/network/includes/internet-endpoints-endpoint-analytics.md)]
 
 ### Proxy server authentication
 
