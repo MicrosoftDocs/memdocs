@@ -205,7 +205,7 @@ For more information about Windows Autopilot, see [Windows Autopilot overview](/
 
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Azure AD. For more specific information, see [Windows Autopilot registration overview](/autopilot/registration-overview) and [Manual registration overview](/autopilot/manual-registration).
 
-- Create an Autopilot deployment profile. For more specific information, see [Create an Autopilot deployment profile](/autopilot/profiles.md#create-an-autopilot-deployment-profile).
+- Create an Autopilot deployment profile. For more specific information, see [Create an Autopilot deployment profile](/autopilot/profiles#create-an-autopilot-deployment-profile).
 
   When you create the profile, you also:
 
