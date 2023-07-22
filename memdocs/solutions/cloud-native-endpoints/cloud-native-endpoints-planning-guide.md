@@ -507,7 +507,7 @@ For more information on Windows Autopilot, go to:
 
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Windows Autopilot scenarios and features](/autopilot/windows-autopilot-scenarios)
-- [Windows Autopilot FAQ](/autopilot/autopilot-faq.yml)
+- [Windows Autopilot FAQ](/autopilot/autopilot-faq)
 
 ## Follow the cloud-native endpoints guidance
 

@@ -7518,10 +7518,10 @@ Applies to:
 ### Device management
 
 #### Edit device name value for Autopilot devices<!-- 2640074 -->
-You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](/autopilot/add-devices.md#edit-autopilot-device-attributes).
+You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](/autopilot/add-devices#edit-autopilot-device-attributes).
 
 #### Edit Group Tag value for Autopilot devices<!-- 4816775   -->
-You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](/autopilot/add-devices.md#edit-autopilot-device-attributes).
+You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](/autopilot/add-devices#edit-autopilot-device-attributes).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -9637,7 +9637,7 @@ For Samsung Knox Mobile Enrollment, Intune now supports enrolling devices to the
 - You can now configure a restart warning prompt for restarts that happen outside of work hours, which supports BYOD scenarios.
 
 #### Group Windows Autopilot-enrolled devices by correlator ID<!-- 2075110 -->
-Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal "OfflineAutopilotprofile-&#9001;correlator ID&#9002;". This allows arbitrary Azure AD dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](/autopilot/enrollment-autopilot.md#windows-autopilot-for-existing-devices).
+Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal "OfflineAutopilotprofile-&#9001;correlator ID&#9002;". This allows arbitrary Azure AD dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](/autopilot/enrollment-autopilot#windows-autopilot-for-existing-devices).
 
 #### Intune app protection policies<!-- 2984657 -->
 Intune app protection policies allow you to configure various data protection settings for Intune protected apps, such as Microsoft Outlook and Microsoft Word. We've change the look and feel of these settings for both [iOS](../apps/app-protection-policy-settings-ios.md) and [Android](../apps/app-protection-policy-settings-android.md) to make it easier to find individual settings. There are three categories of policy settings:
@@ -10283,7 +10283,7 @@ See [Enable Defender for Endpoint with Conditional Access in Intune](../protect/
 Intune supports the ability to evaluate compliance on a user-less device, such as the Microsoft Surface Hub. Compliance policy can target specific devices. So compliance (and noncompliance) can be determined for devices that don't have an associated user.
 
 #### Delete Autopilot devices<!-- 1713650 -->
-Intune admins can [delete Autopilot devices](/autopilot/add-devices.md#delete-autopilot-devices).
+Intune admins can [delete Autopilot devices](/autopilot/add-devices#delete-autopilot-devices).
 
 #### Improved device deletion experience<!--1832333 -->
 You're no longer be required to remove company data or factory reset a device before [deleting a device from Intune](../remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
