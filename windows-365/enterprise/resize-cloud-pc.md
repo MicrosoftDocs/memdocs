@@ -174,7 +174,7 @@ You have 90 days to migrate your users to the new 4vCPU/16 GB/128 GB licenses be
 
 ## Resize a Cloud PC flow diagram
 
-:::image type="content" alt-text="Flowchart of actions for an admin to resize a Cloud PC." source="./media/resize-cloud-pc/resize-cloud-pc-diagram.png" lightbox="./media/resize-cloud-pc/resize-cloud-pc-diagram.png":::
+:::image type="content" alt-text="Flowchart of actions for an admin to resize a Cloud PC." source="./media/resize-cloud-pc/resize-cloud-pc-diagram.png":::
 
 <!-- ########################## -->
 ## Next steps
