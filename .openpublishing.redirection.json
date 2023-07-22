@@ -1606,11 +1606,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "memdocs/autopilot/toc.yml",
-      "redirect_url": "/autopilot/toc.yml",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "memdocs/autopilot/troubleshoot-aad-join.md",
       "redirect_url": "/autopilot/troubleshoot-aad-join",
       "redirect_document_id": false
