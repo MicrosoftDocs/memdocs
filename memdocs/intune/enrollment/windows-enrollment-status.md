@@ -44,7 +44,7 @@ ms.collection:
  
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process. 
 
-The ESP can be deployed during the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join, and any [Windows Autopilot](/autopilot/index.yml) provisioning scenario.  
+The ESP can be deployed during the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join, and any [Windows Autopilot](/autopilot/index) provisioning scenario.  
 
 To deploy the ESP to devices, you have to create an ESP profile in Microsoft Intune. Within the profile, you can configure the ESP settings that control:  
 
