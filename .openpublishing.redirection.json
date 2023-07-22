@@ -638,7 +638,7 @@
     {
       "source_path": "memdocs/autopilot/white-glove.md",
       "redirect_url": "/autopilot/pre-provision",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/fundamentals/use-docs.md",
@@ -1468,657 +1468,657 @@
     {
       "source_path": "memdocs/autopilot/add-devices.md",
       "redirect_url": "/autopilot/add-devices",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/automatic-registration.md",
       "redirect_url": "/autopilot/automatic-registration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/autopilot-device-guidelines.md",
       "redirect_url": "/autopilot/autopilot-device-guidelines",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/autopilot-faq.yml",
       "redirect_url": "/autopilot/autopilot-faq.yml",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/autopilot-motherboard-replacement.md",
       "redirect_url": "/autopilot/autopilot-motherboard-replacement",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/autopilot-support.md",
       "redirect_url": "/autopilot/autopilot-support",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/bitlocker.md",
       "redirect_url": "/autopilot/bitlocker",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/configuration-requirements.md",
       "redirect_url": "/autopilot/configuration-requirements",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/deployment-process.md",
       "redirect_url": "/autopilot/deployment-process",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/dfci-management.md",
       "redirect_url": "/autopilot/dfci-management",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/enrollment-autopilot.md",
       "redirect_url": "/autopilot/enrollment-autopilot",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/enrollment-status.md",
       "redirect_url": "/autopilot/enrollment-status",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/existing-devices.md",
       "redirect_url": "/autopilot/existing-devices",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/index.yml",
       "redirect_url": "/autopilot/index.yml",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/known-issues.md",
       "redirect_url": "/autopilot/known-issues",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/licensing-requirements.md",
       "redirect_url": "/autopilot/licensing-requirements",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/manual-registration.md",
       "redirect_url": "/autopilot/manual-registration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/networking-requirements.md",
       "redirect_url": "/autopilot/networking-requirements",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/oem-registration.md",
       "redirect_url": "/autopilot/oem-registration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/partner-registration.md",
       "redirect_url": "/autopilot/partner-registration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/policy-conflicts.md",
       "redirect_url": "/autopilot/policy-conflicts",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/pre-provision.md",
       "redirect_url": "/autopilot/pre-provision",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/profiles.md",
       "redirect_url": "/autopilot/profiles",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/registration-auth.md",
       "redirect_url": "/autopilot/registration-auth",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/registration-overview.md",
       "redirect_url": "/autopilot/registration-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/resolved-issues.md",
       "redirect_url": "/autopilot/resolved-issues",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/self-deploying.md",
       "redirect_url": "/autopilot/self-deploying",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/software-requirements.md",
       "redirect_url": "/autopilot/software-requirements",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/toc.yml",
       "redirect_url": "/autopilot/toc.yml",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshoot-aad-join.md",
       "redirect_url": "/autopilot/troubleshoot-aad-join",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshoot-device-enrollment.md",
       "redirect_url": "/autopilot/troubleshoot-device-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshooting.md",
       "redirect_url": "/autopilot/troubleshooting",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/troubleshoot-oobe.md",
       "redirect_url": "/autopilot/troubleshoot-oobe",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/autopilot-scenarios.md",
       "redirect_url": "/autopilot/tutorial/autopilot-scenarios",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/create-autopilot-task-sequence.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/create-autopilot-task-sequence",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/create-collection.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/create-collection",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/create-json-file.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/create-json-file",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/create-json-package.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/create-json-package",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/deploy-autopilot-task-sequence.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/deploy-autopilot-task-sequence",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/existing-devices-workflow.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/existing-devices-workflow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/install-modules.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/install-modules",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/register-device.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/register-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/run-autopilot-task-sequence.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/run-autopilot-task-sequence",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/setup-autopilot-profile.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/setup-autopilot-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/existing-devices/speed-up-deployment.md",
       "redirect_url": "/autopilot/tutorial/existing-devices/speed-up-deployment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/assign-autopilot-device-to-user.md",
       "redirect_url": "/autopilot/tutorial/includes/assign-autopilot-device-to-user",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/assign-autopilot-device-to-user-via-csv.md",
       "redirect_url": "/autopilot/tutorial/includes/assign-autopilot-device-to-user-via-csv",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/automatic-intune-enrollment.md",
       "redirect_url": "/autopilot/tutorial/includes/automatic-intune-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/autopilot-profile-steps-after.md",
       "redirect_url": "/autopilot/tutorial/includes/autopilot-profile-steps-after",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/autopilot-profile-steps-before.md",
       "redirect_url": "/autopilot/tutorial/includes/autopilot-profile-steps-before",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/configure-and-assign-esp.md",
       "redirect_url": "/autopilot/tutorial/includes/configure-and-assign-esp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/create-device-group.md",
       "redirect_url": "/autopilot/tutorial/includes/create-device-group",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/domain-join-profile.md",
       "redirect_url": "/autopilot/tutorial/includes/domain-join-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/import-hardware-hash.md",
       "redirect_url": "/autopilot/tutorial/includes/import-hardware-hash",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/more-info-automatic-enrollment.md",
       "redirect_url": "/autopilot/tutorial/includes/more-info-automatic-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/more-info-autopilot-profile.md",
       "redirect_url": "/autopilot/tutorial/includes/more-info-autopilot-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/more-info-device-group.md",
       "redirect_url": "/autopilot/tutorial/includes/more-info-device-group",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/more-info-esp.md",
       "redirect_url": "/autopilot/tutorial/includes/more-info-esp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/more-info-register-device.md",
       "redirect_url": "/autopilot/tutorial/includes/more-info-register-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/more-info-technician-flow.md",
       "redirect_url": "/autopilot/tutorial/includes/more-info-technician-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/more-info-user-flow.md",
       "redirect_url": "/autopilot/tutorial/includes/more-info-user-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/network-connectivity.md",
       "redirect_url": "/autopilot/tutorial/includes/network-connectivity",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/register-autopilot-device.md",
       "redirect_url": "/autopilot/tutorial/includes/register-autopilot-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/technician-flow.md",
       "redirect_url": "/autopilot/tutorial/includes/technician-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-aadj-screens.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-aadj-screens",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-assignments.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-assignments",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-esp-progress.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-esp-progress",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-haadj-lock.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-haadj-lock",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-haadj-screens.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-haadj-screens",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-qr-codes.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-qr-codes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-technician-flow-inherit.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-technician-flow-inherit",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/tips-technician-flow-screens.md",
       "redirect_url": "/autopilot/tutorial/includes/tips-technician-flow-screens",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/includes/verify-autopilot-profile-assignment.md",
       "redirect_url": "/autopilot/tutorial/includes/verify-autopilot-profile-assignment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-allow-users-to-join",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-assign-device-to-user.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-assign-device-to-user",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-automatic-enrollment.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-automatic-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-autopilot-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-device-group.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-device-group",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-esp.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-esp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-register-device.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-register-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-technician-flow.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-technician-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-user-flow.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-user-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/azure-ad-join-workflow.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/azure-ad-join-workflow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-assign-device-to-user.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-assign-device-to-user",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-automatic-enrollment.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-automatic-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-computer-account-limit.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-computer-account-limit",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-device-group.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-device-group",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-domain-join-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-esp.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-esp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-intune-connector.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-intune-connector",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-register-device.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-register-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-technician-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-user-flow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md",
       "redirect_url": "/autopilot/tutorial/pre-provisioning/hybrid-azure-ad-join-workflow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/reset/autopilot-reset-overview.md",
       "redirect_url": "/autopilot/tutorial/reset/autopilot-reset-overview",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/reset/local-autopilot-reset.md",
       "redirect_url": "/autopilot/tutorial/reset/local-autopilot-reset",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/reset/remote-autopilot-reset.md",
       "redirect_url": "/autopilot/tutorial/reset/remote-autopilot-reset",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/self-deploying/self-deploying-automatic-enrollment.md",
       "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-automatic-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/self-deploying/self-deploying-autopilot-profile.md",
       "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-autopilot-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/self-deploying/self-deploying-deploy-device.md",
       "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-deploy-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/self-deploying/self-deploying-device-group.md",
       "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-device-group",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/self-deploying/self-deploying-esp.md",
       "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-esp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/self-deploying/self-deploying-register-device.md",
       "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-register-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/self-deploying/self-deploying-workflow.md",
       "redirect_url": "/autopilot/tutorial/self-deploying/self-deploying-workflow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-allow-users-to-join.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-allow-users-to-join",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-assign-device-to-user.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-assign-device-to-user",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-automatic-enrollment.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-automatic-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-autopilot-profile.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-autopilot-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-deploy-device.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-deploy-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-device-group.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-device-group",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-esp.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-esp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-register-device.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-register-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/azure-ad-join-workflow.md",
       "redirect_url": "/autopilot/tutorial/user-driven/azure-ad-join-workflow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-assign-device-to-user",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-automatic-enrollment.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-automatic-enrollment",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-deploy-device.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-deploy-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-device-group.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-device-group",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-domain-join-profile",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-esp.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-esp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-intune-connector.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-intune-connector",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-register-device.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-register-device",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/tutorial/user-driven/hybrid-azure-ad-join-workflow.md",
       "redirect_url": "/autopilot/tutorial/user-driven/hybrid-azure-ad-join-workflow",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/user-driven.md",
       "redirect_url": "/autopilot/user-driven",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/windows-autopilot.md",
       "redirect_url": "/autopilot/windows-autopilot",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/windows-autopilot-hybrid.md",
       "redirect_url": "/autopilot/windows-autopilot-hybrid",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/windows-autopilot-reset.md",
       "redirect_url": "/autopilot/windows-autopilot-reset",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/windows-autopilot-scenarios.md",
       "redirect_url": "/autopilot/windows-autopilot-scenarios",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "memdocs/autopilot/windows-autopilot-whats-new.md",
       "redirect_url": "/autopilot/windows-autopilot-whats-new",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
