@@ -57,7 +57,7 @@ Startup performance provides an insight on the number of devices that have delay
 
 If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue is a regression and when it might have occurred.
 
-While there are many articles on how to optimize Group Policies performance, you may choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](/mem/intune/protect/security-baselines) and [Group Policy analytics](/mem/configuration/group-policy-analytics).
+While there are many articles on how to optimize Group Policies performance, you may choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune/protect/security-baselines.md) and [Group Policy analytics](../intune/configuration/group-policy-analytics.md).
 
 ### <a name="bkmk_sb"></a> Slow boot and sign-in times
 

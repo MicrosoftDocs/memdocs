@@ -40,7 +40,7 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
 
   - **Scope**: Select **Endpoint analytics**. Windows updates scope is not used by endpoint analytics.
 
-- Use the [Scope tags](/memdocs/intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](/mem/configuration/device-profile-create#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
+- Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
 ### Configuration Manager data connector
 

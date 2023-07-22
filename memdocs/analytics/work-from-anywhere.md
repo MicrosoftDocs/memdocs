@@ -55,7 +55,7 @@ The **Cloud management** metric measures the percent of PCs that have attached t
 
 Benefits of each cloud management type:<!--IN7207657-->
 
-|Benefits|[**Cloud management gateway (CMG)**](/mem/configmgr/core/clients/manage/cmg/overview)|[**Tenant attach**](/mem/configmgr/tenant-attach/device-sync-actions)|[**Co-management**](/mem/configmgr/comanage/overview)|[**Intune**](/mem/fundamentals/what-is-intune)|
+|Benefits|[**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md)|[**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md)|[**Co-management**](../configmgr/comanage/overview.md)|[**Intune**](../intune/fundamentals/what-is-intune.md)|
 |---|---|---|---|---|
 | Manage your clients anywhere | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
 | View and take action on all Windows PCs from Microsoft Intune admin center| |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
@@ -77,6 +77,7 @@ Cloud identity provides users with many productivity benefits including device-w
 ## <a name="bkmk_provisioning"></a> Cloud provisioning
 
 Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Autopilot. The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](/autopilot/enrollment-autopilot).
+
 
 > [!NOTE]
 > Cloud provisioned devices that aren't enrolled into Endpoint analytics won't be populated.

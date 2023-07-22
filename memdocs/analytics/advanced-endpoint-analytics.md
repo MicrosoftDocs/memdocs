@@ -19,7 +19,7 @@ ms.localizationpriority: high
 
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 
-- **Custom device scopes** allow you to use [Scope tags](/mem/intune/fundamentals/scope-tags) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices, such as devices you're responsible to manage, or devices belonging to a particular business group or assigned to a specific geographic region. For more information, see [Device scopes](device-scopes).
+- **Custom device scopes** allow you to use [Scope tags](../intune/fundamentals/scope-tags.md) to slice Endpoint analytics reports to a subset of devices. You can see scores, insights, and recommendations specific to subsets of your enrolled devices, such as devices you're responsible to manage, or devices belonging to a particular business group or assigned to a specific geographic region. For more information, see [Device scopes](device-scopes.md).
 
 - **Anomalies** monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. For more information, see [Anomaly detection](anomaly-detection.md).
 
