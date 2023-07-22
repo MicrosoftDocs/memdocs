@@ -41,9 +41,11 @@ When any account in the Tenant is used to make a change to a resource that’s p
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- Scripts – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
 
 ## Prerequisites for access policies and approvers
+
+To use multi administrative approval, your tenant must have at least two administrator accounts.
 
 To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role.
 

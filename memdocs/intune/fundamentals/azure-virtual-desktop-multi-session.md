@@ -80,7 +80,8 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
 > If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
 
 > [!IMPORTANT]
-> If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won't work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
+> - If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won't work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
+> - Intune does not currently support token roaming functionality between devices. If [FSLogix](/fslogix), or a similar technology, is used to manage Windows user profiles and settings, you must ensure that tokens are not unexpectedly roamed or duplicated across devices. To confirm that you are running a supported version and configuration of FSLogix with token roaming disabled, please see the [FSLogix RoamIdentity Configuration Settings Reference](/fslogix/reference-configuration-settings?tabs=profiles#roamidentity).
 
 See [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements) for more information about Azure Virtual Desktop licensing requirements.
 
@@ -114,7 +115,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
     - **Key**: **OS edition**
     - **Operator**: **==**
     - **Value**: **Enterprise multi-session**
-    - Select **Apply**. The filtered list now shows all configuration profile categories that support Windows 10 or Windows 11 Enterprise multi-session. The scope for a policy is shown in parantheses. For user scope it shows as (User) and all the rest are policies with device scope. 
+    - Select **Apply**. The filtered list now shows all configuration profile categories that support Windows 10 or Windows 11 Enterprise multi-session. The scope for a policy is shown in parentheses. For user scope it shows as (User) and all the rest are policies with device scope. 
 8. From the filtered list, pick the categories that you want.
     - For each category you pick, select the settings that you want to apply to your new configuration profile.
     - For each setting, select the value that you want for this configuration profile.
@@ -239,8 +240,8 @@ The following sections provide troubleshooting guidance for common issues.
 
 |Issue|Detail|
 |---------------|---------------------------------|
-|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you're using must be version 2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
-|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you're using isn't updated. The agent must be version 2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you're using must be version 1.0.2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you're using isn't updated. The agent must be version 1.0.2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
 
 ### Configuration issues
 

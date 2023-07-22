@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 07/05/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -36,7 +36,7 @@ To use Cloud PCs, you must meet the following requirements:
 
 ## Azure requirements
 
-### [Windows 365 Enterprise](#tab/enterprise)
+### [Windows 365 Enterprise and Frontline](#tab/enterprise)
 
 None, if you plan on provisioning Azure AD joined Cloud PCs on a Microsoft hosted network.
 
@@ -53,7 +53,7 @@ All of the Windows 365 Enterprise requirements apply with the following addition
 
 A subscription in Azure Government is required for Windows 365 Government customers who would like to use any of the following capabilities:
 
-- Hybrid AADJ 
+- Hybrid AADJ
 - AADJ and with the customer providing their own network
 - Custom Images
 
@@ -79,16 +79,18 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 > [!NOTE]
 > For the user account used to join the Cloud PCs to the Active Directory domain services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
 
-
 ## Licensing requirements
 
 - You must have an Intune license to use Intune to manage the devices.
-- Users must have licenses for Windows E3, Intune, Azure AD P1, and Windows 365 to use their Cloud PC.
+- Windows 365 Enterprise: Users must have licenses for Windows E3, Intune, Azure AD P1, and Windows 365 to use their Cloud PC.
+- Windows 365 Frontline: Users must
+  - Have licenses for Windows E3, Intune, Azure AD P1.
+  - Be added to the Azure AD security group in the provisioning policy to use their Cloud PC.
 
 ## Management requirements
 
 - You must use [Microsoft Intune admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
-- You must have a Windows 365 Enterprise license to manage Cloud PC configurations.
+- You must have a Windows 365 Enterprise or Frontline license to manage Cloud PC configurations.
 
 ## Role and identity requirements
 
@@ -97,7 +99,7 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 
 ## Supported Azure regions for Cloud PC provisioning
 
-### [Windows 365 Enterprise](#tab/ent)
+### [Windows 365 Enterprise and Frontline](#tab/ent)
 
 Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
 
@@ -124,53 +126,7 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - South Africa
   - South Africa North
 - South America
-  - Brazil South (Restricted, request your Commercial Executive to engage Deal Manager for exception)
-- South Korea
-  - Korea Central
-- Sweden
-  - Sweden Central
-- Switzerland
-  - Switzerland North
-- UAE
-  - UAE North
-- United Kingdom
-  - UK South
-- US Central
-  - Central US
-  - South Central US
-- US East
-  - East US
-  - East US 2
-- US West
-  - West US 2 (Restricted)
-  - West US 3
-
-### [Windows 365 Frontline](#tab/frontline)
-
-- Asia
-  - East Asia
-  - Southeast Asia
-- Australia
-  - Australia East
-- Brazil
   - Brazil South (Restricted)
-- Canada
-  - Canada Central
-- European Union
-  - North Europe
-  - West Europe
-- France
-  - France Central
-- India
-  - Central India
-- Japan
-  - Japan East
-- Norway
-  - Norway East
-- South Africa
-  - South Africa North
-- South America
-  - Brazil South (Restricted, request your Commercial Executive to engage Deal Manager for exception)
 - South Korea
   - Korea Central
 - Sweden

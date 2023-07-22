@@ -87,7 +87,7 @@ To register an app to use Microsoft Graph API:
     - A **Redirect URI** value. *This value is option.*
 
         > [!NOTE]
-        > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API have been deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+        > Azure AD Graph API is in its retirement phase. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
@@ -356,7 +356,7 @@ If this happens, verify that:
 This example shows how to use C# to retrieve a list of devices associated with your Intune account.
 
  > [!NOTE]
- > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API have been deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+ > Azure AD Graph API is in its retirement phase. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 1. Start Visual Studio and then create a new Visual C# Console app (.NET Framework) project.
 
