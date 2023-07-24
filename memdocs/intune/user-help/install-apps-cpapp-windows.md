@@ -102,9 +102,6 @@ Depending on the size of your company, there could be multiple versions of Offic
 
 You should only install one version of Office. If you try to install an additional one, the first one will be uninstalled.  
 
-## Uninstall Win32 and Microsoft store apps using the Windows Company Portal
-End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal.
-
 ## Next steps  
 
 Need additional help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

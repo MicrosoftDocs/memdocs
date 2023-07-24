@@ -1748,6 +1748,8 @@ items:
         displayName: dex
       - name: Intune App SDK for Android
         items:
+        - name: Intune App Developer Guide
+          href: ./developer/app-sdk-android-appendix.md
         - name: Plan the Integration
           href: ./developer/app-sdk-android-phase1.md
         - name: Understand the MSAL Prerequisite
