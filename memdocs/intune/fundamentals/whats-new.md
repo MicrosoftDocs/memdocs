@@ -107,6 +107,20 @@ Applies to:
 
 - iOS/iPadOS
 
+### Change to default settings when adding Windows PowerShell scripts<!-- 20986905  -->  
+In Intune, you can use policies to deploy Windows PowerShell scripts to your Windows devices (**Devices** > **Scripts** > **Add** > **Windows 10 and later**). When you add a Windows PowerShell script, there are settings you configure. To increase secure-by-default behavior of Intune, the default behavior of the following settings has changed:
+
+- The **Run this script using the logged on credentials** setting defaults to **Yes**. Previously, the default was **No**.
+- The **Enforce script signature check** setting defaults to **Yes**. Previously, the default was **No**.
+
+This behavior applies to new scripts you add, not existing scripts.
+
+For more information about using Windows PowerShell scripts in Intune, go to [Use PowerShell scripts on Windows 10/11 devices in Intune](../apps/intune-management-extension.md).
+
+Applies to:
+
+- Windows 10 and later (excluding Windows 10 Home)
+
 ### Device configuration
 
 #### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998  -->
