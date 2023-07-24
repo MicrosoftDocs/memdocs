@@ -174,7 +174,54 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 
 ## Windows Push Notification Services (WNS)  
 
-For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
+For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config). 
+
+### Migrating device health attestation compliance policies to Microsoft Azure attestation
+
+If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices will begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
+However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestion DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and is not impacted by this change.  
+
+If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they are unable to reach the MAA attestation endpoints for their location.
+
+Ensure there are no firewall rules blocking outbound HTTPS/443 traffic to the endpoints listed in this section based on your Intune tenant's location. To find your tenant location navigate to the Intune admin center > **Tenant administration** > **Tenant status** > **Tenant details**, see Tenant location.
+
+North America based locations
+
+- 'https://intunemaape1.eus.attest.azure.net'
+
+- 'https://intunemaape2.eus2.attest.azure.net'
+
+- 'https://intunemaape3.cus.attest.azure.net'
+
+- 'https://intunemaape4.wus.attest.azure.net'
+
+- 'https://intunemaape5.scus.attest.azure.net'
+
+- 'https://intunemaape6.ncus.attest.azure.net'
+
+Europe based locations
+
+- 'https://intunemaape7.neu.attest.azure.net'
+
+- 'https://intunemaape8.neu.attest.azure.net'
+
+- 'https://intunemaape9.neu.attest.azure.net'
+
+- 'https://intunemaape10.weu.attest.azure.net'
+
+- 'https://intunemaape11.weu.attest.azure.net'
+
+- 'https://intunemaape12.weu.attest.azure.net'
+
+Asia pacific locations
+
+- 'https://intunemaape13.jpe.attest.azure.net'
+
+- 'https://intunemaape17.jpe.attest.azure.net'
+
+- 'https://intunemaape18.jpe.attest.azure.net'
+
+- 'https://intunemaape19.jpe.attest.azure.net'
 
 ## Delivery Optimization port requirements  
 

@@ -136,7 +136,6 @@ Go to **Devices** > **Compliance** to monitor and manage device compliance polic
 * **Policies**: Create and manage device compliance policies.
 * **Notifications**: Create and send custom notifications to device users on managed iOS/iPadOS and Android devices.  
 * **Retire noncompliant devices**: Remove all company data from a device and remove the device from Intune management. 
-* **Compliance settings**: Configure compliance policy settings such as enhanced jailbreak detection and compliance status validity period.      
 * **Scripts**: Add and manage scripts used for custom compliance settings.   
 
 For more information about device compliance, see [Compliance overview](../protect/device-compliance-get-started.md).  
