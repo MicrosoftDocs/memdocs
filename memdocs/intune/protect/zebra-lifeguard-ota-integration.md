@@ -51,7 +51,6 @@ For more specific information on supported devices, see [Zebra's TechDocs](https
 The following aren't supported in public preview:
 
 - Graph assignment with inclusions/exclusions
-- Scope tags
 
 ## Prerequisites
 
@@ -105,7 +104,7 @@ You must enroll devices separately with the Zebra LG OTA service before devices 
 
 ### 2a: Approve and deploy required apps for your tenant
 
-Zebra requires two apps present on the device to perform enrollment with the LG OTA service. 
+Zebra requires two apps present on the device to perform enrollment with the LG OTA service.
 
 The apps required are:
 
@@ -157,8 +156,8 @@ For more information, see [Add app configuration policies for managed Android En
 2. Complete the fields in the **Basic** tab and select **Next**.  
 3. In the **Settings** tab, under the **Permissions** section, select **Add** to add the following permission override: 
 
-    1. **Permission**: Phone state (read) 
-    2. **Permission state**: set to Auto grant 
+    1. **Permission**: Phone state (read)
+    2. **Permission state**: set to Auto grant
 
 4. Assign this configuration policy to all the same devices that you assigned the app earlier.
 5. Navigate through the tabs and complete the fields.  
