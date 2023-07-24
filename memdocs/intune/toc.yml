@@ -351,7 +351,9 @@ items:
                   - name: Intune management agent for macOS
                     href: ./apps/lob-apps-macos-agent.md
                   - name: Add a macOS DMG app
-                    href: ./apps/lob-apps-macos-dmg.md                    
+                    href: ./apps/lob-apps-macos-dmg.md         
+                  - name: Add an unmanaged macOS PKG app
+                    href: ./apps/macos-unmanaged-pkg.md                                  
                 - name: Win32 app management
                   items:
                   - name: Win32 app management overview
@@ -663,7 +665,7 @@ items:
             href: ./protect/app-based-conditional-access-intune.md
           - name: Set up app-based Conditional Access
             href: ./protect/app-based-conditional-access-intune-create.md
-          - name: ADAL and Intune
+          - name: Block apps that don't use modern authentication (MSAL)
             href: ./protect/app-modern-authentication-block.md
           - name: Use the Jamf Cloud connector
             href: ./protect/conditional-access-jamf-cloud-connector.md
