@@ -138,7 +138,7 @@ With these additional optional prerequisites, recipients can approve or deny the
 
     1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.
 
-    1. Select the **Client** application that was created for Configuration Manager **Cloud Management** integration.
+    1. Select the **Client** application created for Configuration Manager **Cloud Management** integration.
 
     1. In the **Manage** menu, select **Authentication**.
 
