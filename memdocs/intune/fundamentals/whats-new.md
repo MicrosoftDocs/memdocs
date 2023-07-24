@@ -107,7 +107,7 @@ Applies to:
 
 - iOS/iPadOS
 
-### Change to default settings when adding Windows PowerShell scripts<!-- 20986905  -->  
+#### Change to default settings when adding Windows PowerShell scripts<!-- 20986905  -->  
 In Intune, you can use policies to deploy Windows PowerShell scripts to your Windows devices (**Devices** > **Scripts** > **Add** > **Windows 10 and later**). When you add a Windows PowerShell script, there are settings you configure. To increase secure-by-default behavior of Intune, the default behavior of the following settings has changed:
 
 - The **Run this script using the logged on credentials** setting defaults to **Yes**. Previously, the default was **No**.
@@ -121,9 +121,12 @@ Applies to:
 
 - Windows 10 and later (excluding Windows 10 Home)
 
+#### Uninstall Win32 and Microsoft store apps using the Windows Company Portal<!-- 4664389  -->  
+End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
 ### Device configuration
 
-#### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998  -->
+#### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998  -->  
 Intune is introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices. Windows 11 devices assigned an Intune Windows Compliance policy with any of the Device Health settings (BitLocker, Code Integrity, Secure Boot) set to "Require" will use the MAA service.
 
 However, Windows 10 devices, and GCCH/DOD environments will continue to use Device health attestation (DHA ) and are not impacted by this change.
