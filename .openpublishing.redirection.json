@@ -557,7 +557,7 @@
     },
     {
       "source_path": "memdocs/autopilot/autopilot-update.md",
-      "redirect_url": "/autopilot/index",
+      "redirect_url": "/autopilot/",
       "redirect_document_id": false
     },
     {
@@ -1337,7 +1337,7 @@
     },
     {
       "source_path": "memdocs/configmgr/sum/deploy-use/uup-preview.md",
-      "redirect_url": "/mem/configmgr/sum/index",
+      "redirect_url": "/mem/configmgr/sum/",
       "redirect_document_id": true
     },
     {
@@ -1532,7 +1532,7 @@
     },
     {
       "source_path": "memdocs/autopilot/index.yml",
-      "redirect_url": "/autopilot/index.yml",
+      "redirect_url": "/autopilot/",
       "redirect_document_id": false
     },
     {
