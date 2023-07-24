@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2023
+ms.date: 07/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -52,10 +52,10 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
 - List of individual Cloud PCs with the following columns:
   - **Device name**
   - **Primary user UPN**
-  - **Active time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
-  - **Last active time**: Last time the user was active on the Cloud PC.
+  - **Total time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
+  - **Days since last sign in**
 
-You can use the filter options to see results for specific **Active time connected** and **Last active time** values. These options can help you understand usage patterns and identify Cloud PCs that are under-utilized (for example, those that are listed when using the filter **Last active time: No sign in for 28 days or more**.)
+You can use the filter options to see only data for a specific usage group.
 
 ## Frontline Cloud PCs tab
 
