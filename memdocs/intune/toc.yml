@@ -663,7 +663,7 @@ items:
             href: ./protect/app-based-conditional-access-intune.md
           - name: Set up app-based Conditional Access
             href: ./protect/app-based-conditional-access-intune-create.md
-          - name: ADAL and Intune
+          - name: Block apps that don't use modern authentication (MSAL)
             href: ./protect/app-modern-authentication-block.md
           - name: Use the Jamf Cloud connector
             href: ./protect/conditional-access-jamf-cloud-connector.md
