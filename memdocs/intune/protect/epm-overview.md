@@ -136,6 +136,31 @@ In addition to the dedicated roles, the following built-in roles for Intune also
 
  For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
+## EpmTools PowerShell module
+
+Each device that receives Endpoint Privilege Management policies installs the EPM Microsoft Agent to manage those policies. The agent includes the *EpmTools* PowerShell module, a set of cmdlets that you can import to a device. You can use the cmdlets from EpmTools to:
+
+- Diagnose and troubleshoot issues with Endpoint Privilege Management. 
+- Get File attributes directly from a file or application for which you want to build a detection rule.
+
+### Install the EpmTools PowerShell module
+
+The EPM Tools PowerShell module is available from any device that has received EPM policy. To import the EpmTools PowerShell module:
+
+1. Open PowerShell with admin privileges and go to *C:\Program Files\Microsoft EPM Agent\EpmTools*.
+2. From the **EpmTools** folder, run `Import-Module .\EpmCmdlets.dll`.
+
+Following are the available cmdlets:
+
+- **Get-Policies**: Retrieves a list of all policies received by the Epm Agent for a given PolicyType (ElevationRules, ClientSettings).
+- **DeclaredConfiguration**: Retrieves a list of WinCD documents that identify the policies targeted to the device.
+- **Get-DeclaredConfigurationAnalysis**: Retrieves a list of WinDC documents of type MSFTPolicies and checks if the policy is already present in Epm Agent (Processed column).
+- **Get-ElevationRules**: Query the EpmAgent lookup functionality and retrieves rules given lookup and target. Lookup is supported for FileName  and CertificatePayload.
+- **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.
+- **Get-FileAttributes**: Retrieves File Attributes for a .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
+
+For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
+
 ## Next steps
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)

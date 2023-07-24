@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 07/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -87,16 +87,9 @@ There are two ways to browse and approve Managed Google Play store apps with Int
     > Your Intune tenant account must be connected to your Android Enterprise account to browse Managed Google Play store apps. For more information, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 5. Select an app to view the app details.
-6. On the page that displays the app, click **Approve**. A window for the app opens asking you to give permissions for the app to perform various operations.
-7. Select **Approve** to accept the app permissions and continue.
-8. Select **Keep approved when app requests new permissions** in the **Approval Settings** tab and then click **Done**.
-
-    > [!IMPORTANT]
-    > If you do not choose this option, you will need to manually approve any new permissions if the app developer publishes an update. This will cause installations and updates of the app to stop until permissions are approved. For this reason, it is recommended to select the option to automatically approve new permissions.
-
-9. Click **Select** to select the app.
-10. Click **Sync** at the top of the blade to sync the app with the Managed Google Play service.
-11. Click **Refresh** to update the app list and display the newly added app.
+6. Click **Select** to select the app.
+7. Click **Sync** at the top of the blade to sync the app with the Managed Google Play service.
+8. Click **Refresh** to update the app list and display the newly added app.
 
 ### Add a Managed Google Play store app in the Managed Google Play console (Alternative)
 

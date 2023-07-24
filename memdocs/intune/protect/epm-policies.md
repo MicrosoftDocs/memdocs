@@ -109,6 +109,11 @@ Each elevation rule:
   - **User confirmed** (Recommended): A user confirmed elevation always requires the user to click on a confirmation prompt to run the file. There are more user confirmations you can add. One requires users to authenticate using their organization credentials. Another option requires the user to enter a business justification. While the text entered for a justification is up to the user, EPM can collect and report it when the device is configured to report elevation data as part of its Windows elevation settings policy.
   - **Automatic** elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
+    > [!NOTE]
+    > For more information about creating *strong rules*, see our [guidance for creating elevation rules with Endpoint Privilege Management](../protect/epm-guidance-for-creating-rules.md).
+    >
+    > You can also use the `Get-FileAttributes` PowerShell cmdlet from the [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module). This cmdlet can retrieve file attributes for a .exe file and extract its Publisher and CA certificates to a set location that you can use to populate Elevation Rule Properties for a particular application.
+
 - **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
 
   - **Require rule to elevate** - Configure a child processes to require its own rule before that child process can run in an elevated context
@@ -139,7 +144,7 @@ Deploy *Windows elevation settings policy* to users or devices to configure the 
 - Set default rules for elevation requests for any file that isn't managed by an Endpoint Privilege Management elevation rule on that device.
 - Configure what information EPM reports back to Intune.
 
-A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests.
+A device must have an elevation settings policy that enables support for EPM before the device can process an elevation rules policy or manage elevation requests. When support is enabled, the `C:\Program Files\Microsoft EPM Agent` folder is added to the device along with the EPM Microsoft Agent which is responsible for processing the EPM policies.
 
 ### Create a Windows elevation settings policy
 
