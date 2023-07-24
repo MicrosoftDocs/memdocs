@@ -102,7 +102,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
-- Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).  
+- Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
   - Windows Update for Business deployment service
