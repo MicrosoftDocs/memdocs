@@ -91,6 +91,7 @@ If the device is on and connected, the **Wipe** action propagates across all dev
 **Wipe** isn't supported on:
 
 - Android Enterprise personally owned devices with a work profile
+- Linux
 
 ## Retire
 
