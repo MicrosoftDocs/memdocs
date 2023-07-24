@@ -66,9 +66,13 @@ Run the following commands in a command line to manually install the Intune app 
 
     `$ sudo apt update` 
 
-    `$ sudo apt install intune-portal` 
+    `$ sudo apt install intune-portal`
 
-4. Reboot your device.   
+4. Run the following command to allow the Company Portal to read the disk encryption
+   
+    `$ sudo usermod -a -G disk <USER_ACCOUNT>`
+
+5. Reboot your device.   
 
 ## Update Intune app 
 The Microsoft Intune app automatically updates when updates become available in Software Updater.   
