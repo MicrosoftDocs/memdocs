@@ -157,6 +157,7 @@ For ANCs created before November 26, 2023, the Network Contributor role is used 
 To manually remove the existing roles and add the new roles, refer to the following table for the existing roles used on each Azure resource. Prior to removing the existing roles make nsure that the updated roles have been assigned.
 
 | Azure resource | Existing role (before November 26, 2023) | Updated role (after November 26, 2023) |
+| --- | --- | --- |
 | Resource group | Network Contributor | Windows 365 Network Interface Contributor |
 | Virtual network | Network Contributor | Windows 365 Network User |
 | Subscription | Reader | Reader |
