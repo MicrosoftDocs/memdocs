@@ -71,7 +71,7 @@ Alternatively, you can assign a custom role that includes the permissions of the
 
 In order to use **Resize** there must be available licenses in inventory for the resized Cloud PC configuration.
 
-To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node
+To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node.
 
 The **Resize** remote action is supported for paid, preview, and trial licenses.
 
@@ -171,6 +171,10 @@ For example, let's say that you used a Step-up purchase to convert licenses from
 When a Step-up conversion takes place, the stepped-up licenses show up in your inventory equaling the number of old licenses you chose to convert. If you Step-up 10 licenses of Windows 365 Enterprise 2vCPU/4GB/128 GB to 4vCPU/16 GB/128 GB, you end up with 10 more licenses of 4vCPU/16 GB/128 GB and 10 fewer licenses of 2vCPU/4GB/128 GB. These changes appear on the **Your Products** page in the Microsoft admin center.
 
 You have 90 days to migrate your users to the new 4vCPU/16 GB/128 GB licenses before they lose access to the Cloud PC provisioned with the original license. For more information about license life cycle states, see [What happens to my data and access when my subscription ends?](../subscription-ends.md)
+
+## Resize a Cloud PC flow diagram
+
+:::image type="content" alt-text="Flowchart of actions for an admin to resize a Cloud PC." source="./media/resize-cloud-pc/resize-cloud-pc-diagram.png":::
 
 <!-- ########################## -->
 ## Next steps

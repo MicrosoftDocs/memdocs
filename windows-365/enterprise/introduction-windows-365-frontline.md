@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 07/17/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -52,11 +52,11 @@ Windows 365 Frontline is currently only available for Azure Global Cloud.
 
 To use Windows 365 Frontline, you must be licensed for:
 
-- Windows 11 Enterprise or Windows 10 Enterprise
+- Windows 11 Enterprise or Windows 10 Enterprise
 - Microsoft Intune
 - Azure AD P1.
 
-In addition to being available independently, Windows 365 Frontline licenses are included in:
+In addition to being available independently, Windows Enterprise, Intune, and Azure Active Directory (Azure AD) licenses are included in:
 
 - Microsoft 365 E3
 - Microsoft 365 E5
