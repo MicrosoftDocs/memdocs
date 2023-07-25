@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2022
+ms.date: 07/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -70,6 +70,16 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
       - Beta Channel  
       - Dev Channel  
     - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings) for *Feature* updates.
+
+### Limitations for Workplace Joined devices
+
+Intune Update rings for Windows 10 and later require the use of Windows Update for Business (WUfB), which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use WUfB and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds), which provides for additional capabilities that are not supported for WPJ devices.
+
+- Driver updates for Windows 10 and later
+- Feature updates for Windows 10 and later
+- Quality Updates updates for Windows 10 and later  (also known as *Expedited* updates)
+
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
 ## Create and assign update rings
 
