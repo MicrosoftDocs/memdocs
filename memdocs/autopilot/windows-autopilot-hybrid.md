@@ -16,7 +16,7 @@ ms.collection:
   - highpri
   - tier1
 ---
- 
+
 # Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
 
 **Applies to:**
@@ -344,6 +344,11 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join don't support variables such as %SERIAL% and only support prefixes for the computer name.
 
+## Removing the ODJ Connector
+
+The ODJ connector can only be removed from the machine, it cannot be removed through the Intune portal or through a graph API call. To remove the ODJ connector, go to the machine it is installed, and then uninstall. 
+
 ## Next steps
 
 After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md).
+
