@@ -68,7 +68,7 @@ Run the following commands in a command line to manually install the Intune app 
 
     `$ sudo apt install intune-portal`
 
-4. Run the following command to allow the Company Portal to read the disk encryption
+4. Run the following command to allow the Company Portal to read the disk encryption:
    
     `$ sudo usermod -a -G disk <USER_ACCOUNT>`
 
