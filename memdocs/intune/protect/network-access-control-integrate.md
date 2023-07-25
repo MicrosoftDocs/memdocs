@@ -7,14 +7,14 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
-
+ 
 # optional metadata
 
 #ROBOTS:
@@ -114,7 +114,7 @@ Also, the data returned will be limited if:
 | Compliance state | Yes | Yes | Yes | Yes |
 | Managed by Intune | Yes | Yes | Yes | Yes |
 | Personal or corporate ownership | No | Yes | Yes | No |
-| MAC address | Yes | Yes | Yes | No |
+| MAC address | Yes | Yes | Yes | Yes|
 | Serial number | Yes | Yes | Yes | No |
 | IMEI | Yes | Yes | Yes | No |
 | UDID | Yes | Yes | Yes | No |
@@ -126,7 +126,6 @@ Also, the data returned will be limited if:
 | Last contact time with Intune | Yes | Yes | Yes | No |
 | Intune device ID | No | No | No | Yes |
 
-
 ## Next steps
 
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/UEM-MDM-Server-Integration/b_MDM_UEM_Servers_CiscoISE/chapter.html#task_og1_5zx_cqb)
@@ -134,3 +133,4 @@ Also, the data returned will be limited if:
 - [Integrate F5 BIG-IP Access Policy Manager with Intune](https://techdocs.f5.com/en-us/edge-client-7-1-8/big-ip-access-policy-manager-edge-client-and-application-configuration-7-1-8/configuring-access-policy-manager-for-mdm-applications.html)
 - [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads/documents/RmlsZTowMTg2ZmY0Yy05MGE5LTExZWItODRiZC0yZjM5OWFjNzc5YTY%3D)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.10.0.0/secRMMIntune.pdf)
+
