@@ -121,8 +121,6 @@ Applies to:
 
 - Windows 10 and later (excluding Windows 10 Home)
 
-#### Uninstall Win32 and Microsoft store apps using the Windows Company Portal<!-- 4664389  -->  
-End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ### Device configuration
 

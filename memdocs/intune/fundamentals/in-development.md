@@ -86,6 +86,9 @@ Applies to:
 
 - **iOS/iPadOS**
 
+#### Uninstall Win32 and Microsoft store apps using the Windows Company Portal<!-- 4664389  -->  
+End-users will soon be able to  uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
+
 <!-- *********************************************** -->
 
 <!-- ## Device configuration -->
@@ -132,7 +135,7 @@ We’re working on the improvements for Intune compliance policies and reports w
 For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
 
 <!-- ## Role-based access control -->
-<!-- *********************************************** -->
+<!-- *********************************************** --> 
 
 <!-- ## Tenant administration -->
 <!-- *********************************************** -->
