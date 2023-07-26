@@ -104,8 +104,8 @@ Driver updates are supported for the following Windows 10/11 editions:
 - Have Telemetry turned on and configured to report a minum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
 
   You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows 10 or Windows 11 devices:
-  - **[Device restriction template](../intune/configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
-  - **[Settings catalog](../configuration/settings-catalog)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
+  - **[Device restriction template](../configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
+  - **[Settings catalog](../configuration/settings-catalog.md)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
 
   For more information about Windows Telemetry settings, including both current and past setting options from Windows, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
