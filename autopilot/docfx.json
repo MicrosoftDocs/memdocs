@@ -45,8 +45,12 @@
     "globalMetadata": {
       "breadcrumb_path": "/autopilot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
-      "permissioned-type": "public"
+      "feedback_github_repo": "MicrosoftDocs/memdocs",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
+      "feedback_system": "GitHub",
+      "permissioned-type": "public",
+      "searchScope": ["Autopilot"],
+      "uhfHeaderId": "MSDocsHeader-Windows"
     },
     "fileMetadata": {},
     "template": [],
