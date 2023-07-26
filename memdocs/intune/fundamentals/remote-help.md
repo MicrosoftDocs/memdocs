@@ -79,7 +79,7 @@ The Remote Help app supports the following capabilities:
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
 - [Supported platforms and devices](#supported-platforms-and-devices)
 - The Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
-- The helpers' device must be enrolled in Intune
+- The  helper requires to be signed on an Intune Enrolled Device.
 
 > [!NOTE]
 > Remote Help has the following limitations:  
