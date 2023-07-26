@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: pjain
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
