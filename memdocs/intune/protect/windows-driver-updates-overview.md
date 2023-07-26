@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 07/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -101,9 +101,13 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
 
-- Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
+- Have Telemetry turned on and configured to report a minum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
 
-  Configure Telemetry as part of a Device Restriction policy for Windows 10/11. In the device restriction profile, under *Reporting and Telemetry*, configure **Share usage data** to use a minimum value of **Required**. Required is the default value. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported. Devices with a value of *None* don't report the data that is required for driver updates policies.
+  You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows 10 or Windows 11 devices:
+  - **[Device restriction template](../intune/configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
+  - **[Settings catalog](../configuration/settings-catalog)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
+
+  For more information about Windows Telemetry settings, including both current and past setting options from Windows, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
 - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
