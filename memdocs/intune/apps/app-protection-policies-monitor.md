@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/19/2023
+ms.date: 07/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,10 +39,7 @@ You can monitor the status of the app protection policies that you've applied to
 App protection data is retained for a minimum of 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. 
 
 > [!NOTE]
-> For iOS 16 and later devices, the "Device Name" value in all app protection reports will be a generic device name.  For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
-
-> [!NOTE]
-> For more information, see [How to create and assign app protection policies](app-protection-policies.md). 
+> For iOS 16 and later devices, the **Device Name** value in all app protection reports will be a generic device name. For related information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
 
 ## View the **App protection status** report
 
@@ -59,17 +56,18 @@ The following list provides details about app protection status:
 - **Device type**: The type of device or operating system of the device.
 - **AAD Device ID**: The AAD device ID is displayed if the device is AAD-joined.
 - **Management type**: The type of management on the device. For example, **unmanaged**, **MDM**, or **Android Enterprise**.  
-- **Platform**: The operating system of the device. 
-- **Policy name**: The name of the app protection policy targeted to the app for the user. 
-- **Last sync**: The timestamp of the last sync of the app with Microsoft Intune. 
+- **Platform**: The operating system of the device.
+- **Policy name**: The name of the app protection policy targeted to the app for the user.
+- **Last sync**: The timestamp of the last sync of the app with Microsoft Intune.
 - **Device Name**: Names of any devices that are associated with the user's account.
-- **Android device manufacturer**: The manufacturer of the Android device. 
-- **Android device model**: The Android device model.
-- **Android patch version**: The date of the last Android Security Patch received by the device. 
-- **MDM device ID**: The MDM device ID is displayed if the device is enrolled with Microsoft Intune MDM. 
+- **Device manufacturer**: The manufacturer of the Android device.
+- **Device model**: The Android device model.
+- **Android patch version**: The date of the last Android Security Patch received by the device.
+- **MDM device ID**: The MDM device ID is displayed if the device is enrolled with Microsoft Intune MDM.
 - **Platform version**: The operating system version.
-- **App Protection Status**: Unprotected or protected.
-- **iOS SDK version**: The current iOS MAM SDK version of the iOS app.   
+- **App Protection Status**: The app is considered protected if it is targeted with a MAM policy.
+- **iOS SDK version**: The current iOS MAM SDK version of the iOS app.
+- **Compliance State**: The app meets compliance if it is targeted with MAM policy.
  
 >[!NOTE]
 > The **Last Sync** column represents the same value in both the in-console User status report and the App Protection Policy [exportable .csv report](/intune/app-protection-policies-monitor#export-app-protection-activities). The difference is a small delay in synchronization between the value in the two reports.
@@ -86,4 +84,4 @@ The following list provides details about app protection status:
 
 ## See also
 - [Intune reports](../fundamentals/reports.md)
-
+> [How to create and assign app protection policies](../apps/app-protection-policies.md)
