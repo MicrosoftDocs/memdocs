@@ -18,7 +18,8 @@ ms.topic: conceptual
 # Windows Autopilot: What's new
 
 ## Autopilot profile resiliency
-Downloading the Windows Autopilot policy just got more resilient! A new update is being rolled out that increases the retry attempts for the Windows Autopilot policy to be applied when a network connection might not be fully initialized. This helps ensure that the profile is applied before the user begins the setup experience and improves the time sync. For Windows 10, install quality update [KB5028244](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028244-os-build-19045-3271-preview-8cf92c9b-3a60-4c6a-8f4c-fc41fe8f4f2c) or newer. For Windows 11, install quality update [KB5028245](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2) or newer.
+
+Downloading the Windows Autopilot policy just got more resilient! A new update is being rolled out that increases the retry attempts for the Windows Autopilot policy to be applied when a network connection might not be fully initialized. The increased retry attempts help ensure that the profile is applied before the user begins the setup experience and improves the time sync. For Windows 10, install quality update [KB5028244](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028244-os-build-19045-3271-preview-8cf92c9b-3a60-4c6a-8f4c-fc41fe8f4f2c) or newer. For Windows 11, install quality update [KB5028245](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2) or newer.
 
 ## One step removal of Windows Autopilot registration
 
