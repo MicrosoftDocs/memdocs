@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/19/2021  
+ms.date: 07/26/2023  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -54,37 +54,42 @@ Make sure you're signed in to the primary user account on your device. Work prof
 
 2. On the **Company Access Setup** screen, review the tasks required to enroll your device. Then tap **BEGIN**.  
 
-    ![Screenshot of Company Access Setup screen](./media/access-setup-work-profile-1911.png)  
+    ![Screenshot of Company Access Setup screen highlighting the Begin button.](./media/access-setup-work-profile-1911.png)  
 
 3. On the privacy information screen, review the list of items that your organization can and can't see on your device. Then tap **CONTINUE**. 
 
-    ![Example image of Company Portal, We care about your privacy screen, highlighting the Continue button.](./media/android-privacy-screen-1911.png)
+    ![Screenshot of Company Portal, We care about your privacy screen, highlighting the Continue button.](./media/android-privacy-screen-1911.png)
 4. Review the Google terms for creating a work profile. Accept the terms to continue. The appearance of this screen varies based on OS version.  
 
-    ![Screenshot of Google's work profile terms](./media/android-wp-05-1908.png)  
+    
+    ![Screenshot of Company Portal showing link to Google terms, ACCEPT & CONTINUE button, and CLOSE button.](./media/android-wp-05-1908.png)  
 
-5. Review the Samsung Knox privacy policy. Select **Agree** to continue. This screen only appears if you're using a Samsung device. 
-6. Wait a few minutes while your work profile is set up.       
+5. Review the Samsung Knox privacy policy. Select **Agree** to continue. This screen only appears if you're using a Samsung device.  
 
-    ![Screenshot of "Setting up work profile" screen.](./media/android-wp-05a-1908.png)  
-7. Select **Next**.  
+   :::image type="content" source="./media/samsung-knox-privacy-policy-2307.png" alt-text="Screenshot of Company Portal showing link to Samsung Knox Privacy Policy and highlighting Agree button." border="true" :::
+    
+6. Wait a few minutes while your work profile is set up. Then select **Next**.         
 
-8. On the **Company Access Setup** screen, confirm that the profile has been created. Then tap **CONTINUE** to proceed to the next enrollment task.    
+      :::image type="content" source="./media/work-profile-setup-next-2307.png" alt-text="Screenshot of Company Portal highlighting the **Next** button." border="true":::
+
+7. On the **Company Access Setup** screen, confirm that the profile has been created. Then tap **CONTINUE** to proceed to the next enrollment task.    
 
     ![Screenshot of Company Access Setup showing work profile is created.](./media/work-profile-complete-1911.png)  
 
-9. Wait while the app registers your device. When prompted, sign in with your work account.  
-10. On the **Company Access Setup** screen, confirm that the work profile is active. Then tap **CONTINUE** to proceed to the next enrollment task.  
+8. Wait while the app registers your device. When prompted to, sign in with your work account.  
+9. On the **Company Access Setup** screen, confirm that the work profile is active. Then tap **CONTINUE** to proceed to the next enrollment task.  
 
     ![Screenshot of Company Access Setup showing work profile is active.](./media/work-profile-active-1911.png)  
 
-11. Your organization may require you to update the settings on your device. In the Company Portal app, review the list of settings you need to change. Then tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.    
+10. Update the settings on your device if required. In the Company Portal app, review the list of settings you need to change. Tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.    
 
-12. When setup and enrollment are complete, you are sent back to the **Company Access Setup** screen where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
+      :::image type="content" source="./media/confirm-device-settings-work-profile-2307.png" alt-text="Screenshot of Company Portal, Update device settings screen highlighting the RESOLVE button and CONFIRM DEVICE SETTINGS button." border="true":::  
+
+11. When setup and enrollment are complete, you are sent back to the **Company Access Setup** screen where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
 
-13. Optionally, when prompted to view suggested work apps in Google Play, tap **OPEN**. If you're not ready to install apps, you can do it later by going to the Google Play app in your work profile.    
+12. Optionally, when prompted to view suggested work apps in Google Play, tap **OPEN**. If you're not ready to install apps, you can do it later by going to the Google Play app in your work profile.    
 
     ![Example image of Company Portal prompt to open badged version of Google Play.](./media/get-apps-banner-android-2005.png) 
 
