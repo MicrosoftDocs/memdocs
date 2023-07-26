@@ -153,9 +153,9 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 Image hash values:
 
-- **agentImageDigest**:  sha256:be4b63afec9bcefee576c385f96caa358e18f83116cffc0a4bc721e73fccbaf7
+- **agentImageDigest**: sha256:683f756e15678264599f005f2eefe128e30a39ad74673da84426837b67bc0837
 
-- **serverImageDigest**: sha256:da76d07a9d2ecd287fb65ad11db463fb0b72986c9eeffb7fe2c9ea33c9e00898
+- **serverImageDigest**: sha256:7665f4407f8f5a0b67d352c7c7291fa5d4011c55bd718b6e390247e85585b3c1
 
 Changes in this release:
 
@@ -269,8 +269,9 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- Set process limit to 6000 in the server container 
+- Set process limit to 6000 in the server container
 
+<!-- Archive of past releases
 
 ### June 30, 2022
 
@@ -311,9 +312,6 @@ Image hash values:
 Changes in this release:
 - Minor bug fixes
 - Access log enhancements
-
-
-<!-- Archive of past releases
 
 
 ### February 16, 2022
