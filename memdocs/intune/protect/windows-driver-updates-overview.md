@@ -101,7 +101,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
 
-- Have Telemetry turned on and configured to report a minum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
+- Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
 
   You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows 10 or Windows 11 devices:
   - **[Device restriction template](../configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
