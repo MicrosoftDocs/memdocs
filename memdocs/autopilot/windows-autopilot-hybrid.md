@@ -344,18 +344,18 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join don't support variables such as %SERIAL% and only support prefixes for the computer name.
 
-## Uninstalling the ODJ Connector
+## Uninstall the ODJ Connector
 
 The OSD connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
 
-The following steps will uninstall the ODJ Connector from the computer where it's installed:
+The following steps uninstalls the ODJ Connector from the computer where it's installed:
 
 1. Sign into the computer hosting the ODJ connector.
 2. Right-click on the **Start** menu and select **Settings**.
 3. In the **Windows Settings** window, select **Apps**.
 4. Under **Apps & features**, find and select **Intune Connector for Active Directory**.
 5. Under **Intune Connector for Active Directory**, select the **Uninstall** button, and then select the **Uninstall** button again.
-6. The ODJ connector will proceed to uninstall.
+6. The ODJ connector proceeds to uninstall.
 
 ## Next steps
 
