@@ -83,5 +83,6 @@ The following list provides details about app protection status:
 > - If the user is just launching the app, the Last Sync time reported depends on when the user last checked in.
 
 ## See also
+
+- [How to create and assign app protection policies](../apps/app-protection-policies.md)
 - [Intune reports](../fundamentals/reports.md)
-> [How to create and assign app protection policies](../apps/app-protection-policies.md)
