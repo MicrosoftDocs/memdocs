@@ -17,6 +17,10 @@ ms.topic: conceptual
 
 # Windows Autopilot: What's new
 
+## Autopilot profile resiliency
+
+Downloading the Windows Autopilot policy just got more resilient! A new update is being rolled out that increases the retry attempts for the Windows Autopilot policy to be applied when a network connection might not be fully initialized. The increased retry attempts help ensure that the profile is applied before the user begins the setup experience and improves the time sync. For Windows 10, install quality update [KB5028244](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028244-os-build-19045-3271-preview-8cf92c9b-3a60-4c6a-8f4c-fc41fe8f4f2c) or newer. For Windows 11, install quality update [KB5028245](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2) or newer.
+
 ## One step removal of Windows Autopilot registration
 
 Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that you can now remove the Autopilot registration of a device without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
@@ -42,7 +46,7 @@ A new toggle is available in the Enrollment Status Page (ESP) profile that allow
 
 ## New Microsoft Store apps now supported with the Enrollment Status Page
 
-The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
 
 
 ## Win32 App Supersedence ESP improvements
@@ -60,7 +64,7 @@ For more information on supported scenarios, see [Temporary Access Pass](windows
 
 Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and with Windows 11. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics may include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
 
 ## Updates to Autopilot device targeting infrastructure
 
@@ -73,11 +77,11 @@ Starting in September 2022, the Intune Connector for Active Directory (ODJ conne
 
 ## Enroll to co-management from Windows Autopilot
 <!-- 11300628 -->
-With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](../configmgr/comanage/overview.md), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](/mem/intune/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
 
-For more information, see [How to enroll to co-management with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
+For more information, see [How to enroll to co-management with Autopilot](../configmgr/comanage/autopilot-enrollment.md).
 
 ## Improvements to the enrollment status page
 <!-- 2202 -->
@@ -121,13 +125,13 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
 ## Next steps
 
-[What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
+[What's new in Microsoft Intune](../intune/fundamentals/whats-new.md)
 
 [What's new in Windows client](/windows/whats-new/)
 
