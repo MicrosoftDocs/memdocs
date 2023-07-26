@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/29/2023
+ms.date: 07/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Samsung Knox conditional launch check<!-- 8610063  -->  
+Administrators will be able to add additional detection of device health compromise on Samsung Knox devices. Using a new Intune App Protection Policy conditional launch check, you will be able to require that hardware-level device tamper detection and device attestation be performed for compatible Samsung devices.
+
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
@@ -86,16 +89,72 @@ Applies to:
 
 - **iOS/iPadOS**
 
-#### Uninstall Win32 and Microsoft store apps using the Windows Company Portal<!-- 4664389  -->  
+### Uninstall Win32 and Microsoft store apps using the Windows Company Portal<!-- 4664389  -->  
 End-users will soon be able to  uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+The settings within the Managed Settings command are now available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **Settings catalog** for profile type.
+
+**Managed Settings > App Analytics**:
+
+- Enabled: If true, enable sharing app analytics with app developers. If false, disable sharing app analytics.
+
+**Managed Settings > Diagnostic Submission**:
+
+- Enabled: If true, enables diagnostic submission. If false, disables diagnostic submission.
+
+Applies to:
+
+- Shared iPad
+
+**Managed Settings > Accessibility Settings**:
+
+- Bold Text Enabled
+- Grayscale Enabled
+- Increase Contrast Enabled
+- Reduce Motion Enabled
+- Reduce Transparency Enabled
+- Text Size
+- Touch Accommodations Enabled
+- Voice Over Enabled
+- Zoom Enabled
+
+**Managed Settings > Data Roaming**:
+
+- Enabled: If true, enable data roaming, which also enables voice roaming. If false, disable data roaming.
+
+**Managed Settings > Time Zone**:
+
+- Time Zone: The Internet Assigned Numbers Authority (IANA) time zone database name.
+
+Applies to:
+
+- iOS/iPadOS
+
+For more information on these settings, go to [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### Just-in-time registration and compliance remediation for iOS/iPadOS Setup Assistant with modern authentication now generally available<!-- 16276610  -->  
+Just-in-time registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just-in-time (JIT) registration, the device user doesn't need to use the Company Portal app for Azure Active Directory registration and compliance checking. JIT registration and compliance remediation is embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Additionally, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md#set-up-just-in-time-registration).
+
+### Awaiting final configuration for iOS/iPadOS automated device enrollment becoming generally available<!-- 17473384  -->  
+Soon to be generally available, awaiting final configuration enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:
+
+- iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
+
+- iOS/iPadOS 13+ devices enrolling without user affinity
+- iOS/iPadOS 13+ devices enrolling with Azure AD shared mode
+
+This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. Yes is the default setting for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](..//enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 <!-- *********************************************** -->
 
