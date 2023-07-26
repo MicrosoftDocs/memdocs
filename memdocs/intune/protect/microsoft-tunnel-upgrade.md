@@ -149,7 +149,19 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
  > [!IMPORTANT]  
   > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week. 
 
+### July 24, 2023
 
+Image hash values:
+
+- **agentImageDigest**: sha256:683f756e15678264599f005f2eefe128e30a39ad74673da84426837b67bc0837
+
+- **serverImageDigest**: sha256:7665f4407f8f5a0b67d352c7c7291fa5d4011c55bd718b6e390247e85585b3c1
+
+Changes in this release:
+
+- Minor bug fixes
+- Server upgrades
+  
 ### June 12, 2023
 
 Image hash values:
@@ -257,8 +269,9 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- Set process limit to 6000 in the server container 
+- Set process limit to 6000 in the server container
 
+<!-- Archive of past releases
 
 ### June 30, 2022
 
@@ -299,9 +312,6 @@ Image hash values:
 Changes in this release:
 - Minor bug fixes
 - Access log enhancements
-
-
-<!-- Archive of past releases
 
 
 ### February 16, 2022
