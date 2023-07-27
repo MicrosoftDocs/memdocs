@@ -1076,7 +1076,7 @@ This is because Intune initialize and complete all delegation before `applicatio
 ### I have integrated my application with Intune SDK, however my application does not invoke `application(_:willFinishLaunchingWithOptions:)` instance lifecycle method. Why?
 If you have integrated with IntuneSDK, `AppDelegate` class should be your `UIApplicationMain` class. If not, this may result in certain `UIApplicationDelegate` lifecycle instance method not getting invoked.
 
-### There is MAM-CA policy enabled by IT admin. My application is using OneAuth for AAD authentication and have integrated with Intune SDK with CA related changes, however some of the users with old iPhone devices complained they are unable to sign in to the app and logs shows `UserCancelled` error status. What could be possibly wrong?
+### MAM-CA policy is enabled by the IT admin. My application uses OneAuth for Azure AD authentication and has integrated with Intune SDK with CA-related changes, however, some users with old iPhone devices are unable to sign in to the app and logs show the `UserCancelled` error status. What could possibly be wrong?
 
 If you have already implemented all code and configuration changes to enable and handle MAM CA policy, ensure your application is able to handle MSAL response. The following delegate instance method should be part of your `AppDelegate` class to handle MSAL response:
 
