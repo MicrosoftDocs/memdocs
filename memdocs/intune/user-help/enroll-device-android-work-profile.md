@@ -81,7 +81,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
 
     ![Screenshot of Company Access Setup showing work profile is active.](./media/work-profile-active-1911.png)  
 
-10. Update the settings on your device if required. In the Company Portal app, review the list of settings you need to change. Tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.    
+10. In the Company Portal app, review the list of settings your organization requires.  Update the settings on your device if necessary. Tap **RESOLVE** to open the setting on your device. After you're done updating settings, tap **CONFIRM DEVICE SETTINGS**.    
 
       :::image type="content" source="./media/confirm-device-settings-work-profile-2307.png" alt-text="Screenshot of Company Portal, Update device settings screen highlighting the RESOLVE button and CONFIRM DEVICE SETTINGS button." border="true":::  
 
@@ -108,4 +108,4 @@ If the version of Google Play services on your device is outdated, you may be un
 ## Next steps  
 Install the apps you need for work or school. Switch to your work profile to see all available apps, and search for more apps in the work version of the Google Play store. 
 
-Need additional help? Go to **Support** in the Company Portal app to find your organization's IT contact information. You can also sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account, and go to **Helpdesk**.
+Need more help? Go to **Support** in the Company Portal app to find your organization's IT contact information. You can also sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account, and go to **Helpdesk**.
