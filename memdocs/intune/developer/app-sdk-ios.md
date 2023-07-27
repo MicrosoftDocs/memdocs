@@ -1086,7 +1086,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 }
 ```
 
-If your application uses `SceneDelegate`, in that case instead of above instance method, add below delegate instance method in your `SceneDelegate` class:
+But if your application uses `SceneDelegate`, add the following delegate instance method in your `SceneDelegate` class instead:
 
 ```
 func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
