@@ -1060,7 +1060,7 @@ Yes, the IT admin can send a selective wipe command to the application. This wil
 
 Yes! Please see the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
 
-### Where should I set my custom intune related classes such as EnrollmentDelegate, ComplianceDelegate, PolicyDelegate to listen to enrollment, compliance and policy staus?
+### Where should I set my custom Intune-related classes such as EnrollmentDelegate, ComplianceDelegate, and PolicyDelegate to listen to enrollment, compliance, and policy status?
 
 All delegate classes should be assigned in the UIApplicationDelegate `application(_:willFinishLaunchingWithOptions:)` lifecycle method:
  `func application(
