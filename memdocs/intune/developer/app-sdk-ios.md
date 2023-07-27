@@ -1073,7 +1073,7 @@ All delegate classes should be assigned in UIApplicationDelegate `application(_:
 
 This is because Intune initialize and complete all delegation before `application(_:didFinishLaunchingWithOptions:)` instance method. Moreover, assigning delegate in init() can result into unpredictable method because lifecycle methods can be invoked multiple times based on application running status while init method would only be called during class initialization.
 
-### I have integrated my application with Intune SDK, however my application does not invoke `application(_:willFinishLaunchingWithOptions:)` instance lifecycle method. Why?
+### I have integrated my application with Intune SDK, however, my application does not invoke the `application(_:willFinishLaunchingWithOptions:)` instance lifecycle method. Why?
 If you have integrated with IntuneSDK, `AppDelegate` class should be your `UIApplicationMain` class. If not, this may result in certain `UIApplicationDelegate` lifecycle instance methods not getting invoked.
 
 ### MAM-CA policy is enabled by the IT admin. My application uses OneAuth for Azure AD authentication and has integrated with Intune SDK with CA-related changes, however, some users with old iPhone devices are unable to sign in to the app and logs show the `UserCancelled` error status. What could possibly be wrong?
