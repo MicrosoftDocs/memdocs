@@ -1071,7 +1071,7 @@ All delegate classes should be assigned in UIApplicationDelegate `application(_:
  	// 
 }'
 
-This is because Intune initialize and complete all delegation before `application(_:didFinishLaunchingWithOptions:)` instance method. Moreover, assigning delegate in init() can result into unpredictable method because lifecycle methods can be invoked multiple times based on application running status while init method would only be called during class initialization.
+This is because Intune initializes and completes all delegation before the `application(_:didFinishLaunchingWithOptions:)` instance method. Moreover, assigning a delegate in init() can result in an unpredictable method because lifecycle methods can be invoked multiple times based on application running status while the init method would only be called during class initialization.
 
 ### I have integrated my application with Intune SDK, however, my application does not invoke the `application(_:willFinishLaunchingWithOptions:)` instance lifecycle method. Why?
 If you have integrated with IntuneSDK, `AppDelegate` class should be your `UIApplicationMain` class. If not, this may result in certain `UIApplicationDelegate` lifecycle instance methods not getting invoked.
