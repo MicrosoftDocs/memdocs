@@ -60,7 +60,13 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## App management
+## App management  
+
+### New macOS web clip app type<!-- 24128407 -->
+In Intune, you will be able to pin web apps to the dock on your macOS devices (**Apps** > **macOS** > **Add** > **macOS web clip**). For related information about the settings you can currently configure, go to [Add web apps to Microsoft Intune](../apps/web-app.md).  
+
+Applies to:
+- macOS
 
 ### Samsung Knox conditional launch check<!-- 8610063  -->  
 Administrators will be able to add additional detection of device health compromise on Samsung Knox devices. Using a new Intune App Protection Policy conditional launch check, you will be able to require that hardware-level device tamper detection and device attestation be performed for compatible Samsung devices.
