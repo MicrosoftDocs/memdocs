@@ -154,7 +154,7 @@ Soon to be generally available, awaiting final configuration enables a locked ex
 - iOS/iPadOS 13+ devices enrolling without user affinity
 - iOS/iPadOS 13+ devices enrolling with Azure AD shared mode
 
-This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. Yes is the default setting for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](..//enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. Awaiting final configuration is enabled by default for new enrollment profiles. For more information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](..//enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 <!-- *********************************************** -->
 
@@ -182,7 +182,27 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
+## Device security  
+### New settings available for macOS Antivirus policy<!-- 24191427 -->  
+
+The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profile for macOS devices will be getting several new settings. The new settings will add capabilities to manage:
+
+- Running scans after definitions are updated
+- Turning on-demand scans of archives on or off
+- Turning the file hash computation on or off
+- Tamper protection for macOS
+- device Visibility of the status menu icon
+- Visibility of the feedback option
+- Network protection
+- Controlling sign-in to the consumer version of Microsoft Defender
+
+For more information about how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide).  
+## Monitor and troubleshoot  
+### Anomaly correlation in Intune Endpoint analytics will be generally available <!-- 24577118 -->
+
+Anomaly correlation, a part of our Anomaly detection feature in Intune Endpoint analytics will be generally available.  
+
+Devices associated with a high or medium severity anomaly are correlated into groups based on one or more factors they have in common.  A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You will also be able to view a breakdown of devices currently affected by the anomaly and 'at risk' devices, those that haven't yet shown symptoms of the anomaly.
 
 ### Updates for compliance policies and reports<!-- 15425771  -->  
 We’re working on the improvements for Intune compliance policies and reports which include the following:
