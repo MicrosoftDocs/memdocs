@@ -72,7 +72,7 @@ Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command 
 
 ## How to turn off usage data sent to Microsoft for shell scripts?
 
- To turn off usage data sent to Microsoft from the Intune management agent, open Company Portal and select **Menu** > **Preferences** > *uncheck 'allow Microsoft to collect usage data'*. This will turn off usage data sent for both the agent and Company Portal.
+ To turn off usage data sent to Microsoft from the Intune management agent, open Company Portal and select **Menu** then **Preferences** and uncheck *"allow Microsoft to collect usage data"*. This will turn off usage data sent for both the agent and Company Portal.
 
 ## Next steps
 
