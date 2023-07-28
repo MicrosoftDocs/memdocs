@@ -486,6 +486,8 @@ End of comment -->
   > [!NOTE]
   > Users on fully managed, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   > 
+  > TIP: for the device password settings to apply during device enrollment assign the device restriction profile to users not devices. In this case users will see an extra step during device enrolment asking them to set a screen lock and they will be forced to choose a device password that meets all the requirements set in the device restriction profile.
+  > 
   > On dedicated devices users are prompted to set a password if the device is set up with single or multi-app kiosk mode. Screens force and guide users to create a compliant password before they can continue using the device.
   >
   > On dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements. 
