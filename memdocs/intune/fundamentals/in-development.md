@@ -100,7 +100,7 @@ End-users will soon be able to  uninstall Win32 apps and Microsoft store apps us
 
 <!-- *********************************************** -->
 
-## Device configuration
+## Device configuration  
 
 ### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
@@ -143,7 +143,87 @@ Applies to:
 
 - iOS/iPadOS
 
-For more information on these settings, go to [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information on these settings, go to [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).  
+
+### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541 -->
+
+A range of new settings will be available in the Settings Catalog for iOS/iPadOS and macOS. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
+
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Account Display Name
+- Additional Groups
+- Administrator Groups
+- Authentication Method
+- Authorization Right
+- Group
+- Authorization Group
+- Enable Authorization
+- Enable Create User At Login
+- Login Frequency
+- New User Authorization Mode
+- Account Name
+- Full Name
+- Token To User Mapping
+- User Authorization Mode
+- Use Shared Device Keys
+
+Applies to:
+- macOS 13.0 and later
+
+**Login > Login Window**:
+
+- Autologin Password
+- Autologin Username
+
+**Restrictions**:
+
+- Allow ARD Remote Management Modification
+- Allow Bluetooth Sharing Modification
+- Allow Cloud Freeform
+- Allow File Sharing Modification
+- Allow Internet Sharing Modification
+- Allow Local User Creation
+- Allow Printer Sharing Modification
+- Allow Remote Apple Events Modification
+- Allow Startup Disk Modification
+- Allow Time Machine Backup
+
+**Security > Passcode**:
+
+- Password Content Description
+- Password Content Regex
+
+Applies to:
+- macOS 14.0 and later
+
+**Restrictions**:
+
+- Allow iPhone Widgets On Mac
+
+Applies to:
+- iOS/iPadOS 17.0 and later
+
+**Microsoft Defender > Tamper protection**:
+
+- Process's arguments
+- Process path
+- Process's Signing Identifier
+- Process's Team Identifier
+- Process exclusions
+
+Applies to:
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+
+### Remote Help for Android in public preview <!-- 16238217 -->
+
+Remote Help will be available in public preview for Android Enterprise Dedicated devices from Zebra and Samsung. With Remote Help, IT Pros can remotely view the device screen and take full control in both attended and unattended scenarios, to diagnose and resolve issues quickly and efficiently.
+
+Applies to:
+* Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
 <!-- *********************************************** -->
 
@@ -180,14 +260,6 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device security  -->
-
-<!-- *********************************************** -->
-
-<!-- ## Intune apps -->
-
-<!-- *********************************************** -->
-
 ## Device security  
 ### New settings available for macOS Antivirus policy<!-- 24191427 -->  
 
@@ -217,7 +289,13 @@ We’re working on the improvements for Intune compliance policies and reports w
 - Providing more up-to-date and simplified reporting experience for the policy Overview.
 - Aligning the policy report experience with the experience for device configuration profiles.
 
-For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
+For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).  
+
+<!-- *********************************************** -->
+
+<!-- ## Intune apps -->
+
+<!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
 <!-- *********************************************** --> 
