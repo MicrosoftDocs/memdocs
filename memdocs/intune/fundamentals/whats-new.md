@@ -166,7 +166,7 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 #### Compliance Retrieval service support for MAC address endpoints<!--  24332824  -->  
 You can now use MAC address endpoints with the Intune Compliance Retrieval service (CR service), which is a replacement to the Intune [Network Access Control service](../protect/network-access-control-integrate.md).
 
-The initial release of the CR service included support for using only the Intune device ID with the intent to eliminate the need to manage internal identifiers like serial numbers and MAC addresses. With this update, organizations that prefer to use MAC addresses for certificate authentication may continue to do so while implementing the CR service.
+The initial release of the CR service included support for using only the Intune device ID with the intent to eliminate the need to manage internal identifiers like serial numbers and MAC addresses. With this update, organizations that prefer to use MAC addresses over certificate authentication may continue to do so while implementing the CR service.
 
 While this update adds MAC address support to the CR service, our recommendation is to use certificate-based authentication with the Intune device ID included in the certificate.
 
@@ -1653,6 +1653,4 @@ Applies to:
 
 For previous months, see the [What's new archive](whats-new-archive.md).
 
-## Notices
 
-[!INCLUDE [Intune notices](../includes/intune-notices.md)]
