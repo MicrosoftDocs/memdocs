@@ -85,6 +85,7 @@ If the device is on and connected, the **Wipe** action propagates across all dev
 
 - Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
 - Android Open Source Project (AOSP) devices
+- iOS/iPadOS
 - macOS
 - Windows
 

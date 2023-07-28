@@ -125,7 +125,7 @@ The following filter properties are always available to use with enrollment poli
 
 * OS version 
 * Operating System SKU 
-* Enrollment profile name
+* Ownership
 
 **iOS/iPadOS and macOS**  
 * Manufacturer 
