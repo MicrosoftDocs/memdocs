@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 07/28/2023
+ms.date: 07/31/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -38,7 +38,7 @@ For information about what's new in the *current branch* of Configuration Manage
 
 For most product prerequisites, use the information in the [Supported configurations](../plan-design/configs/supported-configurations.md). The following exceptions apply to the technical preview branch:
 
-- Each install is active for 90 days before it becomes inactive.
+- Each install is active for 180 days before it becomes inactive.
 
 - English is the only language supported.
 

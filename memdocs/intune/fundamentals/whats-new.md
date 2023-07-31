@@ -172,7 +172,7 @@ While this update adds MAC address support to the CR service, our recommendation
 
 For information about the CR service as a replacement for the Intune Network Access Control (NAC) service, see the Intune blog at [https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696).
 
-#### Settings insight within Intune Security Baselines is generally available<!-- 11127203  -->  
+#### Settings insight within Intune Security Baselines is generally available<!-- 24507891   -->  
 Announcing the general availability of Settings insight in Microsoft Intune.
 
 The [Settings insight](../fundamentals/settings-insight.md) feature adds insight to settings giving you confidence in configurations that have been successfully adopted by similar organizations. Settings insight is currently available for Security Baselines.
@@ -192,7 +192,7 @@ The EpmTools PowerShell module is now available for use with Intune Endpoint Pri
 
 For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
-#### Endpoint Privilege Management support to manage elevation rules for child processes<!--   -->  
+#### Endpoint Privilege Management support to manage elevation rules for child processes<!-- 15931887 -->  
 With Intune Endpoint Privilege Management (EPM) you can manage which files and processes are allowed to *Run as Administrator* on your Windows devices.  Now, EPM [elevation rules](../protect/epm-policies.md#create-a-windows-elevation-rules-policy) support a new setting, **Child process behavior**.
 
 With *Child process behavior*, your rules can manage the elevation context for any child processes created by the managed process. Options include:
