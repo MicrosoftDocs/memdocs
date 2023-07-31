@@ -124,15 +124,6 @@ Applies to:
 
 ### Device configuration
 
-#### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998  -->  
-Intune is introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices. Windows 11 devices assigned an Intune Windows Compliance policy with any of the Device Health settings (BitLocker, Code Integrity, Secure Boot) set to "Require" will use the MAA service.
-
-However, Windows 10 devices, and GCCH/DOD environments will continue to use Device health attestation (DHA ) and are not impacted by this change.
-
-Today, Intune uses the Windows Device Health Attestation (DHA) service for Windows 10/11 Compliance policy - Device Health settings. DHA is a reporting service used to ensure a device boots to a trusted state.
-
-For more information, see [Network Endpoints](../fundamentals/intune-endpoints.md).
-
 #### Added Support for Scope tags<!-- 16485280  -->  
 You can now add scope tags when creating deployments using Zebra LifeGuard Over-the-Air integration (in public preview).
 
