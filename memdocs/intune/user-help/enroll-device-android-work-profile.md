@@ -84,7 +84,7 @@ Make sure you're signed in to the primary user account on your device. Work prof
 
       :::image type="content" source="./media/confirm-device-settings-work-profile-2307.png" alt-text="Screenshot of Company Portal, Update device settings screen highlighting the RESOLVE button and CONFIRM DEVICE SETTINGS button." border="true":::  
 
-11. When setup and enrollment are complete, you are sent back to the **Company Access Setup** screen where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
+11. When setup and enrollment are complete, you are sent back to the setup list, where you should see a green checkmark next to each enrollment task. Tap **DONE**.       
 
     ![Example image of Company Portal, Company Access Setup screen, showing completed setup and highlighting Done button.](./media/work-profile-done-1911.png)  
 

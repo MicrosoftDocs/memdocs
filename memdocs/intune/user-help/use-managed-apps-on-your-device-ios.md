@@ -41,28 +41,25 @@ To maximize data protection, your organization might configure several of these 
 Your org can require you to use a specific app to do something like opening a work file, or accessing a web link. If you don't have the app, you might not be able to do these things. 
 
 ## How do I know I'm using a managed app?  
-When you sign in or try to access work or school data in a managed app, you'll receive an on-screen message that the app is protected by your organization.   
+When you sign in or try to access work or school data in a managed app, you receive an on-screen message that tells you the app is protected by your organization.   
 
 ![managed-apps-message-ios](./media/managed-apps-message.png)  
 
 ## How do I get work or school apps?  
 
-There are four ways to get these apps:   
-* Your organization automatically installs apps to your device at time of enrollment.  
-* You install an app from the iOS App Store, and then sign in to the app with your work or school account.    
-* Your organization makes managed apps available to you in Company Portal. Go to the Company Portal app or website to search, view, and install available apps. For more information about these apps, see the next section, [Available apps](#available-apps).  
+There are three ways to get apps for work or school:   
+* The apps automatically install on your device at time of enrollment.  
+* You install an app from the Apple App Store, and then sign in to the app with your work or school account.    
+* Your organization makes the apps available to you in Company Portal. Go to the Company Portal app or website to search, view, and install available apps. For more information, see the next section, [Available apps](#available-apps).  
 
 ### Apple Volume Purchase Program agreement  
-Organizations often purchase iOS app licenses in bulk to accommodate the number of students or employees they have. If you see a message asking you to accept the Apple Volume Purchase Program agreement, this is normal, and you should accept it. If you don't accept it, you won't be able to install the app.  
+Your organization may purchase iOS app licenses in bulk to accommodate the number of students or employees they have. If prompted to, review and accept the Apple Volume Purchase Program agreement to install the app. 
 
 ## Available apps   
- Your organization selects apps that are appropriate and useful for you at work or school. These apps are the only ones you'll find in the Company Portal. 
-
- Apps are also made available to you based on your device type. For example, if you're using the Company Portal app for iOS, you'll have access to iOS apps, but not Android apps.   
+ Your organization selects apps that are appropriate and useful for work or school and makes them available to install in Company Portal. You don't have to install these apps, but they're there if you need them. Apps are made available to you based on your device type. For example, when using the Company Portal app for iOS, you have access to iOS apps, but not Android apps.   
 
 ## Request an app for work or school   
- If there's an app you need, but don't see in Company Portal, you can request it. You'll find contact details for your IT support person in the Company Portal **Support** tab. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
- 
+ If there's an app you need, but don't see in Company Portal, you can request it. Go to the Company Portal app **Support** tab for your support person's contact details. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## What can my org manage in an app?  
 The following list describes the settings your IT support person can control within an app. These settings affect how you view, access, and otherwise use work or school data on your device:  
