@@ -47,7 +47,6 @@ Some VPNs allow username and password authentication with per-app VPN. Meaning, 
 
 > [!IMPORTANT]
 > 
-> - There's a known issue in iOS/iPadOS 13. The issue prevents per-app VPN profiles from connecting in user enrollment environments that use certificate-based authentication. Apple plans to fix this in a future release of iOS.
 > - On iOS/iPadOS, per-app VPN isn't supported for IKEv2 VPN profiles.
 
 ## Per-app VPN with Microsoft Tunnel or Zscaler
