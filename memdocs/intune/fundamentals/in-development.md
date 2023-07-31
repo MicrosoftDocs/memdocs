@@ -60,7 +60,13 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-## App management
+## App management  
+
+### New macOS web clip app type<!-- 24128407 -->
+In Intune, you will be able to pin web apps to the dock on your macOS devices (**Apps** > **macOS** > **Add** > **macOS web clip**). For related information about the settings you can currently configure, go to [Add web apps to Microsoft Intune](../apps/web-app.md).  
+
+Applies to:
+- macOS
 
 ### Samsung Knox conditional launch check<!-- 8610063  -->  
 Administrators will be able to add additional detection of device health compromise on Samsung Knox devices. Using a new Intune App Protection Policy conditional launch check, you will be able to require that hardware-level device tamper detection and device attestation be performed for compatible Samsung devices.
@@ -94,15 +100,94 @@ End-users will soon be able to  uninstall Win32 apps and Microsoft store apps us
 
 <!-- *********************************************** -->
 
-## Device configuration
+## Device configuration  
 
+### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541 -->
+
+A range of new settings will be available in the Settings Catalog for iOS/iPadOS and macOS. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
+
+**Authentication > Extensible Single Sign On (SSO)**:
+
+- Account Display Name
+- Additional Groups
+- Administrator Groups
+- Authentication Method
+- Authorization Right
+- Group
+- Authorization Group
+- Enable Authorization
+- Enable Create User At Login
+- Login Frequency
+- New User Authorization Mode
+- Account Name
+- Full Name
+- Token To User Mapping
+- User Authorization Mode
+- Use Shared Device Keys
+
+Applies to:
+- macOS 13.0 and later
+
+**Login > Login Window**:
+
+- Autologin Password
+- Autologin Username
+
+**Restrictions**:
+
+- Allow ARD Remote Management Modification
+- Allow Bluetooth Sharing Modification
+- Allow Cloud Freeform
+- Allow File Sharing Modification
+- Allow Internet Sharing Modification
+- Allow Local User Creation
+- Allow Printer Sharing Modification
+- Allow Remote Apple Events Modification
+- Allow Startup Disk Modification
+- Allow Time Machine Backup
+
+**Security > Passcode**:
+
+- Password Content Description
+- Password Content Regex
+
+Applies to:
+- macOS 14.0 and later
+
+**Restrictions**:
+
+- Allow iPhone Widgets On Mac
+
+Applies to:
+- iOS/iPadOS 17.0 and later
+
+**Microsoft Defender > Tamper protection**:
+
+- Process's arguments
+- Process path
+- Process's Signing Identifier
+- Process's Team Identifier
+- Process exclusions
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Remote Help for Android in public preview <!-- 16238217 -->
+Remote Help will be available in public preview for Android Enterprise Dedicated devices from Zebra and Samsung. With Remote Help, IT Pros can remotely view the device screen and take full control in both attended and unattended scenarios, to diagnose and resolve issues quickly and efficiently.
+
+Applies to:
+
+* Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
 
 <!-- *********************************************** -->
 
 ## Device enrollment
 
-### Just-in-time registration and compliance remediation for iOS/iPadOS Setup Assistant with modern authentication now generally available<!-- 16276610  -->  
-Just-in-time registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just-in-time (JIT) registration, the device user doesn't need to use the Company Portal app for Azure Active Directory registration and compliance checking. JIT registration and compliance remediation is embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Additionally, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md#set-up-just-in-time-registration).
+### Just-in-time registration and compliance remediation for iOS/iPadOS Setup Assistant with modern authentication becoming generally available<!-- 16276610  -->  
+Just-in-time registration and compliance remediation for Setup Assistant with modern authentication will become generally available. With just-in-time (JIT) registration, the device user doesn't need to use the Company Portal app for Azure Active Directory registration and compliance checking. JIT registration and compliance remediation is embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Additionally, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md#set-up-just-in-time-registration).
 
 ### Awaiting final configuration for iOS/iPadOS automated device enrollment becoming generally available<!-- 17473384  -->  
 Soon to be generally available, awaiting final configuration enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:
@@ -112,7 +197,7 @@ Soon to be generally available, awaiting final configuration enables a locked ex
 - iOS/iPadOS 13+ devices enrolling without user affinity
 - iOS/iPadOS 13+ devices enrolling with Azure AD shared mode
 
-This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. Yes is the default setting for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](..//enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. Awaiting final configuration is enabled by default for new enrollment profiles. For more information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](..//enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 <!-- *********************************************** -->
 
@@ -130,17 +215,44 @@ Applies to:
 
 - iOS/iPadOS
 
+### Changes to Android notification permission prompt behavior<--! 19783177  -->  
+We're updating how our Android apps handle notification permissions to align with recent changes made by Google to the Android platform.  After their changes, notification permissions are granted to apps as follows:
+
+- On devices running Android 12 and earlier: Apps are permitted to send notifications to users by default.
+- On devices running Android 13 and later: Notification permissions vary depending on the API the app targets.
+  - Apps targeting API 32 and lower: Google has added a notification permission prompt that appears when the user opens the app. Management apps will still be able to configure apps so that they're automatically granted notification permissions.
+  - Apps targeting API 33 and higher: App developers define when the notification permission prompts appear. Management apps will still be able to configure apps so that they're automatically granted notification permissions.
+
+You and your device users can expect to see the following changes now that our apps target API 33:
+
+- Company Portal used for work profile management: Users will see a notification permission prompt in the personal instance of the Company Portal when they first open it. Users will not see a notification permission prompt in the work profile instance of Company Portal because notification permissions will be automatically permitted. Users will be able to turn off Company Portal notifications in the Settings app.
+- Company Portal used for device administrator management: Users will see a notification permission prompt when they first open the Company Portal app.
+- Microsoft Intune app: No changes to existing behavior. Users will not see a prompt because notifications are automatically permitted.
+- Microsoft Intune app for AOSP: No changes to existing behavior. Users will not see a prompt because notifications are automatically permitted.
+
 <!-- *********************************************** -->
 
-<!-- ## Device security  -->
+## Device security  
+### New settings available for macOS Antivirus policy<!-- 24191427 -->  
 
-<!-- *********************************************** -->
+The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profile for macOS devices will be getting several new settings. The new settings will add capabilities to manage:
 
-<!-- ## Intune apps -->
+- Running scans after definitions are updated
+- Turning on-demand scans of archives on or off
+- Turning the file hash computation on or off
+- Tamper protection for macOS
+- device Visibility of the status menu icon
+- Visibility of the feedback option
+- Network protection
+- Controlling sign-in to the consumer version of Microsoft Defender
 
-<!-- *********************************************** -->
+For more information about how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide).  
+## Monitor and troubleshoot  
+### Anomaly correlation in Intune Endpoint analytics will be generally available <!-- 24577118 -->
 
-## Monitor and troubleshoot
+Anomaly correlation, a part of our Anomaly detection feature in Intune Endpoint analytics will be generally available.  
+
+Devices associated with a high or medium severity anomaly are correlated into groups based on one or more factors they have in common.  A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You will also be able to view a breakdown of devices currently affected by the anomaly and 'at risk' devices, those that haven't yet shown symptoms of the anomaly.
 
 ### Updates for compliance policies and reports<!-- 15425771  -->  
 We’re working on the improvements for Intune compliance policies and reports which include the following:
@@ -149,7 +261,13 @@ We’re working on the improvements for Intune compliance policies and reports w
 - Providing more up-to-date and simplified reporting experience for the policy Overview.
 - Aligning the policy report experience with the experience for device configuration profiles.
 
-For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
+For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).  
+
+<!-- *********************************************** -->
+
+<!-- ## Intune apps -->
+
+<!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
 <!-- *********************************************** --> 
