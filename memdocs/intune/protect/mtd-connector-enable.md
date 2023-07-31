@@ -38,9 +38,9 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > [!NOTE]
 > This topic applies to all Mobile Threat Defense partners.
 
-## Classic conditional access policies for MTD apps
+## Classic conditional access policies for Mobile Threat Defense (MTD) apps
 
-When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our other [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
+When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each 3rd party [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners) you integrate with creates a new classic conditional access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
 
 If the classic policy is deleted, you'll need to delete the connection to Intune that was responsible for its creation, and then set it up again. This process recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
 
@@ -55,6 +55,9 @@ Classic conditional access policies for MTD apps:
 - By default, don't interact with other conditional access policies you use for evaluation.
 
 To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
+
+> [!NOTE]
+> With the 2308 release of Intune, a classic Conditional Access (CA) policy is no longer created for the **Microsoft Defender for Endpoint** connector. If your tenant has one previously created due to an integration with Microsoft Defender for Endpoint, it can be deleted. Classic CA policies continue to be needed for 3rd party MTD partners. 
 
 ## To enable the Mobile Threat Defense connector
 

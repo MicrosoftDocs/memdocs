@@ -124,15 +124,6 @@ Applies to:
 
 ### Device configuration
 
-#### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998  -->  
-Intune is introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices. Windows 11 devices assigned an Intune Windows Compliance policy with any of the Device Health settings (BitLocker, Code Integrity, Secure Boot) set to "Require" will use the MAA service.
-
-However, Windows 10 devices, and GCCH/DOD environments will continue to use Device health attestation (DHA ) and are not impacted by this change.
-
-Today, Intune uses the Windows Device Health Attestation (DHA) service for Windows 10/11 Compliance policy - Device Health settings. DHA is a reporting service used to ensure a device boots to a trusted state.
-
-For more information, see [Network Endpoints](../fundamentals/intune-endpoints.md).
-
 #### Added Support for Scope tags<!-- 16485280  -->  
 You can now add scope tags when creating deployments using Zebra LifeGuard Over-the-Air integration (in public preview).
 
@@ -172,7 +163,7 @@ While this update adds MAC address support to the CR service, our recommendation
 
 For information about the CR service as a replacement for the Intune Network Access Control (NAC) service, see the Intune blog at [https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696).
 
-#### Settings insight within Intune Security Baselines is generally available<!-- 11127203  -->  
+#### Settings insight within Intune Security Baselines is generally available<!-- 24507891   -->  
 Announcing the general availability of Settings insight in Microsoft Intune.
 
 The [Settings insight](../fundamentals/settings-insight.md) feature adds insight to settings giving you confidence in configurations that have been successfully adopted by similar organizations. Settings insight is currently available for Security Baselines.
@@ -190,9 +181,9 @@ Intune now supports use of endpoint security [Antivirus policy](../protect/endpo
 #### EpmTools PowerShell module for Endpoint Privilege Management<!-- 22800379  -->  
 The EpmTools PowerShell module is now available for use with Intune Endpoint Privilege Management (EPM). EpmTools includes the cmdlets like **Get-FileAttributes** that you can use to retrieve file details to help build accurate elevation rules, and additional cmdlets you can use to troubleshoot or diagnose EPM policy deployments.
 
-For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module.
+For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
-#### Endpoint Privilege Management support to manage elevation rules for child processes<!--   -->  
+#### Endpoint Privilege Management support to manage elevation rules for child processes<!-- 15931887 -->  
 With Intune Endpoint Privilege Management (EPM) you can manage which files and processes are allowed to *Run as Administrator* on your Windows devices.  Now, EPM [elevation rules](../protect/epm-policies.md#create-a-windows-elevation-rules-policy) support a new setting, **Child process behavior**.
 
 With *Child process behavior*, your rules can manage the elevation context for any child processes created by the managed process. Options include:
