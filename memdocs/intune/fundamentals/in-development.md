@@ -62,10 +62,11 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
-### New macOS web clip app type<!-- 24128407 -->
+### New macOS web clip app type<!-- 24128407 -->  
 In Intune, you will be able to pin web apps to the dock on your macOS devices (**Apps** > **macOS** > **Add** > **macOS web clip**). For related information about the settings you can currently configure, go to [Add web apps to Microsoft Intune](../apps/web-app.md).  
 
 Applies to:
+
 - macOS
 
 ### Samsung Knox conditional launch check<!-- 8610063  -->  
@@ -80,8 +81,7 @@ Advanced application management provides you with an enterprise catalog of appli
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
-### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->
-
+### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->  
 You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
 
 - **ICCID**
@@ -102,8 +102,7 @@ End-users will soon be able to  uninstall Win32 apps and Microsoft store apps us
 
 ## Device configuration  
 
-### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541 -->
-
+### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541 -->  
 A range of new settings will be available in the Settings Catalog for iOS/iPadOS and macOS. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
 
 **Authentication > Extensible Single Sign On (SSO)**:
@@ -126,6 +125,7 @@ A range of new settings will be available in the Settings Catalog for iOS/iPadOS
 - Use Shared Device Keys
 
 Applies to:
+
 - macOS 13.0 and later
 
 **Login > Login Window**:
@@ -159,6 +159,7 @@ Applies to:
 - Allow iPhone Widgets On Mac
 
 Applies to:
+
 - iOS/iPadOS 17.0 and later
 
 **Microsoft Defender > Tamper protection**:
@@ -232,7 +233,8 @@ You and your device users can expect to see the following changes now that our a
 
 <!-- *********************************************** -->
 
-## Device security  
+## Device security
+
 ### New settings available for macOS Antivirus policy<!-- 24191427 -->  
 
 The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profile for macOS devices will be getting several new settings. The new settings will add capabilities to manage:
@@ -246,10 +248,11 @@ The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy
 - Network protection
 - Controlling sign-in to the consumer version of Microsoft Defender
 
-For more information about how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide).  
-## Monitor and troubleshoot  
-### Anomaly correlation in Intune Endpoint analytics will be generally available <!-- 24577118 -->
+For more information about how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences).
 
+## Monitor and troubleshoot
+  
+### Anomaly correlation in Intune Endpoint analytics will be generally available<!-- 24577118 -->  
 Anomaly correlation, a part of our Anomaly detection feature in Intune Endpoint analytics will be generally available.  
 
 Devices associated with a high or medium severity anomaly are correlated into groups based on one or more factors they have in common.  A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You will also be able to view a breakdown of devices currently affected by the anomaly and 'at risk' devices, those that haven't yet shown symptoms of the anomaly.
@@ -261,7 +264,7 @@ We’re working on the improvements for Intune compliance policies and reports w
 - Providing more up-to-date and simplified reporting experience for the policy Overview.
 - Aligning the policy report experience with the experience for device configuration profiles.
 
-For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).  
+For more information about these changes, see the Intune Support Team blog at [https://aka.ms/Intune/device_compl_report](https://aka.ms/Intune/device_compl_report).
 
 <!-- *********************************************** -->
 
