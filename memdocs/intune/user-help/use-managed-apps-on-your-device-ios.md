@@ -87,7 +87,7 @@ The following list describes the settings your IT support person can control wit
 
 ![iOS app message - Untrusted Enterprise Developer](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)  
 
-For information about how to manually install and trust an enterprise app on your device, see [Install customer enterprise apps on iOS](https://support.apple.com/en-us/HT204460) on the Apple Support site.  
+For information about how to manually install and trust an enterprise app on your device, see [Install custom enterprise apps on iOS](https://support.apple.com/en-us/HT204460) on the Apple Support site.  
 
 ## Next steps  
 
