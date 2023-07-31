@@ -216,7 +216,7 @@ Applies to:
 
 - iOS/iPadOS
 
-### Changes to Android notification permission prompt behavior<--! 19783177  -->  
+### Changes to Android notification permission prompt behavior<!-- 19783177  -->  
 We're updating how our Android apps handle notification permissions to align with recent changes made by Google to the Android platform.  After their changes, notification permissions are granted to apps as follows:
 
 - On devices running Android 12 and earlier: Apps are permitted to send notifications to users by default.
@@ -273,9 +273,11 @@ For more information about these changes, see the Intune Support Team blog at [h
 <!-- *********************************************** -->
 
 <!-- ## Role-based access control -->
-<!-- *********************************************** --> 
+
+<!-- *********************************************** -->
 
 <!-- ## Tenant administration -->
+
 <!-- *********************************************** -->
 
 ## Notices
