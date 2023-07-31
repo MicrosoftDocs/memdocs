@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/12/2023
+ms.date: 07/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -484,11 +484,12 @@ End of comment -->
 - **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. When the value is blank, Intune doesn't change or update this setting.
 
   > [!NOTE]
-  > Users on fully managed, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   > 
-  > On dedicated devices users are prompted to set a password if the device is set up with single or multi-app kiosk mode. Screens force and guide users to create a compliant password before they can continue using the device.
+  > - Users on fully managed, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
   >
-  > On dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements. 
+  >   To apply the device password settings during device enrollment, assign the device restriction profile to users, not devices. During enrollment, users are asked to set a screen lock. Then, they must choose a device password that meets all the requirements in this device restriction profile.
+  > - On dedicated devices, if the device is set up with single or multi-app kiosk mode, then users are prompted to set a password. Screens force and guide users to create a compliant password before they can continue using the device.
+  > - On dedicated devices that are not using kiosk mode, users are not notified of any password requirement. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements. 
 
 - **Disabled lock screen features**: When the device is locked, choose the features that can't be used. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
 
