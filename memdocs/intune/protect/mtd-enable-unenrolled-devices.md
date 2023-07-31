@@ -66,7 +66,7 @@ Classic conditional access policies for MTD apps:
 To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
 
 > [!NOTE]
-> With the 2308 release of Intune, a classic Conditional Access (CA) policy is no longer created for the **Microsoft Defender for Endpoint** connector. If your tenant has one previously created due to an integration with Microsoft Defender for Endpoint, it can be deleted. Classic CA policies continue to be needed for 3rd party MTD partners. 
+> With the 2308 service release of Intune, a classic Conditional Access (CA) policy is no longer created for the **Microsoft Defender for Endpoint** connector. If your tenant has one previously created due to an integration with Microsoft Defender for Endpoint, it can be deleted. Classic CA policies continue to be needed for 3rd party MTD partners. 
 
 ## To enable the MTD connector
 
