@@ -58,9 +58,9 @@ Manages all aspects of Cloud PCs, like:
 
 Views Cloud PC data available in the Windows 365 node in Microsoft Intune, but can’t make changes.
 
-### Windows365 Network Interface Contributor
+### Windows 365 Network Interface Contributor
 
-The Windows365 Network Interface Contributor role is assigned to the resource group associated with the Azure network connection (ANC). This role allows the Windows365 service to create and join the NIC and manage deployment in the resource group. This role is a collection of the minimum permissions required to operate Windows 365 when using an ANC.
+The Windows 365 Network Interface Contributor role is assigned to the resource group associated with the Azure network connection (ANC). This role allows the Windows 365 service to create and join the NIC and manage deployment in the resource group. This role is a collection of the minimum permissions required to operate Windows 365 when using an ANC.
 
 | Action type | Permissions |
 | --- | --- |
@@ -69,9 +69,9 @@ The Windows365 Network Interface Contributor role is assigned to the resource gr
 | dataActions | None |
 | notDataActions | None |
 
-### Windows365 Network User
+### Windows 365 Network User
 
-The Windows365 Network User role is assigned to the virtual network associated with the ANC. This role allows the Windows 365 service to join the NIC to the virtual network. This role is a collection of the minimum permissions required to operate Windows 365 when using an ANC.
+The Windows 365 Network User role is assigned to the virtual network associated with the ANC. This role allows the Windows 365 service to join the NIC to the virtual network. This role is a collection of the minimum permissions required to operate Windows 365 when using an ANC.
 
 | Action type | Permissions |
 | --- | --- |
