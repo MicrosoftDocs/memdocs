@@ -87,4 +87,10 @@ The following list describes the settings your IT support person can control wit
 
 ![iOS app message - Untrusted Enterprise Developer](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)  
 
-For information about how to manually install and trust an enterprise app on your device, see [Install custom enterprise apps on iOS](https://support.apple.com/en-us/HT204460) on the Apple Support site.   
+For information about how to manually install and trust an enterprise app on your device, see [Install custom enterprise apps on iOS](https://support.apple.com/en-us/HT204460) on the Apple Support site.  
+
+## Next steps  
+
+* Contact your IT support person for more information about work or school apps. Check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's support and helpdesk information.   
+
+* For information about using work or school apps on an Android device, see [Get work or school apps for Android](use-managed-apps-on-your-device-android.md).  
