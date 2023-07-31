@@ -67,7 +67,7 @@ Your device must be running macOS 11 or later.
 4. On the **Install management profile** page, select **Download profile**.  
 
     ![Example screenshot of Company Portal, Install management profile screen, highlighting password prompt.](./media/install-management-profile-macos-2006.png)  
-5. Your macOS system settings open in a new window. The management profile you just downloaded is shown.  
+5. Your macOS system settings window opens. The management profile you just downloaded is shown.  
     1. Select the profile to open it.  
     1. Select **Install...**  
     1. When asked to confirm installation, select **Install**.   
