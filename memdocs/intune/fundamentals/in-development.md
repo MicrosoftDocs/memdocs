@@ -113,6 +113,14 @@ Applies to:
 
 - iOS/iPadOS
 
+### Introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices<!-- 8115998  -->  
+Today, Intune uses the Windows Device Health Attestation (DHA) service for Windows 10/11 Compliance policy - Device Health settings. Device health attestation is a reporting service used to ensure a device boots to a trusted state.
+
+Intune will be introducing support for Microsoft Azure Attestation (MAA) service for Windows 11 devices. Windows 10 devices, and GCCH/DOD environments will continue to use DHA and are not impacted by this change.
+
+For more information, see [Network Endpoints](../fundamentals/intune-endpoints.md).
+
+
 <!-- *********************************************** -->
 
 <!-- ## Device security  -->
