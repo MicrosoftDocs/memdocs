@@ -154,7 +154,7 @@ To create a provisioning policy, an admin needs the following permissions:
 
 For ANCs created before November 26, 2023, the Network Contributor role is used to apply permissions on both the Resource Group and Virtual Network. To apply to the new RBAC roles, you can retry the ANC health check. Note that the existing roles must be manually removed.
 
-To manually remove the existing roles and add the new roles, refer to the following table for the existing roles used on each Azure resource. Prior to removing the existing roles make nsure that the updated roles have been assigned.
+To manually remove the existing roles and add the new roles, refer to the following table for the existing roles used on each Azure resource. Prior to removing the existing roles make sure that the updated roles have been assigned.
 
 | Azure resource | Existing role (before November 26, 2023) | Updated role (after November 26, 2023) |
 | --- | --- | --- |
