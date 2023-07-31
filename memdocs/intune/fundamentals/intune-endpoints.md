@@ -45,7 +45,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The endpoints in this article should be accessible via TCP port 80 and 443 via whatever method you use to allow access. Windows Information Protection uses port 444.
-- For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com.
+- For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net and graph.microsoft.com.
 
 > [!NOTE]
 > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com' or 'dm.microsoft.com' endpoints.
