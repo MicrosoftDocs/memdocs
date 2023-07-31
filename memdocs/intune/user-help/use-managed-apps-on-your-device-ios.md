@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Get work or school apps for iOS- Microsoft Intune | Microsoft Docs
-description: Learn how to get Intune-managed apps for iOS, which protect your data while also helping you stay productive at school or work.  
+title: Get work or school apps for iOS - Microsoft Intune | Microsoft Docs
+description: Learn how to access work or school apps on your iOS device. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 07/31/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: maxles
+ms.reviewer: amanh
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -56,7 +56,7 @@ There are four ways to get these apps:
 Organizations often purchase iOS app licenses in bulk to accommodate the number of students or employees they have. If you see a message asking you to accept the Apple Volume Purchase Program agreement, this is normal, and you should accept it. If you don't accept it, you won't be able to install the app.  
 
 ## Available apps   
- Your organization selects apps that are appropriate and useful for you at work or school. These apps are the only ones you'll find in the Company Portal.   
+ Your organization selects apps that are appropriate and useful for you at work or school. These apps are the only ones you'll find in the Company Portal. 
 
  Apps are also made available to you based on your device type. For example, if you're using the Company Portal app for iOS, you'll have access to iOS apps, but not Android apps.   
 
@@ -90,21 +90,10 @@ The following list describes the settings your IT support person can control wit
 
 ![iOS app message - Untrusted Enterprise Developer](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)  
 
-This section describes how to provide approval for enterprise developer apps in the device management settings on your device. 
-
-1. Go to **Settings** > **General** > **Device Management**.  
-
-   ![iOS device UI - Device Management](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
-
-3. Select **Management Profile** > **Enterprise app**.
-4. Select the developer name.
-5. Select **Trust developer name**.  
-6. Select **Trust** to confirm approval of the enterprise developer.  
-
-   ![iOS device UI - Trust app message](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)  
+For information about how to manually install and trust an enterprise app on your device, see [Install customer enterprise apps on iOS](https://support.apple.com/en-us/HT204460) on the Apple Support site.  
 
 ## Next steps  
 
-* Contact your IT support person for more information about any apps on your device. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Contact your IT support person for more information your work or school apps. Check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's support and helpdesk information.   
 
 * For information about using work or school apps on an Android device, see [Get work or school apps for Android](use-managed-apps-on-your-device-android.md).  

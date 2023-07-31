@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/26/2023  
+ms.date: 07/31/2023  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -60,9 +60,8 @@ Make sure you're signed in to the primary user account on your device. Work prof
 
     ![Screenshot of Company Portal, We care about your privacy screen, highlighting the Continue button.](./media/android-privacy-screen-1911.png)
 4. Review the Google terms for creating a work profile. Accept the terms to continue. The appearance of this screen varies based on OS version.  
-
     
-    ![Screenshot of Company Portal showing link to Google terms, ACCEPT & CONTINUE button, and CLOSE button.](./media/android-wp-05-1908.png)  
+   :::image type="content" source="./media/google-terms-screen-work-profile.png" alt-text="Screenshot of Company Portal showing link to Google terms, and highlighting the Accept & continue button." border="true" :::
 
 5. Review the Samsung Knox privacy policy. Select **Agree** to continue. This screen only appears if you're using a Samsung device.  
 
