@@ -96,48 +96,6 @@ End-users will soon be able to  uninstall Win32 apps and Microsoft store apps us
 
 ## Device configuration
 
-### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-The settings within the Managed Settings command are now available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **Settings catalog** for profile type.
-
-**Managed Settings > App Analytics**:
-
-- Enabled: If true, enable sharing app analytics with app developers. If false, disable sharing app analytics.
-
-**Managed Settings > Diagnostic Submission**:
-
-- Enabled: If true, enables diagnostic submission. If false, disables diagnostic submission.
-
-Applies to:
-
-- Shared iPad
-
-**Managed Settings > Accessibility Settings**:
-
-- Bold Text Enabled
-- Grayscale Enabled
-- Increase Contrast Enabled
-- Reduce Motion Enabled
-- Reduce Transparency Enabled
-- Text Size
-- Touch Accommodations Enabled
-- Voice Over Enabled
-- Zoom Enabled
-
-**Managed Settings > Data Roaming**:
-
-- Enabled: If true, enable data roaming, which also enables voice roaming. If false, disable data roaming.
-
-**Managed Settings > Time Zone**:
-
-- Time Zone: The Internet Assigned Numbers Authority (IANA) time zone database name.
-
-Applies to:
-
-- iOS/iPadOS
-
-For more information on these settings, go to [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 <!-- *********************************************** -->
 
