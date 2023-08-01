@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 6/16/2023
+ms.date: 7/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,7 +42,7 @@ The Settings insight feature provides confidence in configurations by adding ins
 
 For example, if an organization is in the manufacturing industry, we'll look at what similar organizations with similar profiles are doing, and prepare a plan tailored to their specific situation.
 
-This feature is in [public preview](../fundamentals/public-preview.md)
+This feature is now generally available.
 
 ## Prerequisites
 
@@ -63,7 +63,7 @@ This feature is in [public preview](../fundamentals/public-preview.md)
 
 5. Select **Next** to go to the next tab.
 
-6. On the **Configuration settings** tab, view the groups of **Settings** that are available. You can expand a group to view the settings in that group, and the default values for those settings. Insights are available beside some settings with a lighbulb icon.
+6. On the **Configuration settings** tab, view the groups of **Settings** that are available. You can expand a group to view the settings in that group, and the default values for those settings. Insights are available beside some settings with a light bulb icon.
 
     :::image type="content" source="./media/settings-insight/createprofile-settingsinsight.png" alt-text="Settings insight shown while creating a profile" lightbox="./media/settings-insight/createprofile-settingsinsight.png":::
 
@@ -88,9 +88,6 @@ Model execution and performance are actively monitored to ensure quality and rel
 ## Why some settings may not have insights
 
 Settings insight is powered by machine learning and heavily relies on underlying data used to make recommendations. For reliable recommendations, we have set considerable guardrails in place to only show recommendations when we have sufficient data to support them. If the admin doesn't see recommendations for certain settings, it could mean we didn't have sufficient data to provide an insight. However, this could change over a period as more data becomes available.  
-
-> [!NOTE]
-> A phased rollout system is in place for release recommendations. If a tenant is new or part of a later release schedule, the admin might not be able to see recommendations for any of the settings until the recommendations are fully deployed.
 
 ## Next steps
 

@@ -92,7 +92,7 @@ Azure Active Directory uses a different CNAME during device registration for iOS
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+| CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | 1 hour |
 
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
@@ -105,8 +105,8 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-|CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
-|CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |  
+|CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
+|CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | 1 hour |  
 
 For more information about automatic enrollment for Windows, see [Set up automatic enrollment](../enrollment/windows-enroll.md).  
 

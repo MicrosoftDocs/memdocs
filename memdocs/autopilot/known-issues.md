@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/25/2023
+ms.date: 07/14/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -30,6 +30,10 @@ This article describes known issues that can often be resolved with configuratio
 > If you are experiencing issues with Autopilot with Co-management, see [Windows Autopilot with co-management](../configmgr/comanage/autopilot-enrollment.md).
 
 ## Known issues
+
+### Filtering Windows Autopilot devices not working as expected
+
+Viewing Windows Autopilot devices within Intune may not work as expected if you're attempting to filter results. While this issue is being worked on, a workaround is to use [Microsoft Graph API](/graph/use-the-api) to properly query and filter necessary devices.
 
 ### TPM attestation isn't working on some platforms with Infineon SLB9672 discrete TPMs
 

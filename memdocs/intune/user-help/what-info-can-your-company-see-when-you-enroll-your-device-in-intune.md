@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/31/2022
+ms.date: 07/24/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -33,12 +33,12 @@ ms.collection:
 
 # What information can my organization see when I enroll my device?
 
-Your organization can't see your personal information when you enroll a device in Microsoft Intune. Enrolling your device makes certain information, such as device model and serial number, visible to IT administrators and support people with administrator access. This article describes everything your organization can and can't access on an enrolled device, and explains why certain data is made visible. 
-
-We use the following terms in this article: 
+Your organization can't see your personal information when you enroll a device in Microsoft Intune. Enrolling your device makes certain information, such as device model and serial number, visible to IT administrators and support people with administrator access. 
 
 * Support person: This is the person or department at your organization that you're supposed to contact if you're having problems with your device. They provide technical support for device setup, enrollment, and access.  
-* IT administrator: *IT admin* for short, this person or team of people configure the Microsoft Intune device management and enrollment settings for your organization. Some IT admins also provide technical support.    
+* IT administrator: *IT admin* for short, this person or team of people configure the Microsoft Intune device management and enrollment settings for your organization. Some IT admins also provide technical support.
+
+This article describes everything your organization can and can't access on an enrolled device, and explains why certain data is made visible.   
 
 ## Things your organization can never see
 
@@ -70,9 +70,6 @@ Your organization can always see:
   - On personal devices, your organization can only see your managed app inventory, which includes work and school apps. 
   - On corporate-owned devices, your organization can see all apps installed on the device. 
   - On corporate-owned devices with a work profile, which is limited to Android devices, your organization can only see the apps installed in your work profile.
-
- > [!NOTE]
- > Organizations cannot see all app inventory on Android Enterprise fully managed devices, corporate-owned work profile devices, and dedicated devices.  
  
 ### What is a managed app? 
 An app is considered a **managed app** when it's installed in one of the following ways:  

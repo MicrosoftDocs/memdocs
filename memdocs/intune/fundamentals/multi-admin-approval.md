@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer: craigma
+ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -41,7 +41,7 @@ When any account in the Tenant is used to make a change to a resource that’s p
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- Scripts – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
 
 ## Prerequisites for access policies and approvers
 
