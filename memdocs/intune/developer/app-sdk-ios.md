@@ -1011,26 +1011,30 @@ A newly created SwiftUI app supports UIScenes but doesn't have a UISceneDelegate
 
 ## Post build script
 
-The **IntuneMAMFrameworkPatcher** command line tool, available as part of the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios), must be run as the last step of the application build process.
+The **IntuneMAMFrameworkPatcher** command line tool must be run as the last step of the application build process. This tool is available as part of the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
-**Command line usage**:
-    ```swift
+### Command line usage**
+
+```swift
     IntuneMAMFrameworkPatcher -i /path/to/directory_or_binary [-resign] [-verbose]
-    ```
+```
 
 **Parameters**:
-    `path`: The `path` should be the root of the application's *.app* directory.
-    `-resign`: The `-resign` option instructs the tool to resign binaries which had a valid signature prior to patching the binary. This option should be used if the project includes framework dependencies or plugins with the **Embed and Sign** option, even when run prior to the final application signing, or if the tool is run after the final application signing.
-    `-verbose`: The `-verbose` option will cause the tool to output information about each binary which was patched.
+
+- `path`: The `path` should be the root of the application's *.app* directory.
+- `-resign`: The `-resign` option instructs the tool to resign binaries which had a valid signature prior to patching the binary. This option should be used if the project includes framework dependencies or plugins with the **Embed and Sign** option, even when run prior to the final application signing, or if the tool is run after the final application signing.
+- `-verbose`: The `-verbose` option will cause the tool to output information about each binary which was patched.
 
 **Other usages**:
-Remove the patch: ```IntuneMAMFrameworkPatcher -r /path/to/directory_or_binary [-resign] [-verbose]```
-Verify the patch: ```IntuneMAMFrameworkPatcher -v /path/to/directory_or_binary [-verbose]```
+
+- Remove the patch: ```IntuneMAMFrameworkPatcher -r /path/to/directory_or_binary [-resign] [-verbose]```
+- Verify the patch: ```IntuneMAMFrameworkPatcher -v /path/to/directory_or_binary [-verbose]```
 
 **Example script**:
-    ```swift
+
+```swift
     IntuneMAMFrameworkPatcher -i $BUILT_PRODUCTS_DIR/$EXECUTABLE_FOLDER_PATH -resign -verbose
-    ```
+```
 
 For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started.md).
 
