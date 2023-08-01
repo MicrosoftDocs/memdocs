@@ -65,7 +65,7 @@ If a device is lost or stolen, you can sign in to the Company Portal app or Comp
 The reset feature isn't available in the Microsoft Intune app.  
 
 ## Get latest policy updates and requirements
-The Company Portal or Microsoft Intune app automatically checks in, or syncs, your device with Intune every eight hours. If you're using Company Portal and want to check in more frequently, you or you support person can initiate a manual sync. During check-in, the apps:  
+The Company Portal or Microsoft Intune app automatically checks in, or syncs, your device with Intune every eight hours. If you're using Company Portal and want to check in more frequently, you or your support person can initiate a manual sync. During check-in, the apps:  
 
 * Download available policy and app updates.    
 * Send hardware inventory updates. These updates don't contain personal information.  
