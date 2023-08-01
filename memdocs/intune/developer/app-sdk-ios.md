@@ -1022,8 +1022,8 @@ The **IntuneMAMFrameworkPatcher** command line tool must be run as the last step
 **Parameters**:
 
 - `path`: The `path` should be the root of the application's *.app* directory.
-- `-resign`: The `-resign` option instructs the tool to resign binaries which had a valid signature prior to patching the binary. This option should be used if the project includes framework dependencies or plugins with the **Embed and Sign** option, even when run prior to the final application signing, or if the tool is run after the final application signing.
-- `-verbose`: The `-verbose` option will cause the tool to output information about each binary which was patched.
+- `resign`: The `resign` option instructs the tool to resign binaries which had a valid signature prior to patching the binary. This option should be used if the project includes framework dependencies or plugins with the **Embed and Sign** option, even when run prior to the final application signing, or if the tool is run after the final application signing.
+- `verbose`: The `verbose` option will cause the tool to output information about each binary which was patched.
 
 **Other usages**:
 
