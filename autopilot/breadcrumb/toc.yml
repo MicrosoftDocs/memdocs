@@ -1,3 +1,7 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Windows
+    tocHref: /windows/
+    topicHref: /windows/index
+    items:
+    - name: Windows Autopilot
+      tocHref: /autopilot/
+      topicHref: /autopilot/index
