@@ -44,7 +44,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/autopilot/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
+      "uhfHeaderId": "MSDocsHeader-Windows",
       "feedback_github_repo": "MicrosoftDocs/memdocs",
       "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
       "feedback_system": "GitHub",
