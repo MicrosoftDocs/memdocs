@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/21/2023
+ms.date: 08/02/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,34 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of August 2, 2023 (Service release 2307)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Move Cloud PC is now generally available<!--43667415-->
+
+Move Cloud PC has moved out of preview and into general availability. For more information, see [Move Cloud PC](move-cloud-pc.md).
+
+#### New setting to allow users to reprovision their own Cloud PC<!--45034196-->
+
+You can now grant users permission to reset (reprovision) their own Cloud PC. For more information, see [Make a user a local admin](assign-users-as-local-admin.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Azure network connection (ANC) least privilege update<!--44876259-->
+
+A new, more secure least privilege is now available. You must manually remove the old network contributor role from the resources where the ANC was created. For more information, see [Role-based access control](role-based-access.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Provide feedback button for admins is now generally available<!--44506030-->
+
+The **Provide feedback** button has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 17, 2023
