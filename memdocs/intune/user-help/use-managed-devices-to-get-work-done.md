@@ -6,7 +6,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/11/2022
+ms.date: 08/01/2023
 ms.topic: end-user-help
 ms.prod:
 ms.localizationpriority: high
@@ -37,8 +37,10 @@ ms.collection:
 - Windows 11  
 - Windows 10 Mobile  
 - Windows 8.1  
-- Android OS  
-- iOS  
+- Android OS
+- Android Open Source Platform (AOSP)  
+- iOS/iPadOS
+- Linux  
 - macOS  
 
 Device enrollment enables you to access your work or school's internal resources (such as apps, Wi-Fi, and email) from your mobile device.  During device enrollment:
@@ -65,22 +67,20 @@ In some cases, your organization will install the Company Portal app on your dev
 If you're required to use the Microsoft Intune app, your organization will install it on your device for you.  
 
 ## What's the difference between the apps and the website?
-The Company Portal app is available for Windows 10/11, iOS, macOS, and Android devices. It integrates seamlessly with your device's respective platform. The website version is accessible from any device and gives you the same, universal experience no matter what device you're using. 
+The Company Portal app is available for Windows 10/11, iOS/iPadOS, macOS, and Android devices. It integrates seamlessly with your device's respective platform. The website version is accessible from any device and gives you the same, universal experience no matter what device you're using. 
 
-The Microsoft Intune app is for corporate-owned Android devices and doesn't have a website.  
+The Microsoft Intune app is for Linux devices and corporate-owned Android and AOSP devices. It doesn't have a website.  
 
 ## What kind of devices can you enroll with Company Portal?
 You can use Company Portal to enroll devices running: 
 
 - Windows 10/11  
-- Windows 10 Mobile  
-- Windows 8.1  
-- Android OS  
-- iOS  
+- Android OS   
+- iOS/iPadOS  
 - macOS  
 
 ## What kind of devices can you enroll with the Microsoft Intune app?  
-You can enroll corporate-owned Android devices that your organization has set up to use with the app. The app supports Android 8.0 and later. 
+You can enroll corporate-owned Android and AOSP devices that your organization has set up to use with the app. The app supports Android 8.0 and later. The Microsoft Intune app is also available for Linux devices. 
 
 ## Can you remove a device from the Company Portal?
 You can remove or reset your device with Company Portal. There is a difference between **remove** and **reset**. 
@@ -112,5 +112,6 @@ If you're ready to access your work or school account, follow your organization'
 * [Enroll with Microsoft Intune app](enroll-device-android-microsoft-intune-app.md)
 * [Enroll your iOS device](enroll-your-device-in-intune-ios.md)
 * [Enroll your organization-provided iOS device](enroll-your-device-dep-ios.md)
+* [Enroll your Linux device](enroll-device-linux.md)  
 * [Enroll your macOS device](enroll-your-device-in-intune-macos-cp.md)
 * [Enroll your organization-provided macOS device](enroll-company-device-macos.md)
