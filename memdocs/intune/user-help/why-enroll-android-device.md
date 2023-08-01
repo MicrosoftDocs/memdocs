@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Android device enrollment overview  
-description: Learn about enrollment for Android devices, including the benefits and why workplaces and schools require it.  
+title: Overview of device enrollment for Android - Microsoft Intune 
+description: Learn about device enrollment for Android devices, including the benefits and why workplaces and schools require it.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/16/2020
+ms.date: 08/01/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -38,9 +38,12 @@ If your organization requires you to install and enroll with one of these apps, 
 
 To skip this overview and go straight to the enrollment steps, select from one of the following articles (ask your IT support person if you're not sure which set of instructions you're supposed to follow):  
  
-* [Intune Company Portal enrollment](enroll-device-android-company-portal.md)
-* [Android work profile enrollment](enroll-device-android-work-profile.md)
-* [Microsoft Intune app enrollment](enroll-device-android-microsoft-intune-app.md)
+* Enrollment with Intune Company Portal app  
+    * [Android work profile for personal devices](enroll-device-android-work-profile.md)  
+    * [Android device administrator for personal and corporate owned devices](enroll-device-android-company-portal.md)  
+* Enrollment with Microsoft Intune app
+    * [Enroll corporate-owned Android device](enroll-device-android-microsoft-intune-app.md)  
+    * [Enroll corporate-owned AOSP device](enroll-device-aosp.md)  
 * Derived credentials enrollment (smart card users):  
     * [Entrust](enroll-android-device-entrust-datacard.md)  
     * [Intercede](enroll-android-device-intercede.md)  
