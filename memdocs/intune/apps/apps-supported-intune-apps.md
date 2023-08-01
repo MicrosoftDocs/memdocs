@@ -255,4 +255,4 @@ To learn how to add apps for each platform to Intune, see:
 - [Microsoft 365 apps for Windows 10](apps-add-office365.md)
 - [Microsoft 365 apps for macOS](apps-add-office365-macos.md)
 - [Built-in apps](apps-add-built-in.md)
-- [Win32 apps](app-management.md)
+- [Win32 apps](apps-win32-add.md)
