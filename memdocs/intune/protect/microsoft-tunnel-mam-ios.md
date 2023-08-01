@@ -118,6 +118,9 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    For more information about adding custom apps to policies, see [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md).
 
 4. On the *Settings* tab, expand *Microsoft Tunnel for Mobile Application Management settings and configure the following options:
+   
+  > [!NOTE]  
+   > When configuring proxy and split tunneling, if the proxy server is configured in the included routes, all traffic will flow through the proxy. If the proxy server is not configured in the included routes, then all traffic will be blocked. Enabling both split tunneling and proxy is not supported.
 
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
    1. For *Connection name*, specify a user facing name for this connection, like *mam-tunnel-vpn*.
