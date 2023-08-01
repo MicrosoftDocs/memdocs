@@ -51,5 +51,5 @@ To use Windows 365 Switch, the physical device and Cloud PC must meet the follow
 <!-- ########################## -->
 ## Next steps
 
-[Windows 365 Switch known issues](windows-365-switch-known-issues.md).
+[Windows 365 Switch known issues](windows-365-switch-known-issues.md)
 
