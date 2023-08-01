@@ -61,4 +61,4 @@ Let the disconnect complete and then launch a new connection using Task View.
 <!-- ########################## -->
 ## Next steps
 
-[Troubleshoot Windows 365 Boot](troubleshoot-windows-365-boot.md).
+[Troubleshooting](troubleshooting.md).
