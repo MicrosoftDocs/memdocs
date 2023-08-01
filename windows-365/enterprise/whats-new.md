@@ -64,7 +64,7 @@ Move Cloud PC has moved out of preview and into general availability. For more i
 
 #### New setting to allow users to reprovision their own Cloud PC<!--45034196-->
 
-You can now grant users permission to reset (reprovision) their own Cloud PC. For more information, see [Make a user a local admin](assign-users-local-admin.md).
+You can now grant users permission to reset (reprovision) their own Cloud PC. For more information, see [Make a user a local admin](assign-users-as-local-admin.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
