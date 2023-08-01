@@ -61,7 +61,9 @@ In some cases, your organization will install the Company Portal app on your dev
 
 ### Get Microsoft Intune app
 
-If you're required to use the Microsoft Intune app, your organization will install it on your device for you.  
+If you're required to use the Microsoft Intune app with your Android device, your organization will install it on your device for you. 
+
+For information about how to install the Intune app on your personal Linux device, see [Get the Microsoft Intune app for Linux](microsoft-intune-app-linux.md) 
 
 ## What's the difference between the apps and the website?
 The Company Portal app is available for Windows 10/11, iOS/iPadOS, macOS, and Android devices. It integrates seamlessly with your device's respective platform. The website version is accessible from any device and gives you the same, universal experience no matter what device you're using. 
@@ -77,7 +79,7 @@ You can use Company Portal to enroll devices running:
 - macOS  
 
 ## What kind of devices can you enroll with the Microsoft Intune app?  
-You can enroll corporate-owned Android and AOSP devices that your organization has set up to use with the app. The app supports Android 8.0 and later. The Microsoft Intune app is also available for Linux devices. 
+You can enroll corporate-owned Android and AOSP devices that your organization has set up to use with the app. The app supports Android 8.0 and later. The Microsoft Intune app is also available for personal Linux devices. 
 
 ## Can you remove a device from the Company Portal?
 You can remove or reset your device with Company Portal. There is a difference between **remove** and **reset**. 
