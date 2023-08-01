@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of August 2, 2023 (Service release 2307)
+## Week of July 31, 2023 (Service release 2307)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
