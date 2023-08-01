@@ -52,7 +52,7 @@ Users must switch back to their physical device and change the settings in the S
 
 ## Reconnect button not working
 
-If the **Reconnect** option in the disconnect message dialog is used, the reconnect might not work as expected or may result in an unusable Cloud PC session.
+If the **Reconnect** option in the disconnect message dialog is used, reconnecting might not work as expected or may result in an unusable Cloud PC session.
 
 **Troubleshooting steps**:
 
