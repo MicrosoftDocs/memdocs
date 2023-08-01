@@ -8,7 +8,7 @@ keywords:
 author: smbhardwaj  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/10/2023
+ms.date: 07/21/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -171,9 +171,6 @@ All other policies report as **Not applicable**.
 You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows 10, Windows 11, and Windows Server. If that Platform is not available, the profile is not supported on multi-session VMs.
 
 For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
-
-> [!NOTE]
-> Tamper protection is not supported on Azure Virtual Desktop VMs today. This functionality will be enabled in a future release.
 
 ## Application deployment
 
