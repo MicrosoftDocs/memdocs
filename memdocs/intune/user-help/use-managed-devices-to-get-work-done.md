@@ -33,15 +33,12 @@ ms.collection:
 # What is device enrollment?  
 
 **Applies to**  
-- Windows 10  
-- Windows 11  
-- Windows 10 Mobile  
-- Windows 8.1  
-- Android OS
-- Android Open Source Platform (AOSP)  
+- Android 
 - iOS/iPadOS
 - Linux  
-- macOS  
+- macOS
+- Windows 10  
+- Windows 11  
 
 Device enrollment enables you to access your work or school's internal resources (such as apps, Wi-Fi, and email) from your mobile device.  During device enrollment:
 
