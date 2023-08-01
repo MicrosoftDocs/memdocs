@@ -21,7 +21,7 @@ items:
         href: ./fundamentals/zero-trust-with-microsoft-intune.md
       - name: Intune architecture diagram
         href: ./fundamentals/high-level-architecture.md
-        displayName: architecture, diagram, components, design, svg
+        displayName: architecture, diagram, components, design, svg, family, products, suite, on-premises, tunnel
     - name: Intune service release information
       href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
@@ -44,6 +44,7 @@ items:
     items:
     - name: Walkthrough Intune admin center
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
+      displayName: trial, free      
     - name: Try Intune tasks
       items:
       - name: Overview
@@ -242,6 +243,7 @@ items:
             items: 
             - name: Overview
               href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: purchase, buy, app, license
             - name: Understand app types
               items:
               - name: App types overview        
@@ -353,7 +355,8 @@ items:
                   - name: Add a macOS DMG app
                     href: ./apps/lob-apps-macos-dmg.md         
                   - name: Add an unmanaged macOS PKG app
-                    href: ./apps/macos-unmanaged-pkg.md                                  
+                    href: ./apps/macos-unmanaged-pkg.md
+                    displayName: unmanaged, pkg                                  
                 - name: Win32 app management
                   items:
                   - name: Win32 app management overview
@@ -1640,6 +1643,7 @@ items:
     - name: Education
       items:
       - name: What is Intune for Education
+        displayName: edu
         href: ./fundamentals/introduction-intune-education.md
       - name: Intune for Education docs
         href: /intune-education/
@@ -1748,6 +1752,8 @@ items:
         displayName: dex
       - name: Intune App SDK for Android
         items:
+        - name: Intune App Developer Guide
+          href: ./developer/app-sdk-android-appendix.md
         - name: Plan the Integration
           href: ./developer/app-sdk-android-phase1.md
         - name: Understand the MSAL Prerequisite
