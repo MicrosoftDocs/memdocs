@@ -225,6 +225,9 @@ When you need to uninstall an app from user's devices, use the following steps.
 > [!IMPORTANT]
 > To uninstall the app successfully, make sure to remove the members or group assignment for install before assigning them to be uninstalled. If a group is assigned to both install an app and uninstall an app, the app will remain and not be removed.
 
+> [!NOTE]
+> End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal.
+
 ## App installation errors
 
 For details about Intune app installation errors, see [App installation errors](/troubleshoot/mem/intune/troubleshoot-app-install).
