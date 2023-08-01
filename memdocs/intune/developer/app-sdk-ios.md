@@ -1013,7 +1013,7 @@ A newly created SwiftUI app supports UIScenes but doesn't have a UISceneDelegate
 
 The **IntuneMAMFrameworkPatcher** command line tool must be run as the last step of the application build process. This tool is available as part of the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
-### Command line usage**
+### Command line usage
 
 ```swift
     IntuneMAMFrameworkPatcher -i /path/to/directory_or_binary [-resign] [-verbose]
@@ -1027,8 +1027,10 @@ The **IntuneMAMFrameworkPatcher** command line tool must be run as the last step
 
 **Other usages**:
 
-- Remove the patch: ```IntuneMAMFrameworkPatcher -r /path/to/directory_or_binary [-resign] [-verbose]```
-- Verify the patch: ```IntuneMAMFrameworkPatcher -v /path/to/directory_or_binary [-verbose]```
+- Remove the patch:<br>
+  ```IntuneMAMFrameworkPatcher -r /path/to/directory_or_binary [-resign] [-verbose]```
+- Verify the patch:<br>
+  ```IntuneMAMFrameworkPatcher -v /path/to/directory_or_binary [-verbose]```
 
 **Example script**:
 
