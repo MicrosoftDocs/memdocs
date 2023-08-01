@@ -1032,7 +1032,7 @@ Verify the patch: ```IntuneMAMFrameworkPatcher -v /path/to/directory_or_binary [
     IntuneMAMFrameworkPatcher -i $BUILT_PRODUCTS_DIR/$EXECUTABLE_FOLDER_PATH -resign -verbose
     ```
 
-For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started#download-the-sdk-files.md).
+For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started.md).
 
 ## iOS best practices
 
