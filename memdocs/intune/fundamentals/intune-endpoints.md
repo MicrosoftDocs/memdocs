@@ -48,7 +48,7 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net and graph.microsoft.com.
 
 > [!NOTE]
-> The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com' or 'dm.microsoft.com' endpoints.
+> The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', or 'dm.microsoft.com' endpoints.
 >
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
