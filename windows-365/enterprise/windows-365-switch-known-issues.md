@@ -58,6 +58,18 @@ If the **Reconnect** option in the disconnect message dialog is used, reconnecti
 
 Let the disconnect complete and then launch a new connection using Task View.
 
+## Missing or extra buttons in a Cloud PC session
+
+You might see extra buttons, or some buttons might be missing, in your Cloud PC session. For example, the Local Desktop button might not appear in Task View.
+
+**Possible  cause:**
+
+The user connected to their Cloud PC using another mode (like Windows 365 Boot or from the task bar) and then next connects using Windows 365 Switch, or vice versa.
+
+**Troubleshooting steps:**
+
+Restart the Cloud PC.
+
 <!-- ########################## -->
 ## Next steps
 
