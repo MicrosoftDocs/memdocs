@@ -72,7 +72,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device security
 
-### New BitLocker profile for Intune’s endpoint security Disk encryption policy<!—24631986   -->  
+### New BitLocker profile for Intune’s endpoint security Disk encryption policy<!-- 24631986   -->  
 We have released a new experience creating new *BitLocker* profiles for endpoint security Disk Encryption policy. The experience for editing your previously created BitLocker policy remains the same, and you can continue to use them. This update applies only for the new [BitLocker](../protect/endpoint-security-disk-encryption-policy.md) policies you create for the *Windows 10 and later* platform.
 
 This update is part of the continuing [rollout of new profiles for endpoint security policies](../fundamentals/whats-new-archive.md#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022.
