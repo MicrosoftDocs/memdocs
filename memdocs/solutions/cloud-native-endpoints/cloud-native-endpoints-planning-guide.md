@@ -119,8 +119,8 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-  - [Windows Autopilot scenarios and capabilities](../../autopilot/windows-autopilot-scenarios.md)
+  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 - **Deploy software and applications**
 
@@ -341,8 +341,8 @@ This phase is the first step for your organization migration to be fully cloud-n
 
     For more information, go to:
 
-    - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-    - [Windows Autopilot scenarios and capabilities](../../autopilot/windows-autopilot-scenarios.md)
+    - [Windows Autopilot overview](/autopilot/windows-autopilot)
+    - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 ### ✅ Phase 2: Enable endpoint cloud hybrid identity (optional)
 
@@ -418,7 +418,7 @@ This phase transitions new Windows endpoint provisioning to Azure AD joined. Onc
   Before resetting an existing Windows endpoint, be sure to:
   
   1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
-  2. [Delete the Windows Autopilot device registration](../../autopilot/add-devices.md).
+  2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
   3. [Delete the existing Azure AD device object](/azure/active-directory/devices/manage-stale-devices).
   
   Then, reset the device, and reprovision the endpoint.
@@ -505,9 +505,9 @@ Some of the benefits include:
 
 For more information on Windows Autopilot, go to:
 
-- [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md)
-- [Windows Autopilot scenarios and features](../../autopilot/windows-autopilot-scenarios.md)
-- [Windows Autopilot FAQ](../../autopilot/autopilot-faq.yml)
+- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+- [Windows Autopilot scenarios and features](/autopilot/windows-autopilot-scenarios)
+- [Windows Autopilot FAQ](/autopilot/autopilot-faq)
 
 ## Follow the cloud-native endpoints guidance
 

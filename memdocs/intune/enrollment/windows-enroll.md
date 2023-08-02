@@ -80,7 +80,7 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 For information about how to integrate and use automatic enrollment when provisioning devices, see:  
 
-* [Windows Autopilot scenarios](../../autopilot/tutorial/autopilot-scenarios.md)  
+* [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios)  
 * [Enroll a Windows client device automatically using Group Policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 * [Enable co-management in Configuration Manager](../../configmgr/comanage/how-to-enable.md)  
 

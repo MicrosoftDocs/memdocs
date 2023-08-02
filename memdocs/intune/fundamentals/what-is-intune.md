@@ -98,14 +98,14 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   - [Frequently asked questions about co-management](../../configmgr/comanage/faq.yml)
   - [How to enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
-- **[Windows Autopilot](../../autopilot/windows-autopilot.md)** for modern OS deployment and provisioning
+- **[Windows Autopilot](/autopilot/windows-autopilot)** for modern OS deployment and provisioning
 
   With Windows Autopilot, you can provision new devices and send these devices directly to users from an OEM or device provider. For existing devices, you can reimage these devices to use Windows Autopilot and deploy the latest Windows version.
 
   For more specific information, go to:
 
-  - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-  - [Windows Autopilot deployment for existing devices](../../autopilot/existing-devices.md)
+  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot deployment for existing devices](/autopilot/existing-devices)
 
 - **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
 

@@ -78,11 +78,11 @@ At the end of this guide, you have a cloud-native Windows endpoint ready to star
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/phase-1.png" alt-text="Phase 1.":::
 
-Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](../../autopilot/windows-autopilot.md), and creating some settings and applications.
+Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](/autopilot/windows-autopilot), and creating some settings and applications.
 
 ### Step 1 - Network requirements
 
-Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](../../autopilot/networking-requirements.md).
+Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](/autopilot/networking-requirements).
 
 If your wireless network requires certificates, you can start with an Ethernet connection during testing while you determine the best approach for wireless connections for device provisioning.
 
@@ -471,7 +471,7 @@ The following settings in the **Windows security baseline** can cause issues wit
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
 
-For more information, go to [Windows Autopilot policy conflicts](../../autopilot/policy-conflicts.md).
+For more information, go to [Windows Autopilot policy conflicts](/autopilot/policy-conflicts).
 
 ### Windows Update for Business
 
@@ -707,7 +707,7 @@ If you have applications that use MSI, EXE, or script installers, you can deploy
 
 Now that you've configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
-- [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md)
+- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
 
 If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](/mem/intune/fundamentals/deployment-guide-enroll).

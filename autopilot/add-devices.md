@@ -37,13 +37,13 @@ This article provides step-by-step guidance for manual registration. For more in
 
 ## Prerequisites
 
-- [Intune subscription](../intune/fundamentals/licenses.md)
-- [Windows automatic enrollment enabled](../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
+- [Intune subscription](/mem/intune/fundamentals/licenses)
+- [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
 - [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## Required permissions
 
-Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. You can also create a custom Autopilot device manager role by using [role-based access control](../intune/fundamentals/role-based-access-control.md). Autopilot device management requires only that you enable all permissions under **Enrollment programs**, except for the four token management options.
+Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. You can also create a custom Autopilot device manager role by using [role-based access control](/mem/intune/fundamentals/role-based-access-control). Autopilot device management requires only that you enable all permissions under **Enrollment programs**, except for the four token management options.
 
 > [!NOTE]
 > In both Intune Administrator and role-based access control methods, the administrative user also requires consent to use the Microsoft Intune PowerShell and Microsoft Graph PowerShell enterprise applications. 
@@ -219,7 +219,7 @@ You can delete Windows Autopilot devices that aren't enrolled in Intune:
 
 Completely removing a device from your tenant requires you to delete the Intune, Azure AD, and Windows Autopilot device records. You can do all these deletions from Intune, in this order:
 
-1. If the devices are enrolled in Intune, [delete them from the Intune All devices pane](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
+1. If the devices are enrolled in Intune, [delete them from the Intune All devices pane](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
 2. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices that you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
 3. Delete the devices from Azure AD at **Devices** > **Azure AD devices**.
 
