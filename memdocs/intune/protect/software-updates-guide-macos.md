@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: brenduns
 author: Brenduns
 manager: dougeby
-ms.date: 07/12/2023
+ms.date: 08/02/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -47,7 +47,7 @@ To install updates faster and avoid delays, make sure the devices are:
 - Connected to Internet
 - Not shut down but can be can a sleep state
 
-## Admin checklist for organization owned devices
+## ✔️ Manage updates with policies
 
 It's recommended you create policies that update your devices. It's not recommended to put this responsibility on end users.
 
@@ -69,7 +69,9 @@ When users install their own updates (instead of admins managing the updates), i
 
 Because of these potential issues, Microsoft recommends that you evaluate your use case scenarios and deploy policies to manage the update experience to minimize risk and disruption to your business.
 
-For most macOS devices, Microsoft recommends the following steps:
+## Admin steps for organization owned devices
+
+To update macOS devices owned by your organizations, Microsoft recommends the following steps. These steps apply to most macOS devices. You can also use these steps as a starting point for your own update strategy.
 
 1. **[Create a managed software update policy](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed)**: This policy forces updates to be downloaded and installed at a convenient time. Users aren't prompted and don't need to be using the device when the updates are installed.
 
@@ -132,7 +134,7 @@ This Intune policy manages **how** updates are installed.
 
 For example, you can configure the device to automatically install updates, including app updates, when they're available.
 
-This settings catalog policy works with the [software update policy](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
+This settings catalog policy works with the [software update policy](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (Step 1 in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
 
 For more information on the settings catalog, including how to create a settings catalog policy, go to [Use the settings catalog to configure settings](../configuration/settings-catalog.md).
 
@@ -157,6 +159,8 @@ This policy locks these settings so users can't change them. On the device, the 
 
 ### ✔️ Step 3 - Consider using the Nudge community tool
 
+This tool is optional, and can help you **manage the end user experience**.
+
 A popular tool within the Microsoft macOS admin community is Nudge. [Nudge is an open source tool](https://github.com/macadmins/nudge) that encourages end users to install macOS updates. It provides a rich configuration experience for admins.
 
 When Nudge is configured and deployed, end users see the following sample message when their device is ready to be updated. End users can also choose to update the device or defer the update:
@@ -171,7 +175,7 @@ After the update policies are deployed, in the [Microsoft Intune admin center](h
 
 For each device, you can see its current state of updates (Devices > macOS > select a device > Update policies for macOS):
 
-:::image type="content" source="./media/software-updates-guide-macos/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the udpate status of a macOS Apple device in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-macos/intune-report-device-update-category-status.png":::
+:::image type="content" source="./media/software-updates-guide-macos/intune-report-device-update-category-status.png" alt-text="Use the built-in reporting to check the update status of a macOS Apple device in the Microsoft Intune admin center." lightbox="./media/software-updates-guide-macos/intune-report-device-update-category-status.png":::
 
 ## Next steps
 
