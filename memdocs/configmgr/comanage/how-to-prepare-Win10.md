@@ -41,14 +41,14 @@ Use Configuration Manager to collect and report the device information required 
 
 4. After saving the file, upload the data to Intune.
 
-For more information, see [Manually register devices with Windows Autopilot](../../autopilot/add-devices.md).
+For more information, see [Manually register devices with Windows Autopilot](/autopilot/add-devices).
 
 ### Autopilot for existing devices
 <!--1358333-->
 
-_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows 8.1 device for [Windows Autopilot user-driven mode](../../autopilot/user-driven.md) using a single, native Configuration Manager task sequence.
+_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows 8.1 device for [Windows Autopilot user-driven mode](/autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices](../../autopilot/existing-devices.md).
+For more information, see [Windows Autopilot for existing devices](/autopilot/existing-devices).
 
 ## Install the Configuration Manager client
 
