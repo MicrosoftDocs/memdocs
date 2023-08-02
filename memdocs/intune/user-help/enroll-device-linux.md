@@ -66,6 +66,7 @@ Follow these steps to register your personal Linux device on your organization's
    3. Sign in to Microsoft Edge with your work or school account to access your org's internal websites.   
 
 > [!NOTE]
+> Linux desktops enrolled with Microsoft Intune are considered corporate-owned devices. Currently, a notion of personal-owned Linux desktops is not supported.
 > Ubuntu on WSL2 is not a supported scenario.  
 
 ## Next steps
