@@ -70,7 +70,7 @@ This article provides an overview of the steps to start your Intune deployment.
 
     Azure AD Premium, which might cost extra, gives you more features commonly used by organizations, including Conditional Access, multi factor authentication (MFA), and dynamic groups.
 
-  - **[Windows Autopilot](/mem/autopilot/licensing-requirements)**: Included with some Microsoft 365 subscriptions. Windows Autopilot gives you modern OS deployment for Windows 10/11 client devices.
+  - **[Windows Autopilot](/autopilot/licensing-requirements)**: Included with some Microsoft 365 subscriptions. Windows Autopilot gives you modern OS deployment for Windows 10/11 client devices.
   - **Platform specific prerequisites**: Depending on the platforms of your devices, there will probably be other requirements.
 
     For example, if you manage iOS/iPadOS and macOS devices, you need an Apple MDM push certificate and possibly an Apple token. If you manage Android devices, you may need a managed Google Play account. If you use certificate authentication, you may need a SCEP or PKCS certificate.

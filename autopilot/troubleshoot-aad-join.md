@@ -30,7 +30,7 @@ The most common issue joining a device to Azure AD is related to Azure AD permis
 
 ## Maximum number of devices
 
-Errors can also happen if the user exceeds the [number of devices](../intune/enrollment/device-limit-intune-azure.md) that they're allowed to join. This limit is configured in Azure AD.
+Errors can also happen if the user exceeds the [number of devices](/mem/intune/enrollment/device-limit-intune-azure) that they're allowed to join. This limit is configured in Azure AD.
 
 ## Deleted objects
 
