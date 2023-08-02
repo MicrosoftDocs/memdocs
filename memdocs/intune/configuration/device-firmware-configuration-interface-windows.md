@@ -52,11 +52,11 @@ When you reinstall an older Windows version, install a separate OS, or format th
 
 - The device must be registered for Windows Autopilot by a [Microsoft Cloud Solution Provider (CSP) partner](https://partner.microsoft.com/cloud-solution-provider), or registered directly by the OEM. 
 
-  Devices manually registered for Autopilot, such as [imported from a csv file](../../autopilot/add-devices.md#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
+  Devices manually registered for Autopilot, such as [imported from a csv file](/autopilot/add-devices#add-devices), aren't allowed to use DFCI. By design, DFCI management requires external attestation of the device's commercial acquisition through an OEM or a Microsoft CSP partner registration to Windows Autopilot.
 
   Once your device is registered, its serial number is shown in the list of Windows Autopilot devices.
 
-  For more information on Autopilot, including any requirements, see [Windows Autopilot registration overview](../../autopilot/registration-overview.md).
+  For more information on Autopilot, including any requirements, see [Windows Autopilot registration overview](/autopilot/registration-overview).
 
 ## Create your Azure AD security groups
 
@@ -76,7 +76,7 @@ To use DFCI, create the following profiles, and assign them to your group.
 
 This profile sets up and pre-configures new devices. The following article lists the steps to create the profile:
 
-- [Autopilot deployment profile](../../autopilot/profiles.md)
+- [Autopilot deployment profile](/autopilot/profiles)
 
 ### Step 2: Create an Enrollment State Page profile
 

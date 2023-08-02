@@ -257,7 +257,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Azure Active Directory (AD) Premium** includes several features that are key to managing devices, including:
 
-  - **[Windows Autopilot](../../autopilot/enrollment-autopilot.md)**: Windows client devices can automatically enroll in Intune, and automatically receive your policies.
+  - **[Windows Autopilot](/autopilot/enrollment-autopilot)**: Windows client devices can automatically enroll in Intune, and automatically receive your policies.
   - **[Multi-factor authentication](../enrollment/multi-factor-authentication.md) (MFA)**: Users must enter two or more verification methods, such as a PIN, an authenticator app, a fingerprint, and more. MFA is a great option when using app protection policies for personal devices, and organization-owned devices that require extra security.
   - **[Conditional Access](../protect/conditional-access.md)**: If users and devices follow your rules, such as a 6-digit passcode, then they get access to organization resources. If users or devices don't meet your rules, then they don't get access.
   - **[Dynamic user groups and dynamic device groups](../fundamentals/groups-add.md)**: Add users or devices automatically to groups when they meet criteria, such as a city, job title, OS type, OS version, and more.
@@ -544,7 +544,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](../../autopilot/tutorial/autopilot-scenarios.md), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-walkthrough-administrative-templates.md), and courses through training partners.
+  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-walkthrough-administrative-templates.md), and courses through training partners.
 
   The following example is an Intune support training agenda:
 
