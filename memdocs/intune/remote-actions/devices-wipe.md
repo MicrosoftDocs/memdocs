@@ -47,7 +47,7 @@ The **Wipe** device action restores a device to its factory default settings. Th
 
 > [!IMPORTANT]
 >
-> The Wipe action doesn't remove the Autopilot registration from the device. To remove the Autopilot registration from the device, see [Deregister from Autopilot using Intune](/mem/autopilot/registration-overview#deregister-from-autopilot-using-intune)
+> The Wipe action doesn't remove the Autopilot registration from the device. To remove the Autopilot registration from the device, see [Deregister from Autopilot using Intune](/autopilot/registration-overview#deregister-from-autopilot-using-intune)
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
