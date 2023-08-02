@@ -82,7 +82,7 @@ The following features are currently not available and aren't supported in GCC H
 | Log Analytics |  :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
 | Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | :::image type="icon" source="../media/icons/i-article.png"::: For more information on these plans, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing). |
 | Organizational Messages | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Organizational messages in Microsoft Intune](../remote-actions/organizational-messages-overview.md). |
-| Windows Autopilot | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Windows Autopilot overview](../../autopilot/windows-autopilot.md). |
+| Windows Autopilot | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Windows Autopilot overview](/autopilot/windows-autopilot). |
 
 ### Not available
 

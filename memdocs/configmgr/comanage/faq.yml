@@ -117,7 +117,7 @@ sections:
       - question: |
           Can I use Windows Autopilot with co-management?
         answer: |
-          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Autopilot](../../autopilot/windows-autopilot.md) joins it to Azure AD and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
+          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Autopilot](/autopilot/windows-autopilot) joins it to Azure AD and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
 
           For more information, see [How to prepare internet-based devices for co-management](how-to-prepare-win10.md).
 

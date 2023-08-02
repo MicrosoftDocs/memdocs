@@ -47,13 +47,13 @@ Before deploying a device, ensure that an Autopilot profile has been assigned to
 
            - [Autopilot profile not applied after reimaging to an older OS version](../../troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
            - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
-           - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-mbr.md)
+           - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-motherboard-replacement.md)
 
        - **Attention required**: If Intune is unable to register the new hardware after a hardware change occurs on a device, the device can't receive the Autopilot profile until the device is reset and the device re-registers. For more information on this status and how to deregister/re-register a device, see the following articles:
 
          - [Autopilot profile not applied after reimaging to an older OS version](../../troubleshoot-device-enrollment.md#autopilot-profile-not-applied-after-reimaging-to-an-older-os-version).
          - [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
-         - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-mbr.md)
+         - [Windows Autopilot motherboard replacement scenario guidance](../../autopilot-motherboard-replacement.md)
          - [Deregister a device](../../registration-overview.md#deregister-a-device)
 
         Before starting the Autopilot deployment process on a device, make sure that in the **Windows Autopilot devices** page:
