@@ -48,6 +48,7 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
   - **High time connected**: More than 80 hours.
   - **Average time connected**: 40-80 hours.
   - **Low time connected**: Less than 40 hours.
+  - **No active time connected**: Zero hours.
 - List of individual Cloud PCs with the following columns:
   - **Device name**
   - **Primary user UPN**
