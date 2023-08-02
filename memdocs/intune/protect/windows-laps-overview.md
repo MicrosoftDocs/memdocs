@@ -90,7 +90,7 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
     **Enable LAPS in Microsoft Entra**:  
     1. Sign in to the **Microsoft Entra admin center** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
     1. Browse to **Devices** > **Overview** > **Local administrator password recovery**.
-    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true)
+    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
 
 
 
