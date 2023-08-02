@@ -51,7 +51,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   - The **Intune administrator**
 
-  **OR**
+    **OR**
 
   - A role that has the **Security baselines** permission and the **Device configurations/Create** permission
 
