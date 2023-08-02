@@ -128,7 +128,7 @@ items:
       - name: iOS/iPadOS
         displayName: software updates
         href: ./protect/software-updates-guide-ios-ipados.md
-      - name: macos
+      - name: macOS
         displayName: software updates
         href: ./protect/software-updates-guide-macos.md
     - name: Network configuration
