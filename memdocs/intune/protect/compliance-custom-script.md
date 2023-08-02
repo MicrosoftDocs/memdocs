@@ -33,8 +33,9 @@ ms.collection:
 
 Before you can use [custom settings for compliance](../protect/compliance-use-custom-settings.md) with Microsoft Intune, you must define a script for discovery of custom compliance settings on devices. The script you use depends on the platform:
 
-- Linux devices, use a POSIX-compliant shell script
 - Windows devices use a PowerShell script
+- Linux devices can run scripts in any language as long as the corresponding interpreter is installed and configured on the device
+
 
 The script deploys to devices as part of your custom compliance policies. When compliance runs, the script discovers the settings that are defined by the JSON file that you also provide through custom compliance policy.
 
@@ -88,36 +89,19 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 
 Discovery scripts for Linux must be POSIX-compliant shell scripts, such as Bash. However, the scripts can call more complex interpreters from inside the script, like Python. To successfully use other interpreters, they must be correctly installed and configured on the devices in advance of receiving the discovery script.  
 
-**About POSIX-compliant syntax**: Because the custom compliance script interpreter for Linux supports only a POSIX-compliant shell, it’s important to use POSIX-syntax.
+Discovery scripts for Linux can call any interpeter that meets your requirements. Ensure that the chosen interpreter is properly installed and configured on the targeted device before the script is deployed. To specify the intepreter for a script, include a shebang line at the top of the script, indicating the path to the interpreter binary. 
 
-The following are examples of syntax that is compliant vs not compliant:
+For example, if your script should use the Bash shell as the interpreter, add the following line at the top of your script:
 
-- Compliant:
+`[ !/bin/bash ]`
 
-  ```Shell
-  functionName() {
-    // scope of function with compliant syntax
-    }
-  ```
+If you want to use Python for your script, indicate where the interpreter is installed. For example, add the following to the top of your script: `[ !/usr/bin/python3 ]` or `[ !/usr/bin/env python ]`
 
-   For example, `[ "$a" = foo ]` - Use of a single equal sign for a string comparison is POSIX-compliant.
-
-- Not compliant:
-
-  ```Shell
-  function functionName() {
-    // scope of function with non POSIX compliant syntax
-    }
-  ```
-
-   For example, `[ "$a" == foo ]` - Use of a double equal sign for a string comparison isn't POSIX-compliant.
+** Recommended best practice: ** Implementing graceful termination mechanisms in your scripts enables them to handle scenarios such as interrups or cancellation signals. By caching and handling these signals properly, your script can perform cleanup tasks and exist gracefully, ensuring resources are released correctly. For example, you can catch specific signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to be executed when these signals are received. These actions may include closing open files, releasing acquired locks, or cleaning up temporary resources. Properly handling signals helps to maintain script integrity and improve overall user experience.
 
 For more information, the following guides might be of use:
-
-- [POSIX Shell Tutorial (grymoire.com)](https://www.grymoire.com/Unix/Sh.html), a third-party website.
-
 - [Intune Linux Custom Compliance Samples](https://github.com/microsoft/shell-intune-samples/tree/master/Linux).
-
+  
 ## Add a discovery script to Intune
 
 Before deploying your script in production, test it in an isolated environment to ensure the syntax you use behaves as expected.
