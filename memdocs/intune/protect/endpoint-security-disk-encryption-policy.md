@@ -60,7 +60,7 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 
   > [!NOTE]
   >
-  > Beginning on July 28, 2023, the BitLocker profile for Windows 10 and later was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+  > Beginning on June 19, 2023, the BitLocker profile for Windows 10 and later was updated to use the settings format as found in the Settings Catalog. The new profile format includes the same settings as the older profile. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
   >
   > With the new profile format, we no longer publish a dedicated list of settings as found in the profile. Instead, use the *Learn more* link in the UI while viewing information  for a setting, to open [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) in the Windows documentation, where the setting is detailed in full.
   > 
