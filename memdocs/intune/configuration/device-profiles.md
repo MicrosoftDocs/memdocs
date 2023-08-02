@@ -189,7 +189,7 @@ This feature supports:
 - Windows 11
 - Windows 10
 
-## eSIM cellular - Public preview
+## eSIM cellular
 
 [eSIM cellular profiles](esim-device-configuration.md) lets administrators configure cellular data plans on your managed devices for internet and data access. After getting activation codes from your mobile operator, use Intune to import these activation codes, and then assign to your eSIM capable devices.
 
