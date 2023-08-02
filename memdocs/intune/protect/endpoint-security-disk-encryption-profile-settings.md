@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/23/2023
+ms.date: 07/31/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,6 +85,14 @@ Supported platforms and profiles:
     - **Yes** - Hide the personal recovery key during device encryption.
 
 ## BitLocker
+
+> [!NOTE]
+>
+> This article details the settings you can find in BitLocker profiles created before June 19, 2023, for the Windows 10 and later platform for endpoint security Disk encryption policy. On June 19, 2023, the Windows 10 and later profile was updated to use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
+>
+> The following settings details for Windows profiles apply to those deprecated profiles.
 
 ### BitLocker – Base Settings
 

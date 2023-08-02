@@ -35,7 +35,7 @@ Windows Autopilot for existing devices is available with Windows 10, version 180
 
 This scenario applies to Windows 10 version 1809 and later
 
-For more information, see [Windows Autopilot for existing devices](../../../autopilot/existing-devices.md).
+For more information, see [Windows Autopilot for existing devices](/autopilot/existing-devices).
 
 ## Refresh an existing computer with a new version
 
