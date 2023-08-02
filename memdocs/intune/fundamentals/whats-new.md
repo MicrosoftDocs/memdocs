@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2023
+ms.date: 08/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of July 31, 2023
+
+### Device security
+
+### New BitLocker profile for Intune’s endpoint security Disk encryption policy<!-- 24631986   -->  
+We have released a new experience creating new *BitLocker* profiles for endpoint security Disk Encryption policy. The experience for editing your previously created BitLocker policy remains the same, and you can continue to use them. This update applies only for the new [BitLocker](../protect/endpoint-security-disk-encryption-policy.md) policies you create for the *Windows 10 and later* platform.
+
+This update is part of the continuing [rollout of new profiles for endpoint security policies](../fundamentals/whats-new-archive.md#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022.
+
+### App management
+
+#### Uninstall Win32 and Microsoft store apps using the Windows Company Portal<!-- 4664389 -->  
+End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal. For related information, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 ## Week of July 24, 2023 (Service release 2307)
 
@@ -157,7 +171,7 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 #### Compliance Retrieval service support for MAC address endpoints<!--  24332824  -->  
 You can now use MAC address endpoints with the Intune Compliance Retrieval service (CR service), which is a replacement to the Intune [Network Access Control service](../protect/network-access-control-integrate.md).
 
-The initial release of the CR service included support for using only the Intune device ID with the intent to eliminate the need to manage internal identifiers like serial numbers and MAC addresses. With this update, organizations that prefer to use MAC addresses for certificate authentication may continue to do so while implementing the CR service.
+The initial release of the CR service included support for using only the Intune device ID with the intent to eliminate the need to manage internal identifiers like serial numbers and MAC addresses. With this update, organizations that prefer to use MAC addresses over certificate authentication may continue to do so while implementing the CR service.
 
 While this update adds MAC address support to the CR service, our recommendation is to use certificate-based authentication with the Intune device ID included in the certificate.
 
@@ -539,7 +553,7 @@ Applies to:
 
 ### App management
 
-#### Microsoft Store for Business or Microsoft Store for Education<!-- 24250535 wndraft wnready -->
+#### Microsoft Store for Business or Microsoft Store for Education<!-- 24250535 -->
 Apps added from the Microsoft Store for Business or Microsoft Store for Education won't deploy to devices and users. Apps show as "not applicable" in reporting. Apps already deployed are unaffected. Use the [new Microsoft Store app](../apps/store-apps-microsoft.md) to deploy Microsoft Store apps to devices or users. For related information, see [Plan for Change: Ending support for Microsoft Store for Business and Education apps](../fundamentals/whats-new.md#plan-for-change-ending-support-for-microsoft-store-for-business-and-education-apps) for upcoming dates when Microsoft Store for Business apps will no longer deploy and Microsoft Store for Business apps will be removed.
 
 For more information, see the following resources:
