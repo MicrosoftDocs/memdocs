@@ -69,6 +69,10 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a device, and choose **Reset passcode**.
 
+> [!NOTE]
+> To successfully reset a passcode for the Work Profile of an Android device you must configure the device passcode within device restrictions. Any attempts to reset the passcode without configuration will fail.
+
+
 ## Reset Android work profile and Device Owner passcodes
 
 Supported Android Enterprise personally-owned and corporate-owned work profile devices enrolled with a work profile receive a new managed profile unlock password or a managed profile challenge for the end user.

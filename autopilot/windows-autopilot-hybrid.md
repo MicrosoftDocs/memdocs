@@ -68,7 +68,7 @@ Although not required, configuring hybrid Azure AD join for Active Directory Fed
   - Must be part of the **Domain user** group
   - Must be a member of the local **Administrators** group on the Windows server that hosts the connector
 
-- The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
+- The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
 
 ## Set up Windows automatic MDM enrollment
 
@@ -171,7 +171,7 @@ After installing the Intune Connector, it will start logging in the **Event View
 
 ### Configure web proxy settings
 
-If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](../intune/enrollment/autopilot-hybrid-connector-proxy.md).
+If you have a web proxy in your networking environment, ensure that the Intune Connector for Active Directory works properly by referring to [Work with existing on-premises proxy servers](/mem/intune/enrollment/autopilot-hybrid-connector-proxy).
 
 ## Create a device group
 
@@ -282,7 +282,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 9. Select **Next**.
 
-10. On the **Scope tags** page, select [scope tags](../intune/fundamentals/scope-tags.md) for this profile.
+10. On the **Scope tags** page, select [scope tags](/mem/intune/fundamentals/scope-tags) for this profile.
 
 11. Select **Next**.
 
@@ -339,7 +339,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 6. Select **OK** > **Create**. The profile is created and displayed in the list.
 
-7. [Assign a device profile](../intune/configuration/device-profile-assign.md#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](windows-autopilot-hybrid.md#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
+7. [Assign a device profile](/mem/intune/configuration/device-profile-assign#assign-a-policy-to-users-or-groups) to the same group used at the step [Create a device group](/mem/autopilot/windows-autopilot-hybrid#create-a-device-group). Different groups can be used if there's a need to join devices to different domains or OUs.
 
 > [!NOTE]
 > The naming capabilities for Windows Autopilot for Hybrid Azure AD Join don't support variables such as %SERIAL% and only support prefixes for the computer name.
@@ -359,5 +359,4 @@ The following steps uninstalls the ODJ Connector from the computer where it's in
 
 ## Next steps
 
-After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](../intune/remote-actions/device-management.md).
-
+After you configure Windows Autopilot, learn how to manage those devices. For more information, see [What is Microsoft Intune device management?](/mem/intune/remote-actions/device-management).

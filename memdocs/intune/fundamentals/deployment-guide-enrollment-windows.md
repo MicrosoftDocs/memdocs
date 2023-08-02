@@ -178,7 +178,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
 
 Use on organization-owned devices running Windows 10/11. Windows Autopilot uses the Windows client OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. It also requires Automatic enrollment, and uses the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile. When users sign in with their organization account, they're automatically enrolled.
 
-For more information about Windows Autopilot, see [Windows Autopilot overview](../../autopilot/windows-autopilot.md) or [Windows Autopilot scenarios](../../autopilot/tutorial/autopilot-scenarios.md).  
+For more information about Windows Autopilot, see [Windows Autopilot overview](/autopilot/windows-autopilot) or [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios).  
 
 ---
 | Feature | Use this enrollment option when |
@@ -201,15 +201,15 @@ For more information about Windows Autopilot, see [Windows Autopilot overview](.
 
 ### Windows Autopilot administrator tasks
 
-- Be sure your devices are running Windows 10/11. For a complete list, see [software requirements](../../autopilot/software-requirements.md).
+- Be sure your devices are running Windows 10/11. For a complete list, see [software requirements](/autopilot/software-requirements).
 
-- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Azure AD. For more specific information, see [Windows Autopilot registration overview](../../autopilot/registration-overview.md) and [Manual registration overview](../../autopilot/manual-registration.md).
+- In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), register the devices in to Windows Autopilot. This step joins the devices to Azure AD. For more specific information, see [Windows Autopilot registration overview](/autopilot/registration-overview) and [Manual registration overview](/autopilot/manual-registration).
 
-- Create an Autopilot deployment profile. For more specific information, see [Create an Autopilot deployment profile](../../autopilot/profiles.md#create-an-autopilot-deployment-profile).
+- Create an Autopilot deployment profile. For more specific information, see [Create an Autopilot deployment profile](/autopilot/profiles#create-an-autopilot-deployment-profile).
 
   When you create the profile, you also:
 
-  - Configure the out-of-box deployment user experience, including [user driven](../../autopilot/user-driven.md), [pre-provision](../../autopilot/pre-provision.md), and more. For more specific information, see [Configure Autopilot profiles](../../autopilot/profiles.md).
+  - Configure the out-of-box deployment user experience, including [user driven](/autopilot/user-driven), [pre-provision](/autopilot/pre-provision), and more. For more specific information, see [Configure Autopilot profiles](/autopilot/profiles).
 
   - Configure startup behaviors, such as disabling the local administrator, and skipping the EULA. 
 
@@ -217,21 +217,21 @@ For more information about Windows Autopilot, see [Windows Autopilot overview](.
 
   - For hybrid Azure AD joined devices, you register the devices, create the deployment profile, and assign the profile. You'll also install the Intune Connector for Active Directory. This connector communicates between on-premises Active Directory and Azure AD.
 
-  For more specific information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](../../autopilot/windows-autopilot-hybrid.md).
+  For more specific information, see [Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
 After the profile is assigned, the devices start showing in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Windows**).
 
 ### Windows Autopilot end user tasks
 
-The end user experience depends on the Windows Autopilot deployment option you chose, such as [user driven](../../autopilot/user-driven.md) or [pre-provision](../../autopilot/pre-provision.md).
+The end user experience depends on the Windows Autopilot deployment option you chose, such as [user driven](/autopilot/user-driven) or [pre-provision](/autopilot/pre-provision).
 
 - **Self-Deploying mode**: No actions. This option doesn't associate a user with the device. Users just turn on the device, and the enrollment automatically starts. 
 
-  For more specific information, see [self deployment](../../autopilot/self-deploying.md).
+  For more specific information, see [self deployment](/autopilot/self-deploying).
 
 - **Pre-provisioning**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts. Since the device is pre-provisioned by admins, the enrollment is faster compared to **User-driven**.
 
-  For more specific information, see [pre-provisioned deployment](../../autopilot/pre-provision.md).
+  For more specific information, see [pre-provisioned deployment](/autopilot/pre-provision).
 
 - **Existing devices**: Your users must do the following steps:
 
@@ -240,9 +240,9 @@ The end user experience depends on the Windows Autopilot deployment option you c
 
       This step can take some time, and users must wait.
 
-  3. Autopilot runs, and users sign in with their organization or school account. The enrollment can automatically start. For more specific information, see [existing devices deployment](../../autopilot/existing-devices.md).
+  3. Autopilot runs, and users sign in with their organization or school account. The enrollment can automatically start. For more specific information, see [existing devices deployment](/autopilot/existing-devices).
 
-- **User driven**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts. For more specific information, see [user-driven deployment](../../autopilot/user-driven.md).
+- **User driven**: Users turn on the device, and sign in with their organization or school account. The enrollment automatically starts. For more specific information, see [user-driven deployment](/autopilot/user-driven).
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
