@@ -105,8 +105,8 @@ If you constantly provision new devices or repurpose existing devices, then use 
 
 For more information, go to:
 
-- [Windows Autopilot overview](./autopilot/windows-autopilot.md)
-- [Enroll Windows devices in Intune](./autopilot/enrollment-autopilot.md)
+- [Windows Autopilot overview](/autopilot/windows-autopilot)
+- [Enroll Windows devices in Intune](/autopilot/enrollment-autopilot)
 
 ## Azure Active Directory (AD)
 
