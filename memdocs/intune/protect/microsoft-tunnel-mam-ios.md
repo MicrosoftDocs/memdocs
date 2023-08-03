@@ -137,9 +137,9 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    > [!NOTE]  
    > The bypassedUrl should include the federation STS endpoint.
 
-      :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
 
-      For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
+   For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
 
    After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 
