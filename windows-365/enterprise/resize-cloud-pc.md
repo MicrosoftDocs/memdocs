@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 08/04/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -93,15 +93,16 @@ If there are available licenses, the resizing starts.
 
 ## Resize a single Cloud PC provisioned with a group-based license
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
+1. Create a new target Azure AD group. Add the users from the source Azure AD group that you want to resize. Alternately, you can use existing Azure AD groups if you're mapping the groups to individual Windows 365 license types.
+2. Assign the existing provisioning policy targeting the original source Azure AD group to the new target Azure AD group. You only need to do this if you don't have a discrete Azure AD group for your provisioning policy assignment. If you have discrete Azure AD groups to manage your provisioning policy assignments, you can omit this step.
+3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose the device that you want added to the Azure AD target group > **Resize**.
 ![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
-2. You’ll see a list with all the possible SKUs that you can upgrade or downsize to based on the licenses that you have available in your inventory. You can upgrade/downgrade a Cloud PC’s RAM and vCPU. You can only upgrade the OS disk storage. If you're downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
-3. Select **Resize**.
-4. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
-5. Select **Users** > search for the user name assigned to the Cloud PC and select it > **Groups**.
-6. Right-click the group that's assigned the old source license > **Remove** > **OK**.
-7. Select **Add memberships** > select the group that's assigned the new license matching the new specifications > **Select**. Make sure that the same provisioning policy that was used to provision the Cloud PC is assigned to the new group.
-8. The users Cloud PC starts resizing, as you can check in the Windows 365 provisioning blade.
+4. You’ll see a list with all the possible SKUs that you can upgrade or downsize to based on the licenses that you have available in your inventory. You can upgrade/downgrade a Cloud PC’s RAM and vCPU. You can only upgrade the OS disk storage. If you're downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
+5. Select **Resize**.
+6. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
+7. Select **Users** > search for the user name assigned to the Cloud PC and select it > **Groups**.
+8. Remove the users from the original source Azure AD group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
+9. Assign the target license to the new target Azure AD group. The resizing process now begins.
 
 ## Bulk resizing Cloud PCs
 
