@@ -99,6 +99,8 @@ The compliance retrieval service requires certificate-based authentication and t
 
 Other NAC products might require you include a device ID when using NAC with iOS VPN profiles.
 
+> [!NOTE]
+> We have now added support for querying devices based on Mac addresses for customers who are unable to use certificate-based authentication. However, our recommendation is to use certificate-based authentication with Intune device id wherever possible.
 To learn more about certificate profiles, see: [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md)
 
 ## Data shared with NAC partners
@@ -133,4 +135,5 @@ Also, the data returned will be limited if:
 - [Integrate F5 BIG-IP Access Policy Manager with Intune](https://techdocs.f5.com/en-us/edge-client-7-1-8/big-ip-access-policy-manager-edge-client-and-application-configuration-7-1-8/configuring-access-policy-manager-for-mdm-applications.html)
 - [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads/documents/RmlsZTowMTg2ZmY0Yy05MGE5LTExZWItODRiZC0yZjM5OWFjNzc5YTY%3D)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.10.0.0/secRMMIntune.pdf)
+
 
