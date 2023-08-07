@@ -134,7 +134,7 @@ To share diagnostics in the app, you must allow Company Portal access to photos,
 
 * If you deny access, logs aren't written to the device's SD card. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
 
-To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Storage**.  
+To adjust permissions on your device, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Storage**.  
 
 ### Contacts  
 To enroll your Android device with the app, you must allow Company Portal access to your contacts. The Intune Company Portal app never accesses your contacts. The permission text is controlled by Google and can't be changed.  
@@ -143,7 +143,7 @@ To enroll your Android device with the app, you must allow Company Portal access
 
 * If you deny access, you can't enroll your device for work. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
 
-To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
+To adjust permissions on your device, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
 
 ### Phone calls  
 During enrollment, Company Portal requests permission to make and manage phone calls. The Intune Company Portal app never actually makes or manages calls. The permission text is controlled by Google and can't be changed.  
@@ -152,7 +152,7 @@ During enrollment, Company Portal requests permission to make and manage phone c
 
 * If you deny access, you can continue to use Company Portal and enroll your device. Your phone number and IMEI number will not be shared or visible to anyone. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.  
 
-To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
+To adjust permissions on your device, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
 
 ## Windows Information Protection policies 
 
