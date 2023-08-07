@@ -65,7 +65,7 @@ In Windows 10 April and some May update releases, there's an issue where the Aut
 
 ### DefaultuserX profile not deleted
 
-When you use the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin), the `defaultuserX` profile may not be deleted. This CSP isn't currently supported. It's in preview mode only and not recommended for production purposes at this time.
+When you use the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin), the `defaultuserX` profile may not be deleted. 
 
 ### Autopilot reset ran into trouble. Could not find the recovery environment
 
