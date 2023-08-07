@@ -39,7 +39,8 @@ ms.collection:
 Install a mobile threat defense (MTD) app on the personal device you use for work or school. An MTD app works by detecting and alerting you to threats on your device, like suspicious apps or networks, and operating system vulnerabilities. In this article, you'll learn how to set up and activate an MTD app so that you can satisfy your organization's security requirement and access work apps.    
 
 ## Step 1: Install MTD app    
->[!NOTE] An additional step, called *device registration*, happens prior to app installation on devices that aren't registered. Registration is required to confirm your identity and connect your school or work account to your device. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
+>[!NOTE]
+> An additional step, called *device registration*, happens prior to app installation on devices that aren't registered. Registration is required to confirm your identity and connect your school or work account to your device. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
 Install your organization's preferred mobile threat defense (MTD) app on your device. Your organization chooses the MTD app you need to use. If the app name or listing isn't provided to you during enrollment or app setup, contact your IT support person to determine which app you need to use. The following MTD apps are commonly used on Apple devices. Select an app to open its listing in the App Store.   
 
