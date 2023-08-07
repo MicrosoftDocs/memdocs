@@ -34,11 +34,11 @@ ms.collection:
 
 Windows 365 Switch is in [public preview](..\public-preview.md).
 
-Windows 365 Switch lets users move between their local device and one of their Cloud PCs using multiple desktops with the Windows 11 [Task View](https://support.microsoft.com/windows/get-more-done-with-multitasking-in-windows-b4fa0333-98f8-ef43-e25c-06d4fb1d6960).
+Windows 365 Switch lets users move between their local device and one of their Cloud PCs using multiple desktops with the Windows 11 [Task view](https://support.microsoft.com/windows/get-more-done-with-multitasking-in-windows-b4fa0333-98f8-ef43-e25c-06d4fb1d6960).
 
-![Windows 11 Task View.](media/windows-365-switch-overview/task-view.png)
+![Windows 11 Task view.](media/windows-365-switch-overview/task-view.png)
 
-Users can also launch and connect to their Cloud PC directly from the Task View without the need to use [https://windows365.microsoft.com](https://windows365.microsoft.com).
+Users can also launch and connect to their Cloud PC directly from the Task view without the need to use [https://windows365.microsoft.com](https://windows365.microsoft.com).
 
 ## Requirements
 
