@@ -187,8 +187,8 @@ If your organization restricts devices on your network from connecting to the In
 
 **WUA requirements (Windows Update section):**
 For details, see the following resources:
-- [Manage connection endpoints for Windows 11 Enterprise](https://learn.microsoft.com/windows/privacy/manage-windows-11-endpoints)
-- [Manage connection endpoints for Windows 10 Enterprise, version 21H2](https://learn.microsoft.com/windows/privacy/manage-windows-21h2-endpoints)
+- [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
+- [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
 **Win32 content download:**
 The Win32 content download is unique per application, where the external publisher has a specific source location. You can find the current location using `winget show [PackageId]`, the Installer Url property will either show the external download location or region-based spark fallback cache based on whether the cache is in-use at this moment in time. Note that the content download location can change between the cache and external location.
@@ -198,7 +198,7 @@ The Win32 content download is unique per application, where the external publish
 
 **Delivery Optimization (optional, required for peering):**
 For details, see the following resource:
-- [Microsoft Connected Cache content and services endpoints](https://learn.microsoft.com/windows/deployment/do/delivery-optimization-endpoints)
+- [Microsoft Connected Cache content and services endpoints](/windows/deployment/do/delivery-optimization-endpoints)
 
 ## Windows Push Notification Services (WNS)  
 
