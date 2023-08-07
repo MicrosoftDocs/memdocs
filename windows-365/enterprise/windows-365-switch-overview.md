@@ -38,7 +38,7 @@ Windows 365 Switch lets users move between their local device and one of their C
 
 ![Windows 11 Task view.](media/windows-365-switch-overview/task-view.png)
 
-Users can also launch and connect to their Cloud PC directly from the Task view without the need to use [https://windows365.microsoft.com](https://windows365.microsoft.com).
+Users can also launch and connect to their Cloud PC directly from the Task view without the need to use [https://windows365.microsoft.com](https://windows365.microsoft.com) or the Windows 365 app.
 
 ## Requirements
 
