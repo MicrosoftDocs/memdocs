@@ -331,11 +331,6 @@ For communication between clients and the cloud service:
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
 
-## Microsoft Store apps
-
-If your organization restricts devices on your network from connecting to the Internet, there is a set of URLs that need to be available for devices to use Microsoft Store. For related information, see [Proxy configuration](../apps/store-apps-microsoft.md#proxy-configuration) for Microsoft Store.
-
-
 ## Related topics
 
 [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
