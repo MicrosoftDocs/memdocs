@@ -61,7 +61,7 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune services are accessed through a PowerShell script. There are other dependent services for Intune which are already covered as part of the M365 Service and are marked as 'required'. Services already covered by M365 are not included in the script to avoid duplication.
+To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune services are accessed through a PowerShell script. There are other dependent services for Intune, which are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
 By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service. This provides the same list as the subnets indicated in the IP address table below.
 
 ```PowerShell
@@ -74,9 +74,9 @@ By using the following PowerShell script, you can retrieve the list of FQDNs use
 (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
 ```
 
-The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.  
+The script provides a convenient method to list and review all services required by Intune and Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.  
 
-You will also need FQDNs that are covered as part of M365 Requirements. For reference, the following table is the list of URLs returned, and the service they are tied to.
+You'll also need FQDNs that are covered as part of Microsoft 365 Requirements. For reference, the following table is the list of URLs returned, and the service they're tied to.
 
 |FQDN    |Associated Service      |
 |-----------|----------------|
@@ -164,7 +164,7 @@ The following tables list the ports and services that the Intune client accesses
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location will be one of these three regions although your organization’s actual geographic location might be elsewhere.
+To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization’s actual geographic location might be elsewhere.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
@@ -174,7 +174,7 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 
 ## Microsoft Store proxy configuration
 
-If your organization restricts devices on your network from connecting to the Internet, there is a set of URLs that need to be available for devices to use Microsoft Store. Some of the Microsoft Store features use Store services. Devices using Microsoft Store – either to acquire, install, or update apps – will need access to these URLs. If you use a proxy server to block traffic, your configuration needs to allow specific URIs.
+If your organization restricts devices on your network from connecting to the Internet, there's a set of URLs that need to be available for devices to use Microsoft Store. Some of the Microsoft Store features use Store services. Devices using Microsoft Store – either to acquire, install, or update apps – will need access to these URLs. If you use a proxy server to block traffic, your configuration needs to allow specific URIs.
 
 **WPM metadata requires:** 
 - storeedgefd.dsx.mp.microsoft.com
@@ -207,9 +207,9 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 ### Migrating device health attestation compliance policies to Microsoft Azure attestation
 
 If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices will begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
-However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestion DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and is not impacted by this change.  
+However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestion DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.  
 
-If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they are unable to reach the MAA attestation endpoints for their location.
+If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
 
 Ensure there are no firewall rules blocking outbound HTTPS/443 traffic to the endpoints listed in this section based on your Intune tenant's location. To find your tenant location navigate to the Intune admin center > **Tenant administration** > **Tenant status** > **Tenant details**, see Tenant location.
 
