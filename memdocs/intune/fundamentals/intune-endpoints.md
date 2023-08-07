@@ -176,10 +176,10 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 
 If your organization restricts devices on your network from connecting to the Internet, there's a set of URLs that need to be available for devices to use Microsoft Store. Some of the Microsoft Store features use Store services. Devices using Microsoft Store – either to acquire, install, or update apps – will need access to these URLs. If you use a proxy server to block traffic, your configuration needs to allow specific URIs.
 
-**WPM metadata requires:** 
+**WPM metadata requirement:** 
 - storeedgefd.dsx.mp.microsoft.com
 
-**AppInstallManager requires:**
+**AppInstallManager requirements:**
 - displaycatalog.md.mp.microsoft.com
 - purchase.md.mp.microsoft.com
 - displaycatalog.md.mp.microsoft.com
@@ -191,7 +191,12 @@ For details, see the following resources:
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
 **Win32 content download:**
-The Win32 content download is unique per application, where the external publisher has a specific source location. You can find the current location using `winget show [PackageId]`, the Installer Url property will either show the external download location or region-based spark fallback cache based on whether the cache is in-use at this moment in time. Note that the content download location can change between the cache and external location.
+
+The Win32 content download is unique per application, where the external publisher has a specific source location. You can find the current location using the following command:
+
+`winget show [PackageId]`
+
+The **Installer Url** property will either show the external download location or region-based spark fallback cache based on whether the cache is in-use. Note that the content download location can change between the cache and external location.
 
 **SPARK CDNs (for Win32 store app content fallback):**
 - Varies by region, example: *sparkcdneus2.azureedge.net, sparkcdnwus2.azureedge.net*
