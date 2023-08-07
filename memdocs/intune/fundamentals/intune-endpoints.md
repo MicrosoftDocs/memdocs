@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/30/2023
+ms.date: 08/02/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -172,6 +172,34 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 | AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net |
 | AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
 
+## Microsoft Store proxy configuration
+
+If your organization restricts devices on your network from connecting to the Internet, there is a set of URLs that need to be available for devices to use Microsoft Store. Some of the Microsoft Store features use Store services. Devices using Microsoft Store – either to acquire, install, or update apps – will need access to these URLs. If you use a proxy server to block traffic, your configuration needs to allow specific URIs.
+
+**WPM metadata requires:** 
+- storeedgefd.dsx.mp.microsoft.com
+
+**AppInstallManager requires:**
+- displaycatalog.md.mp.microsoft.com
+- purchase.md.mp.microsoft.com
+- displaycatalog.md.mp.microsoft.com
+- licensing.mp.microsoft.com
+
+**WUA requirements (Windows Update section):**
+For details, see the following resources:
+- [Manage connection endpoints for Windows 11 Enterprise](https://learn.microsoft.com/windows/privacy/manage-windows-11-endpoints)
+- [Manage connection endpoints for Windows 10 Enterprise, version 21H2](https://learn.microsoft.com/windows/privacy/manage-windows-21h2-endpoints)
+
+**Win32 content download:**
+The Win32 content download is unique per application, where the external publisher has a specific source location. You can find the current location using `winget show [PackageId]`, the Installer Url property will either show the external download location or region-based spark fallback cache based on whether the cache is in-use at this moment in time. Note that the content download location can change between the cache and external location.
+
+**SPARK CDNs (for Win32 store app content fallback):**
+- Varies by region, example: *sparkcdneus2.azureedge.net, sparkcdnwus2.azureedge.net*
+
+**Delivery Optimization (optional, required for peering):**
+For details, see the following resource:
+- [Microsoft Connected Cache content and services endpoints](https://learn.microsoft.com/windows/deployment/do/delivery-optimization-endpoints)
+
 ## Windows Push Notification Services (WNS)  
 
 For Intune-managed Windows devices managed using Mobile Device Management (MDM), device actions and other immediate activities require the use of Windows Push Notification Services (WNS). For more information, see [Allowing Windows Notification traffic through enterprise firewalls](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config). 
@@ -302,6 +330,11 @@ For communication between clients and the cloud service:
 > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
+
+## Microsoft Store apps
+
+If your organization restricts devices on your network from connecting to the Internet, there is a set of URLs that need to be available for devices to use Microsoft Store. For related information, see [Proxy configuration](../apps/store-apps-microsoft.md#proxy-configuration) for Microsoft Store.
+
 
 ## Related topics
 
