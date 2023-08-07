@@ -68,7 +68,7 @@ The user connected to their Cloud PC using another mode (like Windows 365 Boot o
 
 **Troubleshooting steps:**
 
-Restart the Cloud PC.
+Restart the Cloud PC. 
 
 <!-- ########################## -->
 ## Next steps
