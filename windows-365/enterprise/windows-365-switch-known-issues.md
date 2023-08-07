@@ -40,7 +40,7 @@ Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The use
 
 ## Limited gestures
 
-Some gestures aren't supported in the Cloud PC, like three finger gestures to change app or four finger gesture to bring up the Task View and show the desktop. These gestures will instead get triggered on the physical device. Other than these all the usual Windows 11 gestures are supported.
+Some gestures aren't supported in the Cloud PC, like three finger gestures to change app or four finger gesture to bring up the Task view and show the desktop. These gestures will instead get triggered on the physical device. Other than these all the usual Windows 11 gestures are supported.
 
 ## Bluetooth and hardware settings can't be managed from the Cloud PC
 
@@ -56,11 +56,11 @@ If the **Reconnect** option in the disconnect message dialog is used, reconnecti
 
 **Troubleshooting steps**:
 
-Let the disconnect complete and then launch a new connection using Task View.
+Let the disconnect complete and then launch a new connection using Task view.
 
 ## Missing or extra buttons in a Cloud PC session
 
-You might see extra buttons, or some buttons might be missing, in your Cloud PC session. For example, the Local Desktop button might not appear in Task View.
+You might see extra buttons, or some buttons might be missing, in your Cloud PC session. For example, the Local Desktop button might not appear in Task view.
 
 **Possible  cause:**
 
