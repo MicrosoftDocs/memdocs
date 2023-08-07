@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad  
 manager: dougeby
-ms.date: 07/07/2023
+ms.date: 08/07/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -36,19 +36,17 @@ ms.collection:
 * iOS/iPadOS
 * Android
 
-Install a mobile threat defense (MTD) app on the personal device you use for work or school. MTD apps help keep your device safe by detecting and alerting you to threats, like suspicious apps or networks, and operating system vulnerabilities. In this article, you'll learn how to set up and activate an MTD app so that you can satisfy your organization's security requirement and access work apps.    
+Install a mobile threat defense (MTD) app on the personal device you use for work or school. An MTD app works by detecting and alerting you to threats on your device, like suspicious apps or networks, and operating system vulnerabilities. In this article, you'll learn how to set up and activate an MTD app so that you can satisfy your organization's security requirement and access work apps.    
 
 ## Step 1: Install MTD app    
 >[!NOTE] An additional step, called *device registration*, happens prior to app installation on devices that aren't registered. Registration is required to confirm your identity and connect your school or work account to your device. For more information about device registration, see [Register your personal device on your organization's network](/azure/active-directory/user-help/user-help-register-device-on-network).  
 
-Install your organization's preferred mobile threat defense (MTD) app on your device. Your organization chooses the MTD app you need to use. If the app name or listing isn't provided to you during enrollment or app setup, contact your IT support person to determine which app you need to use.  
-
-The following MTD apps are commonly used on Apple devices. Select an app to open its listing in the App Store.   
+Install your organization's preferred mobile threat defense (MTD) app on your device. Your organization chooses the MTD app you need to use. If the app name or listing isn't provided to you during enrollment or app setup, contact your IT support person to determine which app you need to use. The following MTD apps are commonly used on Apple devices. Select an app to open its listing in the App Store.   
 
 * [ActiveShield](https://apps.apple.com/app/activeshield/id980234260)
 * [Microsoft Defender for Endpoint](https://apps.apple.com/app/microsoft-defender-atp/id1526737990)
 * [Lookout for Work](https://apps.apple.com/app/lookout-for-work/id997193468)
-* [Pradeo Security](https://apps.apple.com)(opens Apple App Store)
+* [Pradeo Security](https://apps.apple.com) 
 * [Harmony Mobile Protect](https://apps.apple.com/app/sandblast-mobile-protect/id1006390797)
 * [SEP Mobile](https://apps.apple.com/app/sep-mobile/id695620821)
 * [Sophos Intercept X for Mobile](https://apps.apple.com/app/sophos-mobile-security/id1086924662)
@@ -57,7 +55,6 @@ The following MTD apps are commonly used on Apple devices. Select an app to open
 
 The following MTD apps are commonly used on Android devices. Select an app to open its listing in Google Play.  
 
-* [Active Shield Enterprise](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) 
 * [Microsoft Defender for Endpoint](https://play.google.com/store/apps/details?id=com.microsoft.scmx)
 * [Lookout for Work](https://play.google.com/store/apps/details?id=com.lookout.enterprise&hl)
 * [Pradeo Security](https://play.google.com/store/apps/details?id=net.pradeo.service)
@@ -73,20 +70,23 @@ Complete the following steps to activate the MTD app on your iOS or Android devi
 ### Activation for iOS app  
 1. Open the MTD app.  
 2. The MTD app asks for permission to open Microsoft Authenticator. Select **Open**. 
-3. Select your work account and sign in. 
+3. Sign in with your work account.   
 4. Wait while the MTD app scans your device for security threats. If the scan doesn't happen automatically, you can start the scan yourself.  
-5. Return to the school or work app that you were originally trying to access, and then sign in. At this point, you may be prompted to complete other security and compliance requirements, such as creating a device PIN or encrypting your device. Follow the onscreen prompts to resolve pending requirements. If you're still blocked, you can:  
-    * Go back to the **Get access** screen and select **Recheck**. Then try accessing your work app again.   
-    * Go to the MTD app and [check for existing threats](#resolving-a-threat) you may have missed in the first scan. Follow the in-app guidance to resolve the threat. Then try accessing your work app again.   
+5. Return to the Company Portal app or website.    
+    * Company Portal app: Select **CONFIRM DEVICE SETTINGS**.  
+    * Company Portal website: Select **Check status**.
+ 6. Now that you have the app set up, you can sign in to work apps with your work account. If you're still blocked:
+    * Check the MTD app for threats and [resolve them](#resolving-a-threat).  
+    * Return to the Company Portal app and check for other compliance issues that need your attention. For more information, see [Check compliance in Company Portal app for iOS](sync-your-device-manually-ios.md).  
 
 ### Activation for Android app  
 1. Open the MTD app.    
 2. Review and grant permissions, as needed, to the MTD app. Permissions vary by MTD app.  
-3. Wait while the MTD app scans your device for security threats. If the scan doesn't happen automatically, you can start the scans yourself.
+3. Wait while the MTD app scans your device for security threats. If the scan doesn't happen automatically, you can start the scan yourself.
 4. Return to the Company Portal app or website.    
     * Company Portal app: Select **CONFIRM DEVICE SETTINGS**.  
     * Company Portal website: Select **Check status**.
-5. Now that you have the app set up, you should now be able to sign in to other work apps with your work account. If you're still blocked:
+5. Now that you have the app set up, you can sign in to work apps with your work account. If you're still blocked:
     * Check the MTD app for threats and [resolve them](#resolving-a-threat).  
     * Return to the Company Portal app and check for other compliance issues that need your attention. For more information, see [Check compliance in Company Portal app for Android](check-compliance-on-your-device-android.md).  
 
@@ -99,14 +99,14 @@ If a threat is detected and exceeds an acceptable threat level, your organizatio
 To resolve a threat and regain access to work apps, complete the following steps.      
 
 1. Open the MTD app on your device.     
-2. Open the threat details in the app and read through them. These details explain how the threat could affect your device if left unresolved, and how to resolve it. 
+2. Open the threat details in the app. These details explain how the threat could affect your device if left unresolved, and how to resolve it. 
 3. Make the required changes on your device. For example, you may need to uninstall an app that's not safe. 
 4. Return to the MTD app and start a new scan. 
-5. Repeat these steps until all threats are resolved. It can take a few minutes for your changes to sync with the MTD app. Once those changes sync, you can access your work apps again.
+5. Repeat these steps until all threats are resolved. It can take a few minutes for your changes to sync with the MTD app. Once those changes sync, you can access your work apps again.  
 
 ## Information your organization can see   
 
-Your organization can't see any data, such as texts, emails, and pictures, in your personal apps. The MTD app reports information to your organization about work apps, including:  
+Your organization can't see any data, such as texts, emails, and pictures, in your personal apps. The MTD app reports information to your organization about apps, including:  
 
 * App name  
 * App ID: The unique name that identifies the app in Google Play.  
@@ -116,7 +116,7 @@ Your organization can't see any data, such as texts, emails, and pictures, in yo
 The actual information reported depends on the MTD vendor your organization uses. For more information, contact your IT support person.  
 
 ## Get support
-Contact your IT support person for help with:
+Contact your support person for help with:  
 
 * Identifying which MTD app to use  
 * App installation  
