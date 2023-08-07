@@ -128,7 +128,7 @@ Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2
 
 ## Next steps  
 
-Next, get apps for work or school. For more more information, see:      
+Next, get apps for work or school. For more information, see:      
 
 * [Use managed apps on your Android device](use-managed-apps-on-your-device-android.md)
 * [Use managed apps on your iOS device](use-managed-apps-on-your-device-ios.md)  
