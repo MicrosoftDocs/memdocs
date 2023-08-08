@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: brenduns
 author: Brenduns
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 07/12/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -23,7 +23,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Software updates admin checklist for BYOD and personal devices in Microsoft Intune
+# Software updates planning guide for BYOD and personal devices in Microsoft Intune
 
 As organizations embrace a hybrid and remote workforce, admins are challenged with controlling and managing software updates on devices owned by users. These devices are often called BYOD (bring your own device) or personally owned devices. When devices are organization owned, IT admins manage software updates. On personal devices, IT admins typically don't have any control of software updates.
 
@@ -37,10 +37,11 @@ This article applies to:
 - iOS/iPadOS
 
 > [!TIP]
-> If your devices are organization owned, then go to the software updates admin checklists for:
+> If your devices are organization owned, then go to the software updates planning guides for:
 >
 > - [Managed Android devices](software-updates-guide-android.md)
 > - [Supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+> - [Managed macOS devices](software-updates-guide-macos.md)
 
 ## Create enrollment restrictions
 
@@ -108,5 +109,5 @@ For more information on these features, go to:
 
 ## Next steps
 
-- [Software updates admin checklist for managed Android devices](software-updates-guide-android.md)
-- [Software updates admin checklist and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+- [Software updates planning guide for managed Android devices](software-updates-guide-android.md)
+- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)

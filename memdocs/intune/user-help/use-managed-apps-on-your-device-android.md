@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 08/07/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: chrisbal
+ms.reviewer: esmich
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
