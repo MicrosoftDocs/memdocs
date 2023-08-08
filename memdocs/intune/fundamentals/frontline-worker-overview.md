@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 06/27/2023
+ms.date: 08/08/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -117,7 +117,7 @@ To learn more about Android (AOSP), go to [About the Android Open Source Project
 
 The next decision is to decide if the devices are shared with many users or assigned to a single user. This decision depends on your business needs and the end user requirements. It also impacts how these devices are enrolled and managed with Intune.
 
-- **Shared device - No user association**
+- **Shared device with no user association (userless)**
 
   With shared devices, a user gets the device, completes their tasks, and gives the device to another user. Typically, these users manually sign into apps; they don't sign into the device.
 
@@ -171,7 +171,7 @@ The following scenarios are common for FLW:
 
   3. Create a device configuration restrictions profile that [allows or restricts features using Intune](../configuration/device-restrictions-android-for-work.md).
 
-      - If you use **dedicated devices** enrollment, want users to use specific apps, but don't want the device locked to only those apps, then in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** and set it to **Not configured**:
+      - If you use **dedicated devices** enrollment, and want users to use specific apps, but don't want the device locked to only those apps, then set the Kiosk mode to Not configured. Specifically, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Device restrictions** > **Device experience** > **Dedicated device** > **Kiosk mode** and set it to **Not configured**:
 
         :::image type="content" source="./media/frontline-worker-overview/android-dedicated-device-kiosk-not-configured.png" alt-text="Screenshot that shows the dedicated device and the kiosk mode not configured in an Android Enterprise device configuration profile in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-dedicated-device-kiosk-not-configured.png":::
 
@@ -195,7 +195,7 @@ The following scenarios are common for FLW:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the apps are added, including the MHS app, you create app policies that deploy the apps to the devices.
+  1. [Add apps to Microsoft Intune](../apps/apps-add.md), including the MHS app. When the apps are added, you create app policies that deploy the apps to the devices.
 
   2. Use a [device restrictions configuration profile](../configuration/device-restrictions-configure.md) to set the kiosk mode to multi-app, and select your apps. This step locks the device to only the apps you select:
 
@@ -282,7 +282,7 @@ For iPad devices, admins must pick one option - **Shared iPad** or **Azure AD sh
 
 - **Azure AD shared device mode**
 
-  Azure AD shared device mode (SDM) is an option for iOS and iPadOS devices and uses the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). Azure AD SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (fewer sign in prompts). Azure AD shared device mode isn't supported on Shared iPad in Intune.
+  Azure AD shared device mode (SDM) is an option for iOS and iPadOS devices and uses the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). Azure AD SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (fewer sign in prompts). Azure AD shared device mode isn't supported with Shared iPad feature in Intune.
 
   For more information on Azure AD shared device mode (SDM), go to [Azure AD shared device mode for FLW](#azure-ad-shared-device-mode-for-flw) (in this article).
 
@@ -318,7 +318,7 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
 1. **Enroll without user affinity**: This option doesn't associate the devices with a specific user. This option is required for Shared iPads.
 2. **Shared iPad**: This option enables Shared iPad on the device, and is required. It allows many users to sign in to the device.
-3. **Require Shared iPad temporary session**: This setting determines if the Shared iPads are used for guest access.
+3. **Require Shared iPad temporary session**: This setting determines if the Shared iPads are used for guest access. Your options:
 
     - **Guest access**
 
@@ -336,7 +336,7 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
       The number of users that can sign in also varies by the amount of storage on the device. So, it's recommended to plan accordingly and configure the enrollment profile to accommodate your needs.
 
-The following image shows a sample Shared iPad enrollment policy that enables guest access:
+The following image shows a sample Shared iPad enrollment policy in Intune that enables guest access:
 
 :::image type="content" source="./media/frontline-worker-overview/shared-ipad-ade-enrollment-policy.png" alt-text="Screenshot that shows Automated Device Enrollment (ADE) policy, Shared iPad enabled, and temporary sessions for Shared iPadOS frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/shared-ipad-ade-enrollment-policy.png":::
 
@@ -389,7 +389,7 @@ This section focuses on Windows devices used by frontline workers. It includes d
 
 ### Step 1 - Select your enrollment option (Windows)
 
-The first step is to determine the enrollment platform that's best for your organization. For FLW devices using the Windows platform, you can use **Windows Autopilot** enrollment or use **provisioning package**. This section focuses on these enrollment options.
+The first step is to determine the enrollment platform that's best for your organization. For FLW devices using the Windows platform, you can use **Windows Autopilot** enrollment or use a **provisioning package**. This section focuses on these enrollment options.
 
 # [Windows Autopilot](#tab/autopilot)
 
@@ -422,7 +422,7 @@ For more information on using a provisioning package with Intune, go to [Bulk en
 
 The next decision is to determine if the devices are shared with many users or assigned to a single user. This decision depends on your business needs and the end user requirements. It also impacts how these devices are managed with Intune.
 
-These features are configured using device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment.
+These features are configured using Intune device configuration profiles. When the profile has the settings you want, you assign the profile to the devices. The profile can be deployed during Intune enrollment.
 
 - **Shared device**
 
@@ -490,7 +490,7 @@ The following scenarios are common:
   To get started, use the following links:
 
   1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure.
+  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../configuration/settings-catalog.md).
 
       :::image type="content" source="./media/frontline-worker-overview/windows-device-restrictions.png" alt-text="Screenshot that shows the device restrictions settings for Windows devices in Microsoft Intune.":::
 
@@ -498,21 +498,23 @@ The following scenarios are common:
 
 ## Azure AD shared device mode for FLW
 
-Azure AD shared device mode (SDM) is designed for frontline workers (FLW). It's a feature of Azure AD that focuses on building apps so the app can be used by many users on the same device. The idea is for users to easily sign in/sign out of apps, have all their data removed, and have the device ready for the next user.
+Azure AD shared device mode (SDM) is designed for frontline workers (FLW). It's an Azure AD feature that focuses on building apps so the app can be used by many users on the same device. The idea is for users to easily sign in/sign out of apps, have all their data removed, and have the device ready for the next user.
 
 Some of the benefits of Azure AD SDM include:
 
 - Azure AD SDM supports multiple users on devices designed for one user. Some mobile devices running Android and iOS are designed for single users. Most apps optimize their experience for a single user. Apps built with Azure AD SDM support multiple users on one device.
 
-- Azure AD SDM does automatic single sign in and single sign out. Employees can sign in once and get single sign on (SSO) to all apps that support Azure AD SDM, giving them faster access to information. This feature is good for organizations that use a set of apps in a device pool that's shared by employees. Devices can be immediately ready for use by the next employee with no access to the previous user's data.
+- Azure AD SDM does automatic single sign in and single sign out. Employees can sign in once and get single sign on (SSO) to all apps that support Azure AD SDM, giving them faster access to information.
+
+  This feature is good for organizations that use a set of apps in a device pool that's shared by employees. Devices can be immediately ready for use by the next employee with no access to the previous user's data.
 
 - Apps built for Azure AD SDM use the Microsoft Authentication Library (MSAL) and the Microsoft Authenticator app. When a device is in shared device mode, and with (MSAL) and the Microsoft Authenticator app, Microsoft provides information to your app. This information allows the app to modify its behavior based on the state of the user on the device, which helps protects user data.
 
 For more information on Azure AD SDM, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
 
-## Other MSFT services FLW
+## More Microsoft services for FLW
 
-**Microsoft 365 for frontline workers** is a licensing option that's designed for frontline worker scenarios. It's ideal for a mobile workforce that primarily interacts with customers that also needs to stay connected to the rest of the organization. It interacts with other apps and services, including Microsoft Teams, Outlook, SharePoint, and more.
+**Microsoft 365 for frontline workers** is a licensing option that's designed for frontline worker scenarios. It's ideal for a mobile workforce that primarily interacts with customers and needs to stay connected to the rest of the organization. It interacts with other apps and services, including Microsoft Teams, Outlook, SharePoint, and more.
 
 For more information and to get started, go to:
 
