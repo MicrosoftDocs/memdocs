@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/27/2023
+ms.date: 08/11/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -49,7 +49,7 @@ Users can navigate to [windows365.microsoft.com](https://windows365.microsoft.co
 To access their Cloud PC from this website, the user's device must meet the following requirements:
 
 - Supported operating systems: Windows, macOS, ChromeOS, Linux
-- A modern browser like Microsoft Edge, Google Chrome, Safari, or Mozilla Firefox (v55.0 and later).
+- A modern browser like Microsoft Edge, Google Chrome, Safari, Mozilla Firefox (v55.0 and later), or LG webOS 23.
 
 ### Home page
 
