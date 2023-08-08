@@ -46,10 +46,9 @@ To use Windows 365 Switch, the physical device and Cloud PC must meet the follow
 
 - Windows 11 Pro or Enterprise physical device.
 - Windows 365 Cloud PC license. for more information, see [Assign licenses](assign-licenses.md).
-- Register both the physical device and the Cloud PC in the [Windows Insider Program](https://www.microsoft.com/windowsinsider/about-windows-insider-program) Beta Channel. 
+- Register both the physical device and the Cloud PC in the [Windows Insider Program](https://www.microsoft.com/windowsinsider/about-windows-insider-program) Beta Channel (preferred) or Dev Channel.
 
 <!-- ########################## -->
 ## Next steps
 
 [Windows 365 Switch known issues](windows-365-switch-known-issues.md)
-
