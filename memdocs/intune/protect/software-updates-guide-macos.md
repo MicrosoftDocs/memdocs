@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: brenduns
 author: Brenduns
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 08/08/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -55,8 +55,6 @@ By default, users receive notifications and/or see the latest updates available 
 
 They can also change the update behavior using the Automatic Updates feature on the device (Settings > Software Updates):
 
-?? We should replace this screenshot with one that has a white background. ??
-
 :::image type="content" source="./media/software-updates-guide-macos/default-update-settings-macos-device.png" alt-text="The operating system default update settings and controls on a macOS Apple device.":::
 
 When users install their own updates (instead of admins managing the updates), it can disrupt user productivity and business tasks. For example:
@@ -73,9 +71,7 @@ Because of these potential issues, Microsoft recommends that you evaluate your u
 
 To update macOS devices owned by your organization, Microsoft recommends the following steps. These steps apply to most macOS devices. You can also use these steps as a starting point for your own update strategy.
 
-1. **[Create a managed software update policy](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed)**: This policy forces updates to be downloaded and installed at a convenient time. Users aren't prompted and don't need to be using the device when the updates are installed.
-
-    ?? Is the 2nd sentence true? In Step 1, there are screenshots that shows users being prompted. ??
+1. **[Create a managed software update policy](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed)**: This policy forces updates to be downloaded and installed at a convenient time. Depending on the settings you enter, users aren't prompted and don't need to be using the device when the updates are installed.
 
 2. **[Create a Settings Catalog software update policy](#-step-2---use-a-settings-catalog-policy-to-automatically-install-updates)**: This policy prevents end users from disabling update checks. It also configures the device to check for updates and prompt users regularly.
 
