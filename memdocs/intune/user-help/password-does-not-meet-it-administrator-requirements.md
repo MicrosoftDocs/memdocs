@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Add or change device password on Intune-enrolled device | Microsoft Docs
-description: This article describes the Company Portal device password requirement, with resources for Windows, Android, and iOS/iPadOS, and next steps.   
+title: Add or change device password on enrolled work device - Microsoft Intune | Microsoft Docs
+description: This article describes the Company Portal device password requirement, with resources for Windows, Android, macOS, and iOS/iPadOS, and next steps.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/03/2023
+ms.date: 08/07/2023
 ms.topic: end-user-help
 ms.prod:
 ms.localizationpriority: high
@@ -41,9 +41,9 @@ ms.collection:
  * iOS/iPadOS  
  * macOS  
 
-You'll receive a message from Company Portal if your device password, PIN, or passcode doesn't meet your organization's security requirements. Password requirements are put in place to prevent unauthorized individuals from gaining access to the work or school data on your enrolled device. Until you create a more secure device password, you may be blocked from accessing your org's network.  
+Intune Company Portal notifies you when the password, PIN, or passcode on your enrolled device conflicts with your organization's security requirements. Password requirements are put in place to prevent unauthorized individuals from gaining access to the work or school data on your device. Until you create a more secure device password, you may be blocked from accessing your org's network.  
 
-Company Portal sends one message per password requirement. For example, if your password is too short and too simple, you will receive one message about the length and one message about the complexity.    
+Company Portal sends one message per password requirement. For example, if your password is too short and too simple, you'll receive one message about the length and one message about the complexity.    
 
 ## Change password, passcode, PIN  
 
@@ -61,4 +61,4 @@ For a list and description of all password-related messages, see [Device passwor
 Still need help?  
 
 * If you still receive password-related messages after updating your password, try restarting your device.  
-* Password requirements are determined by your organization's policies. For questions about specific messages, contact your IT support person. Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to find your organization's helpdesk information.  
+* Password requirements are determined by your organization's policies. For questions about specific messages, contact your IT support person. Check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's helpdesk information.  
