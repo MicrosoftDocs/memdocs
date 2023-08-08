@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/07/2023
+ms.date: 08/21/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -166,12 +166,7 @@ The following profiles are supported for devices you manage with Intune:
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
-- Platform: **Windows 10 and later**:
-
-  > [!NOTE]  
-  > The *Windows 10 and later* platform is available to create new profiles as part of a public preview for the following profile.
-
-  - Profile: **Defender Updates controls** (public preview) - Manage update settings for Microsoft Defender, including the following settings that are taken directly from the [Defender CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-Defender):
+  - Profile: **Defender Updates controls** - Manage update settings for Microsoft Defender, including the following settings that are taken directly from the [Defender CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-Defender):
 
     - Engine Updates Channel
     - Platform Updates Channel
