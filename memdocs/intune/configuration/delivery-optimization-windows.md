@@ -71,7 +71,7 @@ To learn about Delivery Optimization on Windows 10 and Window 11, see [Delivery 
   
    Select **Next** to continue.
 
-9. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
