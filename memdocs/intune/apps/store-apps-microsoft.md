@@ -171,9 +171,9 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 >
 > UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store policy is set to block auto-update.
 
-## Store policy restrictions
+## Common Store policy settings and their impact on Microsoft Store apps
 
-Some Store policies may affect app deployments from the Microsoft Store. The following list provides details about how some Store policies can affect app deployments:
+Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments.
 
 - **Store\Disable all apps from the Microsoft Store** policy
 
