@@ -25,7 +25,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-ms.reviewer: kerimh
+ms.reviewer: davguy
 ---
 
 # Delivery Optimization settings in Microsoft Intune
