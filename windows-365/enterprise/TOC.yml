@@ -189,6 +189,8 @@ items:
         href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
+      - name: Windows 365 Switch
+        href: windows-365-switch-overview.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
       - name: Move a Cloud PC
@@ -267,6 +269,8 @@ items:
       href: troubleshoot-windows-365-boot.md
     - name: Windows 365 Boot known issues
       href: windows-365-boot-known-issues.md
+    - name: Windows 365 Switch known issues
+      href: windows-365-switch-known-issues.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell
