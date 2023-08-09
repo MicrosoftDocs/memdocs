@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 11/17/2022
+  ms.date: 08/09/2023
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -45,7 +45,7 @@ sections:
           Before an OEM or Channel Partner can register a device for Autopilot for a customer, the customer must first give them consent. The consent process begins with the OEM or Channel Partner sending a link to the customer that directs the customer to a consent page in MSfB. For more information, see [Registration](registration-auth.md).
 
       - question: |
-          Are there any restrictions if a business customer has registered devices in MSfB and later wants those devices to be managed by a Cloud Solution Provider (CSP) using the Partner Center?
+          Do any restrictions apply if a business customer who has registered devices in MSfB wants to later manage those devices through a Cloud Solution Provider (CSP) using the Partner Center?
         answer: |
           The business customer must delete the devices in MSfB before the CSP can upload and manage them in the Partner Center.
 
@@ -80,7 +80,7 @@ sections:
         answer: |
           No. The CSP sales regions depend on the location of the Azure AD tenant. A CSP partner can only sell or manage customers with a tenant located in the same CSP region. A partner's CSP region is based on the location of the tenant the CSP partner is using to transact. If the customer tenant was created in the US, only a partner that has a CSP enrollment in the US can establish a reseller relationship with this customer.
           
-          For Autopilot & Intune, the location of the end user or device doesn't matter. A device used by an employee located in Germany can enroll using the Autopilot profile created in the US tenant and can be managed by the Intune service instance in US. The user in Germany will also authenticate in the US-based Azure AD instance.
+          For Autopilot & Intune, the location of the end user or device doesn't matter. An employee located in Germany can enroll a device using the Autopilot profile created in the US tenant and manage it through the Intune service instance in the US. The user in Germany also authenticates in the US-based Azure AD instance.
           
           If a partner wants to manage customers globally, they need to have a global presence. They need multiple CSP enrollments in each of the CSP sales regions where they conduct business.
           
@@ -109,7 +109,7 @@ sections:
       - question: |
           When placing an order, do customers need to be state whether they want it with or without Windows Autopilot options?
         answer: |
-          Yes. If they want Windows Autopilot, they'll want a supported version of Windows. Also, they'll want to receive the CSV file or have the file upload completed on their behalf.
+          Yes. If they want Windows Autopilot, a supported version of Windows is needed. A customer should also receive the CSV file or have the file upload completed on their behalf.
 
       - question: |
           Does the OEM need to manage or collect any custom imaging files from customers? Do they need to upload any images to Microsoft?
@@ -122,7 +122,7 @@ sections:
           The devices must be running a supported version of Windows 10 or Windows 11 general availability channel to enroll in Windows Autopilot deployment. Otherwise, there's generally no issue. For more information, see [Windows Autopilot - known issues](known-issues.md).
 
       - question: |
-          Will there be any change to the existing CBR with 4K hardware hash?
+          Will the existing CBR with 4K hardware hash ever change?
         answer: |
           No.
 
@@ -169,7 +169,7 @@ sections:
       - question: |
           Why are the SMBIOS UUID, MAC address, and disk serial number required in the hardware hash details?
         answer: |
-          For creating the hardware hash, these fields are needed to identify a device, as parts of the device are added or removed. Since we don't have a unique identifier for Windows devices, these fields are the best logic to identify a device.
+          As parts of the device are added or removed, these fields are needed to identify a device when creating the hardware hash. Since we don't have a unique identifier for Windows devices, these fields are the best logic to identify a device.
 
       - question: |
           What's the difference between the OA3 hardware hash, the 4K hardware hash, and the Windows Autopilot hardware hash?
@@ -184,7 +184,7 @@ sections:
         answer: |
           Yes. If you replace parts, you may need to generate a new hardware hash. It depends on what's replaced, and the characteristics of the parts.
 
-          For example, if you replace the TPM or motherboard, it's a new device and you must get a new hardware hash. If you replace one network card, it's probably not a new device, and the device will function with the old hardware hash.
+          For example, if you replace the TPM or motherboard, it's a new device and you must get a new hardware hash. If you replace one network card, it's probably not a new device, and the device functions with the old hardware hash.
 
           In general, after any hardware changes, assume the old hardware hash is invalid and get a new hardware hash. This process is recommended anytime you replace parts.
 
@@ -248,19 +248,19 @@ sections:
       - question: |
           If a device has multiple network cards or disks, how does the OA3 tool choose which MAC address and disk serial number to use?
         answer: |
-          All available values are used, although there may be specific usage rules. The serial number of the system disk is more important than the other disks available. Network interfaces that are removable shouldn't be used if detected as they're removable. LAN vs WLAN shouldn't matter, as both will be used.
+          All available values are used, although there may be specific usage rules. The serial number of the system disk is more important than the other disks available. Network interfaces that are removable shouldn't be used if detected as they're removable. LAN vs WLAN shouldn't matter, as both are used.
 
   - name: End-user experience
     questions:
       - question: |
           How do I know that I received Autopilot?
         answer: |
-          You can tell that the device received an Autopilot configuration but hasn't yet applied it when you skip the selection page, and are immediately taken to a generic or customized sign-in page.
+          A device has received an Autopilot configuration but hasn't yet applied it when the selection page is skipped and are immediately taken to a generic or customized sign-in page.
 
       - question: |
           Why did a user end up as an administrator when the Autopilot profile was configured otherwise?
         answer: |
-          Azure AD administrators will be local administrators even if Windows Autopilot is configured to disable this configuration.
+          Azure AD administrators are always local administrators even if Windows Autopilot is configured to disable this configuration.
 
           To help troubleshoot, run `licensingdiag.exe` and send the `.cab` (cabinet) file to `AutopilotHelp@microsoft.com`. If possible, also collect an ETL from Windows Performance Recorder (WPR).
 
@@ -269,14 +269,14 @@ sections:
           For a complete list of support options, see [Windows Autopilot support](autopilot-support.md).
 
       - question: |
-          If I make changes to an existing Autopilot profile, will the changes take effect on devices that have that profile assigned to them and are already deployed?
+          If I make changes to an existing Autopilot profile, do the changes take effect on devices that have that profile assigned to them and are already deployed?
         answer: |
           No. Windows Autopilot profiles aren't resident on the device. They're downloaded during OOBE, the settings defined at the time are applied. Then the profile is discarded on the device. If the device is reimaged or reset, the new profile settings will take effect the next time the device goes through OOBE.
 
       - question: |
           What's the experience if a device isn't registered or if I don't configure Windows Autopilot before an end user attempts to self-deploy?
         answer: |
-          If the device isn't registered, it won't receive the Windows Autopilot experience and the end user will go through normal OOBE. The Windows Autopilot configurations won't be applied until the user runs through OOBE again, after registration. If a device is started before an MDM profile is created, the device will go through standard OOBE experience. You then have to manually enroll that device into the MDM. The next time the device is reset, it will go through the Windows Autopilot OOBE experience.
+          If the device isn't registered, it doesn't receive the Windows Autopilot experience, and the end user goes through normal OOBE. The Windows Autopilot configurations won't be applied until the user runs through OOBE again, after registration. If a device is started before an MDM profile is created, the device goes through standard OOBE experience. You then have to manually enroll that device into the MDM. The next time the device is reset, it will go through the Windows Autopilot OOBE experience.
 
       - question: |
           Why didn't I receive a customized sign-in screen during Autopilot?
@@ -298,7 +298,7 @@ sections:
       - question: |
           Does Autopilot require the use of Microsoft Intune?
         answer: |
-          No. Any MDM will work with Autopilot, but others may not have the same full suite of Windows Autopilot features as Intune. You'll get the best experience with Intune.
+          No. Any MDM works with Autopilot, but others may not have the same full suite of Windows Autopilot features as Intune. The best experience is with Intune.
 
       - question: |
           Does Intune support preinstalling Win32 apps?
@@ -314,15 +314,15 @@ sections:
 
           For more information, see the following articles:
 
-          - [What is co-management?](/mem/configmgr/comanage/overview.md)
-          - [How to enroll with co-management when provision with Windows Autopilot](/mem/configmgr/comanage/autopilot-enrollment.md)
+          - [What is co-management?](/mem/configmgr/comanage/overview)
+          - [How to enroll with co-management when provision with Windows Autopilot](/mem/configmgr/comanage/autopilot-enrollment)
 
       - question: |
           Does Autopilot require Configuration Manager?
         answer: |
           No. It's not required, but you can use it together with Autopilot in the following scenarios:
 
-          - [Co-management](/mem/configmgr/comanage/overview.md)
+          - [Co-management](/mem/configmgr/comanage/overview)
           - [Autopilot for existing devices](existing-devices.md)
 
   - name: Features
@@ -369,12 +369,12 @@ sections:
       - question: |
           Which manufacturers are enabled for pre-population of username and automatic re-enrollment of pre-provisioning devices? 
         answer: |
-          Current manufacturers enabled for this change are Dell, Dynabook, HP, Lenovo and Microsoft Surface. We are working to other manufacturers and will update this list once they are onboarded. For more information, see [Return of key functionality for Windows Autopilot sign-in and deployment](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
+          Current manufacturers enabled for this change are Dell, Dynabook, HP, Lenovo and Microsoft Surface. We're working to add other manufacturers and will update this list once they're onboarded. For more information, see [Return of key functionality for Windows Autopilot sign-in and deployment](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
 
       - question: |
-          If I wipe the machine and restart, will I still receive Windows Autopilot?
+          If I wipe the machine and restart, do I still receive the Windows Autopilot experience?
         answer: |
-          Yes. If the device is still registered for Autopilot and is running a supported version of Windows, it will receive the Autopilot experience.
+          Yes. If the device is still registered for Autopilot and is running a supported version of Windows, it receives the Autopilot experience.
 
       - question: |
           Can I harvest the device fingerprint on existing devices?
@@ -384,7 +384,7 @@ sections:
       - question: |
           Is Windows Autopilot supported on other SKUs, for example, Surface Hub, HoloLens, or Windows Mobile?
         answer: |
-          For Surface Hub, Windows Mobile, and other SKUs, Windows Autopilot isn't supported. HoloLens 1 also doesn't support Windows Autopilot. Starting with Windows Holographic version 2004, HoloLens 2 supports Windows Autopilot self-deploying mode with Microsoft Intune. Third-party MDM providers aren't supported.
+          For Surface Hub, Windows Mobile, and other SKUs, Windows Autopilot isn't supported. HoloLens 1 also doesn't support Windows Autopilot. With Windows Holographic version 2004, HoloLens 2 supports Windows Autopilot self-deploying mode with Microsoft Intune. Third-party MDM providers aren't supported.
 
           For more information on HoloLens 2, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
@@ -394,14 +394,14 @@ sections:
           Yes. For more information, see [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
 
       - question: |
-          What does this error message mean? This user isn't authorized to enroll, error code 801c0003.
+          What does the error message "This user isn't authorized to enroll, error code 801c0003" mean?
         answer: |
-          There are limits to the number of devices a particular Azure AD user can enroll in Azure AD, and the number of devices that are supported per user in Intune. These limits are configurable, but not infinite. If you reuse devices, or roll back to previous virtual machine snapshots, you'll see this error frequently.
+          There are limits to the number of devices a particular Azure AD user can enroll in Azure AD, and the number of devices that are supported per user in Intune. These limits are configurable, but not infinite. If you reuse devices, or roll back to previous virtual machine snapshots, this error occurs frequently.
 
       - question: |
           What happens if a device is registered to a malicious agent?
         answer: |
-          By design, Windows Autopilot doesn't apply a profile until the user signs in with the matching tenant for the configured profile using the Azure AD sign-in process. For example, `badguys.com` registers a device owned by `contoso.com`. At worst, the user will be directed to sign in to `badguys.com`. When the user enters their email and password, the sign-in information is redirected through Azure AD to the proper Azure AD authentication and the user is prompted to then sign into `contoso.com`. Since `contoso.com` doesn't match `badguys.com` as the tenant, the malicious profile isn't applied and the user sees the regular OOBE.
+          By design, Windows Autopilot doesn't apply a profile until the user signs in with the matching tenant for the configured profile using the Azure AD sign-in process. For example, `badguys.com` registers a device owned by `contoso.com`. At worst, the user is directed to sign in to `badguys.com`. When the user enters their email and password, the sign-in information is redirected through Azure AD to the proper Azure AD authentication and the user is prompted to then sign into `contoso.com`. Since `contoso.com` doesn't match `badguys.com` as the tenant, the malicious profile isn't applied and the user sees the regular OOBE.
 
       - question: |
           Where is Windows Autopilot data stored?
@@ -411,7 +411,7 @@ sections:
       - question: |
           Why is Windows Autopilot data stored in the US and not in a sovereign cloud?
         answer: |
-          Customer data isn't stored, only business data that enables Microsoft to provide a service. For that reason, it's appropriate for the data to be stored in the US. Customers can stop subscribing to the service at any time. In that event, the business data is removed by Microsoft. Autopilot isn't currently supported in any sovereign cloud.
+          Customer data isn't stored, only business data that enables Microsoft to provide a service. For that reason, it's appropriate for the data to be stored in the US. Customers can stop subscribing to the service at any time. In that event, Microsoft removes the business data. Autopilot isn't currently supported in any sovereign cloud.
 
       - question: |
           How many ways are there to register a device for Windows Autopilot?
@@ -453,7 +453,7 @@ sections:
           - Azure Government
           
           If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot. 
-          While Autopilot is available in global tenants, users in China may experience poor connectivity and high latency when deploying due to ISP-related issues. If you are experiencing these issues when deploying in the region, please contact your local ISP for support.
+          While Autopilot is available in global tenants, users in China may experience poor connectivity and high latency when deploying due to ISP-related issues. If you're experiencing these issues when deploying in the region, contact your local ISP for support.
 
       - question: |
           Why does TPM provisioning/attestation take longer during the first boot on a device?
