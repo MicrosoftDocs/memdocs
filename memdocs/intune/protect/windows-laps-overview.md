@@ -1,6 +1,6 @@
 ---
 title: Manage Windows LAPS with Microsoft Intune policies
-description: Use Microsoft Intune application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, backup accounts and passwords to Azure AD, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
+description: Use Microsoft Intune application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, back up accounts and passwords to Azure AD, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
 
 keywords:
 author: brenduns
