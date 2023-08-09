@@ -129,6 +129,8 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
 
   - `microsoft.directory/deviceLocalCredentials/password/read`
   - `microsoft.directory/deviceLocalCredentials/standard/read`
+
+  To create custom roles that can grant these permissions, see [Create and assign a custom role in Azure Active Directory](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation. 
   
 - **View Azure AD audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
