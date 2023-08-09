@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Remote Help on Windows to assist users who are authenticated by your organization. 
-description: With the Remote Help app in Windows, provide remote assistance to authenticated users who also run the Remote Help app.
+title: Remote Help on Android to assist users who are authenticated by your organization. 
+description: With the Remote Help app in Android, provide remote assistance to authenticated users who also run the Remote Help app.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -31,7 +31,7 @@ ms.collection:
 - highseo
 ---
  
-# Remote Help on Windows with Microsoft Intune
+# Remote Help on Android with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
