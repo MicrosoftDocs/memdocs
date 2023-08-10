@@ -7,7 +7,7 @@ keywords:
 author: Smritib17 
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/21/2023
+ms.date: 07/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -294,10 +294,6 @@ During public preview, you may need to disconnect and reconnect the Zebra connec
 
 We're aware of an issue where you may not be able to disconnect the Zebra connector from Tenant administration. To disconnect and reconnect, use the following steps:
 
-1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) with your Intune tenant. Consent to all permissions, if requested.
-1. In Graph Explorer, select POST from the drop-down list.
-1. Enter the following request into the URL field: 'https://graph.microsoft.com/beta/deviceManagement/zebraFotaConnector/disconnect'
-1. Keep the **Request Body** tab empty and select the **Run query** button. The results appear in the Response window.
-1. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
-1. Return to the Intune admin center and reconnect the Zebra connector.
-
+1. Go to Tenant admin > connectors and tokens > Firmware over-the-air.
+2. Select **Disconnect** and confirm the disconnection. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
+3. Return to the Intune admin center and reconnect the Zebra connector.
