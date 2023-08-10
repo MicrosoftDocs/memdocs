@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 08/10/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -98,11 +98,11 @@ For example, devices that are used for augmented or virtual reality typically do
 
 **Android (AOSP)** enrollment devices don't offer or include Google Mobile Services (GMS). These devices:
 
-- Can be specialty devices, such as augmented or virtual reality devices.
+- Can be specialty devices, such as augmented or virtual reality devices, including Realwear and HTC.
 - Don't support GMS.
 - Are used in countries that block GMS.
 
-✔️ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [Supported operating systems and browsers in Intune - Android](supported-devices-browsers.md#android).
+✔️ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](android-os-project-supported-devices.md).
 
 ❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
 
