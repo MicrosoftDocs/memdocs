@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Remotely assist users that are authenticated by your organization. 
+title: Use Remote Help to assist users authenticated by your organization. 
 description: With the Remote Help app, provide remote assistance to authenticated users who also run the Remote Help app.
 keywords:
 author: Smritib17
@@ -41,19 +41,16 @@ In this article, users who provide help are referred to as *helpers*, and users 
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-The app can also be deployed through Intune to your managed devices.
-
 > [!IMPORTANT]
-
 > This article describes the capabilities and configuration tasks that are applicable in general for Remote Help across supported platforms. For specific capabilities, prerequisites, and other details based on the platform that you are using, go to:
-
-> - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
-
-> - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
+  > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
+  > - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
 
 ## Remote Help capabilities and requirements
 
-The Remote Help app supports the following capabilities in general:
+The Remote Help app supports the following capabilities in general across the supported platforms. To know more about specific capabilities and requirements based on the platform that you're using, go to:
+  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
+  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
@@ -61,15 +58,15 @@ The Remote Help app supports the following capabilities in general:
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
-- **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies.
+- **Compliance Warnings**: Before a helper connects to a user's device, the helper will see a non-compliance warning about that device if it's not compliant with its assigned policies.
 
-- **Role-based access control**: Admins can set RBAC rules that determine the scope of a helper's access, like:
-  - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
-  - The users that can only view a device, and which can request full control of the session while assisting others.
+- **Role-based access control**: Admins can set RBAC rules that determine the scope of a helper's access, such as:
+  - The users who can help others and the range of actions they can do while providing help. For example, who can run elevated privileges while helping.
+  - The users who can only view a device, and who can request full control of the session while assisting others.
 
-- **Monitor active Remote Help sessions, and view details about past sessions**: In the Microsoft Intune admin center you can view reports that include details about who helped who, on what device, and for how long. You'll also find details about active sessions. An administrator can also reference audit log sessions created for Remote Help in Intune under **Tenant Administration** > **Audit Logs**.
+- **Monitor active Remote Help sessions, and view details about past sessions**: In the Microsoft Intune admin center, you can view reports that include details about who helped who, on what device, and for how long. You can also find details about active sessions. An administrator can also reference audit log sessions created for Remote Help in Intune under **Tenant Administration** > **Audit Logs**.
 
-  For unenrolled devices, auditing and reporting about the Remote Help sessions is limited.
+  For unenrolled devices, auditing the Remote Help sessions is limited.
 
 ## Prerequisites
 
@@ -141,7 +138,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-To protect the privacy of users who may be using the sharer device, helpers should use the minimum level of privilege required to remotely assist the device. Only request an Unattended session if you know that there is no user at the sharer device to accept the remote help session.  
+To protect the privacy of users who may be using the sharer device, helpers should use the minimum level of privilege required to remotely assist the device. Only request an Unattended session if you know that there's no user at the sharer device to accept the remote help session.  
 
 The following Intune RBAC permissions manage the use of the Remote Help app. Set each to *Yes* to grant the permission:
 
@@ -158,9 +155,9 @@ The following Intune RBAC permissions manage the use of the Remote Help app. Set
   
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
-### Task 3 : Assign user to roles
+### Task 3: Assign user to roles
 
-After creating the custom roles that you'll use to provide different users with Remote Help permissions, assign users to those roles.
+After creating the custom roles that you can use to provide different users with Remote Help permissions, proceed to assign users to those roles.
 
 1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration**  > **Roles** >  and select a role that grants Remote Help app permissions.
 
@@ -170,26 +167,29 @@ After creating the custom roles that you'll use to provide different users with 
 
 4. On the **Admin Groups** page, select the group that contains the user you want to give the permissions to. Choose **Next**.
 
-5. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
+5. On the **Scope (Groups)** page, choose a group containing the users/devices that a member is allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
 
    >[!IMPORTANT]
-   >If a sharer's device isn't in the scope of a helper, that helper cannot provide assistance.
+   >If a sharer or a sharer's device isn't in the scope of a helper, that helper cannot provide assistance.
 
 6. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
 ## Monitoring and reports
 
-You can monitor the use of Remote Help from within the Microsoft Intune admin center.
+You can monitor the use of Remote Help from within the Microsoft Intune admin center. For unenrolled devices, reporting on Remote Help sessions is limited.
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote Help**.
 
-2. On the Monitor tab, you'll see a count of active sessions and historical data about past sessions.
+2. On the Monitor tab, you can see a count of active sessions and historical data about past sessions.
 
-3. On the Remote Help sessions tab, you'll see the records of past sessions, including:
+3. On the Remote Help sessions tab, you can see the records of past sessions, including:
    - The helper (Provider ID) and sharer (Recipient ID) of each session.
    - The device that received assistance.
    - The start and end time of the Remote Assistance session.
-   - The type of control session. The Recipient ID and Recipient name display “--” for Android Enterprise Dedicated devices, as these devices do not have user affinity.
+   - The type of control session.
+
+> [!NOTE]
+> The Recipient ID and Recipient name display “--” for Android Enterprise Dedicated devices, as these devices do not have user affinity.
 
 ## Next steps
 

@@ -35,17 +35,27 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-## Overview
-
 Remote Help is an add-on application that works with Intune and enables your support staff to remotely connect to a user's device. Remote Help is available on multiple platforms including Android and is the focus of this article.
 
 During the session, you can view the device's display via screen sharing and if permitted by the device user, take full control to directly make configurations or take actions on the device. Remote Help for Android also supports unattended control allowing you to take full control of the device without needing user interaction on the device. This is helpful in cases like digital signage or for devices that need to be accessed during maintenance windows when no operators are on site.
 
-In this article, we refer to the users who provide help as helpers, and devices that receive help as sharers as they share their session with the helper.
+In this article, we refer to the users who provide help as *helpers*, and devices that receive help as *sharers* as they share their session with the helper.
 
 > [!IMPORTANT]
 >
-> During the public preview for Remote Help on Android, you will still require the licenses for Remote Help to use Remote Help on Android. Additional permission setup for Zebra devices.
+> During the public preview for Remote Help on Android, you will still require the licenses for Remote Help to use Remote Help on Android.
+
+## Remote Help capabilities and requirements on Android
+
+The Remote Help app supports the following capabilities on Android:
+
+- **Screen sharing**: View of the remote screen. To minimize impact on end user privacy, this option is recommended unless full control is necessary.
+
+- **Full control**: Full control of the remote device.
+
+- **Unattended control**: Full control of the device without the presence of an end user.
+
+- **Compliance warnings**: Before a helper connects to a user's device, the helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
 ## Supported devices
 
@@ -55,12 +65,6 @@ In this article, we refer to the users who provide help as helpers, and devices 
 - Zebra devices running MX version 8.3 or higher
 
   - On Zebra devices, unattended control is only supported on MX version 9.3 and higher
-
-## Remote Help capabilities and requirements
-
-The Remote Help app supports the following capabilities on Android:
-
-Need to add
 
 ## Prerequisites
 
@@ -89,18 +93,6 @@ For general prerequisites, go to [Prerequisites for Remote Help](remote-help.md#
     - Unattended control: Yes (required for unattended control)
 
     - If the user doesn't have the correct RBAC permissions for a particular mode, the corresponding options are disabled when attempting to start a Remote Help session.
-
-## Remote Help modes available for Android
-
-Remote Help offers three different session modes for Android:
-
-- **Request screen sharing**: Request view of the remote screen. To minimize impact on end user privacy, this option is recommended unless full control is necessary.
-
-- **Request full control**: Request full control of the remote device.
-
-- **Initiate unattended control**: Take full control of the device without the presence of end user.
-
-When an Unattended session is initiated, the sharer (if present) is presented with an option to decline the session. The session will only start after 30 seconds have elapsed and the session hasn't been declined. The sharer (if present) can still end the session at any time.
 
 ## Setting up Remote Help for Android
 

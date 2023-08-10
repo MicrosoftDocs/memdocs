@@ -43,17 +43,17 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 The Remote Help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren't enrolled with Intune. The app can also be deployed through Intune to your managed devices.
 
-## Remote Help capabilities and requirements
+## Remote Help capabilities and requirements on Windows
 
 The Remote Help app supports the following capabilities on Windows:
 
 - **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](#set-up-conditional-access-for-remote-help)
 
-- **Compliance Warnings**: Before a helper can connect to a user's device, the helper can see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings**: Before a helper can connect to a user's device, the Helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
   - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. The link allows a helper to learn more about why the device isn't compliant.
 
-  - If the user's device isn't enrolled, the Helper will see a prompt that the user's device is unenrolled.
+  - If the user's device isn't enrolled, the Helper sees a prompt that the user's device is unenrolled.
 
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer's device that requires administrative permissions.
 
@@ -91,7 +91,7 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 
 Remote Help offers three different session modes for Windows:
 
-- **Request screen sharing**: Request view of the remote screen. To minimize impact on end user privacy, this option is recommended unless full control is necessary.
+- **Request screen sharing**: Request view of the remote screen. To minimize effect on end user privacy, this option is recommended unless full control is necessary.
 
 - **Request full control**: Request full control of the remote device.
 
@@ -101,7 +101,7 @@ Remote Help offers three different session modes for Windows:
 
 Remote Help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. By default, Remote Help opts users into automatic updates and updates itself when an update is available.
 
-Users may have opted out of automatic updates, however, when an update to Remote Help is required, users are prompted to install that version of Remote Help when the app opens. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+Some users may choose to opt out of automatic updates. However, when a new version of Remote Help is necessary, the app prompts users to install that version upon opening. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
@@ -181,7 +181,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. When a helper performs elevated actions on a user's device and the sharer ends the session, if the helper continues, then a warning dialog box appears for the helper that if they continue they will be logged off.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. If a helper performs elevated actions on a user's device and the sharer ends the session, a warning message appears for the helper. The message warns that if the helper continues, they'll be logged off.
 
 ### Provide help
 
@@ -197,15 +197,15 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 2. When Remote Help opens, you must sign in to authenticate to your organization. After the helper signs into the app, under *Give help* select **Get a security code**. Remote Help generates a security code that the helper must share with the person who has requested assistance. The sharer then proceeds to enter this code in their instance of Remote Help to establish a connection with the helper's Remote Help instance.
 
-3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
+3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
 
    At this time, you can request a session with full control of the sharer's device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*.
 
-4. After establishing that the session will use a shared display or full control, Remote Help will display a **Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
+4. After establishing that the session uses a shared display or full control, Remote Help will display a **Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. When a helper performs elevated actions on a user's device and the sharer ends the session, if the helper continues, then a warning dialog box appears for the helper that if they continue they will be logged off.
+5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. If a helper performs elevated actions on a user's device and the sharer ends the session, a warning message appears for the helper. The message warns that if the helper continues, they'll be logged off.
 
 > [!IMPORTANT]
 
@@ -228,7 +228,7 @@ Remote Help logs data during installation and during Remote Help sessions, which
 
 Automatic firewall rule creation from the Remote Help installer has been removed. However, if needed, System administrators can create firewall rules.
 
-Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Defender Firewall. In some situations when it is necessary, the following Remote Help executables should be allowed through the firewall:
+Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Defender Firewall. In some situations when it's necessary, the following Remote Help executables should be allowed through the firewall:
 
 - C:\Program Files\Remote help\RemoteHelp.exe
 - C:\Program Files\Remote help\RHService.exe
@@ -291,13 +291,13 @@ Remote Help is supported in the following languages:
 ## Known Issues
 
 - When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session isn't established.
-If a conditional access policy is configured as described earlier and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant cannot use Remote Help.
+If a conditional access policy is configured as described earlier and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant can't use Remote Help.
 
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
 
-## July 13, 2023
+### July 13, 2023
 
 Version: 5.0.1045.0
 This version of Remote Help provides support for ARM64 devices including the Microsoft Surface Pro X and Parallels Desktop on macOS
