@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 08/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -47,6 +47,9 @@ The following prerequisites must be met before a macOS DMG app is installed on m
 - Devices are managed by Intune.
 - DMG app is smaller than 2GB in size.
 - The [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md) is installed.
+
+> [!NOTE]
+> The full disk access permission is required to update or delete DMG apps. Intune automatically requests the permission when a DMG app policy is assigned on macOS 13 and higher.
 
 ## Important considerations for deploying DMG apps
 
