@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Remote Help on Windows to assist users who are authenticated by your organization. 
+title: Using Remote Help on Windows to assist users authenticated by your organization. 
 description: With the Remote Help app in Windows, provide remote assistance to authenticated users who also run the Remote Help app.
 keywords:
 author: Smritib17
@@ -49,20 +49,20 @@ The Remote Help app supports the following capabilities on Windows:
 
 - **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help)
 
-- **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings**: Before a helper can connect to a user's device, the helper can see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-  - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. This allows a helper to learn more about why the device isn't compliant.
+  - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. The link allows a helper to learn more about why the device isn't compliant.
 
-  - If the user's device is not enrolled, the Helper will see a prompt that the user's device is unenrolled.
+  - If the user's device isn't enrolled, the Helper will see a prompt that the user's device is unenrolled.
 
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer's device that requires administrative permissions.
 
-- **Enhanced chat** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and additional languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).
+- **Enhanced chat** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).
 
 ## Prerequisites
 
 - General prerequisites for Remote Help. See [Prerequisites for Remote Help](remote-help.md#prerequisites)
-- Setup the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
+- Set up the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
 
 ### Network considerations
 
@@ -84,7 +84,7 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
-|\*.alcdn.msauth.net|Required to log in to the application Microsoft Azure Authentication Library|
+|\*.alcdn.msauth.net|Required to sign-in to the application Microsoft Azure Authentication Library|
 |\*.wcpstatic.microsoft.com||
 
 ## Remote Help modes available for Windows
@@ -101,7 +101,7 @@ Remote Help offers three different session modes for Windows:
 
 Remote Help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. By default, Remote Help opts users into automatic updates and updates itself when an update is available.
 
-For users that opted out of automatic updates, when an update to Remote Help is required, users are prompted to install that version of Remote Help when the app opens. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+Users may have opted out of automatic updates, however, when an update to Remote Help is required, users are prompted to install that version of Remote Help when the app opens. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
@@ -152,7 +152,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the [version of Remote Help](#download-remote-help) you are deploying. For example, **10.0.22467.1000**
+   - For *Value*, specify the [version of Remote Help](#download-remote-help) you're deploying. For example, **10.0.22467.1000**
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
 
 5. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting group(s) of devices and not for User groups.
@@ -165,7 +165,7 @@ The use of Remote Help depends on whether you're requesting help or providing he
 
 ### Request help
 
-To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
+To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you get from the individual who is assisting you. You need to enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
@@ -173,11 +173,11 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 2. After signing into the app, get the security code from the individual assisting you and enter that code below *Get Help*, and then select **Submit**.
 
-3. After submitting the security code from the helper, the helper will see information about you including your full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
+3. After the sharer submits the security code from the helper, the helper will see information about you including your full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
 
    At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*.
 
-4. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist in resolving any issues on the device.
+4. After the helper establishes the type of session (full control or screen sharing), the session is established, and the helper can then help in resolving any issues on the device.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
@@ -195,7 +195,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    Alternately, or for devices not enrolled in Intune, locate the Remote Help app on your device and manually start it. After Remote Helps opens, you'll need to sign in to authenticate to your organization.
 
-2. When Remote Help opens you must sign in to authenticate to your organization. After signing into the app, under *Give help* select **Get a security code**. Remote Help generates a security code that you'll share with the person who has requested assistance. They'll enter this code in their instance of Remote Help to establish a connection to your Remote Help instance.
+2. When Remote Help opens, you must sign in to authenticate to your organization. After the helper signs into the app, under *Give help* select **Get a security code**. Remote Help generates a security code that the helper must share with the person who has requested assistance. The sharer then proceeds to enter this code in their instance of Remote Help to establish a connection with the helper's Remote Help instance.
 
 3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
 
@@ -228,13 +228,13 @@ Remote Help logs data during installation and during Remote Help sessions, which
 
 Automatic firewall rule creation from the Remote Help installer has been removed. However, if needed, System administrators can create firewall rules.
 
-Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Defender Firewall. In situations where this is necessary, these are the Remote Help executables that should be allowed through the firewall:
+Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Defender Firewall. In some situations when it is necessary, the following Remote Help executables should be allowed through the firewall:
 
 - C:\Program Files\Remote help\RemoteHelp.exe
 - C:\Program Files\Remote help\RHService.exe
 - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
-## Setup Conditional Access for Remote Help
+## Set up Conditional Access for Remote Help
 
 This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
 
@@ -290,8 +290,8 @@ Remote Help is supported in the following languages:
 
 ## Known Issues
 
-- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session won't be established.
-If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use Remote Help.
+- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session isn't established.
+If a conditional access policy is configured as described earlier and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant cannot use Remote Help.
 
 ## What's New for Remote Help
 
@@ -330,7 +330,7 @@ This release addresses a bug in the Laser Pointer and includes some updates to p
 
 Version: 4.1.1.0 - Changes in this release:
 
-With Remote Help 4.1.1.0 a new Laser Pointer feature has been added to better assist a Helper guide a Sharer during a session. This Laser Pointer can be used by a Helper in both Full Control and View Only sessions. Additional updates include improvements to localization, and error handling.
+A new Laser Pointer feature has been added to better assist a Helper guide a Sharer during a session. A helper can use the Laser Pointer in both Full Control and View Only sessions. Other updates include improvements to localization, and error handling.
 
 Various bug fixes included in this release:
 
@@ -344,7 +344,7 @@ Various bug fixes included in this release:
 
 Version: 4.0.1.13 - Changes in this release:
 
-With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+Fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
 
 For more information, go to [Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
 
