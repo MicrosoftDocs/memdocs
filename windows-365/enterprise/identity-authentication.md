@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/19/2023
+ms.date: 07/10/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -37,7 +37,7 @@ A Cloud PC user's identity defines which access management services manage that 
 - The types of Cloud PCs the user has access to.
 - The types of non-Cloud PC resources the user has access to.
 
-A device can also have an identity that is determined by its join type to Azure Active Directory (Azure AD). For a device, the join type defines:
+A device can also have an identity determined by its join type to Azure Active Directory (Azure AD). For a device, the join type defines:
 
 - If the device requires line of sight to a domain controller.
 - How the device is managed.
@@ -58,11 +58,10 @@ There are three identity types:
 
 There are two join types that you can select from when [provisioning a Cloud PC](provisioning.md):
 
-- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid)**: If you choose this join type, Windows 365 will join your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Hybrid Azure AD Join](/azure/active-directory/devices/howto-hybrid-azure-ad-join), the device will be synchronized to Azure AD.
-- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join)**: If you choose this join type, Windows 365 will join your Cloud PC directly to Azure AD.
+- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid)**: If you choose this join type, Windows 365 joins your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Hybrid Azure AD Join](/azure/active-directory/devices/howto-hybrid-azure-ad-join), the device is synchronized to Azure AD.
+- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join)**: If you choose this join type, Windows 365 joins your Cloud PC directly to Azure AD.
 
-
-Below is a table showing key capabilities or requirements based on the selected join type:
+The following table shows key capabilities or requirements based on the selected join type:
 
 |Capability or requirement|Hybrid Azure AD Join|Azure AD Join|
 |-|-|-|
@@ -79,7 +78,7 @@ To successfully access a Cloud PC, a user must authenticate, in turn, with both:
 - The Windows 365 service.
 - The Cloud PC.
 
-Windows 365 offers single sign-on (defined as a single authentication prompt that can satisfy both the Windows 365 service authentication and Cloud PC authentication) as part of the service. See [single sign-on](#single-sign-on-sso) for more information.
+Windows 365 offers single sign-on (defined as a single authentication prompt that can satisfy both the Windows 365 service authentication and Cloud PC authentication) as part of the service. For more information, see [single sign-on](#single-sign-on-sso).
 
 >[!IMPORTANT]
 >In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](/azure/virtual-desktop/safe-url-list#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
@@ -143,8 +142,9 @@ The following credential types are supported for Cloud PC authentication:
 Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential prompt and automatically sign the user in to Windows through Azure AD authentication. Azure AD authentication provides other benefits including passwordless authentication and support for third-party identity providers. Single sign-on is available on Cloud PCs (either [gallery images](device-images.md#gallery-images) or [custom images](device-images.md#custom-images)) using the following operating systems:
 
 - Windows 11 Enterprise with the [2022-09 Cumulative Updates for Windows 11 Preview (KB5017383)](https://support.microsoft.com/kb/KB5017383) or later installed.
+- Windows 10 Enterprise, versions 21H2 or later with the [2022-09 Cumulative Updates for Windows 10 Preview (KB5017380)](https://support.microsoft.com/kb/KB5017380) or later installed.
 
-Without SSO, the client will prompt users for their session host credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
+Without SSO, the client prompts users for their session host credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
 
 >[!NOTE]
 >To maintain single sign-on to Kerberos-based apps and resources in the Cloud PC environment, you must properly [configure your environment to trust the Azure AD Kerberos service](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises).

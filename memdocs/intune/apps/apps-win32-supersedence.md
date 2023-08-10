@@ -25,9 +25,6 @@ ms.collection:
 
 # Add Win32 app supersedence
 
-> [!NOTE]
-> Win32 app supersedence is in public preview.
-
 After you've [added a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This topic provides an overview of the supersedence feature.
 
 > [!IMPORTANT]
@@ -170,11 +167,6 @@ In the following Supersedence diagram, there are five nodes in total. Hence, fiv
 
 Additional supersedence limitations:
 - Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
-- The Enrollment Status Page (ESP) isn't supported with the supersedence public preview. ESP displays provisioning progress after a new device is enrolled, as well as when new users sign into the device. For the supersedence public preview, if an app has a supersedence relationship, it won't be enforced during ESP even if it is included as a selected app in an ESP policy. Additionally, apps that are involved in supersedence relationships won't be sent to the client device during ESP. However, the apps will be sent to the device after ESP completes, and the supersedence relationship will be respected.
-
-    > [!NOTE]
-    > ESP support is being rolled out right now as part of Supersedence GA. For more information, see [Upcoming improvements to Win32 app supersedence - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026). 
-
 - Only apps that are targeted will show install statuses in Microsoft Intune admin center.
 
 ## Next steps

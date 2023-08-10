@@ -65,7 +65,7 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
 
     For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
-  - Windows 10/11 Enterprise LTSC - While LTSC is supported, the following ring controls are not supported for LTSC:  
+  - Windows 10/11 Enterprise LTSC - LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:  
     - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates  
     - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)  
     - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)  
@@ -201,11 +201,11 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
+There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more, see [Windows update reports](../protect/windows-update-reports.md).
 
 ## Next steps
 
 - Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
 - Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
-- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows updates  
+- Use [Windows update reports](../protect/windows-update-reports.md) for Windows updates  
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution

@@ -6,7 +6,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 06/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,16 +30,12 @@ ms.collection:
 # View reporting details for organizational messages  
 
 *Applies to Windows 11*  
-
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 View the details of your organizational messages in the Microsoft Intune admin center. 
 
 ## Access message details  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Tenant administration** > **Organizational messages (preview)**.
+2. Go to **Tenant administration** > **Organizational messages**.
 3. Select the **Message** tab to see a list of all existing messages and message details.  
 
 ### Available details  
@@ -70,7 +66,7 @@ Message details include:
  * Delete  
  * Update (edit)  
  
- To access audit logs, go to **Tenant administration** > **Audit logs**. Available logs are shown in the table. Select **Filter** to filter logs by category. The category for organizational messages is **Other**. 
+ To access audit logs, go to **Tenant administration** > **Audit logs**. Available logs are shown in the table. Select **Filter** to filter logs by category. The category for organizational messages is **OrganizationalMessage**. 
  
  For more information about audit logs, see [Use audit logs to track and monitor events in Microsoft Intune](../fundamentals/monitor-audit-logs.md).    
 

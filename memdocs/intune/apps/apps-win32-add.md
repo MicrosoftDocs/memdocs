@@ -293,9 +293,6 @@ Each dependency will adhere to Intune Win32 app retry logic (try to install thre
 
 ## Step 6: Supersedence
 
-> [!NOTE]
-> Win32 app supersedence is in public preview.
-
 When you supersede an application, you can specify which app will be updated or replaced. To update an app, disable the uninstall previous version option. To replace an app, enable the uninstall previous version option. There is a maximum of 10 updated or replaced apps, including references to other apps. For example, your app references another app. This other app references other apps, and so on. This scenario creates a graph of apps. All apps in the graph count toward the maximum value of 10.
 
 To add apps that the current app will supersede:

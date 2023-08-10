@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: pjain
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -79,6 +79,7 @@ You can create your own roles with custom permissions. For more information abou
 | Compliance Administrator | None | Read only |
 | Compliance Data Administrator | None | Read only |
 | Global Reader (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
+| Helpdesk administrator (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
 | Reports Reader | Read Only| None |
 
 > [!TIP]

@@ -1,0 +1,108 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md",
+          "SECURITY.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/media/**",
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/autopilot/breadcrumb/toc.json",
+      "uhfHeaderId": "MSDocsHeader-Windows",
+      "feedback_github_repo": "MicrosoftDocs/memdocs",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
+      "feedback_system": "GitHub",
+      "permissioned-type": "public",
+      "searchScope": ["Autopilot"],
+      "uhfHeaderId": "MSDocsHeader-Windows",
+      "contributors_to_exclude": [
+        "PRMerger9",
+        "PRMerger17",
+        "PRMerger5",
+        "PRMerger4",
+        "PRMerger3",
+        "PRMerger-2",
+        "hexiaokai",
+        "openpublishingbuild",
+        "tysonn",
+        "v-anpasi",
+        "kiwhit",
+        "ShawnJackson",
+        "PRmerger",
+        "DuncanmaMSFT",
+        "Saisang",
+        "Ja-Dunn",
+        "jomolnar",
+        "KatieCumming",
+        "deneha",
+        "ktoliver",
+        "itechedit",
+        "MattGLaBelle",
+        "Lisaco88",
+        "GitHubber17",
+        "v-shils",
+        "trishamc",
+        "Jak-MS",
+        "Kellylorenebaker",
+        "ShannonLeavitt",
+        "v-albemi",
+        "v-dansch",
+        "chbain",
+        "atookey",
+        "tfosmark",
+        "sdwheeler",
+        "meganbradley",
+        "rjagiewich",        
+        "rmca14",
+        "garycentric",
+        "jborsecnik",
+        "AngelaMotherofDragons",
+        "v-dihans",
+        "dstrome",
+        "tiburd",
+        "traya1",
+        "claydetels19",
+        "beccarobins"
+      ]          
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "autopilot"
+  }
+}

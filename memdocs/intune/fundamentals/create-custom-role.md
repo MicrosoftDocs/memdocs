@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/17/2023
+ms.date: 06/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: pjain
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -79,7 +79,8 @@ The following permissions are available when creating custom roles.
 | Android FOTA/Update | Change existing Android firmware over-the-air (FOTA) deployments and cancel firmware deployments. |
 | Android for work/Read | View the Android for Work configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. | 
 | Android for work/Update app sync | Manage or change the Android for Work configuration used to sync applications with the Play for Work store, or sync the apps you've approved from the store with Intune. | 
-| Android for work/Update onboarding | Manage or change the Android for work configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. | 
+| Android for work/Update onboarding | Manage or change the Android for work configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. |
+| Android for work/ Update Enrollment Profiles| Manage or change AOSP and Android Enterprise Device Owner enrollment profiles that are used to enroll devices.|
 | Audit data/Read | View all Intune audit data for this tenant. | 
 | Certificate Connector/Modify | Add, remove, or modify certificate connectors required to support certificate issuance. | 
 | Certificate Connector/Read | View certificate connectors required to support certificate issuance. | 
@@ -232,8 +233,6 @@ The following permissions are available when creating custom roles.
 | Security baselines/Update | Update Security Baseline profiles. | 
 | Security tasks/Read | View security tasks. | 
 | Security tasks/Update | Update security tasks. | 
-| Telecom expenses/Read | View settings and status of telecom expense partner connector. | 
-| Telecom expenses/Update | Modify or activate telecom expense management partner connector. The telecom expense partner enables you to manage telecom expenses incurred from data usage on corporate-owned mobile devices. | 
 | Terms and conditions/Assign | Assign terms and conditions to Azure AD security groups. | 
 | Terms and conditions/Create | Create new terms and conditions. | 
 | Terms and conditions/Delete | Delete an existing terms and conditions. | 

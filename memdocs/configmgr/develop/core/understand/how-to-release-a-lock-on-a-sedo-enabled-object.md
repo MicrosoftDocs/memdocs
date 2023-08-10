@@ -9,7 +9,7 @@ ms.assetid: 064a7248-6a42-4dbc-b937-9be7e3454cd4
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to release a locked SEDO-enabled object using its object path by creating a ReleaseLock method.
 ms.reviewer: mstewart,aaroncz 

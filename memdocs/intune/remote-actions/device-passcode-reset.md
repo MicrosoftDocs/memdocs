@@ -20,7 +20,7 @@ ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 #ROBOTS:
 #audience:
 
-ms.reviewer: coferro
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -68,6 +68,10 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin (also known as Intune Administrator), Helpdesk Operator, or Role Administrator.
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a device, and choose **Reset passcode**.
+
+> [!NOTE]
+> To successfully reset a passcode for the Work Profile of an Android device you must configure the device passcode within device restrictions. Any attempts to reset the passcode without configuration will fail.
+
 
 ## Reset Android work profile and Device Owner passcodes
 

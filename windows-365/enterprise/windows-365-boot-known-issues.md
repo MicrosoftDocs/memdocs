@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/24/2023
+ms.date: 5/26/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -225,6 +225,12 @@ Resources created by the Windows 365 Boot guided scenario can be applied to both
 - hybrid Azure AD joined devices in tenants where certain workloads have been switched to Intune. For hybrid Azure AD joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
 
 **Troubleshooting steps**: To determine if your device is hybrid Azure AD joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is hybrid Azure AD joined, see [Co-management workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
+
+## User can't reset their password on the Windows 365 Boot device
+
+If the user needs to reset their password, it isn't possible on their Windows 365 Boot device.
+
+**Troubleshooting steps**: Users should reset their password on another non-windows 365 Boot configured device.
 
 <!-- ########################## -->
 ## Next steps

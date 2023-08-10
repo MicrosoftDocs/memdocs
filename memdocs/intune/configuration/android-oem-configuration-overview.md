@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/17/2023
+ms.date: 06/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: jieyan
+ms.reviewer: akritis
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -190,7 +190,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Getac | com.getac.app.getacoemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | Honeywell - Scanpal EDA | com.honeywell.oemconfig.scanpal | |
-| HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
+| HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 |
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
 | HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
 | HMDGlobal - OEMConfig | com.hmdglobal.app.oemconfig |
@@ -213,7 +213,8 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
 | Sunmi | com.sunmi.oemconfig.V2S | |
 | Unitech Electronics | com.unitech.oemconfig | |
-| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
+| Zebra Technologies | com.zebra.oemconfig.release | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig) <br/><br/> This `Zebra OEMConfig Powered by MX` app supports Android 11.0 and newer. |
+| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig) <br/><br/> This `Legacy Zebra OEMConfig` app supports Android 11.0 and earlier. |
 
 -----------------
 

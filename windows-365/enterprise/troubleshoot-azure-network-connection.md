@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 06/15/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -32,11 +32,11 @@ ms.collection:
 
 # Troubleshoot Azure network connections
 
-The Azure network connection (ANC) periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you'll see error messages in the Microsoft Intune admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
+The Azure network connection (ANC) periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you can see error messages in the Microsoft Intune admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
 
 ## Active Directory domain join
 
-When a Cloud PC is provisioned, it’s automatically joined to the provided domain. To test the domain join process, a domain computer object is created in the defined Organizational Unit (OU) with a name similar to "CPC-Hth" every time Windows 365 health checks are run. These computer objects will be disabled when the health check is complete. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
+When a Cloud PC is provisioned, it’s automatically joined to the provided domain. To test the domain join process, a domain computer object is created in the defined Organizational Unit (OU) with a name similar to "CPC-Hth" every time Windows 365 health checks are run. These computer objects are disabled when the health check is complete. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
 
 - The domain join user has sufficient permissions to join the domain provided.  
 - The domain join user can write to the organizational unit (OU) provided.  
@@ -50,7 +50,7 @@ When a Cloud PC is provisioned, it’s automatically joined to the provided doma
 
 Before MDM enrollment can take place during provisioning, an Azure Active Directory (Azure AD) object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Azure AD in a timely manner.  
 
-Make sure that your Azure AD computer objects appear in Azure AD quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Azure AD within 90 minutes, provisioning will fail.  
+Make sure that your Azure AD computer objects appear in Azure AD quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Azure AD within 90 minutes, provisioning fails.  
 
 If provisioning fails, make sure that:
 
@@ -61,7 +61,7 @@ If provisioning fails, make sure that:
 
 ## Azure subnet IP address range usage
 
-As part of the ANC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC provisioning will create a virtual NIC and consume an IP address from the subnet.  
+As part of the ANC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC, provisioning creates a virtual NIC and consume an IP address from the subnet.  
 
 Make sure that there's sufficient IP Address allocation available for the volume of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.  
 
@@ -98,7 +98,7 @@ This test attempts to resolve the domain name provided. For example, contoso.com
 - The subnet/vNet is routed correctly so that the Cloud PC can reach the DNS server provided.  
 - The Cloud PCs/virtual machines in the declared subnet can NSLOOKUP on the DNS server, and it responds with internal names.
 
-Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure tht these records are accessible through the vNet provided in your Azure network connection.
+Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure that these records are accessible through the vNet provided in your Azure network connection.
 
 ## Endpoint connectivity
 
@@ -118,8 +118,6 @@ If this test fails, make sure that:
 
 This check is used for many infrastructure related issues that might be related to infrastructure that customers are responsible for. It can include errors such as internal service time outs or errors caused by customers deleting/changing Azure resources while checks are being run.  
 
-Sometimes, these service errors are intermittent and a retry will complete successfully. Other times there’s no further troubleshooting that can be performed without the help of support.  
-
 We suggest you retry the checks if you encounter this error. If it persists, contact support for help.  
 
 ## First party app permissions
@@ -128,15 +126,15 @@ When creating an ANC, the wizard grants a certain level of permissions on the re
 
 These permissions can be viewed and modified by Azure admins who hold such permissions.  
 
-If any of these permissions are revoked, this check will fail. Make sure that the following permissions are granted to the Windows 365 application service principal:
+If any of these permissions are revoked, this check fails. Make sure that the following permissions are granted to the Windows 365 application service principal:
 
 - [Reader](/azure/role-based-access-control/built-in-roles#reader) role on the Azure subscription.
-- [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor) role on the specified resource group.
-- [Network Contributor](/azure/role-based-access-control/built-in-roles#network-contributor) role on the virtual network.
+- [Windows365 Network Interface Contributor](/azure/role-based-access-control/built-in-roles#network-contributor) role on the specified resource group.
+- [Windows365 Network User](/azure/role-based-access-control/built-in-roles#network-contributor) role on the virtual network.
 
-The role assignment on the subscription will be granted to the Cloud PC service principal.  
+The role assignment on the subscription is granted to the Cloud PC service principal.  
 
-Also, make sure that the permissions haven't been granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)". This role isn't sufficient. It must be one of the Azure role-based access control built-in roles as listed above.
+Also, make sure that the permissions haven't been granted as [classic subscription administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#classic-subscription-administrator-roles) or "Roles (Classic)". This role isn't sufficient. It must be one of the Azure role-based access control built-in roles as listed previously.
 
 <!-- ########################## -->
 ## Next steps

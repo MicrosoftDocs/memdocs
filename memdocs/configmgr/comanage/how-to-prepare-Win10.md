@@ -25,7 +25,7 @@ For new Windows devices, use the Autopilot service to configure the out of box e
 For more information, see [How to enroll with Autopilot](autopilot-enrollment.md).
 
 > [!NOTE]
-> As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (Azure AD) joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
+> As we talk with our customers that are using Microsoft Intune to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (Azure AD) joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
 >
 > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the hybrid Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
 
@@ -41,14 +41,14 @@ Use Configuration Manager to collect and report the device information required 
 
 4. After saving the file, upload the data to Intune.
 
-For more information, see [Manually register devices with Windows Autopilot](../../autopilot/add-devices.md).
+For more information, see [Manually register devices with Windows Autopilot](/autopilot/add-devices).
 
 ### Autopilot for existing devices
 <!--1358333-->
 
-_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows 8.1 device for [Windows Autopilot user-driven mode](../../autopilot/user-driven.md) using a single, native Configuration Manager task sequence.
+_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows 8.1 device for [Windows Autopilot user-driven mode](/autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices](../../autopilot/existing-devices.md).
+For more information, see [Windows Autopilot for existing devices](/autopilot/existing-devices).
 
 ## Install the Configuration Manager client
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Android device enrollment overview  
-description: Learn about enrollment for Android devices, including the benefits and why workplaces and schools require it.  
+title: Overview of device enrollment for Android - Microsoft Intune 
+description: Learn about device enrollment for Android devices, including the benefits and why workplaces and schools require it.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/16/2020
+ms.date: 08/01/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,24 +32,23 @@ ms.collection:
 
 # Android device enrollment overview  
 
-Schools and employers want to make sure that you're using a secure, trusted device to access internal resources such as apps and Wi-Fi. When you enroll in Intune, the Microsoft Intune and Company Portal apps ensure that you have secure access to these resources no matter where you are or what device you're using. 
+By enrolling your device in Intune, you get secure access to work or school apps on your Android device, and access to apps in Intune Company Portal and the Microsoft Intune app. The Company Portal app and Intune app also monitor your device settings to make sure they meet your organization's requirements and syncs things (like apps, policies, and updates) from your organization to your device.
 
-If your organization requires you to install and enroll with one of these apps, you'll need to do that before you can access internal apps on your device. This article describes the purpose and benefits of enrolling your devices with these apps. 
-
-To skip this overview and go straight to the enrollment steps, select from one of the following articles (ask your IT support person if you're not sure which set of instructions you're supposed to follow):  
+This article provides an overview of device enrollment, its purpose, and its benefits. To skip this overview and go straight to the enrollment steps, select from one of the following articles (ask your IT support person if you're not sure which set of instructions you're supposed to follow):  
  
-* [Intune Company Portal enrollment](enroll-device-android-company-portal.md)
-* [Android work profile enrollment](enroll-device-android-work-profile.md)
-* [Microsoft Intune app enrollment](enroll-device-android-microsoft-intune-app.md)
+* Enrollment with Intune Company Portal app  
+    * [Android work profile for personal devices](enroll-device-android-work-profile.md)  
+    * [Android device administrator for personal and corporate-owned devices](enroll-device-android-company-portal.md)  
+* Enrollment with Microsoft Intune app
+    * [Enroll corporate-owned Android device](enroll-device-android-microsoft-intune-app.md)  
+    * [Enroll corporate-owned AOSP device](enroll-device-aosp.md)  
 * Derived credentials enrollment (smart card users):  
     * [Entrust](enroll-android-device-entrust-datacard.md)  
     * [Intercede](enroll-android-device-intercede.md)  
     * [DISA Purebred](enroll-android-device-disa-purebred.md)  
 
 ## Secure your device 
- The Company Portal and Microsoft Intune app enroll your device in Intune.  Intune is a mobile device management provider that helps your org manage mobile devices and apps through security and device policies. 
-
-The apps walk you through each step of enrollment, and configure your device settings to match your organization's policies. They also alert you to problems or settings that need to be resolved before you can get corporate access.  
+Use the Company Portal or Microsoft Intune app to enroll and register your personal or work-provided device with your organization. The apps walk you through each step of enrollment, and configure your device settings to match your organization's policies. They also alert you to problems or settings that need to be resolved before you can get corporate access.  
 
 Examples of policies that your organization might require are:  
 * Setting up a password or PIN
@@ -58,29 +57,24 @@ Examples of policies that your organization might require are:
 * Installing work-required apps  
 
 ## Access internal apps, VPN, and Wi-Fi 
-During enrollment, Microsoft Intune and Company Portal apps require you to connect to your work or school account.  After you authenticate and after you've configured your device settings to match your organization's policies, you'll gain access to your organization's email account, network, files, and apps.  
-
-Organizations sometimes require you to install work or security apps, such as Microsoft Office or Mobile Threat Defense. If these apps are required or become available for you, you'll find them in Company Portal or the Microsoft Intune app.
+During enrollment, you have to sign in with your work or school account.  After you authenticate and configure your device settings to match your organization's policies, you can access your work email, Wi-Fi network, files, and apps on your device. Your organization may also require you to install work or security apps, such as Microsoft Office or Microsoft Defender for Endpoint. You can find all required and available apps in the Company Portal or Microsoft Intune app.
 
 ## Remotely reset a lost or stolen device (if device supports it)
-If a device is lost or stolen, you can sign in to the Company Portal app or Company Portal website on any other device, and reset your phone to factory settings. This feature is helpful if your missing device contains proprietary work data that you don't want anyone else to access. Because the device is enrolled in management, your company support or IT admin can also help reset it.  
+If a device is lost or stolen, you can sign in to the Company Portal app or Company Portal website on any other device, and reset your phone to factory settings. This feature is helpful if your missing device contains proprietary work data that you don't want anyone else to access. Because the device is enrolled in management, your support person or IT admin can also help reset it.  
 
 The reset feature isn't available in the Microsoft Intune app.  
 
 ## Get latest policy updates and requirements
-The Company Portal or Microsoft Intune app will automatically check in, or sync, with Intune every eight hours. If you're using Company Portal and want to check in more frequently, you or your company support can initiate a manual sync. During check-in, the apps will:  
+The Company Portal or Microsoft Intune app automatically checks in, or syncs, your device with Intune every eight hours. If you're using Company Portal and want to check in more frequently, you or your support person can initiate a manual sync. During check-in, the apps:  
 
-* Download any policy or app updates that your company support makes available.  
+* Download available policy and app updates.    
 * Send hardware inventory updates. These updates don't contain personal information.  
 * Send company app inventory updates. These updates don't contain personal information.  
 
-When your device is out-of-sync or no longer meets the requirements, its status appears as *Not compliant*. Your access to work and school-related resources might be revoked until your device meets the requirements again. The Company Portal app notifies you of these problems and the steps you need to take to fix them.  
-
+When your device is out-of-sync or no longer meets the requirements, its status appears in Company Portal or the Intune app as *not compliant*. Device access to work and school-related resources might be revoked until your device meets the requirements again. The Company Portal app notifies you of these problems and the steps you need to take to fix them.  
 
 ## Get Remote Help from IT support person    
-When you enroll your device, your company support or IT admin is given access to the device for limited and meaningful reasons.   
-
-They can:  
+When you enroll your device, your company support or IT admin is given access to the device for limited and meaningful reasons. They can:   
 
 * Reset your device back to the manufacturer's defaults. As mentioned above, you also have access to reset your device. However, if you can't access the Company Portal app right away, your company can reset the device for you.  
 

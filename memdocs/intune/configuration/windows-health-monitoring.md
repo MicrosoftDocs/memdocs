@@ -77,7 +77,7 @@ This article shows you how to create the profile, and enable the monitoring.
       [DeviceHealthMonitoring/AllowDeviceHealthMonitoring CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-allowdevicehealthmonitoring)
 
     - **Scope**: Choose the event information you want collected and evaluated. Your options:
-      - **Windows updates**: This option configures devices to send Windows Update data to Intune. This data is then used in a [compliance policy](../protect/windows-update-compliance-reports.md) that reports on Windows updates.
+      - **Windows updates**: This option configures devices to send Windows Update data to Intune. This data is then used in a [compliance policy](../protect/windows-update-reports.md) that reports on Windows updates.
       - **Endpoint analytics**
 
       [DeviceHealthMonitoring/ConfigDeviceHealthMonitoringScope CSP](/windows/client-management/mdm/policy-csp-devicehealthmonitoring#devicehealthmonitoring-configdevicehealthmonitoringscope)

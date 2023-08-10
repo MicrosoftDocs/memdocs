@@ -9,8 +9,8 @@ ms.author: mandia
 manager: dougeby
 ms.date: 02/28/2023
 ms.topic: overview
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.assetid: 
 
@@ -105,8 +105,8 @@ If you constantly provision new devices or repurpose existing devices, then use 
 
 For more information, go to:
 
-- [Windows Autopilot overview](./autopilot/windows-autopilot.md)
-- [Enroll Windows devices in Intune](./autopilot/enrollment-autopilot.md)
+- [Windows Autopilot overview](/autopilot/windows-autopilot)
+- [Enroll Windows devices in Intune](/autopilot/enrollment-autopilot)
 
 ## Azure Active Directory (AD)
 

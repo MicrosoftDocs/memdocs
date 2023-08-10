@@ -146,7 +146,36 @@ After an update releases, it rolls out to tenants over the following days. This 
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
+ > [!IMPORTANT]  
+  > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week. 
 
+### July 24, 2023
+
+Image hash values:
+
+- **agentImageDigest**: sha256:683f756e15678264599f005f2eefe128e30a39ad74673da84426837b67bc0837
+
+- **serverImageDigest**: sha256:7665f4407f8f5a0b67d352c7c7291fa5d4011c55bd718b6e390247e85585b3c1
+
+Changes in this release:
+
+- Minor bug fixes
+- Server upgrades
+  
+### June 12, 2023
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:ef5c23cc4c56263732124be7215f01a0904b5abaf78f5f033672d139205fcc3a
+
+- **serverImageDigest**: sha256:1b11852378c1a0f0f595d76d841dafe4d23cc962b296eae365629c5c31adcc9a
+
+Changes in this release:
+
+- Minor bug fixes
+- Agent container fixes
+
+  
 ### April 3, 2023
 
 Image hash values:
@@ -240,8 +269,9 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- Set process limit to 6000 in the server container 
+- Set process limit to 6000 in the server container
 
+<!-- Archive of past releases
 
 ### June 30, 2022
 
@@ -282,9 +312,6 @@ Image hash values:
 Changes in this release:
 - Minor bug fixes
 - Access log enhancements
-
-
-<!-- Archive of past releases
 
 
 ### February 16, 2022

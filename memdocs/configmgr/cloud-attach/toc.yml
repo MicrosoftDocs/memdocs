@@ -97,8 +97,6 @@ items:
       href: ../../analytics/enroll-configmgr.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Use Endpoint analytics
     items:
-    - name: Remediations
-      href: ../../analytics/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Startup performance
       href: ../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Restart frequency
@@ -113,8 +111,6 @@ items:
       href: ../../analytics/settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Reference for Endpoint analytics
     items:
-    - name: PowerShell scripts
-      href: ../../analytics/powershell-scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Data collection
       href: ../../analytics/data-collection.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Troubleshoot

@@ -39,7 +39,7 @@ Select your preferences for single sign-on and in-app data collection in Company
 
 ## Single sign-on   
 
-The single sign-on extension configures your work or school account so that you only have to authenticate once to access all apps and services within your organization's network. To opt out of SSO on your macOS device, clear the checkbox next to **Don't ask me to sign in with single sign-on for this device**. 
+The single sign-on extension configures your work or school account so that you only have to authenticate once to access all apps and services within your organization's network. To opt out of SSO on your macOS device, select the checkbox next to **Don't ask me to sign in with single sign-on for this device**. 
 
 
 ## Send usage data to Microsoft    

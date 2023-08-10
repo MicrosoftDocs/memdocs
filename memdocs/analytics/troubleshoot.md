@@ -1,10 +1,10 @@
 ---
 title: Troubleshooting Endpoint analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Instructions for troubleshooting Endpoint analytics.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: troubleshooting
 author: smritib17
 ms.author: smbhardwaj
@@ -32,8 +32,9 @@ To properly configure devices governed by custom client settings for Endpoint an
 ### <a name="bkmk_2016281112"></a> Error code -2016281112 (Remediation failed)
 
 Customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)` if they can't correctly be assigned the [Intune data collection](settings.md#bkmk_profile) policy. Startup performance insights are only available for devices running Windows 10 version 1903 or later Enterprise, Education, or Pro. Long-term servicing channel (LTSC) isn't supported.
-  - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
-  - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
+
+- Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
+- Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063).<!--8392089, 8389021-->
 
 ### Hardware inventory may fail to process
 <!--7535675-->
@@ -51,25 +52,28 @@ Rollback transaction: XXXX
 
 ### Script requirements for Remediations
 
-If the option **Enforce script signature check** is enabled in the [Settings](remediations.md#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
+If the option **Enforce script signature check** is enabled in the [Settings](/mem/intune/fundamentals/remediations) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 
 ## <a name="bkmk_enrollment_tshooter"></a> Troubleshooting device enrollment and startup performance
 
 If the overview page shows a startup performance score of zero with a banner showing it's waiting for data, or if the startup performance's device performance tab shows fewer devices than you expect, there are some steps you can take to troubleshoot the issue.
 
 First, ensure devices meet the prerequisites:
+
 - [Prerequisites for Intune managed devices](enroll-intune.md#bkmk_prereq)
 - [Prerequisites for Configuration Manager managed devices](enroll-configmgr.md#bkmk_prereq)
-- [Prerequisites for Remediations](remediations.md#bkmk_prereq)
+- [Prerequisites for Remediations](/mem/intune/fundamentals/remediations)
 
 For Intune or co-managed devices configured with the Intune data collection policy:
-1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices. 
+
+1. Make sure you have the [Intune data collection](settings.md#bkmk_profile) policy is targeting all devices you want to see performance data. Look at the assignment tab to make sure it's assigned to the expected set of devices.
 1. Look for devices that haven't been successfully configured for data collection. You can also see this information in the profiles overview page.  
    - There's a known issue where customers may see profile assignment errors, where affected devices show an error code of `-2016281112 (Remediation failed)`. For more information, see the [Error code -2016281112](#bkmk_2016281112) section.
 1. Devices that have been successfully configured for data collection must be restarted after data collection has been enabled, and you must then wait up to 25 hours after for the device to show up in the device performance tab. See [Data flow](data-collection.md#bkmk_flow)
 1. If your device has been successfully configured for data collection, has later restarted, and after 25 hours you're still not seeing it, then the device may not be able communicate with the required endpoints. See [Proxy configuration](#bkmk_endpoints).
 
 For Configuration Manager-managed devices:
+
 1. Ensure all devices you want to see performance data are [enrolled](enroll-configmgr.md#bkmk_cm_enroll).
 1. Check if the data upload from Configuration Manager to the Gateway Service was successful by looking at the error messages on the **UXAnalyticsUploadWorker.log** file on the site system hosting Service Connection Point role.
 1. Check if an admin has custom overrides for client settings.  In the Configuration Manager console, go to the **Devices** workspace, find the target devices, and in the **Client settings** group, select the **Resultant client settings**. If endpoint analytics is disabled, there's an overriding client setting. Find the overriding client settings and enable endpoint analytics on it.  
@@ -81,10 +85,11 @@ For Configuration Manager-managed devices:
 
 If your environment uses a proxy server, configure your proxy server to allow the following endpoints:
 
-> [!Important]  
+> [!IMPORTANT]
 > For privacy and data integrity, Windows checks for a Microsoft SSL certificate (certificate pinning) when communicating with the required functional data sharing endpoints. SSL interception and inspection aren't possible. To use Endpoint analytics, exclude these endpoints from SSL inspection.<!-- BUG 4647542 -->
 
 [!INCLUDE [Internet endpoints for Endpoint analytics](../configmgr/core/plan-design/network/includes/internet-endpoints-endpoint-analytics.md)]
+
 
 ### Proxy server authentication
 
@@ -157,4 +162,4 @@ The maximum allowed output size limit for Remediation scripts is 2048 characters
 
 ## Next steps
 
-Use [Remediations](remediations.md) to help fix common support issues before end-users notice issues.
+Use [Remediations](/mem/intune/fundamentals/remediations) to help fix common support issues before end-users notice issues.

@@ -68,9 +68,11 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 :::image type="content" source="../../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../analytics/media/restart-frequency-tab.png":::
 
-- [Remediation](../../analytics/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediation in Endpoint analytics helps you fix common support issues before end-users notice issues. Use Remediation to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
+## Remediations
 
-:::image type="content" source="../../analytics/media/remediations-create.png" alt-text="Screenshot of Endpoint analytics Remediation in Intune admin center." lightbox="../../analytics/media/remediations-create.png":::
+[Remediations](../../intune/fundamentals/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
+
+:::image type="content" source="../../intune/fundamentals/media/remediations/remediations-create.png" alt-text="Screenshot of Remediations in Intune admin center." lightbox="../../intune/fundamentals/media/remediations/remediations-create.png":::
 
 ## Co-management
 
@@ -78,7 +80,7 @@ Co-management transforms your on-premises Configuration Manager environment with
 
 :::image type="content" source="media/comanagement-workloads.png" alt-text="Screenshot of comanagement workload tab in cloud attach properties in configuration manager admin console." lightbox="media/comanagement-workloads.png":::
 
-Once you co-manage the devices, you can specify which workloads to move, such as compliance policy to enable Conditional Access. [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) combines granular control over organizational data while maintaining a consistent user experience on any device from any location. Enforcing compliance policy from Intune is a critical part of developing your [Zero Trust](/security/zero-trust/) architecture. Additionally, you can Use [Windows Autopilot](../../autopilot/windows-autopilot.md) with co-management to simplify the complex process of provisioning devices from the cloud.  
+Once you co-manage the devices, you can specify which workloads to move, such as compliance policy to enable Conditional Access. [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) combines granular control over organizational data while maintaining a consistent user experience on any device from any location. Enforcing compliance policy from Intune is a critical part of developing your [Zero Trust](/security/zero-trust/) architecture. Additionally, you can Use [Windows Autopilot](/autopilot/windows-autopilot) with co-management to simplify the complex process of provisioning devices from the cloud.  
 
 ## <a name="bkmk_cmg"></a> Cloud management gateway (CMG)
 

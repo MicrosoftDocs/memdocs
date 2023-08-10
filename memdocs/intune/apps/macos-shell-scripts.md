@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -55,7 +55,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 - An end user is required to sign in to the device to execute scripts running as a signed-in user.
 - Root user privileges are required if the script requires making changes that a standard user account cannot.
 - Shell scripts will attempt to run more frequently than the chosen script frequency for certain conditions, such as if the disk is full, if the storage location is tampered with, if the local cache is deleted, or if the Mac device restarts.
-- Shell scripts that are running for longer than 15 minutes are stopped and reported as "failed".
+- Shell scripts that are running for longer than 60 minutes are stopped and reported as "failed".
 
 ## Create and assign a shell script policy
 
@@ -232,7 +232,7 @@ Your assigned-intune role requires **Device configurations** permissions to dele
 
 ## Additional information
 
-When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
+When you deploy shell scripts or custom attributes for macOS devices from Microsoft Intune, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
 
 ## Next steps
 

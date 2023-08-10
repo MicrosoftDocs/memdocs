@@ -1,10 +1,10 @@
 ---
 title: What is advanced Endpoint analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Learn about advanced features in Endpoint analytics
 ms.date: 02/22/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: Smritib17
 ms.author: smbhardwaj
@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # What is advanced Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](/mem/intune/fundamentals/intune-add-ons).
 
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 
@@ -28,7 +28,7 @@ The Microsoft Intune Suite includes advanced features for Endpoint analytics, su
 The advanced features in Endpoint analytics are automatically integrated into the existing base Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
 
 ## Prerequisites
- 
+
 The advanced features in Endpoint analytics build on top of the existing base Endpoint analytics experience. You must [onboard and enroll your Intune-managed devices to Endpoint analytics](enroll-intune.md) to use the advanced features.
 
 > [!NOTE]
@@ -36,22 +36,22 @@ The advanced features in Endpoint analytics build on top of the existing base En
 
 ## License requirements
 
-In addition to [license requirements](enroll-intune.md#licensing-prerequisites) for Endpoint analytics, an add-on license is required to use advanced features in Endpoint analytics. 
+In addition to [license requirements](enroll-intune.md#licensing-prerequisites) for Endpoint analytics, an add-on license is required to use advanced features in Endpoint analytics.
 
-The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Endpoint Manager or Intune.
+The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](/mem/intune/fundamentals/intune-add-ons) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Mixed licensing scenarios
 
-If your tenant has an Intune subscription that includes the base Endpoint analytics product for all users and an add-on subscription that contains advanced features in Endpoint analytics for a subset of users, it's considered a mixed license scenario.
+If your tenant has an Intune subscription that includes the base Endpoint analytics product for all users and an add-on subscription or trial that contains advanced features in Endpoint analytics for a subset of users, it's considered a mixed license scenario.
 
-Currently, the highest functional subscription sets the Endpoint aAnalytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint Analytics for all enrolled devices.  
+Currently, the highest functional subscription sets the Endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint analytics for all enrolled devices.  
 
-## Enabling advanced features for Endpoint analytics 
+## Enabling advanced features for Endpoint analytics
 
 When license requirements are met, then advanced features in Endpoint analytics are automatically enabled in your tenant. If licenses expire or you change your subscription to one that doesn't include advanced features in Endpoint analytics, your tenant will automatically revert to the base Endpoint analytics experience.  
 
 > [!NOTE]
-> It may take up to 48 hours after you buy licenses or start a trial to see advanced features in Endpoint analytics in your tenant. 
+> It may take up to 48 hours after you buy licenses or start a trial to see advanced features in Endpoint analytics in your tenant.
 
 ## Next Steps
 
@@ -60,4 +60,3 @@ For more information, go to:
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
 - [Enhanced device timeline](enhanced-device-timeline.md)  
-

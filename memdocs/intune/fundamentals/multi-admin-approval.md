@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/23/2023
+ms.date: 06/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer: craigma
+ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -41,9 +41,11 @@ When any account in the Tenant is used to make a change to a resource that’s p
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- Scripts – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
 
 ## Prerequisites for access policies and approvers
+
+To use multi administrative approval, your tenant must have at least two administrator accounts.
 
 To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role.
 
@@ -98,7 +100,9 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 3. After reviewing the details, enter relevant details in the Approver notes field, and then select **Approve request** or **Reject request**.
 
-4. After you approve a request, the requestor needs select **Complete**.  Intune will process the change, and changes the status to *Completed.*
+4. After you approve a request, the requestor needs select **Complete**.  Intune will process the change, and changes the status to *Completed.* Verify the approval succeeded (or failed) by reviewing the console notification upon completion. 
+
+    To verify if the approval succeeded (or failed), look at the notifications in the Intune admin center. A message shows if the approval succeeded or failed.
 
 ## More considerations
 

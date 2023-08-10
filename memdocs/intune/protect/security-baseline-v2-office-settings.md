@@ -968,7 +968,7 @@ For more information about the following settings that are included in this base
 
 *Security > Security Form Settings*
 
-The "Outlook Security Mode" policy controls how security settings in Outlook are enforced. To manage any of the dependent Outlook security policies using Microsoft Endpoint Manager, Office cloud policy service, or Group policy this policy must be enabled and the Outlook Security Policy dropdown set to "Use Outlook Security Group Policy".
+The "Outlook Security Mode" policy controls how security settings in Outlook are enforced. To manage any of the dependent Outlook security policies using Microsoft Intune, Office cloud policy service, or Group policy this policy must be enabled and the Outlook Security Policy dropdown set to "Use Outlook Security Group Policy".
 
 - **Outlook Security Mode (User)**  
   Baseline default: *Enabled*  

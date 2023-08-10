@@ -64,6 +64,10 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
   | Red Hat (RHEL) 8.6    | Podman 4.0 *(default)* <br> Podman 3.0  | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.6_release_notes/index#enhancement_containers) are not usable with Podman v4.0. If upgrading and changing containers from v3 to v4.0, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 8.7  <!-- This entry is pending podman version details from PM -->  | Podman 4.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+   | Red Hat (RHEL) 8.8  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+   | Red Hat (RHEL) 9.0  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+   | Red Hat (RHEL) 9.1  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
+   | Red Hat (RHEL) 9.2  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Ubuntu 18.04           | Docker CE               | Support ends April 2023. See the following note for more information.        |
   | Ubuntu 20.04           | Docker CE               |                    |
   | Ubuntu 22.04           | Docker CE               |                    |
@@ -504,6 +508,26 @@ In the context of sudo, run the following commands on your Linux server:
 #### Configure Linux to load ip_tables at boot
 
 In the context of sudo, run the following command on your Linux server to create a config file that will load the ip_tables into kernel during boot time: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
+
+### Manually load the tun module
+
+Some Linux distributions will not load the *tun* module by default, which is required by Tunnel.
+
+To validate the present of the *tun* module on the server, run:  `lsmod |grep tun`
+
+1. If *tun* isn't present, run the following to load the module into the kernel immediately, without a restart: `/sbin/modprobe tun`
+
+2. Rerun the validation to confirm the *tun* module is now loaded: `lsmod |grep tun`
+
+> [!IMPORTANT]
+> When updating the Tunnel server, a manually loaded *tun* module might not persist. This can require you to reload the module after the update is completed. After your server update is completed, review the server for the presence of the *tun* module.
+>
+> If not present, use the preceding steps to reload the module, with the additional step to restart the server after the module is loaded.
+
+#### Configure Linux to load tun at boot
+
+In the context of sudo, run the following command on your Linux server to create a config file that will load *tun* into kernel during boot time: `echo tun > /etc/modules-load.d/mstunnel_tun.conf`
+
 
 ## Next steps
 

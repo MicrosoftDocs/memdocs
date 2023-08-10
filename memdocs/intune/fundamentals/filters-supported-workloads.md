@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2023
+ms.date: 06/27/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,6 +87,7 @@ You can use filters for some common app policies on the following platforms. For
 | Microsoft Edge version 77 and newer | N/A |
 | Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
+| iOS/iPadOS web clip | ✔️ |
 | Line-of-business apps | ✔️ |
 | iOS/iPadOS volume purchase program (VPP) app | ✔️ |
 
@@ -110,6 +111,7 @@ You can use filters for some common app policies on the following platforms. For
 | Microsoft Edge version 77 and newer | ✔️ |
 | Microsoft Defender for Endpoint | N/A |
 | Web link | ❌ |
+| Windows web link | ✔️ |
 | Line-of-business apps | ✔️ |
 | Windows app (Win32) | ✔️ |
 | Microsoft Store for Business | ✔️ |
@@ -143,6 +145,7 @@ You can use filters for some common app policies on the following platforms. For
 
   - Android device administrator
   - Android Enterprise
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 10 and later
@@ -218,6 +221,16 @@ You can use filters for some common app policies on the following platforms. For
 | Endpoint detection and response | N/A |
 | Firewall | N/A |
 | Security Baselines | N/A |
+
+### Android (AOSP)
+
+| Profile type | Supported |
+| --- | --- |
+| **Device configuration profile** | &nbsp; |
+| Device restrictions | ✔️ |
+| PKCS certificate | ✔️ |
+| SCEP certificate | ✔️ |
+| Trusted certificate | ✔️ |
 
 ### iOS/iPadOS
 
@@ -345,7 +358,6 @@ The following features on managed devices don't support using filters:
 - Update policies for iOS/iPadOS
 - Feature updates for Windows
 - Enrollment notifications
-- Android AOSP platform workloads
 - Linux platform workloads
 - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers. These devices aren't enrolled in Intune.
 
