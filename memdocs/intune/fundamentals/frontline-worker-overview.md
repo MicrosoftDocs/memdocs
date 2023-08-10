@@ -102,7 +102,7 @@ For example, devices that are used for augmented or virtual reality typically do
 - Don't support GMS.
 - Are used in countries that block GMS.
 
-✔️ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](android-os-project-supported-devices).
+✔️ If your devices meet these criteria, then use Android (AOSP) enrollment. Make sure your devices are supported for Android (AOSP) management with Intune. For a list of supported devices, go to [AOSP supported devices](android-os-project-supported-devices.md).
 
 ❌ If these devices support GMS and don't meet these criteria, then use Android Enterprise enrollment.
 
