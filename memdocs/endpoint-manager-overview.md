@@ -108,9 +108,10 @@ For more information, go to:
 - [Windows Autopilot overview](/autopilot/windows-autopilot)
 - [Enroll Windows devices in Intune](/autopilot/enrollment-autopilot)
 
-## Azure Active Directory (AD)
+# Azure Active Directory (AD)
+## Entra ID
 
-Azure Active Directory (Azure AD) is a cloud-native service that's used by Intune to manage the identities of users, devices, and groups. The Intune policies you create are assigned to these users, devices, and groups. When devices are enrolled in Intune, your users sign in to their devices with their Azure AD accounts (`user@contoso.com`).
+Entra ID formely known as Azure Active Directory (Azure AD) is a cloud-native service that's used by Intune to manage the identities of users, devices, and groups. The Intune policies you create are assigned to these users, devices, and groups. When devices are enrolled in Intune, your users sign in to their devices with their Azure AD accounts (`user@contoso.com`).
 
 **Azure AD Premium**, which may be an extra cost, has [more features](https://azure.microsoft.com/pricing/details/active-directory/) to help protect devices, apps, and data, including dynamic groups, automatic enrollment in Intune, and conditional access.
 
