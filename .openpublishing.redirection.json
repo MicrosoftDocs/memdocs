@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-windows.md",
+      "redirect_url": "/mem/intune/user-help/device-enrollment-overview-windows",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/enroll-your-w81-or-rt81-windows.md",
+      "redirect_url": "/mem/intune/user-help/enroll-windows-10-device",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/user-help/set-or-change-your-passcode-ios.md",
       "redirect_url": "/mem/intune/user-help/password-does-not-meet-it-administrator-requirements",
       "redirect_document_id": false
