@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/25/2023
+ms.date: 08/10/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -46,7 +46,7 @@ then the following process is recommended:
 
 1. If the device isn't going back to the original tenant, [deregister it from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). If it's going back to the same tenant, you don't need to deregister it.
 2. [Replace the motherboard](#replace-the-motherboard).
-3. If the device needs to be re-registered because of a reimage or will be used in a new tenant, [capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
+3. If the device needs to be re-registered because of a reimage or because it will be used in a new tenant, [capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
 4. [Reregister the device](#reregister-the-repaired-device-using-the-new-device-id) with Windows Autopilot.
 5. [Reset the device](#reset-the-device).
 6. [Return the device](#return-the-repaired-device-to-the-customer).
@@ -81,7 +81,7 @@ Because the repair facility doesn't have the user's sign-in credentials, they ha
 
 Technicians replace the motherboard or other hardware on the broken device. A replacement Digital Product Key (DPK) is injected.
 
-Repair and key replacement processes vary between facilities. Sometimes repair facilities receive motherboard spare parts from OEMs that have replacement DPKs already injected, but sometimes not. Sometimes repair facilities receive fully functional BIOS tools from OEMs, but sometimes not. The quality of the data in the BIOS after an motherboard replacement varies. To ensure the repaired device are still Autopilot capable following its repair, check to make sure the new post-repair BIOS can successfully gather and populate the following information at a minimum:
+Repair and key replacement processes vary between facilities. Sometimes repair facilities receive motherboard spare parts from OEMs that have replacement DPKs already injected, but sometimes not. Sometimes repair facilities receive fully functional BIOS tools from OEMs, but sometimes not. The quality of the data in the BIOS after a motherboard replacement varies. To ensure the repaired device are still Autopilot capable following its repair, check to make sure the new post-repair BIOS can successfully gather and populate the following information at a minimum:
 
 - DiskSerialNumber
 - SmbiosSystemSerialNumber
@@ -93,7 +93,7 @@ Repair and key replacement processes vary between facilities. Sometimes repair f
 - ProductKeyID
 - OSType
 
-For simplicity, and because processes vary between repair facilities, we've excluded many of the additional steps often used in an motherboard replacement, such as:
+For simplicity, and because processes vary between repair facilities, we've excluded many of the additional steps often used in a motherboard replacement, such as:
 
 - Verify that the device is still functional
 - Disable or suspend BitLocker
@@ -145,6 +145,10 @@ To use the **WindowsAutopilotInfo** PowerShell script, follow these steps:
     ```powershell
     Register-PSRepository -Default -Verbose
     ```
+
+   > [!NOTE]
+   >
+   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules may require approval of additional permissions in Azure AD when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 The script creates a `.csv` file that contains the device information, including the complete 4K HH. Save this file so that you can access it later. The service facility uses this 4K HH to reregister device as described in the following sections. Be sure to use the `-OutputFile` parameter when saving the file, which ensures that file formatting is correct. Don't attempt to pipe the command output to a file manually.
 
@@ -224,7 +228,7 @@ To use the reset feature in Windows on a device:
 
    4. Under **Ready to reset this PC**, select the **Reset** button.
 
-However, the repair facility most likely doesn't have access to Windows because they lack the user credentials to sign in. In this case they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
+However, the repair facility most likely doesn't have access to Windows because they lack the user credentials to sign in. In this case, they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
 
 ## Return the repaired device to the customer
 
@@ -306,7 +310,7 @@ Other repair scenarios not yet tested and verified include:
 | --- | --- |
 | What to do if you see another customer's welcome page? | If you continue seeing another customer's welcome page on a replacement device or refurbished motherboard, a ticket needs to be raised to Microsoft to fix the device ownership. You can open a ticket through the Microsoft Intune admin center by selecting the Help and Support option outlined [here](/mem/get-support). If you don't have access to Microsoft Intune, you can submit a ticket through Microsoft Store for Business by selecting Manage > Support and selecting Technical Support. You can also submit a ticket through your Microsoft Volume Licensing Center agreement, instructions outlined [here](https://support.microsoft.com/topic/microsoft-software-assurance-support-incident-submission-74a9a148-9a75-ecc8-4420-14191e634d65). Title all tickets **Autopilot Deregistration Request** to streamline requests. |
 | We have a tool that programs product information into the BIOS after the motherboard replacement. Do we still need to submit a CBR report for the device to be Autopilot-capable? | No. Not if the in-house tool writes the minimum necessary information into the BIOS that the Autopilot program looks for to identify the device, as described earlier in this document. |
-| What if only some components are replaced rather than the full motherboard? | It's true that some limited repairs don't prevent the Autopilot algorithm from successfully matching the post-repair device with the pre-repair device. Even so, it's best to ensure 100% success by going through the motherboard replacement steps described in the previous sections even for devices that only needed limited repairs. |
+| What if only some components are replaced rather than the full motherboard? | It's true that some limited repairs don't prevent the Autopilot algorithm from successfully matching the post-repair device with the pre-repair device. However, it's recommended to always go through the motherboard replacement steps described in the previous sections to ensure success. |
 | How does a repair technician gain access to a broken device if they don't have the customer's sign-in credentials? | The technician has to reimage the device and use their own credentials during the repair process. |
 
 ## Related articles
