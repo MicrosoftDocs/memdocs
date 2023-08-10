@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 08/10/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -98,7 +98,7 @@ For example, devices that are used for augmented or virtual reality typically do
 
 **Android (AOSP)** enrollment devices don't offer or include Google Mobile Services (GMS). These devices:
 
-- Can be specialty devices, such as augmented or virtual reality devices, including RealWear and HTC.
+- Can be specialty devices, such as augmented or virtual reality devices, including Realwear and HTC.
 - Don't support GMS.
 - Are used in countries that block GMS.
 
