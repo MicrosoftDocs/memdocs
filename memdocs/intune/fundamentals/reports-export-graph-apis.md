@@ -56,7 +56,7 @@ The below request contains the HTTP method used on the request to Microsoft Grap
     "reportName": "Devices", 
     "filter":"(OwnerType eq '1')", 
     "localizationType": "LocalizedValuesAsAdditionalColumn", 
-    "format": "json"
+    "format": "json",
     "select": [ 
         "DeviceName", 
         "managementAgent", 
