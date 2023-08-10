@@ -34,7 +34,7 @@ ms.collection:
 
 Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must follow the networking requirements listed in this article.
 
-Each customer has its specific requirements based on the workload they use to pre-calculate the network requirements of their Cloud PC environment.  
+Each customer has its specific requirements based on the workload they use to calculate the network requirements of their Cloud PC environment.  
 
 >[!Note]
 >This article only applies if you plan on provisioning Cloud PCs on your own Azure virtual network, as opposed to a Microsoft-hosted network.
@@ -63,7 +63,7 @@ All of the Windows 365 Enterprise **General network requirements** apply to [Win
 To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
-- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this is a US Gov region.
+- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this network is a US Gov region.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
