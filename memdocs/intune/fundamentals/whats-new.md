@@ -72,9 +72,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Role-based access control<!--11298214 -->
 
-#### Introducing a role-based access control permission under Android for work
+#### Introducing a new role-based access control (RBAC) permission under the resource Android for work
 
-Introducing a role based access control **Permission** for creating a custom role in Intune, under the resource **Android for work/Update Enrollment Profile**. **Update Enrollment Profile** allows the admin to manage or change Android Enterprise Device Owner enrollment profiles that are used to enroll devices.
+Introducing a new RBAC **Permission** for creating a custom role in Intune, under the resource **Android for work**. The permission **Update Enrollment Profile** allows the admin to manage or change both AOSP and Android Enterprise Device Owner enrollment profiles that are used to enroll devices.
 
 For more information, go to [Create custom role](../fundamentals/create-custom-role.md)
 
