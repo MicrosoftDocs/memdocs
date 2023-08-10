@@ -45,11 +45,16 @@ If the following conditions are true:
 then the following process is recommended:
 
 1. If the device isn't going back to the original tenant, [deregister it from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). If it's going back to the same tenant, you don't need to deregister it.
-2. [Replace the motherboard](#replace-the-motherboard).
-3. If the device needs to be re-registered because of a reimage or because it will be used in a new tenant, [capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
-4. [Reregister the device](#reregister-the-repaired-device-using-the-new-device-id) with Windows Autopilot.
-5. [Reset the device](#reset-the-device).
-6. [Return the device](#return-the-repaired-device-to-the-customer).
+
+1. [Replace the motherboard](#replace-the-motherboard).
+
+1. If the device needs to be re-registered because of a reimage or because it will be used in a new tenant, [capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
+
+1. [Reregister the device](#reregister-the-repaired-device-using-the-new-device-id) with Windows Autopilot.
+
+1. [Reset the device](#reset-the-device).
+
+1. [Return the device](#return-the-repaired-device-to-the-customer).
 
 Each of these steps is described in the following sections.
 
@@ -106,15 +111,15 @@ Repair technicians must sign in to the repaired device to capture the new device
 
 1. The repair technician creates a [WinPE bootable USB drive](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#create-a-bootable-windows-pe-winpe-partition).
 
-2. The repair technician boots the device to WinPE.
+1. The repair technician boots the device to WinPE.
 
-3. The repair technician [applies a new Windows image to the device](/windows-hardware/manufacture/desktop/work-with-windows-images).
+1. The repair technician [applies a new Windows image to the device](/windows-hardware/manufacture/desktop/work-with-windows-images).
 
     Ideally, the same Windows version that was originally on the device should be reimaged onto the device. Some coordination is required between the repair facility and customer to capture this information at the time the device arrives for repair. Such coordination might include the customer sending the repair facility a customized image (.ppk file) via a USB stick, for example.
 
-4. The repair technician boots the device into the new Windows image.
+1. The repair technician boots the device into the new Windows image.
 
-5. Once on the desktop, the repair technician captures the new device ID (4K HH) off the device using either the OA3 Tool or the PowerShell script.
+1. Once on the desktop, the repair technician captures the new device ID (4K HH) off the device using either the OA3 Tool or the PowerShell script.
 
 Those repair facilities with access to the OA3 Tool (which is part of the ADK) can use the tool to capture the 4K Hardware Hash (4K HH).
 
@@ -128,7 +133,7 @@ To use the **WindowsAutopilotInfo** PowerShell script, follow these steps:
 
 1. Install the script from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) or from the command line.
 
-2. Navigate to the script directory and run it on the device when the device is either in Full OS or Audit Mode. See the following example.
+1. Navigate to the script directory and run it on the device when the device is either in Full OS or Audit Mode. See the following example.
 
    ```powershell
    md c:\HWID
@@ -170,16 +175,20 @@ Both ways of reregistering a device are shown in the following sections.
 To reregister an Autopilot device from Intune, an IT Admin would:
 
 1. Sign in to Intune.
-2. Navigate to **Device enrollment** > **Windows enrollment** > **Devices** > **Import**.
-3. Select the **Import** button to upload a csv file containing the device ID of the device to be reregistered. The device ID was the 4K HH captured by the PowerShell script or OA3 tool described in the section [Capture a new Autopilot device ID (4K HH) from the device](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
+
+1. Navigate to **Device enrollment** > **Windows enrollment** > **Devices** > **Import**.
+
+1. Select the **Import** button to upload a csv file containing the device ID of the device to be reregistered. The device ID was the 4K HH captured by the PowerShell script or OA3 tool described in the section [Capture a new Autopilot device ID (4K HH) from the device](#capture-a-new-autopilot-device-id-4k-hh-from-the-device).
 
 ### Reregister from the Microsoft Partner Center (MPC)
 
 To reregister an Autopilot device from the Microsoft Partner Center MPC, an OEM or CSP would:
 
 1. Sign in to the Microsoft Partner Center (MPC).
-2. Navigate to the **Customer** > **Devices** page.
-3. Select **Add devices** to upload the csv file.
+
+1. Navigate to the **Customer** > **Devices** page.
+
+1. Select **Add devices** to upload the csv file.
 
 ![Screenshot of Add devices button](images/device2.png)<br>
 ![Screenshot of Add devices page](images/device3.png)
@@ -200,33 +209,33 @@ To use the reset feature in Windows on a device:
 
 1. Go to **Settings** > **Update & Security** > **Recovery**.
 
-2. Select **Get started**.
+1. Select **Get started**.
 
-3. In the **Reset this PC** window:
+1. In the **Reset this PC** window:
 
    1. Under **Choose an option**, select **Remove everything**.
 
-   2. Under **How would you like to reinstall Windows?**, select either option.
+   1. Under **How would you like to reinstall Windows?**, select either option.
 
-   3. Under **Additional settings**, select the **Next** button.
+   1. Under **Additional settings**, select the **Next** button.
 
-   4. Under **Ready to reset this PC**, select the **Reset** button.
+   1. Under **Ready to reset this PC**, select the **Reset** button.
 
 **Windows 11**:
 
 1. Go to **Settings** > **System** > **Recovery**.
 
-2. Under **Recovery options**, select the **Reset PC** button next to **Reset this PC**.
+1. Under **Recovery options**, select the **Reset PC** button next to **Reset this PC**.
 
-3. In the **Reset this PC** window:
+1. In the **Reset this PC** window:
 
    1. Under **Choose an option**, select **Remove everything**.
 
-   2. Under **How would you like to reinstall Windows?**, select either option.
+   1. Under **How would you like to reinstall Windows?**, select either option.
 
-   3. Under **Additional settings**, select the **Next** button.
+   1. Under **Additional settings**, select the **Next** button.
 
-   4. Under **Ready to reset this PC**, select the **Reset** button.
+   1. Under **Ready to reset this PC**, select the **Reset** button.
 
 However, the repair facility most likely doesn't have access to Windows because they lack the user credentials to sign in. In this case, they need to use other means to reimage the device, such as the [Deployment Image Servicing and Management tool](/windows-hardware/manufacture/desktop/oem-deployment-of-windows-10-for-desktop-editions#use-a-deployment-script-to-apply-your-image).
 
@@ -236,7 +245,7 @@ The repaired device can now be returned to the customer. The device will be auto
 
 > [!IMPORTANT]
 >
-> If the repair facility did **not** reimage the device, they could be sending it back in a potentially broken state. For example, there's no way to log into the device because it's been dissociated from the only known user account.
+> If the repair facility **didn't** reimage the device, they could be sending it back in a potentially broken state. For example, there's no way to log into the device because it's been dissociated from the only known user account.
 >
 > A device can be **registered** for Autopilot before being powered-on. However, the device isn't actually **deployed** to Autopilot until it goes through OOBE. Therefore, resetting the device back to a pre-OOBE state is a required step.
 
