@@ -183,6 +183,7 @@ Managed Windows devices using the Microsoft Store – either to acquire, install
 - storeedgefd.dsx.mp.microsoft.com
 
 **Windows Update Agent:**
+
 For details, see the following resources:
 - [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
