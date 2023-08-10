@@ -176,14 +176,11 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 
 Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – will need access to these endpoints.
 
-**Windows Package Manager:**
-- storeedgefd.dsx.mp.microsoft.com
-
 **Microsoft Store API (AppInstallManager):**
 - displaycatalog.md.mp.microsoft.com
 - purchase.md.mp.microsoft.com
-- displaycatalog.md.mp.microsoft.com
 - licensing.mp.microsoft.com
+- storeedgefd.dsx.mp.microsoft.com
 
 **Windows Update Agent:**
 For details, see the following resources:
