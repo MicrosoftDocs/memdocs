@@ -292,8 +292,6 @@ By selecting the **More (…)** menu next to a deployment, or by selecting the d
 
 During public preview, you may need to disconnect and reconnect the Zebra connector. The following error message appears on the Android FOTA deployments page: "Something went wrong while communicating with Zebra. Try again later, or if this issue persists try disconnecting and reconnecting the Zebra connector in Tenant administration".
 
-We're aware of an issue where you may not be able to disconnect the Zebra connector from Tenant administration. To disconnect and reconnect, use the following steps:
-
 1. Go to Tenant admin > connectors and tokens > Firmware over-the-air.
 2. Select **Disconnect** and confirm the disconnection. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
 3. Return to the Intune admin center and reconnect the Zebra connector.
