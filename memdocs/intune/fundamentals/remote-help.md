@@ -122,7 +122,7 @@ Microsoft doesn't store any data about either the sharer or the helper for longe
 
 To configure your tenant to support Remote Help, review and complete the following tasks. These tasks are important to configure for all Remote Help platforms that are supported.
 
-### Task 1 – Enable Remote Help
+### Task 1: Enable Remote Help
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote Help**.
 
@@ -137,7 +137,7 @@ To configure your tenant to support Remote Help, review and complete the followi
 > When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours).
 > When you try to create a Remote Help session you may continue to see messages indicating that Remote Help isn't enabled for the tenant even if you enabled Remote Help in the tenant after activation.
 
-### Task 2 – Configure permissions for Remote Help
+### Task 2:  Configure permissions for Remote Help
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
@@ -147,18 +147,18 @@ The following Intune RBAC permissions manage the use of the Remote Help app. Set
 
 - Category: **Remote Help app**
 - Permissions:
-  - **Elevation** – Yes/No
-  - **View screen** – Yes/No
-  - **Take full control** – Yes/No
-  - **Unattended control** – Yes/No
+  - **Elevation** : Yes/No
+  - **View screen** : Yes/No
+  - **Take full control** : Yes/No
+  - **Unattended control** : Yes/No
 
 - Category: **Remote tasks**
 - Permissions:
-  - **Offer remote assistance** – Yes/No  
+  - **Offer remote assistance** : Yes/No  
   
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
-### Task 3 – Assign user to roles
+### Task 3 : Assign user to roles
 
 After creating the custom roles that you'll use to provide different users with Remote Help permissions, assign users to those roles.
 

@@ -35,332 +35,221 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device. During the session, the support staff can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
+## Overview
 
-In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions.
+Remote Help is an add-on application that works with Intune and enables your support staff to remotely connect to a user's device. Remote Help is available on multiple platforms including Android and is the focus of this article.
 
-Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
+During the session, you can view the device's display via screen sharing and if permitted by the device user, take full control to directly make configurations or take actions on the device. Remote Help for Android also supports unattended control allowing you to take full control of the device without needing user interaction on the device. This is particularly helpful in cases like digital signage or for devices that need to be accessed during maintenance windows when no operators are on site.
 
-The Remote Help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren't enrolled with Intune. The app can also be deployed through Intune to your managed devices.
+In this article, we'll refer to the users who provide help as helpers, and devices that receive help as sharers as they share their session with the helper.
+
+> [!IMPORTANT]
+>
+> During the public preview for Remote Help on Android, you will still require the licenses for Remote Help to use Remote Help on Android. Additional permission setup for Zebra devices.
+
+## Supported devices
+
+- Samsung or Zebra Devices
+- Devices enrolled with Android Enterprise Dedicated
+
+- Zebra devices running MX version 8.3 or higher
+
+  - On Zebra devices, unattended control is only supported on MX version 9.3 and higher
 
 ## Remote Help capabilities and requirements
 
-The Remote Help app supports the following capabilities on Windows:
+The Remote Help app supports the following capabilities on Android:
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help)
-
-- **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
-
-  - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. This allows a helper to learn more about why the device isn't compliant.
-
-  - If the user's device is not enrolled, the Helper will see a prompt that the user's device is unenrolled.
-
-- **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer's device that requires administrative permissions.
-
-- **Enhanced chat** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and additional languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).
+Need to add
 
 ## Prerequisites
 
-- General prerequisites for Remote Help. See [Prerequisites for Remote Help](remote-help.md#prerequisites)
-- Setup the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
+For general prerequisites go to [Prerequisites for Remote Help](remote-help.md#prerequisites)
 
-### Network considerations
+- Set up Managed Google Play for your tenant
 
-Remote Help communicates over port 443 (https) and connects to the Remote Assistance Service at `https://remoteassistance.support.services.microsoft.com` by using the Remote Desktop Protocol (RDP). The traffic is encrypted with TLS 1.2.
+- Install the Intune app on devices with a version higher than 5.0.5541.0
 
-Both the helper and sharer must be able to reach these endpoints over port 443:
+- Devices must NOT have device configuration policy set to block Screen capture
 
-| Domain/Name                       | Description                                           |
-|-----------------------------------|-------------------------------------------------------|
-|\*.aria.microsoft.com             | Accessible Rich Internet Applications (ARIA) service for providing accessible experiences to users|
-|\*.events.data.microsoft.com      | Microsoft Telemetry Service |
-|\*.monitor.azure.com              | Required for telemetry and remote service initialization|
-|\*.support.services.microsoft.com | Primary endpoint used for the Remote Help application|
-|\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
-|\*.aadcdn.msauth.net              | Required for logging in to the application Microsoft Azure Active Directory|
-|\*.aadcdn.msftauth.net            | Required for logging in to the application Microsoft Azure Active Directory|
-|\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
-|\*.graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
-|\*.login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
-|\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
-|[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
-|\*.alcdn.msauth.net|Required to log in to the application Microsoft Azure Authentication Library|
-|\*.wcpstatic.microsoft.com||
+- Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)  
 
-## Remote Help modes available for Windows
+- The helper must be licensed to use the Remote Help add-on. For more details on licensing, go to [Use Intune Suite add-on capabilities - Microsoft Intune](../fundamentals/intune-add-ons.md)
 
-Remote Help offers three different session modes for Windows:
+- The helper must have appropriate RBAC permissions to use Remote Help on Android:
 
-- Request screen sharing: Request view of the remote screen. To minimize impact on end user privacy, this option is recommended unless full control is necessary.
+  - Category: Remote Help app
 
-- Request full control: Request full control of the remote device.
+  - Permissions:
 
-- Elevation: Allows helpers to enter UAC credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
+    - Take full control: Yes (required for control)
 
-## Install and update Remote Help
+    - View screen: Yes (required for screen share)
 
-Remote Help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. By default, Remote Help opts users into automatic updates and updates itself when an update is available.
+    - Unattended control: Yes (required for unattended control)
 
-For users that opted out of automatic updates, when an update to Remote Help is required, users are prompted to install that version of Remote Help when the app opens. You can use the same process to download and install Remote Help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+    - If the user does not have the correct RBAC permissions for a particular mode, the corresponding options are disabled when attempting to start a Remote Help session.
 
-- Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
-- Individual users who have permissions to install apps on their devices can also download and install Remote Help.
+## Remote Help modes available for Android
+
+Remote Help offers three different session modes for Android:
+
+- **Request screen sharing**: Request view of the remote screen. To minimize impact on end user privacy, this option is recommended unless full control is necessary.
+
+- **Request full control**: Request full control of the remote device.
+
+- **Initiate unattended control**: Take full control of the device without the presence of end user.
+
+When an Unattended session is initiated, the sharer (if present) is presented with an option to decline the session. The session will only start after 30 seconds have elapsed and the session has not been declined. The sharer (if present) can still end the session at any time.
+
+## Setting up Remote Help for Android
+
+To set up Remote Help for Android, you need to complete the following steps:
+
+1. Deploy the Remote Help app.
+
+2. Grant permissions.  
+
+- Configure camera and microphone permissions.
+
+- Configure permission setup for Zebra devices.
+
+- Configure permission setup for Samsung devices.
+
+### Deploy Remote Help app
+
+1. Using Managed Google Play, add the [Remote Help app from Microsoft](https://play.google.com/store/apps/details?id=com.microsoft.intune.remotehelp).
+
+2. On devices that you want to use Remote Help, assign the app as **Required**.  This setting will allow automatic installation of the app on those devices.
+
+### Grant permissions
+
+To protect user privacy on the device, both the Android OS as well as device OEMs require certain permissions to be granted to the Remote Help app.
+
+#### Camera and microphone
+
+The Remote Help app requires Camera and Microphone permissions.
 
 > [!NOTE]
->
-> - In May 2022, existing users of Remote Help will see a recommended upgrade screen when they open the Remote Help app. Users will be able to continue using Remote Help without upgrading.
-> - On May 23, 2022, existing users of Remote Help will see a mandatory upgrade screen when they open the Remote Help app. They will not be able to proceed until they upgrade to the latest version of Remote Help.
-> - Remote Help will now require Microsoft Edge WebView2 Runtime. During the Remote Help installation process, if Microsoft Edge WebView2 Runtime is not installed on the device, then Remote Help installation will install it. When uninstalling Remote Help, Microsoft Edge WebView2 Runtime will not be uninstalled.
+> Remote Help does not store camera/microphone input. These permissions are only used to initiate a remote help session between the device and the Intune service.  
 
-### Download Remote Help
+You can auto-grant them through app configuration policy:
 
-Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
+1. Go to **Apps** > **App Configuration Policies** > **Add** a new policy for **Managed devices**.
 
-The most recent version of Remote Help is **5.0.1045.0**
+2. Create the policy for **Android Enterprise** with type **Fully managed, Dedicated, and Corporate-Owned Work Profile Only**. Target the policy to the **Remote Help** app that you approved earlier.
 
-### Deploy Remote Help as a Win32 app
+3. Under **Permissions**, add **RECORD_AUDIO** and **CAMERA** permissions. Then, set the permission state to **Auto grant**.
 
-To deploy Remote Help with Intune, you can add the app as a Windows Win32 app, and define a detection rule to identify devices that don’t have the most current version of Remote Help installed.  Before you can add Remote Help as a Win32 app, you must repackage *remotehelpinstaller.exe* as a *.intunewin* file, which is a Win32 app file you can deploy with Intune. For information on how to repackage a file as a Win32 app, see [Prepare the Win32 app content for upload](../apps/apps-win32-prepare.md).
+4. Assign the profile to the devices on which you want to use Remote Help.
 
-After you repackage Remote Help as a *.intunewin* file, use the procedures in [Add a Win32 app](../apps/apps-win32-add.md) with the following details to upload and deploy Remote Help. In the following, the repackaged remotehelpinstaller.exe file is named *remotehelp.intunewin*.
+#### Additional permission setup for Zebra devices
 
-1. On the App information page, select **Select app package file**, and locate the *remotehelp.intunewin* file you’ve previously prepared, and then select **OK**.
+On Zebra devices, permissions are granted through Zebra OEMConfig profiles.  
 
-   Add a *Publisher* and then select **Next**. The other details on the App Information page are optional.
+For instructions on how to set up OEMConfig, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
-2. On the Program page, configure the following options:
+##### Instructions for Zebra OEMConfig powered by MX
 
-   - For *Install command line*, specify **remotehelpinstaller.exe /quiet acceptTerms=1**
-   - For *Uninstall command line*, specify **remotehelpinstaller.exe /uninstall /quiet acceptTerms=1**
+Need to add
 
-    To opt out of automatic updates, specify enableAutoUpdates=0 as part of the install command **remotehelpinstaller.exe /quiet acceptTerms=1 enableAutoUpdates=0**
+##### Instructions for Legacy Zebra OEMConfig
 
-   > [!IMPORTANT]
-   > The command line options *acceptTerms* and *enableAutoUpdates* are always case sensitive.
+When using Legacy Zebra OEMConfig, OEMConfig profiles are applied as one-off actions, not persistent policy states. Make sure to deploy the OEMConfig profile after the Remote Help app is installed on the device. Also, if you uninstall and reinstall the Remote Help app on the device, you will need to re-apply these OEMConfig settings after the app is reinstalled. You can do this by creating a new OEMConfig profile and assigning it to the device, or by editing the previously created OEMConfig profile.
+Use OEMConfig to deploy the following settings on devices that you want to use Remote Help:
 
-   You can leave the rest of the options at their default values and select **Next** to continue.
+1. Under Permission Access Configuration, configure the following:
 
-3. On the Requirements page, configure the following options to meet your environment, and then select **Next**:
+> [!NOTE]
+> The OEMConfig setting requires version MX 10.4 and higher on the device. For devices running a lower MX version, the display overlay permission must be manually granted to the Remote Help app. Contact Zebra for specific steps on your device or refer to the setup instructions for this permission on Samsung devices (insert link).
 
-   - *Operating system architecture*
-   - *Minimum operating system*
+  | Name                      | Description                                           |
+  |-----------------------------------|-----------------------------------------------|
+  | Permission Access Action | Grant |
+  | Grant Permission Access Action | System Alert Window |
+  | Grant Application Package | com.microsoft.intune.remotehelp |
+  | Grant Application Signature | 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|
 
-4. On the Detection rules page, for *Rules format*, select **Manually configure detection rules**, and then select **Add** to open the *Detection rule* pane. Configure the following options:
+2. In a separate transaction step, under Service Access Configuration, create the following:
+  
+  | Name                      | Description                                           |
+  |-----------------------------------|-----------------------------------------------|
+  | Service Binding Action | Allow |
+  | Allow Service Identifier | com.zebra.eventinjectionservice  |
+  | Service Caller Action | Allow |
+  | Allow Service Identifier | com.zebra.eventinjectionservice |
+  | Allow Caller Package | com.microsoft.intune.remotehelp |
+  | Allow Caller Signature | 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|
 
-   - For *Rule type*, select **File**
-   - For *Path*, specify **C:\Program Files\Remote Help**
-   - For *File or folder*, specify **RemoteHelp.exe**
-   - For *Detection method*, select **String (version)**
-   - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the [version of Remote Help](#download-remote-help) you are deploying. For example, **10.0.22467.1000**
-   - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
+3. In another Transaction Step, under Service Access Configuration, configure the following:  
 
-5. Proceed to the Assignments page, and then select an applicable device group or device groups that should install the Remote Help app. Remote Help is applicable when targeting group(s) of devices and not for User groups.
+> [!NOTE]
+> This is only available on Zebra devices running MX 9.3 or later.
+  
+  | Name                      | Description                                           |
+  |-----------------------------------|-----------------------------------------------|
+  | Service Binding Action | Allow |
+  | Allow Service Identifier | com.zebra.remotedisplayservice |
+  | Service Caller Action | Allow |
+  | Allow Service Identifier | com.zebra.remotedisplayservice |
+  | Allow Caller Package | com.microsoft.intune.remotehelp |
+  | Allow Caller Signature | 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|
 
-6. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
+#### Additional permission setup for Samsung devices
 
-## How to use Remote Help
+In this section:
 
-The use of Remote Help depends on whether you're requesting help or providing help.
+- Display overlay permission
+- Knox ALMS Agent consent
 
-### Request help
-
-To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
-
-As a sharer, when you've requested help and both you and the helper are ready to start:
-
-1. Start the Remote Help app on the device and sign in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
-
-2. After signing into the app, get the security code from the individual assisting you and enter that code below *Get Help*, and then select **Submit**.
-
-3. After submitting the security code from the helper, the helper will see information about you including your full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
-
-   At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*.
-
-4. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist in resolving any issues on the device.
-
-   During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
-
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. When a helper performs elevated actions on a user's device and the sharer ends the session, if the helper continues, then a warning dialog box appears for the helper that if they continue they will be logged off.
-
-### Provide help
-
-As a helper, after receiving a request from a user who wants assistance by using the Remote Help app:
-
-1. Start the Remote Help app on your device. You can start the app from within the Microsoft Intune admin center:
-
-   1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
-
-   2. From the remote actions bar across the top of the device view, select **New Remote Help session**. This action opens the Remote Help app.
-
-   Alternately, or for devices not enrolled in Intune, locate the Remote Help app on your device and manually start it. After Remote Helps opens, you'll need to sign in to authenticate to your organization.
-
-2. When Remote Help opens you must sign in to authenticate to your organization. After signing into the app, under *Give help* select **Get a security code**. Remote Help generates a security code that you'll share with the person who has requested assistance. They'll enter this code in their instance of Remote Help to establish a connection to your Remote Help instance.
-
-3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
-
-   At this time, you can request a session with full control of the sharer's device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*.
-
-4. After establishing that the session will use a shared display or full control, Remote Help will display a **Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
-
-   During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
-
-5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. When a helper performs elevated actions on a user's device and the sharer ends the session, if the helper continues, then a warning dialog box appears for the helper that if they continue they will be logged off.
+##### Display overlay permission
 
 > [!IMPORTANT]
+> If the device is running in kiosk mode, the Settings app (which is where the permission is granted) needs to be designated as a system app so that it can launch. See [Granting overlay permissions to Managed Home Screen for Android Enterprise dedicated devices](https://techcommunity.microsoft.com/t5/intune-customer-success/granting-overlay-permissions-to-managed-home-screen-for-android/ba-p/3247041) for detailed instructions.
 
-> During a Remote Help session, when a helper has the Elevation permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off. If the helper ends the session, the sharer will not be logged off.
+The Remote Help app needs the **Display over other apps** or **Appear on top** permission to display the Remote Help session UI. To grant this permission, complete the following steps:
 
-## Log files
+1. After installing the Remote Help app, launch it.  
 
-Remote Help logs data during installation and during Remote Help sessions, which can be of use when investigating issues with the app.
+2. If the permission isn't already granted, the app displays a prompt that will launch Settings to grant the permission.  
 
-**Installation of Remote Help** - When Remote Help installs or uninstalls, the following two logs are created in the device users' Temp folder, for example, `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created.
+3. Tap **Grant** on the prompt, scroll down to **Appear on top** and turn the setting **On**. (The specific UI may differ depending on your device.)
 
-- Remote_help_*_QuickAssist_Win10_x64.msi.log
-- Remote_help_*.log
+##### Knox ALMS Agent consent
 
-**Operational logs** - During use of Remote Help, operational details are logged in the Windows Event Viewer:
+On some devices, the user also needs to agree to Samsung's KLMS Agent terms and conditions before the app can work.
 
-- Event Viewer > Application and Services > Microsoft > Windows > RemoteHelp
+1. After installing the Remote Help app, launch it. The prompt is automatically displayed when the app is launched.
 
-## Installation details
+2. Agree to the terms and conditions and tap **Confirm**.  
 
-Automatic firewall rule creation from the Remote Help installer has been removed. However, if needed, System administrators can create firewall rules.
+> [!NOTE]
 
-Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Defender Firewall. In situations where this is necessary, these are the Remote Help executables that should be allowed through the firewall:
+> - On Knox 2.8-3.7 (inclusive) this consent is revoked if the Remote Help app is uninstalled.
 
-- C:\Program Files\Remote help\RemoteHelp.exe
-- C:\Program Files\Remote help\RHService.exe
-- C:\Program Files\Remote help\RemoteHelpRDP.exe
+> - In some cases, if the user has already agreed to KLMS license terms earlier (they were requested by another app), then the prompt may not be displayed.  
 
-## Setup Conditional Access for Remote Help
+## Using Remote Help for Android
 
-This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
+1. In the admin console, navigate to the device you would like to remotely assist.
 
-1. Open PowerShell in admin mode.
-    - It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
-2. Within PowerShell enter the following commands:
+2. On the device actions toolbar, select New remote assistance session then select the session mode.
 
-    - Install-Module -Name AzureADPreview
-    - Connect-AzureAD
-       - Enter in the appropriate credentials for your Azure admin account
-    - New-AzureADServicePrincipal -AppId 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
-       - The ID corresponds to the app ID for Remote Assistance Service
-       - The display name is **Remote Assistance Service**, which is the backend service for Remote Help  
+3. On the device, the user will see a prompt displaying a request to grant screen share or control of the device.  
 
-## Languages Supported
+  a. If starting an attended screen sharing or full control session, the user must select Accept to allow the session to begin. If the user doesn't accept within 5 minutes, the session times out.  
 
-Remote Help is supported in the following languages:
+  b. If starting an unattended control session, the session will begin automatically after 30 seconds.
 
-- Arabic
-- Bulgarian
-- Chinese (Simplified)
-- Chinese (Traditional)
-- Croatian
-- Czech
-- Danish
-- Dutch
-- English
-- Estonian
-- Finnish
-- French
-- German
-- Greek
-- Hebrew
-- Hungarian
-- Italian
-- Japanese
-- Korean
-- Latvian
-- Lithuanian
-- Norwegian
-- Polish
-- Portuguese
-- Romanian
-- Russian
-- Serbian
-- Slovak
-- Slovenian
-- Spanish
-- Swedish
-- Thai
-- Turkish
-- Ukrainian
+4. During the session, the sharer device will display a floating End Session button. This button can be repositioned on the screen. Tap the button to end the session from the sharer device.
 
-## Known Issues
+5. During a control session, use the buttons on the menu bar, keyboard or mouse input to interact with the sharer device. You can also long-press on the Power button in the menu bar to simulate a long press. This can be useful for, e.g. opening the power options menu on some devices.
 
-- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session won’t be established.
-If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use Remote Help.
+6. At the end of the session, click Leave to end the session from the admin console.
 
-## What's New for Remote Help
+> [!NOTE]
 
-Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
-
-## July 13, 2023
-
-Version: 5.0.1045.0
-This version of Remote Help provides support for ARM64 devices including the Microsoft Surface Pro X and Parallels Desktop on macOS
-
-### June 20, 2023
-
-Version: 4.2.1424.0
-With Remote Help 4.2.1424.0, a new in-session connection mode feature provides users with a way to seamlessly switch between full control and view-only modes during a remote assistance session.
-
-### May 1, 2023
-
-Version: 4.2.1270.0
-
-This version includes a minor update that enables future functionality.
-
-- Added support for slashes within the Remote Help URI (to enable future functionality)
-
-### March 27, 2023
-
-Version: 4.2.1167.0 - Changes in this release:
-
-This release addresses a bug in the Laser Pointer and includes some updates to prepare for future releases.
-
-- Updated product name from **Remote help** to **Remote Help**
-- Updated application description to better localize it for non-US locales
-- Resolved a bug where the app would flash a white screen when launched in dark mode
-- Fixed a bug with the Laser pointer color change
-
-### February 6, 2023
-
-Version: 4.1.1.0 - Changes in this release:
-
-With Remote Help 4.1.1.0 a new Laser Pointer feature has been added to better assist a Helper guide a Sharer during a session. This Laser Pointer can be used by a Helper in both Full Control and View Only sessions. Additional updates include improvements to localization, and error handling.
-
-Various bug fixes included in this release:
-
-- Fixed an issue where in some cases a Helper is unable to interact with elevated applications
-
-- Resolved an accessibility issue where a Helper was unable to use some keyboard navigation hotkeys
-
-- Reliability fixes and improved logging for WebView2 integration
-
-### September 6, 2022
-
-Version: 4.0.1.13 - Changes in this release:
-
-With Remote Help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
-
-For more information, go to [Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
-
-### July 26, 2022
-
-Version: 4.0.1.12 - Changes in this release:
-
-Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
-
-### May 11, 2022
-
-Version 4.0.1.7 - Webview 2 release
-
-### April 5, 2022
-
-Version 4.0.0.0 - GA release
+> On Android 13 devices, the device unlock UI (the PIN entry pad, or the pattern dot grid) cannot be displayed remotely. To unlock the device, you can still use keyboard input to enter a passcode. This is a security measure added by Android, not Remote Help, to protect the end user from a passcode or unlock pattern being captured if the device is unlocked while screen sharing.
 
 ## Next steps
 
