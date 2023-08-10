@@ -47,7 +47,7 @@ The Remote Help app is available from Microsoft to install on both devices enrol
 
 The Remote Help app supports the following capabilities on Windows:
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help)
+- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](#set-up-conditional-access-for-remote-help)
 
 - **Compliance Warnings**: Before a helper can connect to a user's device, the helper can see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
