@@ -172,33 +172,33 @@ To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Micros
 | AMSUB0101<br>AMSUB0102<br>AMSUB0201<br>AMSUB0202<br>AMSUB0301<br>AMSUB0302<br>AMSUB0501<br>AMSUB0502<br>AMSUB0601<br>AMSUB0701 | euprodimedatapri<br>euprodimedatasec<br>euprodimedatahotfix | euprodimedatapri.azureedge.net<br>euprodimedatasec.azureedge.net<br>euprodimedatahotfix.azureedge.net |
 | AMSUC0101<br>AMSUC0201<br>AMSUC0301<br>AMSUC0501<br>AMSUC0601<br>AMSUD0101| approdimedatapri<br>approdimedatasec<br>approdimedatahotifx | approdimedatapri.azureedge.net<br>approdimedatasec.azureedge.net<br>approdimedatahotfix.azureedge.net |
 
-## Microsoft Store proxy configuration
+## Microsoft Store
 
-If your organization restricts devices on your network from connecting to the Internet, there's a set of URLs that need to be available for devices to use Microsoft Store. Some of the Microsoft Store features use Store services. Devices using Microsoft Store – either to acquire, install, or update apps – will need access to these URLs. If you use a proxy server to block traffic, your configuration needs to allow specific URIs.
+Managed Windows devices using the Microsoft Store – either to acquire, install, or update apps – will need access to these endpoints.
 
-**WPM metadata requirement:** 
+**Windows Package Manager:**
 - storeedgefd.dsx.mp.microsoft.com
 
-**AppInstallManager requirements:**
+**Microsoft Store API (AppInstallManager):**
 - displaycatalog.md.mp.microsoft.com
 - purchase.md.mp.microsoft.com
 - displaycatalog.md.mp.microsoft.com
 - licensing.mp.microsoft.com
 
-**WUA requirements (Windows Update section):**
+**Windows Update Agent:**
 For details, see the following resources:
 - [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
 
 **Win32 content download:**
 
-The Win32 content download is unique per application, where the external publisher has a specific source location. You can find the current location using the following command:
+Win32 content download locations and endpoints are unique per application and are provided by the external publisher. You can find the location for each Win32 Store app using the following command on a test system (you can obtain the [PackageId] for a Store app by referencing the **Package Identifier** property of the app after adding it to Microsoft Intune):
 
 `winget show [PackageId]`
 
-The **Installer Url** property will either show the external download location or region-based spark fallback cache based on whether the cache is in-use. Note that the content download location can change between the cache and external location.
+The **Installer Url** property will either show the external download location or the region-based (Microsoft-hosted) fallback cache based on whether the cache is in-use. Note that the content download location can change between the cache and external location.
 
-**SPARK CDNs (for Win32 store app content fallback):**
+**Microsoft-hosted Win32 app fallback cache:**
 - Varies by region, example: *sparkcdneus2.azureedge.net, sparkcdnwus2.azureedge.net*
 
 **Delivery Optimization (optional, required for peering):**
