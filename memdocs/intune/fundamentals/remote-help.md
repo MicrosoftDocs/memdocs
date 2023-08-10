@@ -48,9 +48,11 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 
 ## Remote Help capabilities and requirements
 
-The Remote Help app supports the following capabilities in general across the supported platforms. To know more about specific capabilities and requirements based on the platform that you're using, go to:
-  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
-  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
+The Remote Help app supports the following capabilities in general across the supported platforms.
+> [!NOTE]
+> To know more about specific capabilities and requirements based on the platform that you're using, go to:
+>  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
+>  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 

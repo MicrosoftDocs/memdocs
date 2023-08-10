@@ -102,11 +102,11 @@ To set up Remote Help for Android, you need to complete the following steps:
 
 2. Grant permissions.  
 
-- Configure camera and microphone permissions.
+  - Configure camera and microphone permissions.
 
-- Configure permission setup for Zebra devices.
+  - Configure permission setup for Zebra devices.
 
-- Configure permission setup for Samsung devices.
+  - Configure permission setup for Samsung devices.
 
 ### Deploy Remote Help app
 

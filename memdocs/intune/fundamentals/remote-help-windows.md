@@ -49,11 +49,11 @@ The Remote Help app supports the following capabilities on Windows:
 
 - **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](#set-up-conditional-access-for-remote-help)
 
-- **Compliance Warnings**: Before a helper can connect to a user's device, the Helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings**: Before a helper can connect to a user's device, the helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
   - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in the Microsoft Intune admin center. The link allows a helper to learn more about why the device isn't compliant.
 
-  - If the user's device isn't enrolled, the Helper sees a prompt that the user's device is unenrolled.
+  - If the user's device isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
 
 - **Elevation of privilege** - When needed, a helper with the correct RBAC permissions can interact with the  UAC prompt on the sharer's machine to enter credentials. For example, your Help Desk employees might enter their administrative credentials to complete an action on the sharer's device that requires administrative permissions.
 
@@ -208,7 +208,6 @@ As a helper, after receiving a request from a user who wants assistance by using
 5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. If a helper performs elevated actions on a user's device and the sharer ends the session, a warning message appears for the helper. The message warns that if the helper continues, they'll be logged off.
 
 > [!IMPORTANT]
-
 > During a Remote Help session, when a helper has the Elevation permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off. If the helper ends the session, the sharer will not be logged off.
 
 ## Log files
@@ -330,13 +329,13 @@ This release addresses a bug in the Laser Pointer and includes some updates to p
 
 Version: 4.1.1.0 - Changes in this release:
 
-A new Laser Pointer feature has been added to better assist a Helper guide a Sharer during a session. A helper can use the Laser Pointer in both Full Control and View Only sessions. Other updates include improvements to localization, and error handling.
+A new Laser Pointer feature has been added to better assist a helper guide a sharer during a session. A helper can use the Laser Pointer in both Full Control and View Only sessions. Other updates include improvements to localization, and error handling.
 
 Various bug fixes included in this release:
 
-- Fixed an issue where in some cases a Helper is unable to interact with elevated applications
+- Fixed an issue where in some cases a helper is unable to interact with elevated applications
 
-- Resolved an accessibility issue where a Helper was unable to use some keyboard navigation hotkeys
+- Resolved an accessibility issue where a helper was unable to use some keyboard navigation hotkeys
 
 - Reliability fixes and improved logging for WebView2 integration
 
