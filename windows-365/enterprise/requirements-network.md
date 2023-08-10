@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/10/2023
+ms.date: 08/11/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -95,15 +95,10 @@ You must allow traffic in your Azure network configuration to the following serv
   - cpcsaamssa1prodpreu02.blob.core.windows.net
   - cpcsaamssa1prodprna01.blob.core.windows.net
   - cpcsaamssa1prodprna02.blob.core.windows.net
-  - cpcsacnrysa1prodprna02.blob.core.windows.net
-  - cpcsacnrysa1prodprap01.blob.core.windows.net
-  - cpcsacnrysa1prodprau01.blob.core.windows.net
-  - cpcsacnrysa1prodpreu01.blob.core.windows.net
-  - cpcsacnrysa1prodpreu02.blob.core.windows.net
-  - cpcsacnrysa1prodprna01.blob.core.windows.net
   - cpcstcnryprodprap01.blob.core.windows.net
   - cpcstcnryprodprau01.blob.core.windows.net
   - cpcstcnryprodpreu01.blob.core.windows.net
+  - cpcstcnryprodpreu02.blob.core.windows.net
   - cpcstcnryprodprna01.blob.core.windows.net
   - cpcstcnryprodprna02.blob.core.windows.net
   - cpcstprovprodpreu01.blob.core.windows.net
@@ -118,7 +113,7 @@ You must allow traffic in your Azure network configuration to the following serv
   - preu02.prod.cpcgateway.trafficmanager.net
   - prap01.prod.cpcgateway.trafficmanager.net
   - prau01.prod.cpcgateway.trafficmanager.net
-- Cloud PC communication endpoints\*
+- Cloud PC communication endpoints
   - endpointdiscovery.cmdagent.trafficmanager.net
   - registration.prna01.cmdagent.trafficmanager.net
   - registration.preu01.cmdagent.trafficmanager.net
@@ -133,10 +128,12 @@ You must allow traffic in your Azure network configuration to the following serv
   - hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
 
-\* The CMD Agent is required for the Windows 365 service. It performs core infrastructure functions such as domain join, initial config setup, data monitoring, and remediation.
-
-All endpoints connect over port 443.
+All endpoints connect over port 443 unless otherwise specified.
 
 ### [Windows 365 Government](#tab/gov)
 
@@ -180,7 +177,7 @@ All endpoints connect over port 443 unless specified otherwise.
 #### Azure Active Directory-dependent URLs
 
 | Address:Port | Required for |
-| --- | --- | --- |
+| --- | --- |
 | login.microsoftonline.us | GCCH |
 | login.live.com:443 | GCCH, GCC |
 | login.microsoftonline.com:443 | GCC |
@@ -191,7 +188,8 @@ All endpoints connect over port 443 unless specified otherwise.
 | endpointdiscovery.gcp.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
 | registration.ghp01.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
 | registration.gcp01.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
-|
+| hm-iot-in-gcb-gcb01.azure-devices.us (port 443 and 5671) |GCC |
+| hm-iot-in-ghb-ghb01.azure-devices.us (port 443 and 5671) |GCCH |
 
 #### Azure Virtual Device-dependent URLs
 
