@@ -30,7 +30,7 @@ ms.collection:
 
 # Manage RDP device redirections for Cloud PCs
 
-Remote Desktop Protocol (RDP) can be used to create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. For security reasons, you might want to override the default and block these redirections.
+Remote Desktop Protocol (RDP) can be used to create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. Update these redirections according to your organization's policies.
 
 To understand which redirections are supported based on which platform is used to access the Cloud PC, see [Compare the clients: redirections](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare).
 

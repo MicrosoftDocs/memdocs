@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 08/11/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -61,6 +61,10 @@ Learn what new features are available in Windows 365 Enterprise.
 #### Windows 11 Task view support for Cloud PCs (preview)<!--44976396-->
 
 Windows 365 Switch lets users connect to their Cloud PC by using the Windows 11 Task view. They can also use Task view to switch between their Cloud PC and their local device. For more information, see [Windows 365 Switch](windows-365-switch-overview.md)  and the [Windows 365 Switch end user help article](https://support.microsoft.com/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### LG webOS 23 support on windows365.microsoft.com<!--45794301-->
+
+The Windows 365 web site, windows365.microsoft.com, now supports LG webOS 23.
 
 <!-- ########################## -->
 ## Week of July 31, 2023 (Service release 2307)
