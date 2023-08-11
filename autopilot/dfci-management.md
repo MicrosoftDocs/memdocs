@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/05/2023
+ms.date: 08/11/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -30,7 +30,7 @@ For an overview of DFCI benefits, scenarios, and prerequisites, see [Device Firm
 
 > [!IMPORTANT]
 >
-> All devices which are enabled for DFCI by the OEM and registered for Autopilot via the OEM or a CSP in Partner Center will automatically enroll in DFCI management during Autopilot provisioning. Enrollment in DFCI management will trigger an additional reboot during OOBE.
+> Devices enabled for DFCI by the OEM and registered for Autopilot via the OEM or a CSP in Partner Center automatically enroll in DFCI management during Autopilot provisioning. Enrollment in DFCI management triggers an additional reboot during OOBE.
 
 ## DFCI management lifecycle
 
