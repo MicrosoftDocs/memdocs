@@ -41,20 +41,18 @@ The fastest way to use Windows 365 is to use AADJ, gallery images and the Micros
     - Other Azure Resources, including Cloud PC resources.
 - For more information, see [create an Azure network connection](create-azure-network-connection.md).
 
-For Government Community Cloud (GCC) customers only, the following instructions let Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions.
+For Government Community Cloud (GCC) customers only, the following instructions let Intune running in Azure to manage Cloud PCs running in Azure Government regions.
 
 > [!NOTE]
 > - You don't need an Azure Government subscription to use Windows 365 Government. These instructions are specifically for GCC, and only if Custom Images and/or Azure Network Connections are required.  The instructions on this page don't apply to GCC High.
-> - For government customers that don't have an Azure Government subscription, or require integration with Azure Commercial, using consider Windows 365 Enterprise. Make sure this meets your compliance requirements. Window 365 Enterprise is FedRAMP compliant. See [Windows 365 Service Description](/office365/servicedescriptions/windows-365-service-description/windows-365-service-description)
+> - For government customers that don't have an Azure Government subscription, or require integration with Azure, consider using Windows 365 Enterprise. Make sure this meets your compliance requirements. Windows 365 Enterprise is FedRAMP compliant. See [Windows 365 Service Description](/office365/servicedescriptions/windows-365-service-description/windows-365-service-description)
 
 ## Before you begin
 For both tenant mapping and granting permissions for custom images and/or connecting to your own networks, you need:
 
-- An Azure Commercial subscription.
 - An Azure Government subscription.
 - Credentials of a user that has:
-    - *Owner* role in your Azure Commercial subscription, AND
-    - *Global Administrator* role in your Azure Commercial tenant (ending in onmicrosoft.com).
+    - *Global Administrator* role in your Azure tenant (ending in onmicrosoft.com).
 - Credentials of a user that has:
     - *Owner* role in your Azure Government subscription, AND
     - *Global Administrator* role in your Azure Government tenant (ending in onmicrosoft.us).
@@ -66,13 +64,13 @@ For both tenant mapping and granting permissions for custom images and/or connec
     - Subnet.
 
 >[!NOTE]
-> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the endpoints for admins and end users are in the commercial Azure domain. Users will login to the Cloud PCs using credentials synched with Azure Commercial AAD.
+> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the endpoints for admins and end users are in the commercial Azure domain. Users will login to the Cloud PCs using credentials synched with Azure AD.
 
 ## Azure AD options
 
 If you want to use Azure AD join or hybrid Azure AD join, consider these preparations:
 
-**Azure AD joined Cloud PCs**: If you want to use an Azure AD join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure commercial .com domain must be mapped to the tenant in the Azure Government (.us) domain.
+**Azure AD joined Cloud PCs**: If you want to use an Azure AD join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure .com domain must be mapped to the tenant in the Azure Government (.us) domain.
 
 **Hybrid Azure AD joined Cloud PCs**: If you want to use a hybrid Azure AD join infrastructure, you must configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
 
@@ -93,7 +91,7 @@ Follow these steps to configure tenant mapping using the Windows 365 GCC Setup T
 
 1. Launch the GCCSetupTool.exe. This tool is available at https://aka.ms/gccsetuptool.
 2. On the **Let's get you started** page, select **Next**.
-3. Sign in with your Azure Commercial account. This account must have Global Administrator permissions.
+3. Sign in with your Azure account. This account must have Global Administrator permissions.
 4. Confirm that you want to continue with your commercial account > **Next**.
 5. Sign in with your Azure Government account > **Next** > type your credentials.
 6. Confirm that you want to continue with your government account > **Next**.
