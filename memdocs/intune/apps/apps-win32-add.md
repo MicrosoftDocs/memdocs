@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 08/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -110,6 +110,10 @@ On the **Program** page, configure the app installation and removal commands for
     For example:
     
     `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
+
+- **Installation time required**: The number of minutes the system will wait for install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will fail the app install. Max timeout value is 1440 minutes (1 day).
+
+- **Allow available uninstall**: Select **Yes** to provide the uninstall option for this app for users from the Company Portal. Select **No** to prevent users from uninstalling the app from the Company Portal.
 
 - **Install behavior**: Set the install behavior to either **System** or **User**.
 
