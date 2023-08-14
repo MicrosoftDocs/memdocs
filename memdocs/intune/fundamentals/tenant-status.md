@@ -49,6 +49,9 @@ Tenant details provide at-a-glance information about your tenant. View details l
 
 On this tab, you'll also find basic information about your available licenses and how many are assigned to users. Licenses for devices aren't shown.
 
+> [!IMPORTANT]
+> Note that *Total licensed users* refers to all users which have one license containing an Intune SKU, if the Intune SKU is enable or disable they still count as a licensed user.
+
 ## Connector status
 Connector status is a one-stop location to review the status of all available connectors for Intune.  
 
