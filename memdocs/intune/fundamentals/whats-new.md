@@ -1658,4 +1658,6 @@ Applies to:
 
 For previous months, see the [What's new archive](whats-new-archive.md).
 
+## Notices
 
+- [!INCLUDE [Intune notices](../includes/intune-notices.md)]
