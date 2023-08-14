@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 08/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -173,7 +173,7 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 
 ## Common Store policy settings and their impact on Microsoft Store apps
 
-Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments.
+Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments. For more information on the Microsoft Store experience in Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
 
 - **Disable all apps from the Microsoft Store** policy
 
@@ -181,7 +181,7 @@ Some Store policies may affect app deployments from the Microsoft Store. The fol
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | Not built in; Can use CSP. | Administrative Templates > Windows Components > Store |
+  | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Store |
 
 - **Turn off Automatic Download and Install of updates** policy
 
@@ -189,7 +189,7 @@ Some Store policies may affect app deployments from the Microsoft Store. The fol
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | Not built in; Can use CSP. | Administrative Templates > Windows Components > Store |
+  | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Store |
 
 - **Enable App Installer Microsoft Store Source** policy
 
@@ -197,7 +197,7 @@ Some Store policies may affect app deployments from the Microsoft Store. The fol
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; Can use CSP. | Administrative Templates > Windows Components > Desktop App Installer |
+  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Desktop App Installer |
 
 - **Enable App Installer** policy
 
@@ -205,13 +205,11 @@ Some Store policies may affect app deployments from the Microsoft Store. The fol
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; Can use CSP. | Administrative Templates > Windows Components > Desktop App Installer |
+  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Desktop App Installer |
 
 - **Turn off the Store application** policy
 
-  - Recommended values: **Not configured** or **Disabled**. To prevent end users from blocking or turning off this feature, set the value to **Disabled**.
-
-    To block end users from installing random applications from the Store application, set **Turn off the Store application** to **Enabled**. When **Enabled**, the setting doesn't block the Intune and Windows Package Manager store integration.
+  - To block end users from installing random applications from the Store app and `winget.exe`, set **Turn off the Store application** to **Enabled**. When **Enabled**, the setting doesn't block the Intune and Windows Package Manager store integration. Specifically, this policy doesn't impact the Intune's ability to install Microsoft Store applications.
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
