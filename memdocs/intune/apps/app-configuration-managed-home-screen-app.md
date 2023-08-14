@@ -166,12 +166,12 @@ The following table lists the Managed Home Screen available configuration keys, 
 |     Privacy statement link    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. If you set a link but don't set **Privacy statement title**, the   title will read "Custom privacy statement".    |     ❌          |
 
 > [!NOTE]
-> You can configure Managed Home Screen to use the exact alarm permission for configurations which require action at an exact time. Currently, MHS uses this permission to do the following actions:
+> Managed Home Screen uses the exact alarm permission to do the following actions:
 > - Automatically sign users out after a set time of inactivity on the device
 > - Launch a screen saver after a set period of inactivity
 > - Automatically relaunch MHS after a certain period of time when a user exits kiosk mode
 > 
-> For devices running Android 14 and higher, by default, the exact alarm permission will be denied. To make sure critical user functionality is not impacted, end-users will be prompted to grant exact alarm permission upon first launch of Managed Home Screen.
+> For devices running Android 14 and higher, by default, the exact alarm permission will be denied. To make sure critical user functionality is not impacted, end-users will be prompted to grant exact alarm permission upon first launch of Managed Home Screen. 
 
 ## Enter JSON Data
 
