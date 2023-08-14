@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2022
+ms.date: 08/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,9 +29,9 @@ ms.collection:
 ms.reviewer: shpate
 ---
 
-# Manage Windows Hello for Business on devices at the time devices enroll with Intune 
+# Manage Windows Hello for Business on devices at the time devices enroll with Intune
 
-With Microsoft Intune, you can create a tenant-wide policy that configures use of Windows Hello for Business on Windows 10 or Windows 11 devices at the time those devices enroll with Intune. This policy targets your entire organization and supports the Windows Autopilot out-of-box-experience (OOBE). 
+With Microsoft Intune, you can create a tenant-wide policy that configures use of Windows Hello for Business on Windows 10 or Windows 11 devices at the time those devices enroll with Intune. This policy targets your entire organization and supports the Windows Autopilot out-of-box-experience (OOBE).
 
 For Windows 10/11 devices, use of [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) replaces the use of passwords with strong two-factor authentication on devices. This authentication consists of a user credential that’s tied to a device and uses a biometric or PIN.
 
@@ -62,7 +62,7 @@ The remainder of this article focuses on creating a default Windows Hello for Bu
 END OLD -->
 
 > [!IMPORTANT]
-> Prior to the Anniversary Update, you could set two different PINS that could be used to authenticate to resources:
+> Prior to the Anniversary Update (Windows version 1607), you could set two different PINS that could be used to authenticate to resources:
 >
 > - The **device PIN** could be used to unlock the device and connect to cloud resources.
 > - The **work PIN** was used to access Azure AD resources on user's personal devices (BYOD).
