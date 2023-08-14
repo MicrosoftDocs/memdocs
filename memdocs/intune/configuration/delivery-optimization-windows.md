@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 08/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -25,7 +25,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
-ms.reviewer: kerimh
+ms.reviewer: davguy
 ---
 
 # Delivery Optimization settings in Microsoft Intune
@@ -52,7 +52,7 @@ To learn about Delivery Optimization on Windows 10 and Window 11, see [Delivery 
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile**: Select **Templates** > **Delivery Optimization**.
+   - **Profile**: Select **Templates** > **Delivery optimization**.
 
 4. Select **Create**.
 
@@ -71,7 +71,7 @@ To learn about Delivery Optimization on Windows 10 and Window 11, see [Delivery 
   
    Select **Next** to continue.
 
-9. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
@@ -81,6 +81,8 @@ To learn about Delivery Optimization on Windows 10 and Window 11, see [Delivery 
 
 The next time each device checks in, the policy is applied.
 
+<!-- Removing this section, as Update rings no longer supports the *Delivery Optimization download mode* setting, so this isn't possible  
+>
 ## Remove Delivery Optimization from Windows Update Rings
 
 Delivery Optimization was previously configured as part of Software Update Rings. Beginning in February of 2019, Delivery Optimization settings are configured as part of a Deliver Optimization device configuration profile, which includes additional settings that affect more than Software Update delivery to devices. If you haven't already, remove the Delivery Optimization setting from your Update Rings by setting it to *Not configured*, and then use a Delivery Optimization profile to manage the larger range of available options.
@@ -120,6 +122,7 @@ Delivery Optimization was previously configured as part of Software Update Rings
     2. In the list, select your update ring.
     3. In the settings, set **Delivery Optimization download mode** to **Not configured**.
     4. **OK** > **Save** your changes.
+-->
 
 ## Next steps
 

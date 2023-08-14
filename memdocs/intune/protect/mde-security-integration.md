@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/07/2023
+ms.date: 08/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -77,7 +77,7 @@ Applies to:
 ::: zone-end
 ::: zone pivot="mdssc-preview"
 
-*The information in this article describes behavior for the opt-in public preview. If you use security settings configuration but have not opted in to the public preview, select **Generally Available** at the top of this article to view content that describes the behaviors your tenant supports*
+*The information in this article describes behavior for the opt-in public preview. If you use security settings configuration but haven't opted in to the public preview, select **Generally Available** at the top of this article to view content that describes the behaviors your tenant supports*
 
 When you manage devices through security settings management as part of the public preview:
 
@@ -180,7 +180,7 @@ With [Microsoft Defender for Endpoint for Linux](/microsoft-365/security/defende
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for Linux*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-updates).
 
-*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they are missing the following filepath: `/sys/class/dmi/id/board_vendor`. 
+*Known issue*: With the Defender agent version **101.23052.0009**, Linux devices fail to enroll when they're missing the following filepath: `/sys/class/dmi/id/board_vendor`. 
 
 
 **macOS**:
@@ -193,7 +193,7 @@ With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defende
 
 To confirm the version of the Defender agent, in the Defender portal go to the devices page, and on the devices *Inventories* tab, search for *Defender for macOS*. For guidance on updating the agent version, see [Deploy updates for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-updates).
 
-*Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Azure AD before enrolling with security settings management receive a duplicate Device ID in Azure AD which is a synthetic registration.  When you create an Azure AD group for targeting policy, you must use the synthetic Device ID created by security settings management. In Azure AD the Join Type column for the synthetic Device ID  is blank.
+*Known issue*: With the Defender agent version **101.23052.0004**, macOS devices that are registered in Azure AD before enrolling with security settings management receive a duplicate Device ID in Azure AD, which is a synthetic registration.  When you create an Azure AD group for targeting policy, you must use the synthetic Device ID created by security settings management. In Azure AD, the Join Type column for the synthetic Device ID  is blank.
 
 ::: zone-end
 
@@ -206,7 +206,14 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
 - Windows Server 2022 (with [KB5006745](https://support.microsoft.com/topic/october-26-2021-kb5006745-os-build-20348-320-preview-8ff9319a-19e7-40c7-bbd1-cd70fcca066c))
 
-Security settings management doesn't work on non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
+Security settings management doesn't work on and is not supported with the following:
+
+- Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
+- Domain Controllers
+
+> [!IMPORTANT]
+>
+> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn’t happen in your environment, we recommend making sure your domain controllers are neither tagged “MDE-Management” or managed by MDE.
 
 ### Licensing and subscriptions
 
@@ -288,9 +295,9 @@ To ensure that all devices enrolled in Defender for Endpoint security settings c
 
 With the behavior that is introduced with the public preview in July of 2023, use the following guidance for your Dynamic groups:
 
-- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, WindowsServer, macOS, Linux) to ensure policy continues to be delivered for devices which change management types, for example during MDM enrollment.
+- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, WindowsServer, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
 
-- If required, dynamic groups containing exclusively devices managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices managed by Defender for Endpoint via the security settings management functionality, and devices will only remain in this group while being managed by Defender for Endpoint.
+- If necessary, dynamic groups containing exclusively devices managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices managed by Defender for Endpoint via the security settings management functionality, and devices will only remain in this group while being managed by Defender for Endpoint.
 
 Also, when configuring security settings management, if you intend to manage entire OS platform fleets using Microsoft Defender for Endpoint, by selecting **all devices** instead of **tagged devices** in the Microsoft Defender for Endpoint Enforcement Scope page, understand that any synthetic registrations are counted against Azure AD quotas the same as full registrations.
 
@@ -303,7 +310,7 @@ Microsoft Intune includes several methods and policy types to manage the configu
 
 When you deploy an endpoint security policy that’s supported for both *Defender for Endpoint security settings configuration* and *Microsoft Intune*, a single instance of that policy can be processed by devices supported through security settings management (Microsoft Defender), and by devices that are managed by either Intune or Configuration Manager.
 
-Profiles for the *Windows 10 and later platform* are not supported for devices managed by security settings management.
+Profiles for the *Windows 10 and later platform* aren't supported for devices managed by security settings management.
 
 ::: zone pivot="mdssc-ga"
 
@@ -348,11 +355,13 @@ To support use with Microsoft Defender security settings management, your polici
 |---------|----------|-----------|----------|
 | Antivirus              | Microsoft Defender Antivirus           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
-| Antivirus              | Windows Security Experience            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Antivirus              | Windows Security Experience            | *Note 1*         | ![Supported](./media/mde-security-integration/green-check.png) |
 |Attack Surface Reduction |Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall Rules      | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
+
+***1*** - The *Windows Security Experience* profile is available in the Defender portal but only applies to devices managed by Intune. It isn't supported for devices managed by Microsoft Defender security settings management.
 
 ::: zone-end
 
@@ -437,7 +446,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
    ::: zone-end
    ::: zone pivot="mdssc-preview"
 
-   With behavior introduced with the opt-in public preview, devices that used security management for Microsoft Defender for Endpoint can no longer be identified through the use of the following system labels:
+   With behavior introduced with the opt-in public preview, devices that used security management for Microsoft Defender for Endpoint can no longer be identified by using the following system labels:
 
    - **MDEJoined** - Added to devices that are joined to the directory as part of this scenario.
    - **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
@@ -582,6 +591,10 @@ The following security settings are pending deprecation. The Defender for Endpoi
 ### Use of security settings management on domain controllers
 
 Because an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+
+> [!IMPORTANT]
+>
+> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn’t happen in your environment, we recommend making sure your domain controllers are neither tagged “MDE-Management” or managed by MDE.
 
 ### Server Core installation
 
