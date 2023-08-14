@@ -72,19 +72,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### Use the Turn off the Store application setting to disable end user access to Store apps<!-- 16544362 -->
+#### Use the Turn off the Store application setting to disable end user access to Store apps, and allow managed Intune Store apps<!-- 16544362 -->
 
 In Intune, you can use the new **Store app** type to deploy Store apps to your devices.
 
-Now, you can use **Turn off the Store application** policy to disable end users' direct access to Store apps. When it's disabled, end users can still access and install Store apps from the Windows Company Portal app and through Intune app management.
+Now, you can use the **Turn off the Store application** policy to disable end users' direct access to Store apps. When it's disabled, end users can still access and install Store apps from the Windows Company Portal app and through Intune app management. If you want to allow random store app installs outside of Intune, then don't configure this policy.
 
-In some situations, the previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, it's recommended to use the **Turn off the Store application** policy instead.
+The previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, if your goal is to block random unmanaged Store application installs on client devices, then it's recommended to use the **Turn off the Store application** policy. Don't use the **Only display the private store within the Microsoft Store app** policy.
 
 For more information, go to [Add Microsoft Store Apps to Microsoft Intune](../apps/store-apps-microsoft.md)
 
 Applies to:
 
-- Windows10 and later
+- Windows 10 and later
 
 ## Week of August 7, 2023
 
