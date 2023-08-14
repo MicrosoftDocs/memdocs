@@ -173,7 +173,9 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 
 ## Common Store policy settings and their impact on Microsoft Store apps
 
-Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments. For more information on the Microsoft Store experience in Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
+Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments.
+
+For more information on the Microsoft Store experience in Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
 
 - **Disable all apps from the Microsoft Store** policy
 
