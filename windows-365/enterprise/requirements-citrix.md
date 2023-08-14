@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/24/2023
+ms.date: 08/21/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -59,6 +59,8 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
   - Azure AD Global Admin for required authorizations in Citrix Cloud.
   - Intune Admin for enabling Citrix connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
+
+Windows 365 Frontline doesn't currently supported Citrix HDX Plus.
 
 ## Supported configurations
 
