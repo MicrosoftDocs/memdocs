@@ -117,7 +117,7 @@ items:
       - name: Android Open Source Project Supported Devices
         displayName: software updates, android open source project, supported devices
         href: ./fundamentals/android-os-project-supported-devices.md    
-    - name: Software updates admin checklists
+    - name: Software updates planning guides
       items:
       - name: BYOD and personal devices
         displayName: software updates, android, ios, ipados
@@ -128,6 +128,9 @@ items:
       - name: iOS/iPadOS
         displayName: software updates
         href: ./protect/software-updates-guide-ios-ipados.md
+      - name: macOS
+        displayName: software updates
+        href: ./protect/software-updates-guide-macos.md
     - name: Network configuration
       href: ./fundamentals/network-bandwidth-use.md
     - name: Using Windows 10 VMs with Intune
