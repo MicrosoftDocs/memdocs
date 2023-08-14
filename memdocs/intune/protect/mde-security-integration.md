@@ -206,7 +206,14 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
 - Windows Server 2022 (with [KB5006745](https://support.microsoft.com/topic/october-26-2021-kb5006745-os-build-20348-320-preview-8ff9319a-19e7-40c7-bbd1-cd70fcca066c))
 
-Security settings management doesn't work on non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
+Security settings management doesn't work on and is not supported with the following:
+
+- Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
+- Domain Controllers
+
+> [!IMPORTANT]
+>
+> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn’t happen in your environment, we recommend making sure your domain controllers are neither tagged “MDE-Management” or managed by MDE.
 
 ### Licensing and subscriptions
 
