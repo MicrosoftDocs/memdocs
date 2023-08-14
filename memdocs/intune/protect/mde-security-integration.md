@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 08/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -584,6 +584,10 @@ The following security settings are pending deprecation. The Defender for Endpoi
 ### Use of security settings management on domain controllers
 
 Because an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+
+> [!IMPORTANT]
+>
+> In some cases, Domain Controllers that are run a down level server Operating system (2012 R2 or 2016) can unintentionally be managed by Microsoft Defender for Endpoint. In order to ensure that this doesn’t happen in your environment, we recommend making sure your domain controllers are neither tagged “MDE-Management” or managed by MDE.
 
 ### Server Core installation
 
