@@ -60,7 +60,7 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
   - Intune Admin for enabling Citrix connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
-Windows 365 Frontline doesn't currently support Citrix HDX Plus.
+Citrix HDX Plus doesn't currently support Windows 365 Frontline.
 
 ## Supported configurations
 
