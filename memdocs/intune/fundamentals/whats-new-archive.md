@@ -2517,7 +2517,7 @@ For more information, see [How to enroll to co-management with Autopilot](../../
 
 #### Security Management with Defender for Endpoint is generally available<!-- 13816763 -->
 
-The Microsoft Intune and Microsoft Defender for Endpoint (MDE) team are excited to announce the general availability of Security Management for Defender for Endpoint devices. As part of this general availability, support for Antivirus, Endpoint Detection and Response, as well as Firewall and Firewall rules are now generally available. This general availability applies to Windows Server 2012 R2 and Later, as well as Windows 10 and Windows 11 clients. In the future we will be adding support for additional platforms and profiles in a preview capacity.
+The Microsoft Intune and Microsoft Defender for Endpoint (MDE) team are excited to announce the general availability of Defender for Endpoint security settings management. As part of this general availability, support for Antivirus, Endpoint Detection and Response, as well as Firewall and Firewall rules are now generally available. This general availability applies to Windows Server 2012 R2 and Later, as well as Windows 10 and Windows 11 clients. In the future we will be adding support for additional platforms and profiles in a preview capacity.
 
 For more information, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md).
 
