@@ -254,7 +254,7 @@ To help you find custom catalogs that you can import for third-party software up
 | 11524 | Error | Failed to publish update "ID" due to missing update metadata. | The update may have been synchronized to WSUS outside of Configuration Manager. | Synchronize the update with Configuration Manager before attempting to publish it's content. </br></br> If an external tool was used to publish the update as **Metadata only**, then use the same tool to publish the update content. |
 
 ## Working with third-party updates video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/ai8rLCLtuTI?rel=0]
 
 ## PowerShell
 
