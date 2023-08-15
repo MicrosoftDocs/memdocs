@@ -137,9 +137,9 @@ The next decision is to decide if the devices are shared with many users or assi
 
   With user association:
 
-  - If you're using Android Enterprise, then you can enroll your devices as **fully managed** devices. These devices have one user, and are used exclusively for organization work; not personal use.
+   - If you're using Android Enterprise, then you can enroll your devices as **fully managed** or **Corporate-Owned Personally Enabled devices**. These devices have one user, and are used exclusively for organization work; not personal use.
 
-    For more information on fully managed enrollment, go to [Intune enrollment for Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
+      For more information on fully managed or Corporate-Owned Personally Enabled devices enrollments, go to [Intune enrollment for Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md) & [Intune enrollment for Corporate-Owned Personally Enabled devices](/mem/intune/enrollment/android-corporate-owned-work-profile-enroll).
 
   - If you're using Android (AOSP), then you can enroll your devices as a **user-associated** device. Remember, Android (AOSP) devices don't support Google Mobile Services (GMS). These devices have one user, and are used exclusively for organization work; not personal use.
 
@@ -538,3 +538,5 @@ For more information and to get started, go to:
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md)
 - [Microsoft Intune planning guide](intune-planning-guide.md)
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+
+
