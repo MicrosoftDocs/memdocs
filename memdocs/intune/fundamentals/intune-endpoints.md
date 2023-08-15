@@ -47,9 +47,9 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - The endpoints in this article should be accessible via TCP port 80 and 443 via whatever method you use to allow access. Windows Information Protection uses port 444.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
-> [!NOTE]
-> The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', or 'dm.microsoft.com' endpoints.
->
+  > [!NOTE]
+  > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', or 'dm.microsoft.com' endpoints.
+
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
@@ -216,7 +216,7 @@ If a customer has firewall policies that prevent access to the new Intune MAA se
 
 Ensure there are no firewall rules blocking outbound HTTPS/443 traffic to the endpoints listed in this section based on your Intune tenant's location. To find your tenant location navigate to the Intune admin center > **Tenant administration** > **Tenant status** > **Tenant details**, see Tenant location.
 
-North America based locations
+North America based locations:
 
 - 'https://intunemaape1.eus.attest.azure.net'
 
@@ -230,7 +230,7 @@ North America based locations
 
 - 'https://intunemaape6.ncus.attest.azure.net'
 
-Europe based locations
+Europe based locations:
 
 - 'https://intunemaape7.neu.attest.azure.net'
 
@@ -244,7 +244,7 @@ Europe based locations
 
 - 'https://intunemaape12.weu.attest.azure.net'
 
-Asia pacific locations
+Asia Pacific locations:
 
 - 'https://intunemaape13.jpe.attest.azure.net'
 
@@ -319,8 +319,8 @@ Allow the following hostnames through your firewall to support Defender for Endp
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
-> [!IMPORTANT]
-> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > [!IMPORTANT]
+  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
 ## Microsoft Intune Endpoint Privilege Management
 
@@ -329,8 +329,8 @@ Allow the following hostnames through your firewall to support Endpoint Privileg
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales. 
 
-> [!IMPORTANT]
-> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > [!IMPORTANT]
+  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
 
