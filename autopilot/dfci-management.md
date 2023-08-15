@@ -8,13 +8,12 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/05/2023
+ms.date: 08/11/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
 ms.topic: conceptual
 ---
-
 
 # Device Firmware Configuration Interface (DFCI) Management
 
@@ -28,6 +27,10 @@ With Windows Autopilot Deployment and Intune, you can manage Unified Extensible 
 If a user reinstalls a previous Windows version, installs a separate OS, or formats the hard drive, they can't override DFCI management. This feature can also prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI password security. This layer of security blocks local users from accessing managed settings from the device's UEFI menus.
 
 For an overview of DFCI benefits, scenarios, and prerequisites, see [Device Firmware Configuration Interface (DFCI) Introduction](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Dfci_Feature/).
+
+> [!IMPORTANT]
+>
+> Devices enabled for DFCI by the OEM and registered for Autopilot via the OEM or a CSP in Partner Center automatically enroll in DFCI management during Autopilot provisioning. Enrollment in DFCI management triggers an additional reboot during OOBE.
 
 ## DFCI management lifecycle
 
@@ -84,3 +87,4 @@ Other OEMs are pending.
 
 [Microsoft DFCI Scenarios](https://microsoft.github.io/mu/dyn/mu_feature_dfci/DfciPkg/Docs/Scenarios/DfciScenarios/)<br>
 [Windows Autopilot and Surface devices](/surface/windows-autopilot-and-surface-devices)<br>
+
