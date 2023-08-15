@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/11/2023
+ms.date: 08/14/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -65,6 +65,13 @@ Windows 365 Switch lets users connect to their Cloud PC by using the Windows 11 
 #### LG webOS 23 support on windows365.microsoft.com<!--45794301-->
 
 The Windows 365 web site, windows365.microsoft.com, now supports LG webOS 23.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Security
+
+#### Tamper protection support for Windows 365<!--45780208-->
+
+Windows 365 now supports use of endpoint security Antivirus policy to manage Tamper protection for Windows 365 Cloud PCs. Support for Tamper protection requires devices to onboard to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
 
 <!-- ########################## -->
 ## Week of July 31, 2023 (Service release 2307)
