@@ -45,6 +45,7 @@ The EPM reports are available from the *Reports* tab of the *Endpoint Privilege 
 
 - Elevation report
 - Managed elevations report
+- Elevation report by applications
 
 > [!NOTE]
 > Data is processed once every 24 hours. There may be a delay before seeing data in the elevation usage reports.
