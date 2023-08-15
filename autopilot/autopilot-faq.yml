@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 08/09/2023
+  ms.date: 08/10/2023
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -389,7 +389,7 @@ sections:
           For more information on HoloLens 2, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
       - question: |
-          Does Windows Autopilot work after MBR or image reinstallation?
+          Does Windows Autopilot work after motherboard replacement or image reinstallation?
         answer: |
           Yes. For more information, see [Windows Autopilot motherboard replacement scenario guidance](autopilot-motherboard-replacement.md).
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/07/2023
+ms.date: 08/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -54,7 +54,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 - Client devices must support at least two core processors to successfully install and run Microsoft Store apps.
 - Client device need to be able to support the [Intune Management Extension (IME)](..\apps\intune-management-extension.md) to install Microsoft Store apps.
-- Client device need access to the Microsoft Store and the destination content to install Microsoft Store apps.
+- Client device need access to both the Microsoft Store and the destination content to install Microsoft Store apps. For more information see [Microsoft Store proxy configuration](../fundamentals/intune-endpoints.md#microsoft-store).
 
 ## Add and deploy a Microsoft Store app
 
@@ -167,7 +167,7 @@ The Microsoft Store supports Win32 app types including **.exe** and **.msi** ins
 In addition to user context, you can deploy Universal Windows Platform (UWP) apps from the **Microsoft Store app (new)** in system context. If a provisioned `.appx` app is deployed in system context, the app autoinstalls for each user that logs in. If an individual end user uninstalls the user context app, the app still shows as installed because it's still provisioned. In addition, the app must not already be installed for any users on the device. Our general recommendation is to not mix install contexts when deploying apps.
 
 > [!NOTE]
-> Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". However, the app will still install correctly on the device.
+> Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". However, the app will still install correctly on the device.
 >
 > UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store policy is set to block auto-update.
 
@@ -175,50 +175,50 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 
 Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments.
 
-- **Store\Disable all apps from the Microsoft Store** policy
+For more information on the Microsoft Store experience in Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
 
-    | CSP | Intune | On-premises GPO |
-    | --- | --- | --- |
-    | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | Not built in; Can use CSP. | - Group policy<br/>- ADMX |
+- **Disable all apps from the Microsoft Store** policy
 
   - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
 
-- **Store\Turn off Automatic Download and Install of updates** policy
+  | CSP | Intune | On-premises GPO |
+  | --- | --- | --- |
+  | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Store |
 
-    | CSP | Intune | On-premises GPO |
-    | --- | --- | --- |
-    | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | Not built in; Can use CSP. | - Group policy<br/>- ADMX |
+- **Turn off Automatic Download and Install of updates** policy
 
   - Recommended values: **Not configured** or **Disabled**. To prevent end users from blocking or turning off this feature, set the value to **Disabled**.
 
-- **Desktop App Installer\Enable App Installer Microsoft Store Source** policy
-
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; Can use CSP. | - ADMX |
+  | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Store |
+
+- **Enable App Installer Microsoft Store Source** policy
 
   - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
 
-- **Desktop App Installer\Enable App Installer** policy
-
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; Can use CSP. | - ADMX |
+  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Desktop App Installer |
+
+- **Enable App Installer** policy
 
   - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
 
-- **Store\Turn off the Store application** policy
+  | CSP | Intune | On-premises GPO |
+  | --- | --- | --- |
+  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Desktop App Installer |
+
+- **Turn off the Store application** policy
+
+  - To block end users from installing random applications from the Store app and `winget.exe`, set **Turn off the Store application** to **Enabled**. When **Enabled**, the setting doesn't block the Intune and Windows Package Manager store integration. Specifically, this policy doesn't impact the Intune's ability to install Microsoft Store applications.
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | - ADMX |
+  | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
 
-  - Recommended values: **Not configured** or **Disabled**. To prevent end users from blocking or turning off this feature, set the value to **Disabled**.
-
-    To block end users from installing random applications from the Store application, set **Turn off the Store application** to **Enabled**. When **Enabled**, the setting doesn't block the Intune and Windows Package Manager store integration.
-
-    > [!NOTE]
-    > In some situations, the previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, it's recommended to use the **Turn off the Store application** instead.
+  > [!NOTE]
+  > In some situations, the previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, it's recommended to use the **Turn off the Store application** policy instead.
 
 ## Unsupported functionality for Microsoft Store apps
 
