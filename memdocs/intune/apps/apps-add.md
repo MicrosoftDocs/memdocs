@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/21/2023
+ms.date: 08/09/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,6 +66,7 @@ The following table lists the specific app types and how you can add them in the
 | [Built-in Android app](../apps/apps-add-built-in.md)  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | [Web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [iOS/iPadOS web clip](../apps/web-app.md)  | Web app  | Select **iOS/iPadOS web clip** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the iOS/iPadOS platform.  |
+| [macOS web clip](../apps/web-app.md) | Web app  | Select **macOS web clip** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the macOS platform.  |
 | [Windows web link](../apps/web-app.md) | Web app  | Select **Windows web link** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the Windows platform.  |
 | [Cross platform web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [Android Enterprise system apps](../apps/apps-ae-system.md)  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |

@@ -123,13 +123,13 @@ The following list includes common features and services that might use machine 
   - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](../../intune/apps/intune-management-extension.md)
   - [Introduction to OneDrive in Microsoft 365](/training/modules/m365-onedrive-collaboration-use/)
 
-## Group policy objects might not apply
+## Group Policy Objects might not apply
 
 It's possible some of your older policies aren't available, or don't apply to cloud-native endpoints.
 
 **Resolution**:
 
-- Using [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md) in Intune, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
+- Using [Group Policy analytics](../../intune/configuration/group-policy-analytics.md) in Intune, you can evaluate your existing Group Policy Objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
   For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](../../intune/configuration/device-profile-assign.md).
