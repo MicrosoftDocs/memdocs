@@ -59,10 +59,13 @@ The Remote Help app supports the following capabilities on Windows:
 
 - **Enhanced chat** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).
 
-## Prerequisites
+## Prerequisites for Remote Help on Windows
 
-- General prerequisites for Remote Help. See [Prerequisites for Remote Help](remote-help.md#prerequisites)
+For general prerequisites on Remote Help, go to [Prerequisites for Remote Help](remote-help.md#prerequisites)
+
 - Set up the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
+
+- The helper must be signed-in on an Intune enrolled device
 
 ### Network considerations
 

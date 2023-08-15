@@ -77,7 +77,12 @@ The following general prerequisites apply to Remote Help.
 - [Intune subscription](../fundamentals/licenses.md)
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
 - [Supported platforms and devices](#supported-platforms-and-devices)
-- The helper must be signed in on an Intune enrolled device
+
+> [!NOTE]
+> For specific prerequisites based on the platform that you're using, go to:
+>
+> - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
+> - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
 
 > [!NOTE]
 > Remote Help has the following limitations:  
