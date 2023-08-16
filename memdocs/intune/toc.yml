@@ -1864,7 +1864,9 @@ items:
       - name: Remote Help on Windows
         href: ./fundamentals/remote-help-windows.md
       - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md  
+        href: ./fundamentals/remote-help-android.md
+      - name: Troubleshooting Remote Help on Android
+        href: ./fundamentals/remote-help-android-troubleshooting.md   
     - name: Remediations
       items:
       - name: Use Remediations
