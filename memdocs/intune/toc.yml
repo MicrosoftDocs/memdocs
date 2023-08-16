@@ -81,11 +81,6 @@ items:
       - name: Configure Slack to use Intune 
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
 
-      - name: Protect email on managed devices
-        href: ./protect/tutorial-protect-email-on-enrolled-devices.md
-      - name: Protect email on unmanaged devices
-        href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
-
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
