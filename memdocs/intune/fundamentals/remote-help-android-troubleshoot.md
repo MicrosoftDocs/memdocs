@@ -33,8 +33,6 @@ ms.collection:
  
 # Troubleshooting Remote Help on Android
 
-[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
-
 If a Remote Help session for Android is unable to connect, check for the following possibilities:
 
   | Check if                      | Solution                                           |
