@@ -8,7 +8,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 08/21/2023
-ms.topic: overview
+ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
