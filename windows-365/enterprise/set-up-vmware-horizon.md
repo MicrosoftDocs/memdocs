@@ -72,4 +72,4 @@ During the [public preview](..\public-preview.md), the following limitations exi
 <!-- ########################## -->
 ## Next steps
 
-Proceed to the VMware Horizon Cloud to complete the integration. For more information about Citrix HDX Plus set up in Citrix Cloud, see [Setting up VMware Horizon Cloud for Windows 365 integration](https://go.microsoft.com/fwlink/?linkid=2242843).
+Proceed to the VMware Horizon Cloud to complete the integration. For more information about VMware Horizon set up, see [Setting up VMware Horizon Cloud for Windows 365 integration](https://go.microsoft.com/fwlink/?linkid=2242843).

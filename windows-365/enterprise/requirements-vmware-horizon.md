@@ -60,8 +60,6 @@ To use VMware Horizon for Windows 365, you must meet the following requirements:
   - Intune Admin for enabling the VMware connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
-Citrix HDX Plus doesn't currently support Windows 365 Frontline.
-
 ## Supported configurations
 
 VMware Horizon for Windows 365 supports integrating with Windows 365 deployments with for Azure AD joined Cloud PCs and Hybrid Azure AD joined Cloud PCs.
