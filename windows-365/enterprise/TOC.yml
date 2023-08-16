@@ -115,6 +115,10 @@ items:
           href: requirements-citrix.md
         - name: Set up Citrix HDX Plus for Windows 365
           href: set-up-citrix.md
+        - name: VMware requirements
+          href: requirements-vmware-horizon.md
+        - name: Set up VMware Horizon for Windows 365
+          href: set-up-vmware-horizon.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
