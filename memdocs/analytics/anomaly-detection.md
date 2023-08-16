@@ -2,7 +2,7 @@
 title: Anomaly detection in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about Anomaly detection as an advanced feature in Endpoint analytics
-ms.date: 02/15/2023
+ms.date: 08/16/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -33,6 +33,11 @@ With anomaly detection, you can detect potential problems in a system before the
 
 Anomaly detection aims at addressing these problems by enabling IT admins with critical information.
 
+In addition to detecting anomalies, you can view device correlation groups to explore potential root causes for medium and high severity anomalies. These device cohorts allow you to view patterns identified among devices. We have taken a proactive approach to device management by also identifying devices "at risk" in those cohorts. These are the devices that fall under the identified patterns with high confidence but haven't seen those anomalies yet.
+
+> [!NOTE]
+> Device cohorts are only identified for medium and high severity anomalies.
+
 ## Pre-requisites
 
 - Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
@@ -44,15 +49,19 @@ Anomaly detection aims at addressing these problems by enabling IT admins with c
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Report** > **Endpoint analytics** > **Overview**.
 3. Select **Anomalies** tab. The **Anomalies** tab provides a quick overview of the anomalies detected in your organization.
-4. In this example, the **Anomalies** tab shows an *App regression anomaly* with *high severity* impact. You can add filters to refine the list.
+4. In this example, the **Anomalies** tab shows an *anomaly* with *medium severity* impact. You can add filters to refine the list.
 
-   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint anlaytics":::
+   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics":::
 
-5. Select an item from the list to display a detailed view with key information such as App name, affected devices, Date created and Latest occurrence (Initial and latest occurrence of the anomaly), and potential factors influencing the anomaly and suggested remediation.
+5. Select an item from the list to display a detailed view with key information such as App name, affected devices, Date created and Latest occurrence (Initial and latest occurrence of the anomaly), and identified device cohorts with potential factors influencing the anomaly.
 
    :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
 
-6. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. Additionally, the device timeline shows anomalous events.
+6. Select a device correlation group from the list for a detailed view of the devices' common factors. Devices are correlated based on one or more shared attributes from devices, applications, operating systems, and drivers. You can see the number of devices currently affected by the anomaly and devices at risk of experiencing the anomaly. The prevalence rate also shows you the percentage of affected devices from an anomaly that are members of a correlation group.
+
+   :::image type="content" source="media/anomaly-detection/select-corelation-group.png" alt-text="This is a screenshot showing Device correlation groups":::
+
+7. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. You can filter to view devices in specific correlation groups or show all devices affected by that anomaly in your organization. Additionally, the device timeline shows more anomalous events.
 
    :::image type="content" source="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
 
@@ -64,17 +73,17 @@ The Analytical Model built detects device cohorts facing anomalous set of stop e
 
 - **Paired t-tests model**: Paired t-tests are a mathematical method that compares pairs of observations in a dataset, looking for a statistically significant distance between their means. Tests are used on datasets that consist of observations related to each other in some way. For example, count of Stop Error Restarts from the same device before and after a policy change, or app crashes on a device after an OS (operating systems) update.  
 
-- **Population Z-score model**: Population Z-score based statistical models involve calculating the standard deviation and mean of a dataset, and then using those values to determine which data points are anomalous. 
+- **Population Z-score model**: Population Z-score based statistical models involve calculating the standard deviation and mean of a dataset, and then using those values to determine which data points are anomalous.
 Standard deviation and mean are used to calculate the Z-score for each data point, which represents the number of standard deviations away from the mean. Data points that fall outside a certain range are anomalous. This model is well suited in highlighting outlier devices or apps from the wider baseline but requires sufficiently large datasets to be accurate.
 
-- **Time Series Z-score model**: Time series Z-score models are a variation of the standard Z-score model designed for detecting anomalies in time series data. Time series data is a sequence of data points collected at regular intervals over time, such as aggregate of Stop Error Restarts. 
+- **Time Series Z-score model**: Time series Z-score models are a variation of the standard Z-score model designed for detecting anomalies in time series data. Time series data is a sequence of data points collected at regular intervals over time, such as aggregate of Stop Error Restarts.
 Standard deviation and mean are calculated for a sliding window of time, using aggregated metrics. This method allows the model to be sensitive to temporal patterns in the data and adapt to changes in its distribution over time.
 
 ## Known Issues
 
 Affected Devices: The **Affected Devices** tab has the option to select which columns are displayed in the table view. If you select the **User Experience** column picker control, the **User Experience** column appears in the **Affected Devices** tab view. However, the column is greyed out. In a future release, we plan to make a change to fully resolve the issue.
 
-## Next steps 
+## Next steps
 
 For more information, go to:
 
