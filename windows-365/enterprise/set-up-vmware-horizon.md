@@ -34,7 +34,7 @@ ms.collection:
 
 VMware Horizon is a cloud-based service that lets you deliver Windows 365 Enterprise desktops to your users from any device and location. With VMware Horizon, you can use the power and security of Windows 365 Enterprise, while simplifying the management and deployment of your virtual desktop infrastructure (VDI).
 
-VMware Horizon for Windows 365 Enterprise is in limited public [preview](..\preview.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
+VMware Horizon for Windows 365 Enterprise is in limited [public preview](..\public-preview.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
 
 ## Set up overview
 
@@ -60,7 +60,7 @@ To turn on the VMware connector, follow these steps:
 
 ## Public preview limitations
 
-During the public [preview](..\preview.md), the following limitations exist:
+During the [public preview](..\public-preview.md), the following limitations exist:
 
 - Only the Horizon Cloud Service web access client and native Windows client is available.
 - Only one Cloud PC per user is supported.
