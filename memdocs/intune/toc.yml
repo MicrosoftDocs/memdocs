@@ -1866,7 +1866,7 @@ items:
       - name: Remote Help on Android
         href: ./fundamentals/remote-help-android.md
       - name: Troubleshooting Remote Help on Android
-        href: ./fundamentals/remote-help-android-troubleshooting.md   
+        href: ./fundamentals/remote-help-android-troubleshoot.md   
     - name: Remediations
       items:
       - name: Use Remediations
