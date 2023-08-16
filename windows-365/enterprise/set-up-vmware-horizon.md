@@ -53,7 +53,7 @@ To set up VMware Horizon for Windows 365 Enterprise, follow these steps. The fir
 To turn on the VMware connector, follow these steps:
 
 1. As a Global administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
-![Screenshot of navigating to Connectors and tokens](./media/set-up-citrix/connectors-tokens.png)
+![Screenshot of navigating to Connectors and tokens.](./media/set-up-citrix/connectors-tokens.png)
 2. Select **Windows partner connectors** > **Add**.
 3. Under **Add connector**, select **VMware (preview)** in the drop-down list.
 4. Next to **Allow people to use VMware to connect to their Cloud PCs**, set the toggle to **On** > **Add**.
