@@ -76,7 +76,7 @@ Android devices are in almost every industry across the globe, including healthc
 
 Intune supports different enrollment options for Android devices, as shown in the following image. For FLW devices using the Android platform, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**.
 
-**The image below diplays all Intune enrollment options for Android**
+**The following image displays all available Intune enrollment options for Android**
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-enrollment-options.png":::
 
