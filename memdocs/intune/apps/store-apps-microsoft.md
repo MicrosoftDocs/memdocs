@@ -36,7 +36,8 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports UWP apps, desktop apps packaged in `.msix`, and now Win32 apps packaged in `.exe` or `.msi` installers.  
+Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports UWP apps, desktop apps packaged in *.msix*, and now Win32 apps packaged in *.exe* or *.msi* installers.
+Depending on the assignment type, users can then install the applications via the Company Portal, just like most other Windows applications managed by Intune and Configuration Manager.
 
 > [!IMPORTANT]
 > There are key improvements to the most recent Microsoft Store apps functionality over legacy functionality.
