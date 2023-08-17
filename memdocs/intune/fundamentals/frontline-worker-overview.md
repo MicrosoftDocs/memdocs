@@ -286,7 +286,7 @@ iPad devices are a popular device type for frontline workers (FLW). The Shared i
 
 iOS devices can also be used, but it's not common. For iOS FLW devices, it's recommended to use [Azure AD shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and Intune together. In Intune, you enroll the device and create a device restrictions configuration profile. In the profile, you can allow (or prohibit) specific apps, and can hide apps.
 
-The following diagram shows the iOS/iPadOS options for frontline worker devices in Intune.
+The following diagram shows the iOS/iPadOS options for frontline worker devices in Intune:
 
 :::image type="content" source="./media/frontline-worker-overview/ios-ipados-flw-options.png" alt-text="Diagram that shows Apple iOS and iPadOS frontline worker scenario path in Microsoft Intune." lightbox="./media/frontline-worker-overview/ios-ipados-flw-options.png":::
 
@@ -570,4 +570,5 @@ For more information and to get started, go to:
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md)
 - [Microsoft Intune planning guide](intune-planning-guide.md)
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+
 
