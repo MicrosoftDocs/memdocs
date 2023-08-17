@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 06/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -141,7 +141,7 @@ This task list provides an overview. For more specific information, see [Apple B
 
     - Includes the correct Company Portal app version.
     - You don't have to create another policy to deploy the Company Portal app to devices.
-    - The Company Portal app must be updated manually by you, or your users.
+    - The Company Portal app must be updated manually by you, or your users. Or, in the Intune admin center, you can enable automatic app updates in the app token settings. Then, the Company Portal app is automatically updated.
 
   - **No VPP token + Enrolling new devices**: No administrator tasks. Make sure users enter their Apple ID in Setup Assistant.
 

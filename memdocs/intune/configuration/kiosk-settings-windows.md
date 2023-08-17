@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 06/20/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -52,6 +52,8 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
   2. Create the [device restrictions profile](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older), and configure specific features and settings allowed in Microsoft Edge.
 
 - Be sure that any files, scripts, and shortcuts are on the local system. For more information, including other Windows requirements, see [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout).
+
+- The kiosk profile loads for standard user accounts. The kiosk profile doesn't load for members in the local admin group.
 
 > [!IMPORTANT]
 > Be sure to assign this kiosk profile to the same devices as your [Microsoft Edge profile](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).

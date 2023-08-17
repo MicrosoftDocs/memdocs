@@ -51,7 +51,6 @@ Use this guide to plan your move or migration to Intune.
 
 > [!TIP]
 >
-> - The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) includes email templates, project plans, planning spreadsheet, and more.
 > - Want to print or save this guide as a PDF? In your web browser, use the **Print** option, **Save as PDF**.
 > - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
@@ -257,7 +256,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Azure Active Directory (AD) Premium** includes several features that are key to managing devices, including:
 
-  - **[Windows Autopilot](../../autopilot/enrollment-autopilot.md)**: Windows client devices can automatically enroll in Intune, and automatically receive your policies.
+  - **[Windows Autopilot](/autopilot/enrollment-autopilot)**: Windows client devices can automatically enroll in Intune, and automatically receive your policies.
   - **[Multi-factor authentication](../enrollment/multi-factor-authentication.md) (MFA)**: Users must enter two or more verification methods, such as a PIN, an authenticator app, a fingerprint, and more. MFA is a great option when using app protection policies for personal devices, and organization-owned devices that require extra security.
   - **[Conditional Access](../protect/conditional-access.md)**: If users and devices follow your rules, such as a 6-digit passcode, then they get access to organization resources. If users or devices don't meet your rules, then they don't get access.
   - **[Dynamic user groups and dynamic device groups](../fundamentals/groups-add.md)**: Add users or devices automatically to groups when they meet criteria, such as a city, job title, OS type, OS version, and more.
@@ -343,7 +342,7 @@ Some considerations:
 
 - **Be prepared to create new policies** in Intune. Intune includes several features that cover scenarios that may interest you. Some examples:
 
-  - **Security baselines**: On Windows 10/11 devices, [Security baselines](../protect/security-baselines.md) are security settings that are preconfigured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at security baselines.
+  - **Security baselines**: On Windows 10/11 devices, [Security baselines](../protect/security-baselines.md) are security settings that are preconfigured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at security baselines. Settings insight provides confidence in configurations by adding insights that similar organizations have successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).
   - **Administrative templates**: On Windows 10/11 devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in AD group policy, but are 100% cloud-based in Intune.
   - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
@@ -544,7 +543,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](../../autopilot/tutorial/autopilot-scenarios.md), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-walkthrough-administrative-templates.md), and courses through training partners.
+  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-walkthrough-administrative-templates.md), and courses through training partners.
 
   The following example is an Intune support training agenda:
 

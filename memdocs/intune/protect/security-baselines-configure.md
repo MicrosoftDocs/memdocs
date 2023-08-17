@@ -81,6 +81,7 @@ Common tasks when working with security baselines include:
 
 5. On the Configuration settings tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
    - Select a group to expand and review the available settings.
+   - The insights for a setting are available beside a lightbulb icon. Settings insight provides confidence in configurations by adding insights that similar organizations have successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).
    - Use the *Search* bar and specify keywords that filter the view to display only those groups that contain your search criteria.
 
    Each setting in a baseline has a default configuration for that baseline version. Reconfigure the default settings to meet your business needs. Different baselines might contain the same setting, and use different default values for the setting, depending on the intent of the baseline.

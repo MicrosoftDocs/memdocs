@@ -108,7 +108,7 @@ Required data collected by Intune may include, but isn't limited to:
 |         |   Wi-Fi MacAddress        | No  |
 | **Managed application information** |   Azure Active Directory device ID | Yes (If device is Azure AD joined) |
 |         |   Device enrollment status                     | Yes |
-|         |   Device health status (jailbroken)            | Yes |
+|         |   Device health status                         | Yes (Includes threat status if a Mobile Threat Defense connector is configured) |
 |         |   Encryption keys                              | Yes |
 |         |   Intune device management ID                  | Yes (If device is MDM enrolled with Intune) |
 |         |   Last application check-in date/time          | Yes |

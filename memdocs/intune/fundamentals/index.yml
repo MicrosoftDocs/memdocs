@@ -35,7 +35,7 @@ landingContent:
         url: in-development.md
     - linkListType: tutorial
       links: 
-      - text: Walkthrough Intune in Microsoft Endpoint Manager
+      - text: Walkthrough Microsoft Intune admin center
         url: tutorial-walkthrough-endpoint-manager.md 
     - linkListType: concept
       links:
@@ -59,8 +59,6 @@ landingContent:
         url: intune-planning-guide.md
       - text: Enrollment deployment guide
         url: deployment-guide-enrollment.md
-      - text: Intune Adoption Kit
-        url: https://www.microsoft.com/download/details.aspx?id=58348
 
   # Card (optional)
   - title: Set up Intune

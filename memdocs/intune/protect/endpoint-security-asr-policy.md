@@ -54,6 +54,10 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
 
   To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
+**Support for Security Management for Microsoft Defender for Endpoint**:
+
+When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support  managed by Defender that aren't enrolled with Intune, Attack surface reduction apply to devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+
 ## Attack surface reduction profiles
 
 > [!NOTE]  
@@ -187,15 +191,20 @@ Behavior details pending.
 
 [!INCLUDE [Attack surface reduction prerequisites](../includes/tenant-attach-asr-prerequisites.md)]
 
-### Devices managed by Security Management for Defender for Endpoint
+### Devices managed by Defender for Endpoint security settings management
 
-Profiles for this platform can be used with Windows 10 and Windows 11 devices enrolled with Intune, and with devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).  
-Profiles include:  
+When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows 10, Windows 11, and Windows Server* platform to manage setting on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+
+Profiles supported for this scenario include:
 
 - **Attack Surface Reduction Rules** - Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
   - Executable files and scripts used in Office apps or web mail that attempt to download or run files.
   - Obfuscated or otherwise suspicious scripts.
   - Behaviors that apps don't usually start during normal day-to-day work Reducing your attack surface means offering attackers fewer ways to perform attacks.
+
+> [!IMPORTANT]
+>
+> Only the *Attack surface reduction rules* profile is supported by the Security Management for Microsoft Defender for Endpoint. All other Attack surface reduction profiles aren't supported.
 
 ## Policy merge for settings
 

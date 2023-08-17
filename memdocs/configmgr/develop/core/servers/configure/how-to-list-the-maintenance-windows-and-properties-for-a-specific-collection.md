@@ -9,7 +9,7 @@ ms.assetid: ea92b17f-06f1-4f96-a99d-551d5422092d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to list the maintenance windows and properties for a specific collection with provided examples and links.
 ms.reviewer: mstewart,aaroncz 

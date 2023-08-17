@@ -73,9 +73,9 @@ The following diagram describes the flow from a managed app that has successfull
 >
 > Each active line-of-business (LOB) app that's integrated with Tunnel for MAM iOS-SDK and that runs in the foreground represents an active client connection on the Tunnel Gateway server. The mst-cli command line tool can be used to monitor active client connections. For information about the mst-cli command-line tool, see [Reference for Microsoft Tunnel Gateway](../protect/microsoft-tunnel-reference.md).
 
-### Required Microsoft service endpoints
+### Tunnel Bypass Domain List:
 
-Clients that use the MAM Tunnel don't use Tunnel when accessing the following URLs. Ensure these endpoints aren't blocked by Firewalls and that they're directly accessible from MAM Tunnel clients:
+Clients that use the MAM Tunnel don't use Tunnel when accessing the following URLs. 
 
 - login.microsoftonline.com
 - mamservice.manage.microsoft.com
@@ -118,6 +118,9 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    For more information about adding custom apps to policies, see [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md).
 
 4. On the *Settings* tab, expand *Microsoft Tunnel for Mobile Application Management settings and configure the following options:
+   
+  > [!NOTE]  
+   > When configuring proxy and split tunneling, if the proxy server is configured in the included routes, all traffic will flow through the proxy. If the proxy server is not configured in the included routes, then all traffic will be blocked. Enabling both split tunneling and proxy is not supported.
 
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
    1. For *Connection name*, specify a user facing name for this connection, like *mam-tunnel-vpn*.
@@ -134,9 +137,9 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    > [!NOTE]  
    > The bypassedUrl should include the federation STS endpoint.
 
-      :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
+   :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
 
-      For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
+   For example, *Value* might appear as **{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}**.
 
    After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 

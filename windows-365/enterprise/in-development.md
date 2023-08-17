@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2023
+ms.date: 07/05/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -62,26 +62,15 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-### Group-based license support for Cloud PC resizing<!--41357690-->
-
-In a future update, both single and bulk resizing will support Cloud PCs that were provisioned with group-based licenses.
-
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-## End user experience
+<!--## End user experience-->
 
-### Windows 365 web client keyboard shortcut redirection<!--43951825-->
-
-Windows 365 web client users will be able to use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC.
 
 <!-- ***********************************************-->
 ## Miscellaneous
-
-### Windows 365 Government setup tool<!--43461105-->
-
-A new Windows 365 Government setup tool will replace the current PowerShell scripts that are used to setup tenant mapping and permissions.
 
 ### Single sign on option per tenant (preview)<!--43751308-->
 
@@ -102,18 +91,12 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
 
 <!-- ***********************************************-->
-## Security
+<!--## Security
+-->
 
-### Azure network connection least privilege update<!--44876259-->
+<!-- ***********************************************
+## Windows 365 app-->
 
-A new, more secure least privilege  will be implemented in a future update. When the update is released, customers must manually remove the old network contributor role from the resources where the ANC was created.
-
-<!-- ***********************************************-->
-## Windows 365 app
-
-### Windows 365 app will support Windows 365 Government environments<!--43305226-->
-
-In a future update, the Windows 365 app will support Windows 365 Government environments.
 
 ## Next steps
 

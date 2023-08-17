@@ -2,7 +2,7 @@
 title: Manage software updates synchronization
 titleSuffix: Configuration Manager
 description: Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization.
-ms.date: 05/11/2020
+ms.date: 7/25/2023
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -75,18 +75,11 @@ The top-level Software Update Point uses WSUS to get information about software 
 
 ### To import an update from the Microsoft Update Catalog
 
-1. Open the WSUS administration console and connect it to the top-level WSUS server in your hierarchy.
-   - If Internet Explorer isn't the computer's default web browser, temporarily set it as the default.
-2. Click on **Updates** or click your WSUS server's name. 
-3. In the **Actions** pane, select **Import Updates...** which will open a browser window to the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
-   ![Select import updates in the WSUS console](media/wsus-console-import-updates.png)
-4. If prompted, install the Microsoft Update Catalog ActiveX control. The control must be installed to import updates into WSUS. 
-5. In the browser window, search for the update that you want. Click the **Add*** button to add it to the basket.
-6. Click **view basket**. Make sure that the option to **Import directly into Windows Server Update Services** is selected. Then, click **Import**.
-    ![Import update from catalog into WSUS](./media/import-catalog-update-into-wsus.png)
-7. Once the import is complete, click **Close** on the browser window.
-     - Reset your default browser if needed.
-8. Synchronize your Configuration Manager Software Update Point.
+The **Import Updates** action in WSUS was built using ActiveX, which is now deprecated. This import functionality within WSUS has been replaced with a PowerShell script. The script allows you to import a single update, or multiple updates, from the catalog site into WSUS.
+
+1. Use the instructions and PowerShell script from the [WSUS and the Microsoft Update Catalog site](/windows-server/administration/windows-server-update-services/manage/wsus-and-the-catalog-site) article to import updates into WSUS for your top-level software update point. There isn't a need to import into WSUS for child sites. The top-level software update point will synchronize the updates to the child sites.
+1. Once the import is completed, in the Configuration Manager console, go to the **Software Library** workspace, expand **Software Updates**, and select the **All Software Updates** node.
+1. Select **Synchronize Software Updates** to synchronize the newly imported updates into Configuration Manager. 
 
 
 ## Next steps

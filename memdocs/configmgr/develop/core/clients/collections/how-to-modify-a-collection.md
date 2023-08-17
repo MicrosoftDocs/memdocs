@@ -11,7 +11,7 @@ ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408
 author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 
 

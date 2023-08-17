@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer: coferro
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,7 +42,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md). 
+- The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Intune without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md). 
 
 - Only a Global administrator or Intune administrator in the Intune admin center can onboard TeamViewer. 
 
@@ -101,6 +101,6 @@ When you start a remote session, users see a notification flag on the Company Po
 
 ## Next steps
 
-[Use Remote Help with Intune and Microsoft Endpoint Manager](/mem/intune/fundamentals/remote-help)
+[Use Remote Help with Intune](/mem/intune/fundamentals/remote-help)
 
 [See device details in Intune](device-inventory.md)

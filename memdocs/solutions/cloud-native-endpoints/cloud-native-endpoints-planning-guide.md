@@ -119,8 +119,8 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-  - [Windows Autopilot scenarios and capabilities](../../autopilot/windows-autopilot-scenarios.md)
+  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 - **Deploy software and applications**
 
@@ -341,12 +341,12 @@ This phase is the first step for your organization migration to be fully cloud-n
 
     For more information, go to:
 
-    - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-    - [Windows Autopilot scenarios and capabilities](../../autopilot/windows-autopilot-scenarios.md)
+    - [Windows Autopilot overview](/autopilot/windows-autopilot)
+    - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 ### ✅ Phase 2: Enable endpoint cloud hybrid identity (optional)
 
-To be fully cloud-native, your existing Windows endpoints must be reset. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
+To be fully cloud-native, Microsoft recommends existing Windows endpoints be reset as part of a hardware refresh cycle. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
 
 If you're not ready to reset your endpoints, then you can enable hybrid Azure AD join. A cloud identity is created for hybrid Azure AD join endpoints. Remember, hybrid Azure AD join still requires on-premises connectivity.
 
@@ -360,7 +360,7 @@ For more information, go to:
 - [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join)
   
 > [!NOTE]
-> There isn't a Microsoft supported path to convert existing endpoints from on-premises domain joined or hybrid Azure AD joined to Azure AD joined. These endpoints must be reset.
+> Microsoft doesn't have a migration utility to convert existing endpoints from on-premises domain joined or hybrid Azure AD joined to Azure AD joined. Microsoft recommends these devices be reset and redeployed as part of a hardware refresh.
 
 ### ✅ Phase 3: Cloud attach Configuration Manager (optional)
 
@@ -418,7 +418,7 @@ This phase transitions new Windows endpoint provisioning to Azure AD joined. Onc
   Before resetting an existing Windows endpoint, be sure to:
   
   1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
-  2. [Delete the Windows Autopilot device registration](../../autopilot/add-devices.md).
+  2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
   3. [Delete the existing Azure AD device object](/azure/active-directory/devices/manage-stale-devices).
   
   Then, reset the device, and reprovision the endpoint.
@@ -505,9 +505,9 @@ Some of the benefits include:
 
 For more information on Windows Autopilot, go to:
 
-- [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md)
-- [Windows Autopilot scenarios and features](../../autopilot/windows-autopilot-scenarios.md)
-- [Windows Autopilot FAQ](../../autopilot/autopilot-faq.yml)
+- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+- [Windows Autopilot scenarios and features](/autopilot/windows-autopilot-scenarios)
+- [Windows Autopilot FAQ](/autopilot/autopilot-faq)
 
 ## Follow the cloud-native endpoints guidance
 

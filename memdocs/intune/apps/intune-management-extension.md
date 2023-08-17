@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 07/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -73,7 +73,7 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 > - Do not use scripts to collect PII from devices
 > - Always follow privacy best practices
 >
-> For related information, see [Remediations](../../analytics/remediations.md).
+> For related information, see [Remediations](../fundamentals//remediations.md).
 
 ## Prerequisites
 
@@ -121,8 +121,8 @@ The Intune management extension has the following prerequisites. Once they're me
     - **Description**: Enter a description for the PowerShell script. This setting is optional, but recommended.
 4. In **Script settings**, enter the following properties, and select **Next**:
     - **Script location**: Browse to the PowerShell script. The script must be less than 200 KB (ASCII).
-    - **Run this script using the logged on credentials**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script in the system context. Many administrators choose **Yes**. If the script is required to run in the system context, choose **No**.
-    - **Enforce script signature check**: Select **Yes** if the script must be signed by a trusted publisher. Select **No** (default) if there isn't a requirement for the script to be signed.
+    - **Run this script using the logged on credentials**: Select **Yes** (default) to run the script with the user's credentials on the device. Choose **No** to run the script in the system context. Many administrators choose **Yes**. If the script is required to run in the system context, choose **No**.
+    - **Enforce script signature check**: Select **Yes** (default) if the script must be signed by a trusted publisher. Select **No** if there isn't a requirement for the script to be signed.
     - **Run script in 64-bit PowerShell host**: Select **Yes** to run the script in a 64-bit PowerShell host on a 64-bit client architecture. Select **No** (default) runs the script in a 32-bit PowerShell host.
 
       When setting to **Yes** or **No**, use the following table for new and existing policy behavior:
