@@ -38,7 +38,7 @@ The steps to allow Win32 apps to run on a Windows 10 device in S mode are the fo
 
 1. Enable S mode devices through Intune as part of Windows 10 S enrollment process.
 1. Create a supplemental policy to allow Win32 apps:
-   - You can use [Microsoft Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) tools to create a supplemental policy. The base policy ID within the policy must match the S mode base policy ID (which is hard coded on the client)​. Also, make sure that the policy version is higher than the previous version.
+   - You can use [Microsoft Defender Application Control (WDAC)](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) tools to create a supplemental policy. The base policy ID within the policy must match the S mode base policy ID (which is hard coded on the client). Also, make sure that the policy version is higher than the previous version.
    - You use DGSS to sign your supplemental policy. For more information, see [Sign code integrity policy with Device Guard signing](/microsoft-store/sign-code-integrity-policy-with-device-guard-signing).
    - You upload the signed supplemental policy to Intune by creating a Windows 10 S mode supplemental policy (see below).
 1. You allow Win32 app catalogs through Intune:
@@ -77,15 +77,15 @@ To create a Windows 10 S mode supplemental policy, use the following steps:
 1. Select **Next: Review + create** to review the values you entered for the profile.
 1. When you're done, select **Create** to create the S mode supplemental policy in Intune.
 
-Once the policy is created, you'll see it added to the list of S mode supplemental policies in Intune. Once the policy is assigned, the policy gets deployed to the devices. Note that you must deploy the app to same security group as the supplemental policy​. You can start targeting and assigning apps to those devices. This will allow your end users to install and execute the apps on the S mode devices.
+Once the policy is created, you'll see it added to the list of S mode supplemental policies in Intune. Once the policy is assigned, the policy gets deployed to the devices. Note that you must deploy the app to same security group as the supplemental policy. You can start targeting and assigning apps to those devices. This will allow your end users to install and execute the apps on the S mode devices.
 
 ## Removal of S mode policy
 
 Currently, to remove the S mode supplemental policy from the device, you must assign and deploy an empty policy to overwrite the existing S mode supplemental policy.
 
-## Policy Reporting​
+## Policy Reporting
 
-The S mode supplemental policy, which is enforced at device level, only has device level reporting.​ Device level reporting is available for success and error conditions.
+The S mode supplemental policy, which is enforced at device level, only has device level reporting. Device level reporting is available for success and error conditions.
 
 Reporting values that are shown in the Microsoft Intune admin center for S mode reporting policies:
 
