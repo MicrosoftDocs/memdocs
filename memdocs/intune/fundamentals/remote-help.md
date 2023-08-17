@@ -53,7 +53,7 @@ The Remote Help app supports the following capabilities:
 
 - **Requires Organization login**: To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can't use Remote Help to assist users who aren't members of your organization.
 
-- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help) 
+- **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For example, multi-factor authentication, installing security updates, and locking access to Remote Help for a specific region or IP addresses. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](remote-help.md#setup-conditional-access-for-remote-help)
 
 - **Compliance Warnings**: Before connecting to a user's device, a helper will see a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
@@ -79,7 +79,7 @@ The Remote Help app supports the following capabilities:
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers)
 - [Supported platforms and devices](#supported-platforms-and-devices)
 - The Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
-- The helpers' device must be enrolled in Intune
+- The helper must be signed in on an Intune enrolled device.
 
 > [!NOTE]
 > Remote Help has the following limitations:  
@@ -117,7 +117,7 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
-|\*.alcdn.msauth.net||
+|\*.alcdn.msauth.net|Required to log in to the application Microsoft Azure Authentication Library|
 |\*.wcpstatic.microsoft.com||
 
 ### Data and privacy
@@ -151,6 +151,7 @@ For users that opted out of automatic updates, when an update to Remote Help is 
 - Individual users who have permissions to install apps on their devices can also download and install Remote Help.
 
 > [!NOTE]
+>
 > - In May 2022, existing users of Remote Help will see a recommended upgrade screen when they open the Remote Help app. Users will be able to continue using Remote Help without upgrading.
 > - On May 23, 2022, existing users of Remote Help will see a mandatory upgrade screen when they open the Remote Help app. They will not be able to proceed until they upgrade to the latest version of Remote Help.
 > - Remote Help will now require Microsoft Edge WebView2 Runtime. During the Remote Help installation process, if Microsoft Edge WebView2 Runtime is not installed on the device, then Remote Help installation will install it. When uninstalling Remote Help, Microsoft Edge WebView2 Runtime will not be uninstalled.
@@ -176,7 +177,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
    - For *Install command line*, specify **remotehelpinstaller.exe /quiet acceptTerms=1**
    - For *Uninstall command line*, specify **remotehelpinstaller.exe /uninstall /quiet acceptTerms=1**
 
-To opt out of automatic updates, specify enableAutoUpdates=0 as part of the install command **remotehelpinstaller.exe /quiet acceptTerms=1 enableAutoUpdates=0**
+    To opt out of automatic updates, specify enableAutoUpdates=0 as part of the install command **remotehelpinstaller.exe /quiet acceptTerms=1 enableAutoUpdates=0**
 
    > [!IMPORTANT]
    > The command line options *acceptTerms* and *enableAutoUpdates* are always case sensitive.
@@ -217,10 +218,10 @@ To configure your tenant to support Remote Help, review and complete the followi
 
 3. Select **Save**.
 
-> [!NOTE] 
-> When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours). 
+> [!NOTE]
+> When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours).
 > When you try to create a Remote Help session you may continue to see messages indicating that Remote Help isn't enabled for the tenant even if you enabled Remote Help in the tenant after activation.
- 
+
 ### Task 2 – Configure permissions for Remote Help
 
 The following Intune RBAC permissions manage the use of the Remote Help app. Set each to *Yes* to grant the permission:
@@ -234,7 +235,7 @@ The following Intune RBAC permissions manage the use of the Remote Help app. Set
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and Remote Help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
 > [!IMPORTANT]  
-> During a Remote Help session, when a helper has the *Elevation* permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. 
+> During a Remote Help session, when a helper has the *Elevation* permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device.
 > When the sharer ends the Remote Help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off.
 > If the helper ends the session, the sharer will not be logged off.
 
@@ -347,7 +348,7 @@ This section outlines the steps for provisioning the Remote Help service on the 
 
 1. Open PowerShell in admin mode.
     - It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
-3. Within PowerShell enter the following commands:
+2. Within PowerShell enter the following commands:
 
     - Install-Module -Name AzureADPreview
     - Connect-AzureAD
@@ -397,12 +398,13 @@ Remote Help is supported in the following languages:
 
 ## Known Issues
 
-- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session won’t be established. 
+- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session won’t be established.
 If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use Remote Help.
 
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+
 ## July 13, 2023
 
 Version: 5.0.1045.0
@@ -456,13 +458,13 @@ For more information, go to [Use Remote Help with Intune](/mem/intune/fundamenta
 
 ### July 26, 2022
 
-Version: 4.0.1.12 - Changes in this release: 
+Version: 4.0.1.12 - Changes in this release:
 
 Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
 
 ### May 11, 2022
 
-Version 4.0.1.7 - Webview 2 release 
+Version 4.0.1.7 - Webview 2 release
 
 ### April 5, 2022
 
@@ -471,4 +473,3 @@ Version 4.0.0.0 - GA release
 ## Next steps
 
 [Get support in Microsoft Intune admin center](../../get-support.md)
-  

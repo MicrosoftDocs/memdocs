@@ -21,7 +21,7 @@ items:
         href: ./fundamentals/zero-trust-with-microsoft-intune.md
       - name: Intune architecture diagram
         href: ./fundamentals/high-level-architecture.md
-        displayName: architecture, diagram, components, design, svg
+        displayName: architecture, diagram, components, design, svg, family, products, suite, on-premises, tunnel
     - name: Intune service release information
       href: ./fundamentals/intune-service-servicing-information.md
     - name: What is device management?
@@ -44,6 +44,7 @@ items:
     items:
     - name: Walkthrough Intune admin center
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md
+      displayName: trial, free      
     - name: Try Intune tasks
       items:
       - name: Overview
@@ -80,11 +81,6 @@ items:
       - name: Configure Slack to use Intune 
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
 
-      - name: Protect email on managed devices
-        href: ./protect/tutorial-protect-email-on-enrolled-devices.md
-      - name: Protect email on unmanaged devices
-        href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
-
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
@@ -116,7 +112,7 @@ items:
       - name: Android Open Source Project Supported Devices
         displayName: software updates, android open source project, supported devices
         href: ./fundamentals/android-os-project-supported-devices.md    
-    - name: Software updates admin checklists
+    - name: Software updates planning guides
       items:
       - name: BYOD and personal devices
         displayName: software updates, android, ios, ipados
@@ -127,6 +123,9 @@ items:
       - name: iOS/iPadOS
         displayName: software updates
         href: ./protect/software-updates-guide-ios-ipados.md
+      - name: macOS
+        displayName: software updates
+        href: ./protect/software-updates-guide-macos.md
     - name: Network configuration
       href: ./fundamentals/network-bandwidth-use.md
     - name: Using Windows 10 VMs with Intune
@@ -242,6 +241,7 @@ items:
             items: 
             - name: Overview
               href: /microsoft-365/solutions/apps-guide-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: purchase, buy, app, license
             - name: Understand app types
               items:
               - name: App types overview        
@@ -353,7 +353,8 @@ items:
                   - name: Add a macOS DMG app
                     href: ./apps/lob-apps-macos-dmg.md         
                   - name: Add an unmanaged macOS PKG app
-                    href: ./apps/macos-unmanaged-pkg.md                                  
+                    href: ./apps/macos-unmanaged-pkg.md
+                    displayName: unmanaged, pkg                                  
                 - name: Win32 app management
                   items:
                   - name: Win32 app management overview
@@ -1640,6 +1641,7 @@ items:
     - name: Education
       items:
       - name: What is Intune for Education
+        displayName: edu
         href: ./fundamentals/introduction-intune-education.md
       - name: Intune for Education docs
         href: /intune-education/

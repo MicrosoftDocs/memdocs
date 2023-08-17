@@ -68,7 +68,7 @@ Applies to:
 
 **Support for Microsoft Defender for Endpoint clients:**
 
-- **Defender for Endpoint security settings configuration** - To configure support for deploying antivirus policy to devices that are managed by Defender, but not enrolled with Intune, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md). This article also includes the information about platforms supported by this capability, and the policies and profiles that those platforms support.
+- **Defender for Endpoint security settings management** - To configure support for deploying antivirus policy to devices that are managed by Defender, but not enrolled with Intune, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md). This article also includes the information about platforms supported by this capability, and the policies and profiles that those platforms support.
 
 ### Prerequisites for tamper protection
 

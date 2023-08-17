@@ -1,6 +1,6 @@
 ---
 title: Manage Windows LAPS with Microsoft Intune policies
-description: Use Microsoft Intune application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, backup accounts and passwords to Azure AD, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
+description: Use Microsoft Intune application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, back up accounts and passwords to Azure AD, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
 
 keywords:
 author: brenduns
@@ -87,10 +87,10 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
 
     Support for *Azure AD Join* requires you to enable LAPS in your Azure AD. The following steps can help you complete this configuration. For the larger context, view these steps in the Azure AD documentation at [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Hybrid Azure AD Join* does not require LAPS to be enabled in Azure AD.
 
-    **Enable LAPS in Azure AD**:  
-    1. Sign in to the **Azure portal** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
-    1. Browse to **Azure Active Directory** > **Devices** > **Device settings**.
-    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true)
+    **Enable LAPS in Microsoft Entra**:  
+    1. Sign in to the **Microsoft Entra admin center** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
+    1. Browse to **Devices** > **Overview** > **Local administrator password recovery**.
+    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
 
 
 
@@ -129,14 +129,9 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
 
   - `microsoft.directory/deviceLocalCredentials/password/read`
   - `microsoft.directory/deviceLocalCredentials/standard/read`
+
+  To create custom roles that can grant these permissions, see [Create and assign a custom role in Azure Active Directory](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation. 
   
-  During the public preview, these permissions aren't available to add to custom Azure AD roles. Instead, your account must be assigned one of the following Azure AD built-in rules, which include these permissions by default:
-
-  - **Global Administrator**
-  - **Cloud Device Administrator**
-
-  In the future, Azure AD will add support for assigning the required permissions to custom Azure AD roles.
-
 - **View Azure AD audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
 For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).

@@ -230,7 +230,7 @@ For more information, see [Create applications](../../../apps/deploy-use/create-
 <!--3607717, fka 1358333-->
 [Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is now available with Windows 10, version 1809 or later. This new feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](/windows/deployment/windows-autopilot/user-driven) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices](../../../../autopilot/existing-devices.md).
+For more information, see [Windows Autopilot for existing devices](/autopilot/existing-devices).
 
 
 ### Specify the drive for offline OS image servicing

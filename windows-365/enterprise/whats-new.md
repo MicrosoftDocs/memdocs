@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/21/2023
+ms.date: 08/14/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,55 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of August 7, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows 11 Task view support for Cloud PCs (preview)<!--44976396-->
+
+Windows 365 Switch lets users connect to their Cloud PC by using the Windows 11 Task view. They can also use Task view to switch between their Cloud PC and their local device. For more information, see [Windows 365 Switch](windows-365-switch-overview.md)  and the [Windows 365 Switch end user help article](https://support.microsoft.com/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### LG webOS 23 support on windows365.microsoft.com<!--45794301-->
+
+The Windows 365 web site, windows365.microsoft.com, now supports LG webOS 23.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Security
+
+#### Tamper protection support for Windows 365<!--45780208-->
+
+Windows 365 now supports use of endpoint security Antivirus policy to manage Tamper protection for Windows 365 Cloud PCs. Support for Tamper protection requires devices to onboard to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
+
+<!-- ########################## -->
+## Week of July 31, 2023 (Service release 2307)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Move Cloud PC is now generally available<!--43667415-->
+
+Move Cloud PC has moved out of preview and into general availability. For more information, see [Move Cloud PC](move-cloud-pc.md).
+
+#### New setting to allow users to reprovision their own Cloud PC<!--45034196-->
+
+You can now grant users permission to reset (reprovision) their own Cloud PC. For more information, see [Make a user a local admin](assign-users-as-local-admin.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Azure network connection (ANC) least privilege update<!--44876259-->
+
+A new, more secure least privilege is now available. You must manually remove the old network contributor role from the resources where the ANC was created. For more information, see [Role-based access control](role-based-access.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Provide feedback button for admins is now generally available<!--44506030-->
+
+The **Provide feedback** button has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of July 17, 2023

@@ -200,7 +200,7 @@ To generate a report that uses current data:
 3. Use the drop-down to select which platforms the report will include.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
 
-## Noncompliant devices report (Operational)
+### Noncompliant devices report (Operational)
 
 The **Noncompliant devices** report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
