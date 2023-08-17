@@ -45,11 +45,15 @@ The article provides guidance on managing and configuring frontline worker (FLW)
 
 When you're planning for FLW devices (including rugged devices) and how you'll manage them, there are questions you need to answer. These questions help you determine the best device management experience for you, your end user frontline workers, and the needs of your organization.
 
-- Determine how the **devices will be used**. For example, you can provide a device wide experience where frontline workers access all the apps and settings on the device. Or, provide a locked screen experience where frontline workers only access specific apps and settings. You can configure the device for a single purpose, such as scanning inventory, or for multiple purposes, such as using an app to check in customers and using another app to check email.
+- Determine how the **devices will be used**.
+
+  For example, you can provide a device wide experience where frontline workers access all the apps and settings on the device. Or, provide a locked screen experience where frontline workers only access specific apps. You can configure the device for a single purpose, such as scanning inventory, or for multiple purposes, such as using an app to check in customers and using another app to check email.
 
   Intune has built-in kiosk features that can run one app or run many apps for Android, iPadOS, and Windows. This article provides more details about these device management scenarios.
 
-- Determine if the **devices will be shared** with other users, or if the devices are assigned to specific users. For example, if the devices are part of a shared pool, then your device management strategy should focus on shared device management. If the devices are assigned to specific users, then your device management strategy should focus on user associated device management.
+- Determine if the **devices will be shared** with other users, or if the devices are assigned to specific users.
+
+  For example, if the devices are part of a shared pool, then your device management strategy should focus on shared device management. If the devices are assigned to specific users, then your device management strategy should focus on user associated device management.
 
   Intune has built-in features that offer shared device management for Android, iPadOS, and Windows devices. This article provides more details about shared devices, and the decisions you need to make.
 
@@ -80,7 +84,7 @@ Intune supports different enrollment options for Android devices, as shown in th
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-enrollment-options.png":::
 
-When you use Android devices for frontline workers, the steps in this section help you determine the best enrollment option and the best device management experience for you and your end users.
+When you use Android devices for frontline workers, the steps in this section help you determine the best enrollment option & the best device management experience for you and your end users.
 
 > [!NOTE]
 > There are other Android enrollment options available. This section focuses on the enrollment options commonly used for FLW devices. For more information on all the Android enrollment options, go to [Enrollment guide: Enroll Android devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
@@ -279,7 +283,7 @@ For more information on Azure AD shared device mode (SDM), go to [Azure AD share
 ::: zone pivot="all,ios-ipados"
 ## iOS/iPadOS
 
-For frontline workers, iPad devices are a popular device type for frontline workers (FLW). The Shared iPad feature in Intune is designed for frontline workers.
+iPad devices are a popular device type for frontline workers (FLW). The Shared iPad feature in Intune is designed for frontline workers.
 
 iOS devices can also be used, but it's not common. For iOS FLW devices, it's recommended to use [Azure AD shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and Intune together. In Intune, you enroll the device and create a device restrictions configuration profile. In the profile, you can allow (or prohibit) specific apps, and can hide apps.
 
