@@ -87,7 +87,7 @@ When you enable this action:
   - iOS/iPadOS
   - macOS
 
-- **Retire the noncompliant device**: This action removes all company data off the device and removes the device from Intune management.
+- **Add device to retire list**: When this action is performed on a device, the device is included in a list at **Devices** > **Compliance policies** > **Retire Noncompliant Devices** in the Microsoft Intune admin center. However, the device isn't officially retired until an administrator explicitly initiates the retirement process.
 
   The following platforms support this action:
   - Android device administrator
