@@ -217,7 +217,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Select   Minimum PIN length  |          6  |          iOS/iPadOS,   Android  |
 |       PIN reset   after number of days  |          Yes  |          iOS/iPadOS,   Android  |
 |       Number of   days  |          365  |          iOS/iPadOS,   Android  |
-|       Class 3 Biometrics (Android 9.0+)​   |          Require  |          Android  |
+|       Class 3 Biometrics (Android 9.0+)   |          Require  |          Android  |
 |       Override Biometrics with PIN after biometric updates   |          Require  |          Android  |
 
 #### Conditional launch

@@ -42,7 +42,7 @@ Run the following commands in a command line to manually install the Intune app 
 1. Install Curl:
 
     ```bash
-    $ sudo apt install curl gpg
+    sudo apt install curl gpg
     ```
 
 2. Install the Microsoft package signing key.  
@@ -50,26 +50,26 @@ Run the following commands in a command line to manually install the Intune app 
    For Ubuntu 20.04:
 
     ```bash
-    $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-    $ sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
-    $ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/20.04/prod focal main" > /etc/apt/sources.list.d/microsoft-ubuntu-focal-prod.list'
-    $ sudo rm microsoft.gpg
+    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+    sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
+    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/20.04/prod focal main" > /etc/apt/sources.list.d/microsoft-ubuntu-focal-prod.list'
+    sudo rm microsoft.gpg
     ```
     
     For Ubuntu 22.04:
 
     ```bash
-    $ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-    $ sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/ 
-    $ sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list' 
-    $ sudo rm microsoft.gpg
+    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+    sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/ 
+    sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/microsoft.gpg] https://packages.microsoft.com/ubuntu/22.04/prod jammy main" > /etc/apt/sources.list.d/microsoft-ubuntu-jammy-prod.list' 
+    sudo rm microsoft.gpg
     ```
 
 3. Install the Microsoft Intune app:
 
     ```bash
-    $ sudo apt update
-    $ sudo apt install intune-portal
+    sudo apt update
+    sudo apt install intune-portal
     ```
 
 4. Reboot your device.   
@@ -82,13 +82,13 @@ Run these commands to update the Microsoft Intune app manually:
 1. Update the package repo and metadata, which includes intune-portal, msft-broker, and msft edge:
 
     ```bash
-    $ sudo apt update
+    sudo apt update
     ```
  
 2. Upgrade the packages and clean up dependencies:
 
     ```bash
-    $ sudo apt-get dist-upgrade
+    sudo apt-get dist-upgrade
     ```
 
 ## Uninstall Intune app 
@@ -96,11 +96,11 @@ Run these commands to update the Microsoft Intune app manually:
 1. Remove the Intune app from your system:
 
     ```bash
-    $ sudo apt remove intune-portal
+    sudo apt remove intune-portal
     ```
 
 2. Remove the local registration data. This command removes the local configuration data that contains your device registration:
 
     ```bash
-    $ sudo apt purge intune-portal
+    sudo apt purge intune-portal
     ```

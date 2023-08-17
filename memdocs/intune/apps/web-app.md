@@ -76,7 +76,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Information URL**: Link people to a website or documentation that has more information about the app. The information URL will be visible to users in Company Portal.
     - **Privacy URL**: Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL will be visible to users in Company Portal.
     - **Developer**: The name of the company or Individual that developed the app. This information will be visible to people signed into the admin center.
-    - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.​
+    - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.
     - **Notes**: Add additional notes about the app. Notes will be visible to people signed in to the admin center.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
 6. Click **Next** to display the **Scope tags** page.
