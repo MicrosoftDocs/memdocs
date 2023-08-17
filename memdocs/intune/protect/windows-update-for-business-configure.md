@@ -61,9 +61,9 @@ Microsoft introduced a cloud service as part of the Windows Update for Business 
 
 The following Intune policy types for Windows Updates use WUfB ds, which prevents their support on WPJ devices:
 
-- Windows Driver Updates
-- Windows Feature Updates
-- Windows Expedited Quality Updates
+- Driver Updates for Windows 10 and later
+- Feature Updates for Windows 10 and later
+- Quality Updates for Windows 10 and later
 
 If you support WPJ devices with Intune, the following information can help you understand the differences in capabilities based on policy type, for both WPJ devices and AADJ devices.
 
