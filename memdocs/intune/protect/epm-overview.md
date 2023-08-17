@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/07/2023
+ms.date: 07/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -86,9 +86,15 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 
 - **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
-  When you use Endpoint Privilege Management, there are two options for elevation behavior:
+  When you use Endpoint Privilege Management, there are a few options for elevation behavior:
+
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
   - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
+
+  > [!NOTE]
+  >Each elevation rule can also set the elevation behavior for child processes that the elevated process creates.
+
+- **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM. This allows you to have granular control over any subprocesses that may be created by your elevated application.
 
 - **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received, and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
@@ -130,6 +136,31 @@ In addition to the dedicated roles, the following built-in roles for Intune also
 
  For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
+## EpmTools PowerShell module
+
+Each device that receives Endpoint Privilege Management policies installs the EPM Microsoft Agent to manage those policies. The agent includes the *EpmTools* PowerShell module, a set of cmdlets that you can import to a device. You can use the cmdlets from EpmTools to:
+
+- Diagnose and troubleshoot issues with Endpoint Privilege Management. 
+- Get File attributes directly from a file or application for which you want to build a detection rule.
+
+### Install the EpmTools PowerShell module
+
+The EPM Tools PowerShell module is available from any device that has received EPM policy. To import the EpmTools PowerShell module:
+
+1. Open PowerShell with admin privileges and go to *C:\Program Files\Microsoft EPM Agent\EpmTools*.
+2. From the **EpmTools** folder, run `Import-Module .\EpmCmdlets.dll`.
+
+Following are the available cmdlets:
+
+- **Get-Policies**: Retrieves a list of all policies received by the Epm Agent for a given PolicyType (ElevationRules, ClientSettings).
+- **DeclaredConfiguration**: Retrieves a list of WinCD documents that identify the policies targeted to the device.
+- **Get-DeclaredConfigurationAnalysis**: Retrieves a list of WinDC documents of type MSFTPolicies and checks if the policy is already present in Epm Agent (Processed column).
+- **Get-ElevationRules**: Query the EpmAgent lookup functionality and retrieves rules given lookup and target. Lookup is supported for FileName  and CertificatePayload.
+- **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.
+- **Get-FileAttributes**: Retrieves File Attributes for a .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
+
+For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
+
 ## Next steps
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
@@ -137,4 +168,3 @@ In addition to the dedicated roles, the following built-in roles for Intune also
 - [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
-

@@ -5,6 +5,10 @@ items:
   items:
   - name: KB 16900870 Summary of changes in 2303
     href: 2303/16900870.md
+  - name: KB 21010486 Update rollup for Configuration Manager version 2303
+    href: 2303/21010486.md
+  - name: KB 24721208 Data processing update for Configuration Manager version 2303
+    href: 2303/24721208.md
 - name: Version 2211
   items:
   - name: KB 15582417  Summary of changes in 2211

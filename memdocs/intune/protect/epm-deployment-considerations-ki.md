@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 7/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,14 +67,6 @@ Behavior exists in Windows to set an attribute on files that are downloaded dire
 
 Devices that are workplace joined are not supported by Endpoint Privilege Management. These devices will not show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
 
-### Certificate rules defined as Issuing Certificate Authority might not allow elevation
-
-When you define a certificate rule and specify the certificate as an 'Issuing CA', EPM might not allow elevation when the certificate is properly part of the certificate chain. To work around this issue, specify the publisher certificate of the file instead. This issue will be fixed in a future release.
-
-### On Windows 11, 'Run with elevated access' is shown under 'show more options' when I right-click on a file
-
-Windows 11 introduced a new paradigm for right-click context menus. EPM currently shows under the 'show more options' selection from that menu. This issue will be fixed in a future release.
-
 ### Rules for a network file might fail to elevate
 
 Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network location, such as a network share or mapped drive, is not supported.
@@ -104,10 +96,6 @@ Endpoint Privilege Management supports executable files. Microsoft is currently 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 
 Certain items that reside in the start menu or taskbar have a curated right-click menu and the EPM right-click context menu isn't able to be added to those menus. We plan to fix this issue in a future release.
-
-### Some applications and shortcuts fail to elevate when command-line parameters are present
-
-Certain command line compositions can cause elevations to fail on the client. This issue will be fixed in future release.
 
 ### Can I launch multiple files as elevated with the "Run with elevated access" right-click context menu?
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/17/2023
+ms.date: 07/07/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,6 +41,12 @@ You'll find the antivirus policies under **Manage** in the Endpoint security nod
 
 Antivirus policies include the same settings as found *endpoint protection* or *device restriction* templates for [device configuration](../configuration/device-profile-create.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus workload. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
 
+Applies to:
+
+- Linux
+- macOS
+- Windows 10/11
+
 ## Prerequisites for antivirus policy
 
 **Support for Microsoft Intune (MDM) enrolled devices**:
@@ -49,7 +55,7 @@ Antivirus policies include the same settings as found *endpoint protection* or *
   - Any supported version of macOS
   - For Intune to manage antivirus settings on a device, Microsoft Defender for Endpoint must be installed on that device. See. [Microsoft Defender for Endpoint for macOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Microsoft Defender for Endpoint documentation)
 
-- **Windows 10, Windows 11, and Windows Server** 
+- **Windows 10, Windows 11, and Windows Server**
   - No additional prerequisites are required.  
 
 **Support for Configuration Manager clients**:
@@ -62,9 +68,7 @@ Antivirus policies include the same settings as found *endpoint protection* or *
 
 **Support for Microsoft Defender for Endpoint clients:**
 
-- **Set up Defender for Endpoint Security Configuration Management** - To support deploying antivirus policy to devices communicating with Intune via Defender for Endpoint, configure *Security Management for Microsoft Defender for Endpoint*.
-  
-  To set up security management for Microsoft Defender for Endpoint, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md).
+- **Defender for Endpoint security settings management** - To configure support for deploying antivirus policy to devices that are managed by Defender, but not enrolled with Intune, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md). This article also includes the information about platforms supported by this capability, and the policies and profiles that those platforms support.
 
 ### Prerequisites for tamper protection
 
@@ -134,7 +138,7 @@ The following profiles are supported for devices you manage with Intune:
   Profiles for this platform can be used with devices enrolled with Intune, and devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
   > [!NOTE]  
-  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. 
+  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
   >
   > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Intune through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
   >

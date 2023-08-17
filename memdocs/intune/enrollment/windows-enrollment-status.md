@@ -44,7 +44,7 @@ ms.collection:
  
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process. 
 
-The ESP can be deployed during the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join, and any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario.  
+The ESP can be deployed during the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join, and any [Windows Autopilot](/autopilot/index) provisioning scenario.  
 
 To deploy the ESP to devices, you have to create an ESP profile in Microsoft Intune. Within the profile, you can configure the ESP settings that control:  
 
@@ -103,7 +103,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          - **All**: All assigned apps must be installed before users can use their devices.  
          - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings. 
 
-      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](../../autopilot/pre-provision.md). This setting is only available if you've added *blocking apps* and only applies to devices going through pre-provisioning. Your options:  
+      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](/autopilot/pre-provision). This setting is only available if you've added *blocking apps* and only applies to devices going through pre-provisioning. Your options:  
          - **No**: An attempt will be made to install the blocking apps. Autopilot deployment will fail if a blocking app fails to install. No attempt is made to install non-blocking apps. When the end user receives the resealed device and signs in for the first time, the ESP will attempt to install the non-blocking apps. 
          - **Yes**: An attempt will be made to install all required apps. Autopilot deployment will fail if a blocking app fails to install. If a non-blocking app that's targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP will reattempt to install the apps that it couldn't in the technician phase. This is the default setting for pre-provisioned deployments.   
          
@@ -143,12 +143,12 @@ Intune applies the default profile to all users and all devices when no other ES
 
 
 ## Prioritize profiles       
-If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. The profile set to 1 has the highest priority.
+If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. The profile set to 1 has the highest priority. Intune applies the default ESP profile when no other profiles are assigned to the device or user.  
 
  Intune applies profiles in the following order:  
 
 1. Intune applies the highest-priority profile assigned to the device. 
-2. If no profiles are targeted at the device, Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. In white glove and self-deploying scenarios, only profiles targeted at devices can be applied.   
+2. If no profiles are targeted at the device, Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. In pre-provisioning and self-deploying scenarios, Intune only applies profiles targeted at devices.  
 3. If no profiles are assigned to the device or user, Intune applies the default ESP profile.    
 
 To prioritize your profiles:  

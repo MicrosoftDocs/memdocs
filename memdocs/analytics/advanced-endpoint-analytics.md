@@ -15,7 +15,7 @@ ms.localizationpriority: high
 # What is advanced Endpoint analytics
 
 > [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
+> This capability is available as an Intune add-on. For more information, see [Intune add-ons](/mem/intune/fundamentals/intune-add-ons).
 
 The Microsoft Intune Suite includes advanced features for Endpoint analytics, such as:
 
@@ -38,13 +38,13 @@ The advanced features in Endpoint analytics build on top of the existing base En
 
 In addition to [license requirements](enroll-intune.md#licensing-prerequisites) for Endpoint analytics, an add-on license is required to use advanced features in Endpoint analytics.
 
-The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](/mem/intune/fundamentals/intune-add-ons) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Mixed licensing scenarios
 
-If your tenant has an Intune subscription that includes the base Endpoint analytics product for all users and an add-on subscription that contains advanced features in Endpoint analytics for a subset of users, it's considered a mixed license scenario.
+If your tenant has an Intune subscription that includes the base Endpoint analytics product for all users and an add-on subscription or trial that contains advanced features in Endpoint analytics for a subset of users, it's considered a mixed license scenario.
 
-Currently, the highest functional subscription sets the Endpoint aAnalytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint Analytics for all enrolled devices.  
+Currently, the highest functional subscription sets the Endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint analytics for all enrolled devices.  
 
 ## Enabling advanced features for Endpoint analytics
 

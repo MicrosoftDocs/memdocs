@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/14/2023
+ms.date: 07/13/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 
@@ -61,7 +61,7 @@ The endpoint is joined to Azure AD. It's not joined to an on-premises AD domain.
 
 To join Windows endpoints to Azure AD, you have some options:
 
-- **Use [Windows Autopilot](../../autopilot/index.yml)**. Windows Autopilot guides users through the Windows Out of Box Experience (OOBE). When users enter their work or school account, the endpoint joins Azure AD.
+- **Use [Windows Autopilot](/autopilot/index)**. Windows Autopilot guides users through the Windows Out of Box Experience (OOBE). When users enter their work or school account, the endpoint joins Azure AD.
 
   All devices registered with Windows Autopilot are automatically considered organization owned devices. Windows Autopilot is one of the most adopted approaches to get organization devices joined to Azure AD and managed by IT.  
 
@@ -109,7 +109,7 @@ If the devices can't connect to the DC, then users might be prevented from signi
 
 Many organizations with existing domain joined devices want the benefits and features of Azure AD and endpoint management. If your devices can't be fully cloud-native yet, then you can register these existing devices with Azure AD. When you register existing devices in Azure AD, a [device identity](/azure/active-directory/devices/overview) is created, and your devices are hybrid Azure AD joined. They're not considered cloud-native endpoints.
 
-If your organization is ready and wants to be cloud-native, then [Azure AD joined](#azure-ad-joined) (in this article) is the correct choice. Existing devices will need to be reset. For more specific information and guidance, go to the [High level planning guide](cloud-native-endpoints-planning-guide.md).
+If your organization is ready and wants to be cloud-native, then [Azure AD joined](#azure-ad-joined) (in this article) is the correct choice. Existing devices need to be reset. For more specific information and guidance, go to the [High level planning guide](cloud-native-endpoints-planning-guide.md).
 
 ### Hybrid Azure AD joined resources
 
@@ -123,14 +123,74 @@ Consider the following scenarios:
 
 | Scenario | AADJ or HAADJ |
 | --- | --- |
-| You have new endpoints or can reset existing endpoints | ✔️ Azure AD join <br/><br/> If you have new, refurbished, or refreshed Windows devices, then Azure AD joined is recommended. Windows 10/11 has modern features built in to the OS, including modern management, modern authentication, and more. AADJ should be your default option for new and refurbished endpoints. <br/><br/> It's possible there will be blockers and challenges outside of Microsoft's control that can prevent your organization from fully adopting AADJ. There may also be unknown blockers that are specific to your organization and its configuration or expectations. These blockers can be technical or happen due to other, non-technical factors.<br/><br/>If you identify a potential blocker that's preventing you from using AADJ, then determine the scope, impact, and solution. The [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md) may help.<br/><br/>❌ Hybrid Azure AD join<br/><br/> You can use HAADJ for new endpoints, but it's typically not recommended. When joined using HAADJ, you might not get to use the modern features built into Windows 10/11.  |
-| Endpoints can't be reset or reprovisioned |  ❌ Azure AD join <br/><br/> Existing devices joined to an on-premises AD domain must be reset to become Azure AD joined. If they can't be reset, then AADJ isn't possible. <br/>  <br/>✔️ Hybrid Azure AD join<br/> <br/>If you have existing endpoints that are joined to an on-premises AD domain, and can't be reset, then Hybrid Azure AD joined might be the easiest option for your organization. Devices get a cloud identity and can use cloud services that require a cloud identity. For end users with existing endpoints, this option typically has minimal impact. |
-| You have new endpoints and have existing AD joined endpoints that can't be reset | ✔️ Azure AD join <br/><br/> AADJ should be your default option for new, refurbished, or refreshed Windows devices. <br/><br/> ✔️ Hybrid Azure AD join<br/> <br/> If you have existing endpoints that are joined to an on-premises AD domain, and can't be reset, then Hybrid Azure AD joined might be your only option. <br/> <br/> Hybrid Azure AD joined and Azure AD joined aren't mutually exclusive, and can coexist in the same environment. Having a mixed environment does increase complexity, maintenance tasks, and support costs. But, you can use HAADJ until those endpoints can be replaced or reset. Remember, Hybrid Azure AD joined shouldn't be your organization's end goal. |
-| You want to be cloud-only, and remove dependency to on-premises | ✔️ Azure AD join <br/><br/> The cloud solution is to AADJ your endpoints. The endpoints and their identities are created and stored in Azure AD, and Intune manages the endpoints with settings and policies. These services work with other cloud services, including Microsoft 365, Microsoft 365 Defender, and more. <br/><br/>❌ Hybrid Azure AD join<br/><br/> HAADJ requires connectivity to on-premises domain controllers (DCs). |
-| You want to manage endpoints using MDM policies | ✔️ Azure AD join <br/><br/> Microsoft Intune, which is a 100% cloud solution, can manage Windows client devices. Intune has many built-in features and settings that can manage settings, control device features, help secure your endpoints, and more. <br/><br/>The [High level planning guide to move to cloud-native endpoints: Intune features you should know](cloud-native-endpoints-planning-guide.md#intune-features-you-should-know) lists some of these features. [What is Intune](../../intune/fundamentals/what-is-intune.md) is also a good resource. <br/><br/>❌ Hybrid Azure AD join<br/><br/> On HAADJ endpoints, you must use group policies objects (GPO) to control policy settings. If you enable [co-management](../../configmgr/comanage/overview.md) (Intune (cloud) + Configuration Manager (on-premises)), then you can use some Azure AD features, such as conditional access. <br/><br/>For some guidance, go to [Deployment guide: Setup or move to Microsoft Intune](../../intune/fundamentals/deployment-guide-intune-setup.md). |
-| You want to eliminate on-premises AD for authentication and sign-on  | ✔️ Azure AD join <br/><br/> User identities are created and stored in Azure AD. Users can sign in to their endpoints from anywhere and at any time. If you use [passwordless authentication](/azure/active-directory/authentication/concept-authentication-passwordless), then users might not need internet access to sign in. <br/><br/> AADJ endpoints can also use modern authentication, including multifactor authentication (MFA), smart card authentication, and certificate-based authentication.<br/><br/> ❌ Hybrid Azure AD join<br/><br/> HAADJ endpoints require a line-of-sight to the on-premises AD domain controller for initial sign-in and to change passwords. If the domain is down, or there isn't any internet access, then users could be blocked from signing in to their endpoints. <br/><br/> If you use [passwordless authentication](/azure/active-directory/authentication/howto-authentication-passwordless-faqs), then users need internet access and line of sight to the DCs. HAADJ endpoints can use kerberos and NTLM to authenticate. |
-| You need to access on-premises resources | ✔️ Azure AD join <br/><br/> AADJ endpoints can access on-premises resources, and can use single sign-on (SSO). For more specific information, go to [Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md).<br/><br/>✔️ Hybrid Azure AD join<br/><br/> HAADJ endpoints can use single sign-on (SSO) across your cloud and on-premises resources. For more specific information, go to [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join). |
-| You want device compliance and/or conditional access | ✔️ Azure AD join <br/><br/> With Microsoft Intune or [co-management](../../configmgr/comanage/overview.md) (Intune (cloud) + Configuration Manager (on-premises)), you can create [compliance policies](../../intune/protect/device-compliance-get-started.md). When combined with [conditional access](../../intune/protect/conditional-access.md), you can enforce your compliance policies on AADJ endpoints. <br/><br/>✔️ Hybrid Azure AD join<br/><br/> With Microsoft Intune or [co-management](../../configmgr/comanage/overview.md) (Intune (cloud) + Configuration Manager (on-premises)), you can create [compliance policies](../../intune/protect/device-compliance-get-started.md). When combined with [conditional access](../../intune/protect/conditional-access.md), you can enforce your compliance policies on HAADJ endpoints. |
+| You're provisioning new Windows endpoints | ✔️ Azure AD join (AADJ) <br/><br/> If you have new, refurbished, or refreshed Windows devices that you're provisioning and enrolling, then Azure AD join is recommended. Windows 10/11 has modern features built in to the OS, including modern management, modern authentication, and more. AADJ should be your default option for new and reset endpoints.<br/><br/>❌ Hybrid Azure AD join (HAADJ) <br/><br/> You can use HAADJ for new endpoints, but it's typically not recommended. When joined using HAADJ, you might not get to use the modern features built into Windows 10/11.  |
+| You have existing, previously provisioned Windows endpoints that are hybrid Azure AD or AD joined | ✔️ Hybrid Azure AD join (HAADJ) <br/> <br/>If you have existing endpoints that are joined to an on-premises AD domain (including hybrid Azure AD joined), then hybrid Azure AD join is recommended. Devices get a cloud identity and can use cloud services that require a cloud identity. For end users with existing endpoints, this option has minimal impact. <br/><br/>❌ Azure AD join (AADJ) <br/><br/> Existing devices joined to an on-premises AD domain (including hybrid Azure AD joined) must be reset to become Azure AD joined. If they can't be reset, then there's no supported Microsoft path to Azure AD join them. |
+
+### Common questions, answers, and scenarios
+
+This section answers common questions about Azure AD joined and hybrid Azure AD joined devices.
+
+#### Should hybrid Azure AD joined (HAADJ) be a long term or end goal state for devices?
+
+No, HAADJ shouldn't be long term nor the end goal for any organization.
+
+When you're not restricted or limited (technical, political, or regulatory reasons), your organization should be moving or planning on moving to Azure AD joined (AADJ) for your Windows endpoints.
+
+#### What strategy should an organization adopt to move existing HAADJ devices to AADJ?
+
+The strategy depends on many factors, many that are specific to your organization.
+
+In general, Microsoft recommends waiting for a complementary event. For example, you can move to AADJ during a hardware refresh, OS upgrade, or device troubleshooting scenario when there's a new (or reset) instance of Windows. Using this approach, you minimize user disruption and streamline the conversion process to AADJ. Remember, there's no Microsoft supported process or path to convert an existing device from HAADJ to AADJ without a Windows reset.
+
+You can proactively reset existing devices to move to AADJ. This approach can be more disruptive to users and requires more planning & testing. But you can use this approach if you have a few devices or if you have a strong business case to move to AADJ.
+
+#### There's a blocker that prevents my organization from moving to AADJ
+
+It's possible there are blockers and challenges outside of Microsoft's control that can prevent your organization from fully moving to AADJ. There may also be unknown blockers that are specific to your organization and its configuration or expectations. These blockers can be technical or happen for other, nontechnical reasons.
+
+Remember, moving to AADJ isn't an all or nothing proposition. Moving devices to AADJ takes time, even with or without blockers or inhibitors.
+
+If you identify a potential blocker that's preventing you from using AADJ, then determine the scope, impact, and solution. The [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md) can help.
+
+#### Can AADJ and HAADJ endpoints coexist in the same environment?
+
+Yes, AADJ and HAADJ endpoints can coexist in the same environment. They aren't mutually exclusive.
+
+Having a mixed environment does increase complexity, maintenance, and support costs. But you can use HAADJ until those endpoints are replaced or reset. Remember, HAADJ shouldn't be your organization's end goal for Windows endpoint state.
+
+#### Can users on AADJ systems access on-premises resources?
+
+Yes, users on AADJ systems can access on-premises resources.
+
+AADJ endpoints can access on-premises resources, and can use single sign-on (SSO). For more specific information, go to [Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md).
+
+#### What device join states can Intune manage?
+
+Microsoft Intune, which is a 100% cloud solution, can manage Windows client devices that are AADJ or HAADJ. Intune has many built-in features and settings that can manage settings, control device features, help secure your endpoints, and more.
+
+The [High level planning guide to move to cloud-native endpoints: Intune features you should know](cloud-native-endpoints-planning-guide.md#intune-features-you-should-know) lists some of these features. [What is Intune](../../intune/fundamentals/what-is-intune.md) is also a good resource.
+
+On HAADJ endpoints, you can use on-premises group policies objects (GPO) or Intune to control policy settings. It's possible to also use a combination of GPO and Intune, but this combination adds administrative overhead and complexity. If you enable [co-management](../../configmgr/comanage/overview.md) (Intune (cloud) + Configuration Manager (on-premises)), then you can use some Azure AD features, such as conditional access.
+
+For some guidance, go to [Deployment guide: Setup or move to Microsoft Intune](../../intune/fundamentals/deployment-guide-intune-setup.md).
+
+#### What device join states are required for device compliance and/or conditional access?
+
+Both HAADJ and AADJ endpoints support [compliance policies](../../intune/protect/device-compliance-get-started.md) and [conditional access](../../intune/protect/conditional-access.md) when managed by Intune or co-managed by Intune and Configuration Manager.
+
+#### Are there limitations for HAADJ?
+
+Yes, there are limitations for HAADJ.
+
+These limitations are generally the same with on-premises only domain joined devices. Specifically, HAADJ endpoints require a line-of-sight to the on-premises AD domain controller for initial sign-in and to change passwords. If the domain is down or is unavailable, then users could be blocked from signing in to their endpoints. If your organization is moving away from having an on-premises domain, then you must also move away from HAADJ for your devices.
+
+If you use [passwordless authentication](/azure/active-directory/authentication/concept-authentication-passwordless), then users need internet access and a line of sight to the domain controllers (DCs). To authenticate, HAADJ endpoints can use kerberos and NTLM.
+
+#### Is HAADJ considered cloud-native?
+
+No, HAADJ isn't considered cloud-native.
+
+The cloud solution is to AADJ your endpoints. The endpoints and their identities are created and stored in Azure AD. Intune manages the endpoints with settings and policies. These services work with other cloud services, including Microsoft 365, Microsoft 365 Defender, and more.
 
 ## Follow the cloud-native endpoints guidance
 

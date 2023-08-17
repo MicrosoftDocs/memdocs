@@ -62,7 +62,7 @@ You can configure the following restrictions in the admin center:
 * Device platform  
 * OS version  
 * Device manufacturer
-* Device ownership (personally-owned devices)    
+* Device ownership (personally owned devices)    
 
 ### Device limit 
 Put a limit on the number of devices a person can enroll. You can set the device limit from 1 to 15.  
@@ -97,7 +97,7 @@ This restriction is in the admin center under **Enrollment device platform restr
 ### Device manufacturer  
 This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only. It is in the admin center under **Enrollment device platform restrictions**.    
 
-### Personally-owned devices  
+### Personally owned devices  
 This restriction helps prevent device users from accidentally enrolling their personal devices, and applies to devices running:  
 
 * Android
@@ -110,11 +110,11 @@ This restriction is in the admin center under **Enrollment device platform restr
 #### Blocking personal Android devices  
 By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same. 
 
-If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).  
+If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).  
 
 
 #### Blocking personal iOS/iPadOS devices  
-By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
+By default, Intune classifies iOS/iPadOS devices as personally owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
 - [Registered with a serial number or IMEI](corporate-identifiers-add.md).
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
@@ -122,7 +122,7 @@ By default, Intune classifies iOS/iPadOS devices as personally-owned. To be clas
 > An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
 
 #### Blocking personal Macs  
-By default, Intune classifies macOS devices as personally-owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:
+By default, Intune classifies macOS devices as personally owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:
 - [Registered with a serial number](corporate-identifiers-add.md).
 - Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
@@ -130,13 +130,14 @@ By default, Intune classifies macOS devices as personally-owned. To be classifie
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
 
 The following enrollment methods are authorized for corporate enrollment:  
-- The device enrolls through [Windows Autopilot](../../autopilot/enrollment-autopilot.md).
+- The device enrolls through [Windows Autopilot](/autopilot/enrollment-autopilot).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
 - The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
 
 > [!NOTE]
-> Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it. 
+> Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it.
+
 Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling (unless registered with Autopilot) because these methods don't offer the Intune administrator per-device control:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).

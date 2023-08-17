@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/08/2023
+ms.date: 08/11/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -41,20 +41,18 @@ The fastest way to use Windows 365 is to use AADJ, gallery images and the Micros
     - Other Azure Resources, including Cloud PC resources.
 - For more information, see [create an Azure network connection](create-azure-network-connection.md).
 
-For Government Community Cloud (GCC) customers only, the following instructions let Intune running in Azure Commercial to manage Cloud PCs running in Azure Government regions.
+For Government Community Cloud (GCC) customers only, the following instructions let Intune running in Azure to manage Cloud PCs running in Azure Government regions.
 
 > [!NOTE]
 > - You don't need an Azure Government subscription to use Windows 365 Government. These instructions are specifically for GCC, and only if Custom Images and/or Azure Network Connections are required.  The instructions on this page don't apply to GCC High.
-> - For government customers that don't have an Azure Government subscription, or require integration with Azure Commercial, using consider Windows 365 Enterprise. Make sure this meets your compliance requirements. Window 365 Enterprise is FedRAMP compliant. See [Windows 365 Service Description](/office365/servicedescriptions/windows-365-service-description/windows-365-service-description)
+> - For government customers that don't have an Azure Government subscription, or require integration with Azure, consider using Windows 365 Enterprise. Make sure this meets your compliance requirements. Windows 365 Enterprise is FedRAMP compliant. See [Windows 365 Service Description](/office365/servicedescriptions/windows-365-service-description/windows-365-service-description)
 
 ## Before you begin
 For both tenant mapping and granting permissions for custom images and/or connecting to your own networks, you need:
 
-- An Azure Commercial subscription.
 - An Azure Government subscription.
 - Credentials of a user that has:
-    - *Owner* role in your Azure Commercial subscription, AND
-    - *Global Administrator* role in your Azure Commercial tenant (ending in onmicrosoft.com).
+    - *Global Administrator* role in your Azure tenant (ending in onmicrosoft.com).
 - Credentials of a user that has:
     - *Owner* role in your Azure Government subscription, AND
     - *Global Administrator* role in your Azure Government tenant (ending in onmicrosoft.us).
@@ -66,15 +64,26 @@ For both tenant mapping and granting permissions for custom images and/or connec
     - Subnet.
 
 >[!NOTE]
-> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the endpoints for admins and end users are in the commercial Azure domain. Users will login to the Cloud PCs using credentials synched with Azure Commercial AAD.
+> While the GCC users' Cloud PCs are hosted and secured in the Azure Government cloud, the endpoints for admins and end users are in the commercial Azure domain. Users will login to the Cloud PCs using credentials synched with Azure AD.
 
 ## Azure AD options
 
 If you want to use Azure AD join or hybrid Azure AD join, consider these preparations:
 
-**Azure AD joined Cloud PCs**: If you want to use an Azure AD join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure commercial .com domain must be mapped to the tenant in the Azure Government (.us) domain.
+**Azure AD joined Cloud PCs**: If you want to use an Azure AD join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure .com domain must be mapped to the tenant in the Azure Government (.us) domain.
 
 **Hybrid Azure AD joined Cloud PCs**: If you want to use a hybrid Azure AD join infrastructure, you must configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
+
+## Preparing for Windows 365 GCC Setup Tool
+
+For the Windows 365 GCC Setup Tool to complete tenant mapping, the Windows 365 Azure AD application must be given permission to access your Azure Government AD tenant through a service principal. The service principal object defines what the app can do in the tenant, who can access the app, and what resources the app can access. Before running the Windows 365 GCC Setup Tool the first time, you must do the following:
+
+1. If not already completed, install the Azure CLI on the computer where you will be creating the service principal. For more information, see [How to install the Azure CLI](/cli/azure/install-azure-cli).
+2. Sign into your Azure Government AD tenant by using the Azure CLI steps defined in [Sign in with Azure CLI](/cli/azure/authenticate-azure-cli). Global Administrator permissions are required to create the service principal for the Windows 365 App.
+3. For more information about working with service principals in Azure, see [Work with Azure service principals](/cli/azure/create-an-azure-service-principal-azure-cli#1-create-a-service-principal). Grant the Windows 365 Azure AD app permissions to your tenant by running the following PowerShell command: ```az ad ap create --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```.
+4. After the command completes successfully, you should be able to view details about the service principal by running the following PowerShell command: ```az ad sp show --id 0af06dc6-e4b5-4f28-818e-e78e62d137a5```. You should see the Windows 365 application listed in the **All Applications** view in the Enterprise application blade in Azure portal.
+
+The Windows 365 App service principal can only access Azure resources necessary to configure custom image and Azure Network Connection (ANC) support in Windows 365. After it's created, the service principal can only be deleted when custom images, ANC objects and corresponding Cloud PCs using them have been deprovisioned. Otherwise, Cloud PC provisioning tasks may fail, and existing Cloud PCs may become inaccessible.
 
 ## Get started with the Windows 365 GCC Setup Tool
 
@@ -82,7 +91,7 @@ Follow these steps to configure tenant mapping using the Windows 365 GCC Setup T
 
 1. Launch the GCCSetupTool.exe. This tool is available at https://aka.ms/gccsetuptool.
 2. On the **Let's get you started** page, select **Next**.
-3. Sign in with your Azure Commercial account. This account must have Global Administrator permissions.
+3. Sign in with your Azure account. This account must have Global Administrator permissions.
 4. Confirm that you want to continue with your commercial account > **Next**.
 5. Sign in with your Azure Government account > **Next** > type your credentials.
 6. Confirm that you want to continue with your government account > **Next**.

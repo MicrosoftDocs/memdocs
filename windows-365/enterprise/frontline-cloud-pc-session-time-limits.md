@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 07/17/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -32,13 +32,19 @@ ms.collection:
 
 # Set idle session time limits for Windows 365 Frontline Cloud PCs
 
-Windows 365 Frontline Cloud PCs remain active unless the user signs off from the Cloud PC through the start menu. A user who forgets to sign out might block others from their Frontline Cloud PCs if the max active session limit has been reached. To avoid this problem, you can create a configuration profile to enforce idle session time limits on all your Frontline Cloud PCs.
+Windows 365 Frontline Cloud PCs remain active until:
+
+- The user signs off from the Cloud PC through the start menu.
+- The browser is closed (causing the Cloud PC to disconnect).
+- The Cloud PC is inactive for two hours.
+
+If a user forgets to disconnect, it might block others from their Frontline Cloud PCs if the max active session limit has been reached. To avoid this problem, you can create a configuration profile to enforce idle session time limits on all your Frontline Cloud PCs.
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 2. Under **Create a profile**, select the following options:
 
-  - **Platform**: Windows 10 and later
-  - **Profile type**: Settings catalog
+    - **Platform**: Windows 10 and later
+    - **Profile type**: Settings catalog
 
 3. Select **Create**.
 4. On the **Basics** page, provide a name and optional description > **Next**.
