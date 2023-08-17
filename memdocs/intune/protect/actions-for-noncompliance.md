@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,7 +87,7 @@ When you enable this action:
   - iOS/iPadOS
   - macOS
 
-- **Add device to retire list**: When this action is performed on a device, the device is included in a list at **Devices** > **Compliance policies** > **Retire Noncompliant Devices** in the Microsoft Intune admin center. However, the device isn't officially retired until an administrator explicitly initiates the retirement process.
+- **Add device to retire list**: When this action is performed on a device, the device is added to a list at **Devices** > **Compliance policies** > **Retire Noncompliant Devices** in the Microsoft Intune admin center. However, the device isn't retired until an administrator explicitly initiates the retirement process. When an admin retires the device from that list, retirement removes all company data off the device and removes that device from Intune management. 
 
   The following platforms support this action:
   - Android device administrator
