@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 08/16/2023
+ms.date: 08/17/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -74,13 +74,11 @@ This section focuses on Android devices used by frontline workers. It includes d
 
 Android devices are in almost every industry across the globe, including healthcare, aviation, construction, manufacturing, logistics, and government. They're commonly used by frontline workers in these industries.
 
-Intune supports different enrollment options for Android devices, as shown in the following image. For FLW devices using the Android platform, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**.
-
-**The following image displays all available Intune enrollment options for Android**
+Intune supports different enrollment options for Android devices, as shown in the following image:
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-enrollment-options.png":::
 
-**When planning for Android management with Intune, utilize the following diagram to decide which Android management path or paths to pursue.**
+For FLW Android devices, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**. Use the following image to help decide the path that's best for your FLW devices:
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-options.png" alt-text="Diagram that shows Android Enterprise frontline worker scenario path in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-options.png":::
 
