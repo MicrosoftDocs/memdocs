@@ -76,14 +76,15 @@ Android devices are in almost every industry across the globe, including healthc
 
 Intune supports different enrollment options for Android devices, as shown in the following image. For FLW devices using the Android platform, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**.
 
-**NEW IMAGE**
-
-:::image type="content" source="./media/frontline-worker-overview/android-flw-options.png" alt-text="Diagram that shows Android Enterprise frontline worker scenario path in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-options.png":::
-
-**ORIGINAL IMAGE**
+**The image below diplays all Intune enrollment options for Android**
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-enrollment-options.png":::
 
+**When planning for Android management with Intune, utilize the following diagram to decide which Android management path or paths to pursue.**
+
+:::image type="content" source="./media/frontline-worker-overview/android-flw-options.png" alt-text="Diagram that shows Android Enterprise frontline worker scenario path in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-options.png":::
+
+  
 When you use Android devices for frontline workers, the steps in this section help you determine the best enrollment option & the best device management experience for you and your end users.
 
 > [!NOTE]
@@ -571,3 +572,4 @@ For more information and to get started, go to:
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md)
 - [Microsoft Intune planning guide](intune-planning-guide.md)
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+
