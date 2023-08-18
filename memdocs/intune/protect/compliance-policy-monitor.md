@@ -130,7 +130,7 @@ If you select this tile, Intune displays a *Device status* view that lists each 
 > [!TIP]  
 > Intune includes an organizational report that identifies all devices in your tenant that have not been assigned a compliance policy. See [Devices without compliance policy (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
 
-### Settings compliance
+### Setting compliance
 
 The **Setting compliance** tile displays all the device compliance policy settings from all compliance policies, the platforms the policy settings apply to, and the number of noncompliant devices. At least one device must report a status for a setting before the setting is visible in this view.
 
