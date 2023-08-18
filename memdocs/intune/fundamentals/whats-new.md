@@ -232,7 +232,7 @@ Both reports are new instances of existing reports, and deliver improvements ove
 - Drill-down reports for deeper details, which are filtered based on the column you select.
 - Devices are represented a single time, which is in contrast to the original reports which could count a device more than once if multiple users used that device
 
-Eventually, the [older report versions](../protect/compliance-policy-monitor.md#legacy-compliance-reports) that are still available in the admin center at *Devices > Monitor* will be retired.
+Eventually, the [older report versions](../protect/compliance-policy-monitor.md#other-compliance-reports) that are still available in the admin center at *Devices > Monitor* will be retired.
 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
