@@ -32,7 +32,7 @@ ms.collection:
 
 # Troubleshoot partner connectors for Windows 365
 
-When you turn on Citrix HDX Plus or VMware connector for a user, the partner agent is automatically installed on that user's Cloud PCs. The agent enables the HDX protocol. If this installation runs into a problem, you'll receive an error message in the All Cloud PC list. The description of the error includes advice on how to troubleshoot the error.
+When you turn on Citrix HDX Plus or VMware connector for a user, the partner agent is automatically installed on that user's Cloud PCs. The agent enables the HDX protocol. If this installation runs into a problem, you get an error message in the All Cloud PC list. The description of the error includes advice on how to troubleshoot the error.
 
 If the partner agent installation fails, the user can still connect to their Cloud PC by using Remote Desktop.
 
@@ -58,9 +58,9 @@ While troubleshooting errors, make sure that the following steps have all been s
   - Check the Cloud PC registration status in the partner configuration console.
   - If the Cloud PC is unregistered, check the Application sign-in Windows event viewer (eventvwr.msc) for partner service errors and warnings.
 
-After you find the root cause, remove the assigned license from the partner console and re-add the license. This should trigger a reinstallation of the partner agent.
+After you find the root cause, remove the assigned license from the partner console and re-add the license. This removal should trigger a reinstallation of the partner agent.
 
-If no other solution works, you can [reprovision](reprovision-cloud-pc.md) the Cloud PC to reattempt the enablement. Reprovisioning will delete the Cloud PC and create a brand new one. All data on the original Cloud PC will be lost. Therefore, reprovisioning should be the last resort to resolve the issue.
+If no other solution works, you can [reprovision](reprovision-cloud-pc.md) the Cloud PC to reattempt the enablement. Reprovisioning deletes the Cloud PC and create a brand new one. All data on the original Cloud PC will be lost. Therefore, reprovisioning should be the last resort to resolve the issue.
 
 ## Troubleshoot connection issues
 
@@ -68,14 +68,14 @@ If you’re having connectivity issues with your partner-provisioned Cloud PC, y
 
 ### Turn on the RDP protocol
 
-When the partner protocol is turned on, the Windows 365 remoting protocol remains enabled but inactive. This inactivity means that users trying to connect with the Windows 365 supported Remote Desktop clients (including the HTML5 browser) are blocked by default. Users can only connect by using the partner protocol. Users trying to connect with non-partner clients will get a generic error message.
+When the partner protocol is turned on, the Windows 365 remoting protocol remains enabled but inactive. This inactivity means that users trying to connect with the Windows 365 supported Remote Desktop clients (including the HTML5 browser) are blocked by default. Users can only connect by using the partner protocol. Users trying to connect with non-partner clients get a generic error message.
 
 You can turn on the RDP protocol so users can sign in with RDP to test the Cloud PC connectivity. You can do either of the following to turn on the RDP protocol:
 
 - [Make a user a local admin](assign-users-as-local-admin.md) on the Cloud PC.
 - [Add the user to the Direct Access Users group on the Cloud PC](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
 
-After taking either of these steps,  you might have to reboot the Cloud PC for the group membership updates to take effect. Afterwards, the user will be able to connect by using either RDP or the partner protocol.
+After taking either of these steps,  you might have to reboot the Cloud PC for the group membership updates to take effect. Afterwards, the user can connect by using either RDP or the partner protocol.
 
 You can now test the connectivity by using RDP, and raise a support case with the relevant support team if problems persist.
 
