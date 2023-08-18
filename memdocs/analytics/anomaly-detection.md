@@ -57,7 +57,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
    :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
 
-6. Select a device correlation group from the list for a detailed view of the devices' common factors. Devices are correlated based on one or more shared attributes from devices, applications, operating systems, and drivers. You can see the number of devices currently affected by the anomaly and devices at risk of experiencing the anomaly. The prevalence rate also shows you the percentage of affected devices from an anomaly that are members of a correlation group.
+6. Select a device correlation group from the list for a detailed view of the devices' common factors. Devices are correlated based on one or more shared attributes such as app version, driver update, OS version and device model. You can see the number of devices currently affected by the anomaly and devices at risk of experiencing the anomaly. The prevalence rate also shows you the percentage of affected devices from an anomaly that are members of a correlation group.
 
    :::image type="content" source="media/anomaly-detection/select-corelation-group.png" alt-text="This is a screenshot showing Device correlation groups":::
 
@@ -78,10 +78,6 @@ Standard deviation and mean are used to calculate the Z-score for each data poin
 
 - **Time Series Z-score model**: Time series Z-score models are a variation of the standard Z-score model designed for detecting anomalies in time series data. Time series data is a sequence of data points collected at regular intervals over time, such as aggregate of Stop Error Restarts.
 Standard deviation and mean are calculated for a sliding window of time, using aggregated metrics. This method allows the model to be sensitive to temporal patterns in the data and adapt to changes in its distribution over time.
-
-## Known Issues
-
-Affected Devices: The **Affected Devices** tab has the option to select which columns are displayed in the table view. If you select the **User Experience** column picker control, the **User Experience** column appears in the **Affected Devices** tab view. However, the column is greyed out. In a future release, we plan to make a change to fully resolve the issue.
 
 ## Next steps
 
