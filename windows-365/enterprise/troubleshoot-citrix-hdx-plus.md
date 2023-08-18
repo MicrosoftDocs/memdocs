@@ -58,7 +58,7 @@ While troubleshooting errors, make sure that the following steps have all been s
   - Check the Cloud PC registration status in the partner configuration console.
   - If the Cloud PC is unregistered, check the Application sign-in Windows event viewer (eventvwr.msc) for partner service errors and warnings.
 
-After you find the root cause, remove the assigned license from the partner console and re-add the license. This removal should trigger a reinstallation of the partner agent.
+After you find the root cause, remove the assigned license from the partner console and then add the license back in. This removal should trigger a reinstallation of the partner agent.
 
 If no other solution works, you can [reprovision](reprovision-cloud-pc.md) the Cloud PC to reattempt the enablement. Reprovisioning deletes the Cloud PC and create a brand new one. All data on the original Cloud PC will be lost. Therefore, reprovisioning should be the last resort to resolve the issue.
 
