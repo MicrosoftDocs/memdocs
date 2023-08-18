@@ -65,7 +65,7 @@ During the [public preview](..\public-preview.md), the following limitations exi
 - Only the Horizon Cloud Service web access client and native Windows client is available.
 - Only one Cloud PC per user is supported.
 - Microsoft Frontline licenses aren't supported.
-- UAG as a Service has reduced capabilities from its standalone customer managed counterpart.
+- VMware UAG as a Service has reduced capabilities from its standalone customer managed counterpart.
   - Users with interrupted sessions must manually reconnect.
   - Only TCP streaming protocol is supported.
 
