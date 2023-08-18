@@ -23,7 +23,7 @@ The enhanced device timeline allows you to see a history of events that have occ
 > [!NOTE]
 > The **Device timeline** tab replaces the **Application reliability** tab in tenants that have advanced features in Endpoint analytics.
 
-You can search by event name or details. Select the **Add filter** button to choose the source and type of events that appear on the device timeline and select a time range of interest.  
+You can search by event name or details. Select the **Add filter** button to choose the source and level of events that appear on the device timeline and select a time range of interest.  
 
 Currently, the enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. The end-to-end latency is generally under 24 hours.  
 
