@@ -291,14 +291,14 @@ Organizations can modify their network stack preference by configuring the follo
 
 |Key  |Value  |
 |:---------|:---------|
-|com.microsoft.intune.mam.managedbrowser.NetworkStackPref |**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref|**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
 
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
 
 #### Set a proxy .pac file URL
 
-Organizations can specify a URL to a porxy auto-config (PAC) file for Microsoft Edge for Android.
+Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for Android.
 
 |Key |Value |
 |:-----------|:-------------|
@@ -310,7 +310,7 @@ By default, Microsoft Edge for Android will block network access with invalid or
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**ture** Allow network access |
+|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
 
 #### iOS Website data store
 
@@ -469,7 +469,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |     com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |     EdgeShowAddressBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
-|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref        |     EdgeNetworkStackPref    |
+|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref    |     EdgeNetworkStackPref    |
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
