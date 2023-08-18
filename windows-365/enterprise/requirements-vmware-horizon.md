@@ -43,7 +43,6 @@ To use VMware Horizon for Windows 365, you must meet the following requirements:
 - A VMware Cloud Service Portal (CSP) account
 - The same identity provider access being used by your Windows 365 Tenant
 - Tenant to tenant connectivity
-- The Microsoft Connector allows the VMware and Windows 365 tenants to communicate in order to facilitate the automated agent installation for entitled users
 - Entitle users
 - Cloud PC Must have access to the following ports:
   - Agent facing: 8444
