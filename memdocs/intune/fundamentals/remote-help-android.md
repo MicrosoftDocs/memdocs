@@ -78,6 +78,8 @@ For general prerequisites, go to [Prerequisites for Remote Help](remote-help.md#
 
 - Zebra devices only: Set up Zebra OEMConfig for your tenant. For more details, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md)  
 
+  - Remote Help is not currently supported on Zebra devices running on Android 13. In May 2023, Zebra released a new OEMConfig app called *Zebra OEMConfig Powered by MX*. This app includes a new redesigned schema and is mandatory for using OEMConfig on Zebra devices running on Android 13 or later. The new schema does not currently support configuring the permissions required for Remote Help.
+
 - The helper must be licensed to use the Remote Help add-on. For more details on licensing, go to [Use Intune Suite add-on capabilities - Microsoft Intune](../fundamentals/intune-add-ons.md)
 
 - The helper must have appropriate RBAC permissions to use Remote Help on Android:
@@ -141,9 +143,10 @@ On Zebra devices, permissions are granted through Zebra OEMConfig profiles.
 
 For instructions on how to set up OEMConfig, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
+<!-- Commenting this section for now as it is not currently supported. Will be added back soon 
 ##### Instructions for Zebra OEMConfig powered by MX
 
-Need to add
+Need to add content -->
 
 ##### Instructions for Legacy Zebra OEMConfig
 
