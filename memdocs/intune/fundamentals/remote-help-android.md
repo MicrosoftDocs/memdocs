@@ -144,7 +144,7 @@ On Zebra devices, permissions are granted through Zebra OEMConfig profiles.
 
 For instructions on how to set up OEMConfig, go to [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
-If you're planning to use LG OTA to update a device running on version Android 11, you need to enable another Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
+If you're planning to use Remote Help on a device running on Android 11, you need to enable another Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
 
 |Build|System app to be enabled|
 |--------|------------------------------|
