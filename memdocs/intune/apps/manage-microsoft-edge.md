@@ -298,7 +298,7 @@ Organizations can modify their network stack preference by configuring the follo
 
 #### Set a proxy .pac file URL
 
-Organizations can specify a URL to a porxy auto-config (PAC) file for Microsoft Edge for Android.
+Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for Android.
 
 |Key |Value |
 |:-----------|:-------------|
@@ -310,7 +310,7 @@ By default, Microsoft Edge for Android will block network access with invalid or
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**ture** Allow network access |
+|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
 
 #### iOS Website data store
 
