@@ -17,6 +17,30 @@ ms.topic: conceptual
 
 # Windows Autopilot: What's new
 
+## Update to BitLocker Recovery Key Process for Windows Autopilot
+
+Microsoft Intune will be changing how BitLocker resets occur for re-used Windows Autopilot devices in the September (2309) service release. Previously, users could self-service access the BitLocker recovery key when re-using devices that have been configured through Windows Autopilot. However, after the change, users will need to contact their IT admin to request a restore or access to the BitLocker recovery key. IT admins will continue to have full access to recovery keys both before and after this change.
+
+**User impact:** This change will only affect new primary users of the Autopilot device who have been allowed self-service recovery of BitLocker keys to that device. There is no impact if the devices’ primary user does not change across the device restore or reset.
+
+Self-service BitLocker access will continue to work the same if the IT admin performs either:
+
+- A remote Autopilot Reset (see Reset devices with remote Windows Autopilot Reset).
+- Remove the current primary user or reassign to the new intended primary user prior to the device being reset or reimaged (see Change a device's primary user).
+
+If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties which will update to the new user upon the next check-in.
+
+**What you need to do to prepare?**
+
+To ensure a smooth transition, please notify your helpdesk of this change. Additionally, update your documentation to one of the following options:
+
+1. Temporarily note the BitLocker recovery key prior to a restore as documented BitLocker recovery guide - Windows Security | Microsoft Learn.
+1. Contact the helpdesk or IT Admin to unlock self-service access.
+
+## Win32 app configurable installation time impacts the Enrollment Status Page
+
+Staring in Intune 2308, Win32 apps will allow you to configure an installation time on a per app basis. This time is expressed in minutes and if the app takes longer to install than the set installation time, the system, will fail the app install. Please note, any changes to timeouts that you make to your Win32 apps, you will also need to increase your timeout for the Enrollment Status page to reflect those changes to avoid timeout failures. Learn more about this change here.
+
 ## Autopilot profile resiliency
 
 Downloading the Windows Autopilot policy just got more resilient! A new update is being rolled out that increases the retry attempts for the Windows Autopilot policy to be applied when a network connection might not be fully initialized. The increased retry attempts help ensure that the profile is applied before the user begins the setup experience and improves the time sync. For Windows 10, install quality update [KB5028244](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028244-os-build-19045-3271-preview-8cf92c9b-3a60-4c6a-8f4c-fc41fe8f4f2c) or newer. For Windows 11, install quality update [KB5028245](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2) or newer.
@@ -134,4 +158,5 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
 
 [What's new in Windows client](/windows/whats-new/)
+
 
