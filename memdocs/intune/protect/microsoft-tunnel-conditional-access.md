@@ -15,13 +15,12 @@ ms.technology:
 # optional metadata
 
 #ROBOTS:
-#audience:
  
 ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: intune-azure, has-azure-ad-ps-ref
 ms.collection:
 - tier2
 - M365-identity-device-management
