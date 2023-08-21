@@ -123,7 +123,7 @@ If you don't want to allow the default Universal Link exemptions, you can delete
 
 ### Managed Universal Links
 
-By adding Universal Links to *managed* apps, you can launch the specified application securely. To add the app, you must add the link to the managed list. If the target application has an App Protection policy applied, selecting the link will launch the app. If the target application does not have an App Protection policy applied, selecting the link will launch the protected browser.
+By adding Universal Links to *managed* apps, you can launch the specified application securely. To add the app, you must add the app's universal link to the managed list. If the target application supports Intune App Protection policy, selecting the link will attempt to launch the app. If the app is not able to open, the link is opened in the protected browser. If the target application does not integrate the Intune SDK, selecting the link will launch the protected browser.
 
 The default managed Universal Links are the following:
 
