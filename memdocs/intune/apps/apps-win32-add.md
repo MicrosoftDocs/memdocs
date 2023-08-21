@@ -104,6 +104,10 @@ On the **Program** page, configure the app installation and removal commands for
 
     > [!IMPORTANT]
     > Admins must be careful when they use the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields.
+    >
+    > Calling `powershell.exe` in either of these fields will result in a 32-bit Powershell instance being launched. To force 64-bit Powershell execution, use the following command:
+    >
+    > `%SystemRoot%\Sysnative\WindowsPowerShell\v1.0\powershell.exe`
 
 - **Uninstall command**: Add the complete command line to uninstall the app based on the app's GUID. 
 
