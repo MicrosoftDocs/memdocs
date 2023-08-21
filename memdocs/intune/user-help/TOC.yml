@@ -236,13 +236,11 @@ items:
   items:
   - name: Enrollment
     items:
-    - name: About Windows device enrollment
-      href: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md
+    - name: Device enrollment overview  
+      href: device-enrollment-overview-windows.md  
     - name: Enroll Windows 10/11 device  
       href: enroll-windows-10-device.md
-    - name: Enroll Windows 8.1 or Windows RT 8.1 device
-      href: enroll-your-w81-or-rt81-windows.md
-    - name: Unenroll Windows device
+    - name: Unenroll device
       href: unenroll-your-device-from-intune-windows.md
   - name: Update device settings
     items:

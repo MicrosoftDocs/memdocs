@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 ms.author: brenduns
 author: Brenduns
 manager: dougeby
-ms.date: 05/02/2023
+ms.date: 07/12/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -23,7 +23,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Software updates admin checklist and scenarios for supervised iOS/iPadOS devices in Microsoft Intune
+# Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune
 
 Keeping your mobile devices current with software updates is critical. You need to reduce the risk of security events and have minimal disruption to your organization and your users. On iOS/iPadOS supervised devices, Intune has built-in policies that can manage software updates.
 
@@ -33,10 +33,10 @@ For the specific steps to create a software update policy, go to [Manage iOS/iPa
 
 This article applies to:
 
-- iOS/iPadOS supervised devices
+- iOS/iPadOS supervised devices enrolled in Intune
 
 > [!TIP]
-> If your devices are personally owned, then go to the [software updates admin checklist for personal devices](software-updates-guide-personal-byod.md).
+> If your devices are personally owned, then go to the [software updates planning guide for personal devices](software-updates-guide-personal-byod.md).
 
 ## Admin checklist for organization owned devices
 
@@ -258,5 +258,6 @@ To accomplish this task, this scenario involves two policies:
 ## Next steps
 
 - [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
-- [Software updates admin checklist and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
-- [Software updates admin checklist for managed Android devices](software-updates-guide-android.md)
+- [Software updates planning guide and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
+- [Software updates planning guide for managed Android devices](software-updates-guide-android.md)
+- [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)

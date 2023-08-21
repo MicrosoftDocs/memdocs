@@ -81,11 +81,6 @@ items:
       - name: Configure Slack to use Intune 
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
 
-      - name: Protect email on managed devices
-        href: ./protect/tutorial-protect-email-on-enrolled-devices.md
-      - name: Protect email on unmanaged devices
-        href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
-
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
@@ -117,7 +112,7 @@ items:
       - name: Android Open Source Project Supported Devices
         displayName: software updates, android open source project, supported devices
         href: ./fundamentals/android-os-project-supported-devices.md    
-    - name: Software updates admin checklists
+    - name: Software updates planning guides
       items:
       - name: BYOD and personal devices
         displayName: software updates, android, ios, ipados
@@ -128,6 +123,9 @@ items:
       - name: iOS/iPadOS
         displayName: software updates
         href: ./protect/software-updates-guide-ios-ipados.md
+      - name: macOS
+        displayName: software updates
+        href: ./protect/software-updates-guide-macos.md
     - name: Network configuration
       href: ./fundamentals/network-bandwidth-use.md
     - name: Using Windows 10 VMs with Intune

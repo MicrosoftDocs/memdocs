@@ -51,7 +51,6 @@ Use this guide to plan your move or migration to Intune.
 
 > [!TIP]
 >
-> - The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) includes email templates, project plans, planning spreadsheet, and more.
 > - Want to print or save this guide as a PDF? In your web browser, use the **Print** option, **Save as PDF**.
 > - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
