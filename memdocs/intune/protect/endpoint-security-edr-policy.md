@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 08/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -176,7 +176,10 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 6. On the **Configuration settings** page, Choose **Auto from Connector**  for **Microsoft Defender for Endpoint Clinet configuration package type**. Configure the **Sample Sharing** and **Telemetry Reporting Frequency** settings you want to manage with this profile. 
 
-   When your done configuring settings, select **Next**.
+  > [!NOTE]
+  > To onboard or offboard tenants using the onboarding file from the Microsoft Defender for Endpoint portal, select either *Onboard* or *Offboard* and supply the contents of the onboarding file to the input directly below the selection.
+
+   When you're done configuring settings, select **Next**.
 
 7. *This step only applies for the **Endpoint detection and response** profile and the Windows 10, Windows 11, and Windows Server platform*:  
 
@@ -197,6 +200,40 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
    The new profile is displayed in the list when you select the policy type for the profile you created.
 
+## Updating the onboarding state for a device
+
+Organizations may need to update the onboarding information on a device via Microsoft Intune.
+
+This can be necessary due to a change in the onboarding payload for Microsoft Defender for Endpoint, or when directed by Microsoft support.
+
+Updating the onboarding information will direct the device to start utilizing the new onboarding payload at the next *Restart*.
+
+> [!NOTE]
+> This information will not necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
+
+### Process to update the payload
+
+1. Download the new Mobile Device Management **New** onboarding payload from the Microsoft Defender for Endpoint console.
+
+1. Create a **New Group** to validate the new policies effectiveness.
+
+1. Exclude the **New Group** from your existing EDR policy.
+
+1. Create a **New** Endpoint Detection and Response policy, outlined in [Create EDR policies](./endpoint-security-edr-policy.md#create-edr-policies).
+
+1. While creating the policy, select **Onboard** from the client package configuration type, and specify the **contents** of the onboarding file from the Microsoft Defender for Endpoint console.
+
+1. **Assign the policy** to the new group created for validation.
+
+1. **Add** existing devices to the validation group and ensure the changes work as expected.
+
+1. **Expand** the deployment gradually, eventually decommissioning the original policy.
+
+> [!NOTE]
+> If previously using the *Auto from connector* option to retrieve the onboarding information, engage Microsoft support to confirm the use of the new onboarding information.
+>
+> For organizations updating onboarding information at the direction of Microsoft support, Microsoft will direct you when the connector has been updated to leverage the new onboarding payload.
+
 ## EDR policy reports
 
 You can view details about the EDR policies you deploy in the Microsoft Intune admin center. To view details, go to **Endpoint security** > **Endpoint deployment and response**, and select a policy for which you want to view compliance details:
@@ -206,8 +243,6 @@ You can view details about the EDR policies you deploy in the Microsoft Intune a
   The chart for **Devices with Defender for Endpoint sensor** displays only devices that successfully onboard to Microsoft Defender for Endpoint through use of the **Windows 10, Windows 11, and Windows Server** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
 
 - For policies that target the **Windows 10, Windows 11, and Windows Server (ConfigMgr)** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
-
-
 
 ## Next steps
 

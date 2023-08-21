@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/01/2023
+ms.date: 08/14/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,34 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of August 14, 2023
+
+### App management
+
+#### Use the Turn off the Store application setting to disable end user access to Store apps, and allow managed Intune Store apps<!-- 16544362 -->
+
+In Intune, you can use the new **Store app** type to deploy Store apps to your devices.
+
+Now, you can use the **Turn off the Store application** policy to disable end users' direct access to Store apps. When it's disabled, end users can still access and install Store apps from the Windows Company Portal app and through Intune app management. If you want to allow random store app installs outside of Intune, then don't configure this policy.
+
+The previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, if your goal is to block random unmanaged Store application installs on client devices, then it's recommended to use the **Turn off the Store application** policy. Don't use the **Only display the private store within the Microsoft Store app** policy.
+
+For more information, go to [Add Microsoft Store Apps to Microsoft Intune](../apps/store-apps-microsoft.md)
+
+Applies to:
+
+- Windows 10 and later
+
+## Week of August 7, 2023
+
+### Role-based access control<!--11298214 -->
+
+#### Introducing a new role-based access control (RBAC) permission under the resource Android for work
+
+Introducing a new RBAC **Permission** for creating a custom role in Intune, under the resource **Android for work**. The permission **Update Enrollment Profile** allows the admin to manage or change both AOSP and Android Enterprise Device Owner enrollment profiles that are used to enroll devices.
+
+For more information, go to [Create custom role](../fundamentals/create-custom-role.md)
 
 ## Week of July 31, 2023
 
@@ -169,7 +197,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Compliance Retrieval service support for MAC address endpoints<!--  24332824  -->  
-You can now use MAC address endpoints with the Intune Compliance Retrieval service (CR service), which is a replacement to the Intune [Network Access Control service](../protect/network-access-control-integrate.md).
+We've now added MAC address support to the Compliance Retrieval service.
 
 The initial release of the CR service included support for using only the Intune device ID with the intent to eliminate the need to manage internal identifiers like serial numbers and MAC addresses. With this update, organizations that prefer to use MAC addresses over certificate authentication may continue to do so while implementing the CR service.
 
@@ -290,19 +318,19 @@ For more general information about Intune Android 13 support, go to the [Day Zer
 ### Device security
 
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
-With [Defender for Endpoint security settings management](../protect/mde-security-integration.md) (security settings configuration), you can use Intune’s endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren’t enrolled with Intune.
+With [Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use Intune’s endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren’t enrolled with Intune.
 
 Now, you can opt-in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
 
-- Intune’s endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings configurations.
+- Intune’s endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
 
-- Security settings configuration supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
+- security settings management supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
 
-- For Windows devices, the Windows Security Experience profile is now supported with Security settings configuration.
+- For Windows devices, the Windows Security Experience profile is now supported with security settings management.
 
-- A new onboarding workflow removes the Hybrid Azure AD Join prerequisite. Hybrid Azure AD Join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings configuration. With this change, those devices can now complete enrollment and start processing policies for security settings configuration.
+- A new onboarding workflow removes the Hybrid Azure AD Join prerequisite. Hybrid Azure AD Join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings management. With this change, those devices can now complete enrollment and start processing policies for security settings management.
 
-- Intune creates a synthetic registration in Azure AD for devices that can’t fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings configuration. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed form Azure AD in deference to the full registration.
+- Intune creates a synthetic registration in Azure AD for devices that can’t fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed form Azure AD in deference to the full registration.
 
 If you don’t opt-in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can’t deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile which is currently available for devices enrolled with Intune can’t be deployed to devices managed by Defender.
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/04/2023
+ms.date: 08/14/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -110,7 +110,7 @@ Resizing in bulk can have large scale impact. Before resizing a large group of C
 
 Up to 5000 Cloud PCs can be resized at a time.
 
-### Bulk resize Cloud PCs originally provisioned with directly-assigned licenses
+### Bulk resize Cloud PCs originally provisioned with directly assigned licenses
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > **Bulk device actions** > **OS (Windows)** > **Select device type (Cloud PCs)** > **Device action (Resize)**.
 2. On the **Basics** page, select the **Source size** for the Cloud PCs to be resized.
@@ -165,9 +165,11 @@ Devices with a state of **Resize not supported** won't be resized. The status me
 
 ## Resize with Step-up Licenses
 
+The Windows 365 step-up licenses are lead status licenses available for Enterprise admins that have a direct Enterprise Agreement. A step-up SKU makes it easier for admins to migrate users from a lower-configuration license to a higher-configuration license without incurring the full cost of licensing two separate subscriptions of the product. For Windows 365, step-ups are available only for compute (RAM/CPU) and not for storage and scoped to upgrades and not downgrades of licenses.
+
 If you converted a Windows 365 Enterprise license subscription by purchasing Microsoft Step-up Licenses, you can migrate your users to the new license and preserve all user data by performing a bulk resize for those users.  
 
-For example, let's say that you used a Step-up purchase to convert licenses from a Windows 365 Enterprise 2vCPU/4GB/128 GB subscription to a Windows 365 Enterprise 4vCPU/16GB/128 GB subscription. In this case, follow the steps under [Bulk resize Cloud PCs originally provisioned with group-based licenses](#bulk-resize-cloud-pcs-originally-provisioned-with-group-based-licenses). The Windows 365 2vCPU, 4GB, 128 GB is your base license, and the Windows 365 4vCPU/16GB/128 GB is your target license.  
+For example, let's say that you used a Step-up purchase to convert licenses from a Windows 365 Enterprise 2vCPU/4 GB/128 GB subscription to a Windows 365 Enterprise 4vCPU/16GB/128 GB subscription. In this case, follow the steps under [Bulk resize Cloud PCs originally provisioned with group-based licenses](#bulk-resize-cloud-pcs-originally-provisioned-with-group-based-licenses). The Windows 365 2vCPU, 4GB, 128 GB is your base license, and the Windows 365 4vCPU/16GB/128 GB is your target license.  
 
 When a Step-up conversion takes place, the stepped-up licenses show up in your inventory equaling the number of old licenses you chose to convert. If you Step-up 10 licenses of Windows 365 Enterprise 2vCPU/4GB/128 GB to 4vCPU/16 GB/128 GB, you end up with 10 more licenses of 4vCPU/16 GB/128 GB and 10 fewer licenses of 2vCPU/4GB/128 GB. These changes appear on the **Your Products** page in the Microsoft admin center.
 

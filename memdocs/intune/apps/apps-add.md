@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/21/2023
+ms.date: 08/18/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -227,6 +227,10 @@ When you need to uninstall an app from user's devices, use the following steps.
 
 > [!NOTE]
 > End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal.
+
+## Delete an app from Intune
+
+Once you have removed assignments for an app and revoked any app licenses for an app associated with a token, you can delete the app from Intune. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
 
 ## App installation errors
 
