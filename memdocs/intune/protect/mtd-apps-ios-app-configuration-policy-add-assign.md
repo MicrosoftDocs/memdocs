@@ -266,7 +266,7 @@ Choose the section that corresponds to your MTD provider:
 ### Assigning Better Mobile
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Active Shield app store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) for the **Appstore URL**.
