@@ -230,7 +230,7 @@ The profile **Defender Update controls** for Intune Endpoint security Antivirus 
 
 The profile includes settings for the rollout release channel by which devices and users receive Defender Updates that are related to daily security intelligence updates, monthly platform updates, and monthly engine updates.
 
-This profile includes the following settings, which are all directly taken from [Defender CSP - Windows Client Management](https://learn.microsoft.com/windows/client-management/mdm/policy-csp-Defender).
+This profile includes the following settings, which are all directly taken from [Defender CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-Defender).
 
 - Engine Updates Channel
 - Platform Updates Channel
