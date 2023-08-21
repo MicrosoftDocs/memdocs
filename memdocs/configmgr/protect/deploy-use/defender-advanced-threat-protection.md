@@ -332,7 +332,7 @@ Select **Deploy** to target the Microsoft Defender for Endpoint policy to client
 > [!IMPORTANT]
 > The Microsoft Defender for Endpoint configuration files contains sensitive information which should be kept secure.
 
-## <a name="bkmk_updateatp"></a> Updaing the onboarding information for existing devices
+## <a name="bkmk_updateatp"></a> Updating the onboarding information for existing devices
 
 Organizations may need to update the onboarding information on a device via Microsoft Configuration Manager.
 

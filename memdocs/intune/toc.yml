@@ -1857,8 +1857,16 @@ items:
       href: ./fundamentals/help-desk-operators.md
     - name: ServiceNow integration with Microsoft Intune
       href: ./fundamentals/service-now-integration.md
-    - name: Use Remote Help
-      href: ./fundamentals/remote-help.md
+    - name: Remote Help
+      items:
+      - name: Using Remote Help
+        href: ./fundamentals/remote-help.md
+      - name: Remote Help on Windows
+        href: ./fundamentals/remote-help-windows.md
+      - name: Remote Help on Android
+        href: ./fundamentals/remote-help-android.md
+      - name: Troubleshooting Remote Help on Android
+        href: ./fundamentals/remote-help-android-troubleshoot.md   
     - name: Remediations
       items:
       - name: Use Remediations
