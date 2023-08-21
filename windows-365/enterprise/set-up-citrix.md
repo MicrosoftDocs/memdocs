@@ -7,8 +7,8 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
-ms.topic: overview
+ms.date: 08/21/2023
+ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
 ms.localizationpriority: high
@@ -52,8 +52,9 @@ To turn on the Citrix connector, follow these steps:
 
 1. As a Global administrator, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Connectors and tokens**.
 ![Screenshot of navigating to Connectors and tokens](./media/set-up-citrix/connectors-tokens.png)
-2. Select **Windows 365 Citrix connector** > next to **Allow people to use Citrix to connect to their Cloud PCs**, set the toggle to **On**.
-![Screenshot of turning on the connector](./media/set-up-citrix/turn-on-connector.png)
+2. Select **Windows Windows partner Citrix connector** > **Add**.
+3. Under **Add connector**, select **Citrix** in the drop-down list.
+4. Next to **Allow people to use Citrix to connect to their Cloud PCs**, set the toggle to **On** > **Add**.
 
 <!-- ########################## -->
 ## Next steps
