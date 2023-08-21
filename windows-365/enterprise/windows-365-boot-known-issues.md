@@ -239,7 +239,7 @@ The user tried to connect to their Cloud PC but received the following message:
 ```
 Can't connect to Cloud PC from this device
 The provider app could not be found. Try signing in from another device.
-To resolve this issue here, contact support with the correlation ID.
+To resolve this issue here, contact support.
 ```
 
 This occurs when the provider app was uninstalled, or isn't available or installed on the end user's physical device.
@@ -250,7 +250,7 @@ This occurs when the provider app was uninstalled, or isn't available or install
 - Wait for the app to install on the physical device.
 - Contact the user's IT admin and ask them to push the app to the device.
 
-If the issue persist, contact support with the correlation ID.
+If the issue persist, contact support.
 
 
 <!-- ########################## -->
