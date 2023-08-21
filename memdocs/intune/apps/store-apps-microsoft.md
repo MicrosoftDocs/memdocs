@@ -171,6 +171,8 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 > [!NOTE]
 > Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". However, the app will still install correctly on the device.
 >
+> When a device is enrolled as Azure AD Registered, the installation behavior should be set to "System". If an app with the installation behavior set to "User" is assigned as **Available**, the end user will receive the following error when selecting install in the Company Portal: "Requirements Not Met". Make sure the device is _joined_ to Azure, or use System context to rectify this situation. 
+> 
 > UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store policy is set to block auto-update.
 
 ## Common Store policy settings and their impact on Microsoft Store apps
