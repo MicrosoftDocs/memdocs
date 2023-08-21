@@ -221,7 +221,7 @@ Updating the onboarding information will direct the device to start utilizing th
 
 1. Create a **New** Endpoint Detection and Response policy, outlined in [Create EDR policies](./endpoint-security-edr-policy.md#create-edr-policies).
 
-1. While creatinging the policy, select **Onboard** from the client package configuration type, and specify the **contents** of the onboarding file from the Microsoft Defender for Endpoint console.
+1. While creating the policy, select **Onboard** from the client package configuration type, and specify the **contents** of the onboarding file from the Microsoft Defender for Endpoint console.
 
 1. **Assign the policy** to the new group created for validation.
 
