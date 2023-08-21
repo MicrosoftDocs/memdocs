@@ -48,6 +48,7 @@ Depending on the assignment type, users can then install the applications via th
 > - You can monitor the installation progress and results for store apps
 > - Win32 store apps are supported (in preview)  
 > - System context and user context are supported for UWP apps
+>   - When a device is enrolled by being Azure AD registered, system context must be used.
 
 ## Prerequisites
 
