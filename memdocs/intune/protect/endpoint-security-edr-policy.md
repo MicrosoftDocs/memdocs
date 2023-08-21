@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 08/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -179,7 +179,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
   > [!NOTE]
   > To onboard or offboard tenants using the onboarding file from the Microsoft Defender for Endpoint portal, select either *Onboard* or *Offboard* and supply the contents of the onboarding file to the input directly below the selection.
 
-   When your done configuring settings, select **Next**.
+   When you're done configuring settings, select **Next**.
 
 7. *This step only applies for the **Endpoint detection and response** profile and the Windows 10, Windows 11, and Windows Server platform*:  
 
@@ -221,7 +221,7 @@ Updating the onboarding information will direct the device to start utilizing th
 
 1. Create a **New** Endpoint Detection and Response policy, outlined in [Create EDR policies](./endpoint-security-edr-policy.md#create-edr-policies).
 
-1. While creatinging the policy, select **Onboard** from the client package configuration type, and specify the **contents** of the onboarding file from the Microsoft Defender for Endpoint console.
+1. While creating the policy, select **Onboard** from the client package configuration type, and specify the **contents** of the onboarding file from the Microsoft Defender for Endpoint console.
 
 1. **Assign the policy** to the new group created for validation.
 
