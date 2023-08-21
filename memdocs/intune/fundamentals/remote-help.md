@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Use Remote Help to assist users authenticated by your organization. 
 description: With the Remote Help app, provide remote assistance to authenticated users who also run the Remote Help app.
@@ -23,7 +22,7 @@ ms.reviewer: karawang
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: intune-azure, has-azure-ad-ps-ref
 ms.collection:
 - tier1
 - M365-identity-device-management
