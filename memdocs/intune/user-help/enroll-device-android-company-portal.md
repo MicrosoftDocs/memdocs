@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 08/21/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -55,7 +55,7 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 ## Enroll device  
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
 
-1. Open the Company Portal app and sign in with your work or school account.  
+1. Open the Company Portal app and sign in with your work or school account. If prompted to, allow Company Portal to send you notifications. You can adjust notification permissions anytime in the Settings app.  
 
 2. If you're prompted to accept your organization's terms and conditions, tap **ACCEPT ALL**.  
 
