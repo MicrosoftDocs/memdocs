@@ -115,6 +115,10 @@ On the **Program** page, configure the app installation and removal commands for
     
     `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
 
+- **Installation time required**: The number of minutes the system will wait for install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will fail the app install. Max timeout value is 1440 minutes (1 day).
+
+- **Allow available uninstall**: Select **Yes** to provide the uninstall option for this app for users from the Company Portal. Select **No** to prevent users from uninstalling the app from the Company Portal.
+
 - **Install behavior**: Set the install behavior to either **System** or **User**.
 
     > [!NOTE]
@@ -127,7 +131,7 @@ On the **Program** page, configure the app installation and removal commands for
     > The Win32 app installation and uninstallation will happen under admin privilege (by default) when the app is set to install in user context and the user on the device has admin privileges.
     
 - **Device restart behavior**: Select one of the following options:
-    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration, a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
     - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
     - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Win32 app installation is allowed to complete without suppressing restarts. With this configuration, a hard reboot return code will notify the user that a restart of the device will be triggered in 120 minutes and a soft reboot return code will notify the user that a restart is required to finish the installation.
     - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.

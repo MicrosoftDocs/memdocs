@@ -74,9 +74,6 @@ Before you create the enrollment profile, decide how you want users to authentic
 
 Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Azure AD registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. For how-to steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
 
-  > [!IMPORTANT]
-  > JIT Registration is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).     
-
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
 
 For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
@@ -326,10 +323,6 @@ Now that you've installed your token, you can create an enrollment profile for a
       * User affinity: **Enroll without user affinity** (Step 6 in this section)
       * Shared iPad: **Yes**  (Step 12 in this section)  
       
-      > [!IMPORTANT]
-      > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
- 
-
 16. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
  1. Under **Apply device name template**, select **Yes** .
  2. In the **Device Name Template** box, enter the template you want to use to construct device names. The template can include the device type and serial number. It can't contain more than 63 characters, including the variables. Example: `{{DEVICETYPE}}-{{SERIAL}}`    
