@@ -65,7 +65,7 @@ You can also view properties and system info for a device, as described in the f
 ### Properties  
 Select **Properties** to view management information about the device. 
 
-The following properties sync back to the Google Admin console:. Any changes made to these properties in Intune also show up in the Google Admin console.  
+The following properties sync back to the Google Admin console. Any changes made to these properties in Intune also show up in the Google Admin console.  
 
 * Management name, known in Google Admin as the *asset ID*      
 * User  
