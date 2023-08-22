@@ -33,7 +33,7 @@ ms.collection:
 
 # Incomplete user enrollments report
 
-This Microsoft Intune report tells you where in the Company Portal enrollment process users are not completing the enrollment process. Using this information, you can update your onboarding documents to help users complete enrollment. For example, if many users are quitting enrollment at the Terms of Use screen, you might investigate that area and make it more intuitive for users. 
+This Microsoft Intune report tells you where in the Company Portal enrollment process users are abandoning enrollment. Using this information, you can update your onboarding documents to help users complete enrollment. For example, if many users are quitting enrollment at the Terms of Use screen, you might investigate that area and make it more intuitive for users. 
 
 To see the report, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** and select **Monitor** > **Incomplete user enrollments**.  
 
