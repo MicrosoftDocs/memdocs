@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 07/12/2023
+ms.date: 08/02/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,7 @@ ms.collection:
 - highpri
 ---
 
-# Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune (public preview)
+# Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune
 
 > [!TIP]
 > Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md).
@@ -57,11 +57,9 @@ This article shows you how to export your GPOs, import the GPOs into Intune, and
 
 ## Before you begin
 
-- In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
 
-  For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
-
-- This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 
 ## Export a GPO as an XML file
 
@@ -78,7 +76,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
 ## Import GPOs and run analytics
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics**.
 2. Select **Import**, select your saved XML file > **Next**.
 
     You can select multiple files at the same time.
@@ -169,7 +167,7 @@ Even though Group Policy analytics can parse the CSPs, there are some things you
 
 ## Group Policy migration readiness report
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics (preview)**:
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Group policy analytics**:
 
     :::image type="content" source="./media/group-policy-analytics/policy-analytics-reports.png" alt-text="Screenshot that shows how to review the report and output of imported GPOs using Group Policy analytics in Microsoft Intune and Intune admin center.":::
 
@@ -200,7 +198,7 @@ Currently, the Group Policy analytics tool only supports non-ADMX settings in th
 
 ## Send product feedback
 
-You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)** > **Got feedback**.
+You can provide feedback on Group Policy Analytics. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics** > **Got feedback**.
 
 Examples of feedback areas:
 
@@ -216,7 +214,7 @@ Any use of customer data, such as which GPOs are used in your organization, is a
 
 At any time, you can delete imported GPOs:
 
-1. Go to **Devices** > **Group Policy analytics (preview)**.
+1. Go to **Devices** > **Group Policy analytics**.
 2. Select the context menu > **Delete**:
 
     :::image type="content" source="./media/group-policy-analytics/delete-imported-gpo.png" alt-text="Screenshot that shows how to delete or remove the group policy object (GPO) you imported in the Group Policy analyzer in Microsoft Intune and Intune admin center.":::
