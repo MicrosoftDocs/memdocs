@@ -78,11 +78,10 @@ Intune supports different enrollment options for Android devices, as shown in th
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for Android frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-enrollment-options.png":::
 
-For FLW Android devices, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**. Use the following image to help decide the path that's best for your FLW devices:
+For FLW Android devices, the most common enrollment options are **Android Enterprise** and **Android Open Source Project (AOSP)**. You can use the following image to help decide the path that's best for your FLW devices:
 
 :::image type="content" source="./media/frontline-worker-overview/android-flw-options.png" alt-text="Diagram that shows Android Enterprise frontline worker scenario path in Microsoft Intune." lightbox="./media/frontline-worker-overview/android-flw-options.png":::
 
-  
 When you use Android devices for frontline workers, the steps in this section help you determine the best enrollment option & the best device management experience for you and your end users.
 
 > [!NOTE]
@@ -123,7 +122,7 @@ To learn more about Android (AOSP), go to [About the Android Open Source Project
 ---
 
 > [!NOTE]
-> For Android device administrator (DA), Google is deprecating and reducing features. It's recommended that you move to Android Enterprise or Android (AOSP).
+> For Android device administrator (DA), Google is deprecating and reducing features. It's recommended that you move to Android Enterprise or Android (AOSP) for your FLW devices.
 
 ### Step 2 - Shared device or user associated device (Android)
 
@@ -149,31 +148,31 @@ The next decision is to decide if the devices are shared with many users or assi
 
   With user association:
 
-  - If you're using Android Enterprise, then you can enroll your devices as **Fully managed** or **Corporate-owned device with a work profile**. These devices have one user, and are used exclusively for organization work; not personal use. These enrollments options aren't common for FLW devices and expand the boundary of traditional frontline worker scenarios. But, they can be used if their features are best for your business scenario.
+  - If you're using **Android Enterprise**, then you can enroll your devices as **Fully managed** or **Corporate-owned device with a work profile**. These devices have one user, and are used exclusively for organization work; not personal use.
+
+    These enrollment options aren't common for FLW devices and expand the boundary of traditional frontline worker scenarios. But, they can be used if their features are best for your business scenario. They have many settings you can configure. For example, when using **fully managed** enrollment, you can configure the Microsoft Launcher, add a custom wallpaper, and more.
 
     For more information on these enrollment methods, go to:
 
     - [Intune enrollment for Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md)
     - [Intune enrollment for corporate-owned devices with a work profile](/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)
 
-  - If you're using Android (AOSP), then you can enroll your devices as a **user-associated** device. Remember, Android (AOSP) devices don't support Google Mobile Services (GMS). These devices have one user, and are used exclusively for organization work; not personal use.
+    For a list of some of the settings can you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
 
-    For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
+  - If you're using **Android (AOSP)**, then you can enroll your devices as a **user-associated** device. Remember, Android (AOSP) devices don't support Google Mobile Services (GMS). These devices have one user, and are used exclusively for organization work; not personal use.
 
-  These device enrollment options have many settings you can configure. For example, when using **fully managed** enrollment, you can configure the Microsoft Launcher, add a custom wallpaper, and more.
-
-  For a list of some of the settings can you can configure, go to:
-
-  - [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md)
-  - [Android (AOSP) device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-aosp.md)
+    - For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
+    - For a list of some of the settings can you can configure, go to [Android (AOSP) device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-aosp.md).
 
 ### Step 3 - Home screen and device experience (Android)
 
-This step applies to devices enrolled in Intune as **dedicated devices**. It doesn't apply to devices enrolled in Intune as **fully managed** or **corporate-owned devices with a work profile**.
+This step applies to:
+
+- **Android Enterprise dedicated devices**
 
 This step is optional and depends on your business scenario. If these devices will be shared by many users, then it's recommended to use the home screen and device experience features described in this section.
 
-On Android Enterprise devices, you can configure the Intune Managed Home Screen (MHS) launcher to control the home screen and device experience. This feature isn't available for Android (AOSP) devices.
+On Android Enterprise devices, you can configure the Intune Managed Home Screen (MHS) app to control the home screen and device experience.
 
 In this step, consider what end users are doing on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
@@ -181,7 +180,7 @@ The following scenarios are common for FLW:
 
 - **Scenario 1: Device wide access with multiple apps**
 
-  The devices are enrolled in Intune as **dedicated devices**.
+  The devices are enrolled in Intune as **Android Enterprise dedicated devices**.
 
   Users have access to the apps and settings on the device. Using policy settings, you can restrict users from different features, such as debugging, system applications, and more.
 
@@ -203,7 +202,7 @@ The following scenarios are common for FLW:
 
 - **Scenario 2: Locked screen device with pinned apps**
 
-  The devices are enrolled in Intune as **dedicated devices**.
+  The devices are enrolled in Intune as **Android Enterprise dedicated devices**.
 
   For this scenario, you install the Intune Managed Home Screen (MHS) app, which allows you to customize the managed device experience. You can pin one app or many apps, select a wallpaper, set icon positions, require a PIN, and more. This scenario is often used for **dedicated devices**, such as shared devices.
 
@@ -237,7 +236,7 @@ The following scenarios are common for FLW:
 
 - **Scenario 3: Single app kiosk**
 
-  The devices are enrolled in Intune as **dedicated devices**.
+  The devices are enrolled in Intune as **Android Enterprise dedicated devices**.
 
   This scenario is used on devices that have a single purpose, like scanning inventory.
 
@@ -260,7 +259,7 @@ The following scenarios are common for FLW:
 
 ### Azure AD shared device mode for Android Enterprise dedicated devices
 
-Azure AD shared device mode (SDM) is another option for Android Enterprise **dedicated device** enrollments.
+Azure AD shared device mode (SDM) is another option for **Android Enterprise dedicated device** enrollments.
 
 Azure AD SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). It compliments **Scenario 1** and **Scenario 2** described at [Step 3 - Home screen and device experience (Android)](#step-3---home-screen-and-device-experience-android) (in this article).
 
@@ -297,7 +296,11 @@ Since iPads are a more popular Apple device type for frontline workers (FLW), **
 
 iPads are used in different scenarios and industries, including in field operations, healthcare, aviation, warehouse, data entry, digital forms, and presentations.
 
-For FLW iPad devices, there are two options available - **Shared iPad** or **Azure AD shared device mode**:
+For FLW iPad devices, there are two options available:
+
+- **Shared iPad**
+  OR
+- **Azure AD shared device mode**
 
 :::image type="content" source="./media/frontline-worker-overview/ios-ipados-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for iPadOS frontline worker devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/ios-ipados-flw-enrollment-options.png":::
 
