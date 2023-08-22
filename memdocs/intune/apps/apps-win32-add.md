@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 08/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -104,6 +104,10 @@ On the **Program** page, configure the app installation and removal commands for
 
     > [!IMPORTANT]
     > Admins must be careful when they use the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields.
+    >
+    > Calling `powershell.exe` in either of these fields will result in a 32-bit Powershell instance being launched. To force 64-bit Powershell execution, use the following command:
+    >
+    > `%SystemRoot%\Sysnative\WindowsPowerShell\v1.0\powershell.exe`
 
 - **Uninstall command**: Add the complete command line to uninstall the app based on the app's GUID. 
 
@@ -184,7 +188,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
   > [!NOTE]
   > The conditions for *all* rules must be met to detect the app.
   >
-  > If Intune detects that the app is not present on the device, Intune will offer the app again within approximately 24 hours. This will occur only for apps targeted with the required intent.
+  > If Intune detects that the app isn't present on the device, Intune will offer the app again within approximately 24 hours. This will occur only for apps targeted with the required intent.
 
 - **Manually configure detection rules**: You can select one of the following rule types:
     - **MSI**: Verify based on an MSI version check. This option can be added only once. When you choose this rule type, you have two settings:
@@ -260,7 +264,7 @@ You can choose whether or not to install each dependent app automatically. By de
 > [!NOTE]
 > The install status of a dependent app will be displayed within Intune if the app is targeted to the user or device.
 
-It's important to note that a dependency can have recursive subdependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies doesn't follow a specific order at a dependency level.
+It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies doesn't follow a specific order at a dependency level.
 
 Win32 apps added to Intune can't be removed while they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. 
 
@@ -293,7 +297,7 @@ When a dependent app isn't installed, the user will commonly see one of the foll
 
 If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).
 
-Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule. Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies aren't applicable for uninstalling a Win32 app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
+Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global reevaluation schedule. Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies aren't applicable for uninstalling a Win32 app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
 
 ## Step 6: Supersedence
 
@@ -309,7 +313,7 @@ To add apps that the current app will supersede:
 3. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it isn't necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
 4. Once this step is finalized, click **Next**.
 
-For additional information, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+For more information, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
 <!--
 ## Step 6: Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -322,7 +326,7 @@ Click **Select scope tags** to optionally add scope tags for the app. Then selec
 You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
 > [!IMPORTANT]
-> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device does not have, the app will fail to install.
+> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app will fail to install.
 
 1. For the specific app, select an assignment type:
     - **Required**: The app is installed on devices in the selected groups.
