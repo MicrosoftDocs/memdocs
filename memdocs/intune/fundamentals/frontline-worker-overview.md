@@ -290,8 +290,7 @@ The following diagram shows the iOS/iPadOS options for frontline worker devices 
 :::image type="content" source="./media/frontline-worker-overview/ios-ipados-flw-options.png" alt-text="Diagram that shows Apple iOS and iPadOS frontline worker scenario path in Microsoft Intune." lightbox="./media/frontline-worker-overview/ios-ipados-flw-options.png":::
 
 > [!NOTE]
-> For iPadOS devices, Conditional Access isn't supported when you use Azure AD SDM + Enterprise SSO plug-in. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
-
+> For iPadOS devices, Conditional Access isn't supported for Shared iPad. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
 Since iPads are a more popular Apple device type for frontline workers (FLW), **this section focuses on iPad devices**.
 
 iPads are used in different scenarios and industries, including in field operations, healthcare, aviation, warehouse, data entry, digital forms, and presentations.
@@ -576,5 +575,6 @@ For more information and to get started, go to:
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md)
 - [Microsoft Intune planning guide](intune-planning-guide.md)
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+
 
 
