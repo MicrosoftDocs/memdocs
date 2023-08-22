@@ -79,7 +79,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |--------------|----------------------|----|  
 |Name|The name of the device.|Windows, macOS, iOS, Android|
 |Management name|An easily recognizable device name used only in the Intune admin center. Changing this name does not change the device name or the name in the Company Portal. For more information on how to change the device name, see [Rename a device with Microsoft Intune](device-rename.md).|Windows, macOS, iOS, Android <br/><br/> NOTE: Management names won't automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
-|UDID|The device's Unique Device identifier.|Windows, macOS, iOS|
+|UDID|The device's Unique Device identifier.|macOS, iOS|
 |Intune Device ID|A GUID that uniquely identifies the device.|Windows, macOS, iOS, Android|
 |Serial number|The device's serial number from the manufacturer.|Windows, macOS, iOS, iPadOS, Android <br/><br/> Intune doesn't display serial number for Android personally owned work profile devices running Android 12 and newer.|
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
