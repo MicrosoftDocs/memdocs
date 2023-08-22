@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 08/17/2023
+ms.date: 08/22/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -149,7 +149,7 @@ The next decision is to decide if the devices are shared with many users or assi
 
   With user association:
 
-  - If you're using Android Enterprise, then you can enroll your devices as **Fully managed** or **Corporate-owned device with a work profile**. These devices have one user, and are used exclusively for organization work; not personal use. These enrollments options aren't common for FLW devices. But, they can be used if their features are best for your business scenario.
+  - If you're using Android Enterprise, then you can enroll your devices as **Fully managed** or **Corporate-owned device with a work profile**. These devices have one user, and are used exclusively for organization work; not personal use. These enrollments options aren't common for FLW devices and expand the boundary of traditional frontline worker scenarios. But, they can be used if their features are best for your business scenario.
 
     For more information on these enrollment methods, go to:
 
@@ -289,6 +289,9 @@ iOS devices can also be used, but it's not common. For iOS FLW devices, it's rec
 The following diagram shows the iOS/iPadOS options for frontline worker devices in Intune:
 
 :::image type="content" source="./media/frontline-worker-overview/ios-ipados-flw-options.png" alt-text="Diagram that shows Apple iOS and iPadOS frontline worker scenario path in Microsoft Intune." lightbox="./media/frontline-worker-overview/ios-ipados-flw-options.png":::
+
+> [!NOTE]
+> For iPadOS devices, Conditional Access isn't supported when you use Azure AD SDM + Enterprise SSO plug-in. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
 
 Since iPads are a more popular Apple device type for frontline workers (FLW), **this section focuses on iPad devices**.
 
