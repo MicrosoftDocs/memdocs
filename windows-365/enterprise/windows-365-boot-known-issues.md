@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/26/2023
+ms.date: 8/21/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -231,6 +231,27 @@ Resources created by the Windows 365 Boot guided scenario can be applied to both
 If the user needs to reset their password, it isn't possible on their Windows 365 Boot device.
 
 **Troubleshooting steps**: Users should reset their password on another non-windows 365 Boot configured device.
+
+## The Provider app could not be found<!--45613654-->
+
+The user tried to connect to their Cloud PC but received the following message:
+
+```
+Can't connect to Cloud PC from this device
+The provider app could not be found. Try signing in from another device.
+To resolve this issue here, contact support.
+```
+
+This occurs when the provider app was uninstalled, or isn't available or installed on the end user's physical device.
+
+**Troubleshooting steps**: The end user can use any of these options:
+
+- Sign in from another device.
+- Wait for the app to install on the physical device.
+- Contact the user's IT admin and ask them to push the app to the device.
+
+If the issue persist, contact support.
+
 
 <!-- ########################## -->
 ## Next steps
