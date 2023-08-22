@@ -71,6 +71,7 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
    > [!NOTE]
    > The parameters `-ac` and `-ar` are required parameters. Each app will need a unique set of these parameters. `-aa` is only required for single tenant applications.
+
 5.	Deploy the app.
 
 ## Apple Developer prerequisites for the App Wrapping Tool
