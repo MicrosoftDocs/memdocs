@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/11/2023
+ms.date: 08/12/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -81,38 +81,44 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 ### [Windows 365 Enterprise](#tab/ent)
 
-You must allow traffic in your Azure network configuration to the following service URLs and ports:
+You must allow traffic in your network configuration to the following service URLs and ports to support provisioning and management of Cloud PCs and for remote connectivity with Cloud PCs. Although most of the configuration is for the Cloud PC network, end user connectivity occurs from a physical device. Therefore, you must also follow the connectivity guidelines on the physical device network.
 
-- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
-- [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list)
-- rdweb.wvd.microsoft.com
-- rdbroker.wvd.microsoft.com
-- Provisioning and Azure network connection endpoints:
-  - \*.infra.windows365.microsoft.com
-  - cpcsaamssa1prodprap01.blob.core.windows.net
-  - cpcsaamssa1prodprau01.blob.core.windows.net
-  - cpcsaamssa1prodpreu01.blob.core.windows.net
-  - cpcsaamssa1prodpreu02.blob.core.windows.net
-  - cpcsaamssa1prodprna01.blob.core.windows.net
-  - cpcsaamssa1prodprna02.blob.core.windows.net
-  - cpcstcnryprodprap01.blob.core.windows.net
-  - cpcstcnryprodprau01.blob.core.windows.net
-  - cpcstcnryprodpreu01.blob.core.windows.net
-  - cpcstcnryprodpreu02.blob.core.windows.net
-  - cpcstcnryprodprna01.blob.core.windows.net
-  - cpcstcnryprodprna02.blob.core.windows.net
-  - cpcstprovprodpreu01.blob.core.windows.net
-  - cpcstprovprodpreu02.blob.core.windows.net
-  - cpcstprovprodprna01.blob.core.windows.net
-  - cpcstprovprodprna02.blob.core.windows.net
-  - cpcstprovprodprap01.blob.core.windows.net
-  - cpcstprovprodprau01.blob.core.windows.net
-  - prna01.prod.cpcgateway.trafficmanager.net
-  - prna02.prod.cpcgateway.trafficmanager.net
-  - preu01.prod.cpcgateway.trafficmanager.net
-  - preu02.prod.cpcgateway.trafficmanager.net
-  - prap01.prod.cpcgateway.trafficmanager.net
-  - prau01.prod.cpcgateway.trafficmanager.net
+| Device or service | Network connectivity required URLs and ports | Notes |
+| --- | --- | --- |
+| Physical device | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#remote-desktop-clients) | For Remote Desktop client connectivity and updates. |
+| Microsoft Intune service | [Link](/mem/intune/fundamentals/intune-endpoints) | For Intune cloud services like device management, applciation delivery, and endpoint analytics. |
+| Azure Virtual Desktop session host virtual machine | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines) | For remote connectivity between Cloud PCs and the backend Azure Virtual Desktop service. |
+| Windows 365 service | [Link](#windows-365-service) | For provisioning and health checks. |
+
+#### Windows 365 service
+
+The following URLs and ports are required for the provisioning of Cloud PCs and the Azure Network Connection (ANC) health checks:
+
+- \*.infra.windows365.microsoft.com
+- cpcsaamssa1prodprap01.blob.core.windows.net
+- cpcsaamssa1prodprau01.blob.core.windows.net
+- cpcsaamssa1prodpreu01.blob.core.windows.net
+- cpcsaamssa1prodpreu02.blob.core.windows.net
+- cpcsaamssa1prodprna01.blob.core.windows.net
+- cpcsaamssa1prodprna02.blob.core.windows.net
+- cpcstcnryprodprap01.blob.core.windows.net
+- cpcstcnryprodprau01.blob.core.windows.net
+- cpcstcnryprodpreu01.blob.core.windows.net
+- cpcstcnryprodpreu02.blob.core.windows.net
+- cpcstcnryprodprna01.blob.core.windows.net
+- cpcstcnryprodprna02.blob.core.windows.net
+- cpcstprovprodpreu01.blob.core.windows.net
+- cpcstprovprodpreu02.blob.core.windows.net
+- cpcstprovprodprna01.blob.core.windows.net
+- cpcstprovprodprna02.blob.core.windows.net
+- cpcstprovprodprap01.blob.core.windows.net
+- cpcstprovprodprau01.blob.core.windows.net
+- prna01.prod.cpcgateway.trafficmanager.net
+- prna02.prod.cpcgateway.trafficmanager.net
+- preu01.prod.cpcgateway.trafficmanager.net
+- preu02.prod.cpcgateway.trafficmanager.net
+- prap01.prod.cpcgateway.trafficmanager.net
+- prau01.prod.cpcgateway.trafficmanager.net
 - Cloud PC communication endpoints
   - endpointdiscovery.cmdagent.trafficmanager.net
   - registration.prna01.cmdagent.trafficmanager.net
