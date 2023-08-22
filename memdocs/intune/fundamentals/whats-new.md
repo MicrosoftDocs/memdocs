@@ -344,7 +344,7 @@ For more information, go to [Create custom role](../fundamentals/create-custom-r
 
 ### Device security
 
-### New BitLocker profile for Intune’s endpoint security Disk encryption policy<!-- 24631986   -->  
+### New BitLocker profile for Intune's endpoint security Disk encryption policy<!-- 24631986   -->  
 We have released a new experience creating new *BitLocker* profiles for endpoint security Disk Encryption policy. The experience for editing your previously created BitLocker policy remains the same, and you can continue to use them. This update applies only for the new [BitLocker](../protect/endpoint-security-disk-encryption-policy.md) policies you create for the *Windows 10 and later* platform.
 
 This update is part of the continuing [rollout of new profiles for endpoint security policies](../fundamentals/whats-new-archive.md#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022.
@@ -359,7 +359,7 @@ End-users can uninstall Win32 apps and Microsoft store apps using the Windows Co
 ### App management
 
 #### Intune supports new Google Play Android Management API<!-- 10982449 -->  
-Changes have been made to how Managed Google Play public apps are managed in Intune. These changes are to support [Google’s Android Management APIs](https://developers.google.com/android/management) (opens Google's web site).
+Changes have been made to how Managed Google Play public apps are managed in Intune. These changes are to support [Google's Android Management APIs](https://developers.google.com/android/management) (opens Google's web site).
 
 To learn more about changes to the admin and user experience, go to [Support Tip: Intune moving to support new Google Play Android Management API](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-intune-moving-to-support-new-google-play-android/ba-p/3849875).
 
@@ -382,8 +382,8 @@ Applies to:
 #### New settings available for the iOS/iPadOS web clip app type<!-- 21084128   -->  
 In Intune, you can pin web apps to your iOS/iPadOS devices (**Apps** > **iOS/iPadOS** > **Add** > **iOS/iPadOS web clip**). When you add web clips, there are new settings available:
 
-- **Full screen**: If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there’s no URL or search bar, and no bookmarks.
-- **Ignore manifest scope**: If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip’s URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
+- **Full screen**: If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there's no URL or search bar, and no bookmarks.
+- **Ignore manifest scope**: If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip's URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
 - **Precomposed**: If configured to **Yes**, prevents Apple's application launcher (SpringBoard) from adding "shine" to the icon.
 - **Target application bundle identifier**: Enter the application bundle identifier that specifies the application that opens the URL. Available in iOS 14 and later.
 
@@ -501,7 +501,7 @@ Both reports are new instances of existing reports, and deliver improvements ove
 - Drill-down reports for deeper details, which are filtered based on the column you select.
 - Devices are represented a single time, which is in contrast to the original reports which could count a device more than once if multiple users used that device
 
-Eventually, the [older report versions](../protect/compliance-policy-monitor.md#view-compliance-reports) that are still available in the admin center at *Devices > Monitor* will be retired.
+Eventually, the [older report versions](../protect/compliance-policy-monitor.md#other-compliance-reports) that are still available in the admin center at *Devices > Monitor* will be retired.
 
 ## Week of July 10, 2023
 
@@ -554,21 +554,21 @@ For more general information about Intune Android 13 support, go to the [Day Zer
 ### Device security
 
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
-With [Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use Intune’s endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren’t enrolled with Intune.
+With [Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use Intune's endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren't enrolled with Intune.
 
 Now, you can opt-in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
 
-- Intune’s endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
+- Intune's endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
 
-- security settings management supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
+- Security settings management supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
 
 - For Windows devices, the Windows Security Experience profile is now supported with security settings management.
 
 - A new onboarding workflow removes the Hybrid Azure AD Join prerequisite. Hybrid Azure AD Join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings management. With this change, those devices can now complete enrollment and start processing policies for security settings management.
 
-- Intune creates a synthetic registration in Azure AD for devices that can’t fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed form Azure AD in deference to the full registration.
+- Intune creates a synthetic registration in Azure AD for devices that can't fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed form Azure AD in deference to the full registration.
 
-If you don’t opt-in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can’t deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile which is currently available for devices enrolled with Intune can’t be deployed to devices managed by Defender.
+If you don't opt-in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can't deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile which is currently available for devices enrolled with Intune can't be deployed to devices managed by Defender.
 
 Applies to:
 
@@ -1150,7 +1150,7 @@ Administrators can now utilize conditional access capability when setting up pol
 For more information, go to:
 
 - [Conditional access](../protect/conditional-access.md)
-- [Remote Help](../fundamentals/remote-help.md#setup-conditional-access-for-remote-help)
+- [Remote Help](../fundamentals/remote-help-windows.md#set-up-conditional-access-for-remote-help)
 
 ### Device security
 
