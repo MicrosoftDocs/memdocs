@@ -578,7 +578,3 @@ For more information and to get started, go to:
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md)
 - [Microsoft Intune planning guide](intune-planning-guide.md)
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
-
-
-
-
