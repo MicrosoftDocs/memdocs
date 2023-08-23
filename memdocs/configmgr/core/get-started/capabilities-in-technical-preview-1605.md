@@ -111,7 +111,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 3.  In the Windows Store for Business, configure Configuration Manager as the store management tool.  
 
-    1.  Open [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) and sign-in if prompted.  
+    1.  Open [https://businessstore.microsoft.com](https://businessstore.microsoft.com/) and sign-in if prompted.  
 
     2.  Accept the terms of use if required.  
 
