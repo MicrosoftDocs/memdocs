@@ -19,27 +19,27 @@ ms.topic: conceptual
 
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
-Microsoft Intune will be changing how BitLocker resets occur for re-used Windows Autopilot devices in the September (2309) service release. Previously, users could self-service access the BitLocker recovery key when re-using devices that have been configured through Windows Autopilot. However, after the change, users will need to contact their IT admin to request a restore or access to the BitLocker recovery key. IT admins will continue to have full access to recovery keys both before and after this change.
+Microsoft Intune is changing how BitLocker resets occur for reused Windows Autopilot devices in the September (2309) service release. Previously, users could access the BitLocker recovery key via BitLocker self-service when reusing devices that have been configured through Windows Autopilot. However, after the change, users will need to contact their IT admin to request a restore or access to the BitLocker recovery key. IT admins will continue to have full access to recovery keys both before and after this change.
 
-**User impact:** This change will only affect new primary users of the Autopilot device who have been allowed self-service recovery of BitLocker keys to that device. There is no impact if the devices’ primary user does not change across the device restore or reset.
+**User impact:** This change affects new primary users of the Autopilot device who have been allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
 
-Self-service BitLocker access will continue to work the same if the IT admin performs either:
+Self-service BitLocker access can continue to work the same if the IT admin performs either:
 
 - A remote Autopilot Reset (see Reset devices with remote Windows Autopilot Reset).
 - Remove the current primary user or reassign to the new intended primary user prior to the device being reset or reimaged (see Change a device's primary user).
 
-If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties which will update to the new user upon the next check-in.
+If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties, which will update to the new user upon the next check-in.
 
 **What you need to do to prepare?**
 
-To ensure a smooth transition, please notify your helpdesk of this change. Additionally, update your documentation to one of the following options:
+To ensure a smooth transition, notify your help desk of this change. Additionally, update your documentation to one of the following options:
 
 1. Temporarily note the BitLocker recovery key prior to a restore as documented BitLocker recovery guide - Windows Security | Microsoft Learn.
-1. Contact the helpdesk or IT Admin to unlock self-service access.
+1. Contact the help desk or IT Admin to unlock self-service access.
 
 ## Win32 app configurable installation time impacts the Enrollment Status Page
 
-Staring in Intune 2308, Win32 apps will allow you to configure an installation time on a per app basis. This time is expressed in minutes and if the app takes longer to install than the set installation time, the system, will fail the app install. Please note, any changes to timeouts that you make to your Win32 apps, you will also need to increase your timeout for the Enrollment Status page to reflect those changes to avoid timeout failures. Learn more about this change here.
+Staring in Intune 2308, Win32 apps allow you to configure an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes to timeouts that you make to your Win32 apps also needs an increase your timeout for the ESP to reflect those changes.
 
 ## Autopilot profile resiliency
 
