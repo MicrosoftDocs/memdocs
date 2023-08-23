@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 08/22/2023
+ms.date: 08/23/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -166,7 +166,9 @@ The next decision is to decide if the devices are shared with many users or assi
 
 ### Step 3 - Home screen and device experience (Android)
 
-This step applies to:
+For **Android (AOSP)**, there isn't a home screen experience to configure. Typically, virtual reality and/or augmented reality devices are enrolled in Intune using AOSP. When frontline workers get AOSP-enrolled devices, they turn on the devices, sign-in to an app (or don't sign in, depending on the user association), like Microsoft Teams, and then just start using them.
+
+For **Android Enterprise dedicated devices**, there are home screen and device experience features you can configure in Intune. This section and steps apply to:
 
 - **Android Enterprise dedicated devices**
 
