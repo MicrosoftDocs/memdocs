@@ -21,7 +21,9 @@ ms.topic: conceptual
 
 Microsoft Intune is changing how BitLocker resets occur for reused Windows Autopilot devices in the September (2309) service release. Previously, users could access the BitLocker recovery key via BitLocker self-service when reusing devices that have been configured through Windows Autopilot. However, after the change, users will need to contact their IT admin to request a restore or access to the BitLocker recovery key. IT admins will continue to have full access to recovery keys both before and after this change.
 
-**User impact:** This change affects new primary users of the Autopilot device who have been allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
+### User impact
+
+This change affects new primary users of the Autopilot device who have been allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
 
 Self-service BitLocker access can continue to work the same if the IT admin performs either:
 
@@ -30,7 +32,7 @@ Self-service BitLocker access can continue to work the same if the IT admin perf
 
 If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties, which will update to the new user upon the next check-in.
 
-**What you need to do to prepare?**
+### What you need to do to prepare?
 
 To ensure a smooth transition, notify your help desk of this change. Additionally, update your documentation to one of the following options:
 
