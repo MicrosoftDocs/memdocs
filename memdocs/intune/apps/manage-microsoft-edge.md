@@ -271,7 +271,7 @@ You can control whether sites can store cookies for your users within Edge for A
 |com.microsoft.intune.mam.managedbrowser.cookieControlsMode |**0** (default) allow cookies <br>**1** block non-Microsoft cookies <br>**2** block non-Microsoft cookies in InPrivate mode <br>**3** block all cookies |
 
 > [!NOTE]
-> Edge for iOS does not support controling cookies.
+> Edge for iOS does not support controlling cookies.
 
 
 ### Kiosk mode experiences on Android devices
