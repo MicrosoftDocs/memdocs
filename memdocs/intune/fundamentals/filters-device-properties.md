@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 08/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -83,15 +83,17 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
-- **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators). For iOS/iPadOS and macOS devices, be sure to use the model identifier, not the model name. Only model identifiers will be recognized for Apple devices (instead of iPhone 8, the correct model identifier would be iPhone 10,4).
+- **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+
+  For iOS/iPadOS and macOS devices, use the model identifier. Don't use the model name. Only model identifiers are recognized for Apple devices. For example, for iPhone 8 devices, enter the model identifier as `iPhone 10,4`.
 
   Examples:
 
   - `(device.model -eq "Surface Book 3")`
   - `(device.model -in ["Surface Book 3", "Surface Book 2"])`
   - `(device.model -startsWith "Surface Book")`
-  - (device.model -startsWith "MacBookPro18,2")
-  - (device.model -startsWith "iPhone10,4")
+  - `(device.model -startsWith "MacBookPro18,2")`
+  - `(device.model -startsWith "iPhone10,4")`
 
   This property applies to:
 
