@@ -83,13 +83,15 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
-- **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
+- **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators). For iOS/iPadOS and macOS devices, be sure to use the model identifier, not the model name. Only model identifiers will be recognized for Apple devices (instead of iPhone 8, the correct model identifier would be iPhone 10,4).
 
   Examples:
 
   - `(device.model -eq "Surface Book 3")`
   - `(device.model -in ["Surface Book 3", "Surface Book 2"])`
   - `(device.model -startsWith "Surface Book")`
+  - (device.model -startsWith "MacBookPro18,2")
+  - (device.model -startsWith "iPhone10,4")
 
   This property applies to:
 
