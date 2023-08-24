@@ -158,9 +158,9 @@ To upload your organization's logo and color, first complete the following steps
 3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
 
 > [!NOTE]
-> As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview] (Migrate from Azure Active Directory (Azure AD) Graph to Microsoft Graph - Microsoft Graph | Microsoft Learn).  As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
+> As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
 > 
-> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps]( Add company branding to your organization's sign-in page - Microsoft Entra | Microsoft Learn). Favicon will be used as your organization and Background image will be used as brand color.
+> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). Favicon will be used as your organization and Background image will be used as brand color.
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
