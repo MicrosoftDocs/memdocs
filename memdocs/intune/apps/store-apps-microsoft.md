@@ -244,12 +244,12 @@ For more information on the Microsoft Store experience in Intune due to the Micr
   | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
 
   > [!NOTE]
-  > The **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly) CSP) does the following:
+  > It's not recommended to use the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly) CSP). This policy:
   >
   > - Blocks end user access to the Microsoft Store.
   > - Allows the Windows Package Manager `winget` APIs access to the Microsoft Store.
   >
-  > It's recommended to use the **Turn off the Store application** policy instead.
+  > So, it's recommended to use the **Turn off the Store application** policy instead.
 
 ## Unsupported functionality for Microsoft Store apps
 
