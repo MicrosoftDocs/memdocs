@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/23/2023
+ms.date: 08/24/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,7 +87,75 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration  -->
+## Device configuration
+
+#### Config Refresh will be in the Settings Catalog for Windows Insiders<!-- 15060174 -->
+In the Windows Settings Catalog, you can configure Config Refresh. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune.
+
+For more information on the Settings Catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+Applies to:
+- Windows 10 and later
+
+### Managed Settings now available in the Apple settings catalog <!-- 21083384 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **Settings catalog** for profile type.
+
+**Managed Settings > App Analytics**:
+- Enabled: If true, enable sharing app analytics with app developers. If false, disable sharing app analytics.
+
+Applies to:
+- Shared iPad
+
+**Managed Settings > Accessibility Settings**:
+- Bold Text Enabled
+- Grayscale Enabled
+- Increase Contrast Enabled
+- Reduce Motion Enabled
+- Reduce Transparency Enabled
+- Text Size
+- Touch Accommodations Enabled
+- Voice Over Enabled
+- Zoom Enabled
+
+**Managed Settings > Personal Hotspot**:
+- Enabled: If true, enable Personal Hotspot. If false, disable Personal Hotspot.
+
+**Managed Settings > Software Update Settings**:
+- Recommendation Cadence: This value defines how the system presents software updates to the user.
+
+**Managed Settings > Time Zone**:
+- Time Zone: The Internet Assigned Numbers Authority (IANA) time zone database name.
+
+Applies to:
+- iOS/iPadOS
+
+**Managed Settings > Bluetooth**:
+- Enabled: If true, enable the Bluetooth setting. If false, disable the Bluetooth setting.
+
+**Managed Settings > MDM Options**:
+- Activation Lock Allowed While Supervised: If true, a supervised device registers itself with Activation Lock when the user enables Find My.
+
+Applies to:
+- iOS/iPadOS
+- macOS
+
+For more information on these settings, go to [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### New setting available in the macOS settings catalog<!-- 24809885 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
+
+**Microsoft Defender > Cloud delivered protection preferences**:
+- Cloud Block Level
+
+Applies to:
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
 
 <!-- *********************************************** -->
 
@@ -96,6 +164,24 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device management
+
+### Introducing Remote Help on macOS <!-- 12454029 -->
+
+The Remote Help web app allows users to connect to macOS devices and join a view-only remote assistance session.
+
+For more information on Remote Help, go to [Remote Help](../fundamentals/remote-help.md).
+
+Applies to: 
+Safari 16.4+
+macOS 11 Big Sur
+
+### Government tenant support for endpoint security Application Control policy and Managed Installer<!-- 24850055 -->
+We’re adding support to use endpoint security Application Control policies, and to configure a Managed Installer, to both tenants in US Government and tenants in 21Vianet in China.
+
+Support for Application Control policy and Managed installers was originally [released in preview in June 2023](../fundamentals/whats-new.md#new-endpoint-security-application-control-policy-in-preview) as part of the Intune 2306 service release. Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
+
+### Management certificate expiration date<!-- 17648747 -->
+Management certificate expiration date will be available as a column in the **Devices** workload. You will be able to filter on a range of expiration dates for the management certificate and also export a list of devices with an expiration date matching the filter. You will find this information listed in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **All devices**.
 
 ### Intune will support iOS/iPadOS 15.x as the minimum version<!-- 24161619  -->  
 Later this year, Apple is expected to release iOS/iPadOS version 17. After the release of iOS/iPadOS 17, the minimum version supported by Intune will be iOS/iPadOS 15.x.
@@ -111,7 +197,29 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device security -->
+## Device security
+
+### Endpoint Privilege Management support for Windows 365 devices<!-- 17016794 -->
+We are adding support to manage application elevations on Windows 365 devices (also known as Cloud PCs) to [Endpoint Privilege Management](../protect/epm-overview.md).  
+
+### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972 -->  
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support Linux.  We’re adding a new profile template that you can use with both the Linux devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+
+The Linux EDR template will include the following settings for the Device tags category from Defender for Endpoint:
+- **Group tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+
+You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences?view=o365-worldwide#device-tags) in the Defender documentation.
+
+### macOS support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972 -->  
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support macOS.  We’re adding a new profile template that you can use with both the macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+
+The macOS EDR template will include the following settings for the Device tags category from Defender for Endpoint:
+- **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+
+You can learn more about Defender for Endpoint settings that are available for macOS in  [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide#device-tags) in the Defender documentation.
+
 
 <!-- *********************************************** -->
 
