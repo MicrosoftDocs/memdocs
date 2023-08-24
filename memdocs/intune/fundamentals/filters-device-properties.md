@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2023
+ms.date: 08/24/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -85,7 +85,7 @@ You can use the following device properties in your managed device filter rules:
 
 - **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
-  For iOS/iPadOS and macOS devices, use the model identifier. Don't use the model name. Only model identifiers are recognized for Apple devices. For example, for iPhone 8 devices, enter the model identifier as `iPhone 10,4`.
+  For iOS/iPadOS and macOS devices, use the model identifier. Don't use the model name. Only model identifiers are recognized for Apple devices. For example, for iPhone 8 devices, enter the model identifier as `iPhone10,4` (no spaces).
 
   Examples:
 
