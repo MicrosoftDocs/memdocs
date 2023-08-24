@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 08/23/2023
+ms.date: 08/24/2023
 ms.collection: 
   - M365-modern-desktop
   - tier2
@@ -28,7 +28,7 @@ This change affects new primary users of the Autopilot device who were allowed s
 Self-service BitLocker access can continue to work the same if the IT admin performs either:
 
 - A remote Autopilot Reset. For more information, see [Step by step tutorial for Windows Autopilot Reset in Intune](tutorial/reset/autopilot-reset-overview.md), [Reset devices with remote Windows Autopilot Reset](tutorial/reset/remote-autopilot-reset.md), and [Windows Autopilot Reset](windows-autopilot-reset.md).
-- Remove the current primary user or reassign to the new intended primary user prior to the device being reset or reimaged (see Change a device's primary user).
+- Remove the current primary user or reassign to the new intended primary user prior to the device being reset or reimaged. For more information, see [Change a device's primary user](/mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user).
 
 If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties. The primary user on the device will then update to the new user upon the next check-in.
 
