@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 08/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -55,7 +55,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 - Client devices must support at least two core processors to successfully install and run Microsoft Store apps.
 - Client device need to be able to support the [Intune Management Extension (IME)](..\apps\intune-management-extension.md) to install Microsoft Store apps.
-- Client device need access to both the Microsoft Store and the destination content to install Microsoft Store apps. For more information see [Microsoft Store proxy configuration](../fundamentals/intune-endpoints.md#microsoft-store).
+- Client device need access to both the Microsoft Store and the destination content to install Microsoft Store apps. For more information, see [Microsoft Store proxy configuration](../fundamentals/intune-endpoints.md#microsoft-store).
 
 ## Add and deploy a Microsoft Store app
 
@@ -212,16 +212,44 @@ For more information on the Microsoft Store experience in Intune due to the Micr
   | --- | --- | --- |
   | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; Can use custom ADMX. | Administrative Templates > Windows Components > Desktop App Installer |
 
-- **Turn off the Store application** policy
+- **Turn off the Store application** policy: Your options:
 
-  - To block end users from installing random applications from the Store app and `winget.exe`, set **Turn off the Store application** to **Enabled**. When **Enabled**, the setting doesn't block the Intune and Windows Package Manager store integration. Specifically, this policy doesn't impact the Intune's ability to install Microsoft Store applications.
+  - **Not configured**: This policy isn't changed or updated. By default, the OS might allow end users to install arbitrary store apps outside of Intune.
+
+  - **Enabled**: When enabled, this setting:
+
+    - Blocks end users from installing arbitrary apps from the Microsoft Store app.
+    - Blocks end users from installing arbitrary apps using `winget.exe`.
+    - Allows Intune to install Microsoft Store apps. In other words, in Intune, it allows the new integration between the Microsoft Store and Windows Package Manager.
+    - Allows the Microsoft Store to automatically update apps as long as the **Turn off Automatic Download and Install of updates** policy ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) isn't enabled.
+    - Blocks end users from using the Microsoft Store to manually install app updates.
+
+  - **Disabled**: When disabled, this setting:
+
+    - Allows end users to install arbitrary apps from the Microsoft Store app.
+    - Allows end users to install arbitrary apps using `winget.exe`.
+    - Allows Intune to install Microsoft Store apps. In other words, in Intune, it allows the new integration between the Microsoft Store and Windows Package Manager.
+    - Allows the Microsoft Store to automatically update apps as long as the **Turn off Automatic Download and Install of updates** ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) policy isn't enabled.
+    - Blocks end users from using the Microsoft Store to manually install app updates.
+
+  If you want to allow automatic app updates from the Microsoft Store, including built-in Windows apps, and block users from installing apps from the Microsoft Store or `winget.exe`, then:
+
+  - Set **Turn off Automatic Download and Install of updates** to Disabled or Not configured, AND
+  - Set **Turn off the Store application**" to Enabled or Not configured.
+
+  For Win32 Store apps, if **Turn off Automatic Download and Install of updates** is set, then the Win32 apps with an active Intune assignment are still automatically updated.
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
   | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
 
   > [!NOTE]
-  > In some situations, the previous **Only display the private store within the Microsoft Store app** policy doesn't prevent end users from directly accessing the store using the Windows Package Manager `winget` APIs. So, it's recommended to use the **Turn off the Store application** policy instead.
+  > The **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly) CSP) does the following:
+  >
+  > - Blocks end user access to the Microsoft Store.
+  > - Allows the Windows Package Manager `winget` APIs access to the Microsoft Store.
+  >
+  > It's recommended to use the **Turn off the Store application** policy instead.
 
 ## Unsupported functionality for Microsoft Store apps
 
