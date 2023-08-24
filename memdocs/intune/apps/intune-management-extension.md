@@ -68,6 +68,7 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 
 > [!IMPORTANT]
 > Best practices for privacy awareness when using PowerShell scripts and Remediation scripts include the following:
+>
 > - Do not include any type of sensitive information in scripts (such as passwords)
 > - Do not include Personally Identifiable Information (PII) in scripts
 > - Do not use scripts to collect PII from devices
