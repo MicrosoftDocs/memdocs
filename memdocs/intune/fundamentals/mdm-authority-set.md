@@ -116,6 +116,7 @@ To enable coexistence, you must add Intune as the MDM authority for your environ
 2. Navigate to **Devices**.
 3. The **Add MDM Authority blade** displays.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
+  
   ![Screenshot of Add MDM Authority screen](./media/mdm-authority-set/add-mdm-authority.png)
 
 ### Migrate users and devices (optional)
@@ -136,8 +137,8 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
 
 - Devices that are powered on and online during or shortly after the change in MDM authority experience a delay. The delay can last up to eight hours, depending on the timing of the next scheduled regular check-in. During the delay, the devices aren't registered with the service under the new MDM authority. After the delay, the devices are fully registered and operational under the new MDM authority.  
 
- > [!IMPORTANT]  
- > Between the time when you change the MDM authority and when the renewed APNs certificate is uploaded to the new authority, new device enrollments and device check-in for iOS/iPadOS devices fail. Therefore, it's important that you review and upload the APNs certificate to the new authority as soon as possible after the change in MDM authority.
+   > [!IMPORTANT]  
+   > Between the time when you change the MDM authority and when the renewed APNs certificate is uploaded to the new authority, new device enrollments and device check-in for iOS/iPadOS devices fail. Therefore, it's important that you review and upload the APNs certificate to the new authority as soon as possible after the change in MDM authority.
 
 - Users can quickly change to the new MDM authority by manually starting a check-in from the device to the service. Users can easily make this change by using the Company Portal app and starting a device compliance check.
 - To validate that things are working correctly after devices have checked-in and synchronized with the service after the change in MDM authority, look for the devices in the new MDM authority.
@@ -150,8 +151,8 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
 - After you change to the new MDM authority, the compliance data in the Microsoft Intune admin center can take up to a week to accurately report. However, the compliance states in Azure Active Directory and on the device are accurate so the device is still protected.
 - Make sure the new settings intended to overwrite existing settings have the same name as the previous ones to ensure that the old settings are overwritten. Otherwise, the devices might end up with redundant profiles and policies.  
 
- > [!TIP]  
- > As a best practice, you should create all management settings and configurations, as well as deployments, shortly after the change to the MDM authority has completed. This helps ensure that devices are protected and actively managed during the interim period.
+   > [!TIP]  
+   > As a best practice, you should create all management settings and configurations, as well as deployments, shortly after the change to the MDM authority has completed. This helps ensure that devices are protected and actively managed during the interim period.
 
 - After you change the MDM authority, perform the following steps to validate that new devices are enrolled successfully to the new authority:  
   - Enroll a new device
