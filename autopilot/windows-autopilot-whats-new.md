@@ -23,7 +23,7 @@ Microsoft Intune is changing how BitLocker resets occur for reused Windows Autop
 
 ### User impact
 
-This change affects new primary users of the Autopilot device who were allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
+This change affects new primary users of the Autopilot device who are allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
 
 Self-service BitLocker access can continue to work the same if the IT admin performs either:
 
