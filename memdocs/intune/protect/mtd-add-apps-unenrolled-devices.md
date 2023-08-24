@@ -75,7 +75,7 @@ However, should you wish to make the app available to end users via the Intune C
 ### Making Better Mobile available to end users
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Active Shield - Play Store URL](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) when completing the **Configure app information** section.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section.

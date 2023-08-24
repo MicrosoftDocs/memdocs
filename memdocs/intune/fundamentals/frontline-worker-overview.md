@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 08/22/2023
+ms.date: 08/23/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -166,7 +166,9 @@ The next decision is to decide if the devices are shared with many users or assi
 
 ### Step 3 - Home screen and device experience (Android)
 
-This step applies to:
+For **Android (AOSP)**, there isn't a home screen experience to configure when devices are enrolled in Intune using AOSP. When frontline workers get AOSP-enrolled devices, they turn on the devices, sign-in to an app (or don't sign in, depending on the user association), like Microsoft Teams, and then just start using them.
+
+For **Android Enterprise dedicated devices**, there are home screen and device experience features you can configure in Intune. This section and steps apply to:
 
 - **Android Enterprise dedicated devices**
 
@@ -291,7 +293,8 @@ The following diagram shows the iOS/iPadOS options for frontline worker devices 
 
 > [!NOTE]
 > For iPadOS devices, Conditional Access isn't supported for Shared iPad. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../enrollment/device-enrollment-shared-ios.md).
-Since iPads are a more popular Apple device type for frontline workers (FLW), **this section focuses on iPad devices**.
+
+Since iPads are a popular Apple device type for frontline workers (FLW), **this section focuses on iPad devices**.
 
 iPads are used in different scenarios and industries, including in field operations, healthcare, aviation, warehouse, data entry, digital forms, and presentations.
 
@@ -575,6 +578,3 @@ For more information and to get started, go to:
 - [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md)
 - [Microsoft Intune planning guide](intune-planning-guide.md)
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
-
-
-
