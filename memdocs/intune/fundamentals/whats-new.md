@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2023
+ms.date: 08/25/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -284,6 +284,12 @@ The following protected app is now available for Microsoft Intune:
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ### Monitor and troubleshoot
+
+#### CloudDesktop log now collected with Windows diagnositcs data<!-- 24541366 -->
+The Intune remote action to [collect diagnostics](../remote-actions/collect-diagnostics.md) from a Windows device now includes data in a log file.
+
+Log file:
+- %temp%\CloudDesktop\*.log
 
 #### Anomaly detection device cohorts in Intune Endpoint analytics is generally available <!-- 24577118  -->  
 Anomaly detection device cohorts in Intune Endpoint analytics is now generally available.
