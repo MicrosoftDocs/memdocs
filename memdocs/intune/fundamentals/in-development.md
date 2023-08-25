@@ -159,7 +159,10 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment  -->
+## Device enrollment
+
+### SSO support for fully managed and corporate-owned devices with a work profile<!-- 8080357 --> 
+Intune will support single sign-on (SSO) on Android Enterprise devices that are fully managed or corporate-owned with a work profile.  With the addition of SSO, people enrolling their devices will only need to sign in once with their work or school account during enrollment.
 
 <!-- *********************************************** -->
 
