@@ -175,8 +175,8 @@ The Remote Help web app allows users to connect to macOS devices and join a view
 For more information on Remote Help, go to [Remote Help](../fundamentals/remote-help.md).
 
 Applies to: 
-Safari 16.4+
-macOS 11 Big Sur
+- Safari 16.4+
+- macOS 11 Big Sur
 
 ### Government tenant support for endpoint security Application Control policy and Managed Installer<!-- 24850055 -->
 We’re adding support to use endpoint security Application Control policies, and to configure a Managed Installer, to both tenants in US Government and tenants in 21Vianet in China.
