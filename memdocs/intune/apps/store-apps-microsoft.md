@@ -220,7 +220,7 @@ For more information on the Microsoft Store experience in Intune due to the Micr
 
     - Blocks end users from installing arbitrary apps from the Microsoft Store app.
     - Blocks end users from installing arbitrary apps using `winget.exe`.
-    - Allows Intune to install Microsoft Store apps. In other words, in Intune, it allows the new integration between the Microsoft Store and Windows Package Manager.
+    - Allows Intune to install Microsoft Store apps. In other words, it allows the new Intune integration with the Microsoft Store and Windows Package Manager.
     - Allows the Microsoft Store to automatically update apps as long as the **Turn off Automatic Download and Install of updates** policy ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) isn't enabled.
     - Blocks end users from using the Microsoft Store to manually install app updates.
 
@@ -228,14 +228,14 @@ For more information on the Microsoft Store experience in Intune due to the Micr
 
     - Allows end users to install arbitrary apps from the Microsoft Store app.
     - Allows end users to install arbitrary apps using `winget.exe`.
-    - Allows Intune to install Microsoft Store apps. In other words, in Intune, it allows the new integration between the Microsoft Store and Windows Package Manager.
+    - Allows Intune to install Microsoft Store apps. In other words, it allows the new Intune integration with the Microsoft Store and Windows Package Manager.
     - Allows the Microsoft Store to automatically update apps as long as the **Turn off Automatic Download and Install of updates** ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) policy isn't enabled.
     - Blocks end users from using the Microsoft Store to manually install app updates.
 
   If you want to allow automatic app updates from the Microsoft Store, including built-in Windows apps, and block users from installing apps from the Microsoft Store or `winget.exe`, then:
 
-  - Set **Turn off Automatic Download and Install of updates** to Disabled or Not configured, AND
-  - Set **Turn off the Store application**" to Enabled or Not configured.
+  - Set **Turn off Automatic Download and Install of updates** to Disabled or Not configured, **AND**
+  - Set **Turn off the Store application** to Enabled or Not configured.
 
   For Win32 Store apps, if **Turn off Automatic Download and Install of updates** is set, then the Win32 apps with an active Intune assignment are still automatically updated.
 
