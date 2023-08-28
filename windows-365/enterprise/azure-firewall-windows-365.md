@@ -84,15 +84,15 @@ The environment in the diagram was set up using the following Azure Firewall app
 
 ### Windows365 tag
 
-The Windows365 tag includes the required Azure Virtual Desktop (AVD) endpoints, except those with non-standard ports that need to be entered manually (see the Network rules section).
+The Windows365 tag includes the required Azure Virtual Desktop (AVD) endpoints, except those endpoints with nonstandard ports that need to be entered manually (see the Network rules section).
 
 The Windows365 tag doesn't include Intune. The MicrosoftIntune tag can be used separately.
 
-The Windows365 FQDN tag includes all required endpoints except those listed as *Required* in separate rows of this document, which must be configured separately. FQDN tags are different from a service tag. For example, the WindowsVirtualDesktop service tag only includes the IP addresses that *.wvd.microsoft.com resolves to.
+The Windows365 FQDN tag includes all required endpoints except those endpoints listed as *Required* in separate rows of this document, which must be configured separately. FQDN tags are different from a service tag. For example, the WindowsVirtualDesktop service tag only includes the IP addresses that *.wvd.microsoft.com resolves to.
 
 ## Network rules
 
-Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Windows 365 has a few non-standard port requirements, so the following rules must be added manually as Network Rules in addition to the FQDN tags.
+Azure Firewall doesn’t currently handle nonstandard ports in an FQDN tag. Windows 365 has a few nonstandard port requirements, so the following rules must be added manually as Network Rules in addition to the FQDN tags.
 
 | Rule Description | Destination type | FQDN/IP| Protocol | Port/s | TLS inspection | Required/Optional |
 | --- | --- | --- | --- | --- | --- | --- |
