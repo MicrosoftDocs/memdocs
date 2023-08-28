@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/28/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -84,15 +84,15 @@ The environment in the diagram was set up using the following Azure Firewall app
 
 ### Windows365 tag
 
-The Windows365 tag includes the required Azure Virtual Desktop (AVD) endpoints, except those with non-standard ports that need to be entered manually (see the Network rules section).
+The Windows365 tag includes the required Azure Virtual Desktop (AVD) endpoints, except those endpoints with nonstandard ports that need to be entered manually (see the Network rules section).
 
 The Windows365 tag doesn't include Intune. The MicrosoftIntune tag can be used separately.
 
-The Windows365 FQDN tag includes all required endpoints except those listed as *Required* in separate rows of this document, which must be configured separately. FQDN tags are different from a service tag. For example, the WindowsVirtualDesktop service tag only includes the IP addresses that *.wvd.microsoft.com resolves to.
+The Windows365 FQDN tag includes all required endpoints except those endpoints listed as *Required* in separate rows of this document, which must be configured separately. FQDN tags are different from a service tag. For example, the WindowsVirtualDesktop service tag only includes the IP addresses that *.wvd.microsoft.com resolves to.
 
 ## Network rules
 
-Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Windows 365 has a few non-standard port requirements, so the following rules must be added manually as Network Rules in addition to the FQDN tags.
+Azure Firewall doesn’t currently handle nonstandard ports in an FQDN tag. Windows 365 has a few nonstandard port requirements, so the following rules must be added manually as Network Rules in addition to the FQDN tags.
 
 | Rule Description | Destination type | FQDN/IP| Protocol | Port/s | TLS inspection | Required/Optional |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -103,6 +103,10 @@ Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Win
 | Registration | FQDN | hm-iot-in-prod-prap01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prau01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-2-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-3-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-2-prod-prna01.azure-devices.net  | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-3-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | UDP connectivity via TURN | IP | 20.202.0.0/16 | UDP | 3478 | Not recommended | Required |
 | TURN connectivity | IP | 20.202.0.0/16 | TCP | 443 | Not recommended | Required |
 

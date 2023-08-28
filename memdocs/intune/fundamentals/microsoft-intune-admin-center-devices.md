@@ -11,7 +11,7 @@ ms.date: 08/02/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: 
-ms.localizationpriority: med
+ms.localizationpriority: medium
 
 # optional metadata
 

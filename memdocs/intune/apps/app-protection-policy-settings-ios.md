@@ -105,6 +105,8 @@ Third party unmanaged apps can be added to the exemptions list which can allow d
 
 Universal links allow the user to directly launch an application associated with the link instead of a protected browser specified by the **Restrict web content transfer with other apps** setting. You must contact the application developer to determine correct universal link format for each application.
 
+Default App Clip Links are also managed by universal link policy.
+
 ### Exempt Universal Links
 
 By adding Universal Links to *unmanaged* apps, you can launch the specified application. To add the app, you must add the link to the exemption list.
