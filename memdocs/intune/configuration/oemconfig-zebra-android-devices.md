@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 08/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ ms.collection:
 
 In Microsoft Intune, use OEMConfig to customize OEM-specific settings for Android Enterprise devices. These settings are specific to the device manufacturer, and deployed using configuration profiles in Intune.
 
-On Zebra devices, you can deploy or assign profiles to the same device(depending on which OEMCOnfig app is being used, details in the later section). Existing OEMConfig profiles can use this feature the next time the devices sync with Intune.
+Depending on the OEMCOnfig app you're using, on Zebra devices, you can deploy or assign profiles to the same device. Existing OEMConfig profiles can use this feature the next time the devices sync with Intune.
 
 This feature applies to:
 
@@ -48,17 +48,22 @@ This article describes deploying OEMConfig multiple profiles to Zebra devices, d
 
 Create an [OEMConfig configuration profile](android-oem-configuration-overview.md).
 
-## OEMConfig App for Zebra devices
+## OEMConfig apps for Zebra devices
 
-There are now two versions of Zebra OEMConfig App available for managing Zebra android devices. Make sure to use correct version for the devices being targeted:
-![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/135346573/0eb9706b-bdc0-47a7-b2bd-0c65874d19fe)
+To manage Zebra devices, there are two versions of the OEMConfig app:
 
-## Deploying profiles to the Zebra device
+| OEMConfig app | Supported Android versions | Multiple profile support |
+| --- | --- | --- |
+| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google’s standards and only allows one profile on the device. Be sure to deploy one profile with all the required configuration settings. <br/><br/> If you try to deploy multiple profiles, then the profiles conflict and no settings are configured. |
+| **Legacy Zebra OEMConfig** | - Android 11 and earlier | ✔️ You can split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device. |
 
-Historically Zebra has allowed multiple profiles to be deployed on each device through its **Legacy Zebra OEMConfig App**. This feature allowed you to split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device. This is possible on all the android devices having Android 11 and earlier.
-With the introduction of the new **Zebra OEMConfig Powered by MX**, multiple profiles are no longer allowed. This new app aligns closely with Google’s standards and only a single profile is deployed on the device. Admins must ensure to create and deploy only one profile with all the required setting configurations. If an attempt is made to deploy multiple profiles, the profile goes into conflict and no setting is configured. Note: New Zebra OEMConfg app runs on Android version 11 and above.
+> [!NOTE]
+>
+> - Zebra devices don’t support Android 12.
+> - For more information on the new **Zebra OEMConfig Powered by MX** app, go to [New Zebra OEMConfig app for Android](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730).
 
-## Multiple profiles using Legacy App
+## Multiple profiles using the Legacy Zebra OEMConfig app
+
 Zebra's OEMConfig schema also uses **Actions**. Actions are operations that run on the device. They don't configure any settings. Use these actions to trigger a file download, clear the clipboard, and more. For a full list of the supported actions, go to [Zebra's documentation](https://techdocs.zebra.com/oemconfig/) (opens Zebra's web site).
 
 For example, you create a Zebra OEMConfig profile that applies some settings to the device. Another Zebra OEMConfig profile includes an action that clears the clipboard. You assign the first profile to a Zebra devices group. Later, you need to clear the clipboard on those devices. You assign the second profile to the same devices group, without changing the first profile. The device clipboard gets cleared without resending or affecting the configuration settings created in the first profile.
