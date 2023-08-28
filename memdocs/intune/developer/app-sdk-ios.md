@@ -918,6 +918,10 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
 
 > [!NOTE]
 > In iOS 16 and above, a new App Intents system framework is available for creating Swift App Intents. Apps that implement an App Intent should first check the `areSiriIntentsAllowed` property on the IntuneMAMPolicy object for the user.
+
+ ## App Clips
+
+ If your app includes an app clip target, be sure to verify no managed data is presented in the app clip. The app clip should be considered an unmanaged location. SDK integration into App Clips is not currently supported.
     
  ## Printing
 
