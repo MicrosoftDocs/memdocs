@@ -103,6 +103,9 @@ This option is the same as Setup Assistant with modern authentication, except th
 * One authentication handles enrollment and user-device affinity, and happens when the device user turns on their device and signs into Setup Assistant.  
 * Another authentication handles Azure AD registration and happens when the user signs into the designated app. Compliance checks are also done in this app. 
 
+> [!NOTE]
+> If your organization uses Microsoft Defender for Endpoint, for JIT registration and compliance remediation to work as expected, make sure the Microsoft Defender for Endpoint app **isn't** the first app users open.
+
 Once the device user reaches the home screen, they can sign in to any work or school app that's configured with the SSO extension to complete Azure AD registration and compliance checks. SSO signs the user into all apps that are a part of your SSO extension policy. At that point, they can also manually sign into any app that isn’t configured to use the SSO extension.  
 
 To set up JIT Registration:  
