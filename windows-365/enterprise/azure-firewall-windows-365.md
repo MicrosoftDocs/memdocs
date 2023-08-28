@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 08/28/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -103,6 +103,10 @@ Azure Firewall doesn’t currently handle non-standard ports in an FQDN tag. Win
 | Registration | FQDN | hm-iot-in-prod-prap01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | Registration | FQDN | hm-iot-in-prod-prau01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-2-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-3-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-2-prod-prna01.azure-devices.net  | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
+| Registration | FQDN | hm-iot-in-3-prod-prna01.azure-devices.net | TCP | 443,5671 | [Not recommended](/azure/virtual-desktop/proxy-server-support#dont-use-ssl-termination-on-the-proxy-server) | Required |
 | UDP connectivity via TURN | IP | 20.202.0.0/16 | UDP | 3478 | Not recommended | Required |
 | TURN connectivity | IP | 20.202.0.0/16 | TCP | 443 | Not recommended | Required |
 
