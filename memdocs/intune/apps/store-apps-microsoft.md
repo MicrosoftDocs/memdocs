@@ -202,7 +202,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; use a [custom configuration profile](../configuration/custom-settings-configure). | Administrative Templates > Windows Components > Desktop App Installer |
+  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; use a [custom configuration profile](../configuration/custom-settings-configure.md). | Administrative Templates > Windows Components > Desktop App Installer |
 
 - **Enable App Installer** policy
 
@@ -210,7 +210,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; use a [custom configuration profile](../configuration/custom-settings-configure). | Administrative Templates > Windows Components > Desktop App Installer |
+  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; use a [custom configuration profile](../configuration/custom-settings-configure.md). | Administrative Templates > Windows Components > Desktop App Installer |
 
 - **Turn off the Store application** policy: Your options:
 
@@ -228,29 +228,30 @@ For more information on the Microsoft Store integration with Intune due to the M
     - Allows end users to install arbitrary apps using `winget.exe`.
     - Allows end users to use the Microsoft Store to manually install app updates.
 
-  This setting:
-
-  - Doesn't affect Intune's ability to install Microsoft Store apps. In all cases, the new Intune integration with the Microsoft Store is allowed.
-  - Doesn't affect the Microsoft Store's ability to automatically update UWP apps. As long as the **Turn off Automatic Download and Install of updates** ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) policy isn't enabled, the Microsoft Store automatically updates UWP apps.
-
-  If you want to allow automatic UWP app updates from the Microsoft Store, including built-in Windows apps, and block users from installing apps from the Microsoft Store or `winget.exe`, then:
-
-  - Set **Turn off Automatic Download and Install of updates** to Disabled or Not configured, **AND**
-  - Set **Turn off the Store application** to Enabled or Not configured.
-
-  For Win32 Store apps, if **Turn off Automatic Download and Install of updates** is set, then the Win32 apps with an active Intune assignment are still automatically updated.
-
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
   | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
 
-  > [!NOTE]
-  > Using the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly)) is still valid. But, it's not the preferred choice to prevent end user access to the Microsoft Store. The **Only display the private store within the Microsoft Store app** policy:
-  >
-  > - Blocks end user access to the Microsoft Store.
-  > - Allows the Windows Package Manager `winget` CLI access to the Microsoft Store.
-  >
-  > So, it's recommended to use the **Turn off the Store application** policy instead.
+### What you need to know
+
+- The **Turn off the Store application** setting:
+
+  - Doesn't affect Intune's ability to install Microsoft Store apps. In all cases, the new Intune integration with the Microsoft Store is allowed.
+  - Doesn't affect the Microsoft Store's ability to automatically update UWP apps. As long as the **Turn off Automatic Download and Install of updates** ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) policy isn't enabled, the Microsoft Store automatically updates UWP apps.
+- If you want to allow automatic UWP app updates from the Microsoft Store, including built-in Windows apps, and block users from installing apps from the Microsoft Store or `winget.exe`, then:
+
+  - Set **Turn off Automatic Download and Install of updates** to Disabled or Not configured, **AND**
+  - Set **Turn off the Store application** to Enabled or Not configured.
+
+- For Win32 Store apps, if **Turn off Automatic Download and Install of updates** is set, then the Win32 apps with an active Intune assignment are still automatically updated.
+
+> [!TIP]
+> Using the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly)) is still valid. But, it's not the preferred choice to prevent end user access to the Microsoft Store. The **Only display the private store within the Microsoft Store app** policy:
+>
+> - Blocks end user access to the Microsoft Store.
+> - Allows the Windows Package Manager `winget` CLI access to the Microsoft Store.
+>
+> So, it's recommended to use the **Turn off the Store application** policy instead.
 
 ## Unsupported functionality for Microsoft Store apps
 
@@ -258,6 +259,6 @@ Microsoft Store apps don't support the following features:
 
 - Any app that has an ARM64 installer isn't supported.
 
-## Next steps
+## Next step
 
 - [Assign apps to groups](apps-deploy.md)
