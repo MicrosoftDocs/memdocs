@@ -246,12 +246,12 @@ For more information on the Microsoft Store integration with Intune due to the M
 - For Win32 Store apps, if **Turn off Automatic Download and Install of updates** is set, then the Win32 apps with an active Intune assignment are still automatically updated.
 
 > [!TIP]
-> Using the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly)) is still valid. But, it's not the preferred choice to prevent end user access to the Microsoft Store. The **Only display the private store within the Microsoft Store app** policy:
+> Using the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly)) is still valid. This policy:
 >
 > - Blocks end user access to the Microsoft Store.
-> - Allows the Windows Package Manager `winget` CLI access to the Microsoft Store.
+> - Allows the Windows Package Manager `winget` command line interface (CLI) access to the Microsoft Store.
 >
-> So, it's recommended to use the **Turn off the Store application** policy instead.
+> So, it's not the preferred choice to prevent end user access to the Microsoft Store. Instead, it's recommended to use the **Turn off the Store application** policy.
 
 ## Unsupported functionality for Microsoft Store apps
 
