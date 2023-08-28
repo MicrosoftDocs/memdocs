@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2023
+ms.date: 08/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,7 +36,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports UWP apps, desktop apps packaged in `.msix`, and now Win32 apps packaged in `.exe` or `.msi` installers.  
+Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports Universal Windows Platform (UWP) apps, desktop apps packaged in `.msix`, and now Win32 apps packaged in `.exe` or `.msi` installers.  
 
 > [!IMPORTANT]
 > There are key improvements to the most recent Microsoft Store apps functionality over legacy functionality.
@@ -178,7 +178,7 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 
 Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments.
 
-For more information on the Microsoft Store experience in Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
+For more information on the Microsoft Store integration with Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
 
 - **Disable all apps from the Microsoft Store** policy
 
@@ -227,10 +227,11 @@ For more information on the Microsoft Store experience in Intune due to the Micr
     - Allows end users to install arbitrary apps from the Microsoft Store app.
     - Allows end users to install arbitrary apps using `winget.exe`.
     - Allows end users to use the Microsoft Store to manually install app updates.
-   
-  This setting does not impact Intune's ability to install Microsoft Store apps. In all cases the new Intune integration with the Microsoft Store is allowed.
 
-  Similarly, the configuration of this setting does not impact the Microsoft Store's ability to automatically update UWP apps. As long as the **Turn off Automatic Download and Install of updates** ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) policy isn't enabled, the Microsoft Store will automatically update UWP apps.
+  This setting:
+
+  - Doesn't affect Intune's ability to install Microsoft Store apps. In all cases, the new Intune integration with the Microsoft Store is allowed.
+  - Doesn't affect the Microsoft Store's ability to automatically update UWP apps. As long as the **Turn off Automatic Download and Install of updates** ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) policy isn't enabled, the Microsoft Store automatically updates UWP apps.
 
   If you want to allow automatic UWP app updates from the Microsoft Store, including built-in Windows apps, and block users from installing apps from the Microsoft Store or `winget.exe`, then:
 
@@ -244,7 +245,7 @@ For more information on the Microsoft Store experience in Intune due to the Micr
   | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
 
   > [!NOTE]
-  > Using the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly)) is still valid, but no longer the preferred choice to prevent end user access to the Microsoft Store. This policy:
+  > Using the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly)) is still valid. But, it's not the preferred choice to prevent end user access to the Microsoft Store. The **Only display the private store within the Microsoft Store app** policy:
   >
   > - Blocks end user access to the Microsoft Store.
   > - Allows the Windows Package Manager `winget` CLI access to the Microsoft Store.
