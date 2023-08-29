@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Use group policy analytics to import and analyze GPOs in Microsoft Intune
-description: Import and analyze your group policy objects in Microsoft Intune. See the policies that are supported and aren't supported in cloud MDM providers.
-keywords:
+title: Use Microsoft Intune to analyze and import group policies
+description: Import and analyze your group policy objects using the Group Policy analytics tool. See the policies that are supported and aren't supported in Intune.
+keywords: intune group policy, import gpo into Intune, Group Policy analytics
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 08/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,7 @@ ms.collection:
 # Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune
 
 > [!TIP]
-> Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md).
+> Looking for on-premises GPO analysis? There are tools available in the [Microsoft Security Compliance Toolkit](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
 
 Microsoft Intune has many of the same settings as your on-premises GPOs. **Group Policy analytics** is a tool in Microsoft Intune that:
 
@@ -62,6 +62,8 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 
 ## Export a GPO as an XML file
+
+The following steps might be different on your server, depending on the GPMC version you're using. When you export the GPO, make sure you export as an XML file.
 
 1. On your on-premises computer, open the `Group Policy Management` console (GPMC.msc).
 2. In the management console, expand your **domain name**.

@@ -285,7 +285,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Monitor and troubleshoot
 
-#### CloudDesktop log now collected with Windows diagnositcs data<!-- 24541366 -->
+#### CloudDesktop log now collected with Windows diagnostics data<!-- 24541366 -->
 The Intune remote action to [collect diagnostics](../remote-actions/collect-diagnostics.md) from a Windows device now includes data in a log file.
 
 Log file:
