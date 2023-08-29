@@ -730,7 +730,7 @@ Your app may actively import data from other apps, like Microsoft Outlook attach
 Your app may also passively receive data from other apps, like Microsoft Office opening a document from a Microsoft Outlook attachment.
 The receive app protection policy setting covers both scenarios.
 
-If your app has the ability to actively import data from other apps: 
+If your app has the ability to actively import data from other apps:
 
 | Scenario | Steps |
 | - | - |
