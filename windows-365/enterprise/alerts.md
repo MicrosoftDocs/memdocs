@@ -61,7 +61,7 @@ By default, only active alerts are shown. You can use the **Add filter** option 
 
 You can select an alert from the list to see the details of that alert. 
 
-## Customize alert rules
+## Customize alert rule
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts** > **Alert rules**.
     ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
