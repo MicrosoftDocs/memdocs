@@ -58,7 +58,7 @@ To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft In
 
 ## Report data
 
-On the **Frontline Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
+The report shows the following data aggregated for the last 28 days:
 
 - Number of currently connected Frontline Cloud PCs.
 - Maximum number of connected Frontline Cloud PCs for each day in the filtered range (7 or 28 days).
