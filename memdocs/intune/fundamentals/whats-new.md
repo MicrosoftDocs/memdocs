@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/25/2023
+ms.date: 08/30/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,27 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of August 28, 2023
+
+### Device configuration
+
+#### Windows and Android support for 4096-bit key size for SCEP and PFX certificate profiles<!--16314561  -->
+
+Intune [SCEP certificate profiles](../protect/certificates-profile-scep.md) and [PKCS certificate profiles](../protect/certificates-pfx-configure.md) for Windows and Android devices now support a **Key size (bits)** of **4096**. This key size is available for new profiles and existing profiles you choose to edit.
+
+- SCEP profiles have always included the *Key size (bits)* setting and now support 4096 as an available configuration option.
+- PKCS profiles don’t include the *Key size (bits)* setting directly. Instead, an admin must [modify the certificate template on the Certification Authority](../protect/certificates-pfx-configure.md#configure-certificate-templates-on-the-ca) to set the *Minimum key size* to 4096.
+
+If you use a third-party Certificate Authority (CA), you might need to contact your vendor for assistance with implementing the 4096-bit key size.
+
+When updating or deploying new certificate profiles to take advantage of this new key size, we recommend use of a staggered deployment approach to help avoid creating excessive demand for new certificates across a large number of devices at the same time.
+
+With this update, be aware of the following limitations on Windows devices:
+
+- 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+  - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
+  - Windows Hello for Business. There is no work around at this time.
 
 ## Week of August 21, 2023 (Service release 2308)
 
