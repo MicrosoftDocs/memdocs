@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 08/30/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,28 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of August 28, 2023 (Service release 2308)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### System alerts and email notifications are now generally available<!--40932899 -->
+
+System alerts and email notifications have moved out of preview and into general availability. For more information, see [Alerts](alerts.md).
+
+#### New report: Connected Frontline Cloud PCs<!--45975938-->
+
+The Connected Frontline Cloud PCs report is now available. For more information, see [Connected Frontline Cloud PCs report](report-connected-frontline-cloud-pcs.md).
+
+#### Endpoint Analytics resource performance report now available to GCCH customers<!--45234123-->
+
+The Endpoint Analytics resource performance report is now available to Government Community Cloud High (GCCH) customers. For more information, see [Resource performance report](report-resource-performance.md).
+
+#### New Cloud PC overview report page<!--45976156-->
+
+All Cloud PC reports can now be access from the **Cloud PC overview** section under **Device management**.
 
 <!-- ########################## -->
 ## Week of August 21, 2023
