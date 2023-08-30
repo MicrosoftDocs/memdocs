@@ -73,20 +73,7 @@ The following diagram describes the flow from a managed app that has successfull
 >
 > Each active line-of-business (LOB) app that's integrated with Tunnel for MAM iOS-SDK and that runs in the foreground represents an active client connection on the Tunnel Gateway server. The mst-cli command line tool can be used to monitor active client connections. For information about the mst-cli command-line tool, see [Reference for Microsoft Tunnel Gateway](../protect/microsoft-tunnel-reference.md).
 
-### Tunnel Bypass Domain List:
 
-Clients that use the MAM Tunnel don't use Tunnel when accessing the following URLs. 
-
-- login.microsoftonline.com
-- mamservice.manage.microsoft.com
-- msauth.net
-- msftauth.net
-- login.live.com
-- go.microsoft.com
-- browser.events.data.microsoft.com
-- msauthimages.net
-- msftauthimages.net
-- account.activedirectory.windowsazure.com
 
 ## Configure Intune policies for Microsoft Tunnel for MAM iOS
 
