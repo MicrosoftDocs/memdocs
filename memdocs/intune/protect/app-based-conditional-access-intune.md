@@ -33,7 +33,7 @@ ms.collection:
 
 # Use app-based Conditional Access policies with Intune
 
-Intune app protection policies work with Conditional Access, an Azure Active  (Azure AD) capability, to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll.
+Intune app protection policies work with Conditional Access, an Azure Active Directory (Azure AD) capability, to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll.
 
 [App protection policies](../apps/app-protection-policy.md) are rules that ensure an organization's data remains safe or contained in a managed app.
 
