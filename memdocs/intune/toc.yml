@@ -1375,9 +1375,9 @@ items:
           items: 
           - name: Configure Chrome Enterprise connector
             href: ./enrollment/chrome-enterprise-connector-configure.md 
-          - name: View Chrome OS device information in Intune
+          - name: View ChromeOS device information in Intune
             href: ./enrollment/chrome-enterprise-device-details.md              
-          - name: Remote device actions for Chrome OS  
+          - name: Remote device actions for ChromeOS  
             href: ./enrollment/chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
@@ -1675,6 +1675,9 @@ items:
     items: 
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
+    - name: Frontline worker (FLW)
+      displayName: android, ios, ipados
+      href: ./fundamentals/frontline-worker-overview.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview

@@ -718,6 +718,7 @@ For these tests, install your app and the Intune Company Portal; log in with bot
 - Log in to the other managed app with the managed test account. Even if the other managed app is multi-identity, only log in with the managed account.
 
 If your app has the ability to send data to other apps, like Microsoft Outlook sending a document attachment to Microsoft Office:
+
 | Scenario | Steps |
 | - | - |
 | Managed identity send to unmanaged app | - Switch to the managed account. <br> - Navigate to where your app can send data. <br> - Attempt to send data to an unmanaged app. <br> - You should be blocked from sending data to the unmanaged app. |
@@ -730,6 +731,7 @@ Your app may also passively receive data from other apps, like Microsoft Office 
 The receive app protection policy setting covers both scenarios.
 
 If your app has the ability to actively import data from other apps:
+
 | Scenario | Steps |
 | - | - |
 | Managed identity import from unmanaged app | - Switch to the managed account. <br> - Navigate to where your app can import data from other apps. <br> - Attempt to import data from an unmanaged app. <br> - You should be blocked from importing data from unmanaged apps. |

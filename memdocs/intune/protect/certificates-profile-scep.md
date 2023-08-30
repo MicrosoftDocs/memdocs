@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2023
+ms.date: 08/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -280,7 +280,18 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - Not configured
      - 1024
      - 2048
-     - 4096 *(supported with iOS/iPadOS 14 and later, and macOS 11 and later)*
+     - 4096 - A Key size of 4096 is supported for the following platforms:
+       - Android (all)
+       - iOS/iPadOS 14 and later
+       - macOS 11 and later
+       - Windows (all)
+
+       > [!NOTE]
+       >
+       > For Windows devices, 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+       >
+       > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
+       > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
 
    - **Hash algorithm**:
 

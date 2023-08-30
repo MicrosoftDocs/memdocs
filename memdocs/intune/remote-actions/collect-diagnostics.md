@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 08/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -162,6 +162,7 @@ Files:
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
 - %ProgramData%\USOShared\logs\system\\*.etl
 - %ProgramData Microsoft Update Health Tools\Logs\\*.etl
+- %temp%\CloudDesktop\*.log
 - %temp%\MDMDiagnostics\battery-report.html
 - %temp%\MDMDiagnostics\energy-report.html
 - %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
