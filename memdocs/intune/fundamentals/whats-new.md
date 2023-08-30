@@ -89,6 +89,13 @@ With this update, be aware of the following limitations on Windows devices:
   - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
   - Windows Hello for Business. There is no work around at this time.
 
+### Tenant administration
+
+#### Access policies for multiple Administrator Approval are now generally available<!-- 24936423   -->  
+Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies you can protect a resource, like App deployments, by requiring any change to the deployment be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
+
+For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
+
 ## Week of August 21, 2023 (Service release 2308)
 
 ### App management
