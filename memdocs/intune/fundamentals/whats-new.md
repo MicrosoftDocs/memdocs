@@ -91,8 +91,8 @@ With this update, be aware of the following limitations on Windows devices:
 
 ### Tenant administration
 
-#### Access policies for Multiple Administrator Approval are now generally available<!-- 24936423   -->  
-Access policies for Multiple Administrator Approval are out of public preview and are now generally available. With these policies you can protect a resource, like App deployments, by requiring any change to the deployment be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
+#### Access policies for multiple Administrator Approval are now generally available<!-- 24936423   -->  
+Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies you can protect a resource, like App deployments, by requiring any change to the deployment be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
 
 For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
 
