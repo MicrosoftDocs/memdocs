@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2023
+ms.date: 08/02/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -51,9 +51,9 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   - The **Intune administrator**
 
-  **OR**
+    **OR**
 
-  - With a role that has the **Security baselines** permission and the **Device configurations/Create** permission
+  - A role that has the **Security baselines** permission and the **Device configurations/Create** permission
 
   For more information about the permissions included with the built-in Intune roles, go to [built-in admin roles](../fundamentals/role-based-access-control.md#built-in-roles). For information on custom roles, go to [assign permissions to custom roles](../fundamentals/create-custom-role.md#custom-role-permissions).
 
@@ -69,7 +69,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 After you import your GPOs, review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After they've been reviewed, you can migrate the settings to a Settings Catalog policy.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
 
     :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png" alt-text="Screenshot that shows how to select the Migrate checkbox next to your imported GPO in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png":::
@@ -101,26 +101,26 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
 
     Select **Next**.
 
-6. In **Configuration**, your settings and their values are shown. The values are the same values in the on-premises Group Policy. Review these settings and their values.
+5. In **Configuration**, your settings and their values are shown. The values are the same values in the on-premises Group Policy. Review these settings and their values.
 
     After you create the Settings Catalog policy, you can change any values.
 
     Select **Next**.
 
-7. In **Profile info**, enter the following settings:
+6. In **Profile info**, enter the following settings:
 
     - **Name**: Enter a descriptive name for the Setting Catalog profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Windows 10/11: Imported Microsoft Edge GPOs**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
-    
-    Select **Next**.
-
-8. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
     Select **Next**.
 
-10. In **Review + deploy**, review your settings.
+7. In **Scope tags**, optionally assign a tag to filter the profile to specific IT groups, such as US-NC IT Team or JohnGlenn_ITDepartment. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+8. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](device-profile-assign.md).
+
+    Select **Next**.
+
+9. In **Review + deploy**, review your settings.
 
     When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Configuration profiles** list.
 
@@ -138,9 +138,9 @@ To resolve the conflict, uncheck a conflicting setting, and continue the migrati
 
 ## What you need to know
 
-The **Migrate** feature takes the parsed data from the imported Group Policy object (GPO) and translates it to a relevant setting in the Settings Catalog, if the setting exists. 
+The **Migrate** feature takes the parsed data from the imported Group Policy object (GPO) and translates it to a relevant setting in the Settings Catalog, if the setting exists.
 
-**Migrate** is best effort. 
+**Migrate** is best effort.
 
 When you create the Settings Catalog profile, any settings that can be included in the profile are included. There can be some differences with the imported settings and the settings in Settings Catalog.
 

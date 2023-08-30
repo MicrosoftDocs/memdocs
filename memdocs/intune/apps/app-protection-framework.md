@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/12/2023
+ms.date: 08/15/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -229,6 +229,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](../protect/mtd-enable-unenrolled-devices.md).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](../protect/mtd-device-compliance-policy-create.md).</p> |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 11.0* / Block access   |          Android        | Microsoft recommends configuring   the maximum Android major version to ensure beta or unsupported versions of the operating system are not used.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor.Build <br>Example:   15.0* / Block access |          iOS/iPadOS        | Microsoft recommends configuring   the maximum iOS/iPadOS major version to ensure beta or unsupported versions of the operating system are not used. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
+| Device conditions  |       Samsung Knox device attestation  | Warn, Block access, Wipe data |          Android        | Microsoft recommends configuring the **Samsung Knox device attestation** setting to **Block access** to ensure the user account is blocked from access if the device does not meet Samsung's Knox device attestation check. For more information, see [Device settings](../apps/app-protection-policy-settings-android.md#device-conditions) for Android app protection policies. |
 
 ## Next steps
 
