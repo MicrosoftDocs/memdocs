@@ -39,7 +39,7 @@ This report helps you:
 
 By reviewing the maximum concurrent connections, you can decide if you need to purchase more licenses to ensure your end users aren't blocked from using their Frontline Cloud PCs.
 
-The Connected Frontline Cloud PCs report is in [public preview](public-preview.md).
+The Connected Frontline Cloud PCs report is in [public preview](..\public-preview.md).
 
 ## Requirements
 
