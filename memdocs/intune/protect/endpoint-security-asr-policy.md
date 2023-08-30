@@ -176,7 +176,7 @@ Intune supports the following two settings to exclude specific file and folder p
   By default, **ASR Only Per Rule Exclusions** is set to **Not configured**.
   
   > [!IMPORTANT]
-  > ASR polices do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple polices that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
+  > ASR policies do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple policies that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
 
   <!-- 
   For more information, see the documentation for the Defender CSP  [Defender/ASROnlyPerRuleExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-asronlyperruleexclusions). 
@@ -193,7 +193,7 @@ Behavior details pending.
 
 ### Devices managed by Defender for Endpoint security settings management
 
-When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows 10, Windows 11, and Windows Server* platform to manage setting on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows 10, Windows 11, and Windows Server* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 Profiles supported for this scenario include:
 

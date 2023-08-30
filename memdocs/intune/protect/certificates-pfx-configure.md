@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/08/2023
+ms.date: 08/23/2023
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -103,11 +103,22 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 6. In **Request Handling**, select **Allow private key to be exported**.
 
     > [!NOTE]
+    >
     > Unlike SCEP, with PKCS the certificate private key is generated on the server where the certificate connector is installed and not on the device. The certificate template must allow the private key to be exported so that the connector can export the PFX certificate and send it to the device.
     >
     > When the certificates install on the device itself, the private key is marked as not exportable.
 
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
+
+   Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 40496 as the *Minimum key size*. 
+
+   > [!NOTE]
+   >
+   > For Windows devices, 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+   >
+   > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
+   > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
+
 8. In **Subject Name**, choose **Supply in the request**.
 9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
 
