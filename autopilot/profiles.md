@@ -87,8 +87,12 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
 10. Choose **Select groups to include**, and choose the groups you want to include in this profile.
 11. If you want to exclude any groups, choose **Select groups to exclude**, and choose the groups you want to exclude.
-12. Select **Next**.
-13. On the **Review + Create** page, choose **Create** to create the profile.
+
+ > [!NOTE]
+    > If you use the assigment **All Devices** exclusions are not supported. Any workaround to excluse groups while targeting it to all devices may cause assignation problems and require to re-upload the hash once again.
+    
+13. Select **Next**.
+14. On the **Review + Create** page, choose **Create** to create the profile.
 
     ![Screenshot of Review page.](images/create-profile-review.png)
 
