@@ -50,7 +50,7 @@ The following permissions are required to view this report:
 
 To assign these permissions, go to **Tenant administration** > **Roles** > **Create** > **Windows 365 role**.
 
-## Use the Cloud PC utilization report
+## Use the Connected Frontline Cloud PCs report
 
 To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Connected Frontline Cloud PCs**).
 
