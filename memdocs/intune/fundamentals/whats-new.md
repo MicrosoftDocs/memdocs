@@ -818,7 +818,7 @@ The Intune troubleshooting pane is now generally available.  It provides details
 - Details about available device diagnostics and disabled devices.
 - Details about offline devices that haven't checked-in to the service for three or more days.
 
-You can find the troubleshooting pane in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**.
+You can find the troubleshooting pane in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**.
 
 #### Updated troubleshoot + support pane in Intune<!-- 16240430  -->  
 The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Azure Active Directory, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
