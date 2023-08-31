@@ -105,7 +105,7 @@ The admin center also plugs-in other key device management services, including:
 - [**Windows 365** for your Windows virtual machines](/windows-365/overview)
 - [**Windows Autopatch** to automate updates](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
-## Identity management with Entra ID
+## Microsoft Entra ID
 
 Microsoft Entra ID, previously known as Azure Active Directory (Azure AD), is a cloud-native service that's used by Intune to **manage the identities of users, devices, and groups**. The Intune policies you create are assigned to these users, devices, and groups. When devices are enrolled in Intune, your users sign in to their devices with their Azure AD accounts (`user@contoso.com`).
 
