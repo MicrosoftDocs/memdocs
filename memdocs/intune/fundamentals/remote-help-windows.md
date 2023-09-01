@@ -70,9 +70,13 @@ The prerequisites for Remote Help on Windows are:
 
 - Set up the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
 
-- The helper must be signed-in on an Intune enrolled device
+- The Sharer's device must be signed-in on an Intune enrolled device while the helper's device enrollment is optional
 
-- The sidecar agent is required for the remote launch feature and that is only supported on Windows 10. The OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075.
+- Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
+
+- Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
+
+- Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
 ### Network considerations
 
@@ -171,7 +175,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 ## How to use Remote Help
 
-The use of Remote Help depends on whether you're requesting help or providing help.
+The use of Remote Help depends on whether you're requesting help or providing help. In this section we'll cover both scenarios.
 
 ### Request help
 
@@ -179,9 +183,9 @@ To request help, you must reach out to your support staff to request assistance.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
-1. The helper sends a notification to your device that alerts you that they want to help you on your device. You can open the Remote Help app to accept or decline the request. The notification includes the name and verified domain of the helper.
+1. The helper locates the device in the Microsoft Intune admin center and selects **New remote assistance session**. A notification is sent to the sharer's device.
 
-2. Start the Remote Help app on the device and sign in to authenticate to your organization.
+2. As a sharer, Select **Launch Remote Help** to join the session. You may need to sign in to authenticate to your organization. As an alternative, both the helper and sharer can manually launch the app and exchange a session code.
 
 3. After opening the Remote Help app, the sharer has to wait for the helper to set up the session. The helper sees information about the sharer including the full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
 
