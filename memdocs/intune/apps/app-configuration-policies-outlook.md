@@ -79,7 +79,7 @@ For more information on the available settings, see [Android app protection poli
 
 ## Use app configuration
 
-Outlook for iOS and Android supports app settings that allow unified endpoint management, like Microsoft Endpoint Manager, administrators to customize the behavior of the app.
+Outlook for iOS and Android supports app settings that allow unified endpoint management administrators to customize the behavior of the app. Microsoft Intune, which is a unified endpoint management solution, is commonly used to configure and assign apps to organizational end users.
 
 App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the Intune App Protection Policy (APP) channel. Outlook for iOS and Android supports the following configuration scenarios:
 

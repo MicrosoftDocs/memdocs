@@ -67,7 +67,7 @@ Before you start, get a VPP token from Apple and upload it to your Intune accoun
 2. Select **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 3. On the list of VPP tokens pane, click **Create**.
 5. On the **New VPP Token** pane, specify the following information:
-    - **VPP token file** - Ensure you have signed in to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). Note these services were previously known as Apple's volume purchase program for business or the Apple volume purchase program for education. Then, download the Apple location/VPP token for your account and select it in Endpoint Manager.
+    - **VPP token file** - Ensure you have signed in to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/). Note these services were previously known as Apple's volume purchase program for business or the Apple volume purchase program for education. Then, download the Apple location/VPP token for your account and select it in Intune.
     - **Apple ID** - Enter the Apple ID of the account associated with the volume-purchase program.
     - **Type of VPP account** - Choose from **Business** or **Education**.
 5. When you are done, click **Create**.
