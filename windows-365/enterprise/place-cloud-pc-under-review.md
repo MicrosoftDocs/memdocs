@@ -73,7 +73,7 @@ After setting up an Azure storage account with permissions as explained above, y
 3. Select the Azure subscription and the Azure storage account to which the Windows 365 service was given **Storage Account Contributor** permissions.
     ![Screenshot of choose a subscription and storage](./media/place-cloud-pc-under-review/subscription-storage.png)
     
-4. Select **Place under review**. Based on the size of the Cloud PC and storage account destination region, it can range from minutes to a few hours for each snapshot to be saved to the storage account.
+4. Select **Place under review**. Based on the disk size of the Cloud PC and storage account destination region, it can range from minutes to a few hours for each snapshot to be saved to the storage account.
 
 ## Remove a Cloud PC from review
 
