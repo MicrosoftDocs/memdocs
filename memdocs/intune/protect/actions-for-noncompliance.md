@@ -67,11 +67,11 @@ When you enable this action:
   This action is supported on all platforms supported by Intune.
 
    > [!NOTE] 
-   > In the commercial cloud, notification emails are sent from: IntuneNotificationService@microsoft.com
+   > Notification emails are sent from: microsoft-noreply@microsoft.com
    > 
-   > In government clouds, notification emails are sent from: microsoft-noreply@microsoft.com
+   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification.
    > 
-   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification. 
+   > _Prior to December 2022, notification emails in the commercial cloud were sent from: IntuneNotificationService@microsoft.com_
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
@@ -104,7 +104,7 @@ When you enable this action:
   When this action applies to a device, that device is added to a list of devices in the Microsoft Intune admin center at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
   
   > [!NOTE]
-  > Only devices to which the **Retire the noncompliant device** action has been triggered appear in the **Retire Selected Devices** view. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#view-compliance-reports).
+  > Only devices to which the **Retire the noncompliant device** action has been triggered appear in the **Retire Selected Devices** view. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#other-compliance-reports).
 
   To retire one or more devices from the list, select devices to retire and then select **Retire Selected Devices**. When you choose an action that retires devices, you're then presented with a dialog box to confirm the action. It's only after confirming the intent to retire the devices that they're cleared of company data and removed from Intune management. 
 

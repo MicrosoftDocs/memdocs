@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: View Chrome OS device information | Microsoft Intune  
-description: View Chrome OS devices and details synced with the Chrome Enterprise connector.  
+title: View ChromeOS device information | Microsoft Intune  
+description: View ChromeOS devices and details synced with the Chrome Enterprise connector.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -28,12 +28,12 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# View Chrome OS device information in Intune    
+# View ChromeOS device information in Intune    
 
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
 
-View details about your Chrome Enterprise connector and Chrome OS devices in the Microsoft Intune admin center. Information becomes available after:  
+View details about your Chrome Enterprise connector and ChromeOS devices in the Microsoft Intune admin center. Information becomes available after:  
 
 * You establish the connection between Google Admin console and Microsoft Intune.
 * The initial device sync finishes. 
@@ -43,21 +43,21 @@ You can view synced devices in the **Devices** > **All devices** list and throug
 
 ## Prerequisites  
 
-To view Chrome OS devices and device details, you must be assigned a role that has read permission for *Chrome Enterprise (preview)*.  
+To view ChromeOS devices and device details, you must be assigned a role that has read permission for *Chrome Enterprise (preview)*.  
 
-Devices must be enrolled before you can see them in the admin center. Enrollment for Chrome OS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
+Devices must be enrolled before you can see them in the admin center. Enrollment for ChromeOS devices is done in the Google Admin center. You can create the connection before or after you enroll devices. For more information, see [Enroll ChromeOS devices](https://support.google.com/chrome/a/answer/1360534) (opens Chrome Enterprise and Education Help).
 
-## View Chrome OS devices  
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running Chrome OS.  The following information is shown for Chrome OS devices: 
+## View ChromeOS devices  
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** to view an aggregated list of all devices in Intune, including those running ChromeOS.  The following information is shown for ChromeOS devices: 
 
-* **Device name**: Device names for Chrome OS devices appear as `Chrome- {serialNumber}`. 
-* **Managed by**: Chrome OS devices are managed by **Intune**. 
-* **Ownership**: Chrome OS devices are always marked as **Corporate**.  
-* **Compliance**: Compliance policies are not supported with Chrome OS devices in Intune so they'll appear in this column as **Not evaluated**.  
+* **Device name**: Device names for ChromeOS devices appear as `Chrome- {serialNumber}`. 
+* **Managed by**: ChromeOS devices are managed by **Intune**. 
+* **Ownership**: ChromeOS devices are always marked as **Corporate**.  
+* **Compliance**: Compliance policies are not supported with ChromeOS devices in Intune so they'll appear in this column as **Not evaluated**.  
 
-Select **Filter** to filter the device list by platform. You can also go to the navigation menu and select **Chrome OS (preview)** for an exclusive view of Chrome OS devices.    
+Select **Filter** to filter the device list by platform. You can also go to the navigation menu and select **ChromeOS (preview)** for an exclusive view of ChromeOS devices.    
 
-## View Chrome OS device details  
+## View ChromeOS device details  
 Directly select a device to view more details about it. The device's **Overview** page shows the device name, and lists key properties of the device, such as ownership, serial number, primary user, and device model. 
 
 You can also view properties and system info for a device, as described in the following sections.  
@@ -65,7 +65,7 @@ You can also view properties and system info for a device, as described in the f
 ### Properties  
 Select **Properties** to view management information about the device. 
 
-The following properties sync back to the Google Admin console:. Any changes made to these properties in Intune also show up in the Google Admin console.  
+The following properties sync back to the Google Admin console. Any changes made to these properties in Intune also show up in the Google Admin console.  
 
 * Management name, known in Google Admin as the *asset ID*      
 * User  
@@ -75,4 +75,4 @@ The following properties sync back to the Google Admin console:. Any changes mad
 Select **System info** to see a real-time snapshot of the information available from the Google Admin console.  
 
 ## Next steps  
-Use the remote actions available for Chrome OS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote actions for Chrome OS](chrome-enterprise-remote-actions.md).  
+Use the remote actions available for ChromeOS devices to deprovision, wipe, restart, or put devices in lost mode. For more information, see [Remote actions for ChromeOS](chrome-enterprise-remote-actions.md).  

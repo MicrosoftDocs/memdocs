@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/05/2023
+ms.date: 08/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -72,21 +72,6 @@ The following diagram describes the flow from a managed app that has successfull
 > The Tunnel for MAM iOS SDK provides VPN Tunnel. It’s scoped to the networking layer within the app. VPN connections are not displayed in iOS settings.
 >
 > Each active line-of-business (LOB) app that's integrated with Tunnel for MAM iOS-SDK and that runs in the foreground represents an active client connection on the Tunnel Gateway server. The mst-cli command line tool can be used to monitor active client connections. For information about the mst-cli command-line tool, see [Reference for Microsoft Tunnel Gateway](../protect/microsoft-tunnel-reference.md).
-
-### Tunnel Bypass Domain List:
-
-Clients that use the MAM Tunnel don't use Tunnel when accessing the following URLs. 
-
-- login.microsoftonline.com
-- mamservice.manage.microsoft.com
-- msauth.net
-- msftauth.net
-- login.live.com
-- go.microsoft.com
-- browser.events.data.microsoft.com
-- msauthimages.net
-- msftauthimages.net
-- account.activedirectory.windowsazure.com
 
 ## Configure Intune policies for Microsoft Tunnel for MAM iOS
 

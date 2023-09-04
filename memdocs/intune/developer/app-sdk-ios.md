@@ -918,6 +918,10 @@ If your app integrates with Siri Intents or makes Siri Intent Donations, please 
 
 > [!NOTE]
 > In iOS 16 and above, a new App Intents system framework is available for creating Swift App Intents. Apps that implement an App Intent should first check the `areSiriIntentsAllowed` property on the IntuneMAMPolicy object for the user.
+
+ ## App Clips
+
+ If your app includes an app clip target, be sure to verify no managed data is presented in the app clip. The app clip should be considered an unmanaged location. SDK integration into App Clips is not currently supported.
     
  ## Printing
 
@@ -1011,7 +1015,10 @@ A newly created SwiftUI app supports UIScenes but doesn't have a UISceneDelegate
 
 ## Post build script
 
-The **IntuneMAMFrameworkPatcher** command line tool must be run as the last step of the application build process. This tool is available as part of the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
+The **IntuneMAMFrameworkPatcher** command line tool no longer must be run as the last step of the application build process. However, this tool is available as part of the Intune App SDK for iOS on [GitHub](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
+
+> [!IMPORTANT]
+> As of the 17.7.1 release of the Intune MAM SDK, this step is no longer required. The **IntuneMAMFrameworkPatcher** command line tool no longer must be run.
 
 ### Command line usage
 
