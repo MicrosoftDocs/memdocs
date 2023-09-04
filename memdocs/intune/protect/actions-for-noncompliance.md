@@ -104,11 +104,11 @@ When you enable this action:
   When this action applies to a device, that device is added to a list of devices in the Microsoft Intune admin center at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
   
   > [!NOTE]
-  > Only devices to which the **Retire the noncompliant device** action has been triggered appear in the **Retire Selected Devices** view. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#view-compliance-reports).
+  > Only devices to which the **Add device to retire list** action has been triggered appear in the **Retire Selected Devices** view. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#view-compliance-reports).
 
   To retire one or more devices from the list, select devices to retire and then select **Retire Selected Devices**. When you choose an action that retires devices, you're then presented with a dialog box to confirm the action. It's only after confirming the intent to retire the devices that they're cleared of company data and removed from Intune management. 
 
-  Other options include *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
+  Other options include *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Add device to retire list* is applied to that device again.
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
@@ -145,7 +145,7 @@ When you enable this action:
 > The following actions for noncompliance are not supported for devices that are managed by a [device compliance management partner](../protect/device-compliance-partners.md):  
 > - Send push notification to end user
 > - Remotely lock the noncompliant device
-> - Retire the noncompliant device
+> - Add device to retire list
 > - Send push notification to end user
 
 ## Before you begin
@@ -240,7 +240,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
    - **Remotely lock the noncompliant device**: When the device is noncompliant, lock the device. This action forces the user to enter a PIN or passcode to unlock the device.
 
-   - **Retire the noncompliant device**: When the device is noncompliant, remove all company data off the device and remove the device from Intune management.
+   - **Add device to retire list**: When the device is noncompliant, remove all company data off the device and remove the device from Intune management.
 
    - **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
 
