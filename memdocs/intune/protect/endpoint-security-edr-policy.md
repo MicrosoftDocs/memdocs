@@ -64,22 +64,25 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 
 ### Devices managed by Microsoft Intune
 
-The following are supported for devices you manage with Intune:
-
 **macOS** - To manage EDR for macOS devices, select the **macOS** platform. The following profile is available:
 
-- **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with devices enrolled with Intune, and with devices managed through the opt-in public preview for [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
+- **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
+  - Devices enrolled with Intune
+  - Devices managed through the opt-in public preview for [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
 
   EDR templates for macOS include two settings for the *Device tags* category from Defender for Endpoint:
 
   - **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
   - **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
 
-  To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide#device-tags) in the Defender documentation.
+  To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
 **Windows** - To manage EDR for Windows devices, select the **Windows 10, Windows 11, and Windows Server** platform. The following profile is available:
 
-- **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with devices enrolled with Intune, and with devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
+- **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
+
+  - Devices enrolled with Intune
+  - Devices managed through the opt-in public preview for [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
 
   > [!NOTE]  
   > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
