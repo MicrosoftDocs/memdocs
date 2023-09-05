@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -63,9 +63,9 @@ When you manage devices through security settings management without participati
 
 - You use the Microsoft Intune admin center to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure AD groups
 - Devices get the policies based on their Azure Active Directory device object. A device that isn’t already present in Azure Active Directory is joined as part of this solution
-- When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center
+- On devices that receive a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center
 
-This scenario extends the Microsoft Intune Endpoint Security surface to devices that aren't capable of enrolling in Intune. When a device is managed by Intune (enrolled to Intune) the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
+This scenario extends the Microsoft Intune Endpoint Security surface to devices that aren't capable of enrolling in Intune. When a device is managed by Intune (enrolled to Intune), the device doesn't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
 
 Applies to:
 
@@ -81,7 +81,7 @@ Applies to:
 
 When you manage devices through security settings management as part of the public preview:
 
-- You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure endpoint security policies for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
+- You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure policies for endpoint security for Defender for Endpoint and assign those policies to Azure Active Directory (Azure AD) groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
   To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
 
@@ -208,7 +208,7 @@ To confirm the version of the Defender agent, in the Defender portal go to the d
 - Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
 - Windows Server 2022 (with [KB5006745](https://support.microsoft.com/topic/october-26-2021-kb5006745-os-build-20348-320-preview-8ff9319a-19e7-40c7-bbd1-cd70fcca066c))
 
-Security settings management doesn't work on and is not supported with the following:
+Security settings management doesn't work on and is not supported with the following devices:
 
 - Non-persistent desktops, like Virtual Desktop Infrastructure (VDI) clients or Azure Virtual Desktops.
 - Domain Controllers
@@ -250,7 +250,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 :::image type="content" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint security configuration management solution" source="./media/mde-security-integration/mde-architecture-2.png" lightbox="./media/mde-security-integration/mde-architecture-2.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
-2. Devices communicate with Intune. This enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
+2. Devices communicate with Intune. This communication enables Microsoft Intune to distribute policies that are targeted to the devices when they check in.
 3. A registration is established for each device in Azure AD:
    - If a device was previously fully registered, like a Hybrid Join device, the existing registration is used.
    - For devices that haven't been registered, a synthetic device identity is created in Azure AD to enable the device to retrieve policies. When a device with a synthetic registration has a full Azure AD registration created for it, the synthetic registration is removed and the devices management continues on uninterrupted by using the full registration.
@@ -299,7 +299,7 @@ With the behavior that is introduced with the public preview in July of 2023, us
 
 - (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, WindowsServer, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
 
-- If necessary, dynamic groups containing exclusively devices managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices managed by Defender for Endpoint via the security settings management functionality, and devices will only remain in this group while being managed by Defender for Endpoint.
+- If necessary, dynamic groups containing exclusively devices that are managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices that are managed by Defender for Endpoint via the security settings management functionality, and devices remain in this group only while managed by Defender for Endpoint.
 
 Also, when configuring security settings management, if you intend to manage entire OS platform fleets using Microsoft Defender for Endpoint, by selecting **all devices** instead of **tagged devices** in the Microsoft Defender for Endpoint Enforcement Scope page, understand that any synthetic registrations are counted against Azure AD quotas the same as full registrations.
 
@@ -310,7 +310,10 @@ Also, when configuring security settings management, if you intend to manage ent
 
 Microsoft Intune includes several methods and policy types to manage the configuration of Defender for Endpoint on devices. The following table identifies the Intune policies and profiles that support deployment to devices managed by Defender for Endpoint security settings management and can help you identify if this solution is right for your needs.
 
-When you deploy an endpoint security policy that’s supported for both *Defender for Endpoint security settings management* and *Microsoft Intune*, a single instance of that policy can be processed by devices supported through security settings management (Microsoft Defender), and by devices that are managed by either Intune or Configuration Manager.
+When you deploy an endpoint security policy that’s supported for both *Defender for Endpoint security settings management* and *Microsoft Intune*, a single instance of that policy can be processed by:
+
+- Devices supported through security settings management (Microsoft Defender)
+- Devices that are managed by either Intune or Configuration Manager.
 
 Profiles for the *Windows 10 and later platform* aren't supported for devices managed by security settings management.
 
@@ -348,6 +351,7 @@ The following policy types support the *macOS* platform.
 |---------|----------|-----------|----------|
 | Antivirus                            | Microsoft Defender Antivirus            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Endpoint detection and response | Endpoint detection and response |  ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 
 ### Windows 10, Windows 11, and Windows Server
 
@@ -423,7 +427,7 @@ Microsoft Defender for Endpoint supports several options to onboard devices. For
 
 ## Coexistence with Microsoft Configuration Manager
 
-In some environments it might be desired to use security settings management with devices managed by Configuration Manager. If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
+In some environments it might be desired to use security settings management with devices managed by Configuration Manager. If you use both, you need to control policy through a single channel. Use of more than one channel creates the opportunity for conflicts and undesired results.
 
 To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*. Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
 
@@ -435,7 +439,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices. Devices that onboard to Microsoft Defender for Endpoint but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These are the devices that can receive policies for security settings management.
+2. Go to **Devices** > **All devices**, and then select the column **Managed by** to sort the view of devices. Devices that onboard to Microsoft Defender for Endpoint but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These devices can receive policies for security settings management.
 
    Devices that onboard to Microsoft Defender for Endpoint and have registered but aren't managed by Intune display **Microsoft Defender for Endpoint** in the *Managed by* column. These are the devices that can receive policy for security management for Microsoft Defender for Endpoint.
 
@@ -507,7 +511,7 @@ For the list of policy and profile combinations supported for security settings 
 
    When you're done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the Azure AD groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
+7. On the **Assignments** page, select the Azure AD groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 
    Select **Next** to continue.
 
@@ -600,11 +604,11 @@ Because an Azure Active Directory trust is required, domain controllers aren't c
 
 ### Server Core installation
 
-Due to the platform limitations of Server core installations, these aren't supported by security settings management.
+Security settings management doesn't support Server core installations due to Server core platform limitations.
 
 ### PowerShell restrict mode
 
-Security settings management won't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
+Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
 ## Next steps
 
