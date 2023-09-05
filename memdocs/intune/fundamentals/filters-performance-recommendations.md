@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2023
+ms.date: 09/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -141,7 +141,7 @@ This recommendation also applies when groups are “unnested”. For more inform
 
 This recommendation is also a support statement. We don't recommend or support creating assignments to user groups and excluding a device group from that assignment, or vice-versa.
 
-This recommendation exists due to the timing/latency characteristic of dynamic groups.**Excluded groups** membership isn't instant, which can result in cases where devices incorrectly receive app or policy assignments. To understand more, go to the [Assign policies and profiles - support matrix](../configuration/device-profile-assign.md#support-matrix).
+This recommendation exists due to the timing/latency characteristic of dynamic groups. **Excluded groups** membership isn't instant, which can result in cases where devices incorrectly receive app or policy assignments. To understand more, go to the [Assign policies and profiles - support matrix](../configuration/device-profile-assign.md#support-matrix).
 
 Instead of mixed exclusions, we recommend assigning to a user group. Then, use filters to dynamically include or exclude the appropriate devices.
 
@@ -149,8 +149,8 @@ Instead of mixed exclusions, we recommend assigning to a user group. Then, use f
 
 When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups, and apply filters to help refine the targeting scope. Keep the best practices in mind:
 
--  Don't create your own version of "All users" or "All devices" groups. Use the Intune virtual groups instead as they don’t require Azure AD syncing when a new user or device is added to the environment.
-- Reuse groups as much as possible to optimize your targeting.
+-  Don't create your own version of "All users" or "All devices" groups. Use the Intune virtual groups, as they don’t require Azure AD syncing when a new user or device is added to the environment.
+- To optimize your targeting, reuse groups as much as possible.
 - Take care when making large nesting changes to Intune groups. Intune needs to process all these changes and calculate effective changes for all the members of all the groups impacted by that change. 
 - Intune doesn't support mixed group exclusions. So, use filters to dynamically include and exclude devices in addition to group or virtual group assignments.
 
