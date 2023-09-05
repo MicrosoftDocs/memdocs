@@ -70,14 +70,14 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 
 ### Self-help in Windows 365 Business<!--45828334-->
 
-A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the ? button and ask questions to find relevant help topics.
+A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
 
 <!-- ***********************************************-->
 ## Miscellaneous
 
-### Single sign on option per tenant (preview)<!--43751308-->
+### Single sign-on option per tenant (preview)<!--43751308-->
 
-Each tenant will be able to decide if you want to turn on Single Sign On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign on.
+Each tenant will be able to decide if you want to turn on Single Sign-On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign-on.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -88,7 +88,7 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 ### Audit logs supported in Azure Log Analytics<!--45693398-->
 
-In a future update, you'll be able to send Windows 365 audit log data directly to Azure Log Analytics, Event Hub, or certain 3rd party solutions.
+In a future update, you'll be able to send Windows 365 audit log data directly to Azure Log Analytics, Event Hubs, or certain third party solutions.
 
 <!-- ***********************************************-->
 ## Provisioning
