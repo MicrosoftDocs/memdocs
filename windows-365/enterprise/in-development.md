@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 09/05/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -66,8 +66,11 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-<!--## End user experience-->
+## End user experience
 
+### Self-help in Windows 365 Business<!--45828334-->
+
+A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the ? button and ask questions to find relevant help topics.
 
 <!-- ***********************************************-->
 ## Miscellaneous
@@ -82,6 +85,10 @@ Each tenant will be able to decide if you want to turn on Single Sign On. We'll 
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### Audit logs supported in Azure Log Analytics<!--45693398-->
+
+In a future update, you'll be able to send Windows 365 audit log data directly to Azure Log Analytics, Event Hub, or certain 3rd party solutions.
 
 <!-- ***********************************************-->
 ## Provisioning
