@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/10/2023
+ms.date: 09/05/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -88,8 +88,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 10. Choose **Select groups to include**, and choose the groups you want to include in this profile.
 11. If you want to exclude any groups, choose **Select groups to exclude**, and choose the groups you want to exclude.
 
-> [!NOTE]
-> If you use the assignment **All Devices**, exclusions are not supported. Any workaround to exclude groups while targeting it to all devices may cause assignation problems and requires uploading the hash again.
+  > [!NOTE]
+  >
+  > When using the assignment **All Devices**, exclusions aren't supported. Attempting to exclude groups while targeting to all devices may cause assignment problems and may require uploading device hashes again.
     
 13. Select **Next**.
 14. On the **Review + Create** page, choose **Create** to create the profile.
