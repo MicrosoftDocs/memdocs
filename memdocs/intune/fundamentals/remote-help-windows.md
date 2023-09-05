@@ -102,7 +102,7 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
 |\*.alcdn.msauth.net|Required to sign-in to the application Microsoft Azure Authentication Library|
-|\*.wcpstatic.microsoft.com|
+|\*.wcpstatic.microsoft.com|--
 |\*.remotehelp.microsoft.com    | Primary endpoint for Remote Help Web App ||
 
 ## Remote Help modes available for Windows
