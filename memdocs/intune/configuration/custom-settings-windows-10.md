@@ -35,7 +35,7 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes some of the different custom settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built-in to Intune.
+This article describes some of the different custom settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built in to Intune.
 
 For more information on custom profiles, go to [Create a profile with custom settings](custom-settings-configure.md).
 
@@ -50,7 +50,7 @@ Windows client custom profiles use Open Mobile Alliance Uniform Resource Identif
 
 Windows client makes many Configuration Service Provider (CSP) settings available, such as [Policy Configuration Service Provider (Policy CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
-If you're looking for a specific setting, remember that the [Windows 10/11 device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](settings-catalog.md) includes many built-in settings. So, you may not need to enter custom values.
+If you're looking for a specific setting, the [Windows 10/11 device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](settings-catalog.md) include many built-in settings. So, you may not need to enter custom values.
 
 ## Before you begin
 

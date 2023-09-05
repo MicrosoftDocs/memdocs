@@ -38,7 +38,7 @@ Personal and organization-owned devices can be enrolled in Intune. Once enrolled
 - [Android Enterprise corporate owned dedicated devices](#android-enterprise-dedicated-devices) (COSU)
 - [Android Enterprise corporate owned fully managed](#android-enterprise-fully-managed) (COBO)
 - [Android Enterprise corporate owned work profile](#android-enterprise-corporate-owned-work-profile) (COPE)
-- [Android Open Source Project (AOSP)](#android-open-source-project)
+- [Android Open Source Project (AOSP)](#android-open-source-project-aosp)
 - [Android device administrator](#android-device-administrator) (DA)
 
 This article provides enrollment recommendations and includes an overview of the administrator and user tasks for each option.
@@ -252,7 +252,7 @@ When you create the Intune enrollment profile, you decide if the devices are use
 
 ---
 
-### Admin tasks (Android (AOSP))
+### Admin tasks (AOSP)
 
 This task list provides an overview. For more specific information, go to enrollment for [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md) and [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
 
@@ -267,7 +267,7 @@ This task list provides an overview. For more specific information, go to enroll
 
   During enrollment, the Microsoft Intune app and Microsoft Authenticator app automatically install and open on the device, which allows the device to enroll. The device is locked in the enrollment process until enrollment completes.
 
-### End user tasks (Android (AOSP))
+### End user tasks (AOSP)
 
 The specific steps depend on how you configured the enrollment profile.
 
