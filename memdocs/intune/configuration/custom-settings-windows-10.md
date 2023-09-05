@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 09/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,7 @@ ms.collection:
 
 This article describes some of the different custom settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure settings that aren't built-in to Intune.
 
-For more information on custom profiles, see [Create a profile with custom settings](custom-settings-configure.md).
+For more information on custom profiles, go to [Create a profile with custom settings](custom-settings-configure.md).
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows client devices.
 
@@ -50,7 +50,7 @@ Windows client custom profiles use Open Mobile Alliance Uniform Resource Identif
 
 Windows client makes many Configuration Service Provider (CSP) settings available, such as [Policy Configuration Service Provider (Policy CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
-If you're looking for a specific setting, remember that the [Windows 10/11 device restriction profile](device-restrictions-windows-10.md) includes many built-in settings. So, you may not need to enter custom values.
+If you're looking for a specific setting, remember that the [Windows 10/11 device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](settings-catalog.md) includes many built-in settings. So, you may not need to enter custom values.
 
 ## Before you begin
 
@@ -75,15 +75,15 @@ If you're looking for a specific setting, remember that the [Windows 10/11 devic
 
 - **Value**: Enter the data value you want to associate with the OMA-URI you entered. The value depends on the data type you selected. For example, if you select **Date and time**, select the value from a date picker.
 
-After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (.csv) file.
+After you add some settings, you can select **Export**. **Export** creates a list of all the values you added in a comma-separated values (`.csv`) file.
 
 ## Find the policies you can configure
 
-There's a complete list of all configuration service providers (CSPs) that Windows client supports in the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
+For a complete list of all configuration service providers (CSPs) that Windows client supports, go to the [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
-Not all settings are compatible with all Windows client versions. [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference) tells you which versions are supported for each CSP.
+Not all settings are compatible with all Windows client versions. The [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference) lists the supported versions for each CSP.
 
-Additionally, Intune doesn't support all the settings listed in [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
+Also, Intune doesn't support all the settings listed in [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference). To find out if Intune supports the setting you want, open the article for that setting. Each setting page shows its supported operation. To work with Intune, the setting must support the **Add**, **Replace**, and **Get** operations. If the value returned by the **Get** operation doesn't match the value supplied by the **Add** or **Replace** operations, then Intune reports a compliance error.
 
 > [!NOTE]
 > For settings that were created by using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
@@ -92,7 +92,7 @@ Additionally, Intune doesn't support all the settings listed in [Configuration s
 > - Intune Service Administrator.
 > - Global Administrator Azure Active Directory role.
 >
-> For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+> For more information, go to [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Next steps
 
