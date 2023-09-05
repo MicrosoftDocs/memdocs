@@ -88,7 +88,7 @@ The following table contains the possible output when calling the `AllAppsList` 
 
 | Available   properties |
 |-|
-|     AppIdentifier |
+| AppIdentifier |
 | Name |
 | Publisher |
 | Platform |
@@ -106,7 +106,7 @@ The following table contains the possible output when calling the `AllAppsList` 
 | MoreInformationURL |
 | PrivacyInformationURL |
 | StoreURL |
-| Assigned    |
+| Assigned |
 
 There are no filters for this report.
 
@@ -116,7 +116,7 @@ The following table contains the possible output when calling the `AppInstallSta
 
 | Available   properties |
 |-|
-|     ApplicationId |
+| ApplicationId |
 | DisplayName |
 | Publisher |
 | Platform |
@@ -144,7 +144,7 @@ The following table contains the possible output when calling the `DeviceInstall
 
 | Available   properties |
 |-|
-|     DeviceName |
+| DeviceName |
 | UserPrincipalName |
 | Platform |
 | AppVersion |
@@ -158,7 +158,7 @@ The following table contains the possible output when calling the `DeviceInstall
 | HexErrorCode    |
 
 You can choose to filter the `DeviceInstallStatusByApp` report's output based on the following columns:
-- `ApplicationId`
+- `ApplicationId` **(Required)**
 - `AppInstallState`
 - `HexErrorCode` (Used as ErrorCode)
 
@@ -168,7 +168,7 @@ The following table contains the possible output when calling the `UserInstallSt
 
 | Available   properties |
 |-|
-|     UserName |
+| UserName |
 | UserPrincipalName |
 | FailedCount |
 | InstalledCount |
@@ -177,7 +177,7 @@ The following table contains the possible output when calling the `UserInstallSt
 | NotApplicableCount    |
 
 You can choose to filter the `UserInstallStatusAggregateByApp` report's output based on the following column:
-- `ApplicationId`
+- `ApplicationId` **(Required)**
 
 ## DeviceCompliance report
 
@@ -560,7 +560,6 @@ The following table contains the possible output when calling the `DeviceRunStat
 |   UniqueKustoKey   |
 |   DetectionScriptStatus   |
 |   RemediationScriptStatus   |
-|   PolicyId   |
 
 You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's output based on the following columns:
 - `PolicyId` **(required)**
@@ -672,7 +671,6 @@ The following table contains the possible output when calling the `FirewallStatu
 | FirewallStatus  |
 | FirewallStatus_loc   |
 | _ManagedBy   |
-| _ManagedBy_loc   |
 | UPN   |
 
 You can choose to filter the `FirewallStatus` report's output based on the following columns:

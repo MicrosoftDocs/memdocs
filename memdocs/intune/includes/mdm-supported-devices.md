@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 12/08/2022
+ms.date: 08/30/2023
 ms.localizationpriority: high
 ---
 
@@ -74,9 +74,9 @@ For guidelines on using Windows 10 virtual machines with Intune, see [Using Wind
 
 ### Windows 11 known issues
 
-- Multi-app kiosk mode isn't currently available. Windows 11 only supports the use of a single app in kiosk mode. For more information, see the following articles:
-  - [Set up a multi-app kiosk on Windows devices](/windows/configuration/lock-down-windows-10-to-specific-apps)
-  - [Windows device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md)
+- Currently, you can use Intune to configure a single-app kiosk on Windows 11 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+
+  For more information on dedicated kiosk devices in Intune, go to [Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md).
 
 - Management capabilities to deliver customized Start and Taskbar experiences are currently limited. For more information, see the following articles:
 

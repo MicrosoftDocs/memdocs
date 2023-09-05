@@ -45,19 +45,16 @@ You can add a Microsoft Store app to Intune by doing the following:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app**.
+3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app (new)**.
 4. Click **Select**. The **Add app** steps are displayed.
-5. To configure the **App information** for Microsoft store apps, navigate to the [Microsoft store](https://www.microsoft.com/store/apps), select **Open Store Apps**, and search for the app you want to deploy. Display the app page and make a note of the app details. 
+5. To configure the **App information** for Microsoft store apps, click **Select app**, and search for the app you want to assign to members of your organization. Display the app page and make a note of the app details. 
 6. In the **App information** page, add the app details:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of the app. 
-    - **Appstore URL**: Type the App Store URL of the app that you want to create.<br>
-      To find the **Appstore URL**, use the following steps:
-      1. Navigate to the [Microsoft Store](https://www.microsoft.com/store/apps).
-      2. Search for and select the desired app.
-      3. Click the **Endpoint Manager** link to display the **Microsoft Endpoint Manager Details** dialog box.
-      4. Copy the **Link for Intune** and use that link as the **Appstore URL** when adding the app to Intune.
+    - **Package Identifier**: The app Package Identifier is the unique value that identifies the app.
+    - **Installer Type**: The installer type of the application package.
+	- **Install behavior**: Select **System** to install this app for all users, if supported. Select **User** to install this app for the logged-in user on the device.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL is displayed to users in the company portal.

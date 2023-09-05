@@ -191,7 +191,7 @@ To create a new account:
 
 ### App protection policy configuration
 
-[Create and assign app protection policies] in the Microsoft Intune admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Endpoint Manager.
+[Create and assign app protection policies] in the Microsoft Intune admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Intune.
 
 Before you test app protection policy settings within your own application, it's helpful to familiarize yourself with how these settings behave inside other SDK-integrated applications.
 
