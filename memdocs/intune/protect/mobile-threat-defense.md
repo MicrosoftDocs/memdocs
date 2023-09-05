@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 09/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -62,7 +62,7 @@ Once you add a Mobile Threat Defense connector to your tenant, the status will s
 | Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
 |--------------|-----------|------------|------------|
 | **Unavailable**| Connector is/was deprovisioned. The MTD partner will need to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308)
-| **Not Set Up**| Connector setup is not complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | No | No
+| **Not Set Up**| Connector setup is not complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309)
 | **Available**| Connector setup is complete. At least 1 platform toggle must be turned on for this status to change to **Enabled**. | No | No
 | **Enabled**| Connector setup is complete, and at least 1 platform toggle is currently turned on for this connector. | No | No
 | **Unresponsive**| Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.| No | No
@@ -83,6 +83,10 @@ If you enable App Sync for iOS/iPadOS devices, inventories from both corporate a
 - App Name
 - App Bundle Size
 - App Dynamic Size
+- Whether the app is ad-hoc code-signed (starting 2309)
+- Whether the app is installed from the app store (starting 2309)
+- Whether the app is a beta app (installed via TestFlight) (starting 2309)
+- Whether the app is a device-based volume purchased app (starting 2309)
 - Whether the app is validated or not
 - Whether the app is managed or not
 
