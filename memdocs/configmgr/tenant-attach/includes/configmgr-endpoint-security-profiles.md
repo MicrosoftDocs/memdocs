@@ -1,6 +1,6 @@
 ---
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
