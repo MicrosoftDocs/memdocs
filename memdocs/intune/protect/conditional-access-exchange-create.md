@@ -82,7 +82,7 @@ Before you can configure Conditional Access, verify the following configurations
 
 - **EAS mail clients on Android device administrator** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
-      [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 #### To set up Conditional Access for Android Enterprise Personally-Owned Work Profile devices
 

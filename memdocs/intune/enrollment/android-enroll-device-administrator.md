@@ -39,9 +39,9 @@ Android device administrator (sometimes referred to "legacy" Android management 
 
 Therefore, we advise against enrolling new devices using the device administrator process described here and we also recommend that you migrate devices off of device administrator management.
 
-For information about using DA when Google Mobile Services are unavailable, see [How to use Intune in environments without Google Mobile Services](https://review.learn.microsoft.com/en-us/mem/intune/apps/manage-without-gms).
+For information about using DA when Google Mobile Services are unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).
 
-[Microsoft Teams certified Android devices](https://learn.microsoft.com/en-us/microsoftteams/devices/teams-ip-phones) should no longer be managed with device administrator management and instead should be managed with [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management.
+[Microsoft Teams certified Android devices](https://learn.microsoft.com/microsoftteams/devices/teams-ip-phones) should no longer be managed with device administrator management and instead should be managed with [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management.
 
 If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.
 
