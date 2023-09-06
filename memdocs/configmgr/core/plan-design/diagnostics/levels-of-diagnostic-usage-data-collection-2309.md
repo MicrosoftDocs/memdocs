@@ -193,6 +193,10 @@ For Configuration Manager version 2309, this level includes the following data:
 
 - Number of software updates referenced by task sequence
 
+- ***[New]*** Count of scripts scheduled and run statistics
+
+- ***[New]*** External Service Notification usage statistics
+
 ## Level 2 - Enhanced
 
 For Configuration Manager version 2309, this level includes the following data:
@@ -439,8 +443,6 @@ For Configuration Manager version 2309, this level includes the following data:
  
 - Console dark mode usage
 
-- ***[New]*** External Service Notification usage statistics
-
 ### Content (Level 2)
 
 - Boundary group statistics: how many fast, how many slow, count per group, and fallback relationships
@@ -660,8 +662,6 @@ For Configuration Manager version 2309, this level includes the following data:
 - Configuration of data warehouse service point including synchronization schedule, average time, and use of customized tables feature
 
 - Count of scripts and run/edit statistics
-
-- ***[New]*** Count of scripts scheduled and run statistics
 
 - Count of sites with Wake On LAN (WOL)
 
