@@ -17,7 +17,7 @@ ms.subservice: fundamentals
 #ROBOTS:
 #audience:
 
-ms.reviewer: craigma
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,12 +40,17 @@ For example, let's say a Seattle regional office admin has the Policy and Profil
     - Scope (Groups) = A security group named Seattle users. All users/devices in this group can have their profiles and policies managed by the admins in the Members (Groups). 
     - Scope (Tags) = Seattle. Admins in the Member (Groups) can see Intune objects that also have the Seattle scope tag.
 3. Add the Seattle scope tag to policies and profiles that you want admins in Members (Groups) to have access to.
-4. Add the Seattle scope tag to devices that you want visible to admins in the Members (Groups). 
+4. Add the Seattle scope tag to devices that you want visible to admins in the Members (Groups).
 
 ## Default scope tag
+
 The default scope tag is automatically added to all untagged objects that support scope tags.
 
-The default scope tag feature is similar to the security scopes feature in Microsoft Configuration Manager. 
+The default scope tag feature is similar to the security scopes feature in Microsoft Configuration Manager.
+
+> [!NOTE]
+> When configuring or editing Intune policies, some policy types might not display the Scope Tags configuration page if there are no custom defined scope tags for the tenant.
+> If you don't see the Scope Tag option, ensure that at least one tag in addition to the default scope tag has been defined.
 
 ## To create a scope tag
 
@@ -55,7 +60,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 4. On the **Review + create** page, choose **Create**.
 
     > [!IMPORTANT]
-    > Auto scope tags assignments will overwrite mannually assigned scope tags.
+    > Auto scope tags assignments will overwrite manually assigned scope tags.
     > If a device is assigned multiple scope tags through group assignment, all scope tags will apply.
 
 ## To assign a scope tag to a role

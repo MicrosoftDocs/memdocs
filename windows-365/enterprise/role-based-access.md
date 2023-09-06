@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/05/2023 
+ms.date: 07/26/2023 
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -34,6 +34,8 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. You can assign roles for your Cloud PCs by using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
+When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 will transparently assign the required built-in roles on your Azure Subscription, resource group, and virtual network associated with the ANC, if they're not already assigned.
+
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
 ## Windows 365 Administrator role
@@ -42,15 +44,41 @@ Windows 365 supports the Windows 365 Administrator role available for role assig
 
 ## Cloud PC built-in roles
 
-Two built-in roles are available for Cloud PC:
+The following built-in roles are available for Cloud PC:
 
-**Cloud PC Administrator**: Manages all aspects of Cloud PCs, like:
+### Cloud PC Administrator
+
+Manages all aspects of Cloud PCs, like:
 
 - OS image management
 - Azure network connection configuration
 - Provisioning
 
-**Cloud PC Reader**: Views Cloud PC data available in the Windows 365 node in Microsoft Endpoint Manager, but can’t make changes.
+### Cloud PC Reader
+
+Views Cloud PC data available in the Windows 365 node in Microsoft Intune, but can’t make changes.
+
+### Windows 365 Network Interface Contributor
+
+The Windows 365 Network Interface Contributor role is assigned to the resource group associated with the Azure network connection (ANC). This role allows the Windows 365 service to create and join the NIC and manage deployment in the resource group. This role is a collection of the minimum permissions required to operate Windows 365 when using an ANC.
+
+| Action type | Permissions |
+| --- | --- |
+| actions | Microsoft.Resources/subscriptions/resourcegroups/read</br>Microsoft.Resources/deployments/read</br>Microsoft.Resources/deployments/write</br>Microsoft.Resources/deployments/delete</br>Microsoft.Resources/deployments/operations/read</br>Microsoft.Resources/deployments/operationstatuses/read</br>Microsoft.Network/locations/operations/read</br>Microsoft.Network/locations/operationResults/read</br>Microsoft.Network/locations/usages/read</br>Microsoft.Network/networkInterfaces/write</br>Microsoft.Network/networkInterfaces/read</br>Microsoft.Network/networkInterfaces/delete</br>Microsoft.Network/networkInterfaces/join/action</br>Microsoft.Network/networkInterfaces/effectiveNetworkSecurityGroups/action</br>Microsoft.Network/networkInterfaces/effectiveRouteTable/action</br> |
+| notActions | None |
+| dataActions | None |
+| notDataActions | None |
+
+### Windows 365 Network User
+
+The Windows 365 Network User role is assigned to the virtual network associated with the ANC. This role allows the Windows 365 service to join the NIC to the virtual network. This role is a collection of the minimum permissions required to operate Windows 365 when using an ANC.
+
+| Action type | Permissions |
+| --- | --- |
+| actions | Microsoft.Network/virtualNetworks/read<br>Microsoft.Network/virtualNetworks/subnets/read<br>Microsoft.Network/virtualNetworks/usages/read<br>Microsoft.Network/virtualNetworks/subnets/join/action |
+| notActions | None |
+| dataActions | None |
+| notDataActions | None |
 
 ## Custom roles
 
@@ -122,6 +150,24 @@ To create a provisioning policy, an admin needs the following permissions:
 - Supported Region/Read
 - Device Images/Read
 
+## Migrating existing permissions
+
+For ANCs created before November 26, 2023, the Network Contributor role is used to apply permissions on both the Resource Group and Virtual Network. To apply to the new RBAC roles, you can retry the ANC health check. Note that the existing roles must be manually removed.
+
+To manually remove the existing roles and add the new roles, refer to the following table for the existing roles used on each Azure resource. Prior to removing the existing roles make sure that the updated roles have been assigned.
+
+| Azure resource | Existing role (before November 26, 2023) | Updated role (after November 26, 2023) |
+| --- | --- | --- |
+| Resource group | Network Contributor | Windows 365 Network Interface Contributor |
+| Virtual network | Network Contributor | Windows 365 Network User |
+| Subscription | Reader | Reader |
+
+For more details about removing a role assignment from an Azure resource, see [Remove Azure role assignments](/azure/role-based-access-control/role-assignments-remove).
+
 <!-- ########################## -->
 ## Next steps
 [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
+
+[Understand Azure role definitions](/azure/role-based-access-control/role-definitions)
+
+[What is Azure role-based access control (Azure RBAC)?](/azure/role-based-access-control/overview)

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/26/2022
+ms.date: 08/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,7 +40,7 @@ This article describes the authentication methods available for iOS/iPadOS devic
 
 * Intune Company Portal app 
 * Setup Assistant with modern authentication
-* Just in Time (JIT) Registration for Setup Assistant with modern authentication (public preview)  
+* Just in Time (JIT) Registration for Setup Assistant with modern authentication  
 * Setup Assistant (legacy)
 
 All methods are available for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager.   
@@ -55,7 +55,7 @@ Use the Intune Company Portal app as the authentication method if you want to:
  - Automatically install the Company Portal app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install Company Portal app during enrollment without user Apple IDs. 
  - You want to lock the device until the Company Portal app installs.
 
-These features aren't supported in Apple Setup Assistant authentication methods. 
+None of the features mentioned in Option 1 are supported in Apple Setup Assistant authentication methods. 
 
 ## Option 2: Setup Assistant with modern authentication  
 This option provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed.  Use this option for authentication when you want to:
@@ -98,13 +98,13 @@ After they go through the Setup Assistant screens, the device user lands on the 
 - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.  
 
 ## Option 3: Just in Time Registration for Setup Assistant with modern authentication  
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required for Azure AD registration or compliance. Instead, Azure AD registration and compliance checks are fully integrated in a designated Microsoft or non-Microsoft app that's configured with the Apple single sign-on (SSO) app extension. The extension reduces authentication prompts and establishes SSO across the whole device. JIT Registration prompts users to authenticate twice:     
 
 * One authentication handles enrollment and user-device affinity, and happens when the device user turns on their device and signs into Setup Assistant.  
 * Another authentication handles Azure AD registration and happens when the user signs into the designated app. Compliance checks are also done in this app. 
+
+> [!NOTE]
+> If your organization uses Microsoft Defender for Endpoint, for JIT registration and compliance remediation to work as expected, make sure the Microsoft Defender for Endpoint app **isn't** the first app users open.
 
 Once the device user reaches the home screen, they can sign in to any work or school app that's configured with the SSO extension to complete Azure AD registration and compliance checks. SSO signs the user into all apps that are a part of your SSO extension policy. At that point, they can also manually sign into any app that isn’t configured to use the SSO extension.  
 
@@ -123,9 +123,6 @@ To set up JIT Registration:
  If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. For more information, see [Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true) in our Windows PowerShell Reference guide. 
 
 ## Set up Just in Time Registration  
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 Complete these steps to configure Just in Time (JIT) Registration in Intune for Setup Assistant with modern authentication. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  

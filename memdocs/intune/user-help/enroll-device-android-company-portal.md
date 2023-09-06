@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 08/21/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -55,7 +55,7 @@ Install the Intune Company Portal app [from Google Play](https://play.google.com
 ## Enroll device  
 During enrollment, you might be asked to choose a category that best describes how you use your device. Your company support uses your answer to check the apps that you have access to.  
 
-1. Open the Company Portal app and sign in with your work or school account.  
+1. Open the Company Portal app and sign in with your work or school account. If prompted to, review notification permissions for Company Portal. You can adjust notification permissions anytime in the Settings app.  
 
 2. If you're prompted to accept your organization's terms and conditions, tap **ACCEPT ALL**.  
 
@@ -108,9 +108,6 @@ During enrollment, you might be asked to choose a category that best describes h
 ## Next steps  
 
 Before you try to install a school or work app, go to **Settings** > **Security**, and turn on **Unknown sources**. If you don't turn on this option, you'll see the following message when you try to install an app: "Install blocked. For security reasons, your device is set to block installations of apps obtained from unknown sources." You can tap **Settings** on the message to go directly to **Unknown sources**.  
-
-> [!Note]
-> If your organization is using telecom expense management software, you will have an additional few steps to complete before your device is fully enrolled. Find out more [here](enroll-your-device-with-telecom-expense-management-android.md).
 
 If you get an error while you try to enroll your device in Intune, you can [email your company support](send-logs-to-your-it-admin-by-email-android.md).  
 

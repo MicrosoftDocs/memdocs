@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 05/19/2023
+ms.date: 07/10/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,12 +32,13 @@ ms.collection:
 
 # Device images overview
 
-Windows 365 uses both default and custom operating system images to automatically create the virtual Cloud PCs that you provide to your end users. The default images are available from the gallery in Microsoft Endpoint Manager as a part of creating your provisioning policy. You can also [upload custom images](add-device-images.md) that you create.
+Windows 365 uses both default and custom operating system images to automatically create the virtual Cloud PCs that you provide to your end users. The default images are available from the gallery in Microsoft Intune as a part of creating your provisioning policy. You can also [upload custom images](add-device-images.md) that you create.
 
 ## Image requirements
 
 Both marketplace and custom images must meet the following requirements:
 
+- Windows 10 Enterprise version 21H2 or later.
 - Windows 11 Enterprise 21H2 or later.
 - Generation 2 images.
     > [!Note]
@@ -45,14 +46,14 @@ Both marketplace and custom images must meet the following requirements:
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
-- Default 64-GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
+- Default 64-GB OS disk size. The OS disk size is automatically adjusted to the size specified in SKU description of the Windows 365 license.
 
 A custom image must also meet the following extra requirements:
 
 - Exist in an Azure subscription.
 - Is stored as a managed image in Azure.
 
-Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Endpoint Manager.
+Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
 ## Gallery images
 
@@ -66,7 +67,7 @@ There are two sets of images available to choose from across the different versi
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
   - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
-  - Microsoft Outlook first-time configuration settings (auto log-on based on Azure AD profile, support for other profiles).
+  - Microsoft Outlook first-time configuration settings (auto log on based on Azure AD profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
@@ -91,7 +92,7 @@ If none of the default gallery images meet your requirements, you can upload up 
 
 For more information on creating such a custom image, see [Create a managed image of a generalized VM in Azure](/azure/virtual-machines/windows/capture-image-resource). For best performance, you should also make sure to optimize your image for a virtual desktop role. For more information on this optimization, see [Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role](/windows-server/remote/remote-desktop-services/rds-vdi-recommendations-2004).
 
-A custom image can be created using [any of the images above as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with an image above and then install more applications and make more configuration changes.
+A custom image can be created using [any of the images mentioned previously as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with one of those images and then install more applications and make more configuration changes.
 
 > [!NOTE]
 > For custom images with Teams application, follow the instructions detailed in [Create a Cloud PC custom image that supports Microsoft Teams](create-custom-image-support-teams.md) to configure optimizations that are needed.  

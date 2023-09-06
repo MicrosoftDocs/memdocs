@@ -39,12 +39,12 @@ Before setting up Microsoft Intune for Android Open Source Project devices, ensu
 
 |**OEM**     | **Device**              | **Minimum Firmware**    | **Type of Device** | **Restrictions**       |
 | ------- | -------------------| ------------------- | -------------- | ------------------ |
-| HTC     | HTC Vive Focus 3   | 5.2 - 3.0.999.624    | AR/VR Headset  |                    |
-| HTC     | HTC Vive XR Elite  | 5.2 - 3.0.999.624    | AR/VR Headset  |                    |
-| Meta    | Quest 2            | v49                 | AR/VR Headset  | Open Beta - US Only|
-| Meta    | Quest Pro          | v49                 | AR/VR Headset  | Open Beta - US Only|
-| Pico    | Pico Neo 3 Pro     | 4.6.13              | AR/VR Headset  |                    |
-| Pico    | Pico 4             | 4.6.13              | AR/VR Headset  |                    |
+| HTC     | HTC Vive Focus 3   | 5.2 - 5.0.999.624    | AR/VR Headset  |                    |
+| HTC     | HTC Vive XR Elite  | 4.0 - 1.0.999.350    | AR/VR Headset  |                    |
+| Meta    | Quest 2            | v49                 | AR/VR Headset  | Open Beta, [Available in select regions only](https://www.meta.com/help/quest/articles/quest-for-business/participate-in-meta-quest-for-business-beta/) |
+| Meta    | Quest Pro          | v49                 | AR/VR Headset  | Open Beta, [Available in select regions only](https://www.meta.com/help/quest/articles/quest-for-business/participate-in-meta-quest-for-business-beta/)|
+| PICO    | PICO Neo3 Pro/Eye     | PUI 4.8.19              | AR/VR Headset  |                    |
+| PICO    | PICO 4 Enterprise     | PUI 5.6.0              | AR/VR Headset  |                    |
 | Realwear| HMT-1              | 11.2                | AR/VR Headset  |                    |
 | Realwear| HMT-1Z1            | 11.2                | AR/VR Headset  |                    |
 | Realwear| Navigator500       | 11.2                | AR/VR Headset  |                    |

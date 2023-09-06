@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 08/28/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer: craigma
+ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -30,8 +30,6 @@ ms.collection:
 
 # Use Access policies to require multiple administrative approvals
 
-*This feature is in Public Preview*
-
 To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA).
 
 With MAA, you configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts are permitted to approve changes to those resources.
@@ -41,9 +39,11 @@ When any account in the Tenant is used to make a change to a resource that’s p
 Access policies are supported for the following resources:
 
 - Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- Scripts – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+- Scripts – Applies to deploying scripts to devices that run [Windows](../apps/intune-management-extension.md).
 
 ## Prerequisites for access policies and approvers
+
+To use multi administrative approval, your tenant must have at least two administrator accounts.
 
 To create an access policy, your account must be assigned the [*Intune Service Administrator* or *Azure Global Administrator*](../fundamentals/role-based-access-control.md) role.
 
@@ -104,7 +104,7 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 ## More considerations
 
-- With the public preview, Intune doesn't send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.
+- Intune doesn't send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.
 
 - Plan to monitor the status of your requests through the *My requests* page of the *Multi Admin Approval* node in the Microsoft Intune admin center.
 

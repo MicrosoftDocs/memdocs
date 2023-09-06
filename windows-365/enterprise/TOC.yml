@@ -109,12 +109,16 @@ items:
           href: windows-365-boot-physical-device-requirements.md
         - name: Restrict access to physical device
           href: windows-365-boot-restrict-user-access-physical-device.md
-      - name: Citrix HDX Plus for Windows 365
+      - name: Partner connectors for Windows 365
         items:
-        - name: Requirements
+        - name: Citrix requirements
           href: requirements-citrix.md
         - name: Set up Citrix HDX Plus for Windows 365
           href: set-up-citrix.md
+        - name: VMware requirements
+          href: requirements-vmware-horizon.md
+        - name: Set up VMware Horizon for Windows 365
+          href: set-up-vmware-horizon.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
@@ -138,9 +142,7 @@ items:
       - name: Create device configuration profile
         href: create-device-configuration-profile.md
     - name: User settings
-      items:
-      - name: Assign users as Local Admin
-        href: assign-users-as-local-admin.md
+      href: assign-users-as-local-admin.md
     - name: Security
       items:
       - name: Security guidelines 
@@ -191,6 +193,8 @@ items:
         href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
+      - name: Windows 365 Switch
+        href: windows-365-switch-overview.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
       - name: Move a Cloud PC
@@ -229,6 +233,8 @@ items:
         href: report-cloud-pc-utilization.md
       - name: Cloud PC connection quality report
         href: report-cloud-pc-connection-quality.md
+      - name: Connected Frontline Cloud PCs report
+        href: report-connected-frontline-cloud-pcs.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
@@ -261,7 +267,7 @@ items:
       href: connection-errors.md
     - name: Provisioning errors
       href: provisioning-errors.md
-    - name: Citrix HDX Plus
+    - name: Partner connectors
       href: troubleshoot-citrix-hdx-plus.md
     - name: Windows 365 app
       href: troubleshoot-windows-365-app.md
@@ -269,6 +275,8 @@ items:
       href: troubleshoot-windows-365-boot.md
     - name: Windows 365 Boot known issues
       href: windows-365-boot-known-issues.md
+    - name: Windows 365 Switch known issues
+      href: windows-365-switch-known-issues.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell

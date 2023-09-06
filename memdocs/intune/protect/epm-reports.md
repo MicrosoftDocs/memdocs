@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 08/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,6 +45,7 @@ The EPM reports are available from the *Reports* tab of the *Endpoint Privilege 
 
 - Elevation report
 - Managed elevations report
+- Elevation report by applications
 
 > [!NOTE]
 > Data is processed once every 24 hours. There may be a delay before seeing data in the elevation usage reports.
@@ -64,6 +65,18 @@ By selecting an entry in the report, you can drill in to view more details about
 ## Managed elevation report
 
 The *Managed elevation report* displays the same types of detail as the *Elevation report*, but reports on only the elevations that are managed by a *Windows elevation rule policy*.
+
+## Elevation report by applications
+
+The *Elevation report by applications* report displays details for all managed and unmanaged elevations, aggregated by the application that elevated. Details include:
+
+- **Internal file name**
+- **File version**
+- **Publisher**
+- **Elevation type**
+- **Elevation count**
+
+The information in this report can help identify applications that might require elevation rules to function properly, including rules for child processes.
 
 ## Endpoint Privilege Management policy details
 

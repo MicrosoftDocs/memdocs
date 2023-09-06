@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 08/15/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -71,6 +71,9 @@ Microsoft recommends reviewing and categorizing usage scenarios, and then config
 
 Administrators can incorporate the below configuration levels within their ring deployment methodology for testing and production use by importing the sample [Intune App Protection Policy Configuration Framework JSON templates](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) with [Intune's PowerShell scripts](https://github.com/microsoftgraph/powershell-intune-samples).
 
+> [!NOTE]
+> Preview: When using MAM for Windows, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
+
 ### Conditional Access Policies
 
 To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
@@ -102,7 +105,7 @@ The policies should include other Microsoft apps based on business need, additio
 
 Level 1 is the minimum data protection configuration for an enterprise mobile device. This configuration replaces the need for basic Exchange Online device access policies by requiring a PIN to access work or school data, encrypting the work or school account data, and providing the capability to selectively wipe the school or work data. However, unlike Exchange Online device access policies, the below App Protection Policy settings apply to all the apps selected in the policy, thereby ensuring data access is protected beyond mobile messaging scenarios.
 
-The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default data protection and access requirements settings when creating an App Protection Policy within Microsoft Endpoint Manager.  
+The policies in level 1 enforce a reasonable data access level while minimizing the impact to users and mirror the default data protection and access requirements settings when creating an App Protection Policy within Microsoft Intune.  
 
 #### Data protection
 
@@ -214,7 +217,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Select   Minimum PIN length  |          6  |          iOS/iPadOS,   Android  |
 |       PIN reset   after number of days  |          Yes  |          iOS/iPadOS,   Android  |
 |       Number of   days  |          365  |          iOS/iPadOS,   Android  |
-|       Class 3 Biometrics (Android 9.0+)​   |          Require  |          Android  |
+|       Class 3 Biometrics (Android 9.0+)   |          Require  |          Android  |
 |       Override Biometrics with PIN after biometric updates   |          Require  |          Android  |
 
 #### Conditional launch
@@ -226,6 +229,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](../protect/mtd-enable-unenrolled-devices.md).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](../protect/mtd-device-compliance-policy-create.md).</p> |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 11.0* / Block access   |          Android        | Microsoft recommends configuring   the maximum Android major version to ensure beta or unsupported versions of the operating system are not used.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor.Build <br>Example:   15.0* / Block access |          iOS/iPadOS        | Microsoft recommends configuring   the maximum iOS/iPadOS major version to ensure beta or unsupported versions of the operating system are not used. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
+| Device conditions  |       Samsung Knox device attestation  | Warn, Block access, Wipe data |          Android        | Microsoft recommends configuring the **Samsung Knox device attestation** setting to **Block access** to ensure the user account is blocked from access if the device does not meet Samsung's Knox device attestation check. For more information, see [Device settings](../apps/app-protection-policy-settings-android.md#device-conditions) for Android app protection policies. |
 
 ## Next steps
 

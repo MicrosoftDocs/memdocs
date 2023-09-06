@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2023
+ms.date: 09/06/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -62,30 +62,22 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
-### Group-based license support for Cloud PC resizing<!--41357690-->
-
-In a future update, both single and bulk resizing will support Cloud PCs that were provisioned with group-based licenses.
-
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
 <!--***********************************************-->
 ## End user experience
 
-### Windows 365 web client keyboard shortcut redirection<!--43951825-->
+### Self-help in Windows 365 Business<!--45828334-->
 
-Windows 365 web client users will be able to use keyboard shortcuts (like Alt + Tab) on their Cloud PC. These shortcuts would normally be intercepted by the host operating system and not sent to the Cloud PC.
+A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
 
 <!-- ***********************************************-->
 ## Miscellaneous
 
-### Windows 365 Government setup tool<!--43461105-->
+### Single sign-on option per tenant (preview)<!--43751308-->
 
-A new Windows 365 Government setup tool will replace the current PowerShell scripts that are used to setup tenant mapping and permissions.
-
-### Single sign on option per tenant (preview)<!--43751308-->
-
-Each tenant will be able to decide if you want to turn on Single Sign On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign on.
+Each tenant will be able to decide if you want to turn on Single Sign-On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign-on.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -93,6 +85,29 @@ Each tenant will be able to decide if you want to turn on Single Sign On. We'll 
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### Audit logs supported in Azure Log Analytics<!--45693398-->
+
+In a future update, you'll be able to send Windows 365 audit log data directly to Azure Log Analytics, Event Hubs, or certain third party solutions.
+
+### New report: Cloud PCs that can't connect<!--45946128-->
+
+A new report will be available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you'll be able to observe:
+devices that have unhealthy hosts users' connections that consistently or frequently fail systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
+
+### Improvements to Cloud PC connection quality report<!--45946378-->
+
+In a future update, improvements to the Cloud PC connection quality report will include:
+
+- a more comprehensive view of the overall performance of their Cloud PCs.
+- a more detailed view of devices when they are in a state of poor performance due to high round trip times.
+- Tenant level visibility to most recent/current for:
+    - Round Trip Time.
+    - Bandwidth.
+    - Connection Time.
+    - UDP Utilization.
+- Connection specific detail on client IP and associated CPC Gateway.
+- Filters for all columns.
 
 <!-- ***********************************************-->
 ## Provisioning
@@ -102,18 +117,12 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
 
 <!-- ***********************************************-->
-## Security
+<!--## Security
+-->
 
-### Azure network connection least privilege update<!--44876259-->
+<!-- ***********************************************
+## Windows 365 app-->
 
-A new, more secure least privilege  will be implemented in a future update. When the update is released, customers must manually remove the old network contributor role from the resources where the ANC was created.
-
-<!-- ***********************************************-->
-## Windows 365 app
-
-### Windows 365 app will support Windows 365 Government environments<!--43305226-->
-
-In a future update, the Windows 365 app will support Windows 365 Government environments.
 
 ## Next steps
 

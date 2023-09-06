@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 07/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -72,11 +72,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   *Review your subscription details for applicability to Windows 11.*
 
-   Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
+   Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license will be checked and enforced.
   
    Capabilities supported by client policies on Professional SKU devices will not require a license.  That includes basic controls for deploying a specified feature update and when to start making the update available to devices. The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
   
-  If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+  If you’re blocked when creating new policies for capabilities that require WUfB ds and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
@@ -89,8 +89,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
   - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
-  - Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
-
+  - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
     - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
     - Windows Update for Business deployment service
 
@@ -104,6 +103,12 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
   > [!NOTE]
   > **Unsupported versions and editions**:  
   > *Windows 10/11 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+
+### Limitations for Workplace Joined devices
+
+Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
+
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
 ## Limitations for Feature updates for Windows 10 and later policy
 
@@ -235,7 +240,6 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 
 - Select **Delete** to delete the policy from Intune and remove it from devices.
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
-- Select **End user update status** to view information about the policy.
 
 > [!NOTE]
 > The End user update status Last Scanned Time value will return 'Not scanned yet' until an initial user logs on and Update Session Orchestrator (USO) scan is initiated. For more information on the Unified Update Platform (UUP) architecture and related components, see [Get started with Windows Update](/windows/deployment/update/windows-update-overview).

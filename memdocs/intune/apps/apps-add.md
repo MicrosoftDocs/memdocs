@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 08/18/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -66,15 +66,17 @@ The following table lists the specific app types and how you can add them in the
 | [Built-in Android app](../apps/apps-add-built-in.md)  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | [Web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [iOS/iPadOS web clip](../apps/web-app.md)  | Web app  | Select **iOS/iPadOS web clip** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the iOS/iPadOS platform.  |
+| [macOS web clip](../apps/web-app.md) | Web app  | Select **macOS web clip** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the macOS platform.  |
 | [Windows web link](../apps/web-app.md) | Web app  | Select **Windows web link** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the Windows platform.  |
 | [Cross platform web apps](../apps/web-app.md)  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | [Android Enterprise system apps](../apps/apps-ae-system.md)  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | [Windows app (Win32)](../apps/apps-win32-add.md)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
 | [macOS LOB apps](../apps/lob-apps-macos.md) | LOB app  | Select **Line-of-business app** as the **app type**, select the **App package file**, and then select an installation file with the extension **.pkg**.  |
 | [macOS apps (DMG)](../apps/lob-apps-macos-dmg.md) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
+| [macOS apps (PKG)](../apps/macos-unmanaged-pkg.md) | LOB app  | Select **macOS app (PKG)** as the app type, select the **App package** file, and then select an installation file with the extension *.pkg*. This app type is used to add an unmanaged macOS PKG app to Intune.  |
 | [Microsoft Defender for Endpoint (macOS)](../apps/apps-advanced-threat-protection-macos.md) | Store app (Microsoft Defender ATP) | Select **macOS** under **Microsoft Defender for Endpoint** as the app type and then continue by setting up the app in Intune.  |
 
-<sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
+<sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps).
 
 You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **Add**. The **Select app type** pane is displayed and allows you to select the **App type**.
 
@@ -171,14 +173,14 @@ Requirements for cloud storage space are as follows:
 
 App categories can be used to help you sort apps to make them easier for users to find in the company portal. You can assign one or more categories to an app, for example, *Developer apps* or *Communication apps*.
 
-When you add an app to Intune, you are given the option to select the category you want. Use the platform-specific topics to add an app and assign categories. To create and edit your own categories, use the following procedure:
+When you add an app to Intune, you're given the option to select the category you want. Use the platform-specific articles to add an app and assign categories. To create and edit your own categories, use the following procedure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **App categories**.  
     The **App categories** pane displays a list of current categories.
 3. Do either of the following:
     - To add a category, in the **Create category** pane, select **Add**, and then enter a name for the category.  
-    Names can be entered in one language only, and they are not translated by Intune.
+    Names can be entered in one language only, and they aren't translated by Intune.
     - To edit a category, select the ellipsis (**...**) next to the category, and then select **Pin to dashboard** or **Delete**.
 4. Select **Create**.
 
@@ -196,7 +198,7 @@ Intune will automatically reinstall, update, or remove a required app within 24 
 Intune will automatically reinstall, update, or remove a required app based on the following conditions:
 
 - If an end user uninstalls an app that you have required to be installed on the end user's device, Intune will automatically reinstall the app when this schedule elapses.
-- If a required app install fails or somehow the app is not present on the device, Intune evaluates compliance and reinstalls the app when this schedule elapses.  
+- If a required app install fails or somehow the app isn't present on the device, Intune evaluates compliance and reinstalls the app when this schedule elapses.  
 - An admin targets an app as available to a user group and an end user installs the app from the company portal on the device. Later, the admin updates the app from v1 to v2. Intune will update the app when this schedule elapses, provided that any previous version of the app is still present on the device.
 - If the admin deploys uninstall intent and the app is present on the device and failed to uninstall, Intune evaluates compliance and uninstalls the app when this schedule elapses.
 
@@ -223,6 +225,13 @@ When you need to uninstall an app from user's devices, use the following steps.
 
 > [!IMPORTANT]
 > To uninstall the app successfully, make sure to remove the members or group assignment for install before assigning them to be uninstalled. If a group is assigned to both install an app and uninstall an app, the app will remain and not be removed.
+
+> [!NOTE]
+> End-users can uninstall Win32 apps and Microsoft store apps using the Windows Company Portal if the apps were assigned as available and were installed on-demand by the end-users. For Win32 apps, you have the option to enable or disable this feature (off by default). For Microsoft store apps, it is always on and available for your end-users. If an app can be uninstalled by the end-user, the end-user will be able to select **Uninstall** for the app in the Windows Company Portal.
+
+## Delete an app from Intune
+
+Once you have removed assignments for an app and revoked any app licenses for an app associated with a token, you can delete the app from Intune. Delete the app in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **All apps** > *right-click on the app to delete* > **Delete**.
 
 ## App installation errors
 

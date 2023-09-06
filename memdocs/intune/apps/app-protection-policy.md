@@ -86,7 +86,9 @@ If you apply a MAM policy to the user without setting the device state, the user
 
 Intune offers a range of capabilities to help you get the apps you need on the devices you want to run them on. For more information, see [App management capabilities by platform](app-management.md#app-management-capabilities-by-platform).
 
-Intune app protection policies platform support aligns with Office mobile application platform support for Android and iOS/iPadOS devices. For details, see the **Mobile apps** section of [Office System Requirements](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
+Intune app protection policies platform support aligns with Office mobile application platform support for Android and iOS/iPadOS devices. For details, see the **Mobile apps** section of [Office System Requirements](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg). 
+
+Preview: In addition, you can create app protection policies for Windows devices. For details, see [App protection experience for Windows devices](#preview-app-protection-experience-for-windows-devices).
 
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies on Android.  
@@ -217,7 +219,7 @@ By default, there can only be one **Global** policy per tenant. However, you can
 While the **Global** policy applies to all users in your tenant, any standard Intune app protection policy will override these settings.
 
 > [!NOTE]
-> The policy settings in the OneDrive Admin Center are no longer being updated. Microsoft Endpoint Manager may be used instead. For more information, see [Control access to features in the OneDrive and SharePoint mobile apps](/onedrive/control-access-to-mobile-app-features).
+> The policy settings in the OneDrive Admin Center are no longer being updated. Microsoft Intune may be used instead. For more information, see [Control access to features in the OneDrive and SharePoint mobile apps](/onedrive/control-access-to-mobile-app-features).
 
 ## App protection features
 
@@ -279,7 +281,7 @@ Since the PIN is shared amongst apps with the same publisher, if the wipe goes t
 If you observe the PIN being wiped on some devices, the following is likely happening: Since the PIN is tied to an identity, if the user signed in with a different account after a wipe, they will be prompted to enter a new PIN. However, if they sign in with a previously existing account, a PIN stored in the keychain already can be used to sign in.
 
 **Setting a PIN twice on apps from the same publisher?**<br>
-MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
+MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
 In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Another change was introduced in the Intune SDK for iOS v 14.6.0 that causes all PINs in 14.6.0+ to be handled separately from any PINs in previous versions of the SDK.
 
@@ -344,7 +346,7 @@ The IT administrator can deploy and set app protection policy for [Microsoft Edg
 
 Intune app protection policies allow control over app access to only the Intune licensed user. One of the ways to control access to the app is to require either Apple's Touch ID or Face ID on supported devices. Intune implements a behavior where if there is any change to the device's biometric database, Intune prompts the user for a PIN when the next inactivity timeout value is met. Changes to biometric data include the addition or removal of a fingerprint, or face. If the Intune user does not have a PIN set, they are led to set up an Intune PIN.
 
-The intent of this process is to continue keeping your organization's data within the app secure and protected at the app level. This feature is only available for iOS/iPadOS, and requires the participation of applications that integrate the Intune SDK for iOS/iPadOS, version 9.0.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Yammer.
+The intent of this process is to continue keeping your organization's data within the app secure and protected at the app level. This feature is only available for iOS/iPadOS, and requires the participation of applications that integrate the Intune SDK for iOS/iPadOS, version 9.0.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Viva Engage.
   
 ### iOS share extension
 
@@ -381,9 +383,9 @@ Much of app protection functionality is built into the Company Portal app. Devic
 
 ### Multiple Intune app protection access settings for same set of apps and users
 
-Intune app protection policies for access will be applied in a specific order on end-user devices as they try to access a targeted app from their corporate account. In general, a block would take precedence, then a dismissible warning. For example, if applicable to the specific user/app, a minimum Android patch version setting that warns a user to take a patch upgrade will be applied after the minimum Android patch version setting that blocks the user from access. So, in the scenario where the IT admin configures the min Android patch version to 2018-03-01 and the min Android patch version (Warning only) to 2018-02-01, while the device trying to access the app was on a patch version 2018-01-01, the end user would be blocked based on the more restrictive setting for min Android patch version that results in blocked access.
+Intune app protection policies for access will be applied in a specific order on end-user devices as they try to access a targeted app from their corporate account. In general, a block would take precedence and then a dismissible warning. For example, if applicable to the specific user/app, a minimum Android patch version setting that warns a user to take a patch upgrade will be applied after the minimum Android patch version setting that blocks the user from access. So, in the scenario where the IT admin configures the min Android patch version to 2018-03-01 and the min Android patch version (Warning only) to 2018-02-01, while the device trying to access the app was on a patch version 2018-01-01, the end user would be blocked based on the more restrictive setting for min Android patch version that results in blocked access.
 
-When dealing with different types of settings, an app version requirement would take precedence, followed by Android operating system version requirement and Android patch version requirement. Then, any warnings for all types of settings in the same order are checked.
+When dealing with different types of settings, an app version requirement would take precedence, followed by an Android operating system version requirement and an Android patch version requirement. Then, any warnings are checked for all types of settings in the same order.
 
 ### Intune app protection policies and Google Play’s device integrity check for Android devices
 
@@ -391,7 +393,7 @@ Intune app protection policies provide the capability for admins to require end-
 
 ### Intune app protection policies and Google's Verify Apps API for Android devices
 
-Intune App Protection Policies provide the capability for admins to require end-user devices to send signals via Google's Verify Apps API for Android devices. The instructions on how to do this vary slightly by device. The general process involves going to the Google Play Store, then clicking on **My apps & games**, clicking on the result of the last app scan which will take you into the Play Protect menu. Ensure the toggle for **Scan device for security threats** is switched to on.
+Intune App Protection Policies provide the capability for admins to require end-user devices to send signals via Google's Verify Apps API for Android devices. The instructions on how to do this vary slightly by device. The general process involves going to the Google Play Store, then clicking on **My apps & games**, clicking on the result of the last app scan which will take you to the Play Protect menu. Ensure the toggle for **Scan device for security threats** is switched to on.
 
 ### Google's Play Integrity API
 
@@ -413,6 +415,18 @@ Play integrity verdict requires the end user to be online, at least for the dura
 ### Google Play Protect APIs and Google Play Services
 
 The app protection policy settings that leverage Google Play Protect APIs require Google Play Services to function. Both the **Play integrity verdict**, and **Threat scan on apps** settings require Google determined version of Google Play Services to function correctly. Since these are settings that fall in the area of security, the end user will be blocked if they have been targeted with these settings and are not meeting the appropriate version of Google Play Services or have no access to Google Play Services.
+
+## Preview: App protection experience for Windows devices
+
+There are two categories of policy settings: *Data protection* and *Health Checks*. The term ***policy-managed app*** refers to apps that are configured with app protection policies.
+
+### Data protection
+
+The **Data protection** settings impact the org data and context. As the admin, you can control the movement of data into and out of the context of org protection. The org context is defined by documents, services, and sites accessed by the specified org account. The following policy settings help control external data received into the org context and org data sent out of the org context. 
+
+### Health Checks
+
+Health checks allow you to configure conditional launch capabilities. To do this, you must set the health check conditions for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to access your org data. Then select the **Action** you want to take if users do not meet your conditionals. In some cases, multiple actions can be configured for a single setting.
 
 ## Next steps
 

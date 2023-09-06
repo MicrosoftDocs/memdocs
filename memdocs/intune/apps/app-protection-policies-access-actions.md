@@ -54,6 +54,17 @@ You can explicitly choose to wipe your company's corporate data from the end use
 
 The app protection policy settings table has columns for **Setting**, **Value**, and **Action**.
 
+### Preview: Windows policy settings
+
+For Windows, you'll be able to configure actions for the following "Health Check" settings using the **Setting** dropdown:
+- Disabled account
+- Max OS version
+- Min app version
+- Min OS version
+- Min SDK version
+- Offline grace period
+- Max allowed device threat level
+
 ### iOS policy settings
 For iOS/iPadOS, you're able to configure actions for the following settings using the **Setting** dropdown:
 - Max PIN attempts

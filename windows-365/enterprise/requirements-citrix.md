@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/24/2023
+ms.date: 08/21/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -48,17 +48,19 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
 - For Hybrid Azure Active Directory (Azure AD) joined deployments:
   - The Azure AD domain must be synchronized from the Azure AD domain that the Cloud PCs belong to.
   - Cloud Connectors to allow Citrix Cloud to connect to your Active Directory domain. For more information, see [Citrix Cloud Connector](https://docs.citrix.com/en-us/citrix-cloud/citrix-cloud-resource-locations/citrix-cloud-connector.html).
-- Allowlist endpoint required for VDA registation: \*.apps.cloud.com
+- Allowlist endpoint required for VDA registration: \*.apps.cloud.com
 
 ## Microsoft requirements
 
-- Microsoft Endpoint Manager entitlement
-- Azure AD domain in the same tenant as Microsoft Endpoint Manager
-- Windows 365 Enterprise licenses in the same tenant as Microsoft Endpoint Manager
+- Microsoft Intune entitlement
+- Azure AD domain in the same tenant as Microsoft Intune
+- Windows 365 Enterprise licenses in the same tenant as Microsoft Intune
 - Azure admin account:
   - Azure AD Global Admin for required authorizations in Citrix Cloud.
-  - Intune Admin for enabling Citrix connector in Microsoft Endpoint Manager.
+  - Intune Admin for enabling Citrix connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
+
+Citrix HDX Plus doesn't currently support Windows 365 Frontline.
 
 ## Supported configurations
 

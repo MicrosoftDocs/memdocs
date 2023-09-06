@@ -157,6 +157,11 @@ To upload your organization's logo and color, first complete the following steps
 2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
 3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
 
+> [!NOTE]
+> As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
+> 
+> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). Favicon will be used as your organization and Background image will be used as brand color.
+
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
 |Key |Value |
@@ -271,7 +276,7 @@ You can control whether sites can store cookies for your users within Edge for A
 |com.microsoft.intune.mam.managedbrowser.cookieControlsMode |**0** (default) allow cookies <br>**1** block non-Microsoft cookies <br>**2** block non-Microsoft cookies in InPrivate mode <br>**3** block all cookies |
 
 > [!NOTE]
-> Edge for iOS does not support controling cookies.
+> Edge for iOS does not support controlling cookies.
 
 
 ### Kiosk mode experiences on Android devices
@@ -291,14 +296,14 @@ Organizations can modify their network stack preference by configuring the follo
 
 |Key  |Value  |
 |:---------|:---------|
-|com.microsoft.intune.mam.managedbrowser.NetworkStackPref |**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref|**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
 
 > [!NOTE]
 > Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
 
 #### Set a proxy .pac file URL
 
-Organizations can specify a URL to a porxy auto-config (PAC) file for Microsoft Edge for Android.
+Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for Android.
 
 |Key |Value |
 |:-----------|:-------------|
@@ -310,7 +315,7 @@ By default, Microsoft Edge for Android will block network access with invalid or
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**ture** Allow network access |
+|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
 
 #### iOS Website data store
 
@@ -319,6 +324,27 @@ As there is only one persistent website data store in Edge for iOS, by default t
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** (default) The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** The website data store will be used by work or school account first regardless of the sign-in order |
+
+#### Bing Chat Enterprise 
+
+Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Bing button in bottom bar. 
+
+There are three settings in Settings->General->New Bing copilot mode for Bing Chat Enterprise.
+
+- New Bing copilot mode – Control whether to show Bing button on bottom bar
+- Page context – Control whether to allow Bing Chat Enterprise to access page content
+- Show Quick chat panel – Control whether to show quick chat panel when text on a webpage is selected
+
+You can manage the settings for Bing Chat Enterprise.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users will see Bing button in bottom bar. Setting “New Bing co-pilot mode” is on by default and can be turned off by users.  <br>**false** Users cannot see Bing button in bottom bar. Setting “New Bing co-pilot mode” will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings are on by default and can be turned off by users.  <br>**false** Bing Chat Enterprise can NOT access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings will be disabled and cannot be turned on by users|
+
+> [!NOTE]
+> Bing Chat Enterprise is only avaiable on Edge for iOS and com.microsoft.intune.mam.managedbrowser.Chat will have **false** as the default value before Aug 28, 2023. You can enable Bing Chat Enterprise by setting the policy value to **true**. The default value will become **true** after Aug 28, 2023 with new release avaiable on Edge for iOS and Android.
+
 
 ## Data protection app configuration scenarios
 
@@ -469,7 +495,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |     com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |     EdgeShowAddressBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
-|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref        |     EdgeNetworkStackPref    |
+|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref    |     EdgeNetworkStackPref    |
 
 ## Deploy app configuration scenarios with Microsoft Intune
 

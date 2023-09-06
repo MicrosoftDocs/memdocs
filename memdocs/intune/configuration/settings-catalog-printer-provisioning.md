@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/24/2023
+ms.date: 09/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -154,8 +154,6 @@ For information on all the reporting data you can view, go to [Intune reports](.
 - If a printer is removed from the Universal Print service, unshared, or if permissions are removed, then the Intune policy will fail to install the printer.
 
 - Make sure the printer is discoverable on the device. If users can't discover or install the printer manually, then the Intune policy will also fail to install the printer.
-
-  For more information and possible steps, go to [Unable to discover printers on the client](https://supportability.visualstudio.com/WindowsUserExperience/_wiki/wikis/WindowsUserExperience/725155/Unable-to-discover-printers-on-the-client).  
 
 - Make sure the **SharedID** and **PrinterID** are entered correctly in the Intune policy.
 

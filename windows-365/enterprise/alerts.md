@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 9/26/2022
+ms.date: 07/05/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -41,16 +41,32 @@ The Windows 365 Alerts system notifies you when specific events occur in your Cl
 
 ## View alerts
 
-To view the list of recent alerts, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)**.
+To view the list of recent alerts, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts**.
 
 ![Screenshot of view alerts](./media/alerts/view-alerts.png)
 
+### Filters
+
+By default, only active alerts are shown. You can use the **Add filter** option to filter by:
+
+- Severity
+  - Informational
+  - Warning
+  - Critical
+- State
+  - Active
+  - Resolved
+  
+### Alert details
+
+You can select an alert from the list to see the details of that alert. 
+
 ## Customize alert rule
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)** > **Alert rules**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts** > **Alert rules**.
     ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
 
-2. Select a rule in the list.
+2. Select a rule from the list.
 3. On the **System rule** page, make any changes that you want in the **Conditions**, **Settings**, and **Notifications** sections.
     ![Screenshot of system rule.](./media/alerts/system-rule.png)
 4. Select **Apply** to save the changes to the rule.

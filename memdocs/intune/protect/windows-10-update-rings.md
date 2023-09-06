@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2022
+ms.date: 07/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,33 +39,29 @@ Windows update rings support [scope tags](../fundamentals/scope-tags.md). You ca
 
 ## Prerequisites
 
-The following prerequisites must be met to use Windows updates for Windows 10/11 devices in Intune.
+The following prerequisites must be met to use Windows Update Rings for Windows 10/11 devices in Intune.
 
-- Devices must:
+- Devices must have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+  - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)  
 
-  - Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
-
-    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-
-  - Run Windows 10 version 1607 or later, or Windows 11.
+- Devices must run Windows 10 version 1607 or later, or Windows 11.
   
   > [!NOTE]
   > Although not required to configure Windows Update for Business, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates to devices running Windows 10 1709 or later, or Windows 11. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 
-- Update rings are supported for the following Windows editions:  
+- Devices must be one of the following supported Windows editions:
+
   - Windows 10/11 Pro
   - Windows 10/11 Enterprise
   - Windows 10/11 Team - for Surface Hub devices
-  - Windows Holographic for Business
-
-    Windows Holographic for Business supports a subset of settings for Windows updates, including:
+  - Windows Holographic for Business - Windows Holographic for Business supports a subset of settings for Windows updates, including:
     - **Automatic update behavior**
     - **Microsoft product updates**
     - **Servicing channel**: Any update build that is generally available.
 
     For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
-  - Windows 10/11 Enterprise LTSC - While LTSC is supported, the following ring controls are not supported for LTSC:  
+  - Windows 10/11 Enterprise LTSC - LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
     - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates  
     - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)  
     - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)  
@@ -74,6 +70,16 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
       - Beta Channel  
       - Dev Channel  
     - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings) for *Feature* updates.
+
+### Limitations for Workplace Joined devices
+
+Intune Update rings for Windows 10 and later require the use of Windows Update for Business (WUfB), which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use WUfB and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds), which provides for additional capabilities that are not supported for WPJ devices.
+
+- Driver updates for Windows 10 and later
+- Feature updates for Windows 10 and later
+- Quality Updates updates for Windows 10 and later  (also known as *Expedited* updates)
+
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
 ## Create and assign update rings
 

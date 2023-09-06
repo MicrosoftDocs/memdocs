@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 08/30/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -40,7 +40,7 @@ To get to the **Cloud PC utilization** report, sign in to [Microsoft Intune admi
 
 :::image type="content" source="./media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report." lightbox="./media/report-cloud-pc-utilization/view-report.png":::
 
-## All Cloud PCs tab 
+## All Cloud PCs tab
 
 On the **All Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
 
@@ -48,6 +48,7 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
   - **High time connected**: More than 80 hours.
   - **Average time connected**: 40-80 hours.
   - **Low time connected**: Less than 40 hours.
+  - **No active time connected**: Zero hours.
 - List of individual Cloud PCs with the following columns:
   - **Device name**
   - **Primary user UPN**
@@ -55,24 +56,6 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
   - **Days since last sign in**
 
 You can use the filter options to see only data for a specific usage group.
-
-## Frontline Cloud PCs tab
-
-This report helps you:
-
-- Understand your users’ utilization of their Frontline Cloud PCs
-- Make sure you have purchased the right number of licenses for your peak usage.
-
-By reviewing the maximum concurrent connections, you can decide if you require additional licenses to ensure your end users are not blocked using their Frontline Cloud PCs.
-
-On the **Frontline Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
-
-- Number of currently connected Frontline Cloud PCs.
-- Maximum number of connected Frontline Cloud PCs for each day in the filtered range (7 or 28 days).
-- Maximum concurrency limit.
-- Warnings for approaching and reaching the maximum concurrency limit.
-
-This report is specific to Windows 365 Frontline and does not apply to other Windows 365 plans. If no Windows 365 Frontline licenses have been purchased on your tenant, no data will be in the report.
 
 ## Other reports
 

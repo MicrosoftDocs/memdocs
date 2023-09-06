@@ -3,7 +3,7 @@
 
 title: Update your workloads to support cloud-native endpoints
 titleSuffix: Microsoft Intune
-description: To support hybrid and remote workers, convert or migrate your workloads to support cloud-native endpoints. This planning guide focuses on deploying apps and updates with Intune, moving from group policy objects, and using Windows Autopilot.
+description: To support hybrid and remote workers, convert or migrate your workloads to support cloud-native endpoints. This planning guide focuses on deploying apps and updates with Intune, moving from Group Policy Objects, and using Windows Autopilot.
 keywords:
 author: MandiOhlinger
   
@@ -101,14 +101,14 @@ Cloud-native endpoints also include the services and workloads that support the 
 
 The following workloads are configuration, tools, processes, and services for enabling user productivity and endpoint management.
 
-Your exact workloads, details, and how to update the workloads for cloud-native endpoints might be different. Also, you don’t need to transition every workload. But, you do need to consider each workload, its impact on user productivity, and the device management abilities. Converting some workloads to use cloud-native endpoints might take longer than others. Workloads may also have interdependencies on each other.
+Your exact workloads, details, and how to update the workloads for cloud-native endpoints might be different. Also, you don't need to transition every workload. But, you do need to consider each workload, its impact on user productivity, and the device management abilities. Converting some workloads to use cloud-native endpoints might take longer than others. Workloads may also have interdependencies on each other.
 
 - **Device identity**
   
   A device's identity is determined by the identity providers (IdP) that have knowledge of the device and a security trust with the device. For Windows endpoints, the most common IdP's are on-premises Active Directory (AD) and Azure Active Directory (Azure AD). Endpoints with identities from one of these IdP's are typically joined to one or joined to both.
 
   - For cloud-native endpoints, Azure AD join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
-  - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign-in, to deliver group policies, and change passwords. These options aren’t suitable for cloud-native endpoints.
+  - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign-in, to deliver group policies, and change passwords. These options aren't suitable for cloud-native endpoints.
 
   > [!NOTE]
   > Azure AD registration, sometimes referred to as workplace join, is for bring your own device (BYOD) scenarios only. It shouldn't be used for organization owned Windows endpoints. Some functionality may not be supported or work as expected on Azure AD registered Windows endpoints.
@@ -119,8 +119,8 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
   For more information, go to:
 
-  - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-  - [Windows Autopilot scenarios and capabilities](../../autopilot/windows-autopilot-scenarios.md)
+  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 - **Deploy software and applications**
 
@@ -266,7 +266,7 @@ After you've identified the key workloads and their end-state blockers, then:
 
 1. Prioritize each blocker and evaluate each blocker for resolution.
 
-    You may not want or need to address all blockers. For example, your organization might have workloads, or a part of workloads, that won’t support your cloud-native endpoints. This lack of support may or may not be significant for your organization or users. You and your organization can make this decision.
+    You may not want or need to address all blockers. For example, your organization might have workloads, or a part of workloads, that won't support your cloud-native endpoints. This lack of support may or may not be significant for your organization or users. You and your organization can make this decision.
 
 2. To support testing and proof of concept (POC), start with a minimum set of workloads. The goal is to test and validate a sample of your workloads.
 
@@ -275,7 +275,7 @@ After you've identified the key workloads and their end-state blockers, then:
     In many organizations, there's a role or business group that will be easier to migrate. For example, you can target the following scenarios in your POC:
 
     - Highly mobile sales team whose primary requirements are productivity tools and an online customer relationship management solution
-    - Knowledge workers who primarily access content that’s already in the cloud and rely heavily on Microsoft 365 apps
+    - Knowledge workers who primarily access content that's already in the cloud and rely heavily on Microsoft 365 apps
     - Frontline worker devices that are highly mobile, or are in environments where they don't have access to the organization network
 
     For these groups, review their workloads. Determine how these workloads can move to modern management, including identity, software distribution, device management, and more.
@@ -341,12 +341,12 @@ This phase is the first step for your organization migration to be fully cloud-n
 
     For more information, go to:
 
-    - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-    - [Windows Autopilot scenarios and capabilities](../../autopilot/windows-autopilot-scenarios.md)
+    - [Windows Autopilot overview](/autopilot/windows-autopilot)
+    - [Windows Autopilot scenarios and capabilities](/autopilot/windows-autopilot-scenarios)
 
 ### ✅ Phase 2: Enable endpoint cloud hybrid identity (optional)
 
-To be fully cloud-native, your existing Windows endpoints must be reset. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
+To be fully cloud-native, Microsoft recommends existing Windows endpoints be reset as part of a hardware refresh cycle. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
 
 If you're not ready to reset your endpoints, then you can enable hybrid Azure AD join. A cloud identity is created for hybrid Azure AD join endpoints. Remember, hybrid Azure AD join still requires on-premises connectivity.
 
@@ -360,7 +360,7 @@ For more information, go to:
 - [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join)
   
 > [!NOTE]
-> There isn't a Microsoft supported path to convert existing endpoints from on-premises domain joined or hybrid Azure AD joined to Azure AD joined. These endpoints must be reset.
+> Microsoft doesn't have a migration utility to convert existing endpoints from on-premises domain joined or hybrid Azure AD joined to Azure AD joined. Microsoft recommends these devices be reset and redeployed as part of a hardware refresh.
 
 ### ✅ Phase 3: Cloud attach Configuration Manager (optional)
 
@@ -418,14 +418,14 @@ This phase transitions new Windows endpoint provisioning to Azure AD joined. Onc
   Before resetting an existing Windows endpoint, be sure to:
   
   1. [Delete the device in Intune](../../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-admin-center).
-  2. [Delete the Windows Autopilot device registration](../../autopilot/add-devices.md).
+  2. [Delete the Windows Autopilot device registration](/autopilot/add-devices).
   3. [Delete the existing Azure AD device object](/azure/active-directory/devices/manage-stale-devices).
   
   Then, reset the device, and reprovision the endpoint.
 
 When the devices are ready, join these devices to Azure AD using the option that best for your organization. For more specific information, go to [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) and [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan).
 
-## Move from group policy objects (GPOs)
+## Move from Group Policy Objects (GPOs)
 
 Many organizations use GPOs to configure and manage their Windows endpoints.
 
@@ -449,15 +449,15 @@ These options aren't necessarily mutually exclusive. You can migrate a subset of
 
 Intune also has built-in features that can help you configure your cloud-native endpoints:
 
-- **[Group Policy Analytics](../../intune/configuration/group-policy-analytics.md)**: You can import your GPOs in the Microsoft Intune admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
+- **[Group Policy analytics](../../intune/configuration/group-policy-analytics.md)**: You can import your GPOs in the Microsoft Intune admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
 
   If you use GPOs, then using this tool is a valuable first step.
 
-  For more information, go to [Group Policy Analytics in Intune](../../intune/configuration/group-policy-analytics.md).
+  For more information, go to [Group Policy analytics in Intune](../../intune/configuration/group-policy-analytics.md).
 
 - **[Settings catalog](../../intune/configuration/settings-catalog.md)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](../../intune/configuration/settings-catalog-common-features.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud-native endpoint configuration.
 
-  When combined with [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
+  When combined with [Group Policy analytics](../../intune/configuration/group-policy-analytics.md), you can deploy the policies you used on-premises to your cloud-native endpoints.
 
   For more information, go to [Settings catalog in Intune](../../intune/configuration/settings-catalog.md).
 
@@ -505,9 +505,9 @@ Some of the benefits include:
 
 For more information on Windows Autopilot, go to:
 
-- [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md)
-- [Windows Autopilot scenarios and features](../../autopilot/windows-autopilot-scenarios.md)
-- [Windows Autopilot FAQ](../../autopilot/autopilot-faq.yml)
+- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+- [Windows Autopilot scenarios and features](/autopilot/windows-autopilot-scenarios)
+- [Windows Autopilot FAQ](/autopilot/autopilot-faq)
 
 ## Follow the cloud-native endpoints guidance
 

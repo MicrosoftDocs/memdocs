@@ -32,7 +32,7 @@ ms.collection:
 
 # Applications in Windows 365
 
-As an IT admin, one of the easiest ways to get started with Windows 365 is to create Cloud PCs with default gallery images of Windows 10/11 Enterprise. After provisioning, you can customize the user experience by using Microsoft Endpoint Manager to push apps to your users’ Cloud PCs. These images can include existing Windows client apps already in your Microsoft Endpoint Manager environment. Since these Cloud PC devices are enrolled in Endpoint Manager, you can treat them like any other Windows device in your environment.
+As an IT admin, one of the easiest ways to get started with Windows 365 is to create Cloud PCs with default gallery images of Windows 10/11 Enterprise. After provisioning, you can customize the user experience by using Microsoft Intune to push apps to your users’ Cloud PCs. These images can include existing Windows client apps already in your Microsoft Intune environment. Since these Cloud PC devices are enrolled in Intune, you can treat them like any other Windows device in your environment.
 
 The following apps are available with no need to upload:
 

@@ -78,11 +78,11 @@ At the end of this guide, you have a cloud-native Windows endpoint ready to star
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/phase-1.png" alt-text="Phase 1.":::
 
-Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](../../autopilot/windows-autopilot.md), and creating some settings and applications.
+Before you build your first cloud-native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase walks you through checking the requirements, configuring [Windows Autopilot](/autopilot/windows-autopilot), and creating some settings and applications.
 
 ### Step 1 - Network requirements
 
-Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](../../autopilot/networking-requirements.md).
+Your cloud-native Windows endpoint needs access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](/autopilot/networking-requirements).
 
 If your wireless network requires certificates, you can start with an Ethernet connection during testing while you determine the best approach for wireless connections for device provisioning.
 
@@ -471,7 +471,7 @@ The following settings in the **Windows security baseline** can cause issues wit
 - Local Policies Security Options\Administrator elevation prompt behavior (default = Prompt for consent on the secure desktop)
 - Standard user elevation prompt behavior (default = Automatically deny elevation requests)
 
-For more information, go to [Windows Autopilot policy conflicts](../../autopilot/policy-conflicts.md).
+For more information, go to [Windows Autopilot policy conflicts](/autopilot/policy-conflicts).
 
 ### Windows Update for Business
 
@@ -653,8 +653,8 @@ For more information, go to [How to manage the local administrators group on Azu
 There are several options for creating your device configuration when considering a migration from Group Policy to cloud-native device management:
 
 - Start fresh and apply custom settings as required.
-- Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md).
-- Use Group Policy Analytics to create Device Configuration profiles directly for supported settings.
+- Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy analytics](../../intune/configuration/group-policy-analytics.md).
+- Use Group Policy analytics to create Device Configuration profiles directly for supported settings.
 
 The transition to a cloud-native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP.
 
@@ -662,7 +662,7 @@ To start fresh, review your current requirements and implement a minimal collect
 
 Migrating settings from existing Group Policies to MDM (Microsoft Intune) isn't the preferred approach. When you transition to cloud-native Windows, the intention shouldn't be to lift and shift existing group policy settings. Instead, consider the target audience and what settings they require. It's time consuming and likely impractical to review each group policy setting in your environment to determine its relevance and compatibility with a modern managed device. Avoid trying to assess every group policy and individual setting. Instead, focus on assessing those common policies that cover most devices and scenarios.
 
-Instead, identify the group policy settings that are mandatory and review those settings against available MDM settings. Any gaps would represent blockers that can prevent you from moving forward with a cloud-native device if unresolved. Tools such as [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md) can be used to analyze group policy settings and determine if they can be migrated to MDM policies or not.
+Instead, identify the group policy settings that are mandatory and review those settings against available MDM settings. Any gaps would represent blockers that can prevent you from moving forward with a cloud-native device if unresolved. Tools such as [Group Policy analytics](../../intune/configuration/group-policy-analytics.md) can be used to analyze group policy settings and determine if they can be migrated to MDM policies or not.
 
 ### Scripts
 
@@ -707,7 +707,7 @@ If you have applications that use MSI, EXE, or script installers, you can deploy
 
 Now that you've configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
-- [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md)
+- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
 
 If for some reason Windows Autopilot isn't the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](/mem/intune/fundamentals/deployment-guide-enroll).

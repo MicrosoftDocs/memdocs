@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 07/17/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,26 +32,47 @@ ms.collection:
 
 # What is Windows 365 Frontline?
 
-Windows 365 Frontline is a version of [Windows 365](../overview.md) that helps organizations save costs by providing a single license to provision three Cloud PC virtual machines. For each Windows 365 Frontline license that you buy, you can provision three different Cloud PCs that can’t be used concurrently. Instead, each user receives a unique Cloud PC that they can use when the other two users on the same license aren’t signed into their Cloud PCs.
+Windows 365 Frontline is a version of [Windows 365](../overview.md) that helps organizations save costs by providing a single license to provision three Cloud PC virtual machines. Each license:
 
-Windows 365 Frontline is designed specifically for workers who share computing resources and don't require 24/7 dedicated Cloud PCs. This system better supports organizations that are more elastic and distributed working across various devices. Frontline Cloud PCs can be helpful for users who are:
+- Lets you provision up to three Cloud PCs.
+- Provides one concurrent session.
+
+Windows 365 Frontline is designed specifically for workers who don't need 24/7 access to their dedicated Cloud PCs. This system better supports organizations that are more elastic and distributed, working across various devices. Frontline Cloud PCs can be helpful for users who are:
 
 - On a rotation schedule.
 - Working across time zones and regions.
 - Part-time workers.
 - Contingent staff.
 
-The maximum number of active Windows 365 Frontline Cloud PCs in your organization is equal to the number of Windows 365 Frontline licenses that you’ve purchased. For example, if you purchase 10 licenses, 30 Cloud PCs will be provisioned. Ten of those Cloud PCs can be active at a given time. The licenses are managed automatically based on active sessions. When a user ends their session, the license is released for another user to start using their Cloud PC.
+The maximum number of active Windows 365 Frontline Cloud PC sessions in your organization is equal to the number of Windows 365 Frontline licenses that you’ve purchased. For example, if you purchase 10 licenses, up to 30 Cloud PCs can be provisioned. Ten of those Cloud PCs can be active at a given time. The active sessions are managed automatically. When a user signs off from their Cloud PC, the session is released for another user to start using their Cloud PC.
 
-Windows 365 Frontline is in [public preview](../public-preview.md).
+Windows 365 Frontline is currently only available for Azure Global Cloud.
+
+Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use the Windows 365 web portal if you want to access your Frontline Cloud PC with the Remote Desktop app.
 
 ## Licensing
 
-During public preview, Windows 365 Frontline licenses can't be purchased through the Microsoft 365 admin center. Instead, contact your Microsoft representative.
+To use Windows 365 Frontline, you must be licensed for:
 
-Because Windows 365 Frontline licenses are applied at the tenant level, the Microsoft 365 admin center shows Windows 365 Frontline licenses as assigned to zero users. To see how many licenses are being used, use the Windows 365 [utilization report](report-cloud-pc-utilization.md).
+- Windows 11 Enterprise or Windows 10 Enterprise
+- Microsoft Intune
+- Azure AD P1.
 
-To make sure users can continuously use their Cloud PCs after short breaks, the license isn't released until 20 minutes after a user signs off.
+In addition to being available independently, Windows Enterprise, Intune, and Azure Active Directory (Azure AD) licenses are included in:
+
+- Microsoft 365 E3
+- Microsoft 365 E5
+- Microsoft 365 F3
+- Microsoft 365 A3
+- Microsoft 365 A5
+- Microsoft 365 Business Premium
+- Microsoft 365 Education Student Use Benefit subscriptions
+
+Windows 365 Frontline licenses can be purchased through the Microsoft 365 admin center. You can confirm your license quantities under **Billing - Your Products**.
+
+Windows 365 Frontline licenses are pooled licenses applied at the tenant level, not assigned directly to users. The Microsoft 365 admin center shows Windows 365 Frontline licenses as assigned to zero users. To see how many licenses are being used, use the Windows 365 [utilization report](report-cloud-pc-utilization.md).
+
+Windows 365 Frontline is a separate product and isn't governed by the Microsoft 365 F1/F3 license eligibility conditions.
 
 ## Managing Windows 365 Frontline Cloud PCs
 
@@ -69,7 +90,7 @@ You can view your Cloud PCs on two pages:
 - **All devices**: Turn on the **Model** column to differentiate between Frontline Cloud PCs and others.
 - **All Cloud PCs**: This list can be filtered to show only Frontline Cloud PCs using the **PC type** filter.
 
-When inactive, Cloud PCs will be in a powered off state. This state makes sure that the license is available when another user on the same license signs in to their Cloud PC.
+When inactive, Cloud PCs are in a powered off state. You can confirm the power state of the Cloud PC in **Overview** page for a device.
 
 For the best user experience, make sure to:
 

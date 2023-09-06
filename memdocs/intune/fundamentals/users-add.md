@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Add users and grant permissions
 titleSuffix: Microsoft Intune
@@ -17,13 +16,12 @@ ms.localizationpriority: high
 # optional metadata
 
 #ROBOTS:
-#audience:
 
 ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
+ms.custom: intune-classic, get-started, has-azure-ad-ps-ref
 ms.collection:
 - tier1
 - M365-identity-device-management

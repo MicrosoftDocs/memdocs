@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2022
+ms.date: 08/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,6 +32,16 @@ ms.collection:
 ---
 
 # Enforce compliance on Macs managed with Jamf Pro
+
+> [!IMPORTANT]
+>
+> **Jamf macOS device support for Conditional Access is being deprecated**.
+>
+> Beginning on September 1, 2024, the platform that Jamf Pro’s Conditional Access feature is built on will no longer be supported.
+>
+> If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
+>
+> If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 After you integrate Jamf Pro with Intune, configure Intune compliance policies and Azure Active Directory (Azure AD) Conditional Access policies to enforce compliance of macOS devices with your organizational requirements.
 

@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: Assign Microsoft Intune licenses
 description: Assign licenses to users so they can enroll in Intune
@@ -7,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/19/2023
+ms.date: 06/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,13 +15,12 @@ ms.localizationpriority: high
 # optional metadata
 
 #ROBOTS:
-#audience:
 
 ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
+ms.custom: intune-classic, get-started, has-azure-ad-ps-ref
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -98,13 +96,13 @@ To view the number of free and used licenses on a Microsoft Intune subscription,
 3. Run the following command:
 
    ```powershell
-   Connect-MsolService -Credential $creds
+   Connect-MgGraph -Credential $creds
    ```
 
 4. Run the following command:
 
    ```powershell
-   Get-MsolAccountSku
+   Get-MgSubscribedSku
    ```
 
 A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
@@ -121,7 +119,7 @@ To selectively assign user licenses for EMS services, open PowerShell as an admi
 You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that does not assign an Intune license. To see a list of available services, type:
 
 ```powershell
-(Get-MsolAccountSku | Where {$_.SkuPartNumber -eq "EMS"}).ServiceStatus
+(Get-MgSubscribedSku | Where {$_.SkuPartNumber -eq "EMS"}).ServiceStatus
 ```
 
 You can run the following command to exclude the Intune service plan. You can use the same method to expand to an entire security group or you can use more granular filters.
@@ -130,34 +128,34 @@ You can run the following command to exclude the Intune service plan. You can us
 Create a new user on the command line and assign an EMS license without enabling the Intune portion of the license:
 
 ```powershell
-Connect-MsolService
+Connect-MgGraph
 
-New-MsolUser -DisplayName "Test User" -FirstName FName -LastName LName -UserPrincipalName user@<TenantName>.onmicrosoft.com –Department DName -UsageLocation US
+New-MgUser -DisplayName "Test User" -FirstName FName -LastName LName -UserPrincipalName user@<TenantName>.onmicrosoft.com –Department DName -UsageLocation US
 
-$CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
-Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
+$CustomEMS = 	Set-MgUserLicense -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
+Set-MgUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
 ```
 
 Verify with:
 
 ```powershell
-(Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
+(Get-MgUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 ```
 
 **Example 2**<br>
 Disable the Intune portion of EMS license for a user that is already assigned with a license:
 
 ```powershell
-Connect-MsolService
+Connect-MgGraph
 
-$CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
-Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -LicenseOptions $CustomEMS
+$CustomEMS = 	Set-MgUserLicense -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
+Set-MgUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -LicenseOptions $CustomEMS
 ```
 
 Verify with:
 
 ```powershell
-(Get-MsolUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
+(Get-MgUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 ```
 
 ![Command line sample of PowerShell verification alt-text="Command line sample"](./media/licenses-assign/posh-addlic-verify.png)
