@@ -75,7 +75,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 **Use a command line**:  
 
-1. Log into the Root Certification Authority server with Administrator Account.
+1. Log in to the Root Certification Authority server with Administrator Account.
 
 2. Go to **Start** > **Run**, and then enter **Cmd** to open command prompt.
 
@@ -181,7 +181,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
-   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that recieve a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that receive a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
