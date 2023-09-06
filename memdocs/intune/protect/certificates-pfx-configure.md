@@ -110,7 +110,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 
-   Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 40496 as the *Minimum key size*. 
+   Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 4096 as the *Minimum key size*. 
 
    > [!NOTE]
    >
