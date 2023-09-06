@@ -78,6 +78,7 @@ Microsoft Intune is ending support for [Android device administrator management]
 
 If you currently use device administrator management, we recommend switching to another Android management option in Intune before support ends.
 For more information, read [Ending support for Android device administrator on GMS devices](https://aka.ms/Intune-Android-DA-blog).
+
 ## Week of August 28, 2023
 
 ### Device configuration
