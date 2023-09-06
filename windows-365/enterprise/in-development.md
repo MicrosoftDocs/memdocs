@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 09/05/2023
+ms.date: 09/06/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -89,6 +89,25 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 ### Audit logs supported in Azure Log Analytics<!--45693398-->
 
 In a future update, you'll be able to send Windows 365 audit log data directly to Azure Log Analytics, Event Hubs, or certain third party solutions.
+
+### New report: Cloud PCs that can't connect<!--45946128-->
+
+A new report will be available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you'll be able to observe:
+devices that have unhealthy hosts users' connections that consistently or frequently fail systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
+
+### Improvements to Cloud PC connection quality report<!--45946378-->
+
+In a future update, improvements to the Cloud PC connection quality report will include:
+
+- a more comprehensive view of the overall performance of their Cloud PCs.
+- a more detailed view of devices when they are in a state of poor performance due to high round trip times.
+- Tenant level visibility to most recent/current for:
+    - Round Trip Time.
+    - Bandwidth.
+    - Connection Time.
+    - UDP Utilization.
+- Connection specific detail on client IP and associated CPC Gateway.
+- Filters for all columns.
 
 <!-- ***********************************************-->
 ## Provisioning
