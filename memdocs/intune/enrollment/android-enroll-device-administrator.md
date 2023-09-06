@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Android device administrator enrollment in Microsoft Intune
+title: Manage Intune devices with Android device administrator 
 titleSuffix: 
-description: Enroll Android devices into Intune by using device administrator enrollment.
+description: Use Android device administrator with Intune to manage devices. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/21/2021
+ms.date: 08/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: esalter
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,7 +31,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Android device administrator enrollment
+# Android device administrator enrollment  
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
 Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is  available with [Android Enterprise](https://www.android.com/enterprise/management/). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
 

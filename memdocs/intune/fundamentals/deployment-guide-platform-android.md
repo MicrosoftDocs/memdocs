@@ -28,8 +28,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Deployment guide: Manage Android devices in Microsoft Intune
-
+# Deployment guide: Manage Android devices in Microsoft Intune  
 Intune supports the mobile device management (MDM) of Android devices to give people secure access to work email, data, and apps. This guide provides Android-specific resources to help you set up enrollment in Intune and deploy apps and policies to users and devices. 
 
 ## Prerequisites  
@@ -43,6 +42,8 @@ Before you begin, complete these prerequisites to enable Android device manageme
  
 
 ## Plan for your deployment  
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
+
 
 Use the [Microsoft Intune planning guide](intune-planning-guide.md) for help with planning, designing, and implementing Microsoft Intune in your organization. The guide provides information to help you:
 

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2022
+ms.date: 08/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -69,7 +69,8 @@ Put a limit on the number of devices a person can enroll. You can set the device
 
 This configuration is in the admin center under **Enrollment device limit restrictions**. 
 
-### Device platform 
+### Device platform  
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 Block devices running on a specific device platform. You can apply this restriction to devices running: 
 
    * Android device administrator
@@ -124,7 +125,7 @@ By default, Intune classifies iOS/iPadOS devices as personally owned. To be clas
 #### Blocking personal Macs  
 By default, Intune classifies macOS devices as personally owned. To be classified as corporate-owned, a Mac must fulfill one of the following conditions:
 - [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
+- Enrolled via Apple Automated Device Enrollment.  
 
 #### Blocking personal Windows devices  
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  

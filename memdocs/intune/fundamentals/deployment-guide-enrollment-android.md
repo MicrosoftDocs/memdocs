@@ -280,7 +280,9 @@ Admins can complete the enrollment themselves, and then give the devices to the 
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
-## Android device administrator
+## Android device administrator  
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
 These Android devices are corporate, or personal/BYOD (bring your own device) devices that can access organization email, apps, and other data.
 
