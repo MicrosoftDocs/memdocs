@@ -1,6 +1,6 @@
 ---
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
@@ -11,6 +11,20 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
+
+| Platform | Endpoint security policy | Profile | Endpoint Protection (Configuration Manager)  |  Endpoint Security (Tenant Attach) |
+|-----------|--------------------------|---------|--------------------------------------------------------|-------------------|
+| Windows 10, Windows 11, and Windows Server | Antivirus  | Antivirus                   | ![Supported](../media/green-check.png)  | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server | Antivirus           | Antivirus Exclusions        | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Antivirus  | Tamper Protection  | ![Not Supported](../media/red-wrong.png) | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Attack Surface Reduction  | Attack Surface Reduction Rules  | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Attack Surface Reduction  | Application Guard Settings  | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Attack Surface Reduction  | Exploit protection  | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Endpoint detection and response  | Endpoint detection and response | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server| Firewall     | Firewall                    | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
+| Windows 10, Windows 11, and Windows Server | Firewall   | Firewall Rules  | ![Not Supported](../media/red-wrong.png) | ![Supported](../media/green-check.png)  |
+
+
 The following profiles are supported for devices you manage with Configuration Manager current branch, through the tenant attach scenario:
 <!--The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:-->
 
