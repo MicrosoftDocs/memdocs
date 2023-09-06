@@ -70,7 +70,7 @@ This scenario extends the Microsoft Intune Endpoint Security surface to devices 
 Applies to:
 
 - Windows 10
-- Windows 11 
+- Windows 11
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the Microsoft Defender for Endpoint-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
 
@@ -116,6 +116,8 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 - Devices without an Intune presence enable the security settings management feature.
 - A trust is created with Azure Active Directory if one doesn't already exist.
 - Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
+
+Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 
 ::: zone-end
 ::: zone pivot="mdssc-preview"

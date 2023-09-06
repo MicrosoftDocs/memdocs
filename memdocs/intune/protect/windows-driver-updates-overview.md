@@ -144,6 +144,12 @@ You can add the *Device configurations* permission with one or more rights to yo
 
 For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
+### Limitations for Workplace Joined devices
+
+Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
+
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
+
 ## Architecture
 
 :::image type="content" source="./media/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./media/windows-driver-updates-overview/wdum-architecture.png":::

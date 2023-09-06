@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -99,18 +99,18 @@ Wi-Fi profiles support the following device platforms:
     - [Windows 8.1 and newer](wi-fi-settings-import-windows-8-1.md), including Windows Holographic for Business
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 > [!TIP]
-> If you use certificate based authentication for your Wi-Fi profile, deploy the Wi-Fi profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority.  For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
+> If you use certificate based authentication for your Wi-Fi profile, deploy the Wi-Fi profile, certificate profile, and trusted root profile to the same groups to ensure that each device can recognize the legitimacy of your certificate authority. For more information, go to [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
 ## Next steps
 
