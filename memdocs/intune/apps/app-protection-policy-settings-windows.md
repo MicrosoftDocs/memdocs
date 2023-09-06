@@ -32,7 +32,8 @@ ms.collection:
 - highpri
 ---
 
-# Preview: App protection policy settings for Windows
+# App protection policy settings for Windows
+
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 This article describes app protection policy (APP) settings for Windows. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the Intune admin center (portal) when you make a new policy.
@@ -40,7 +41,7 @@ This article describes app protection policy (APP) settings for Windows. The pol
 There are two categories of policy settings: *Data protection* and *Health Checks*. In this article, the term ***policy-managed app*** refers to apps that are configured with app protection policies.
 
 > [!IMPORTANT]
-> Intune MAM on Windows supports unmanaged devices.  If a device is already managed, then Intune MAM enrollment is blocked and APP settings will not be applied.  If a device becomes managed after , Intune APP will 
+> Intune MAM on Windows supports unmanaged devices.  If a device is already managed, then Intune MAM enrollment will be blocked and APP settings will not be applied.  If a device becomes managed after MAM enrollment, APP settings will no longer be applied.
 ## Data protection
 
 The **Data protection** settings impact the org data and context. As the admin, you can control the movement of data into and out of the context of org protection. The org context is defined by documents, services, and sites accessed by the specified org account. The following policy settings help control external data received into the org context and org data sent out of the org context.  
