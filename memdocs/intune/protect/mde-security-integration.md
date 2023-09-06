@@ -589,6 +589,7 @@ The following security settings are pending deprecation. The Defender for Endpoi
 
 - Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
+- Tamper Protection (under **Windows Security Experience**). This setting is not pending deprecation, but is currently not supported.
 
 ### Use of security settings management on domain controllers
 
