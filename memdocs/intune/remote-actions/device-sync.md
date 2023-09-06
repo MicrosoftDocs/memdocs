@@ -37,7 +37,10 @@ The **Sync** device action forces the selected device to immediately check in wi
 - Windows
 - iOS
 - macOS
-- Android (Device administrator and Android for Work only)
+- Android (Device administrator and personally owned work profile only)
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Sync a device
 

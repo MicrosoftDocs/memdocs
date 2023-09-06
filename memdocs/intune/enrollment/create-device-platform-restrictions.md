@@ -52,12 +52,14 @@ This article describes the device platform restrictions supported in Microsoft I
 ## Default policy 
 Microsoft Intune provides one default policy for device platform restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 
-## Best practice - Android platform restrictions  
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
+## Best practice - Android platform restrictions
      
 Since Intune supports two Android platforms, it's important to understand how OS version restrictions work when you use them with device platform restrictions:   
   * If you allow both platforms for the same group, and then refine it for specific and non-overlapping versions, devices are sent through the Android enrollment flow that's picked for their version.   
   * If you allow both platforms, but block the same versions, devices running blocked versions can't enroll. Users on these devices are sent through the Android device administrator enrollment flow before they're blocked and prompted to sign out. 
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Create a device platform restriction   
 

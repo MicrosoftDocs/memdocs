@@ -13,4 +13,5 @@ ms.collection:
 ---
 
 > [!IMPORTANT]
-> Microsoft Intune is ending support for Android device administrator management on August 30, 2024. After that date, technical support, bug fixes, and security fixes will be unavailable for Intune devices managed with device administrator. If you currently use device administrator management, we recommend switching to another Android management option in Intune before support ends. For more information, see [Plan for change: Ending support for Android device administrator](../fundamentals/whats-new.md#notices).   
+> Microsoft Intune is ending support for Android device administrator management on devices with access to Google Mobile Services (GMS) on August 30, 2024. After that date, device enrollment, technical support, bug fixes, and security fixes will be unavailable. If you currently use device administrator management, we recommend switching to another Android management option in Intune before support ends. For more information, see [Plan for change: Ending support for Android device administrator](../fundamentals/whats-new.md#notices).
+

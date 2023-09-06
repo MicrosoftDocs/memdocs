@@ -39,12 +39,11 @@ ms.collection:
 **Applies to**
 * Android  
 * iOS
-* macOS 
+* macOS
 * Windows 10
-* Windows 11 
+* Windows 11
 
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]  
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 Device enrollment restrictions let you restrict devices from enrolling in Intune based on certain device attributes. There are two types of device enrollment restrictions you can configure in Microsoft Intune:   
 

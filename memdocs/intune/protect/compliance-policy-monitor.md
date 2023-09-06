@@ -47,6 +47,9 @@ This article applies to:
 - macOS
 - Windows 10 and later
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 Intune includes the following options for reviewing device compliance details:
 
 - Device compliance status dashboard

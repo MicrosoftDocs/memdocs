@@ -33,8 +33,6 @@ ms.collection:
 
 # Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment  
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
-
 This topic helps you set up Intune for enrolling supported Android devices using Samsung Knox Mobile Enrollment (KME). Using Intune with Samsung KME, you can enroll large numbers of company-owned Android devices when end users turn on their devices for the first time and connect to a WiFi or cellular network. Also, devices can be enrolled using Bluetooth or NFC when using the Knox Deployment App.
 
 To enable Intune enrollment using Samsung KME, you use both the Intune and Samsung Knox portals in this order:
@@ -64,6 +62,9 @@ To enroll into Intune using KME, you must first register your company on the Sam
 5. Registration Review: After your profile is completed and submitted, Samsung reviews your application and either approves it immediately or puts it in a pending review status for further follow-up. After your account is approved, you can continue to further steps.
 
 ## Create MDM profile
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)] 
 
 When your company is successfully registered, you can create your MDM profile for Microsoft Intune in the Knox portal using the information below. You can create MDM profiles for both Android and Android enterprise in the Knox portal.
 - To create an Android MDM profile, select **Device Admin** as the profile type in the Knox Portal. 
