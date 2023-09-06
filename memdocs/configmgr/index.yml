@@ -35,6 +35,9 @@ conceptualContent:
   items:
     - title: Cloud-attached management
       links:
+        - text: Overview of cloud attach
+          url: ./cloud-attach/overview.md
+          itemType: overview
         - text: Microsoft Intune tenant attach
           url: ./tenant-attach/index.yml
           itemType: overview
