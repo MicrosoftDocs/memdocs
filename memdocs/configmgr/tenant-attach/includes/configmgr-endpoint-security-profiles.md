@@ -11,7 +11,6 @@ ms.reviewer: mstewart,aaroncz
 ms.collection: tier3
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
-::: zone pivot="mde-cm-ta"
 
 | Platform | Endpoint security policy | Profile | Endpoint Protection (Configuration Manager)  |  Endpoint Security (Tenant Attach) |
 |-----------|--------------------------|---------|--------------------------------------------------------|-------------------|
@@ -24,8 +23,6 @@ ms.collection: tier3
 | Windows 10, Windows 11, and Windows Server| Endpoint detection and response  | Endpoint detection and response | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
 | Windows 10, Windows 11, and Windows Server| Firewall     | Firewall                    | ![Supported](../media/green-check.png) | ![Supported](../media/green-check.png)  |
 | Windows 10, Windows 11, and Windows Server | Firewall   | Firewall Rules  | ![Not Supported](../media/red-wrong.png) | ![Supported](../media/green-check.png)  |
-
-::: zone-end
 
 
 The following profiles are supported for devices you manage with Configuration Manager current branch, through the tenant attach scenario:
