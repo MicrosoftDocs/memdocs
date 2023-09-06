@@ -46,8 +46,6 @@ To download the sample reports:
 
 > [!NOTE]
 > Some of the sample reports are also available for download in [Community hub](community-hub.md).
-> - Community hub direct link to the [Software Update Compliance Status sample report](https://communityhub.microsoft.com/item/10428)
-> - Community hub direct link to the [Software Update Deployment Status sample report](https://communityhub.microsoft.com/item/10429)
 
 ## Install the sample reports
 
