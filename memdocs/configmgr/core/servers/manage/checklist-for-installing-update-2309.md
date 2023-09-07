@@ -2,7 +2,7 @@
 title: Checklist for 2309
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2309.
-ms.date: 09/05/2023
+ms.date: 09/13/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -62,39 +62,39 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-As of April 24, 2023, version 2303 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+<!-- As of September 13, 2023, version 2309 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
 
-<!--At this time, version 2303 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2303:
+At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2309: 
 
-[Version 2303 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2309 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-<!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+<!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable. -->
 
 > [!NOTE]
-> The version 2303 update is only applicable to sites running version 2111 or later.
+> The version 2309 update is only applicable to sites running version 2203 or later.
 
 To opt in to the early update ring:
 
 1. Open a Windows PowerShell session **as administrator**.
 
-1. Run the **EnableEarlyUpdateRing2303.ps1** script, using the following syntax:
+1. Run the **EnableEarlyUpdateRing2309.ps1** script, using the following syntax:
 
-    `EnableEarlyUpdateRing2303.ps1 <SiteServer_Name> | SiteServer_IP>`
+    `EnableEarlyUpdateRing2309.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2303.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2309.ps1 cmprimary01`
 
 1. Check for updates. For more information, see [Get available updates](prepare-in-console-updates.md#get-available-updates).
 
-The version 2303 update should now be available in the console.
+The version 2309 update should now be available in the console.
 
 > [!IMPORTANT]
-> This script only adds your site to the early update ring for version 2303. It's not a permanent change.-->
+> This script only adds your site to the early update ring for version 2309. It's not a permanent change.
 
 ## Pre-update checklist
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2303, use version 2111 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2309, use version 2203 or later.
 
 ### Review the status of your product licensing
 
@@ -114,13 +114,17 @@ For more information including how to manage restarts, see [Site and site system
 
 ### Review the version of the Windows ADK
 
-The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2303. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2309. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
 ### Review SQL Server Native Client version
 
 Install a minimum version of SQL Server 2012 Native Client, which includes support for TLS 1.2. For more information, see the [List of prerequisite checks](../deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
+
+### Review SQL ODBC driver for CM
+
+Starting with version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. This prerequisite is required when you create a new site or update an existing one.
 
 ### Review the site and hierarchy status for unresolved issues
 
@@ -221,7 +225,7 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2303. Check with the product vendor for this information.
+If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2309. Check with the product vendor for this information.
 
 > [!TIP]
 > If you develop a third-party add-on to Configuration Manager, you should test your add-on with every monthly [technical preview branch release](../../get-started/technical-preview.md). Regular testing helps confirm compatibility, and allows for early reporting of any issues with standard interfaces.
@@ -247,7 +251,7 @@ For more information, see the [Release notes](../deploy/install/release-notes.md
 
 When the console lists the update as **Available**, you can run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2303** update package, and select **Run prerequisite check** in the ribbon.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2309** update package, and select **Run prerequisite check** in the ribbon.
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
@@ -268,7 +272,7 @@ After the site updates, use the following checklist to complete common tasks and
 
 ### Confirm version and restart (if necessary)
 
-Make sure each site server and site system role is updated to version 2303. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
+Make sure each site server and site system role is updated to version 2309. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
 
 Consider restarting remote site systems that don't successfully update at first. Review your site infrastructure and make sure that applicable site servers and remote site system servers successfully restarted. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.
 
@@ -325,11 +329,11 @@ Update clients per the plan you created, especially if you configured client pil
 
 ### Third-party extensions
 
-If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2303.
+If you use any extensions to Configuration Manager, update them to a version that supports and is compatible with Configuration Manager version 2309.
 
 ### Enable any custom solutions
 
-Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2303.
+Enable any custom solutions based on the Configuration Manager SDK or PowerShell that you've already tested in a lab environment with version 2309.
 
 ### Update boot images and media
 
