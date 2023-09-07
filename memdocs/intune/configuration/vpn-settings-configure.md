@@ -57,6 +57,7 @@ This feature applies to:
   >
   > - A Windows 11 device doesn't have an existing VPN profile assigned, and it receives one Intune VPN profile.
   > - Windows 11 devices with a VPN profile assigned, and are assigned another VPN profile with no other profile changes.
+  > - Windows 11 now has a requirement that either ALL or NONE of the IPSEC parameters need to be populated for the device tunnel.
   > - A Windows 10 device upgrades to Windows 11, and if there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
   >
   > This issue and warning remain until Windows updates the Windows 11 client that resolves this issue.
