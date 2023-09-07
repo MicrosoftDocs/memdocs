@@ -78,7 +78,7 @@ The following devices are supported when enrolled with Intune:
     - Version 21H2 with [KB5019961](https://support.microsoft.com/topic/november-8-2022-kb5019980-os-build-22621-819-b503e08b-b850-469a-8de9-74df8aebd5f4)
 
 - **Windows 11 SE**:
-  - Windows 11 SE is supported for Educational tenants only. For more information, see [App Control for Business policies for Education tenants](#application-control-policies-for-education-tenants) later in this article.
+  - Windows 11 SE is supported for Educational tenants only. For more information, see [App Control for Business policies for Education tenants](#app-control-for-business-for-education-tenants) later in this article.
 
 - **Azure Virtual Desktop** (AVD):
   - AVD devices are supported to use App Control for Business policies
