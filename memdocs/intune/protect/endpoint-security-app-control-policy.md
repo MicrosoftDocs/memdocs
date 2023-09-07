@@ -2,7 +2,7 @@
 # required metadata
 
 title: Manage approved apps for Windows devices with Application Control policy and Managed Installers in Microsoft Intune | Microsoft Docs
-description: Use Application Control policies for WDAC and a managed installer to manage which apps are approved to run on Windows devices you manage with Microsoft Intune. 
+description: Use Application Control policies for App Control for Business (previously known as WDAC) and a managed installer to manage which apps are approved to run on Windows devices you manage with Microsoft Intune. 
 keywords:
 author: brenduns
 ms.author: brenduns
