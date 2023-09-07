@@ -70,18 +70,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of September 4, 2023
 
-### Device configuration
-
-#### Introducing Remote Launch on Remote Help<!--9843475 -->
-
-With Remote Launch, the helper can launch Remote Help seamlessly on the helper and user's device from Intune by sending a notification to the user's device. This allows both helpdesk and the sharer to be connected to a session quickly without exchanging session codes.
-
-For more information, go to [Remote Help](../fundamentals/remote-help-windows.md)
-
-Applies to:
-
-Windows 10/11
-
 ### Device management
 
 #### Microsoft Intune ending support for Android device administrator on devices with GMS access in August 2024<!--13891824 -->
