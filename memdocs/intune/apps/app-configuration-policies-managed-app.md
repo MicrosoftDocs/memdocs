@@ -98,7 +98,7 @@ Use the following steps to create a **Managed apps** app configuration policy. A
 4. Choose either **Select public apps** or **Select custom apps** to choose the app that you are going to configure. Select the app from the list of apps that you've approved, added, and synchronized with Intune.
 5. Click **Next** to display the **Settings catalog** page. The **Settings catalog** allows you to choose which settings you want to configure.
 6. Click **Add settings** to display the **Settings picker** pane.
-7. Search, filter, or browse the setting catalog to find the category settings to select. click **Search** to find a specific settings or setting subcategory.
+7. Search, filter, or browse the setting catalog to find the category settings to select. Click **Search** to find a specific settings or setting subcategory.
 8. Select all configuration settings that your organization requires.
 9. Once you have selected the settings to configure, the **Settings catalog** page will display the selected settings that you can configure.
 10. Configure each setting by adding required details. Click the information icon to find additional information for each setting.
