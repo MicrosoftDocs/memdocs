@@ -150,6 +150,9 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Next steps
 
 More resources:
