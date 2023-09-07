@@ -11,7 +11,25 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Plan for change: Intune is moving to support iOS/iPadOS 15 and later<!--24161619-->
+### Plan for Change: Intune ending support for Android device administrator on devices with GMS access in August 2024
+
+[Google has deprecated](https://blog.google/products/android-enterprise/da-migration/) Android device administrator management, continues to remove management capabilities, and no longer provides fixes or improvements. Due to these changes, Intune will be ending support for Android device administrator management on devices with access to Google Mobile Services (GMS) beginning **August 30, 2024**. Until that time, we will support device administrator management on devices running Android 14 and earlier. For more details, read the blog: [Microsoft Intune ending support for Android device administrator on devices with GMS access in August 2024](https://aka.ms/Intune-Android-DA-blog).
+
+#### How does this affect you or your users?
+
+After Intune ends support for Android device administrator, devices with access to GMS will be impacted in the following ways:   
+
+1. Users won't be able to enroll devices with Android device administrator.  
+2. Intune won't make changes or updates to Android device administrator management, such as bug fixes, security fixes, or fixes to address changes in new Android versions.  
+3. Intune technical support will no longer support these devices.
+
+#### How can you prepare?
+
+Stop enrolling devices into Android device administrator and migrate impacted devices to other management methods. You can check your Intune reporting to see which devices or users may be affected. Go to **Devices** > **All devices** and filter the OS column to **Android (device administrator)** to see the list of devices. 
+
+Read the blog, [Microsoft Intune ending support for Android device administrator on devices with GMS access in August 2024](https://aka.ms/Intune-Android-DA-blog), for our recommended alternative Android device management methods and information about the impact to devices without access to GMS.
+
+### Plan for Change: Intune is moving to support iOS/iPadOS 15 and later<!--24161619-->
 
 Later this year, we expect iOS 17 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require [iOS 15/iPadOS 15 and higher](../fundamentals/supported-devices-browsers.md) shortly after iOS 17’s release.
 

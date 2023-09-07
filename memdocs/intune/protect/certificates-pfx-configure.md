@@ -193,6 +193,9 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 ## Create a PKCS certificate profile
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
