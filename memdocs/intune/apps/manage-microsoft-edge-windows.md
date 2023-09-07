@@ -1,0 +1,502 @@
+---
+# required metadata
+
+title: Manage Microsoft Edge on Windows with Intune
+titleSuffix: 
+description: Use Intune configuration policies with Edge for Windows to ensure corporate websites are always accessed with safeguards in place. 
+keywords:
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 09/07/2023
+ms.topic: how-to
+ms.service: microsoft-intune
+ms.subservice: apps
+ms.localizationpriority: medium
+ms.technology:
+ms.assetid: 
+
+# optional metadata
+
+#ROBOTS:
+#audience:
+
+ms.reviewer: demerson
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.collection:
+- tier1
+- M365-identity-device-management
+- Windows
+- highpri
+ms.custom: intune-azure
+---
+
+# Manage Microsoft Edge on Windows with Intune
+
+Edge for Windows is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is also offered in other Microsoft mobile apps.
+
+This feature applies to:
+- Windows 10 or later
+
+> [!NOTE]
+> Edge for Windows doesn't consume settings that users set for the native browser on their devices, because Edge for Windows can't access these settings.
+
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Entra ID (AAD) Premium features.
+
+## Use app configuration to manage the browsing experience
+
+Edge for Windows supports app settings that allow unified endpoint management administrators, such as an Intune administrator, to customize the behavior of the app.
+
+App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices ([Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android) or through the MAM (Mobile Application Management) channel. Edge for Windows supports the following configuration scenarios:
+
+- Only allow work or school accounts
+- General app configuration settings
+- Data protection settings
+- Additional app configuration for managed devices
+
+> [!IMPORTANT]
+> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Edge for Android must be deployed via the Managed Google Play store. For more information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md) and [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
+
+Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
+
+> [!IMPORTANT]
+> App configuration keys are case sensitive. Use the proper casing to ensure the configuration takes effect.
+
+> [!NOTE]
+> With Microsoft Intune, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the MAM (Mobile Application Management) channel is referred to as a **Managed Apps** App Configuration Policy.
+
+## General app configuration scenarios
+
+Edge for Windows offers administrators the ability to customize the default configuration for several in-app settings. This capability is offered when Edge for Windows has a managed apps App Configuration Policy applied to the work or school account that is signed into the app.
+
+Edge supports the following settings for configuration:
+
+- New Tab Page experiences
+- Bookmark experiences
+- App behavior experiences
+- Kiosk mode experiences
+
+These settings can be deployed to the app regardless of device enrollment status.
+
+### New Tab Page experiences
+
+When you sign in into Edge for Windows, opening a new tab page delivers the familiar productivity content and new pivots that organize news feeds relevant to your organization's industry and interests in one view. The New Tab Page experience provides links for your organization's home page, top sites, and industry news.
+
+Edge for Windows offers organizations several options for adjusting the New Tab Page experience.
+
+#### Organization logo and brand color
+
+These settings allow you to customize the New Tab Page for Edge for Windows to display your organization's logo and brand color as the page background.
+
+To upload your organization's logo and color, first complete the following steps:
+1. Within [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), navigate to **Tenant Administration** > **Customization**. Next to **Settings**, click **Edit**.
+2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
+3. To set your brand's background color, select a **Theme color**. Edge for Windows applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
+
+> [!NOTE]
+> As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
+> 
+> Therefore, starting version v116 of Edge for Windows, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). Favicon will be used as your organization and Background image will be used as brand color.
+
+Next, use the following key/value pairs to pull your organization's branding into Edge for Windows:
+
+|Key |Value |
+|:---------|:------------|
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo |**true** shows organization's brand logo <br>**false** (default) will not expose a logo |
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor |**true** shows organization's brand color <br>**false** (default) will not expose a color |
+
+#### Homepage shortcut
+
+This setting allows you to configure a homepage shortcut for Edge for Windows in the New Tab Page. The homepage shortcut you configure appears as the first icon beneath the search bar when the user opens a new tab in Edge for Windows. The user can't edit or delete this shortcut in their managed context. The homepage shortcut displays your organization's name to distinguish it.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.homepage |Specify a valid URL. Incorrect URLs are blocked as a security measure. <br>For example: `https://www.bing.com` |
+
+#### Multiple top site shortcuts
+
+Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on New Tab Pages in Edge for Windows. The user can't edit or delete these shortcuts in a managed context. Note: you can configure a total of 8 shortcuts, including a homepage shortcut. If you have configured a homepage shortcut, that shortcut will override the first top site configured. 
+
+|Key |Value |
+|:------------|:------------|
+|com.microsoft.intune.mam.managedbrowser.managedTopSites |Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character. <br>For example: `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`|
+
+#### Industry news
+
+You can configure the New Tab Page experience within Edge for Windows to display industry news that is relevant to your organization. When you enable this feature, Edge for Windows uses your organization's domain name to aggregate news from the web about your organization, organization's industry, and competitors, so your users can find relevant external news all from the centralized new tab pages within Edge for Windows. Industry News is off by default. 
+
+|Key |Value |
+|:------------|:--------------|
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews |**true** shows Industry News on the New Tab Page<br>**false** (default) hides Industry News from the New Tab Page |
+
+#### Homepage instead of New Tab Page experience
+
+Edge for Windows allows organizations to disable the New Tab Page experience and instead have a web site launch when the user opens a new tab. While this is a supported scenario, Microsoft recommends organizations take advantage of the New Tab Page experience to provide dynamic content that is relevant to the user.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL |Specify a valid URL. If no URL is specified, the app uses the New Tab Page experience. Incorrect URLs are blocked as a security measure.<br>For example: `https://www.bing.com`|
+
+### Bookmark experiences
+
+Edge for Windows offers organizations several options for managing bookmarks.
+
+#### Managed bookmarks
+
+For ease of access, you can configure bookmarks that you'd like your users to have available when they are using Edge for Windows.
+
+- Bookmarks only appear in the work or school account and are not exposed to personal accounts.
+- Bookmarks can't be deleted or modified by users.
+- Bookmarks appear at the top of the list. Any bookmarks that users create appear below these bookmarks.
+- If you have enabled Application Proxy redirection, you can add Application Proxy web apps by using either their internal or external URL.
+- Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
+- Bookmarks are created in a folder named after the organization's name which is defined in Entra ID (AAD).
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.bookmarks |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the   bookmark URL. Separate the title and URL with the `|` character.<br>For example: `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
+
+#### My Apps bookmark
+
+By default, users have the My Apps bookmark configured within the organization folder inside Edge for Windows.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.MyApps |**true** (default) shows My Apps within the Edge for Windows bookmarks <br>**false** hides My Apps within Edge for Windows|
+
+### App behavior experiences
+
+Edge for Windows offers organizations several options for managing the app's behavior.
+
+#### Azure AD password single sign-on
+
+The Azure AD Password single sign-on (SSO) functionality offered by Entra ID (AAD) brings user access management to web applications that don't support identity federation. By default, Edge for Windows does not perform SSO with the Azure AD credentials. For more information, see [Add password-based single sign-on to an application](/azure/active-directory/manage-apps/configure-password-single-sign-on-non-gallery-applications).
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.PasswordSSO |**true** Azure AD Password SSO is enabled <br>**false** (default) Azure AD Password SSO is disabled|
+
+#### Default protocol handler
+
+By default, Edge for Windows uses the HTTPS protocol handler when the user doesn't specify the protocol in the URL. Generally, this is considered a best practice, but can be disabled.
+
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.defaultHTTPS|**true** (default) default protocol handler is HTTPS <br>**false** default protocol handler is HTTP|
+
+#### Disable data sharing for personalization
+
+By default, Edge for Windows prompts users for usage data collection and sharing browsing history to personalize their browsing experience. Organizations can disable this data sharing by preventing this prompt from being shown to end users.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.disableShareUsageData |**true** disables this prompt from displaying to end users <br>**false** (default) users are prompted to share usage data |
+|com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory|**true** disables this prompt from displaying to end users <br>**false** (default) users are prompted to share browsing history |
+
+#### Disable specific features
+
+Edge for Windows allows organizations to disable certain features that are enabled by default. To disable these features, configure the following setting:
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br> **developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
+
+
+#### Control Cookie Mode
+
+You can control whether sites can store cookies for your users within Edge for Android.  To do this, configure the following setting:
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.cookieControlsMode |**0** (default) allow cookies <br>**1** block non-Microsoft cookies <br>**2** block non-Microsoft cookies in InPrivate mode <br>**3** block all cookies |
+
+> [!NOTE]
+> Edge for iOS does not support controlling cookies.
+
+
+### Kiosk mode experiences on Windows devices
+
+Edge for Android can be enabled as a kiosk app with the following settings:
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.enableKioskMode |**true** enables kiosk mode for Edge for Android <br>**false** (default) disables kiosk mode |
+|com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode |**true** shows the address bar in kiosk mode <br>**false** (default) hides the address bar when kiosk mode is enabled|
+|com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
+
+### Switch network stack between Chromium and iOS 
+By default, Microsoft Edge for both Windows use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
+
+Organizations can modify their network stack preference by configuring the following setting.
+
+|Key  |Value  |
+|:---------|:---------|
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref|**0** (default) use the Chromium network stack <br> **1** use the iOS network stack | 
+
+> [!NOTE]
+> Using the Chromium network stack is recommended. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack may solve the issues.
+
+#### Set a proxy .pac file URL
+
+Organizations can specify a URL to a proxy auto-config (PAC) file for Microsoft Edge for Android.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.proxyPacUrl |Specify a valid URL to a proxy .pac file.  <br>For example: `https://internal.site/example.pac` |
+
+#### PAC failed-open support 
+
+By default, Microsoft Edge for Android will block network access with invalid or unavailable PAC script. However, organizations can modify the default behavior to PAC failed open.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.proxyPacUrl.FailOpenEnabled |**false** (default) Block network access  <br>**true** Allow network access |
+
+#### iOS Website data store
+
+As there is only one persistent website data store in Edge for iOS, by default the website data store is always statically used only by personal account. Work or school account cannot use the website data store, which causes the browsing data expect cookies lost after each session ends. Organizations can make the website data store used by work or school account so the browsing data will be persisted for a better users experience.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** (default) The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** The website data store will be used by work or school account first regardless of the sign-in order |
+
+#### Bing Chat Enterprise 
+
+Bing Chat Enterprise is available on Microsoft Edge for Windows. Users can start Bing Chat Enterprise by clicking on Bing button in bottom bar. 
+
+There are three settings in Settings->General->New Bing copilot mode for Bing Chat Enterprise.
+
+- New Bing copilot mode – Control whether to show Bing button on bottom bar
+- Page context – Control whether to allow Bing Chat Enterprise to access page content
+- Show Quick chat panel – Control whether to show quick chat panel when text on a webpage is selected
+
+You can manage the settings for Bing Chat Enterprise.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users will see Bing button in bottom bar. Setting “New Bing co-pilot mode” is on by default and can be turned off by users.  <br>**false** Users cannot see Bing button in bottom bar. Setting “New Bing co-pilot mode” will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings are on by default and can be turned off by users.  <br>**false** Bing Chat Enterprise can NOT access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings will be disabled and cannot be turned on by users|
+
+> [!NOTE]
+> Bing Chat Enterprise is only avaiable on Edge for iOS and com.microsoft.intune.mam.managedbrowser.Chat will have **false** as the default value before Aug 28, 2023. You can enable Bing Chat Enterprise by setting the policy value to **true**. The default value will become **true** after Aug 28, 2023 with new release avaiable on Edge for Windows.
+
+
+## Data protection app configuration scenarios
+
+Edge for Windows supports app configuration policies for the following data protection settings when the app is managed by Microsoft Intune with a managed apps App Configuration Policy applied to the work or school account that is signed into the app:
+
+- Manage account synchronization
+- Manage restricted web sites
+- Manage proxy configuration
+- Manage NTLM single sign-on sites
+
+These settings can be deployed to the app regardless of device enrollment status.
+
+### Manage account synchronization
+
+By default, Microsoft Edge sync enables users to access their browsing data across all their signed-in devices. The data supported by sync includes:
+
+- Favorites
+- Passwords
+- Addresses and more (autofill form entry)
+
+Sync functionality is enabled via user consent and users can turn sync on or off for each of the data types listed above. For more information see [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync).
+
+Organizations have the capability to disable Edge sync on Windows.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled |**true** disables Edge sync <br>**false** (default) allows Edge sync |
+
+### Manage restricted web sites
+
+Organizations can define which sites users can access within the work or school account context in Edge for Windows. If you use an allow list, your users are only able to access the sites explicitly listed. If you use a blocked list, users can access all sites except for those explicitly blocked. You should only impose either an allowed or a blocked list, not both. If you impose both, only the allowed list is honored.
+
+Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Azure AD account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
+
+> [!NOTE]
+> Edge for Windows can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URL that launch Edge, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, are not supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. Instead, you can use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information inforamtion, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
+
+Use the following key/value pairs to configure either an allowed or blocked site list for Edge for Windows. 
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock |**true** (default) allows Edge for Windows to transition restricted sites. When personal accounts are not disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Edge for Windows from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked |**true** allows restricted sites to be opened in the Azure AD account's InPrivate context. If the Azure AD account is the only account configured in Edge for Windows, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
+|com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
+
+The following sites are always allowed regardless of the defined allow list or block list settings:
+- `https://*.microsoft.com/*`
+- `http://*.microsoft.com/*`
+- `https://microsoft.com/*`
+- `http://microsoft.com/*`
+- `https://*.windowsazure.com/*`
+- `https://*.microsoftonline.com/*`
+- `https://*.microsoftonline-p.com/*`
+
+#### URL formats for allowed and blocked site list
+
+You can use various URL formats to build your allowed/blocked sites lists. These permitted patterns are detailed in the following table.
+
+- Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
+- You can use the wildcard symbol (\*) according to the rules in the following permitted patterns list.
+- A wildcard can only match a portion (e.g., `news-contoso.com`) or entire component of the hostname (e.g., `host.contoso.com`) or entire parts of the path when separated by forward slashes (`www.contoso.com/images`).
+- You can specify port numbers in the address. If you do not specify a port number, the values used are:
+  - Port 80 for http
+  - Port 443 for https
+- Using wildcards for the port number is **not** supported. For example, `http://www.contoso.com:*` and `http://www.contoso.com:*/` are not supported.
+
+  |URL |Details |Matches |Does not match |
+  |:----|:-------|:----------|:----------------|
+  |`http://www.contoso.com` |Matches a single page |`www.contoso.com` |`host.contoso.com` <br>`www.contoso.com/images` <br>`contoso.com/` |
+  |`http://contoso.com`|Matches a single page |`contoso.com/`|`host.contoso.com` <br>`www.contoso.com/images` <br>`www.contoso.com` |
+  |`http://www.contoso.com/*`|Matches all URLs that begin with `www.contoso.com`|`www.contoso.com` <br>`www.contoso.com/images` <br>`www.contoso.com/videos/tvshows` |`host.contoso.com` <br>`host.contoso.com/images`|
+  |`http://*.contoso.com/*`|Matches all subdomains under `contoso.com`|`developer.contoso.com/resources` <br>`news.contoso.com/images` <br>`news.contoso.com/videos` |`contoso.host.com` <br>`news-contoso.com`|
+  |`http://*contoso.com/*`|Matches all subdomains ending with `contoso.com/`|`news-contoso.com` <br>`news-contoso.com.com/daily` |`news-contoso.host.com` <br>`news.contoso.com`|
+  |`http://www.contoso.com/images`|Matches a single folder |`www.contoso.com/images`|`www.contoso.com/images/dogs`|
+  |`http://www.contoso.com:80`|Matches a single page, by using a port number |`www.contoso.com:80`| |
+  |`https://www.contoso.com`|Matches a single, secure page|`www.contoso.com`|`www.contoso.com`|
+  |`http://www.contoso.com/images/*` |Matches a single folder and all subfolders |`www.contoso.com/images/dogs` <br>`www.contoso.com/images/cats` | `www.contoso.com/videos`|
+  
+- The following are examples of some of the inputs that you can't specify:
+  - `*.com`
+  - `*.contoso/*`
+  - `www.contoso.com/*images`
+  - `www.contoso.com/*images*pigs`
+  - `www.contoso.com/page*`
+  - IP addresses
+  - `https://*`
+  - `http://*`
+  - `http://www.contoso.com:*`
+  - `http://www.contoso.com: /*`
+
+### Manage proxy configuration
+
+You can use Edge for Windows and [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started) together to give users access to intranet sites on their mobile devices. For example: 
+
+- A user is using the Outlook mobile app, which is protected by Intune. They then click a link to an intranet site in an email, and Edge for Windows recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate with any applicable multi-factor authentication and Conditional Access, before reaching the intranet site. The user is now able to access internal sites, even on their mobile devices, and the link in Outlook works as expected.
+- A user opens Edge for Windows on their iOS or Android device. If Edge for Windows is protected with Intune, and Application Proxy is enabled, the user can go to an intranet site by using the internal URL they are used to. Edge for Windows recognizes that this intranet site has been exposed to the user through Application Proxy. The user is automatically routed through Application Proxy, to authenticate before reaching the intranet site.
+
+Before you start:
+
+- Set up your internal applications through Azure AD Application Proxy.
+  - To configure Application Proxy and publish applications, see the [setup documentation](/azure/active-directory/manage-apps/application-proxy).
+  - Ensure that the user is assigned to the Azure AD Application Proxy app, even if the app is configured with Passthrough pre-authentication type.
+- The Edge for Windows app must have an [Intune app protection policy](app-protection-policy.md) assigned.
+- Microsoft apps must have an app protection policy that has **Restrict web content transfer with other apps** data transfer setting set to **Microsoft Edge**.
+
+> [!NOTE]
+> Edge for Windows updates the Application Proxy redirection data based on the last successful refresh event. Updates are attempted whenever the last successful refresh event is greater than one hour.
+
+Target Edge for iOS with the following key/value pair, to enable Application Proxy:
+
+|Key |Value|
+|:-------------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.AppProxyRedirection |**true** enables Azure AD App Proxy redirection scenarios <br>**false** (default) prevents Azure AD App Proxy scenarios |
+
+> [!NOTE]
+> Edge for Android does not consume this key. Instead, Edge for Android consumes Azure AD Application Proxy configuration automatically as long as the signed-in Azure AD account has an App Protection Policy applied.
+
+For more information about how to use Edge for Windows and Azure AD Application Proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Entra ID (AAD) team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for Windows as well.
+
+### Manage NTLM single sign-on sites
+
+Organizations may require users to authenticate with NTLM to access intranet web sites. By default, users are prompted to enter credentials each time they access a web site that requires NTLM authentication as NTLM credential caching is disabled. 
+
+Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
+
+|Key  |Value  |
+|:---------|:---------|
+|com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2` <br>`http://app.contoso.com/|https://expenses.contoso.com` <br><br>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list). |
+|com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO |Number of hours to cache credentials, default is 720 hours |
+
+## Additional app configuration for managed devices
+
+The following policies, originally configurable through managed apps app configuration policy, is now available through managed devices app configuration policy. When using policies for managed apps, users must sign into Microsoft Edge. When using policies for managed devices, users are not required to sign into Edge to apply the policies.
+
+As app configuration policies for managed devices needs device enrollment, any unified endpoint management (UEM) is supported. To find more policies under the MDM channel, see [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies). 
+
+|     MAM policy    |     MDM policy    |
+|---|---|
+|     com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL    |     EdgeNewTabPageCustomURL    |
+|     com.microsoft.intune.mam.managedbrowser.MyApps    |     EdgeMyApps    |
+|     com.microsoft.intune.mam.managedbrowser.defaultHTTPS       |     EdgeDefaultHTTPS    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     EdgeDisableShareUsageData    |
+|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     EdgeDisableShareBrowsingHistory    |
+|     com.microsoft.intune.mam.managedbrowser.disabledFeatures    |     EdgeDisabledFeatures    |
+|     com.microsoft.intune.mam.managedbrowser.enableKioskMode    |     EdgeEnableKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |     EdgeShowAddressBarInKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
+|     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
+|     com.microsoft.intune.mam.managedbrowser.NetworkStackPref    |     EdgeNetworkStackPref    |
+
+## Deploy app configuration scenarios with Microsoft Intune
+
+If you are using Microsoft Intune as your mobile app management provider, the following steps allow you to create a managed apps app configuration policy. After the configuration is created, you can assign its settings to groups of users.
+
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Apps** and then select **App configuration policies**.
+
+3. On the **App Configuration policies** blade, choose **Add** and select **Managed apps**.
+
+4. On the **Basics** section, enter a **Name**, and optional **Description** for the app configuration settings.
+
+5. For **Public apps**, choose **Select public apps**, and then, on the **Targeted apps** blade, choose **Edge for Windows** by selecting both the Windows platform apps. Click **Select** to save the selected public apps.
+
+6. Click **Next** to complete the basic settings of the app configuration policy.
+
+7. On the **Settings** section, expand the **Edge configuration settings**.
+
+8. If you want to manage the data protection settings, configure the desired settings accordingly:
+
+    - For **Application proxy redirection**, choose from the available options: **Enable**, **Disable** (default).
+
+    - For **Homepage shortcut URL**, specify a valid URL that includes the prefix of either *http://* or *https://*. Incorrect URLs are blocked as a security measure.
+
+    - For **Managed bookmarks**, specify the title and a valid URL that includes the prefix of either *http://* or *https://*.
+
+    - For **Allowed URLs**, specify a valid URL (only these URLs are allowed; no other sites can be accessed). For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).
+
+    - For **Blocked URLs**, specify a valid URL (only these URLs are blocked). For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).
+
+    - For **Redirect restricted sites to personal context**, choose from the available options: **Enable** (default), **Disable**.
+
+    > [!NOTE]
+    > When both Allowed URLs and Blocked URLs are defined in the policy, only the allowed list is honored.
+
+9. If you want to additional app configuration settings not exposed in the above policy, expand the **General configuration settings** node and enter in the key value pairs accordingly.
+
+10. When you are finished configuring the settings, choose **Next**.
+
+11. On the **Assignments** section, choose **Select groups to include**. Select the Azure AD group to which you want to assign the app configuration policy, and then choose **Select**.
+
+12. When you are finished with the assignments, choose **Next**.
+
+13. On the **Create app configuration policy Review + Create** blade, review the settings configured and choose **Create**.
+
+The newly created configuration policy is displayed on the **App configuration** blade.
+
+## Use Edge for Windows to access managed app logs  
+
+Users with Edge for Windows installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
+
+1. Open Edge for Windows on your device.
+
+2. Type `edge://intunehelp/` in the address box.
+
+3. Edge for Windows launches troubleshooting mode.
+
+You can retrieve logs from Microsoft Support by giving them the user's incident ID.  
+
+For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). 
+
+## Next steps
+
+- [What are app protection policies?](app-protection-policy.md) 
+- [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)
