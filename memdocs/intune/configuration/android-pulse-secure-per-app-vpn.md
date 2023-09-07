@@ -42,6 +42,9 @@ To use per-app VPN on Android Enterprise devices, use an [app configuration poli
 
 After you assign the policy to your Android device or user groups, users should start the Pulse Secure or Citrix VPN client. Then, the VPN client allows only traffic from the specified apps to use the open VPN connection.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 > [!NOTE]
 >
 > Only the Pulse Secure and Citrix connection types are supported for Android device administrator. On Android Enterprise devices, use an [app configuration policy](../apps/app-configuration-vpn-ae.md).

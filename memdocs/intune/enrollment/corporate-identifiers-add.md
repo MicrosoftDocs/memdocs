@@ -54,6 +54,9 @@ After enrollment, you can [change the ownership setting](#change-device-ownershi
 
 As an Intune admin, you can create and import a comma-separated value (.csv) file that lists 14-digit IMEI numbers or serial numbers. Intune uses these identifiers to specify device ownership as corporate during device enrollment. Each IMEI or serial number can have details specified in the list for administrative purposes.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 This feature is supported for the following platforms:
 
 | Platform | IMEI numbers | Serial numbers |

@@ -49,7 +49,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
+- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
 
 - When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 

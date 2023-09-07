@@ -36,6 +36,9 @@ This feature applies to:
 
 - Android device administrator (DA)
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 >[!TIP]
 >If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
 
