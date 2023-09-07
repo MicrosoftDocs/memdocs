@@ -42,6 +42,9 @@ This feature applies to:
 - Windows
 - EAP-based Wi-Fi
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 > [!IMPORTANT]
 >
 > - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.

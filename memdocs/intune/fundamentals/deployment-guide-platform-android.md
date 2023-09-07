@@ -28,8 +28,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Deployment guide: Manage Android devices in Microsoft Intune
-
+# Deployment guide: Manage Android devices in Microsoft Intune  
 Intune supports the mobile device management (MDM) of Android devices to give people secure access to work email, data, and apps. This guide provides Android-specific resources to help you set up enrollment in Intune and deploy apps and policies to users and devices. 
 
 ## Prerequisites  
@@ -50,11 +49,14 @@ Use the [Microsoft Intune planning guide](intune-planning-guide.md) for help wit
 * Create rollout and communication plans.
 * Create support, testing, and validation plans.  
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Leverage the Android Enterprise security configuration framework  
 
 The Android Enterprise security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations can help you tailor your organization's mobile device security protection to your specific needs. You can apply them to devices that are fully managed or personally owned with work profiles. 
 
-The taxonomy for this framework is similar to the one used for security configurations in iOS. It includes recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one to offer more protection than the last. 
+The taxonomy for this framework is similar to the one used for security configurations in iOS. It includes recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one to offer more protection than the last.
 
 The security levels for personally owned devices with work profile are:  
 

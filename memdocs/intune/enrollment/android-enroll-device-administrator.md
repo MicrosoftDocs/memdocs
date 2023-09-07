@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Android device administrator enrollment in Microsoft Intune
+title: Manage Intune devices with Android device administrator 
 titleSuffix: 
-description: Enroll Android devices into Intune by using device administrator enrollment.
+description: Use Android device administrator with Intune to manage devices. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/21/2021
+ms.date: 08/24/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chmaguir
+ms.reviewer: esalter
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,26 +31,19 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Android device administrator enrollment
+# Android device administrator enrollment  
 
-Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is  available with [Android Enterprise](https://www.android.com/enterprise/management/). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
 
-Therefore, to avoid such reduced functionality, we advise against enrolling new devices using the device administrator process described below.
+Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is available with [Android Enterprise](https://www.android.com/enterprise/management/) in [countries where Android Enterprise is available](https://support.google.com/work/android/answer/6270910). In an effort to move to modern, richer, and more secure device management, Google deprecated Android device administrator management in 2020 and Intune will be ending support for device administrator devices with access to Google Mobile Services in August 2024.
 
-For the same reasons, we also recommend that you migrate devices off of device administrator management if the devices are going to update to Android 10. 
+Therefore, we advise against enrolling new devices using the device administrator process described here and we also recommend that you migrate devices off of device administrator management.
 
-> [!IMPORTANT]
-> In [areas where Android Enterprise is available](https://support.google.com/work/android/answer/6270910)(opens Google documentation), Google is encouraging people to move away from device administrator (DA) management by decreasing its management support in new Android releases. 
-> 
-> In areas where Android Enterprise is unavailable, or for devices incapable of integrating with Google Mobile Services, we still recommend using DA as your management solution in Microsoft Intune. For more information about using DA when Google Mobile Services are unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md). 
-> 
-> DA is currently the recommended management solution for Microsoft Teams certified Android devices. 
+For information about using DA when Google Mobile Services are unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).
 
-If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.  
+[Microsoft Teams certified Android devices](/microsoftteams/devices/teams-ip-phones) should no longer be managed with device administrator management and instead should be managed with [AOSP user-associated](android-aosp-corporate-owned-user-associated-enroll.md) management.
 
-For more information about Google's Android Enterprise features, see these articles:
-- [Google's guidance for migration from device administrator to Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
-- [Google's documentation on the plan to deprecate the device administrator API](https://developers.google.com/android/work/device-admin-deprecation)
+If you still decide to have users enroll their Android devices with device administrator management, continue to the next section.
 
 ## Set up device administrator enrollment
 

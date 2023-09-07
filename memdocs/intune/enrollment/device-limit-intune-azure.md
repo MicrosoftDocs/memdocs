@@ -33,13 +33,16 @@ ms.collection:
 # Understand Intune and Azure AD device limit restrictions  
 
 **Applies to**
+
 - Android
 - iOS
 - macOS
 - Windows 10
 - Windows 11
 
-Device limit restrictions can be configured two ways: by Intune enrollment, or by Azure Active Directory (AD) joined or Azure AD registered. This article clarifies when these limits are applied based on your configuration.  
+Device limit restrictions can be configured two ways: by Intune enrollment, or by Azure Active Directory (AD) joined or Azure AD registered. This article clarifies when these limits are applied based on your configuration.
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Intune device limit restrictions
 

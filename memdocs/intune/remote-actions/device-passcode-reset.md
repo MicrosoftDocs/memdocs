@@ -52,6 +52,9 @@ This document discusses both device level passcode reset and work profile passco
 
 For Android devices, device level passcode reset is only supported on devices running 6.x or earlier, or on Android enterprise devices running in Kiosk mode. This restriction is because Google removed support for resetting an Android 7 device's passcode/password from within a Device Administrator granted app and applies to all MDM vendors.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Supported platforms for Android enterprise work profile passcode reset
 
 | Platform | Supported? |
