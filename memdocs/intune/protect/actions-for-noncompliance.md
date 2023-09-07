@@ -33,6 +33,9 @@ ms.collection:
 
 As part of a [compliance policy](../protect/device-compliance-get-started.md) that protects your organizations resources from devices that don't meet your security requirements, compliance policies also include **Actions for noncompliance**. Actions for noncompliance are one or more time-ordered actions that are taken by a policy to help protect devices and your organization. As an example, an action for noncompliance can remotely lock a device to ensure it's protected, or send a notification to devices or users to help them understand and resolve the noncompliant status.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Overview
 
 By default, each compliance policy includes the action for noncompliance of **Mark device noncompliant** with a schedule of zero days (**0**). The result of this default is when Intune detects a device isn't compliant, Intune immediately marks the device as noncompliant. After a device is marked as noncompliance, Azure Active Directory (AD) [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) can block the device.

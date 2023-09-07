@@ -64,6 +64,8 @@ Create a separate trusted certificate profile for each device platform you want 
 
 ### Trusted certificate profiles for Android device administrator
 
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 Beginning with Android 11, you can no longer use a trusted certificate profile to deploy a trusted root certificate to devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox.
 
 Because SCEP certificate profiles require both the trusted root certificate be installed on a device, and must reference a trusted certificate profile that in turn references that certificate, use the following steps to work around this limitation:
