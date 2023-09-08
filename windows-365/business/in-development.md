@@ -32,7 +32,7 @@ ms.collection:
 
 To help in your readiness and planning, this page lists Windows 365 Business updates and features that are in development but not yet released. In addition to the information on this page:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
+- If we anticipate that you need to take action before a change, we'll publish a complementary post in Office message center.
 - This page is updated periodically. Check back for more updates.
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 - Similar features may be announced at different times for Windows 365 Enterprise.
@@ -40,7 +40,6 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 > [!NOTE]
 > This page reflects our current expectations about Windows 365 Business capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
 
-**This article was last updated on the date listed under the title above.**
 
 <!-- Common categories:  
 ## App management
@@ -54,7 +53,7 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 -->
 
-<!-- ***********************************************-->
+
 ## End user experience
 
 ### Self-help in Windows 365 Business<!--45828334-->
