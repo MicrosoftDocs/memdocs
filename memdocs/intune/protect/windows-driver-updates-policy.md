@@ -2,7 +2,7 @@
 # required metadata
 
 title: Create Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
-description: Create and manage policies that install Windows driver updates on Windows 10 and Windows 11 devices you manage with Microsoft Intune.
+description: Use Microsoft Intune to manage policies that install Windows driver updates on your Intune managed Windows 10 and Windows 11 devices.
 keywords:
 author: brenduns
 ms.author: brenduns
