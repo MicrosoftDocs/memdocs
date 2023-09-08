@@ -558,11 +558,9 @@ Support for custom Windows 365 role-based access control (RBAC) roles has moved 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
-<a name='provision-azure-active-directory-join-cloud-pcs-with-single-sign-on-public-preview--42104318--'></a>
+#### Provision Azure Active Directory Join Cloud PCs with single sign-on (public preview)<!--42104318-->
 
-#### Provision Microsoft Entra join Cloud PCs with single sign-on (public preview)<!--42104318-->
-
-Windows 365 now supports creating Microsoft Entra join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
+Windows 365 now supports creating Azure Active Directory Join Cloud PCs that use single sign-on for Cloud PC login. Existing Cloud PCs won’t have single sign-on configured. For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
@@ -623,11 +621,9 @@ For more information, see [Create provisioning policies](create-provisioning-pol
 
 The Windows 365 app installation process has been updated to automatically install dependent applications.
 
-<a name='azure-active-directory-policy-updated-for-windows-365-app--42190185--'></a>
+#### Azure Active Directory policy updated for Windows 365 app<!--42190185-->
 
-#### Microsoft Entra policy updated for Windows 365 app<!--42190185-->
-
-The Microsoft Entra policy has been updated so that no extra Conditional Access policy change is required to use the Windows 365 app.
+The Azure Active Directory (Azure AD) policy has been updated so that no extra Conditional Access policy change is required to use the Windows 365 app.
 
 <!-- ########################## -->
 ## Week of November 14, 2022
@@ -825,7 +821,7 @@ We’ve published a new help documentation article. For more information, see [W
 
 ### Resize action support for more Cloud PCs<!--40263425  -->
 
-The resize action now supports Cloud PCs that are Microsoft Entra joined.
+The resize action now supports Cloud PCs that are Azure Active Directory joined.
 
 <!-- ########################## -->
 ## Week of July 18, 2022
@@ -914,10 +910,8 @@ Windows 365 Cloud PCs now support multi-window and Call Me in Teams. For more in
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-<a name='support-for-azure-ad-joined-cloud-pcs-now-general-available--38765480---'></a>
-
-#### Support for Microsoft Entra joined Cloud PCs now general available<!--38765480 -->
-Support for Microsoft Entra joined Cloud PCs has moved out of preview and into general availability.
+#### Support for Azure AD joined Cloud PCs now general available<!--38765480 -->
+Support for Azure AD joined Cloud PCs has moved out of preview and into general availability.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
@@ -986,7 +980,7 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 
 #### Upload a custom image without an Azure network connection<!--8341750 -->
 
-Customers using Microsoft Entra join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Intune. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription that provides the image.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Intune. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription that provides the image.
 
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
@@ -1041,11 +1035,9 @@ We’ve published a new help documentation article. For more information, see [W
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-<a name='support-for-azure-ad-joined-cloud-pcs---35060203-36751258--'></a>
+#### Support for Azure AD joined Cloud PCs<!-- 35060203 36751258-->
 
-#### Support for Microsoft Entra joined Cloud PCs<!-- 35060203 36751258-->
-
-Windows 365 Enterprise now supports Cloud PCs that are Microsoft Entra joined. These devices can run in either:
+Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These devices can run in either:
 
 - A Microsoft-hosted network:
   - You don’t need to bring any Azure infrastructure
@@ -1185,7 +1177,7 @@ If you have a combination of paid and free trial licenses, the Resize remote act
 
 #### Health check improvement<!--36461502-->
 
-The **DNS can resolve Active Directory domain** health check has been improved. A new step has been added to look for the following Microsoft Entra DNS record. If it can’t be found, the check fails.
+The **DNS can resolve Active Directory domain** health check has been improved. A new step has been added to look for the following Azure Active Directory DNS record. If it can’t be found, the check fails.
 
 _ldap._tcp.yourDomain.com -type SRV
 
@@ -1194,7 +1186,7 @@ _ldap._tcp.yourDomain.com -type SRV
 
 #### Windows 365 Administrator role<!--5827123-->
 
-The Windows 365 Administrator role is now available for admins by using role assignment in the Microsoft Intune admin center and Microsoft Entra ID for Windows. With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Microsoft Entra Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Intune. For more information, see [Role-based access control](role-based-access.md).
+The Windows 365 Administrator role is now available for admins by using role assignment in the Microsoft Intune admin center and Azure Active Directory (Azure AD) for Windows. With this role, admins can broadly manage Windows 365 Enterprise Cloud PCs, users, devices, and groups. This new role is in addition to the other existing roles that Windows 365 currently supports: Azure AD Global Admin, Intune Admin, and Cloud PC granular roles in Microsoft Intune. For more information, see [Role-based access control](role-based-access.md).
 
 <!-- ########################## -->
 ## Week of October 4, 2021
