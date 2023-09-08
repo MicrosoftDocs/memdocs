@@ -80,8 +80,8 @@ The device compliance dashboard is found in the [Microsoft Intune admin center](
 
 - [Device compliance status](#device-compliance-status)
 - [Devices without compliance](#devices-without-compliance)
-- [Policy compliance](./fundamentals/reports.md#policy-compliance) (Link opens the *Intune reports* article)
-- [Setting compliance](../fundamentals/reports.md#setting-compliance) (Link opens the *Intune reports* article)
+- [Policy compliance](../fundamentals/reports.md#policy-compliance) (Link opens the *Intune reports* article)
+- [Setting compliance](../fundamentals/reports.md#settings-compliance) (Link opens the *Intune reports* article)
 
 :::image type="content" source="./media/compliance-policy-monitor/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab.":::
 
