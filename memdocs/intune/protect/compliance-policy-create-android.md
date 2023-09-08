@@ -102,12 +102,12 @@ As an Intune administrator, use these compliance settings to help protect your o
   > [!NOTE]
   > On the legacy Android platform, this feature is a compliance setting. Intune can only check whether this setting is enabled at the device level.
 
-- **Google Play’s device integrity check**  
+- **Play integrity verdict**  
   Enter the level of Google's [Play Integrity](https://developer.android.com/google/play/integrity) that must be met. Your options:
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
-  - **Check basic integrity & certified devices**
+  - **Check basic integrity & device integrity**
 
 > [!NOTE]
 > To configure Google Play Protect settings using app protection policies, see [Intune app protection policy settings](../apps/app-protection-policy-settings-android.md#conditional-launch) on Android.
