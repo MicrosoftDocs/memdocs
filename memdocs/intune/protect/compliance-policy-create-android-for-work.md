@@ -94,11 +94,11 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
 > Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
 - **Play integrity verdict**  
-  Enter the level of Google's [Play Integrity](https://developer.android.com/google/play/integrity) that must be met. Your options:
+  Enter the level of Google's [Play integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
 
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
-  - **Check basic integrity & certified devices**
+  - **Check basic integrity & device integrit**
 
 ### Device Properties
 
@@ -215,21 +215,21 @@ When ready to proceed, [create a compliance policy](create-compliance-policy.md#
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require that an up-to-date security provider can protect a device from known vulnerabilities.
   
-- **Google Play’s device integrity check**  
-  Enter the level of [Google Play’s device integrity check](https://developer.android.com/google/play/integrity) that must be met. Your options:
+- **Play integrity verdict**  
+  Enter the level of [Google's Play device integrity verdict](https://developer.android.com/google/play/integrity) that must be met. Your options:
   - **Not configured** (*default*) - Setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
-  - **Check basic integrity & certified devices**
+  - **Check basic integrity & device integrity**
 
-- **Required device integrity evaluation type**  
-  This setting is only available when *Google Play’s device integrity check* is set to either *Check basic integrity* or *Check basic integrity & certified devices*.
+- **Play integrity verdict evaluation type**  
+  This setting is only available when *Play integrity verdict* is set to either *Check basic integrity* or *Check basic integrity & device integrity*.
 
-  Select the evaluation type you want to use to compute Google Play’s device integrity check response.
+  Select the evaluation type you want to use to compute Play integrity verdict response.
 
   - **Not configured (defaults to basic evaluation)** – (*default*)
-  - **Hardware-backed key** – Require that hardware-backed key attestation is used for Google Play’s device integrity check evaluation. Devices that don’t support hardware-backed key attestation are marked as not compliant.
+  - **Check strong integrity** – Require that Check strong integrity attestation is used for Play integrity verdict evaluation. Devices that don’t support Check strong integrity attestation are marked as not compliant.
 
-  For more information about Google Play’s device integrity check and which devices support hardware-backed key attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
+  For more information about Play integrity verdict and which devices support Check strong integrity attestation, see [Google Play's integrity and signing services](https://developer.android.com/google/play/integrity).
 > [!NOTE]
 > On Android Enterprise devices, **Threat scan on apps** is a device configuration policy. Using a configuration policy, administrators can enable the setting on a device. See [Android Enterprise device restriction settings](../configuration/device-restrictions-android-for-work.md).
 
