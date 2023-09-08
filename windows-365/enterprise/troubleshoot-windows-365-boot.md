@@ -99,7 +99,7 @@ If you're still unable to troubleshoot the problem, you can contact Microsoft su
 
 ## Collect local logs
 
-Windows 365 and Azure AD log information is helpful to Microsoft support. Collect it beforehand from the following locations:
+Windows 365 and Microsoft Entra ID log information is helpful to Microsoft support. Collect it beforehand from the following locations:
 
 - C:\Users\\{username}\AppData\Local\Temp\DiagOutputDir\Windows365\Logs  
 - C:\Users\\{username}\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace

@@ -54,7 +54,7 @@ Resizing automatically disconnects the user from their session and any unsaved w
 
 ## Requirements
 
-To resize a Cloud PC, the admin must have certain built-in Azure Active Directory (Azure AD) roles.
+To resize a Cloud PC, the admin must have certain built-in Microsoft Entra roles.
 
 - For a Cloud PC provisioned with a direct assigned license, at least one of the following roles
   - Global Admin
@@ -65,7 +65,7 @@ To resize a Cloud PC, the admin must have certain built-in Azure Active Director
   - Global Admin
   - Intune Service Admin
   - Intune Reader + Windows 365 Admin
-  - In addition to one of the previous three roles, a role with Azure AD group read/write membership and licensing permissions, like the Windows 365 Admin role.
+  - In addition to one of the previous three roles, a role with Microsoft Entra group read/write membership and licensing permissions, like the Windows 365 Admin role.
 
 Alternatively, you can assign a custom role that includes the permissions of these built-in roles.
 
@@ -93,16 +93,16 @@ If there are available licenses, the resizing starts.
 
 ## Resize a single Cloud PC provisioned with a group-based license
 
-1. Create a new target Azure AD group. Add the users from the source Azure AD group that you want to resize. Alternately, you can use existing Azure AD groups if you're mapping the groups to individual Windows 365 license types.
-2. Assign the existing provisioning policy targeting the original source Azure AD group to the new target Azure AD group. You only need to do this if you don't have a discrete Azure AD group for your provisioning policy assignment. If you have discrete Azure AD groups to manage your provisioning policy assignments, you can omit this step.
-3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose the device that you want added to the Azure AD target group > **Resize**.
+1. Create a new target Microsoft Entra group. Add the users from the source Microsoft Entra group that you want to resize. Alternately, you can use existing Microsoft Entra groups if you're mapping the groups to individual Windows 365 license types.
+2. Assign the existing provisioning policy targeting the original source Microsoft Entra group to the new target Microsoft Entra group. You only need to do this if you don't have a discrete Microsoft Entra group for your provisioning policy assignment. If you have discrete Microsoft Entra groups to manage your provisioning policy assignments, you can omit this step.
+3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose the device that you want added to the Microsoft Entra ID target group > **Resize**.
 ![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
 4. You’ll see a list with all the possible SKUs that you can upgrade or downsize to based on the licenses that you have available in your inventory. You can upgrade/downgrade a Cloud PC’s RAM and vCPU. You can only upgrade the OS disk storage. If you're downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
 5. Select **Resize**.
 6. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
 7. Select **Users** > search for the user name assigned to the Cloud PC and select it > **Groups**.
-8. Remove the users from the original source Azure AD group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
-9. Assign the target license to the new target Azure AD group. The resizing process now begins.
+8. Remove the users from the original source Microsoft Entra group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
+9. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Bulk resizing Cloud PCs
 
@@ -132,16 +132,16 @@ Up to 5000 Cloud PCs can be resized at a time.
 
 ### Bulk resize a subset of Cloud PCs originally provisioned using group-based licenses
 
-1. Create a new target Azure AD group. Add the users from the source Azure AD group that you want to resize. Alternately, you can use existing Azure AD groups if you're mapping the groups to individual Windows 365 license types.
-2. Assign the existing provisioning policy targeting the original source Azure AD group to the new target Azure AD group. You only need to do this if you don't have a discrete Azure AD group for your provisioning policy assignment. If you have discrete Azure AD groups to manage your provisioning policy assignments, you can omit this step.
+1. Create a new target Microsoft Entra group. Add the users from the source Microsoft Entra group that you want to resize. Alternately, you can use existing Microsoft Entra groups if you're mapping the groups to individual Windows 365 license types.
+2. Assign the existing provisioning policy targeting the original source Microsoft Entra group to the new target Microsoft Entra group. You only need to do this if you don't have a discrete Microsoft Entra group for your provisioning policy assignment. If you have discrete Microsoft Entra groups to manage your provisioning policy assignments, you can omit this step.
 3. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > **Bulk device actions** > **OS (Windows)** > **Select device type (Cloud PCs)** > **Device action (Resize)**.
 4. On the **Basics** page, select the **Source size** for the Cloud PCs to be resized.
 5. Select the **Target size** for the resized Cloud PCs > **Next**.
 6. On the **Devices** page, choose **Apply this action to the devices registered to its group members** > **Next**.
 7. Under **Select groups to include**, choose the groups containing the users who own the devices that you want to resize > **Next**.
 8. On the **Review + create** page, select **Create**. The user’s Cloud PC is placed in the **Resize pending license** state as can be seen in the Windows 365 provisioning blade.
-9. Remove the users from the original source Azure AD group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
-10. Assign the target license to the new target Azure AD group. The resizing process now begins.
+9. Remove the users from the original source Microsoft Entra group to retrieve the old license. If you don’t perform this step, a new Cloud PC will be provisioned with the original source license after you assign the target license.
+10. Assign the target license to the new target Microsoft Entra group. The resizing process now begins.
 
 ## Resizing details
 
