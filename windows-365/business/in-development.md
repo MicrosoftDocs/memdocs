@@ -40,7 +40,6 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 > [!NOTE]
 > This page reflects our current expectations about Windows 365 Business capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
 
-**This article was last updated on the date listed under the title above.**
 
 <!-- Common categories:  
 ## App management
