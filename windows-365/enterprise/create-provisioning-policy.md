@@ -32,7 +32,7 @@ ms.collection:
 
 # Create provisioning policies
 
-Cloud PCs are created and assigned to users based on provisioning policies. These policies hold key provisioning rules and settings that let the Windows 365 service set up and configure the right Cloud PCs for your users. After provisioning policies are created and assigned to the Azure AD user security groups or Microsoft 365 Groups, the Windows 365 service:
+Cloud PCs are created and assigned to users based on provisioning policies. These policies hold key provisioning rules and settings that let the Windows 365 service set up and configure the right Cloud PCs for your users. After provisioning policies are created and assigned to the Microsoft Entra user security groups or Microsoft 365 Groups, the Windows 365 service:
 
 1. Checks for appropriate licensing for each user.
 2. Configures the Cloud PCs accordingly.
@@ -46,8 +46,8 @@ A few things to keep in mind:
 
 - Windows 365 Frontline
 
-  - If you have more users in your Azure Active Directory (Azure AD) user group than the number of Cloud PCs available for the selected size, some users might not receive their Cloud PC.
-  - If you remove users from your Azure AD user group, their Cloud PC is automatically moved into a grace period.  
+  - If you have more users in your Microsoft Entra user group than the number of Cloud PCs available for the selected size, some users might not receive their Cloud PC.
+  - If you remove users from your Microsoft Entra user group, their Cloud PC is automatically moved into a grace period.  
 
 ## Create a provisioning policy
 
@@ -112,13 +112,13 @@ To select an ANC, follow these steps:
 8. Select **Next**.
 9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select**. Nested groups aren't currently supported.
 10. For Windows 365 Frontline, you must also select a Cloud PC size for each group in the policy. Choose **Select one** > select a size under **Available sizes** > **Select**. After you've selected a size for each group, select **Next**.
-11. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
+11. On the **Review + create** page, select **Create**. If you used Microsoft Entra hybrid join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Microsoft Entra Connect sync last happened.
 
 After the provisioning policy is created and assigned, Windows 365 automatically starts to provision Cloud PCs and assigns them to users in the assigned groups.
 
 ### Windows 365 Frontline
 
-Azure AD group members don't receive Cloud PCs if the number of users in the Azure AD user group exceeds the maximum number of Cloud PCs allowed to be provisioned (based on the number of purchased licenses).
+Microsoft Entra group members don't receive Cloud PCs if the number of users in the Microsoft Entra user group exceeds the maximum number of Cloud PCs allowed to be provisioned (based on the number of purchased licenses).
 
 Admins can confirm the list of members who received Cloud PCs by reviewing the **Provisioning policy** > choose the policy > review the users in the groups under **Assignments**.
 
