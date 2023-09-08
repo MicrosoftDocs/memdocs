@@ -4,12 +4,24 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 06/09/2023
+ms.date: 09/08/2023
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for Change: Removal of Microsoft Graph Beta API Android LOB app properties ‘identityVersion’ and ‘identityName’
+
+With Intune’s October (2310) service release, we'll be removing the Android line-of-business (LOB) app properties “identityVersion” and “identityName” from the Microsoft Graph Beta API [managedAndroidLobApp resource type](https://learn.microsoft.com/graph/api/resources/intune-apps-managedandroidlobapp?view=graph-rest-beta). The same data can be found using the Graph API "versionCode” and “versionName” properties.
+
+#### How does this affect you or your users?
+
+If you have automation or reporting using the Android LOB app properties “identityVersion” and “identityName”, you'll need update to the “versionName” and “versionCode” properties for the Graph call to continue working. 
+
+#### How can you prepare?
+
+Update your documentation and reporting as needed.
 
 ### Plan for Change: Intune ending support for Android device administrator on devices with GMS access in August 2024
 
