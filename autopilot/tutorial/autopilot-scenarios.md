@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 08/10/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -23,7 +23,7 @@ appliesto:
 Due to different environments, different configurations, and different needs, Windows Autopilot offers several different scenarios. The following table summarizes the scenarios that are available in Windows Autopilot:
 
 | **Scenario** | **Purpose** | **Description** |
-| --- | --- |
+| --- | --- | --- |
 | **Windows Autopilot user-driven mode** | Device for a single user | User runs deployment |
 | **Windows Autopilot for pre-provisioned** | Device for a single user | Deployment is split between IT admin/OEM/reseller and user |
 | **Windows Autopilot self-deploying mode** | Kiosk device or device for multiple users | Deployment is completely automated |

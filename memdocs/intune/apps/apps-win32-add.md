@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 08/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -104,12 +104,20 @@ On the **Program** page, configure the app installation and removal commands for
 
     > [!IMPORTANT]
     > Admins must be careful when they use the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields.
+    >
+    > Calling `powershell.exe` in either of these fields will result in a 32-bit Powershell instance being launched. To force 64-bit Powershell execution, use the following command:
+    >
+    > `%SystemRoot%\Sysnative\WindowsPowerShell\v1.0\powershell.exe`
 
 - **Uninstall command**: Add the complete command line to uninstall the app based on the app's GUID. 
 
     For example:
     
     `msiexec /x "{12345A67-89B0-1234-5678-000001000000}"`
+
+- **Installation time required**: The number of minutes the system will wait for install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will fail the app install. Max timeout value is 1440 minutes (1 day).
+
+- **Allow available uninstall**: Select **Yes** to provide the uninstall option for this app for users from the Company Portal. Select **No** to prevent users from uninstalling the app from the Company Portal.
 
 - **Install behavior**: Set the install behavior to either **System** or **User**.
 
@@ -123,15 +131,15 @@ On the **Program** page, configure the app installation and removal commands for
     > The Win32 app installation and uninstallation will happen under admin privilege (by default) when the app is set to install in user context and the user on the device has admin privileges.
     
 - **Device restart behavior**: Select one of the following options:
-    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration, a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
     - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
-    - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Win32 app installation is allowed to complete without suppressing restarts. With this configuration, a hard reboot return code will notify the user that a restart of the device will be triggered in 120 minutes and a soft reboot return code will notify the user that a restart is required to finish the installation.
+    - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Win32 app installation is allowed to complete without suppressing restarts. With this configuration, a hard reboot return code will notify the user that a restart of the device will be triggered in 120 minutes and a soft reboot return code will only notify the user that a restart is required to finish the installation.
     - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
 
 - **Specify return codes to indicate post-installation behavior**: Add the return codes that are used to specify either app installation retry behavior or post-installation behavior. Return code entries are added by default during app creation. However, you can add more return codes or change existing return codes.
     1. In the **Code type** column, set the **Code type** to one of the following:
         - **Failed**: The return value that indicates an app installation failure.
-        - **Hard reboot**: The hard reboot return code does not allow the next Win32 app to be installed on the client without reboot. 
+        - **Hard reboot**: The hard reboot return code doesn't allow the next Win32 app to be installed on the client without reboot. 
         - **Soft reboot**: The soft reboot return code allows the next Win32 app to be installed without requiring a client reboot. Reboot is necessary to complete installation of the current application.
         - **Retry**: The retry return code agent will attempt to install the app three times. It will wait for five minutes between each attempt. 
         - **Success**: The return value that indicates the app was successfully installed.
@@ -180,14 +188,14 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
   > [!NOTE]
   > The conditions for *all* rules must be met to detect the app.
   >
-  > If Intune detects that the app is not present on the device, Intune will offer the app again within approximately 24 hours. This will occur only for apps targeted with the required intent.
+  > If Intune detects that the app isn't present on the device, Intune will offer the app again within approximately 24 hours. This will occur only for apps targeted with the required intent.
 
 - **Manually configure detection rules**: You can select one of the following rule types:
     - **MSI**: Verify based on an MSI version check. This option can be added only once. When you choose this rule type, you have two settings:
         - **MSI product code**: Add a valid MSI product code for the app.
         - **MSI product version check**: Select **Yes** to verify the MSI product version in addition to the MSI product code.
     - **File**: Verify based on file or folder detection, date, version, or size.
-        - **Path**: Enter the full path of the folder that contains the file or folder to detect. This should not include special characters such as **,** or **"**.
+        - **Path**: Enter the full path of the folder that contains the file or folder to detect. This shouldn't include special characters such as **,** or **"**.
         - **File or folder**: Enter the file or folder to detect.
         - **Detection method**: Select the type of detection method used to validate the presence of the app.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
@@ -230,7 +238,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
 
    - **Enforce script signature check**: Select **Yes** to verify that a trusted publisher has signed the script, which will allow the script to run with no warnings or prompts displayed. The script will run unblocked. Select **No** (default) to run the script without signature verification.
     
-   The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status is not installed. If the exit code is zero and STDOUT has data, the application detection status is installed. 
+   The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed. 
 
    > [!NOTE]
    > We recommend encoding your script as UTF-8. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
@@ -243,22 +251,22 @@ After you've added your rules, select **Next** to display the **Dependencies** p
 
 App dependencies are applications that must be installed before your Win32 app can be installed. You can require that other apps are installed as dependencies. 
 
-Specifically, the device must install the dependent apps before it installs the Win32 app. There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
+Specifically, the device must install the dependent apps before it installs the Win32 app. There's a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
 
 You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. 
 
-Any Win32 app dependency needs to also be a Win32 app. It does not support depending on other app types, such as single MSI LOB apps or Microsoft Store apps.
+Any Win32 app dependency needs to also be a Win32 app. It doesn't support depending on other app types, such as single MSI LOB apps or Microsoft Store apps.
 
 When you're adding an app dependency, you can search based on the app name and publisher. Additionally, you can sort your added dependencies based on app name and publisher. Previously added app dependencies can't be selected in the list of added app dependencies. 
 
-You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app is not targeted to the user or device, Intune will install the app on the device to satisfy the dependency before installing your Win32 app.
+You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app isn't targeted to the user or device, Intune will install the app on the device to satisfy the dependency before installing your Win32 app.
 
 > [!NOTE]
 > The install status of a dependent app will be displayed within Intune if the app is targeted to the user or device.
 
-It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies does not follow a specific order at a dependency level.
+It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies doesn't follow a specific order at a dependency level.
 
-Win32 apps added to Intune cannot be removed while they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. 
+Win32 apps added to Intune can't be removed while they are in a dependency relationship. These apps can only be deleted after the dependency relationship is removed. This requirement is applied to both parent and child apps in a dependency relationship. Also, this requirement ensures that dependencies are enforced properly and that dependency behavior is more predictable. 
 
 ### Select the dependencies
 
@@ -282,18 +290,18 @@ The following bulleted list provides additional clarity about dependency limitat
 
 #### Dependency failures
 
-When a dependent app is not installed, the user will commonly see one of the following notifications:
+When a dependent app isn't installed, the user will commonly see one of the following notifications:
 - One or more dependent apps failed to be installed.
-- One or more dependent app requirements are not met.
+- One or more dependent app requirements aren't met.
 - One or more dependent apps are pending a device reboot.
 
 If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).
 
-Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule. Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
+Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global reevaluation schedule. Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies aren't applicable for uninstalling a Win32 app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
 
 ## Step 6: Supersedence
 
-When you supersede an application, you can specify which app will be updated or replaced. To update an app, disable the uninstall previous version option. To replace an app, enable the uninstall previous version option. There is a maximum of 10 updated or replaced apps, including references to other apps. For example, your app references another app. This other app references other apps, and so on. This scenario creates a graph of apps. All apps in the graph count toward the maximum value of 10.
+When you supersede an application, you can specify which app will be updated or replaced. To update an app, disable the uninstall previous version option. To replace an app, enable the uninstall previous version option. There's a maximum of 10 updated or replaced apps, including references to other apps. For example, your app references another app. This other app references other apps, and so on. This scenario creates a graph of apps. All apps in the graph count toward the maximum value of 10.
 
 To add apps that the current app will supersede:
 1. In the **Supersedence** step, click **Add** to choose apps that should be superseded.
@@ -302,10 +310,10 @@ To add apps that the current app will supersede:
     > There can be a maximum of 10 nodes in a supersedence relationship in Intune.
 
 2. Find and click the apps to apply the supersedence relationship in the **Add Apps** pane. Click **Select** to add the apps to your supersedence list.
-3. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it is not necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
+3. In the list of superseded apps, modify the **Uninstall previous version** option for each selected app to specify whether an uninstall command will be sent by Intune to each selected app. If the installer of the current app updates the selected app automatically, then it isn't necessary to send an uninstall command. When replacing a selected app with a different app, it may be necessary to turn on the **Uninstall previous version** option to remove and replace the older app.
 4. Once this step is finalized, click **Next**.
 
-For additional information, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
+For more information, see [Add Win32 app supersedence](../apps/apps-win32-supersedence.md).
 <!--
 ## Step 6: Select scope tags (optional)
 You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
@@ -318,7 +326,7 @@ Click **Select scope tags** to optionally add scope tags for the app. Then selec
 You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
 
 > [!IMPORTANT]
-> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device does not have, the app will fail to install.
+> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app will fail to install.
 
 1. For the specific app, select an assignment type:
     - **Required**: The app is installed on devices in the selected groups.

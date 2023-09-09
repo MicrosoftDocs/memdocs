@@ -68,7 +68,7 @@ The following list provides the app platform type, the apps that are monitored f
 | macOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android device administrator | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android Enterprise personally owned enrollment | Only managed apps in the work profile | Not applicable | Every seven days from device enrollment |
-| Android Enterprise corporate-owned enrollments | Not applicable| Not yet supported | Not Applicable |
+| Android Enterprise corporate-owned enrollments | Not applicable| All apps installed on the device| Every seven days from device enrollment |
 | AOSP enrollments | Not applicable | Not yet supported | Not applicable |
 
 > [!NOTE]
@@ -87,3 +87,4 @@ The number of discovered apps may not match the app install status count. Possib
 
 - [App types in Microsoft Intune](apps-add.md#app-types-in-microsoft-intune)
 - [Monitor app information and assignments with Microsoft Intune](apps-monitor.md)
+

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/10/2023
+ms.date: 08/12/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -34,7 +34,7 @@ ms.collection:
 
 Windows 365 is a cloud-based service that lets users connect through the internet from any device, from any place, to a Windows Desktop running in Azure. To support these internet connections, you must follow the networking requirements listed in this article.
 
-Each customer has its specific requirements based on the workload they use to pre-calculate the network requirements of their Cloud PC environment.  
+Each customer has its specific requirements based on the workload they use to calculate the network requirements of their Cloud PC environment.  
 
 >[!Note]
 >This article only applies if you plan on provisioning Cloud PCs on your own Azure virtual network, as opposed to a Microsoft-hosted network.
@@ -63,7 +63,7 @@ All of the Windows 365 Enterprise **General network requirements** apply to [Win
 To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
-- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this is a US Gov region.
+- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this network is a US Gov region.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
@@ -81,44 +81,45 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 ### [Windows 365 Enterprise](#tab/ent)
 
-You must allow traffic in your Azure network configuration to the following service URLs and ports:
+You must allow traffic in your network configuration to the following service URLs and ports to support provisioning and management of Cloud PCs and for remote connectivity with Cloud PCs. Although most of the configuration is for the Cloud PC network, end user connectivity occurs from a physical device. Therefore, you must also follow the connectivity guidelines on the physical device network.
 
-- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
-- [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list)
-- rdweb.wvd.microsoft.com
-- rdbroker.wvd.microsoft.com
-- Provisioning and Azure network connection endpoints:
-  - \*.infra.windows365.microsoft.com
-  - cpcsaamssa1prodprap01.blob.core.windows.net
-  - cpcsaamssa1prodprau01.blob.core.windows.net
-  - cpcsaamssa1prodpreu01.blob.core.windows.net
-  - cpcsaamssa1prodpreu02.blob.core.windows.net
-  - cpcsaamssa1prodprna01.blob.core.windows.net
-  - cpcsaamssa1prodprna02.blob.core.windows.net
-  - cpcsacnrysa1prodprna02.blob.core.windows.net
-  - cpcsacnrysa1prodprap01.blob.core.windows.net
-  - cpcsacnrysa1prodprau01.blob.core.windows.net
-  - cpcsacnrysa1prodpreu01.blob.core.windows.net
-  - cpcsacnrysa1prodpreu02.blob.core.windows.net
-  - cpcsacnrysa1prodprna01.blob.core.windows.net
-  - cpcstcnryprodprap01.blob.core.windows.net
-  - cpcstcnryprodprau01.blob.core.windows.net
-  - cpcstcnryprodpreu01.blob.core.windows.net
-  - cpcstcnryprodprna01.blob.core.windows.net
-  - cpcstcnryprodprna02.blob.core.windows.net
-  - cpcstprovprodpreu01.blob.core.windows.net
-  - cpcstprovprodpreu02.blob.core.windows.net
-  - cpcstprovprodprna01.blob.core.windows.net
-  - cpcstprovprodprna02.blob.core.windows.net
-  - cpcstprovprodprap01.blob.core.windows.net
-  - cpcstprovprodprau01.blob.core.windows.net
-  - prna01.prod.cpcgateway.trafficmanager.net
-  - prna02.prod.cpcgateway.trafficmanager.net
-  - preu01.prod.cpcgateway.trafficmanager.net
-  - preu02.prod.cpcgateway.trafficmanager.net
-  - prap01.prod.cpcgateway.trafficmanager.net
-  - prau01.prod.cpcgateway.trafficmanager.net
-- Cloud PC communication endpoints\*
+| Device or service | Network connectivity required URLs and ports | Notes |
+| --- | --- | --- |
+| Physical device | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#remote-desktop-clients) | For Remote Desktop client connectivity and updates. |
+| Microsoft Intune service | [Link](/mem/intune/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
+| Azure Virtual Desktop session host virtual machine | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines) | For remote connectivity between Cloud PCs and the backend Azure Virtual Desktop service. |
+| Windows 365 service | [Link](#windows-365-service) | For provisioning and health checks. |
+
+#### Windows 365 service
+
+The following URLs and ports are required for the provisioning of Cloud PCs and the Azure Network Connection (ANC) health checks:
+
+- \*.infra.windows365.microsoft.com
+- cpcsaamssa1prodprap01.blob.core.windows.net
+- cpcsaamssa1prodprau01.blob.core.windows.net
+- cpcsaamssa1prodpreu01.blob.core.windows.net
+- cpcsaamssa1prodpreu02.blob.core.windows.net
+- cpcsaamssa1prodprna01.blob.core.windows.net
+- cpcsaamssa1prodprna02.blob.core.windows.net
+- cpcstcnryprodprap01.blob.core.windows.net
+- cpcstcnryprodprau01.blob.core.windows.net
+- cpcstcnryprodpreu01.blob.core.windows.net
+- cpcstcnryprodpreu02.blob.core.windows.net
+- cpcstcnryprodprna01.blob.core.windows.net
+- cpcstcnryprodprna02.blob.core.windows.net
+- cpcstprovprodpreu01.blob.core.windows.net
+- cpcstprovprodpreu02.blob.core.windows.net
+- cpcstprovprodprna01.blob.core.windows.net
+- cpcstprovprodprna02.blob.core.windows.net
+- cpcstprovprodprap01.blob.core.windows.net
+- cpcstprovprodprau01.blob.core.windows.net
+- prna01.prod.cpcgateway.trafficmanager.net
+- prna02.prod.cpcgateway.trafficmanager.net
+- preu01.prod.cpcgateway.trafficmanager.net
+- preu02.prod.cpcgateway.trafficmanager.net
+- prap01.prod.cpcgateway.trafficmanager.net
+- prau01.prod.cpcgateway.trafficmanager.net
+- Cloud PC communication endpoints
   - endpointdiscovery.cmdagent.trafficmanager.net
   - registration.prna01.cmdagent.trafficmanager.net
   - registration.preu01.cmdagent.trafficmanager.net
@@ -133,10 +134,12 @@ You must allow traffic in your Azure network configuration to the following serv
   - hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
 
-\* The CMD Agent is required for the Windows 365 service. It performs core infrastructure functions such as domain join, initial config setup, data monitoring, and remediation.
-
-All endpoints connect over port 443.
+All endpoints connect over port 443 unless otherwise specified.
 
 ### [Windows 365 Government](#tab/gov)
 
@@ -180,7 +183,7 @@ All endpoints connect over port 443 unless specified otherwise.
 #### Azure Active Directory-dependent URLs
 
 | Address:Port | Required for |
-| --- | --- | --- |
+| --- | --- |
 | login.microsoftonline.us | GCCH |
 | login.live.com:443 | GCCH, GCC |
 | login.microsoftonline.com:443 | GCC |
@@ -191,7 +194,8 @@ All endpoints connect over port 443 unless specified otherwise.
 | endpointdiscovery.gcp.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
 | registration.ghp01.cmdagent.usgovtrafficmanager.net (port 443) | GCCH |
 | registration.gcp01.cmdagent.usgovtrafficmanager.net (port 443) | GCC |
-|
+| hm-iot-in-gcb-gcb01.azure-devices.us (port 443 and 5671) |GCC |
+| hm-iot-in-ghb-ghb01.azure-devices.us (port 443 and 5671) |GCCH |
 
 #### Azure Virtual Device-dependent URLs
 

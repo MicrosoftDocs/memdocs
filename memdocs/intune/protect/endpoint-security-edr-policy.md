@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 08/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,7 +44,7 @@ The capabilities of Microsoft Defender for Endpoint endpoint detection and respo
 
 EDR policies include platform-specific profiles to manage settings for EDR. The profiles automatically include an *onboarding package* for Microsoft Defender for Endpoint. Onboarding packages are how devices are configured to work with Microsoft Defender for Endpoint. After a device onboards, you can start to use threat data from that device.
 
-EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, you’ll create separate EDR policies for the different types of devices you manage.
+EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, you'll create separate EDR policies for the different types of devices you manage.
 
 Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -91,7 +91,7 @@ When you select **Auto from connector**, Intune automatically gets the onboardin
 
 Before you can deploy EDR policies to Configuration Manager devices, complete the configurations detailed in the following sections.
 
-These configurations are made within the Configuration Manager console and to your Configuration Manager deployment. If you’re not familiar with Configuration Manager, plan to work with a Configuration Manager admin to complete these tasks.  
+These configurations are made within the Configuration Manager console and to your Configuration Manager deployment. If you're not familiar with Configuration Manager, plan to work with a Configuration Manager admin to complete these tasks.  
 
 The following sections cover the required tasks:
 
@@ -112,7 +112,7 @@ Configuration Manager version 2002 requires an update to support use with Endpoi
 
 - **Configuration Manager 2002 Hotfix (KB4563473)**
 
-You’ll find this update as an *in-console update* for Configuration Manager 2002.
+You'll find this update as an *in-console update* for Configuration Manager 2002.
 
 To install this update, follow the guidance from [Install in-console updates](../../configmgr/core/servers/manage/install-in-console-updates.md) in the Configuration Manager documentation.
 
@@ -124,10 +124,10 @@ With Tenant attach you specify collections of devices from your Configuration Ma
 
 For more information about the Tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
-#### Enable tenant attach when co-management hasn’t been enabled
+#### Enable tenant attach when co-management hasn't been enabled
 
 > [!TIP]
-> You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don’t need to enable co-management.
+> You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don't need to enable co-management.
 
 If you're planning to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
@@ -174,9 +174,12 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-6. On the **Configuration settings** page, Choose **Auto from Connector**  for **Microsoft Defender for Endpoint Clinet configuration package type**. Configure the **Sample Sharing** and **Telemetry Reporting Frequency** settings you want to manage with this profile. 
+6. On the **Configuration settings** page, Choose **Auto from Connector**  for **Microsoft Defender for Endpoint Client configuration package type**. Configure the **Sample Sharing** and **Telemetry Reporting Frequency** settings you want to manage with this profile. 
 
-   When your done configuring settings, select **Next**.
+  > [!NOTE]
+  > To onboard or offboard tenants using the onboarding file from the Microsoft Defender for Endpoint portal, select either *Onboard* or *Offboard* and supply the contents of the onboarding file to the input directly below the selection.
+
+   When you're done configuring settings, select **Next**.
 
 7. *This step only applies for the **Endpoint detection and response** profile and the Windows 10, Windows 11, and Windows Server platform*:  
 
@@ -186,8 +189,8 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 8. On the **Assignments** page, select the groups or collections that will receive this policy. The choice depends on the platform and profile you selected:
 
-   - For Intune, you’ll select groups from Azure AD.
-   - For Configuration Manager, you'll select collections from Configuration Manager that you’ve synced to Microsoft Intune admin center and enabled for Microsoft Defender for Endpoint policy.
+   - For Intune, you'll select groups from Azure AD.
+   - For Configuration Manager, you'll select collections from Configuration Manager that you've synced to Microsoft Intune admin center and enabled for Microsoft Defender for Endpoint policy.
 
    You can choose not to assign groups or collections at this time, and later edit the policy to add an assignment.
 
@@ -197,17 +200,49 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
    The new profile is displayed in the list when you select the policy type for the profile you created.
 
+## Updating the onboarding state for a device
+
+Organizations may need to update the onboarding information on a device via Microsoft Intune.
+
+This can be necessary due to a change in the onboarding payload for Microsoft Defender for Endpoint, or when directed by Microsoft support.
+
+Updating the onboarding information will direct the device to start utilizing the new onboarding payload at the next *Restart*.
+
+> [!NOTE]
+> This information will not necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
+
+### Process to update the payload
+
+1. Download the new Mobile Device Management **New** onboarding payload from the Microsoft Defender for Endpoint console.
+
+1. Create a **New Group** to validate the new policies effectiveness.
+
+1. Exclude the **New Group** from your existing EDR policy.
+
+1. Create a **New** Endpoint Detection and Response policy, outlined in [Create EDR policies](./endpoint-security-edr-policy.md#create-edr-policies).
+
+1. While creating the policy, select **Onboard** from the client package configuration type, and specify the **contents** of the onboarding file from the Microsoft Defender for Endpoint console.
+
+1. **Assign the policy** to the new group created for validation.
+
+1. **Add** existing devices to the validation group and ensure the changes work as expected.
+
+1. **Expand** the deployment gradually, eventually decommissioning the original policy.
+
+> [!NOTE]
+> If previously using the *Auto from connector* option to retrieve the onboarding information, engage Microsoft support to confirm the use of the new onboarding information.
+>
+> For organizations updating onboarding information at the direction of Microsoft support, Microsoft will direct you when the connector has been updated to leverage the new onboarding payload.
+
 ## EDR policy reports
 
 You can view details about the EDR policies you deploy in the Microsoft Intune admin center. To view details, go to **Endpoint security** > **Endpoint deployment and response**, and select a policy for which you want to view compliance details:
 
-- For policies that target the **Windows 10, Windows 11, and Windows Server** platform (Intune), you’ll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
+- For policies that target the **Windows 10, Windows 11, and Windows Server** platform (Intune), you'll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
   The chart for **Devices with Defender for Endpoint sensor** displays only devices that successfully onboard to Microsoft Defender for Endpoint through use of the **Windows 10, Windows 11, and Windows Server** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
 
-- For policies that target the **Windows 10, Windows 11, and Windows Server (ConfigMgr)** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
-
-
+- For policies that target the **Windows 10, Windows 11, and Windows Server (ConfigMgr)** platform (Configuration Manager), you'll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
 ## Next steps
 

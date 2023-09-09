@@ -48,6 +48,8 @@ The maximum number of active Windows 365 Frontline Cloud PC sessions in your org
 
 Windows 365 Frontline is currently only available for Azure Global Cloud.
 
+Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use the Windows 365 web portal if you want to access your Frontline Cloud PC with the Remote Desktop app.
+
 ## Licensing
 
 To use Windows 365 Frontline, you must be licensed for:

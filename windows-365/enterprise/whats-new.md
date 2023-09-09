@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 08/30/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,59 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of August 28, 2023 (Service release 2308)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### System alerts and email notifications are now generally available<!--40932899 -->
+
+System alerts and email notifications have moved out of preview and into general availability. For more information, see [Alerts](alerts.md).
+
+#### New report: Connected Frontline Cloud PCs<!--45975938-->
+
+The Connected Frontline Cloud PCs report is now available. For more information, see [Connected Frontline Cloud PCs report](report-connected-frontline-cloud-pcs.md).
+
+#### Endpoint Analytics resource performance report now available to GCCH customers<!--45234123-->
+
+The Endpoint Analytics resource performance report is now available to Government Community Cloud High (GCCH) customers. For more information, see [Resource performance report](report-resource-performance.md).
+
+#### New Cloud PC overview report page<!--45976156-->
+
+All Cloud PC reports can now be access from the **Cloud PC overview** section under **Device management**.
+
+<!-- ########################## -->
+## Week of August 21, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Partners
+
+#### Use VMWare Horizon clients and the Blast protocol with Windows 365 Enterprise (public preview)<!--44716096-->
+
+VMWare Horizon clients and the Blast protocol can be used with Windows 365 Enterprise Cloud PCs. This is a [public preview](..\public-preview.md). For more information, see [Set up VMware Horizon for Windows 365 Enterprise](set-up-vmware-horizon.md). To submit a request to join this preview, see [Tech Preview – VMware Horizon extending Microsoft Windows 365](https://www.vmware.com/learn/1733900_REG.html).
+
+<!-- ########################## -->
+## Week of August 7, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows 11 Task view support for Cloud PCs (preview)<!--44976396-->
+
+Windows 365 Switch lets users connect to their Cloud PC by using the Windows 11 Task view. They can also use Task view to switch between their Cloud PC and their local device. For more information, see [Windows 365 Switch](windows-365-switch-overview.md)  and the [Windows 365 Switch end user help article](https://support.microsoft.com/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### LG webOS 23 support on windows365.microsoft.com<!--45794301-->
+
+The Windows 365 web site, windows365.microsoft.com, now supports LG webOS 23.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Security
+
+#### Tamper protection support for Windows 365<!--45780208-->
+
+Windows 365 now supports use of endpoint security Antivirus policy to manage Tamper protection for Windows 365 Cloud PCs. Support for Tamper protection requires devices to onboard to Microsoft Defender for Endpoint before the policy that enables Tamper protection is applied.
 
 <!-- ########################## -->
 ## Week of July 31, 2023 (Service release 2307)

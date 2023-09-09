@@ -99,7 +99,8 @@ The following steps help you deploy a Windows update package to Intune.
     **Sample script file (DetectKB.ps1)**:
 
     ```powershell
-    $result = systeminfo.exe | findstr KB<KB number>
+   $sysinfo = systeminfo.exe
+   $result = $sysinfo -match KB<KB number>
 
     if ($result)
      {

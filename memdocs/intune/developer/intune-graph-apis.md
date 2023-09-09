@@ -1,5 +1,4 @@
 ---
-# required metadata
 
 title: How to use Azure AD to access Intune APIs in Microsoft Graph
 titleSuffix: Microsoft Intune
@@ -19,13 +18,12 @@ ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 # optional metadata
 
 #ROBOTS:
-#audience:
 
 ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: intune-azure, has-azure-ad-ps-ref
 ms.collection:
 - tier3
 - M365-identity-device-management
