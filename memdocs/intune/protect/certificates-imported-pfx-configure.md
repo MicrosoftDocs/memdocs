@@ -65,6 +65,9 @@ Intune supports import of PFX certificates for the following platforms:
 - macOS
 - Windows 10/11
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Requirements
 
 To use imported PKCS certificates with Intune, you'll need the following infrastructure:

@@ -48,6 +48,9 @@ Using Intune, you can enroll Zebra devices to deploy your line-of-business apps 
 
 This article shows you how to use Zebra Mobility Extensions (MX) on Zebra devices in Microsoft Intune.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 > [!NOTE]
 > By default, the Zebra MX APIs aren't locked down on devices. Before a device enrolls in Intune, it's possible the device can be compromised in a malicious manner. When the device is in a clean state, we suggest you lock down MX APIs using Access Manager (AccessMgr). For example, you can choose that only the Company Portal app and apps you trust are allowed to call MX APIs.
 >

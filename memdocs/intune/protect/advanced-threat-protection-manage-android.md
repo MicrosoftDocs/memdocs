@@ -34,6 +34,9 @@ When you integrate Microsoft Intune and Microsoft Defender for Endpoint, you can
 
 Before you begin, you must successfully [configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md) and onboard Android devices to Defender for Endpoint.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Configure web protection on devices that run Android
 
 By default, Microsoft Defender for Endpoint for Android includes and enables the web protection feature. [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) helps to secure devices against web threats and protect users from phishing attacks.
