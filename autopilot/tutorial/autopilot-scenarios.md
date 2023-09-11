@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/10/2023
+ms.date: 09/11/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -61,7 +61,7 @@ The following table describes the pros and cons of each Windows Autopilot scenar
 | **User-driven** | • Requires no interaction from admin/OEM/reseller. <br> • Doesn't require [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so works on physical devices and VMs. | • Takes longer for user than the pre-provisioned scenario since user has to go through both device ESP and user ESP. |
 | **Pre-provisioned** | • Faster for user since IT admin/OEM/reseller handles bulk of device ESP during the technician flow.  | • Requires interaction by IT admin/OEM/reseller. <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) during technician flow so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM). |
 | **Self-deploying** | • Requires no interaction from user or admin/OEM/reseller. | • Can't assign a user to the device. <br> • User ESP doesn't run during the Autopilot deployment since no user is assigned. <br> • Requires [TPM attestation](/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation) so only works on physical devices with supported TPM (doesn't work in VMs even with virtual TPM). <br> • Doesn't support hybrid Azure AD join devices. |
-| **Existing devices** | • Can use custom images. <br> • Can use ConfigMgr task sequences. <br> • Can reinstall a fresh copy of Windows in cases of severe corruption in Windows installation. <br> • Good scenario to upgrade a device from domain joined/hybrid Azure AD join to Azure AD join. | • Requires Microsoft Configuration Manager. <br> • Not an actual Autopilot deployment so doesn't work on its own - only works alongside one a supported Autopilot scenario. <br> •  Takes longer since device has to undergo both task sequence and Autopilot deployment. <br> • JSON file only supports user-driven Autopilot scenarios. <br> • Pre-provisioning and self-deploying Autopilot scenarios are only supported when the device is already an Autopilot device and there is an Autopilot profile assigned to the device. |
+| **Existing devices** | • Can use custom images. <br> • Can use ConfigMgr task sequences. <br> • Can reinstall a fresh copy of Windows in cases of severe corruption in Windows installation. <br> • Good scenario to upgrade a device from domain joined/hybrid Azure AD join to Azure AD join. | • Requires Microsoft Configuration Manager. <br> • Not an actual Autopilot deployment so doesn't work on its own - only works alongside one a supported Autopilot scenario. <br> •  Takes longer since device has to undergo both task sequence and Autopilot deployment. <br> • JSON file only supports user-driven Autopilot scenarios. <br> • Pre-provisioning and self-deploying Autopilot scenarios are only supported when the device is already an Autopilot device and there's an Autopilot profile assigned to the device. |
 | **Reset** | • Easily allows resetting an existing broken or repurposed device to a business ready state. | • Doesn't work if there's severe corruption in Windows installation. <br> • Doesn't support hybrid Azure AD join devices. |
 
 ## Azure AD join and Hybrid Azure AD join vs. Autopilot scenarios
@@ -75,6 +75,19 @@ Azure AD join and hybrid Azure AD join aren't Autopilot scenarios, but instead [
 If possible, Microsoft recommends using only Azure AD join. Azure AD join provides the best user experience. However, current environment configurations and restrictions may require the continued use of on-premises Active Directory. In scenarios where on-premises Active Directory is still needed, hybrid Azure AD join can be used. However, consider moving new devices to Azure AD join while keeping existing devices on hybrid Azure AD join. Hybrid Azure AD join can also be seen as a way to transition from on-premises Active Directory to purely Azure AD.
 
 Also keep in mind that for the Autopilot deployments that support hybrid Azure AD join, hybrid Azure AD join requires connectivity to a domain controller. If the device undergoing an Autopilot deployment is a remote device and isn't able to connect to a domain controller either on-premises or via a VPN connection, then only Azure AD join is an option.
+
+<!-- Intune 12378279 -->
+
+For more information on Azure AD join versus hybrid Azure AD join, see the following articles:
+
+- [What is a device identity?](/azure/active-directory/devices/overview).
+- [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
+- [Azure AD joined vs. Hybrid Azure AD joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
+- [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/device-join-plan).
+- [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
+- [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201)
+- [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).
 
 ## Which Autopilot scenario to use
 
@@ -109,7 +122,7 @@ The following guide makes general suggestions on which Autopilot scenario to use
 
 ### Existing devices
 
-- Windows Autopilot for existing devices isn't a Windows Autopilot deployment itself, but a method to prepare an existing device for an Autopilot deployment. As part of the Windows Autopilot for existing devices deployment, a JSON file is added to the device that defines which Autopilot deployment to run once the Windows Autopilot for existing devices deployment completes.
+- Windows Autopilot for existing devices isn't a Windows Autopilot deployment itself, but a method to prepare an existing device for an Autopilot deployment. As part of the Windows Autopilot for existing devices deployment, a JSON file is added to the device. The JSON file defines which Autopilot deployment to run once the Windows Autopilot for existing devices deployment completes.
 - The device doesn't need to be a current Autopilot device.
 - On existing devices that are already part of the environment. For example, when repurposing a device and the Windows OS need to be reinstalled.
 - On existing devices where the Windows OS needs to be reinstalled. For example, the previous Windows OS installation is corrupted and needs to be reinstalled, or if the hard drive of the device is replaced.
@@ -127,11 +140,6 @@ The following guide makes general suggestions on which Autopilot scenario to use
 - When the device needs to be reset to resolve ongoing problems on the device. Sometimes it's better and quicker to reset a device than to troubleshoot and fix on going problems on the device.
 
 ## Next steps: Scenario walkthroughs
-
-<!--
-> [!div class="nextstepaction"]
-> [Step 3: Register devices as Autopilot devices](azure-ad-join-register-device.md)
--->
 
 The following list contains links to Autopilot scenario walkthroughs. The walkthroughs contain step by step instructions on how to configure each of the Autopilot scenarios:
 
