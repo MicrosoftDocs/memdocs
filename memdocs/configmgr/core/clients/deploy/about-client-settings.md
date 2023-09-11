@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/20/2023
+ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -501,7 +501,7 @@ Then, configure the following additional settings as needed:
 
 - **IPv6 prefixes if required for DirectAccess or other intervening network devices. Use a comma to specify multiple entries**: Enter the necessary IPv6 prefixes for wake-up proxy to function on your network.
 
-
+- **Reduce network packets for Modern Standby devices**: When you enable this setting, the client configures the reduced network packets for the modern standby devices. If you disable this setting, the computer's network packets will be defaulted for legacy and modern standby devices.
 
 ## Remote tools  
 
