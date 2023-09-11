@@ -85,6 +85,12 @@ To enable the Intune App SDK, follow these steps:
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-static-lib.png" alt-text="Screenshot of the Intune App SDK iOS Static Library: Xcode Frameworks, Libraries, and Embedded Content sample.":::
 
+    > [!NOTE]
+    > Currently, if you run the SDK static lib on iOS 15 simulator, it can cause a crash since AppleArchive does not exist.
+    > This can be fixed by explicitly weak linking `libSwiftAppleArchive` in the main app target by marking it as "optional".
+    
+    > ![Screenshot of the Intune App SDK iOS Static Library: Weak linking Apple Archive sample.](./media/app-sdk-ios/intune-app-sdk-ios-weak-link-apple-archive.png.png)
+
      Add the `IntuneMAMResources.bundle` resource bundle to the project by dragging the resource bundle under **Copy Bundle Resources** within **Build Phases**.
 
      ![Intune App SDK iOS: copy bundle resources](./media/app-sdk-ios/intune-app-sdk-ios-copy-bundle-resources.png)
