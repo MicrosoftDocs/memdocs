@@ -27,13 +27,13 @@ appliesto:
 
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This functionality lets end users get their devices business-ready by using a simple process.
 
-:::image type="content" source="images/wg01.png" alt-text="OEM process.":::
+:::image type="content" source="images/wg01.png" alt-text="Diagram of the OEM process.":::
 
 Windows Autopilot can also provide a _pre-provisioning_ service that helps partners or IT staff pre-provision a fully configured and business-ready Windows PC. From the end user's perspective, the Windows Autopilot user-driven experience is unchanged, but getting their device to a fully provisioned state is faster.
 
 With **Windows Autopilot for pre-provisioned deployment**, the provisioning process is split. The time-consuming portions are done by IT, partners, or OEMs. The end user simply completes a few necessary settings and policies and then they can begin using their device.
 
-:::image type="content" source="images/wg02.png" alt-text="OEM process with partner.":::
+:::image type="content" source="images/wg02.png" alt-text="Diagram of the OEM process with partner.":::
 
 Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and later. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Azure Active Directory joined and Hybrid Azure Active Directory joined devices.
 
@@ -101,7 +101,7 @@ After the customer or IT Admin has targeted all the apps and settings they want 
 - Boot the device.
 - From the first OOBE screen (which could be a language selection, locale selection screen, or the Azure AD sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
 
-:::image type="content" source="images/choice.png" alt-text="Windows Autopilot provisioning option.":::
+:::image type="content" source="images/choice.png" alt-text="Screenshot of the Windows Autopilot provisioning option.":::
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.
@@ -115,14 +115,14 @@ After the customer or IT Admin has targeted all the apps and settings they want 
 
 - Validate the information displayed. If any changes are needed, make the changes, and then select **Refresh** to redownload the updated Autopilot profile details.
 
-:::image type="content" source="images/landing.png" alt-text="Windows Autopilot configuration screen.":::
+:::image type="content" source="images/landing.png" alt-text="Screenshot of the Windows Autopilot configuration screen.":::
 
 - Select **Provision** to begin the provisioning process.
 
 If the pre-provisioning process completes successfully:
 
 - A green status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
-:::image type="content" source="images/white-glove-result.png" alt-text="Green configuration screen.":::
+:::image type="content" source="images/white-glove-result.png" alt-text="Screenshot of a green configuration screen.":::
 - Select **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
 
 > [!NOTE]
