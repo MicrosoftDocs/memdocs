@@ -68,6 +68,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of September 4, 2023
+
+### Device management
+
+#### Microsoft Intune ending support for Android device administrator on devices with GMS access in August 2024<!--13891824 -->
+
+Microsoft Intune is ending support for [Android device administrator management](../enrollment/android-enroll-device-administrator.md) on devices with access to Google Mobile Services (GMS) on August 30, 2024. After that date, device enrollment, technical support, bug fixes, and security fixes will be unavailable.  
+
+If you currently use device administrator management, we recommend switching to another Android management option in Intune before support ends.
+For more information, read [Ending support for Android device administrator on GMS devices](https://aka.ms/Intune-Android-DA-blog).
+
 ## Week of August 28, 2023
 
 ### Device configuration
@@ -300,7 +311,7 @@ The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy
 
 New profiles that you create include the original settings as well as the new settings. Your existing profiles automatically update to include the new settings, with each new setting set to *Not configured* until you choose to edit that profile to change it.
 
-For more information about how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide).
+For more information about how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide&preserve-view=true).
 
 ### Intune apps
 

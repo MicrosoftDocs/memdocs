@@ -511,13 +511,16 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
   # [Android](#tab/android-kiosk)
 
-  - **Android device administrator**
-    - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-android.md#kiosk)
-
   - **Android Enterprise**:
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
     - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices)
+
+  - **Android device administrator**
+    - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
+    - [Device settings to run as a kiosk](../configuration/device-restrictions-android.md#kiosk)
+    
+     [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 
   # [iOS/iPadOS](#tab/ios-kiosk)
 
