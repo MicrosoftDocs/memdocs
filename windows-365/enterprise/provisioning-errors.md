@@ -78,7 +78,7 @@ JsonADDomainExtension is the Azure function used to perform this domain join. Ma
 
 Windows 365 doesn’t perform any Microsoft Entra hybrid join function for the customer. Microsoft Entra hybrid join must be configured and healthy as a pre-requisite for Cloud PC.
 
-If provisioning fails because of Microsoft Entra hybrid join, it’s likely because of an insufficient sync period configured in your AD Sync service. Make sure that Microsoft Entra Connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will time out if the Microsoft Entra ID object doesn’t appear within 90 minutes.
+If provisioning fails because of Microsoft Entra hybrid join, it’s likely because of an insufficient sync period configured in your AD Sync service. Make sure that Microsoft Entra Connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will time out if the Microsoft Entra object doesn’t appear within 90 minutes.
 
 Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 will be replicated fast enough to make it into Microsoft Entra ID within this five hour timeout window.
 
