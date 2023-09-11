@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2022
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.collection:
 
 You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that enrolled as supervised devices.
 
-[Supervised devices](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) are devices that enroll through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
+A [supervised device](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
 This feature applies to:
 
@@ -48,7 +48,7 @@ With policies for iOS software updates, you can:
 
 - Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in, or creating date and time ranges during which updates can install or are blocked from installing.
 
-  By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
+  By default, devices check in with Intune about every eight hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
 > [!NOTE]
 >
@@ -104,7 +104,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 
    After configuring *Update policy settings*, select **Next**.
 
-5. On the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
+5. If [available](../fundamentals/scope-tags.md#default-scope-tag), on the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
 
    - On the **Select tags** pane, choose one or more tags, and then **Select** to add them to the policy and return to the *Scope tags* pane.
 
