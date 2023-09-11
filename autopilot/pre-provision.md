@@ -164,7 +164,7 @@ The device ESP reruns during the user flow so that both device and user ESP run 
 
 <!-- Intune 12378279 -->
 
-- [Pre-provisioning video](https://youtu.be/nE5XSOBV0rI)
+- [Pre-provisioning video](https://youtu.be/nE5XSOBV0rI).
 - [What is a device identity?](/azure/active-directory/devices/overview).
 - [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
 - [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
