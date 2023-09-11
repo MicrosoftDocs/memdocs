@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -111,7 +111,9 @@ After naming the certificate, it can be saved.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that will receive this profile.
-   - **Profile**: Select **Trusted certificate**. Or, select **Templates** > **Trusted certificate**.
+   - **Profile**: Depending on your chosen platform, select **Trusted certificate** or select **Templates** > **Trusted certificate**.
+
+   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 4. Select **Create**.
 
@@ -130,10 +132,9 @@ After naming the certificate, it can be saved.
    - **User certificate store - Intermediate**
 
    ![Create a profile and upload a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-fill.png)
-   
-   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
 
 8. Select **Next**.
+
 
 9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
