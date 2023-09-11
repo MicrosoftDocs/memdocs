@@ -91,7 +91,7 @@ Users must authenticate with the Windows 365 service when:
 - They navigate to the URL that maps directly to their Cloud PC.
 - They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) to list their Cloud PCs.
 
-This authentication triggers a Microsoft Entra ID prompt, allowing any credential type that is supported by both Microsoft Entra ID and your OS.
+This authentication triggers a Microsoft Entra ID, allowing any credential type that is supported by both Microsoft Entra ID and your OS.
 
 ### Passwordless authentication
 You can use any authentication type supported by Microsoft Entra ID, such as [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) and other [passwordless authentication options](/azure/active-directory/authentication/concept-authentication-passwordless) (for example, FIDO keys), to authenticate to the service.
