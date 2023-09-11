@@ -40,7 +40,7 @@ The Intune App SDK supports similar scenarios across iOS and Android, and is int
 
 The following diagram provides the process flow for the Intune App SDK for iOS and the Intune App SDK for Android:
 
-:::image type="content" source="media/app-sdk-get-started/intune-app-sdk-combined-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune"  lightbox="media/app-sdk-get-started/intune-app-sdk-combined-process-flow.png" :::
+:::image type="content" source="media/app-sdk-get-started/intune-app-sdk-combined-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune."  lightbox="media/app-sdk-get-started/intune-app-sdk-combined-process-flow.png" :::
 
 ## Register your store app with Microsoft
 

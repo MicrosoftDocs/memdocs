@@ -73,7 +73,7 @@ The objective of the Intune App SDK for iOS is to add management capabilities to
 
 The following diagram provides the Intune App SDK for iOS process flow:
 
-:::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune"  lightbox="media/app-sdk-ios/intune-app-sdk-ios-process-flow.png" :::
+:::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune."  lightbox="media/app-sdk-ios/intune-app-sdk-ios-process-flow.png" :::
 
 ## Build the SDK into your mobile app
 

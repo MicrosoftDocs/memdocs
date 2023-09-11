@@ -39,7 +39,7 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 
 The following diagram provides the Intune App SDK for Android process flow:
 
-:::image type="content" source="media/app-sdk-android/intune-app-sdk-android-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune"  lightbox="media/app-sdk-android/intune-app-sdk-android-process-flow.png" :::
+:::image type="content" source="media/app-sdk-android/intune-app-sdk-android-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune."  lightbox="media/app-sdk-android/intune-app-sdk-android-process-flow.png" :::
 
 ## Stage Goals
 The guide contains greater detail about the Intune App SDK's architecture, information about uncommon integration steps, and other helpful content.
