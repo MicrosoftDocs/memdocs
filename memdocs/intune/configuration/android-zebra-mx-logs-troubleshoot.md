@@ -48,6 +48,9 @@ Some issues aren't related to the contents of the StageNow profile, and aren't r
 
 This article shows you how to read the StageNow logs. It also lists some potential issues with Zebra devices that may not be reflected in the logs.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 [Use and manage Zebra devices with Zebra Mobility Extensions](android-zebra-mx-overview.md) has more information on this feature.
 
 ## Get the logs

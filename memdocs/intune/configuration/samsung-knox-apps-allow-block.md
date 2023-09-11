@@ -42,6 +42,9 @@ This feature applies to:
 
 These settings can only be used by devices that run Samsung Knox Standard.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Create an allowed or blocked app list
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
