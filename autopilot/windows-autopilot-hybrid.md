@@ -84,17 +84,17 @@ The organizational unit that's granted the rights to create computers must match
 
 1. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
 
-    :::image type="content" source="./media/windows-autopilot-hybrid/delegate-control.png" alt-text="The Delegate Control command.":::
+    :::image type="content" source="./media/windows-autopilot-hybrid/delegate-control.png" alt-text="Screenshot of the Delegate Control command.":::
 
 1. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
 
 1. In the **Object Types** pane, select the **Computers** > **OK**.
 
-    :::image type="content" source="./media/windows-autopilot-hybrid/object-types-computers.png" alt-text="The Object Types pane.":::
+    :::image type="content" source="./media/windows-autopilot-hybrid/object-types-computers.png" alt-text="Screenshot of the Object Types pane.":::
 
 1. In the **Select Users, Computers, or Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
 
-    :::image type="content" source="./media/windows-autopilot-hybrid/enter-object-names.png" alt-text="The Select Users, Computers, or Groups pane.":::
+    :::image type="content" source="./media/windows-autopilot-hybrid/enter-object-names.png" alt-text="Screenshot of the Select Users, Computers, or Groups pane.":::
 
 1. Select **Check Names** to validate your entry > **OK** > **Next**.
 
@@ -104,13 +104,13 @@ The organizational unit that's granted the rights to create computers must match
 
 1. Select **Create selected objects in this folder** and **Delete selected objects in this folder**.
 
-    :::image type="content" source="./media/windows-autopilot-hybrid/only-following-objects.png" alt-text="The Active Directory Object Type pane.":::
+    :::image type="content" source="./media/windows-autopilot-hybrid/only-following-objects.png" alt-text="Screenshot of the Active Directory Object Type pane.":::
 
 1. Select **Next**.
 
 1. Under **Permissions**, select the **Full Control** check box. This action selects all the other options.
 
-    :::image type="content" source="./media/windows-autopilot-hybrid/full-control.png" alt-text="The Permissions pane.":::
+    :::image type="content" source="./media/windows-autopilot-hybrid/full-control.png" alt-text="Screenshot of the Permissions pane.":::
 
 1. Select **Next** > **Finish**.
 
