@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/30/2022
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
-3. Select the *certificate connector* link to download the connector software. Save the file to a location that’s accessible from the server where you're going to install the connector.
+3. On the *Install the certificate connector* pane, select the *certificate connector* link to download the connector software. Save the file to a location that’s accessible from the server where you're going to install the connector.
 
    :::image type="content" source="./media/certificate-connector-install/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
 
