@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- ContentEnagagementFY24
 ---
 
 # Manage policy for Windows Driver updates with Microsoft Intune
