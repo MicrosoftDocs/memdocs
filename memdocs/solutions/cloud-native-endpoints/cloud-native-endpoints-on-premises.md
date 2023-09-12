@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 09/11/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: 

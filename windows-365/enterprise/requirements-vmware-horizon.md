@@ -52,16 +52,16 @@ To use VMware Horizon for Windows 365, you must meet the following requirements:
 ## Microsoft requirements
 
 - Microsoft Intune entitlement
-- Azure Active Directory (Azure AD) domain in the same tenant as Microsoft Intune
+- Microsoft Entra domain in the same tenant as Microsoft Intune
 - Windows 365 Enterprise licenses in the same tenant as Microsoft Intune
 - Azure admin account:
-  - Azure AD Global Admin for required authorizations in the VMware Cloud.
+  - Microsoft Entra Global Admin for required authorizations in the VMware Cloud.
   - Intune Admin for enabling the VMware connector in Microsoft Intune.
   - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
 ## Supported configurations
 
-VMware Horizon for Windows 365 supports integrating with Windows 365 deployments with for Azure AD joined Cloud PCs and Hybrid Azure AD joined Cloud PCs.
+VMware Horizon for Windows 365 supports integrating with Windows 365 deployments with for Microsoft Entra joined Cloud PCs and Microsoft Entra hybrid joined Cloud PCs.
 
 <!-- ########################## -->
 ## Next steps

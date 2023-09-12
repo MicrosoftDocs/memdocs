@@ -40,7 +40,7 @@ To set up Citrix HDX Plus for Windows 365 Enterprise, follow these steps. The fi
 
 1. [Fulfill requirements](requirements-citrix.md).
 2. [Turn on the Citrix connector in Intune](#turn-on-the-windows-365-citrix-connector-in-intune).
-3. [Connect Azure Active Directory to Citrix Cloud](https://docs.citrix.com/en-us/citrix-hdxplus-w365).
+3. [Connect Microsoft Entra ID to Citrix Cloud](https://docs.citrix.com/en-us/citrix-hdxplus-w365).
 4. [Configure Citrix Workspace](https://docs.citrix.com/en-us/citrix-hdxplus-w365).
 5. [Connect Windows 365 to Citrix Cloud](https://docs.citrix.com/en-us/citrix-hdxplus-w365).
 6. [Assign Citrix licenses to users](https://docs.citrix.com/en-us/citrix-hdxplus-w365).
