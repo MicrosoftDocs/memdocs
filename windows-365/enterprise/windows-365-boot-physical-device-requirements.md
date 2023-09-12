@@ -32,7 +32,7 @@ ms.collection:
 
 # Windows 365 Boot physical device setup and requirements
 
-Follow these steps and requirements to setup shared physical devices for Windows 365 Boot.
+Follow these steps and requirements to set up shared physical devices for Windows 365 Boot.
 
 ## Install Windows Insider Program Preview Build
 
@@ -62,10 +62,12 @@ If the device is already registered with Autopilot, skip this section.
 
 3. When prompted, sign in with a user that has the Intune Administrator role. After sign-in, the device is automatically enrolled in Intune. Make a note of the serial number.
 
-## Add the physical device to the Azure Active Directory group
+<a name='add-the-physical-device-to-the-azure-active-directory-group'></a>
+
+## Add the physical device to the Microsoft Entra group
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with the Intune Service Administrator role.
-2. Select **Groups** > **All groups** > search for the Azure Active Directory (Azure AD) group that you used in the [Windows 365 Boot guided scenario](windows-365-boot-guide.md) > select the group.
+2. Select **Groups** > **All groups** > search for the Microsoft Entra group that you used in the [Windows 365 Boot guided scenario](windows-365-boot-guide.md) > select the group.
 3. On the group page, select **Members** > **Add members** > search physical device's serial number > select the physical device > **Select**.
 4. Wait several minutes while the resource assignments complete.
 

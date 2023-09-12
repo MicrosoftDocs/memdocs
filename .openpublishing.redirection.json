@@ -2124,6 +2124,21 @@
       "source_path": "memdocs/autopilot/windows-autopilot-whats-new.md",
       "redirect_url": "/autopilot/windows-autopilot-whats-new",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/ui-changes.md",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
     }
   ]
 }

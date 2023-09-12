@@ -32,15 +32,15 @@ ms.collection:
 
 # Restrict Office 365 services to Cloud PCs
 
-Administrators can deny access to Office 365 services on any device other than a Cloud PC. To do so, you can configure Azure Active Directory (Azure AD) Conditional Access policies and [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) as described in this article. By following these steps, you can make sure that users use their Cloud PCs as their primary device. In this way, you can improve security for your corporate resources and services.
+Administrators can deny access to Office 365 services on any device other than a Cloud PC. To do so, you can configure Microsoft Entra Conditional Access policies and [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) as described in this article. By following these steps, you can make sure that users use their Cloud PCs as their primary device. In this way, you can improve security for your corporate resources and services.
 
-This article describes how to limit access to Office 365 services. You can use the same strategy with any cloud service that uses Azure Active Directory as the authentication source.
+This article describes how to limit access to Office 365 services. You can use the same strategy with any cloud service that uses Microsoft Entra ID as the authentication source.
 
-1. Create an Azure AD security group to manage which users are controlled by the new policy. Add to this group all the Cloud PC users who will be subjected to the new policy. Only users in this group will be restricted to using Cloud PCs when accessing Office 365 services. If you want to change a user’s access, you can just remove them from this group.
+1. Create a Microsoft Entra security group to manage which users are controlled by the new policy. Add to this group all the Cloud PC users who will be subjected to the new policy. Only users in this group will be restricted to using Cloud PCs when accessing Office 365 services. If you want to change a user’s access, you can just remove them from this group.
 2. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Conditional access** > **Create new policy**.
     ![Create conditional access policy screen shot](./media/restrict-office-365-cloud-pcs/create-conditional-policy.png)
 3. Type a **Name** for your new Conditional Access policy. For example, “Restrict Office 365 access to CPCs”.
-4. Select **0 users and groups selected** > **Include** > **Select users and groups** > **Users and groups** > select the Azure AD security group that you created > **Select**.
+4. Select **0 users and groups selected** > **Include** > **Select users and groups** > **Users and groups** > select the Microsoft Entra security group that you created > **Select**.
     ![Select group screen shot](./media/restrict-office-365-cloud-pcs/select-group.png)
 5. Select **No cloud apps, actions, or authentication contexts selected** > **Include** > **Select apps** > **None** (under **Select**) > search for and select **Office 365** > **Select**.
     ![Select apps to include](./media/restrict-office-365-cloud-pcs/include-apps.png)
