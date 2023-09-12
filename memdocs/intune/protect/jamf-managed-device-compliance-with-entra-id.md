@@ -3,13 +3,15 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title:       Jamf Managed Device Compliance with Entra ID
+description: Configure a new integration to report Jamf device compliance to Intune and Entra ID.
 author:      jeffducasse # GitHub alias
 ms.author:   jeffducasse # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
+manager:     egomes
+ms.service:  microsoft-intune
+ms.subservice: protect
 # ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.topic:    how-to
 ms.date:     09/09/2023
 ---
 
@@ -152,7 +154,7 @@ To ensure users are able to enroll devices, knowledge of the Entra ID Conditiona
 - Is assigned to all user or that includes users that have Jamf Managed devices.
 - Target Resources are all cloud apps.
 - with 2 conditions.  1 that requires compliance and 1 that requires a registerd device.
-![Entra_CA_User_App-exceptions-resize](media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions-resize.png)
+![Image of the Entra Condtional Access Policy exception for user application.](media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions-resize.png)
 
 For the example above, the **Target Resources** exclusions should be updated with the **User Registration app for Device Compliance** app.
 
@@ -176,5 +178,6 @@ This can be verified on the affected device in the macOS terminal application by
 *This was the resolution for this particular issue* **->** If **the command creates a sign in prompt, and the user is able to complete the sign in without error**, there may have been a user error during the initial registration attempt.
 · If the command creates a sign in prompt but there is an error when the user signs in, further troubleshooting is required.
 · Also, it is worth checking the contents of the PLIST here: ~/Library/Preferences/com.jamf.management.jamfAAD.plist.
+
 
 
