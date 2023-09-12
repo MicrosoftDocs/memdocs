@@ -343,7 +343,7 @@ You can manage the settings for Bing Chat Enterprise.
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings are on by default and can be turned off by users.  <br>**false** Bing Chat Enterprise can NOT access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings will be disabled and cannot be turned on by users|
 
 > [!NOTE]
-> Bing Chat Enterprise is only avaiable on Edge for iOS and com.microsoft.intune.mam.managedbrowser.Chat will have **false** as the default value before Aug 28, 2023. You can enable Bing Chat Enterprise by setting the policy value to **true**. The default value will become **true** after Aug 28, 2023 with new release avaiable on Edge for iOS and Android.
+> Bing Chat Enterprise is only available on Edge for iOS and com.microsoft.intune.mam.managedbrowser.Chat will have **false** as the default value before Aug 28, 2023. You can enable Bing Chat Enterprise by setting the policy value to **true**. The default value will become **true** after Aug 28, 2023 with new release available on Edge for iOS and Android.
 
 
 ## Data protection app configuration scenarios

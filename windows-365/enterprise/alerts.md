@@ -64,11 +64,14 @@ You can select an alert from the list to see the details of that alert.
 ## Customize alert rule
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts** > **Alert rules**.
-    ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
+
+   ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
 
 2. Select a rule from the list.
 3. On the **System rule** page, make any changes that you want in the **Conditions**, **Settings**, and **Notifications** sections.
-    ![Screenshot of system rule.](./media/alerts/system-rule.png)
+
+   ![Screenshot of system rule.](./media/alerts/system-rule.png)
+
 4. Select **Apply** to save the changes to the rule.
 
 <!-- ########################## -->
