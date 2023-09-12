@@ -53,7 +53,7 @@ As part of the process to place Cloud PCs under review, Windows 365 requires the
         - **Performance**: **Premium**
         - **Premium account type**: **Page blobs**
     - **Security**
-        - [Authenticate with your Azure AD account](/azure/storage/blobs/authorize-data-operations-portal#authenticate-with-your-azure-ad-account)
+        - [Authenticate with your Microsoft Entra account](/azure/storage/blobs/authorize-data-operations-portal#authenticate-with-your-azure-ad-account)
         - [Prevent Shared Key authorization for an Azure Storage account](/azure/storage/common/shared-key-authorization-prevent) 
         - Minimum TLS version: **Version 1.2**
     - **Networking**

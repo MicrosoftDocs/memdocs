@@ -35,6 +35,12 @@ ms.custom: intune-classic
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
+## Process flow
+
+The following diagram provides the Intune App SDK for Android process flow:
+
+:::image type="content" source="media/app-sdk-android/intune-app-sdk-android-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune."  lightbox="media/app-sdk-android/intune-app-sdk-android-process-flow.png" :::
+
 ## Stage Goals
 The guide contains greater detail about the Intune App SDK's architecture, information about uncommon integration steps, and other helpful content.
 
