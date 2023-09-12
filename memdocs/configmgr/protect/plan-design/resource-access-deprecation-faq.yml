@@ -38,7 +38,7 @@ sections:
           
           Action required by customer: Delete all Resource Access profiles and deployments and reevaluate the prerequisite rules, which allows you to proceed with upgrade. 
           
-          After the upgrade completion, if the cloud attach wizard is configured, the Resource Access workload is defaulted to Intune and remains greyed out in console. If the customer is not previously cloud attached and configures the cloud attach wizard, during or after upgrade, the Resource Access workload is defaulted to Intune and remains greyed out in the console. 
+          After the upgrade completion, if the cloud attach wizard is configured, the Resource Access workload is defaulted to Intune and remains greyed out in console. If the customer is not previously cloud attached and configures the cloud attach wizard, during or after upgrade, the Resource Access workload is defaulted to Intune and remains greyed out in the console. **Company Resource Access** node in Asset Management workspace will be removed.
       
       - question: |
           When will these features removed from Configuration Manager?
