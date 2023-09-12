@@ -32,7 +32,7 @@ ms.collection:
 
 # Windows 365 Boot physical device setup and requirements
 
-Follow these steps and requirements to setup shared physical devices for Windows 365 Boot.
+Follow these steps and requirements to set up shared physical devices for Windows 365 Boot.
 
 ## Install Windows Insider Program Preview Build
 
