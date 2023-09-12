@@ -148,6 +148,7 @@ Prior to the Attack Surface Reduction capability in Windows Server, rules were m
 ## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
+
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
 ## Other updates
