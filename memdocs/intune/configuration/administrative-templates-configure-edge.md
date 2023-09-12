@@ -119,7 +119,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 
     :::image type="content" source="./media/administrative-templates-configure-edge/add-azure-ad-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center.":::
 
-14. In **Review + create**, the summary of your changes are shown. Select **Create**.
+14. In **Review + create**, the summary of your changes is shown. Select **Create**.
 
     When you create the profile, your policy is automatically assigned to the users or groups you chose. If you didn't choose any users or groups, then your policy is created, but it's not deployed.
 
