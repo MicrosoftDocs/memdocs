@@ -19,7 +19,7 @@ summary: |
 
   Starting in Configuration Manager version 2103, the following company resource access [features are deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md):<!-- 9315387 -->
 
-  - Certificate profiles, including the certificate registration point site system role<!--13951253-->
+  - Certificate profiles, including the certificate registration point site system role <!--13951253-->
   - VPN profiles
   - Wi-Fi profiles
   - Windows Hello for Business settings
@@ -71,7 +71,7 @@ sections:
       - question: |
           What happens if I don't enable co-management?
         answer: |
-          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause warning prerequisite checks. You can't create new wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles for Configuration Manager clients. Any existing deployed profiles won't be removed from devices and will continue to function. These existing profiles will be unmanaged. For example, when a certificate expires, Configuration Manager won't renew it.
+          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause warning prerequisite checks. You can't create new wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles for Configuration Manager clients. Any existing deployed profiles won't be removed from devices and will continue to function. These existing profiles are unmanaged. For example, when a certificate expires, Configuration Manager won't renew it.
 
       - question: |
           What happens if I've enabled co-management, but haven't switched the resource access workload?
