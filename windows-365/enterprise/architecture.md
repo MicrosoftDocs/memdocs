@@ -133,11 +133,11 @@ The "hosted on behalf of" architecture lets Microsoft services, after they’re 
 
 The following diagrams show the logical architecture for a Microsoft Entra join configuration using a Microsoft hosted network, a Microsoft Entra join configuration using a customer's network connection ("bring your own network"), and a Microsoft Entra hybrid join configuration using an ANC, respectively.
 
-![Microsoft Entra join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
+![Screenshot of Microsoft Entra join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
 
-![Microsoft Entra join architecture with BYO network](media/architecture/aadjbyon.png)
+![Screenshot of Microsoft Entra join architecture with BYO network](media/architecture/aadjbyon.png)
 
-![Microsoft Entra hybrid join architecture](./media/architecture/haadjarch.png)
+![Screenshot of Microsoft Entra hybrid join architecture](./media/architecture/haadjarch.png)
 
 All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
 
