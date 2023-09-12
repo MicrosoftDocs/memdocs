@@ -42,7 +42,7 @@ For more information, see
 
 ### Option to schedule Scripts execution time
 
-Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC.The run Script Wizard now offers a **scheduling** option, that enables administrators to schedule the execution of scripts. It provides a convenient way to automate the running of scripts on managed devices according to specified schedules.
+Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC.The run Script Wizard now offers a scheduling option that enables administrators to schedule the execution of scripts. It provides a convenient way to automate the running of scripts on managed devices according to specified schedules.
 
 :::image type="content" source="media/17668435-schedule-script.png" alt-text="An example of the schedule script wizard.":::
 
@@ -50,7 +50,7 @@ For more information, see
 
 ### External service notification Run details from Azure Logic application.  
 
-Starting in Configuration Manager current branch version 2309,when Azure Logic App generates notifications or alerts related to specific events or conditions, CM can now capture and display these notifications within the console to the users. This integration enables the monitoring and management of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
+Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications or alerts related to specific events or conditions, CM can now capture and display these notifications within the console to the users. This integration enables the monitoring and management of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
 
 :::image type="content" source="media/17668438-external-service.png" alt-text="An example of the run details of external service notification wizard.":::
 
@@ -67,7 +67,7 @@ PowerShell Commandlet: ```Set-CMSiteMaintenanceTask -Sitecode "XXX" -Maintenance
 
 ### Update Orchestrator Service (USO) for Windows 11 22H2 or later with windows native reboot experience 
 
-In Configuration Manager current branch version 2309, when installing software updates from Configuration Manager, administrators can now choose to use the **native Windows Update restart** experience.To use this feature, client devices must be running Windows build 22H2 or later. From the Computer Restart client device settings, ensure that Windows is selected as the restart experience. Branding information will be included in the Windows restart notification for updates that require restart. 
+In Configuration Manager current branch version 2309, when installing software updates from Configuration Manager, administrators can now choose to use the **native Windows Update restart** experience.To use this feature, client devices must be running Windows build 22H2 or later. From the Computer Restart client device settings, ensure that Windows is selected as the restart experience. Branding information is included in the Windows restart notification for updates that require restart. 
 
 For more information, see
 
@@ -86,13 +86,13 @@ For more information, see
 
 Starting in Configuration Manager current branch version 2309, Preferred Management Point (MP) option will now allow **PXE clients** to communicate to an initial lookup MP and receive the list of MP(s) to be used for further communication. When the option is enabled, it allows an MP to redirect the PXE client to another MP, based on the client location in the site boundaries.
 
-:::image type="content" source="media/2839966-osd-mp-pxe.png" alt-text="An example of the preffered management pount option in console.":::
+:::image type="content" source="media/2839966-osd-mp-pxe.png" alt-text="An example of the management point option in console.":::
 
 For more information, see
 
 ### Enable Bitlocker through ProvisionTS  
 
-In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. ProvisionTS is the task sequence, that is executed at the time of provisioning.As a result, device can escrow the key to Config Manager Database instantly.  
+In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. ProvisionTS is the task sequence that is executed at the time of provisioning. As a result device can escrow the key to Config Manager Database instantly.
 
 For more information, see
 
@@ -106,7 +106,7 @@ For more information, see
 
 ### Windows 11 Upgrade Readiness Dashboard 
 
-Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for Windows 11 Upgrade.This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
+Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for Windows 11 Upgrade. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
 
 :::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="An example  of UX of windows 11 readiness dashboard.":::
   
@@ -116,7 +116,7 @@ For more information, see
 
 ### CMG creation using Third PartyApp via Console  
 
-Starting in Configuration Manager current branch version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG will use a third party server app to get bearer tokens.For CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears.To update the server app, you can navigate to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings". 
+Starting in Configuration Manager current branch version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens.For CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears.To update the server app, you can navigate to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings". 
 
 >[Note]
 >Existing Customers, must update their server app as current version, doesn't have the Redirect to- "http://localhost"
