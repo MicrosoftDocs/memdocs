@@ -125,7 +125,7 @@ To see alerts for unassigned devices, in the [Microsoft Intune admin center](htt
 
 ## Autopilot profile priority
 
-If you have groups assigned to multiple Autopilot profile, the device would receive the oldest created profile to resolve the conflict. To see when an Autopilot profile is created, select the Autopilot profile name from the Windows Autopilot deployment profiles blade and the created date will be visible under the Overview tab.
+If you have groups assigned to multiple Autopilot profile, the device would receive the oldest created profile to resolve the conflict. If no other profile is applicable to the device and there is a default profile (any Autopilot profile assigned to all devices), then the default profile is applied. If a device is assigned to a security group that is not assigned to Autopilot profile, then it would receive the default profile targeted to all devices. To see when an Autopilot profile is created, select the Autopilot profile name from the Windows Autopilot deployment profiles blade and the created date will be visible under the Overview tab.
 
 ## Autopilot deployments report
 
