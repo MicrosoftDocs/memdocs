@@ -39,7 +39,7 @@ This article is for people who plan to buy and set up Windows 365 Business for t
 > [!NOTE]  
 > Before starting, make sure that your [Microsoft Entra device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for **Users may join devices to Azure AD** are set to **All**.
 
-   ![Users may join devices to Microsoft Entra settings.](./media/get-started-windows-365-business/azure-device-settings.png)
+   ![Screenshot of Users may join devices to Microsoft Entra settings.](./media/get-started-windows-365-business/azure-device-settings.png)
 
 ## Prerequisites
 
