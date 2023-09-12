@@ -91,7 +91,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
   > [!NOTE]
   >
   > When using the assignment **All Devices**, exclusions aren't supported. Attempting to exclude groups while targeting to all devices may cause assignment problems and may require uploading device hashes again.
-    
+
 13. Select **Next**.
 14. On the **Review + Create** page, choose **Create** to create the profile.
 
@@ -123,6 +123,10 @@ Alerts will show how many Autopilot program devices don't have Autopilot deploym
 
 To see alerts for unassigned devices, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
 
+## Autopilot profile priority
+
+If you have groups assigned to multiple Autopilot profile, the device would receive the oldest created profile to resolve the conflict. To see when an Autopilot profile is created, select the Autopilot profile name from the Windows Autopilot deployment profiles blade and the created date will be visible under the Overview tab.
+
 ## Autopilot deployments report
 
 You can see details on each device deployed through Windows Autopilot.
@@ -136,3 +140,4 @@ This report is in preview. Device deployment records are currently triggered onl
 [Profile download](troubleshooting.md#profile-download)
 
 [Registering devices](add-devices.md)
+
