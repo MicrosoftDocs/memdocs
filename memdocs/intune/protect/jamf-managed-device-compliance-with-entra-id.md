@@ -122,9 +122,8 @@ Jamf pro will utilize connectors in Intune > Tenant Administration > connectors 
 1. Two Microsoft Authentication prompts will show in success requiring the Microsoft 365 Global Administrator to authenticate.
    - The first authentication prompt will create the Cloud Connector for Device Compliance application in Entra ID.  
    - The second authentication prompt will create the User registration app for Device Compliance.
-      ![Image showing prompts for permissions requested in the Entra registered applications.](media/jamf-managed-device-compliance-with-entra-id/appregreqs-all.png)
-      :::image type="content" lightbox="./media/jamf-managed-device-compliance-with-entra-id/appregreqs-all.png":::
-
+     ![Image showing prompts for permissions requested in the Entra registered applications.](media/jamf-managed-device-compliance-with-entra-id/appregreqs-all.png)
+      
 1. A new browser tab will open a Jamf Portal page with a **Configure Compliance Partner** dialog.
 ![Image of the Jamf Configure Compliance Partner Open Microsoft Endpoint Manager button.](media/jamf-managed-device-compliance-with-entra-id/jamf-create-connector-3a.png)
 
@@ -178,6 +177,7 @@ This can be verified on the affected device in the macOS terminal application by
 *This was the resolution for this particular issue* **->** If **the command creates a sign in prompt, and the user is able to complete the sign in without error**, there may have been a user error during the initial registration attempt.
 · If the command creates a sign in prompt but there is an error when the user signs in, further troubleshooting is required.
 · Also, it is worth checking the contents of the PLIST here: ~/Library/Preferences/com.jamf.management.jamfAAD.plist.
+
 
 
 
