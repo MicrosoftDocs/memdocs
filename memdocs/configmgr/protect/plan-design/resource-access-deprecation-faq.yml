@@ -32,6 +32,15 @@ sections:
   - name: Ignored
     questions:
       - question: |
+          What happens when you upgrade to CM 2403? 
+        answer: |
+          When you upgrade your Configuration Manager site to 2403, the [prerequisite checker will display an error](../../core/servers/deploy/install/list-of-prerequisite-checks.md#resource-access-policies-are-no-longer-supported). This will block upgrade. 
+          
+          Action required by customer: Delete all Resource Access profile deployments and re-evaluate the pre-requisite rules, which will now allow you to proceed with upgrade. 
+          
+          After the upgrade completion, if the cloud attach wizard is configured, the Resource Access workload is defaulted to Intune and remains greyed out in console. If the customer is not previously cloud attached and configures the cloud attach wizard, during or after upgrade, the Resource Access workload is defaulted to Intune and remains greyed out in the console. 
+      
+      - question: |
           When will these features be removed from Configuration Manager?
         answer: |
           Starting in version 2203, these features will still be available in Configuration Manager, but no longer tested or supported. When you upgrade to version 2203, the [prerequisite checker will display a warning](../../core/servers/deploy/install/list-of-prerequisite-checks.md#resource-access-policies-are-no-longer-supported).
