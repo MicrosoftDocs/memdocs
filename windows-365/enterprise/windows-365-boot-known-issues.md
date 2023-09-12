@@ -97,7 +97,7 @@ Windows 365 Boot uses “clean” Windows 11 devices that don't have preconfigur
 
 ## Single sign-on users see a dialog to allow remote desktop connection during the connection attempt
 
-When using single sign-on, users are prompted to authenticate to Azure Active Directory (Azure AD) and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Azure AD remembers up to 15 devices for 30 days before prompting again.
+When using single sign-on, users are prompted to authenticate to Microsoft Entra ID and allow the Remote Desktop connection when launching a connection to a new Cloud PC. Microsoft Entra remembers up to 15 devices for 30 days before prompting again.
 
 **Troubleshooting steps**: If you see this dialog, select **Yes** to connect.
 
@@ -148,10 +148,10 @@ Your Conditional Access policies might also be causing other authentication dial
 
 When using single sign-on, users are prompted to:
 
-- Authenticate to Azure AD
+- Authenticate to Microsoft Entra ID
 - Allow the Remote Desktop connection when launching a connection to a new Cloud PC.
 
-Azure AD remembers up to 15 devices for 30 days before prompting again.
+Microsoft Entra remembers up to 15 devices for 30 days before prompting again.
 
 If you see this dialog, select **Yes** to connect.
 
@@ -221,10 +221,10 @@ This known issue is related to application registration that is under investigat
 
 Resources created by the Windows 365 Boot guided scenario can be applied to both:
 
-- Azure AD joined devices
-- hybrid Azure AD joined devices in tenants where certain workloads have been switched to Intune. For hybrid Azure AD joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
+- Microsoft Entra joined devices
+- Microsoft Entra hybrid joined devices in tenants where certain workloads have been switched to Intune. For Microsoft Entra hybrid joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
 
-**Troubleshooting steps**: To determine if your device is hybrid Azure AD joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is hybrid Azure AD joined, see [Co-management workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
+**Troubleshooting steps**: To determine if your device is Microsoft Entra hybrid joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is Microsoft Entra hybrid joined, see [Co-management workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
 
 ## User can't reset their password on the Windows 365 Boot device
 
@@ -250,7 +250,7 @@ This occurs when the provider app was uninstalled, or isn't available or install
 - Wait for the app to install on the physical device.
 - Contact the user's IT admin and ask them to push the app to the device.
 
-If the issue persist, contact support.
+If the issue persists, contact support.
 
 
 <!-- ########################## -->

@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Use Azure AD to access the Windows 365 APIs in Microsoft Graph
+title: Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph
 titleSuffix:
-description: Learn how to use Azure AD to access the Windows 365 APIs in Microsoft Graph.
+description: Learn how to use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -30,15 +30,15 @@ ms.collection:
 - tier2
 ---
 
-# Use Azure AD to access the Windows 365 APIs in Microsoft Graph
+# Use Microsoft Entra ID to access the Windows 365 APIs in Microsoft Graph
 
-The Microsoft Graph API supports Windows 365 as a Beta workload with specific APIs and permission roles. The Microsoft Graph API uses Azure Active Directory (Azure AD) for authentication and access control. Access to the Windows 365 APIs in Microsoft Graph requires:
+The Microsoft Graph API supports Windows 365 as a Beta workload with specific APIs and permission roles. The Microsoft Graph API uses Microsoft Entra ID for authentication and access control. Access to the Windows 365 APIs in Microsoft Graph requires:
 
 - An application ID with:
-  - Permission to call Azure AD and the Microsoft Graph APIs.
+  - Permission to call Microsoft Entra ID and the Microsoft Graph APIs.
   - Permission scopes relevant to the specific application tasks.
 - User credentials with:
-  - Permission to access the Azure AD tenant associated with the application.
+  - Permission to access the Microsoft Entra tenant associated with the application.
   - Role permissions required to support the application permission scopes.
 - The end user to grant permissions to the app to perform application tasks for their Azure tenant.
 
@@ -72,10 +72,10 @@ You can also choose to grant permission for all tenant accounts to use the app w
 <!-- ########################## -->
 ## Next steps
 
-[Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
+[Authorize access to web applications using OAuth 2.0 and Microsoft Entra ID](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
-[Getting started with Azure AD authentication](/azure/devops/integrate/get-started/authentication/oauth).
+[Getting started with Microsoft Entra authentication](/azure/devops/integrate/get-started/authentication/oauth).
 
-[Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
+[Integrating applications with Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications).
 
 [Understand OAuth 2.0](https://oauth.net/2/).

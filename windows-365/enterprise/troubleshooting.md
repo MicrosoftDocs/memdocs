@@ -48,16 +48,16 @@ After the installation, the optimizations to redirect audio and video to your lo
 
 ## Conditional access
 
-Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Intune admin center or Azure Active Directory.
+Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Intune admin center or Microsoft Entra ID.
 
 Any conditional access policy that you apply will affect:
 
 - Access to the end-user web portal
 - The connection to the Cloud PC from the Remote Desktop apps.
 
-For more information about service dependencies in Azure AD Conditional Access, see [Conditional Access service dependencies](/azure/active-directory/conditional-access/service-dependencies).
+For more information about service dependencies in Microsoft Entra Conditional Access, see [Conditional Access service dependencies](/azure/active-directory/conditional-access/service-dependencies).
 
-Applying a more restrictive policy to Azure Virtual Desktop than the Windows 365 cloud app will result in Azure AD honoring the more restrictive policy. This policy will affect end user connectivity to their Cloud PCs after accessing the Windows 365 end user portal.
+Applying a more restrictive policy to Azure Virtual Desktop than the Windows 365 cloud app will result in Microsoft Entra ID honoring the more restrictive policy. This policy will affect end user connectivity to their Cloud PCs after accessing the Windows 365 end user portal.
 
 For more information on how a given policy may affect your environment, see [Troubleshoot using the What If tool in Conditional Access](/azure/active-directory/conditional-access/what-if-tool).
 
