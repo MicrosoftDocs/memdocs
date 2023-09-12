@@ -404,6 +404,12 @@ For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md)
 
 For more information, see [External notifications](../../servers/manage/external-notifications.md).
 
+### <a name="BKMK_PortsSCP-to-SQL"></a> Service connection point `-->` SQL Server
+
+|Description|UDP|TCP|
+|-----------------|---------|---------|
+|SQL over TCP|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
+
 ### <a name="BKMK_PortsSite-AISP"></a> Site server `<-->` Asset Intelligence synchronization point
 
 |Description|UDP|TCP|
