@@ -175,6 +175,6 @@ This can be verified on the affected device in the macOS terminal application by
 · If the command does not result in a prompt, but instead returns AAD ID acquired for macOS user $USER, then the registration was good.
 *This was the resolution for this particular issue* **->** If **the command creates a sign in prompt, and the user is able to complete the sign in without error**, there may have been a user error during the initial registration attempt.
 · If the command creates a sign in prompt but there is an error when the user signs in, further troubleshooting is required.
-· Also, it is worth checking the contents of the PLIST here: ~/Library/Preferences/com.jamf.management.jamfAAD.plist
+· Also, it is worth checking the contents of the PLIST here: ~/Library/Preferences/com.jamf.management.jamfAAD.plist.
 
 
