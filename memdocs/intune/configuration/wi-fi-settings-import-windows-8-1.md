@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -54,7 +54,7 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 
 1. Create a local folder for the exported Wi-Fi profiles, such as **c:\WiFi**.
 2. Open a command prompt as an administrator.
-3. Run the `netsh wlan show profiles` command. Note the name of the profile you'd like to export. In this example, the profile name is **ContosoWiFi**.
+3. Run the `netsh wlan show profiles` command. Note the name of the profile you'd like to export. In our example, the profile name is **ContosoWiFi**.
 4. Run the `netsh wlan export profile name="ContosoWiFi" folder=c:\Wifi` command. This command creates a Wi-Fi profile file named **Wi-Fi-ContosoWiFi.xml** in your target folder.
 
 > [!IMPORTANT]
@@ -81,7 +81,7 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: This setting is the profile name. You must enter the same name as the `name` attribute in the Wi-Fi profile xml. If you enter a different name, the profile will fail.
+    - **Name**: This setting is the profile name. You must enter the same name as the `name` attribute in the Wi-Fi profile xml. If you enter a different name, the profile fails.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended. For example, enter `Imported Wi-Fi profile for Windows Holographic devices`.
 
 6. Select **Next**.
@@ -92,17 +92,17 @@ Use `netsh wlan` to export an existing Wi-Fi profile to an XML file readable by 
     - **File contents**: Shows the XML code for the XML file you selected.
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Next steps
+## Related content
 
 The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status.](device-profile-monitor.md).
 

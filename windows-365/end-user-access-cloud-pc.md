@@ -68,7 +68,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ![Card menu.](business/media/get-started-windows-365-business/cloud-pc-gear.png)
 
-- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Intune, Azure Active Directory, on the device, or in the Remote Desktop Apps.
+- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Intune, Microsoft Entra ID, on the device, or in the Remote Desktop Apps.
 - **Reset**:
   - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.
@@ -248,7 +248,7 @@ To set up their Remote Desktop client, users follow these steps:
 
 1. Download the Remote Desktop app from the [Remote Desktop clients page](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
 2. Select **Subscribe**.
-3. Enter their Azure Active Directory credentials.
+3. Enter their Microsoft Entra credentials.
 4. The Cloud PC appears in the list, and they can double-click it to launch.
 
 <!-- ########################## -->
