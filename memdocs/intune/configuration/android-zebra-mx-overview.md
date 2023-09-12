@@ -89,7 +89,7 @@ Continue to publish the profile, and consume it with the StageNow app on the dev
 
 ## Step 2 - Confirm the Company Portal app has device administrator role
 
-The Company Portal app requires Device Administrator to manage Android devices. To activate the Device Administrator role, some Zebra devices include a user interface (UI) on the device. If the device includes a UI, the Company Portal app prompts the end user to grant Device Administrator during [enrollment](#step-3-enroll-the-device-in-to-intune) (in this article).
+The Company Portal app requires Device Administrator to manage Android devices. To activate the Device Administrator role, some Zebra devices include a user interface (UI) on the device. If the device includes a UI, the Company Portal app prompts the end user to grant Device Administrator during [enrollment](#step-3---enroll-the-device-in-to-intune) (in this article).
 
 If a UI isn't available, use the **DevAdmin Manager** in StageNow to create a profile that manually grants Device Administrator to the Company Portal app.
 
