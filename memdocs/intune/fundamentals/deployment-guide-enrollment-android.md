@@ -77,7 +77,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 
 This task list provides an overview. For more specific information, go to [Set up enrollment of Android Enterprise personally owned work profile devices](../enrollment/android-work-profile-enroll.md).
 
-- Be sure your devices are [supported](supported-devices-browsers.md).
+- Be sure your devices are [supported based on platform](supported-devices-browsers.md). For AOSP devices, see [Android Open Source Project Supported Devices](../fundamentals/android-os-project-supported-devices.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, go to [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).
 
 ### End user tasks (personally owned devices with a work profile)
