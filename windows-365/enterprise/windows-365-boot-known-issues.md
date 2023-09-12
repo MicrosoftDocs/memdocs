@@ -250,7 +250,7 @@ This occurs when the provider app was uninstalled, or isn't available or install
 - Wait for the app to install on the physical device.
 - Contact the user's IT admin and ask them to push the app to the device.
 
-If the issue persist, contact support.
+If the issue persists, contact support.
 
 
 <!-- ########################## -->
