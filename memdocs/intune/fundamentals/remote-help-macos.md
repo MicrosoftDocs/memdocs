@@ -59,9 +59,9 @@ The Remote Help web app supports the following capabilities on macOS:
 
 - **Chat functionality** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).  
 
-## Prerequisites for Remote Help on Windows
+## Prerequisites for Remote Help on macOS
 
-General prerequisites for Remote Help, are listed here [Prerequisites for Remote Help](remote-help.md#prerequisites).
+General prerequisites for Remote Help are listed here [Prerequisites for Remote Help](remote-help.md#prerequisites).
 
 The prerequisites for Remote Help on macOS are listed under [Supported devices](#supported-devices).
 
@@ -81,7 +81,7 @@ The prerequisites for Remote Help on macOS are listed under [Supported devices](
 
 - Chrome (version 109+)
 
-- Edge (version 109+)
+- Microsoft Edge (version 109+)
 
 ### Network considerations
 
@@ -120,7 +120,7 @@ Remote Help offers screen share session mode on macOS:
 
 ## Using Remote Help
 
-The use of Remote Help depends on whether you're requesting help or providing help. In this section we'll cover both scenarios.
+The use of Remote Help depends on whether you're requesting help or providing help. In this section, we cover both scenarios.
 
 ### Request help
 
@@ -140,7 +140,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 #### Request help on an unenrolled device
 
-The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you are trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. 
+The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter the security code that get from the individual who is assisting you.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
@@ -154,7 +154,7 @@ Follow the rest of the steps outlined in [Request help](#request-help) to be in 
 
 As a helper, after receiving a request from a user who wants assistance by using Remote Help. While the sharer is using a macOS device, you can provide support on either a macOS device or Windows device.
 
-1. Navigate to the device you are trying to help from within the Microsoft Intune admin center:
+1. Navigate to the device you're trying to help from within the Microsoft Intune admin center:
 
    1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the macOS device on which assistance is needed.
 
@@ -162,7 +162,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 2. Copy and share session link with the sharer that you're trying to help, before selecting Start to launch a new Remote Help session.  
 
-   a. When the sharer navigates to the session link with the passcode embedded, they are 	able to directly get to the specific session.
+   a. When the sharer navigates to the session link with the passcode embedded, they're 	able to directly get to the specific session.
 
    b. As an alternative, you can copy and share the 8-digit passcode with the sharer. The sharer can navigate to aka.ms/rh and follow the steps.
 
@@ -176,13 +176,13 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 #### Provide help on an unenrolled device
 
-If the device that you are trying to help is not enrolled in Intune, you'll have to follow the process described in this section to give help:
+If the device that you're trying to help isn't enrolled in Intune, you have to follow the process described in this section to give help:
 
 1. Navigate to aka.ms/rhh on your browser and sign in to authenticate to your organization.
 
-2. After signing in, copy and share the 8-digit security code with the person you are trying to help.
+2. The helper has to sign in, copy and then share the 8-digit security code with the person they are trying to help.
 
-Remote Help displays a warning if the sharer's device is not enrolled in Microsoft Intune. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+Remote Help displays a warning if the sharer's device isn't enrolled in Microsoft Intune. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
 Follow the steps provided in the section [Provide help](#provide-help) to be in a connected session.
 
@@ -244,7 +244,7 @@ Remote Help is supported in the following languages:
 
 If the sharer exits from a Remote Help session early, the helper may not be notified for 60+ seconds.  
 
-If using Edge, it may require the sharer to sign in to Edge before starting a session or the device is reported as "Unenrolled".
+If using Microsoft Edge, it may require the sharer to sign in to the browser before starting a session or the device is reported as "Unenrolled".
 
 ## Next steps
 
