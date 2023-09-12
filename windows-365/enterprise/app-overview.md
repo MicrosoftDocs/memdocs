@@ -57,7 +57,7 @@ Both the Line of Business and Windows app (win32) options within Intune support 
 
 ### MSIX  
 
-MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and install files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
+MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and installs files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
 
 MSIX combines the best features of MSI, .appx, App-V.
 
