@@ -8,19 +8,17 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/10/2023
+ms.date: 09/13/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
 ms.topic: how-to
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Windows Autopilot motherboard replacement scenario guidance
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
 
 This document offers guidance for Windows Autopilot device repair scenarios that Microsoft partners can use in motherboard replacement situations, and other servicing scenarios.
 
@@ -29,9 +27,9 @@ Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requ
 If a motherboard is replaced on an Autopilot registered device with the following versions of Windows:
 
 - Windows 11 22H2 (all versions)
-- Windows 11 21H2 with [KB5015882](https://support.microsoft.com/topic/july-21-2022-kb5015882-os-build-22000-832-preview-473e1d95-06a0-4f40-9554-cdc7cca85584) or newer installed
+- Windows 11 21H2 with [KB5015882](https://support.microsoft.com/topic/july-21-2022-kb5015882-os-build-22000-832-preview-473e1d95-06a0-4f40-9554-cdc7cca85584) or later installed
 - Windows 10 22H2 (all versions)
-- Windows 10 21H2 with [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or newer installed
+- Windows 10 21H2 with [KB5017383](https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393) or later installed
 
 and the device goes back to the same tenant without an OS reset, Autopilot attempts to register the new hardware components. In Intune, the profile status for the device shows **Fix pending** as Autopilot attempts to register the new hardware components. If the new hardware components are successfully registered, the device status goes back to the assigned Autopilot profile. If the device can't be successfully registered, the profile status for the device shows **Attention required**. 
 
