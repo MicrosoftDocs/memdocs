@@ -195,7 +195,7 @@ When a repaired device is reregistering through MPC, the uploaded csv file must 
 
 When including the 4K HH in the csv file, you don't also need to include the PKID or Tuple. Those columns may be left blank, as shown in the following example:
 
-![hash](images/hh.png)
+![Screenshot of a CSV file in Excel with a hash value in the Hardware Hash column.](images/hh.png)
 
 ## Reset the device
 
