@@ -37,27 +37,27 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device. During the session, the support staff can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
+Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device.
 
 In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the web app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions. During the session, the support staff can view the device's display.
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
-The Remote Help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren't enrolled with Intune. The app can also be deployed through Intune to your managed devices.
+Remote Help for macOS is available as a web application. You do not need to install the Remote Help app.
 
 ## Remote Help capabilities and requirements on macOS
 
 The Remote Help web app supports the following capabilities on macOS:
 
-- **Use Remote Help with unenrolled devices** - Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
+- **Use Remote Help with unenrolled devices**: Disabled by default, you can choose to allow help to devices that aren't enrolled with Intune.
 
 - **Conditional access**: Administrators can now utilize conditional access capability when setting up policies and conditions for Remote Help. For more information on setting up conditional access, go to [Set up Conditional Access for Remote Help](#set-up-conditional-access-for-remote-help)
 
-- **Compliance Warnings**: Before a helper can connect to a user's device, the helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
+- **Compliance Warnings**: Before connecting to a user's device, the helper sees a non-compliance warning about that device if it's not compliant with its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-  - If the user's device isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
+  - If the user's device that the helper is trying to connect to isn't enrolled, the helper sees a prompt that the user's device is unenrolled.
 
-- **Chat functionality** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).  
+- **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).  
 
 ## Prerequisites for Remote Help on macOS
 
@@ -109,18 +109,15 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.trouter.communication.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
 |\*.alcdn.msauth.net|Required to sign-in to the application Microsoft Azure Authentication Library|
 |\*.wcpstatic.microsoft.com| Used to confirm cookie compliance in accordance with various laws|
-|\*.flightproxy.skype.com | Conversation service URL for Azure Communication Service |
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
 
 ## Remote Help modes available for macOS
 
-Remote Help offers screen share session mode on macOS:
-
-**Screen sharing**: View of the remote screen. Remote Help for a web application. The web app allows support teams to view the sharer's device during a connected session. The use of Remote Help depends on whether you're requesting help or providing help.
+Remote Help offers screen share session mode on macOS.
 
 ## Using Remote Help
 
-The use of Remote Help depends on whether you're requesting help or providing help. In this section, we cover both scenarios.
+The web app allows support teams to view the sharer's device during a connected session. The use of Remote Help depends on whether you're requesting help or providing help. In this section, we cover both scenarios.
 
 ### Request help
 
@@ -160,19 +157,17 @@ As a helper, after receiving a request from a user who wants assistance by using
 
    2. From the remote actions bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
 
-2. Copy and share session link with the sharer that you're trying to help, before selecting Start to launch a new Remote Help session.  
+2. Copy and share session link with the sharer that you're trying to help, before selecting **Start** to launch a new Remote Help session.  
 
-   a. When the sharer navigates to the session link with the passcode embedded, they're 	able to directly get to the specific session.
+   a. When the sharer navigates to the session link with the passcode embedded, they're able to directly get to the specific session.
 
    b. As an alternative, you can copy and share the 8-digit passcode with the sharer. The sharer can navigate to aka.ms/rh and follow the steps.
 
-2. When Remote Help opens, you must sign in to authenticate to your organization.
+3. When Remote Help opens in a new tab, you must sign in to authenticate to your organization.
 
-3. After the sharer navigates to the Remote Help session, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
+4. After the sharer navigates to the Remote Help session, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
 
-   At this time, you can only request a screen sharing session of the sharer's device. The sharer can choose *Allow* or *Decline* the request.
-
-4. Remote Help displays a **Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
+5. At this time, you can only request a screen sharing session of the sharer's device. The sharer can choose *Allow* or *Decline* the request. Remote Help displays a **Compliance Warning** if the sharer's device fails to meet the conditions of its assigned compliance policies.
 
 #### Provide help on an unenrolled device
 
@@ -244,7 +239,7 @@ Remote Help is supported in the following languages:
 
 If the sharer exits from a Remote Help session early, the helper may not be notified for 60+ seconds.  
 
-If using Microsoft Edge, it may require the sharer to sign in to the browser before starting a session or the device is reported as "Unenrolled".
+If using Microsoft Edge, it may require the sharer to sign in to the browser before starting a session or the device is reported as Unenrolled.
 
 ## Next steps
 
