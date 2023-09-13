@@ -56,13 +56,13 @@ The Windows 11 upgrade readiness dashboard was created to make administrators or
 
 The Upgrade Experience marker (UpgEx) is used more than any other appraiser marker. It provides a quick summary of the known compatibility issues that a device would encounter upon upgrade, boiling down to four colors:
 
-   - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device will generally result in a hard, impassable block (although if the device is red due to BDD, the customer will sees a dismissive warning in setup).
+   - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device will generally result in a hard, impassable block (although if the device is red due to BDD, the customer will see a dismissive warning in setup).
 
    - **Orange** : device encounters regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues that make a device Orange will be surfaced in setup.
 
-   - **Yellow** : device needs to have an app uninstalled in order to upgrade. This may be a major problem for the customer, but at least they are aware of the issue.
+   - **Yellow** : device needs to have an app uninstalled in order to upgrade. This may be a major problem for the customer, but at least they're aware of the issue.
 
-   - **Green** : none of the above issues will be hit. Note that Dismissive issues, like the Media Center or WMDRM warnings will still be Green. As a level-set, 95+% of devices are Green for 10-to-10 upgrades.
+   - **Green** : none of the above issues will be hit. Dismissive issues, like the Media Center or WMDRM warnings will still be Green. As a level-set, 95+% of devices are Green for 10-to-10 upgrades.
 
 **Red**
 
@@ -86,7 +86,7 @@ Starting with Windows 11, the UpgEx marker will also evaluate against the Window
 The following conditions will results in a device marked as Red for Windows 11:
 
 - If a system doesn't support TPM 2.0 (RedReason=Tpm)
-- If the system is not Secure Boot Capable (RedReason=UefiSecureBoot)
+- If the system isn't Secure Boot Capable (RedReason=UefiSecureBoot)
 - If the system has less than 4 GB of RAM (RedReason=Memory)
 - If the system doesn't have 2 processor cores (RedReason=CPU)
 - If the CPU doesn't support 1 ghz and higher speed (RedReason=CPU)
