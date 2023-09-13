@@ -41,7 +41,7 @@ Set up enrollment in Microsoft Intune for corporate-owned, userless devices buil
 
 Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment.
 
-With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). Through Company Portal installation, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
+With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). Through Company Portal installation, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
 
 ## Prerequisites
 
