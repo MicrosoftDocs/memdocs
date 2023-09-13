@@ -34,7 +34,7 @@ additionalContent:
           url: /microsoft-365/admin/setup/setup-business-standard
         - text: Set up Microsoft Business Premium
           url: /microsoft-365/admin/setup/setup-business-standard
-      - title: Azure Active Directory
+      - title: Microsoft Entra ID
         links: 
         - text: User management documentation
           url: /azure/active-directory/fundamentals/active-directory-manage-groups
