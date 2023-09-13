@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 09/13/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -54,18 +54,19 @@ To register an app to use Microsoft Graph API:
 1. Sign in to the [Microsoft Intune admin center](https://admin.microsoft.com/) using administrative credentials. As appropriate, you may use:
     - The tenant admin account.
     - A tenant user account with the **Users can register applications setting** enabled.
-2. Select **All services** > **Azure Active Directory** > **App registrations**.
+2. Select **All services** > **Azure Active Directory** > **Applications** >  **App registrations**.
 3. Either choose **New registration** to create a new application or choose an existing application.
 4. If you chose a new registration, in the **Register an application pane**, specify the following:
     - A name for the application.
     - The supported account type.
     - A redirect URI value (optional).
-5. On the **Application** pane:
+5. Select **Register**.
+6. On the **Application** pane:
     - Note the **Application (client) ID** value.
     - Select **API permissions**.
-6. On the **API permissions** pane, select **Add a permission** > **Microsoft APIs** > **Microsoft Graph** > select the type of permissions your application requires.
-7. Choose the roles required for your app by selecting the checkbox next to the relevant names. For best results, choose the fewest roles needed to implement your application. For more information about Windows 365 and other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
-8. When finished, select **Add permissions** to save your changes.
+7. On the **API permissions** pane, select **Add a permission** > **Microsoft APIs** > **Microsoft Graph** > select the type of permissions your application requires.
+8. Choose the roles required for your app by selecting the checkbox next to the relevant names. For best results, choose the fewest roles needed to implement your application. For more information about Windows 365 and other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
+9. When finished, select **Add permissions** to save your changes.
 
 You can also choose to grant permission for all tenant accounts to use the app without providing credentials. To do so, you can grant permissions and accept the confirmation prompt. When you run the application for the first time, you’re prompted to grant the app permission to perform the selected roles.
 
