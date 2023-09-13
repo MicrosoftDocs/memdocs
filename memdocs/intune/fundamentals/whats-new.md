@@ -68,6 +68,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of September 11, 2023
+
+### Device Management
+
+#### Introducing Remote Help on macOS<!--12454029 -->
+
+The Remote Help web app allows users to connect to macOS devices and join a view-only remote assistance session.
+
+For more information on Remote Help on macOS, go to [Remote Help](../fundamentals/remote-help-macos.md).
+
+Applies to:
+
+- Safari 16.4+
+- macOS 11 Big Sur
+
 ## Week of September 4, 2023
 
 ### Device management
