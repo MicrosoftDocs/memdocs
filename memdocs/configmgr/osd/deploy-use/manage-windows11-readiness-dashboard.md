@@ -40,7 +40,7 @@ The Windows 11 upgrade readiness dashboard was created to make administrators or
 
 **Upgrade Experience Indicators** : Shows information for each device, which can be in any of these states:
 
-- Cannot Upgrade (Red Color) devices that cannot be upgraded to windows 11.
+- Can't Upgrade (Red Color) devices to windows 11.
     
 - App Upgrade/Uninstall required (Yellow Color) devices that need an application update or uninstall before upgrading to Windows 11.
     
@@ -56,11 +56,11 @@ The Windows 11 upgrade readiness dashboard was created to make administrators or
 
 The Upgrade Experience marker (UpgEx) is used more than any other appraiser marker. It provides a quick summary of the known compatibility issues that a device would encounter upon upgrade, boiling down to four colors:
 
-   - **Red** : device cannot upgrade to the latest version of Windows. Attempts to run setup on a Red device will generally result in a hard, impassable block (although if the device is red due to BDD, the customer will see a dismissible warning in setup).
+   - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device will generally result in a hard, impassable block (although if the device is red due to BDD, the customer will see a dismissible warning in setup).
 
    - **Orange** : device will encounter regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues that make a device Orange will be surfaced in setup.
 
-   - **Yellow** : device will need to have an app uninstalled in order to upgrade. This may be a major problem for the customer, but at least they will be aware of the issue.
+   - **Yellow** : device will need to have an app uninstalled in order to upgrade. This may be a major problem for the customer, but at least they'll be aware of the issue.
 
    - **Green** : none of the above issues will be hit. Note that dismissible issues, like the Media Center or WMDRM warnings will still be Green. As a level-set, 95+% of devices will be Green for 10-to-10 upgrades.
 
@@ -85,12 +85,12 @@ Starting with Windows 11, the UpgEx marker will also evaluate against the Window
 
 The following conditions will results in a device marked as Red for Windows 11:
 
-- If a system does not support TPM 2.0 (RedReason=Tpm)
+- If a system doesn't support TPM 2.0 (RedReason=Tpm)
 - If the system is not Secure Boot Capable (RedReason=UefiSecureBoot)
 - If the system has less than 4 GB of RAM (RedReason=Memory)
-- If the system is does not have 2 processor cores (RedReason=CPU)
-- If the CPU does not support 1 ghz and higher speed (RedReason=CPU)
-- If the CPU does not support the Windows 11 approved CPU generation (RedReason=CpuFms)
+- If the system is doesn't have 2 processor cores (RedReason=CPU)
+- If the CPU doesn't support 1 ghz and higher speed (RedReason=CPU)
+- If the CPU doesn't support the Windows 11 approved CPU generation (RedReason=CpuFms)
 - If the system is in SMode and not a home (core) sku (RedReason=SModeState)
 - If the system drive size is < 64 Gb (RedReason=SystemDriveSize)
 
@@ -98,24 +98,24 @@ The following conditions will results in a device marked as Red for Windows 11:
 
 Orange is more complicated than Red. The following will trigger a machine to be Orange:
 
-- If a non-system-class PNP device loses its driver on upgrade. Does not include display or active network, as those would make a device red.
-- If any app or file will be blocked from running uplevel, is not blocked downlevel, and does not get automatically removed. (Blocks take into account the UX_OVERRIDE declared in the SDB, which allows SDB authors to make an app block be considered benign for experience calculation)
+- If a non-system-class PNP device loses its driver on upgrade. Doesn't include display or active network, as those would make a device red.
+- If any app or file will be blocked from running uplevel, isn't blocked downlevel, and doesn't get automatically removed. (Blocks take into account the UX_OVERRIDE declared in the SDB, which allows SDB authors to make an app block be considered benign for experience calculation)
 
 The last bullet is tricky. Some examples:
 - If app/file is blocked downlevel but also uplevel (such as an old app that's always been blocked): NOT orange
 - If app/file is blocked only uplevel but has a mig removal (such as a broken antivirus that gets removed): NOT orange
 - If app/file is blocked only uplevel but has a UX_OVERRIDE of NO_BLOCK (such as an app that's just not applicable post-upgrade): NOT orange
-- If app/file is not blocked uplevel at all: NOT orange
+- If app/file isn't blocked uplevel at all: NOT orange
 
 **Yellow**
 
 Yellow status generally means that the customer will be required to remove an app during setup.
 
 Specifically, a machine will be yellow in these cases:
-- If any app has a softblock uplevel, taking into account UX_OVERRIDE (this will not surface in setup, but is not severe enough to be Orange)
+- If any app has a softblock uplevel, taking into account UX_OVERRIDE (this won't surface in setup, but isn't severe enough to be Orange)
 
 **Green**
 
-Any device that does not meet the criteria for the other colors becomes Green. This includes devices that will be warned about media center or WMDRM, as well as devices that will have a problematic app removed silently during upgrade.
+Any device that doesn't meet the criteria for the other colors becomes Green. This includes devices that will be warned about media center or WMDRM, as well as devices that will have a problematic app removed silently during upgrade.
 
 
