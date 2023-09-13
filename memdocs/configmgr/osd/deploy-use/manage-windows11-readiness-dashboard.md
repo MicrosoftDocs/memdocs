@@ -18,7 +18,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-In Configuration Manager, you can view the Windows 10 machines which are ready for upgrade in your environment. Create collections for Windows 11 ready devices and deploy the upgrade. 
+In Configuration Manager, you can view the Windows 10 machines, which are ready for upgrade in your environment. Create collections for Windows 11 ready devices and deploy the upgrade. 
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ In Configuration Manager, you can view the Windows 10 machines which are ready f
 <!--16875242-->
 (*Introduced in version 2309*)
 
-The Windows 11 upgrade readiness dashboard was created to make administrators or management aware of the devices which are ready for upgrade. The following charts are displayed for the selected Collection:
+The Windows 11 upgrade readiness dashboard was created to make administrators or management aware of the devices, which are ready for upgrade. The following charts are displayed for the selected Collection:
 
 **Windows Device Information** : Shows count of Windows 7, 8 , 10 and 11 devices in your organization.
 
@@ -56,13 +56,13 @@ The Windows 11 upgrade readiness dashboard was created to make administrators or
 
 The Upgrade Experience marker (UpgEx) is used more than any other appraiser marker. It provides a quick summary of the known compatibility issues that a device would encounter upon upgrade, boiling down to four colors:
 
-   - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device will generally result in a hard, impassable block (although if the device is red due to BDD, the customer will see a dismissible warning in setup).
+   - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device will generally result in a hard, impassable block (although if the device is red due to BDD, the customer will sees a dismissible warning in setup).
 
-   - **Orange** : device will encounter regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues that make a device Orange will be surfaced in setup.
+   - **Orange** : device encounters regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues that make a device Orange will be surfaced in setup.
 
-   - **Yellow** : device will need to have an app uninstalled in order to upgrade. This may be a major problem for the customer, but at least they'll be aware of the issue.
+   - **Yellow** : device needs to have an app uninstalled in order to upgrade. This may be a major problem for the customer, but at least they are aware of the issue.
 
-   - **Green** : none of the above issues will be hit. Note that dismissible issues, like the Media Center or WMDRM warnings will still be Green. As a level-set, 95+% of devices will be Green for 10-to-10 upgrades.
+   - **Green** : none of the above issues will be hit. Note that Dismissible issues, like the Media Center or WMDRM warnings will still be Green. As a level-set, 95+% of devices are Green for 10-to-10 upgrades.
 
 **Red**
 
@@ -73,7 +73,7 @@ The following conditions will all result in a device being marked Red:
 - If the system doesn’t have enough RAM. Requirement is 512 MB for Server, 1 GB for x86 Client, 2 GB for x64 Server, enforced with 10% wiggle room
 - If there’s a (non-network) device on the system that is considered boot critical and has its driver blocked
 - If there’s a wireless device that uses an XP-era emulated wireless driver
-- If a network device with an active connection will lose its driver on upgrade (in theory this means that the device would upgrade and lose access to WU)
+- If a network device with an active connection loses its driver on upgrade (in theory this means that the device would upgrade and lose access to WU)
 - If the system has a block for which the enumerator is ComputerHardwareId, meaning we’ve dictated in the SDB that this specific model can’t upgrade
 - If there’s any other PNP device on the system that blocks upgrade not already called out above
 - If there’s a display-class device with a driver block that isn’t overridden AND no driver uplevel AND not already on BDD (customer would upgrade and have basic display)
