@@ -81,3 +81,4 @@ The following steps are needed to configure and then perform a Windows Autopilot
 For more information on Windows Autopilot deployment for existing devices, see the following article(s):
 
 - [Windows Autopilot deployment for existing devices](/mem/autopilot/existing-devices)
+- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)
