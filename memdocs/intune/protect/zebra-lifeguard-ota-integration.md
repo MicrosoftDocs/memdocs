@@ -61,6 +61,8 @@ The following aren't supported in public preview:
   - Mobile Apps (to create and deploy app configuration profiles)
   - Android FOTA (to manage firmware OTA updates)
 
+- [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md)
+
 - Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
 - For more information about which Zebra devices work with the service based on the platform, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
