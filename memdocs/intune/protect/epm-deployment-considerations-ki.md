@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 7/11/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -79,7 +79,9 @@ Endpoint Privilege Management doesn't support SSL inspection, which is known as 
 
 ### Why is my virtual device not onboarding to Endpoint Privilege Management?
 
-Currently virtual desktop infrastructure (VDI) is not supported by Endpoint Privilege Management (including Windows 365 and Azure Virtual Desktop). This issue will be fixed in future release.
+Currently, Endpoint Privilege Management isn't supported with Azure Virtual Desktop. This issue will be fixed in future release.
+
+Support for Windows 365 (Cloud PCs) was added in September 2023.
 
 ### Why is my elevation settings policy showing error/not applicable?
 
