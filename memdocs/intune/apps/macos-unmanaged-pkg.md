@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/19/2023
+ms.date: 09/13/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -152,6 +152,8 @@ macOS app installation may not be successful due to any of the following reasons
 |------------|---------------|-------------------|
 | 0x87D30137 | The device doesn't meet the minimum OS requirement set by the admin. | Update macOS to the minimum OS version required by the admin. |
 | 0x87D3012F, 0x87D30130, 0x87D30133, 0x87D30134, 0x87D30136,| The app couldn't be installed due to an internal error. Contact Intune support if the error persists. | Something went wrong while installing the app using Intune. Try installing the app manually or try creating a new macOS app profile containing the app. Contact Intune support if the error persists. |
+
+If an app is configured with a pre-install script, the script must exit successfully (with exit code zero) for the app-install to proceed. Failed pre-install scripts will be flagged with a "failure" status and include a error message indicating pre-install script failed. At the next check-in, the device runs the pre-install script again. However, if an app is configured with a post-install script and the script fails, it is not reattempted. The app install reports as "success" irrespective of post-install script status. Log messages for app pre-install and post-install are available as well.
 
 ## Next steps
 
