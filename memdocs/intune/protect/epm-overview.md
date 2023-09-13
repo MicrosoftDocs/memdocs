@@ -60,7 +60,7 @@ Endpoint Privilege Management has the following operating system requirements:
 - Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
 - Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
 
-Support for EPM extends to Windows 365 (Cloud PCs) that use a supported client version.
+Support for EPM extends to Windows 365 (Cloud PCs) that use a supported client version. Azure Virtual Desktop is not supported at this time.
 
 > [!IMPORTANT]
 > Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
