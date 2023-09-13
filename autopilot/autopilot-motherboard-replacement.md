@@ -264,7 +264,7 @@ For the **Supported** column in the following table:
 - **Yes**: the device can be reenabled for Autopilot.
 - **No**: the device can't be reenabled for Autopilot.
 
-| **Scenario** | **Supported** | **Microsoft Recommendation** |
+| Scenario | Supported | Microsoft Recommendation |
 | --- | --- | --- |
 | **Motherboard Replacement in general** | Yes | The recommended course of action for motherboard replacement scenarios is: <br> 1. Autopilot device is deregistered from the Autopilot program. <br> 2. The motherboard is replaced. <br> 3. The device is reimaged (with BIOS info and DPK reinjected). <sup>1</sup> <br> 4. A new Autopilot device ID (4K HH) is captured off the device. <br> 5. The repaired device is reregistered for the Autopilot program using the new device ID. <br> 6. The repaired device is reset to boot to OOBE. <br> 7. The repaired device is shipped back to the customer. <br><br> <sup>1</sup> It's not necessary to reimage the device if the repair technician has access to the customer's sign-in credentials. It's technically possible to successfully re-enable motherboard replacement and Autopilot without keys or certain BIOS info (serial #, model name, etc.) However, doing so is only recommended for testing/educational purposes. |
 | **Motherboard replacement when motherboard has a TPM chip enabled and only one onboard network card that also gets replaced** | Yes  | 1. Deregister damaged device. <br> 2. Replace motherboard. <br> 3. To gain access, reimage device or sign-in using customer's credentials. <br> 4. Write device info into BIOS. <br> 5. Capture new 4K HH. <br> 6. Reregister repaired device. <br> 7. Reset device back to OOBE. <br> 8. Go through Autopilot OOBE (customer). <br> 9. Autopilot successfully enabled. |
