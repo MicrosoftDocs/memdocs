@@ -188,8 +188,8 @@ To reregister an Autopilot device from the Microsoft Partner Center MPC, an OEM 
 
 1. Select **Add devices** to upload the csv file.
 
-![Screenshot of Add devices button](images/device2.png)<br>
-![Screenshot of Add devices page](images/device3.png)
+   ![Screenshot of Add devices button](images/device2.png)<br>
+   ![Screenshot of Add devices page](images/device3.png)
 
 When a repaired device is reregistering through MPC, the uploaded csv file must contain the 4K HH for the device, and not just the PKID or Tuple (SerialNumber + OEMName + ModelName). If only the PKID or Tuple was used, the Autopilot service would be unable to find a match in the Autopilot database. No match would be found because no 4K HH info was previously submitted for this essentially "new" device and the upload fails, likely returning a **ZtdDeviceNotFound** error. For this reason, only upload the 4K HH, not the Tuple or PKID.
 
