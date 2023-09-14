@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 09/26/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -36,7 +36,7 @@ This page lists recent known issues with [Windows 365 Switch](windows-365-switch
 
 ## Support for only one Cloud PC
 
-Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. The user can’t choose the Cloud PC that they want to sign in to.
+Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The user is automatically signed into the first available Switch-supported Cloud PC from the list of Cloud PCs assigned to the user. Using Switch, the user can choose which Cloud PC to sign in to by selecting the ellipses (...) > choose the Cloud PC > **Add to Task view**. Only one Cloud PC can be added to Task view at a time.
 
 ## Limited gestures
 
@@ -58,17 +58,13 @@ If the **Reconnect** option in the disconnect message dialog is used, reconnecti
 
 Let the disconnect complete and then launch a new connection using Task view.
 
-## Missing or extra buttons in a Cloud PC session
+## Navigation between sign in prompts and your Cloud PC
 
-You might see extra buttons, or some buttons might be missing, in your Cloud PC session. For example, the Local Desktop button might not appear in Task view.
+After selecting a Cloud PC from the Task view, users might be prompted to sign in using their account credentials. In some builds of Windows, after providing the credentials, the user might not be returned to the Cloud PC connection.
 
-**Possible  cause:**
+**Troubleshooting steps**:
 
-The user connected to their Cloud PC using another mode (like Windows 365 Boot or from the task bar) and then next connects using Windows 365 Switch, or vice versa.
-
-**Troubleshooting steps:**
-
-Restart the Cloud PC. 
+Select the Task view button for the Cloud PC again. The connection continues in the background. The user should be connected to their Cloud PC within a few minutes
 
 <!-- ########################## -->
 ## Next steps
