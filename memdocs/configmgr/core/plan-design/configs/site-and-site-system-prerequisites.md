@@ -95,7 +95,7 @@ There's also a new [management insight](../../servers/manage/management-insights
 
 ### Managing system restarts for .NET updates
 
-Whether you update .NET before updating the site, or setup updates it, .NET may require a restart to complete its installation. After .NET Framework is installed, it may require other updates. These updates may also require the server to restart.
+Whether you update .NET before updating the site, or set up updates it, .NET may require a restart to complete its installation. After .NET Framework is installed, it may require other updates. These updates may also require the server to restart.
 
 If you need to manage the device restarts before you update the site, use the following recommended process:
 
