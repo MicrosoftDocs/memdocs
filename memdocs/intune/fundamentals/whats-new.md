@@ -82,22 +82,6 @@ Applies to:
 
 - Windows 10/11
 
-### Device Management
-
-#### Introducing Remote Help on macOS<!--12454029 -->
-
-The Remote Help web app allows users to connect to macOS devices and join a view-only remote assistance session.
-
-For more information on Remote Help on macOS, go to [Remote Help](../fundamentals/remote-help-macos.md).
-
-Applies to:
-
-- 11 Big Sur
-
-- 12 Monterey
-
-- 13 Ventura
-
 ## Week of September 4, 2023
 
 ### Device management
