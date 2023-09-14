@@ -118,7 +118,7 @@ For more information, see
 
 Starting in Configuration Manager current branch version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens.For CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears.To update the server app, you can navigate to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings". 
 
->[Note]
+[!NOTE]
 >Existing Customers, must update their server app as current version, doesn't have the Redirect to- "http://localhost"
 
 For more information, see
@@ -135,7 +135,7 @@ If you try to create the CMG before updating RedirectUrl, you get an error "Your
 
 Run this PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
 
-> [!NOTE] 
+[!NOTE] 
 > For new customers, before creating CMG, create Azure AD server app that contains the RedirectUrl="http://localhost” in your App. 
 Once redirect URL and database settings are complete, you can execute the new PowerShell commandlet script.
 
