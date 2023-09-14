@@ -44,7 +44,7 @@ For more information, see
 
 Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC.The run Script Wizard now offers a scheduling option that enables administrators to schedule the execution of scripts. It provides a convenient way to automate the running of scripts on managed devices according to specified schedules.
 
-:::image type="content" source="media/17668435-schedule-script.png" alt-text="An example of the schedule script wizard.":::
+:::image type="content" source="media/17668435-schedule-script.png" alt-text="A screenshot of the schedule script wizard.":::
 
 For more information, see
 
@@ -52,7 +52,7 @@ For more information, see
 
 Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications or alerts related to specific events or conditions, CM can now capture and display these notifications within the console to the users. This integration enables the monitoring and management of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
 
-:::image type="content" source="media/17668438-external-service.png" alt-text="An example of the run details of external service notification wizard.":::
+:::image type="content" source="media/17668438-external-service.png" alt-text="A screenshot of the run details of external service notification wizard.":::
 
 For more information, see
 
@@ -86,7 +86,7 @@ For more information, see
 
 Starting in Configuration Manager current branch version 2309, Preferred Management Point (MP) option will now allow **PXE clients** to communicate to an initial lookup MP and receive the list of MP(s) to be used for further communication. When the option is enabled, it allows an MP to redirect the PXE client to another MP, based on the client location in the site boundaries.
 
-:::image type="content" source="media/2839966-osd-mp-pxe.png" alt-text="An example of the management point option in console.":::
+:::image type="content" source="media/2839966-osd-mp-pxe.png" alt-text="A screenshot of the management point option in console.":::
 
 For more information, see
 
@@ -100,7 +100,7 @@ For more information, see
 
 Starting in Configuration Manager current branch version 2309,administrator can now create a policy using edition upgrade in Configuration Manager to update the **Windows 11 edition**.   
 
-:::image type="content" source="media/17668419-edition-upgrade-windows11.png" alt-text="An example of the windows 11 edition upgrade wizard.":::
+:::image type="content" source="media/17668419-edition-upgrade-windows11.png" alt-text="A screenshot of the windows 11 edition upgrade wizard.":::
 
 For more information, see
 
@@ -108,7 +108,7 @@ For more information, see
 
 Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for Windows 11 Upgrade. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
 
-:::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="An example  of UX of windows 11 readiness dashboard.":::
+:::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard.":::
   
 For more information, see
 
