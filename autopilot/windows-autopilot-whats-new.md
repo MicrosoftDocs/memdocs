@@ -8,18 +8,50 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 2/14/2023
+ms.date: 09/13/2023
 ms.collection: 
   - M365-modern-desktop
   - tier2
 ms.topic: conceptual
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Windows Autopilot: What's new
 
+## Update to BitLocker Recovery Key Process for Windows Autopilot
+
+Microsoft Intune is changing how BitLocker resets occur for reused Windows Autopilot devices in the September (2309) service release. Previously, users could access the BitLocker recovery key via BitLocker self-service when reusing devices that have been configured through Windows Autopilot. However, after the change, users will need to contact their IT admin to request a restore or to access the BitLocker recovery key. IT admins will continue to have full access to recovery keys both before and after this change.
+
+### User impact
+
+This change affects new primary users of the Autopilot device who are allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
+
+Self-service BitLocker access can continue to work the same if the IT admin performs either:
+
+- A remote Autopilot Reset. For more information, see [Step by step tutorial for Windows Autopilot Reset in Intune](tutorial/reset/autopilot-reset-overview.md), [Reset devices with remote Windows Autopilot Reset](tutorial/reset/remote-autopilot-reset.md), and [Windows Autopilot Reset](windows-autopilot-reset.md).
+- Remove the current primary user or reassign to the new intended primary user prior to the device being reset or reimaged. For more information, see [Change a device's primary user](/mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user).
+
+If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties. The primary user on the device then updates to the new user upon the next check-in.
+
+### What you need to do to prepare?
+
+To ensure a smooth transition, notify your help desk of this change. Additionally, update your documentation to one of the following options:
+
+1. Temporarily note the BitLocker recovery key prior to a restore as documented in the [BitLocker recovery guide](/windows/security/operating-system-security/data-protection/bitlocker/bitlocker-recovery-guide-plan).
+1. Contact the help desk or IT Admin to unlock BitLocker self-service access.
+
+## Win32 app configurable installation time impacts the Enrollment Status Page
+
+Staring in Intune 2308, Win32 apps allow you to configure an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes to timeouts that you make to your Win32 apps also needs an increase in the ESP timeout to reflect those changes.
+
 ## Autopilot profile resiliency
 
-Downloading the Windows Autopilot policy just got more resilient! A new update is being rolled out that increases the retry attempts for the Windows Autopilot policy to be applied when a network connection might not be fully initialized. The increased retry attempts help ensure that the profile is applied before the user begins the setup experience and improves the time sync. For Windows 10, install quality update [KB5028244](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028244-os-build-19045-3271-preview-8cf92c9b-3a60-4c6a-8f4c-fc41fe8f4f2c) or newer. For Windows 11, install quality update [KB5028245](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2) or newer.
+Downloading the Windows Autopilot policy just got more resilient! A new update is being rolled out that increases the retry attempts for applying the Windows Autopilot policy when a network connection might not be fully initialized. The increased retry attempts help ensure that the profile is applied before the user begins the setup experience and improves the time sync. Install the following quality updates for this feature:
+
+- Windows 10: [KB5028244](https://support.microsoft.com/topic/july-25-2023-kb5028244-os-build-19045-3271-preview-8cf92c9b-3a60-4c6a-8f4c-fc41fe8f4f2c) or later.
+- Windows 11: [KB5028245](https://support.microsoft.com/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2) or later.
 
 ## One step removal of Windows Autopilot registration
 
@@ -37,7 +69,7 @@ Starting in 2307, Windows Autopilot is making it easier to manage devices by add
 
 ## Device rename occurs during technician phase for pre-provisioning 
 
-Starting in 2303, a new functional change forces the device rename to occur during the technician phase for pre-provisioning for Azure AD join devices. After the technician selects the provision button, we'll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, for Windows 10, install quality update [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or newer. For Windows 11, install quality update [KB5023778](https://support.microsoft.com/topic/march-28-2023-kb5023778-os-build-22621-1485-preview-d490bb51-492e-410c-871f-50ad01b0f765) or newer.
+Starting in 2303, a new functional change forces the device rename to occur during the technician phase for pre-provisioning for Azure AD join devices. After the technician selects the provision button, we'll immediately perform the device rename and reboot the device, then transition to the device ESP. During the user flow, the device rename is then skipped keeping resources that depend on device name (such as SCEP certs) intact. To apply this change, for Windows 10, install quality update [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or later. For Windows 11, install quality update [KB5023778](https://support.microsoft.com/topic/march-28-2023-kb5023778-os-build-22621-1485-preview-d490bb51-492e-410c-871f-50ad01b0f765) or later.
 
 ## Install required apps during pre-provisioning
 
@@ -68,7 +100,7 @@ For more information, see [Collect diagnostics from a Windows device](/mem/intun
 
 ## Updates to Autopilot device targeting infrastructure
 
-With Intune 2208, we're updating the Autopilot infrastructure to ensure that the profiles and applications assigned are consistently ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Autopilot device and leverages device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Azure AD and Hybrid Azure AD joined devices. No action is needed to enable this change, it's rolling out to all clients starting August 2022.
+With Intune 2208, we're updating the Autopilot infrastructure to ensure that the profiles and applications assigned are consistently ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Autopilot device. Additionally, it uses device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Azure AD and Hybrid Azure AD joined devices. No action is needed to enable this change. It's rolling out to all clients starting August 2022.
 
 ## Update Intune Connector for Active Directory for Hybrid Azure AD joined devices
 <!-- 2209 -->
@@ -134,4 +166,5 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
 
 [What's new in Windows client](/windows/whats-new/)
+
 

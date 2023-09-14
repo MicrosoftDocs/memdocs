@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 09/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -119,9 +119,10 @@ Office for iOS/iPadOS and Android offers administrators the ability to customize
 
 Office supports the following settings for configuration:
 
-- Manage the creation of Sticky Notes
-- Set add-ins preference
-- Manage Teams apps running on Office for iOS and Android
+- [Manage the creation of Sticky Notes](#manage-the-creation-of-sticky-notes)
+- [Set add-ins preference](#set-add-ins-preference)
+- [Manage Teams apps running on Office for iOS and Android](#manage-teams-apps-running-on-office-for-ios-and-android)
+- [Enable or disable Microsoft 365 Feed for iOS and Android](#enable-or-disable-microsoft-365-feed-for-ios-and-android)
 
 ### Manage the creation of Sticky Notes
 

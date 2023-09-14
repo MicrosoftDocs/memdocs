@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/30/2023
+ms.date: 08/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,6 +34,9 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 For devices to use a SCEP certificate profile, they must trust your Trusted Root Certification Authority (CA). Trust of the root CA is best established by deploying a [trusted certificate profile](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) to the same group that receives the SCEP certificate profile. Trusted certificate profiles provision the Trusted Root CA certificate.
 
 Devices that run Android Enterprise might require a PIN before SCEP can provision them with a certificate. For more information, see [PIN requirement for Android Enterprise](../protect/certificates-scep-configure.md#pin-requirement-for-android-enterprise).
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 > [!NOTE]
 > Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation does not apply to Samsung Knox.
@@ -280,7 +283,18 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
      - Not configured
      - 1024
      - 2048
-     - 4096 *(supported with iOS/iPadOS 14 and later, and macOS 11 and later)*
+     - 4096 - A Key size of 4096 is supported for the following platforms:
+       - Android (all)
+       - iOS/iPadOS 14 and later
+       - macOS 11 and later
+       - Windows (all)
+
+       > [!NOTE]
+       >
+       > For Windows devices, 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
+       >
+       > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
+       > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
 
    - **Hash algorithm**:
 

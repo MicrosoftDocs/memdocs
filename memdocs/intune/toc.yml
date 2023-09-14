@@ -81,11 +81,6 @@ items:
       - name: Configure Slack to use Intune 
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
 
-      - name: Protect email on managed devices
-        href: ./protect/tutorial-protect-email-on-enrolled-devices.md
-      - name: Protect email on unmanaged devices
-        href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
-
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
 
@@ -1380,9 +1375,9 @@ items:
           items: 
           - name: Configure Chrome Enterprise connector
             href: ./enrollment/chrome-enterprise-connector-configure.md 
-          - name: View Chrome OS device information in Intune
+          - name: View ChromeOS device information in Intune
             href: ./enrollment/chrome-enterprise-device-details.md              
-          - name: Remote device actions for Chrome OS  
+          - name: Remote device actions for ChromeOS  
             href: ./enrollment/chrome-enterprise-remote-actions.md  
   
       - name: Set up Windows enrollment
@@ -1680,6 +1675,9 @@ items:
     items: 
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
+    - name: Frontline worker (FLW)
+      displayName: android, ios, ipados
+      href: ./fundamentals/frontline-worker-overview.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
@@ -1862,8 +1860,16 @@ items:
       href: ./fundamentals/help-desk-operators.md
     - name: ServiceNow integration with Microsoft Intune
       href: ./fundamentals/service-now-integration.md
-    - name: Use Remote Help
-      href: ./fundamentals/remote-help.md
+    - name: Remote Help
+      items:
+      - name: Using Remote Help
+        href: ./fundamentals/remote-help.md
+      - name: Remote Help on Windows
+        href: ./fundamentals/remote-help-windows.md
+      - name: Remote Help on Android
+        href: ./fundamentals/remote-help-android.md
+      - name: Troubleshooting Remote Help on Android
+        href: ./fundamentals/remote-help-android-troubleshoot.md   
     - name: Remediations
       items:
       - name: Use Remediations

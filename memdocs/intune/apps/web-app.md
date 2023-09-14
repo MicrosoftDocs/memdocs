@@ -39,7 +39,7 @@ Intune supports a variety of app types, including web apps. A web app is a clien
 
 Before you can manage and assign an app for your users, add the app to Intune. 
 
-Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS devices, a shortcut to the web app is added to the home screen. For Android Device Admin devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
+Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS devices, a shortcut to the web app is added to the home screen. For macOS devices, end users can pin web apps to the dock on their macOS device. For Android Device Admin devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
 
 > [!Note]
 > A browser must be installed on the user's device to launch web apps. 
@@ -76,7 +76,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Information URL**: Link people to a website or documentation that has more information about the app. The information URL will be visible to users in Company Portal.
     - **Privacy URL**: Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL will be visible to users in Company Portal.
     - **Developer**: The name of the company or Individual that developed the app. This information will be visible to people signed into the admin center.
-    - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.​
+    - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.
     - **Notes**: Add additional notes about the app. Notes will be visible to people signed in to the admin center.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
 6. Click **Next** to display the **Scope tags** page.

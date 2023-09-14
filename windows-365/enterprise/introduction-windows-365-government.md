@@ -49,7 +49,6 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 The following features are not yet supported for Windows 365 GCC or GCCH.
 
 - Unified dashboard
-- Endpoint analytics support (this is supported in GCC)
 - Windows 365 Security baseline
 - RDP Shortpath for public networks
 - Windows 365 System based alerting on Microsoft Intune for Cloud PCs
@@ -61,6 +60,7 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Convert Windows 365 licenses to higher level licenses
 - Windows 365 Frontline
 - Admin feedback
+- System alerts and email notifications
 
 ## Next steps
 

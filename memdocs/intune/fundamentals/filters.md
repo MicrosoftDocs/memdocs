@@ -73,6 +73,9 @@ This feature applies to:
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## How filters work
 
 :::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Screenshot that shows how the admin creates a filter, and uses the filter in a policy in Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::

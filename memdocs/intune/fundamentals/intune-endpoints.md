@@ -47,9 +47,9 @@ To manage devices behind firewalls and proxy servers, you must enable communicat
 - The endpoints in this article should be accessible via TCP port 80 and 443 via whatever method you use to allow access. Windows Information Protection uses port 444.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
-> [!NOTE]
-> The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', or 'dm.microsoft.com' endpoints.
->
+  > [!NOTE]
+  > The inspection of SSL traffic is not supported on 'manage.microsoft.com', 'a.manage.microsoft.com', or 'dm.microsoft.com' endpoints.
+
 > [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
@@ -164,7 +164,7 @@ The following tables list the ports and services that the Intune client accesses
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
 
-To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization’s actual geographic location might be elsewhere.
+To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. The location is under **Tenant location** as something like North America 0501 or Europe 0202. Look for the matching number in the following table. That row will tell you which storage name and CDN endpoints to grant access to. The rows are differentiated by geographic region, as indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Your tenant location is one of these three regions although your organization's actual geographic location might be elsewhere.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
@@ -210,13 +210,13 @@ For Intune-managed Windows devices managed using Mobile Device Management (MDM),
 ### Migrating device health attestation compliance policies to Microsoft Azure attestation
 
 If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices will begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
-However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestion DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.  
+However, Windows 10 and GCCH/DOD environments will continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.  
 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
 
 Ensure there are no firewall rules blocking outbound HTTPS/443 traffic to the endpoints listed in this section based on your Intune tenant's location. To find your tenant location navigate to the Intune admin center > **Tenant administration** > **Tenant status** > **Tenant details**, see Tenant location.
 
-North America based locations
+North America based locations:
 
 - 'https://intunemaape1.eus.attest.azure.net'
 
@@ -230,7 +230,7 @@ North America based locations
 
 - 'https://intunemaape6.ncus.attest.azure.net'
 
-Europe based locations
+Europe based locations:
 
 - 'https://intunemaape7.neu.attest.azure.net'
 
@@ -244,7 +244,7 @@ Europe based locations
 
 - 'https://intunemaape12.weu.attest.azure.net'
 
-Asia pacific locations
+Asia Pacific locations:
 
 - 'https://intunemaape13.jpe.attest.azure.net'
 
@@ -315,12 +315,12 @@ For more information on the required endpoints for endpoint analytics, see [Endp
 
 For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements)
 
-Allow the following hostnames through your firewall to support Security Management for Defender for Endpoint.
+Allow the following hostnames through your firewall to support Defender for Endpoint security settings management.
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
-> [!IMPORTANT]
-> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > [!IMPORTANT]
+  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
 ## Microsoft Intune Endpoint Privilege Management
 
@@ -329,8 +329,8 @@ Allow the following hostnames through your firewall to support Endpoint Privileg
 For communication between clients and the cloud service:
 - \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales. 
 
-> [!IMPORTANT]
-> SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
+  > [!IMPORTANT]
+  > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md)
 

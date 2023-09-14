@@ -68,7 +68,7 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 
 ![Card menu.](business/media/get-started-windows-365-business/cloud-pc-gear.png)
 
-- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Intune, Azure Active Directory, on the device, or in the Remote Desktop Apps.
+- **Rename**: Changes the name of the Cloud PC shown to the user on the web site. This action doesn't affect any name in Microsoft Intune, Microsoft Entra ID, on the device, or in the Remote Desktop Apps.
 - **Reset**:
   - Reinstalls Windows (with the option to choose between Windows 11 and Windows 10).
   - Removes your personal files.
@@ -87,8 +87,8 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
   | ------------- | ------------- |
   | No issues detected | None of the checks discovered an issue with the Cloud PC. |
   | Issues resolved  | An issue was detected and fixed. |
-  | Can’t connect to Cloud PC. We’re working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
-  | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exists because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reset. |
+  | Can't connect to Cloud PC. We're working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
+  | We couldn't fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exists because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reset. |
 - **System Information**: Displays information about the Cloud PC specification.
 
 ### Dark mode
@@ -183,11 +183,11 @@ By default, **Alternative keyboard layout** is turned off. If using a standard k
 
 ### Location (preview)
 
-Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, you let your Cloud PC use the location of your physical device for most apps (the Weather widget isn’t currently supported).
+Location redirection lets Cloud PCs access your approximate location safely without privacy concerns. By turning on the location service, you let your Cloud PC use the location of your physical device for most apps (the Weather widget isn't currently supported).
 
 For more information about location services, see [Windows location service and privacy](https://support.microsoft.com/en-us/windows/windows-location-service-and-privacy-3a8eee0a-5b0b-dc07-eede-2a5ca1c49088).
 
-Location redirection requiers local admin privileges on the Cloud PC. For more information, see [Assign user as a local admin](enterprise/assign-users-as-local-admin.md).
+Location redirection requires local admin privileges on the Cloud PC. For more information, see [Assign user as a local admin](enterprise/assign-users-as-local-admin.md).
 
 To turn on location redirection, follow these steps:
 
@@ -248,7 +248,7 @@ To set up their Remote Desktop client, users follow these steps:
 
 1. Download the Remote Desktop app from the [Remote Desktop clients page](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
 2. Select **Subscribe**.
-3. Enter their Azure Active Directory credentials.
+3. Enter their Microsoft Entra credentials.
 4. The Cloud PC appears in the list, and they can double-click it to launch.
 
 <!-- ########################## -->

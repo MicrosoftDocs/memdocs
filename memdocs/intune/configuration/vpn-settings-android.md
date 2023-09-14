@@ -38,6 +38,9 @@ This feature applies to:
 
 As an Intune administrator, you can create and assign VPN settings to Android devices. To learn more about VPN profiles in Intune, see [VPN profiles](vpn-settings-configure.md).
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Before you begin
 
 - Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).

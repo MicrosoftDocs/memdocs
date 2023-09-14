@@ -51,7 +51,6 @@ Use this guide to plan your move or migration to Intune.
 
 > [!TIP]
 >
-> - The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) includes email templates, project plans, planning spreadsheet, and more.
 > - Want to print or save this guide as a PDF? In your web browser, use the **Print** option, **Save as PDF**.
 > - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 
@@ -479,8 +478,6 @@ This information should include how to notify users, and when to communicate. So
   - **Enrollment phase**: Communication targets organization users and groups that are scheduled to enroll in Intune. It should inform users that they're ready to enroll, include enrollment steps, and who to contact for help and questions.
 
   - **Post enrollment phase**: Communication targets organization users and groups that have enrolled in Intune. It should provide more resources that might be helpful to users, and collect feedback about their experience during and after enrollment.
-
-  The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) might be helpful. Use it as-is, or change it for your organization.
 
 - **Choose how to communicate** Intune rollout information to your targeted groups and users. For example:
 

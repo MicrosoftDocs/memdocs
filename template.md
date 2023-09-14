@@ -230,12 +230,12 @@ This is an example of `in-line code`.
 
 ### Channel 9
 
-<iframe src="http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+> [!VIDEO http://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player]
 
 
 ### Youtube
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/R6_eWWfNB54]
 
 ## docs.ms extensions
 

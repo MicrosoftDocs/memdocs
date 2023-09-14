@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -64,6 +64,8 @@ Create a separate trusted certificate profile for each device platform you want 
 
 ### Trusted certificate profiles for Android device administrator
 
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 Beginning with Android 11, you can no longer use a trusted certificate profile to deploy a trusted root certificate to devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox.
 
 Because SCEP certificate profiles require both the trusted root certificate be installed on a device, and must reference a trusted certificate profile that in turn references that certificate, use the following steps to work around this limitation:
@@ -109,7 +111,9 @@ After naming the certificate, it can be saved.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of the devices that will receive this profile.
-   - **Profile**: Select **Trusted certificate**. Or, select **Templates** > **Trusted certificate**.
+   - **Profile**: Depending on your chosen platform, select **Trusted certificate** or select **Templates** > **Trusted certificate**.
+
+   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 4. Select **Create**.
 
@@ -128,10 +132,9 @@ After naming the certificate, it can be saved.
    - **User certificate store - Intermediate**
 
    ![Create a profile and upload a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-fill.png)
-   
-   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
 
 8. Select **Next**.
+
 
 9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 

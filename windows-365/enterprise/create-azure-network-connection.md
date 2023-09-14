@@ -47,7 +47,7 @@ As part of the connection process, the Windows 365 service is granted the follow
 To create an ANC, you must:
 
 - Have the [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
-- Have an Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit( (Hybrid Azure AD Join ANCs only).
+- Have an Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (Hybrid Azure AD Join ANCs only).
 - Have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 - For Disaster Recovery (DR) purposes, make sure that there are at least 50% of the IP addresses available in your subnet. If reprovisioning for DR is required, sufficient new IP addresses are required for each Cloud PC provisioned on the subnet.
 - For Windows 365 Government - GCC only and not GCC-H - make sure to complete the script options listed in [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
@@ -61,9 +61,13 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > **Create**.
 2. Depending on the type of ANC you want to create, choose **Azure AD Join** or **Hybrid Azure AD Join**.
+
     ![Screenshot of create connection dropdown](./media/create-azure-network-connection/create-connection-dropdown.png)
+
 3. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
+
     ![Screenshot of Name field](./media/create-azure-network-connection/connection-name.png)
+
 4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you won't be able to proceed.
 5. Select a **Virtual network** and **Subnet**.
 6. Select **Next**.

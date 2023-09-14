@@ -7,11 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/14/2023
+ms.date: 07/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
-ms.subservice: protect
 ms.localizationpriority: high
+ms.subservice: protect
 ms.technology:
 
 # optional metadata
@@ -78,9 +78,9 @@ In addition to a license for Intune, your organization must have one of the foll
 - Windows Virtual Desktop Access E3 or E5
 - Microsoft 365 Business Premium
 
-Beginning in November of 2022, the Windows Update for Business deployment service (WUfB DS) license will be checked and enforced.
+Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license will be checked and enforced.
 
-If you’re blocked when creating new policies for capabilities that require WUfB DS and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB DS license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+If you’re blocked when creating new policies for capabilities that require WUfB ds and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 **Supported Windows 10/11 versions**:
 
@@ -102,7 +102,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
 
-- Have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, go to [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).  
+- Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
   - Windows Update for Business deployment service
@@ -128,11 +128,9 @@ Only update builds that are generally available are supported. Preview builds, i
    }
    return 0 
    ```
+
   If the script returns a 1, the device has UHS client. If the script returns a 0, the device doesn’t have UHS client.
 
-
-
- 
 **Device settings**:
 
 To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use Intune *Update rings for Windows 10 and later* policies to manage these settings.
@@ -155,7 +153,13 @@ Group Policy settings override mobile device management policies, and the follow
 **Enable Windows Health Monitoring**:
 
 Before you can monitor results and update status for expedited updates, your Intune tenant must enable [Windows Health Monitoring](../configuration/windows-health-monitoring.md). While configuring Windows Health Monitoring, be sure to set the **Scope** to **Windows updates**.
- 
+
+### Limitations for Workplace Joined devices
+
+Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
+
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
+
 ## Create and assign an expedited quality update
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

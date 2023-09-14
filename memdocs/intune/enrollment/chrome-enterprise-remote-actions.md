@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Remote actions for Chrome OS devices | Microsoft Intune  
-description: Remotely run Microsoft Intune device actions on Chrome OS devices in the Microsoft Intune admin center.   
+title: Remote actions for ChromeOS devices | Microsoft Intune  
+description: Remotely run Microsoft Intune device actions on ChromeOS devices in the Microsoft Intune admin center.   
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -28,12 +28,12 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Remote device actions for Chrome OS   
+# Remote device actions for ChromeOS   
 
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).   
 
-Remotely run device actions on Chrome OS devices synced with Microsoft Intune. There are four remote actions supported on Chrome OS devices:  
+Remotely run device actions on ChromeOS devices synced with Microsoft Intune. There are four remote actions supported on ChromeOS devices:  
 
 * Deprovision  
 * Lost mode, known in Chrome Enterprise as *disabling a device*  
@@ -49,12 +49,12 @@ To access remote actions, select a device in your **Chrome Enterprise (preview)*
 Permission requirements are provided in the sections that follow.  
 
 ## Deprovision  
-Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a Chrome OS device, you must be assigned a role that has the *Remote tasks: Retire* permission.  
+Select **Deprovision** to remove Google Admin policies from devices your organization no longer uses. To deprovision a ChromeOS device, you must be assigned a role that has the *Remote tasks: Retire* permission.  
 
 After you deprovision a device, it remains in the Intune admin center and the Google Admin console. Then on the admin center **System info** page, the device status changes to **DEPROVISIONED**. The device can't be enrolled again until it's restored to factory settings. For more information about the deprovision action, such as how to select the best reason for deprovisioning, see the [Chrome Enterprise and Education Help documentation](https://support.google.com/chrome/a/answer/3523633?).  
 
 ## Lost mode  
-Select **Lost mode** to prevent people from using a Chrome OS device that's lost or stolen. Devices in lost mode display the contact information and message you configured in the Google Admin console. To deprovision a device, you must be assigned a role that has the following permissions:  
+Select **Lost mode** to prevent people from using a ChromeOS device that's lost or stolen. Devices in lost mode display the contact information and message you configured in the Google Admin console. To deprovision a device, you must be assigned a role that has the following permissions:  
 
 * *Remote tasks: Enable lost mode*     
 * *Remote tasks: Disable lost mode*        
@@ -68,7 +68,7 @@ Select **Lost mode** to prevent people from using a Chrome OS device that's lost
  * **Remove user profiles only**: This option removes all user account data. Device and enrollment policies remain on the device.  
  * **Factory reset (powerwash)**: This option fully restores a device to its factory state, removing all personal and work data. Before using this action, [deprovision](chrome-enterprise-remote-actions.md#deprovision) the device. Otherwise, once it connects to Wi-Fi, it will automatically enroll again.  
  
-To wipe a device, you must be assigned a role that has the *Remote tasks: Wipe* permission. For more information about wiping Chrome OS devices, see [Wipe ChromeOS device data](https://support.google.com/chrome/a/answer/1360642) (opens Google Chrome Enterprise Help).    
+To wipe a device, you must be assigned a role that has the *Remote tasks: Wipe* permission. For more information about wiping ChromeOS devices, see [Wipe ChromeOS device data](https://support.google.com/chrome/a/answer/1360642) (opens Google Chrome Enterprise Help).    
 
 ## Restart  
 Select **Restart** to restart a device. To restart a device, you must be assigned a role that has the *Remote tasks: Reboot now* permission.  
