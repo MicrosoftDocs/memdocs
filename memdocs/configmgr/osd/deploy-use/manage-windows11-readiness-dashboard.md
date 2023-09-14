@@ -56,13 +56,13 @@ The Windows 11 upgrade readiness dashboard was created to make administrators or
 
 The Upgrade Experience marker (UpgEx) is used more than any other appraiser marker. It provides a quick summary of the known compatibility issues that a device would encounter upon upgrade, boiling down to four colors:
 
-   - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device will generally result in a hard, impassable block (although if the device is red due to BDD, the customer will see a dismissive warning in setup).
+   - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device results in a hard, impassable block (although if the device is red due to BDD, the customer sees a dismissive warning in setup).
 
-   - **Orange** : device encounters regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues that make a device Orange will be surfaced in setup.
+   - **Orange** : device encounters regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues making a device Orange will surface in setup.
 
-   - **Yellow** : device needs to have an app uninstalled in order to upgrade. This may be a major problem for the customer, but at least they're aware of the issue.
+   - **Yellow** : device needs to have an app uninstalled in order to upgrade. This is a major problem for the customer, but they're aware of the issue.
 
-   - **Green** : none of the above issues will be hit. Dismissive issues, like the Media Center or WMDRM warnings will still be Green. As a level-set, 95+% of devices are Green for 10-to-10 upgrades.
+   - **Green** : none of the above issues are hit. Dismissive issues, like the Media Center or WMDRM warnings will be Green. As a level-set, 95+% of devices are Green for 10-to-10 upgrades.
 
 **Red**
 
@@ -73,15 +73,15 @@ The following conditions will all result in a device being marked Red:
 - If the system doesn’t have enough RAM. Requirement is 512 MB for Server, 1 GB for x86 Client, 2 GB for x64 Server, enforced with 10% wiggle room
 - If there’s a (non-network) device on the system that is considered boot critical and has its driver blocked
 - If there’s a wireless device that uses an XP-era emulated wireless driver
-- If a network device with an active connection loses its driver on upgrade (in theory this means that the device would upgrade and lose access to WU)
+- If a network device with an active connection loses its driver on upgrade (it means that the device would upgrade and lose access to WU)
 - If the system has a block for which the enumerator is ComputerHardwareId, meaning we’ve dictated in the SDB that this specific model can’t upgrade
-- If there’s any other PNP device on the system that blocks upgrade not already called out above
+- If there’s any other PNP device on the system that blocks upgrade not previously called out
 - If there’s a display-class device with a driver block that isn’t overridden AND no driver up level AND not already on BDD (customer would upgrade and have basic display)
 - If the system reserve partition is < 15 MB, RedReason=SystemDriveFull (“We couldn’t update system reserved partition” error installing Windows 10 - Microsoft Support)
 
 All except the last item will also hard block setup. The BDD block, however, can be bypassed by hitting the Dismiss button.
 
-Starting with Windows 11, the UpgEx marker will also evaluate against the Windows 11 minimum hardware requirements. 
+Starting with Windows 11, the UpgEx marker evaluates against the Windows 11 minimum hardware requirements. 
 
 The following conditions will results in a device marked as Red for Windows 11:
 
@@ -96,7 +96,7 @@ The following conditions will results in a device marked as Red for Windows 11:
 
 **Orange** 
 
-Orange is more complicated than Red. The following will trigger a machine to be Orange:
+Orange is more complicated than Red. The following conditions will trigger a machine to be Orange:
 
 - If a non-system-class PNP device loses its driver on upgrade. Doesn't include display or active network, as those would make a device red.
 - If any app or file will be blocked from running up level, isn't blocked downlevel, and doesn't get automatically removed. (Blocks take into account the UX_OVERRIDE declared in the SDB, which allows SDB authors to make an app block be considered benign for experience calculation)
@@ -109,13 +109,13 @@ The last bullet is tricky. Some examples:
 
 **Yellow**
 
-Yellow status generally means that the customer will be required to remove an app during setup.
+Yellow status generally means that the customer needs to remove an app during setup.
 
 Specifically, a machine is yellow in these cases:
 - If any app has a soft block up level, taking into account UX_OVERRIDE (this won't surface in setup, but isn't severe enough to be Orange)
 
 **Green**
 
-Any device that doesn't meet the criteria for the other colors becomes Green. This includes devices that will be warned about media center or WMDRM, and devices that have a problematic app removed silently during upgrade.
+Any device that doesn't meet the criteria for the other colors becomes Green. This includes devices that are warned about media center or WMDRM, and devices that have a problematic app removed silently during upgrade.
 
 
