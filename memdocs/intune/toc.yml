@@ -1868,6 +1868,8 @@ items:
         href: ./fundamentals/remote-help.md
       - name: Remote Help on Windows
         href: ./fundamentals/remote-help-windows.md
+      - name: Remote Help on macOS
+        href: ./fundamentals/remote-help-macos.md
       - name: Remote Help on Android
         href: ./fundamentals/remote-help-android.md
       - name: Troubleshooting Remote Help on Android
