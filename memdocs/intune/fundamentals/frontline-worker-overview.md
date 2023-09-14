@@ -570,7 +570,7 @@ For more information and to get started, go to:
 
 For more information and to get started, go to:
 
-- [Windows 365 Frontline)](https://www.microsoft.com/windows-365/frontline)
+- [Windows 365 Frontline](https://www.microsoft.com/windows-365/frontline)
 - [What is Windows 365 Frontline?](/windows-365/enterprise/introduction-windows-365-frontline)
 
 ## Next steps

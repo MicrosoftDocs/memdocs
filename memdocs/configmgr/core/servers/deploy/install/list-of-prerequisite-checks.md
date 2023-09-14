@@ -248,6 +248,12 @@ Microsoft .NET Framework 4.0 is installed on the Configuration Manager console c
 
 .NET Framework 4.0 is installed or enabled on the Configuration Manager secondary site server. This version is required by SQL Server Express.
 
+### ODBC driver for SQL Server
+
+*Applies to: new site or when updating an existing one*
+
+Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. 
+
 ### Parent database collation
 
 *Applies to: Primary site, secondary site*

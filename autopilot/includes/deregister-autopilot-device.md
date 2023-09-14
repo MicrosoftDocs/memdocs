@@ -95,7 +95,7 @@ To deregister an Autopilot device from the Microsoft Partner Center (MPC), a CSP
 2. Navigate to **Customer** > **Devices**.
 3. Select the device to be deregistered and then select **Delete device**.
 
-![Screenshot of delete device](../images/devices.png)
+   ![Screenshot of delete device](../images/devices.png)
 
 Partners deregistering a device from Autopilot in Microsoft Partner Center (MPC) only deregisters the device from Autopilot. It doesn't perform any of the following actions:
 
@@ -104,7 +104,7 @@ Partners deregistering a device from Autopilot in Microsoft Partner Center (MPC)
 
 For the reasons listed above, the OEM or CSP should work with the customer IT administrators to have the device fully removed by following the steps in the [Deregister a device](#deregister-a-device) section.
 
-An OEM or CSP that has has integrated the OEM Direct APIs can also deregister a device with the **AutopilotDeviceRegistration** API. Make sure the **TenantID** and **TenantDomain** fields are left blank.
+An OEM or CSP that has integrated the OEM Direct APIs can also deregister a device with the **AutopilotDeviceRegistration** API. Make sure the **TenantID** and **TenantDomain** fields are left blank.
 
 > [!NOTE]
 >

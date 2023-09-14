@@ -43,8 +43,8 @@ Admins need only provide a few configuration details to set up the provisioning 
 
 At a high level, the full provisioning process looks like this:
 
-1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you provide details for the network, the [image](device-images.md) used to create each Cloud PC, and an Azure Active Directory (Azure AD) user group.
-2. When a user in the Azure AD user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC for the user. This automation has three stages, which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article](automated-provisioning-steps.md).
+1. You [create a provisioning policy](create-provisioning-policy.md) to manage who gets access to Cloud PCs. The provisioning policies are the engines that build, configure, and make Cloud PCs available to end users. Within a policy, you provide details for the network, the [image](device-images.md) used to create each Cloud PC, and a Microsoft Entra user group.
+2. When a user in the Microsoft Entra user group is assigned a Windows 365 license, Windows 365 automatically provisions a Cloud PC for the user. This automation has three stages, which are invisible to the administrator. For more information on this automated process, see the [Details of the automated provisioning process article](automated-provisioning-steps.md).
 3. Once provisioned, the end user can then sign in to the Windows Cloud PC from anywhere.
 
 ## Provisioning policy objects
@@ -53,13 +53,13 @@ A Windows 365 provisioning policy is an object in the Microsoft Intune admin cen
 
 As the admin, you provide the following required information when creating a provisioning policy:
 
-- **Network**: A Microsoft-hosted network or an Azure network connection (ANC) dictates how the device joins Azure AD and how its network is managed. Depending on the join type, an ANC may have information detailing:
+- **Network**: A Microsoft-hosted network or an Azure network connection (ANC) dictates how the device joins Microsoft Entra ID and how its network is managed. Depending on the join type, an ANC may have information detailing:
   - The Azure subscription that is associated with the Cloud PC.
   - The domain and Organizational Unit (OU) to join.
   - The Active Directory credentials to use.
 - **Image**: A Windows image is used as the reference image for all Cloud PCs provisioned with this policy. You can choose either a gallery image or supply your own custom image.
 - **Configuration**: You can control more settings that are configured when the Cloud PC is provisioned.
-- **Assignment**:  The assignment identifies one or more Azure AD user groups. Windows 365 automatically provisions a Cloud PC for each licensed user in the policy’s Azure AD user groups. If a user is later added to the user groups, they also get a Cloud PC.
+- **Assignment**:  The assignment identifies one or more Microsoft Entra user groups. Windows 365 automatically provisions a Cloud PC for each licensed user in the policy’s Microsoft Entra user groups. If a user is later added to the user groups, they also get a Cloud PC.
 
 Without this information, Windows 365 can’t provision the Cloud PCs.
 
@@ -73,10 +73,10 @@ After the provisioning of a Cloud PC is complete, it doesn't reoccur unless you 
 
 Changes made to any part of a provisioning policy don't trigger a reprovision. Such changes aren't applied to previously provisioned Cloud PCs. Changes to a provisioning policy will only be applied to Cloud PCs that are provisioned or reprovisioned after the changes.
 
-If a provisioning policy name is changed, it doesn't update the Cloud PC name under All Cloud PCs, and doesn't update the enrollmentProfileName in Azure AD.
+If a provisioning policy name is changed, it doesn't update the Cloud PC name under All Cloud PCs, and doesn't update the enrollmentProfileName in Microsoft Entra ID.
 
 ### Deleting a provisioning policy
-A provisioning policy can only be [deleted](delete-provisioning-policy.md) if it’s not assigned to any Azure AD groups.
+A provisioning policy can only be [deleted](delete-provisioning-policy.md) if it’s not assigned to any Microsoft Entra groups.
 
 Removing the targeting of a provisioning policy that was used for successful Cloud PC provisioning puts the Cloud PCs into a grace period. When the grace period expires, the Cloud PCs are deleted automatically.
 
@@ -108,7 +108,7 @@ The **Reprovision** action can also be used when a Cloud PC is in a **Failed pro
 
 When a Cloud PC is reprovisioned, the Cloud PC is deleted and recreated as a new Cloud PC. All user data, applications, customizations, and the like are deleted.
 
-The Cloud PC will be reprovisioned to the current configured settings in the provisioning policy that is targeting the user's Azure AD group. If the image referenced by the policy has changed, or if any other changes to the policy have been made, the reprovisioned Cloud PC uses the new settings.
+The Cloud PC will be reprovisioned to the current configured settings in the provisioning policy that is targeting the user's Microsoft Entra group. If the image referenced by the policy has changed, or if any other changes to the policy have been made, the reprovisioned Cloud PC uses the new settings.
 
 For more information, see [Reprovision a Cloud PC](reprovision-cloud-pc.md).
 
@@ -125,12 +125,12 @@ When a Cloud PC provisioning failure occurs, or a Cloud PC is deleted post grace
 The following objects are cleaned up:
 
 - Intune objects
-- Azure AD device objects
+- Microsoft Entra device objects
 - Azure vNics
 
 Network security groups created for Cloud PCs aren't cleaned up, as there may be other objects relying on those groups.
 
-Any on-premises Azure AD computer accounts that were joined to the domain during provisioning aren't be deleted. Windows 365 doesn't have sufficient permissions to delete on-premises computer objects, so instead the redundant computer objects are disabled. We encourage your organization to clean up these disabled computer objects during  your regular maintenance process.
+Any on-premises Microsoft Entra computer accounts that were joined to the domain during provisioning aren't be deleted. Windows 365 doesn't have sufficient permissions to delete on-premises computer objects, so instead the redundant computer objects are disabled. We encourage your organization to clean up these disabled computer objects during  your regular maintenance process.
 
 <!-- ########################## -->
 ## Next steps

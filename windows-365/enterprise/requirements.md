@@ -38,7 +38,7 @@ To use Cloud PCs, you must meet the following requirements:
 
 ### [Windows 365 Enterprise and Frontline](#tab/enterprise)
 
-None, if you plan on provisioning Azure AD joined Cloud PCs on a Microsoft hosted network.
+None, if you plan on provisioning Microsoft Entra joined Cloud PCs on a Microsoft hosted network.
 
 If you choose to provision Cloud PCs on your own network, an active Azure subscription with the following configurations is required:
 
@@ -59,33 +59,35 @@ A subscription in Azure Government is required for Windows 365 Government custom
 
 ---
 
-## Azure Active Directory and Intune requirements
+<a name='azure-active-directory-and-intune-requirements'></a>
 
-- A valid and working Intune and Azure Active Directory tenant.
+## Microsoft Entra ID and Intune requirements
+
+- A valid and working Intune and Microsoft Entra tenant.
 - Ensure that Intune device type enrollment restrictions are set to Allow Windows (MDM) platform for corporate enrollment.
-- Infrastructure configuration: If you plan on provisioning Hybrid Azure AD joined Cloud PCs, you must configure your infrastructure to automatically hybrid Azure AD join any devices that domain join to the on-premises Active Directory. This [configuration lets them be recognized and managed in the cloud](/azure/active-directory/devices/overview).
-- Azure Active Directory Domain Services isn't supported because it doesn't support Hybrid Azure AD join.
+- Infrastructure configuration: If you plan on provisioning Microsoft Entra hybrid joined Cloud PCs, you must configure your infrastructure to automatically Microsoft Entra hybrid join any devices that domain join to the on-premises Active Directory. This [configuration lets them be recognized and managed in the cloud](/azure/active-directory/devices/overview).
+- Microsoft Entra Domain Services isn't supported because it doesn't support Microsoft Entra hybrid join.
 
 ## Domain requirements
 
-None, if you plan on provisioning Azure AD joined Cloud PCs on a Microsoft hosted network.
+None, if you plan on provisioning Microsoft Entra joined Cloud PCs on a Microsoft hosted network.
 
-If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following configurations on your domain are required:
+If you choose to provision Microsoft Entra hybrid joined Cloud PCs, then the following configurations on your domain are required:
 
 - If an organizational unit is specified, ensure it exists and is valid.
 - An Active Directory user account with sufficient permissions to join the computer into the specified organizational unit within the Active Directory domain. If you don't specify an organizational unit, the user account must have sufficient permissions to join the computer to the Active Directory domain.
-- User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Azure Active Directory.
+- User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Microsoft Entra ID.
 
 > [!NOTE]
-> For the user account used to join the Cloud PCs to the Active Directory domain services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
+> For the user account used to join the Cloud PCs to the Active Directory Domain Services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
 
 ## Licensing requirements
 
 - You must have an Intune license to use Intune to manage the devices.
-- Windows 365 Enterprise: Users must have licenses for Windows E3, Intune, Azure AD P1, and Windows 365 to use their Cloud PC.
+- Windows 365 Enterprise: Users must have licenses for Windows E3, Intune, Microsoft Entra ID P1, and Windows 365 to use their Cloud PC.
 - Windows 365 Frontline: Users must
-  - Have licenses for Windows E3, Intune, Azure AD P1.
-  - Be added to the Azure AD security group in the provisioning policy to use their Cloud PC.
+  - Have licenses for Windows E3, Intune, Microsoft Entra ID P1.
+  - Be added to the Microsoft Entra security group in the provisioning policy to use their Cloud PC.
 
 ## Management requirements
 
@@ -94,7 +96,7 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 
 ## Role and identity requirements
 
-- Admin role: You must be an [Intune Administrator in Azure AD](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) to provision Cloud PCs.
+- Admin role: You must be an [Intune Administrator in Microsoft Entra ID](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#intune-administrator) or [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference) to provision Cloud PCs.
 - User identity: Cloud PC users must be configured with [hybrid identities](/azure/active-directory/hybrid/whatis-hybrid-identity) so that they can authenticate with resources both on-premises and in the cloud.
 
 ## Supported Azure regions for Cloud PC provisioning
