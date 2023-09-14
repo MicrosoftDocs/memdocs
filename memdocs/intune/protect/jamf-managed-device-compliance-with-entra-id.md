@@ -1,9 +1,9 @@
 ---
 # Required metadata
 
-title: Jamf Managed Device Compliance with Entra ID
+title: Jamf Managed Device Compliance with Microsoft Entra ID
 titleSuffix: Microsoft Intune
-description: Configure a new integration to report Jamf device compliance to Intune and Entra ID.
+description: Configure a new integration to report Jamf device compliance to Microsoft Intune and Entra ID.
 author:      jeffducasse
 ms.author:   brenduns
 manager:     dougeby
@@ -31,9 +31,9 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Integrate Jamf Pro with Intune to report device compliance to Entra ID
+# Integrate Jamf Pro with Microsoft Intune to report device compliance to Microsoft Entra ID
 
-The process to establish integration between Jamf Pro and Intune is evolving. The reporting of the compliance status of Jamf managed devices is now able to allow the Jamf Pro environment to determine the status of compliance with Jamf managed policies and report the state of device compliance to Entra through a connector in Intune. Once the compliance status for devices managed by Jamf are reported to Entra ID, those devices are able to meet the Zero-Trust principles that Entra conditional access policies establish.
+The process to establish integration between Jamf Pro and Microsoft Intune is evolving. The reporting of the compliance status of Jamf managed devices is now able to allow the Jamf Pro environment to determine the status of compliance with Jamf managed policies and report the state of device compliance to Microsoft Entra through a connector in Intune. Once the compliance status for devices managed by Jamf are reported to Entra ID, those devices are able to meet the Zero-Trust principles that Entra conditional access policies establish.
 
 > [!IMPORTANT]
 >
@@ -136,7 +136,7 @@ Create an app in **Mac Apps** Jamf App Catalog for the Microsoft Intune Company 
 > - Enable **Install supporting configuration profiles**.
 > - Enable the **Deploy** switch at the top right, and then select **Save**.
 
-## Entra AD administrative configurations
+## Entra ID administrative configurations
 
 The ability to register devices can be blocked due to the Conditional Access Policy configurations your organization has in place to secure corporate resources.
 
@@ -204,7 +204,7 @@ For example, consider a Entra Conditional Access policy that requires compliant 
 
 :::image type="content" source="./media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions-resize.png" alt-text="Image of the Entra Conditional Access Policy exception for user application" lightbox="./media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions-resize.png":::
 
-## End User Notifications
+## End user notifications
 
 We recommend that you provide ample notification of the end user experience to ensure your users of Jamf managed devices are aware of the process, how it works, and a timeline in which they need to comply with policy. An important reminder that should be included in these notifications is that the Jamf Self-Service app contains the policy that they use to register their device. Users **must not** use the deployed Microsoft Company Portal App to attempt to register. Use of the Company Portal App results in an error indicating *AccountNotOnboarded*.
 
