@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 09/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,8 +32,6 @@ ms.collection:
 
 # What is Windows 365 Switch?
 
-Windows 365 Switch is in [public preview](..\public-preview.md).
-
 Windows 365 Switch lets users move between their local device and one of their Cloud PCs using multiple desktops with the Windows 11 [Task view](https://support.microsoft.com/windows/get-more-done-with-multitasking-in-windows-b4fa0333-98f8-ef43-e25c-06d4fb1d6960).
 
 :::image type="content" source="media/windows-365-switch-overview/task-view.png" alt-text="Screehshot of the Windows 11 Task view." lightbox="media/windows-365-switch-overview/task-view.png":::
@@ -44,9 +42,8 @@ Users can also launch and connect to their Cloud PC directly from the Task view 
 
 To use Windows 365 Switch, the physical device and Cloud PC must meet the following requirements:
 
-- Windows 11 Pro or Enterprise physical device.
+- Windows 11 Pro or Enterprise
 - Windows 365 Cloud PC license. for more information, see [Assign licenses](assign-licenses.md).
-- Register both the physical device and the Cloud PC in the [Windows Insider Program](https://www.microsoft.com/windowsinsider/about-windows-insider-program) Beta Channel (preferred) or Dev Channel.
 
 For information about installing Windows 365 Switch on a user's device, see the [Windows 365 Switch end user help article](https://support.microsoft.com/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
 
