@@ -58,6 +58,9 @@ Not all device actions are available for every platform or device. Available act
        - **Device cleanup rules**: This option lets you automatically remove inactive devices from Intune. For more information, see [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-admin-center).
        - **Device categories**: This option lets you create [device categories](../enrollment/device-group-mapping.md).
    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
+     
+> [!NOTE]
+> The Retire, Wipe, and Delete actions take precendence over all others. It is expected that a device with multiple pending actions will only carry out a Retire, Wipe, or Delete and all other pending actions will be ignored.
 
 ## Available device actions
 
