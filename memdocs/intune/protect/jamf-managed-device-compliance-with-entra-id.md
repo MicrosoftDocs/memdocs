@@ -188,7 +188,7 @@ For example, consider a Entra Conditional Access policy that requires compliant 
 > - Requires compliance
 >  - Requires a registered device
 
-:::image type="content" source="./media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions.png" alt-text="Image of the Entra Conditional Access Policy exception for user application" lightbox="./media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions.png":::
+:::image type="content" source="./media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions-resize.png" alt-text="Image of the Entra Conditional Access Policy exception for user application" lightbox="./media/jamf-managed-device-compliance-with-entra-id/entra-ca-user-app-exceptions-resize.png":::
 
 ## End User Notifications
 
