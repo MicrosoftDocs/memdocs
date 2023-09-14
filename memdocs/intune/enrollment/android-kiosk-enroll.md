@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/08/2023
+ms.date: 09/12/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,13 +36,15 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Android Enterprise supports corporate-owned, single-use, kiosk-style devices with its dedicated devices solution. Such devices are used for a single purpose, such as digital signage, ticket printing, or inventory management. Admins can lock down the usage of a device to a single app, or a limited set of apps, inclusive of web apps. Users are prevented from adding other apps or taking actions on the device unless explicitly approved by admins.
+Android Enterprise supports corporate-owned, single-use, kiosk-style devices with its dedicated devices solution. These devices are used for a single purpose, such as digital signage, ticket printing, or inventory management. Admins can lock down the usage of a device to a single app, or a limited set of apps, inclusive of web apps. Users are prevented from adding other apps or taking actions on the device unless explicitly approved by admins.
 
 Devices intended for dedicated use can be enrolled in Microsoft Intune in two different ways:
 
 * As a standard Android Enterprise dedicated device. These devices are enrolled into Intune without a user account and aren't associated with a user. These devices aren't intended for personal apps, or apps such as Outlook or Gmail that require user-specific account data.
 
-* As a standard Android Enterprise dedicated device that's automatically set up with Microsoft Authenticator and configured for [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. These devices are enrolled in Intune without a user account and aren't associated with a user. These devices are intended for use with apps that integrate with Azure AD Shared device mode, and allow for single sign-in and sign-out between users across participating apps.
+* As a standard Android Enterprise dedicated device that's automatically set up with Microsoft Authenticator and configured for [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment
+
+  These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). When the Company Portal app is deployed to devices with this enrollment mode, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
 
 This article describes how to set up and configure Microsoft Intune to enroll dedicated devices. For more information about Android Enterprise management solutions, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012)(opens Android Enterprise Help Center). 
 
