@@ -2,7 +2,7 @@
 # required metadata
 
 title: Planning guide to move to Microsoft Intune
-description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, create rollout and communication plans, support, testing, and validation plans. 
+description: Plan, design, implement, adopt, and move to Microsoft Intune. Get guidance and advice to determine goals, use-case scenarios and requirements, and create rollout and communication plans, support, testing, and validation plans.
 keywords: mobile device management migration guide, migration guide, intune planning and configuration spreadsheet, intune deployment planning, design and implementation guide, intune deployment project plan
 author: MandiOhlinger
 ms.author: mandia
@@ -124,7 +124,7 @@ Some considerations:
 
   If some users only need access to corporate email and documents, which is common for personally owned devices, then you can require users to use Microsoft 365 apps with app protection policies. The devices don't have to be enrolled in Intune. You create policies that help secure the data in your apps.
 
-  For more information and considerations, go to [Personal devices vs Organization-owned devices](#personal-devices-vs-organization-owned-devices) (in this article).
+  For more information and considerations, go to [Personal devices vs. Organization-owned devices](#personal-devices-vs-organization-owned-devices) (in this article).
 
 ### Objective: Distribute IT
 
@@ -178,7 +178,7 @@ Some sample scenarios:
 
   On managed devices (devices enrolled in Intune), you can also control these features using device configuration profiles. [Device configuration profiles](../configuration/device-profiles.md) control settings on the device, not the app. On devices that access highly sensitive or confidential data, device configuration profiles can prevent copy/paste, taking screenshots, and more.
 
-For more information and considerations, go to [Personal devices vs Organization-owned devices](#personal-devices-vs-organization-owned-devices) (in this article).
+For more information and considerations, go to [Personal devices vs. Organization-owned devices](#personal-devices-vs-organization-owned-devices) (in this article).
 
 ## Step 2 - Inventory your devices
 
@@ -196,9 +196,27 @@ If your devices use unsupported versions, which are primarily older operating sy
 
 ### Personal devices vs Organization-owned devices
 
-On personal devices, it's normal and expected for users to check email, join meetings, update files, and more. Many organizations allow personal devices, and many organizations only allow organization-owned devices. Bring your own device (BYOD) continues to grow in popularity among organizations. They reduce hardware costs, can increase mobile productivity choices for employees, and can help remote & hybrid workers.
+On personal devices, it's normal and expected for users to check email, join meetings, update files, and more. Many organizations allow personal devices to access organization resources.
 
-As an organization and as an admin, you decide if personal devices are allowed. If you do allow personal devices, then you need to make important decisions before allowing BYOD, including how to protect your organization data.
+BYOD/personal devices are part of a mobile application management (MAM) strategy that:
+
+- Continues to grow in popularity with many organizations
+- Is a good option for organizations that want to protect organization data, but don't want to manage the entire device
+- Reduces hardware costs.
+- Can increase mobile productivity choices for employees, including remote & hybrid workers
+- Only removes organization data from apps, instead of removing all data from the device
+
+Organization-owned devices are part of a mobile device management (MDM) strategy that:
+
+- Gives full control to IT admins in your organization
+- Has a rich set of features that manages apps, devices, and users
+- Is a good option for organizations that want to manage the entire device, including hardware and software
+- Can increase hardware costs, especially if existing devices are outdated or not supported anymore
+- Can remove all data from the device, including personal data
+
+:::image type="content" source="./media/intune-planning-guide/byod-app-device-mgmt.png" alt-text="Compares mobile device management and app management on devices in Microsoft Intune." lightbox="./media/intune-planning-guide/byod-app-device-mgmt.png":::
+
+As an organization and as an admin, you decide if personal devices are allowed. If you do allow personal devices, then you need to make important decisions, including how to protect your organization data.
 
 ✔️ **Task: Determine how you want to handle personal devices**
 
@@ -206,7 +224,7 @@ If being mobile or supporting remote workers is important to your organization, 
 
 - **Option 1**: Allow personal devices to access organization resources. Users have a **choice to enroll or not enroll**.
 
-  - For users that **enroll their personal devices**, then admins fully manage these devices, including pushing policies, controlling device features & settings, and even wiping devices. As an admin, you may want this control, or you may *think* you want this control.
+  - For users that **enroll their personal devices**, admins fully manage these devices, including pushing policies, controlling device features & settings, and even wiping devices. As an admin, you may want this control, or you may *think* you want this control.
 
     When users enroll their personal devices, they may not realize or understand that admins can do anything on the device, including accidentally wiping or resetting the device. As an admin, you may not want this liability or potential impact on devices your organization doesn't own.
 
@@ -224,9 +242,9 @@ If being mobile or supporting remote workers is important to your organization, 
 
     For example, users can use the Outlook app on their personal device to check work email. In Intune, admins create an Outlook app protection policy. This policy uses multi-factor authentication (MFA) every time the Outlook app opens, prevents copy and paste, and restricts other features.
 
-- **Option 2**: You want **every device to be fully managed**. In this scenario, all devices are enrolled in Intune and managed by the organization, inlcuding personal devices.
+- **Option 2**: You want **every device to be fully managed**. In this scenario, all devices are enrolled in Intune and managed by the organization, including personal devices.
 
-  To help enforce enrollment, you can deploy a Conditional Acces (CA) policy that requires devices to enroll in Intune. On these devices, you can also:
+  To help enforce enrollment, you can deploy a Conditional Access (CA) policy that requires devices to enroll in Intune. On these devices, you can also:
 
   - Configure a **WiFi/VPN connection for organization connectivity** and deploy these connection policies to devices. Users don't need to enter any settings.
   - If **users need specific apps** on their device, then deploy the apps. You can also deploy apps that your organization requires for security purposes, like a mobile threat defense app.
@@ -493,7 +511,7 @@ And, choose how users enroll their devices in Intune. Some considerations:
 
 ## Step 6 - Communicate changes
 
-Change management relies on clear and helpful communications about upcoming changes. The idea is to smooth your Intune deployment, and make users aware of changes and any disruption.
+Change management relies on clear and helpful communications about upcoming changes. The idea is to have a smooth Intune deployment, and make users aware of changes & any disruption.
 
 ✔️ **Task: Your rollout communication plan should include important information**
 
