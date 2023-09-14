@@ -58,11 +58,11 @@ The Upgrade Experience marker (UpgEx) is used more than any other appraiser mark
 
    - **Red** : device can't be upgrade to the latest version of Windows. Attempts to run setup on a Red device results in a hard, impassable block (although if the device is red due to BDD, the customer sees a dismissive warning in setup).
 
-   - **Orange** : device encounters regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues making a device Orange will surface in setup.
+   - **Orange** : device encounters regressions in functionality post-upgrade, including either an app that no longer runs or a device with no driver. Important note: none of the issues making a device Orange surface in setup.
 
-   - **Yellow** : device needs to have an app uninstalled in order to upgrade. This is a major problem for the customer, but they're aware of the issue.
+   - **Yellow** : device needs to have an app uninstalled in order to upgrade. It is a major problem for the customer, but they're aware of the issue.
 
-   - **Green** : none of the above issues are hit. Dismissive issues, like the Media Center or WMDRM warnings will be Green. As a level-set, 95+% of devices are Green for 10-to-10 upgrades.
+   - **Green** : none of the above issues are hit. Dismissive issues, like the Media Center or WMDRM warnings are Green. As a level-set, 95+% of devices are Green for 10-to-10 upgrades.
 
 **Red**
 
@@ -96,7 +96,7 @@ The following conditions will results in a device marked as Red for Windows 11:
 
 **Orange** 
 
-Orange is more complicated than Red. The following conditions will trigger a machine to be Orange:
+Orange is more complicated than Red. The following conditions trigger a machine to be Orange:
 
 - If a non-system-class PNP device loses its driver on upgrade. Doesn't include display or active network, as those would make a device red.
 - If any app or file will be blocked from running up level, isn't blocked downlevel, and doesn't get automatically removed. (Blocks take into account the UX_OVERRIDE declared in the SDB, which allows SDB authors to make an app block be considered benign for experience calculation)
