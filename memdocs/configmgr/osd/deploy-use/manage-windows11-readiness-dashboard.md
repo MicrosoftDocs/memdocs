@@ -50,7 +50,7 @@ The Windows 11 upgrade readiness dashboard was created to make administrators or
     
 **Windows 11 Minimum Hardware Requirement** : Showcases the minimum hardware and software requirements needed to support Windows 11.
 
-:::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="Windows 11 readiness dashboard.":::
+:::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="Screenshot of Windows 11 readiness dashboard.":::
 
 ## Upgrade experience marker
 
@@ -69,21 +69,21 @@ The Upgrade Experience marker (UpgEx) is used more than any other appraiser mark
 The following conditions will all result in a device being marked Red:
 
 - If the system fails any CPU requirement checks (SSE2, NX, CompareExchange128, LahfSahf, or PrefetchW). See the below section on CPU blocks for more.
-- If the system has a BIOS block
-- If the system doesn’t have enough RAM. Requirement is 512 MB for Server, 1 GB for x86 Client, 2 GB for x64 Server, enforced with 10% wiggle room
-- If there’s a (non-network) device on the system that is considered boot critical and has its driver blocked
-- If there’s a wireless device that uses an XP-era emulated wireless driver
-- If a network device with an active connection loses its driver on upgrade (it means that the device would upgrade and lose access to WU)
-- If the system has a block for which the enumerator is ComputerHardwareId, meaning we’ve dictated in the SDB that this specific model can’t upgrade
-- If there’s any other PNP device on the system that blocks upgrade not previously called out
-- If there’s a display-class device with a driver block that isn’t overridden AND no driver up level AND not already on BDD (customer would upgrade and have basic display)
-- If the system reserve partition is < 15 MB, RedReason=SystemDriveFull (“We couldn’t update system reserved partition” error installing Windows 10 - Microsoft Support)
+- If the system has a BIOS block.
+- If the system doesn’t have enough RAM. Requirement is 512 MB for Server, 1 GB for x86 Client, 2 GB for x64 Server, enforced with 10% wiggle room.
+- If there’s a (non-network) device on the system that is considered boot critical and has its driver blocked.
+- If there’s a wireless device that uses an XP-era emulated wireless driver.
+- If a network device with an active connection loses its driver on upgrade (it means that the device would upgrade and lose access to WU).
+- If the system has a block for which the enumerator is ComputerHardwareId, meaning we’ve dictated in the SDB that this specific model can’t upgrade.
+- If there’s any other PNP device on the system that blocks upgrade not previously called out.
+- If there’s a display-class device with a driver block that isn’t overridden AND no driver up level AND not already on BDD (customer would upgrade and have basic display).
+- If the system reserve partition is < 15 MB, RedReason=SystemDriveFull (“We couldn’t update system reserved partition” error installing Windows 10 - Microsoft Support).
 
 All except the last item will also hard block setup. The BDD block, however, can be bypassed by hitting the Dismiss button.
 
 Starting with Windows 11, the UpgEx marker evaluates against the Windows 11 minimum hardware requirements. 
 
-The following conditions will results in a device marked as Red for Windows 11:
+The following conditions will result in a device marked as Red for Windows 11:
 
 - If a system doesn't support TPM 2.0 (RedReason=Tpm)
 - If the system isn't Secure Boot Capable (RedReason=UefiSecureBoot)
@@ -99,7 +99,7 @@ The following conditions will results in a device marked as Red for Windows 11:
 Orange is more complicated than Red. The following conditions trigger a machine to be Orange:
 
 - If a non-system-class PNP device loses its driver on upgrade. Doesn't include display or active network, as those would make a device red.
-- If any app or file will be blocked from running up level, isn't blocked downlevel, and doesn't get automatically removed. (Blocks take into account the UX_OVERRIDE declared in the SDB, which allows SDB authors to make an app block be considered benign for experience calculation)
+- If any app or file will be blocked from running up level, isn't blocked downlevel, and doesn't get automatically removed. (Blocks take into account the UX_OVERRIDE declared in the SDB, which allows SDB authors to make an app block be considered benign for experience calculation).
 
 The last bullet is tricky. Some examples:
 - If app/file is blocked downlevel but also up level (such as an old app that's always been blocked): NOT orange
@@ -112,7 +112,7 @@ The last bullet is tricky. Some examples:
 Yellow status generally means that the customer needs to remove an app during setup.
 
 Specifically, a machine is yellow in these cases:
-- If any app has a soft block up level, taking into account UX_OVERRIDE (this won't surface in setup, but isn't severe enough to be Orange)
+- If any app has a soft block up level, taking into account UX_OVERRIDE (this won't surface in setup, but isn't severe enough to be Orange).
 
 **Green**
 
