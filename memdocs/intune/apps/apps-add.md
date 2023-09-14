@@ -101,7 +101,7 @@ Using Intune to manage apps with MAM without managing the device is useful when:
 - You want to provide a one-time pop-up message to let users know that MAM protections are in place, rather than continual device-level notification.
 - You want to comply with policies that require less management capability on personal devices. For instance, you want to manage the corporate data for the apps, rather than manage the corporate data for the entire device.
 
-For more information, [Compare MDM and MAM](../fundamentals/byod-technology-decisions.md).
+For more information, go to [Planning guide: Personal devices vs. Organization-owned devices](../fundamentals/intune-planning-guide.md#personal-devices-vs-organization-owned-devices).
 
 ### Determine who will use the app
 
