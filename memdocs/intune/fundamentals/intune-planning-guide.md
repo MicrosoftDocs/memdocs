@@ -104,9 +104,14 @@ Some considerations:
 
   Conditional Access helps protect your network and resources from devices, even devices that aren't enrolled in Intune.
 
-- **Update device, the OS, and apps to help keep your data secure**. Create a plan on how and when updates are installed. There are policies in Intune that help you manage updates, including updates to store apps.
+- **Update the device, the OS, and apps to help keep your data secure**. Create a plan on how and when updates are installed. There are policies in Intune that help you manage updates, including updates to store apps.
 
-  The software updates planning guides for [personal/BYOD](../protect/software-updates-guide-personal-byod.md), [Android](../protect/software-updates-guide-android.md), [iOS/iPadOS](../protect/software-updates-guide-ios-ipados.md), and [macOS](../protect/software-updates-guide-macos.md) device can help you determine your update strategy and solution.
+  The following software updates planning guides can help you determine your update strategy:
+
+  - [Personal/BYOD](../protect/software-updates-guide-personal-byod.md)
+  - [Android](../protect/software-updates-guide-android.md)
+  - [iOS/iPadOS](../protect/software-updates-guide-ios-ipados.md)
+  - [macOS](../protect/software-updates-guide-macos.md)
 
 - **Determine how users will authenticate to organization resources** from their many devices. For example, you can:
 
@@ -122,7 +127,7 @@ Some considerations:
 
 - **Configure the data containment policies** that come with the Microsoft 365 apps. These policies help prevent organization data from being shared with other apps and storage locations that aren't managed by IT.
 
-  If some users only need access to corporate email and documents, which is common for personally owned devices, then you can require users to use Microsoft 365 apps with app protection policies. The devices don't have to be enrolled in Intune. You create policies that help secure the data in your apps.
+  If some users only need access to corporate email and documents, which is common for personally owned devices, then you can require users to use Microsoft 365 apps with app protection policies. The devices don't have to be enrolled in Intune.
 
   For more information and considerations, go to [Personal devices vs. Organization-owned devices](#personal-devices-vs-organization-owned-devices) (in this article).
 
@@ -331,13 +336,9 @@ Some considerations:
 
   - Intune
 
-  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](licenses.md).
+  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](licenses.md). The [Intune Suite](intune-add-ons.md) has advanced endpoint management and security features, like remote help or Endpoint Privilege Management. It's available as a separate license.
 
   You currently use Configuration Manager, and want to set up co-management for your devices. Intune is already included in your Configuration Manager license. If you want Intune to fully manage new devices or existing co-managed devices, then you need a separate Intune license.
-
-  If you want advanced endpoint management and security features, like remote help or Endpoint Privilege Management, then the [Intune Suite](intune-add-ons.md) is available as a separate license.
-
-  For Intune licensing information, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing).
 
 - You want to enforce the compliance or password rules you create in Intune. At a minimum, you need:
 
