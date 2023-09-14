@@ -40,7 +40,7 @@ Currently, Windows 365 Switch only supports one Switch-enabled Cloud PC. The use
 
 ## Limited gestures
 
-Some gestures aren't supported in the Cloud PC, like three finger gestures to change app or four finger gesture to bring up the Task view and show the desktop. These gestures will instead get triggered on the physical device. Other than these all the usual Windows 11 gestures are supported.
+Some gestures aren't supported in the Cloud PC, like three finger gestures to change app or four finger gesture to bring up the Task view and show the desktop. These gestures instead get triggered on the physical device. Other than these gestures, all the usual Windows 11 gestures are supported.
 
 ## Bluetooth and hardware settings can't be managed from the Cloud PC
 
