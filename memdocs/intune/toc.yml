@@ -672,7 +672,7 @@ items:
             href: ./protect/conditional-access-jamf-cloud-connector.md
           - name: Integrate Jamf Pro with Intune for compliance
             href: ./protect/conditional-access-integrate-jamf.md
-          - name: Integrate Jamf Pro with Intune to report compliance to Entra AD
+          - name: Integrate Jamf Pro with Intune to report compliance to Entra ID
             href: ./protect/jamf-managed-device-compliance-with-entra-id.md
           - name: Enforce compliance on Macs managed with Jamf Pro
             href: ./protect/conditional-access-assign-jamf.md
