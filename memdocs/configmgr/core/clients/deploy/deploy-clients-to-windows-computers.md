@@ -57,9 +57,10 @@ Client log files provide more detailed information for troubleshooting. The log 
 
 5. Starting in version 1806, when you update the site, a Kerberos check for client push is enabled. The option to **Allow connection fallback to NTLM** is enabled by default, which is consistent with previous behavior. If the site can't authenticate the client by using Kerberos, it retries the connection by using NTLM. The recommended configuration for improved security is to disable this setting, which requires Kerberos without NTLM fallback.<!--1358204-->
  
-It is recommended to disable this option in existing environments, where possible, to increase security.
+    It is recommended to disable this option in existing environments, where possible, to increase security.
 
-    > [!NOTE]  
+    > [!NOTE]
+    >
     > When it uses client push to install the Configuration Manager client, the site server creates a remote connection to the client. Starting in version 1806, the site can require Kerberos mutual authentication by not allowing fallback to NTLM before establishing the connection. This enhancement helps to secure the communication between the server and the client.  
     >
     > Depending on your security policies, your environment might already prefer or require Kerberos over the older NTLM authentication. For more information on the security considerations of these authentication protocols, read about the [Windows security policy setting to restrict NTLM](/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-outgoing-ntlm-traffic-to-remote-servers#security-considerations).  
