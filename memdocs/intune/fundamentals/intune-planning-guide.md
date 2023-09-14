@@ -479,8 +479,6 @@ This information should include how to notify users, and when to communicate. So
 
   - **Post enrollment phase**: Communication targets organization users and groups that have enrolled in Intune. It should provide more resources that might be helpful to users, and collect feedback about their experience during and after enrollment.
 
-  The [Intune Adoption Kit](https://aka.ms/IntuneAdoptionKit) might be helpful. Use it as-is, or change it for your organization.
-
 - **Choose how to communicate** Intune rollout information to your targeted groups and users. For example:
 
   - Create an organization wide in-person meeting, or use Microsoft Teams.
