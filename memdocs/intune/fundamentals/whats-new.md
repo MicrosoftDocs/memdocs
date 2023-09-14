@@ -80,8 +80,11 @@ For more information on Remote Help on macOS, go to [Remote Help](../fundamental
 
 Applies to:
 
-- Safari 16.4+
-- macOS 11 Big Sur
+- 11 Big Sur
+
+- 12 Monterey
+
+- 13 Ventura
 
 ## Week of September 4, 2023
 
