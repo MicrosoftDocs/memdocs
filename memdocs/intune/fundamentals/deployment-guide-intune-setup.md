@@ -61,8 +61,6 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 - Your Intune deployment might be different from a previous MDM deployment. Intune uses identity-driven access control. It doesn't require a network proxy to access organization data from devices outside your network.
 
-  Review the [common ways to use Intune](common-scenarios.md).
-
 ## Currently don't use anything
 
 If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
