@@ -67,8 +67,8 @@ Do this procedure on the top-level site. That site is either a standalone primar
      
 1. Starting in version 2309,  select **Azure AD tenant name**,  **Azure Ad app name** automtiacally populates. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
-         > [!NOTE]
-         > Starting in version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens.
+   > [!NOTE]
+   > Starting in version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens.
 
 1. In versions 2303 and below, Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
