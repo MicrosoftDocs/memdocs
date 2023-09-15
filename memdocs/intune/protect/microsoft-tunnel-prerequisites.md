@@ -34,7 +34,7 @@ Before you can install the Microsoft Tunnel VPN gateway for Microsoft Intune, yo
 At a high level, you'll need the following to use the Microsoft Tunnel:
 
 - An Azure subscription.
-- A *Microsoft Intune Plan 1* subscription
+- A *Microsoft Intune Plan 2* subscription
 - A Linux server that runs containers. This server can be on-premises or in the cloud:
   - Podman for Red Hat Enterprise Linux (RHEL) (See the [Linux server](#linux-server) requirements.)
   - Docker for all other Linux distributions
