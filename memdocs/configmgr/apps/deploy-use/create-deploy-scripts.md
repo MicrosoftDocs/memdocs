@@ -286,8 +286,11 @@ Schedule script execution on a collection:
 5. Verify the details that are displayed on the **summary page**. 
 6. Click **Next**, and then complete the wizard.
    
-![Script - Schedule](./media/run-scripts/schedule-scriptn.png)
- 
+ ![Script - Schedule](./media/run-scripts/schedule-scriptn.png)
+
+> [!Note]
+> Site will process twenty five scheduled scripts in every 5 mins at a time.
+
 ### Target machine execution
 
 The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
