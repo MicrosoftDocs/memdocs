@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -57,9 +57,13 @@ By default, only active alerts are shown. You can use the **Add filter** option 
   - Active
   - Resolved
   
-### Alert details
+### Alert summary
 
-You can select an alert from the list to see the details of that alert. 
+You can select an alert from the list to see the details of summary of that alert.
+
+![Screenshot of view alert.](./media/alerts/alert-summary.png)
+
+Select the link next to **Reports** to see more details.
 
 ## Customize alert rule
 
