@@ -7,7 +7,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
 ms.author: PalikaSingh
-author: palsi
+author:  palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
