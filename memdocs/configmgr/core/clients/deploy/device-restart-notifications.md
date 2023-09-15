@@ -2,7 +2,7 @@
 title: Device restart notifications
 titleSuffix: Configuration Manager
 description: Restart notification behavior for various client settings in Configuration Manager.
-ms.date: 04/08/2022
+ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -24,6 +24,13 @@ The notifications a user receives for a pending device restart can vary dependin
 > By default, Windows 11 enables **focus assist** for the first hour after a user signs on for the first time. For more information, see [Reaching the Desktop and the Quiet Period](/windows-hardware/customize/desktop/customize-oobe-in-windows-11#reaching-the-desktop-and-the-quiet-period).
 >
 > Software Center notifications are currently suppressed during this time. For more information, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).<!-- 11059565 -->
+>
+
+Starting in Configuration Manager version 2309, windows native reboot experience (USO) are currently available in restart settings. Admin can set deadline in days and organization name. <!-- 4316341 -->
+
+## Windows restart notification type (USO)
+
+When a device requires a restart, the client shows a notification to the end user of the upcoming restart.
 
 ## Deployment types for restart notifications
 
@@ -61,6 +68,12 @@ Software Center shows this final countdown notification that the user can't clos
 If the user proactively installs required software before the deadline, and it requires a restart, they'll see a different notification. The following notification occurs when both the user experience setting allows notifications and you don't use toast notifications for the deployment. For more information about configuring these settings, see [Deployment **User Experience** settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-ux) and [User notifications for required deployments](../../../apps/plan-design/user-notifications.md).
 
 :::image type="content" source="media/3976435-proactive-user-restart-notification.png" alt-text="Notification for proactively installed software":::
+
+## Windows restart notification type (USO)
+
+When a device requires a restart, the client shows a notification to the end user of the upcoming restart.
+
+:::image type="content" source="media/4316341-USO-native-reboot-exp.png" alt-text="Toast notification of native windows pending restart":::
 
 #### Available apps
 
