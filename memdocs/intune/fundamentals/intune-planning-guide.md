@@ -219,7 +219,7 @@ Organization-owned devices are part of a mobile device management (MDM) strategy
 - Can increase hardware costs, especially if existing devices are outdated or not supported anymore
 - Can remove all data from the device, including personal data
 
-:::image type="content" source="./media/intune-planning-guide/byod-app-device-mgmt.png" alt-text="Compares mobile device management and app management on devices in Microsoft Intune." lightbox="./media/intune-planning-guide/byod-app-device-mgmt.png":::
+:::image type="content" source="./media/intune-planning-guide/byod-app-device-mgmt.png" alt-text="Screenshot that Compares mobile device management and app management on devices in Microsoft Intune." lightbox="./media/intune-planning-guide/byod-app-device-mgmt.png":::
 
 As an organization and as an admin, you decide if personal devices are allowed. If you do allow personal devices, then you need to make important decisions, including how to protect your organization data.
 
@@ -299,7 +299,7 @@ There are options available for the different platforms, including Android (AOSP
 
 ✔️ **Task: Determine your FLW scenarios**
 
-FLW devices are organization-owned, enrolled into device management, and can be used by one user (user assigned) or many users (shared devices). These devices are critical to frontline workers to do their job, and are often used in a limited-use mode. For example, a device is used to scan items, or a tablet is used to check-in patients at a hospital.
+FLW devices are organization-owned, enrolled into device management, and can be used by one user (user assigned) or many users (shared devices). These devices are critical to frontline workers to do their job, and are often used in a limited-use mode. For example, a device is used to scan items, or a tablet is used to check in patients at a hospital.
 
 For more information, go to [Frontline worker device management in Microsoft Intune](frontline-worker-overview.md).
 
