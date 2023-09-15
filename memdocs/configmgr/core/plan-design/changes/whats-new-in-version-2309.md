@@ -6,7 +6,7 @@ ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
-author: PalikaSingh
+author: Palika Singh
 ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
@@ -89,13 +89,13 @@ Starting in Configuration Manager current branch version 2309, Preferred Managem
 
 :::image type="content" source="media/2839966-osd-mp-pxe.png" alt-text="A screenshot of the management point option in console.":::
 
-For more information, see [install-and-configure-distribution-points](../../servers/deploy/configure/install-and-configure-distribution-points.md#-pxe)
+For more information, see [Install-and-configure-distribution-points](../../servers/deploy/configure/install-and-configure-distribution-points.md)
 
 ### Enable Bitlocker through ProvisionTS  
 
 In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. ProvisionTS is the task sequence that is executed at the time of provisioning. As a result device can escrow the key to Config Manager Database instantly.
 
-For more information, see [preprovision-bitlocker-in-windows-pe](../../../osd/deploy-use/preprovision-bitlocker-in-windows-pe.md)
+For more information, see [Preprovision-bitlocker-in-windows-pe](../../../osd/deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
 ### Windows 11 Edition Upgrade using CM Policy settings 
 
