@@ -290,7 +290,7 @@ By selecting the **More (…)** menu next to a deployment, or by selecting the d
   - Code NOTAPPLICABLE: the device isn't enrolled with the LG OTA service, or not eligible for this update
   - Numeric error code. For example, 4009. Contact Zebra support for more details on next steps.
 
-## Known issues
+## Disconnecting Zebra connector
 
 1. Go to **Tenant admin** > **Connectors and tokens** > **Firmware over-the-air**.
 2. Select **Disconnect** and confirm the disconnection. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
