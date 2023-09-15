@@ -226,7 +226,7 @@ Use the following steps to view a list of devices that belong to a user:
 
 For more information about viewing client details and tenant attach, see [Tenant attach: ConfigMgr client details in the admin center](/mem/configmgr/tenant-attach/client-details).
 
-## Device data
+## View on-premises device data
 
 From the Microsoft Intune admin center, you can view hardware inventory for uploaded Configuration Manager devices by using resource explorer.
 
@@ -255,7 +255,7 @@ Resource explorer can display a historical view of the device inventory in the M
 
 For more information about viewing device data for tenant attach devices, see [Tenant attach: Resource explorer in the admin center](/mem/configmgr/tenant-attach/resource-explorer).
 
-## App management
+## View on-premises app management
 
 From the Microsoft Intune admin center, you can initiate an application install in real time for a tenant attached device. You can deploy an application to a device or user. Also, you can repair, re-evaluate, reinstall, or uninstall an application.
 
@@ -272,7 +272,7 @@ Use the following steps to install an application to an on-premises device:
 
 For more information about applications and tenant attach, see [Tenant attach: Install an application from the admin center](/mem/configmgr/tenant-attach/applications).
 
-## Scripts
+## View on-premises scripts
 
 You can run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. You can also allow additional personas, like Helpdesk, to run PowerShell scripts. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
 
@@ -288,7 +288,7 @@ You can run PowerShell scripts from the cloud against an individual Configuratio
 
 For more information about running scripts on tenant attached devices, see [Tenant attach: Run Scripts from the admin center](/mem/configmgr/tenant-attach/scripts).
 
-## Device event timeline
+## View on-premises device event timeline
 
 When Configuration Manager synchronizes a device to Microsoft Intune through tenant attach, you can see a timeline of events for those devices within Microsoft Intune admin center. This timeline shows past activity on the device that can help you troubleshoot problems.
 
@@ -312,9 +312,6 @@ To view the device event timeline:
    [ ![Timeline of events for a device](./media/tenant-attach-intune/tenant-attach-10.png) ](./media/tenant-attach-intune/tenant-attach-10.png#lightbox)
 
 For more information about viewing device events for tenant attached devices, see [Tenant attach: Device timeline in the admin center](/mem/configmgr/tenant-attach/timeline).
-
-
-
 
 ## Next steps
 
