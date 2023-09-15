@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/30/2023
+ms.date: 09/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,137 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of September 18, 2023 (Service release 2309)
+
+### App management
+
+#### Configuration scripts for unmanaged macOS PKG apps<!-- 17745891  -->  
+You can now configure pre-install and post-install scripts in unmanaged macOS PKG apps. This feature gives you greater flexibility over custom PKG installers. Configuring these scripts is optional and requires the Intune agent for macOS devices v2309.007 or higher. For more information about adding scripts to unmanaged macOS PKG apps, see [Add an unmanaged macOS PKG app](../apps/macos-unmanaged-pkg.md).
+
+#### MAM for Microsoft Edge for Business [General Availability]<!-- 12394345, 12394352  -->  
+You can now enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability uses the following functionality:
+
+- Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge.
+- Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge.
+- Windows Security Center threat defense integrated with Intune APP to detect local health threats on personal Windows devices.
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Entra ID (AAD).
+
+MAM for Microsoft Edge for Business supports Windows 11 22H2 and later. Sovereign cloud support is expected in the future. For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
+
+### Device configuration
+
+#### Config Refresh settings are in the Settings Catalog for Windows Insiders<!-- 15060174  -->  
+In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune.
+
+Config Refresh:
+
+- Enable config refresh
+- Refresh cadence (minutes)
+
+For more information on the Settings Catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+Applies to:
+
+- Windows 10 and later
+
+#### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **Settings catalog** for profile type.
+
+**Managed Settings > App Analytics**:
+
+- Enabled: If true, enable sharing app analytics with app developers. If false, disable sharing app analytics.
+
+Applies to:
+
+- Shared iPad
+
+**Managed Settings > Accessibility Settings**:
+
+- Bold Text Enabled
+- Grayscale Enabled
+- Increase Contrast Enabled
+- Reduce Motion Enabled
+- Reduce Transparency Enabled
+- Text Size
+- Touch Accommodations Enabled
+- Voice Over Enabled
+- Zoom Enabled
+
+**Managed Settings > Personal Hotspot**:
+
+- Enabled: If true, enable Personal Hotspot. If false, disable Personal Hotspot.
+
+**Managed Settings > Software Update Settings**:
+
+- Recommendation Cadence: This value defines how the system presents software updates to the user.
+
+**Managed Settings > Time Zone**:
+
+- Time Zone: The Internet Assigned Numbers Authority (IANA) time zone database name.
+
+Applies to:
+
+- iOS/iPadOS
+
+**Managed Settings > Bluetooth**:
+
+- Enabled: If true, enable the Bluetooth setting. If false, disable the Bluetooth setting.
+
+**Managed Settings > MDM Options**:
+
+- Activation Lock Allowed While Supervised: If true, a supervised device registers itself with Activation Lock when the user enables Find My.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information on these settings, go to [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### New setting available in the macOS settings catalog<!-- 24809885  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
+
+**Microsoft Defender > Cloud delivered protection preferences**:
+
+- Cloud Block Level
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Device enrollment
+
+#### SSO support during enrollment for Android Enterprise fully managed and corporate-owned devices with a work profile<!-- 8080357 -->  
+Intune supports single sign-on (SSO) on Android Enterprise devices that are fully managed or corporate-owned with a work profile.  With the addition of SSO during enrollment, end users enrolling their devices only need to sign in once with their work or school account.
+
+For more information on these enrollment methods, go to:
+
+- [Set up Intune enrollment of Android Enterprise corporate-owned devices with work profile](../enrollment/android-corporate-owned-work-profile-enroll.md)
+- [Set up enrollment for Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md)
+
+Applies to:
+
+- Android Enterprise corporate owned devices with a work profile
+- Android Enterprise fully managed
+
+### Device management
+
+#### Management certificate expiration date<!-- 17648747  -->  
+Management certificate expiration date is available as a column in the **Devices** workload. You can filter on a range of expiration dates for the management certificate and also export a list of devices with an expiration date matching the filter. This information is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **All devices**.
+
+### Device security
+
+#### Endpoint Privilege Management support for Windows 365 devices<!-- 17016794  -->  
+You can now use [Endpoint Privilege Management](../protect/epm-overview.md) to manage application elevations on Windows 365 devices (also known as Cloud PCs).
+
+This support does not include Azure Virtual Desktop.
 
 ## Week of September 11, 2023
 
