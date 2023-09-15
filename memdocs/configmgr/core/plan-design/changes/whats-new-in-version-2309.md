@@ -6,7 +6,7 @@ ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
-author: Palika Singh
+author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
