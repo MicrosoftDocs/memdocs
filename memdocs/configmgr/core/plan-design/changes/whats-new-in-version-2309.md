@@ -46,15 +46,15 @@ Starting in Configuration Manager current branch version 2309, you can now sched
 
 :::image type="content" source="media/17668435-schedule-script.png" alt-text="A screenshot of the schedule script wizard.":::
 
-For more information, see [Schedule scripts' runtime](../../apps/deploy-use/create-deploy-scripts.md#schedule-scripts-runtime)
+For more information, see [Schedule scripts' runtime](../../../apps/deploy-use/create-deploy-scripts.md#schedule-scripts-runtime)
 
 ### External service notification Run details from Azure Logic application.  
 
-Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications or alerts related to specific events or conditions, CM can now capture and display these notifications within the console to the users. This integration enables the monitoring and management of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
+Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications or alerts related to specific events or conditions, CM can now capture and display these notifications. This integration enables the monitoring and management of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
 
 :::image type="content" source="media/17668438-external-service.png" alt-text="A screenshot of the run details of external service notification wizard.":::
 
-For more information, see [Monitor the workflow](../../servers/manage/external-notifications.md#monitor-the-workflow).
+For more information, see [External service notification](../../servers/manage/external-notifications.md#monitor-the-workflow).
 
 ### New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to clean up data older than 30 days or configured number of days
 
@@ -102,7 +102,7 @@ Starting in Configuration Manager current branch version 2309,administrator can 
 
 :::image type="content" source="media/17668419-edition-upgrade-windows11.png" alt-text="A screenshot of the windows 11 edition upgrade wizard.":::
 
-For more information, see [Upgrade Windows devices to a new edition](../../compliance/deploy-use/upgrade-windows-version.md)
+For more information, see [Upgrade Windows devices to a new edition](../../../compliance/deploy-use/upgrade-windows-version.md)
 
 ### Windows 11 Upgrade Readiness Dashboard 
 
@@ -110,7 +110,7 @@ Starting in Configuration Manager current branch version 2309, administrators ca
 
 :::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard.":::
   
-For more information, see [Manage Windows 11 readiness dashboard](../osd/deploy-use/manage-windows11-readiness-dashboard.md)
+For more information, see [Manage Windows 11 readiness dashboard](../../../osd/deploy-use/manage-windows11-readiness-dashboard.md)
 
 ## Cloud-attached management
 
