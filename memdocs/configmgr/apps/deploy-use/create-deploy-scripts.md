@@ -258,7 +258,7 @@ You can **Edit** or **Copy** an existing PowerShell script used with the **Run S
 
 ## Run a script
 
-After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it's launched quickly through a high priority system that times-out in one hour. The results of the script are then returned using a state message system.
+After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it's launched quickly through a high priority system that times out in one hour. The results of the script are then returned using a state message system.
 
 To select a collection of targets for your script:
 
