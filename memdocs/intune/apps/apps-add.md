@@ -40,7 +40,7 @@ Intune supports a wide range of app types. The available options differ for each
 |---|---|---|
 | Apps from the store (store apps) | Intune installs the app on the device.  | App updates are automatic. |
 | Apps written in-house or as a custom app (line-of-business) | Intune installs the app on the device (you supply the installation file). | You must update the app. |
-| Apps that are built-in (built-in apps) | Intune installs the app on the device.  | App updates are automatic. |
+| Apps that are built in (built-in apps) | Intune installs the app on the device.  | App updates are automatic. |
 | Apps on the web (web link) | Intune creates a shortcut to the web app on the device home screen. | App updates are automatic. |
 | Apps from other Microsoft services  | Intune creates a shortcut to the app in the Company Portal. For more information, see [App source setting options](../apps/company-portal-app.md#app-source-setting-options). | App updates are automatic. |
 
@@ -85,7 +85,7 @@ You can add an app in Microsoft Intune by selecting **Apps** > **All apps** > **
 
 ## Assess app requirements
 
-As an IT Admin, you determine not only which apps your group must use, but you also determine the capabilities needed for each group and subgroup. For each app, you determine the platforms needed, the groups of users that need the app, the configuration policies to apply for those groups, and the protection policies to apply. For example, for enrollment types including Android personally-owned work profile, you may want to deploy a web browsing app to make sure users will have a way to open links.
+As an IT Admin, you determine not only which apps your group must use, but you also determine the capabilities needed for each group and subgroup. For each app, you determine the platforms needed, the groups of users that need the app, the configuration policies to apply for those groups, and the protection policies to apply. For example, for enrollment types including Android personally owned work profile, you may want to deploy a web browsing app to make sure users will have a way to open links.
 
 Additionally, you must determine whether to focus on Mobile Device Management (MDM) or only on Mobile Application Management (MAM).
 
