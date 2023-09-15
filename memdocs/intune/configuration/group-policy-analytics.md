@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Use Microsoft Intune to analyze and import group policies
+title: Use Microsoft Intune to import and analyze group policies
 description: Import and analyze your group policy objects using the Group Policy analytics tool. See the policies that are supported and aren't supported in Intune.
 keywords: intune group policy, import gpo into Intune, Group Policy analytics
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2023
+ms.date: 09/12/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,14 +32,14 @@ ms.collection:
 - highpri
 ---
 
-# Analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune
+# Import and analyze your on-premises GPOs using Group Policy analytics in Microsoft Intune
 
 > [!TIP]
 > Looking for on-premises GPO analysis? There are tools available in the [Microsoft Security Compliance Toolkit](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
 
 Microsoft Intune has many of the same settings as your on-premises GPOs. **Group Policy analytics** is a tool in Microsoft Intune that:
 
-- Analyzes your on-premises GPOs.
+- Imports and analyzes your on-premises GPOs.
 - Shows the settings that cloud-based MDM providers support, including Microsoft Intune.
 - Shows any deprecated settings, or settings not available.
 - Can [migrate your imported GPOs to a settings catalog policy](group-policy-analytics-migrate.md) that can be deployed to your devices.
@@ -53,7 +53,7 @@ This feature applies to:
 - Windows 11
 - Windows 10
 
-This article shows you how to export your GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](group-policy-analytics-migrate.md).
+This article shows you how to export your on-premises GPOs, import the GPOs into Intune, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](group-policy-analytics-migrate.md).
 
 ## Before you begin
 
