@@ -406,7 +406,7 @@ Use this task to delete aged User Device Affinity data from the database. For mo
 
 ### Delete Aged Task Execution Status Messages
 
-Use this task to delete aded task execution status messages on primary site servers. By default, it has been set to run on Saturday and delete the data older than 30 days. It does so by cleaning up [dbo].TaskExecutionStatus table.
+Use this task to delete added task execution status messages on primary site servers. By default, it has been set to run on Saturday and delete the data older than 30 days. It does so by cleaning up [dbo].TaskExecutionStatus table.
 
 | Site type | Status |
 | --------- | ------ |
