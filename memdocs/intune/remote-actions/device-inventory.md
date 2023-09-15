@@ -123,7 +123,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Resident users|Shows the number of users currently on the shared iPad device, or defaults to null if the number of users can't be determined.|iOS/iPadOS|
 
 >[!NOTE]
- > - For Windows 10 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
+ > - For Windows 10 and Windows 11 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
  > - For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases. 
 
 ## Next steps
