@@ -114,10 +114,11 @@ Create one computer policy that includes the following configurations:
 >   - **General**:
 >     - Display Name - Give the policy a name. For example, *Register with Azure AD(Entra)*.
 >     - Enabled - Check this box to enable the policy.
->
 >   - **Microsoft Device Compliance**:
 >     - Enable **Register computers with Azure Active Directory**.
+>
 > - **Scope** tab: Configure *Selected Deployment Targets* to **Add** the [**Applicable**](#computer-smart-groups) computer smart group created as part of the [*Jamf Pro administrative configurations*](#complete-the-administrative-configuration).
+>
 > - **Self Service** tab:
 >   - Enable **Make the policy available in Self Service**.
 >   - Set a display name.
@@ -125,6 +126,7 @@ Create one computer policy that includes the following configurations:
 >   - Provide a description.
 >   - Enable **Ensure that users view the description**.
 >   - Enable optional *Categories* as desired.
+>
 > - Select **Save**.
 
 ### Mac App
