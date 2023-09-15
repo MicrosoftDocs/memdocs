@@ -80,7 +80,6 @@ We've extended the Offset parameter for **Maintenance windows**.The cmdlet New-C
 Example : 
 PowerShell Commandlet: ``` New-CMSchedule -Start (Get-Date) -DayOfWeek Monday -WeekOrder Second -RecurCount 1 -OffSetDay 6 ```
 
-For more information, see
 
 ## OS deployment
 
@@ -109,7 +108,8 @@ For more information, see [Upgrade Windows devices to a new edition](../../../co
 Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for Windows 11 Upgrade. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
 
 :::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard.":::
-  
+
+
 For more information, see [Manage Windows 11 readiness dashboard](../../../osd/deploy-use/manage-windows11-readiness-dashboard.md)
 
 ## Cloud-attached management
@@ -139,7 +139,6 @@ Run this PowerShell command: ``` Set-UpdateServerApplication ``` to 
 > For new customers, before creating CMG, create Azure AD server app that contains the RedirectUrl="http://localhost” in your App. 
 Once redirect URL and database settings are complete, you can execute the new PowerShell commandlet script.
 
-For more information, see
 
 ### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.   
 <!--9217349-->
@@ -151,7 +150,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
-## Other updates
+<!--## Other updates-->
 
 
 ## Next steps
