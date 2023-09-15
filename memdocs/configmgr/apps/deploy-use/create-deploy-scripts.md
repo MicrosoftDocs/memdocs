@@ -2,12 +2,12 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run PowerShell scripts on client devices.
-ms.date: 12/28/2021
+ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -30,6 +30,7 @@ With this integration in Configuration Manager, you can use the *Run Scripts* fu
 - Create and edit scripts for use with Configuration Manager.
 - Manage script usage through roles and security scopes. 
 - Run scripts on collections or individual on-premises managed Windows PCs.
+- Schedule scripts' runtime in UTC on collections or individual on-premises managed Windows PCs.
 - Get rapid aggregated script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
@@ -257,7 +258,7 @@ You can **Edit** or **Copy** an existing PowerShell script used with the **Run S
 
 ## Run a script
 
-After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it's launched quickly through a high priority system that times-out in one hour. The results of the script are then returned using a state message system.
+After a script is approved, it can be run against a single device or a collection. Once execution of your script begins, it's launched quickly through a high priority system that times out in one hour. The results of the script are then returned using a state message system.
 
 To select a collection of targets for your script:
 
@@ -270,6 +271,25 @@ To select a collection of targets for your script:
 
 > [!IMPORTANT]
 > If a script does not run, for example because a target device is turned off during the one hour time period, you must run it again.
+
+## Schedule scripts' runtime
+
+Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC.
+
+Schedule script execution on a collection: 
+  
+1. In the Configuration Manager console, click **Assets and Compliance**.
+2. In the Assets and Compliance workspace, click **Device Collections**.
+3. In the **Device Collections** list, click the collection of devices on which you want to schedule the script.
+4. Select a collection of your choice, click **Run Script**.
+4. On the **Scheduling page**, Schedule the script to be run at checkbox and specify the Schedule Time in UTC. 
+5. Verify the details that are displayed on the **summary page**. 
+6. Click **Next**, and then complete the wizard.
+   
+ ![Screenshot of script - schedule.](./media/run-scripts/schedule-scriptn.png)
+
+> [!Note]
+> Site will process twenty five scheduled scripts in every 5 mins at a time.
 
 ### Target machine execution
 
@@ -287,6 +307,18 @@ After you have initiated running a script on a collection of devices, use the fo
 
  
    ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png)
+
+### Schedule script Monitoring on a collection: 
+ 
+1. In the Configuration Manager console, click **Monitoring**. 
+2. In the Monitoring workspace, click **Scheduled Scripts node**. 
+3. A new row will be displayed in the list of **Scheduled Scripts**.  
+4. Verify a new row has been displayed in the list of Scheduled Scripts. The state column should have the value **Scheduled**. The **ClientOperationId** column should be blank. Verify that the other columns like Script Name, Schedule Time etc. have appropriate values.
+5. After the Schedule Time, refresh the **Scheduled Scripts** node. The state column should have the value **Successfully initiated client operation**. The **ClientOperationId** column  should have an integer value. 
+6. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node. 
+7. Click on **View Status** and ensure that the script output displays.
+   
+![Screenshot of script - schedule monitoring,](./media/run-scripts/scripts-schedulemonitoring.jpg)
 
 ## Script output
 
