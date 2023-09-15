@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 09/13/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -36,19 +36,9 @@ The **Cloud PC connection quality** report helps you evaluate your users' connec
 
 ## Use the Cloud PC connection quality report
 
-To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with connection quality issues**).
+To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Connection quality (preview)**).
 
 ![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-pc-connection-quality/view-report-connection-quality.png)
-
-The report has two main sections: the aggregated histogram and the device list table.
-
-![Screenshot of the Cloud PC connection quality report](./media/report-cloud-pc-connection-quality/report-connection-quality.png)
-
-The histogram shows aggregated round-trip times of all the Cloud PCs in your tenant. The round-trip time is how many milliseconds it took to connect to the Cloud PC.
-  
-- **Good**: Less than 100 milliseconds.
-- **Average**: 100-200 milliseconds.
-- **High**: More than 200 milliseconds.
 
 The device list shows the individual Cloud PCs with the following columns:
 
