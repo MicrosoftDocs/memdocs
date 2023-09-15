@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/30/2023
+ms.date: 09/15/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -60,10 +60,10 @@ To get to the **Connected Frontline Cloud PCs** report, sign in to [Microsoft In
 
 The report shows the following data aggregated for the last 28 days:
 
-- Number of currently connected Frontline Cloud PCs.
-- Maximum number of connected Frontline Cloud PCs for each day in the filtered range (7 or 28 days).
-- Maximum concurrency limit.
-- Warnings for approaching and reaching the maximum concurrency limit.
+- **Current connections**: Number of currently connected Frontline Cloud PCs.
+- **Most concurrent connections**: Highest number of connected Frontline Cloud PCs for each day in the filtered range (7 or 28 days).
+- **Limit**: Maximum concurrency limit, whichi s equal to the number of licenses purchased.
+- **Reached concurrency limit**: Warnings for approaching and reaching the maximum concurrency limit.
 
 This report is specific to Windows 365 Frontline and doesn't apply to other Windows 365 plans. If no Windows 365 Frontline licenses have been purchased on your tenant, no data is in the report.
 
