@@ -26,9 +26,7 @@ The notifications a user receives for a pending device restart can vary dependin
 > Software Center notifications are currently suppressed during this time. For more information, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).<!-- 11059565 -->
 >
 
-Starting in Configuration Manager version 2309, windows native reboot experience (USO) are currently available in restart settings. Admin can set deadline in days and organization name. <!-- 4316341 -->
-
-## Windows restart notification type (USO)
+Starting in Configuration Manager version 2309, Windows native reboot experience (USO) are currently available in restart settings. Admin can set deadline in days and organization name. <!-- 4316341 -->
 
 When a device requires a restart, the client shows a notification to the end user of the upcoming restart.
 
