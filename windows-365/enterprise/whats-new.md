@@ -72,7 +72,7 @@ The Endpoint Analytics resource performance report is now available to Governmen
 
 #### New Cloud PC overview report page<!--45976156-->
 
-All Cloud PC reports can now be access from the **Cloud PC overview** section under **Device management**.
+All Cloud PC reports can now be accessed from the **Cloud PC overview** section under **Device management**.
 
 <!-- ########################## -->
 ## Week of August 21, 2023

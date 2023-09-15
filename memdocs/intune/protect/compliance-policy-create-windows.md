@@ -212,12 +212,14 @@ Applies only to co-managed devices running Windows 10/11. Intune-only devices re
 - **Antivirus**:  
   - **Not configured** (*default*) - Intune doesn't check for any antivirus solutions installed on the device.
   - **Require** - Check compliance using antivirus solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
+    When set to Require, a device that has its Antivirus software disabled or out of date is noncompliant.
 
   [DeviceStatus CSP - DeviceStatus/Antivirus/Status](/windows/client-management/mdm/devicestatus-csp)
 
 - **Antispyware**:  
   - **Not configured** (*default*) - Intune doesn't check for any antispyware solutions installed on the device.
   - **Require** - Check compliance using antispyware solutions that are registered with [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), such as Symantec and Microsoft Defender.
+    When set to Require, a device that has its antimalware software disabled or out of date is noncompliant.
 
   [DeviceStatus CSP - DeviceStatus/Antispyware/Status](/windows/client-management/mdm/devicestatus-csp)
 

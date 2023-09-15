@@ -32,11 +32,13 @@ ms.collection:
 
 # Access a Cloud PC
 
-Users can access their Cloud PCs in these ways:
+Users can access their Cloud PCs in accordance with the matrix below:
 
-- [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0 )
-- [windows365.microsoft.com](https://Windows365.microsoft.com) web client
-- Microsoft Remote Desktop
+| Windows 365 Edition | [Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0) | [windows365.microsoft.com](https://Windows365.microsoft.com) web client | Microsoft Remote Desktop | LG Web OS |
+|--|--|--|--|--|
+| Windows 365 Business | X | X | X | X |
+| Windows 365 Enterprise | X | X | X | X |
+| Windows 365 Frontline | X | X | | |
 
 For information on hardware requirements, see [End user hardware requirements](end-user-hardware-requirements.md).
 
