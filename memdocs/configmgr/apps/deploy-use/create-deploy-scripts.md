@@ -286,7 +286,7 @@ Schedule script execution on a collection:
 5. Verify the details that are displayed on the **summary page**. 
 6. Click **Next**, and then complete the wizard.
    
- ![Script - Schedule](./media/run-scripts/schedule-scriptn.png)
+ ![Screenshot of script - schedule.](./media/run-scripts/schedule-scriptn.png)
 
 > [!Note]
 > Site will process twenty five scheduled scripts in every 5 mins at a time.
@@ -318,7 +318,7 @@ After you have initiated running a script on a collection of devices, use the fo
 6. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node. 
 7. Click on **View Status** and ensure that the script output displays.
    
-![Script - Schedule Monitoring](./media/run-scripts/scripts-schedulemonitoring.jpg)
+![Screenshot of script - schedule monitoring,](./media/run-scripts/scripts-schedulemonitoring.jpg)
 
 ## Script output
 
