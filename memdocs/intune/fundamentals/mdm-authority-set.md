@@ -160,6 +160,13 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
   - Perform an action, such as Remote Lock, from the Microsoft Intune admin center to the device. If it's successful, then the new MDM authority is managing the device.
 - If you have issues with specific devices, you can unenroll and re-enroll the devices to get them connected to the new authority and managed as quickly as possible.
 
+## Confirm your tenant's MDM authority
+
+To confirm that your MDM authority is set to Intune, use the following steps:
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status**.
+2. Under the **Tenant details** tab, find **MDM authority**.
+
 ## Next steps
 
 With the MDM authority set, you can start [enrolling devices](/mem/intune/fundamentals/deployment-guide-enrollment).
