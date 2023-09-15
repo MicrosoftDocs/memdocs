@@ -6,8 +6,8 @@ ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.author: PalikaSingh
-author: palsi
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
