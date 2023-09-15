@@ -86,14 +86,16 @@ Create two computer smart groups using the following examples:
 **Applicable**: Create a computer smart group containing criteria, which determines the devices that need access to company resources in the Microsoft tenant.
 
 > **Example:** Go to *Jamf Pro* > *Computers* > *Smart Computer Groups* create a new group:
+>
 > - Display Name:
-    - In this article, we've named the group **Jamf-Intune Applicable Group**.
+>   - In this article, we've named the group **Jamf-Intune Applicable Group**.
 > - Criteria:
 >   - Application Title, Operator = is, Value = CompanyPortal.app
 
 **Compliance**: Create a second computer smart group containing criteria, which determines if devices are deemed compliant within Jamf and meet your organization's security standards.
 
 > **Example:** Go to *Jamf Pro* > *Computers* > *Smart Computer Groups*, create another group:
+>
 > - Display Name:
 >   - In this article, we've named the group **Jamf-Intune Compliance Group**.
 >   - *Option to enable* **Send email notification on membership change**.
@@ -107,14 +109,16 @@ Create two computer smart groups using the following examples:
 Create one computer policy that includes the following configurations:
 
 > **Example:** Go to *Jamf Pro* > *Computers* > *Policy*, create a new policy:
+>
 > - **Options** tab:
 >   - **General**:
 >     - Display Name - Give the policy a name. For example, *Register with Azure AD(Entra)*.
 >     - Enabled - Check this box to enable the policy.
->
 >   - **Microsoft Device Compliance**:
 >     - Enable **Register computers with Azure Active Directory**.
+>
 > - **Scope** tab: Configure *Selected Deployment Targets* to **Add** the [**Applicable**](#computer-smart-groups) computer smart group created as part of the [*Jamf Pro administrative configurations*](#complete-the-administrative-configuration).
+>
 > - **Self Service** tab:
 >   - Enable **Make the policy available in Self Service**.
 >   - Set a display name.
@@ -122,6 +126,7 @@ Create one computer policy that includes the following configurations:
 >   - Provide a description.
 >   - Enable **Ensure that users view the description**.
 >   - Enable optional *Categories* as desired.
+>
 > - Select **Save**.
 
 ### Mac App
@@ -148,7 +153,6 @@ Use the following to create a group, containing users of Jamf managed devices, w
 
    > [!TIP]
    > We recommend use of a dynamic group, but you can also use a static group.
-
 
 ## Connect Jamf Pro to Intune
 
@@ -212,26 +216,28 @@ Devices managed with the Jamf platform don't show in Intune's device list in the
 
 ## Troubleshooting
 
-### Issue:
+### Issue
 
 After the policy was launched from the Jamf Self-Service App on the macOS device as instructed, the Microsoft authentication prompt appeared to work normally. However, the status of the device shown in Entra ID did not update from *N/A* to the *Compliant* state as expected, even after waiting one hour or more.
 
 In this case, the device record in Entra ID was incomplete.
 
-### Resolution:
+### Resolution
 
 First, Verify the following:
-   - The device is shown as a member of the Jamf computer smart group for Compliance. This membership indicates the device is compliant.
-   - The authenticating user is a member of the Entra ID group that is scoped to the Jamf Intune connector.
+
+- The device is shown as a member of the Jamf computer smart group for Compliance. This membership indicates the device is compliant.
+- The authenticating user is a member of the Entra ID group that is scoped to the Jamf Intune connector.
 
 Second, On the affected device:
 
-   - Open the Terminal application and execute the following command: 
+- Open the Terminal application and execute the following command:
 
-     `/usr/local/jamf/bin/jamfaad gatherAADInfo`
-     - If the command does not result in a prompt, and instead returns AAD ID acquired for macOS user $USER, then the registration was good.
-     - If the command creates a sign in prompt, and the user is able to complete the sign in without error, there may have been a user error during the initial registration attempt.
-     - If the command creates a sign in prompt but there is an error when the user signs in, further troubleshooting is required via a support case.
+  `/usr/local/jamf/bin/jamfaad gatherAADInfo`
+
+  - If the command does not result in a prompt, and instead returns AAD ID acquired for macOS user $USER, then the registration was good.
+  - If the command creates a sign in prompt, and the user is able to complete the sign in without error, there may have been a user error during the initial registration attempt.
+  - If the command creates a sign in prompt but there is an error when the user signs in, further troubleshooting is required via a support case.
 
 ## Next steps
 
