@@ -111,7 +111,7 @@ To do so, you modify a configuration file to point to the Government cloud, and 
 
    **Edits:**
 
-   Change the value for the setting name *FairFaxArmResourceID* to be equal to "<https://management.usgovcloudapi.net/">
+   Change the value for the setting name *FairFaxArmResourceID* to be equal to ```<https://management.usgovcloudapi.net/>```
 
    - **Original:**
      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
