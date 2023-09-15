@@ -30,6 +30,7 @@ With this integration in Configuration Manager, you can use the *Run Scripts* fu
 - Create and edit scripts for use with Configuration Manager.
 - Manage script usage through roles and security scopes. 
 - Run scripts on collections or individual on-premises managed Windows PCs.
+- Schedule scripts' runtime in UTC on collections or individual on-premises managed Windows PCs.
 - Get rapid aggregated script results from client devices.
 - Monitor script execution and view reporting results from script output.
 
@@ -271,6 +272,30 @@ To select a collection of targets for your script:
 > [!IMPORTANT]
 > If a script does not run, for example because a target device is turned off during the one hour time period, you must run it again.
 
+## Schedule scripts' runtime
+
+Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC.
+
+Schedule script execution on a collection: 
+  
+1. In the Configuration Manager console, click **Assets and Compliance**. 
+2. Right click on a **Device Collections** and select **Run Script**. 
+3. Select the previously created **script**. Click next. 
+4. Select **Scheduling page**, check the **Schedule the script to be run at** checkbox and specify the Schedule Time in UTC. 
+5. Verify the details that are displayed on the **summary page**. 
+6. Click **Next**, and then complete the wizard.
+![Script - Schedule](./media/run-scripts/17668435-schedule-script.png)
+
+Schedule script Monitoring on a collection: 
+ 
+1. In the Configuration Manager console, click **Monitoring**. 
+2. In the Monitoring workspace, click **Scheduled Scripts node**. 
+3. A new row will be displayed in the list of **Scheduled Scripts**.  
+4. The state column should have the value **Scheduled**. The **ClientOperationId** column should be blank. Verify that the other columns like Script Name, Schedule Time etc. have appropriate values. 
+5. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node. 
+6. Click on **View Status** and ensure that the script output displays.
+![Script - Schedule Monitoring](./media/run-scripts/scripts-schedulemonitoring.jpg)
+ 
 ### Target machine execution
 
 The script is executed as the *system* or *computer* account on the targeted client(s). This account has limited network access. Any access to remote systems and locations by the script must be provisioned accordingly.
