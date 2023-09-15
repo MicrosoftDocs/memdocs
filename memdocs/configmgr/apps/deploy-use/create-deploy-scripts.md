@@ -278,7 +278,7 @@ Starting in Configuration Manager current branch version 2309, you can now sched
 
 Schedule script execution on a collection: 
   
-1. 1. In the Configuration Manager console, click **Assets and Compliance**.
+1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
 3. In the **Device Collections** list, click the collection of devices on which you want to schedule the script.
 4. Select a collection of your choice, click **Run Script**.
