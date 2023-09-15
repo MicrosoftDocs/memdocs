@@ -42,7 +42,7 @@ For more information, see [SQL ODBC driver for the site server](../..//plan-desi
 
 ### Option to schedule Scripts execution time
 
-Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC.The run Script Wizard now offers a scheduling option that enables administrators to schedule the execution of scripts. It provides a convenient way to automate the running of scripts on managed devices according to specified schedules.
+Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC. The run Script Wizard now offers a scheduling option that enables administrators to schedule the execution of scripts. It provides a convenient way to automate the running of scripts on managed devices according to specified schedules.
 
 :::image type="content" source="media/17668435-schedule-script.png" alt-text="A screenshot of the schedule script wizard.":::
 
@@ -118,7 +118,7 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 ### CMG creation using Third PartyApp via Console  
 
-Starting in Configuration Manager current branch version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens.For CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears.To update the server app, you can navigate to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings". 
+Starting in Configuration Manager current branch version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens. For CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears. To update the server app, you can navigate to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings". 
 
 >[!NOTE]
 >Existing Customers, must update their server app as current version, doesn't have the Redirect to- "http://localhost"
