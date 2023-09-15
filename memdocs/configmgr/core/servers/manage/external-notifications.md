@@ -243,7 +243,7 @@ Use the following process to view Run Details of subscription:
 5. Select the Subscription ID and enter the **Resource group** name and **Workflow** name.
 6. Click on **Get Run Details** button to view the **Run Details**.
 
- :::image type="content" source="media/17668438-external-service.png" alt-text="Run Details wizard in Configuration Manager console.":::
+ :::image type="content" source="media/17668438-external-service.png" alt-text="Screenshot of the Run Details wizard in Configuration Manager console.":::
 
 ### Azure Portal
 
