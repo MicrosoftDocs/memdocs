@@ -59,7 +59,7 @@ By default, only active alerts are shown. You can use the **Add filter** option 
   
 ### Alert summary
 
-You can select an alert from the list to see the details of summary of that alert.
+You can select an alert from the list to see a summary of that alert.
 
 ![Screenshot of view alert.](./media/alerts/alert-summary.png)
 
