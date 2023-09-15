@@ -1715,13 +1715,8 @@ items:
     - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
       displayName: admx, administrative template, windows, gpo
-    - name: Common scenarios
-      href: ./fundamentals/common-scenarios.md
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
-    - name: Technology decisions for BYOD with EMS
-      href: ./fundamentals/byod-technology-decisions.md    
-      displayName: MDM      
 
   - name: Developer guidance
     items:
