@@ -6,8 +6,8 @@ ms.date: 12/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: PalikaSingh
+author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -278,22 +278,26 @@ Starting in Configuration Manager current branch version 2309, you can now sched
 
 Schedule script execution on a collection: 
   
-1. In the Configuration Manager console, click **Assets and Compliance**. 
-2. Right click on a **Device Collections** and select **Run Script**. 
-3. Select the previously created **script**. Click next. 
-4. Select **Scheduling page**, check the **Schedule the script to be run at** checkbox and specify the Schedule Time in UTC. 
+1. 1. In the Configuration Manager console, click **Assets and Compliance**.
+2. In the Assets and Compliance workspace, click **Device Collections**.
+3. In the **Device Collections** list, click the collection of devices on which you want to schedule the script.
+4. Select a collection of your choice, click **Run Script**.
+4. On the **Scheduling page**, Schedule the script to be run at checkbox and specify the Schedule Time in UTC. 
 5. Verify the details that are displayed on the **summary page**. 
 6. Click **Next**, and then complete the wizard.
-![Script - Schedule](./media/run-scripts/17668435-schedule-script.png)
+   
+![Script - Schedule](./media/run-scripts/schedule-scriptn.png)
 
 Schedule script Monitoring on a collection: 
  
 1. In the Configuration Manager console, click **Monitoring**. 
 2. In the Monitoring workspace, click **Scheduled Scripts node**. 
 3. A new row will be displayed in the list of **Scheduled Scripts**.  
-4. The state column should have the value **Scheduled**. The **ClientOperationId** column should be blank. Verify that the other columns like Script Name, Schedule Time etc. have appropriate values. 
-5. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node. 
-6. Click on **View Status** and ensure that the script output displays.
+4. Verify a new row has been displayed in the list of Scheduled Scripts. The state column should have the value **Scheduled**. The **ClientOperationId** column should be blank. Verify that the other columns like Script Name, Schedule Time etc. have appropriate values.
+5. After the Schedule Time, refresh the **Scheduled Scripts** node. The state column should have the value **Successfully initiated client operation**. The **ClientOperationId** column  should have an integer value. 
+6. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node. 
+7. Click on **View Status** and ensure that the script output displays.
+   
 ![Script - Schedule Monitoring](./media/run-scripts/scripts-schedulemonitoring.jpg)
  
 ### Target machine execution
