@@ -6,8 +6,8 @@ ms.date: 18/09/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -230,7 +230,7 @@ The process to trigger an event depends upon the type of subscription:
 ### Configuration Manager Console
 When Azure Logic Apps generate notifications or alerts related to specific events or conditions, Configuration Manager can now capture and display these notifications. This integration enables the monitoring of Azure Logic App notifications directly within the Configuration Manager console, providing a centralized location for tracking critical events, taking appropriate actions and maintain a high level of operational efficiency. 
 
-To use this feature a valid **Azure AD web app** is required. Please deploy the Azure services for **Administration Service Management** under Administration\Overview\Cloud Services\Azure Services. If the service is already deployed, admin can use the existing web application to view **Run details** from Azure logic app.
+To use this feature a valid **Azure AD Web app** is required. Please deploy the Azure services for **Administration Service Management** under Administration\Overview\Cloud Services\Azure Services. If the service is already deployed, admin can use the existing web application to view **Run details** from Azure logic app.
 
 For more information, see [Configure Azure services for use with Configuration Manager](../deploy/configure/azure-services-wizard.md).
 
