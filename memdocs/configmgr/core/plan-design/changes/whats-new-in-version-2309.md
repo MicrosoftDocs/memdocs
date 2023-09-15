@@ -2,7 +2,7 @@
 title: What's new in version 2309
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
-ms.date: 08/25/2023
+ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
