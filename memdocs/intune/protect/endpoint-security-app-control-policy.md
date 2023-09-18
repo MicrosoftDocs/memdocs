@@ -101,6 +101,14 @@ To manage Application Control policies, an account must have sufficient role-bas
 
 For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
+### Government cloud support
+
+Intune endpoint security Application control policies and configuring aManaged Installer are supported with the following sovereign cloud environments:
+
+- GGC High
+- DoD
+- 21Vianet
+
 ## Get started with managed installers
 
 With Intune’s endpoint security Application control, you can use policy to the [Intune Management Extension](../apps/apps-win32-app-management.md) as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work) on your managed Windows devices.
