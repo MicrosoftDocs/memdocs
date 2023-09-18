@@ -68,10 +68,9 @@ Consider testing to assess the impact of OS updates on the app you are running i
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Update policies for iOS/iPadOS** > **Create profile**.
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
+4. On the **Update policy settings** tab, configure the following options:
 
    :::image type="content" source="./media/software-updates-ios/basics-tab.png" alt-text="Example Update policy settings.":::
-
-4. On the **Update policy settings** tab, configure the following options:
 
    1. **Select version to install**. You can choose from:
 
