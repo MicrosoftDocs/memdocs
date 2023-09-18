@@ -453,6 +453,7 @@ value: {"bypassedUrls":["ipchicken.com", "whatsmyip.org"]}
 Tunnel for MAM doesn't support:  
 
 - On-premises sites using Kerberos or NTLM integrated authentication webserver sign-in.
+- Client Certificate HTTP Authentication not supported
 
 **Workaround**: None.
 
