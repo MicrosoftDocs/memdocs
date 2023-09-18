@@ -172,6 +172,15 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
+#### Intune integration with the Zebra Lifeguard Over-the-Air service becomes generally available<!-- 16238201  -->  
+Microsoft Intune supports integration with Zebra Lifeguard Over-the-Air service, which allows you to deliver OS updates and security patches over-the-air to eligible Zebra devices that are enrolled with Intune. You can select the firmware version you want to deploy, set a schedule, and stagger update downloads and installs. You can also set minimum battery, charging status, and network conditions requirements for when the update can happen.
+
+This integration is now Generally Available for Android Enterprise Dedicated and Fully Managed Zebra devices that are running Android 8 or later, and requires an account with Zebra, as well as Intune Plan 2 or Microsoft Intune Suite.
+
+Previously, this was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
+
+For licensing details, see [Intune add-ons](../fundamentals/intune-add-ons.md).
+
 ### Device enrollment
 
 #### SSO support during enrollment for Android Enterprise fully managed and corporate-owned devices with a work profile<!-- 8080357 -->  
@@ -191,6 +200,9 @@ Applies to:
 
 #### Management certificate expiration date<!-- 17648747  -->  
 Management certificate expiration date is available as a column in the **Devices** workload. You can filter on a range of expiration dates for the management certificate and also export a list of devices with an expiration date matching the filter. This information is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **All devices**.
+
+#### Windows Defender Application Control (WDAC) references will update to App Control for Business<!-- 24863807  -->  
+Windows has renamed *Windows Defender Application Control* (WDAC) as *App Control for Business*. With this change, the references in Intune docs and the Intune admin center will update to reflect this new name.
 
 ### Device security
 
