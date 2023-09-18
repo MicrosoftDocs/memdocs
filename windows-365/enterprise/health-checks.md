@@ -59,7 +59,7 @@ Every failed ANC or success with warning error state includes the technical deta
 - **DNS can resolve Active Directory domain**: Resolve the provided Active Directory domain name.
 - **Active directory domain join**: A domain join using the credentials, domain, and OU provided.
 - **Endpoint connectivity**: Connectivity to the required [URL/endpoints](requirements-network.md).
-- **Azure AD device sync (warning)**: Device ID sync is enabled on the Microsoft Entra tenant, and the computer object is being synced within 90 minutes.
+- **Microsoft Entra device sync (warning)**: Device ID sync is enabled on the Microsoft Entra tenant, and the computer object is being synced within 90 minutes.
 - **Azure subnet IP address usage**: Sufficient IP addresses are available in the provided Azure subnet.
 - **Azure tenant readiness**: The defined Azure subscription is enabled and ready for use. No Azure policy restrictions are blocking Windows 365 resources from being created.
 - **Azure virtual network readiness**: The defined vNet is in a Windows 365 supported region.

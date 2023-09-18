@@ -72,9 +72,9 @@ For both tenant mapping and granting permissions for custom images and/or connec
 
 If you want to use Microsoft Entra join or Microsoft Entra hybrid join, consider these preparations:
 
-**Azure AD joined Cloud PCs**: If you want to use a Microsoft Entra join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure .com domain must be mapped to the tenant in the Azure Government (.us) domain.
+**Microsoft Entra joined Cloud PCs**: If you want to use a Microsoft Entra join infrastructure and your own network, you need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure .com domain must be mapped to the tenant in the Azure Government (.us) domain.
 
-**Hybrid Azure AD joined Cloud PCs**: If you want to use a Microsoft Entra hybrid join infrastructure, you must configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
+**Hybrid Microsoft Entra joined Cloud PCs**: If you want to use a Microsoft Entra hybrid join infrastructure, you must configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
 
 ## Preparing for Windows 365 GCC Setup Tool
 
