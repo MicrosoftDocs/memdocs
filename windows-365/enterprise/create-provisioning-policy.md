@@ -63,8 +63,8 @@ A few things to keep in mind:
     - **Enterprise**: Provision Cloud PCs for Windows 365 Enterprise.
     - **Frontline**: Provision Cloud PCs for [Windows 365 Frontline](introduction-windows-365-frontline.md).
 4. On the **General** page, select a **Join type**:
-    - **Hybrid Azure AD Join**: You must select an ANC to use for this policy.
-    - **Azure AD Join**: You have two options for **Network**:
+    - **Hybrid Microsoft Entra join**: You must select an ANC to use for this policy.
+    - **Microsoft Entra join**: You have two options for **Network**:
         - **Azure network connection**: Select an ANC to use for this policy.
         - **Microsoft hosted network**: Select a **Geography** where you want your Cloud PCs provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
             - **Automatic (Recommended)**: The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. This automation decreases the chance of provisioning failure.
