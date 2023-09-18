@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/04/2020
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -58,7 +58,7 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 > [!NOTE]
 > If you're moving to Microsoft 365 from an Office 365 subscription, your users and groups are already in Azure AD. Intune uses the same Azure AD, and can use the existing users and groups.
 
-### Add Intune users in the Microsoft Intune admin center
+### Add individual Intune users in the Microsoft Intune admin center
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create user**.
 2. Specify the following user details:
@@ -73,6 +73,15 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
 7. Choose a **Usage location** for the new user. Usage location is required before you can assign the new user an Intune license.
 8. Optionally, you can provide information for the **Job title**, **Department**, **Company name**, and **Manager** fields.
 9. Select **Create** to add the new user to Intune.
+
+### Add multiple Intune users in the Microsoft Intune admin center
+
+You can add Intune users in bulk by uploading a csv file containing the full list of users. The following steps allow you to add multiple users to Intune:
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create user** pane is displayed.
+2. Download, edit, and upload a *csv* template containing a list of users that you want to add to Intune. 
+
+The *csv* file is a comma-separated value list that can be edited in Notepad or Excel. For more information about using a *csv* file to add Intune users, see [Bulk create users in Azure Active Directory](/azure/active-directory/enterprise-users/users-bulk-add).
 
 ## Grant admin permissions
 

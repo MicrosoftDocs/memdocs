@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of September 18 28, 2023
+## Week of September 18, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Documentation
