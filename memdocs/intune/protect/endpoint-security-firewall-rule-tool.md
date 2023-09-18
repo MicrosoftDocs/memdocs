@@ -66,7 +66,7 @@ Run the tool on a reference machine to migrate that machines current Windows Fir
 
    > [!NOTE]
    > By default, remote assemblies do not run in the .NET Framework 4 and later. To run a remote assembly, you must either run it as fully trusted or create a sandboxed AppDomain in which to run it.
-   > For information on how to undertake this configuration change, see [*loadFromRemoteSources* Element](../previous-versions/dotnet/netframework-4.0/dd409252(v=vs.100)?redirectedfrom=MSDN) in the Microsoft .NET Framework documentation.
+   > For information on how to undertake this configuration change, see [*loadFromRemoteSources* Element](/previous-versions/dotnet/netframework-4.0/dd409252(v=vs.100)?redirectedfrom=MSDN) in the Microsoft .NET Framework documentation.
    > Running "[System.Runtime.InteropServices.RuntimeEnvironment]::SystemConfigurationFile" from a PowerShell window will provide you with the path to your configuration file.
    > Remember to revert the .NET Framework security change when you have imported your firewall rules.
 
