@@ -34,7 +34,7 @@ ms.collection:
 
 By editing a provisioning policy, you can move existing Cloud PCs from their current region or Azure network connection (ANC) to a new one.
 
-The best time to perform moves is over the weekend to make sure the impact to users is minimized. Cloud PC's will be shutdown during the move process, so you should notify your users before the move so that they can save their work and sign-off.
+The best time to perform moves is over the weekend to make sure the impact to users is minimized. Cloud PCs are shut down during the move process, so you should notify your users before the move so that they can save their work and sign out.
 
 New Cloud PCs created by the edited provisioning policy are assigned to the new region or ANC.
 

@@ -39,8 +39,8 @@ You can have up to 10 ANCs per tenant.
 As part of the connection process, the Windows 365 service is granted the following permissions:
 
 - Reader permission on the Azure subscription.
-- Windows365 Network Interface Contributor role on the specified resource group.
-- Windows365 Network User role on the virtual network.
+- Windows 365 Network Interface Contributor role on the specified resource group.
+- Windows 365 Network User role on the virtual network.
 
 ## Requirements
 
@@ -71,19 +71,19 @@ When planning your ANC VNets with ExpressRoute as the on-premises connectivity m
 4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you won't be able to proceed.
 5. Select a **Virtual network** and **Subnet**.
 6. Select **Next**.
-7. For hybrid Microosft Entra join ANCs, on the **AD domain** page, provide the following information:
+7. For hybrid Microsoft Entra join ANCs, on the **AD domain** page, provide the following information:
 
     - **AD domain name**: The DNS name of the Active Directory domain that you want to use for connecting and provisioning Cloud PCs. For example, corp.contoso.com.
 
         > [!NOTE]
         > If your on-premises Active Directory environment has more than one domain or parent-child domains, be sure to enter the specific domain in which the Cloud PCs need to be domain joined.
 
-    - **Organizational unit**: (Optional.) An organizational unit (OU) is a container within an Active Directory domain, which can hold users, groups, and computers. Make sure that this OU is enabled to sync with Microsoft Entra Connect. Provisioning will fail if this OU isn't syncing.
+    - **Organizational unit**: (Optional.) An organizational unit (OU) is a container within an Active Directory domain, which can hold users, groups, and computers. Make sure that this OU is enabled to sync with Microsoft Entra Connect. Provisioning fails if this OU isn't syncing.
     - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU.
-    - **AD domain password**: The password for the user specified above.
-    - **Confirm AD domain password**: The password for the user specified above.
+    - **AD domain password**: The password for the user.
+    - **Confirm AD domain password**: The password for the user.
 
-    Cloud PCs that use the defined ANC will be joined to the domain and OU specified. Make sure that the domain selected is the desired domain for the computers to join
+    Cloud PCs that use the defined ANC are joined to the domain and OU specified. Make sure that the domain selected is the desired domain for the computers to join
 
 8. Select **Next**.
 9. On the **Review + Create** page, select **Create**.
