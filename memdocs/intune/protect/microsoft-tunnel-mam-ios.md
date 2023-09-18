@@ -452,9 +452,13 @@ value: {"bypassedUrls":["ipchicken.com", "whatsmyip.org"]}
 
 Tunnel for MAM doesn't support:  
 
-- On-premises sites using Kerberos or NTLM integrated authentication webserver sign-in.
+- On-premises sites using Kerberos integrated authentication webserver sign-in.
 
 **Workaround**: None.
+
+> [!TIP]
+> Tunnel for MAM on iOS does support NTLM integrated authentication webserver sign-in. For more information, see [Manage NTLM single sign-on sites](../apps/manage-microsoft-edge.md#manage-ntlm-single-sign-on-sites) in *Manage Microsoft Edge on iOS and Android with Intune*.
+
 
 ## Next steps
 
