@@ -255,7 +255,7 @@ Specifically:
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
 - On Windows devices, these profiles use the [Windows configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference).
 
-When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). Group Policy analytics is a tool and feature in Configuration Manager that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
+When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). Group Policy analytics is a tool and feature in Intune that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
 
 Next, [Step 1: Set up Microsoft Intune](deployment-plan-setup.md).
 
