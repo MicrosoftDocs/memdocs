@@ -121,7 +121,7 @@ Microsoft 365 (Office) supports the following settings for configuration:
 
 - [Manage the creation of Sticky Notes](#manage-the-creation-of-sticky-notes)
 - [Set add-ins preference](#set-add-ins-preference)
-- [Manage Teams apps running on Microsoft 365 (Office) for iOS and Android](#manage-teams-apps-running-on-office-for-ios-and-android)
+- [Manage Teams apps running on Microsoft 365 (Office) for iOS and Android](#manage-teams-apps-running-on-microsoft-365-office-for-ios-and-android)
 - [Enable or disable Microsoft 365 Feed for iOS and Android](#enable-or-disable-microsoft-365-feed-for-ios-and-android)
 
 ### Manage the creation of Sticky Notes
