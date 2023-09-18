@@ -84,6 +84,9 @@ These apps are the apps you want on their devices. Some considerations:
 
   For more information and considerations, go to [Personal devices vs. Organization-owned devices](#personal-devices-vs-organization-owned-devices) (in this article).
 
+- If you plan to migrate to Microsoft Outlook, note the email configurations you currently use. These settings can be configured using Intune app configuration policies.
+- Review the [protected apps designed to work with Intune](../apps/apps-supported-intune-apps.md). These apps are supported partner apps and Microsoft apps that are commonly used with Microsoft Intune.
+
 ### Objective: Secure access on all devices
 
 When data is stored on mobile devices, it must be protected from malicious activity.

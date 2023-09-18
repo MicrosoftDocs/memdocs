@@ -114,6 +114,9 @@ When assigning policies and apps in the Intune admin center, you can choose to a
 
 The **All devices** group targets all devices that are enrolled into management. The **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you don't create them or view them in Azure Active Directory. They're convenient to use because they're already in your tenant, and they're a faster targeting unit than Azure AD groups.
 
+> [!TIP]
+> To create the basic compliance requirements of your organization, you can create a default policy that applies to all groups and devices. Then, create more specific policies for the broadest categories of users and devices. For example, you might create email policies for each of the device operating systems.
+
 When assigning policies and applications to large groups, such as **All users** and **All devices**, you may choose to use **Filters**, so that you can dynamically control which devices the policy or app deployment should apply to.
 
 For more guidance on using Filters, go to:
