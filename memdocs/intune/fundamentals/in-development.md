@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/24/2023
+ms.date: 09/18/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -179,24 +179,12 @@ Applies to:
 - macOS 11 Big Sur
 
 ### Government tenant support for endpoint security Application Control policy and Managed Installer<!-- 24850055 -->
-We’re adding support to use endpoint security Application Control policies, and to configure a Managed Installer, to both tenants in US Government and tenants in 21Vianet in China.
+We're adding support to use endpoint security Application Control policies, and to configure a Managed Installer, to both tenants in US Government and tenants in 21Vianet in China.
 
 Support for Application Control policy and Managed installers was originally [released in preview in June 2023](../fundamentals/whats-new.md#new-endpoint-security-application-control-policy-in-preview) as part of the Intune 2306 service release. Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
 
 ### Management certificate expiration date<!-- 17648747 -->
 Management certificate expiration date will be available as a column in the **Devices** workload. You will be able to filter on a range of expiration dates for the management certificate and also export a list of devices with an expiration date matching the filter. You will find this information listed in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **All devices**.
-
-### Intune will support iOS/iPadOS 15.x as the minimum version<!-- 24161619  -->  
-Later this year, Apple is expected to release iOS/iPadOS version 17. After the release of iOS/iPadOS 17, the minimum version supported by Intune will be iOS/iPadOS 15.x.
-
-For more information on this change, go to [Plan for change: Intune is moving to support iOS/iPadOS 15 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-15-and-later).
-
-> [!NOTE]
-> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
-
-Applies to:
-
-- iOS/iPadOS
 
 <!-- *********************************************** -->
 
@@ -206,20 +194,20 @@ Applies to:
 We are adding support to manage application elevations on Windows 365 devices (also known as Cloud PCs) to [Endpoint Privilege Management](../protect/epm-overview.md).  
 
 ### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972 -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support Linux.  We’re adding a new profile template that you can use with both the Linux devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support Linux.  We're adding a new profile template that you can use with both the Linux devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The Linux EDR template will include the following settings for the Device tags category from Defender for Endpoint:
 - **Group tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
-- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn't be repeated in the same profile.
 
 You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
 
 ### macOS support with Intune Endpoint security policies for Endpoint detection and response<!--  17757981 -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support macOS.  We’re adding a new profile template that you can use with both the macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support macOS.  We're adding a new profile template that you can use with both the macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The macOS EDR template will include the following settings for the Device tags category from Defender for Endpoint:
 - **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
-- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn't be repeated in the same profile.
 
 You can learn more about Defender for Endpoint settings that are available for macOS in  [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
