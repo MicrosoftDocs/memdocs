@@ -244,9 +244,6 @@ Devices are ready to be enrolled in Intune, and receive your policies.
 
 In the cloud, MDM providers, like Intune, manage settings and features on devices. Group policy objects (GPO) aren't used. 
 
-> [!NOTE]
-> Group policy objects (GPOs) are primarily used on-premises to configure settings on Windows computers, but also can include remote Windows devices. In device management, GPOs help control security and features in the Windows OS, Internet Explorer, Office apps, and more. Group policy provides the capability to manage a large number of Active Directory Domain Services (AD DS) computer and user objects through a centralized, one-to-many model. Group Policy settings are contained in a group policy object and linked to one or more AD DS service containers (sites, domains, and organizational units (OUs)). Note that devices do not have to be domain-joined to apply GPOs.
-
 When you manage devices, Intune device configuration profiles replace on-premises GPO. Device configuration profiles use settings exposed by Apple, Google, and Microsoft.
 
 Specifically:
