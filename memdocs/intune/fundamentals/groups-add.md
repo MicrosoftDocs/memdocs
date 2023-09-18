@@ -51,7 +51,6 @@ Use the following steps to create a new group.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Groups** > **New group**:
 
-    ![Screenshot that shows the Azure portal with New Group selected](./media/groups-add/groups-add-new.png)
    :::image type="content" alt-text="Screenshot that shows the Azure portal with New Group selected." source="./media/groups-add/groups-add-new.png" link="./media/groups-add/groups-add-new.png":::
 
 3. In **Group type**, choose one of the following options:
@@ -78,7 +77,7 @@ Use the following steps to create a new group.
     - **Dynamic User**: Administrators create membership rules to automatically add and remove members.
     - **Dynamic Device**: Administrators create dynamic group rules to automatically add and remove devices.
 
-      ![Screenshot that shows Intune group properties.](./media/groups-add/groups-add-properties.png)
+      :::image type="content" alt-text="Screenshot that shows Intune group properties." source="./media/groups-add/groups-add-properties.png":::
 
     For more information on these membership types, and creating dynamic expressions, see:
 
