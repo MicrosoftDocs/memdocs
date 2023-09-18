@@ -292,5 +292,5 @@ By selecting the **More (…)** menu next to a deployment, or by selecting the d
 
 ## Disconnecting Zebra connector
 
-1. Go to **Tenant admin** > **connectors and tokens** > **Firmware over-the-air**.
+1. Go to **Tenant admin** > **Connectors and tokens** > **Firmware over-the-air**.
 2. Select **Disconnect** and confirm the disconnection. This disconnects your Intune tenant from Zebra and existing deployments will not be affected.
