@@ -52,6 +52,7 @@ Use the following steps to create a new group.
 2. Select **Groups** > **New group**:
 
     ![Screenshot that shows the Azure portal with New Group selected](./media/groups-add/groups-add-new.png)
+   :::image type="content" alt-text="Screenshot that shows the Azure portal with New Group selected." source="./media/groups-add/groups-add-new.png" link="./media/groups-add/groups-add-new.png":::
 
 3. In **Group type**, choose one of the following options:
 
