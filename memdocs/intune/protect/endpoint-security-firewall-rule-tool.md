@@ -50,15 +50,27 @@ Run the tool on a reference machine to migrate that machines current Windows Fir
 
 1. Sign in to the reference machine with local administrator privileges.
 
-2. Download and unzip the file `Export-FirewallRules.zip`.
+2. Download the pre-requisite PowerShell module(s) from [Github](https://github.com/microsoft/Intune-PowerShell-Management/archive/master.zip)
 
-   The zip file contains the script file `Export-FirewallRules.ps1`.
+   The zip file should be extracted into a root folder where you will place the script in the next step.
 
-3. Run the `Export-FirewallRules.ps1` script on the machine.
+3. Download and unzip the file `Export-FirewallRules.zip`.
+
+   The zip file contains the script file `Export-FirewallRules.ps1`. This should be extracted to the root folder from the above step, where you should now have the `Export-FirewallRules.ps1` and subfolder "Intune-PowerShell-Management-master"
+
+4. Launch PowerShell with the following switch - "PowerShell.exe -Executionpolicy Bypass"
+
+5. Run the `Export-FirewallRules.ps1` script on the machine.
 
    The script downloads all the prerequisites it requires to run. When prompted, provide appropriate Intune administrator credentials. For more information about required permissions, see [Required permissions](#required-permissions).
 
-4. Provide a policy name when prompted. The policy name must be unique for the tenant.
+   > [!NOTE]
+   > By default, remote assemblies do not run in the .NET Framework 4 and later. To run a remote assembly, you must either run it as fully trusted or create a sandboxed AppDomain in which to run it.
+   > For information on how to undertake this configuration change, see [*loadFromRemoteSources* Element](/previous-versions/dotnet/netframework-4.0/dd409252(v=vs.100)?redirectedfrom=MSDN) in the Microsoft .NET Framework documentation.
+   > Running "[System.Runtime.InteropServices.RuntimeEnvironment]::SystemConfigurationFile" from a PowerShell window will provide you with the path to your configuration file.
+   > Remember to revert the .NET Framework security change when you have imported your firewall rules.
+
+7. Provide a policy name when prompted. The policy name must be unique for the tenant.
 
    When more than 150 firewall rules are found, multiple policies are created.
 
@@ -69,7 +81,7 @@ Run the tool on a reference machine to migrate that machines current Windows Fir
    >
    > The time the tool takes to run depends on the number of firewall rules found.
 
-5. After the tool runs, it outputs a count of firewall rules that it couldn't automatically migrate. For more information, see [Unsupported configuration](#unsupported-configuration).
+8. After the tool runs, it outputs a count of firewall rules that it couldn't automatically migrate. For more information, see [Unsupported configuration](#unsupported-configuration).
 
 ## Switches
 
