@@ -117,7 +117,7 @@ To enable coexistence, you must add Intune as the MDM authority for your environ
 3. The **Add MDM Authority blade** displays.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
   
-  ![Screenshot of Add MDM Authority screen](./media/mdm-authority-set/add-mdm-authority.png)
+   :::image type="content" alt-text="Screenshot of Add MDM Authority screen." source="./media/mdm-authority-set/add-mdm-authority.png" link="./media/mdm-authority-set/add-mdm-authority.png":::
 
 ### Migrate users and devices (optional)
 
