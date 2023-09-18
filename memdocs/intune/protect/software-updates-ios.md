@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Microsoft Intune policies to manage iOS/iPadOS software updates
+title: Use Microsoft Intune to manage software updates for supervised iOS/iPadOS devices
 description: Use Microsoft Intune to manage system updates for supervised iOS/iPadOS devices.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2022
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,7 +31,7 @@ ms.collection:
 
 # Manage iOS/iPadOS software update policies in Intune
 
-You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that enrolled as supervised devices.
+You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that enrolled as *supervised devices*.
 
 [Supervised devices](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) are devices that enroll through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
@@ -52,10 +52,10 @@ With policies for iOS software updates, you can:
 
 > [!NOTE]
 >
-> - iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md), can install only when there is no user signed in to a Shared iPad session and the device is charging. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully. 
+> - iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) will install only when the device is charging and while no users are signed in to a *Shared iPad session* on he device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
 >
 > - If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behavior may be undesirable.
-Consider testing to assess the impact of OS updates on the app you are running in ASAM. ASAM can be configured through Intune [device restriction profiles](../configuration/device-restrictions-ios.md#general).
+Consider testing to assess the impact of OS updates on the app you are running in ASAM. You can use Intune [*device restriction profiles*](../configuration/device-restrictions-ios.md#general) to configure ASAM.
 
 > [!TIP]
 > If you're new to configuring software updates or want some guidance based on common scenarios, go to:
@@ -91,9 +91,9 @@ Consider testing to assess the impact of OS updates on the app you are running i
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. With a start day and end day, overnight blocks are supported. Options include:
 
         - **Start day**: Choose the day on which the schedule window starts.
-        - **Start time**: Choose the time day when the schedule window begins. For example, if you select 5 AM and have a Schedule type of *Update during scheduled time*, 5 AM will be the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, 5 AM will be the start of a period of time that updates can't install.
+        - **Start time**: Choose the time day when the schedule window begins. For example, if you select 5 AM and have a Schedule type of *Update during scheduled time*, 5 AM is the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, 5 AM is the start of a period of time that updates can't install.
         - **End day**: Choose the day on which the schedule window ends.
-        - **End time**: Choose the time of day when the schedule window stops. For example, if you select 1 AM and have a Schedule type of *Update during scheduled time*, 1 AM will be the time when updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM will be the start of a period of time that updates can install.
+        - **End time**: Choose the time of day when the schedule window stops. For example, if you select 1 AM and have a Schedule type of *Update during scheduled time*, 1 AM is the time when updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM is the start of a period of time that updates can install.
 
        If you don't configure times to start or end, the configuration results in no restriction and updates can install at any time.  
 
@@ -137,7 +137,7 @@ You can edit an existing policy, including changing the restricted times:
 
 ## Delay visibility of software updates
 
-When you use update policies for iOS, you might have need to delay visibility of an iOS software update. Reasons to delay visibility include:  
+When you use update policies for iOS, you might have need to delay visibility of an iOS software update. Reasons to delay visibility include:
 
 - Prevent users  from updating the OS manually
 - To deploy an older update while preventing users from installing a more recent one
@@ -152,7 +152,7 @@ To delay visibility, deploy a device restriction template that configures the fo
 
 [Device restriction](../configuration/device-restrictions-configure.md) templates are part of device configuration policies.
 
-For guidance from the Intune support team, see [Delay visibility of software updates in Intune for supervised devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
+For guidance from the Intune support team, see the Intune Customer Success blog [Delaying visibility of software updates in Intune for supervised iOS devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
 
 ## Monitor for update installation failures on devices
 
