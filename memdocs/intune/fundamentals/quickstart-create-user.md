@@ -49,11 +49,11 @@ A user must have a user account to enroll in Intune device management. To create
 
 1. In the Microsoft Intune admin center, select **Users** > **All users** > **New user**:
 
-   :::image type="content" alt-text="In the Microsoft Intune admin center, select New user." source="./media/quickstart-create-user/create-user.png" link="./media/quickstart-create-user/create-user.png":::
+   :::image type="content" alt-text="In the Microsoft Intune admin center, select New user." source="./media/quickstart-create-user/create-user.png" lightbox="./media/quickstart-create-user/create-user.png":::
 
 1. In the **Name** box, enter a name, such as *Dewey Kellum*:
 
-   :::image type="content" alt-text="Add user details." source="./media/quickstart-create-user/create-user-02.png" link="./media/quickstart-create-user/create-user-02.png":::
+   :::image type="content" alt-text="Add user details." source="./media/quickstart-create-user/create-user-02.png" lightbox="./media/quickstart-create-user/create-user-02.png":::
 
 1. In the **User name** box, enter a user identifier, such as Dewey@contoso.onmicrosoft.com.
 
@@ -75,7 +75,7 @@ To assign an Intune license to a user:
 4. Under **Select location**, select a location for the user, if it's not already set.
 2. Select the **Intune** check box in the **Licenses** section. If another license includes Intune, you can select that license. The displayed [product name](/azure/active-directory/users-groups-roles/licensing-service-plan-reference) is used as the service plan in Azure management.
 
-   :::image type="content" alt-text="Select the location and Intune license." source="./media/quickstart-create-user/create-user-03.png" link="./media/quickstart-create-user/create-user-03.png":::
+   :::image type="content" alt-text="Select the location and Intune license." source="./media/quickstart-create-user/create-user-03.png" lightbox="./media/quickstart-create-user/create-user-03.png":::
 
    > [!NOTE]
    > This setting uses one of your licenses for the user. If you're using a trial environment, you'll later reassign this license to a real user in a live environment.
