@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/01/2023
+ms.date: 09/05/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -69,6 +69,11 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 The objective of the Intune App SDK for iOS is to add management capabilities to iOS applications with minimal code changes. The fewer the code changes the less time to market, but without affecting the consistency and stability of your mobile application.
 
+### Process flow
+
+The following diagram provides the Intune App SDK for iOS process flow:
+
+:::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune."  lightbox="media/app-sdk-ios/intune-app-sdk-ios-process-flow.png" :::
 
 ## Build the SDK into your mobile app
 

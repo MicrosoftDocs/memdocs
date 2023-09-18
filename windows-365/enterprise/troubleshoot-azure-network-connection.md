@@ -46,18 +46,20 @@ When a Cloud PC is provisioned, it’s automatically joined to the provided doma
 - You troubleshoot domain join failures like any physical computer in your organization.
 - If you have a domain name that can be resolved on the internet (like contoso.com), make sure that your DNS servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records and not your public domain name.  
 
-## Azure Active Directory device Sync
+<a name='azure-active-directory-device-sync'></a>
 
-Before MDM enrollment can take place during provisioning, an Azure Active Directory (Azure AD) object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Azure AD in a timely manner.  
+## Microsoft Entra device Sync
 
-Make sure that your Azure AD computer objects appear in Azure AD quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Azure AD within 90 minutes, provisioning fails.  
+Before MDM enrollment can take place during provisioning, a Microsoft Entra ID object must be present for the Cloud PC. This check is intended to make sure that your organizations computer accounts are syncing to Microsoft Entra ID in a timely manner.  
+
+Make sure that your Microsoft Entra computer objects appear in Microsoft Entra ID quickly. We suggest within 30 minutes, and no longer than 60 minutes. If the computer object doesn’t arrive in Microsoft Entra ID within 90 minutes, provisioning fails.  
 
 If provisioning fails, make sure that:
 
-- The sync period configuration on Azure AD is set appropriately. Speak with your identity team to make sure that your directory is syncing fast enough.  
-- Your Azure AD is active and healthy.  
-- Azure AD Connect is running correctly and there are no issues with the sync server.  
-- You manually perform an Add-Computer into the OU provided for Cloud PCs. Time how long it takes for that computer object to appear in Azure AD.
+- The sync period configuration on Microsoft Entra ID is set appropriately. Speak with your identity team to make sure that your directory is syncing fast enough.  
+- Your Microsoft Entra ID is active and healthy.  
+- Microsoft Entra Connect is running correctly and there are no issues with the sync server.  
+- You manually perform an Add-Computer into the OU provided for Cloud PCs. Time how long it takes for that computer object to appear in Microsoft Entra ID.
 
 ## Azure subnet IP address range usage
 
@@ -102,7 +104,7 @@ Along with standard the DNS lookup on the supplied domain name, we also check fo
 
 ## Endpoint connectivity
 
-During provisioning, Cloud PCs must connect to multiple Microsoft publicly available services. These services include Microsoft Intune, Azure Active Directory, and Azure Virtual Desktop.  
+During provisioning, Cloud PCs must connect to multiple Microsoft publicly available services. These services include Microsoft Intune, Microsoft Entra ID, and Azure Virtual Desktop.  
 
 You must make sure that all of the [required public endpoints](requirements-network.md#allow-network-connectivity) can be reached from the subnet being used by Cloud PCs.
 

@@ -33,7 +33,7 @@ ms.collection:
 
 You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that enrolled as *supervised devices*.
 
-[Supervised devices](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) are devices that enroll through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
+A [supervised device](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
 This feature applies to:
 
@@ -48,7 +48,7 @@ With policies for iOS software updates, you can:
 
 - Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in, or creating date and time ranges during which updates can install or are blocked from installing.
 
-  By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
+  By default, devices check in with Intune about every eight hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
 > [!NOTE]
 >
@@ -59,6 +59,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 
 > [!TIP]
 > If you're new to configuring software updates or want some guidance based on common scenarios, go to:
+>
 > - [Software updates admin checklist and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
 > - [Software updates admin checklist for BYOD and personal devices](software-updates-guide-personal-byod.md)
 
@@ -95,16 +96,17 @@ Consider testing to assess the impact of OS updates on the app you are running i
         - **End day**: Choose the day on which the schedule window ends.
         - **End time**: Choose the time of day when the schedule window stops. For example, if you select 1 AM and have a Schedule type of *Update during scheduled time*, 1 AM is the time when updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM is the start of a period of time that updates can install.
 
-       If you don't configure times to start or end, the configuration results in no restriction and updates can install at any time.  
+      If you don't configure times to start or end, the configuration results in no restriction and updates can install at any time.
 
-       > [!NOTE]
-       > You can configure settings in a [device restrictions](#delay-visibility-of-software-updates) profile to hide an update from device users for a period of time on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
-       >
-       > When you use a device restriction to hide an update, review your software update policies to ensure they won't schedule the installation of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
+      > [!NOTE]
+      >
+      > You can configure settings in a [device restrictions](#delay-visibility-of-software-updates) profile to hide an update from device users for a period of time on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+      >
+      > When you use a device restriction to hide an update, review your software update policies to ensure they won't schedule the installation of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
 
    After configuring *Update policy settings*, select **Next**.
 
-5. On the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
+5. If [available](../fundamentals/scope-tags.md#default-scope-tag), on the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
 
    - On the **Select tags** pane, choose one or more tags, and then **Select** to add them to the policy and return to the *Scope tags* pane.
 
