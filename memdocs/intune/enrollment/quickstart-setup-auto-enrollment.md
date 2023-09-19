@@ -6,6 +6,7 @@ description: Enable Intune automatic enrollment of Windows 10/11 devices that jo
 services: microsoft-intune
 author: Lenewsad
 ms.author: lanewsad
+manager: dougeby
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
