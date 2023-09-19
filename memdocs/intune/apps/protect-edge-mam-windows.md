@@ -43,6 +43,8 @@ You can enable protected Mobile Application Management (MAM) access to org data 
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Entra ID (AAD)
 
 > [!NOTE]
+> Intune Mobile Application Management (MAM) for Windows is available for Windows 11, build 10.0.22621 (22H2) or later. This includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later) and Windows Security Center (v 1.0.2309.xxxxx and later).  App Protection Conditional Access is in Public Preview.
+> 
 > For more information about MAM, see [Mobile Application Management (MAM) basics](../apps/app-management.md#mobile-application-management-mam-basics).
 
 Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user’s unmanaged assets on their device aren't impacted by your organization's policies. 
