@@ -75,7 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### Configuration scripts for unmanaged macOS PKG apps<!-- 17745891  -->  
 You can now configure pre-install and post-install scripts in unmanaged macOS PKG apps. This feature gives you greater flexibility over custom PKG installers. Configuring these scripts is optional and requires the Intune agent for macOS devices v2309.007 or higher. For more information about adding scripts to unmanaged macOS PKG apps, see [Add an unmanaged macOS PKG app](../apps/macos-unmanaged-pkg.md).
 
-#### MAM for Microsoft Edge for Business [General Availability]<!-- 12394345, 12394352  -->  
+#### MAM for Microsoft Edge for Business is generally available<!-- 12394345, 12394352  -->  
 You can now enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability uses the following functionality:
 
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge.
@@ -87,7 +87,7 @@ MAM for Microsoft Edge for Business supports Windows 11 22H2 and later. Sovereig
 
 ### Device configuration
 
-#### Config Refresh settings are in the Settings Catalog for Windows Insiders<!-- 15060174  -->  
+#### Config Refresh settings are in the settings catalog for Windows Insiders<!-- 15060174  -->  
 In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune.
 
 Config Refresh:
@@ -172,10 +172,10 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-#### Intune integration with the Zebra Lifeguard Over-the-Air service becomes generally available<!-- 16238201  -->  
+#### Intune integration with the Zebra Lifeguard Over-the-Air service is generally available<!-- 16238201  -->  
 Microsoft Intune supports integration with Zebra Lifeguard Over-the-Air service, which allows you to deliver OS updates and security patches over-the-air to eligible Zebra devices that are enrolled with Intune. You can select the firmware version you want to deploy, set a schedule, and stagger update downloads and installs. You can also set minimum battery, charging status, and network conditions requirements for when the update can happen.
 
-This integration is now Generally Available for Android Enterprise Dedicated and Fully Managed Zebra devices that are running Android 8 or later, and requires an account with Zebra, as well as Intune Plan 2 or Microsoft Intune Suite.
+This integration is now generally available for Android Enterprise Dedicated and Fully Managed Zebra devices that are running Android 8 or later, and requires an account with Zebra, as well as Intune Plan 2 or Microsoft Intune Suite.
 
 Previously, this was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
 
@@ -205,7 +205,7 @@ Management certificate expiration date is available as a column in the **Devices
 Windows has renamed *Windows Defender Application Control* (WDAC) as *App Control for Business*. With this change, the references in Intune docs and the Intune admin center will update to reflect this new name.
 
 #### Intune support for Windows LAPS is now generally available<!-- 17426634  -->  
-Intune support for managing Windows Local Administrator Password Solution (Windows LAPS) with  [Account protection policies](../protect/endpoint-security-account-protection-policy.md) is now Generally Available, and out of Preview. To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+Intune support for managing Windows Local Administrator Password Solution (Windows LAPS) with  [Account protection policies](../protect/endpoint-security-account-protection-policy.md) is now generally available, and out of Preview. To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
 
 [Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that allows you to manage and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices.
 
