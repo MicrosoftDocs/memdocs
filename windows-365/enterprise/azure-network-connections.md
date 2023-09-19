@@ -41,8 +41,8 @@ An Azure network connection (ANC) is an object in the Microsoft Intune admin cen
 
 There are two kinds of ANCs based on their join type. Both let you manage traffic and Cloud PC access to network based resources but they have different connectivity requirements.
 
-- **Azure AD Join**: Doesn't require connectivity to a Windows Server Active Directory (AD) domain.
-- **Hybrid Azure AD Join**: Requires connectivity to a Windows Server AD domain. You must provide the AD domain details when you [create the ANC](create-azure-network-connection.md).
+- **Microsoft Entra join**: Doesn't require connectivity to a Windows Server Active Directory (AD) domain.
+- **Hybrid Microsoft Entra Join**: Requires connectivity to a Windows Server AD domain. You must provide the AD domain details when you [create the ANC](create-azure-network-connection.md).
 
 ## Provisioning
 
