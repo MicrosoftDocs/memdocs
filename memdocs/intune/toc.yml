@@ -293,7 +293,9 @@ items:
             href: ./apps/android-deployment-scenarios-app-protection-work-profiles.md
             displayName: app-we; without; without enrollment
           - name: Use Intune without Google Mobile Services
-            href: ./apps/manage-without-gms.md      
+            href: ./apps/manage-without-gms.md
+          - name: Data protection for Windows MAM
+            href: ./apps/protect-edge-mam-windows.md      
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
             displayName: MAM          
@@ -428,6 +430,8 @@ items:
                   href: ./apps/configure-microsoft-launcher.md
                 - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
+                - name: Configure Microsoft Edge for Windows
+                  href: ./apps/manage-microsoft-edge-windows.md                
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
                 - name: Configure Outlook
@@ -672,6 +676,8 @@ items:
             href: ./protect/conditional-access-jamf-cloud-connector.md
           - name: Integrate Jamf Pro with Intune for compliance
             href: ./protect/conditional-access-integrate-jamf.md
+          - name: Integrate Jamf Pro with Intune to report compliance to Entra ID
+            href: ./protect/jamf-managed-device-compliance-with-entra-id.md
           - name: Enforce compliance on Macs managed with Jamf Pro
             href: ./protect/conditional-access-assign-jamf.md
         - name: Endpoint protection
@@ -1715,13 +1721,8 @@ items:
     - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
       displayName: admx, administrative template, windows, gpo
-    - name: Common scenarios
-      href: ./fundamentals/common-scenarios.md
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
-    - name: Technology decisions for BYOD with EMS
-      href: ./fundamentals/byod-technology-decisions.md    
-      displayName: MDM      
 
   - name: Developer guidance
     items:

@@ -8,20 +8,18 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/10/2023
+ms.date: 09/13/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
   - tier1
 ms.topic: how-to
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Windows Autopilot deployment for existing devices
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
 
 Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows to your existing devices. The apps you need for work can be automatically installed. If you manage Windows user data with OneDrive for Business, your data is synchronized, so users can resume working right away.
 
@@ -466,3 +464,13 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 ## How to speed up the deployment process
 
 To remove around 20 minutes from the deployment process, see Michael Niehaus's blog with instructions for [Speeding up Windows Autopilot for existing devices](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices).
+
+## Tutorial
+
+For a detailed tutorial on configuring Windows Autopilot for existing devices, see the following article:
+
+[Step by step tutorial for Windows Autopilot deployment for existing devices in Intune and Configuration Manager](tutorial/existing-devices/existing-devices-workflow.md)
+
+## Related articles
+
+- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/new-windows-autopilot-capabilities-and-expanded-partner-support/ba-p/260430)

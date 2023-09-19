@@ -1,13 +1,14 @@
 ---
 # required metadata
 
-title: Using Remote Help on Windows to assist users authenticated by your organization. 
-description: With the Remote Help app in Windows, provide remote assistance to authenticated users who also run the Remote Help app.
+title: Using Remote Help on Windows to assist authenticated users.
+titleSuffix: Microsoft Intune 
+description: Use the Remote Help app to provide remote assistance to authenticated users who also run the Remote Help app, and to troubleshoot for frontline workers (FLW).
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 08/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -19,6 +20,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
+#CustomerIntent: As an IT admin, I want to use Remote Help on Windows so that we can troubleshoot and assist users such as Frontline Workers.
 ms.reviewer: Karawang
 ms.suite: ems
 search.appverid: MET150
@@ -59,13 +61,25 @@ The Remote Help app supports the following capabilities on Windows:
 
 - **Enhanced chat** - Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](#languages-supported).
 
+- **Remotely start session** - The helper is able to launch Remote Help seamlessly on the helper and user's device from Intune by sending a notification to the user's device. The notification allows helpdesk and the sharer to be connected to a session quickly without exchanging session codes.  
+
 ## Prerequisites for Remote Help on Windows
 
-For general prerequisites on Remote Help, go to [Prerequisites for Remote Help](remote-help.md#prerequisites)
+General prerequisites for Remote Help, are listed here [Prerequisites for Remote Help](remote-help.md#prerequisites).
+
+The prerequisites for Remote Help on Windows are:
 
 - Set up the Remote Help app for Windows. See [Install and update Remote Help](#install-and-update-remote-help)
 
-- The helper must be signed-in on an Intune enrolled device
+- The Sharer's device must be signed-in on an Intune enrolled device while the helper's device enrollment is optional
+
+For the remote launch feature:
+
+- Intune management extension is required for the remote launch feature and that is supported on Windows 10 and 11. Specifically for Windows 10 the OS builds need to be greater than or equal to version 19042 and have KB5018410 patch installed. The OS version should be greater than or equal to 10.0.19042.2075 or 10.0.19043.2075 or 10.0.19044.2075. For more information on the Intune management extension, see [Intune management extension](../apps/intune-management-extension.md)
+
+- Win 11: [July 25, 2023—KB5028245 (OS Build 22000.2245) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/july-25-2023-kb5028245-os-build-22000-2245-preview-bbe6f09f-6cec-4777-a548-d237f5d849d2)
+
+- Win 10: [August 22, 2023—KB5029331 (OS Build 19045.3393) Preview - Microsoft Support](https://support.microsoft.com/en-us/topic/august-22-2023-kb5029331-os-build-19045-3393-preview-9f6c1dbd-0ee6-469b-af24-f9d0bf35ca18)
 
 ### Network considerations
 
@@ -88,7 +102,12 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
 |[Allowlist for Microsoft Edge endpoints](/deployedge/microsoft-edge-security-endpoints) |The app uses Microsoft Edge WebView2 browser control. This article identifies the domain URLs that you need to add to the allowlist to ensure communications through firewalls and other security mechanisms|
 |\*.alcdn.msauth.net|Required to sign-in to the application Microsoft Azure Authentication Library|
-|\*.wcpstatic.microsoft.com||
+|\*.wcpstatic.microsoft.com| Used to confirm cookie compliance in accordance with various laws|
+|\*.remotehelp.microsoft.com  | Primary endpoint for Remote Help Web App |
+|\*.trouter.teams.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
+|\*.trouter.communication.microsoft.com  | Allows for the Remote Help Web App to become directly addressable within the web browser|
+|\*.registrar.skype.com  | Registrar service for Azure Communication Service (ACS) |
+|\*.flightproxy.skype.com | Conversation service URL for Azure Communication Service |
 
 ## Remote Help modes available for Windows
 
@@ -164,19 +183,19 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 ## How to use Remote Help
 
-The use of Remote Help depends on whether you're requesting help or providing help.
+The use of Remote Help depends on whether you're requesting help or providing help. In this section we'll cover both scenarios.
 
 ### Request help
 
-To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you get from the individual who is assisting you. You need to enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
+To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
-1. Start the Remote Help app on the device and sign in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
+1. The helper locates the device in the Microsoft Intune admin center and selects **New remote assistance session**. A notification is sent to the sharer's device.
 
-2. After signing into the app, get the security code from the individual assisting you and enter that code below *Get Help*, and then select **Submit**.
+2. The sharer must select **Launch Remote Help** to join the session. The sharer may need to sign in to authenticate. As an alternative, both the helper and sharer can manually launch the app and exchange a session code.
 
-3. After the sharer submits the security code from the helper, the helper will see information about you including your full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
+3. After opening the Remote Help app, the sharer has to wait for the helper to set up the session. The helper sees information about the sharer including the full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
 
    At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*.
 
@@ -186,21 +205,43 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. If a helper performs elevated actions on a user's device and the sharer ends the session, a warning message appears for the helper. The message warns that if the helper continues, they'll be logged off.
 
+#### Request help on an unenrolled device
+
+The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you are trying to receive help, be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your Remote Help instance to establish a connection to the helper's instance of Remote Help.
+
+As a sharer, when you've requested help and both you and the helper are ready to start:
+
+1. Start the Remote Help app on the device and sign in to authenticate to your organization.  
+
+2. After signing into the app, get the security code from the individual assisting you and enter the code. Then select **Submit**.
+
+3. After submitting the security code from the helper, the helper sees information about you including your full name, job title, company, profile picture, and verified domain. As the sharer, your app displays similar information about the helper.
+
+4. At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to **Allow full control** or choose to **Decline the request**. Full control must be established before the help session starts.
+
+5. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist in resolving any issues on the device.  
+
 ### Provide help
 
 As a helper, after receiving a request from a user who wants assistance by using the Remote Help app:
 
-1. Start the Remote Help app on your device. You can start the app from within the Microsoft Intune admin center:
+1. Launch a session on the remote device from within the Microsoft Intune admin center:
 
    1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **All devices** and select the device on which assistance is needed.
 
-   2. From the remote actions bar across the top of the device view, select **New Remote Help session**. This action opens the Remote Help app.
+   2. From the remote actions bar across the top of the device view, select **New remote assistance session** and select **Remote Help**, and then **Continue**.
 
-   Alternately, or for devices not enrolled in Intune, locate the Remote Help app on your device and manually start it. After Remote Helps opens, you'll need to sign in to authenticate to your organization.
+2. A notification is sent to the sharer's device, and you'll see an update that the notification was successfully sent. Select **Launch Remote Help** to join the session.  
 
-2. When Remote Help opens, you must sign in to authenticate to your organization. After the helper signs into the app, under *Give help* select **Get a security code**. Remote Help generates a security code that the helper must share with the person who has requested assistance. The sharer then proceeds to enter this code in their instance of Remote Help to establish a connection with the helper's Remote Help instance.
+   a. If the notification is sent but not received by the user, you can resend the notification by selecting **Retry**.
 
-3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
+   b. If the sharer's device is not online or not connected to the internet, an error message is  displayed.
+
+   c. If the device that you are trying to connect to is noncompliant, a warning banner is displayed.
+
+2. When Remote Help opens, you must sign in to authenticate to your organization.
+
+3. After the sharer opens the Remote Help app through the notification, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you.
 
    At this time, you can request a session with full control of the sharer's device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*.
 
@@ -209,6 +250,18 @@ As a helper, after receiving a request from a user who wants assistance by using
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
 5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the Remote Help app. When a helper performs elevated actions on a user's device, at the end of the session the sharer is automatically signed out of their device. If a helper performs elevated actions on a user's device and the sharer ends the session, a warning message appears for the helper. The message warns that if the helper continues, they'll be logged off.
+
+#### Provide help on an unenrolled device
+
+If the device that you are trying to help is not enrolled in Intune, you'll have to follow the process described in this section to give help:
+
+1. Locate the Remote Help app on your device and manually start it. After the Remote Help app opens, you'll need to sign in to authenticate your organization.
+
+2. After signing into the app, under **Give help** select **Get a security code**. Remote Help generates a security code that you'll share with the person who has requested assistance. The sharer enters the code in their instance of the Remote Help app to establish a connection to your Remote Help instance.
+
+After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer sees similar information about you. At this time, you can request a session with full control of the sharer's device or choose only screen sharing. If you request full control, the sharer can choose to **Allow full control** or to **Decline the request**.  
+
+Now you'll be in a session with the user with the same experience and procedure outlined in the section [Provide help](#provide-help).
 
 > [!IMPORTANT]
 > During a Remote Help session, when a helper has the Elevation permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's Remote Help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. When the sharer ends the Remote Help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off. If the helper ends the session, the sharer will not be logged off.
@@ -292,17 +345,27 @@ Remote Help is supported in the following languages:
 
 ## Known Issues
 
-- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session isn't established.
+When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the Remote Help session isn't established.
 If a conditional access policy is configured as described earlier and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant can't use Remote Help.
+
+Notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service is not running.
+
+- After a device is restarted, there is a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
 
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
 
+### September 7, 2023
+
+Version: 5.0.1045.0
+
+With Remote Launch, the helper can launch Remote Help seamlessly on the helper and sharer's device from Intune by sending a notification to the sharer's device.
+
 ### July 13, 2023
 
 Version: 5.0.1045.0
-This version of Remote Help provides support for ARM64 devices including the Microsoft Surface Pro X and Parallels Desktop on macOS
+This version of Remote Help provides support for ARM64 devices including the Microsoft Surface Pro X and Parallels Desktop on macOS.
 
 ### June 20, 2023
 

@@ -64,6 +64,9 @@ A SCEP certificate is revoked *and* removed when:
 - An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 - An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
 - The device is removed from an Azure AD group.
+
+A SCEP certificate is removed when:
+
 - A certificate profile is removed from the group assignment.
 
 A SCEP certificate is revoked when:

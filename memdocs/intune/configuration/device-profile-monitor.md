@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2022
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,9 @@ ms.collection:
 
 # Monitor device configuration profiles in Microsoft Intune
 
-Intune includes some features to help monitor and manage your device configuration profiles. For example, you can check the status of a profile, see which devices are assigned, and update the properties of a profile.
+Intune includes some features to help monitor and manage your device configuration profiles. For example, you can check the status of a profile, go to the devices are assigned to the profile, and update the properties of an existing profile.
+
+This article shows you how to view existing profiles for assignment status, making changes, and how to troubleshoot any conflicts.
 
 ## View existing profiles
 
@@ -42,13 +44,13 @@ Intune includes some features to help monitor and manage your device configurati
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
 
 > [!NOTE]
-> For additional reporting information about device configuration profiles, see [Intune reports](../fundamentals/reports.md).
+> For more in-depth reporting information about device configuration profiles, go to [Intune reports](../fundamentals/reports.md).
 
 ## View details on a profile
 
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
 
-1. In **Devices** > **Configuration profiles**, select an existing profile. For example, select a macOS profile.
+1. In **Devices** > **Configuration profiles**, select an existing profile.
 2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:
 
     - **Succeeded**: Policy is applied successfully.
@@ -61,15 +63,15 @@ After you create your device profile, Intune provides graphical charts. These ch
 
     When you monitor a Windows profile, the count in the **Profile assignment status** is per device per user. So, if two users sign in to the same device, then that device is counted twice.
 
-4. Select the top graphical chart. Or, select **Device status**. **Device status** opens.
+4. Select the top graphical chart. Or, select **Device status**.
 
-    The devices assigned to the profile are listed, and it shows the deployment status. Also note that it only lists the devices with the specific platform (for example, macOS).
+    In **Device status**, the devices assigned to the profile are listed, and the deployment status is shown. It only lists the devices with the specific platform, like macOS.
 
     Close the **Device status** details.
 
-5. Select the circle in the bottom graphical chart. Or, select **User status**. **User status** opens.
+5. Select the circle in the bottom graphical chart. Or, select **User status**.
 
-    The users assigned to the profile are listed, and it shows the deployment status. Also note that it only lists the users with the specific platform (for example, macOS).
+    In **User status**, the users assigned to the profile are listed, and the deployment status is shown. It only lists the users with the specific platform, like macOS.
 
     Close the **User status** details.
 
@@ -79,12 +81,12 @@ After you create your device profile, Intune provides graphical charts. These ch
 
       - **Scope tags**: See any existing [scope tags](../fundamentals/scope-tags.md) used in the policy. Select **Edit** to add or remove a scope tag.
       - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy. Select **Edit** to update the policy assignment, and add or remove a filter.
-      - **Applicability Rules**: On your Windows devices, see the [applicability rules](device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
+      - **Applicability Rules**: On your Windows devices, go to the [applicability rules](device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
 
-    - **Device and user check-in status**: Shows the number of **all** users or devices that checked-in with the profile. If one device has multiple users, this report shows the status for each user. When the user or devices check-in, they receive the settings in your profile.
+    - **Device and user check-in status**: Shows the number of **all** users or devices that checked-in with the profile. If one device has multiple users, this report shows the status for each user. When the user or device check-in, they receive the settings in your profile.
 
       Select **View report** to see the following information:
-      
+
       - The devices that received the profile
       - The user names with devices that received the profile
       - The check-in status and the last time the user/device checked in with the profile
@@ -93,7 +95,7 @@ After you create your device profile, Intune provides graphical charts. These ch
 
     - **Device assignment status**: Shows information for the user that last checked-in. Select **Generate report** to see the latest profile assignment states for the devices that received the profile. You can also filter the assignment status to see only errors, conflicts, and more.
 
-      It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different. 
+      It's normal for the numbers in the **Device and user check-in status** and **Device assignment status** reports to be different.
 
     - **Per setting status**: Shows the individual settings in the profile, and their status.
 
@@ -111,9 +113,9 @@ In **Devices** > **All devices**, you can see any settings that are causing a co
 Now that you know the conflicting setting, and the policies that include that setting, it should be easier to resolve the conflict.
 
 > [!TIP]
-> In **Devices** > **Monitor**, a list of all policies are shown. The **Assignment failures (preview)** report helps troubleshoot errors and conflicts for configuration profiles that are assigned. For more information on the available reporting data, see [Intune reports](../fundamentals/reports.md).
+> In **Devices** > **Monitor**, a list of all policies are shown. The **Assignment failures (preview)** report helps troubleshoot errors and conflicts for configuration profiles that are assigned. For more information on the available reporting data, go to [Intune reports](../fundamentals/reports.md).
 
-## Device Firmware Configuration Interface profile reporting
+## Device Firmware Configuration Interface (DFCI) profile reporting
 
 DFCI profiles are reported on a per-setting basis, just like other device configuration profiles. Depending on the manufacturer's support of DFCI, some settings may not apply.
 
@@ -137,7 +139,7 @@ With your DFCI profile settings, you may see the following states:
   - The device was enrolled to Intune outside of Autopilot enrollment.
   - The device wasn't registered to Autopilot by a Microsoft CSP, or registered directly by the OEM.
 
-## Next steps
+## Related content
 
-[Common questions, issues, and resolutions with device profiles](device-profile-troubleshoot.md)  
-[Troubleshoot policies and profiles and in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)
+- [Common questions, issues, and resolutions with device profiles](device-profile-troubleshoot.md)
+- [Troubleshoot policies and profiles and in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune)

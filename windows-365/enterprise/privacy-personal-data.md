@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/07/2022
+ms.date: 09/13/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -55,7 +55,7 @@ Other customer data, diagnostic data, or service-generated data may be collected
 
 For more information on where your data is located, see:
 
-- [Azure Active Directory - Where is your data located?](https://msit.powerbi.com/view?r=eyJrIjoiODdjOWViZDctMWRhZS00ODUzLWI4MmQtNWM5NjBkZTBkNjFlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9)
+- [Microsoft Entra ID - Where is your data located?](https://msit.powerbi.com/view?r=eyJrIjoiODdjOWViZDctMWRhZS00ODUzLWI4MmQtNWM5NjBkZTBkNjFlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9)
 - [Data locations for Azure Virtual Desktop](/azure/virtual-desktop/data-locations)
 - [Windows 365 supported regions](planning-guide.md#objective-geographical-regions)
 - [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations)
@@ -80,7 +80,7 @@ For more information about individual data retention and storage policies of all
 
 ## Isolation and access control
 
-Each internal customer data subscription in Windows 365 Enterprise contains Azure Virtual Desktop (AVD) metadata, Cloud PCs, and Storage from multiple tenants. Each VM is connected to a single virtual network interface card (NIC). During provisioning of the Cloud PC, that NIC is attached to a single virtual network in a customer's Azure subscription. The virtual network is defined by the tenant administrator. Every Cloud PC is assigned to a single user by using the AVD connection brokering layer. The access control list (ACL) for the AVD layer is authenticated by Azure AD at the tenant and user level. Network access to and from a Cloud PC in Windows 365 is at the control and discretion of each tenant administrator. So, Cloud PCs in tenant A can't be accessed by users in tenant B, unless the tenant A administrator chooses to provide connectivity outside Windows 365 and AVD at the network layer in their own subscription.
+Each internal customer data subscription in Windows 365 Enterprise contains Azure Virtual Desktop (AVD) metadata, Cloud PCs, and Storage from multiple tenants. Each VM is connected to a single virtual network interface card (NIC). During provisioning of the Cloud PC, that NIC is attached to a single virtual network in a customer's Azure subscription. The virtual network is defined by the tenant administrator. Every Cloud PC is assigned to a single user by using the AVD connection brokering layer. The access control list (ACL) for the AVD layer is authenticated by Microsoft Entra ID at the tenant and user level. Network access to and from a Cloud PC in Windows 365 is at the control and discretion of each tenant administrator. So, Cloud PCs in tenant A can't be accessed by users in tenant B, unless the tenant A administrator chooses to provide connectivity outside Windows 365 and AVD at the network layer in their own subscription.
 
 For Windows 365 Business, one or more dedicated virtual networks are created in a tenant. The service automatically creates more networks as needed and doesn't guarantee that all Windows 365 Business Cloud PCs in the same tenant will have network connectivity to each other.
 

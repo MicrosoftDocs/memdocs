@@ -75,7 +75,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 **Use a command line**:  
 
-1. Log into the Root Certification Authority server with Administrator Account.
+1. Log in to the Root Certification Authority server with Administrator Account.
 
 2. Go to **Start** > **Run**, and then enter **Cmd** to open command prompt.
 
@@ -95,12 +95,15 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     - Set **Certification Authority** to **Windows Server 2008 R2**
     - Set **Certificate recipient** to **Windows 7 / Server 2008 R2**
 
-5. On the **General** tab, set **Template display name** to something meaningful to you.
+5. On the **General** tab:
+  
+     - set **Template display name** to something meaningful to you.
+     - Uncheck **Publish certificate in Active Directory**.
 
     > [!WARNING]
     > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
 
-6. In **Request Handling**, select **Allow private key to be exported**.
+8. In **Request Handling**, select **Allow private key to be exported**.
 
     > [!NOTE]
     >
@@ -108,9 +111,9 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     >
     > When the certificates install on the device itself, the private key is marked as not exportable.
 
-7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
+9. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 
-   Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 40496 as the *Minimum key size*. 
+   Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 4096 as the *Minimum key size*. 
 
    > [!NOTE]
    >
@@ -119,25 +122,25 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
    > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
    > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
 
-8. In **Subject Name**, choose **Supply in the request**.
-9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
+10. In **Subject Name**, choose **Supply in the request**.
+11. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
 
     > [!IMPORTANT]
     > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
-10. In **Security**:
+12. In **Security**:
     1. (Required): Add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
     1. (Optional but recommended): Remove the Domain Users group from the list of groups or user names allowed permissions on this template by selecting the **Domain Users** group and select *Remove*. Review the other entries in *Groups or user names* for permissions and applicability to your environment.
 
-12. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
-13. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
-14. For the server to manage certificates for enrolled devices and users, use the following steps:
+13. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
+14. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
+15. For the server to manage certificates for enrolled devices and users, use the following steps:
 
     1. Right-click the Certification Authority, choose **Properties**.
     2. On the security tab, add the Computer account of the server where you run the connector.
     3. Grant **Issue and Manage Certificates** and **Request Certificates** Allow permissions to the computer account.
 
-15. Sign out of the Enterprise CA.
+16. Sign out of the Enterprise CA.
 
 ## Download, install, and configure the Certificate Connector for Microsoft Intune
 
@@ -181,7 +184,7 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 
 9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
-   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that recieve a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that receive a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
@@ -192,6 +195,9 @@ For guidance, see [Install and configure the Certificate Connector for Microsoft
 11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Create a PKCS certificate profile
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

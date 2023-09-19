@@ -2,12 +2,12 @@
 # required metadata
 
 title: Learn about Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
-description: Learn about using Microsoft Intune policy for Windows driver updates to manage driver updates on your Windows 10 and Windows 11 devices.
+description: Learn about using Microsoft Intune policy to manage Windows driver updates on your Windows 10 and Windows 11 devices.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2023
+ms.date: 09/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- ContentEnagagementFY24 
 ---
 
 # Windows Driver update management in Microsoft Intune
@@ -211,7 +212,6 @@ To help avoid issues that require rolling back a driver from large numbers of de
   - For policies with automatic approval, you could pause a newly added and then return to approve it. When you reapprove any paused update, you can set an *approval available date*.
 
   To help mitigate this type of recurring challenge, we're evaluating changes that can mitigate the need to manually coordinate driver updates with *Patch Tuesday* updates.
-
 
 ### Why has a driver disappeared from the list of available drivers in my policy?
 

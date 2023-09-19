@@ -40,7 +40,7 @@ For more information, see [Role-based access control (RBAC) with Microsoft Intun
 
 ## Windows 365 Administrator role
 
-Windows 365 supports the Windows 365 Administrator role available for role assignment through the Microsoft Admin Center and Azure Active Directory (Azure AD). With this role, you can manage Windows 365 Cloud PCs for both Enterprise and Business editions. The Windows 365 Administrator role can grant more scoped permissions than other Azure AD roles like Global Administrator. For more information, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+Windows 365 supports the Windows 365 Administrator role available for role assignment through the Microsoft Admin Center and Microsoft Entra ID. With this role, you can manage Windows 365 Cloud PCs for both Enterprise and Business editions. The Windows 365 Administrator role can grant more scoped permissions than other Microsoft Entra roles like Global Administrator. For more information, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
 ## Cloud PC built-in roles
 
