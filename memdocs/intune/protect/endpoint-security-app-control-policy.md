@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/18/2023
+ms.date: 09/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -101,6 +101,13 @@ To manage App Control for Business policies, an account must have sufficient rol
 - **View reports for App Control for Business policy** - Accounts must have the **Organization** permission of *Read*.
 
 For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+### Government cloud support
+
+Intune endpoint security Application control policies and configuring a managed installer are supported with the following sovereign cloud environments:
+
+- US Government clouds
+- 21Vianet
 
 ## Get started with managed installers
 
