@@ -204,12 +204,37 @@ Management certificate expiration date is available as a column in the **Devices
 #### Windows Defender Application Control (WDAC) references will update to App Control for Business<!-- 24863807  -->  
 Windows has renamed *Windows Defender Application Control* (WDAC) as *App Control for Business*. With this change, the references in Intune docs and the Intune admin center will update to reflect this new name.
 
+#### Intune support for Windows LAPS is now generally available<!-- 17426634  -->  
+Intune support for managing Windows Local Administrator Password Solution (Windows LAPS) with  [Account protection policies](../protect/endpoint-security-account-protection-policy.md) is now Generally Available, and out of Preview. To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+
+[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that allows you to manage and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
 ### Device security
 
 #### Endpoint Privilege Management support for Windows 365 devices<!-- 17016794  -->  
 You can now use [Endpoint Privilege Management](../protect/epm-overview.md) to manage application elevations on Windows 365 devices (also known as Cloud PCs).
 
 This support does not include Azure Virtual Desktop.
+
+#### Elevation report by Publisher for Endpoint Privilege Management<!--  24593400  -->  
+We’ve released a new report named **Elevation report by Publisher** for Endpoint Privilege Management (EPM). With [this new report](../protect/epm-reports.md#elevation-report-by-publisher) you can view all managed and unmanaged elevations, which are aggregated by the publisher of the app that is elevated.
+
+You’ll find the report in the Report node for EPM in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Navigate to **Endpoint security** > **Endpoint Privilege Management** and then select the **Reports** tab.
+
+#### macOS support with Intune Endpoint security policies for Endpoint detection and response<!--  17757981 -->  
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support macOS. To enable this support, we’ve added a new [EDR template profile for macOS](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+
+The EDR template for macOS includes the following settings for the *Device tags* category from Defender for Endpoint:
+
+- **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+
+To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences?view=o365-worldwide#device-tags) in the Defender documentation.
 
 ## Week of September 11, 2023
 
