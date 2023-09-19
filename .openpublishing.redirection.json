@@ -2169,6 +2169,11 @@
       "source_path": "memdocs/intune/remote-actions/index.yml",
       "redirect_url": "/mem/intune/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/developer/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
     }
   ]
 }
