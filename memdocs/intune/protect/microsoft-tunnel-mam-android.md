@@ -80,7 +80,7 @@ To support using Tunnel for MAM, create and deploy the three profiles detailed i
 
 - [App configuration policy for Microsoft Edge](#app-configuration-policy-for-microsoft-edge)
 - [App configuration policy for Microsoft Defender](#app-configuration-policy-for-microsoft-defender)
-- [App protection policy for Microsoft Edge](#app-protection-policy-for-Microsoft-edge)
+- [App protection policy for Microsoft Edge](#app-protection-policy-for-microsoft-edge)
 
 When all three are configured and deployed to the same groups, the app protection policy will automatically trigger Tunnel to connect to the VPN whenever Microsoft Edge is launched.
 
