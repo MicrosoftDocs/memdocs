@@ -41,8 +41,8 @@ An Azure network connection (ANC) is an object in the Microsoft Intune admin cen
 
 There are two kinds of ANCs based on their join type. Both let you manage traffic and Cloud PC access to network based resources but they have different connectivity requirements.
 
-- **Azure AD Join**: Doesn't require connectivity to a Windows Server Active Directory (AD) domain.
-- **Hybrid Azure AD Join**: Requires connectivity to a Windows Server AD domain. You must provide the AD domain details when you [create the ANC](create-azure-network-connection.md).
+- **Microsoft Entra join**: Doesn't require connectivity to a Windows Server Active Directory (AD) domain.
+- **Hybrid Microsoft Entra Join**: Requires connectivity to a Windows Server AD domain. You must provide the AD domain details when you [create the ANC](create-azure-network-connection.md).
 
 ## Provisioning
 
@@ -51,10 +51,10 @@ When a Cloud PC is provisioned, the information in the ANC is used by the provis
 - **Network details**: The Azure subscription, resource group, virtual network, and subnet that the Cloud PC will be associated with. When a provisioning policy runs, it creates a Cloud PC in the Microsoft hosted Azure subscription. To connect to a customer's on-premises network, a virtual network interface card (vNic) is injected into a customer-provided Azure virtual network (vNet). To create this vNic, Windows 365 needs sufficient access to an Azure subscription.
 - **Active Directory domain**: The Active Directory domain to join, an Organizational Unit (OU) destination for the computer object, and Active Directory user credentials with sufficient permissions to perform the domain join. When a provisioning policy runs, the Cloud PC is joined to this Active Directory domain. The credentials will be stored securely in the Windows 365 service.
 
-During provisioning, the Cloud PC is connected to the Azure subnet and joined to a domain (either Windows Server Active Directory or Azure Active Directory (Azure AD)). This process results in a Cloud PC that is:
+During provisioning, the Cloud PC is connected to the Azure subnet and joined to a domain (either Windows Server Active Directory or Microsoft Entra ID). This process results in a Cloud PC that is:
 
 - On your network.
-- Registered to Azure AD.
+- Registered to Microsoft Entra ID.
 - Enrolled into Microsoft Intune.
 - Ready to accept user sign-in requests.
 
@@ -101,7 +101,7 @@ To manually trigger a full health check, sign in to the [Microsoft Intune admin 
 The ANC wizard requires access to Azure and, optionally, on-premises domain resources. The following permissions are required for the ANC:
 
 - [Intune Administrator](/azure/active-directory/roles/permissions-reference#intune-administrator), [Windows 365 Administrator](/azure/active-directory/roles/permissions-reference), or [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator) role.
-- An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit( (Hybrid Azure AD Join ANCs only).
+- An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit (Microsoft Entra hybrid join ANCs only).
 
 To create or edit an ANC, you must also have the Subscription Reader role in the Azure Subscription where the VNET associated with the ANC was located.
 
@@ -130,9 +130,9 @@ Each tenant has a limit of 10 Azure network connections. If your organization ne
 
 When users attempt to sign in to their Cloud PC, user authentication occurs.
 
-For Hybrid Azure AD Join ANCs, the ANC is used to route the authentication request to your domain controllers. If the ANC or the network connection to your domain is unhealthy, user sign-in can't occur. Windows cached credentials can't be used over the remote desktop channel, so domain controller availability is critical. Ensure your network is stable or place a domain controller server on the same subnet as your Cloud PCs.
+For Microsoft Entra hybrid join ANCs, the ANC is used to route the authentication request to your domain controllers. If the ANC or the network connection to your domain is unhealthy, user sign-in can't occur. Windows cached credentials can't be used over the remote desktop channel, so domain controller availability is critical. Ensure your network is stable or place a domain controller server on the same subnet as your Cloud PCs.
 
-For Azure AD Join ANCs, the ANC is used to route the authentication request to Azure AD. Windows cached credentials can’t be used over the remote desktop channel, so connectivity to Azure AD is critical.
+For Microsoft Entra join ANCs, the ANC is used to route the authentication request to Microsoft Entra ID. Windows cached credentials can’t be used over the remote desktop channel, so connectivity to Microsoft Entra ID is critical.
 
 <!-- ########################## -->
 ## Next steps

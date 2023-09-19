@@ -19,7 +19,7 @@ summary: |
 
   Starting in Configuration Manager version 2103, the following company resource access [features are deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md):<!-- 9315387 -->
 
-  - Certificate profiles, including the certificate registration point site system role<!--13951253-->
+  - Certificate profiles, including the certificate registration point site system role <!--13951253-->
   - VPN profiles
   - Wi-Fi profiles
   - Windows Hello for Business settings
@@ -32,13 +32,24 @@ sections:
   - name: Ignored
     questions:
       - question: |
-          When will these features be removed from Configuration Manager?
+          What happens when you upgrade to CM 2403? 
         answer: |
-          Starting in version 2203, these features will still be available in Configuration Manager, but no longer tested or supported. When you upgrade to version 2203, the [prerequisite checker will display a warning](../../core/servers/deploy/install/list-of-prerequisite-checks.md#resource-access-policies-are-no-longer-supported).
+          When you upgrade your Configuration Manager site to 2403, the [prerequisite checker displays an error](../../core/servers/deploy/install/list-of-prerequisite-checks.md#resource-access-policies-are-no-longer-supported). This blocks upgrade. 
+          
+          **Action required by customer:** Delete all Resource Access profiles and deployments and reevaluate the prerequisite rules, which allows you to proceed with upgrade. 
+          
+          After the upgrade completion, if the cloud attach wizard is configured, the Resource Access workload is defaulted to Intune and remains greyed out in console. 
+          If the customer is not previously cloud attached and configures the cloud attach wizard, during or after upgrade, the Resource Access workload is defaulted to Intune and remains greyed out in the console.
+          **Company Resource Access** node in Asset Management workspace will be removed.
+      
+      - question: |
+          When will these features removed from Configuration Manager?
+        answer: |
+          Starting in version 2203, these features will still be available in Configuration Manager, but no longer tested or supported. When you upgrade to version 2203, the [prerequisite checker displays a warning](../../core/servers/deploy/install/list-of-prerequisite-checks.md#resource-access-policies-are-no-longer-supported).
 
           In version 2207, the creation of new company resource access profiles including the certificate registration point site system role is disabled. Set/New/Import type PowerShell cmdlets for Resource Access features are deprecated as well.
 
-          These features will be completely removed in 2211.
+          These features will be completely removed in 2403.
 
       - question: |
           If I'm still using these features, can I upgrade to version 2207?
@@ -62,7 +73,7 @@ sections:
       - question: |
           What happens if I don't enable co-management?
         answer: |
-          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause warning prerequisite checks. You can't create new wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles for Configuration Manager clients. Any existing deployed profiles won't be removed from devices and will continue to function. These existing profiles will be unmanaged. For example, when a certificate expires, Configuration Manager won't renew it.
+          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause warning prerequisite checks. You can't create new wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles for Configuration Manager clients. Any existing deployed profiles won't be removed from devices and will continue to function. These existing profiles are unmanaged. For example, when a certificate expires, Configuration Manager won't renew it.
 
       - question: |
           What happens if I've enabled co-management, but haven't switched the resource access workload?

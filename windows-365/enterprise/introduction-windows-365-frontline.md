@@ -56,9 +56,9 @@ To use Windows 365 Frontline, you must be licensed for:
 
 - Windows 11 Enterprise or Windows 10 Enterprise
 - Microsoft Intune
-- Azure AD P1.
+- Microsoft Entra ID P1.
 
-In addition to being available independently, Windows Enterprise, Intune, and Azure Active Directory (Azure AD) licenses are included in:
+In addition to being available independently, Windows Enterprise, Intune, and Microsoft Entra ID licenses are included in:
 
 - Microsoft 365 E3
 - Microsoft 365 E5

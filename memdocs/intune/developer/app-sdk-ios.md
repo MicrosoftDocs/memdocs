@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/01/2023
+ms.date: 09/05/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -69,6 +69,11 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 The objective of the Intune App SDK for iOS is to add management capabilities to iOS applications with minimal code changes. The fewer the code changes the less time to market, but without affecting the consistency and stability of your mobile application.
 
+### Process flow
+
+The following diagram provides the Intune App SDK for iOS process flow:
+
+:::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-process-flow.svg" alt-text="High-level architectural diagram for Microsoft Intune."  lightbox="media/app-sdk-ios/intune-app-sdk-ios-process-flow.png" :::
 
 ## Build the SDK into your mobile app
 
@@ -84,6 +89,12 @@ To enable the Intune App SDK, follow these steps:
    **Option 2 - Static Library**:  Link `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-static-lib.png" alt-text="Screenshot of the Intune App SDK iOS Static Library: Xcode Frameworks, Libraries, and Embedded Content sample.":::
+
+    > [!NOTE]
+    > Currently, if you run the SDK static lib on iOS 15 simulator, it can cause a crash since AppleArchive does not exist.
+    > This can be fixed by explicitly weak linking `libSwiftAppleArchive` in the main app target by marking it as "optional".
+    
+    > ![Screenshot of the Intune App SDK iOS Static Library: Weak linking Apple Archive sample.](./media/app-sdk-ios/intune-app-sdk-ios-weak-link-apple-archive.png.png)
 
      Add the `IntuneMAMResources.bundle` resource bundle to the project by dragging the resource bundle under **Copy Bundle Resources** within **Build Phases**.
 

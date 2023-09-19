@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/30/2023
+ms.date: 09/18/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -53,6 +53,16 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of September 18, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Windows 365 help documentation updated for Microsoft Entra ID<!--465015050-->
+
+Windows 365 help documentation has been updated for the rebranding of Azure Active Directory to Microsoft Entra ID. For more information, see [New name for Azure Active Directory](/azure/active-directory/fundamentals/new-name). Some areas of the Microsoft Intune user interface haven't yet been updated to Microsoft Entra ID, so you might see  differences until those updates are made.
+
+<!-- ########################## -->
 ## Week of August 28, 2023 (Service release 2308)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -72,7 +82,7 @@ The Endpoint Analytics resource performance report is now available to Governmen
 
 #### New Cloud PC overview report page<!--45976156-->
 
-All Cloud PC reports can now be access from the **Cloud PC overview** section under **Device management**.
+All Cloud PC reports can now be accessed from the **Cloud PC overview** section under **Device management**.
 
 <!-- ########################## -->
 ## Week of August 21, 2023

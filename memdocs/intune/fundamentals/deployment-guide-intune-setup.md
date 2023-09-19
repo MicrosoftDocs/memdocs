@@ -61,8 +61,6 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 - Your Intune deployment might be different from a previous MDM deployment. Intune uses identity-driven access control. It doesn't require a network proxy to access organization data from devices outside your network.
 
-  Review the [common ways to use Intune](common-scenarios.md).
-
 ## Currently don't use anything
 
 If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
@@ -244,7 +242,9 @@ Devices are ready to be enrolled in Intune, and receive your policies.
 
 ## Currently use on-premises group policy
 
-In the cloud, MDM providers, like Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When you manage devices, Intune device configuration profiles replace on-premises GPO. Device configuration profiles use settings exposed by Apple, Google, and Microsoft.
+In the cloud, MDM providers, like Intune, manage settings and features on devices. Group policy objects (GPO) aren't used. 
+
+When you manage devices, Intune device configuration profiles replace on-premises GPO. Device configuration profiles use settings exposed by Apple, Google, and Microsoft.
 
 Specifically:
 
@@ -252,7 +252,7 @@ Specifically:
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
 - On Windows devices, these profiles use the [Windows configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference).
 
-When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
+When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). Group Policy analytics is a tool and feature in Intune that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
 
 Next, [Step 1: Set up Microsoft Intune](deployment-plan-setup.md).
 
