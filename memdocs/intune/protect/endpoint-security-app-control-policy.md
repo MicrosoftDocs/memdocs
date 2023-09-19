@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2023
+ms.date: 09/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -105,8 +105,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 Intune endpoint security Application control policies and configuring aManaged Installer are supported with the following sovereign cloud environments:
 
-- GGC High
-- DoD
+- US Government clouds
 - 21Vianet
 
 ## Get started with managed installers
