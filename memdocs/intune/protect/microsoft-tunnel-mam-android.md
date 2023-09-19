@@ -1,4 +1,4 @@
----
+App protection policy for Tunnel---
 title: Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune
 description: Add support for Mobile Application Management (MAM) for Android to the Microsoft Tunnel Gateway. Tunnel support for MAM expands access to your organizational resources for devices that can't or haven't enrolled with Microsoft Intune
 keywords:
@@ -167,7 +167,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
 The new policy will appear in the list of App configuration policies.
 
-### App protection policy for Tunnel
+### App protection policy for Microsoft Edge
 
 Create an app protection policy to automatically start the Microsoft Tunnel VPN connection when the app is launched.
 
