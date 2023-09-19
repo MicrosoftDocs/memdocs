@@ -192,6 +192,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 3. Select the platform and profile for your policy. The following information identifies your options:
 
    - Intune - Intune deploys the policy to devices in your assigned groups. When you create the policy, select:
+
      - Platform: **Linux**, **macOS**, or **Windows 10, Windows 11, and Windows Server**
      - Profile: **Endpoint detection and response**
 
@@ -264,6 +265,7 @@ Updating the onboarding information directs the device to start utilizing the ne
 ## EDR policy reports
 
 You can view details about the EDR policies you deploy in the Microsoft Intune admin center. To view details, go to **Endpoint security** > **Endpoint deployment and response**, and select a policy for which you want to view compliance details:
+
 
 - For policies that target the **Linux**, **macOS**, or **Windows 10, Windows 11, and Windows Server** platforms (Intune), Intune displays an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
