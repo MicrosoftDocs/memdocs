@@ -108,11 +108,6 @@ Applies to:
 - Safari 16.4+
 - macOS 11 Big Sur
 
-### Government tenant support for endpoint security Application Control policy and Managed Installer<!-- 24850055 -->
-We're adding support to use endpoint security Application Control policies, and to configure a Managed Installer, to both tenants in US Government and tenants in 21Vianet in China.
-
-Support for Application Control policy and Managed installers was originally [released in preview in June 2023](../fundamentals/whats-new.md#new-endpoint-security-application-control-policy-in-preview) as part of the Intune 2306 service release. Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
-
 <!-- *********************************************** -->
 
 <!-- ## Device security -->
