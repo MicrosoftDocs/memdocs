@@ -342,6 +342,7 @@ The following policy types support the *Linux* platform.
 |---------|----------|-----------|----------|
 | Antivirus                            | Microsoft Defender Antivirus | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus                            | Microsoft Defender Antivirus exclusions | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
+| Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 
 ### macOS
 

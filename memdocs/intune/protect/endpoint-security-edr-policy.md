@@ -37,6 +37,8 @@ When you integrate Microsoft Defender for Endpoint with Intune, you can use endp
 
 Applies to:
 
+- Linux
+- macOS
 - Windows 10/11
 - Windows Server 2012 R2 and later
 
@@ -63,6 +65,19 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 ## EDR profiles
 
 ### Devices managed by Microsoft Intune
+
+**Linux** - To manage EDR for Linux devices, select the **Linux** platform. The following profile is available:
+
+- **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
+  - Devices enrolled with Intune
+  - Devices managed through the opt-in public preview for [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
+
+  EDR templates for Linux include two settings for the *Device tags* category from Defender for Endpoint:
+
+  - **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+  - **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
+
+  To learn more about Defender for Endpoint settings that are available for Linux, see [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
 
 **macOS** - To manage EDR for macOS devices, select the **macOS** platform. The following profile is available:
 
@@ -177,7 +192,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 3. Select the platform and profile for your policy. The following information identifies your options:
 
    - Intune - Intune deploys the policy to devices in your assigned groups. When you create the policy, select:
-     - Platform: **macOS** or **Windows 10, Windows 11, and Windows Server**
+     - Platform: **Linux**, **macOS**, or **Windows 10, Windows 11, and Windows Server**
      - Profile: **Endpoint detection and response**
 
    - Configuration Manager - Configuration Manager deploys the policy to devices in your Configuration Manager collections. When you create the policy, select:
@@ -190,8 +205,8 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 6. On the **Configuration settings** page, Choose **Auto from Connector**  for **Microsoft Defender for Endpoint Client configuration package type**. Configure the **Sample Sharing** and **Telemetry Reporting Frequency** settings you want to manage with this profile. 
 
-  > [!NOTE]
-  > To onboard or offboard tenants using the onboarding file from the Microsoft Defender for Endpoint portal, select either *Onboard* or *Offboard* and supply the contents of the onboarding file to the input directly below the selection.
+   > [!NOTE]
+   > To onboard or offboard tenants using the onboarding file from the Microsoft Defender for Endpoint portal, select either *Onboard* or *Offboard* and supply the contents of the onboarding file to the input directly below the selection.
 
    When you're done configuring settings, select **Next**.
 
@@ -250,7 +265,7 @@ Updating the onboarding information directs the device to start utilizing the ne
 
 You can view details about the EDR policies you deploy in the Microsoft Intune admin center. To view details, go to **Endpoint security** > **Endpoint deployment and response**, and select a policy for which you want to view compliance details:
 
-- For policies that target the **macOS** or **Windows 10, Windows 11, and Windows Server** platforms (Intune), Intune displays an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
+- For policies that target the **Linux**, **macOS**, or **Windows 10, Windows 11, and Windows Server** platforms (Intune), Intune displays an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
   For Windows devices, the chart for **Devices with Defender for Endpoint sensor** displays only devices that successfully onboard to Microsoft Defender for Endpoint through use of the **Windows 10, Windows 11, and Windows Server** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
 
