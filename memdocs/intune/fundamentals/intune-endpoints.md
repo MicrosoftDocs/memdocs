@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 09/19/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -327,7 +327,8 @@ For communication between clients and the cloud service:
 Allow the following hostnames through your firewall to support Endpoint Privilege Management.
 
 For communication between clients and the cloud service:
-- \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales. 
+- \*.dm.microsoft.com - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+- \*.events.data.microsoft.com - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
 
   > [!IMPORTANT]
   > SSL Inspection is not supported on the 'dm.microsoft.com' endpoint.
