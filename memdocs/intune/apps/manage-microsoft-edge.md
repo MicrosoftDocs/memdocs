@@ -266,6 +266,16 @@ Edge for iOS and Android allows organizations to disable certain features that a
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information <br>**translator** disables translator <br> **readaloud** disables read aloud <br> **drop** disables drop <br> **developertools** grays out the build version numbers to prevent users from accessing Developer options (Edge for Android only) <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
+#### Disable import passwords feature
+
+Edge for iOS and Android allows users to import passwords from Password Manager. To disable import passwords, configure the following setting:
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.disableImportPasswords| **true** Disable import passwords <br>**false** (default) Allow import passwords |
+
+> [!NOTE]
+> In the Password Manager of Edge for iOS, there is an **Add** button. When the import passwords feature is disabled, the **Add** button will also be disabled.
 
 #### Control Cookie Mode
 
@@ -491,6 +501,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |     com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     EdgeDisableShareUsageData    |
 |     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     EdgeDisableShareBrowsingHistory    |
 |     com.microsoft.intune.mam.managedbrowser.disabledFeatures    |     EdgeDisabledFeatures    |
+|     com.microsoft.intune.mam.managedbrowser.disableImportPasswords    |     EdgeImportPasswordsDisabled    |
 |     com.microsoft.intune.mam.managedbrowser.enableKioskMode    |     EdgeEnableKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |     EdgeShowAddressBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
