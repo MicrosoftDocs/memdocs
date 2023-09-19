@@ -227,6 +227,14 @@ Applies to:
 
 - iOS/iPadOS
 
+### Government tenant support for endpoint security Application Control policy and managed installer<!-- 24850055   -->  
+We’ve added support to use endpoint security [Application Control policies](../protect/endpoint-security-app-control-policy.md), and to configure a managed installer, to the following sovereign cloud environments:
+
+- US Government clouds
+- 21Vianet in China
+
+Support for Application Control policy and managed installers was originally [released in preview in June 2023](../fundamentals/whats-new.md#new-endpoint-security-application-control-policy-in-preview) as part of the Intune 2306 service release. Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
+
 ### Device security
 
 #### Endpoint Privilege Management support for Windows 365 devices<!-- 17016794  -->  
