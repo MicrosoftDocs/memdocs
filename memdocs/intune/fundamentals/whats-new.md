@@ -249,6 +249,16 @@ The EDR template for macOS includes the following settings for the *Device tags*
 
 To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
+#### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972  -->  
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we’ve added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+
+The EDR template for Linux includes the following settings for the *Device tags* category from Defender for Endpoint:
+ 
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+- **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
+
+You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
+
 ## Week of September 11, 2023
 
 ### Device configuration
