@@ -453,6 +453,7 @@ value: {"bypassedUrls":["ipchicken.com", "whatsmyip.org"]}
 Tunnel for MAM doesn't support:  
 
 - On-premises sites using Kerberos.
+- Certificate-based authentication for websites using Edge
 
 **Workaround**: None.
 
