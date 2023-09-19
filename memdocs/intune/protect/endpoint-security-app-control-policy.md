@@ -103,7 +103,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 ### Government cloud support
 
-Intune endpoint security Application control policies and configuring aManaged Installer are supported with the following sovereign cloud environments:
+Intune endpoint security Application control policies and configuring a managed installer are supported with the following sovereign cloud environments:
 
 - US Government clouds
 - 21Vianet
