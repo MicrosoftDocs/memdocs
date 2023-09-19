@@ -2141,12 +2141,37 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "memdocs/intune/apps/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/configuration/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/enrollment/index.yml",
       "redirect_url": "/mem/intune/",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/fundamentals/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "memdocs/intune/remote-actions/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/developer/index.yml",
       "redirect_url": "/mem/intune/",
       "redirect_document_id": false
     }
