@@ -126,10 +126,6 @@ Applies to:
 - Voice Over Enabled
 - Zoom Enabled
 
-**Managed Settings > Personal Hotspot**:
-
-- Enabled: If true, enable Personal Hotspot. If false, disable Personal Hotspot.
-
 **Managed Settings > Software Update Settings**:
 
 - Recommendation Cadence: This value defines how the system presents software updates to the user.
