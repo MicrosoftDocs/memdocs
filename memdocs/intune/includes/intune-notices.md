@@ -33,7 +33,7 @@ To support the upcoming release of iOS/iPadOS 17, update to the latest versions 
 
 ### Plan for Change: Removal of Microsoft Graph Beta API Android LOB app properties ‘identityVersion’ and ‘identityName’
 
-With Intune’s October (2310) service release, we'll be removing the Android line-of-business (LOB) app properties “identityVersion” and “identityName” from the Microsoft Graph Beta API [managedAndroidLobApp resource type](https://learn.microsoft.com/graph/api/resources/intune-apps-managedandroidlobapp?view=graph-rest-beta). The same data can be found using the Graph API "versionCode” and “versionName” properties.
+With Intune’s October (2310) service release, we'll be removing the Android line-of-business (LOB) app properties “identityVersion” and “identityName” from the Microsoft Graph Beta API [managedAndroidLobApp resource type](/graph/api/resources/intune-apps-managedandroidlobapp?view=graph-rest-beta). The same data can be found using the Graph API "versionCode” and “versionName” properties.
 
 #### How does this affect you or your users?
 
