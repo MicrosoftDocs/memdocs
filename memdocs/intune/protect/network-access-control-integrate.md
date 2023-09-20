@@ -20,7 +20,7 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

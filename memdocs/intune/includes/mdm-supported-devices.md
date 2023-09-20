@@ -4,14 +4,14 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 08/30/2023
+ms.date: 09/18/2023
 ms.localizationpriority: high
 ---
 
 ### Apple
 
-- Apple iOS 14.0 and later
-- Apple iPadOS 14.0 and later
+- Apple iOS 15.0 and later
+- Apple iPadOS 15.0 and later
 - macOS 11.0 and later
 
 > [!NOTE]
