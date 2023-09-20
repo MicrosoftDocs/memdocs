@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -130,7 +130,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   - `microsoft.directory/deviceLocalCredentials/password/read`
   - `microsoft.directory/deviceLocalCredentials/standard/read`
 
-  To create custom roles that can grant these permissions, see [Create and assign a custom role in Azure Active Directory](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation. 
+  To create custom roles that can grant these permissions, see [Create and assign a custom role in Azure Active Directory](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
   
 - **View Azure AD audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
@@ -177,14 +177,6 @@ The following built-in roles are supported to view metadata about LAPS including
 ### Why is the Local admin password button greyed out and inaccessible?
 Currently, access to this area requires the Rotate local Administrator password Intune permission. See [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-<!--  REMOVED until this is validated as accurate: 
-### Are custom roles supported?
-
-Yes. If you have Azure AD Premium, you can create a custom role with the following RBAC permissions:
-
-- To read LAPS metadata: *microsoft.directory/deviceLocalCredentials/standard/read*
-- To read LAPS passwords: *microsoft.directory/deviceLocalCredentials/password/read*
--->
 ### What happens when the account specified by policy is changed?
 
 Because Windows LAPS can only manage one local admin account on a device at a time, the original account is no longer managed by LAPS policy. If policy has the device back up that account, the new account is backed up and details about the previous account are no longer available from within the Intune admin center or from the Directory that is specified to store the account information.
