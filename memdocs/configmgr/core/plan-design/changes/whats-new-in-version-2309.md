@@ -28,15 +28,11 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Introducing SQL ODBC driver support for Configuration Manager
 
-Config Manager stores both Configuration and Reporting data in SQL Server Database. Components written in native code access this data in SQL Database by using SQL Native Client 11 driver, which has been deprecated. It needs to be replaced with the latest Microsoft ODBC Driver for SQL Server 18.1.0.
+Starting with Configuration Manager 2309 release, Configuration Manager requires the installation of the ODBC driver for SQL server 18.1.0 or later as a prerequisite. This prerequisite is required when you create a new site or update an existing one and all other remote roles.
 
-Feature requirements:
- - Remove the deprecated SQL Server Native Client 11.0 package in Config Manager.
- - Replace SNAC 11.0 with the latest Microsoft ODBC Driver for SQL Server (version 18.1.0).
- - Update code with hard dependency on SQL Server Native Client 11.0 to use Microsoft ODBC Driver instead.
-   
 > [!IMPORTANT]
-> Microsoft ODBC Driver for SQL Server 18.1.0 needs to be installed on Site Servers before upgrading to 2309 version.
+> Microsoft ODBC Driver for SQL Server 18.1.0 needs to be installed on Site Servers and site system roles before upgrading to 2309 version.
+> Do not uninstall SQL native client 11 until we call out in further communications. Configuration Manager doesn't manage the updates for the ODBC driver, ensure that this component is up to date.
 
 For more information, see [SQL ODBC driver for the site server](../..//plan-design/configs/site-and-site-system-prerequisites.md#sql-odbc-driver-for-the-site-server)
 
@@ -116,12 +112,12 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 ## Cloud-attached management
 
-### CMG creation using Third PartyApp via Console  
+### New Cloud Management Gateway (CMG) creation via Console 
 
-Starting in Configuration Manager current branch version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens. For CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears. To update the server app, you can navigate to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings". 
+Starting in Configuration Manager current branch version 2309, We have enhanced security of web (server) app for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the Setup CMG.
 
 >[!NOTE]
->Existing Customers, must update their server app as current version, doesn't have the Redirect to- "http://localhost"
+>Pre existing CMG customers must update their web server app by navigating to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings".
 
 For more information, see [Configure Azure Active Directory for CMG](../../clients/manage/cmg/configure-azure-ad.md)
 
@@ -131,15 +127,12 @@ You can now create CMG using third party Server app via PowerShell cmdlet, you n
 
 PowerShell Commandlet:  ``` Set-UpdateServerApplication – TenantID ```
 
-If you're utilizing the existing Azure AD server app, when existing (nonupdated) Azure AD server app is used, ensure that the server app has RedirectUrl="http://localhost” added in Azure portal and in TableAAD_Application_EX in Database.
-
 If you try to create the CMG before updating RedirectUrl, you get an error "Your server Application needs to be updated".
 
 Run this PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
 
 >[!NOTE] 
-> For new customers, before creating CMG, create Azure AD server app that contains the RedirectUrl="http://localhost” in your App. 
-Once redirect URL and database settings are complete, you can execute the new PowerShell commandlet script.
+> For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
 
 
 ### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.   
