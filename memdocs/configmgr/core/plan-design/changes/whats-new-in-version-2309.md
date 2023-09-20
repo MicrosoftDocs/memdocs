@@ -116,6 +116,8 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 Starting in Configuration Manager current branch version 2309, We have enhanced security of web (server) app for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the Setup CMG.
 
+:::image type="content" source="media/cmg-console-creation.png" alt-text="A screenshot of the cmg app creation via console.":::
+
 >[!NOTE]
 >Pre existing CMG customers must update their web server app by navigating to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings".
 
