@@ -28,15 +28,15 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Introducing SQL ODBC driver support for Configuration Manager
 
-Starting with Configuration Manager 2309 release, Configuration Manager requires the installation of the ODBC driver for SQL server 18.1.0 or later as a prerequisite. This prerequisite is required when you create a new site or update an existing one and all other remote roles.
+Starting with Configuration Manager 2309 release, Configuration Manager requires the installation of the ODBC driver for SQL server 18.1.0 or later as a prerequisite. This prerequisite is required when you create a new site or update an existing one and on all remote roles.
 
 > [!IMPORTANT]
-> Microsoft ODBC Driver for SQL Server 18.1.0 needs to be installed on Site Servers and site system roles before upgrading to 2309 version.
+> Microsoft ODBC Driver for SQL Server 18.1.0 or later needs to be installed on Site Servers and site system roles before upgrading to 2309 version.
 > Do not uninstall SQL native client 11 until we call out in further communications. Configuration Manager doesn't manage the updates for the ODBC driver, ensure that this component is up to date.
 
 For more information, see [SQL ODBC driver for the site server](../..//plan-design/configs/site-and-site-system-prerequisites.md#sql-odbc-driver-for-the-site-server)
 
-### Option to schedule Scripts execution time
+### Option to schedule scripts' runtime
 
 Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC. The run Script Wizard now offers a scheduling option that enables administrators to schedule the execution of scripts. It provides a convenient way to automate the running of scripts on managed devices according to specified schedules.
 
@@ -131,7 +131,7 @@ PowerShell Commandlet:  ``` Set-UpdateServerApplication – TenantID ```
 
 If you try to create the CMG before updating RedirectUrl, you get an error "Your server Application needs to be updated".
 
-Run this PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
+PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
 
 >[!NOTE] 
 > For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
@@ -145,10 +145,16 @@ Prior to the Attack Surface Reduction capability in Windows Server, rules were m
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
+ - Configured resource access policies will block Configuration Manager 2403 upgrade, remove existing policies and move the slider to Intune. Please action before January 2024, read the [FAQ](/../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml).
+ - Added System center update publisher (SCUP) deprecation time-line.
+
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
 <!--## Other updates-->
 
+## Known Issues 
+
+Missing SQL ODBC driver will generate other pre-req errors but will be fixed once you install SQL ODBC component.
 
 ## Next steps
 At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
