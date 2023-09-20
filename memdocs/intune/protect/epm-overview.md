@@ -66,11 +66,13 @@ Endpoint Privilege Management as the following requirements:
 
 Endpoint Privilege Management supports the following operating systems:
 
-- Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
-- Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/en-us/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)
-- Windows 10, version 22H2 (19045.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
-- Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
-- Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
+- Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)
+- Windows 10, version 22H2 (19045.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+
+Support for EPM extends to Windows 365 (Cloud PCs) that use a supported client version. Azure Virtual Desktop is not supported at this time.
 
 > [!IMPORTANT]
 > Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
@@ -78,7 +80,7 @@ Endpoint Privilege Management supports the following operating systems:
 > Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 >
 > Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
-> 
+>
 > Endpoint Privilege Management is supported for Intune-managed devices, including [co-managed](../../configmgr/comanage/overview.md) devices.
 
 ## Getting started with Endpoint Privilege Management
