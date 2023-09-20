@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/25/2023
+ms.date: 09/26/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -68,7 +68,7 @@ This command shows all the Microsoft-maintained apps (like QuickAssist, Microsof
 - Windows 365 app version 1.1.162.0 or later.
 - Azure Virtual Desktop (HostApp) app version 1.2.4159. or later.
 
-Windows 365 Boot also requires that the physical device is in the **Beta channel of the Windows Insider Program**.
+Windows 365 Boot also requires the latest version of Windows 11.
 
 ## Remove Windows 365 Boot from the physical device
 
@@ -120,7 +120,7 @@ You can find the Windows 365 Session ID in error dialog boxes. For example, the 
 
 ### Correlation ID
 
-You can find the Correlation ID in the interstitial screen displayed during a two-minute timeout.
+You can find the Correlation ID in the interstitial screen displayed during a five-minute timeout.
 
 ![Screenshot of connection issue dialog box.](./media/troubleshoot-windows-365-boot/connection-issue.png)
 
