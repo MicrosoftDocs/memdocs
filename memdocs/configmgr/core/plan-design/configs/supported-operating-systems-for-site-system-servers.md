@@ -188,8 +188,6 @@ The following client OS versions are supported for use as a **distribution point
 
     For more information on supported build versions and editions, see [Support for Windows 10](support-for-windows-10.md).
 
-- Windows 8.1 (x86, x64): Professional and Enterprise
-
 This support has the following limitation:
 
 - Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
