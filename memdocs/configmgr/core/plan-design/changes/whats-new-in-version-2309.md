@@ -50,7 +50,7 @@ For more information, see [Schedule scripts' runtime](../../../apps/deploy-use/c
 
 ### External service notification Run details from Azure Logic application.  
 
-Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications or alerts related to specific events or conditions, CM can now capture and display these notifications. This integration enables the monitoring and management of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
+Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications related to specific events, CM can now capture and display these notifications. This integration enables the monitoring of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
 
 :::image type="content" source="media/17668438-external-service.png" alt-text="A screenshot of the run details of external service notification wizard.":::
 
