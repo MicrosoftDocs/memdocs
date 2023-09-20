@@ -192,18 +192,6 @@ Applies to:
 - Android Enterprise corporate owned devices with a work profile
 - Android Enterprise fully managed
 
-### Role-based access
-
-#### Updating the scope of UpdateEnrollment<!--25077072 -->
-
-With the introduction of a new role **UpdateEnrollment**, the scope of **UpdateOnboarding** is getting updated.
-
-The **UpdateOnboarding** setting for custom and built-in roles is modified to only manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. Any built in roles that used **UpdateOnboarding** will now have **UpdateEnrollmentProfiles** included.
-
-The resource name is being updated from **Android for work** to **Android Enterprise**.
-
-For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-
 ### Device management
 
 #### Management certificate expiration date<!-- 17648747  -->  
@@ -225,7 +213,7 @@ Applies to:
 
 - iOS/iPadOS
 
-### Government tenant support for endpoint security Application Control policy and managed installer<!-- 24850055   -->  
+#### Government tenant support for endpoint security Application Control policy and managed installer<!-- 24850055   -->  
 We’ve added support to use endpoint security [Application Control policies](../protect/endpoint-security-app-control-policy.md), and to configure a managed installer, to the following sovereign cloud environments:
 
 - US Government clouds
@@ -259,11 +247,22 @@ To learn more about Defender for Endpoint settings that are available for macOS,
 Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we’ve added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for Linux includes the following settings for the *Device tags* category from Defender for Endpoint:
- 
+
 - **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
 - **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
 
 You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
+
+### Role-based access
+
+#### Updating the scope of UpdateEnrollment<!--25077072 -->  
+With the introduction of a new role **UpdateEnrollment**, the scope of **UpdateOnboarding** is getting updated.
+
+The **UpdateOnboarding** setting for custom and built-in roles is modified to only manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. Any built in roles that used **UpdateOnboarding** will now have **UpdateEnrollmentProfiles** included.
+
+The resource name is being updated from **Android for work** to **Android Enterprise**.
+
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Week of September 11, 2023
 
