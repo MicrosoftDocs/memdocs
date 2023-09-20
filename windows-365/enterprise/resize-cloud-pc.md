@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Resize a Cloud PC (preview) 
+title: Resize a Cloud PC
 titleSuffix:
 description: Learn how to resize a Cloud PC by using Microsoft Intune.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 09/23/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Resize a Cloud PC (preview)
+# Resize a Cloud PC
 
 The **Resize** remote action, which preserves user and disk data, lets you:
 
