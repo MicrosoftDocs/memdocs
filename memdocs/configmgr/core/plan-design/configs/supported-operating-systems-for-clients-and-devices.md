@@ -74,13 +74,13 @@ For more information, see the following articles:
 
 - **Windows Storage Server 2016**: Workgroup, Standard, IoT
 
-- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2012 R2** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Storage Server 2012 R2** (x64)
+- **Windows Storage Server 2012 R2** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
+- **Windows Server 2012** (x64): Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Storage Server 2012** (x64)
+- **Windows Storage Server 2012** (x64) <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### Server Core
 
@@ -94,9 +94,9 @@ Windows Server semi-annual channel versions are Server Core installations, such 
 
 - **Windows Server 2016** (x64) <sup>[Note 2](#bkmk_note2)</sup>
 
-- **Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2012 R2** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
-- **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup>
+- **Windows Server 2012** (x64) <sup>[Note 2](#bkmk_note2)</sup> <sup>[Extended Security Updates](#bkmk_ESU)</sup>
 
 #### <a name="bkmk_note1"></a> Note 1
 
