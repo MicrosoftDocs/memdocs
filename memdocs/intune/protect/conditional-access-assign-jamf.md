@@ -43,6 +43,9 @@ ms.collection:
 >
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
+> [!TIP]
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
+
 After you integrate Jamf Pro with Intune, configure Intune compliance policies and Azure Active Directory (Azure AD) Conditional Access policies to enforce compliance of macOS devices with your organizational requirements.
 
 This article can help you with the following tasks:

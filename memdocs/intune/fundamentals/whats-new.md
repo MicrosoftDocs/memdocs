@@ -70,6 +70,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of September 18, 2023
 
+### Role-based access
+
+#### Updating the scope of UpdateEnrollment<!--25077072 -->
+
+With the introduction of a new role **UpdateEnrollment**, the scope of **UpdateOnboarding** is getting updated.
+
+The **UpdateOnboarding** setting for custom and built-in roles is modified to only manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. Any built in roles that used **UpdateOnboarding** will now have **UpdateEnrollmentProfiles** included.
+
+The resource name is being updated from **Android for work** to **Android Enterprise**.
+
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+
 ### Device management
 
 #### Intune supports iOS/iPadOS 15.x as the minimum version<!-- 24161619 -->
