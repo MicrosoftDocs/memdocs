@@ -77,13 +77,13 @@ The following permissions are available when creating custom roles.
 | Android FOTA/Create | Create and manage all aspects of Android firmware over-the-air (FOTA) deployments. |
 | Android FOTA/Read | View Android firmware over-the-air (FOTA) deployments, including history and reporting. |
 | Android FOTA/Update | Change existing Android firmware over-the-air (FOTA) deployments and cancel firmware deployments. |
-| Android Enterprise/Read | View the Android for Work configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. |
-| Android Enterprise/Update app sync | Manage or change the Android for Work configuration used to sync applications with the Play for Work store, or sync the apps you've approved from the store with Intune. |
+| Android Enterprise/Read | View the Android for Work configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. | 
+| Android Enterprise/Update app sync | Manage or change the Android for Work configuration used to sync applications with the Play for Work store, or sync the apps you've approved from the store with Intune. | 
 | Android Enterprise/Update onboarding | Manage or change the Android for work configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. |
-| Android Enterprise/ Update Enrollment Profiles| Manage or change AOSP and Android for work Device Owner enrollment profiles that are used to enroll devices.|
-| Audit data/Read | View all Intune audit data for this tenant. |
-| Certificate Connector/Modify | Add, remove, or modify certificate connectors required to support certificate issuance. |
-| Certificate Connector/Read | View certificate connectors required to support certificate issuance. |
+| Android Enterprise/ Update Enrollment Profiles| Manage or change AOSP and Android Enterprise Device Owner enrollment profiles that are used to enroll devices.|
+| Audit data/Read | View all Intune audit data for this tenant. | 
+| Certificate Connector/Modify | Add, remove, or modify certificate connectors required to support certificate issuance. | 
+| Certificate Connector/Read | View certificate connectors required to support certificate issuance. | 
 | Cloud attached devices\View collections | Displays the *Collections* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\View resource explorer | Displays the *Resource explorer* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\View timeline | Displays the *Timeline* page for Configuration Manager cloud attached devices |
@@ -94,15 +94,15 @@ The following permissions are available when creating custom roles.
 | Cloud attached devices\View client details | Displays the *Client details* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\View applications | Displays the *Applications* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\Take application actions | Displays application actions in the *Applications* page and allows the user to take application actions on Configuration Manager cloud attached devices |
-| Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. |
-| Corporate device identifiers/Delete | Delete IMEI or serial numbers used as corporate device identifiers. |
-| Corporate device identifiers/Read | View the IMEI or serial numbers used as corporate device identifiers. |
-| Corporate device identifiers/Update | Change IMEI or serial numbers used as corporate device identifiers. |
-| Customization/Assign | Assign customization options for the Company Portal. |
-| Customization/Create | Create customization options for the Company Portal. |
-| Customization/Delete | Delete customization options for the Company Portal. |
-| Customization/Read | Read customization options for the Company Portal. |
-| Customization/Update | Update customization options for the Company Portal. |
+| Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. | 
+| Corporate device identifiers/Delete | Delete IMEI or serial numbers used as corporate device identifiers. | 
+| Corporate device identifiers/Read | View the IMEI or serial numbers used as corporate device identifiers. | 
+| Corporate device identifiers/Update | Change IMEI or serial numbers used as corporate device identifiers. | 
+| Customization/Assign | Assign customization options for the Company Portal. | 
+| Customization/Create | Create customization options for the Company Portal. | 
+| Customization/Delete | Delete customization options for the Company Portal. | 
+| Customization/Read | Read customization options for the Company Portal. | 
+| Customization/Update | Update customization options for the Company Portal. | 
 | Derived Credentials/Modify | Configure the Derived Credentials for your Microsoft Intune tenant. | 
 | Derived Credentials/Read | View the Derived Credentials for your Microsoft Intune tenant. | 
 | Device compliance policies/Assign | Assign device compliance policies to Azure AD security groups, and assign Exchange on-premises access to Azure AD security groups. | 

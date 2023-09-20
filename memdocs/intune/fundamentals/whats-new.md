@@ -80,7 +80,7 @@ The **UpdateOnboarding** setting for custom and built-in roles is modified to on
 
 The resource name is being updated from **Android for work** to **Android Enterprise**.
 
-For more information, see [Create a custom role in Microsoft Intune](../fundamentals/create-custom-role.md)
+For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
 ### Device management
 
