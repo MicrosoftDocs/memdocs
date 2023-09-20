@@ -77,9 +77,9 @@ The following permissions are available when creating custom roles.
 | Android FOTA/Create | Create and manage all aspects of Android firmware over-the-air (FOTA) deployments. |
 | Android FOTA/Read | View Android firmware over-the-air (FOTA) deployments, including history and reporting. |
 | Android FOTA/Update | Change existing Android firmware over-the-air (FOTA) deployments and cancel firmware deployments. |
-| Android Enterprise/Read | View the Android for Work configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. | 
-| Android Enterprise/Update app sync | Manage or change the Android for Work configuration used to sync applications with the Play for Work store, or sync the apps you've approved from the store with Intune. | 
-| Android Enterprise/Update onboarding | Manage or change the Android for work configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. |
+| Android Enterprise/Read | View the Android Enterprise configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. | 
+| Android Enterprise/Update app sync | Manage or change the Android Enterprise configuration used to sync applications with the Play for Work store, or sync the apps you've approved from the store with Intune. | 
+| Android Enterprise/Update onboarding | Manage or change the Android Enterprise configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. |
 | Android Enterprise/ Update Enrollment Profiles| Manage or change AOSP and Android Enterprise Device Owner enrollment profiles that are used to enroll devices.|
 | Audit data/Read | View all Intune audit data for this tenant. | 
 | Certificate Connector/Modify | Add, remove, or modify certificate connectors required to support certificate issuance. | 
