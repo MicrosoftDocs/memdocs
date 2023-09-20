@@ -76,7 +76,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 With the introduction of a new role **UpdateEnrollment**, the scope of **UpdateOnboarding** is getting updated.
 
-The **UpdateOnboarding** setting for custom and built-in roles is modified to only manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. Any Built in roles that used UpdateOnboarding will now have UpdateEnrollmentProfiles included.
+The **UpdateOnboarding** setting for custom and built-in roles is modified to only manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. Any built in roles that used **UpdateOnboarding** will now have **UpdateEnrollmentProfiles** included.
 
 The resource name is being updated from **Android for work** to **Android Enterprise**.
 
