@@ -308,7 +308,7 @@ After you have initiated running a script on a collection of devices, use the fo
  
    ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png)
 
-### Schedule script Monitoring on a collection: 
+### Schedule script Monitoring on a collection
  
 1. In the Configuration Manager console, click **Monitoring**. 
 2. In the Monitoring workspace, click **Scheduled Scripts node**. 
