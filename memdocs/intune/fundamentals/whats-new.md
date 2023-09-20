@@ -200,16 +200,6 @@ Management certificate expiration date is available as a column in the **Devices
 #### Windows Defender Application Control (WDAC) references will update to App Control for Business<!-- 24863807  -->  
 Windows has renamed *Windows Defender Application Control* (WDAC) as *App Control for Business*. With this change, the references in Intune docs and the Intune admin center will update to reflect this new name.
 
-#### Intune support for Windows LAPS is now generally available<!-- 17426634  -->  
-Intune support for managing Windows Local Administrator Password Solution (Windows LAPS) with  [Account protection policies](../protect/endpoint-security-account-protection-policy.md) is now generally available, and out of Preview. To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
-
-[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that allows you to manage and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices.
-
-Applies to:
-
-- Windows 10
-- Windows 11
-
 #### Intune supports iOS/iPadOS 15.x as the minimum version<!-- 24161619 -->
 
 Apple released iOS/iPadOS version 17. Now, the minimum version supported by Intune is iOS/iPadOS 15.x.
