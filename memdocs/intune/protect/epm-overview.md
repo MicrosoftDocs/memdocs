@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/24/2023
+ms.date: 09/19/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,9 +50,21 @@ Applies to:
 
 Endpoint Privilege Management requires an additional license beyond the *Microsoft Intune Plan 1* license. You can choose between an stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-### Windows Client requirements
+### Requirements
 
-Endpoint Privilege Management has the following operating system requirements:
+Endpoint Privilege Management as the following requirements:
+
+- Azure Active Directory Join (AADJ) *or* Hybrid Azure Active Directory Join (HAADJ)
+- Microsoft Intune Enrollment *or* Microsoft Configuration Manager Co-Managed (no workload requirements)
+- Supported Operating System
+- Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)
+
+> [!NOTE]
+>
+> - Workplace-join devices are not supported by Endpoint Privilege Management
+> - Azure Virtual Desktop is not supported by Endpoint Privilege Management
+
+Endpoint Privilege Management supports the following operating systems:
 
 - Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
 - Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/en-us/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)

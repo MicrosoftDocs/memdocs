@@ -80,11 +80,11 @@ To support using Tunnel for MAM, create and deploy the three profiles detailed i
 
 - [App configuration policy for Microsoft Edge](#app-configuration-policy-for-microsoft-edge)
 - [App configuration policy for Microsoft Defender](#app-configuration-policy-for-microsoft-defender)
-- [App protection policy for Tunnel](#app-protection-policy-for-tunnel)
+- [App protection policy for Microsoft Edge](#app-protection-policy-for-microsoft-edge)
 
 When all three are configured and deployed to the same groups, the app protection policy will automatically trigger Tunnel to connect to the VPN whenever Microsoft Edge is launched.
 
-In addition, you can configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with Microsoft Edge and with your with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). By default, Microsoft Edge supports trusted root certificates. For LOB apps, you [use the MAM SDK](#configure-line-of-business-applications) to add support for trusted root certificates.
+In addition, you can configure a [Trusted certificate profile](../protect/certificates-trusted-root.md) for use with Microsoft Edge and with your line-of-business apps when they must connect to on-premises resources and are protected by an SSL/TLS certificate issued by an on-premises or private certificate authority (CA). By default, Microsoft Edge supports trusted root certificates. For LOB apps, you [use the MAM SDK](#configure-line-of-business-applications) to add support for trusted root certificates.
 
 ### App configuration policy for Microsoft Defender
 
@@ -167,7 +167,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
 The new policy will appear in the list of App configuration policies.
 
-### App protection policy for Tunnel
+### App protection policy for Microsoft Edge
 
 Create an app protection policy to automatically start the Microsoft Tunnel VPN connection when the app is launched.
 
@@ -305,7 +305,9 @@ Use of two or more app configuration policies for Microsoft Defender that specif
 
 ### GCC High and FIPS support
 
-Microsoft Tunnel for MAM is supported for GCC High environments, but doesn't support Federal Information Processing Standard (FIPS).
+Microsoft Tunnel for MAM is not supported for GCC High environments 
+Microsoft Tunnel for MAM does not support Federal Information Processing Standard (FIPS).
+Mcirosoft Tunnel for MAM is not supported in Fairfax environments
 
 ## Next steps
 

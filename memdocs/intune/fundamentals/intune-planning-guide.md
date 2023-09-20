@@ -84,6 +84,9 @@ These apps are the apps you want on their devices. Some considerations:
 
   For more information and considerations, go to [Personal devices vs. Organization-owned devices](#personal-devices-vs-organization-owned-devices) (in this article).
 
+- If you plan to migrate to Microsoft Outlook, note the email configurations you currently use. These settings can be configured using Intune app configuration policies.
+- Review the [protected apps designed to work with Intune](../apps/apps-supported-intune-apps.md). These apps are supported partner apps and Microsoft apps that are commonly used with Microsoft Intune.
+
 ### Objective: Secure access on all devices
 
 When data is stored on mobile devices, it must be protected from malicious activity.
@@ -475,7 +478,7 @@ And, choose how users enroll their devices in Intune. Some considerations:
 
   - After a successful pilot, you're ready to start a full production rollout. The following example is an Intune rollout plan that includes targeted groups and timelines:
 
-  | **Rollout phase** | **July** | **August** | **September** | **October** |
+  | Rollout phase | July | August | September | October |
   |:---:|:---:|:---:|:---:|:---:|
   | Limited Pilot | IT (50 users) |  |  |  |
   | Expanded Pilot | IT (200 users), IT Executives (10 users) |  |  |  |
@@ -493,7 +496,7 @@ And, choose how users enroll their devices in Intune. Some considerations:
 
   The following example includes the enrollment approaches:
 
-  | **Rollout phase** | **July** | **August** | **September** | **October** |
+  | Rollout phase | July | August | September | October |
   |:---:|:---:|:---:|:---:|:---:|
   | Limited Pilot |  |  |  |  |
   | Self-service | IT |  |  |  |
@@ -547,7 +550,7 @@ This information should include how to notify users, and when to communicate. So
 
   The following example is a high-level Intune rollout communications plan:
 
-  | **Communication plan** | **July** | **August** | **September** | **October** |
+  | Communication plan | July | August | September | October |
   |:---:|:---:|:---:|:---:|:---:|
   | Phase 1  | All |  |  |  |
   | Kickoff meeting | First week |  |  |  |
