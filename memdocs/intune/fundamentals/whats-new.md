@@ -75,7 +75,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### Configuration scripts for unmanaged macOS PKG apps<!-- 17745891  -->  
 You can now configure pre-install and post-install scripts in unmanaged macOS PKG apps. This feature gives you greater flexibility over custom PKG installers. Configuring these scripts is optional and requires the Intune agent for macOS devices v2309.007 or higher. For more information about adding scripts to unmanaged macOS PKG apps, see [Add an unmanaged macOS PKG app](../apps/macos-unmanaged-pkg.md).
 
-#### MAM for Microsoft Edge for Business [General Availability]<!-- 12394345, 12394352 -->
+#### MAM for Windows [General Availability]<!-- 12394345, 12394352 -->
 You can now enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability uses the following functionality:
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
@@ -84,7 +84,7 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 
 Intune Mobile Application Management (MAM) for Windows is available for Windows 11, build 10.0.22621 (22H2) or later.  This includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later) and Windows Security Center (v 1.0.2309.xxxxx and later).  App Protection Conditional Access is in Public Preview.
 
-Sovereign cloud support is expected in the future. For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
+Sovereign cloud support is expected in the future. For more information, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
 ### Device configuration
 
