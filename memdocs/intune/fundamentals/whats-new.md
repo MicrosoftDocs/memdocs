@@ -195,6 +195,19 @@ Applies to:
 
 ### Device management
 
+#### Introducing Remote Help on macOS<!--12454029 -->
+
+The Remote Help web app allows users to connect to macOS devices and join a view-only remote assistance session.
+For more information on Remote Help on macOS, go to [Remote Help](../fundamentals/remote-help-macos.md).
+
+Applies to:
+
+- 11 Big Sur
+
+- 12 Monterey
+
+- 13 Ventura
+
 #### Management certificate expiration date<!-- 17648747  -->  
 Management certificate expiration date is available as a column in the **Devices** workload. You can filter on a range of expiration dates for the management certificate and also export a list of devices with an expiration date matching the filter. This information is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **All devices**.
 
