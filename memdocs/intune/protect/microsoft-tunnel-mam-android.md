@@ -114,6 +114,10 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
    - For *Site Name*, select an available site, and then click **OK**.
 
    - *Per-App VPN (Android only)* is an optional setting. Select public or custom apps, to restrict the use of use the Tunnel VPN connection to these specified apps.
+ 
+  > [!IMPORTANT]  
+     >
+     > To ensure seamless identity switching and accurate Tunnel notifications within Microsoft Edge, it's essential to include Edge in your per-app VPN list.
 
      > [!IMPORTANT]  
      >
