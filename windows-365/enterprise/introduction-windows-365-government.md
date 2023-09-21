@@ -40,13 +40,13 @@ For GCC environments, users that access Windows 365 Government Cloud PCs have an
 
 Windows 365 Government supports this scenario in a secure, scalable, and transparent manner. It provides flexibility to administrators to manage users in the public cloud, resources in the government cloud, and the dynamic relationship between the two.
 
-Windows 365 Government is available for GCC and GCC High customers in the US, as well as contractors (in US entities) holding or processing data on behalf of US government agencies.
+Windows 365 Government is available for GCC and GCC High customers in the US, and contractors (in US entities) holding or processing data on behalf of US government agencies.
 
 For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Windows 365 Government](https://aka.ms/win365).
 
 ## Features not yet supported Windows 365 Government
 
-The following features are not yet supported for Windows 365 GCC or GCCH.
+The following features aren't yet supported for Windows 365 GCC or GCCH.
 
 - Unified dashboard
 - Windows 365 Security baseline
