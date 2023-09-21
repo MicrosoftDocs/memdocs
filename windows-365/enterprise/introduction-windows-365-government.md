@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/14/2023
+ms.date: 09/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -61,6 +61,7 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Frontline
 - Admin feedback
 - System alerts and email notifications
+- Cloud PC utilization report
 
 ## Next steps
 
