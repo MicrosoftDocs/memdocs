@@ -267,6 +267,25 @@ The EDR template for Linux includes the following settings for the *Device tags*
 
 You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
 
+### Monitor and troubleshoot 
+
+#### Updated reports for Update rings for Windows 10 and later<!-- 10159960 -->  
+Reporting for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) has been updated to use Intune’s improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
+
+With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there is no more left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
+
+- **Essentials** – including the policy name, created and modified dates, and additional details.
+- **Device and user check-in status**  – This is the default report view and includes:
+  - A  high-level overview of device status for this policy, and a *View report* button to open a more comprehensive report view.
+  - A streamlined representation and count of the different device status values returned by devices assigned to the policy. The simplified bar and chart replace former doughnut charts seen in the prior reporting representation.
+- Two additional report tiles to open additional reports. These include:
+  - **Device assignment status** – This report combines the same information as the previous Device status and User status reports, which are no longer available. However, with this change, pivots and drill-in through based on the user name is no longer available.
+  - **Per setting status** – This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings may not be successfully deploying to your organization.
+- **Properties** – View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
+
+For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article. 
+
+
 ### Role-based access
 
 #### Updating the scope of UpdateEnrollment<!--25077072 -->  
