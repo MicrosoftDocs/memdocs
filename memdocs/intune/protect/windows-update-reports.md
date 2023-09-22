@@ -54,7 +54,7 @@ For more information, see [Monitor Windows Updates with Windows Update for Busin
 
 ## Reports for Update rings for Windows 10 and later policy
 
-Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Windows** > **Update rings for Windows 10 and later** > and select a profile.  Intune displays details similar to the following for the selected profile:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Windows** > **Update rings for Windows 10 and later** > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
 
 :::image type="content" source="./media/windows-10-update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./media/windows-10-update-rings/default-policy-view.png":::
 
