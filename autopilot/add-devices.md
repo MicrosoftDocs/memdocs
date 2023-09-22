@@ -25,7 +25,9 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
-You can perform Windows Autopilot device registration within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-values (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. So, this process is primarily for testing and evaluation scenarios.
+You can perform Windows Autopilot device registration within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-values (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. So, this process is primarily for testing and evaluation scenarios. 
+
+You can manually register 500 devices per CSV though the portal. Before proceeding with additional devices, check that the previous batch has been successfully registered. If you are transferring devices hashes from one tenant to another tenant, please use this blog post for additional guidance: [Support tip: How to transfer Windows Autopilot devices between tenants](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-transfer-windows-autopilot-devices-between/ba-p/3920555).
 
 Device owners can only register their devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
 
@@ -241,3 +243,4 @@ Completely removing a device from your tenant requires you to delete the Intune,
 ## Next steps
 
 [Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.
+
