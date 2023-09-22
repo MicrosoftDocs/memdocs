@@ -47,13 +47,13 @@ The device list shows the individual Cloud PCs with the following columns:
 - **Round Trip Time for the specified date range (P50)**
 - **Available bandwidth for the most recent (or current) connection**
 - **Available bandwidth for the specified date range (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
-- **Connectin gateway**
+- **Connection gateway**
 - **Remoting sign-in time (P50)**: The number of seconds it took the user to complete the sign-in process.
 - **Client IP address**
-- **Protocol for most recent (or current) connection** 
+- **Protocol for most recent (or current) connection**
 - **UDP Utilization average over date range**
 
-Each row in the report gives links to the specific Cloud PC where you'll find greater detail regarding the devices connection history and related performance.
+Each row in the report gives links to the specific Cloud PC where you can find greater detail regarding the devices connection history and related performance.
 
 You can use the **Columns** and **Add filter** options to customize the report:
 
