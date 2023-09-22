@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/12/2023
+ms.date: 09/21/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -44,6 +44,7 @@ Remote Help uses Intune role-based access controls (RBAC) to set the level of ac
 > This article describes the capabilities and configuration tasks that are applicable in general for Remote Help across supported platforms. For specific capabilities, prerequisites, and other details based on the platform that you are using, go to:
   > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md)
   > - [Remote Help on Android with Microsoft Intune](remote-help-android.md)
+  > - [Remote Help on macOS with Microsoft Intune](remote-help-macOS.md)
 
 ## Remote Help capabilities and requirements
 
@@ -52,6 +53,7 @@ The Remote Help app supports the following capabilities in general across the su
 > To know more about specific capabilities and requirements based on the platform that you're using, go to:
 >  - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#remote-help-capabilities-and-requirements-on-windows)
 >  - [Remote Help on Android with Microsoft Intune](remote-help-android.md#remote-help-capabilities-and-requirements-on-android)
+>  - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#remote-help-capabilities-and-requirements-on-macos)
 
 - **Enable Remote Help for your tenant**: By default, Intune tenants aren't enabled for Remote Help. If you choose to turn on Remote Help, its use is enabled tenant-wide. Remote Help must be enabled before users can be authenticated through your tenant when using Remote Help.
 
@@ -82,6 +84,7 @@ The following general prerequisites apply to Remote Help.
 >
 > - [Remote Help on Windows with Microsoft Intune](remote-help-windows.md#prerequisites-for-remote-help-on-windows)
 > - [Remote Help on Android with Microsoft Intune](remote-help-android.md#prerequisites-for-remote-help-on-android)
+> - [Remote Help on macOS with Microsoft Intune](remote-help-macos.md#prerequisites-for-remote-help-on-macos)
 
 > [!NOTE]
 > Remote Help has the following limitations:  
@@ -99,6 +102,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
+- macOS 11, 12 and 13
 
 ## Data and privacy
 
