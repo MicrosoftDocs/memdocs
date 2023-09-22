@@ -118,7 +118,7 @@ This view includes:
 - [Extend](#extend)
 - [Uninstall](#uninstall)
 
-:::image type="content" source="./media/windows-10-update-rings/overview-actions.png" alt-\text="Available actions.":::
+:::image type="content" source="./media/windows-10-update-rings/overview-actions.png" alt-text="Available actions.":::
 
 This view also includes:
 
