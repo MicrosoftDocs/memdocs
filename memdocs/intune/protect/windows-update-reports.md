@@ -60,7 +60,7 @@ Intune offers integrated report views for the Windows update ring policies you d
 
 > [!TIP]
 >
-> For details about the policy actions at the top of the policy view, like *Delete*, *Pause*, and *Extend*, see [Manage your Windows Update rings](../protect/windows-10-update-rings.md#manage-your-udpate-rings) in the *Update rings for Windows 10 and later policy in Intune* article.
+> For details about the policy actions at the top of the policy view, like *Delete*, *Pause*, and *Extend*, see [Manage your Windows Update rings](../protect/windows-10-update-rings.md#manage-your-windows-update-rings) in the *Update rings for Windows 10 and later policy in Intune* article.
 
 On the policy page view:
 
