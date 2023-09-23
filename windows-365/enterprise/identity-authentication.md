@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrimo
+ms.reviewer: davidbel
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -58,7 +58,7 @@ There are three identity types:
 
 There are two join types that you can select from when [provisioning a Cloud PC](provisioning.md):
 
-- **[Hybrid Microsoft Entra Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid)**: If you choose this join type, Windows 365 joins your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Microsoft Entra hybrid join](/azure/active-directory/devices/howto-hybrid-azure-ad-join), the device is synchronized to Microsoft Entra ID.
+- **[Microsoft Entra Hybrid Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid)**: If you choose this join type, Windows 365 joins your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Microsoft Entra hybrid join](/azure/active-directory/devices/howto-hybrid-azure-ad-join), the device is synchronized to Microsoft Entra ID.
 - **[Microsoft Entra Join](/azure/active-directory/devices/concept-azure-ad-join)**: If you choose this join type, Windows 365 joins your Cloud PC directly to Microsoft Entra ID.
 
 The following table shows key capabilities or requirements based on the selected join type:
@@ -94,9 +94,11 @@ Users must authenticate with the Windows 365 service when:
 This authentication triggers a Microsoft Entra ID, allowing any credential type that is supported by both Microsoft Entra ID and your OS.
 
 ### Passwordless authentication
+
 You can use any authentication type supported by Microsoft Entra ID, such as [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) and other [passwordless authentication options](/azure/active-directory/authentication/concept-authentication-passwordless) (for example, FIDO keys), to authenticate to the service.
 
 ### Smart card authentication
+
 To use a smart card to authenticate to Microsoft Entra ID, you must first [configure AD FS for user certificate authentication](/windows-server/identity/ad-fs/operations/configure-user-certificate-authentication) or [configure Microsoft Entra certificate-based authentication](/azure/active-directory/authentication/concept-certificate-based-authentication).
 
 ## Cloud PC authentication
@@ -112,42 +114,45 @@ This authentication request is processed by Microsoft Entra ID for Microsoft Ent
 >If a user launches the web browser URL that maps directly to their Cloud PC, they will encounter the Windows 365 service authentication first, then encounter the Cloud PC authentication.
 
 The following credential types are supported for Cloud PC authentication:
+
 - Windows desktop client
-    - [Single sign-on](#single-sign-on-sso)
-    - Username and password
-    - Smartcard
-    - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust)
-    - [Windows Hello for Business key trust with certificates](/windows/security/identity-protection/hello-for-business/hello-deployment-rdp-certs)
->[!NOTE]
->Smartcard and Windows Hello authentication require the Windows desktop client to be able to perform Kerberos authentication when used with Hybrid AADJ. This requires the physical client to have line of sight to a domain controller.
+  - [Single sign-on](#single-sign-on-sso)
+  - Username and password
+  - Smartcard
+  - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust)
+  - [Windows Hello for Business key trust with certificates](/windows/security/identity-protection/hello-for-business/hello-deployment-rdp-certs)
+  >[!NOTE]
+  >Smartcard and Windows Hello authentication require the Windows desktop client to be able to perform Kerberos authentication when used with Microsoft Entra Hybrid joined Cloud PCs. This requires the physical client to have line of sight to a domain controller.
 - Windows store client
-    - Username and password
+  - Username and password
 - Web client
-    - [Single sign-on](#single-sign-on-sso)
-    - Username and password
+  - [Single sign-on](#single-sign-on-sso)
+  - Username and password
 - Android
-    - Username and password
+  - [Single sign-on](#single-sign-on-sso)
+  - Username and password
 - iOS
-    - Username and password
+  - [Single sign-on](#single-sign-on-sso)
+  - Username and password
 - macOS
-    - Username and password
+  - [Single sign-on](#single-sign-on-sso)
+  - Username and password
 
 ### Single sign-on (SSO)
 
 >[!Important]
->Single sign-on is in [public preview](../public-preview.md) for Microsoft Entra joined Cloud PCs.
->
->Single sign-on is not supported for Microsoft Entra hybrid joined Cloud PCs.
+>Single sign-on is in [public preview](../public-preview.md) for Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
 
 Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential prompt and automatically sign the user in to Windows through Microsoft Entra authentication. Microsoft Entra authentication provides other benefits including passwordless authentication and support for third-party identity providers. Single sign-on is available on Cloud PCs (either [gallery images](device-images.md#gallery-images) or [custom images](device-images.md#custom-images)) using the following operating systems:
 
-- Windows 11 Enterprise with the [2022-09 Cumulative Updates for Windows 11 Preview (KB5017383)](https://support.microsoft.com/kb/KB5017383) or later installed.
-- Windows 10 Enterprise, versions 21H2 or later with the [2022-09 Cumulative Updates for Windows 10 Preview (KB5017380)](https://support.microsoft.com/kb/KB5017380) or later installed.
+- Windows 11 Enterprise with the [2022-10 Cumulative Updates for Windows 11 (KB5018418)](https://support.microsoft.com/kb/KB5018418) or later installed.
+- Windows 10 Enterprise, versions 20H2 or later with the [2022-10 Cumulative Updates for Windows 10 (KB5018410)](https://support.microsoft.com/kb/KB5018410) or later installed.
 
-Without SSO, the client prompts users for their session host credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
+Without SSO, the client prompts users for their Cloud PC credentials for every connection. The only way to avoid being prompted is to save the credentials in the client. We recommend you only save credentials on secure devices to prevent other users from accessing your resources.
 
 >[!NOTE]
->To maintain single sign-on to Kerberos-based apps and resources in the Cloud PC environment, you must properly [configure your environment to trust the Microsoft Entra Kerberos service](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises).
+>To maintain single sign-on to Kerberos-based apps and resources in the Cloud PC environment, you must properly [configure your environment to trust the Microsoft Entra Kerberos service](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises) by creating a Kerberos Server object.
+> You must also [create a Kerberos Server object](/azure/active-directory/authentication/howto-authentication-passwordless-security-key-on-premises) for connections to Microsoft Entra hybrid joined Cloud PCs to succeed. If the Kerberos Server object isn't present, you'll also see an error in your Azure Network Connection (ANC) health check regarding single sign-on.
 
 ## In-session authentication
 
@@ -158,10 +163,10 @@ Once you're connected to your Cloud PC, you may be prompted for authentication i
 > [!IMPORTANT]
 > In-session passwordless authentication is currently in [public preview](../public-preview.md).
 
-Windows 365 supports in-session passwordless authentication (preview](/windows-365/public-preview)) using [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) or security devices like FIDO keys when using the [Windows Desktop client](../end-user-access-cloud-pc.md#remote-desktop). Passwordless authentication is enabled automatically when the Cloud PC and local PC are using the following operating systems:
+Windows 365 supports in-session passwordless authentication using [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) or security devices like FIDO keys when using the [Windows Desktop client](../end-user-access-cloud-pc.md#remote-desktop). Passwordless authentication is enabled automatically when the Cloud PC and local PC are using the following operating systems:
 
-  - Windows 11 Enterprise with the [2022-09 Cumulative Updates for Windows 11 Preview (KB5017383)](https://support.microsoft.com/kb/KB5017383) or later installed.
-  - Windows 10 Enterprise, versions 20H2 or later with the [2022-09 Cumulative Updates for Windows 10 Preview (KB5017380)](https://support.microsoft.com/kb/KB5017380) or later installed.
+- Windows 11 Enterprise with the [2022-10 Cumulative Updates for Windows 11 (KB5018418)](https://support.microsoft.com/kb/KB5018418) or later installed.
+- Windows 10 Enterprise, versions 20H2 or later with the [2022-10 Cumulative Updates for Windows 10 (KB5018410)](https://support.microsoft.com/kb/KB5018410) or later installed.
   
 When enabled, all WebAuthn requests in the session are redirected to the local PC. You can use Windows Hello for Business or locally attached security devices to complete the authentication process.
 
