@@ -2,7 +2,7 @@
 title: What's new in version 2309
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
-ms.date: 09/18/2023
+ms.date: 09/26/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
@@ -146,15 +146,10 @@ Prior to the Attack Surface Reduction capability in Windows Server, rules were m
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
  - Configured resource access policies will block Configuration Manager 2403 upgrade, remove existing policies and move the slider to Intune. Please action before January 2024, read the [FAQ](/../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml).
- - Added System center update publisher (SCUP) deprecation time-line.
 
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
 <!--## Other updates-->
-
-## Known Issues 
-
-Missing SQL ODBC driver will generate other pre-req errors but will be fixed once you install SQL ODBC component.
 
 ## Next steps
 At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
