@@ -58,8 +58,8 @@ There are three identity types:
 
 There are two join types that you can select from when [provisioning a Cloud PC](provisioning.md):
 
-- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid)**: If you choose this join type, Windows 365 joins your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Microsoft Entra hybrid join](/azure/active-directory/devices/howto-hybrid-azure-ad-join), the device is synchronized to Microsoft Entra ID.
-- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join)**: If you choose this join type, Windows 365 joins your Cloud PC directly to Microsoft Entra ID.
+- **[Hybrid Microsoft Entra Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid)**: If you choose this join type, Windows 365 joins your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Microsoft Entra hybrid join](/azure/active-directory/devices/howto-hybrid-azure-ad-join), the device is synchronized to Microsoft Entra ID.
+- **[Microsoft Entra Join](/azure/active-directory/devices/concept-azure-ad-join)**: If you choose this join type, Windows 365 joins your Cloud PC directly to Microsoft Entra ID.
 
 The following table shows key capabilities or requirements based on the selected join type:
 
