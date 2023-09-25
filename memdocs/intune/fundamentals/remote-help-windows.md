@@ -309,7 +309,7 @@ Connect-MgGraph -Scopes "Application.ReadWrite.All"
 ```
 
 #### Create the Service Principal
-Create a Service Principal using the `Remote Assistance Service` AppId
+Create a Service Principal using the `Remote Assistance Service` AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2".
 ```powershell
 New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
 ```
