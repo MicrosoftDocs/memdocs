@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2023
+ms.date: 09/22/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -195,6 +195,19 @@ Applies to:
 
 ### Device management
 
+#### Introducing Remote Help on macOS<!--12454029 -->
+
+The Remote Help web app allows users to connect to macOS devices and join a view-only remote assistance session.
+For more information on Remote Help on macOS, go to [Remote Help](../fundamentals/remote-help-macos.md).
+
+Applies to:
+
+- 11 Big Sur
+
+- 12 Monterey
+
+- 13 Ventura
+
 #### Management certificate expiration date<!-- 17648747  -->  
 Management certificate expiration date is available as a column in the **Devices** workload. You can filter on a range of expiration dates for the management certificate and also export a list of devices with an expiration date matching the filter. This information is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **All devices**.
 
@@ -253,6 +266,25 @@ The EDR template for Linux includes the following settings for the *Device tags*
 - **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
 
 You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
+
+### Monitor and troubleshoot 
+
+#### Updated reports for Update rings for Windows 10 and later<!-- 10159960 -->  
+Reporting for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) has been updated to use Intune’s improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
+
+With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there is no more left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
+
+- **Essentials** – including the policy name, created and modified dates, and additional details.
+- **Device and user check-in status**  – This is the default report view and includes:
+  - A  high-level overview of device status for this policy, and a *View report* button to open a more comprehensive report view.
+  - A streamlined representation and count of the different device status values returned by devices assigned to the policy. The simplified bar and chart replace former doughnut charts seen in the prior reporting representation.
+- Two additional report tiles to open additional reports. These include:
+  - **Device assignment status** – This report combines the same information as the previous Device status and User status reports, which are no longer available. However, with this change, pivots and drill-in through based on the user name is no longer available.
+  - **Per setting status** – This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings may not be successfully deploying to your organization.
+- **Properties** – View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
+
+For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article. 
+
 
 ### Role-based access
 
