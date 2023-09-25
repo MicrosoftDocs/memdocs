@@ -7,8 +7,8 @@ description: Combine Conditional Access with Intune compliance policies to defin
 keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby    
-ms.date: 04/14/2022
+manager: dougeby
+ms.date: 09/25/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
