@@ -61,6 +61,8 @@ The following features are not yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Frontline
 - Admin feedback
 - System alerts and email notifications
+- Windows 365 Switch
+- Windows 365 Boot
 
 ## Next steps
 
