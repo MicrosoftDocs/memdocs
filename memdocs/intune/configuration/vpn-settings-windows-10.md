@@ -247,9 +247,6 @@ Example:
 
     To allow inbound and outbound, create two separate rules. Create one rule for inbound, and another rule for outbound.
 
-    > [!NOTE]
-    > This setting is coming in a future release, possibly the 2308 Intune release.
-
   - **Protocol**: Enter the port number of the network protocol you want the VPN to use, from 0-255. For example, enter `6` for TCP, or `17` for UDP.
 
     When you enter a protocol, you're connecting two networks over this same protocol. If you use the TPC (`6`) or UDP (`17`) protocols, you also need to enter the allowed local & remote port ranges and the allowed local & remote IP address ranges.

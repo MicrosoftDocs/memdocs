@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2023
+ms.date: 09/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,9 +52,9 @@ Endpoint Privilege Management requires an additional license beyond the *Microso
 
 ### Requirements
 
-Endpoint Privilege Management as the following requirements:
+Endpoint Privilege Management has the following requirements:
 
-- Azure Active Directory Join (AADJ) *or* Hybrid Azure Active Directory Join (HAADJ)
+- Microsoft Entra joined *or* Microsoft Entra hybrid joined
 - Microsoft Intune Enrollment *or* Microsoft Configuration Manager Co-Managed (no workload requirements)
 - Supported Operating System
 - Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)

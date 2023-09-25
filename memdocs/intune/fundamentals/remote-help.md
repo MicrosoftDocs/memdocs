@@ -201,6 +201,10 @@ You can monitor the use of Remote Help from within the Microsoft Intune admin ce
 > [!NOTE]
 > The Recipient ID and Recipient name display “--” for Android Enterprise Dedicated devices, as these devices do not have user affinity.
 
+### Try an interactive demo
+
+The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.html#/0/0) interactive demo walks you through scenarios step-by-step with interactive annotations and navigation controls.
+
 ## Next steps
 
 [Get support in Microsoft Intune admin center](../../get-support.md)
