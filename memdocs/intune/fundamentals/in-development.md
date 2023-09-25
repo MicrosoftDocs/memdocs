@@ -110,6 +110,29 @@ Applies to:
 
 ## Device configuration
 
+### New settings available in the macOS settings catalog <!-- 24950434  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
+
+**Microsoft Defender > Antivirus engine**:
+
+- Enforcement Level
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- System Policy App Data
+
+**Restrictions**:
+
+- Force On Device Only Dictation
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
 ### Import and export settings catalog policies<!-- 3470151  -->  
 The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration profiles** > **Create profile** > Select your **platform** > For **Profile**, select **Settings catalog**).
 
@@ -137,10 +160,12 @@ Applies to:
 
 - Android Enterprise personally owned devices with a work profile (BYOD)
 
- 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment  -->
+## Device enrollment
+
+### Web-based enrollment with JIT registration for personal iOS/iPadOS devices <!-- 15412485  -->  
+Intune will support web-based enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the app. Additionally, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps.
 
 <!-- *********************************************** -->
 
@@ -160,6 +185,30 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device security
+
+### Defender for Endpoint security settings management enhancements and support for Linux and macOS will soon be generally available<!-- 24190967  -->  
+The improvements introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) will soon be generally available. This change will include support all of the opt-in preview behavior – without having to enable support for preview features in Microsoft Defender for Endpoint.
+
+When the opt-in public preview behavior becomes generally available, the following endpoint security profiles for Linux and macOS that were added as part of the opt-in preview will also generally available:
+
+**Linux**:
+
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
+
+**MacOS**:
+
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
+
+For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) in the Intune documentation.
+
+###  Mvision Mobile is changing to Trellix Mobile Security<!-- 16208061 -->  
+The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  is transitioning to **Trellix Mobile Security**. With this change we’ll be updating Intune UI and our documentation to match. For example, the *Mvision Mobile connector* will soon be *Trellix Mobile Security*.
+
+If you have questions about this change, reach out to your Trellix Mobile Security representative.
 
 ### Configure declarative software updates for Apple devices in the Settings Catalog<!-- 24989083  -->  
 You'll be able to manage software updates using Apple's declarative device management (DDM) configuration using the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type:).
@@ -200,7 +249,11 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Intune admin center URL will redirect to intune.microsoft.com <!-- 25169925  -->  
+Previously, it was announced that the Microsoft Intune admin center is changing. Currently, the Microsoft Intune admin center URL is `https://endpoint.microsoft.com`. This URL will redirect to `https://intune.microsoft.com`.
+
 
 <!-- *********************************************** -->
 
