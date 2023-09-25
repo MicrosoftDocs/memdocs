@@ -32,7 +32,7 @@ ms.collection:
 - highpri
 - highseo
 ---
- 
+
 # Remote Help on Windows with Microsoft Intune
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
@@ -294,15 +294,45 @@ Depending on the environment that Remote Help is utilized in, it may be necessar
 This section outlines the steps for provisioning the Remote Help service on the tenant for conditional access.
 
 1. Open PowerShell in admin mode.
-    - It may be necessary to install [AzureADPreview](https://www.powershellgallery.com/packages/AzureADPreview/2.0.2.149)  
+    - It may be necessary to install [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation)  
 2. Within PowerShell enter the following commands:
 
-    - Install-Module -Name AzureADPreview
-    - Connect-AzureAD
-       - Enter in the appropriate credentials for your Azure admin account
-    - New-AzureADServicePrincipal -AppId 1dee7b72-b80d-4e56-933d-8b6b04f9a3e2
-       - The ID corresponds to the app ID for Remote Assistance Service
-       - The display name is **Remote Assistance Service**, which is the backend service for Remote Help  
+#### Installation
+```powershell
+Install-Module Microsoft.Graph -Scope CurrentUser
+```
+#### Sign in
+
+Use the `Connect-MgGraph` command to sign in with the required scopes. You'll need to sign in with an admin account to consent to the required scopes.
+```powershell
+Connect-MgGraph -Scopes "Application.ReadWrite.All"
+```
+
+#### Create the Service Principal
+Create a Service Principal using the `Remote Assistance Service` AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2".
+```powershell
+New-MgServicePrincipal -AppId "1dee7b72-b80d-4e56-933d-8b6b04f9a3e2"
+```
+
+```Output
+DisplayName                                     Id AppId                                   ServicePrincipalType
+----                                         ------- -----------                                   ---------------
+RemoteAssistanceService                           3d5ff82b-a5f2-483a-xxxx-9514ed66f7c5    1dee7b72-b80d-4e56-933d-8b6b04f9a3e2                           Application
+```
+
+This output has been shortened for readability.
+
+The ID corresponds to the app ID for the Remote Assistance Service
+
+The display name is **Remote Assistance Service**, which is the backend service for Remote Help  
+
+#### Sign out
+
+Use the `Disconnect-MgGraph` command to sign out.
+
+```powershell
+Disconnect-MgGraph
+```
 
 ## Languages Supported
 
@@ -430,3 +460,4 @@ Version 4.0.0.0 - GA release
 ## Next steps
 
 [Get support in Microsoft Intune admin center](../../get-support.md)
+
