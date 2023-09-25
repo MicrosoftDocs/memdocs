@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -65,7 +65,7 @@ This article describes how to limit access to Office 365 services. You can use t
 11. Select **Create** to complete the creation of policy.
 
 >[!NOTE]
->If you have configured a provisioning policy to **Use single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
+>If you have configured a provisioning policy to **Use Microsoft Entra single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
 
 ## Other devices
 
