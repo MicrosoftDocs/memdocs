@@ -293,7 +293,9 @@ items:
             href: ./apps/android-deployment-scenarios-app-protection-work-profiles.md
             displayName: app-we; without; without enrollment
           - name: Use Intune without Google Mobile Services
-            href: ./apps/manage-without-gms.md      
+            href: ./apps/manage-without-gms.md
+          - name: Data protection for Windows MAM
+            href: ./apps/protect-edge-mam-windows.md      
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
             displayName: MAM          
@@ -428,6 +430,8 @@ items:
                   href: ./apps/configure-microsoft-launcher.md
                 - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
+                - name: Configure Microsoft Edge for Windows
+                  href: ./apps/manage-microsoft-edge-windows.md                
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
                 - name: Configure Outlook
@@ -1863,6 +1867,8 @@ items:
         href: ./fundamentals/remote-help.md
       - name: Remote Help on Windows
         href: ./fundamentals/remote-help-windows.md
+      - name: Remote Help on macOS
+        href: ./fundamentals/remote-help-macos.md  
       - name: Remote Help on Android
         href: ./fundamentals/remote-help-android.md
       - name: Troubleshooting Remote Help on Android
