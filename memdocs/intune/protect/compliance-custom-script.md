@@ -75,10 +75,9 @@ $hash = @{ ModelName = $WMI_ComputerSystem.Model; BiosVersion = $WMI_BIOS.SMBIOS
 return $hash | ConvertTo-Json -Compress
 ```
 
-The following example is the output of the sample script:
+The following is an example of the output of the sample script above:
 
 ```powershell
-PS C:\Users\apervaiz\Documents> .\sample.ps1
 {"ModelName":  "Dell","BiosVersion":  1.24,"TPMChipPresent":  true}
 ```
 
