@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2023
+ms.date: 09/26/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,17 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of September 26, 2023
+
+#### Windows 365 Switch is now generally available<!--45933920-->
+
+Windows 365 Switch has moved out of preview and into general availability. For more information, see [Windows 365 Switch](windows-365-switch-overview.md). This feature isn't currently available for Windows 365 Government.
+
+#### Windows 365 Boot is now generally available<!--43305609-->
+
+Windows 365 Boot has moved out of preview and into general availability. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md). This feature isn't currently available for Windows 365 Government.
 
 <!-- ########################## -->
 ## Week of September 18, 2023
