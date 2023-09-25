@@ -112,7 +112,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
-    - **Root certificate for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
+    - **Root certificate for server validation**: Select one existing trusted root certificate profile. When the client connects to the network, this certificate are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
 
       > [!NOTE]
       > Depending on your Android OS version and your Wi-Fi authentication infrastructure, the certificate requirements can vary. You may need to add your secure hash algorithm(s) (SHA) from the certificate used by your network policy server (NPS). Or, if your Radius or NPS server has a publicly signed certificate, then a root certificate may not be needed for validation.
