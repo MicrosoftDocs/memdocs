@@ -114,7 +114,7 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 ### New Cloud Management Gateway (CMG) creation via Console 
 
-Starting in Configuration Manager current branch version 2309, We have enhanced security of web (server) app for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the Setup CMG.
+Starting in Configuration Manager current branch version 2309, We have enhanced security of web (server) app for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
 
 :::image type="content" source="media/cmg-console-creation.png" alt-text="A screenshot of the cmg app creation via console.":::
 
@@ -123,11 +123,11 @@ Starting in Configuration Manager current branch version 2309, We have enhanced 
 
 For more information, see [Configure Azure Active Directory for CMG](../../clients/manage/cmg/configure-azure-ad.md)
 
-### CMG creation using Third Party ServerApp via PowerShell 
+### New Cloud Management Gateway (CMG) creation via PowerShell 
 
 You can now create CMG using third party Server app via PowerShell cmdlet, you need to specify TenantID in the argument: 
 
-PowerShell Commandlet:  ``` Set-UpdateServerApplication – TenantID ```
+PowerShell Commandlet:  ``` Set-UpdateServerApplication – 'TenantID' ```
 
 If you try to create the CMG before updating RedirectUrl, you get an error "Your server Application needs to be updated".
 
@@ -145,7 +145,7 @@ Prior to the Attack Surface Reduction capability in Windows Server, rules were m
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
- - Configured resource access policies will block Configuration Manager 2403 upgrade, remove existing policies and move the slider to Intune. Please action before January 2024, read the [FAQ](/../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml).
+ - Configured resource access policies will block Configuration Manager 2403 upgrade, remove existing policies and move the slider to Intune. Please action before January 2024, read the [FAQ](../../../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml).
 
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
