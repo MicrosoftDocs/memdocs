@@ -61,7 +61,7 @@ Windows 365 Switch has moved out of preview and into general availability. For m
 
 #### Windows 365 Boot is now generally available<!--43305609-->
 
-Windows 365 Boot has moved out of preview and into general availability. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md). This feature isn't currently available for Windows 365 Government.
+Windows 365 Boot has moved out of preview and into general availability. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) This feature isn't currently available for Windows 365 Government.
 
 <!-- ########################## -->
 ## Week of September 18, 2023
