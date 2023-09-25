@@ -49,8 +49,8 @@ All discovery scripts:
 
 In addition, the PowerShell script for Windows:
 
-- Must be compressed to output results in a single line. For example: `$hash = @{ ModelName = "Dell"; BiosVersion = "1.24"; TPMChipPresent = $true}`
-- Must include the following line at the end of the script: `return $hash | ConvertTo-Json -Compress`
+- Must be compressed to output results in a single line.
+- For example: `$hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}` must include the following line at the end of the script: `return $hash | ConvertTo-Json -Compress`
 
 ## Limits
 
@@ -64,21 +64,21 @@ The scripts you write must be within the following limits in order to successful
 
 ## Sample discovery script for Windows
 
-The following example is a sample PowerShell script that you would use for Windows devices:
+The following example is a sample PowerShell script that you could use for Windows devices:
 
 ```powershell
 $WMI_ComputerSystem = Get-WMIObject -class Win32_ComputerSystem
 $WMI_BIOS = Get-WMIObject -class Win32_BIOS 
 $TPM = Get-Tpm
 
-$hash = @{ ModelName = $WMI_ComputerSystem.Model; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}
+$hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}
 return $hash | ConvertTo-Json -Compress
 ```
 
 The following is an example of the output of the sample script above:
 
 ```powershell
-{"ModelName":  "Dell","BiosVersion":  1.24,"TPMChipPresent":  true}
+{"BiosVersion":"1.24","Manufacturer":"Microsoft Corporation","TPMChipPresent":true}
 ```
 
 ## Sample discovery script for Linux
