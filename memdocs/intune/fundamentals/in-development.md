@@ -251,8 +251,8 @@ Applies to:
 
 ## Tenant administration
 
-### Intune admin center URL will redirect to intune.microsoft.com <!-- 25169925  -->  
-Previously, it was announced that the Microsoft Intune admin center is changing. Currently, the Microsoft Intune admin center URL is `https://endpoint.microsoft.com`. This URL will redirect to `https://intune.microsoft.com`.
+### `endpoint.microsoft.com` URL will redirect to `intune.microsoft.com` <!-- 25169925  -->  
+Previously, it was announced that the Microsoft Intune admin center has a new URL (`https://intune.microsoft.com`). The `https://endpoint.microsoft.com` URL will redirect to `https://intune.microsoft.com`.
 
 
 <!-- *********************************************** -->
