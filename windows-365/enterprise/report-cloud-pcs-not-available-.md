@@ -51,19 +51,19 @@ The device list shows the individual Cloud PCs with the following columns:
 - **System status**: Current system status for the Cloud PC.
 - **Region**: Azure region where the Cloud PC resides.
 - **Device status**: Current status of the Cloud PC.
-- **Last event**: Date and time of the most recent event suggesting that the Cloud PC is not available.
+- **Last event**: Date and time of the most recent event suggesting that the Cloud PC isn't available.
 - **Issue details**: Details about the event.
 
-The lack of data in a column indicates that there is nothing to report for that area. That area is probably not hte root cause of the unavailability.
+The lack of data in a column indicates that there's nothing to report for that area. That area is probably not the root cause of the unavailability.
 
 You can use the **Columns** and **Add filter** options to customize the report:
 
 - Choose which columns are displayed.
 - Filter the range for each column.
 
-You can use the **View details** link to see the recent history of the Cloud PC. This lets you cross-reference multiple conditions and timelines to find potential root causes of Cloud PC unavailability.
+You can use the **View details** link to see the recent history of the Cloud PC. You can then cross-reference multiple conditions and timelines to find potential root causes of Cloud PC unavailability.
 
-By using the various columns together, an experienced admin may draw clues to the state of the device and the underlying cause of any problems. For example, a user complains to your help desk that they can't access their Cloud PC. you check this report and see no data in the **Host health** or **System status** columns, the **Device status** is **Provisioned**, and the **Connection error** says **Client Disconnect**. Other Cloud PCs in the same region are not in the list. This issue is probably specific to this user, possibly something to do with the physical client configuration, network configuration, or network infrastructure.
+By using the various columns together, an experienced admin may draw clues to the state of the device and the underlying cause of any problems. For example, a user complains to your help desk that they can't access their Cloud PC. you check this report and see no data in the **Host health** or **System status** columns, the **Device status** is **Provisioned**, and the **Connection error** says **Client Disconnect**. Other Cloud PCs in the same region aren't in the list. This issue is probably specific to this user, possibly something to do with the physical client configuration, network configuration, or network infrastructure.
 
 <!-- ########################## -->
 ## Next steps
