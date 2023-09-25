@@ -36,7 +36,7 @@ Follow these steps and requirements to set up shared physical devices for Window
 
 ## Operating system requirements
 
-Each Windows 365 Boot physical device must have the latest version of Windows installed.
+Each physical device must be running Windows 11 Enterprise or Professional, version 22621.2361 or later.
 
 ## Configure the physical device
 
