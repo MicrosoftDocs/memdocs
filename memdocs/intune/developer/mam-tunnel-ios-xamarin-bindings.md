@@ -141,9 +141,8 @@ The final integration point is found in AppDelegate.cs. It calls the MicrosoftTu
 
 Provisioning problems
 Follow the steps outlined here  if you have problems provisioning the application(
-```
 
-Integrate Xamarin App using Custom Application: 
+```
 
  __Note__
 
