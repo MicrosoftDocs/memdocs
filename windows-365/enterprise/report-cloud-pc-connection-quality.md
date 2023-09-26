@@ -43,10 +43,10 @@ To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intu
 The device list shows the individual Cloud PCs with the following columns:
 
 - **Device name**
-- **Round Trip Time for the most recent (or current) connection** (RTT): The number of milliseconds it took to establish the user connection to the Cloud PC. Lower values indicate better round-trip connectivity.
+- **Round Trip Time for the most recent (or current) connection** (RTT): The number of milliseconds it takes, at the transport layer only, for communication between the client and the Cloud PC. Lower values indicate better round-trip connectivity.
 - **Round Trip Time for the specified date range (P50)**
 - **Available bandwidth for the most recent (or current) connection**
-- **Available bandwidth for the specified date range (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
+- **Available bandwidth for the specified date range (P50)**: network bandwidth observed during sessions with the specified CPC sample set.
 - **Connection gateway**
 - **Remoting sign-in time (P50)**: The number of seconds it took the user to complete the sign-in process.
 - **Client IP address**
