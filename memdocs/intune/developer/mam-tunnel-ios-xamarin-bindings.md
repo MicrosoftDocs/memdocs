@@ -142,4 +142,4 @@ Follow the steps outlined here if you have problems provisioning the application
 
 ## Next steps
 
-Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../developer/tunnel-mam-ios-sdk.md)
+[Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../developer/tunnel-mam-ios-sdk.md)
