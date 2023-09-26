@@ -1772,7 +1772,7 @@ items:
           href: ./developer/app-sdk-android-phase7.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
-      - name: Intune App SDK for Android
+      - name: Microsoft Tunnel for MAM SDK 
         items:
         - name: Microsoft Tunnel for MAM iOS SDK 
           href: ./developer/tunnel-mam-ios-sdk.md
