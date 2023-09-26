@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2022
+ms.date: 09/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,15 @@ ms.collection:
 
 # Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune
 
-Use an Identity protection profile to manage Windows Hello for Business on groups of devices in Microsoft Intune. [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards. Intune includes built-in settings so Administrators can configure and use Windows Hello for Business. For example, you can use these settings to:
+Microsoft Intune uses *Identity protection* profiles for device configuration, to manage Windows Hello for Business on your managed Windows devices.   [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards.
+
+Applies to:
+
+- Windows 10
+- Windows 11
+
+
+When you use Intune Identity protection profiles to manage Windows Hello for Business settings, you can:
 
 - Enable Windows Hello for Business for devices and users
 - Set device PIN requirements, including a minimum or maximum PIN length
@@ -38,10 +46,7 @@ Use an Identity protection profile to manage Windows Hello for Business on group
 
 This feature applies to devices running:
 
-- Windows 10
-- Windows 11
-
-In addition to use of an Identity protection profile, Intune supports the following options to manage settings for Windows Hello for Business:
+In addition to Identity protection profiles, Intune supports the following options to manage settings for Windows Hello for Business:
 
 - [During device enrollment](../protect/windows-hello.md): Manage Windows Hello when a device enrolls with a tenant-wide policy.
 - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed by security baselines like the baselines for *Microsoft Defender for Endpoint security* or  *Security Baseline for Windows 10 and later*.
