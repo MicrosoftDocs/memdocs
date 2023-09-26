@@ -28,35 +28,34 @@ ms.collection:
 
 # Microsoft Tunnel for MAM iOS Xamarin Bindings
 
- __Note__
+> [!NOTE]
+>
+> The current Xamarin bindings for IOS platform only support apps targeting iOS 15.0 and higher.
 
-The current Xamarin bindings for IOS platform only support apps targeting iOS 15.0 and higher.
+> [!NOTE]
+>
+> Consider reading the __[Get Started with Microsoft Tunnel iOS SDK](/mem/intune/developer/tunnel-mam-ios-sdk) article, which explains how to prepare for integration on each supported platform.
 
- __Note__
+## Overview
 
-You may wish to first read the __[Get Started with Microsoft Tunnel iOS SDK](/mem/intune/developer/tunnel-mam-ios-sdk)__ [ ](/mem/intune/developer/tunnel-mam-ios-sdk)article, which explains how to prepare for integration on each supported platform.
+The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of tunneling functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed tunnel connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
 
-__Overview__
+## What’s supported?
 
-The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of tunneling functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed Tunnel Connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
+__Developer machines__:
 
-__What's supported?__
+- Windows (Visual Studio version 15.7+)
+- macOS
 
-__Developer machines__
+__Mobile app platforms__:
 
-·        Windows (Visual Studio version 15.7+)
+- iOS 15.0 and Higher
 
-·        macOS
+__Intune Mobile Application Management scenarios__:
 
-__Mobile app platforms__
+- Intune [MAM](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)
 
-·        iOS 15.0 and Higher
-
-__Intune Mobile Application Management scenarios__
-
-·        Intune [MAM](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)
-
-__Prerequisites__
+## Prerequisites
 
 Review the license terms. Print and retain a copy of the license terms for your records. By downloading and using the Microsoft Tunnel iOS SDK Xamarin Bindings, you agree to such license terms. If you do not accept them, do not use the software.
 
@@ -64,33 +63,26 @@ The Tunnel for MAM SDK relies on the Intune MAM SDK for application protection a
 
 The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
 
-If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, please refer to the developer guide
+If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, please refer to the developer guide.
 
-__Security Considerations__
+## Security considerations
 
 To prevent potential spoofing, information disclosure, and elevation of privilege attacks:
 
-·        Ensure that Xamarin app development is performed on a secure work station.
+- Ensure that Xamarin app development is performed on a secure work station.
+- Ensure the bindings are from a valid Microsoft source:
+  - [MS Microsoft Tunnel iOS SDK NuGet Profile](https://www.nuget.org/profiles/msintuneappsdk)
+  - [Microsoft Tunnel iOS SDK Xamarin GitHub Repository](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+- Configure your NuGet config for your project to trust signed, unmodified NuGet packages. For more information, see [installing signed packages](/nuget/consume-packages/installing-signed-packages).
+- Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 
-·        Ensure the bindings are from a valid Microsoft source:
-
-o   [MS Microsoft Tunnel iOS SDK  NuGet Profile](https://www.nuget.org/profiles/msintuneappsdk)
-
-o   [Microsoft Tunnel iOS SDK  Xamarin GitHub Repository](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
-
-·        Configure your NuGet config for your project to trust signed, unmodified NuGet packages. See [installing signed packages](/nuget/consume-packages/installing-signed-packages) for more information.
-
-·        Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
-
-__Sample Applications__
+## Sample Applications
 
 Sample applications highlighting MAM functionality in Xamarin iOS apps are available on [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios). (new link)
 
-  
-__Enabling Tunnel for MAM Xamarin Bindings__
+## Enabling Tunnel for MAM Xamarin Bindings
 
 Integrate Xamarin App using Sample Application: 
-
 
 ```java
 Building the Sample application (link to sample application)
@@ -140,12 +132,12 @@ The MicrosoftTunnelDelegate also passes itself into the Microsoft.Intune.Tunnel.
 The final integration point is found in AppDelegate.cs. It calls the MicrosoftTunnelDelegate.Launch method from within the FinishedLaunching method.
 
 Provisioning problems
-Follow the steps outlined here  if you have problems provisioning the application(
+Follow the steps outlined here if you have problems provisioning the application (https://learn.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/free-provisioning?tabs=macos).
 
 ```
 
- __Note__
-
-There is no remapper for iOS/iPadOS. Integrating into a Xamarin.Forms app should be the same as for a regular Xamarin.iOS project.
+> [!NOTE]
+>
+> There is no remapper for iOS/iPadOS. Integrating into a Xamarin.Forms app should be the same as for a regular Xamarin.iOS project.
 
 
