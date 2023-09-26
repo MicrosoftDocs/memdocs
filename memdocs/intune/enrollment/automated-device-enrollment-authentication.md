@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/09/2023
+ms.date: 09/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -56,8 +56,7 @@ Use the Intune Company Portal app as the authentication method if you want to:
  - You want to lock the device until the Company Portal app installs.
 
 >[!CAUTION]
-> ADE enrollments using this authentication method will receive **"Enrollment Blocked. Your account does not support enrollment through the company portal app. Please select continue to enroll through the Web Company Portal."** if the user is targeted by an [Account Driven Apple User Enrollment profile type](https://learn.microsoft.com/en-us/mem/intune/enrollment/apple-account-driven-user-enrollment). This is an expected behavior and to avoid it, **"Setup Assistant With Modern Authentication"** should be used instead.![image](https://github.com/MicrosoftDocs/memdocs-pr/assets/46572053/eeb3e1e1-1661-4287-915f-1379954baa01)
-
+> Intune blocks ADE enrollments using this authentication method if the user is targeted with an [Account Driven Apple User Enrollment profile type](apple-account-driven-user-enrollment.md). The device user receives an error message informing them that their account does not support enrollment through the Company Portal app, and prompts them to enroll through the Company Portal website. To avoid blocked enrollments, use [Option 2: Setup Assistant with modern authentication](automated-device-enrollment-authentication.md#option-2-setup-assistant-with-modern-authentication) as the authentication method for account driven user enrollment profile types.     
 
 ## Option 2: Setup Assistant with modern authentication  
 This option provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed.  Use this option for authentication when you want to:
