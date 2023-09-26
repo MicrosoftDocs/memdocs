@@ -1774,6 +1774,8 @@ items:
         href: ./developer/app-sdk-xamarin.md
     - name: Microsoft Tunnel for MAM iOS SDK 
       href: ./developer/tunnel-mam-ios-sdk.md
+    - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
+      href: ./developer/mam-tunnel-ios-xamarin-bindings.md
     - name: Use the Intune Data Warehouse
       href: ./developer/reports-nav-create-intune-reports.md
       items:
