@@ -82,18 +82,31 @@ o   [Microsoft Tunnel iOS SDK  Xamarin GitHub Repository](https://github.com/
 
 ·        Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 
+__Sample Applications__
+
+Sample applications highlighting MAM functionality in Xamarin iOS apps are available on [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios). (new link)
+
   
 __Enabling Tunnel for MAM Xamarin Bindings__
 
+Integrate Xamarin App using Sample Application: 
+
 
 ```java
-Building the Sample application
+Building the Sample application (link to sample application)
+
 Clone the repository
-Open Xamarin/Xamarin.sln in Visual Studio
+
+Open your app sln file in Visual Studio
+
 Use the Nuget Package Manager to update the Microsoft.Intune.Tunnel.MAM.Xamarin.iOS package to the latest version
+
 Update Directory.Build.props and change the values of <ApplicationId>, <ClientId> and <TenantId> to match the values of your Bundle Id, your AAD application Client Id and your AAD Tenant Id respectively
+
 Optionally update <ApplicationTitle> to change the deployed name of the application
+
 Alternatively, you can create a file adjacent to the Directory.Build.props file named Developer.props
+
 Include the contents
 <Project>
     <PropertyGroup>
@@ -103,14 +116,19 @@ Include the contents
         <TenantId>[your AAD Tenant Id]</TenantId>
     </PropertyGroup>
 </Project>
+
 This will allow you to update these properties without altering the csproj file
+
 Select your target device in Visual Studio and run
+
 Details
+
 The target GeneratePartialAppManifests defined in Directory.Build.props will convert the MSBuild properties defined above into the appropriate Info.plist properties. It also sets the default values for the IntuneMAMSettings 
 
 The target AddPartialAppManifests will merge the newly generated plist file and the main Info.plist
 
 Integration
+
 Beyond the configuring of IntuneMAMSettings as described in the Details section of this document. You also need to configure the Entitlements.plist as seen in step 2 of this document . It has already been done in this sample application.
 
 The bulk of the integration can be found in MicrosoftTunnelDelegate.cs. It is a class that inherits from Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate and implements abstract members.
@@ -125,9 +143,7 @@ Provisioning problems
 Follow the steps outlined here  if you have problems provisioning the application(
 ```
 
-__Sample Applications__
-
-Sample applications highlighting MAM functionality in Xamarin.iOS apps are available on [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
+Integrate Xamarin App using Custom Application: 
 
  __Note__
 
