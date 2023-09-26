@@ -169,6 +169,19 @@ Intune will support web-based enrollment with just in time (JIT) registration fo
 
 <!-- *********************************************** -->
 
+## Device management
+
+### Remote Help for Android is now generally available<!--17675897  -->  
+Remote Help will be generally available for Android Enterprise Dedicated devices from Zebra and Samsung.
+
+With Remote Help, IT Pros can remotely view the device screen and take full control in both attended and unattended scenarios, to diagnose and resolve issues quickly and efficiently.
+
+Applies to:
+
+- Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
+
+For more information, go to [Remote Help on Android](../fundamentals/remote-help-android.md).
+
 <!-- *********************************************** -->
 
 ## Device security
