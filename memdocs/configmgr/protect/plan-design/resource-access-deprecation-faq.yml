@@ -49,7 +49,7 @@ sections:
 
           In version 2207, the creation of new company resource access profiles including the certificate registration point site system role is disabled. Set/New/Import type PowerShell cmdlets for Resource Access features are deprecated as well.
 
-          These features will be completely removed in 2403.
+          These features will be removed in 2403.
 
       - question: |
           If I'm still using these features, can I upgrade to version 2207?
