@@ -125,7 +125,7 @@ For more information, see [Configure Azure Active Directory for CMG](../../clien
 
 ### New Cloud Management Gateway (CMG) creation via PowerShell 
 
-You can now create CMG using third party Server app via PowerShell cmdlet, you need to specify TenantID in the argument: 
+You can now create CMG Server app via PowerShell cmdlet, you need to specify TenantID in the argument: 
 
 PowerShell Commandlet:  ``` Set-UpdateServerApplication – 'TenantID' ```
 
