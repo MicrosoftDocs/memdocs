@@ -1,16 +1,30 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
+title: Microsoft Tunnel for MAM iOS SDK Xamarin Bindings 
+description: Use Xamarin Bindings to allow Microsoft Tunnel capabilities for iOS applications. 
+author: oluchic 
+ms.author: brenduns
+manager: dougeby
+ms.date: 09/26/2023
+ms.topic: reference
+ms.service: microsoft-intune
+ms.subservice: developer
+ms.localizationpriority: medium
+ms.technology:
+ms.assetid:
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
-author:      OluchiC # GitHub alias
-ms.author:   ochukwunyere # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
-ms.date:     09/26/2023
+#ROBOTS:
+#audience:
+
+ms.reviewer: ochukwunyere
+ms.suite: ems
+search.appverid: MET150
+#ms.tgt_pltfrm:
+ms.custom:
+ms.collection:
+- tier2
+- M365-identity-device-management
+- iOS/iPadOS
+
 ---
 
 # Microsoft Tunnel for MAM iOS Xamarin Bindings
