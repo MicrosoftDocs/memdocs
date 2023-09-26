@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 8/21/2023
+ms.date: 09/26/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -65,7 +65,7 @@ Windows 365 Boot doesn't completely restrict the user from accessing the physica
 
 ## Other sign-in options besides username/password are displayed on the sign-in screen
 
-Windows 365 Boot is used with the Shared PC configuration service provider (CSP). This CSP doesn't support sign-in methods other than username/password.
+Windows 365 Boot is used with the Shared PC configuration service provider (CSP). The primary supported sign-in method is by using username/password.
 
 **Troubleshooting steps**:
 
