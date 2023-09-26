@@ -34,7 +34,7 @@ ms.collection:
 
 > [!NOTE]
 >
-> Consider reading the __[Get Started with Microsoft Tunnel iOS SDK](/mem/intune/developer/tunnel-mam-ios-sdk) article, which explains how to prepare for integration on each supported platform.
+> Consider reading the [Get Started with Microsoft Tunnel iOS SDK](/mem/intune/developer/tunnel-mam-ios-sdk) article, which explains how to prepare for integration on each supported platform.
 
 ## Overview
 
@@ -140,4 +140,6 @@ Follow the steps outlined here if you have problems provisioning the application
 >
 > There is no remapper for iOS/iPadOS. Integrating into a Xamarin.Forms app should be the same as for a regular Xamarin.iOS project.
 
+## Next steps
 
+Microsoft Tunnel for MAM for iOS/iPadOS - Intune admin guide](../developer/tunnel-mam-ios-sdk.md)
