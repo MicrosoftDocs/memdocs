@@ -3,8 +3,8 @@ metadata:
   title: FAQ for resource access deprecation
   titleSuffix: Configuration Manager
   description: Frequently asked questions (FAQ) about the end of support for compliance settings for company resource access features.
-  author: banreet
-  ms.author: banreetkaur
+  author: gowdhamankarthikeyan
+  ms.author: gokarthi
   ms.reviewer: mstewart,aczechowski
   manager: apoorvseth
   ms.date: 04/08/2022
