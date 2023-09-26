@@ -169,19 +169,6 @@ Intune will support web-based enrollment with just in time (JIT) registration fo
 
 <!-- *********************************************** -->
 
-## Device management
-
-### Introducing Remote Help on macOS <!-- 12454029 -->
-
-The Remote Help web app allows users to connect to macOS devices and join a view-only remote assistance session.
-
-For more information on Remote Help, go to [Remote Help](../fundamentals/remote-help.md).
-
-Applies to:
-
-- Safari 16.4+
-- macOS 11 Big Sur
-
 <!-- *********************************************** -->
 
 ## Device security

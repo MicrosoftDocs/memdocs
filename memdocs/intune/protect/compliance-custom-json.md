@@ -42,7 +42,7 @@ A correctly formatted JSON file must include the following information:
 - **DataType** - The type of data that you can use to build your compliance rule. For options, see the following list of *supported DataTypes*.
 - **Operand** - Represent the values that the operator works on.
 - **MoreInfoURL** - A URL that’s shown to device users so they can learn more about the compliance requirement when their device is noncompliant for a setting. You can also use this to link to instructions to help users bring their device into compliance for this setting.
-- **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state.
+- **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state. There must be at least one string for the language "en_US", but you can also specify additional remediation string languages as in the example below.
 
 You may include as many settings as you'd like in the JSON file, but the file must be no larger than 1 megabyte (MB).
 
@@ -104,6 +104,11 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
              "Language":"en_US",
              "Title":"BIOS Version needs to be upgraded to at least 2.3. Value discovered was {ActualValue}.",
              "Description": "BIOS must be updated. Please refer to the link above"
+          },
+          {
+             "Language":"de_DE",
+             "Title":"BIOS-Version muss auf mindestens 2.3 aktualisiert werden. Der erkannte Wert lautet {ActualValue}.",
+             "Description": "BIOS muss aktualisiert werden. Bitte beziehen Sie sich auf den obigen Link"
           }
        ]
     },
@@ -114,24 +119,34 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
        "Operand":true,
        "MoreInfoUrl":"https://bing.com",
        "RemediationStrings":[ 
-          { 
+          {
              "Language": "en_US",
              "Title": "TPM chip must be enabled.",
              "Description": "TPM chip must be enabled. Please refer to the link above"
+          },
+          {
+             "Language": "de_DE",
+             "Title": "TPM-Chip muss aktiviert sein.",
+             "Description": "TPM-Chip muss aktiviert sein. Bitte beziehen Sie sich auf den obigen Link"
           }
        ]
     },
-    { 
-       "SettingName":"ModelName",
+    {
+       "SettingName":"Manufacturer",
        "Operator":"IsEquals",
        "DataType":"String",
-       "Operand":"Inspiron",
+       "Operand":"Microsoft Corporation",
        "MoreInfoUrl":"https://bing.com",
        "RemediationStrings":[ 
           { 
              "Language": "en_US",
-             "Title": "Only Inspiron is supported.",
-             "Description": "Only desktop model Inspiron is allowed."
+             "Title": "Only Microsoft devices are supported.",
+             "Description": "You are not currently using a Microsoft device."
+          },
+          {
+             "Language": "de_DE",
+             "Title": "Nur Microsoft-Geräte werden unterstützt.",
+             "Description": "Sie verwenden derzeit kein Microsoft-Gerät."
           }
        ]
     }
