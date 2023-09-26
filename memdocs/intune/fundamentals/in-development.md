@@ -110,6 +110,23 @@ Applies to:
 
 ## Device configuration
 
+### New device configuration settings that configure enhanced permissions to apps on Android Enterprise devices<!-- 14029609  -->  
+In Intune, you can create a device restrictions profile that manages app installation from unknown sources, app auto updates, and more (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**).
+
+There are new settings that give enhanced permissions to some selected apps:
+
+- **Allow other apps to install and manage certificates**: Admins can select multiple apps for this permission. The selected apps are granted access to certificate installation and management.
+- **Allow this app to access Android security logs**: Admins can select one app for this permission. The selected app is granted access to security logs.
+- **Allow this app to access Android network activity logs**: Admins can select one app for this permission The selected app is granted access to network activity logs.
+
+For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune > Applications](../configuration/device-restrictions-android-for-work.md#applications).
+
+Applies to:
+
+- Android Enterprise fully managed devices
+- Android Enterprise dedicated devices
+- Android Enterprise corporate-owned devices with a work profile
+
 ### New settings available in the macOS settings catalog <!-- 24950434  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
@@ -170,6 +187,15 @@ Intune will support web-based enrollment with just in time (JIT) registration fo
 <!-- *********************************************** -->
 
 ## Device management
+
+### Introducing a remote action to pause the config refresh enforcement interval<!-- 24249019  -->  
+In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
+
+To support this feature, a remote action will be added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
+
+The remote action **Pause config refresh** can be accessed from the device summary page.
+
+For information on currently available Remote actions, see [Remote actions](../remote-actions/device-management.md).
 
 ### Remote Help for Android is now generally available<!--17675897  -->  
 Remote Help will be generally available for Android Enterprise Dedicated devices from Zebra and Samsung.
@@ -250,6 +276,9 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Tenant administration
+
+### Intune admin center home page update<!-- 16950040 -->  
+The Intune admin center home page has been redesigned with a fresh new look and more dynamic content. The **Status** section has been simplified. You can explore Intune related capabilities in the **Spotlight** section. The **Get more out of Intune** section provides links to the Intune community and blog, as well as Intune customer success. Also, the **Documentation and training** section provides links to **What's New in Intune**, **Feature in development**, and additional training. This update will be available when you access [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Home**.
 
 ### `endpoint.microsoft.com` URL will redirect to `intune.microsoft.com` <!-- 25169925  -->  
 Previously, it was announced that the Microsoft Intune admin center has a new URL (`https://intune.microsoft.com`). The `https://endpoint.microsoft.com` URL will redirect to `https://intune.microsoft.com`.
