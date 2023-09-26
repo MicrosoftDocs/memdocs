@@ -36,9 +36,9 @@ sections:
         answer: |
           When you upgrade your Configuration Manager site to 2403, the [prerequisite checker displays an error](../../core/servers/deploy/install/list-of-prerequisite-checks.md#resource-access-policies-are-no-longer-supported). This blocks upgrade. 
           
-          **Action required by customer:** Delete all Resource Access profiles and deployments and reevaluate the prerequisite rules, which allows you to proceed with upgrade. 
+          **Action required by customer:** Delete all Resource Access profiles and associated deployments and move the co-management workload for Resource Access (if co-managed) to Intune. Reevaluate the prerequisite rules, which allows you to proceed with upgrade. 
           
-          After the upgrade completion, if the cloud attach wizard is configured, the Resource Access workload is defaulted to Intune and remains greyed out in console. 
+          After the upgrade completion, if the cloud attach wizard is configured, the Resource Access workload (configured to Intune) remains greyed out in console. 
           If the customer is not previously cloud attached and configures the cloud attach wizard, during or after upgrade, the Resource Access workload is defaulted to Intune and remains greyed out in the console.
           **Company Resource Access** node in Asset Management workspace will be removed.
       
