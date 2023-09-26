@@ -74,7 +74,7 @@ Applies to:
 - macOS
 
 ### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138  -->  
-You will soon be able to install and uninstall mandatory LOB apps on AOSP devices by using the **Required** and **Uninstall** group assignments. To learn more about managing LOB apps, see [Add an Android line-of-business app to Microsoft Intune](.../apps/lob-apps-android.md).
+You will soon be able to install and uninstall mandatory LOB apps on AOSP devices by using the **Required** and **Uninstall** group assignments. To learn more about managing LOB apps, see [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md).
 
 Applies to:
 
