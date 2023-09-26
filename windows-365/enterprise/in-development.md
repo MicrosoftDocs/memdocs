@@ -73,11 +73,7 @@ In a future update, RDP Shortpath in Windows 365 will support establishing an in
 A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
 
 <!-- ***********************************************-->
-## Miscellaneous
-
-### Single sign-on option per tenant (preview)<!--43751308-->
-
-Each tenant will be able to decide if you want to turn on Single Sign-On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign-on.
+<!--## Miscellaneous-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -94,20 +90,6 @@ In a future update, you'll be able to send Windows 365 audit log data directly t
 
 A new report will be available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you'll be able to observe:
 devices that have unhealthy hosts users' connections that consistently or frequently fail systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
-
-### Improvements to Cloud PC connection quality report<!--45946378-->
-
-In a future update, improvements to the Cloud PC connection quality report will include:
-
-- a more comprehensive view of the overall performance of their Cloud PCs.
-- a more detailed view of devices when they are in a state of poor performance due to high round trip times.
-- Tenant level visibility to most recent/current for:
-    - Round Trip Time.
-    - Bandwidth.
-    - Connection Time.
-    - UDP Utilization.
-- Connection specific detail on client IP and associated CPC Gateway.
-- Filters for all columns.
 
 <!-- ***********************************************-->
 ## Provisioning
