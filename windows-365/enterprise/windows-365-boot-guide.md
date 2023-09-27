@@ -94,7 +94,7 @@ Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopa
 
 ![Screenshot of Windows 365 Boot guided scenario Settings tab.](./media/windows-365-boot-guide/settings-tab.png)
 
-1. (Optional) On the **Settings** page, select the **VPN profile** and **Wifi profile** to use for Windows 365 Boot physical devices.
+1. (Optional) On the **Settings** page, select the **VPN profile** and **Wifi profile** to use for Windows 365 Boot physical devices. - Note, when you select an existing WiFi or VPN profile, if the profile is assigned to All Users or All Devices already, this assignment will be removed and replaced with the new assignment to the W365 group created here.
 2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
 3. (Optional) Select the **Security baseline profile** to use for Windows 365 Boot physical devices.
 4. (Optional) Select a value for the **Set the maximum connection timeout value** for Windows 365 Boot. The operating system waits for a connection until the selected timeout value has been reached. For more information, see [SetMaxConnectionTimeout policy CSP](/windows/client-management/mdm/policy-csp-clouddesktop#setmaxconnectiontimeout).
