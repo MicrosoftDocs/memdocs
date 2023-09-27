@@ -59,7 +59,7 @@ Optionally, you can use a [device-only subscription](https://techcommunity.micro
 > Self-deploying mode does not presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Azure AD and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
 
 > [!NOTE 2]
-> When combining Self-deploying with autologon using kiosk policies, make sure you configure SkipUserStatusPage CSP, otherwise Intune will not be able to deploy new apps or scripts as the Management Extension will try to authenticate using an account token which does not exist. For more information, see [Troubleshooting the Enrollment Status Page](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#collect-logs).
+> When combining Self-deploying with autologon using kiosk policies, make sure you configure SkipUserStatusPage CSP, otherwise Intune will not be able to deploy new apps or scripts as the Management Extension will try to authenticate using an account token which does not exist. For more information, see [Troubleshooting the Enrollment Status Page](https://learn.microsoft.com/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#collect-logs).
 
 ![The user experience with Windows Autopilot self-deploying mode](images/self-deploy-welcome.png)
 
