@@ -53,9 +53,9 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of September 27, 2023 (Service release 2309)
+## Week of September 25, 2023 (Service release 2309)
 
-<!-- ***********************************************-->
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### The resize action is now generally available<!--43950142-->

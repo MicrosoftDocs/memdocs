@@ -62,6 +62,8 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Admin feedback
 - System alerts and email notifications
 - Cloud PC utilization report
+- Windows 365 Switch
+- Windows 365 Boot
 
 ## Next steps
 
