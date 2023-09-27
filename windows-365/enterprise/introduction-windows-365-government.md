@@ -53,7 +53,6 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - RDP Shortpath for public networks
 - Windows 365 System based alerting on Microsoft Intune for Cloud PCs
 - User initiated feedback in End User Portal and Windows 365 Web Client
-- Resize VM
 - Citrix HDX Plus for Windows 365
 - Multimedia redirection for improved video playback
 - Microsoft Dev Box
@@ -61,7 +60,6 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Frontline
 - Admin feedback
 - System alerts and email notifications
-- Cloud PC utilization report
 - Windows 365 Switch
 - Windows 365 Boot
 
