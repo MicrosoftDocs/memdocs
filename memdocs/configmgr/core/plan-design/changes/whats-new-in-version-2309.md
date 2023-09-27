@@ -89,7 +89,7 @@ For more information, see [Install-and-configure-distribution-points](../../serv
 
 ### Enable Bitlocker through ProvisionTS  
 
-In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. ProvisionTS is the task sequence that is executed at the time of provisioning. As a result device can escrow the key to Config Manager Database instantly.
+In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. **ProvisionTS** is the task sequence that is executed at the time of provisioning. As a result device can escrow the key to Config Manager Database instantly.
 
 For more information, see [Preprovision-bitlocker-in-windows-pe](../../../osd/deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
@@ -103,7 +103,7 @@ For more information, see [Upgrade Windows devices to a new edition](../../../co
 
 ### Windows 11 Upgrade Readiness Dashboard 
 
-Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for Windows 11 Upgrade. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
+Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for **Windows 11 Upgrade**. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
 
 :::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard.":::
 
@@ -114,7 +114,7 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 ### New Cloud Management Gateway (CMG) creation via Console 
 
-Starting in Configuration Manager current branch version 2309, We have enhanced security of web (server) app for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
+Starting in Configuration Manager current branch version 2309, We have enhanced security of **web (server) app** for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
 
 :::image type="content" source="media/cmg-console-creation.png" alt-text="A screenshot of the cmg app creation via console.":::
 
@@ -125,7 +125,7 @@ For more information, see [Configure Azure Active Directory for CMG](../../clien
 
 ### New Cloud Management Gateway (CMG) creation via PowerShell 
 
-You can now create CMG Server app via PowerShell cmdlet, you need to specify TenantID in the argument: 
+You can now create CMG **web (server) app** via PowerShell cmdlet, you need to specify TenantID in the argument: 
 
 PowerShell Commandlet:  ``` Set-UpdateServerApplication – 'TenantID' ```
 
@@ -137,6 +137,7 @@ PowerShell command: ``` Set-UpdateServerApplication ``` to update your
 > For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
 
 For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway.md)
+
 ### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.   
 <!--9217349-->
 Prior to the Attack Surface Reduction capability in Windows Server, rules were marked compliant by default. As this rule setting becomes available to Server SKU, it's enforced through Config Manager. Now the Server SKU will be marked as compliant for an Attack Surface Reduction rule, only after enforcement of the rule.
