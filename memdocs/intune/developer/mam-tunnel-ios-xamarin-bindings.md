@@ -38,7 +38,7 @@ ms.collection:
 
 ## Overview
 
-The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of tunneling functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed tunnel connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
+The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of Microsoft Tunnel for MAM functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed tunnel connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
 
 ## What’s supported?
 
@@ -57,9 +57,9 @@ __Intune Mobile Application Management scenarios__:
 
 ## Prerequisites
 
-Review the license terms. Print and retain a copy of the license terms for your records. By downloading and using the Microsoft Tunnel iOS SDK Xamarin Bindings, you agree to such license terms. If you do not accept them, do not use the software.
+Review the [license terms](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-xamarin/blob/main/Microsoft%20License%20Terms%20Tunnel%20for%20Mobile%20Application%20Management%20iOS%20SDK%20Xamarin%20Bindings.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Microsoft Tunnel iOS SDK Xamarin Bindings, you agree to such license terms. If you do not accept them, do not use the software.
 
-The Tunnel for MAM SDK relies on the Intune MAM SDK for application protection and to enforce Application Configuration Policy (ACP).
+The Tunnel for MAM SDK relies on the Intune MAM SDK to enforce application protection policies (APP) and Application Configuration Policies (ACP).
 
 The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
 
@@ -78,14 +78,14 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
 
 ## Sample Applications
 
-Sample applications highlighting MAM functionality in Xamarin iOS apps are available on [GitHub](https://github.com/msintuneappsdk/sample-intune-xamarin-ios). (new link)
+Sample applications highlighting MAM functionality in Xamarin iOS apps are available on [GitHub](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps). (new link)
 
 ## Enabling Tunnel for MAM Xamarin Bindings
 
 Integrate Xamarin App using Sample Application: 
 
 ```java
-Building the Sample application (link to sample application)
+Building the Sample application (https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps)
 
 Clone the repository
 
