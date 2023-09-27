@@ -122,7 +122,7 @@ The target `AddPartialAppManifests` will merge the newly generated plist file an
 
 ### Integration
 
-- Beyond the configuring of `IntuneMAMSettings` as described in the [Details](#details) section of this document, you also need to configure the `Entitlements.plist` as seen in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Enabling Intune app protection policies in your iOS mobile app_ section of the _Microsoft Intune App SDK Xamarin Bindings_ article. This configuration has already been done in the sample application.
+- Beyond the configuring of `IntuneMAMSettings` as described in the [Details](#details) section of this document, you also need to configure the `Entitlements.plist` as seen in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Enabling Intune app protection policies in your iOS mobile app_ section of the _Microsoft Intune App SDK Xamarin Bindings_ article.
 
 - The bulk of the integration can be found in `MicrosoftTunnelDelegate.cs`. It is a class that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` and implements abstract members.
 
@@ -136,7 +136,7 @@ The target `AddPartialAppManifests` will merge the newly generated plist file an
 
 **Provisioning problems**"
 
-Follow the [steps outlined here](https://learn.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/free-provisioning?tabs=macos) if you have problems provisioning the application.
+Follow the [steps outlined here](/xamarin/ios/get-started/installation/device-provisioning/free-provisioning?tabs=macos) if you have problems provisioning the application.
 
 > [!NOTE]
 >
