@@ -136,7 +136,7 @@ PowerShell command: ``` Set-UpdateServerApplication ``` to update your
 >[!NOTE] 
 > For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
 
-For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway.md)
+For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway)
 
 ### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.   
 <!--9217349-->
