@@ -44,7 +44,7 @@ Starting in Configuration Manager current branch version 2309, you can now sched
 
 For more information, see [Schedule scripts' runtime](../../../apps/deploy-use/create-deploy-scripts.md#schedule-scripts-runtime)
 
-### External service notification Run details from Azure Logic application.  
+### External service notification Run details from Azure Logic application  
 
 Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications related to specific events, CM can now capture and display these notifications. This integration enables the monitoring of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
 
@@ -56,7 +56,7 @@ For more information, see [External service notification](../../servers/manage/e
 
 Starting in Configuration Manager current branch version 2309, you can now enable this feature by utilizing the Site Maintenance Window or using PowerShell Commandlet. By default, it has been set to run on Saturday and delete the data older than 30 days. It does so by cleaning up [dbo].TaskExecutionStatus Table  
 
-Example : 
+Example: 
 PowerShell Commandlet: ```Set-CMSiteMaintenanceTask -Sitecode "XXX" -MaintenanceTaskName "Delete Aged Task Execution Status Messages" -DaysOfWeek Friday ```
 
 For more information, see [Delete Aged Task Execution Status Messages](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-task-execution-status-messages).
@@ -73,7 +73,7 @@ For more information, see [Device restart notifications](../../clients/deploy/de
 
 We've extended the Offset parameter for **Maintenance windows**.The cmdlet New-CMMaintenanceWindow is used to create a maintenance window for a collection. Earlier the Offset parameter could be set only between 0 and 4. Now it has been extended between 0 to 7.
 
-Example : 
+Example: 
 PowerShell Commandlet: ``` New-CMSchedule -Start (Get-Date) -DayOfWeek Monday -WeekOrder Second -RecurCount 1 -OffSetDay 6 ```
 
 
@@ -114,7 +114,7 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 ### New Cloud Management Gateway (CMG) creation via Console 
 
-Starting in Configuration Manager current branch version 2309, We have enhanced security of **web (server) app** for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
+Starting in Configuration Manager current branch version 2309, we have enhanced security of **web (server) app** for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
 
 :::image type="content" source="media/cmg-console-creation.png" alt-text="A screenshot of the cmg app creation via console.":::
 
