@@ -117,7 +117,7 @@ There are new settings that give enhanced permissions to some selected apps:
 
 - **Allow other apps to install and manage certificates**: Admins can select multiple apps for this permission. The selected apps are granted access to certificate installation and management.
 - **Allow this app to access Android security logs**: Admins can select one app for this permission. The selected app is granted access to security logs.
-- **Allow this app to access Android network activity logs**: Admins can select one app for this permission The selected app is granted access to network activity logs.
+- **Allow this app to access Android network activity logs**: Admins can select one app for this permission. The selected app is granted access to network activity logs.
 
 For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune > Applications](../configuration/device-restrictions-android-for-work.md#applications).
 
