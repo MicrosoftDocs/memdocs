@@ -57,13 +57,13 @@ __Intune Mobile Application Management scenarios__:
 
 ## Prerequisites
 
-Review the [license terms](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-xamarin/blob/main/Microsoft%20License%20Terms%20Tunnel%20for%20Mobile%20Application%20Management%20iOS%20SDK%20Xamarin%20Bindings.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Microsoft Tunnel iOS SDK Xamarin Bindings, you agree to such license terms. If you do not accept them, do not use the software.
+Review the [license terms](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-xamarin/blob/main/Microsoft%20License%20Terms%20Tunnel%20for%20Mobile%20Application%20Management%20iOS%20SDK%20Xamarin%20Bindings.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Microsoft Tunnel iOS SDK Xamarin Bindings, you agree to such license terms. If you don't accept them, do not use the software.
 
 The Tunnel for MAM SDK relies on the Intune MAM SDK to enforce application protection policies (APP) and Application Configuration Policies (ACP).
 
-The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
+The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis).
 
-If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, refer to the developer guide.
+If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Microsoft Entra ID follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, refer to the developer guide.
 
 ## Security considerations
 
@@ -105,8 +105,8 @@ See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-
         <PropertyGroup>
           <ApplicationID>[your Bundle ID]</ApplicationID>
           <ApplicationTitle>xPlat-Tunnel</ApplicationTitle>
-          <ClientID>[your AAD Application Client ID]</ClientID>
-          <TenantID>[your AAD Tenant ID]</TenantID>
+          <ClientID>[your Microsoft Entra Application Client ID]</ClientID>
+          <TenantID>[your Microsoft Entra Tenant ID]</TenantID>
         </PropertyGroup>
      </Project>
       ```
