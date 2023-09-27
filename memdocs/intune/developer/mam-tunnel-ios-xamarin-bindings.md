@@ -78,63 +78,65 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
 
 ## Sample Applications
 
-Sample applications highlighting MAM functionality in Xamarin iOS apps are available on [GitHub](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps). (new link)
+Sample applications highlighting MAM functionality in Xamarin iOS apps are available on [GitHub](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps).
 
 ## Enabling Tunnel for MAM Xamarin Bindings
 
-Integrate Xamarin App using Sample Application: 
+Integrate your Xamarin App using Sample Application.
 
-```java
-Building the Sample application (https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps)
+### Building the Sample application
 
-Clone the repository
+See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps)
+ 
+1. Clone the repository.
 
-Open your app sln file in Visual Studio
+2. Open your app `.sln` file in Visual Studio.
 
-Use the Nuget Package Manager to update the Microsoft.Intune.Tunnel.MAM.Xamarin.iOS package to the latest version
+3. Use the Nuget Package Manager to update the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package to the latest version.
 
-Update Directory.Build.props and change the values of <ApplicationId>, <ClientId> and <TenantId> to match the values of your Bundle Id, your AAD application Client Id and your AAD Tenant Id respectively
+4. Update `Directory.Build.props` and change the values of `<ApplicationId>`, `<ClientId>` and `<TenantId>` to match the values of your _Bundle Id_, your _AAD application Client Id_ and your _AAD Tenant Id_ respectively.
 
-Optionally update <ApplicationTitle> to change the deployed name of the application
+5. Optionally, update `<ApplicationTitle>` to change the deployed name of the application.
 
-Alternatively, you can create a file adjacent to the Directory.Build.props file named Developer.props
+   - Alternatively, you can create a file adjacent to the `Directory.Build.props` file named `Developer.props`.
+   - Include the contents:
+     ```
+     <Project>
+        <PropertyGroup>
+          <ApplicationId>[your Bundle Id]</ApplicationId>
+          <ApplicationTitle>xPlat-Tunnel</ApplicationTitle>
+          <ClientId>[your AAD Application Client Id]</ClientId>
+          <TenantId>[your AAD Tenant Id]</TenantId>
+        </PropertyGroup>
+     </Project>
+      ```
+   - This allows you to update these properties without altering the csproj file.
 
-Include the contents
-<Project>
-    <PropertyGroup>
-        <ApplicationId>[your Bundle Id]</ApplicationId>
-        <ApplicationTitle>xPlat-Tunnel</ApplicationTitle>
-        <ClientId>[your AAD Application Client Id]</ClientId>
-        <TenantId>[your AAD Tenant Id]</TenantId>
-    </PropertyGroup>
-</Project>
+6. Select your target device in Visual Studio and run.
 
-This will allow you to update these properties without altering the csproj file
+### Details
 
-Select your target device in Visual Studio and run
+The target `GeneratePartialAppManifests` defined in `Directory.Build.props` will convert the MSBuild properties defined above into the appropriate `Info.plist` properties. It also sets the default values for the `IntuneMAMSettings`.
 
-Details
+The target `AddPartialAppManifests` will merge the newly generated plist file and the main Info.plist.
 
-The target GeneratePartialAppManifests defined in Directory.Build.props will convert the MSBuild properties defined above into the appropriate Info.plist properties. It also sets the default values for the IntuneMAMSettings 
+### Integration
 
-The target AddPartialAppManifests will merge the newly generated plist file and the main Info.plist
+- Beyond the configuring of `IntuneMAMSettings` as described in the [Details](#details) section of this document, you also need to configure the `Entitlements.plist` as seen in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Enabling Intune app protection policies in your iOS mobile app_ section of the _Microsoft Intune App SDK Xamarin Bindings_ article. This configuration has already been done in the sample application.
 
-Integration
+- The bulk of the integration can be found in `MicrosoftTunnelDelegate.cs`. It is a class that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` and implements abstract members.
 
-Beyond the configuring of IntuneMAMSettings as described in the Details section of this document. You also need to configure the Entitlements.plist as seen in step 2 of this document . It has already been done in this sample application.
+- To facilitate logging and debugging, the `MicrosoftTunnelDelegate.cs` file declares a `LogDelegate` that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnelLogDelegate`.
 
-The bulk of the integration can be found in MicrosoftTunnelDelegate.cs. It is a class that inherits from Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate and implements abstract members.
+- The `MicrosoftTunnelDelegate` also passes itself into the `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnel.SharedInstance.MicrosoftTunnelInitialize` method to start the SDK initialization.
 
-To facilitate logging and debugging, the MicrosoftTunnelDelegate.cs file declares a LogDelegate that inherits from Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnelLogDelegate
+- The final integration point is found in `AppDelegate.cs`. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
 
-The MicrosoftTunnelDelegate also passes itself into the Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnel.SharedInstance.MicrosoftTunnelInitialize method to start the SDK initialization.
+### Troubleshooting
 
-The final integration point is found in AppDelegate.cs. It calls the MicrosoftTunnelDelegate.Launch method from within the FinishedLaunching method.
+**Provisioning problems**"
 
-Provisioning problems
-Follow the steps outlined here if you have problems provisioning the application (https://learn.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/free-provisioning?tabs=macos).
-
-```
+Follow the [steps outlined here](https://learn.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/free-provisioning?tabs=macos) if you have problems provisioning the application.
 
 > [!NOTE]
 >
