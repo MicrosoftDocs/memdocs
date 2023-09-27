@@ -237,8 +237,8 @@ The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) 
 
 If you have questions about this change, reach out to your Trellix Mobile Security representative.
 
-### Configure declarative software updates for Apple devices in the Settings Catalog<!-- 24989083  -->  
-You'll be able to manage software updates using Apple's declarative device management (DDM) configuration using the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type:).
+### Configure declarative software updates and passcode policies for Apple devices in the Settings Catalog<!-- 24989083  -->  
+You'll be able to manage software updates and passcode using Apple's declarative device management (DDM) configuration using the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type:).
 
 For more information about DDM, go to [Apple's declarative device management (DDM)](https://developer.apple.com/documentation/devicemanagement/leveraging_the_declarative_management_data_model_to_scale_devices) (opens Apple's website).
 
@@ -250,6 +250,16 @@ In the settings catalog, the following declarative software update settings will
 - **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn’t consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 - **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn’t trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
+
+In the settings catalog, the following declarative passcode settings will be available at **Declarative device management > Passcode**:
+
+- **Automatic Device Lock**: The maximum period that a user can select, during which the device can be idle before the system automatically locks it.
+- **Maximum Grace Period**: The maximum period that a user can select, during which the user can unlock the device without a passcode.
+- **Maximum Number of Failed Attempts**: The number of failed passcode attempts that the system allows the user before iOS erases the device or macOS locks the device.
+- **Minimum Passcode Length**: The minimum number of characters a passcode can contain.
+- **Passcode Reuse Limit**: The number of historical passcode entries the system checks when validating a new passcode.
+- **Require Complex Passcode**: If 'true', requires a complex passcode. A complex passcode is one that doesn't contain repeated characters or increasing or decreasing characters (such as 123 or CBA).
+- **Require Passcode on Device**: If 'true', requires the user to set a passcode without any requirements about the length or quality of the passcode.
 
 For information on the settings you can currently configure, go to:
 
