@@ -130,11 +130,7 @@ Applies to:
 ### New settings available in the macOS settings catalog <!-- 24950434  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
-
-**Microsoft Defender > Antivirus engine**:
-
-- Enforcement Level
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.
 
 **Privacy > Privacy Preferences Policy Control**:
 
