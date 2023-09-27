@@ -161,7 +161,7 @@ On Android Enterprise personally owned devices with a work profile, users can us
 
 There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
 
-- **One lock for work profile and device**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile. When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
+- **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile. When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
 
 This setting is optional and doesn't impact existing configuration profiles.
 
