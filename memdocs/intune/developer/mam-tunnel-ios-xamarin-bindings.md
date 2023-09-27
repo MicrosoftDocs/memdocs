@@ -63,7 +63,7 @@ The Tunnel for MAM SDK relies on the Intune MAM SDK to enforce application prote
 
 The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis).
 
-If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, please refer to the developer guide.
+If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, refer to the developer guide.
 
 ## Security considerations
 
@@ -94,37 +94,37 @@ See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-
 
 3. Use the Nuget Package Manager to update the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package to the latest version.
 
-4. Update `Directory.Build.props` and change the values of `<ApplicationId>`, `<ClientId>` and `<TenantId>` to match the values of your _Bundle Id_, your _AAD application Client Id_ and your _AAD Tenant Id_ respectively.
+4. Update `Directory.Build.props` and change the values of `<ApplicationID>`, `<ClientID>` and `<TenantID>` to match the values of your _Bundle ID_, your _AAD application Client ID_ and your _AAD Tenant ID_ respectively.
 
 5. Optionally, update `<ApplicationTitle>` to change the deployed name of the application.
 
-   - Alternatively, you can create a file adjacent to the `Directory.Build.props` file named `Developer.props`.
+   - Alternatively, you can create a file next to the `Directory.Build.props` file named `Developer.props`.
    - Include the contents:
      ```
      <Project>
         <PropertyGroup>
-          <ApplicationId>[your Bundle Id]</ApplicationId>
+          <ApplicationID>[your Bundle ID]</ApplicationID>
           <ApplicationTitle>xPlat-Tunnel</ApplicationTitle>
-          <ClientId>[your AAD Application Client Id]</ClientId>
-          <TenantId>[your AAD Tenant Id]</TenantId>
+          <ClientID>[your AAD Application Client ID]</ClientID>
+          <TenantID>[your AAD Tenant ID]</TenantID>
         </PropertyGroup>
      </Project>
       ```
-   - This allows you to update these properties without altering the csproj file.
+   - This file allows you to update these properties without altering the csproj file.
 
 6. Select your target device in Visual Studio and run.
 
 ### Details
 
-The target `GeneratePartialAppManifests` defined in `Directory.Build.props` will convert the MSBuild properties defined above into the appropriate `Info.plist` properties. It also sets the default values for the `IntuneMAMSettings`.
+The target `GeneratePartialAppManifests` defined in `Directory.Build.props` converts the MSBuild properties defined in the previous section into the appropriate `Info.plist` properties. It also sets the default values for the `IntuneMAMSettings`.
 
-The target `AddPartialAppManifests` will merge the newly generated plist file and the main Info.plist.
+The target `AddPartialAppManifests` merges the newly generated plist file and the main Info.plist.
 
 ### Integration
 
 - Beyond the configuring of `IntuneMAMSettings` as described in the [Details](#details) section of this document, you also need to configure the `Entitlements.plist` as seen in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Enabling Intune app protection policies in your iOS mobile app_ section of the _Microsoft Intune App SDK Xamarin Bindings_ article.
 
-- The bulk of the integration can be found in `MicrosoftTunnelDelegate.cs`. It is a class that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` and implements abstract members.
+- The bulk of the integration can be found in `MicrosoftTunnelDelegate.cs`, which is a class that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` and implements abstract members.
 
 - To facilitate logging and debugging, the `MicrosoftTunnelDelegate.cs` file declares a `LogDelegate` that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnelLogDelegate`.
 
