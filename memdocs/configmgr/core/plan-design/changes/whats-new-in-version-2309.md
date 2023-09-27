@@ -2,7 +2,7 @@
 title: What's new in version 2309
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
-ms.date: 09/26/2023
+ms.date: 09/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
@@ -136,7 +136,7 @@ PowerShell command: ``` Set-UpdateServerApplication ``` to update your
 >[!NOTE] 
 > For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
 
-
+For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway.md)
 ### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.   
 <!--9217349-->
 Prior to the Attack Surface Reduction capability in Windows Server, rules were marked compliant by default. As this rule setting becomes available to Server SKU, it's enforced through Config Manager. Now the Server SKU will be marked as compliant for an Attack Surface Reduction rule, only after enforcement of the rule.
@@ -149,7 +149,9 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
-<!--## Other updates-->
+## Other updates
+
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2209 release notes](/powershell/sccm/2209-release-notes).
 
 ## Next steps
 At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
