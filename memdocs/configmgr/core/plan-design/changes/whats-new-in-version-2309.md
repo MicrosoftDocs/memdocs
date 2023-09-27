@@ -2,7 +2,7 @@
 title: What's new in version 2309
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
-ms.date: 09/18/2023
+ms.date: 09/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
@@ -28,19 +28,15 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ### Introducing SQL ODBC driver support for Configuration Manager
 
-Config Manager stores both Configuration and Reporting data in SQL Server Database. Components written in native code access this data in SQL Database by using SQL Native Client 11 driver, which has been deprecated. It needs to be replaced with the latest Microsoft ODBC Driver for SQL Server 18.1.0.
+Starting with Configuration Manager 2309 release, Configuration Manager requires the installation of the ODBC driver for SQL server 18.1.0 or later as a prerequisite. This prerequisite is required when you create a new site or update an existing one and on all remote roles.
 
-Feature requirements:
- - Remove the deprecated SQL Server Native Client 11.0 package in Config Manager.
- - Replace SNAC 11.0 with the latest Microsoft ODBC Driver for SQL Server (version 18.1.0).
- - Update code with hard dependency on SQL Server Native Client 11.0 to use Microsoft ODBC Driver instead.
-   
 > [!IMPORTANT]
-> Microsoft ODBC Driver for SQL Server 18.1.0 needs to be installed on Site Servers before upgrading to 2309 version.
+> Microsoft ODBC Driver for SQL Server 18.1.0 or later needs to be installed on Site Servers and site system roles before upgrading to 2309 version.
+> Do not uninstall SQL native client 11 until we call out in further communications. Configuration Manager doesn't manage the updates for the ODBC driver, ensure that this component is up to date.
 
 For more information, see [SQL ODBC driver for the site server](../..//plan-design/configs/site-and-site-system-prerequisites.md#sql-odbc-driver-for-the-site-server)
 
-### Option to schedule Scripts execution time
+### Option to schedule scripts' runtime
 
 Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC. The run Script Wizard now offers a scheduling option that enables administrators to schedule the execution of scripts. It provides a convenient way to automate the running of scripts on managed devices according to specified schedules.
 
@@ -48,9 +44,9 @@ Starting in Configuration Manager current branch version 2309, you can now sched
 
 For more information, see [Schedule scripts' runtime](../../../apps/deploy-use/create-deploy-scripts.md#schedule-scripts-runtime)
 
-### External service notification Run details from Azure Logic application.  
+### External service notification Run details from Azure Logic application  
 
-Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications or alerts related to specific events or conditions, CM can now capture and display these notifications. This integration enables the monitoring and management of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
+Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications related to specific events, CM can now capture and display these notifications. This integration enables the monitoring of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
 
 :::image type="content" source="media/17668438-external-service.png" alt-text="A screenshot of the run details of external service notification wizard.":::
 
@@ -60,7 +56,7 @@ For more information, see [External service notification](../../servers/manage/e
 
 Starting in Configuration Manager current branch version 2309, you can now enable this feature by utilizing the Site Maintenance Window or using PowerShell Commandlet. By default, it has been set to run on Saturday and delete the data older than 30 days. It does so by cleaning up [dbo].TaskExecutionStatus Table  
 
-Example : 
+Example: 
 PowerShell Commandlet: ```Set-CMSiteMaintenanceTask -Sitecode "XXX" -MaintenanceTaskName "Delete Aged Task Execution Status Messages" -DaysOfWeek Friday ```
 
 For more information, see [Delete Aged Task Execution Status Messages](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-task-execution-status-messages).
@@ -77,7 +73,7 @@ For more information, see [Device restart notifications](../../clients/deploy/de
 
 We've extended the Offset parameter for **Maintenance windows**.The cmdlet New-CMMaintenanceWindow is used to create a maintenance window for a collection. Earlier the Offset parameter could be set only between 0 and 4. Now it has been extended between 0 to 7.
 
-Example : 
+Example: 
 PowerShell Commandlet: ``` New-CMSchedule -Start (Get-Date) -DayOfWeek Monday -WeekOrder Second -RecurCount 1 -OffSetDay 6 ```
 
 
@@ -93,7 +89,7 @@ For more information, see [Install-and-configure-distribution-points](../../serv
 
 ### Enable Bitlocker through ProvisionTS  
 
-In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. ProvisionTS is the task sequence that is executed at the time of provisioning. As a result device can escrow the key to Config Manager Database instantly.
+In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. **ProvisionTS** is the task sequence that is executed at the time of provisioning. As a result device can escrow the key to Config Manager Database instantly.
 
 For more information, see [Preprovision-bitlocker-in-windows-pe](../../../osd/deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
@@ -107,7 +103,7 @@ For more information, see [Upgrade Windows devices to a new edition](../../../co
 
 ### Windows 11 Upgrade Readiness Dashboard 
 
-Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for Windows 11 Upgrade. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
+Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for **Windows 11 Upgrade**. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
 
 :::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard.":::
 
@@ -116,31 +112,31 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 ## Cloud-attached management
 
-### CMG creation using Third PartyApp via Console  
+### New Cloud Management Gateway (CMG) creation via Console 
 
-Starting in Configuration Manager current branch version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens. For CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears. To update the server app, you can navigate to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings". 
+Starting in Configuration Manager current branch version 2309, we have enhanced security of **web (server) app** for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
+
+:::image type="content" source="media/cmg-console-creation.png" alt-text="A screenshot of the cmg app creation via console.":::
 
 >[!NOTE]
->Existing Customers, must update their server app as current version, doesn't have the Redirect to- "http://localhost"
+>Pre existing CMG customers must update their web server app by navigating to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings".
 
 For more information, see [Configure Azure Active Directory for CMG](../../clients/manage/cmg/configure-azure-ad.md)
 
-### CMG creation using Third Party ServerApp via PowerShell 
+### New Cloud Management Gateway (CMG) creation via PowerShell 
 
-You can now create CMG using third party Server app via PowerShell cmdlet, you need to specify TenantID in the argument: 
+You can now create CMG **web (server) app** via PowerShell cmdlet, you need to specify TenantID in the argument: 
 
-PowerShell Commandlet:  ``` Set-UpdateServerApplication – TenantID ```
-
-If you're utilizing the existing Azure AD server app, when existing (nonupdated) Azure AD server app is used, ensure that the server app has RedirectUrl="http://localhost” added in Azure portal and in TableAAD_Application_EX in Database.
+PowerShell Commandlet:  ``` Set-UpdateServerApplication – 'TenantID' ```
 
 If you try to create the CMG before updating RedirectUrl, you get an error "Your server Application needs to be updated".
 
-Run this PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
+PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
 
 >[!NOTE] 
-> For new customers, before creating CMG, create Azure AD server app that contains the RedirectUrl="http://localhost” in your App. 
-Once redirect URL and database settings are complete, you can execute the new PowerShell commandlet script.
+> For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
 
+For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway)
 
 ### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.   
 <!--9217349-->
@@ -150,10 +146,13 @@ Prior to the Attack Surface Reduction capability in Windows Server, rules were m
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
+ - Configured resource access policies will block Configuration Manager 2403 upgrade, remove existing policies and move the slider to Intune. Please action before January 2024, read the [FAQ](../../../../configmgr/protect/plan-design/resource-access-deprecation-faq.yml).
+
 For more information, see [Removed and deprecated features for Configuration Manager](deprecated/removed-and-deprecated-cmfeatures.md).
 
-<!--## Other updates-->
+## Other updates
 
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2309 release notes](/powershell/sccm/2309-release-notes).
 
 ## Next steps
 At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
