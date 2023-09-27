@@ -9,7 +9,7 @@ ms.author: mandia
 manager: dougeby
 ms.date: 09/27/2023
 ms.topic: conceptual
-ms.service: microsoft-intune, security-copilot
+ms.service: microsoft-intune
 ms.subservice: copilot
 ms.localizationpriority: high
 
