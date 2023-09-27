@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -38,7 +38,7 @@ You can update provisioning policies to change assignments or key attributes, li
 ![Screenshot of edit policy](./media/edit-provisioning-policy/edit-policy.png)
 2. On the policy page, you can edit the **General** information, **Image**, and **Assignments** by selecting **Edit** next to each header.
 
-If you change the network, single sign-on configuration or image in a provisioning policy, no change will occur for previously provisioned Cloud PCs. Newly provisioned Cloud PCs will honor the changes in your provisioning policy. To change the previously provisioned Cloud PCs to align with the changes, you must reprovision those Cloud PCs.
+If you change the network, image, region or single sign-on configuration in a provisioning policy, no change will occur for previously provisioned Cloud PCs. Newly provisioned Cloud PCs will honor the changes in your provisioning policy. To change the network or image of previously provisioned Cloud PCs to align with the changes, you must reprovision those Cloud PCs. To change the region or single sign-on of previously provisioned Cloud PCs to align with the changes, you must [apply the current configuration](#apply-the-current-configuration).
 
 If you edit the name of the provisioning policy in the **General** information, the following will occur:
 
@@ -50,6 +50,20 @@ If you edit the name of the provisioning policy in the **General** information, 
   - **Value** = \<New name for provisioning policy\>
 
 If you assign new users to the provisioning policy, and these users have a valid Cloud PC license, provisioning will automatically occur. If you remove users from the provisioning policy assignment, the [grace period](device-management-overview.md#column-details) will be triggered.
+
+## Apply the current configuration
+
+To apply a configuration change to existing Cloud PCs:
+
+1. Modify and save the changes to an existing provisioning policy.
+2. From the policy page, select **Apply current configuration**.
+3. Select the configuration change to apply to existing Cloud PCs from the available list including:
+    1. Region.
+    2. Single sign-on.
+4. Select Apply.
+
+>[!Important]
+>Cloud PCs will be shutdown during the application process. Users will be disconnected and any unsaved work will be lost.
 
 ## Next steps
 

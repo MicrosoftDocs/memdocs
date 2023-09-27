@@ -34,7 +34,7 @@ ms.collection:
 
 Role-based access control (RBAC) helps you manage who has access to your organization's resources and what they can do with those resources. You can assign roles for your Cloud PCs by using the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 will transparently assign the required built-in roles on your Azure Subscription, resource group, and virtual network associated with the ANC, if they're not already assigned.
+When a user with the Subscription Owner or User Access Administrator role creates, edits, or retries an ANC, Windows 365 will transparently assign the required built-in roles on your Azure Subscription, resource group, and virtual network associated with the ANC, if they're not already assigned. If you only have the Subscription Reader role, these assignments won't be done automatically. Instead, you'll need to manually configure the required built-in roles to the Windows First Party App in Azure.
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
