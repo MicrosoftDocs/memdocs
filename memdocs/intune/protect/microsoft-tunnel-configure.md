@@ -296,6 +296,18 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 6. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
 ### iOS
+  > [!NOTE]  
+     > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively.
+     >
+>    In the VPN Configurations settings tab, click the On-Demand VPN Rules dropdown to show the On-Demand rules:
+     > Click Add by On-demand rules.
+     >  In the Add Row blade:
+      >  In "I want do do the following", select "Connect VPN".
+       > In "I want to restrict to", select a restriction, such as "All domains".
+       > Optionally, specify a URL to probe.
+       > Click Save.
+     > ![MicrosoftTeams-image (21)](https://github.com/MicrosoftDocs/memdocs-pr/assets/30053031/cfc025d0-4d60-48ad-b160-f6a1715e0b03)
+> 
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Device Configuration** > **Create profile**.
 
@@ -309,8 +321,8 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
 
-     > [!NOTE]  
-     > When using the Tunnel VPN connection and Defender web protection together in combined mode, the *Disconnect on sleep* setting is not supported. If this Intune VPN setting is set to *Enabled* and the iOS device goes to sleep, both the Tunnel VPN and the Defender VPN are disconnected.
+
+
 
    - **Per-app VPN**:  
      - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
@@ -330,6 +342,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 Intune supports Microsoft Defender for Endpoint as both an MTD app and as the Microsoft Tunnel client application on Android Enterprise devices. If you use Defender for Endpoint for both the Microsoft Tunnel client application and as an MTD app, you can use *custom settings* in your VPN profile for Microsoft Tunnel to simplify your configurations. Use of custom settings in the VPN profile replaces the need to use a separate app configuration profile.
 
 For devices [enrolled](/mem/intune/fundamentals/deployment-guide-enrollment-android) as *Android Enterprise personally-owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
+![MicrosoftTeams-image (21)](https://github.com/MicrosoftDocs/memdocs-pr/assets/30053031/9c67ca76-12b9-4b3a-a7b3-3bf8aa2bb1bd)
 
 If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD , then you continue to use the app tunnel configuration profile to configure Microsoft Defender for Endpoint as a Tunnel Client.
 
