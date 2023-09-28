@@ -40,6 +40,13 @@ ms.collection:
 
 The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of Microsoft Tunnel for MAM functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed tunnel connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
 
+## How it works
+The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a .Net wrapper/bridge to its public APIs. Since Xamarin/.Net apps typically use ADAL or MSAL for .Net as their AAD auth library, and the native Intune SDK does not know how to call into those libraries for its own enrollment/auth scenarios, the Xamarin bindings depend on the MAM SDK bindings which also contain Objective-C MSAL library, which can share a common token cache with ADAL/MSAL for .Net.
+
+These bindings are also availabe as a NuGet package which developers can pull into their Xamarin.iOS project directly via the Visual Studio UI.
+
+These are the[Xamarin.iOS bindings](https://learn.microsoft.com/en-us/xamarin/cross-platform/macios/binding/objective-c-libraries?tabs=macos) for the [Intune MAM Tunnel Objective-C library for iOS](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
+
 ## What’s supported?
 
 __Developer machines__:
@@ -54,6 +61,8 @@ __Mobile app platforms__:
 __Intune Mobile Application Management scenarios__:
 
 - Intune [MAM](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)
+
+
 
 ## Prerequisites
 
@@ -82,9 +91,8 @@ Sample applications highlighting MAM functionality in Xamarin iOS apps are avail
 
 ## Enabling Tunnel for MAM Xamarin Bindings
 
-Integrate your Xamarin App using Sample Application.
 
-### Building the Sample application
+## Integrate your Xamarin App using Sample Application
 
 See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps)
  
@@ -114,13 +122,13 @@ See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-
 
 6. Select your target device in Visual Studio and run.
 
-### Details
+## Details
 
 The target `GeneratePartialAppManifests` defined in `Directory.Build.props` converts the MSBuild properties defined in the previous section into the appropriate `Info.plist` properties. It also sets the default values for the `IntuneMAMSettings`.
 
 The target `AddPartialAppManifests` merges the newly generated plist file and the main Info.plist.
 
-### Integration
+## Integration
 
 - Beyond the configuring of `IntuneMAMSettings` as described in the [Details](#details) section of this document, you also need to configure the `Entitlements.plist` as seen in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Enabling Intune app protection policies in your iOS mobile app_ section of the _Microsoft Intune App SDK Xamarin Bindings_ article.
 
@@ -132,7 +140,43 @@ The target `AddPartialAppManifests` merges the newly generated plist file and th
 
 - The final integration point is found in `AppDelegate.cs`. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
 
-### Troubleshooting
+
+### Integrate your Xamarin App using a Custom Application.
+
+### Step 1: Install the Package
+- Install the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package into your Xamarin application.
+  ```
+  dotnet add package Microsoft.Intune.Tunnel.MAM.Xamarin.iOS --version 1.0.9
+  ```
+ [NuGet Package Link](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS/#readme-body-tab)
+
+### Step 2: Configure IntuneMAMSettings
+- Configure the `IntuneMAMSettings` following the instructions in the [Details](#details) section of this document.
+
+### Step 3: Configure the Entitlements.plist
+- Update the `Entitlements.plist` as outlined in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Microsoft Intune App SDK Xamarin Bindings_ article.
+
+### Step 4: Integration in MicrosoftTunnelDelegate.cs
+- The main integration is in the `MicrosoftTunnelDelegate.cs` file, a class inheriting from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` implementing abstract members.
+
+### Step 5: Enable Logging and Debugging
+- For logging and debugging purposes, the `MicrosoftTunnelDelegate.cs` file declares a `LogDelegate` that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnelLogDelegate`.
+
+### Step 6: Initialize the SDK
+- The `MicrosoftTunnelDelegate` passes itself into the `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnel.SharedInstance.MicrosoftTunnelInitialize` method to begin the SDK initialization.
+
+### Step 7: Final Integration Point in AppDelegate.cs
+- The last integration point is in the `AppDelegate.cs` file. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
+
+### Additional Notes
+- Ensure to refer to the documentation and the [Details](#details) section carefully for any additional configurations or settings related to `IntuneMAMSettings` and other functionalities.
+
+
+### Releases & Dependencies
+These bindings are typically kept in sync with the 3rd party native MAM Tunnel SDK  releases.(link: https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
+
+These bindings are also typically updated to the "latest version of MSAL for Objective-C" (Link: https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases)  and to the "latest version of the Intune MAM SDK" (Link:https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)  with each release.
+
 
 **Provisioning problems**"
 
