@@ -45,7 +45,7 @@ The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a .Net wr
 
 These bindings are also availabe as a NuGet package which developers can pull into their Xamarin.iOS project directly via the Visual Studio UI.
 
-These are the[Xamarin.iOS bindings](https://learn.microsoft.com/en-us/xamarin/cross-platform/macios/binding/objective-c-libraries?tabs=macos) for the [Intune MAM Tunnel Objective-C library for iOS](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
+These are the[Xamarin.iOS bindings](/xamarin/cross-platform/macios/binding/objective-c-libraries?tabs=macos) for the [Intune MAM Tunnel Objective-C library for iOS](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
 
 ## What’s supported?
 
