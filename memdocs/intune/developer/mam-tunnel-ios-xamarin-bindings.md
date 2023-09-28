@@ -1,4 +1,4 @@
----
+B(---
 title: Microsoft Tunnel for MAM iOS SDK Xamarin Bindings 
 description: Use Xamarin Bindings to allow Microsoft Tunnel capabilities for iOS applications. 
 author: oluchic 
@@ -61,8 +61,6 @@ __Mobile app platforms__:
 __Intune Mobile Application Management scenarios__:
 
 - Intune [MAM](/mem/intune/apps/android-deployment-scenarios-app-protection-work-profiles)
-
-
 
 ## Prerequisites
 
@@ -140,43 +138,40 @@ The target `AddPartialAppManifests` merges the newly generated plist file and th
 
 - The final integration point is found in `AppDelegate.cs`. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
 
-
 ### Integrate your Xamarin App using a Custom Application.
 
-### Step 1: Install the Package
+#### Step 1: Install the Package
 - Install the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package into your Xamarin application.
   ```
   dotnet add package Microsoft.Intune.Tunnel.MAM.Xamarin.iOS --version 1.0.9
   ```
- [NuGet Package Link](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS/#readme-body-tab)
+ [NuGet Package](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS/#readme-body-tab)
 
-### Step 2: Configure IntuneMAMSettings
+#### Step 2: Configure IntuneMAMSettings
 - Configure the `IntuneMAMSettings` following the instructions in the [Details](#details) section of this document.
 
-### Step 3: Configure the Entitlements.plist
+#### Step 3: Configure the Entitlements.plist
 - Update the `Entitlements.plist` as outlined in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Microsoft Intune App SDK Xamarin Bindings_ article.
 
-### Step 4: Integration in MicrosoftTunnelDelegate.cs
+#### Step 4: Integration in MicrosoftTunnelDelegate.cs
 - The main integration is in the `MicrosoftTunnelDelegate.cs` file, a class inheriting from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` implementing abstract members.
 
-### Step 5: Enable Logging and Debugging
+#### Step 5: Enable Logging and Debugging
 - For logging and debugging purposes, the `MicrosoftTunnelDelegate.cs` file declares a `LogDelegate` that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnelLogDelegate`.
 
-### Step 6: Initialize the SDK
+#### Step 6: Initialize the SDK
 - The `MicrosoftTunnelDelegate` passes itself into the `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnel.SharedInstance.MicrosoftTunnelInitialize` method to begin the SDK initialization.
 
-### Step 7: Final Integration Point in AppDelegate.cs
+#### Step 7: Final Integration Point in AppDelegate.cs
 - The last integration point is in the `AppDelegate.cs` file. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
 
 ### Additional Notes
 - Ensure to refer to the documentation and the [Details](#details) section carefully for any additional configurations or settings related to `IntuneMAMSettings` and other functionalities.
 
-
 ### Releases & Dependencies
-These bindings are typically kept in sync with the 3rd party native MAM Tunnel SDK  releases.(link: https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
+These bindings are typically kept in sync with the 3rd party native [MAM Tunnel SDK releases](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios).
 
-These bindings are also typically updated to the "latest version of MSAL for Objective-C" (Link: https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases)  and to the "latest version of the Intune MAM SDK" (Link:https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)  with each release.
-
+These bindings are also typically updated to the [latest version of MSAL for Objective-C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases) and to the [latest version of the Intune MAM SDK](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios) with each release.
 
 **Provisioning problems**"
 
