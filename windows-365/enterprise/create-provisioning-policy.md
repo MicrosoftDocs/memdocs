@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -63,12 +63,12 @@ A few things to keep in mind:
     - **Enterprise**: Provision Cloud PCs for Windows 365 Enterprise.
     - **Frontline**: Provision Cloud PCs for [Windows 365 Frontline](introduction-windows-365-frontline.md).
 4. On the **General** page, select a **Join type**:
-    - **Hybrid Microsoft Entra join**: You must select an ANC to use for this policy.
-    - **Microsoft Entra join**: You have two options for **Network**:
-        - **Azure network connection**: Select an ANC to use for this policy.
+    - **Microsoft Entra Join**: You have two options for **Network**:
         - **Microsoft hosted network**: Select a **Geography** where you want your Cloud PCs provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
             - **Automatic (Recommended)**: The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. This automation decreases the chance of provisioning failure.
             - A specific region: This option makes sure that your Cloud PCs are only provisioned in the region that you choose.
+        - **Azure network connection**: Select an ANC to use for this policy.
+    - **Hybrid Microsoft Entra join**: You must select an ANC to use for this policy.
 
 ### Select an ANC
 
@@ -87,7 +87,7 @@ To select an ANC, follow these steps:
 
 ### Continue creating a provisioning policy
 
-1. If you select **Microsoft Entra Join**, you can check the box so that your users **Use single sign-on (preview)**.
+1. On the **General** page, you can check the box so that your users **Use Microsoft Entra single sign-on (preview)**.
 2. Select **Next**.
 3. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
