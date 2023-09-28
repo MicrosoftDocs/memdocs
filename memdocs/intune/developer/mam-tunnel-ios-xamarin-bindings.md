@@ -87,10 +87,10 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
 
 Sample applications highlighting MAM functionality in Xamarin iOS apps are available on [GitHub](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps).
 
-## Enabling Tunnel for MAM Xamarin Bindings
+## Enable Tunnel for MAM Xamarin Bindings
 
 
-## Integrate your Xamarin App using Sample Application
+### Integrate your Xamarin App using Sample Application
 
 See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps)
  
@@ -120,13 +120,13 @@ See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-
 
 6. Select your target device in Visual Studio and run.
 
-## Details
+#### Details
 
 The target `GeneratePartialAppManifests` defined in `Directory.Build.props` converts the MSBuild properties defined in the previous section into the appropriate `Info.plist` properties. It also sets the default values for the `IntuneMAMSettings`.
 
 The target `AddPartialAppManifests` merges the newly generated plist file and the main Info.plist.
 
-## Integration
+#### Integration
 
 - Beyond the configuring of `IntuneMAMSettings` as described in the [Details](#details) section of this document, you also need to configure the `Entitlements.plist` as seen in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Enabling Intune app protection policies in your iOS mobile app_ section of the _Microsoft Intune App SDK Xamarin Bindings_ article.
 
@@ -138,7 +138,7 @@ The target `AddPartialAppManifests` merges the newly generated plist file and th
 
 - The final integration point is found in `AppDelegate.cs`. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
 
-### Integrate your Xamarin App using a Custom Application.
+### Integrate your Xamarin App using a Custom Application
 
 #### Step 1: Install the Package
 - Install the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package into your Xamarin application.
