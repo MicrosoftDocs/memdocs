@@ -96,7 +96,7 @@ items:
         href: ./enrollment/automated-device-enrollment-shared-device-mode.md
         displayName: devices, frontline worker, automated device enrollment  
 
-  - name: Security Copilot and Intune
+  - name: Security Copilot + Intune
     href: ./fundamentals/security-copilot.md
 
   - name: Plan
