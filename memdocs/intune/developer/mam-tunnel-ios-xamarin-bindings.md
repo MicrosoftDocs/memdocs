@@ -45,7 +45,7 @@ The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a  wrappe
 
 These bindings are also available as a NuGet package which developers can pull into their Xamarin.iOS project directly via the Visual Studio UI.
 
-View the [Xamarin.iOS bindings](/xamarin/cross-platform/macios/binding/objective-c-libraries?tabs=macos) for the [Intune MAM Tunnel Objective-C library for iOS](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
+View the [Xamarin iOS bindings](/xamarin/cross-platform/macios/binding/objective-c-libraries?tabs=macos) for the [Intune MAM Tunnel Objective-C library for iOS](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
 
 ## What’s supported?
 
@@ -140,32 +140,32 @@ The target `AddPartialAppManifests` merges the newly generated plist file and th
 
 ### Integrate your Xamarin App using a Custom Application
 
-#### Step 1: Install the Package
-- Install the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package into your Xamarin application.
-  ```
-  dotnet add package Microsoft.Intune.Tunnel.MAM.Xamarin.iOS --version 1.0.9
-  ```
- [NuGet Package](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS/#readme-body-tab)
+1. Install the Package
+  - Install the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package into your Xamarin application.
+    ```
+    dotnet add package Microsoft.Intune.Tunnel.MAM.Xamarin.iOS --version 1.0.9
+    ```
+    [NuGet Package](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS/#readme-body-tab)
 
-#### Step 2: Configure IntuneMAMSettings
-- Configure the `IntuneMAMSettings` following the instructions in the [Details](#details) section of this document.
+2. Step 2: Configure IntuneMAMSettings
+   - Configure the `IntuneMAMSettings` following the instructions in the [Details](#details) section of this document.
 
-#### Step 3: Configure the Entitlements.plist
-- Update the `Entitlements.plist` as outlined in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Microsoft Intune App SDK Xamarin Bindings_ article.
+3. Configure the Entitlements.plist
+   - Update the `Entitlements.plist` as outlined in [step 2 of *Enabling Intune app protection policies in your iOS mobile app*](../developer/app-sdk-xamarin.md#enabling-intune-app-protection-policies-in-your-ios-mobile-app) in the _Microsoft Intune App SDK Xamarin Bindings_ article.
 
-#### Step 4: Integration in MicrosoftTunnelDelegate.cs
-- The main integration is in the `MicrosoftTunnelDelegate.cs` file, a class inheriting from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` implementing abstract members.
+4. Integration in MicrosoftTunnelDelegate.cs
+   - The main integration is in the `MicrosoftTunnelDelegate.cs` file, a class inheriting from `Microsoft.Intune.Tunnel.MAM.iOS.TunnelDelegate` implementing abstract members.
 
-#### Step 5: Enable Logging and Debugging
-- For logging and debugging purposes, the `MicrosoftTunnelDelegate.cs` file declares a `LogDelegate` that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnelLogDelegate`.
+5. Enable Logging and Debugging
+   - For logging and debugging purposes, the `MicrosoftTunnelDelegate.cs` file declares a `LogDelegate` that inherits from `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnelLogDelegate`.
 
-#### Step 6: Initialize the SDK
-- The `MicrosoftTunnelDelegate` passes itself into the `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnel.SharedInstance.MicrosoftTunnelInitialize` method to begin the SDK initialization.
+6. Initialize the SDK
+   - The `MicrosoftTunnelDelegate` passes itself into the `Microsoft.Intune.Tunnel.MAM.iOS.MicrosoftTunnel.SharedInstance.MicrosoftTunnelInitialize` method to begin the SDK initialization.
 
-#### Step 7: Final Integration Point in AppDelegate.cs
-- The last integration point is in the `AppDelegate.cs` file. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
+7. Final Integration Point in AppDelegate.cs
+  - The last integration point is in the `AppDelegate.cs` file. It calls the `MicrosoftTunnelDelegate.Launch` method from within the `FinishedLaunching` method.
 
-### Additional Notes
+#### Additional Notes
 - Ensure to refer to the documentation and the [Details](#details) section carefully for any additional configurations or settings related to `IntuneMAMSettings` and other functionalities.
 
 ### Releases & Dependencies
