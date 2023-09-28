@@ -296,18 +296,16 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 6. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
 ### iOS
-  > [!NOTE]  
-     > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively.
-     >
->    In the VPN Configurations settings tab, click the On-Demand VPN Rules dropdown to show the On-Demand rules:
-     > Click Add by On-demand rules.
-     >  In the Add Row blade:
-      >  In "I want do do the following", select "Connect VPN".
-       > In "I want to restrict to", select a restriction, such as "All domains".
-       > Optionally, specify a URL to probe.
-       > Click Save.
-     > ![MicrosoftTeams-image (21)](https://github.com/MicrosoftDocs/memdocs-pr/assets/30053031/cfc025d0-4d60-48ad-b160-f6a1715e0b03)
-> 
+> [!NOTE]  
+> When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On-Demand' rules to activate the 'Disconnect on Sleep' setting effectively. To configure the on-demand rule when configuring the Tunnel VPN profile:
+>
+> 1. On the Configuration setting page, expand the *On-Demand VPN Rules* section.
+> 2. For *On-demand rules* select **Add** to open the *Add Row* pane.
+> 3. On the *Add Row* pane, set *I want to do the following* to **Connect VPN**, and then for *I want to restrict* select a restriction, like **All domains**.
+> 4. Optionally, you can add a URL to probe to the *But only if this URL probe succeeds* field.
+> 5. Select **Save**.
+
+:::image type="content" source="./media/microsoft-tunnel-configure/on-demand-vpn-rule.png" alt-text="Screen shot of the Add Row pane where you configure the on-demand rule.":::
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Device Configuration** > **Create profile**.
 
@@ -320,9 +318,6 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
-
-
-
 
    - **Per-app VPN**:  
      - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
