@@ -41,11 +41,11 @@ ms.collection:
 The Microsoft Tunnel iOS SDK Xamarin Bindings facilitate the integration of Microsoft Tunnel for MAM functionality for MAM iOS applications developed with Xamarin. These bindings empower developers by providing a straightforward means to embed tunnel connectivity features directly into their Xamarin-based applications, ensuring seamless and secure connectivity for end users.
 
 ## How it works
-The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a .Net wrapper/bridge to its public APIs. Since Xamarin/.Net apps typically use ADAL or MSAL for .Net as their AAD auth library, and the native Intune SDK does not know how to call into those libraries for its own enrollment/auth scenarios, the Xamarin bindings depend on the MAM SDK bindings which also contain Objective-C MSAL library, which can share a common token cache with ADAL/MSAL for .Net.
+The Intune MAM Xamarin.iOS bindings are the native MAM Tunnel SDK with a  wrapper/bridge to its public APIs. Since Xamarin/.NET apps typically use ADAL or MSAL for .NET as their AAD auth library, and the native Intune SDK doesn't know how to call into those libraries for its own enrollment/auth scenarios, the Xamarin bindings depend on the MAM SDK bindings that also contain Objective-C MSAL library, which can share a common token cache with ADAL/MSAL for .NET.
 
-These bindings are also availabe as a NuGet package which developers can pull into their Xamarin.iOS project directly via the Visual Studio UI.
+These bindings are also available as a NuGet package which developers can pull into their Xamarin.iOS project directly via the Visual Studio UI.
 
-These are the[Xamarin.iOS bindings](/xamarin/cross-platform/macios/binding/objective-c-libraries?tabs=macos) for the [Intune MAM Tunnel Objective-C library for iOS](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
+View the [Xamarin.iOS bindings](/xamarin/cross-platform/macios/binding/objective-c-libraries?tabs=macos) for the [Intune MAM Tunnel Objective-C library for iOS](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios)
 
 ## What’s supported?
 
@@ -98,7 +98,7 @@ See the [Sample application](https://github.com/msintuneappsdk/ms-intune-tunnel-
 
 2. Open your app `.sln` file in Visual Studio.
 
-3. Use the Nuget Package Manager to update the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package to the latest version.
+3. Use the NuGet Package Manager to update the `Microsoft.Intune.Tunnel.MAM.Xamarin.iOS` package to the latest version.
 
 4. Update `Directory.Build.props` and change the values of `<ApplicationID>`, `<ClientID>` and `<TenantID>` to match the values of your _Bundle ID_, your _AAD application Client ID_ and your _AAD Tenant ID_ respectively.
 
@@ -169,9 +169,9 @@ The target `AddPartialAppManifests` merges the newly generated plist file and th
 - Ensure to refer to the documentation and the [Details](#details) section carefully for any additional configurations or settings related to `IntuneMAMSettings` and other functionalities.
 
 ### Releases & Dependencies
-These bindings are typically kept in sync with the 3rd party native [MAM Tunnel SDK releases](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios).
+These bindings are typically kept in sync with the third-party native [MAM Tunnel SDK releases](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios).
 
-These bindings are also typically updated to the [latest version of MSAL for Objective-C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases) and to the [latest version of the Intune MAM SDK](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios) with each release.
+These bindings are typically updated to the [latest version of MSAL for Objective-C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases), and to the [latest version of the Intune MAM SDK](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios) with each release.
 
 **Provisioning problems**"
 
