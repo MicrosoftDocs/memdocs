@@ -27,7 +27,7 @@ ms.collection:
 
 Keeping your devices current with updates is critical. Admins must do what they can to reduce risk of security events, and reduce this risk with minimal disruption to the business & users.
 
-Intune has built-in policies that can manage software updates. For macOS devices, you can use Intune to manage device updates, configure when devices are updated, and review the device update status.
+Intune has built-in policies that can manage software updates. For macOS devices, you can use Intune to manage device updates, configure when devices are updated, and review the device update status. 
 
 This article includes an admin guide for enrolled and managed macOS devices. Use this information to help manage software updates on your organization-owned devices.
 
