@@ -41,7 +41,7 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
   - Enrollment Programs Read device, Read profile, Create profile, Assign profile, Delete profile
   - Mobile apps Read, Create, Delete, Assign and Update
   - Organization Read and Update
-  - Security Baselines Read, Create, Delete, Assign and Update
+  - Security baselines Read, Create, Delete, Assign and Update
   - Policy Sets Read, Create, Delete, Assign and Update
 
 ## Step 1 - Introduction

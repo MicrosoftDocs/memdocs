@@ -325,6 +325,17 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Proxy**:  
      - Configure proxy server details for your environment.  
 
+> [!NOTE]  
+> When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On-Demand' rules to activate the 'Disconnect on Sleep' setting effectively. To configure the on-demand rule when configuring the Tunnel VPN profile:
+>
+> 1. On the Configuration setting page, expand the *On-Demand VPN Rules* section.
+> 2. For *On-demand rules* select **Add** to open the *Add Row* pane.
+> 3. On the *Add Row* pane, set *I want to do the following* to **Connect VPN**, and then for *I want to restrict* select a restriction, like **All domains**.
+> 4. Optionally, you can add a URL to the *But only if this URL probe succeeds* field. 
+> 5. Select **Save**.
+>
+> :::image type="content" source="./media/microsoft-tunnel-configure/on-demand-vpn-rule.png" alt-text="Screen shot of the Add Row pane where you configure the on-demand rule.":::
+
 ## Use custom settings for Microsoft Defender for Endpoint
 
 Intune supports Microsoft Defender for Endpoint as both an MTD app and as the Microsoft Tunnel client application on Android Enterprise devices. If you use Defender for Endpoint for both the Microsoft Tunnel client application and as an MTD app, you can use *custom settings* in your VPN profile for Microsoft Tunnel to simplify your configurations. Use of custom settings in the VPN profile replaces the need to use a separate app configuration profile.

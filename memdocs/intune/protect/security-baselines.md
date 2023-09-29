@@ -56,7 +56,7 @@ This feature applies to:
 >
 > Intune also introduced a new process to help you migrate an existing security baseline profile to the newer baseline version. This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
 
-You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or 11. For example, the default configuration of the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
+You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or 11. For example, the default configuration of the *Security Baseline for Windows 10 and later* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 
 **Benefits of using baselines**:  
 Security baselines can help you to have an end-to-end secure workflow when working with Microsoft 365. Some of the benefits include:
@@ -120,7 +120,7 @@ When you're ready to use the more recent baseline version, you can create new pr
 
 ## About baseline versions and instances
 
-Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows 10/11, the MDM Security Baseline might receive a new version instance that includes the newest settings.
+Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows 10/11, *Security Baseline for Windows 10 and later* might receive a new version instance that includes the newest settings.
 
 You can view the list of available baselines in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines**. The list includes:
 
@@ -129,7 +129,7 @@ You can view the list of available baselines in the [Microsoft Intune admin cent
 - How many separate instances (versions) of the baseline type are available.
 - A *Last Published* date that identifies when the latest version of the baseline template became available.
 
-To view more information about the baseline versions you use, select a baseline type, like *MDM Security Baseline* to open its *Profiles* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
+To view more information about the baseline versions you use, select a baseline type, like *Security Baseline for Windows 10 and later* to open its *Profiles* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. The details include the most recent and current baseline version. You can select a single version to view deeper details about the profiles that use that version.
 
 You can choose to [change of the version](../protect/security-baselines-configure.md#update-a-profile-to-the-latest-version) of a baseline that's in use with a given profile. When you change the version, you don't have to create a new baseline profile to take advantage of updated versions. Instead you can select a baseline profile and use the built-in option to change the instance version for that profile to a new one.
 
