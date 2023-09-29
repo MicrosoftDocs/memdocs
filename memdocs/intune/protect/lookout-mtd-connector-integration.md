@@ -75,7 +75,7 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 
    4. Repeat the process for the *restricted access* group if you use that group.
 
-      :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-group-id.png" alt-text="Azure AD group Object ID"::: 
+      :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-group-id.png" alt-text="Azure AD group Object ID":::
 
    After you gather this information, contact Lookout support (email: enterprisesupport@lookout.com). Lookout Support works with your primary contact to onboard your subscription and create your Lookout Enterprise account, using the information that you provide.
 
