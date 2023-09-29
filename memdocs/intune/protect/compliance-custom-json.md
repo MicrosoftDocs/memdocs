@@ -4,8 +4,8 @@
 title: Create a JSON file for custom compliance settings in Microsoft Intune
 description: Create the JSON file that defines custom settings and values for use with device compliance policies in Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/19/2022
 ms.topic: conceptual
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Custom compliance JSON files for Microsoft Intune
