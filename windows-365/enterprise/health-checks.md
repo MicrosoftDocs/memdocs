@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -70,6 +70,7 @@ Every failed ANC or success with warning error state includes the technical deta
 - **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment.
 - **Localization language package readiness**: Verify that the operating system and Microsoft 365 language packages are reachable. Also verify that the localization package download link is reachable.
 - **UDP connection check**: Network configuration allows the use of UDP direct connection (STUN).
+- **Single sign-on configuration**: Determine if the network is properly configured for [single sign-on](identity-authentication.md#single-sign-on-sso) to Microsoft Entra hybrid joined Cloud PCs by ensuring a Kerberos Server object exists.
 
 <!-- ########################## -->
 ## Next steps

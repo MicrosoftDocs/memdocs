@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Android device compliance settings in Microsoft Intune
-description: View the device compliance settings that are available for  Android device administrator devices in Microsoft Intune.
+title: View the Android device administrator compliance settings for Microsoft Intune compliance policies 
+description: View the device compliance settings that are available for Android device administrator devices in Microsoft Intune.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/16/2021
+ms.date: 09/25/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,12 +35,13 @@ ms.collection:
 
 This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
+For assistance in configuring compliance policy, see [Use compliance policies to set rules for devices you manage with Intune](../protect/device-compliance-get-started.md).
+
 This feature applies to:
 
 - Android device administrator
 
 As an Intune administrator, use these compliance settings to help protect your organizational resources. To learn more about compliance policies, and what they do, see [get started with device compliance](device-compliance-get-started.md).
-
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -106,12 +107,12 @@ As an Intune administrator, use these compliance settings to help protect your o
   > [!NOTE]
   > On the legacy Android platform, this feature is a compliance setting. Intune can only check whether this setting is enabled at the device level.
 
-- **SafetyNet device attestation**  
+- **Play Integrity Verdict**  
   Enter the level of [SafetyNet attestation](https://developer.android.com/training/safetynet/attestation.html) that must be met. Your options:
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Check basic integrity**
-  - **Check basic integrity & certified devices**
+  - **Check basic integrity & device integrity**
 
 > [!NOTE]
 > To configure Google Play Protect settings using app protection policies, see [Intune app protection policy settings](../apps/app-protection-policy-settings-android.md#conditional-launch) on Android.
@@ -134,7 +135,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ### Encryption
 
-- **Encryption of data storage on a device**  
+- **Require encryption of data storage on device**  
   *Supported on Android 4.0 and later, or KNOX 4.0 and later.*
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
@@ -187,6 +188,12 @@ The available settings for passwords vary by the version of Android on the devic
 
 - **Maximum minutes of inactivity before password is required**  
   This setting specifies the length of time without user input after which the mobile device screen is locked. Options range from *1 Minute* to *8 Hours*. The recommended value is *15 Minutes*.
+
+  - **Not configured** *(default)*
+
+- **Require a password to unlock mobile devices**
+
+  This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices. Recommended value: *Require* (This compliance check is supported for devices with OS versions Android 4.0 and above, or KNOX 4.0 and above.)
 
   - **Not configured** *(default)*
 
@@ -248,7 +255,6 @@ The available settings for passwords vary by the version of Android on the devic
 
   - **Number of previous passwords to prevent reuse**  
     Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
-
 
 ## Next steps
 

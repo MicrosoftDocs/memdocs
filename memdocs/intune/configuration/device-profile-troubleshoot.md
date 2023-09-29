@@ -79,7 +79,7 @@ There are different actions that trigger a notification. For example, when a pol
 
 Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, when a lock, passcode reset, app, or policy assignment action runs.
 
-Other changes, such as revising the contact information in the Company Portal app, don't cause an immediate notification to devices.
+Other changes don't cause an immediate notification to devices, including revising the contact information in the Company Portal app or updates to an `.ipa` file.
 
 The settings in the policy or profile are applied at every check-in. A [Windows 10 MDM policy refresh customer blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
 

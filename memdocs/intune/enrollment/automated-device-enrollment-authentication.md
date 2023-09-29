@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/09/2023
+ms.date: 09/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -55,7 +55,8 @@ Use the Intune Company Portal app as the authentication method if you want to:
  - Automatically install the Company Portal app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install Company Portal app during enrollment without user Apple IDs. 
  - You want to lock the device until the Company Portal app installs.
 
-None of the features mentioned in Option 1 are supported in Apple Setup Assistant authentication methods. 
+>[!CAUTION]
+> Intune will block an enrollment that uses this authentication method if the device user is targeted with an [Account Driven Apple User Enrollment profile type](apple-account-driven-user-enrollment.md). This behavior is expected. The user receives an error message that says their account doesn't support enrollment through the Company Portal app, and that they need to enroll through the Company Portal website. To ensure successful enrollments via automated device enrollment, use [Option 2: Setup Assistant with modern authentication](automated-device-enrollment-authentication.md#option-2-setup-assistant-with-modern-authentication) as the authentication method when working with account driven Apple User Enrollment profile types.     
 
 ## Option 2: Setup Assistant with modern authentication  
 This option provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed.  Use this option for authentication when you want to:
