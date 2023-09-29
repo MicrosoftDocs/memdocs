@@ -4,7 +4,7 @@
 title: Deployment guide to manage Android devices in Microsoft Intune
 description: Learn the recommended processes to manage Android devices in Microsoft Intune.
 keywords:
-author: dougeby
+author: lenewsad
 ms.author: dougeby
 manager: dougeby
 ms.date: 09/16/2021

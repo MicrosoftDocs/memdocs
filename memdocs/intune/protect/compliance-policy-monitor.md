@@ -4,8 +4,8 @@
 title: Monitor results of your device compliance policies in Microsoft Intune
 description: Use the device compliance dashboard to understand overall device compliance the per-policy and per-setting device compliance results.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/21/2023
 ms.topic: how-to
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- compliance
 ---
 # Monitor results of your Intune Device compliance policies
 

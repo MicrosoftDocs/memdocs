@@ -3805,7 +3805,7 @@ The remote device action to *Disable Activation Lock* is no longer available in 
 
 This remote action is removed because the action to disable the [iOS/iPadOS Activation Lock](https://support.apple.com/en-us/HT201365) feature did not function as intended.
 
-#### Updates for Security Baselines<!-- 9549108,  10873848 -->
+#### Updates for security baselines<!-- 9549108,  10873848 -->
 We have a pair of updates for [security baselines](../protect/security-baselines.md), which add the following settings:
 - **Security baseline for Windows 10 and later** (Applies to Windows 10 and Windows 11) 
   The new baseline version is [November 2021](../protect/security-baseline-settings-mdm-all.md) and adds **Scan scripts that are used in Microsoft browsers** to the *Microsoft Defender* category. This baseline has no other changes.
@@ -5470,7 +5470,7 @@ We've added two new settings to the App and browser isolation profile of Intune'
 
 For more information, see the settings for [App and browser isolation](../protect/endpoint-security-asr-profile-settings.md#app-and-browser-isolation).
 
-#### Updates for Security Baselines<!-- 8391335, 8377369   -->  
+#### Updates for security baselines<!-- 8391335, 8377369   -->  
 We have new versions available for the following [security baselines](../protect/security-baselines.md):
 
 - **[MDM Security baseline (Windows 10 Security)](../protect/security-baseline-settings-mdm-all.md?pivots=december-2020)**
@@ -7741,7 +7741,7 @@ New report types focus on the following information:
 The first set of new reports focuses on device compliance. For more information, see [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) and [Intune reports](reports.md).
 
 #### Consolidated the location of security baselines in the UI<!-- 6177074   -->
-We've consolidated the paths to find [security baselines](../protect/security-baselines.md) in the Microsoft Intune admin center by removing *Security baselines* from several UI locations. To find Security baselines, you now use the following path:  **Endpoint security** > **Security baselines**.
+We've consolidated the paths to find [security baselines](../protect/security-baselines.md) in the Microsoft Intune admin center by removing *Security baselines* from several UI locations. To find security baselines, you now use the following path:  **Endpoint security** > **Security baselines**.
 
 #### Expanded support for imported PKCS certificates<!-- 6044197  -->
 We've expanded support for using [imported PKCS certificates](../protect/certificates-imported-pfx-configure.md#supported-platforms) to support *Android Enterprise fully managed devices*. Generally, importing PFX certificates is used for S/MIME encryption scenarios, where a user's encryption certificates are required on all of their devices so that email decryption can occur.
@@ -8338,7 +8338,7 @@ For more information about these improvements, see the [Enterprise Mobility + Se
 
 **Endpoint Security** node is now generally available in Microsoft 365 Device Management specialist workspace at https://endpoint.microsoft.com, which groups together the capabilities to secure endpoints such as:
 
-- Security Baselines:  Pre'configured group of settings that help you apply known group of settings and default values that are recommended by Microsoft.
+- Security baselines:  Pre'configured group of settings that help you apply known group of settings and default values that are recommended by Microsoft.
 - Security Tasks: Take advantage of Microsoft Defender for Endpoints Threat and Vulnerability Management (TVM) and use Intune to remediate endpoint weaknesses.
 - Microsoft Defender for Endpoint: Integrated Microsoft Defender for Endpoint to help prevent security breaches.""
 
@@ -9004,11 +9004,11 @@ You can now assign scope tags to a security group and all devices in the securit
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Use keyword search with Security Baselines<!--  -->
-When you create or edit [Security Baseline profiles](../protect/security-baselines-configure.md), you can specify keywords in the new *Search* bar to filter the available groups of settings to those that contain your search criteria.
+#### Use keyword search with security baselines<!--  -->
+When you create or edit [security baseline profiles](../protect/security-baselines-configure.md), you can specify keywords in the new *Search* bar to filter the available groups of settings to those that contain your search criteria.
 
-#### The Security Baselines feature is now generally available<!-- 3785395 -->
-The **Security Baselines** feature is out of preview and is now generally available (GA).  This means the feature is ready for use in production. However, the individual baseline templates can remain in preview and are evaluated and released to GA on their own schedules.
+#### The security baselines feature is now generally available<!-- 3785395 -->
+The **security baselines** feature is out of preview and is now generally available (GA).  This means the feature is ready for use in production. However, the individual baseline templates can remain in preview and are evaluated and released to GA on their own schedules.
 
 #### The MDM Security Baseline template is now generally available<!-- 3794072, 4217151,  3534649 -->
 The MDM Security Baseline template has moved out of preview and is now generally available (GA). The GA template is identified as **MDM Security Baseline for May 2019**.  This is a new template and not an upgrade from the preview version.  As a new template, you'll need to review the [settings it contains](../protect/security-baseline-settings-mdm-all.md), and then create new profiles to deploy the template to your device. Other security baseline templates can remain in preview. For a list of available baselines, see [Available security baselines](../protect/security-baselines.md#available-security-baselines).  
@@ -9020,7 +9020,7 @@ In addition to being a new template, the *MDM Security Baseline for May 2019* te
 The *MDM Security Baseline for May 2019* also includes the addition of several new settings, the removal of others, and a revision of the default value of one setting. For a detailed list of the changes from Preview to GA, see **What's changed in the new template**.
 
 #### Security baseline versioning<!-- 3194322 -->
-Security baselines for Intune support versioning. With this support, as new versions of each security baseline are released, you can update your existing security baseline profiles to use the newer baseline version without having to recreate and deploy a new baseline from scratch. Additionally, in the Intune console you can view information about each baseline like the number of individual profiles you have that use the baseline, how many of the different baseline versions your profiles use, and when the latest release of a specific security baseline was.  For more information, see **Security Baselines**.
+Security baselines for Intune support versioning. With this support, as new versions of each security baseline are released, you can update your existing security baseline profiles to use the newer baseline version without having to recreate and deploy a new baseline from scratch. Additionally, in the Intune console you can view information about each baseline like the number of individual profiles you have that use the baseline, how many of the different baseline versions your profiles use, and when the latest release of a specific security baseline was.  For more information, see **Security bselines**.
 
 #### The Use security keys for sign-in setting has moved<!-- 4501151 -->
 The device configuration setting for identity protection named **Use security keys for sign-in** is no longer found as a sub-setting of *Configure Windows Hello for Business*. It's now a top-level setting that is always available, even when you don't enable use of Windows Hello for Business. For more information, see [Identity protection](../protect/identity-protection-windows-settings.md).
@@ -9344,7 +9344,7 @@ This feature has been delayed and is planned for a future release.
 #### Intune Data Warehouse V1.0 changes reflecting back to beta<!-- 4403765 -->
 When V1.0 was first introduced in 1808, it differed in some significant ways from the beta API. In 1903 those changes will be reflected back into the beta API version. If you have important reports that use the beta API version, we strongly recommend switching those reports to V1.0 to avoid breaking changes. For more information, see [Change log for the Intune Data Warehouse API](../developer/reports-changelog.md#1903-part-2).
 
-#### Monitor Security Baseline status (public preview) <!-- 3082047 --> 
+#### Monitor security baseline status (public preview) <!-- 3082047 --> 
 We've added a [per-category view](../protect/security-baselines-monitor.md) to the monitoring of security baselines. (Security baselines remain in preview). The per-category view displays each category from the baseline along with the percentage of devices that fall into each status group for that category. You can now see how many devices don't match the individual categories, are misconfigured, or are not applicable.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -9773,7 +9773,7 @@ Applies to: Windows 10 and later
 Intune integrates with other services that focus on security, including Windows Defender for Endpoint and Office 365 Defender for Endpoint. Customers are asking for a common strategy and a cohesive set of end-to-end security workflows across the Microsoft 365 services. Our goal is to align strategies to build solutions that bridge security operations and common administrator tasks. 
 In Intune, we aim to accomplish this goal by publishing a set of Microsoft recommended "Security baselines" (**Intune** > **Security baselines**).  An administrator can create security policies directly from these baselines, and then deploy them to their users. You can also customize the best practice recommendations to meet the needs of your organization. Intune makes sure that devices stay in compliance with these baselines, and notifies administrators of users or devices that aren't in compliance.
 
-This feature is in public preview so any profiles created now will not move over to Security Baselines templates that are generally available (GA). You shouldn't plan to use these preview templates in your production environment.
+This feature is in public preview so any profiles created now will not move over to security baseline templates that are generally available (GA). You shouldn't plan to use these preview templates in your production environment.
 
 To learn more about security baselines, see [Create a Windows 10 security baseline in Intune](../protect/security-baselines-monitor.md).
 

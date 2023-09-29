@@ -68,7 +68,7 @@ Review the [license terms](https://github.com/msintuneappsdk/ms-intune-tunnel-s
 
 The Tunnel for MAM SDK relies on the Intune MAM SDK to enforce application protection policies (APP) and Application Configuration Policies (ACP).
 
-The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis).
+The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis).
 
 If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Microsoft Entra ID follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, refer to the developer guide.
 
@@ -78,8 +78,8 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
 
 - Ensure that Xamarin app development is performed on a secure work station.
 - Ensure the bindings are from a valid Microsoft source:
-  - [MS Microsoft Tunnel iOS SDK NuGet Profile](https://www.nuget.org/profiles/msintuneappsdk)
-  - [Microsoft Tunnel iOS SDK Xamarin GitHub Repository](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+  - [MS Microsoft Tunnel iOS SDK NuGet Profile](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS)
+  - [Microsoft Tunnel iOS SDK Xamarin GitHub Repository](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-xamarin)
 - Configure your NuGet config for your project to trust signed, unmodified NuGet packages. For more information, see [installing signed packages](/nuget/consume-packages/installing-signed-packages).
 - Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 
@@ -171,7 +171,7 @@ The target `AddPartialAppManifests` merges the newly generated plist file and th
 ### Releases & Dependencies
 These bindings are typically kept in sync with the third-party native [MAM Tunnel SDK releases](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios).
 
-These bindings are typically updated to the [latest version of MSAL for Objective-C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases), and to the [latest version of the Intune MAM SDK](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-ios) with each release.
+These bindings are typically updated to the [latest version of MSAL for Objective-C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases), and to the [latest version of the Intune MAM SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios) with each release.
 
 **Provisioning problems**"
 

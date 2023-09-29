@@ -4,8 +4,8 @@
 title: Network access control integration with Microsoft Intune
 description: Network access control (NAC) solutions check enrollment and compliance for devices with Intune. NAC includes certain behaviors and works with Conditional Access. See the steps to get onboarded, and get a list of partner solutions.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2023
 ms.topic: how-to
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- network-access-control
 ---
 
 # Network access control (NAC) integration with Intune

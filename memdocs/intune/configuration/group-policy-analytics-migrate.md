@@ -154,7 +154,7 @@ When you create the Settings Catalog profile, any settings that can be included 
   - [Endpoint security firewall rule migration tool overview](../protect/endpoint-security-firewall-rule-tool.md)
   - [Application control policy in Endpoint Security](../protect/endpoint-security-asr-policy.md).
 
-  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../protect/endpoint-security.md), including Security Baselines and mobile threat defense.
+  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../protect/endpoint-security.md), including security baselines and mobile threat defense.
 
 - **Some settings don't migrate exactly, and may use a different setting**
 
