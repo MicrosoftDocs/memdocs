@@ -96,7 +96,7 @@ To manage App Control for Business policies, an account must have sufficient rol
 
 - **Enable use of a managed installer** - Accounts must be assigned the role of **Global Administrator** or **Intune Service Administrator**.
 
-- **Manage App Control for Business policy** - Accounts must have the **Security Baseline** permissions for *Delete*, *Read*, *Assign*, *Create*, and *Update*.
+- **Manage App Control for Business policy** - Accounts must have the **Security baseline** permissions for *Delete*, *Read*, *Assign*, *Create*, and *Update*.
 
 - **View reports for App Control for Business policy** - Accounts must have the **Organization** permission of *Read*.
 

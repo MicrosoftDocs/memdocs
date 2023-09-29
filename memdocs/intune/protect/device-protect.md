@@ -75,7 +75,7 @@ Following are a few of the security settings and tasks you can manage through de
   - For [iOS](../protect/software-updates-ios.md), manage device operating system versions, and when devices check for and install updates.
   - For [Windows 10](../protect/windows-update-for-business-configure.md), you can manage the Windows Update experience for devices. You can configure when devices scan or install updates, hold a set of your managed devices at specific feature versions, and more.
 
-- **Security Baselines** – Deploy [security baselines](../protect/security-baselines.md) to establish a core security posture on your Windows 10 devices. Security baselines are pre-configured groups of Windows settings that are recommended by the relevant product teams. You can use baselines as provided or edit instances of them to meet your security goals for targeted groups of devices.
+- **Security baselines** – Deploy [security baselines](../protect/security-baselines.md) to establish a core security posture on your Windows 10 devices. Security baselines are pre-configured groups of Windows settings that are recommended by the relevant product teams. You can use baselines as provided or edit instances of them to meet your security goals for targeted groups of devices.
 
 ## Protect data through policies
 

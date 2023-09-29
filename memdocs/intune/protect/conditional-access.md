@@ -5,9 +5,9 @@ title: Use Conditional Access with Microsoft Intune compliance policies
 titleSuffix: Microsoft Intune
 description: Combine Conditional Access with Intune compliance policies to define the requirements that users and devices must meet before gaining access your organizations resources. 
 keywords:
-author: brenduns
-ms.author: brenduns
-manager: dougeby
+author: lenewsad
+ms.author: lanewsad
+manager: dougeby    
 ms.date: 09/25/2023
 ms.topic: overview
 ms.service: microsoft-intune
@@ -29,6 +29,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
 - tier2
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Learn about Conditional Access and Intune

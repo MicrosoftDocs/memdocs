@@ -4,8 +4,8 @@
 title: Learn about using Windows Update for Business in Microsoft Intune
 description: Manage Windows 10 and Windows 11 software updates by using Intune policy for Update rings for Windows and Windows feature updates for Windows Update for Business settings in Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 08/30/2023
 ms.topic: overview
