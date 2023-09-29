@@ -68,7 +68,7 @@ Review the [license terms](https://github.com/msintuneappsdk/ms-intune-tunnel-s
 
 The Tunnel for MAM SDK relies on the Intune MAM SDK to enforce application protection policies (APP) and Application Configuration Policies (ACP).
 
-The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis).
+The Tunnel for MAM SDK relies on [Microsoft Authentication Library (MSAL)](https://learn.microsoft.com/azure/active-directory/develop/msal-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis).
 
 If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Microsoft Entra ID follow the subsequent steps to establish tunnel connectivity for your Xamarin application. For detailed instructions and additional information, refer to the developer guide.
 
