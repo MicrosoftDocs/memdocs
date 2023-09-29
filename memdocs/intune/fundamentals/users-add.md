@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ ms.collection:
 
 # Add users and grant administrative permission to Intune
 
-As an administrator, you can add users directly or synchronize users from your on-premises Active Directory. Once added, users can enroll devices and access company resources. You can also give users additional permissions including *global administrator* and *service administrator* permissions.
+As an administrator, you can add users directly or synchronize users from your on-premises Active Directory. Once added, users can enroll devices and access company resources. You can also give users more permissions including *global administrator* and *service administrator* permissions.
 
 ## Add users to Intune
 
@@ -47,10 +47,10 @@ You can manually add users to your Intune subscription via the [Microsoft 365 ad
    - **User name** - Universal principle name (UPN) stored in Azure Active Directory used to access the service.
    - **Password** - Autogenerate or create.
 4. Choose **Next**.
-5. On the **Assign product licenses** page, select a **Location** and then choose a license for this user. A license including Intune is required.
+5. In the **Assign product licenses** page, select a **Location** and then choose a license for this user. A license including Intune is required.
 6. Choose **Next**.
-7. On the **Optional settings** page, you can
-    - Assign the new user additional roles (by default the new user is given the User role).
+7. In the **Optional settings** page, you can
+    - Assign the new user more roles (by default the new user is given the User role).
     - Provide profile information.
 8. Choose **Next**.
 9. On the **Review and finish** page, select **Finish adding** to add the user. Choose **Close** to close the **Add a user** page.
@@ -117,7 +117,7 @@ To access the Microsoft 365 admin center, your account must have a **Sign-in all
 
 ## Sync Active Directory and add users to Intune
 
-You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity much simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Azure AD tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
+You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Azure Active Directory (Azure AD) which includes Intune users. Having your on-premises Active Directory service connected with all of your Azure Active Directory-based services makes managing user identity simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Azure AD tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
 
 Be sure your AD admins have access to your Azure AD subscription, and are trained to complete common AD and Azure AD tasks.
 
