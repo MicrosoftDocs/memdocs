@@ -290,7 +290,7 @@ After a *Refresh*, the new baseline profile appears in the admin center.
 
 ## Older baseline versions
 
-Microsoft Intune updates the versions of built-in Security Baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will use the latest baseline version as a starting point to their Device Configuration profiles.
+Microsoft Intune updates the versions of built-in security baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will use the latest baseline version as a starting point to their Device Configuration profiles.
 
 When there are no longer any profiles that use an older baseline listed in your tenant, Microsoft Intune lists the latest baseline version available.
 

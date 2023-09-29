@@ -105,7 +105,7 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
-In the Intune admin center, there are few places you can create configuration policies, including Group Policy analytics, Endpoint Security, Security Baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+In the Intune admin center, there are few places you can create configuration policies, including Group Policy analytics, endpoint security, security baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
 
 ### Custom iOS/iPadOS or macOS policies that conflict
 
