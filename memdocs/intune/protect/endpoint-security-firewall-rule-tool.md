@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/31/2022
+ms.date: 09/29/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,7 @@ Many organizations are moving their security configuration to Microsoft Intune t
 
 Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**, which is a PowerShell script.
 
-When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10/11 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Azure AD groups to configure MDM and co-managed clients.
+When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10/11 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Microsoft Entra ID groups to configure MDM and co-managed clients.
 
 Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):
 
@@ -50,13 +50,13 @@ Run the tool on a reference machine to migrate that machines current Windows Fir
 
 1. Sign in to the reference machine with local administrator privileges.
 
-2. Download the pre-requisite PowerShell module(s) from [Github](https://github.com/microsoft/Intune-PowerShell-Management/archive/master.zip)
+2. Download the prerequisite PowerShell module(s) from [GitHub](https://github.com/microsoft/Intune-PowerShell-Management/archive/master.zip)
 
-   The zip file should be extracted into a root folder where you will place the script in the next step.
+   The zip file should be extracted into a root folder where you place the script in the next step.
 
 3. Download and unzip the file `Export-FirewallRules.zip`.
 
-   The zip file contains the script file `Export-FirewallRules.ps1`. This should be extracted to the root folder from the above step, where you should now have the `Export-FirewallRules.ps1` and subfolder "Intune-PowerShell-Management-master"
+   The zip file contains the script file `Export-FirewallRules.ps1`. Extract the script to the root folder from the previous step, where you should now have the `Export-FirewallRules.ps1` and subfolder "Intune-PowerShell-Management-master"
 
 4. Launch PowerShell with the following switch - "PowerShell.exe -Executionpolicy Bypass"
 
@@ -70,7 +70,7 @@ Run the tool on a reference machine to migrate that machines current Windows Fir
    > Running "[System.Runtime.InteropServices.RuntimeEnvironment]::SystemConfigurationFile" from a PowerShell window will provide you with the path to your configuration file.
    > Remember to revert the .NET Framework security change when you have imported your firewall rules.
 
-7. Provide a policy name when prompted. The policy name must be unique for the tenant.
+6. Provide a policy name when prompted. The policy name must be unique for the tenant.
 
    When more than 150 firewall rules are found, multiple policies are created.
 
@@ -81,15 +81,15 @@ Run the tool on a reference machine to migrate that machines current Windows Fir
    >
    > The time the tool takes to run depends on the number of firewall rules found.
 
-8. After the tool runs, it outputs a count of firewall rules that it couldn't automatically migrate. For more information, see [Unsupported configuration](#unsupported-configuration).
+7. After the tool runs, it outputs a count of firewall rules that it couldn't automatically migrate. For more information, see [Unsupported configuration](#unsupported-configuration).
 
 ## Switches
 
 Use the following switches (parameters) to modify the tool's default behavior.
 
-- `IncludeLocalRules` - Use this switch to include all locally created/default Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
+- `IncludeLocalRules` - Use this switch to include all locally created/default Windows Firewall rules in the export. Use of this switch can result in a large count of included rules.
 
-- `IncludedDisabledRules` - e this switch to include all enabled and disabled Windows firewall rules in the export. Use of this switch can result in a large count of included rules.
+- `IncludedDisabledRules` - e this switch to include all enabled and disabled Windows Firewall rules in the export. Use of this switch can result in a large count of included rules.
 
 ## Unsupported configuration
 
@@ -140,4 +140,4 @@ Users assigned the Intune roles for Endpoint Security Manager, Intune Service Ad
 
 ## Next steps
 
-After creating Endpoint security policies for Firewall rules, assign those policies to Azure AD groups to configure both your MDM and co-managed clients. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+After creating Endpoint security policies for Firewall rules, assign those policies to Microsoft Entra ID groups to configure both your MDM and co-managed clients. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
