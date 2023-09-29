@@ -67,7 +67,7 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 
 3. Next, find the Microsoft Entra ID Group ID for the accounts you use to grant Microsoft Entra ID users access to the Lookout Console. One group is for *full access*, and the second group, for *restricted access* is optional. To get the *Object ID*, for each account:
 
-   1. Go to **Azure Active Directory** > **Groups** to open the *Groups - All groups* pane.
+   1. Go to **Microsoft Entra ID** > **Groups** to open the *Groups - All groups* pane.
 
    2. Select the group you created for *full access* to open its *Overview* pane.
 
