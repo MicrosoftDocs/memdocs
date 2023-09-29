@@ -8,7 +8,7 @@ keywords: privacy, personal data
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/27/2022
+ms.date: 09/29/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,7 +85,7 @@ Required data collected by Intune may include, but isn't limited to:
 | **Customer third party tenant IDs** (like Apple ID) |    | No  |
 | **Device Data** |   Account ID                           | Yes |
 |         |   AppleID for iOS/iPadOS devices               | No  |
-|         |   Azure Active Directory device ID             | Yes (If device is Azure Active Directory (Azure AD) joined) |
+|         |   Microsoft Entra device ID             | Yes (If device is Microsoft Entra ID joined) |
 |         |   Intune device ID                             | Yes (If device is MDM enrolled with Intune) |
 |         |   Device storage space                         | No  |
 |         |   EAS device ID                                | No  |
@@ -107,7 +107,7 @@ Required data collected by Intune may include, but isn't limited to:
 |         |   Operating system version| Yes |
 |         |   Serial number           | No  |
 |         |   Wi-Fi MacAddress        | No  |
-| **Managed application information** |   Azure Active Directory device ID | Yes (If device is Azure AD joined) |
+| **Managed application information** |   Microsoft Entra device ID | Yes (If device is Microsoft Entra ID joined) |
 |         |   Device enrollment status                     | Yes |
 |         |   Device health status                         | Yes (Includes threat status if a Mobile Threat Defense connector is configured) |
 |         |   Encryption keys                              | Yes |
