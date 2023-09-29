@@ -4,8 +4,8 @@
 title: Device compliance policies in Microsoft Intune
 description: Get started with using compliance policies, including compliance policy settings and device compliance policies for Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/08/2023
 ms.topic: overview
@@ -27,6 +27,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- compliance
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune

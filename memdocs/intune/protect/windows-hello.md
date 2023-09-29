@@ -4,8 +4,8 @@ title: Configure a tenant-wide Windows Hello for Business policy with Microsoft 
 titleSuffix: Microsoft Intune
 description: Apply policy for Windows Hello for Business on devices at the time they enroll with Microsoft Intune
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/14/2023
 ms.topic: how-to
@@ -26,6 +26,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- identity-protection
 ms.reviewer: shpate
 ---
 

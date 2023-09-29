@@ -5,8 +5,8 @@ title: Set up app-based Conditional Access policies with Intune
 titleSuffix: Microsoft Intune
 description: Create Conditional Access policies that work with Intune app protection policies
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/15/2022
 ms.topic: how-to
@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Set up app-based Conditional Access policies with Intune
