@@ -4,8 +4,8 @@
 title: Deploy policy for Windows Hello to groups of Windows 10 and Windows 11 devices in Microsoft Intune
 description: Use an Identity protection profile in Microsoft Intune to configure groups of devices to use Windows Hello for Business. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/25/2022
 ms.topic: how-to
@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- identity-protection
 ---
 
 # Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune

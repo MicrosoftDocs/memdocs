@@ -4,15 +4,14 @@
 title: Device compliance partners in Microsoft Intune
 description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 01/31/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.reviewer: tycast
 
 # optional metadata
@@ -27,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Support third-party device compliance partners in Intune
