@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/08/2022
+ms.date: 09/29/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,7 +61,7 @@ Microsoft Intune only attempts Samsung Knox activation during enrollment on supp
 > [!NOTE]
 > You may need to enable access to Samsung servers to enroll Samsung Knox devices. For more information about enrollment, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).  
 
-The Samsung device models in the following table don't support Knox solutions and features. Intune enrolls them as native Android devices. 
+The Samsung device models in the following table don't support Knox solutions and features. Intune enrolls them as native Android devices.
 
 | **Device Name** | **Device Model Numbers** |
 | --- | --- |
