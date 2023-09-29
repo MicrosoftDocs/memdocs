@@ -4,8 +4,8 @@
 title: Create a discovery script for custom compliance policy in Microsoft Intune
 description: Create scripts for Linux or Windows devices to discover the settings you define as custom compliance settings for Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/19/2022
 ms.topic: conceptual
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Custom compliance discovery scripts for Microsoft Intune

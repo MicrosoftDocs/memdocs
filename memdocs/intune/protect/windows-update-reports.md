@@ -5,8 +5,8 @@ title: Use Windows Update for Business reports for Windows Updates in Microsoft 
 titleSuffix: Microsoft Intune
 description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 09/22/2023
 ms.topic: how-to

@@ -226,11 +226,11 @@ The following permissions are available when creating custom roles.
 | Roles/Delete | Delete a custom Intune role. You cannot delete built-in roles. | 
 | Roles/Read | View permissions, role assignments, member groups and scope groups for any built-in or custom Intune role. | 
 | Roles/Update | Update custom role permissions and role assignments for built-in or custom roles. Role assignments define the administrators and end user scope for the role.  | 
-| Security baselines/Assign | Assign Security Baseline profiles to Azure AD security groups. | 
-| Security baselines/Create | Create new Security Baseline profiles. | 
-| Security baselines/Delete | Delete Security Baseline profiles. | 
-| Security baselines/Read | View Security Baseline profiles or profiles reporting or Template reporting for all Security Baseline workspace. | 
-| Security baselines/Update | Update Security Baseline profiles. | 
+| Security baselines/Assign | Assign security baseline profiles to Azure AD security groups. | 
+| Security baselines/Create | Create new security baseline profiles. | 
+| Security baselines/Delete | Delete security baseline profiles. | 
+| Security baselines/Read | View security baseline profiles or profiles reporting or Template reporting for all security baseline workspace. | 
+| Security baselines/Update | Update security baseline profiles. | 
 | Security tasks/Read | View security tasks. | 
 | Security tasks/Update | Update security tasks. | 
 | Terms and conditions/Assign | Assign terms and conditions to Azure AD security groups. | 

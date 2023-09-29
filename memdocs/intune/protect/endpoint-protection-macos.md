@@ -4,8 +4,8 @@
 title: Configure endpoint protection on macOS devices with Microsoft Intune | Microsoft Docs
 description: Use Intune to configure macOS devices use the built-in firewall to allow or block specific apps or to use stealth mode, to use Gatekeeper to determine where apps install, and to use FileVault disk encryption.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/15/2022
 ms.topic: reference
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- endpoint-protection
 ---
 
 # macOS endpoint protection settings in Intune
