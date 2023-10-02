@@ -33,9 +33,9 @@ ms.collection:
 
 # Use Trellix Mobile Security with Intune
 
-You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by Trellix Mobile Security Mobile, a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Trellix Mobile Security app.
+You can control mobile device access to corporate resources using Conditional Access based on a risk assessment that's conducted by Trellix Mobile Security. Trellix Mobile Security is a Mobile Threat Defense (MTD) solution that integrates with Microsoft Intune. Risk is assessed based on telemetry collected from devices running the Trellix Mobile Security app.
 
-You can configure Conditional Access policies based on Trellix Mobile Security risk assessment enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
+You can configure Conditional Access policies that are based on Trellix Mobile Security risk assessment. These policies are enabled through Intune device compliance policies for enrolled devices, which you can use to allow or block noncompliant devices to access corporate resources based on detected threats. For unenrolled devices, you can use app protection policies to enforce a block or selective wipe based on detected threats.
 
 ## Supported platforms
 
@@ -53,7 +53,7 @@ For more information, see the documentation for Trellix Mobile Security.
 
 ## How do Intune and Trellix Mobile Security help protect your company resources?
 
-The Trellix Mobile Security app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the Trellix Mobile Security cloud service to assess the device's risk for mobile threats.
+The Trellix Mobile Security app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available. Trellis then sends the telemetry data to the Trellix Mobile Security cloud service to assess the device's risk for mobile threats.
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Trellix Mobile Security. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Trellix Mobile Security app installed in their devices to resolve the issue and regain access to corporate resources. To support using Trellix Mobile Security with enrolled devices:
 
