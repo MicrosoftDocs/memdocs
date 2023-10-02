@@ -45,10 +45,8 @@ You can configure Conditional Access policies based on Trellix Mobile Security r
 
 ## Prerequisites
 
-- Azure Active Directory Premium
-
+- Microsoft Entra ID Premium
 - Microsoft Intune Plan 1 subscription
-
 - Trellix Mobile Security subscription
 
 For more information, see the documentation for Trellix Mobile Security.
@@ -58,6 +56,7 @@ For more information, see the documentation for Trellix Mobile Security.
 The Trellix Mobile Security app for Android and iOS/iPadOS captures file system, network stack, device, and application telemetry where available, then sends the telemetry data to the Trellix Mobile Security cloud service to assess the device's risk for mobile threats.
 
 - **Support for enrolled devices** - Intune device compliance policy includes a rule for Mobile Threat Defense (MTD), which can use risk assessment information from Trellix Mobile Security. When the MTD rule is enabled, Intune evaluates device compliance with the policy that you enabled. If the device is found noncompliant, users are blocked access to corporate resources like Exchange Online and SharePoint Online. Users also receive guidance from the Trellix Mobile Security app installed in their devices to resolve the issue and regain access to corporate resources. To support using Trellix Mobile Security with enrolled devices:
+
   - [Add MTD apps to devices](../protect/mtd-apps-ios-app-configuration-policy-add-assign.md)
   - [Create a device compliance policy that supports MTD](../protect/mtd-device-compliance-policy-create.md)
   - [Enable the MTD connector in Intune](../protect/mtd-connector-enable.md)
@@ -77,9 +76,7 @@ See below a few scenarios when integrating Trellix Mobile Security with Intune:
 When malicious apps such as malware are detected on devices, you can block devices until the threat is resolved:
 
 - Connecting to corporate e-mail
-
 - Syncing corporate files with the OneDrive for Work app
-
 - Accessing company apps
 
 *Block when malicious apps are detected:*
@@ -127,11 +124,7 @@ Access is granted on remediation:
 ## Next steps
 
 - [Integrate Trellix Mobile Security with Intune](mcafee-mtd-connector-integration.md)
-
 - [Set up Trellix Mobile Security apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
-
 - [Create Trellix Mobile Security device compliance policy](mtd-device-compliance-policy-create.md)
-
 - [Enable Trellix Mobile Security MTD connector](mtd-connector-enable.md)
-
 - [Create an MTD app protection policy](../protect/mtd-app-protection-policy.md)

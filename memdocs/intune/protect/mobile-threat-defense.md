@@ -34,6 +34,7 @@ ms.collection:
 # Mobile Threat Defense integration with Intune
 
 > [!NOTE]
+>
 > This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
 
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
@@ -41,6 +42,7 @@ Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an inform
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
 > [!NOTE]
+>
 > Intune for GCC High only supports the Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors that also have support in this environment. You will see connectors enabled for those specific vendors when you log in with a GCC-H tenant. Learn more about [Microsoft Intune for US Government GCC High support](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 ## Protect corporate resources
@@ -57,15 +59,15 @@ For example: A connected MTD app reports to the MTD vendor that a phone on your 
 
 ### Connector status
 
-Once you add a Mobile Threat Defense connector to your tenant, the status will show one of the following states:
+Once you add a Mobile Threat Defense connector to your tenant, the status displays one of the following states:
 
 | Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
 |--------------|-----------|------------|------------|
-| **Unavailable**| Connector is/was deprovisioned. The MTD partner will need to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308)
-| **Not Set Up**| Connector setup is not complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309)
-| **Available**| Connector setup is complete. At least 1 platform toggle must be turned on for this status to change to **Enabled**. | No | No
-| **Enabled**| Connector setup is complete, and at least 1 platform toggle is currently turned on for this connector. | No | No
-| **Unresponsive**| Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.| No | No
+| **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308)
+| **Not Set Up**| Connector setup isn't complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309)
+| **Available**| Connector setup is complete. At least one platform toggle must be turned on for this status to change to **Enabled**. | No | No
+| **Enabled**| Connector setup is complete, and at least one platform toggle is currently turned on for this connector. | No | No
+| **Unresponsive**| Connector isn't responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune ignores the compliance state.| No | No
 | **Error**| Connector has an error code. Some MTD partners may choose to send this in an error case. | No | No
 
 ## Data that Intune collects for Mobile Threat Defense
@@ -109,9 +111,9 @@ Access is granted when the device is remediated:<br>
 ![Image showing a Mobile Threat Defense access granted](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
-> We recommend using one Mobile Threat Defense vendor per tenant per platform. 
-> 
-> For Device Compliance, you can use multiple Mobile Defense vendors with a single Intune tenant. However, when two or more vendors are configured for use for the same platform, all devices that run that platform must install each MTD app and scan for threats. Failure to submit a scan from any configured app results in the device being marked as non-compliant. 
+> We recommend using one Mobile Threat Defense vendor per tenant per platform.
+>
+> For Device Compliance, you can use multiple Mobile Defense vendors with a single Intune tenant. However, when two or more vendors are configured for use for the same platform, all devices that run that platform must install each MTD app and scan for threats. Failure to submit a scan from any configured app results in the device being marked as non-compliant.
 >
 > This recommendation does not apply to Microsoft Defender for Endpoint. You can use Defender for Endpoint with a third-party MTD app and check compliance separately by deploying different compliance policies to different groups.
 

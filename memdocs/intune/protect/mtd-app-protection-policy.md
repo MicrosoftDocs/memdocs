@@ -42,7 +42,7 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
 > - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
-> - MVITrellix Mobile Security (Android, iOS/iPadOS)
+> - Trellix Mobile Security (Android, iOS/iPadOS)
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android, iOS/iPadOS)
@@ -55,14 +55,14 @@ As part of the MTD setup, in the MTD partner console, you created a policy that 
 
 Prerequisites for app protection policy with MTD:
 
-- Set up MTD integration with Intune. Without this integration, the MTD app protection policy will have no effect.
+- Set up MTD integration with Intune. Without this integration, the MTD app protection policy has no effect.
 
 ## To create an MTD app protection policy for mobile
 
 Use the procedure to [create an Application protection policy for either iOS/iPadOS or Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
 
-- **Apps**: Select the apps you wish to be targeted by app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
-- **Conditional launch**:  Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.
+- **Apps**: Select the apps you wish to target with app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
+- **Conditional launch**: Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.
 
   Options for the threat level **Value**:
 
@@ -76,13 +76,13 @@ Use the procedure to [create an Application protection policy for either iOS/iPa
   - **Block access**
   - **Wipe data**
 
-- **Assignments**: Assign the policy to groups of users.  The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
+- **Assignments**: Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
 ## To create an MTD app protection policy for Windows
 
 Use the procedure to [create an Application protection policy for Windows](../apps/app-protection-policy-settings-windows.md), and use the following information on the *Apps*, *Health Checks*, and *Assignments* pages:
 
-- **Apps**: Select the apps you want to be targeted by app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
+- **Apps**: Select the apps you want to target app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Health Checks**: Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.
 
   Options for the threat level **Value**:
@@ -97,7 +97,7 @@ Use the procedure to [create an Application protection policy for Windows](../ap
   - **Block access**
   - **Wipe data**
   - **Assignments**: Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
-      
+
 > [!IMPORTANT]
 >
 > If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that don’t meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they are prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
@@ -105,5 +105,3 @@ Use the procedure to [create an Application protection policy for Windows](../ap
 ## Next steps
 
 - Learn more about [Mobile Threat Defense](mobile-threat-defense.md) in Microsoft Intune.
-      
-
