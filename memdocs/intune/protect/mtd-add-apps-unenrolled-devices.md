@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,9 +46,9 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 > - Better Mobile (Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
-> - MVISION Mobile (Android, iOS/iPadOS)
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
+> - Trellix Mobile Security (Android, iOS/iPadOS)
 > - Wandera (Android, iOS/iPadOS)
 > - Zimperium (Android, iOS/iPadOS)
 >
@@ -96,12 +96,12 @@ However, should you wish to make the app available to end users via the Intune C
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Lookout for Work - iOS App Store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) when completing the **Configure app information** section.
 
-### Making MVISION Mobile available to end users
+### Making Trellix Mobile Security available to end users
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [MVISION Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision&hl=en_CA&gl=US) when completing the **Configure app information** section.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Trellix Mobile Security - Play Store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision&hl=en_CA&gl=US) when completing the **Configure app information** section.
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [MVISION Mobile - App Store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) when completing the **Configure app information** section.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Trellix Mobile Security - App Store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) when completing the **Configure app information** section.
 
 ### Making SentinelOne available to end users
 

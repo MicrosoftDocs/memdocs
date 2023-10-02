@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/28/2023
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,9 +41,9 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > - Better Mobile (Android,iOS/iPadOS)
 > - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
-> - MVISION Mobile (Android,iOS/iPadOS)
 > - SentinelOne (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
+> - Trellix Mobile Security (Android,iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
 

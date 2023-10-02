@@ -7,7 +7,7 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -107,31 +107,31 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
 
-### MVISION Mobile app configuration policy
+### Trellix Mobile Security app configuration policy
 
 - **Android Enterprise**
-   
-   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the MVISION Android app configuration policy. 
-   
-   For **Configuration settings format**, select **Use configuration designer**, and add the following settings: 
+
+   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Trellix Mobile Security Android app configuration policy.
+
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
 | Configuration key  | Value type | Configuration value  |
 |---|---|---|
 |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-|  tenantid | string  | Copy value from admin console “Manage” page in the MVISION console |
-|  defaultchannel | string   | Copy value from admin console “Manage” page in the MVISION console  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
 
 - **iOS**
-   
-   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the MVISION Mobile iOS app configuration policy.
-   
-   For **Configuration settings format**, select **Use configuration designer**, and add the following settings: 
+
+   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trellix Mobile Security iOS app configuration policy.
+
+   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
 | Configuration key  | Value type | Configuration value  |
 |---|---|---|
 |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-|  tenantid | string  | Copy value from admin console “Manage” page in the MVISION console |
-|  defaultchannel | string   | Copy value from admin console “Manage” page in the MVISION console  |
+|  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
+|  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
 
 ### Pradeo app configuration policy
 
@@ -140,9 +140,9 @@ Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead,
 ### SentinelOne app configuration policy
 
 - **Android Enterprise**
-   
+
    See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the SentinelOne Android app configuration policy. 
-   
+
    For **Configuration settings format**, select **Use configuration designer**, and add the following settings: 
 
 | Configuration key  | Value type | Configuration value  |
@@ -152,7 +152,7 @@ Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead,
 |  defaultchannel | string   | Copy value from admin console “Manage” page in the SentinelOne console  |
 
 - **iOS**
-   
+
    See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the SentinelOne iOS app configuration policy.
 
    For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -255,11 +255,11 @@ Choose the section that corresponds to your MTD provider:
 - [Better Mobile](#assigning-better-mobile)
 - [Check Point Harmony Mobile Protect](#assigning-check-point-harmony-mobile-protect)
 - [Lookout for Work](#assigning-lookout-for-work)
-- [MVISION Mobile](#assigning-mvision-mobile)
 - [Pradeo](#assigning-pradeo)
 - [SentinelOne](#assigning-sentinelone)
 - [Sophos Mobile](#assigning-sophos)
 - [Symantec Endpoint Protection Mobile (SEP Mobile)](#assigning-symantec-endpoint-protection-mobile)
+- [Trellix Mobile Security](#assigning-trellix-mobile-security)
 - [Wandera](#assigning-wandera)
 - [Zimperium](#assigning-zimperium)
 
@@ -311,13 +311,13 @@ Choose the section that corresponds to your MTD provider:
 
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
-### Assigning MVISION Mobile
+### Assigning Trellix Mobile Security
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [MVISION Mobile app store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Trellix Mobile Security app store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [MVISION Mobile app store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Trellix Mobile Security app store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) for the **Appstore URL**.
 
 
 ### Assigning Pradeo
