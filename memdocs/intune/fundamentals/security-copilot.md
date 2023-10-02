@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/28/2023
+ms.date: 10/02/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: device-management
@@ -54,7 +54,11 @@ This article introduces you to Security Copilot and includes sample prompts that
 
 - Experiment with different prompts and variations to see what works best for your use case. Chat AI models vary, so iterate and refine your prompts based on the results you receive.
 
-- When you have a good prompt, save the text for future use. When you close the Security Copilot session, your prompts and answers aren't saved.
+- Security Copilot saves your prompt sessions. To see the previous sessions, in Security Copilot, go to the menu > **My investigations**:
+
+  :::image type="content" source="./media/security-copilot/security-copilot-menu-my-investigations.png" alt-text="Screenshot that shows the Microsoft Security Copilot menu and My investigations with previous sessions.":::
+
+  For a walkthrough on Security Copilot, including the pin and share feature, go to [Navigating Microsoft Security Copilot](/security-copilot/navigating-security-copilot).
 
 For more information on writing Security Copilot prompts, go to [Microsoft Security Copilot prompting tips](/security-copilot/prompting-tips).
 
@@ -68,17 +72,20 @@ For more information on writing Security Copilot prompts, go to [Microsoft Secur
 > This warning will be deleted from the article closer to the EAP release. **For questions, contact Mandi Ohlinger (mandia)**.
 
 1. Go to `https://go.microsoft.com/fwlink/?linkid=2247989` and sign in with your credentials.
-2. By default, Intune should be enabled. To confirm, select **Connections** (bottom left corner):
+2. By default, Intune should be enabled. To confirm, select **plugins** (bottom left corner):
 
-    :::image type="content" source="./media/security-copilot/security-copilot-connections.png" alt-text="Screenshot that shows the connections that are available, enabled, and disabled in Microsoft Security Copilot.":::
+    :::image type="content" source="./media/security-copilot/security-copilot-plugins.png" alt-text="Screenshot that shows the plugins that are available, enabled, and disabled in Microsoft Security Copilot.":::
 
-    In **My connections**, confirm Microsoft Intune is on. Close **Connections**.
+    In **My plugins**, confirm Microsoft Intune is on. Close **Plugins**.
+
+    > [!NOTE]
+    > Some roles can enable or disable plugins, like Microsoft Intune. For more information, go to [Manage plugins in Microsoft Security Copilot](/security-copilot/manage-plugins).
 
 3. Enter your prompt.
 
 ## Built-in system features
 
-In Security Copilot, there are built in system features. These features can get data from the different connections that are enabled.
+In Security Copilot, there are built in system features. These features can get data from the different plugins that are enabled.
 
 To view the list of built-in system capabilities for Intune, use the following steps:
 
@@ -151,15 +158,17 @@ Get the **similarities and differences** between two devices, like the complianc
 
 Your feedback on the Intune integration with Security Copilot helps with development. To provide feedback, in Security Copilot, use the feedback buttons at the bottom of each completed prompt:
 
+**TO DO: UPDATE SCREENSHOT WHEN CHANGES ARE IN UI**
+
 :::image type="content" source="./media/security-copilot/security-copilot-prompt-feedback.png" alt-text="Screenshot that shows how to submit feedback on the prompt results in Microsoft Security Copilot.":::
 
 Your options:
 
-- **Confirm**: The results match expectations.
-- **Off-target**: The results don't match expectations.
-- **Report**: The results are harmful in some way.
+- **Looks right**: The results match expectations.
+- **Needs improvement**: The results don't match expectations.
+- **Inappropriate**: The results are harmful in some way.
 
-Whenever possible, and when the result is **Off-target**, write a few words explaining what can be done to improve the outcome. If you entered Intune-specific prompts and the results aren't Intune related, then include that information.
+Whenever possible, and when the result is **Needs improvement**, write a few words explaining what can be done to improve the outcome. If you entered Intune-specific prompts and the results aren't Intune related, then include that information.
 
 ## Data processing and privacy
 
