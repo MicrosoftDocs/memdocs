@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Integrate MVISION Mobile MTD with Microsoft Intune
+title: Integrate Trellix Mobile Security MTD with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: How to set up the MVISION Mobile mobile threat defense (MTD) solution with Microsoft Intune to control mobile device access to your corporate resources.
+description: How to set up the Trellix Mobile Security mobile threat defense (MTD) solution with Microsoft Intune to control mobile device access to your corporate resources.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,13 +31,13 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Integrate MVISION Mobile with Intune
+# Integrate Trellix Mobile Security with Intune
 
-Complete the following steps to integrate the MVISION Mobile mobile threat defense solution with Intune.
+Complete the following steps to integrate the Trellix Mobile Security threat defense solution with Intune.
 
 ## Before you begin
 
-The following steps are done in the MVISION Mobile console <!-- Link pending --> and will enable a connection to MVISION Mobile's service for Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are done in the MVISION Mobile console and will enable a connection to MVISION Mobile's service for Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating MVISION Mobile with Intune, make sure you have the following subscription and credentials:
 
