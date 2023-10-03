@@ -109,7 +109,7 @@ For information on some features you can configure using the settings catalog, g
 
     - Intune doesn't change or update this setting. The minus is the same as **Not configured**. When set to **Not configured**, the setting is no longer managed.
     - The setting is removed from the policy. The next time you open your policy, the setting isn't shown. You can add it again.
-    - The next time devices check in, the setting is no longer locked. It can be changed by another policy or by the device user.
+    - The next time devices check in, the setting is no longer locked. Another policy or device user can change the policy.
 
     > [!TIP]
     >
@@ -159,10 +159,6 @@ There are thousands of settings available in the settings catalog. To make it ea
 
 ## Copy a profile  
 
-This feature applies to:
-
-- Windows 10 and later
-
 Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
 1. Go to **Devices** > **Configuration profiles**.
@@ -171,21 +167,25 @@ Select **Duplicate** to create a copy of an existing profile. Duplicating is use
 4. Enter a new name and description for the policy.
 5. **Save** your changes.
 
-## Import and export
+## Import and export a profile
 
-When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you can export a policy, and then import it to create a new policy. You can then make changes to the new policy.
+This feature applies to:
+
+- Windows 10 and later
+
+When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 
 1. Go to **Devices** > **Configuration profiles**.
 
 2. To export an existing policy, select the profile > select the ellipsis context menu (`…`) > **Export JSON**:
 
-    :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to export a settings catalog policy as JSON in Microsoft Intune and Intune admin center.":::
 
-3. To import a previously exported settings catalog policy, select **Create profile** > **Import policy**:
+3. To import a previously exported settings catalog policy, select **Create** > **Import policy**:
 
-    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center.":::
 
-    Select the previously exported file and name your new policy. **Save** your changes.
+    Select the JSON file you exported and name your new policy. **Save** your changes.
 
 ## Reporting and conflicts
 
@@ -211,7 +211,7 @@ You create the policy, and assign it to your groups. In the Intune admin center,
     - Select the number of devices in compliance, conflict, or error. And, see a list of users or devices in that state.
     - Search, sort, filter, export, and go to the next and previous pages.
 
-5. In the admin center, select **Devices** > **Monitor** > **Assignment failures**. If your Settings Catalog policy failed to deploy because of an error or conflict, it will show in this list. You can also **Export** to a `.csv` file.
+5. In the admin center, select **Devices** > **Monitor** > **Assignment failures**. If your Settings Catalog policy failed to deploy because of an error or conflict, it shows in this list. You can also **Export** to a `.csv` file.
 
 6. Select the policy to see the devices. Then, select a specific device to see the setting that failed, and a possible error code.
 
