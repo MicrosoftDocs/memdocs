@@ -1838,7 +1838,6 @@ Following are the new settings, all found in the [Firewall configuration service
 
 Applies to:
 
-- Windows 10
 - Windows 11
 
 #### Endpoint security firewall rules support for Mobile Broadband (MBB)<!-- 16730577  -->  
