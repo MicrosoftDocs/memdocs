@@ -38,7 +38,7 @@ As a security administrator, use the *All devices* view in the Microsoft Intune 
 - Intune
 - Configuration Manager
 - [Co-management](/configmgr/comanage/overview) *(by both Intune and Configuration Manager)*
-- [Defender for Endpoint security settings management](/protect/mde-security-integration) *(for devices that aren't enrolled with Intune)*
+- [Defender for Endpoint security settings management](../protect/mde-security-integration.md) *(for devices that aren't enrolled with Intune)*
 
 Devices can be in the cloud and from your on-premises infrastructure when integrated with your Microsoft Entra ID.
 
