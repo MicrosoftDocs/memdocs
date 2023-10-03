@@ -2177,12 +2177,12 @@
     },
     {
       "source_path": "memdocs/intune/protect/mcafee-mobile-threat-defense-connector.md",
-      "redirect_url": "mem/intune/protect/trellix-mobile-threat-defense-connector",
+      "redirect_url": "/protect/trellix-mobile-threat-defense-connector",
       "redirect_document_id": false
     },
     {
       "source_path": "memdocs/intune/protect/mcafee-mtd-connector-integration.md",
-      "redirect_url": "mem/intune/protect/trellix-mtd-connector-integration",
+      "redirect_url": "/protect/trellix-mtd-connector-integration",
       "redirect_document_id": false
     }
   ]
