@@ -149,6 +149,19 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
  > [!IMPORTANT]  
   > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week. 
 
+### October 2, 2023
+
+Image hash values:
+
+- **agentImageDigest**: sha256:92fc18c61cdadcb9ed1392f9ae3b3f633e1143924a3e370adc82088fc882ef5f
+
+- **serverImageDigest**: sha256:e465e4f7a9a5977950abd44dde1e418a57db5eb9dbb0456e4acc735153589581
+
+Changes in this release:
+- Bug fix: Ensure the monitor starts the container when the state is empty 
+- Bug fix for server container: Check /dev/tun permissions only when the server container is running. 
+- Limit Tunnel server's maximum logging level to verbose to enhance privacy 
+
 ### July 24, 2023
 
 Image hash values:
