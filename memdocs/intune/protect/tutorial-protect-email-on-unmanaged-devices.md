@@ -36,7 +36,7 @@ This tutorial demonstrates how to use Microsoft Intune app protection policies w
 
 > [!div class="checklist"]
 >
-> * Create an Intune app protection policy for the Outlook app. You'll limit what the user can do with app data by preventing *Save As*" and restricting *cut*, *copy*, and *paste* actions.
+> * Create an Intune app protection policy for the Outlook app. You'll limit what the user can do with app data by preventing *Save As* and restricting *cut*, *copy*, and *paste* actions.
 > * Create Microsoft Entra Conditional Access policies that allows only the Outlook app to access company email in Exchange Online. You'll also require multi-factor authentication (MFA) for Modern authentication clients, like Outlook for iOS and Android.
 
 ## Prerequisites
@@ -145,7 +145,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
 
    :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-cloud-apps.png" alt-text="Select the Office 365 Exchange Online app.":::
 
-6. Under **Assignments**, for *Conditions*, select **0 conditions selected**, and then for *Device platforms** select *Not configured* to open the Device platforms pane:
+6. Under **Assignments**, for *Conditions*, select **0 conditions selected**, and then for *Device platforms* select *Not configured* to open the Device platforms pane:
 
    1. Set the *Configure* toggle to **Yes**.
    2. On the **Include** tab, choose **Select device platforms**, and then select the checkboxes for **Android** and for **iOS**.
