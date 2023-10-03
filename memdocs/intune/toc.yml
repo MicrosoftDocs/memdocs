@@ -726,10 +726,10 @@ items:
               - name: Lookout and Intune integration
                 href: ./protect/lookout-mtd-connector-integration.md
             - name: Set up Trellix Mobile Security
-              href: ./protect/mcafee-mobile-threat-defense-connector.md
+              href: ./protect/trellix-mobile-threat-defense-connector.md
               items:
               - name: Trellix Mobile Security and Intune integration
-                href: ./protect/mcafee-mtd-connector-integration.md 
+                href: ./protect/trellix-mtd-connector-integration.md 
             - name: Set up Pradeo
               href: ./protect/pradeo-mobile-threat-defense-connector.md
               items:

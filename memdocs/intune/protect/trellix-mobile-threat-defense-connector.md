@@ -123,7 +123,7 @@ Access is granted on remediation:
 
 ## Next steps
 
-- [Integrate Trellix Mobile Security with Intune](mcafee-mtd-connector-integration.md)
+- [Integrate Trellix Mobile Security with Intune](trellix-mtd-connector-integration.md)
 - [Set up Trellix Mobile Security apps](mtd-apps-ios-app-configuration-policy-add-assign.md)
 - [Create Trellix Mobile Security device compliance policy](mtd-device-compliance-policy-create.md)
 - [Enable Trellix Mobile Security MTD connector](mtd-connector-enable.md)

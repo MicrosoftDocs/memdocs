@@ -130,7 +130,7 @@ Learn how to protect access to company resource based on device, network, and ap
 - [SentinelOne](Sentinelone-mobile-threat-defense-connector.md)
 - [Sophos Mobile](sophos-mtd-connector.md)
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
-- [Trellix Mobile Security](mcafee-mobile-threat-defense-connector.md)
+- [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md)
 - [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
