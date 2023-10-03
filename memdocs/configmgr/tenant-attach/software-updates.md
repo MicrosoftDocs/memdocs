@@ -4,8 +4,8 @@ description: Software updates for Configuration Manager devices from the admin c
 ms.date: 06/07/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.manager: apoorvseth
 ms.topic: conceptual
 ms.localizationpriority: high
@@ -15,6 +15,9 @@ ms.localizationpriority: high
 *Applies to: Configuration Manager (current branch)*
 
 The **Software updates** page in the admin center displays the status of software updates status for devices. You can review updates that have successfully installed, failed, or that are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting.
+
+> [!IMPORTANT]
+> Shows software updates managed by Configuration Manager only. If the device is also co-managed and the Windows Update workload is managed by Intune, then the blade does not show the status of the updates managed by Intune.
 
 ## Software updates page overview
 
