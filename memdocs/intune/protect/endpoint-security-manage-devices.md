@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2022
+ms.date: 10/03/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,12 +33,14 @@ ms.reviewer: mattcall
 
 # Manage devices with endpoint security in Microsoft Intune
 
-As a security administrator, use the *All devices* view in the Microsoft Intune admin center to review and manage your devices. The view displays a list of all your devices from your Azure Active Directory (Azure AD), including devices managed by:
+As a security administrator, use the *All devices* view in the Microsoft Intune admin center to review and manage your devices. The view displays a list of all your devices from your Microsoft Entra ID, including devices managed by:
+
 - Intune
 - Configuration Manager
 - [Co-management](/configmgr/comanage/overview) *(by both Intune and Configuration Manager)*
+- [Defender for Endpoint security settings management](protect/mde-security-integration) *(for devices that aren't enrolled with Intune)*
 
-Devices can be in the cloud and from your on-premises infrastructure when integrated with your Azure AD.
+Devices can be in the cloud and from your on-premises infrastructure when integrated with your Microsoft Entra ID.
 
  To find the view, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** > **All devices**.
 
@@ -66,9 +68,9 @@ Consider the following fields:
 
   - **ConfigMgr** – These devices appear in the Microsoft Intune admin center when you use *tenant attach* to add the devices you manage with Configuration Manager. To be managed, the device must run the Configuration Manager client and be:
 
-    - In a Workgroup (Azure AD joined and otherwise)
+    - In a Workgroup (Microsoft Entra ID joined and otherwise)
     - Domain Joined
-    - Hybrid Azure AD Joined (joined to the AD and Azure AD)
+    - Hybrid Microsoft Entra ID Joined (joined to the AD and Microsoft Entra ID)
 
     Compliance status for devices that are managed by Configuration Manager isn't visible in the Microsoft Intune admin center.
 
@@ -79,6 +81,8 @@ Consider the following fields:
     With co-management, you [choose different co-management workloads](/configmgr/comanage/how-to-switch-workloads) to determine which aspects are managed by Configuration Manager or by Intune. These choices affect which policies the device applies, and how compliance data is reported to the admin center.
 
     For example, you can use Intune to configure policies for Antivirus, Firewall, and Encryption. These policies are all considered policy for *Endpoint Protection*. To have a co-managed device use the Intune policies and not the Configuration Manager policies, set the co-management slider for Endpoint Protection to either *Intune* or *Pilot Intune*. If the slider is set to Configuration Manager, the device uses the policies and settings from Configuration Manager instead.
+
+  - **MDE** - These are devices that are not enrolled with Intune. Instead, they onboard to Defender for Endpoint and can process many of the [Intune endpoint security policies](../protect/mde-security-integration.md#which-solution-should-i-use). Devices enrolled with security settings management appear both in the Intune admin center and in the Defender portal. In the admin center, the *Managed by* field displays MDE for these devices.
 
 - **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to *Intune* or to *Pilot Intune*.  
 
@@ -113,6 +117,8 @@ The remote actions that are available depend on how the device is managed:
   - App Evaluation Cycle
 
 - **Co-management**: You can access both Intune remote actions and Configuration Manager actions.
+
+- **Defender for Endpoint security settings management** - These devices are not managed by Intune and do not support remote actions.
 
 Some of the Intune remote actions can help secure devices or safeguard data that might be on the device. With remote actions you can:
 
