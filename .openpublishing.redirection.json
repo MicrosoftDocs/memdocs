@@ -2174,6 +2174,16 @@
       "source_path": "memdocs/intune/developer/index.yml",
       "redirect_url": "/mem/intune/",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "memdocs/intune/protect/mcafee-mobile-threat-defense-connector.md",
+      "redirect_url": "memdocs/intune/protect/trellix-mobile-threat-defense-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/mcafee-mtd-connector-integration.md",
+      "redirect_url": "memdocs/intune/protect/trellix-mtd-connector-integration",
+      "redirect_document_id": false
+    },
   ]
 }
