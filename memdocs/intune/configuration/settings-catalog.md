@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -94,7 +94,7 @@ For information on some features you can configure using the settings catalog, g
     > [!TIP]
     >
     > - On macOS, the categories are temporarily removed. To find a specific setting, use the **Microsoft Edge - All** category, or search for the setting name. For a list of the setting names, go to [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
-    > 
+    >
     > - Use the **Learn more** link in the tooltip to see if a setting is obsolete, and to see the supported versions.
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
@@ -112,10 +112,10 @@ For information on some features you can configure using the settings catalog, g
     - The next time devices check in, the setting is no longer locked. It can be changed by another policy or by the device user.
 
     > [!TIP]
-    > 
+    >
     > - In the Windows setting tooltips, **Learn more** links to the CSP.
     > - When a setting allows multiple values, it's recommended to add each value separately.
-    > 
+    >
     >   For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
     >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center":::
     >
@@ -159,13 +159,33 @@ There are thousands of settings available in the settings catalog. To make it ea
 
 ## Copy a profile  
 
+This feature applies to:
+
+- Windows 10 and later
+
 Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
 1. Go to **Devices** > **Configuration profiles**.
-2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (**…**).
+2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (`…`).
 3. Select **Duplicate**.  
 4. Enter a new name and description for the policy.
 5. **Save** your changes.
+
+## Import and export
+
+When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you can export a policy, and then import it to create a new policy. You can then make changes to the new policy.
+
+1. Go to **Devices** > **Configuration profiles**.
+
+2. To export an existing policy, select the profile > select the ellipsis context menu (`…`) > **Export JSON**:
+
+    :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center.":::
+
+3. To import a previously exported settings catalog policy, select **Create profile** > **Import policy**:
+
+    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to open the settings catalog in Microsoft Intune and Intune admin center.":::
+
+    Select the previously exported file and name your new policy. **Save** your changes.
 
 ## Reporting and conflicts
 
