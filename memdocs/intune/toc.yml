@@ -813,6 +813,8 @@ items:
             href: ./protect/software-updates-ios.md
           - name: macOS update policies
             href: ./protect/software-updates-macos.md
+          - name: Declarative software updates for iOS/iPadOS and macOS
+            href: software-updates-declarative-ios-macos.md
           - name: Android Enterprise updates
             items:
             - name: Android FOTA update

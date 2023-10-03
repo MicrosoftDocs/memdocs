@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/18/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,7 +31,7 @@ ms.collection:
 
 # Manage iOS/iPadOS software update policies in Intune
 
-You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that enrolled as *supervised devices*.
+You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that are enrolled as *supervised devices*.
 
 A [supervised device](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
@@ -50,27 +50,28 @@ With policies for iOS software updates, you can:
 
   By default, devices check in with Intune about every eight hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
+- Use the [settings catalog](..configuration/settings-catalog.md) to manage declarative software updates. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
+
 > [!NOTE]
 >
 > - iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) will install only when the device is charging and while no users are signed in to a *Shared iPad session* on he device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
 >
-> - If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behavior may be undesirable.
-Consider testing to assess the impact of OS updates on the app you are running in ASAM. You can use Intune [*device restriction profiles*](../configuration/device-restrictions-ios.md#general) to configure ASAM.
+> - If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the impact of OS updates should be considered as the resulting behavior may be undesirable. Consider testing to assess the impact of OS updates on the app you are running in ASAM. You can use Intune [*device restriction profiles*](../configuration/device-restrictions-ios.md#general) to configure ASAM.
 
 > [!TIP]
 > If you're new to configuring software updates or want some guidance based on common scenarios, go to:
 >
-> - [Software updates admin checklist and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-> - [Software updates admin checklist for BYOD and personal devices](software-updates-guide-personal-byod.md)
+> - [Software updates planning guide for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+> - [Software updates planning guide for BYOD and personal devices](software-updates-guide-personal-byod.md)
 
-## Configure the policy
+## Configure the update policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Update policies for iOS/iPadOS** > **Create profile**.
 3. On the **Basics** tab, specify a name for this policy, specify a description (optional), and then select **Next**.
 4. On the **Update policy settings** tab, configure the following options:
 
-   :::image type="content" source="./media/software-updates-ios/basics-tab.png" alt-text="Example Update policy settings.":::
+   :::image type="content" source="./media/software-updates-ios/basics-tab.png" alt-text="Screenshot that shows sample software update policy settings in Microsoft Intune.":::
 
    1. **Select version to install**. You can choose from:
 
@@ -85,7 +86,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
-      :::image type="content" source="./media/software-updates-ios/scheduled-time.png" alt-text="Example of selecting an update during scheduled time.":::
+      :::image type="content" source="./media/software-updates-ios/scheduled-time.png" alt-text="Screenshot that shows selecting to install an update during scheduled time in an update policy in Microsoft Intune.":::
 
       - **Time zone**: Choose a time zone.
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. With a start day and end day, overnight blocks are supported. Options include:
@@ -120,7 +121,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 > [!NOTE]
 > You can't use Intune software update policies to downgrade the OS version on a device.
 
-## Edit a policy
+## Edit an existing policy
 
 You can edit an existing policy, including changing the restricted times:
 
@@ -128,13 +129,12 @@ You can edit an existing policy, including changing the restricted times:
 
 2. While viewing the policies **Properties**, select **Edit** for the policy page you want to modify.
 
-   :::image type="content" source="./media/software-updates-ios/edit-policy.png" alt-text="Editing an existing policy.":::
+   :::image type="content" source="./media/software-updates-ios/edit-policy.png" alt-text="Screenshot that shows how to edit an existing iOS/iPadOS software update policy in Microsoft Intune.":::
 
 3. After introducing a change, select **Review + save** > **Save** to save your edits, and return to the policies *Properties*.
 
 > [!NOTE]
 > If the **Start time** and **End time** are both set to 12 AM, Intune does not check for restrictions on when to install updates. This means that any configurations you have for **Select times to prevent update installations** are ignored, and updates can install at any time.
-
 
 ## Delay visibility of software updates
 
@@ -166,4 +166,4 @@ For each device on the list, the *Installation Status* displays the error that w
 ## Next steps
 
 - [Monitor device profiles](../configuration/device-profile-monitor.md)
-- [Software updates admin checklist and scenarios for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
+- [Software updates admin guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)

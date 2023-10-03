@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -83,7 +83,7 @@ By default, devices check in with Intune about every 8 hours. If an update is av
         When you configure *Install later* for *All other updates (OS, built-in-apps), the following additional settings are available:
 
         - **Max User Deferrals**:  
-        When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
+        When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it's installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
 
         - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
@@ -147,11 +147,11 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
 When you use update policies for macOS, you might want to hide updates from users of supervised macOS devices for a period of time. You can accomplish this with a settings catalog policy for macOS devices that configure update restriction periods.
 
-A restriction period can give you time to test an update before it’s made available to users to install. After the restriction period ends, the update becomes visible to users, and they can choose to install it if your update policies don’t install it first.
+A restriction period can give you time to test an update before it's made available to users to install. After the restriction period ends, the update becomes visible to users, and they can choose to install it if your update policies don't install it first.
 
-If you use device restrictions to hide an update, review your software update policies to ensure they won’t schedule the installation of that update before the restriction period ends. Software update policies will install updates per their schedule regardless of the update being hidden or visible to the device user.
+If you use device restrictions to hide an update, review your software update policies to ensure they won't schedule the installation of that update before the restriction period ends. Software update policies will install updates per their schedule regardless of the update being hidden or visible to the device user.
 
-You’ll find settings that can restrict visibility of updates on macOS devices in the **Restrictions** category of the [settings catalog](../configuration/settings-catalog.md). A few examples of settings you can use to defer an update include:
+You'll find settings that can restrict visibility of updates on macOS devices in the **Restrictions** category of the [settings catalog](../configuration/settings-catalog.md). A few examples of settings you can use to defer an update include:
 
 - Enforced Software Update Delay
 - Enforced Software Update Major OS Deferred Install Delay
@@ -177,7 +177,7 @@ You can edit an existing policy, including changing the restricted times:
 
 The *Restrictions* category contains the following settings that can be used to delay visibility of macOS software updates on devices (**Devices** > **macOS** > **Device configuration** > **Settings catalog** > **Restrictions**):
 
-- *Enforced Software Update Delay*:  Sets how many days to delay a software update on the device. With this restriction in place, the user doesn’t see a software update until the specified number of days after the software update release date. This value is used by *Force Delayed App Software Updates* and *Force Delayed Software Updates*.
+- *Enforced Software Update Delay*:  Sets how many days to delay a software update on the device. With this restriction in place, the user doesn't see a software update until the specified number of days after the software update release date. This value is used by *Force Delayed App Software Updates* and *Force Delayed Software Updates*.
 
 - *Force Delayed App Software Updates*:  If true, delays user visibility of non-OS Software Updates for built-in software like Safari, XProtect, and Gatekeeper. Requires a supervised device. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
 
