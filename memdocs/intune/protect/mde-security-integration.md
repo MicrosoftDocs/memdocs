@@ -467,23 +467,19 @@ You can create groups for these devices [in Azure AD](/azure/active-directory/fu
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*
 - **Linux Device** - The deviceOSType or OS displays as *Linux*
 
-Sample Dynamic Groups with Rule Syntax
+**Sample Intune Dynamic Groups with Rule Syntax:**
 
-Windows Server
+**Windows Workstations**
 
-![A screenshot of a computerDescription automatically generated.](file:///C:/Users/philbr/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+![Servers](media/mde-security-integration/servers.jpg)
 
-Windows Workstations
+**Windows Servers**
 
-![A screenshot of a computer
+![Servers](media/mde-security-integration/servers1.jpg)
 
-Description automatically generated](file:///C:/Users/philbr/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)
+**Linux Devices**
 
-Linux Devices
-
-![A screenshot of a computer
-
-Description automatically generated](file:///C:/Users/philbr/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
+![linux](media/mde-security-integration/linux.jpg)
 
 > [!IMPORTANT]
 > In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
