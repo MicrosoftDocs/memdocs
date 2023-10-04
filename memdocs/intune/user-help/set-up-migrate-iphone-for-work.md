@@ -102,21 +102,21 @@ Complete these steps on your new device.
 6. Re-evaluate compliance. After you address compliance issues, return to Company Portal and tap **Check status** to re-evaluate compliance on your device. Ensure the device is compliant before moving on to the next step.  
 7. Get access. You should now have access to work resources on your iPhone. Launch an app you use for work to access work files.  
 8. Restore your Authenticator backup. Open Authenticator and tap **Begin recovery** to sign in with your Microsoft account and restore allowed 2-step verification credentials and saved passwords. 
-9. Enable *sign in with your phone*. After you restore the backup, you'll see a placeholder for your employee email address in Authenticator. Select the account and tap **Set up 2-step verification** to register this device. Then register and set up MFA to gain access to email. 
+9. Enable *phone sign-in*. After you restore the backup, you'll see a placeholder for your employee email address in Authenticator. Select the account and tap **Set up 2-step verification** to register this device. Then register and set up MFA to gain access to email. 
 
 ## Frequently asked questions 
 This section provides answers to frequently asked questions about setting up and enrolling iPhones for work access. 
 
-## How do I migrate from an old iPhone that can't be used for 2-step verification? 
+### How do I migrate from an old iPhone that can't be used for 2-step verification? 
 If you are unable to use your old device when setting up your new device, go to ??? to register and set up MFA before you can access email. 
 
-## I use SMS/call for 2-step verification, and Microsoft Authenticator is not set up for 2-step verification. How should I proceed? 
+### I use SMS/call for 2-step verification, and Microsoft Authenticator is not set up for 2-step verification. How should I proceed? 
 If you use SMS or call-based MFA, as long as the number is active and can receive the SMS/call for verification on any type of device, you can use it for 2-step verification while setting up your new device. However, we recommended that you set up phone sign-in for the easiest setup experience. 
  
-## How do I migrate from an old iPhone that has 2-step verification to a new iPhone? 
+### How do I migrate from an old iPhone that has 2-step verification to a new iPhone? 
 Do not factory reset the old device or remove the Authenticator app before you have successfully set up your new device. You will need to use your current device for 2-step verification if using app-based MFA when setting up your new device.  
 
-## I am trying to migrate from an Android to an iPhone. How should I proceed? 
+### I am trying to migrate from an Android to an iPhone. How should I proceed? 
 If your Android phone is active and is set up for 2-step verification, you can use it to set up work access on your iPhone. You cannot restore an Authenticator app backup across Android and iOS or vice-versa. 
 
 Still need help? Contact your IT support person. Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or app to check for your organization's contact information.    
