@@ -53,7 +53,8 @@ After enrollment, the only way to turn on supervised mode is to connect an iOS/i
 ## Identify a supervised device
 
 To determine if a device is supervised, check the **Settings** app:
-Users are notified that their devices are supervised in the **Settings** app. In the app at the top of their screen, a static message tells them **This iPhone is supervised and managed by *`<your organization>`***.  
+
+Users are notified that their devices are supervised in the **Settings** app. In the app at the top of the screen, a static message shows the message **This iPhone is supervised and managed by *`<your organization>`***.  
 
 ## Next steps
 
