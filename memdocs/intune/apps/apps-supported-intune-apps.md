@@ -71,7 +71,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Lens - PDF Scanner|[iOS](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059)|✖|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Lists|[iOS](https://apps.apple.com/us/app/microsoft-lists/id1530637363)|✔|No settings|✔|N/A|N/A|✔|✔|
 |Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✖|No settings|✖|N/A|N/A|✖|✖|
-|Microsoft Loop|[Android]( https://play.google.com/store/apps/details?id=com.microsoft.loop)|✔|No settings|✔|N/A|✖|N/A|N/A|
+|Microsoft Loop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.loop)|✔|No settings|✔|N/A|✖|N/A|N/A|
 |Office (Microsoft 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
 |Microsoft 365 (Office)|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✔|✖|✔|
 |Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|
