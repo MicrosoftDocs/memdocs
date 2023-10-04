@@ -93,30 +93,6 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
 
-### Trellix Mobile Security app configuration policy
-
-- **Android Enterprise**:  
-  See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Trellix Mobile Security Android app configuration policy.
-
-  For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
-
-  | Configuration key  | Value type | Configuration value  |
-  |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
-
-- **iOS**:  
-  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trellix Mobile Security iOS app configuration policy.
-
-  For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
-
-  | Configuration key  | Value type | Configuration value  |
-  |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
-
 ### Pradeo app configuration policy
 
 Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
@@ -167,6 +143,30 @@ Use the same Microsoft Entra ID account previously configured in the [Symantec E
 ### Sophos Mobile app configuration policy
 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article. For more information, see [Sophos Intercept X for Mobile iOS - Available managed settings](https://community.sophos.com/kb/133963) in the Sophos knowledge base.
+
+### Trellix Mobile Security app configuration policy
+
+- **Android Enterprise**:  
+  See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Trellix Mobile Security Android app configuration policy.
+
+  For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
+
+  | Configuration key  | Value type | Configuration value  |
+  |---|---|---|
+  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+  |  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
+  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
+
+- **iOS**:  
+  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trellix Mobile Security iOS app configuration policy.
+
+  For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
+
+  | Configuration key  | Value type | Configuration value  |
+  |---|---|---|
+  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
+  |  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
+  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
 
 ### Trend Micro Mobile Security as a Service app configuration policy
 
@@ -292,14 +292,6 @@ Choose the section that corresponds to your MTD provider:
 
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
-### Assigning Trellix Mobile Security
-
-- **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Trellix Mobile Security app store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision) for the **Appstore URL**.
-
-- **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Trellix Mobile Security app store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) for the **Appstore URL**.
-
 ### Assigning Pradeo
 
 - **Android**:
@@ -331,6 +323,14 @@ Choose the section that corresponds to your MTD provider:
 
 - **iOS**:
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SEP Mobile app store URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) for the **Appstore URL**.
+
+### Assigning Trellix Mobile Security
+
+- **Android**:
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Trellix Mobile Security app store URL](https://play.google.com/store/apps/details?id=com.mcafee.mvision) for the **Appstore URL**.
+
+- **iOS**:
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Trellix Mobile Security app store URL](https://apps.apple.com/us/app/mcafee-mvision-mobile/id1435156022) for the **Appstore URL**.
 
 ### Assigning Wandera
 
