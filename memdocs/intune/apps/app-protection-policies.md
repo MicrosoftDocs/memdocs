@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2023
+ms.date: 10/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -58,7 +58,7 @@ For information about adding your organization's line-of-business (LOB) apps to 
 
 ## App protection policies for iOS/iPadOS and Android apps
 
-When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy. For information about creating app protection policies for Windows apps, see [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
+When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy. For information about creating app protection policies for Windows apps, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
 ### Create an iOS/iPadOS or Android app protection policy
 

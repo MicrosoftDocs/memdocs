@@ -65,6 +65,8 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 
 The prerequisites for Remote Help on macOS are listed under [Supported devices](#supported-devices).
 
+If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help. 
+
 ## Supported devices
 
 ### macOS versions
@@ -137,7 +139,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 #### Request help on an unenrolled device
 
-The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter the security code that get from the individual who is assisting you.
+The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter the security code that you get from the individual who is assisting you.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
