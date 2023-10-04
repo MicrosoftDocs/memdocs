@@ -20,7 +20,7 @@ Contributors who only make infrequent or small updates can edit the file directl
 
 5. The topic opens in a line-numbered editing page where you can make changes to the file. Files in GitHub are written and edited using Markdown language. For help on using Markdown, see [Mastering Markdown](https://guides.github.com/features/mastering-markdown/). Select the **Preview changes** tab to view your changes as you go.
 
-6. When you're finished making changes, go to the **Propose file change** section at the bottom of the page:
+6. When you're finished making changes, go to the **Commit changes...** button at the upper right part of the page:
 
    - A brief title is required. By default, the title is the name of the file, but you can change it.
    - Optionally, you can enter more details in the **Add an optional extended description** box.
