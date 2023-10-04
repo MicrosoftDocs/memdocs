@@ -37,7 +37,7 @@ Complete the following steps to integrate the Trellix Mobile Security threat def
 
 ## Before you begin
 
-The following steps are done in the Trellix console to enable a connection to the Trellix service for Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are done in the [Trellix console](https://manage.trellix.com) to enable a connection to the Trellix service for Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating Trellix Mobile Security with Intune, make sure you have the following subscription and credentials:
 
@@ -65,11 +65,10 @@ For more information about consent and Microsoft Entra ID applications, see [Req
 
 ## To set up Trellix Mobile Security integration
 
-1. Go to Trellix console and sign in with your credentials. To perform the Trellix Mobile Security integration setup process, you must sign in with a Microsoft Entra ID user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Trellix Mobile Security apps to communicate with Intune.
+1. Open the [Trellix console](https://manage.trellix.com) and sign in with your credentials. To perform the Trellix Mobile Security integration setup process, you must sign in with a Microsoft Entra ID user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Trellix Mobile Security apps to communicate with Intune.
 
-2. Choose **Management** from the left menu.
-
-3. Choose the **MDM settings** tab.
+2. Choose **Manage** from the left menu.
+3. Choose the **Integrations** tab.
 
 4. Choose **Add MDM,** then select **Microsoft Intune** from the **MDM provider** list.
 

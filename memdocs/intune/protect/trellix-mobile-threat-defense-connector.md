@@ -39,9 +39,9 @@ You can configure Conditional Access policies that are based on Trellix Mobile S
 
 ## Supported platforms
 
-- **Android 5.1 and later**
+- **Android 6.0 and later**
 
-- **iOS 10 and later**
+- **iOS 11.0 and later**
 
 ## Prerequisites
 
