@@ -139,7 +139,7 @@ As a sharer, when you've requested help and both you and the helper are ready to
 
 #### Request help on an unenrolled device
 
-The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter the security code that get from the individual who is assisting you.
+The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices. If your device is unenrolled and you're trying to receive help, be prepared to enter the security code that you get from the individual who is assisting you.
 
 As a sharer, when you've requested help and both you and the helper are ready to start:
 
