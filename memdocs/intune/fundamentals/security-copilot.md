@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2023
+ms.date: 10/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: device-management
@@ -158,17 +158,15 @@ Get the **similarities and differences** between two devices, like the complianc
 
 Your feedback on the Intune integration with Security Copilot helps with development. To provide feedback, in Security Copilot, use the feedback buttons at the bottom of each completed prompt:
 
-**TO DO: UPDATE SCREENSHOT WHEN CHANGES ARE IN UI**
-
 :::image type="content" source="./media/security-copilot/security-copilot-prompt-feedback.png" alt-text="Screenshot that shows how to submit feedback on the prompt results in Microsoft Security Copilot.":::
 
 Your options:
 
-- **Looks right**: The results match expectations.
-- **Needs improvement**: The results don't match expectations.
-- **Inappropriate**: The results are harmful in some way.
+- **Confirm**: The results match expectations.
+- **Off-target**: The results don't match expectations.
+- **Report**: The results are harmful in some way.
 
-Whenever possible, and when the result is **Needs improvement**, write a few words explaining what can be done to improve the outcome. If you entered Intune-specific prompts and the results aren't Intune related, then include that information.
+Whenever possible, and when the result is **Off-target**, write a few words explaining what can be done to improve the outcome. If you entered Intune-specific prompts and the results aren't Intune related, then include that information.
 
 ## Data processing and privacy
 
