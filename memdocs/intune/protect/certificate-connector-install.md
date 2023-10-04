@@ -112,7 +112,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. An Intune license is required for the account that you are signing in with that can be either a Global Administrator or Intune Administrator.
+6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
