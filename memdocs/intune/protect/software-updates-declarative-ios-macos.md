@@ -52,15 +52,15 @@ Apple's declarative device management (DDM) allows you to install a specific upd
 
 ## Declarative software updates vs software update policies
 
-On Apple devices in Intune, you can create software update policies or declarative software update policies. Both policy types install software updates on devices. However, there are some differences between the two policy types:
+On Apple devices in Intune, you can create software update policies or declarative software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types. Here's what you need to know:
 
-| Software update policies | Declarative software update policies |
-| --- | --- |
-| Install software updates on devices. | Install software updates on devices. |
-| Use **Update policies for iOS/iPadOS** or **Update policies for macOS**. | Use the **Settings catalog**. |
-| | Takes precedence over iOS/iPadOS and macOS software update policies. |
+| Feature | Software update policy | Declarative software update policy |
+| --- | --- | --- |
+| Installs software updates on devices. | ✔️ | ✔️ |
+| Intune admin center policy type | - Update policies for iOS/iPadOS <br/> - Update policies for macOS | Settings catalog |
+| Precedence | ❌ | ✔️ <br/> Takes precedence over iOS/iPadOS and macOS software update policies.  <br/> <br/>Can the two policy types work together? Or, is this a conflict scenario? |
 
-Can the two policy types work together? Or, is this a conflict scenario?
+
 
 ## Configure the DDM software updates policy
 
