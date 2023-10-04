@@ -467,7 +467,7 @@ You can create groups for these devices [in Azure AD](/azure/active-directory/fu
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*
 - **Linux Device** - The deviceOSType or OS displays as *Linux*
 
-**Sample Intune Dynamic Groups with Rule Syntax:**
+#### **Sample Intune Dynamic Groups with Rule Syntax:**
 
 **Windows Workstations**
 
