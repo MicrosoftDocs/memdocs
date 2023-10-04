@@ -45,16 +45,14 @@ You can add a Microsoft Store app to Intune by doing the following:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app (new)**.
+3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app (Legacy)**.
 4. Click **Select**. The **Add app** steps are displayed.
 5. To configure the **App information** for Microsoft store apps, click **Select app**, and search for the app you want to assign to members of your organization. Display the app page and make a note of the app details. 
 6. In the **App information** page, add the app details:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of the app. 
-    - **Package Identifier**: The app Package Identifier is the unique value that identifies the app.
-    - **Installer Type**: The installer type of the application package.
-	- **Install behavior**: Select **System** to install this app for all users, if supported. Select **User** to install this app for the logged-in user on the device.
+    - **Appstore URL**: Enter the 'Link for Intune' URL for the app provided from the store.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL is displayed to users in the company portal.
