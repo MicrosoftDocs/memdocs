@@ -471,15 +471,15 @@ You can create groups for these devices [in Azure AD](/azure/active-directory/fu
 
 **Windows Workstations**
 
-![Servers](media/mde-security-integration/servers.jpg)
+![WindowsWorkstationDymanicGroup.](media/mde-security-integration/windowworkstation.jpg)
 
 **Windows Servers**
 
-![Servers](media/mde-security-integration/servers1.jpg)
+![WindowsServersDymanicGroup.](media/mde-security-integration/windowsserver.jpg)
 
 **Linux Devices**
 
-![linux](media/mde-security-integration/linux.jpg)
+![LinuxDevicesDynamicGroup.](media/mde-security-integration/linuxdevices.jpg)
 
 > [!IMPORTANT]
 > In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
@@ -635,4 +635,5 @@ Security settings management doesn't work for a device that has PowerShell *Lang
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
 
 ::: zone-end
+
 
