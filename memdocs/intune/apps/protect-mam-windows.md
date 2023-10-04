@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Mobile Application Management for Microsoft Edge on unmanaged Windows devices
+title: Data protection for Windows MAM
 titleSuffix: 
-description: Use Microsoft Edge on personal Windows devices to enable protected MAM access to org data.
+description: Enable protected MAM access to org data using Windows MAM.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2023
+ms.date: 10/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -106,6 +106,8 @@ The health state includes the following details:
 - The time of last health state update
 
 The health state is only sent for MAM enrolled users.  End users may stop sending data by signing out of their org account in protected applications.  Administrators may stop sending data by removing the Windows Security Connector from Microsoft Intune.
+
+For related information, see [create an MTD app protection policy for Windows](../protect/mtd-app-protection-policy.md#to-create-an-mtd-app-protection-policy-for-windows).
 
 ## Create Intune app protection policies
 
