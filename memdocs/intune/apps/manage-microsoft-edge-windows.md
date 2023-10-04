@@ -38,8 +38,7 @@ ms.custom: intune-azure
 Edge for Windows is designed to enable users to browse the web and supports multi-identity. Users can add a work account, as well as a personal account, for browsing. There is complete separation between the two identities, which is also offered in other Microsoft mobile apps.
 
 This feature applies to:
-- Until the end of October 2023, applies to Windows 11 22H2
-- After October 2023, applies to Windows 10 or later
+- Applies to Windows 11 22H2
 
 > [!NOTE]
 > Edge for Windows doesn't consume settings that users set for the native browser on their devices, because Edge for Windows can't access these settings.
