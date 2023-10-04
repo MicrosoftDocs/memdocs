@@ -32,7 +32,9 @@ ms.collection:
 
 # Tutorial: Protect Exchange Online email on unmanaged devices with Microsoft Intune
 
-This tutorial demonstrates how to use Microsoft Intune app protection policies with Microsoft Entra Conditional Access to protect Exchange Online, even when devices aren't enrolled in a device management solution like Intune. In this tutorial, you'll learn how to:
+This tutorial demonstrates how to use Microsoft Intune app protection policies with Microsoft Entra Conditional Access to protect access to Exchange Online. This protection prevents access to Exchange by users who use are using an unmanaged device or an app other than the Outlook mobile app to access Microsoft 365 email. The result of these policies apply when devices aren't enrolled in a device management solution like Intune.
+
+In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
 >
@@ -86,7 +88,7 @@ In this tutorial, we set up an Intune [app protection policy](../apps/app-protec
    For the *Data Transfer* category, configure the following settings and leave all other settings at their default values:
 
    - **Send org data to other apps** - From the drop-down list, select **None**.
-   - **Receive data from other apps** - From the drop-down list, select**None**.
+   - **Receive data from other apps** - From the drop-down list, select **None**.
    - **Restrict cut, copy and paste between other apps**- From the drop-down list, select **Blocked**.
 
    :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png" alt-text="Select the Outlook app protection policy data relocation settings.":::
@@ -165,7 +167,7 @@ When you configure Conditional Access policies in the Microsoft Intune admin cen
    1. On the *Grant* pane, select **Grant access**.
    2. Select **Require multi-factor authentication**.
    3. Select **Require approved client app**.
-   4. For *For multiple controls*, select **Require all the selected controls**. This setting ensures that both requirements you selected are enforced when a device tries to access email.
+   4. Set *For multiple controls* to **Require all the selected controls**. This setting ensures that both requirements you selected are enforced when a device tries to access email.
    5. Choose **Select** to save the Grant configuration.
 
    :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png" alt-text="Select access controls.":::
@@ -186,20 +188,20 @@ The process to configure this policy is  similar to the previous Conditional Acc
 
 3. For **Name**, enter **Test policy for EAS clients**.
 
-4. Under **Assignments**, for *Users*, select **0 users and groups**. On the *Include* tab, select **All users**. 
+4. Under **Assignments**, for *Users*, select **0 users and groups**. On the *Include* tab, select **All users**.
 
-5. Under **Assignments**, for *Target resources*, select *Test policy for EAS clients*. Set *Select what this policy applies to* to **Cloud apps**, and then configure Microsoft 365 Exchange Online email with these steps:
+5. Under **Assignments**, for *Target resources*, select *No target resources selected*. Ensure that *Select what this policy applies to* is set to **Cloud apps**, and then configure Microsoft 365 Exchange Online email with these steps:
 
    1. On the *Include* tab, choose **Select apps**.
    2. For *Select*, choose *None*.
    3. From the Cloud apps list, select the checkbox for **Office 365 Exchange Online**, and then choose **Select**.
   
-6. Under **Assignments** open *Conditions* > *Device platforms*.
+6. Under **Assignments** open *Conditions* > *Device platforms*, and then:
 
    1. Set the *Configure* toggle to **Yes**.
    2. On the **Include** tab, select **Any device**, and then select **Done**.
 
-7. Remain on the *Conditions* pane and expand **Client apps**.
+7. Remain on the *Conditions* pan, expand **Client apps**, and then:
 
    1. Set the *Configure* toggle to **Yes**.
    2. Select **Mobile apps and desktop clients**.
@@ -209,7 +211,7 @@ The process to configure this policy is  similar to the previous Conditional Acc
 
    :::image type="content" source="./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png" alt-text="Apply to supported platforms.":::
 
-8. Under **Access controls**, expand **Grant**.
+8. Under **Access controls**, expand **Grant** and then:
 
    1. On the **Grant** pane, select **Grant access**.
    2. Select **Require approved client app**. Clear all other check boxes, but leave the configuration *For multiple controls* set to *Require all the selected controls*.
@@ -223,7 +225,7 @@ Your app protection policies and Conditional Access are now in place and ready t
 
 ## Try it out
 
-With the policies that you created in this tutorial, devices must need to enroll in Intune and use the Outlook mobile app to access Microsoft 365 email. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant.
+With the policies that you created in this tutorial, devices must enroll in Intune and use the Outlook mobile app before the device can be used to access Microsoft 365 email. To test this scenario on an iOS device, try signing in to Exchange Online using credentials for a user in your test tenant.
 
 1. To test on an iPhone, go to **Settings** > **Passwords & Accounts** > **Add Account** > **Exchange**.
 
