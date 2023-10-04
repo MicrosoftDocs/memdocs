@@ -128,6 +128,8 @@ items:
     items:
     - name: Enroll iOS/iPadOS device
       href: enroll-your-device-in-intune-ios.md
+    - name: Set up or migrate iPhone for work 
+      href: set-up-migrate-iphone-for-work.md
     - name: Enroll company-provided iOS device
       href: enroll-your-device-dep-ios.md
     - name: Enroll with derived credentials
