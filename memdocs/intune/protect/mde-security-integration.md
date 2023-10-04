@@ -142,9 +142,9 @@ When a device that is domain joined creates a trust with Azure Active Directory,
 
 > [!NOTE]
 >
-> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device.
+> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device. 
 >
-> If the device was part of a dynamic Azure AD group, the policy targeting the device will be resolved within a minimum of 48 hours. However, if the device was targeted as part of a static Azure AD group, administrators will need to go back and retarget the device.
+> If the device was part of any dynamic Azure AD groups previously and has now been re-added back into Azure AD (with the same Device ID), the policies targeting the device will be resolved within a minimum of 48 hours. However, if the device was part of any static Azure AD groups previously, administrators will need to go back and re-add the device back into those groups.
 >
 > This is a known issue with Azure AD.
 
