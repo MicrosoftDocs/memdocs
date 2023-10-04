@@ -52,7 +52,13 @@ Apple's declarative device management (DDM) allows you to install a specific upd
 
 ## Declarative software updates vs software update policies
 
-Declarative software updates take precedence over iOS/iPadOS and macOS software update policies.
+On Apple devices in Intune, you can create software update policies or declarative software update policies. Both policy types install software updates on devices. However, there are some differences between the two policy types:
+
+| Software update policies | Declarative software update policies |
+| --- | --- |
+| Install software updates on devices. | Install software updates on devices. |
+| Use **Update policies for iOS/iPadOS** or **Update policies for macOS**. | Use the **Settings catalog**. |
+| | Takes precedence over iOS/iPadOS and macOS software update policies. |
 
 Can the two policy types work together? Or, is this a conflict scenario?
 
@@ -100,7 +106,7 @@ Can the two policy types work together? Or, is this a conflict scenario?
 
 9. In **Review + create**, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Delay visibility and configure experience of updates
+## Delay visibility of updates
 
 When you configure declarative software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
 
@@ -115,7 +121,7 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 
 :::image type="content" source="./media/software-updates-declarative-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune.":::
 
-In the **Settings catalog**, you can also use the **System Updates** > **Software Update** settings to manage how users manually interact with updates through their macOS system. However, updates from a targeted update policy override these settings.
+For macOS devices, in the **Settings catalog**, you can also use the **System Updates** > **Software Update** settings. These settings manage how users manually interact with updates. However, updates from a targeted update policy override these settings catalog policy settings.
 
 ## Related articles
 

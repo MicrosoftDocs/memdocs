@@ -44,13 +44,13 @@ With policies for iOS software updates, you can:
 
 - Choose to deploy the *latest update* that's available, or choose to deploy an older update, based on the update version number.
 
-  When deploying an older update, you must also deploy a device restrictions profile to [restrict visibility of software updates](#delay-visibility-of-software-updates). This is because update profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a device configuration policy that restricts visibility of software updates.
+  When deploying an older update, you must also deploy a device restrictions profile to [restrict visibility of software updates](#delay-visibility-of-software-updates). Update profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a device configuration policy that restricts visibility of software updates.
 
-- Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in, or creating date and time ranges during which updates can install or are blocked from installing.
+- Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in. Or, creating date and time ranges during which updates can install or are blocked from installing.
 
   By default, devices check in with Intune about every eight hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
-- Use the [settings catalog](..configuration/settings-catalog.md) to manage declarative software updates. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
+- You can also use the [settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
 
 > [!NOTE]
 >
@@ -81,8 +81,8 @@ With policies for iOS software updates, you can:
    2. **Schedule type**: Configure the schedule for this policy:
 
       - *Update at next check-in*: The update installs on the device the next time it checks in with Intune. This option is the simplest and has no extra configurations.
-      - *Update during scheduled time*: You configure one or more windows of time during which the update will install upon check-in.
-      - *Update outside of scheduled time*: You configure one or more windows of time during which the updates won't install upon check-in.
+      - *Update during scheduled time*: You configure one or more windows of time during which the update installs upon check-in.
+      - *Update outside of scheduled time*: You configure one or more windows of time. During these windows, updates don't install upon check-in.
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
@@ -92,9 +92,9 @@ With policies for iOS software updates, you can:
       - **Time window**: Define one or more blocks of time that restrict when the updates install. The effect of the following options depends on the Schedule type you selected. With a start day and end day, overnight blocks are supported. Options include:
 
         - **Start day**: Choose the day on which the schedule window starts.
-        - **Start time**: Choose the time day when the schedule window begins. For example, if you select 5 AM and have a Schedule type of *Update during scheduled time*, 5 AM is the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, 5 AM is the start of a period of time that updates can't install.
+        - **Start time**: Choose the time day when the schedule window begins. For example, you select 5 AM and have a Schedule type of *Update during scheduled time*. In this scenario, 5 AM is the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, then 5 AM is the start of a period of time that updates can't install.
         - **End day**: Choose the day on which the schedule window ends.
-        - **End time**: Choose the time of day when the schedule window stops. For example, if you select 1 AM and have a Schedule type of *Update during scheduled time*, 1 AM is the time when updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM is the start of a period of time that updates can install.
+        - **End time**: Choose the time of day when the schedule window stops. For example, you select 1 AM and have a Schedule type of *Update during scheduled time*. In this scenario, 1 AM is the time when updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM is the start of a period of time that updates can install.
 
       If you don't configure times to start or end, the configuration results in no restriction and updates can install at any time.
 
@@ -161,7 +161,7 @@ In the Microsoft Intune admin center, go to **Devices** > **Monitor** > **Instal
 
 Intune displays a list of supervised iOS/iPadOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because iOS/iPad devices only return information about installation failures.
 
-For each device on the list, the *Installation Status* displays the error that was returned by the device. To view the list of potential installation status values, on the *Installation failures for iOS devices* page, select **Filters** and then expand the drop-down list for *Installation Status*.
+For each device on the list, the *Installation Status* displays the error that the device returns. To view the list of potential installation status values, on the *Installation failures for iOS devices* page, select **Filters** and then expand the drop-down list for *Installation Status*.
 
 ## Next steps
 
