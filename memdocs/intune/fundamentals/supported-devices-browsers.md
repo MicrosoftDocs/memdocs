@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 10/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,7 +35,6 @@ ms.collection:
 Before setting up Microsoft Intune, review the supported operating systems and browsers.
 
 For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).  
-
 
 ## Intune supported operating systems
 
@@ -107,7 +106,7 @@ Device management and administrative tasks are done in the Microsoft Intune admi
 - [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure portal](https://portal.azure.com/)
 
-Microsoft Intune is supported with the following web browsers: 
+Microsoft Intune is supported with the following web browsers:
 
 - Microsoft Edge (latest version)
 - Safari (latest version, Mac only)
@@ -115,6 +114,7 @@ Microsoft Intune is supported with the following web browsers:
 - Firefox (latest version)  
 
 ## Next steps  
+
 For network configuration requirements, or to learn more about setting up devices using the configuration service provider (CSP), see:
 
 * [Intune network configuration requirements and bandwidth](network-bandwidth-use.md)   
