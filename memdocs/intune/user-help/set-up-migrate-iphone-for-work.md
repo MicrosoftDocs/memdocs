@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Set up new iPhone | Microsoft Intune
+title: Migrate to a new iPhone for work or school | Microsoft Intune
 titlesuffix: Microsoft Intune
-description: Learn how to migrate old iPhone that's already enrolled to a new iPhone. 
+description: Learn how to migrate an old iPhone that's already enrolled for work to a new iPhone. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -31,17 +31,23 @@ ms.collection:
 - tier2
 ---
 
-# iPhone setup guidance for work or school  
+# Migrate to a new iPhone for work or school  
 
-Set up a new or existing iPhone for work access. This article describes how to:     
+Transfer from the old iPhone you used for work, to your new one. In this article you will:      
 
-* Set up a new iPhone. 
-* Migrate settings and apps from an active iPhone that can access protected work resources and is set up for multifactor authentication (MFA) to a new iPhone. 
+* Prepare your 
+* Enroll your new iPhone. 
+* Migrate data from an active iPhone that can access protected work resources and is set up for multifactor authentication (MFA) to a new iPhone. 
 
-Review all steps carefully before you start setting up your device for work.  
+Review all steps carefully before you start setting up your new device.   
 
 ## Prerequisites  
-You'll need to use your old device for 2-step verification (if using app-based MFA) when setting up the new device. Do not factory reset your old device or remove the Authenticator app before you have successfully set up your new device. 
+> [!CAUTION]
+> You'll need to use your old device to complete MFA (if using app-based MFA) when setting up the new device. Do not factory reset your old device or remove the Authenticator app before you have successfully set up your new device. 
+
+To back up the data on your device and restore it later, you must have:
+* A [personal Microsoft account](https://account.microsoft.com/account) to act as your recovery account.
+* An [iCloud account](https://www.icloud.com/) for the actual storage location. 
 
 If you use SMS or call-based MFA, you can use either your old or new device to complete setup. We recommend turning on phone sign-in for the easiest way to authenticate. To set up phone sign-in:
   1. On your existing device, open Microsoft Authenticator.  
@@ -50,73 +56,74 @@ If you use SMS or call-based MFA, you can use either your old or new device to c
 
 ## Before you begin  
 
-If you're migrating from an existing iPhone you use for work to a new device, first complete these steps on your existing device. If you don't need to restore apps and settings from a previous iPhone, continue to [Power on the new device](set-up-migrate-iphone-for-work.md#power-on-the-new-device).       
+If you're migrating from an old iPhone you used for work to a new iPhone, first complete these steps on your old iPhone. If you don't want to back up credentials, apps, and settings from a previous iPhone, continue to [Power on the new device](set-up-migrate-iphone-for-work.md#power-on-the-new-device).       
 
-1. Set up Microsoft Authenticator recovery settings. On your current device, set up a personal Microsoft account as a recovery account in Authenticator.  
+1. Set up Microsoft Authenticator recovery settings. On your current device, set up a personal Microsoft account as a recovery account for your credentials.  
     1. Open Microsoft Authenticator.
-    2. Go to **Settings** > **iCloud backup**. Turn on iCloud backup. A recovery account is set up.    
-    3. Optionally, you can sync your autofill passwords from Authenticator. Scroll to **Autofill** > **Sync account** to adjust autofill settings.  
+    2. Go to **Settings** and turn on **iCloud backup**. Your account credentials are backed up to your iCloud account and your **Recovery Account** is created.       
+    3. Optionally, you can sync your autofill passwords from Authenticator. Scroll to **Autofill** > **Sync account** to set up the password sync.  
 
     > [!NOTE]
-    > You'll need to set up your work account on the new device after you restore the backup.    
+    > You'll need to sign in and set up your work account on the new device after you go through device enrollment and restore the backup.    
 
-2. Turn on automatic app downloads in your App Store settings to automatically install all apps from your current device onto your new device. 
-    1. On your current device, go to **Settings** > **App Store**. 
+2. Turn on automatic app downloads in your App Store settings to automatically install all apps from your old device onto your new device. 
+    1. On your old device, go to **Settings** > **App Store**. 
     2. Go to **Automatic Downloads** and turn on **Apps**.  
 
 3. Turn on iCloud backup and make sure a recent backup exists. 
-   1. On your current device, go to **Settings** and tap your Apple ID > **iCloud** > **iCloud backup**. 
-   2. Turn on iCloud Backup. To start a new backup, tap **back up now**. 
+   1. On your current device, go to **Settings** and tap your Apple ID > **iCloud** > **iCloud Backup**. 
+   2. Turn on iCloud Backup. To start a new backup, tap **Back Up Now**. 
 
 4. Check iCloud backup settings. Go to **Settings** > your Apple ID > **iCloud** to confirm that other iCloud backup settings are correct. Check that the apps you want to restore from iCloud are set appropriately. 
 
 Continue to [Power on the new device](set-up-migrate-iphone-for-work.md#power-on-the-new-device).  
 
 ## Power on the new device  
-Complete these steps on your new device.  
+Set up your new iPhone. Complete these steps on your new iPhone unless otherwise indicated.   
 
 1. Complete the Setup Assistant experience.  
   1. Power on the new phone and select your language. 
-  2. When the Quick Start menu appears, bring your old phone close to the new phone and leave it there while you continue setup.  
-  3. Choose how you want to transfer your data, or skip.  
-   * **Transfer from iCloud**: You'll be automatically signed into iCloud on the new phone and restoration from backup will be initiated. Your apps and data will be downloaded in the background, so you can use the new device right away.  
+  2. When the Quick Start menu appears, place your old phone close to the new phone and leave it there while you continue setup.  
+  3. Choose how you want to transfer your data,. Skip this step if you're not transferring anything.  
+   * **Transfer from iCloud**: You are automatically signed into iCloud on the new phone and restoration from backup begins. Your apps and data download in the background, so you can use the new device right away.  
    * **Transfer from the old phone**: You must wait for the transfer to complete on both devices before you can use the new device.  
-  4. After your device restarts and you're on the homepage with your default apps, wait for your apps to automatically install.   
-2. Check that the Microsoft Authenticator app is installed before continuing. It may have installed from your apps backup in iCloud. If not, install Microsoft Authenticator from the [App Store](https://apps.apple.com/us/app/microsoft-authenticator/id983156458). 
-3. Initiate the onboarding workflow. 
-  1. Open a productivity app, such as Microsoft Teams. 
+  4. After your device restarts and you're on the homepage (where your default apps appear), wait while your transferred apps automatically install.   
+2. Check that the Microsoft Authenticator app is installed before continuing. It could have installed from your iCloud apps backup. If you don't have the app, install Microsoft Authenticator from the [App Store](https://apps.apple.com/us/app/microsoft-authenticator/id983156458).  
+3. Initiate the device enrollment workflow. 
+  1. On your new device, open a productivity app, such as Microsoft Teams and sign in with your work account.  
   2. Complete the MFA requirements or passwordless authentication using Authenticator on your old phone. 
-  3. You will get blocked by conditional access and prompted to enroll the device. Continue to [Device enrollment](set-up-migrate-iphone-for-work.md#device-enrollment).   
+  3. You will get blocked by conditional access and prompted to enroll your new device. Continue to [Device enrollment](set-up-migrate-iphone-for-work.md#device-enrollment).   
 
 ## Device enrollment  
+When you open a productivity app, such as Microsoft Teams, and sign in with your work account, you'll be prompted to enroll your new iPhone and install the Company Portal app for iOS.
 
-1. Install Company Portal. Open a productivity app, such as Microsoft Teams, and you will be prompted to enroll your device and install the Company Portal app for iOS.  
+1. Install [Intune Company Portal](https://apps.apple.com/us/app/intune-company-portal/id719171358) on your new iPhone.   
 2. Complete mobile device management (MDM) profile installation. 
-  1. Sign into Company Portal.
-  2. Tap through setup pages to review privacy information. 
+  1. Sign into Company Portal with your work account. 
+  2. Tap through the setup pages to review privacy information. 
   3. Download the management profile. 
   4. Go to the Settings app to complete profile installation. 
-3. Complete a device sync. Return to Company Portal to continue syncing the device and checking for device compliance. 
-4. Wait for apps to install. Authenticator is automatically installed or taken over if already installed.  
-5. Make the device compliant. Update your device settings as prompted by Company Portal to ensure the device meets your organization's compliance policy requirements.  
-6. Re-evaluate compliance. After you address compliance issues, return to Company Portal and tap **Check status** to re-evaluate compliance on your device. Ensure the device is compliant before moving on to the next step.  
-7. Get access. You should now have access to work resources on your iPhone. Launch an app you use for work to access work files.  
-8. Restore your Authenticator backup. Open Authenticator and tap **Begin recovery** to sign in with your Microsoft account and restore allowed 2-step verification credentials and saved passwords. 
+3. Complete a device sync. Return to the Company Portal app and wait while Company Portal syncs the device and checks for device compliance. 
+4. Wait for your work apps to install. Authenticator is automatically installed if it's not already installed.  
+5. Make the iPhone compliant. Update your device settings as prompted by Company Portal to ensure the iPhone meets your organization's device compliance policy requirements.  
+6. Re-evaluate compliance. After you resolve device compliance issues, return to Company Portal and tap **Check status** to re-evaluate compliance. Ensure the device is compliant before moving on to the next step.  
+7. Get access. You should now have access to work resources on your iPhone. Open an app you use for work and sign in with your work account to access work files.  
+8. Restore your Authenticator backup. Open Authenticator and tap **Begin recovery** to sign in with your Microsoft account and restore allowed MFA credentials and saved passwords. 
 9. Enable *phone sign-in*. After you restore the backup, you'll see a placeholder for your employee email address in Authenticator. Select the account and tap **Set up 2-step verification** to register this device. Then register and set up MFA to gain access to email. 
 
 ## Frequently asked questions 
-This section provides answers to frequently asked questions about setting up and enrolling iPhones for work access. 
+This section provides answers to frequently asked questions about setting up and migrating iPhones for work access. 
 
-### How do I migrate from an old iPhone that can't be used for 2-step verification? 
-If you are unable to use your old device when setting up your new device, go to ??? to register and set up MFA before you can access email. 
+### How do I migrate from an old iPhone that can't be used for two-step verification? 
+If you are unable to use your old device when setting up your new device, then you must register and set up MFA before you can access email. 
 
-### I use SMS/call for 2-step verification, and Microsoft Authenticator is not set up for 2-step verification. How should I proceed? 
-If you use SMS or call-based MFA, as long as the number is active and can receive the SMS/call for verification on any type of device, you can use it for 2-step verification while setting up your new device. However, we recommended that you set up phone sign-in for the easiest setup experience. 
+### I use SMS/call for two-step verification, and Microsoft Authenticator is not set up for two-step verification. How should I proceed? 
+If you use SMS or call-based MFA, as long as the number is active and can receive the SMS/call for verification on any type of device, you can use it for two-step verification while setting up your new device. However, we recommended that you set up *phone sign-in* for the easiest setup experience. 
  
-### How do I migrate from an old iPhone that has 2-step verification to a new iPhone? 
-Do not factory reset the old device or remove the Authenticator app before you have successfully set up your new device. You will need to use your current device for 2-step verification if using app-based MFA when setting up your new device.  
+### How do I migrate from an old iPhone that has two-step verification to a new iPhone? 
+Do not factory reset the old device or remove the Authenticator app before you have successfully set up your new device. You will need to use your current device for two-step verification if using app-based MFA when setting up your new device.    
 
 ### I am trying to migrate from an Android to an iPhone. How should I proceed? 
-If your Android phone is active and is set up for 2-step verification, you can use it to set up work access on your iPhone. You cannot restore an Authenticator app backup across Android and iOS or vice-versa. 
+If your Android phone is active and is set up for two-step verification, you can use it to set up work access on your iPhone. You can't restore an Authenticator app backup from Android to iOS and vice-versa. 
 
 Still need help? Contact your IT support person. Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or app to check for your organization's contact information.    
