@@ -67,9 +67,11 @@ If devices are currently enrolled in another MDM provider, unenroll the devices 
 | Android Enterprise fully managed (COBO) | Yes |
 | Android Enterprise dedicated devices (COSU) | Yes |
 | Android device administrator (DA) | No |
-| iOS/iPadOS | Yes |
+| iOS/iPadOS (BYOD) | No |
+| iOS/iPadOS (ADE) | Yes |
 | Linux | No |
-| macOS | Yes |
+| macOS (BYOD) | No |
+| macOS (ADE) | Yes |
 | Windows | No |
 
 -----  
