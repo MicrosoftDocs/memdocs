@@ -30,7 +30,6 @@ ms.collection:
 ms.reviewer: laarrizz
 
 zone_pivot_groups: mde-attach-preview
-
 ---
 
 <!--  PIVOTS in use:
@@ -464,8 +463,23 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
 
-- **Windows 10 and Windows 11** - The deviceType or OS displays as *Windows*
-- **Windows Server** - The deviceType or OS displays as *Windows Server*
+- **Windows 10 and Windows 11** - The deviceOSType or OS displays as *Windows*
+- **Windows Server** - The deviceOSType or OS displays as *Windows Server*
+- **Linux Device** - The deviceOSType or OS displays as *Linux*
+
+#### **Sample Intune Dynamic Groups with Rule Syntax:**
+
+**Windows Workstations**
+
+![WindowsWorkstationDymanicGroup.](media/mde-security-integration/windowworkstation.jpg)
+
+**Windows Servers**
+
+![WindowsServersDymanicGroup.](media/mde-security-integration/windowsserver.jpg)
+
+**Linux Devices**
+
+![LinuxDevicesDynamicGroup.](media/mde-security-integration/linuxdevices.jpg)
 
 > [!IMPORTANT]
 > In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
@@ -621,3 +635,5 @@ Security settings management doesn't work for a device that has PowerShell *Lang
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
 
 ::: zone-end
+
+
