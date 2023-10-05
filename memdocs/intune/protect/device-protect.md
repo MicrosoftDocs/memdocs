@@ -123,13 +123,9 @@ Following are examples of actions you can run that help secure devices and data:
 - Wipe
 - Sync (force a device to immediately check-in with Intune to find new policies or pending actions)
 
-## Integrate with other products
+## Integrate with other products and partner technologies
 
 Intune supports integration with partner apps from both first-party and third-party sources, which expand on its built-in capabilities. You can also integrate Intune with several Microsoft technologies.
-
-### Partner Technologies
-
-Intune can use data from integrated compliance partners and mobile threat defense partners:
 
 ### Compliance partners
 
