@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 10/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -98,8 +98,6 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     :::image type="content" alt-text="Screenshot of policy assignments - Edit filter" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" :::
 
 16. Click **Select groups to exclude** to display the related pane.
-
-    :::image type="content" alt-text="Screenshot of policy assignments - Select groups to exclude page" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-05.png" :::
 
 17. Choose the groups you want to exclude and then click **Select**.
 
