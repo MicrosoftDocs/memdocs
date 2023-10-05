@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create Windows Driver updates policy for Windows 10 Windows 11 devices in Intune
-description: Create and manage policies that install Windows driver updates on Windows 10 and Windows 11 devices you manage with Microsoft Intune.
+description: Use Microsoft Intune to manage policies that install Windows driver updates on your Intune managed Windows 10 and Windows 11 devices.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 09/08/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,13 +27,14 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- ContentEnagagementFY24
 ---
 
 # Manage policy for Windows Driver updates with Microsoft Intune
 
 This article can help you use Microsoft Intune to create and manage Windows Driver updates policies for your Windows 10 and Windows 11 devices. These policies allow you to view the list of available driver updates that are applicable to the devices targeted by the policy, approve updates for deployment, or pause the deployment of individual updates. When driver updates are approved, Intune sends the assignments to Windows Update, which manages the update installation on devices based on the policy configuration.
 
-Before you create and deploy driver update policies, take time to [plan how you might deploy and manage Windows driver updates](../protect/windows-driver-updates-overview.md#plan-for-driver-updates) in your organization. Also review the [prerequisites](../protect/windows-driver-updates-overview.md#prerequisites) for using Windows driver updates ensure your tenant is configured to support them.
+Before you create and deploy driver update policies, take time to review the Windows driver update prerequisites, consider a constructing a driver update deployment plan, and review the frequently asked questions for Driver updates. These subjects are available in the [Windows Driver updates overview article](../protect/windows-driver-updates-overview.md#prerequisites).
 
 After you create driver update policies, plan to review them regularly for newly added driver updates. *Recommended* driver updates that are added to policies that support automatic approvals start to deploy without any intervention. However, any other new updates added to your policies won't install until an admin manually approves them.
 

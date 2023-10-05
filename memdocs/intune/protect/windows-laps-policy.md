@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,7 +50,7 @@ Applies to:
 
 ## About Intune LAPS policy
 
-Intune’s provides support to configure Windows LAPS on devices through the **Local admin password solution (Windows LAPS) (preview)** profile, available through endpoint security policies for [account protection](../protect/endpoint-security-account-protection-policy.md).
+Intune’s provides support to configure Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile, available through endpoint security policies for [account protection](../protect/endpoint-security-account-protection-policy.md).
 
 Intune policies manage LAPS by using the Windows LAPS configuration service provider (CSP). Windows LAPS CSP configurations [take precedence](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over, and overwrite, any existing configurations from other LAPS sources, like GPOs or the [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) tool.
 
@@ -78,7 +78,7 @@ Before you create a policy, you can review details about the available settings 
 
    :::image type="content" source="./media/windows-laps-policy/create-laps-policy.png" alt-text="Screen shot that shows where in the admin center you create a LAPS policy." lightbox="./media/windows-laps-policy/create-laps-policy.png":::
 
-   Set the *Platform* to **Windows 10 and later**, *Profile* to **Local admin password solution (Windows LAPS) (preview)**, and then select **Create**.
+   Set the *Platform* to **Windows 10 and later**, *Profile* to **Local admin password solution (Windows LAPS)**, and then select **Create**.
 
 2. On **Basics**, enter the following properties:
 
@@ -110,7 +110,7 @@ Before you create a policy, you can review details about the available settings 
 
 ## View Device actions status
 
-When your account has permissions equivalent to the *Security Baselines* permissions that grant rights to all policy templates in the Endpoint security workload, you can use the Intune admin center to view the status of device actions that have been requested for the device.
+When your account has permissions equivalent to the *Security baselines* permissions that grant rights to all policy templates in the Endpoint security workload, you can use the Intune admin center to view the status of device actions that have been requested for the device.
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -124,10 +124,18 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
 ## View account and password details
 
-During the public preview, your account must be assigned one of the following built-in Azure AD roles that grant access to view an account name and password:
+To view account and password details, an account must have one of the following Azure Active Directory permissions:
 
-- Global Admin
-- Cloud Device Admin
+- `microsoft.directory/deviceLocalCredentials/password/read`
+- `microsoft.directory/deviceLocalCredentials/standard/read`
+
+Use the following methods to grant accounts these permissions:
+
+- Assign one of the following built-in Azure AD roles:
+  - Global Admin
+  - Cloud Device Admin
+
+Create and assign a custom role in Azure Active Directory that grants these permissions. See [Create and assign a custom role in Azure Active Directory](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 

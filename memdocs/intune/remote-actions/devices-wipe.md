@@ -130,6 +130,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 
 #### Android device administrator
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 |Data type|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Web links|Removed.|Removed.|

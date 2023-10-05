@@ -49,17 +49,6 @@ This article assumes you're familiar with filters. If not, learn more at [Use fi
 
 You can use filters for some common app policies on the following platforms. For a list of what's not supported on managed devices, go to [not supported](#not-supported-on-managed-devices) (in this article).
 
-### Android device administrator
-
-| App type | Supported |
-| --- | --- |
-| Store app | ✔️ |
-| Microsoft 365 apps | N/A |
-| Microsoft Edge version 77 and newer | N/A |
-| Microsoft Defender for Endpoint | N/A |
-| Web link | ❌ |
-| Line-of-business apps | ✔️ |
-
 ### Android Enterprise
 
 | App type | Supported |
@@ -77,6 +66,20 @@ You can use filters for some common app policies on the following platforms. For
 
 > [!NOTE]
 > Filters aren't supported on Android Enterprise personally-owned devices with work profile (BYOD) when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
+
+### Android device administrator
+
+| App type | Supported |
+| --- | --- |
+| Store app | ✔️ |
+| Microsoft 365 apps | N/A |
+| Microsoft Edge version 77 and newer | N/A |
+| Microsoft Defender for Endpoint | N/A |
+| Web link | ❌ |
+| Line-of-business apps | ✔️ |
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ### iOS/iPadOS
 
@@ -190,7 +193,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | N/A |
 | Endpoint detection and response | N/A |
 | Firewall | N/A |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### Android Enterprise
 
@@ -220,7 +223,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | N/A |
 | Endpoint detection and response | N/A |
 | Firewall | N/A |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### Android (AOSP)
 
@@ -259,7 +262,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | N/A |
 | Endpoint detection and response | N/A |
 | Firewall | N/A  |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### macOS
 
@@ -291,7 +294,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | ❌ |
 | Endpoint detection and response | N/A |
 | Firewall | ❌ |
-| Security Baselines | N/A |
+| Security baselines | N/A |
 
 ### Windows 10/11
 
@@ -335,7 +338,7 @@ You can use filters for some common app policies on the following platforms. For
 | Disk encryption | ❌ |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
-| Security Baselines | ❌ |
+| Security baselines | ❌ |
 
 ## Not supported on managed devices
 

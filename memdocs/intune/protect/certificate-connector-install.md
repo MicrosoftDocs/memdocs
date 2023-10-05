@@ -4,10 +4,10 @@
 title: Install the Certificate Connector for Microsoft Intune - Azure | Microsoft Docs
 description: Learn how to install and configure the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 03/30/2022
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- certificates
 ---
 
 # Install the Certificate Connector for Microsoft Intune
@@ -39,7 +40,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
-3. Select the *certificate connector* link to download the connector software. Save the file to a location that’s accessible from the server where you're going to install the connector.
+3. On the *Install the certificate connector* pane, select the *certificate connector* link to download the connector software. Save the file to a location that’s accessible from the server where you're going to install the connector.
 
    :::image type="content" source="./media/certificate-connector-install/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
 

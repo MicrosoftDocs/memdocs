@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/31/2023
+ms.date: 09/27/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,7 +49,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
+- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
 
 - When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 
@@ -155,6 +155,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the device home and overview buttons.
   - **Home button only**: Users can see and select the home button. They can't see or select the overview buttons.
   - **Home and overview buttons**: Users can see and select the home and overview buttons.
+
+    When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.       
 
   This setting applies to:
 

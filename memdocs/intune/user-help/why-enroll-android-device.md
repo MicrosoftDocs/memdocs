@@ -34,6 +34,9 @@ ms.collection:
 
 By enrolling your device in Intune, you get secure access to work or school apps on your Android device, and access to apps in Intune Company Portal and the Microsoft Intune app. The Company Portal app and Intune app also monitor your device settings to make sure they meet your organization's requirements and syncs things (like apps, policies, and updates) from your organization to your device.
 
+>[!IMPORTANT]
+> Before setting up Microsoft Intune for an Android Open Source Project (AOSP) device, ensure your device is supported. For a list of supported devices, see to [Android Open Source Project Supported Devices](../fundamentals/android-os-project-supported-devices.md).
+
 This article provides an overview of device enrollment, its purpose, and its benefits. To skip this overview and go straight to the enrollment steps, select from one of the following articles (ask your IT support person if you're not sure which set of instructions you're supposed to follow):  
  
 * Enrollment with Intune Company Portal app  

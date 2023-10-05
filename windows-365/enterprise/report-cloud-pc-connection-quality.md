@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 09/13/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,42 +32,41 @@ ms.collection:
 
 # Cloud PC connection quality report (preview)
 
-The **Cloud PC connection quality** report helps you evaluate your users' connection experiences on their Cloud PCs.
+The **Connection quality report** helps Windows 365 administrators identify devices that might be performing below expectations. Connection quality is a subjective concept with many variables defining what is acceptable in any given circumstance. Admins should use the objective data provided by this report, feed it into their own subjective performance criteria, to determine their organization's policies and remediations.
 
 ## Use the Cloud PC connection quality report
 
-To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with connection quality issues**).
+To get to the **Cloud PC connection quality** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Overview** > **Cloud PC performance (preview)** > **View report** (under **Connection quality (preview)**).
 
 ![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-pc-connection-quality/view-report-connection-quality.png)
-
-The report has two main sections: the aggregated histogram and the device list table.
-
-![Screenshot of the Cloud PC connection quality report](./media/report-cloud-pc-connection-quality/report-connection-quality.png)
-
-The histogram shows aggregated round-trip times of all the Cloud PCs in your tenant. The round-trip time is how many milliseconds it took to connect to the Cloud PC.
-  
-- **Good**: Less than 100 milliseconds.
-- **Average**: 100-200 milliseconds.
-- **High**: More than 200 milliseconds.
 
 The device list shows the individual Cloud PCs with the following columns:
 
 - **Device name**
-- **Round-trip time (P50)** (RTT): The number of milliseconds it took to establish the user connection to the Cloud PC. Lower values indicate better round-trip connectivity.
-- **Available bandwidth (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
+- **Round Trip Time for the most recent (or current) connection** (RTT): The number of milliseconds it takes, at the transport layer only, for communication between the client and the Cloud PC. Lower values indicate better round-trip connectivity.
+- **Round Trip Time for the specified date range (P50)**
+- **Available bandwidth for the most recent (or current) connection**
+- **Available bandwidth for the specified date range (P50)**: network bandwidth observed during sessions with the specified CPC sample set.
+- **Connection gateway**
 - **Remoting sign-in time (P50)**: The number of seconds it took the user to complete the sign-in process.
+- **Client IP address**
+- **Protocol for most recent (or current) connection**
+- **UDP Utilization average over date range**
 
-Each metric is aggregated to a P50 median level over the last 24 hours. This is to ensure spikes and troughs are smoothed in order to provide a good understanding of the overall end-user connectivity experience.
+Each row in the report gives links to the specific Cloud PC where you can find greater detail regarding the devices connection history and related performance.
 
-You can use **Add filter** to limit the histogram and table data to specific time spans and round-trip time ranges.
+You can use the **Columns** and **Add filter** options to customize the report:
 
-## Other reports
+- Choose which columns are displayed.
+- Filter the range for each column.
+- Choose the date range (7 days or 28 days).
 
-You can see similar quality data on a per-Cloud PC basis:
+You can use these filters to identify connections that don't meet your organization's requirements. Then, you can evaluate potential causes, like:
 
-1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All Devices**.
-2. Select a device and then select **Performance (preview)**.
-3. You'll see **Connection quality (preview)**. Under this chart, select **View report** to see more connection data specific to this Cloud PC.
+- Network, host, or client configurations that limit protocol choice.
+- Geographic distance.
+- Authentication methods and architecture.
+- Appropriateness of the client or host.
 
 <!-- ########################## -->
 ## Next steps

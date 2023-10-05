@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/apps/protect-edge-mam-windows.md",
+      "redirect_url": "/mem/intune/apps/apps/protect-mam-windows",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/byod-technology-decisions.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-planning-guide#personal-devices-vs-organization-owned-devices",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/common-scenarios.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-planning-guide#step-1---determine-your-objectives",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-windows.md",
       "redirect_url": "/mem/intune/user-help/device-enrollment-overview-windows",
       "redirect_document_id": false 
@@ -2123,6 +2138,46 @@
     {
       "source_path": "memdocs/autopilot/windows-autopilot-whats-new.md",
       "redirect_url": "/autopilot/windows-autopilot-whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/ui-changes.md",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/apps/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/configuration/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "memdocs/intune/remote-actions/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/developer/index.yml",
+      "redirect_url": "/mem/intune/",
       "redirect_document_id": false
     }
   ]

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 09/27/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,110 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of September 25, 2023 (Service release 2309)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### The resize action is now generally available<!--43950142-->
+
+The resize action has moved out of preview and into general availability. This feature is also available for both Windows 365 Government and Windows 365 Government customers using Windows 365 Enterprise. The resize action isn't currently available for Windows 365 Frontline. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+
+#### Windows 365 Boot is now generally available<!--43305609-->
+
+Windows 365 Boot has moved out of preview and into general availability. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) This feature isn't currently available for Windows 365 Government.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New filter options in the Cloud PC utilization report<!-- 43968518-->
+
+Two new filter options are now available for the **Cloud PC utilization** report:
+
+- **Date last connected** filter option: **No connection within the last 60 days**
+- **Time connected** filter option: **None (0 hours)**
+
+For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### New report: Cloud PCs that can't connect <!--45946128-->
+
+A new report is now available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you can observe:
+
+- devices that have unhealthy hosts.
+- users' connections that consistently or frequently fail.
+- systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
+
+For more information, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md).
+
+#### Improvements to Cloud PC connection quality report<!--45946378-->
+
+Improvements to the Cloud PC connection quality report include:
+
+- A more comprehensive view of the overall performance of their Cloud PCs.
+- A more detailed view of devices when they are in a state of poor performance due to high round trip times.
+- Tenant level visibility to most recent/current for:
+    - Round Trip Time.
+    - Bandwidth.
+    - Connection Time.
+    - UDP Utilization.
+- Connection specific detail on client IP and associated CPC Gateway.
+- Filters for all columns.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Single sign-on updates<!--43751308-->
+
+The following updates related to single sign-on are now available:
+
+- [Public preview features](..\public-preview.md).
+  - Single sign-on for Microsoft Entra hybrid join Cloud PCs.
+  - You can turn on single sign-on separately for each provisioning policy.
+  - A new Azure Network Connection check to make sure that the network is properly configured for single sign on.
+  - Apply single sign-on to existing Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
+
+For more information, see [Create provisioning policy](create-provisioning-policy.md) and [Edit provisioning policy](edit-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows 365 Switch is now generally available<!--45933920-->
+
+Windows 365 Switch has moved out of preview and into general availability. For more information, see [Windows 365 Switch](windows-365-switch-overview.md). This feature isn't currently available for Windows 365 Government.
+
+<!-- ########################## -->
+## Week of September 18, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### Windows 365 help documentation updated for Microsoft Entra ID<!--465015050-->
+
+Windows 365 help documentation has been updated for the rebranding of Azure Active Directory to Microsoft Entra ID. For more information, see [New name for Azure Active Directory](/azure/active-directory/fundamentals/new-name). Some areas of the Microsoft Intune user interface haven't yet been updated to Microsoft Entra ID, so you might see  differences until those updates are made.
+
+<!-- ########################## -->
+## Week of August 28, 2023 (Service release 2308)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### System alerts and email notifications are now generally available<!--40932899 -->
+
+System alerts and email notifications have moved out of preview and into general availability. For more information, see [Alerts](alerts.md).
+
+#### New report: Connected Frontline Cloud PCs<!--45975938-->
+
+The Connected Frontline Cloud PCs report is now available. For more information, see [Connected Frontline Cloud PCs report](report-connected-frontline-cloud-pcs.md).
+
+#### Endpoint Analytics resource performance report now available to GCCH customers<!--45234123-->
+
+The Endpoint Analytics resource performance report is now available to Government Community Cloud High (GCCH) customers. For more information, see [Resource performance report](report-resource-performance.md).
+
+#### New Cloud PC overview report page<!--45976156-->
+
+All Cloud PC reports can now be accessed from the **Cloud PC overview** section under **Device management**.
 
 <!-- ########################## -->
 ## Week of August 21, 2023

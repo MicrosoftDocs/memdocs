@@ -4,14 +4,14 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 12/08/2022
+ms.date: 09/18/2023
 ms.localizationpriority: high
 ---
 
 ### Apple
 
-- Apple iOS 14.0 and later
-- Apple iPadOS 14.0 and later
+- Apple iOS 15.0 and later
+- Apple iPadOS 15.0 and later
 - macOS 11.0 and later
 
 > [!NOTE]
@@ -25,7 +25,7 @@ In the context of userless iOS/iPadOS devices, there's a difference between *sup
 
 - Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
-- Android open source project device: [requirements](../fundamentals/android-os-project-supported-devices.md)
+- Android open source project device: [See here for the list of Supported devices](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
@@ -74,9 +74,9 @@ For guidelines on using Windows 10 virtual machines with Intune, see [Using Wind
 
 ### Windows 11 known issues
 
-- Multi-app kiosk mode isn't currently available. Windows 11 only supports the use of a single app in kiosk mode. For more information, see the following articles:
-  - [Set up a multi-app kiosk on Windows devices](/windows/configuration/lock-down-windows-10-to-specific-apps)
-  - [Windows device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md)
+- Currently, you can use Intune to configure a single-app kiosk on Windows 11 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+
+  For more information on dedicated kiosk devices in Intune, go to [Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md).
 
 - Management capabilities to deliver customized Start and Taskbar experiences are currently limited. For more information, see the following articles:
 

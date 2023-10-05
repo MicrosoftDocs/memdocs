@@ -4,8 +4,8 @@
 title: Network access control integration with Microsoft Intune
 description: Network access control (NAC) solutions check enrollment and compliance for devices with Intune. NAC includes certain behaviors and works with Conditional Access. See the steps to get onboarded, and get a list of partner solutions.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2023
 ms.topic: how-to
@@ -20,7 +20,7 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- network-access-control
 ---
 
 # Network access control (NAC) integration with Intune
@@ -46,6 +47,7 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - F5 BIG-IP Access Policy Manager 17.0 and later
 > - Ivanti Connect Secure 9.1R16 and later
 > - Aruba ClearPass with Microsoft Intune Extension v6 and later
+> - Forescout eyeExtend Microsoft Module v1.0.1 and later
 >
 > Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
 
@@ -134,7 +136,10 @@ Also, the data returned will be limited if:
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/UEM-MDM-Server-Integration/b_MDM_UEM_Servers_CiscoISE/chapter.html#task_og1_5zx_cqb)
 - [Integrate Citrix Gateway with Intune](https://docs.citrix.com/en-us/citrix-gateway/current-release/microsoft-intune-integration/configuring-network-access-control-device-check-for-citrix-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrate F5 BIG-IP Access Policy Manager with Intune](https://techdocs.f5.com/en-us/edge-client-7-1-8/big-ip-access-policy-manager-edge-client-and-application-configuration-7-1-8/configuring-access-policy-manager-for-mdm-applications.html)
+- [Integrate Forescout with Intune](https://protect-us.mimecast.com/s/YTj3CmZV3rFkqlOJFGbpF-?domain=docs.forescout.com)
 - [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads/documents/RmlsZTowMTg2ZmY0Yy05MGE5LTExZWItODRiZC0yZjM5OWFjNzc5YTY%3D)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.10.0.0/secRMMIntune.pdf)
+
+  
 
 

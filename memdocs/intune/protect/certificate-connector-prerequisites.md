@@ -4,10 +4,10 @@
 title: Prerequisites for use of the Certificate Connector for Microsoft Intune - Azure | Microsoft Docs
 description: Review the software and network prerequisites for use of the Certificate Connector for Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 08/26/2021
+ms.date: 09/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- certificates
 ---
 
 # Prerequisites for the Certificate Connector for Microsoft Intune

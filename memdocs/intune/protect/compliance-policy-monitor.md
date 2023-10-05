@@ -4,8 +4,8 @@
 title: Monitor results of your device compliance policies in Microsoft Intune
 description: Use the device compliance dashboard to understand overall device compliance the per-policy and per-setting device compliance results.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/21/2023
 ms.topic: how-to
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- compliance
 ---
 # Monitor results of your Intune Device compliance policies
 
@@ -46,6 +47,9 @@ This article applies to:
 - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
 - macOS
 - Windows 10 and later
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 Intune includes the following options for reviewing device compliance details:
 

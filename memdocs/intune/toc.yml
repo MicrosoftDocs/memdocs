@@ -293,7 +293,10 @@ items:
             href: ./apps/android-deployment-scenarios-app-protection-work-profiles.md
             displayName: app-we; without; without enrollment
           - name: Use Intune without Google Mobile Services
-            href: ./apps/manage-without-gms.md      
+            href: ./apps/manage-without-gms.md
+          - name: Data protection for Windows MAM
+            href: ./apps/protect-mam-windows.md
+            displayName: Windows MAM                  
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
             displayName: MAM          
@@ -428,6 +431,8 @@ items:
                   href: ./apps/configure-microsoft-launcher.md
                 - name: Configure Microsoft Edge for iOS/Android
                   href: ./apps/manage-microsoft-edge.md
+                - name: Configure Microsoft Edge for Windows
+                  href: ./apps/manage-microsoft-edge-windows.md                
                 - name: Configure Office
                   href: ./apps/manage-microsoft-office.md
                 - name: Configure Outlook
@@ -672,6 +677,8 @@ items:
             href: ./protect/conditional-access-jamf-cloud-connector.md
           - name: Integrate Jamf Pro with Intune for compliance
             href: ./protect/conditional-access-integrate-jamf.md
+          - name: Integrate Jamf Pro with Intune to report compliance to Entra ID
+            href: ./protect/jamf-managed-device-compliance-with-entra-id.md
           - name: Enforce compliance on Macs managed with Jamf Pro
             href: ./protect/conditional-access-assign-jamf.md
         - name: Endpoint protection
@@ -1715,13 +1722,8 @@ items:
     - name: Create an ADMX template
       href: ./configuration/tutorial-walkthrough-administrative-templates.md
       displayName: admx, administrative template, windows, gpo
-    - name: Common scenarios
-      href: ./fundamentals/common-scenarios.md
     - name: "Zero Trust: Manage devices with Intune"
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
-    - name: Technology decisions for BYOD with EMS
-      href: ./fundamentals/byod-technology-decisions.md    
-      displayName: MDM      
 
   - name: Developer guidance
     items:
@@ -1771,8 +1773,12 @@ items:
           href: ./developer/app-sdk-android-appendix.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
-    - name: Microsoft Tunnel for MAM iOS SDK 
-      href: ./developer/tunnel-mam-ios-sdk.md
+      - name: Microsoft Tunnel for MAM SDK 
+        items:
+        - name: Microsoft Tunnel for MAM iOS SDK 
+          href: ./developer/tunnel-mam-ios-sdk.md
+        - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
+          href: ./developer/mam-tunnel-ios-xamarin-bindings.md
     - name: Use the Intune Data Warehouse
       href: ./developer/reports-nav-create-intune-reports.md
       items:
@@ -1866,6 +1872,8 @@ items:
         href: ./fundamentals/remote-help.md
       - name: Remote Help on Windows
         href: ./fundamentals/remote-help-windows.md
+      - name: Remote Help on macOS
+        href: ./fundamentals/remote-help-macos.md  
       - name: Remote Help on Android
         href: ./fundamentals/remote-help-android.md
       - name: Troubleshooting Remote Help on Android

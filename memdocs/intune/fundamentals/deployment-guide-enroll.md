@@ -67,9 +67,11 @@ If devices are currently enrolled in another MDM provider, unenroll the devices 
 | Android Enterprise fully managed (COBO) | Yes |
 | Android Enterprise dedicated devices (COSU) | Yes |
 | Android device administrator (DA) | No |
-| iOS/iPadOS | Yes |
+| iOS/iPadOS (BYOD) | No |
+| iOS/iPadOS (ADE) | Yes |
 | Linux | No |
-| macOS | Yes |
+| macOS (BYOD) | No |
+| macOS (ADE) | Yes |
 | Windows | No |
 
 -----  
@@ -130,9 +132,11 @@ You can enroll personal or corporate-owned Android devices in Intune. We recomme
 * Android Enterprise dedicated  
 
 ### Android enrollment methods  
-The following tabs describe the Intune-supported Android and AOSP enrollment options. 
+
+The following tabs describe the Intune-supported Android and AOSP enrollment options.
 
 # [Corporate owned](#tab/work-profile)  
+
 * [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* management solution.  
  
 * [Fully managed](../enrollment/android-dedicated-devices-fully-managed-enroll.md): Enroll corporate-owned devices exclusively for work and not personal use. There's one user associated with the enrolled device. You can manage the entire device and enforce policy controls not available with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* management solution.  
@@ -145,16 +149,14 @@ The following tabs describe the Intune-supported Android and AOSP enrollment opt
 * [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
 
 # [User owned](#tab/user-owned-android)  
+
 [Personally owned devices with a work profile](../enrollment/android-work-profile-enroll.md): Support enrollment for personal devices in BYOD scenarios. During enrollment, a separate work profile is created on the device so that people can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise work profile for personally owned devices* management solution.    
 
 
 ---
 
 >[!NOTE]
-> Android Enterprise device management capabilities supersede Android device administrator capabilities so we recommend using Android Enterprise management solutions when possible. We still recommend the [Android device administrator management solution](../enrollment/android-move-device-admin-work-profile.md) for these scenarios:  
-> * For Microsoft Teams certified Android devices.
-> * When the device is in an area where Android Enterprise is unavailable.  
-> * When devices are incapable of integrating with Google Mobile Services, and the AOSP enrollment options won't work with them. For more information about using Android device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).   
+> Microsoft Intune also supports [Android device administrator management](../enrollment/android-enroll-device-administrator.md), but will be ending support on devices with access to Google Mobile Services (GMS) on August 30, 2024. After that date, device enrollment, technical support, bug fixes, and security fixes will be unavailable. For more information, read [Ending support for Android device administrator on GMS devices](https://aka.ms/Intune-Android-DA-blog).  
 
 ## Enrollment for Apple devices 
 This section describes the enrollment options available for iOS/iPadOS and Mac devices in Intune. 

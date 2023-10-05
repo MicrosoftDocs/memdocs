@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/24/2023
+ms.date: 09/22/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -82,7 +82,7 @@ For more information, see [EpmTools PowerShell module](../protect/epm-overview.m
 
 Child process behavior allows you to control the context when a child process is created by a process elevated with EPM. This behavior allows you to further restrict processes which normally would be automatically delegated the context of it's parent process.
 
-Windows automatically delegates a the context of a parent to a child, so take special care in controlling the behavior for your allowed applications. Ensure you evaluate what is needed when you create elevation rules, and implement the principle of least privilege.
+Windows automatically delegates the context of a parent to a child, so take special care in controlling the behavior for your allowed applications. Ensure you evaluate what is needed when you create elevation rules, and implement the principle of least privilege.
 
 > [!NOTE]
 >

@@ -40,7 +40,7 @@ Windows 365-branded security baselines are a group of tested and validated recom
 - MDATP settings: version 4
 - Microsoft Edge settings: April 2020 (Microsoft Edge version 80 and later)
 
-You can optionally apply Windows 365 security baselines to the Azure AD groups containing Cloud PC devices in your tenant.  
+You can optionally apply Windows 365 security baselines to the Microsoft Entra groups containing Cloud PC devices in your tenant.  
 
 > [!TIP]
 > Like any configuration change, it is always a good idea to test the security baseline on a pilot group of Cloud PCs. For information on how to build a rollout plan in Microsoft Intune, see the [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide#task-5-create-a-rollout-plan). For information on Microsoft Defender for Endpoint features can be tested, see [Test how Microsoft Defender for Endpoint features work in audit mode](/microsoft-365/security/defender-endpoint/audit-windows-defender).

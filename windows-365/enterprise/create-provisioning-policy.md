@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection:
 
 # Create provisioning policies
 
-Cloud PCs are created and assigned to users based on provisioning policies. These policies hold key provisioning rules and settings that let the Windows 365 service set up and configure the right Cloud PCs for your users. After provisioning policies are created and assigned to the Azure AD user security groups or Microsoft 365 Groups, the Windows 365 service:
+Cloud PCs are created and assigned to users based on provisioning policies. These policies hold key provisioning rules and settings that let the Windows 365 service set up and configure the right Cloud PCs for your users. After provisioning policies are created and assigned to the Microsoft Entra user security groups or Microsoft 365 Groups, the Windows 365 service:
 
 1. Checks for appropriate licensing for each user.
 2. Configures the Cloud PCs accordingly.
@@ -46,8 +46,8 @@ A few things to keep in mind:
 
 - Windows 365 Frontline
 
-  - If you have more users in your Azure Active Directory (Azure AD) user group than the number of Cloud PCs available for the selected size, some users might not receive their Cloud PC.
-  - If you remove users from your Azure AD user group, their Cloud PC is automatically moved into a grace period.  
+  - If you have more users in your Microsoft Entra user group than the number of Cloud PCs available for the selected size, some users might not receive their Cloud PC.
+  - If you remove users from your Microsoft Entra user group, their Cloud PC is automatically moved into a grace period.  
 
 ## Create a provisioning policy
 
@@ -63,19 +63,19 @@ A few things to keep in mind:
     - **Enterprise**: Provision Cloud PCs for Windows 365 Enterprise.
     - **Frontline**: Provision Cloud PCs for [Windows 365 Frontline](introduction-windows-365-frontline.md).
 4. On the **General** page, select a **Join type**:
-    - **Hybrid Azure AD Join**: You must select an ANC to use for this policy.
-    - **Azure AD Join**: You have two options for **Network**:
-        - **Azure network connection**: Select an ANC to use for this policy.
+    - **Microsoft Entra Join**: You have two options for **Network**:
         - **Microsoft hosted network**: Select a **Geography** where you want your Cloud PCs provisioned. Then, for [**Region**](requirements.md#supported-azure-regions-for-cloud-pc-provisioning), you can select:
             - **Automatic (Recommended)**: The Windows 365 service automatically chooses a region within the selected geography at the time of provisioning. This automation decreases the chance of provisioning failure.
             - A specific region: This option makes sure that your Cloud PCs are only provisioned in the region that you choose.
+        - **Azure network connection**: Select an ANC to use for this policy.
+    - **Hybrid Microsoft Entra join**: You must select an ANC to use for this policy.
 
 ### Select an ANC
 
 You must select an [ANC](azure-network-connections.md) for your provisioning policy if you selected either of these two options in the previous section:
 
-- **Join type** = **Hybrid Azure AD Join**
-- **Join type** = **Azure AD join** and **Network** = **Azure network connection**
+- **Join type** = **Hybrid Microsoft Entra Join**
+- **Join type** = **Microsoft Entra join** and **Network** = **Azure network connection**
 
 To select an ANC, follow these steps:
 
@@ -87,7 +87,7 @@ To select an ANC, follow these steps:
 
 ### Continue creating a provisioning policy
 
-1. If you select **Azure AD Join**, you can check the box so that your users **Use single sign-on (preview)**.
+1. On the **General** page, you can check the box so that your users **Use Microsoft Entra single sign-on (preview)**.
 2. Select **Next**.
 3. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
@@ -112,13 +112,13 @@ To select an ANC, follow these steps:
 8. Select **Next**.
 9. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select**. Nested groups aren't currently supported.
 10. For Windows 365 Frontline, you must also select a Cloud PC size for each group in the policy. Choose **Select one** > select a size under **Available sizes** > **Select**. After you've selected a size for each group, select **Next**.
-11. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
+11. On the **Review + create** page, select **Create**. If you used Microsoft Entra hybrid join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Microsoft Entra Connect sync last happened.
 
 After the provisioning policy is created and assigned, Windows 365 automatically starts to provision Cloud PCs and assigns them to users in the assigned groups.
 
 ### Windows 365 Frontline
 
-Azure AD group members don't receive Cloud PCs if the number of users in the Azure AD user group exceeds the maximum number of Cloud PCs allowed to be provisioned (based on the number of purchased licenses).
+Microsoft Entra group members don't receive Cloud PCs if the number of users in the Microsoft Entra user group exceeds the maximum number of Cloud PCs allowed to be provisioned (based on the number of purchased licenses).
 
 Admins can confirm the list of members who received Cloud PCs by reviewing the **Provisioning policy** > choose the policy > review the users in the groups under **Assignments**.
 
