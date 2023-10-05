@@ -3,7 +3,7 @@
 
 title: Migrate to a new iPhone for work or school | Microsoft Intune
 titlesuffix: Microsoft Intune
-description: Learn how to migrate an old iPhone that's already enrolled for work to a new iPhone. 
+description: Learn how to transfer your work access from an old iPhone to a new iPhone. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -33,23 +33,22 @@ ms.collection:
 
 # Migrate to a new iPhone for work or school  
 
-Transfer from the old iPhone you used for work, to your new one. In this article you will:      
+Transfer credentials, apps, and settings from the old iPhone you used for work, to your new one. This article describes how to:     
 
-* Prepare your 
-* Enroll your new iPhone. 
-* Migrate data from an active iPhone that can access protected work resources and is set up for multifactor authentication (MFA) to a new iPhone. 
+* Set up and enroll your new iPhone for work. 
+* Transfer data from your old iPhone to your new one. 
 
 Review all steps carefully before you start setting up your new device.   
 
 ## Prerequisites  
 > [!CAUTION]
-> You'll need to use your old device to complete MFA (if using app-based MFA) when setting up the new device. Do not factory reset your old device or remove the Authenticator app before you have successfully set up your new device. 
+> If using app-based MFA, you'll need to use your old device to complete multifactor authentication (MFA) when setting up the new device. Do not factory reset your old device or remove the Microsoft Authenticator app before you have successfully set up your new device. If you use SMS or call-based MFA, you can use either your old or new device to complete setup. 
 
-To back up the data on your device and restore it later, you must have:
+Your old phone must already have access to protected work resources and be set up for multifactor authentication (MFA). To create a backup of your data, you need:
 * A [personal Microsoft account](https://account.microsoft.com/account) to act as your recovery account.
 * An [iCloud account](https://www.icloud.com/) for the actual storage location. 
 
-If you use SMS or call-based MFA, you can use either your old or new device to complete setup. We recommend turning on phone sign-in for the easiest way to authenticate. To set up phone sign-in:
+We recommend turning on phone sign-in for the easiest way to authenticate. To set up phone sign-in:  
   1. On your existing device, open Microsoft Authenticator.  
   2. Tap your employee email address. 
   3. Tap **Enable phone sign-in**.  

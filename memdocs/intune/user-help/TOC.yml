@@ -128,8 +128,6 @@ items:
     items:
     - name: Enroll iOS/iPadOS device
       href: enroll-your-device-in-intune-ios.md
-    - name: Set up or migrate iPhone for work 
-      href: set-up-migrate-iphone-for-work.md
     - name: Enroll company-provided iOS device
       href: enroll-your-device-dep-ios.md
     - name: Enroll with derived credentials
@@ -142,6 +140,8 @@ items:
         href: enroll-ios-device-disa-purebred.md
   - name: Company Portal app for iOS/iPadOS
     items:
+    - name: Migrate account to new iPhone
+      href: set-up-migrate-iphone-for-work.md
     - name: Manually sync iOS/iPadOS device
       href: sync-your-device-manually-ios.md
     - name: Reset iOS/iPadOS device
