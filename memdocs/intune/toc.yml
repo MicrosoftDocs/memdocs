@@ -295,7 +295,8 @@ items:
           - name: Use Intune without Google Mobile Services
             href: ./apps/manage-without-gms.md
           - name: Data protection for Windows MAM
-            href: ./apps/protect-edge-mam-windows.md      
+            href: ./apps/protect-mam-windows.md
+            displayName: Windows MAM                  
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
             displayName: MAM          

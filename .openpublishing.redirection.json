@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/apps/protect-edge-mam-windows.md",
+      "redirect_url": "/mem/intune/apps/apps/protect-mam-windows",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/fundamentals/byod-technology-decisions.md",
       "redirect_url": "/mem/intune/fundamentals/intune-planning-guide#personal-devices-vs-organization-owned-devices",
       "redirect_document_id": false 

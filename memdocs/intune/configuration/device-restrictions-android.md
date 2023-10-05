@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 10/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -226,7 +226,7 @@ For each setting, add your apps:
 
 ## Kiosk
 
-Kiosk settings apply only to Samsung Knox Standard devices, and only to apps you manage using Intune.
+Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or earlier, and only to apps you manage using Intune.
 
 - Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Pre-installed browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../apps/manage-microsoft-edge.md).
 
