@@ -106,7 +106,7 @@ The below apps support the core Intune App Protection Policy settings.
 |Dynamics 365 for phone|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone)|✔|No settings|
 |Field Service (Dynamics 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone.fieldServices)|✔|No settings|
 |Field Service (Dynamics 365)|[iOS](https://apps.apple.com/app/field-service-dynamics-365/id1485579247?ls=1)|✔|No settings|
-|Field Service Mobile|[Android](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile)|✔|No settings|
+|Field Service Mobile|Android|✔|No settings|
 |Field Service Mobile|[iOS](https://apps.apple.com/app/field-service-mobile/id1414669075)|✔|No settings|
 |Microsoft 365 Admin|[Android](https://play.google.com/store/apps/details?id=com.ms.office365admin)|✔|No settings|
 |Microsoft 365 Admin|[iOS](https://apps.apple.com/app/microsoft-365-admin/id761397963)|✔|No settings|
