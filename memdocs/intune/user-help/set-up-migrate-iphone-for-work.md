@@ -113,16 +113,20 @@ When you open a productivity app, such as Microsoft Teams, and sign in with your
 ## Frequently asked questions 
 This section provides answers to frequently asked questions about setting up and migrating iPhones for work access. 
 
-### How do I migrate from an old iPhone that can't be used for MFA? 
-If you're unable to use your old device when setting up your new device, then you must register and set up multifactor authentication (MFA) on your new device before you can access email. 
+### General  
 
-### What happens if I use SMS/call for MFA and Microsoft Authenticator isn't set up for MFA?  
+#### How do I migrate from an old iPhone that can't be used for MFA? 
+If you're unable to use your old device to set up your new device, then you must register and set up multifactor authentication (MFA) on your new device before you can access email. 
+
+#### What happens if I use SMS/call for MFA and Microsoft Authenticator isn't set up for MFA?  
 If you use SMS or call-based MFA, as long as the number is active and can receive the SMS/call for verification on any type of device, you can use it for two-step verification while setting up your new device. However, we recommended that you set up *phone sign-in* for the easiest setup experience. 
  
-### How do I migrate from an old iPhone that has MFA set up to a new iPhone? 
-Don't factory reset the old iPhone or remove the Authenticator app until you have successfully set up your new iPhone. You'll need to use your old iPhone for two-step verification (if using app-based MFA) when setting up your new device. Follow the steps in this article from beginning to end to set up your new iPhone.      
+#### How do I migrate from an old iPhone that has two-step verification set up to a new iPhone? 
+Don't factory reset the old iPhone or remove the Authenticator app until you have successfully set up your new iPhone. You'll need to use your old iPhone for two-step verification (if using app-based MFA) when setting up your new device. Follow the steps in this article from beginning to end to set up your new iPhone.  
 
-### Can I migrate from an Android to an iPhone using these steps?  
+### Android
+
+#### Can I migrate from an Android to an iPhone using these steps?  
 If your Android phone is active and is set up for two-step verification, you can use it to set up work access on your iPhone. You can't restore an Authenticator app backup from Android to iOS and vice-versa. 
 
 Still need help? Contact your IT support person. Sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or app to check for your organization's contact information.    
