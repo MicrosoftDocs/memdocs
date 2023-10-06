@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 10/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,10 +52,6 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 - **Microsoft Entra ID group Object ID** for the group with **restricted** Lookout MES Console access *(optional group)*.
 
   You create this optional user group in Microsoft Entra ID to contain users that shouldn't have access to several configuration and enrollment-related modules of the Lookout console. Instead, these users have read-only access to the **Security Policy** module of the Lookout console. Users must be members of this optional group, or the required *full access* group, to sign in to the Lookout Console.
-
-> [!TIP]
->
-> For more details on the permissions, read [this article](https://personal.support.lookout.com/hc/articles/114094105653) on the Lookout website.
 
 ### Collect information from Microsoft Entra ID
 
