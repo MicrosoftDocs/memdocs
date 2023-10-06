@@ -142,6 +142,10 @@ For more information, see [New-CMCloudManagementGateway](/powershell/module/conf
 <!--9217349-->
 Prior to the Attack Surface Reduction capability in Windows Server, rules were marked compliant by default. As this rule setting becomes available to Server SKU, it's enforced through Config Manager. Now the Server SKU will be marked as compliant for an Attack Surface Reduction rule, only after enforcement of the rule.
 
+### Known issue with Bulk registration token
+
+The BulkRegistrationTokenTool.exe tool is not able to generate new token post upgrade to 2309 version.
+
 ## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
