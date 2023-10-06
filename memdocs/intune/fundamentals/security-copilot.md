@@ -38,19 +38,19 @@ ms.collection:
 
 Security Copilot is a cloud-based AI platform that provides a natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot).
 
-**Security Copilot integrates with Microsoft Intune**.
+**Security Copilot integrates with Microsoft Intune**
 
 If you use [Microsoft Intune](what-is-intune.md) in the same tenant as Security Copilot, then you can use Security Copilot to view managed device attributes and configuration data. You can get information about your devices, apps, compliance & configuration policies, and policy assignments managed in Intune.
 
-Specifically, Security Copilot gets insights from your Intune data. You can use the system features built into Security Copilot, and/or use prompts to get more information. This information can help you understand your security posture and possibly troubleshoot device issues.
+Specifically, Security Copilot gets insights from your Intune data. You can use the system features built into Security Copilot, and use prompts to get more information. This information can help you understand your security posture and possibly troubleshoot device issues.
 
 This article introduces you to Security Copilot and includes sample prompts that can help Intune admins.
 
-## Before you begin
+## Know before you begin
 
 - Be clear and specific with your prompts. You may get better results if you include specific device IDs/names, app names, or policy names in your prompts.
 
-  It may also help to add **Intune** to your prompt, like **What are the Windows device names managed by Intune?** or **How many Android devices are managed by Intune?**.
+  It may also help to add **Intune** to your prompt, like **According to Intune, how many devices were enrolled this week** or **Tell me about Intune devices for (user name)**.
 
 - Experiment with different prompts and variations to see what works best for your use case. Chat AI models vary, so iterate and refine your prompts based on the results you receive.
 
@@ -97,7 +97,8 @@ To view the list of built-in system capabilities for Intune, use the following s
     - Get a summary of an existing policy.
     - Get policy assignment scope.
     - Get the differences or comparisons between two devices.
-    - Get the Intune security posture of your tenant, and recommendations.
+    - Quickly gather details for a device by asking about it.
+    - Get detailed information about a user's device enrollments and device compliance for troubleshooting or a security investigation.
     - And more
 
 ## Sample prompts for Intune
@@ -112,11 +113,8 @@ Get **general information** about your Intune data, like the number of devices, 
 
 - What apps are added to Intune?
 - What Intune apps are assigned the most?
-- How many devices are managed by Intune?
-- What are the device names managed by Intune?
-- What are the Android device IDs managed by Intune?
-- What are the versions of the iOS and iPadOS devices in Intune?
-- How many macOS devices are enrolled in Intune?
+- How many devices were enrolled in Intune in the last 24 hours?
+- Tell me about Intune devices for Jon Smith.
 
 ### Policy targets
 
@@ -140,7 +138,7 @@ Get information about a **specific device**, like its group memberships and the 
 - What groups are DeviceX in?
 - Tell me about DeviceX
 - Who is the primary user for DeviceX?
-- Is appX installed on DeviceX?
+- Is ContosoApp installed on DeviceX?
 - Show me discovered apps on DeviceX
 
 ### Similarities and differences
