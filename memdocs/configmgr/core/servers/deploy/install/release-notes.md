@@ -148,7 +148,22 @@ AS
     WHERE RN = 1
 GO
 ```
+## Boundaries and Boundary groups
 
+### Clients not belonging to any boundary group may fail to download due to SQL issue 
+<!--22760249-->
+*Applies to: version 2303, 2309 RTM*
+
+ Consider ConfigMgr hierarchy with a remote MP and CMG and you deploy an app to a device collection. The Clients cannot download app, and reflect the below SQL permissions issue in **MP_Location.log**.
+
+ ```log
+    The SELECT permission was denied on the object 'vSMS_DefaultBoundaryGroup', database 'CM_xxx', schema 'dbo'.
+ ```
+ To workaround the issue run the below SQL script on the SQL database on the primary sites where the MP reports.
+
+```sql
+    GRANT SELECT ON vSMS_DefaultBoundaryGroup To smsdbrole_MP
+```
 <!-- ## Cloud services -->
 
 <!-- ## Role based administration -->

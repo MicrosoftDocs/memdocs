@@ -4,8 +4,8 @@
 title: Configure feature updates policy for Windows 10 Windows 11 devices in Intune
 description: Create and manage Intune policy for Windows feature updates. Configure and deploy policy to maintain the Windows feature version of Windows 10/11 devices you manage with Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 07/25/2023
 ms.topic: how-to
@@ -141,16 +141,13 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 - Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives. The service is utilized by Microsoft Intune and works with your Intune policies for Windows updates to deploy feature updates to devices.
 
-  When a device is no longer assigned to any feature update policies, Intune waits 90 days to unenroll that device from feature update management and to unenroll that device from the deployment service. This delay allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that wasn't intended.
+  When a device is no longer assigned to any feature update policies, the device remains enrolled in the deployment service.  This allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that wasn't intended.
 
   This means that when a feature updates policy no longer applies to a device, that device won’t be offered any feature updates until one of the following happens:
 
-  - 90 days elapse.
   - The device is assigned to a new feature update profile.
   - The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
   - You use the Windows Update for [Business deployment service graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
-
-  To keep a device at its current feature update version and prevent it from being unenrolled and updated to the most recent feature update version, ensure the device remains assigned to a feature update policy that specifies the devices current Windows version.
 
 ## Create and assign Feature updates for Windows 10 and later policy
 

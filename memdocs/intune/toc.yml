@@ -295,7 +295,8 @@ items:
           - name: Use Intune without Google Mobile Services
             href: ./apps/manage-without-gms.md
           - name: Data protection for Windows MAM
-            href: ./apps/protect-edge-mam-windows.md      
+            href: ./apps/protect-mam-windows.md
+            displayName: Windows MAM                  
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
             displayName: MAM          
@@ -1754,26 +1755,30 @@ items:
         displayName: dex
       - name: Intune App SDK for Android
         items:
-        - name: Intune App Developer Guide
-          href: ./developer/app-sdk-android-appendix.md
         - name: Plan the Integration
           href: ./developer/app-sdk-android-phase1.md
         - name: Understand the MSAL Prerequisite
           href: ./developer/app-sdk-android-phase2.md
-        - name: Get started with MAM
+        - name: Get Started with MAM
           href: ./developer/app-sdk-android-phase3.md
-        - name: MAM integration essentials
+        - name: MAM Integration Essentials
           href: ./developer/app-sdk-android-phase4.md
         - name: Multi-Identity
           href: ./developer/app-sdk-android-phase5.md
-        - name: App configuration
+        - name: App Configuration
           href: ./developer/app-sdk-android-phase6.md
-        - name: App participation features
+        - name: App Participation Features
           href: ./developer/app-sdk-android-phase7.md
+        - name: Appendix
+          href: ./developer/app-sdk-android-appendix.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
-    - name: Microsoft Tunnel for MAM iOS SDK 
-      href: ./developer/tunnel-mam-ios-sdk.md
+      - name: Microsoft Tunnel for MAM SDK 
+        items:
+        - name: Microsoft Tunnel for MAM iOS SDK 
+          href: ./developer/tunnel-mam-ios-sdk.md
+        - name: Microsoft Tunnel for MAM iOS Xamarin Bindings SDK
+          href: ./developer/mam-tunnel-ios-xamarin-bindings.md
     - name: Use the Intune Data Warehouse
       href: ./developer/reports-nav-create-intune-reports.md
       items:

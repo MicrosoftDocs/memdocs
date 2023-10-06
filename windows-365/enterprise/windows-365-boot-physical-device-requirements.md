@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/24/2023
+ms.date: 09/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -34,16 +34,17 @@ ms.collection:
 
 Follow these steps and requirements to set up shared physical devices for Windows 365 Boot.
 
-## Install Windows Insider Program Preview Build
+## Operating system requirements
 
-Each device must be running the **latest Beta Channel** Windows Insider Preview Build.
+Each physical device (and Cloud PC) must be running Windows 11 Enterprise or Professional, version 22621.2361 or later.
 
-1. To install this build, follow the instructions in the [Get started with the Windows Insider Program article](/windows-insider/get-started).
-2. Users should turn on **Get the latest updates as soon as they’re available** on the **Windows update** settings page to get the latest updates available for Windows 365 Boot.
-3. After installation, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices**.
-4. Select the device in the list > **Wipe** > **Wipe**. Don't select any of the boxes in the wipe confirmation box.
-5. The next time the device connects to the internet, it will be wiped. This process can take several minutes.
-6. Complete the Windows Autopilot steps in the next section.
+## Configure the physical device
+
+1. Open **Windows Update** and turn on **Get the latest updates as soon as they’re available**.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All devices**.
+3. Select the device in the list > **Wipe** > **Wipe**. Don't select any of the boxes in the wipe confirmation box.
+4. The next time the device connects to the internet, it will be wiped. This process can take several minutes.
+5. Complete the Windows Autopilot steps in the next section.
 
 ## Register the physical device with Windows Autopilot
 

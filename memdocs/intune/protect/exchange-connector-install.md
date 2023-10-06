@@ -5,8 +5,8 @@ title: Set up a Microsoft Intune Exchange connector
 titleSuffix: Microsoft Intune
 description: Use the on-premises Intune Exchange connector to manage device access to Exchange mailboxes based on Intune enrollment and Exchange ActiveSync (EAS).
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/15/2021
 
@@ -30,6 +30,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Set up the on-premises Intune Exchange connector

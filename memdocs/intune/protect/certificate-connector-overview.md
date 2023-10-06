@@ -4,8 +4,8 @@
 title: Overview of Certificate Connector for Microsoft Intune - Azure | Microsoft Docs
 description: Learn about the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/14/2023
 ms.topic: how-to
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- certificates
 ---
 
 

@@ -72,9 +72,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### Configuration scripts for unmanaged macOS PKG apps<!-- 17745891  -->  
-You can now configure pre-install and post-install scripts in unmanaged macOS PKG apps. This feature gives you greater flexibility over custom PKG installers. Configuring these scripts is optional and requires the Intune agent for macOS devices v2309.007 or higher. For more information about adding scripts to unmanaged macOS PKG apps, see [Add an unmanaged macOS PKG app](../apps/macos-unmanaged-pkg.md).
-
 #### MAM for Windows general availability<!-- 12394345, 12394352 -->
 You can now enable protected MAM access to org data via Microsoft Edge on personal Windows devices. This capability uses the following functionality:
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
@@ -737,10 +734,10 @@ While this update adds MAC address support to the CR service, our recommendation
 
 For information about the CR service as a replacement for the Intune Network Access Control (NAC) service, see the Intune blog at [https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-service-for-network-access-control/ba-p/2544696).
 
-#### Settings insight within Intune Security Baselines is generally available<!-- 24507891   -->  
+#### Settings insight within Intune security baselines is generally available<!-- 24507891   -->  
 Announcing the general availability of Settings insight in Microsoft Intune.
 
-The [Settings insight](../fundamentals/settings-insight.md) feature adds insight to settings giving you confidence in configurations that have been successfully adopted by similar organizations. Settings insight is currently available for Security Baselines.
+The [Settings insight](../fundamentals/settings-insight.md) feature adds insight to settings giving you confidence in configurations that have been successfully adopted by similar organizations. Settings insight is currently available for security baselines.
 
 Navigate to **Endpoint security** > **Security baselines**. While creating and editing a workflow these insights are available for all settings with light bulbs.
 
@@ -998,7 +995,7 @@ Applies to:
 - Android
 - iOS/iPadOS
 
-#### Settings insight within Intune Security Baselines<!-- 11127203  -->  
+#### Settings insight within Intune security baseline<!-- 11127203  -->  
 The [Settings insight](../fundamentals/settings-insight.md) feature adds insights to security baselines giving you confidence in configurations that are successfully adopted by similar organizations.
 
 Navigate to **Endpoint security** > **Security baselines**. When you create and edit the workflow, these insights are available for you in the form of a light bulb.
@@ -1841,7 +1838,6 @@ Following are the new settings, all found in the [Firewall configuration service
 
 Applies to:
 
-- Windows 10
 - Windows 11
 
 #### Endpoint security firewall rules support for Mobile Broadband (MBB)<!-- 16730577  -->  

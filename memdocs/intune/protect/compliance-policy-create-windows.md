@@ -4,8 +4,8 @@
 title: Windows compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Windows 10, Windows 11, Windows Holographic, and Surface Hub devices in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, check for partner anti-virus (AV) solutions, enable encryption on data storage, and more.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 5/5/2021
 ms.topic: reference
@@ -28,6 +28,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- compliance
 ---
 
 # Device Compliance settings for Windows 10/11 in Intune
