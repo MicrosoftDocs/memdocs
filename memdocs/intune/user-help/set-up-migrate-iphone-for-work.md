@@ -49,7 +49,7 @@ Your old phone must already have access to protected work resources and be set u
 * An [iCloud account](https://www.icloud.com/) for the actual storage location. 
 
 We recommend turning on *phone sign-in* for the easiest way to authenticate. To set up phone sign-in:  
-  1. On your existing device, open Microsoft Authenticator.  
+  1. On your old device, open Microsoft Authenticator.  
   2. Tap your employee email address. 
   3. Tap **Enable phone sign-in**.  
 
