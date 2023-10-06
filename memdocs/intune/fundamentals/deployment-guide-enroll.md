@@ -218,7 +218,7 @@ These options can be used by users in BYOD scenarios who want to enroll their pe
 * [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md): Users sign in to the Intune Company Portal app with their work account to enroll their devices. They can install Company Portal from Microsoft Store. 
 * Enrollment via a Microsoft 365 app sign-in: Users sign into a Microsoft 365 app or service, such as Exchange Online, from an unmanaged/unregistered device with their work account. On the sign-in prompt, they select **Allow my organization to manage my device**.   
 
-In all of these BYOD scenarios the devices are Azure AD-registered and managed by Intune. If both the MDM and MAM user scopes are enabled for a user in the [Intune automatic enrollment configuration]((../enrollment/windows-enroll.md) then the MAM user scope will take precedence and the device will not be enrolled and managed by Intune.  
+In all of these BYOD scenarios, the devices are Azure AD-registered and managed by Intune. If both the MDM and MAM user scopes are enabled for a user in the [Intune automatic enrollment configuration](../enrollment/windows-enroll.md),r then the MAM user scope will take precedence and the device will not be enrolled and managed by Intune.  
 
 # [Bulk enrollment via provisioning package](#tab/bulk-enrollment)
 Workplace join and enroll a large number of corporate-owned devices in Azure AD and Intune without needing to reimage them. This process requires you to create a provisioning package using the Windows Configuration Designer app. You can apply the package during the device OOBE, or upload it on the device in the Settings app.   
