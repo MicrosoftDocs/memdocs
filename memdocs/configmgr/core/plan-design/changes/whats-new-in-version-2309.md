@@ -144,7 +144,13 @@ Prior to the Attack Surface Reduction capability in Windows Server, rules were m
 
 ### Known issue with Bulk registration token
 
-The BulkRegistrationTokenTool.exe tool is not able to generate new token post upgrade to 2309 version.
+The BulkRegistrationTokenTool tool is not able to generate new token post upgrade to 2309 version. 
+Customers will get following error while running the BulkRegistrationTokenTool.exe.
+
+ - Unhandled Exception: System.IO.FileLoadException: Could not load file or assembly 'System.IdentityModel.Tokens.Jwt, Version=4.0.40306.1554, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+   at Microsoft.ConfigurationManager.CloudBase.AuthorizationToken.TokenIssuer.IssueToken(IToken token, Int32 tokenLifetime)
+   at Microsoft.ConfigurationManager.BulkRegistrationTool.BulkRegistrationToken.CreateNewToken(IDatabaseOperation dbOperation, Int32 lifeTime)
+   at Microsoft.ConfigurationManager.BulkRegistrationTool.BulkRegistrationToken.Main(String[] args)
 
 ## Deprecated features
 
