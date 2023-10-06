@@ -52,15 +52,30 @@ Apple's declarative device management (DDM) allows you to install a specific upd
 
 ## Declarative software updates vs software update policies
 
-On Apple devices in Intune, you can create software update policies or declarative software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types. Here's what you need to know:
+On Apple devices in Intune, you can create software update policies or declarative software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
 
-| Feature | Software update policy | Declarative software update policy |
+Use the following information to help you decide which policy type to use.
+
+| Feature | Declarative software update policy | Software update policy|
 | --- | --- | --- |
-| Installs software updates on devices. | ✔️ | ✔️ |
-| Intune admin center policy type | - Update policies for iOS/iPadOS <br/> - Update policies for macOS | Settings catalog |
-| Precedence | ❌ | ✔️ <br/> Takes precedence over iOS/iPadOS and macOS software update policies.  <br/> <br/>Can the two policy types work together? Or, is this a conflict scenario? |
-
-
+| **Installs a specific update** |  |  |
+| iOS/iPadOS | ✔️ | ✔️ |
+| macOS | ✔️ | ❌ |
+| | | |
+| **Enforces an update** |  |  |
+| iOS/iPadOS | ✔️ | ❌ |
+| macOS | ✔️ | ❌ |
+| | | |
+| **Enter a help URL** |  |  |
+| iOS/iPadOS | ✔️ | ❌ |
+| macOS | ✔️ | ❌ |
+| | | |
+| **Auto deploy latest update** |  |  |
+| iOS/iPadOS | ❌ | ✔️ |
+| macOS | ❌ | ✔️ |
+| | | |
+| **Intune admin center policy type** | - [Update policies for iOS/iPadOS](software-updates-ios.md) <br/> - [Update policies for macOS](software-updates-macos.md) | [Settings catalog](../configuration/settings-catalog.md) |
+| **Precedence** | ✔️ <br/> Takes precedence over software update policies.  <br/> <br/>Can the two policy types work together? Or, is this a conflict scenario? | ❌ |
 
 ## Configure the DDM software updates policy
 
