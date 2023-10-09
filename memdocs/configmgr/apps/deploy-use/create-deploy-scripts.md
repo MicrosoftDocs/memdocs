@@ -289,7 +289,7 @@ Schedule script execution on a collection:
  ![Screenshot of script - schedule.](./media/run-scripts/schedule-scriptn.png)
 
 > [!Note]
-> Site will process twenty five scheduled scripts in every 5 mins at a time.
+> A max of twenty five scheduled scripts will be proccessed in every 5 minutes.
 
 ### Target machine execution
 

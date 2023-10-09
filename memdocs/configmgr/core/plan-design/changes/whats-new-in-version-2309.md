@@ -2,7 +2,7 @@
 title: What's new in version 2309
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
-ms.date: 09/28/2023
+ms.date: 10/09/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
@@ -138,10 +138,18 @@ PowerShell command: ``` Set-UpdateServerApplication ``` to update your
 
 For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway)
 
-### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement.   
+### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement  
 <!--9217349-->
 Prior to the Attack Surface Reduction capability in Windows Server, rules were marked compliant by default. As this rule setting becomes available to Server SKU, it's enforced through Config Manager. Now the Server SKU will be marked as compliant for an Attack Surface Reduction rule, only after enforcement of the rule.
 
+### Known issue with Bulk registration token
+
+The BulkRegistrationTokenTool is not able to generate new token post upgrade to 2309 version. 
+Customers will get following error while running the BulkRegistrationTokenTool.exe.
+
+ - Unhandled Exception: System.IO.FileLoadException: Could not load file or assembly 'System.IdentityModel.Tokens.Jwt, Version=4.0.40306.1554, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+
+For more information, see [Bulk registration token]( ../../clients/deploy/deploy-clients-cmg-token.md#bulk-registration-token)  
 ## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
