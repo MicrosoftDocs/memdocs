@@ -20,6 +20,15 @@ appliesto:
 
 # Windows Autopilot: What's new
 
+## Unblock fix pending state for self-deploying mode for disabled OEMs
+
+Starting in 2310, we are making an update to the self-deployment mode for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time self-deployment mode block, which means that the device could go through self-deployment mode once and then get blocked from doing it again. This could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button on the Autopilot devices blade to manually unblock those devices.  This update only works for OEMs that are not within the [OEM list](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftechcommunity.microsoft.com%2Ft5%2Fintune-customer-success%2Freturn-of-key-functionality-for-windows-autopilot-sign-in-and%2Fba-p%2F3583130&data=05%7C01%7CJuanita.Baptiste%40microsoft.com%7Cdf135488602e4e5d5f6408dbaefb5692%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638296166746909038%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=id6lEQmXQU3ooxkcW5pnyhEJ743sOJqYgZfhCXP%2BQo4%3D&reserved=0) and does not work on the fix pending status.
+
+### How to unblock the devices
+
+1. Sign into the Microsoft Endpoint Manager admin center.
+Go to __Devices__ > __Windows__ > __Windows enrollment__ > Under the Windows Autopilot Program, select __Devices__.
+Select the device that you want to unblock and click on the Unblock button at the top of the blade.
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
 Microsoft Intune is changing how BitLocker resets occur for reused Windows Autopilot devices in the September (2309) service release. Previously, users could access the BitLocker recovery key via BitLocker self-service when reusing devices that have been configured through Windows Autopilot. However, after the change, users will need to contact their IT admin to request a restore or to access the BitLocker recovery key. IT admins will continue to have full access to recovery keys both before and after this change.
@@ -166,5 +175,6 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
 
 [What's new in Windows client](/windows/whats-new/)
+
 
 
