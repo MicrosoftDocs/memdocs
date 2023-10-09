@@ -40,7 +40,7 @@ zone_pivot_groups: mde-attach-preview
 -->
 # Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
 
-When you use Microsoft Defender for Endpoint, you can  deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
+When you use Microsoft Defender for Endpoint, you can deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
 
 ::: zone pivot="mdssc-ga"
 **The following describes behavior that is generally available.**
@@ -467,19 +467,23 @@ You can create groups for these devices [in Azure AD](/azure/active-directory/fu
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*
 - **Linux Device** - The deviceOSType or OS displays as *Linux*
 
-#### **Sample Intune Dynamic Groups with Rule Syntax:**
+
+ #### Sample Intune Dynamic Groups with Rule Syntax:
 
 **Windows Workstations**
 
-![WindowsWorkstationDymanicGroup.](media/mde-security-integration/windowworkstation.jpg)
+:::image type="content" source="./media/mde-security-integration/windowworkstation.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Workstations." lightbox="./media/mde-security-integration/windowworkstation.jpg":::
+
 
 **Windows Servers**
 
-![WindowsServersDymanicGroup.](media/mde-security-integration/windowsserver.jpg)
+:::image type="content" source="./media/mde-security-integration/windowsserver.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Servers." lightbox="./media/mde-security-integration/windowsserver.jpg":::
+
 
 **Linux Devices**
 
-![LinuxDevicesDynamicGroup.](media/mde-security-integration/linuxdevices.jpg)
+:::image type="content" source="./media/mde-security-integration/linuxdevices.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Linux." lightbox="./media/mde-security-integration/linuxdevices.jpg":::
+
 
 > [!IMPORTANT]
 > In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
@@ -635,5 +639,6 @@ Security settings management doesn't work for a device that has PowerShell *Lang
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
 
 ::: zone-end
+
 
 
