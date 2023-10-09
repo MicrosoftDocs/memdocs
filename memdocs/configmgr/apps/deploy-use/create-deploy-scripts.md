@@ -286,7 +286,7 @@ Schedule script execution on a collection:
 5. Verify the details that are displayed on the **summary page**. 
 6. Click **Next**, and then complete the wizard.
    
-   ![Screenshot of script - schedule.](./media/run-scripts/schedule-scriptn.png)
+   ![Screenshot of script - schedule.](./media/run-scripts/schedule-script.png)
 
 > [!Note]
 > A max of twenty five scheduled scripts will be proccessed in every 5 minutes.
