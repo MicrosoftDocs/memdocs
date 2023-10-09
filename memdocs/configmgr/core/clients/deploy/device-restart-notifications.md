@@ -46,7 +46,7 @@ When a device requires a restart, the client shows a notification to the end use
 
 A Windows toast notification informs the user that the device needs to restart. The information in the toast notification can be different depending on which version of Configuration Manager you're running. This type of notification is native to the Windows OS. You may also see third-party software using this type of notification.
 
-:::image type="content" source="media/3555947-restart-toast.png" alt-text="Screenshot of Toast notification of pending restart":::
+:::image type="content" source="media/3555947-restart-toast.png" alt-text="Screenshot of Toast notification of pending restart.":::
 
 ### Software Center notification with snooze
 
