@@ -45,7 +45,7 @@ For more information about the feature, see [Security baselines in Intune](secur
 >
 > In May 2023, Intune began rollout of a new security baseline format that applies to new baseline types, like Microsoft 365 Apps, and to the newer versions of existing baselines, like Microsoft Edge baseline version 112. The new format updates the baseline settings to directly take their name and configuration options from the configuration service provider (CSP) that the baseline setting manages.
 >
-> Intune also introduced a new process to help you [*migrate an existing security baseline profile to the newer baseline version*](../protect/security-baselines-configure#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
+> Intune also introduced a new process to help you [*migrate an existing security baseline profile to the newer baseline version*](../protect/security-baselines-configure.md#update-a-baseline-to-the-new-format). This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
 >
 > Baselines instances that use this new format also have an updated report and monitoring structure that aligns to other report improvements rolled out this year across Intune feature areas. The report view details for the [new format](#monitor-the-baseline-and-your-devices) are presented in this article separately from the [original details provided for the older baselines](#monitor-profiles-for-baseline-versions-released-before-may-2023), many of the concepts discussed for the older views remain relevant.
 
@@ -99,7 +99,7 @@ Should this setting have been in conflict, this view can help you identify the o
 Select the *Device assignment status* tile to view this report. In this report:
 
 - Results are a list of devices, similar to the *Device and user check-in status* report.
-- Selecting a device on this page opens that devices Profile Settings view, which is the same view you can see from the main report drill-in you access from the View report button. However, devices that have an Assignment status of Pending won't have results to display.
+- Selecting a device on this page opens that devices Profile Settings view, which is the same view you can see from the main report drill-in you access from the View report button. However, devices that have an Assignment status of Pending don't have results to display.
 - Selecting a setting from this view opens the Setting Details pane, same as via the main report-drill in.
 
 ### Per setting status report
