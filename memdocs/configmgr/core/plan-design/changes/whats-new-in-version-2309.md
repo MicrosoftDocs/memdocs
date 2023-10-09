@@ -119,7 +119,7 @@ Starting in Configuration Manager current branch version 2309, we have enhanced 
 :::image type="content" source="media/cmg-console-creation.png" alt-text="A screenshot of the cmg app creation via console.":::
 
 >[!NOTE]
->Pre existing CMG customers must update their web server app by navigating to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings".
+>Pre-existing CMG customers must update their web server app by navigating to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings".
 
 For more information, see [Configure Azure Active Directory for CMG](../../clients/manage/cmg/configure-azure-ad.md)
 
