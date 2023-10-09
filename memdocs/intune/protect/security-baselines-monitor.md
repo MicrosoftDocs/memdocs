@@ -106,16 +106,14 @@ Select the *Device assignment status* tile to view this report. In this report:
 
 Select the *Per setting status* tile to view this report. This report displays a list of the settings in the profile and for each, the count of results from devices for each status, like how many devices report Success, Error, or Conflict.
 
-This view has no support to drill-in. Instead, to pursue settings that are in error or conflict you can use the other reports and view. For example, to find more about any devices that might have reported an Error or Conflict, you can then open the *Device assignment status* tile, and for that report, scope the report status to show only the status you're investigating, like Error, or Conflict. Then, with that report you can continue to drill-in to run-down the relevant details.
+This view has no support to drill-in. Instead, to pursue settings that are in error or conflict you can use the other reports and view. For example, to find more about any devices that might have reported an Error or Conflict, you can then open the *Device assignment status* tile, and for that report, scope the report status to show only the status you're investigating. Then, with that report you can continue to drill-in to run-down the relevant details.
 
 ### Properties
 
-On the dashboards main page is the *Properties* view where you can:
+Below the reports section of the dashboard, you can find the profiles *Properties* view. From Properties you can:
 
-- View the profiles configuration.
-- Edit aspects like the friendly name you gave the profile, its Assignments and its Configuration settings.
-
-From this view, you can also expand individual categories that are part of the profile, to view and edit each settings current configuration:
+- View the configuration of each page of the profile.
+- **Edit** the profiles configuration, like the friendly name you gave the profile, its *Assignments*, and any of the profile settings.
 
 :::image type="content" source="./media/security-baselines-monitor/view-profile-configurations.png" alt-text="View the baselines configuration, where you can edit to make changes.":::
 
