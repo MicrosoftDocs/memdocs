@@ -58,24 +58,29 @@ Use the following information to help you decide which policy type to use.
 
 | Feature | Declarative software update policy | Software update policy|
 | --- | --- | --- |
-| **Installs a specific update** |  |  |
+| **Installs a specific update** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ✔️ | ✔️ |
 | macOS | ✔️ | ❌ |
-| | | |
-| **Enforces an update** |  |  |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Enforces an update** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ✔️ | ❌ |
 | macOS | ✔️ | ❌ |
-| | | |
-| **Enter a help URL** |  |  |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Enter a help URL** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ✔️ | ❌ |
 | macOS | ✔️ | ❌ |
-| | | |
-| **Auto deploy latest update** |  |  |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Auto deploy latest update** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ❌ | ✔️ |
 | macOS | ❌ | ✔️ |
-| | | |
-| **Intune admin center policy type** | - [Update policies for iOS/iPadOS](software-updates-ios.md) <br/> - [Update policies for macOS](software-updates-macos.md) | [Settings catalog](../configuration/settings-catalog.md) |
-| **Precedence** | ✔️ <br/> Takes precedence over software update policies.  <br/> <br/>Can the two policy types work together? Or, is this a conflict scenario? | ❌ |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Intune admin center policy type** | &nbsp; | &nbsp; |
+| iOS/iPadOS | [Update policies for iOS/iPadOS](software-updates-ios.md) | [Settings catalog](../configuration/settings-catalog.md) |
+| macOS | [Update policies for macOS](software-updates-macos.md) | [Settings catalog](../configuration/settings-catalog.md) |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Precedence order** | &nbsp; | &nbsp; |
+| iOS/iPadOS | ✔️ <br/> Takes precedence over software update policies.  <br/> <br/>1. DDM<br/> 2. Software Update policies <br/> <br/>Can the two policy types work together? Or, is this a conflict scenario? | ❌ |
+| macOS | ✔️ <br/> Takes precedence over software update policies.  <br/> <br/>1. DDM<br/>2. Software Update policies<br/>3. **Settings catalog** > **System Updates** > **Software Update** <br/> <br/>Can the policies work together? Or, is this a conflict scenario? | ❌ |
 
 ## Configure the DDM software updates policy
 
