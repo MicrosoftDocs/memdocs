@@ -30,7 +30,6 @@ ms.collection:
 ms.reviewer: laarrizz
 
 zone_pivot_groups: mde-attach-preview
-
 ---
 
 <!--  PIVOTS in use:
@@ -41,7 +40,7 @@ zone_pivot_groups: mde-attach-preview
 -->
 # Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
 
-When you use Microsoft Defender for Endpoint, you can  deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
+When you use Microsoft Defender for Endpoint, you can deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
 
 ::: zone pivot="mdssc-ga"
 **The following describes behavior that is generally available.**
@@ -142,9 +141,9 @@ When a device that is domain joined creates a trust with Azure Active Directory,
 
 > [!NOTE]
 >
-> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device.
+> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device. 
 >
-> If the device was part of a dynamic Azure AD group, the policy targeting the device will be resolved within a minimum of 48 hours. However, if the device was targeted as part of a static Azure AD group, administrators will need to go back and retarget the device.
+> If the device was part of any dynamic Azure AD groups previously and has now been re-added back into Azure AD (with the same Device ID), the policies targeting the device will be resolved within a minimum of 48 hours. However, if the device was part of any static Azure AD groups previously, administrators will need to go back and re-add the device back into those groups.
 >
 > This is a known issue with Azure AD.
 
@@ -464,8 +463,27 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
 
-- **Windows 10 and Windows 11** - The deviceType or OS displays as *Windows*
-- **Windows Server** - The deviceType or OS displays as *Windows Server*
+- **Windows 10 and Windows 11** - The deviceOSType or OS displays as *Windows*
+- **Windows Server** - The deviceOSType or OS displays as *Windows Server*
+- **Linux Device** - The deviceOSType or OS displays as *Linux*
+
+
+ #### Sample Intune Dynamic Groups with Rule Syntax:
+
+**Windows Workstations**
+
+:::image type="content" source="./media/mde-security-integration/windowworkstation.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Workstations." lightbox="./media/mde-security-integration/windowworkstation.jpg":::
+
+
+**Windows Servers**
+
+:::image type="content" source="./media/mde-security-integration/windowsserver.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Servers." lightbox="./media/mde-security-integration/windowsserver.jpg":::
+
+
+**Linux Devices**
+
+:::image type="content" source="./media/mde-security-integration/linuxdevices.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Linux." lightbox="./media/mde-security-integration/linuxdevices.jpg":::
+
 
 > [!IMPORTANT]
 > In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
@@ -621,3 +639,6 @@ Security settings management doesn't work for a device that has PowerShell *Lang
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.
 
 ::: zone-end
+
+
+

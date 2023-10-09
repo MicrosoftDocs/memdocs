@@ -2,7 +2,7 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 04/08/2022
+ms.date: 09/26/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -93,6 +93,12 @@ If clients use PKI-issued client authentication certificates, then the two clien
 1. Select **OK** to create the web app in Azure AD and close the _Create Server Application_ window.
 
 1. In the _Server App_ window, make sure your new app is selected, then select **OK** to save and close the window.
+
+> [!NOTE]
+> 
+> Starting in Configuration Manager current branch version 2309, We have enhanced security of web (server) app for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
+> 
+> Pre-existing CMG customers must update their web server app by navigating to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings".
 
 ## Create the native (client) app registration
 

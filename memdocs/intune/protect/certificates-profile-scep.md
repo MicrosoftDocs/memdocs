@@ -2,8 +2,8 @@
 title: Use SCEP certificate profiles with Microsoft Intune
 description: Create and assign Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/23/2023
 ms.topic: how-to
@@ -25,6 +25,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- certificates
 ---
 
 # Create and assign SCEP certificate profiles in Intune

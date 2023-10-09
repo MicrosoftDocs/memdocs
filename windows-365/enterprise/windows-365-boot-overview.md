@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/24/2023
+ms.date: 09/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,14 +32,14 @@ ms.collection:
 
 # What is Windows 365 Boot?
 
-Windows 365 Boot is in [public preview](..\public-preview.md). During this preview, Windows 365 Boot is designed for shared PC scenarios.
-
 Windows 365 Boot lets admins configure Windows 11 physical devices so that users can:
 
 - Avoid signing in to their physical device.
 - Sign in directly to their Windows 365 Cloud PC on their physical device.
 
 When a user turns on their physical device and signs in, Windows 365 Boot signs them in directly to their Cloud PC, not their physical device. If single sign-on is turned on for their Cloud PC, they don't have to sign in again to their Cloud PC. This expedited sign in process reduces the time it takes the user to access their Cloud PC.
+
+## Shared PC scenario
 
 Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for workers such as nursing, salespeople, and call centers, who share company physical devices. Such workers might frequently switch between physical tasks and computer interaction. Windows 365 Boot lets them bypass the lengthy startup process and boot directly into their secure Cloud PC to pick up right where they left off.
 
@@ -55,7 +55,7 @@ Signing out of the Windows 365 Cloud PC brings the device back to the Windows 11
 
 Windows 365 Boot physical devices are intended to let users interact with their Cloud PCs without the ability to interact with the physical device. To meet this goal, you must set some configuration service provider (CSP) policies.
 
-During the preview, Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. You should review the  configuration policies that can be applied to your Windows 365 Boot devices to meet your organization’s security needs for preventing access to the physical device. For more information about these configuration profiles, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
+Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. You should review the  configuration policies that can be applied to your Windows 365 Boot devices to meet your organization’s security needs for preventing access to the physical device. For more information about these configuration profiles, see [Restrict user access to Windows 365 Boot physical device](windows-365-boot-restrict-user-access-physical-device.md).
 
 ## Process overview
 
@@ -69,6 +69,22 @@ During the preview, Windows 365 Boot doesn't automatically set these policies to
 ## User sign-in authentication modes
 
 Windows 365 Boot supports username/password-based authentication for user sign in to their Cloud PC. Windows Hello for Business, convenience PIN, and FIDO key authentication modes aren't supported.
+
+## Multiple Cloud PCs
+
+If a user has more than one Cloud PC, they can select a default Cloud PC to use each time they sign in. To set this default:
+
+1. Navigate to https://windows365.microsoft.com.
+2. In the card for the Cloud PC you want to set as default, select the ellipses (...) > **Settings**. 
+3. In the **Integrated experiences** tab, under **Boot to this Cloud PC**, select **Connect while signed into device**.
+4. Select **Update**.
+
+## Bluetooth support
+
+To connect to Bluetooth devices from your Windows 365 Boot Cloud PC:
+
+1. Open **Quick Settings** > **Bluetooth**.
+2. In the **Settings** window, pair and connect to bluetooth devices.
 
 <!-- ########################## -->
 ## Next steps
