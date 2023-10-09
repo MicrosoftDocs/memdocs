@@ -2,15 +2,15 @@
 # required metadata
 
 title: Use Security Copilot to get device and policy information
-description: You can use Security Copilot to get information about your devices, apps, policy assignments, and groups managed in Intune.
+description: You can use Security Copilot to get information about your Intune data, including devices, apps, policies, and groups managed in Intune. You can also compare policies, get device specific details, and get target info for policies.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/04/2023
+ms.date: 10/10/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
-ms.subservice: device-management
+ms.subservice: fundamentals
 ms.localizationpriority: high
 
 # optional metadata
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: scottduf, rashok
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,7 +38,7 @@ ms.collection:
 
 Security Copilot is a cloud-based AI platform that provides a natural language copilot experience. It can help support security professionals in different scenarios, like incident response, threat hunting, and intelligence gathering. For more information about what it can do, go to [What is Microsoft Security Copilot?](/security-copilot/microsoft-security-copilot).
 
-**Security Copilot integrates with Microsoft Intune**
+**Security Copilot integrates with Microsoft Intune**.
 
 If you use [Microsoft Intune](what-is-intune.md) in the same tenant as Security Copilot, then you can use Security Copilot to view managed device attributes and configuration data. You can get information about your devices, apps, compliance & configuration policies, and policy assignments managed in Intune.
 
@@ -48,9 +48,12 @@ This article introduces you to Security Copilot and includes sample prompts that
 
 ## Know before you begin
 
-- Be clear and specific with your prompts. You may get better results if you include specific device IDs/names, app names, or policy names in your prompts.
+- Be clear and specific with your prompts. You might get better results if you include specific device IDs/names, app names, or policy names in your prompts.
 
-  It may also help to add **Intune** to your prompt, like **According to Intune, how many devices were enrolled this week** or **Tell me about Intune devices for (user name)**.
+  It might also help to add **Intune** to your prompt, like:
+
+  - **According to Intune, how many devices were enrolled this week**
+  - **Tell me about Intune devices for (user name)**
 
 - Experiment with different prompts and variations to see what works best for your use case. Chat AI models vary, so iterate and refine your prompts based on the results you receive.
 
@@ -64,14 +67,7 @@ For more information on writing Security Copilot prompts, go to [Microsoft Secur
 
 ## Open Security Copilot
 
-> [!WARNING]
-> `https://go.microsoft.com/fwlink/?linkid=2247989` goes to `https://securitycopilot.microsoft.com`. The FWLink is NOT active yet. It will be active closer to the Security Copilot EAP release.
->
-> This FWLink is owned by the Intune docs team and should be used ONLY by the Intune Docs team. Do not use this FWLink in any other documentation or any other location.
->
-> This warning will be deleted from the article closer to the EAP release. **For questions, contact Mandi Ohlinger (mandia)**.
-
-1. Go to `https://go.microsoft.com/fwlink/?linkid=2247989` and sign in with your credentials.
+1. Go to [Microsoft Security Copilot](https://go.microsoft.com/fwlink/?linkid=2247989) and sign in with your credentials.
 2. By default, Intune should be enabled. To confirm, select **plugins** (bottom left corner):
 
     :::image type="content" source="./media/security-copilot/security-copilot-plugins.png" alt-text="Screenshot that shows the plugins that are available, enabled, and disabled in Microsoft Security Copilot.":::
@@ -122,12 +118,12 @@ Get details on **policy targets**, like the groups that have a specific app assi
 
 **Sample prompts**:
 
-- How many users is appX assigned to?
-- Which groups are appX assigned to?
+- How many users is ContosoApp assigned to?
+- Which groups are ContosoApp assigned to?
 - How many apps are assigned to the device ID *Enter the device ID* in Intune?
-- Why is "Allow Microsoft Store App to auto update" policy applying to DeviceX?
+- Why is "Allow Microsoft Store App to auto update" policy applying to DeviceA?
 - Tell me about Intune devices for user UserA.
-- Why is PolicyA applying on DeviceX?
+- Why is PolicyA applying on DeviceB?
 
 ### Specific devices
 
@@ -135,11 +131,11 @@ Get information about a **specific device**, like its group memberships and the 
 
 **Sample prompts**:
 
-- What groups are DeviceX in?
-- Tell me about DeviceX
-- Who is the primary user for DeviceX?
-- Is ContosoApp installed on DeviceX?
-- Show me discovered apps on DeviceX
+- What groups are DeviceA in?
+- Tell me about DeviceA
+- Who is the primary user for DeviceA?
+- Is ContosoApp installed on DeviceA?
+- Show me discovered apps on DeviceA
 
 ### Similarities and differences
 
@@ -147,10 +143,10 @@ Get the **similarities and differences** between two devices, like the complianc
 
 **Sample prompts**:
 
-- What is the hardware configuration difference between the DeviceX and DeviceZ devices?
-- What are the similarities in compliance policy between the DeviceX and DeviceZ devices?
-- What is the difference in device configuration profile between the DeviceX and DeviceZ devices?
-- Compare installed applications on DeviceX and DeviceZ.
+- What is the hardware configuration difference between the DeviceA and DeviceB devices?
+- What are the similarities in compliance policy between the DeviceA and DeviceB devices?
+- What is the difference in device configuration profile between the DeviceA and DeviceB devices?
+- Compare installed applications on DeviceA and DeviceB.
 
 ## Provide feedback
 
