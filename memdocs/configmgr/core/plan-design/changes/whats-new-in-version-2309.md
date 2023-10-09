@@ -108,7 +108,7 @@ Starting in Configuration Manager current branch version 2309, administrators ca
 :::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard." lightbox="media/17668425-windows11-dashboard.png":::
 
 
-For more information, see [Manage Windows 11 readiness dashboard](../../../osd/deploy-use/manage-windows11-readiness-dashboard.md)
+For more information, see [Manage Windows 11 readiness dashboard](../../../osd/deploy-use/manage-windows-11-readiness-dashboard.md)
 
 ## Cloud-attached management
 
