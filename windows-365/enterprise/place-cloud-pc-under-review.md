@@ -56,7 +56,7 @@ As part of the process to place Cloud PCs under review, Windows 365 requires the
         - Minimum TLS version: **Version 1.2**
     - **Networking**
         - **Network access**: **Enable public access from all networks**
-3. [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access). The minimum permission required for the Windows 365 service to place a Cloud PC under review is Storage Account Contributor.
+3. [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access). The minimum permissions required for the Windows 365 service to place a Cloud PC under review are Storage Account Contributor and Storage Blob Data Contributor.
 
 ## Place a Cloud PC under review
 
