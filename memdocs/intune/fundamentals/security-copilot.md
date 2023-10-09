@@ -10,7 +10,7 @@ manager: dougeby
 ms.date: 10/10/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
-ms.subservice: management
+ms.subservice: fundamentals
 ms.localizationpriority: high
 
 # optional metadata
