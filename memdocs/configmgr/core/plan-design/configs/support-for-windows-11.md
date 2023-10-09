@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 12/05/2022
+ms.date: 10/06/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -138,25 +138,8 @@ Use one of the following options to work around this issue:
 
 ### Offline servicing
 
-<!-- 12661534 -->
-
-> [!IMPORTANT]
-> This issue is resolved with the March 2022 cumulative update (KB5011493). For any version of Windows 11, you can successfully use offline servicing with the March 2022 cumulative update.
-
-When you [apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image) for Windows 11, the process will fail. You'll see errors similar to the following entries in the offline servicing log file, `OfflineServicingMgr.log`:
-
-```log
-InstallUpdate returned code 0x8007007b
-Failed to install update with ID 16787962 on the image. ErrorCode = 123
-```
-
-This issue is because DISM doesn't support the `.cab` files.
-
-To work around this issue, you can manually service the image:
-
-1. Download the update directly from the Microsoft Update Catalog. For example, `https://www.catalog.update.microsoft.com/Search.aspx?q=KB5007215`
-1. Use DISM to manually inject the downloaded `.msu` update file into the Windows 11 image. For more information, see [Add updates to a Windows image](/windows-hardware/manufacture/desktop/servicing-the-image-with-windows-updates-sxs).
-1. Manually update the image file in the package source. Then update it on distribution points.
+> [!Note]
+> Starting March 2023 offline servicing (UUP patch) will not work for any version of Windows 11.
 
 ## Next steps
 
