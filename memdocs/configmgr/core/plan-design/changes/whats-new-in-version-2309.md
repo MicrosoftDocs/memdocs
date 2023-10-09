@@ -105,7 +105,7 @@ For more information, see [Upgrade Windows devices to a new edition](../../../co
 
 Starting in Configuration Manager current branch version 2309, administrators can use this dashboard to devise their windows 11 upgrade strategy and discover the devices in the organization, which are ready for **Windows 11 Upgrade**. This Dashboard also provides a count by installed Feature update version and a view of all Windows devices inside the organization. Administrators can create a collection of Windows 11 ready for upgrading devices and roll out feature updates to them.
 
-:::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard.":::
+:::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="A screenshot of UX of windows 11 readiness dashboard." lightbox="media/17668425-windows11-dashboard.png":::
 
 
 For more information, see [Manage Windows 11 readiness dashboard](../../../osd/deploy-use/manage-windows11-readiness-dashboard.md)
