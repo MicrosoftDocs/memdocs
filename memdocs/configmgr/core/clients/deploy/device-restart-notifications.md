@@ -52,7 +52,7 @@ A Windows toast notification informs the user that the device needs to restart. 
 
 Software Center shows a notification with a snooze option and the time remaining before it forces the devices to restart. The message may be different depending on your version of Configuration Manager.
 
-:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Screenshot of Pending restart Software Center notification with snooze button":::
+:::image type="content" source="media/3976435-snooze-restart-countdown.png" alt-text="Screenshot of Pending restart Software Center notification with snooze button.":::
 
 ### Software Center final countdown notification
 
