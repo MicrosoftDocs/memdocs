@@ -318,7 +318,7 @@ After you have initiated running a script on a collection of devices, use the fo
 6. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node. 
 7. Click on **View Status** and ensure that the script output displays.
    
-![Screenshot of script - schedule monitoring,](./media/run-scripts/scripts-schedulemonitoring.jpg)
+   ![Screenshot of script - schedule monitoring,](./media/run-scripts/scripts-schedulemonitoring.jpg)
 
 ## Script output
 
@@ -374,7 +374,7 @@ You can use the following PowerShell cmdlets to automate some of these tasks:
 - [Remove-CMScript](/powershell/module/configurationmanager/remove-cmscript)
 - [Set-CMScript](/powershell/module/configurationmanager/set-cmscript)
 
-## See Also
+## See also
 
 - [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md)
 - [Fundamentals of role-based administration](../../core/understand/fundamentals-of-role-based-administration.md)
