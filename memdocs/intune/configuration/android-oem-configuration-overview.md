@@ -142,7 +142,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
     Select **Next**.
 
-11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device. An OEMConfig profile that exceeds 350 kb isn't assigned, and shows a "pending" status.  
+11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device. Also, the maximum size of any OEMConfig profile is 350 KB. Any profile exceeding beyond this limit would not be deployed on the device.
 
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
@@ -164,7 +164,7 @@ After your profile is deployed, you can check its status:
     - **Device status**: The devices assigned to the profile are listed, and it shows if the profile successfully deployed. You can select a specific device to get more details.
     - **User status**: Lists the user names with devices affected by this profile, and if the profile successfully deployed. You can select a specific user to get more details.
 
-3. You can also see if individual settings in a profile successfully applied. To see the per-setting status of an OEMConfig profile, select **Devices** > **All devices**, and choose a device from the list. Then, go to **App configuration**, and select your OEMConfig profile. Select an individual setting status to get more information.
+3. You can also see if individual settings in a profile successfully applied. To see the per-setting status of an OEMConfig profile, select **Devices** > **All devices**, and choose a device from the list. Then, go to **App configuration**, and select your OEMConfig profile. The profiles in pending state or exceeding the size of 350KB would not be displayed here. Select an individual setting status to get more information.
 
 > [!NOTE]
 > For Zebra devices, only a single setting row is shown. Selecting the row shows details for all settings in the policy.
