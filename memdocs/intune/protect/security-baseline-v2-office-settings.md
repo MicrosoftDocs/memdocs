@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/24/2022
+ms.date: 10/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,26 +33,25 @@ ms.collection:
 <!-- Add when pivots are needed:
  
 Metadata:
-zone_pivot_groups: dcv2-office-baselines
+zone_pivot_groups: m365-app-baseline-versions
 
 Pivot yml: 
-- id: dcv2-office-baselines
-  title: Microsoft 365 Apps for Enterprise baseline versions
+- id: m365-app-baseline-versions
+  title: M365 App baseline versions
   prompt: Choose a version
   pivots:
-    id: office-may2023
+    - id: office-oct-2023
+      title: October 2023
+    - id: office-may-2023
       title: May 2023
-    id: office-future
-      title: Future version
 -->
 # Microsoft  365 Apps for Enterprise security baseline settings reference for Microsoft Intune
 
-This article is a reference for the settings that are available in the Microsoft 365 Apps for Enterprise security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later.
-
+This article is a reference for the settings that are available in the Microsoft 365 Apps for Enterprise security baseline for Microsoft Intune.
 
 ## About this reference article
 
-Each security baseline is a group of preconfigured Windows settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration profiles.
+Each security baseline is a group of preconfigured settings that help you apply and enforce granular security settings that the relevant security teams recommend. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration profiles.
 
 The details that are displayed in this article are based on baseline version that is selected at the top of the article. For each selection, this article displays:
 
@@ -70,15 +69,24 @@ To learn more about using security baselines, see:
 - [Use security baselines](../protect/security-baselines.md)
 - [Manage security baselines](../protect/security-baselines-configure.md).
 
-
-
-## Microsoft 365 Apps for Enterprise
-
-<!-- >::: zone pivot="office-may2023" -->
+::: zone pivot="office-oct-2023"
 
 **Microsoft 365 Apps for Enterprise security baseline for May 2023**  
 
 For more information about the following settings that are included in this baseline, download the [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and review the *Microsoft 365 Apps for Enterprise-2206-FINAL.zip* file.
+
+::: zone-end
+::: zone pivot="office-may-2023"
+
+**Microsoft 365 Apps for Enterprise for security baseline October 2023**  
+
+For more information about the following settings that are included in this baseline, download the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and then review the *Microsoft 365 Apps for Enterprise 2306.zip* file.
+
+::: zone-end
+
+## Microsoft 365 Apps for Enterprise
+
+::: zone pivot="office-may-2023,office-oct-2023"
 
 ### Microsoft Access 2016
 
@@ -89,9 +97,8 @@ For more information about the following settings that are included in this base
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
-
   - Baseline default: *Disable all with notification*
-  
+
 - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
   Baseline default: *Enabled*  
 
@@ -143,6 +150,7 @@ For more information about the following settings that are included in this base
   - Baseline default: *Disable all with notification*
 
 *Excel Options > Security > Trust Center*
+
 - **Block macros from running in Office files from the Internet (User)**  
   Baseline default: *Enabled*
 
@@ -152,23 +160,38 @@ For more information about the following settings that are included in this base
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*
 
-  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
   Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
   - Baseline default: *Disable all except digitally signed macros*
 
+::: zone-end
+::: zone pivot="office-oct-2023"
+
+- **Block Excel XLL Add-ins that come from an untrusted source**  
+  Baseline default: *Block*
+
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
+
 *Excel Options > Security > Trust Center > External Content*
 
 - **Always prevent untrusted Microsoft Query files from opening (User)**  
   Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023"
 
 - **Don’t allow Dynamic Data Exchange (DDE) server launch in Excel (User)**  
   Baseline default: *Enabled*
 
 - **Don’t allow Dynamic Data Exchange (DDE) server lookup in Excel (User)**  
   Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
 
 *Excel Options > Security > Trust Center > File Block Settings*
 
@@ -265,8 +288,10 @@ For more information about the following settings that are included in this base
 *Excel Options > Security > Trust Center > Trusted Locations*
 
 - **Allow Trusted Locations on the network (User)**  
-  Baseline default: *Disabled*
+  Baseline default: *Disabled*+
 
+::: zone-end
+::: zone pivot="office-may-2023"
 ### Microsoft Lync Feature Policies
 
 - **Configure SIP security mode**
@@ -274,6 +299,9 @@ For more information about the following settings that are included in this base
 
 - **Disable HTTP fallback for SIP connection**
   Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
 
 ### Microsoft Office 2016
 
@@ -317,6 +345,15 @@ For more information about the following settings that are included in this base
   -**ActiveX Control Initialization: (User)**  
   Baseline default: *6*
 
+::: zone-end
+::: zone pivot="office-oct-2023"
+
+-**Allow Basic Authentication prompts from network proxies**  
+  Baseline default: *Disabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
+
 - **Allow VBA to load typelib references by path from untrusted intranet locations (User)**  
   Baseline default: *Disabled*
 
@@ -337,6 +374,17 @@ For more information about the following settings that are included in this base
 
 - **Disable all Trust Bar notifications for security issues (User)**  
   Baseline default: *Disabled*
+
+::: zone-end
+::: zone pivot="office-oct-2023"
+
+- **Encryption mode for Information Rights Management (IRM)**  
+  Baseline default: *Enabled*  
+  - **Encryption type: (User)**  
+    Baseline default: *Cipher Block Chaining (CBC)*
+
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
 
 - **Encryption type for password protected Office 97-2003 files (User)**  
   Baseline default: *Enabled*  
@@ -374,6 +422,9 @@ For more information about the following settings that are included in this base
 
 - **Disable Smart Document's use of manifests (User)**  
   Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023"
 
 ### Microsoft Office 2016 (Machine)
 
@@ -785,7 +836,7 @@ For more information about the following settings that are included in this base
     Baseline default: *True*
 
 - **Restrict ActiveX Install**  
-    Baseline default: *Enabled*
+  Baseline default: *Enabled*
 
   - **mse7.exe (Device)**  
     Baseline default: *True*
@@ -964,6 +1015,9 @@ For more information about the following settings that are included in this base
   - **winproj.exe (Device)**  
     Baseline default: *True*
 
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
+
 ### Microsoft Outlook 2016
 
 *Security > Security Form Settings*
@@ -1058,8 +1112,14 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
     - **Removed Extensions: (User)**  
       Baseline default: *;*
 
+::: zone-end
+::: zone pivot="office-may-2023"
+
   - **Junk E-mail protection level (User)**  
     Baseline default: *Disabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
 
   - **Display Level 1 attachments (User)**  
     Baseline default: *Disabled*
@@ -1104,7 +1164,8 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*  
-  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
   Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
@@ -1153,8 +1214,9 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*  
-  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
-    Baseline default: *Enabled*
+
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
@@ -1170,11 +1232,20 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 *Security > Trust Center*
 
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
+
+- **Block macros from running in Office files from the internet**
+  Baseline default: *Enabled*
+
+::: zone-end
+::: zone pivot="office-may-2023,office-oct-2023"
+
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*
 
-  - **Disable Trust Bar Notification for unsigned application add-ins (User)**  
-  Baseline default: Enabled*
+- **Disable Trust Bar Notification for unsigned application add-ins and block them(User)**  
+  Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
@@ -1187,13 +1258,14 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Allow Trusted Locations on the network (User)**  
   Baseline default: *Disabled*
 
-- **Block macros from running in Office files from the Internet (User)**  
+- **Block macros from running in Office files from the internet (User)**  
   Baseline default: *Enabled*
 
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*  
-  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
-    Baseline default: *Enabled*
+
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+  Baseline default: *Enabled*
 
 - **VBA Macro Notification Settings (User)**  
   Baseline default: *Enabled*  
@@ -1220,7 +1292,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 *Word Options > Security > Trust Center*
 
-- **Block macros from running in Office files from the Internet (User)**  
+- **Block macros from running in Office files from the internet (User)**  
   Baseline default: *Enabled*
 
 - **Dynamic Data Exchange (User)**  
@@ -1229,7 +1301,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*
 
-  - **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
+- **Disable Trust Bar Notification for unsigned application add-ins and block them (User)**  
   Baseline default: *Enabled*
 
 - **Scan encrypted macros in Word Open XML documents (User)**  
@@ -1288,14 +1360,16 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 *Word Options > Security > Trust Center > Protected View*
 
-- **Do not open files from the Internet zone in Protected View (User)**  
+- **Do not open files from the internet zone in Protected View (User)**  
   Baseline default: *Disabled*
 
 - **Do not open files in unsafe locations in Protected View (User)**  
   Baseline default: *Disabled*
+
 - **Set document behavior if file validation fails (User)**  
   Baseline default: *Enabled*
   - Baseline default: *Open in Protected View*
+
   - **Checked: Allow edit. Unchecked: Do not allow edit. (User)**  
     Baseline default: *False*
 
@@ -1311,6 +1385,9 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 
 - **Turn off file validation (User)**  
   Baseline default: *Disabled*
+
+::: zone-end
+::: zone pivot="office-may-2023"
 
 ### Administrative Templates
 
@@ -1350,6 +1427,8 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
   
   - **Word: (Device)**  
     Baseline default: *69632*
+
+::: zone-end
 
 ## Next steps
 

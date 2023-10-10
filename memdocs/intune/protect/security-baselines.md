@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/24/2023
+ms.date: 10/23/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -103,7 +103,8 @@ The following security baseline instances are available for use with Intune. Use
   > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**  
-  - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md)
+  - [October 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-oct-2023)
+  - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**
   - [May 2023 (Edge Version 112 and later)](../protect/security-baseline-v2-edge-settings.md)
@@ -164,7 +165,7 @@ Strictly speaking, no. The Microsoft security team consults organizations, such 
 
 Microsoft continues to publish security baselines for group policies (GPOs) and the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10), as it has for many years. These baselines are used by many organizations. The recommendations in these baselines are from the Microsoft security team's engagement with enterprise customers and external agencies, including the Department of Defense (DoD), National Institute of Standards and Technology (NIST), and more. We share our recommendations and baselines with these organizations. These organizations also have their own recommendations that closely mirror Microsoft's recommendations. As mobile device management (MDM) continues to grow into the cloud, Microsoft created equivalent MDM recommendations of these group policy baselines. These additional baselines are built into Microsoft Intune, and include compliance reports on users, groups, and devices that follow (or don't follow) the baseline.
 
-Many customers use the Intune baseline recommendations as a starting point, and then customize them to meet their IT and security demands. Microsoft's Windows 10 and later baseline template was the first baseline to release. This baseline is built as a generic infrastructure that allows customers to eventually import other security baselines based on CIS, NIST, and other standards. <!-- Currently, it's available for Windows and will eventually include iOS/iPadOS and Android. -->
+Many customers use the Intune baseline recommendations as a starting point, and then customize them to meet their IT and security demands. Microsoft's Windows 10 and later baseline template was the first baseline to release. This baseline is built as a generic infrastructure that allows customers to eventually import other security baselines based on CIS, NIST, and other standards.
 
 Migrating from on-premises Active Directory group policies to a pure cloud solution using Azure Active Directory (AD) with Microsoft Intune is a journey. To help, use the various tools from the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) that can help you identify cloud-based options from security baselines that can replace your on-premises GPO configurations.
 
@@ -183,6 +184,6 @@ Within the Intune security baseline policy UI, Intune provides information text 
 - View the settings in the latest versions of the available baselines:
   - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
   - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
-<!-->  - [Microsoft 365 Apps for Enterprise (Office baseline)](security-baseline-settings-office.md)  -->
-  - [Microsoft Edge (Version 107 and later)](security-baseline-settings-edge.md?pivots-edge-may-2023)
+  - [Microsoft 365 Apps for Enterprise security baseline (Office)](security-baseline-settings-office.md)
+  - [Microsoft Edge security baseline](security-baseline-settings-edge.md)
   - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)

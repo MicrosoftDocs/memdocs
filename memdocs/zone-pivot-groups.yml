@@ -10,6 +10,7 @@ groups:
       title: December 2020
     - id: mdm-august-2020
       title: August 2020
+
 - id: edge-baseline-versions
   title: Edge baseline versions
   prompt: Choose a version
@@ -33,6 +34,16 @@ groups:
       title: April 2020
     - id: atp-march-2020
       title: March 2020
+
+- id: m365-app-baseline-versions
+  title: M365 App baseline versions
+  prompt: Choose a version
+  pivots:
+    - id: office-oct-2023
+      title: October 2023
+    - id: office-may-2023
+      title: May 2023
+
 - id: apple-enterprise-sso
   title: Enterprise single sign-on platform
   prompt: Select your platform
@@ -43,6 +54,7 @@ groups:
       title: iOS/iPadOS
     - id: macos
       title: macOS
+
 - id: mde-attach-preview
   title: Defender for Endpoint security settings configuration
   prompt: Select your environment
@@ -51,6 +63,7 @@ groups:
       title: Generally Available
     - id: mdssc-preview
       title: Opt-in Public Preview
+
 - id: flw-platforms
   title: FLW OS platform
   prompt: Select your platform
