@@ -31,7 +31,7 @@ ms.collection:
 
 Remote Help, an add-on to Microsoft Intune, provides a secure cloud based remote assistance solution for Windows commercial users. The integration between Intune and ServiceNow makes it possible for helpdesk agents to use Intune to troubleshoot endpoint related issues.
 
-Support organizations need all the tools at their disposal to resolve workers’ technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the Microsoft Intune admin center.
+Support organizations need all the tools at their disposal to resolve workers' technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the Microsoft Intune admin center.
 
 ## About ServiceNow connector Integration
 
@@ -91,7 +91,7 @@ To create a new OAuth application,
      |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
      | Client ID            | The ServiceNow OAuth server automatically generates the ClientID.  This value is used as an input in the **ServiceNow client appID** field for the ServiceNow connector configuration. |
      | Client Secret         | Client Secret for the OAuth generation. Leave it empty for auto-generation.                            |
-     | Redirect URL     | The authorization server redirects to this URL. They must be an absolute URL and comma separated. For example, you can set the URL to 'https://endpoint.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_DeviceSettings,https://endpoint.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_Workflows'                       |
+     | Redirect URL     | The authorization server redirects to this URL. They must be an absolute URL and comma separated. For example, you can set the URL to 'https://intune.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_DeviceSettings,https://intune.microsoft.com/TokenAuthorize/ExtensionName/Microsoft_Intune_Workflows'                       |
      | Logo URL           | Provide the URL to the publicly hosted company logo, which is displayed when authenticating with ServiceNow. For example, you can set it to: 'https://photos.smugmug.com/photos/i-SJfnMq3/0/XL/i-SJfnMq3-XL.png'    |
      | Application        | By default, set to **Global** and isn't editable when creating the OAuth app.                           |
      | Accessible from    | By default, set to **All application scopes**.                       |
