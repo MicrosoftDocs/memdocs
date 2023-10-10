@@ -37,8 +37,11 @@ This feature applies to:
 
 - macOS 12 and later (supervised)
 
-> [!NOTE]
-> Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update.
+  > [!NOTE]
+  > Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update.
+
+> [!TIP]
+> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
 
 With policies for macOS software updates, you can:
 
@@ -50,8 +53,6 @@ With policies for macOS software updates, you can:
   - *All other updates (OS, built-in apps)*
 
 - Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in or creating day-time ranges during which updates can install or are blocked from installing.
-
-- You can also use the [settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
 
 By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 

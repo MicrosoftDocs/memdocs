@@ -31,7 +31,7 @@ ms.collection:
 
 # Manage declarative software updates with the settings catalog
 
-You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure declarative software updates for supervised iOS/iPadOS and macOS devices. With declarative software updates in Intune, you can:
+You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure declarative software updates for iOS/iPadOS and macOS devices. With declarative software updates in Intune, you can:
 
 - Choose an update to install using its OS version or build version.
 - Enforce a deadline for the device to automatically install an update.
@@ -75,12 +75,23 @@ Use the following information to help you decide which policy type to use.
 | macOS | ❌ | ✔️ |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Intune admin center policy type** | &nbsp; | &nbsp; |
-| iOS/iPadOS | [Update policies for iOS/iPadOS](software-updates-ios.md) | [Settings catalog](../configuration/settings-catalog.md) |
-| macOS | [Update policies for macOS](software-updates-macos.md) | [Settings catalog](../configuration/settings-catalog.md) |
-| &nbsp;|&nbsp; | &nbsp;|
-| **Precedence order** | &nbsp; | &nbsp; |
-| iOS/iPadOS | ✔️ <br/> Takes precedence over software update policies.  <br/> <br/>1. DDM<br/> 2. Software Update policies <br/> <br/>Can the two policy types work together? Or, is this a conflict scenario? | ❌ |
-| macOS | ✔️ <br/> Takes precedence over software update policies.  <br/> <br/>1. DDM<br/>2. Software Update policies<br/>3. **Settings catalog** > **System Updates** > **Software Update** <br/> <br/>Can the policies work together? Or, is this a conflict scenario? | ❌ |
+| iOS/iPadOS | [Settings catalog](../configuration/settings-catalog.md) |[Update policies for iOS/iPadOS](software-updates-ios.md) |
+| macOS | [Settings catalog](../configuration/settings-catalog.md) | [Update policies for macOS](software-updates-macos.md) |
+
+### Precedence
+
+Declarative software updates have precedence over other policies that configure software updates. If you configure declarative software updates and also have other software update policies assigned, then it's possible the other update policies have no effect.
+
+**iOS/iPadOS precedence order**:
+
+1. Declarative software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
+2. Update policies (**Devices** > **Update policies for iOS/iPadOS**)
+
+**macOS precedence order**:
+
+1. Declarative software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
+2. Update policies (**Devices** > **Update policies for macOS**)
+3. System Updates (**Settings catalog** > **System Updates** > **Software Update**)
 
 ## Configure the DDM software updates policy
 
@@ -109,7 +120,7 @@ Use the following information to help you decide which policy type to use.
 
       If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 
-    - **Target Local Date Time**: Enter the local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
+    - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 
       After the deadline passes, there's a one hour grace period. Then, the device forces a restart.
 
@@ -141,7 +152,7 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 
 :::image type="content" source="./media/software-updates-declarative-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune.":::
 
-For macOS devices, in the **Settings catalog**, you can also use the **System Updates** > **Software Update** settings. These settings manage how users manually interact with updates. However, updates from a targeted update policy override these settings catalog policy settings.
+
 
 ## Related articles
 

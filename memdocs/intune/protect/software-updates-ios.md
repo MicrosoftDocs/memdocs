@@ -40,6 +40,9 @@ This feature applies to:
 - iOS 10.3 and later (supervised)
 - iPadOS 13.0 and later (supervised)
 
+> [!TIP]
+> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
+
 With policies for iOS software updates, you can:
 
 - Choose to deploy the *latest update* that's available, or choose to deploy an older update, based on the update version number.
@@ -49,8 +52,6 @@ With policies for iOS software updates, you can:
 - Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in. Or, creating date and time ranges during which updates can install or are blocked from installing.
 
   By default, devices check in with Intune about every eight hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
-
-- You can also use the [settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
 
 > [!NOTE]
 >
