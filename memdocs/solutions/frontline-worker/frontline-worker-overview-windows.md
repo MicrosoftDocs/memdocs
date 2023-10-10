@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Windows devices 
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 09/25/2023
+ms.date: 10/09/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -71,12 +71,12 @@ This option uses the Windows Configuration Designer (WCD) app to create a provis
 
 ❌ If you have Azure AD Premium, then use Windows Autopilot. Windows Autopilot requires Azure AD Premium.
 
-For more information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md).
+For more information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../intune/enrollment/windows-bulk-enroll.md).
 
 ---
 
 > [!NOTE]
-> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-windows.md).
+> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-windows.md).
 
 ## Step 2 - Shared device or user associated device
 
@@ -92,8 +92,8 @@ These features are configured using Intune device configuration profiles. When t
 
   For more information on this feature, and to get started, go to:
 
-  - [Shared PC or multi-user Windows devices in Intune](../configuration/shared-user-device-settings-windows.md)
-  - [Shared PC or multi-user Windows devices in Intune - Settings list](../configuration/shared-user-device-settings.md)
+  - [Shared PC or multi-user Windows devices in Intune](../intune/configuration/shared-user-device-settings-windows.md)
+  - [Shared PC or multi-user Windows devices in Intune - Settings list](../intune/configuration/shared-user-device-settings.md)
 
 - **User associated device**
 
@@ -128,16 +128,16 @@ The following scenarios are common:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration [kiosk profile](../configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../configuration/kiosk-settings.md).
+  1. [Add apps to Microsoft Intune](../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+  2. Create a device configuration [kiosk profile](../intune/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../intune/configuration/kiosk-settings.md).
 
       The following example shows the kiosk profile settings for a single app. Make sure you add the app to Intune before you configure the kiosk profile.
 
-      :::image type="content" source="./media/frontline-worker-overview/windows-kiosk-single-app.png" alt-text="The kiosk device configuration profile settings for a single app on Windows devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/windows-kiosk-single-app.png":::
+      :::image type="content" source="./media/windows-kiosk-single-app.png" alt-text="The kiosk device configuration profile settings for a single app on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-single-app.png":::
 
       The following example shows the kiosk profile settings for multiple apps. Make sure you add the apps to Intune before you configure the kiosk profile.
 
-      :::image type="content" source="./media/frontline-worker-overview/windows-kiosk-multi-app.png" alt-text="The kiosk device configuration profile settings for multiple apps on Windows devices in Microsoft Intune." lightbox="./media/frontline-worker-overview/windows-kiosk-multi-app.png":::
+      :::image type="content" source="./media/windows-kiosk-multi-app.png" alt-text="The kiosk device configuration profile settings for multiple apps on Windows devices in Microsoft Intune." lightbox="./media/windows-kiosk-multi-app.png":::
 
 - **Scenario 2: Device wide access with multiple apps**
 
@@ -149,10 +149,10 @@ The following scenarios are common:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../configuration/settings-catalog.md).
+  1. [Add apps to Microsoft Intune](../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../intune/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../intune/configuration/settings-catalog.md).
 
-      :::image type="content" source="./media/frontline-worker-overview/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
+      :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
 
 ## Related articles
 

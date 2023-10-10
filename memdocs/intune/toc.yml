@@ -1683,19 +1683,19 @@ items:
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
     - name: Frontline worker (FLW) device management
-      displayName: android, ios, ipados, FLW
+      displayName: android, ios, ipados, windows, FLW
       items:
       - name: FLW Overview
-        href: ./fundamentals/frontline-worker-overview.md
+        href: ../solutions/frontline-worker/frontline-worker-overview.md
       - name: Android
         displayName: Android Enterprise, ae, aosp, flw, kiosk
-        href: ./fundamentals/frontline-worker-overview-android.md
+        href: ../solutions/frontline-worker/frontline-worker-overview-android.md
       - name: iOS/iPadOS
         displayName: ios, ipados, shared ipad, flw, kiosk
-        href: ./fundamentals/frontline-worker-overview-ios-ipados.md
+        href: ../solutions/frontline-worker/frontline-worker-overview-ios-ipados.md
       - name: Windows
         displayName: flw, kiosk
-        href: ./fundamentals/frontline-worker-overview-windows.md
+        href: ../solutions/frontline-worker/frontline-worker-overview-windows.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview

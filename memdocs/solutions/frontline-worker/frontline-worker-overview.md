@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using Android, iOS/iPa
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 09/25/2023
+ms.date: 10/09/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -21,7 +21,6 @@ ms.custom: intune-azure
 ms.collection:
 - tier1
 - M365-identity-device-management
-zone_pivot_groups: flw-platforms
 ---
 
 # Frontline worker device management for Android, iOS/iPadOS, and Windows devices in Microsoft Intune
@@ -73,29 +72,29 @@ When you have this information, the next step is to identify the platforms you u
 
 Intune has built-in features that can be used for frontline worker devices, including:
 
-- **[Windows cloud configuration](cloud-configuration.md)**
+- **[Windows cloud configuration](../intune/fundamentals/cloud-configuration.md)**
 
   This feature is a guided scenario and can turn a Windows client device into a cloud-optimized device. It simplifes the devices, and secures them with Microsoft-recommended security features.
 
   For more information on this guided scenario and the other guided scenarios available, go to:
 
-  - [Guided scenario - Windows 10/11 in cloud configuration](cloud-configuration.md)
-  - [Intune guided scenarios overview](guided-scenarios-overview.md)
+  - [Guided scenario - Windows 10/11 in cloud configuration](../intune/fundamentals/cloud-configuration.md)
+  - [Intune guided scenarios overview](../intune/fundamentals/guided-scenarios-overview.md)
 
 - **[Remote Help](remote-help.md)**
 
   This feature is cloud-based solution that secures help desk connections. With these connections, your support staff can remote connect to FLW devices on:
 
-  - [Android](remote-help-android.md)
-  - [macOS](remote-help-macos.md)
-  - [Windows](remote-help-windows.md)
+  - [Android](../intune/fundamentals/remote-help-android.md)
+  - [macOS](../intune/fundamentals/remote-help-macos.md)
+  - [Windows](../intune/fundamentals/remote-help-windows.md)
 
-- **[Specialty devices](specialty-devices-with-intune.md)**
+- **[Specialty devices](../intune/fundamentals/specialty-devices-with-intune.md)**
 
   These devices include augmented reality (AR) & virtual reality (VR) headsets, large smart-screen devices, and some conference room meeting devices, lik Microsoft Teams Rooms devices. They can be managed using Intune policies.
 
 > [!NOTE]
-> Some features may require additional licenses. For more information, go to [ntune Suite add-on capabilities](intune-add-ons.md) or [Microsoft Intune licensing](licenses.md).
+> Some features may require additional licenses. For more information, go to [ntune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md) or [Microsoft Intune licensing](../intune/fundamentals/licenses.md).
 
 ## Azure AD shared device mode for FLW
 
@@ -139,6 +138,6 @@ For more information and to get started, go to:
 - [FLW for Android devices](frontline-worker-overview-android.md)
 - [FLW for iOS/iPadOS devices](frontline-worker-overview-ios-ipados.md)
 - [FLW for Windows devices](frontline-worker-overview-windows.md)
-- [Microsoft Intune securely manages identities, manages apps, and manages devices](what-is-intune.md)
-- [Microsoft Intune planning guide](intune-planning-guide.md)
-- [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+- [Microsoft Intune securely manages identities, manages apps, and manages devices](../intune/fundamentals/what-is-intune.md)
+- [Microsoft Intune planning guide](../intune/fundamentals/intune-planning-guide.md)
+- [Migration guide: Set up or move to Microsoft Intune](../intune/fundamentals/deployment-guide-intune-setup.md)
