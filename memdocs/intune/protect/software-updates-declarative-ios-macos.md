@@ -91,7 +91,7 @@ Declarative software updates have precedence over other policies that configure 
 
 1. Declarative software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
 2. Update policies (**Devices** > **Update policies for macOS**)
-3. System Updates (**Settings catalog** > **System Updates** > **Software Update**)
+3. Software updates (**Settings catalog** > **System Updates** > **Software Update**)
 
 ## Configure the DDM software updates policy
 
