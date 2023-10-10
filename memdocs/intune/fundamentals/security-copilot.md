@@ -164,7 +164,7 @@ Whenever possible, and when the result is **Off-target**, write a few words expl
 
 ## Data processing and privacy
 
-When you interact with the Security Copilot to get Intune data, Security Copilot pulls that data from Intune. The prompts, the Intune data that's retrieved, and the output shown in the prompt results are processed and stored within the Security Copilot service.
+When you interact with the Security Copilot to get Intune data, Security Copilot pulls that data from Intune. The prompts, the Intune data that's retrieved, and the output shown in the prompt results is processed and stored within the Security Copilot service.
 
 For more information about data privacy in Security Copilot, go to [Privacy and data security in Microsoft Security Copilot](/security-copilot/privacy-data-security).
 
