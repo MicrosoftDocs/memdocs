@@ -184,6 +184,6 @@ Within the Intune security baseline policy UI, Intune provides information text 
 - View the settings in the latest versions of the available baselines:
   - [Windows 10 and later - MDM security baseline](security-baseline-settings-mdm-all.md)
   - [Microsoft Defender for Endpoint baseline](security-baseline-settings-defender-atp.md)
-  - [Microsoft 365 Apps for Enterprise security baseline (Office)](security-baseline--v2-office-settings.md)
+  - [Microsoft 365 Apps for Enterprise security baseline (Office)](security-baseline-v2-office-settings.md)
   - [Microsoft Edge security baseline](security-baseline-settings-edge.md)
   - [Windows 365 Security Baseline](security-baseline-settings-windows-365.md)
