@@ -813,16 +813,21 @@ items:
           href: ./protect/derived-credentials.md
         - name: Software updates
           items:
-          - name: iOS/iPadOS update policies
-            href: ./protect/software-updates-ios.md
-          - name: macOS update policies
-            href: ./protect/software-updates-macos.md
           - name: Android Enterprise updates
             items:
             - name: Android FOTA update
               href: ./protect/fota-updates-android.md
             - name: Zebra LG OTA Integration
-              href: ./protect/zebra-lifeguard-ota-integration.md            
+              href: ./protect/zebra-lifeguard-ota-integration.md    
+          - name: iOS/iPadOS & macOS updates
+            items:
+            - name: Declarative software updates
+              displayName: ddm
+              href: ./protect/software-updates-declarative-ios-macos.md    
+            - name: iOS/iPadOS update policies
+              href: ./protect/software-updates-ios.md
+            - name: macOS update policies
+              href: ./protect/software-updates-macos.md    
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
