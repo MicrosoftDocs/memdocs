@@ -31,7 +31,7 @@ ms.collection:
 
 Remote Help, an add-on to Microsoft Intune, provides a secure cloud based remote assistance solution for Windows commercial users. The integration between Intune and ServiceNow makes it possible for helpdesk agents to use Intune to troubleshoot endpoint related issues.
 
-Support organizations need all the tools at their disposal to resolve workers' technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the Microsoft Intune admin center.
+Support organizations need all the tools at their disposal to resolve workers' technology issues quickly and efficiently. With ServiceNow integration, helpdesk agents licensed to use Remote Help and who use ServiceNow can view incidents to see the details of the tech issue that an employee is facing. This integration allows helpdesk agents to view ServiceNow incidents directly from the Troubleshooting pane in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## About ServiceNow connector Integration
 
@@ -57,7 +57,7 @@ To get started, review the following steps:
 
 ## Configure the ServiceNow integration with Microsoft Intune
 
-1. Sign into Microsoft Intune admin center and go to **Tenant Administration > Connectors and Tokens > ServiceNow connector**.
+1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant Administration > Connectors and Tokens > ServiceNow connector**.
 2. You can see the **Connection Status** and the **Last Connection** date time stamp.
 3. Use the toggle to either turn on or off the ability to **Exchange data with the ServiceNow instance**.
 4. Next, define the following properties for how you're going to connect with ServiceNow.
