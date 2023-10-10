@@ -150,7 +150,7 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
     Select **Next**.
 
-13. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time the device checks for configuration updates, the OEM-specific settings you configured are applied to the OEMConfig app.
 
@@ -168,7 +168,7 @@ After your profile is deployed, you can check its status:
 
 3. You can also see if individual settings in a profile successfully applied. To see the per-setting status of an OEMConfig profile, select **Devices** > **All devices**, and choose a device from the list. Then, go to **App configuration**, and select your OEMConfig profile. Select an individual setting status to get more information.
 
-    Profiles in a pending state or profiles larger that 350KB aren't shown.
+    The maximum size of any OEMConfig profile is 350 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 350KB aren't shown.
 
 > [!NOTE]
 > For Zebra devices, only a single setting row is shown. Selecting the row shows details for all settings in the policy.
