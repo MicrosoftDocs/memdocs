@@ -2,7 +2,7 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 04/11/2022
+ms.date: 09/18/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -423,6 +423,8 @@ Select the option to **Enable PXE support for clients**, and then configure the 
 
     > [!NOTE]
     > When you enable a PXE responder on a distribution point without Windows Deployment Service, it can be on the same server as the DHCP service. <!--3734270-->
+
+- **Enable Preferred Management Point(s) for PXE requests**: Preferred Management Point (MP) option will now allow PXE clients to communicate to an initial lookup MP and receive the list of MP(s) to be used for further communication. When the option is enabled, it allows an MP to redirect the PXE client to another MP, based on the client location in the site boundaries. <!--2839966-->
 
 - **Require a password when computers use PXE**: To provide more security for your PXE deployments, specify a strong password.
 
