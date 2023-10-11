@@ -35,9 +35,9 @@ ms.collection:
 
 This Microsoft Intune report tells you where in the Company Portal enrollment process users are abandoning enrollment. Use this information to improve onboarding efforts and support documents for users going through enrollment. To see the report, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** and select **Monitor** > **Incomplete user enrollments**.  
 
-## What is an incomplete enrollment?
+## Overview  
 
-An incomplete enrollment is when a user does any of the following:  
+An incomplete enrollment happens when the user takes any of the following actions:    
 
 - Explicitly chooses an action to halt enrollment, such as **Decline all**, **Cancel**, or **Postpone**.  
 - Closes the Company Portal during enrollment.  
@@ -45,11 +45,11 @@ An incomplete enrollment is when a user does any of the following:
 
 If a user chooses to stop enrollment and restart multiple times, it shows up in the report as multiple attempts and multiple incomplete enrollments. If a user waits for 30 minutes before moving onto the next enrollment screen, it shows up in the report as multiple incomplete enrollments.  
 
-## What does the report show?
+## Report data      
 
 The reports include data for iOS/iPadOS and Android devices. It shows data for the past two weeks, but you can filter it to show any time period up to 30 days in the past. You can filter the date range, operating system, and enrollment section by choosing **Filter**.  
 
-### Comprehensive summary of incompletes  
+### Roll-up of attempted enrollments   
 
 At the top of the report, you can see the number and percentage of incomplete enrollments in relation to all enrollments.  
 
@@ -57,7 +57,7 @@ At the top of the report, you can see the number and percentage of incomplete en
 - Incomplete enrollments: The number of attempted enrollments that didn't result in a fully enrolled and compliant device.
 - Incomplete rate: The percentage of enrollment attempts that were abandoned (Abandoned enrollments / Initiated enrollments).  
 
-### Daily incomplete enrollments  
+### Incomplete enrollments by section   
 
 The line graph shows the daily incomplete enrollments for each of the four core enrollment sections:
 
@@ -66,54 +66,46 @@ The line graph shows the daily incomplete enrollments for each of the four core 
 - Terms of Use  
 - Compliance/Activation  
 
-### User abandonment actions
-
-You can see the areas of enrollment where incomplete enrollments happen. The different areas of enrollment include:   
-* **Setup checklist**  
-* **Platform screens**  
-* **Terms of use**  
-* **Compliance/Activation**  
-
-The tables in this section list the user actions that cause an incomplete enrollment for each area.   
+The following tables describe the user actions that cause incomplete enrollments during device enrollment.  
 
 **Setup checklist** 
 
-| Action name | Screen or flow | Platform | Action |
+| Action name | Screen or flow | Platform | User action |
 | ---- |---- |---- |---- |
 | EnrollmentWrapUp | Prompt to open page in Company Portal | iOS/Android | **Cancel** |
-| EnrollmentWrapUp | Enrolling device screen until finish of **Loading company resources** | iOS/Android | Exceed 30 minutes |
-| DeviceCategory | Device Category selection (if admin configured) until click **Done** | iOS/Android | Exceed 30 minutes |
+| EnrollmentWrapUp | Enrolling device screen until finish of **Loading company resources** | iOS/Android | Exceeded 30 minutes |
+| DeviceCategory | Device Category selection (if admin configured) until click **Done** | iOS/Android | Exceeded 30 minutes |
 | PreEnrollmentWizard | Set up access screen when having started enrollment but returned to Set up access | iOS/Android| **Postpone** |
-| PreEnrollmentWizard | Set up access screen until clicking **Next** on the **What's Next** screen | iOS/Android | Exceed 30 minutes |
+| PreEnrollmentWizard | Set up access screen until clicking **Next** on the **What's Next** screen | iOS/Android | Exceeded 30 minutes |
 
 **Platform screens** 
 
-| Action name | Screen or flow | Platform | Action |
+| Action name | Screen or flow | Platform | User action |
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | Prompt to show a configuration profile | iOS/iPadOS | **Ignore** |
 | iOSProfileLaunch | Installing profile screen | iOS/iPadOS | **Cancel** |
 | iOSProfileLaunch | Prompt to trust the profile's source to enroll the device | iOS/iPadOS | **Cancel** |
-| iOSProfileLaunch | Install profile screen until profile is installed | iOS/iPadOS | Exceed 30 minutes |
+| iOSProfileLaunch | Install profile screen until profile is installed | iOS/iPadOS | Exceeded 30 minutes |
 | AndroidPermissions | Device administrator activation screen | Android | **Cancel** |
-| AndroidPermissions | From prompt for approval to make and manage phone calls until device administrator **Activate** | Android | Exceed 30 minutes|
+| AndroidPermissions | From prompt for approval to make and manage phone calls until device administrator **Activate** | Android | Exceeded 30 minutes|
 | KnoxActivation | KLMS agent activation (Samsung only) | Android| **Cancel** |
-| KnoxActivation | KLMS agent activation until **Confirm** | Android | Exceed 30 minutes|
+| KnoxActivation | KLMS agent activation until **Confirm** | Android | Exceeded 30 minutes|
 
 **Terms of use**  
 
-| Action name | Screen or flow | Platform | Action |
+| Action name | Screen or flow | Platform | User action |
 | ---- |---- |---- |---- |
 | TermsofUse | Terms of use (if admin configured) | iOS/Android | **Decline All** |
-| TermsofUse | Terms of use until **Accept all** | iOS/Android | Exceed 30 minutes |
+| TermsofUse | Terms of use until **Accept all** | iOS/Android | Exceeded 30 minutes |
 
 **Compliance/Activation**
 
-| Action name | Screen or flow | Platform | Action |
+| Action name | Screen or flow | Platform | User action |
 | ---- |---- |---- |---- |
-| Compliance | Device compliance (if admin configured) shows as non-green on access setup post enrollment| iOS/Android | **Postpone** |
-| Compliance | Device compliance shows as non-green until updated to show green | iOS/Android | Exceed 30 minutes |
-| Activation | Enrollment activation  (if admin configured) shows as non-green on access setup | iOS/Android | **Postpone** |
-| Compliance | Device activation shows as non-green until updated to show green | iOS/Android | Exceed 30 minutes |
+| Compliance | Device compliance (if admin configured) shows as incomplete on access setup post enrollment| iOS/Android | **Postpone** |
+| Compliance | Device compliance shows as incomplete until updated to show complete | iOS/Android | Exceeded 30 minutes |
+| Activation | Enrollment activation (if admin configured) shows as incomplete on access setup | iOS/Android | **Postpone** |
+| Compliance | Device activation shows as incomplete until updated to show complete | iOS/Android | Exceeded 30 minutes |
 
 ## Next steps
 
