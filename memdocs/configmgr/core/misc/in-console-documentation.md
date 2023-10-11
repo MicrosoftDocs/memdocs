@@ -29,7 +29,7 @@ All learn.microsoft.com links should include `?WT.mc_id=configmgr-console` campa
 
 This content can assist you in learning and supporting Configuration Manager.
 
-For more information, see the following articles:
+For more information, see the following articles: <!--URLs MUST BE ABSOLUTE LINKS-->
 
 - [Configuration Manager documentation library](https://learn.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console)
 - [Get started with Configuration Manager PowerShell cmdlets](https://learn.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console)
@@ -42,7 +42,7 @@ For the latest product changes, see the following articles:<!-- 8625956 -->
 
 ## Recommended
 
-A curated list of important articles.
+A curated list of important articles.  <!--URLs MUST BE ABSOLUTE LINKS-->
 
 - [Microsoft Intune tenant attach](https://learn.microsoft.com/mem/configmgr/tenant-attach?WT.mc_id=configmgr-console)
 - [Endpoint analytics](https://learn.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)
@@ -57,7 +57,7 @@ A curated list of important articles.
 
 ## Troubleshooting articles
 
-Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
+Guided walkthroughs to assist with troubleshooting Configuration Manager components and features. <!--URLs MUST BE ABSOLUTE LINKS-->
 
 - [Troubleshoot application deployments](https://learn.microsoft.com/mem/configmgr/apps/understand/app-deployment-technical-reference?WT.mc_id=configmgr-console)
 - [Application installation common error codes reference](https://learn.microsoft.com/mem/configmgr/tenant-attach/app-install-error-reference?WT.mc_id=configmgr-console)
