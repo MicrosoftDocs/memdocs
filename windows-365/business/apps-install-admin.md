@@ -30,7 +30,7 @@ ms.collection:
 - tier1
 ---
 
-# Set up Intune so admins can install apps on Cloud PCs
+# Set up Intune so admins can deploy apps to Cloud PCs
 
 Admins can deploy apps to users' Cloud PCs by first enrolling Windows 365 Business Cloud PCs into [Microsoft Intune](/mem/intune/fundamentals/what-is-intune#key-features-and-benefits).
 
@@ -38,7 +38,7 @@ Admins can deploy apps to users' Cloud PCs by first enrolling Windows 365 Busine
 
 You must have the Global Administrator or Windows 365 Administrator role.
 
-## Enroll Cloud PCs in Intune so you can deploy apps to Cloud PCs
+## Enroll Cloud PCs in Intune
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Make sure that the [Mobile Device Management Authority in Intune is set to Intune MDM Authority](/mem/intune/fundamentals/mdm-authority-set). If it's not, you must have the
