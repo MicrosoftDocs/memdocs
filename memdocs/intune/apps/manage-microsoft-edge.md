@@ -258,7 +258,7 @@ By default, users can choose to send optional diagnostic data from **Settings**-
 |com.microsoft.intune.mam.managedbrowser.disableShareUsageData |**true** Optional diagnostic data setting is disabled <br>**false** (default) The option can be turned on or off by users |
 
 > [!NOTE]
-> **Optional diagnostic data** setting is also prompted to users during the First Run Experience (FRE). Organizations can skip this step by using the MDM policy [EdgeDisableShareUsageData](https://learn.microsoft.com/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata)
+> **Optional diagnostic data** setting is also prompted to users during the First Run Experience (FRE). Organizations can skip this step by using the MDM policy [EdgeDisableShareUsageData](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata)
 
 
 #### Disable specific features
