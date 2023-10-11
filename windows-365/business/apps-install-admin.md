@@ -43,7 +43,7 @@ You must have the Global Administrator or Windows 365 Administrator role.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Make sure that the [Mobile Device Management Authority in Intune is set to Intune MDM Authority](/mem/intune/fundamentals/mdm-authority-set). If it's not, you must have the
 Global Administrator or Windows 365 Administrator role to do so.
-3. Sign in to [windows365.microsoft.com](https://windows365.microsfot.com) and select **Update organization settings**.
+3. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) and select **Update organization settings**.
 4. Select **Enroll new Cloud PCs in Microsoft Intune**.
 5. Select **Save**.
 
@@ -55,4 +55,4 @@ After enrolling Cloud PCs in Intune, you can add apps as explained in [Add Micro
 
 ## Next steps
 
-[Learn about Microsoft Inune app management](/mem/intune/apps/app-management).
+[Learn about Microsoft Intune app management](/mem/intune/apps/app-management).
