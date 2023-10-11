@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 8/22/2023
+ms.date: 10/11/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,9 +33,7 @@ ms.collection:
 
 # Incomplete user enrollments report
 
-This Microsoft Intune report tells you where in the Company Portal enrollment process users are abandoning enrollment. Using this information, you can update your onboarding documents to help users complete enrollment. For example, if many users are quitting enrollment at the Terms of Use screen, you might investigate that area and make it more intuitive for users. 
-
-To see the report, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** and select **Monitor** > **Incomplete user enrollments**.  
+This Microsoft Intune report tells you where in the Company Portal enrollment process users are abandoning enrollment. Use this information to improve onboarding efforts and support documents for users going through enrollment. To see the report, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Then go to **Devices** and select **Monitor** > **Incomplete user enrollments**.  
 
 ## What is an incomplete enrollment?
 
@@ -51,7 +49,7 @@ If a user chooses to stop enrollment and restart multiple times, it shows up in 
 
 The reports include data for iOS/iPadOS and Android devices. It shows data for the past two weeks, but you can filter it to show any time period up to 30 days in the past. You can filter the date range, operating system, and enrollment section by choosing **Filter**.  
 
-### Number and percentage tiles
+### Comprehensive summary of incompletes  
 
 At the top of the report, you can see the number and percentage of incomplete enrollments in relation to all enrollments.  
 
@@ -59,7 +57,7 @@ At the top of the report, you can see the number and percentage of incomplete en
 - Incomplete enrollments: The number of attempted enrollments that didn't result in a fully enrolled and compliant device.
 - Incomplete rate: The percentage of enrollment attempts that were abandoned (Abandoned enrollments / Initiated enrollments).  
 
-### Line graph
+### Daily incomplete enrollments  
 
 The line graph shows the daily incomplete enrollments for each of the four core enrollment sections:
 
