@@ -342,13 +342,13 @@ For more information about the following settings that are included in this base
 - **ActiveX Control Initialization (User)**  
   Baseline default: *Enabled*
 
-  -**ActiveX Control Initialization: (User)**  
+  - **ActiveX Control Initialization: (User)**  
   Baseline default: *6*
 
 ::: zone-end
 ::: zone pivot="office-oct-2023"
 
--**Allow Basic Authentication prompts from network proxies**  
+- **Allow Basic Authentication prompts from network proxies**  
   Baseline default: *Disabled*
 
 ::: zone-end
