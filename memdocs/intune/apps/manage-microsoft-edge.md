@@ -249,14 +249,17 @@ By default, Edge for iOS and Android uses the HTTPS protocol handler when the us
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.defaultHTTPS|**true** (default) default protocol handler is HTTPS <br>**false** default protocol handler is HTTP|
 
-#### Disable data sharing for personalization
+#### Disable optional diagnostic data
 
-By default, Edge for iOS and Android prompts users for usage data collection and sharing browsing history to personalize their browsing experience. Organizations can disable this data sharing by preventing this prompt from being shown to end users.
+By default, users can choose to send optional diagnostic data from **Settings**->**Privacy and security**->**Diagnostic data**->**Optional diagnostic data** setting. Organizations can disable this setting.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disableShareUsageData |**true** disables this prompt from displaying to end users <br>**false** (default) users are prompted to share usage data |
-|com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory|**true** disables this prompt from displaying to end users <br>**false** (default) users are prompted to share browsing history |
+|com.microsoft.intune.mam.managedbrowser.disableShareUsageData |**true** Optional diagnostic data setting is disabled <br>**false** (default) The option can be turned on or off by users |
+
+> [!NOTE]
+> **Optional diagnostic data** setting is also prompted to users during the First Run Experience (FRE). Organizations can skip this step by using the MDM policy [EdgeDisableShareUsageData](https://learn.microsoft.com/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata)
+
 
 #### Disable specific features
 
@@ -335,6 +338,21 @@ As there is only one persistent website data store in Edge for iOS, by default t
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** (default) The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** The website data store will be used by work or school account first regardless of the sign-in order |
 
+#### Microsoft Defender SmartScreen
+
+Microsoft Defender SmartScreen is a feature that helps users avoid malicious sites and downloads. It is enabled by default. Organizations can disable this setting.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScree is enabled. <br>**false**  Microsoft Defender SmartScree is disabled.|
+
+#### Block opening external apps
+When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps are not installed, the behavior will be the same as value 1|
+
 #### Bing Chat Enterprise 
 
 Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Bing button in bottom bar. 
@@ -351,10 +369,6 @@ You can manage the settings for Bing Chat Enterprise.
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users will see Bing button in bottom bar. Setting “New Bing co-pilot mode” is on by default and can be turned off by users.  <br>**false** Users cannot see Bing button in bottom bar. Setting “New Bing co-pilot mode” will be disabled and cannot be turned on by users|
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings are on by default and can be turned off by users.  <br>**false** Bing Chat Enterprise can NOT access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings will be disabled and cannot be turned on by users|
-
-> [!NOTE]
-> Bing Chat Enterprise is only available on Edge for iOS and com.microsoft.intune.mam.managedbrowser.Chat will have **false** as the default value before Aug 28, 2023. You can enable Bing Chat Enterprise by setting the policy value to **true**. The default value will become **true** after Aug 28, 2023 with new release available on Edge for iOS and Android.
-
 
 ## Data protection app configuration scenarios
 
@@ -499,7 +513,6 @@ As app configuration policies for managed devices needs device enrollment, any u
 |     com.microsoft.intune.mam.managedbrowser.MyApps    |     EdgeMyApps    |
 |     com.microsoft.intune.mam.managedbrowser.defaultHTTPS       |     EdgeDefaultHTTPS    |
 |     com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     EdgeDisableShareUsageData    |
-|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     EdgeDisableShareBrowsingHistory    |
 |     com.microsoft.intune.mam.managedbrowser.disabledFeatures    |     EdgeDisabledFeatures    |
 |     com.microsoft.intune.mam.managedbrowser.disableImportPasswords    |     EdgeImportPasswordsDisabled    |
 |     com.microsoft.intune.mam.managedbrowser.enableKioskMode    |     EdgeEnableKioskMode    |
