@@ -38,9 +38,9 @@ The process to establish integration between Jamf Pro and Microsoft Intune is ev
 >
 > **Jamf macOS device support for Conditional Access is being deprecated**.
 >
-> Beginning on September 1, 2024, the platform that Jamf Pro’s Conditional Access feature is built on will no longer be supported.
+> Beginning on September 1, 2024, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
 >
-> If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
+> If you use Jamf Pro's Conditional Access integration for macOS devices, follow Jamf's documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 >
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
@@ -173,7 +173,7 @@ Jamf pro utilizes connectors in the [Microsoft Intune admin center](https://go.m
 
    :::image type="content" source="./media/jamf-managed-device-compliance-with-entra-id/jamf-create-connector-3a.png" alt-text="Image of the Jamf Configure Compliance Partner Open Microsoft Endpoint Manager button." lightbox="./media/jamf-managed-device-compliance-with-entra-id/jamf-create-connector-3a.png":::
 
-1. A new browser tab opens to the Microsoft Intune admin center, at [**https://endpoint.microsoft.com**](https://endpoint.microsoft.com).
+1. A new browser tab opens the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Proceed to *Tenant administration > Connectors and tokens > Partner compliance management*.
 1. At the top of the *Partner compliance management* page, select **Add compliance partner**.
 1. In the *Create Compliance Partner* wizard:

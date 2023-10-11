@@ -47,9 +47,9 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 - **Synchronize Configuration Manager devices and collections** – After you configure tenant attach, you can select the Configuration Manager devices to synchronize with Microsoft Intune admin center. You can also return later to modify the devices you sync.
 
-  After selecting devices to synchronize, you must *enable* collections for use with endpoint security policies from Intune. Supported policies for Configuration Manager devices can only be assigned to collections you’ve *enabled*.
+  After selecting devices to synchronize, you must *enable* collections for use with endpoint security policies from Intune. Supported policies for Configuration Manager devices can only be assigned to collections you've *enabled*.
 
-- **Permissions to Azure AD** - To complete setup of tenant attach, you’ll need an account with Global Administrator permissions to your Azure subscription.
+- **Permissions to Azure AD** - To complete setup of tenant attach, you'll need an account with Global Administrator permissions to your Azure subscription.
 
 - **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription).  See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
 
@@ -65,7 +65,7 @@ To support using Intune endpoint security policies with Configuration Manager de
 
 Before you deploy Intune policies to Configuration Manager devices, complete the configurations detailed in the following sections. These configurations onboard your Configuration Manager devices with Microsoft Defender for Endpoint, and enable them to work with the Intune policies.
 
-The following tasks are completed in the Configuration Manager console. If you’re not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
+The following tasks are completed in the Configuration Manager console. If you're not familiar with Configuration Manager, work with a Configuration Manager admin to complete these tasks.
 
 1. [Confirm your Configuration Manager environment](#task-1-confirm-your-configuration-manager-environment)
 2. [Configure tenant attach and synchronize devices](#task-2-configure-tenant-attach-and-synchronize-devices)
@@ -92,10 +92,10 @@ With Tenant attach you specify collections of devices from your Configuration Ma
 
 For more information about the tenant attach scenario, see [Enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md) in the Configuration Manager content.
 
-#### Enable tenant attach when co-management hasn’t been enabled
+#### Enable tenant attach when co-management hasn't been enabled
 
 > [!TIP]
-> You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don’t need to enable co-management.
+> You use the **Co-management Configuration Wizard** in the Configuration Manager console to enable tenant attach, but you don't need to enable co-management.
 >
 > If you plan to enable co-management, be familiar with co-management, its prerequisites, and how to manage workloads before you continue. See [What is co-management?](../../configmgr/comanage/overview.md) in the Configuration Manager documentation.
 
@@ -192,7 +192,7 @@ You can see Configuration Manager client details including collections, boundary
 
 Use the following steps to view client details for a specific device:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Devices** > **All Devices**.<br>
    You'll see **ConfigMgr** in the **Managed by** column for devices that have been uploaded using tenant attach.
 
@@ -217,7 +217,7 @@ Use the following steps to view client details for a specific device:
 
 Use the following steps to view a list of devices that belong to a user:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Troubleshooting + support** > **Troubleshoot** > **Select user**.<br>
    If you already have a displayed user, you choose **Change user** to select a different user.
 3. Search for or click on a listed user. Then, click **Select**.
@@ -232,7 +232,7 @@ From the Microsoft Intune admin center, you can view hardware inventory for uplo
 
 To view device data from the resource explorer:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.<br>
    You can recognize devices that have been synced via tenant attach because **ConfigMgr** will be listed in the **Managed by** column for the device. Devices can also be listed as **Co-managed** when both Configuration Manager and Intune apply, or as **Intune** when only Intune management applies.
@@ -261,7 +261,7 @@ From the Microsoft Intune admin center, you can initiate an application install 
 
 Use the following steps to install an application to an on-premises device:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.<br>
    As noted before, you can recognize devices that have been synced via tenant attach because **ConfigMgr** will be listed in the **Managed by** column for the device. Devices can also be listed as **Co-managed** when both Configuration Manager and Intune apply, or as **Intune** when only Intune management applies.
@@ -276,7 +276,7 @@ For more information about applications and tenant attach, see [Tenant attach: I
 
 You can run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. You can also allow additional personas, like Helpdesk, to run PowerShell scripts. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.<br>
    As noted before, you can recognize devices that have been synced via tenant attach because **ConfigMgr** will be listed in the **Managed by** column for the device. Devices can also be listed as **Co-managed** when both Configuration Manager and Intune apply, or as **Intune** when only Intune management applies.
@@ -299,7 +299,7 @@ Once a day Configuration Manager sends the on-premises device events to the Micr
 
 To view the device event timeline:
 
-1. In a browser, navigate to [Microsoft Intune admin center](https://endpoint.microsoft.com).
+1. In a browser, navigate to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click  **Devices** > **All Devices**.
 3. Select a device that is synced from Configuration Manager via tenant attach.<br>
    As noted before, you can recognize devices that have been synced via tenant attach because **ConfigMgr** will be listed in the **Managed by** column for the device. Devices can also be listed as **Co-managed** when both Configuration Manager and Intune apply, or as **Intune** when only Intune management applies.
