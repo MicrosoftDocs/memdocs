@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/20/2023
+ms.date: 09/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -501,6 +501,11 @@ Then, configure the following additional settings as needed:
 
 - **IPv6 prefixes if required for DirectAccess or other intervening network devices. Use a comma to specify multiple entries**: Enter the necessary IPv6 prefixes for wake-up proxy to function on your network.
 
+- **Reduce network packets for Modern Standby devices**: Windows 10 and later operating systems support a low power mode known as **Modern Standby**, and includes wake on lan enabled by default. Some Modern Standby-capable devices may constantly send DHCP and DNS registration packets when in low power state and the legacy method of enabling wake on lan is used by Configuration Manager.
+
+  Choose **No** to continue to use the legacy wake on lan settings (may cause DHCP/DNS registration packets on some Modern Standby devices)
+  
+  Choose **Yes** to allow Configuration Manager to detect if a device is Modern Standby capable and default to using Modern Standby wake on lan implementation.
 
 
 ## Remote tools  
