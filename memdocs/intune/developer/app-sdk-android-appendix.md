@@ -334,7 +334,7 @@ If you need to test your application under Robolectric, the recommended workarou
 <!-- Other Intune docs -->
 [Review client app protection logs]:/mem/intune/apps/app-protection-policy-settings-log#android-app-protection-policy-settings
 [Android app protection policy settings in Microsoft Intune]:/mem/intune/apps/app-protection-policy-settings-android
-[Use Edge for Android to access managed app logs]:/mem/intune/apps/manage-microsoft-edge#use-edge-for-ios-and-android-to-access-managed-app-logs
+[Use Edge for Android to access managed app logs]:/mem/intune/apps/manage-microsoft-edge#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs
 [Enroll Android devices]:/mem/intune/enrollment/android-enroll 
 
 <!-- Class links -->
