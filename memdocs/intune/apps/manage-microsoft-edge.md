@@ -346,12 +346,24 @@ Microsoft Defender SmartScreen is a feature that helps users avoid malicious sit
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScreen is enabled. <br>**false**  Microsoft Defender SmartScreen is disabled.|
 
-#### Block opening external apps
+#### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
+
+#### Certificate verification
+
+By default, Microsoft Edge for Android verifies server certificates using the built-in certificate verifier and the Microsoft Root Store as the source of public trust. Organizations can switch to system certificate verifier and system root certificates.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled |**true** (default) Use built-in certificate verifier and Microsoft Root Store to verify certificates. <br>**false** Use system certificate verifier and system root certificates as the source of public trust to verify certificates.|
+
+> [!NOTE]
+> A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](/mem/intune/protect/microsoft-tunnel-mam-android).
+
 
 #### Bing Chat Enterprise 
 
@@ -568,7 +580,7 @@ If you are using Microsoft Intune as your mobile app management provider, the fo
 
 The newly created configuration policy is displayed on the **App configuration** blade.
 
-## Use Edge for iOS and Android to access managed app logs  
+## Use Microsoft Edge for iOS and Android to access managed app logs  
 
 Users with Edge for iOS and Android installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
 
@@ -581,6 +593,21 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 You can retrieve logs from Microsoft Support by giving them the user's incident ID.  
 
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md). 
+
+## Diagnostic logs
+
+Besides Intune logs from `edge://intunehelp/`, you may be asked by Microsoft Support to provide diagnostic logs of Microsoft Edge for iOS and Android. You can download the logs to local devices and share them to Microsoft Support. To download the logs to local devices:
+
+1.Open **Help and feedback** from overflow menu
+
+2.Click **diagnostic data**
+
+3.For Microsoft Edge for iOS, click the **Share** icon on the top right. The OS sharing dialog will be displayed. You can choose to save the logs to local or share with other apps. For Microsoft Edge for Android, click sub menu on the top right corner to save logs. The logs will be stored to folder **Download** -> **Edge**.
+
+You may also want to click the **Clear** icon to clear logs first in order to get refresh logs.
+
+> [!NOTE]
+> Saving logs also respects Intune App Protection Policy.So you may not be allowed to save diagnostic data to local devices.
 
 ## Next steps
 
