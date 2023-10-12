@@ -66,15 +66,15 @@ Admins can configure these [application configuration policies for managed Andro
 Your app can retrieve these admin-configured values either through [Android's `RestrictionsManager`][] or through the Intune App SDK.
 See [retrieving app configuration from the SDK][] for more information.
 
-> [!NOTE]
-> App developers can use [delegated scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) to integrate enhanced permissions for their Managed Google Play apps. Delegated scopes provide the following capabilities for Managed Google Play apps:
-> - Allow other apps to install and manage certificates
-> - Allow app to access Android security logs
-> - Allow app to access Android network activity logs
-> 
-> Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings - Applications](../configuration/device-restrictions-android-for-work.md#applications).
-> 
-> For app implementation details, see [Android developer documentation - Delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes).
+### Delegated scopes for Managed Google Play apps
+App developers can use [delegated scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) to integrate enhanced permissions for their Managed Google Play apps. Delegated scopes provide the following capabilities for Managed Google Play apps:
+- Allow other apps to install and manage certificates
+- Allow app to access Android security logs
+- Allow app to access Android network activity logs
+ 
+Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings - Applications](../configuration/device-restrictions-android-for-work.md#applications).
+ 
+For app implementation details, see [Android developer documentation - Delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes).
 
 ### Intune App SDK App Configurations
 
