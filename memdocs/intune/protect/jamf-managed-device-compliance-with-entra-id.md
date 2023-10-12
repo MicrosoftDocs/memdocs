@@ -4,7 +4,7 @@
 title: Jamf Managed Device Compliance with Microsoft Entra ID
 titleSuffix: Microsoft Intune
 description: Configure a new integration to report Jamf device compliance to Microsoft Intune and Entra ID.
-author: lenewsad
+author: jeffducasse
 ms.author: lanewsad
 manager: dougeby
 ms.date: 09/12/2023
