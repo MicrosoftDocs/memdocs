@@ -346,7 +346,7 @@ Microsoft Defender SmartScreen is a feature that helps users avoid malicious sit
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScreen is enabled. <br>**false**  Microsoft Defender SmartScreen is disabled.|
 
-#### Opening external apps
+#### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
 
 |Key |Value |
