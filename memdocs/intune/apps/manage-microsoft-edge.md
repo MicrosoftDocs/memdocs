@@ -346,7 +346,7 @@ Microsoft Defender SmartScreen is a feature that helps users avoid malicious sit
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScreen is enabled. <br>**false**  Microsoft Defender SmartScreen is disabled.|
 
-#### Open external apps
+#### Block opening external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
 
 |Key |Value |
@@ -580,7 +580,7 @@ If you are using Microsoft Intune as your mobile app management provider, the fo
 
 The newly created configuration policy is displayed on the **App configuration** blade.
 
-## Use Microsoft Edge for iOS and Android to access managed app logs  
+## Use Edge for iOS and Android to access managed app logs  
 
 Users with Edge for iOS and Android installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
 
