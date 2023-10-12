@@ -166,6 +166,17 @@ Before the policy has any effect, you must create and deploy an App Control for 
 
 For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
+> [!IMPORTANT]
+>
+> **The risk of potential no-boot from AppLocker policy merge**
+>
+> When enabling managed installer via Intune, an AppLocker policy with a dummy rule is deployed and merged with the existing AppLocker policy on the target device.
+> If the existing AppLocker policy includes a RuleCollection defined as **NotConfigured** with an empty rule set, it will be merged as **NotConfigured** with the dummy rule.
+> A **NotConfigured** rule collection will default to enforced if there are any rules defined in the collection.
+> When the dummy rule is the only rule configured, this implies that anything else will be blocked from being loaded or executed.
+> This can cause unexpected problems such as applications failing to start, and failing to boot or logon into Windows.
+> To avoid this issue, we recommend removing any RuleCollection defined as **NotConfigured** with an empty rule set from your existing AppLocker policy if it is currently in place.
+
 ### Remove the Intune Management Extension as a managed installer
 
 Should you need to, you can stop configuring the Intune Management Extension as a managed installer for your tenant. This requires you to turn off the managed installer policy. After the policy is turned off, you can choose to use additional clean-up actions.
