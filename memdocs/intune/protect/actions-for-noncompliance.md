@@ -4,8 +4,8 @@
 title: Configure compliance policies with actions for noncompliance in Microsoft Intune
 description: Configure your compliance policies with one or more actions for noncompliance to protect devices and your organization from unprotected devices. Actions can remotely lock devices, send email or notifications to device users, and more.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 09/17/2023
 ms.topic: how-to
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- compliance
 ---
 
 # Configure actions for noncompliant devices in Intune

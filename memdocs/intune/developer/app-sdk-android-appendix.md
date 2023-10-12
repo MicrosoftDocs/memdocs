@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 09/29/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,6 +35,11 @@ ms.custom: intune-classic
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
+> [!IMPORTANT]
+> Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
+> 
+> Plan to take mandatory Intune App SDK updates prior to every major OS release to ensure your app continues to run smoothly as OS updates can cause breaking changes. If you do not update to the latest version prior to a major OS release, you may run the risk of encountering a breaking change and/or being unable to apply app protection policies to your app.
+
 ## Process flow
 
 The following diagram provides the Intune App SDK for Android process flow:
@@ -51,7 +56,7 @@ Through the [build tooling], the Intune App SDK attempts to minimize the integra
 Prior to the build tooling, developers needed to perform all replacements manually.
 
 > [!NOTE] 
-> Apps *must* now integrate with the SDK [build tooling], which will perform all of these replacements automatically (except for [manifest replacements]).
+> Apps *must* now integrate with the SDK [build tooling], which will perform all of these replacements automatically.
 
 Android base classes are replaced with their respective MAM equivalents in order to enable Intune management.
 The SDK classes live between the Android base class and the app's own derived version of that class.
@@ -145,10 +150,6 @@ Again, the required build plugin automatically makes these replacements.
 Some classes have most of their methods wrapped, for example, `ClipboardManager`, `ContentProviderClient`, `ContentResolver`,
 and `PackageManager` while other classes have only one or two methods wrapped, for example, `DownloadManager`, `PrintManager`, `PrintHelper`,
 `View`, `DragEvent`, `NotificationManager` and `NotificationManagerCompat`. 
-
-### Manifest Replacements
-It may be necessary to perform some of the above class replacements in the manifest and in Java code. Of special note:
-- Manifest references to `android.support.v4.content.FileProvider` must be replaced with `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
 
 ### MDM and MAM Enrollment
 As discussed in [Stage 4's Registration vs Enrollment], the Intune App SDK will "enroll" accounts that your app registers so that account is protected with policy.
@@ -321,7 +322,6 @@ If you need to test your application under Robolectric, the recommended workarou
 
 <!-- Appendix links -->
 <!-- internal links -->
-[manifest replacements]:#manifest-replacements
 [some method calls must also be replaced]:#wrapped-system-services
 [Pending Intent]:#pendingintent
 [MAMApplication]:#mamapplication
