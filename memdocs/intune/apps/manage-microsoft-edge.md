@@ -602,7 +602,9 @@ Besides Intune logs from `edge://intunehelp/`, you may be asked by Microsoft Sup
 
 2.Click **diagnostic data**
 
-3.For Microsoft Edge for iOS, click the **Share** icon on the top right. The OS sharing dialog will be displayed. You can choose to save the logs to local or share with other apps. For Microsoft Edge for Android, click sub menu on the top right corner to save logs. The logs will be stored to folder **Download** -> **Edge**. You may also want to click the **Clear** icon to clear logs first in order to get refresh logs.
+3.For Microsoft Edge for iOS, click the **Share** icon on the top right. The OS sharing dialog will be displayed. You can choose to save the logs to local or share with other apps. For Microsoft Edge for Android, click sub menu on the top right corner to save logs. The logs will be stored to folder **Download** -> **Edge**.
+
+You may also want to click the **Clear** icon to clear logs first in order to get refresh logs.
 
 > [!NOTE]
 > Saving logs also respects Intune App Protection Policy.So you may not be allowed to save diagnostic data to local devices.
