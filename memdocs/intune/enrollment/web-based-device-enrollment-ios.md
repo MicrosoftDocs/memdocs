@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Overview of Apple Device Enrollment in Microsoft Intune  
+title: Set up web-based device enrollment  
 titleSuffix: Microsoft Intune
-description: Utilize Apple Device Enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune.
+description: Set up web-based device enrollment to manage user-owned iOS/iPadOS devices in Microsoft Intune.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -41,12 +41,14 @@ In this article, you will:
 * Create an enrollment profile for web-based enrollments.  
 
 ## Prerequisites  
+Microsoft Intune supports web-based Apple Device Enrollment on devices running iOS/iPadOS version 15 or later. If you assign a web-based enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via app-based device enrollment, which requires the Company Portal app.   
 
+Before beginning setup, complete the following tasks:    
+
+- [Set mobile device management (MDM) authority](../fundamentals/mdm-authority-set.md)
+- [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)  
 
 ## Best practices   
-We recommend extra configurations to help improve the enrollment experience for device users. This section provides more information about each recommendation. 
-
-### Deploy Company Portal web app 
 Deploy the web app version of the Intune Company Portal website so that users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). Without the web app, devices users can still access the Company Portal website but have to open the browser and type the address into the search field. For more information about how to add a web app, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
 
 ## Step 1: Set up just-in-time registration 

@@ -32,17 +32,17 @@ ms.collection:
 ---
 
 # Overview of Apple Device Enrollment in Microsoft Intune  
-Apple *Device Enrollment* enables employees and students to enroll to their new and existing personal devices anytime. It enables essential management functionalities for you in Intune while protecting the personal data of employees and students. When users unenroll their device, all work-related profiles, apps, and data are deleted from the device.    
+*Apple Device Enrollment* enables employees and students to enroll to their new and existing personal devices anytime. It enables essential management functionalities for you in Intune while protecting the personal data of employees and students. When users unenroll their device, all work-related profiles, apps, and data are deleted from the device.    
 
-This article provides an overview of the Apple Device Enrollment features and functionality supported by Microsoft Intune.  
+This article provides an overview of the Apple Device Enrollment features and functionality supported by Microsoft Intune.    
 
-## Enrollment options      
-Employees and students can enroll devices via the Intune Company Portal website or app. [Create an enrollment profile] in the admin center to choose and configure the enrollment type.   
+## App or web based enrollment        
+Employees and students can enroll devices via the Intune Company Portal website or app. [Create an enrollment profile](tbd) in the admin center to choose and configure the enrollment type.   
 
 > [!TIP]
 > We recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. 
 
-Web-based enrollment utilizes Just in Time (JIT) registration and Apple single sign-on (SSO) extension functionality to handle Azure AD registration within Microsoft Office apps. JIT registration establishes SSO across the device and reduces the number of times users have to authenticate. To enable JIT registration in enrollments, create a device configuration profile with an SSO app extension policy. While web-based enrollment utilizes JIT registration, you are not required to use it with web enrollment.  
+Web-based enrollment utilizes Just in Time (JIT) registration and Apple single sign-on (SSO) extension functionality to handle Azure AD registration within Microsoft Office apps and reduce the number of times users have to authenticate. Although web-based enrollment utilizes JIT registration, you are not required to use it with web enrollment. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration).  
 
 The following table provides details about app and web-based enrollment.   
 

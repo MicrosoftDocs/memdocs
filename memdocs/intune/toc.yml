@@ -1484,11 +1484,9 @@ items:
           - name: Set up Apple Device Enrollment
             items:              
             - name: Overview   
-              href: ./enrollment/device-enrollment-overview-apple.md 
+              href: ./enrollment/apple-device-enrollment-overview.md 
             - name: Set up web-based device enrollment   
-              href: ./enrollment/web-based-device-enrollment-ios.md  
-            - name: Set up app-based device enrollment    
-              href: ./enrollment/app-based-device-enrollment-ios.md         
+              href: ./enrollment/web-based-device-enrollment-ios.md         
           - name: Set up Apple User Enrollment
             items:
             - name: Overview   
