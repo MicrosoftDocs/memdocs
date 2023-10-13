@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,7 @@ ms.reviewer: laarrizz
 
 # Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
 
-When you use Microsoft Defender for Endpoint, you can  deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
+When you use Microsoft Defender for Endpoint, you can deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
 
 When you manage devices through security settings management:
 
@@ -340,7 +340,7 @@ To support this, configure the *Manage Security settings using Configuration Man
 
 :::image type="content" source="./media/mde-security-integration/disable-configuration-manager-toggle.png" alt-text="Screen shot of the Defender portal showing the Manage Security settings using Configuration Manager toggle set to Off." lightbox="./media/mde-security-integration/disable-configuration-manager-toggle.png" :::
 
-## Create AzuMicrosoft Entra Groups
+## Create Microsoft Entra Groups
 
 After devices onboard to Defender for Endpoint, you'll need to create device groups to support deployment of policy for Microsoft Defender for Endpoint. To identify devices that have enrolled with Microsoft Defender for Endpoint but aren't managed by Intune or Configuration Manager:
 
@@ -359,8 +359,23 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](/mem/intune/fundamentals/groups-add). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:  
 
-- **Windows 10 and Windows 11** - The deviceType or OS displays as *Windows*
-- **Windows Server** - The deviceType or OS displays as *Windows Server*
+- **Windows 10 and Windows 11** - The deviceOSType or OS displays as *Windows*
+- **Windows Server** - The deviceOSType or OS displays as *Windows Server*
+- **Linux Device** - The deviceOSType or OS displays as *Linux*
+
+ #### Sample Intune Dynamic Groups with Rule Syntax
+
+**Windows Workstations**:
+
+:::image type="content" source="./media/mde-security-integration/windowworkstation.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Workstations." lightbox="./media/mde-security-integration/windowworkstation.jpg":::
+
+**Windows Servers**:
+
+:::image type="content" source="./media/mde-security-integration/windowsserver.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Servers." lightbox="./media/mde-security-integration/windowsserver.jpg":::
+
+**Linux Devices**:
+
+:::image type="content" source="./media/mde-security-integration/linuxdevices.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Linux." lightbox="./media/mde-security-integration/linuxdevices.jpg":::
 
 > [!IMPORTANT]
 > In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.

@@ -4,8 +4,8 @@
 title: Android (AOSP) compliance settings in Microsoft Intune
 description: View the Android (AOSP) device compliance settings available in Microsoft Intune.
 keywords:
-author: brenduns    
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 09/20/2022
 ms.topic: conceptual
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Device compliance settings for Android (AOSP) in Intune

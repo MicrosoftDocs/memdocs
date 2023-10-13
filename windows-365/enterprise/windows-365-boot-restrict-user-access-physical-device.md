@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/24/2023
+ms.date: 09/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,11 +32,11 @@ ms.collection:
 
 # Restrict user access to Windows 365 Boot physical device
 
-Windows 365 Boot is in [public preview](../public-preview.md). During this preview, Windows 365 Boot is designed for shared PC scenarios.
-
 Windows 365 Boot physical devices are intended to let users interact with their Cloud PCs without the ability to interact with the physical device. To meet this goal, you must set some configuration service provider (CSP) policies.
 
-During the preview, Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. Admins should review the following CSPs and decide which ones to implement on the physical device to meet your organization's security requirements.
+Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. Admins should review the following CSPs and decide which ones to implement on the physical device to meet your organization's security requirements.
+
+A new CSP policy in [public preview](..\public-preview.md) is available. You can use this policy to further restrict devices automatically. For more information, see [TBS](whats-new.md).
 
 ## Prevent access to physical device's Task Manager
 
