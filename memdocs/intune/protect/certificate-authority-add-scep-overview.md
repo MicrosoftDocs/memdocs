@@ -5,7 +5,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 10/13/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -138,6 +138,7 @@ The following third-party certification authorities support Intune:
 
 - [Cogito Group](https://cogitogroup.net/scep)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [EasyScep](ttps://docs.just-software.com/EasyScep/)
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
 - [Entrust](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
