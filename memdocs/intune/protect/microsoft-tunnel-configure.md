@@ -310,7 +310,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
      - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile will use.
 
      > [!NOTE]  
-     > When using the Tunnel VPN connection and Defender web protection together in combined mode, the *Disconnect on sleep* setting is not supported. If this Intune VPN setting is set to *Enabled* and the iOS device goes to sleep, both the Tunnel VPN and the Defender VPN are disconnected.
+     > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively. Failing to do so will result in both the Tunnel VPN and Defender VPN being disconnected when the iOS device enters sleep mode, while the VPN is turned on.
 
    - **Per-app VPN**:  
      - To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, your split tunneling rules are ignored by iOS.
@@ -324,6 +324,17 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
+
+> [!NOTE]  
+> When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it is crucial to configure the 'On-Demand' rules to activate the 'Disconnect on Sleep' setting effectively. To configure the on-demand rule when configuring the Tunnel VPN profile:
+>
+> 1. On the Configuration setting page, expand the *On-Demand VPN Rules* section.
+> 2. For *On-demand rules* select **Add** to open the *Add Row* pane.
+> 3. On the *Add Row* pane, set *I want to do the following* to **Connect VPN**, and then for *I want to restrict* select a restriction, like **All domains**.
+> 4. Optionally, you can add a URL to the *But only if this URL probe succeeds* field. 
+> 5. Select **Save**.
+>
+> :::image type="content" source="./media/microsoft-tunnel-configure/on-demand-vpn-rule.png" alt-text="Screen shot of the Add Row pane where you configure the on-demand rule.":::
 
 ## Use custom settings for Microsoft Defender for Endpoint
 

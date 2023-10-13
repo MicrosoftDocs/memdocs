@@ -4,8 +4,8 @@
 title: Use Windows compatibility reports for Windows 10 and Windows 11 updates in Intune
 description: Use the app and driver compatibility reports for Windows 10 and Windows 11 devices before you deploy Intune policies for feature updates or update rings.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 12/09/2022
 ms.topic: how-to
