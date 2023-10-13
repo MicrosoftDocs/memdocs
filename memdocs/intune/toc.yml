@@ -1361,6 +1361,8 @@ items:
         displayName: COD; BYOD; DEM; ADE; USB-SA; USB-Direct; co-management; GPO
       - name: Configure enrollment features      
         items:
+        - name: Enable just in time registration
+          href: ./tbd  
         - name: Get Apple MDM push certificate   
           href: ./enrollment/apple-mdm-push-certificate-get.md 
         - name: Add corporate identifiers
@@ -1479,6 +1481,14 @@ items:
               href: ./enrollment/automated-device-enrollment-authentication.md
             - name: Walkthrough - Set up enrollment with Apple School Manager
               href: ./enrollment/apple-school-manager-set-up-ios.md
+          - name: Set up Apple Device Enrollment
+            items:              
+            - name: Overview   
+              href: ./enrollment/device-enrollment-overview-apple.md 
+            - name: Set up web-based device enrollment   
+              href: ./enrollment/web-based-device-enrollment-ios.md  
+            - name: Set up app-based device enrollment    
+              href: ./enrollment/app-based-device-enrollment-ios.md         
           - name: Set up Apple User Enrollment
             items:
             - name: Overview   
