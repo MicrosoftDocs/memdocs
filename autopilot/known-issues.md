@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2023
+ms.date: 10/16/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -42,7 +42,7 @@ Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK cert
 There's currently a known issue in the following Windows Updates released in January 2023:
 
 - Windows 11 22H2: [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629)
-- Windows 11 21H2: [KB5022287]https://support.microsoft.com/topic/january-10-2023-kb5022287-os-build-22000-1455-951898ec-2628-4d25-850e-9a44207bc139
+- Windows 11 21H2: [KB5022287](https://support.microsoft.com/topic/january-10-2023-kb5022287-os-build-22000-1455-951898ec-2628-4d25-850e-9a44207bc139)
 - Windows 10: [KB5022282](https://support.microsoft.com/topic/january-10-2023-kb5022282-os-builds-19042-2486-19044-2486-and-19045-2486-9587e4e3-c2d7-48a6-86e2-8cd9146b47fd)
 
 where Kiosk device profiles that have auto sign-in enabled won't auto sign in. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After you enter this username with no password, it should take you to the desktop. This issue should be resolved in cumulative updates released for Windows 11 in April 2023 and Windows 10 in March 2023:
