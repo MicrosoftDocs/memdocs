@@ -39,7 +39,7 @@ With Microsoft Intune and Intune for Education, you can:
 * Manage the mobile devices and apps your staff and students use for school.  
 * Protect school data by helping to control the way your users access and share it.  
 * Ensure devices and apps are compliant with security requirements.  
-For more information about how to set up Intune for Education, see [Overview of Intune for Education](https://learn.microsoft.com/en-us/intune-education/what-is-intune-for-education).  
+For more information about how to set up Intune for Education, see [Overview of Intune for Education](/intune-education/what-is-intune-for-education).  
 
 ## Next steps
 * Ensure your organization meets [Microsoft Intune technical requirements and capabilities](/intune/supported-devices-browsers).  
