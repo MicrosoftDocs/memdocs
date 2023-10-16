@@ -33,7 +33,8 @@ ms.collection:
 
 Enable productivity on school devices while protecting your school's data. With *Intune for Education*, you can you manage Windows 10 and iOS/iPadOS devices with the full mobile device management (MDM) capabilities available in Microsoft Intune. Use Intune for Education alone, in harmony with [Microsoft Intune](what-is-intune.md), or with tools available in [Microsoft Education](https://microsoft.com/education).  
 
-> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]
+
+> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]  
 
 With Microsoft Intune and Intune for Education, you can:
 * Manage the mobile devices and apps your staff and students use for school.  
