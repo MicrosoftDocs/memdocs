@@ -220,8 +220,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Weak biometric   
 *  Device compliance reporting is not available for Android (AOSP).   
 
-* Android (AOSP) management is not supported in these environments:   
-    * Intune operated by 21Vianet  
+* Android (AOSP) management is not supported in environments using Intune operated by 21Vianet.    
 
 ## Next steps  
 
