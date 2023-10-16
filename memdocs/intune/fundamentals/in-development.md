@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 10/16/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -209,7 +209,7 @@ For more information, go to [Remote Help on Android](../fundamentals/remote-help
 ## Device security
 
 ### Updated security baseline for Microsoft 365 Apps for Enterprise.<!-- 25021846  -->  
-We’re working on an update to the Intune security baseline for Microsoft 365 Apps for Enterprise. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Office apps.
+We're working on an update to the Intune security baseline for Microsoft 365 Apps for Enterprise. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Office apps.
 
 For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
@@ -233,7 +233,7 @@ When the opt-in public preview behavior becomes generally available, the followi
 For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) in the Intune documentation.
 
 ###  Mvision Mobile is changing to Trellix Mobile Security<!-- 16208061 -->  
-The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  is transitioning to **Trellix Mobile Security**. With this change we’ll be updating Intune UI and our documentation to match. For example, the *Mvision Mobile connector* will soon be *Trellix Mobile Security*.
+The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  is transitioning to **Trellix Mobile Security**. With this change we'll be updating Intune UI and our documentation to match. For example, the *Mvision Mobile connector* will soon be *Trellix Mobile Security*.
 
 If you have questions about this change, reach out to your Trellix Mobile Security representative.
 
@@ -247,8 +247,8 @@ DDM allows you to install a specific update by an enforced deadline. The autonom
 In the settings catalog, the following declarative software update settings will be available at **Declarative device management > Software Update**:
 
 - **Details URL**: The web page URL that shows the update details. Typically, this is a web page hosted by your organization that users can select if they need organization-specific help with the update.
-- **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn’t consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
-- **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn’t trigger the software update before this time, then the device force installs it.
+- **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+- **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
 In the settings catalog, the following declarative passcode settings will be available at **Declarative device management > Passcode**:
@@ -290,10 +290,6 @@ Applies to:
 
 ### Intune admin center home page update<!-- 16950040 -->  
 The Intune admin center home page has been redesigned with a fresh new look and more dynamic content. The **Status** section has been simplified. You can explore Intune related capabilities in the **Spotlight** section. The **Get more out of Intune** section provides links to the Intune community and blog, as well as Intune customer success. Also, the **Documentation and training** section provides links to **What's New in Intune**, **Feature in development**, and additional training. This update will be available when you access [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Home**.
-
-### `endpoint.microsoft.com` URL will redirect to `intune.microsoft.com` <!-- 25169925  -->  
-Previously, it was announced that the Microsoft Intune admin center has a new URL (`https://intune.microsoft.com`). The `https://endpoint.microsoft.com` URL will redirect to `https://intune.microsoft.com`.
-
 
 <!-- *********************************************** -->
 
