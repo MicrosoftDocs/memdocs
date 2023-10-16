@@ -70,29 +70,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of October 16, 2023
 
-### Device configuration
-
-#### OEMConfig profiles that don't deploy successfully aren't shown as "pending"<!-- 24284049 -->
-
-For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig** for profile type).
-
-Previously, OEMConfig profiles that exceed 350 KB show a "pending" state. This behavior changed. An OEMConfig profile that exceeds 350 KB isn't deployed to the device. Profiles in a pending state or profiles larger that 350 KB aren't shown. Only profiles that successfully deploy are shown.
-
-This change is a UI change only. No changes are made to the corresponding Microsoft Graph APIs.
-
-To monitor the profile pending status, go to **Devices** > **Configuration profiles** > Select the profile > **Device status**.
-
-For more information on OEM Configuration, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
-
-Applies to:
-
-- Android Enterprise
-
 ### Tenant administration
 
 #### `endpoint.microsoft.com` URL redirects to `intune.microsoft.com`<!-- 25169925 -->
 
-Previously, it was announced that the Microsoft Intune admin center has a new URL (`https://intune.microsoft.com`). The `https://endpoint.microsoft.com` URL now redirects to `https://intune.microsoft.com`.
+Previously, it was announced that the Microsoft Intune admin center has a new URL (`https://intune.microsoft.com`).
+
+The `https://endpoint.microsoft.com` URL now redirects to `https://intune.microsoft.com`.
 
 ## Week of September 18, 2023 (Service release 2309)
 
@@ -110,6 +94,22 @@ Intune Mobile Application Management (MAM) for Windows is available for Windows 
 Sovereign cloud support is expected in the future. For more information, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
 ### Device configuration
+
+#### OEMConfig profiles that don't deploy successfully aren't shown as "pending"<!-- 24284049 -->
+
+For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig** for profile type).
+
+Previously, OEMConfig profiles that exceed 350 KB show a "pending" state. This behavior changed. An OEMConfig profile that exceeds 350 KB isn't deployed to the device. Profiles in a pending state or profiles larger that 350 KB aren't shown. Only profiles that successfully deploy are shown.
+
+This change is a UI change only. No changes are made to the corresponding Microsoft Graph APIs.
+
+To monitor the profile pending status in the Intune admin center, go to **Devices** > **Configuration profiles** > Select the profile > **Device status**.
+
+For more information on OEM Configuration, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+Applies to:
+
+- Android Enterprise
 
 #### Config Refresh settings are in the settings catalog for Windows Insiders<!-- 15060174  -->  
 In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune.
