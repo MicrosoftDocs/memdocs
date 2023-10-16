@@ -39,6 +39,9 @@ To help determine potential costs, use the following Azure resources:
 
 CMG uses Azure platform as a service (PaaS), which uses virtual machines (VMs). These VMs incur compute costs. The specific type to use when estimating costs depends upon which deployment method you use.
 
+> [!NOTE]
+> Although CMG is built on Azure PaaS, CMG is a software as a serice (SaaS) solution provided and maintained by Microsoft. CMG resources are added to customer Azure subscriptions so that consumption costs can be directly monitored and accounted for by the customer.
+
 ### Virtual machine scale set
 
 When you deploy the CMG as a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets), the following factors affect the cost of the service:
