@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 10/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -127,7 +127,9 @@ Security settings management isn't yet supported with Government clouds. For mor
 - Policies retrieved from Microsoft Intune are enforced on the device by Microsoft Defender for Endpoint.
 
 Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
+
 ::: zone-end
+::: zone pivot="mdssc-ga"
 
 ### Active Directory requirements
 
@@ -141,15 +143,22 @@ When a device that is domain joined creates a trust with Azure Active Directory,
 
 > [!NOTE]
 >
-> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device. 
+> If a device is deleted (from either Azure AD or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Azure AD Connect, the device's record is removed from Azure AD and the group membership is also removed. As a result, Intune policies no longer target the device.
 >
 > If the device was part of any dynamic Azure AD groups previously and has now been re-added back into Azure AD (with the same Device ID), the policies targeting the device will be resolved within a minimum of 48 hours. However, if the device was part of any static Azure AD groups previously, administrators will need to go back and re-add the device back into those groups.
 >
 > This is a known issue with Azure AD.
 
+::: zone-end
+
+
 ### Connectivity requirements
 
+::: zone pivot="mdssc-ga"
+
 Devices must have access to the following endpoints:
+
+
 
 - `enterpriseregistration.windows.net` - For Azure AD registration.
 - `login.microsoftonline.com` - For Azure AD registration.
@@ -159,6 +168,20 @@ Devices must have access to the following endpoints:
 > You need to configure an endpoint system-wide proxy in an environment that is not connected to the internet. Use of only the EDR static proxy configuration is not sufficient.
 >
 > If your organization uses Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
+
+::: zone-end
+::: zone pivot="mdssc-preview"
+
+Devices must have access to the following endpoint:
+
+- `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
+
+> [!NOTE]
+> You need to configure an endpoint system-wide proxy in an environment that is not connected to the internet. Use of only the EDR static proxy configuration is not sufficient.
+>
+> If your organization uses Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
+
+::: zone-end
 
 ### Supported platforms
 
