@@ -8,14 +8,14 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/24/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 
 # optional metadata
-# CustomerIntent: As an  IT admin, I want to set an MDM authority before users can enroll their devices so that we can determine how to manage devices.
+# CustomerIntent: As an  IT admin, I want to set the MDM authority before users can enroll their devices so that we can determine how to manage devices.
 #ROBOTS:
 #audience:
 
@@ -62,7 +62,7 @@ For pre-1911 service release tenants, if you haven't yet set the MDM authority, 
     - **Intune MDM Authority**
     - **None**
 
-  ![Screenshot of Intune set mobile device management authority screen](./media/mdm-authority-set/set-mdm-auth.png)
+    :::image type="content" source="./media/mdm-authority-set/set-mdm-auth.png" alt-text="Screenshot of Intune set mobile device management authority screen." lightbox="./media/mdm-authority-set/set-mdm-auth.png":::
 
   A message indicates that you have successfully set your MDM authority to Intune.
 

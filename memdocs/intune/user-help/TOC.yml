@@ -140,6 +140,8 @@ items:
         href: enroll-ios-device-disa-purebred.md
   - name: Company Portal app for iOS/iPadOS
     items:
+    - name: Migrate account to new iPhone
+      href: set-up-migrate-iphone-for-work.md
     - name: Manually sync iOS/iPadOS device
       href: sync-your-device-manually-ios.md
     - name: Reset iOS/iPadOS device

@@ -223,10 +223,7 @@ The users and groups created are also seen in the [Microsoft 365 admin center](h
 
 ### Review group membership
 
-1. In the Intune admin center, select **Users** > select the name of any existing user.
-
-    :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png" alt-text="Screenshot that shows how to select Users in Microsoft Intune and the Intune admin center.":::
-
+1. In the Intune admin center, select **Users** > **All users** > select the name of any existing user.
 2. Review some of the information you can add or change. For example, look at the properties you can configure, such as Job Title, Department, City, Office location, and more. You can use these properties in your dynamic queries when creating dynamic groups.
 3. Select **Groups** to see the membership of this user. You can also remove the user from a group.
 4. Select some of the other options to see more information, and what you can do. For example, look at the assigned license, the user's devices, and more.

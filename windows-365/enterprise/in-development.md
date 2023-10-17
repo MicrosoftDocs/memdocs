@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 09/06/2023
+ms.date: 10/06/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -61,6 +61,10 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 ### Support for symmetric NAT with RDP Shortpath<!--43602619-->
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
+
+### Permissions update for placing a Cloud PC under review<!--46608968-->
+
+In a future update, you’ll need an additional role, Storage Blob Data Contributor, to place a Cloud PC under review.
 
 <!-- ***********************************************-->
 <!--## Device provisioning-->

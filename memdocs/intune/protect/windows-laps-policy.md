@@ -39,7 +39,7 @@ When you’re ready to manage the *Windows Local Administrator Password Solution
 Before creating policies, be familiar with the information in [Microsoft Intune support for Windows LAPS](../protect/windows-laps-overview.md), which includes:
 
 - An overview of Intune’s Windows LAPS policy and capabilities.
-- The perquisites for using Intune policies for LAPS.
+- The prerequisites for using Intune policies for LAPS.
 - The role-based admin control (RBAC) permissions your account needs to have to manage LAPS policy.
 - Frequently asked questions that can provide insight to configuring and using Intune LAPS policy.
 
@@ -110,7 +110,7 @@ Before you create a policy, you can review details about the available settings 
 
 ## View Device actions status
 
-When your account has permissions equivalent to the *Security Baselines* permissions that grant rights to all policy templates in the Endpoint security workload, you can use the Intune admin center to view the status of device actions that have been requested for the device.
+When your account has permissions equivalent to the *Security baselines* permissions that grant rights to all policy templates in the Endpoint security workload, you can use the Intune admin center to view the status of device actions that have been requested for the device.
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 

@@ -71,9 +71,8 @@ For more information about consent and Azure Active Directory applications, see 
 
 
 ## To set up MVISION Mobile integration
-***The actual console name, link, and following step details are pending***
 
-1. Go to [MVISION Mobile console]() and sign in with your credentials. To perform the MVISION Mobile integration setup process, you must sign in with an Azure Active Directory user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the MVISION Mobile apps to communicate with Intune.
+1. Go to MVISION Mobile console and sign in with your credentials. To perform the MVISION Mobile integration setup process, you must sign in with an Azure Active Directory user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the MVISION Mobile apps to communicate with Intune.
 
 2. Choose **Management** from the left menu.
 
