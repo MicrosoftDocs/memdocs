@@ -568,17 +568,24 @@ End of comment -->
   - Only show apps in the Managed Google Play store that are approved, or apps that are required.
   - Uninstall apps that were installed outside of the Managed Google Play store.
 
-- **Allow other apps to install and manage certificates**: Select **Add** to select existing apps for this permission. You can add multiple apps. The selected apps are granted access to install and manage certificates.
+- The following settings are part of the Google's delegated scope feature:
 
-  To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
+  - **Allow other apps to install and manage certificates**: Select **Add** to select existing apps for this permission. You can add multiple apps. The selected apps are granted access to install and manage certificates.
 
-- **Allow this app to access Android security logs**: Select the app that should have this permission. You can only select one app. The app is granted access to the security logs.
+    To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
 
-  To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
+  - **Allow this app to access Android security logs**: Select the app that should have this permission. You can only select one app. The app is granted access to the security logs.
 
-- **Allow this app to access Android network activity logs**: Select the app that should have this permission. You can only select one app. The app is granted access to the network activity logs.
+    To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
 
-  To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
+  - **Allow this app to access Android network activity logs**: Select the app that should have this permission. You can only select one app. The app is granted access to the network activity logs.
+
+    To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
+
+  > [!TIP]
+  > If there's a conflict with one of these settings, then the conflict applies to all three settings. Make sure you give the **Allow this app to access Android security logs** and **Allow this app to access Android network activity logs** permissions to only one app. You can give these permissions to the same app, but not different apps.
+  >
+  > For more information, go to [Android Management API - DelegatedScope](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#delegatedscope) (opens Google's web site).
 
 ### Dedicated devices
 
