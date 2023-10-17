@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/06/2023
+ms.date: 10/17/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -281,9 +281,11 @@ These settings use the [experience policy CSP](/windows/client-management/mdm/po
   [Connectivity/AllowUSBConnection CSP](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection)
 
 - **AntiTheft mode** (mobile only): **Block** prevents users from selecting AntiTheft mode preference on the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
-- **Cortana**: **Block** disable the Cortana voice assistant on the device. When Cortana is off, users can still search to find items on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Cortana.
+- **Cortana**: **Block** disables the Cortana voice assistant on the device. When Cortana is off, users can still search to find items on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Cortana.
 
   [Experience/AllowCortana CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
+
+  [!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
 
 - **Voice recording** (mobile only): **Block** prevents users from using the device voice recorder on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow voice recording for apps.
 - **Device name modification** (mobile only): **Block** prevents users from changing the name of the device. When set to **Not configured** (default), Intune doesn't change or update this setting.
@@ -618,7 +620,7 @@ These settings use the [privacy policy CSP](/windows/client-management/mdm/polic
 
   [Privacy/DisablePrivacyExperience](/windows/client-management/mdm/policy-csp-privacy#privacy-disableprivacyexperience)
 
-- **Input personalization**: **Block** prevents using voice for dictation and to talk to Cortana and other apps that use Microsoft cloud-based speech recognition. It's disabled and users can't enable online speech recognition using settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users choose. If you allow these services, Microsoft might collect voice data to improve the service.
+- **Input personalization**: **Block** prevents using voice for dictation and to talk to apps that use Microsoft cloud-based speech recognition. It's disabled and users can't enable online speech recognition using settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users choose. If you allow these services, Microsoft might collect voice data to improve the service.
 
   [Privacy/AllowInputPersonalization CSP](/windows/client-management/mdm/policy-csp-privacy#privacy-allowinputpersonalization)
 

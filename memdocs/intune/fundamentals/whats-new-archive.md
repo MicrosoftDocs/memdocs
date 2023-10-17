@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 10/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -10457,6 +10457,8 @@ If anyone tries to delete an Apple MDM Push certificate, a confirmation dialog b
 
 #### Security settings for Windows installer<!-- 2282430 -->
 You can allow users to control app installs. If enabled, installations that stop due to a security violation would be permitted to continue. You can direct the Windows installer to use elevated permissions when it installs any program on a system. Also, you can enable Windows Information Protection (WIP) items to be indexed and the metadata about them stored in an unencrypted location. When the policy is disabled, the WIP protected items are not indexed and don't show up in the results in Cortana or file explorer. The functionality for these options is disabled by default. 
+
+[!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
 
 #### New user experience update for the Company Portal website<!--2000968 -->
 We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Areas of the site&ndash;such as device details, feedback and support, and device overview&ndash;have received a new, modern, responsive design. You'll also see:
