@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -57,7 +57,7 @@ A few things to keep in mind:
 2. On the **General** page, enter a **Name** and **Description** (optional) for the new policy.
 
    > [!TIP]
-   > Your provisioning policy name cannot contain the following characters: < > & | " ^ _
+   > Your provisioning policy name cannot contain the following characters: < > & | " ^
 
 3. On the  **General** page, select a **License type**:
     - **Enterprise**: Provision Cloud PCs for Windows 365 Enterprise.
