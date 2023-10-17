@@ -37,7 +37,12 @@ ms.collection:
 This article provides an overview of the Apple Device Enrollment features and functionality supported by Microsoft Intune.    
 
 ## App or web based enrollment        
-Employees and students can enroll devices via the Intune Company Portal website or app. [Create an enrollment profile](tbd) in the admin center to choose and configure the enrollment type.   
+Device enrollment supports an app based enrollment experience and web based enrollment experience. In the admin center, your device enrollment options are:   
+
+* **Device enrollment with Company Portal**  
+* **Web based device enrollment**   
+
+[Create an enrollment profile](tbd) in the admin center to choose and configure the enrollment type.   
 
 > [!TIP]
 > We recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. 
