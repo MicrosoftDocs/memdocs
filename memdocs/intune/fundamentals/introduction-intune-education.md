@@ -7,7 +7,7 @@ keywords: what is Intune
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/16/2023
+ms.date: 10/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,21 +29,25 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# How is Intune for Education different from the full device management experience in Intune?
+# What is Intune for Education?  
+**Applies to**:  
+* Windows 10
+* Windows 11
+* iOS/iPadOS 
 
-Enable productivity on school devices while protecting your school's data. With *Intune for Education*, you can you manage Windows 10 and iOS/iPadOS devices with the full mobile device management (MDM) capabilities available in Microsoft Intune. Use Intune for Education alone, in harmony with [Microsoft Intune](what-is-intune.md), or with tools available in [Microsoft Education](https://microsoft.com/education).  
+Enable productivity on school devices while protecting your school's data with Microsoft Intune for Education. *Intune for Education* is a cloud-based, mobile device management (MDM) service for schools. In the Intune for Education portal you can focus on school-related settings and devices that belong to staff and students, while also leveraging the capabilities of Microsoft Intune. Use Intune for Education by itself, together with [Microsoft Intune](what-is-intune.md), and with supported [Microsoft Education tools](https://microsoft.com/education).  
 
-
-> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]  
-
-With Microsoft Intune and Intune for Education, you can:
+With Intune for Education, you can:  
 * Manage the mobile devices and apps your staff and students use for school.  
 * Protect school data by helping to control the way your users access and share it.  
 * Ensure devices and apps are compliant with security requirements.  
-For more information about how to set up Intune for Education, see [Overview of Intune for Education](/intune-education/what-is-intune-for-education).  
+
+For more information about Intune for Education, see [Overview of Intune for Education](/intune-education/what-is-intune-for-education).  
+
+> [!VIDEO https://www.youtube.com/embed/ukrnCwcLvV8]   
 
 ## Next steps
 * Ensure your organization meets [Microsoft Intune technical requirements and capabilities](/intune/supported-devices-browsers).  
-* Get familiar with the product [with a 90 day free trial of Intune](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1) and
+* Try Microsoft Intune [with a 90 day free trial](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1).  
 * Sign in to [Intune for Education](https://intuneeducation.portal.azure.com) with your admin account.  
 * [Learn about express configuration](/intune-education/what-is-express-configuration) to get started in Intune for Education.  
