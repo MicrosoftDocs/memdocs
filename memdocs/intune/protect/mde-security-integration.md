@@ -71,30 +71,10 @@ When a supported device onboards to Microsoft Defender for Endpoint:
 
 Security settings management isn't yet supported with Government clouds. For more information, see [Feature parity with commercial](/microsoft-365/security/defender-endpoint/gov#feature-parity-with-commercial) in *Microsoft Defender for Endpoint for US Government customers*.
 
-### Microsoft Entra ID requirements
-
-When a device that is domain joined creates a trust with Microsoft Entra ID, this scenario is referred to as a *Microsoft Entra hybrid join* scenario. Security settings management fully supports this scenario with the following requirements:
-
-- Microsoft Entra Connect must be synchronized to the tenant that is used from Microsoft Defender for Endpoint.
-- Microsoft Entra hybrid join must be configured in your environment (either through Federation or Microsoft Entra Connect Sync).
-- Microsoft Entra Connect Sync must include the device objects *in scope* for synchronization with Microsoft Entra (when needed for join).
-- Microsoft Entra Connect rules for sync [must be modified for Server 2012 R2](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt#instructions-for-applying-computer-join-rule-in-aad-connect) (when support for Server 2012 R2 is needed).
-- All devices must register in the Microsoft Entra tenant that hosts Microsoft Defender for Endpoint. Cross-tenant scenarios aren't supported.
-
-> [!NOTE]
->
-> If a device is deleted (from either Microsoft Entra ID or the on-premises Active Directory), or the device is shifted to a different organizational unit (OU) that isn’t synchronized by Microsoft Entra Connect, the device's record is removed from Microsoft Entra ID and the group membership is also removed. As a result, Intune policies no longer target the device.
->
-> If the device was part of a dynamic Microsoft Entra group, the policy targeting the device will be resolved within a minimum of 48 hours. However, if the device was targeted as part of a static Microsoft Entra group, administrators will need to go back and retarget the device.
->
-> This is a known issue with Microsoft Entra ID.
-
 ### Connectivity requirements
 
-Devices must have access to the following endpoints:
+Devices must have access to the following endpoint:
 
-- `enterpriseregistration.windows.net` - For Microsoft Entra registration.
-- `login.microsoftonline.com` - For Microsoft Entra registration.
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
 > [!NOTE]
