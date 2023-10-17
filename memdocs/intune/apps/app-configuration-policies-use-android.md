@@ -78,7 +78,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     :::image type="content" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-01.png" alt-text="Screenshot of configuration policy - Settings":::
 
     > [!NOTE]
-    > This setting only works for personally-owned work profile and corporate-owned work profile devices.
+    > This setting only works for personally owned work profile and corporate-owned work profile devices.
     > 
     > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
@@ -170,9 +170,9 @@ When the assigned app is run on a device, it runs with the settings that you con
 Applies to:<br>
 Android 11+
 
-Personally-owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
+Personally owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
 
-You can allow users using Android personally-owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances.
+You can allow users using Android personally owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances.
 
 For an app to provide this experience, the app needs to integrate with Google's connected apps SDK, so only limited apps support it. You can turn on the connected apps setting proactively, and when apps add support, users will be able to enable the connected apps experience.
 
@@ -214,7 +214,7 @@ For example, an app uses the device's microphone. The user is prompted to grant 
 
 ## Additional information
 
-- [Assign a Managed Google Play app to Android Enterprise personally-owned and corporate-owned work profile devices](apps-add-android-for-work.md#assign-a-managed-google-play-app-to-android-enterprise-personally-owned-and-corporate-owned-work-profile-devices)
+- [Assign a Managed Google Play app to Android Enterprise personally owned and corporate-owned work profile devices](apps-add-android-for-work.md#assign-a-managed-google-play-app-to-android-enterprise-personally-owned-and-corporate-owned-work-profile-devices)
 - [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps
