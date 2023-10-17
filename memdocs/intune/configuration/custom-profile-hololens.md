@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/17/2023
+ms.date: 10/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,7 @@ ms.collection:
 
 Microsoft HoloLens 2 devices support the [Windows Defender Application Control (WDAC) CSP](/windows/client-management/mdm/applicationcontrol-csp), which replaces the [AppLocker CSP](/windows/client-management/mdm/applocker-csp).
 
-Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow or block specific apps from opening on Microsoft HoloLens 2 devices. For example, you may want to allow or prevent the Cortana app from opening on HoloLens 2 devices in your organization.
+Using Windows PowerShell and Microsoft Intune, you can use the WDAC CSP to allow or block specific apps from opening on Microsoft HoloLens 2 devices. For example, you may want to allow or prevent an app from opening on HoloLens 2 devices in your organization.
 
 This feature applies to:
 
