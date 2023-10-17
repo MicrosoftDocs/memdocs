@@ -49,7 +49,7 @@ Derived credentials are an implementation of the National Institute of Standards
 - The Intune administrator specifies **Derived credential** as the *authentication method* for the following objects:
   
   **For Android Enterprise fully managed devices**:
-  - Common profile types like Wi-Fi and VPN
+  - Common profile types like Wi-Fi
   - App authentication
 
   **For iOS/iPadOS**:
@@ -291,7 +291,6 @@ You can specify **Derived credential** for the following profile types and purpo
   - [Android Enterprise](../configuration/email-settings-android-enterprise.md)
 - VPN:
   - [iOS and iPadOS](../configuration/vpn-settings-ios.md)
-  - [Android Enterprise](../configuration/vpn-settings-android-enterprise.md)
 - [S/MIME signing and encryption](certificates-s-mime-encryption-sign.md)
 - Wi-Fi:
   - [iOS and iPadOS](../configuration/wi-fi-settings-ios.md)
