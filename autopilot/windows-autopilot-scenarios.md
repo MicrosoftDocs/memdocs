@@ -69,7 +69,7 @@ The key value is a DWORD with **0** = disabled and **1** = enabled.
 
 To change this key value, use WCD tool to create as PPKG as documented [here](/windows/configuration/wcd/wcd-oobe#nforce).
 
-[!INCLUDE [cortana-app-deprecation](./memdocs/intune/includes/cortana-app-deprecation.md)]
+[!INCLUDE [cortana-app-deprecation](../memdocs/intune/includes/cortana-app-deprecation.md)]
 
 ### BitLocker encryption
 
