@@ -157,7 +157,7 @@ For guidance on configuring the NDES server role for the Certificate Connector f
 
 ### Azure Active Directory User
 
-When configuring the connector, you'll need to use a user account that: is either a Global Admin or Intune Admin, has an Intune license assigned, and must be a synchronized account from your local Active Directory.
+When configuring the connector, you'll need to use a user account that: is either a Global Admin or Intune Admin and has an Intune license assigned.
 
 ## Next steps
 
