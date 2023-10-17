@@ -74,7 +74,7 @@ Security settings management isn't yet supported with Government clouds. For mor
 ### Connectivity requirements
 
 Devices must have access to the following endpoint:
-
+ 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
 > [!NOTE]
