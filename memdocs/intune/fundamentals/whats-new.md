@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/22/2023
+ms.date: 10/16/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,6 +68,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of October 16, 2023
+
+### Tenant administration
+
+#### `endpoint.microsoft.com` URL redirects to `intune.microsoft.com`<!-- 25169925 -->
+
+Previously, it was announced that the Microsoft Intune admin center has a new URL (`https://intune.microsoft.com`).
+
+The `https://endpoint.microsoft.com` URL now redirects to `https://intune.microsoft.com`.
+
 ## Week of September 18, 2023 (Service release 2309)
 
 ### App management
@@ -77,13 +87,29 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
 - Windows Security Center threat defense integrated with Intune APP to detect local health threats on personal Windows devices
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Entra ID (AAD).
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Entra ID (Azure AD).
 
-Intune Mobile Application Management (MAM) for Windows is available for Windows 11, build 10.0.22621 (22H2) or later.  This includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later) and Windows Security Center (v 1.0.2309.xxxxx and later).  App Protection Conditional Access is in Public Preview.
+Intune Mobile Application Management (MAM) for Windows is available for Windows 11, build 10.0.22621 (22H2) or later.  This feature includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later) and Windows Security Center (v 1.0.2309.xxxxx and later).  App Protection Conditional Access is in Public Preview.
 
 Sovereign cloud support is expected in the future. For more information, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
 ### Device configuration
+
+#### OEMConfig profiles that don't deploy successfully aren't shown as "pending"<!-- 24284049 -->
+
+For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig** for profile type).
+
+Previously, OEMConfig profiles that exceed 350 KB show a "pending" state. This behavior changed. An OEMConfig profile that exceeds 350 KB isn't deployed to the device. Profiles in a pending state or profiles larger that 350 KB aren't shown. Only profiles that successfully deploy are shown.
+
+This change is a UI change only. No changes are made to the corresponding Microsoft Graph APIs.
+
+To monitor the profile pending status in the Intune admin center, go to **Devices** > **Configuration profiles** > Select the profile > **Device status**.
+
+For more information on OEM Configuration, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
+Applies to:
+
+- Android Enterprise
 
 #### Config Refresh settings are in the settings catalog for Windows Insiders<!-- 15060174  -->  
 In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune.
@@ -171,7 +197,7 @@ Microsoft Intune supports integration with Zebra Lifeguard Over-the-Air service,
 
 This integration is now generally available for Android Enterprise Dedicated and Fully Managed Zebra devices that are running Android 8 or later, and requires an account with Zebra, as well as Intune Plan 2 or Microsoft Intune Suite.
 
-Previously, this was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
+Previously, this feature was in public preview and free for use. With this release as generally available, this solution now requires an add-on license for its use.
 
 For licensing details, see [Intune add-ons](../fundamentals/intune-add-ons.md).
 
@@ -225,7 +251,7 @@ Applies to:
 - iOS/iPadOS
 
 #### Government tenant support for endpoint security Application Control policy and managed installer<!-- 24850055   -->  
-We’ve added support to use endpoint security [Application Control policies](../protect/endpoint-security-app-control-policy.md), and to configure a managed installer, to the following sovereign cloud environments:
+We've added support to use endpoint security [Application Control policies](../protect/endpoint-security-app-control-policy.md), and to configure a managed installer, to the following sovereign cloud environments:
 
 - US Government clouds
 - 21Vianet in China
@@ -240,26 +266,26 @@ You can now use [Endpoint Privilege Management](../protect/epm-overview.md) to m
 This support does not include Azure Virtual Desktop.
 
 #### Elevation report by Publisher for Endpoint Privilege Management<!--  24593400  -->  
-We’ve released a new report named **Elevation report by Publisher** for Endpoint Privilege Management (EPM). With [this new report](../protect/epm-reports.md#elevation-report-by-publisher) you can view all managed and unmanaged elevations, which are aggregated by the publisher of the app that is elevated.
+We've released a new report named **Elevation report by Publisher** for Endpoint Privilege Management (EPM). With [this new report](../protect/epm-reports.md#elevation-report-by-publisher) you can view all managed and unmanaged elevations, which are aggregated by the publisher of the app that is elevated.
 
-You’ll find the report in the Report node for EPM in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Navigate to **Endpoint security** > **Endpoint Privilege Management** and then select the **Reports** tab.
+You'll find the report in the Report node for EPM in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Navigate to **Endpoint security** > **Endpoint Privilege Management** and then select the **Reports** tab.
 
 #### macOS support with Intune Endpoint security policies for Endpoint detection and response<!--  17757981 -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support macOS. To enable this support, we’ve added a new [EDR template profile for macOS](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support macOS. To enable this support, we've added a new [EDR template profile for macOS](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for macOS includes the following settings for the *Device tags* category from Defender for Endpoint:
 
 - **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
-- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn't be repeated in the same profile.
 
 To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
 #### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972  -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we’ve added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we've added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune) that you can use with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for Linux includes the following settings for the *Device tags* category from Defender for Endpoint:
 
-- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn't be repeated in the same profile.
 - **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
 
 You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
@@ -267,7 +293,7 @@ You can learn more about Defender for Endpoint settings that are available for L
 ### Monitor and troubleshoot 
 
 #### Updated reports for Update rings for Windows 10 and later<!-- 10159960 -->  
-Reporting for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) has been updated to use Intune’s improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
+Reporting for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
 
 With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there is no more left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
 
@@ -1075,7 +1101,7 @@ You can find the troubleshooting pane in [Microsoft Intune admin center](https:/
 The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Azure Active Directory, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
 
 #### Download mobile app diagnostics<!-- 22139638  -->  
-Now generally available, access user-submitted mobile app diagnostics in the Intune admin center, including app logs sent through Company Portal apps, which include Windows, iOS, Android, Android AOSP, and macOS. In addition, you can retrieve app protection logs via Microsoft Edge. For more information, see [Company Portal app logs](../apps/company-portal-app.md#app-logs) and [Use Edge for iOS and Android to access managed app logs](../apps/manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
+Now generally available, access user-submitted mobile app diagnostics in the Intune admin center, including app logs sent through Company Portal apps, which include Windows, iOS, Android, Android AOSP, and macOS. In addition, you can retrieve app protection logs via Microsoft Edge. For more information, see [Company Portal app logs](../apps/company-portal-app.md#app-logs) and [Use Microsoft Edge for iOS and Android to access managed app logs](../apps/manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
 
 ## Week of June 12, 2023
 

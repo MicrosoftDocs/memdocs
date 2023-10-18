@@ -78,8 +78,10 @@ To prevent potential spoofing, information disclosure, and elevation of privileg
 
 - Ensure that Xamarin app development is performed on a secure work station.
 - Ensure the bindings are from a valid Microsoft source:
+
   - [MS Microsoft Tunnel iOS SDK NuGet Profile](https://www.nuget.org/packages/Microsoft.Intune.Tunnel.MAM.Xamarin.iOS)
   - [Microsoft Tunnel iOS SDK Xamarin GitHub Repository](https://github.com/msintuneappsdk/ms-intune-tunnel-sdk-xamarin)
+
 - Configure your NuGet config for your project to trust signed, unmodified NuGet packages. For more information, see [installing signed packages](/nuget/consume-packages/installing-signed-packages).
 - Secure the output directory that contains the Xamarin app. Consider using a user-level directory for the output.
 

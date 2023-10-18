@@ -39,7 +39,7 @@ When you’re ready to manage the *Windows Local Administrator Password Solution
 Before creating policies, be familiar with the information in [Microsoft Intune support for Windows LAPS](../protect/windows-laps-overview.md), which includes:
 
 - An overview of Intune’s Windows LAPS policy and capabilities.
-- The perquisites for using Intune policies for LAPS.
+- The prerequisites for using Intune policies for LAPS.
 - The role-based admin control (RBAC) permissions your account needs to have to manage LAPS policy.
 - Frequently asked questions that can provide insight to configuring and using Intune LAPS policy.
 
