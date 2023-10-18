@@ -45,7 +45,7 @@ You can configure Conditional Access policies based on MVISION Mobile risk asses
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 
