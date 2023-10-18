@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 10/06/2023
+ms.date: 10/18/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -94,6 +94,10 @@ In a future update, you'll be able to send Windows 365 audit log data directly t
 
 A new report will be available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you'll be able to observe:
 devices that have unhealthy hosts users' connections that consistently or frequently fail systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
+
+### New report: Action status<!--44871923-->
+
+A new report will be available that lets you know which actions have been performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided.
 
 <!-- ***********************************************-->
 ## Provisioning
