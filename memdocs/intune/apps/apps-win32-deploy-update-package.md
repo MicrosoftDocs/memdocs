@@ -54,8 +54,8 @@ The following steps help you deploy a Windows update package to Intune.
 
     **Uninstall command:**  
 
-    `wusa.exe /uninstall /kb:<KB number> /quiet`
-
+    `dism.exe /online /remove-package /packagename:<Package Identity> /quiet /norestart`
+    
     The following image provides an example of the **Program** page:
 
     :::image type="content" source="./media/apps-win32-deploy-update-package/apps-win32-deploy-update-package-01.png" alt-text="Example of editing commands.":::
