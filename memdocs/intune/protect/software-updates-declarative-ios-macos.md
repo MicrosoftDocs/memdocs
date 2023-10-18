@@ -128,7 +128,10 @@ Declarative software updates have precedence over other policies that configure 
 
       If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 
-    - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. This setting uses the `yyyy-mm-ddThh:mm:sss` format. Make sure you enter the correct values. For example, to install an update on January 1, 2024 at 6 AM EST, enter `2024-01-01E06:00:000`. To install an update on December 31, 2023 at 9 PM PST, enter `2023-12-31P21:00:000`.
+    - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. This setting uses the `yyyy-mm-ddThh:mm:sss` format. Make sure you enter the correct values. For example:
+
+      - To install an update on January 1, 2024 at 6 AM EST, enter `2024-01-01E06:00:000`.
+      - To install an update on December 31, 2023 at 9 PM PST, enter `2023-12-31P21:00:000`.
 
       If the user doesn't trigger the software update before this time, then there's a one hour grace period. When the grace period ends, the device force installs the update and forces a restart.
 
