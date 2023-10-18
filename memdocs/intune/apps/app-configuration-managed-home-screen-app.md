@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 10/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -81,6 +81,10 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Set device wall paper | string | Default | Allows you to set a wallpaper of your choice. Enter the URL of the image that you want to set as a wallpaper. | ✔️ |
 | Define theme color | string | light | Specify if you want Managed Home   Screen to run in "light" or "dark" mode.  | ❌ |
 | Block pinning browser web pages to MHS | bool | FALSE | Set this restriction to `true` to block users from pinning web pages from any browser onto Managed Home Screen.  | ✔️ |
+| Enable updated user experience | bool | False  | Enable updated user description must be set to **true** to make the top bar visible on user's devices. | ✔️ |
+| Top Bar Primary Element | choice |  | (PREVIEW) Use this key to select whether the primary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. This setting can only be used if **Enable sign in** key is set to **false**. If the **Enable sign in** key is set to **true**, the user's name will be shown as the primary element.  | ❌ |
+| Top Bar Secondary Element | choice |  | (PREVIEW) Use this key to select whether the secondary element of the top bar will be the device Serial Number, Device Name, or Tenant Name.  | ❌ |
+| Top Bar User Name Style | choice |  | (PREVIEW) Use this setting to select the style of the user's name in the top bar based on the following list:<ul><li>full name</li><li>last name, first name</li><li><li>first name, last name</li><li>first name, last initial</li></ul><br>This setting can only be used if the **Enable sign in** key is set to **true**.  | ❌ |
 
 **Configurations for device peripherals and Managed Home Screen settings**: 
 
@@ -96,6 +100,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting app   or swipe-down. Accessible information includes device's make, model, and serial number for OS 8. | ✔️ |
 | Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune admin center "device name" property from the Managed Settings app or from swipe-down when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
 | Show serial number for all supported OS version on MHS | choice | {{serialnumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
+| Show device name for all supported OS version on MHS | choice | {{DeviceName}} | Ensure that app configuration device name is configured to display `{{DeviceName}}`. This value is auto-populated by Intune with the correct value. | ❌ |
 | Enable virtual home button | bool | FALSE | True allows end users to have access to a Managed Home Screen home button that will return   the user to the Managed Home Screen from the current task they are in. | ✔️ |
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
@@ -305,13 +310,29 @@ The following syntax is an example JSON script with all the available configurat
             "key": "show_device_info_setting",
             "valueBool": false
         },
-	{
+	    {
             "key": "show_device_name",
             "valueBool": false
         },
         {
             "key": "device_name",
             "valueString": "{{DeviceName}}"
+        },
+        {
+            "key": "enable_updated_user_experience",
+            "valueString": false
+        },
+        {
+            "key": "header_primary_element",
+            "valueString": "DeviceName"
+        },
+        {
+            "key": "header_secondary_element",
+            "valueString": "DeviceName"
+        },
+        {
+            "key": "header_name_style",
+            "valueString": "FullName"
         },
         {
             "key": "device_serial_number",
@@ -518,11 +539,11 @@ The following syntax is an example JSON script with all the available configurat
                 }
             ]
         },
-	{
+	    {
             "key": "show_notification_badge",
             "valueBool": true
         },
-	{
+	    {
             "key": "show_screen_saver",
             "valueBool": true
         },
@@ -534,7 +555,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "screen_saver_show_time",
             "valueInteger": 0
         },
-	{
+	    {
             "key": "inactive_time_to_show_screen_saver",
             "valueInteger": 30
         },
@@ -542,7 +563,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "media_detect_before_screen_saver",
             "valueBool": true
         }, 
-	{
+	    {
             "key": "enable_max_inactive_time_outside_MHS",
             "valueBool": false
         },
@@ -558,7 +579,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "max_absolute_time_outside_MHS",
             "valueInteger": 600
         },
-	{
+	    {
             "key": "theme_color",
             "valueString": "light"
         },
@@ -594,7 +615,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "session_PIN_complexity",
             "valueString": "simple"
         },
-	{
+	    {
             "key": "max_number_of_attempts_for_session_PIN",
             "valueInteger": 0
         },
