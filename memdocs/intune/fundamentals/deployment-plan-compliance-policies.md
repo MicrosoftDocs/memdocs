@@ -77,7 +77,7 @@ Because different device platforms support different compliance capabilities or 
 
 - **Level 1** – [**Minimal device compliance**](#level-1---minimal-device-compliance). These are configurations that we recommend all tenants have in place.
 - **Level 2** – [**Enhanced device compliance settings**](#level-2---enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
-- **Level 3** – [**Advanced device compliance configurations**](#level-3---advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Microsoft Entra Conditional Access
+- **Level 3** – [**Advanced device compliance configurations**](#level-3---advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Microsoft Entra Conditional Access.
 
 Generally, our recommendations place settings that are considered key configurations that are common across platforms at the minimal compliance level, providing a strong return for your investment. Settings listed for at higher levels can involve more complexity, such as settings that require integration of third-party products. Be sure to review all the range recommendations and be ready to adjust your own deployment plan to fit your organization’s needs and expectations.
 
