@@ -73,6 +73,7 @@ Use the following information to help you decide which policy type to use.
 | **Auto deploy latest update** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ❌ | ✔️ |
 | macOS | ❌ | ✔️ |
+| &nbsp;|&nbsp; | &nbsp;|
 | **Downgrade versions** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ❌ | ✔️ |
 | macOS | ❌ | ✔️ |
@@ -84,7 +85,6 @@ Use the following information to help you decide which policy type to use.
 | **Minimum supported version** | &nbsp; | &nbsp; |
 | iOS/iPadOS | 17.0 and later (supervised) | [Supported operating systems in Intune](../fundamentals/supported-devices-browsers.md) |
 | macOS | 14.0 and later | [Supported operating systems in Intune](../fundamentals/supported-devices-browsers.md) |
-| &nbsp;|&nbsp; | &nbsp;|
 
 ### Precedence
 
