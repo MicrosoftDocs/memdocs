@@ -81,10 +81,10 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Set device wall paper | string | Default | Allows you to set a wallpaper of your choice. Enter the URL of the image that you want to set as a wallpaper. | ✔️ |
 | Define theme color | string | light | Specify if you want Managed Home   Screen to run in "light" or "dark" mode.  | ❌ |
 | Block pinning browser web pages to MHS | bool | FALSE | Set this restriction to `true` to block users from pinning web pages from any browser onto Managed Home Screen.  | ✔️ |
-| Enable updated user experience | bool | False  | Enable updated user description must be set to **true** to make the top bar visible on user's devices. | ✔️ |
-| Top Bar Primary Element | choice |  | (PREVIEW) Use this key to select whether the primary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. This setting can only be used if **Enable sign in** key is set to **false**. If the **Enable sign in** key is set to **true**, the user's name will be shown as the primary element.  | ❌ |
-| Top Bar Secondary Element | choice |  | (PREVIEW) Use this key to select whether the secondary element of the top bar will be the device Serial Number, Device Name, or Tenant Name.  | ❌ |
-| Top Bar User Name Style | choice |  | (PREVIEW) Use this setting to select the style of the user's name in the top bar based on the following list:<ul><li>full name</li><li>last name, first name</li><li><li>first name, last name</li><li>first name, last initial</li></ul><br>This setting can only be used if the **Enable sign in** key is set to **true**.  | ❌ |
+| Enable updated user experience | bool | False  | (Preview) Set to **true** to display the updated app design, with improvements to user workflows for usability and supportability, for MHS. If **false**, user will continue to see previous workflows on the app. | ✔️ |
+| Top Bar Primary Element | choice |  | (PREVIEW) Use this key to select whether the primary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. This setting can only be used if **Enable sign in** key is set to **false**. If the **Enable sign in** key is set to **true**, the user's name will be shown as the primary element. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices.  | ❌ |
+| Top Bar Secondary Element | choice |  | (PREVIEW) Use this key to select whether the secondary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices.  | ❌ |
+| Top Bar User Name Style | choice |  | (PREVIEW) Use this setting to select the style of the user's name in the top bar based on the following list:<ul><li>display name</li><li>last name, first name</li><li>first name, last name</li><li>first name, last initial</li></ul><br>This setting can only be used if the **Enable sign in** key is set to **true**. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices. | ❌ |
 
 **Configurations for device peripherals and Managed Home Screen settings**: 
 
@@ -324,15 +324,15 @@ The following syntax is an example JSON script with all the available configurat
         },
         {
             "key": "header_primary_element",
-            "valueString": "DeviceName"
+            "valueString": "Tenant Name"
         },
         {
             "key": "header_secondary_element",
-            "valueString": "DeviceName"
+            "valueString": "Device Name"
         },
         {
             "key": "header_name_style",
-            "valueString": "FullName"
+            "valueString": "Display Name"
         },
         {
             "key": "device_serial_number",
