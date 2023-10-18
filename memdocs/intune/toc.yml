@@ -1702,7 +1702,7 @@ items:
         items:
         - name: Overview
           href: ./fundamentals/cloud-configuration.md
-        - name: Ravi's article
+        - name: Step by step setup guide
           href: ./fundamentals/cloud-configuration-setup-guide.md
     - name: Move to cloud native endpoints
       items:
