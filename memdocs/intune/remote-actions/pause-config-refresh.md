@@ -9,7 +9,7 @@ author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
 ms.date: 10/18/2023
-ms.topic: How-to
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
