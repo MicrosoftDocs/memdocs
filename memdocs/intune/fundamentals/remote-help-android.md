@@ -157,7 +157,7 @@ If you're planning to use Remote Help on a device running on Android 11, you nee
 *Zebra OEMConfig Powered by MX* is a new version of the OEMConfig app released in May 2023.
 
 > [!NOTE]
-> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions on updating supported Zebra devices with Intune, see [ Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration)
+> On Android 11, the new OEM Config schema (Zebra OEMConfig powered by MX) doesn't work if the BSP version is HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04. You must upgrade to a later BSP to use the new OEMConfig app. For instructions on updating supported Zebra devices with Intune, see [ Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
 
 Use OEMConfig to deploy the following settings on devices that you want to use Remote Help with:
 
