@@ -102,6 +102,21 @@ You can now configure pre-install and post-install scripts in unmanaged macOS PK
 
 ### Device configuration
 
+#### FSLogix settings are available in the Settings Catalog and Administrative Templates<!-- 10946920  -->  
+The [FSLogix settings](/fslogix/reference-configuration-settings) are available in the Settings Catalog and in Administrative Templates (ADMX) for you to configure.
+
+Previously, to configure FSLogix settings on Windows devices, you imported them using the ADMX import feature in Intune.
+
+For more information on these features, go to:
+
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+- [What is FSLogix?](/fslogix/overview-what-is-fslogix)
+
+Applies to:
+
+- Windows 10/11
+
 #### Use delegated scopes in your Managed Google Play apps that configure enhanced permissions on Android Enterprise devices<!-- 14029609  -->  
 In your Managed Google Play apps, you can give apps enhanced permissions using delegated scopes.
 
