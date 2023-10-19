@@ -379,8 +379,8 @@ You can manage the settings for Bing Chat Enterprise.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users will see Bing button in bottom bar. Setting “New Bing co-pilot mode” is on by default and can be turned off by users.  <br>**false** Users cannot see Bing button in bottom bar. Setting “New Bing co-pilot mode” will be disabled and cannot be turned on by users|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings are on by default and can be turned off by users.  <br>**false** Bing Chat Enterprise can NOT access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Bing button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Bing button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings are on by default and can be turned off by users <br>**false** Bing Chat Enterprise cannot access to page content.  **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings will be disabled and cannot be turned on by users|
 
 ## Data protection app configuration scenarios
 
