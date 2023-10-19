@@ -54,6 +54,10 @@ Complete the following steps to Pause ConfigRefresh for a configurable period of
 
 5. Select **Pause**.
 
+> [!Note]
+> If you pause a device that does not have ConfigRefresh enabled it has no effect.
+> If ConfigRefresh is paused and you want to resume, then select Pause again for 0 minutes to resume ConfigRefresh enforcement.
+
 ## Next steps
 
 To see the status of the action you just took, in **Devices**, select **Device actions**.
