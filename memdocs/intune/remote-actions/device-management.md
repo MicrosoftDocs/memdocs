@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 10/19/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -30,8 +30,6 @@ ms.collection:
 ---
 
 # Manage devices with Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 As an IT admin, you must ensure that managed devices are providing the resources that your users need to do their work, while protecting that data from risk.
 
@@ -75,6 +73,7 @@ The available actions depend on the device platform and the device configuration
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
   - [Locate device](device-locate.md) (iOS only)
   - [Lost mode](device-lost-mode.md) (iOS only)
+  - [Pause Config Refresh](pause-config-refresh.md) (Windows 11 only)
   - [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
   - [Remote control for Android](teamviewer-support.md)
   - [Remote lock](device-remote-lock.md)
