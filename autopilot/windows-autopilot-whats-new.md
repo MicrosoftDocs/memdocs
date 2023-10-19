@@ -70,6 +70,9 @@ To ensure a smooth transition, notify your help desk of this change. Additionall
 1. Temporarily note the BitLocker recovery key prior to a restore as documented in the [BitLocker recovery guide](/windows/security/operating-system-security/data-protection/bitlocker/bitlocker-recovery-guide-plan).
 1. Contact the help desk or IT Admin to unlock BitLocker self-service access.
 
+**Update: Temporary change**  
+When devices that utilize Windows Autopilot are reused, and there is a new device owner, that new device owner must contact an administrator to acquire the BitLocker recovery key for that device. Administrative unit scoped administrators will lose access to BitLocker recovery keys after device ownership changes. These scoped administrators will need to contact a non-scoped administrator for the recovery keys. This is a temporary change for scoped administrators and will be updated once a solution is in place.
+
 ## Win32 app configurable installation time impacts the Enrollment Status Page
 
 Staring in Intune 2308, Win32 apps allow you to configure an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes to timeouts that you make to your Win32 apps also needs an increase in the ESP timeout to reflect those changes.
@@ -196,6 +199,7 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
 
 [What's new in Windows client](/windows/whats-new/)
+
 
 
 
