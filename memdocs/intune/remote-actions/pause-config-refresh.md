@@ -2,7 +2,7 @@
 
 title: Pause ConfigRefresh
 titleSuffix: Microsoft Intune
-description: Learn how Config Refresh can be paused for a configurable period of time, after which it is automatically re-enabled, or can be turned back on manually at any time by an IT administrator.
+description: Learn how Config Refresh can be paused for a configurable period of time, after which it's automatically re-enabled, or can be turned back on manually at any time by an IT administrator.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-#customerIntent:As an IT admin, I want to pause ConfigRefresh so that I can make changes or run remediation on a device for troubleshooting or maintenance.
+#customerIntent: As an IT admin, I want to pause ConfigRefresh so that I can make changes or run remediation on a device for troubleshooting or maintenance.
 ms.reviewer: Mike Danoski
 ms.suite: ems
 search.appverid: MET150
@@ -31,9 +31,9 @@ ms.collection:
 
 # Pause ConfigRefresh in Intune
 
-With Config Refresh, you can ensure that your settings are retained the way you configured them. Use the Windows [settings catalog](../configuration/settings-catalog.md) to set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune— every 90 minutes by default, or every 30 minutes if desired.
+With Config Refresh, you can ensure that your settings are retained the way you configured them. Use the Windows [settings catalog](../configuration/settings-catalog.md) to set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune every 90 minutes by default, or every 30 minutes if desired.
 
-To support this feature, there is a remote action that allows for a pause. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue the Pause action from Intune for a specified period. When the period expires, the settings are enforced again.  
+To support this feature, there's a remote action that allows for a pause. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue the Pause action from Intune for a specified period. When the period expires, the settings are enforced again.  
 
 ## Supported platforms for Pause ConfigRefresh
 
