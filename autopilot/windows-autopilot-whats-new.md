@@ -20,6 +20,16 @@ appliesto:
 
 # Windows Autopilot: What's new
 
+## Updates to error message for manual device uploads
+
+Available in the 2310 release of Intune, we have added more clarity to the manual hardware hash upload in the console. If a device could not be imported, the notification will show the import error along with the specific lines of the CSV file that received the error. The error codes will also include more details on why the device failed to upload, whether the device is assigned to another tenant, or the device already registered to the tenant. 
+
+![Import Error Screenshot.](media/windows-autopilot-whats-new/importerror1.png)
+
+ 
+
+![Import error details.](media/windows-autopilot-whats-new/importerror2.png)
+
 ## Unblock fix pending state for self-deploying mode for disabled OEMs
 
 Starting in 2310, we're making an update to the self-deployment mode for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time self-deployment mode block, which means that the device could go through self-deployment mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices.  This update only works for OEMs that aren't within the [OEM list](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130) and doesn't work on the fix pending status.
@@ -186,6 +196,7 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
 
 [What's new in Windows client](/windows/whats-new/)
+
 
 
 
