@@ -461,9 +461,9 @@ sections:
           TPM provisioning involves generating and processing strong cryptographic keys. Depending on the characteristics of the TPM hardware used on a device, it may take longer than a minute on first boot.
 
       - question: |
-          Why can't I install apps on my Intune managed device when using Self-deploing mode with Autologon?
+          Why don't applications install on my Intune managed device when using autologon with Windows Autopilot self-deploing mode?
         answer: |
-          When using Self-depoloying mode together with autologon (which uses the KioskUser0 local account) the device does not process app installs until it undergoes the User ESP (Enrollment Status Page). Since User ESP is not processed for local accounts it's required to you Skip the User ESP using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device) 
+          When using autologon with Windows Autopilot self-deploing mode, autologon uses the KioskUser0 local account. Normally applications are installed during the user portion of the Enrollment Status Page (user ESP). However, user ESP isn't processed for local accounts. In order for applications to install when using autologon, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
   
   - name: Glossary
     questions:
