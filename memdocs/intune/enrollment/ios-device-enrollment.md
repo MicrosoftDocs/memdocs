@@ -32,7 +32,7 @@ ms.collection:
 ---
 
 # Overview of Apple device enrollment in Microsoft Intune  
-*Apple device enrollment* enables employees and students to enroll their new and existing personal devices for work or school. It unlocks essential management functionalities for you in Microsoft Intune while protecting the personal data of employees and students. This article provides an overview of the Apple device enrollment features and functionality supported by Microsoft Intune.    
+*Apple device enrollment* lets employees and students enroll new and existing personal devices for work or school. It unlocks essential iOS/iPadOS management capabilities for you in the Microsoft Intune admin center, while also protecting the personal data of employees and students. This article provides an overview of the Apple device enrollment features and functionality supported by Microsoft Intune.    
 
 ## App or web based enrollment        
 Device enrollment supports an app based enrollment experience and web based enrollment experience. In the admin center, your device enrollment options are:   
@@ -85,9 +85,9 @@ For more information about how employees and students can access these actions i
 
 ## Limitations   
 
-* Device users must download the management profile in Safari. When a user gets blocked by condtional access policies, the link that redirects them to enrollment opens in their default browser. If the default browser is not Safari, the users should copy and paste the link into Safari so that enrollment can continue.  
+* Device users must download the management profile in Safari. When a user gets blocked by condtional access policies, they are given a link that redirects them to device enrollment. The link opens in their default browser. If the default browser is not Safari, the users should copy and paste the link into Safari so that enrollment can continue. 
 
-* After the management profile downloads, device users have a limited amount of time to go to the Settings app and install the profile. If they wait to long to do it, they'll receive a message letting them know that the management profile can't be found. They must select **enroll again** to restart the enrollment process and download the management profile again. 
+* After the management profile downloads, device users have a limited amount of time to go to the Settings app and install the profile. If they wait top long to do it, they'll receive a message letting them know that the management profile can't be found. They must select **enroll again** to restart the enrollment process and download the management profile again. 
 
 * Device users may be unable to access work apps if they try signing in on their newly enrolled device while Microsoft Authenticator is still trying to deploy. Users should wait a few minutes while Authenticator catches up with the Intune service, and then try to sign into their work app again.  
 

@@ -78,7 +78,7 @@ Create a single sign-on app extension policy to enable just-in-time (JIT) regist
 Create an enrollment profile for enrolling devices. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment. For information about how to create a profile for supported enrollment types, see the following resources:  
 
 * [Account driven user enrollment](apple-account-driven-user-enrollment.md)
-* [Apple automated device enrollment for Setup Assistant with modern authentication](device-enrollment-program-enroll-ios#create-an-apple-enrollment-profile) 
+* [Apple automated device enrollment for Setup Assistant with modern authentication](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) 
 * [Web based device enrollment](web-based-device-enrollment-ios.md)  
 
 
