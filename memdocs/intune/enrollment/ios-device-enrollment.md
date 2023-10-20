@@ -93,6 +93,8 @@ For more information about how employees and students can access these actions i
 
 * Device users can sign into any of their work or school apps to complete enrollment, except for Microsoft Defender. If they try to sign into Microsoft Defender before any other app, they will be redirected back to Safari for enrollment. 
 
+* Web based device enrollment can be used without JIT registration. However, users in that scenario can't currently use the Company Portal app to enroll. To prepare for this scenario, we recommend deploying a web clip of the Company Portal website to users, because the web clip functions the same as the Company Portal app during enrollment.   
+
 ## Next steps  
 
 Choose the user enrollment method you want to use to enroll devices, and then create an enrollment profile. For more information about how to enable web-based enrollment in the Microsoft Intune admin center, see [Set up web based enrollment](web-based-device-enrollment-ios.md).     

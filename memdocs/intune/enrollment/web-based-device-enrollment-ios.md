@@ -60,7 +60,7 @@ The Microsoft Authenticator app is required for work or school access. We recomm
 ## Step 1: Set up just-in-time registration 
 Create a single sign-on app extension policy to enable just-in-time (JIT) registration. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.    
 
-## Step 3: Create enrollment profile  
+## Step 2: Create enrollment profile  
 Create an enrollment profile for devices enrolling via web-based device enrollment. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment in Safari. 
 
 1. In the Microsoft Intune admin center, go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
@@ -76,19 +76,23 @@ Create an enrollment profile for devices enrolling via web-based device enrollme
 
 Return to **Enrollment types** to see a list of your enrollment profiles. Intune applies enrollment profiles in the order you prioritize them. If a conflict occurs because a user is assigned more than one profile, Intune applies the profile with the higher priority. Drag and drop the profiles in the list to reposition them and change the order in which they're applied.   
 
-## Step 4: Prepare employees for enrollment  
-When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.  Alternatively, you can provide a URL that opens the Company Portal website. It's necessary to share the link with device users in scenarios that don't utilize conditional access because these scenarios don't redirect them to the web. The link is:  
+## Step 3: Prepare employees for enrollment  
+When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.  
+
+Alternatively, you can provide employees and students with a URL that opens the Company Portal website. It's necessary to share the link with device users In scenarios that don't utilize conditional access, because these scenarios don't redirect them to the web. The link to share is:  
 
  `portal.manage.microsoft.com`   
 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 
-1. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
-2. Wait while Company Portal downloads a management profile on your device.
-3. Go to your device settings app. Follow the onscreen prompts to install the management profile.  
-4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. 
+1. Open Safari and sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
+2. When prompted to, download the management profile. Wait in Safari while Company Portal downloads the management profile.  
+3. Go to your device settings app to view and install the management profile.  
+4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **Profile** > **Management Profile** > **Single Sign On Extension**. Authenticator should be listed as the SSO extension.  
+5. Sign in to a work app, such as Microsoft Teams, with your work account.  
+6. Wait while the app identifies required setting updates. For example, you may be required to update your device's operating system before you can use the app. Check the app you're signed into for pending action items. When you're done making changes, select **Recheck**.   
 
-After enrollment is complete, devices users can sign in and authenticate with any of the apps configured with the SSO app extension policy.   
+After compliance checks are complete, users can access apps configured with the SSO app extension policy for the rest of their session without needing to sign in again.       
 
 ### Removing device from management  
 The volume and cryptographic keys created to manage the work data on the device are erased when the device unenrolls from Intune. 
@@ -96,7 +100,7 @@ The volume and cryptographic keys created to manage the work data on the device 
 ### Onboarding documentation resources    
 For end user help and how-to guides, see [Microsoft Intune user help docs](/mem/intune/user-help/). Feel free to use the articles in that doc set as templates for your organization's onboarding resources.  
 
-For more details about Apple Device Enrollment features and functionality, see [Device Enrollment and MDM]( https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple support website. 
+For more details about Apple Device Enrollment features and functionality, see [Device Enrollment and MDM]( https://support.apple.com/guide/deployment/device-enrollment-and-mdm-depd1c27dfe6/web) on the Apple support website.  
 
 ### Troubleshooting  
 For information about how to troubleshoot device enrollment issues in Microsoft Intune, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
