@@ -499,7 +499,7 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
     Microsoft Tunnel uses Intune, Azure AD, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
 
-  - In addition to Microsoft Tunnel for devices enrolled with Intune, you can use **Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../protect/microsoft-tunnel-mam.md) is available as an Intune add-on that requires an additional license.
+  - In addition to Microsoft Tunnel for devices enrolled with Intune, you can use **Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../protect/microsoft-tunnel-mam.md) is available as an Intune add-on that requires an extra license.
 
     For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons).
 
@@ -507,11 +507,11 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
   For more information, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
 
-- Use **Microsoft Intune Endpoint Privilege Management** (EPM) to reduce the attack surface of your Windows devices. EPM allows you to have users run as standard users (without administrator rights) yet remain productive by managing how and when the apps and processes you select can be run by those users in an elevated context.
+- Use **Microsoft Intune Endpoint Privilege Management** (EPM) to reduce the attack surface of your Windows devices. EPM empowers you to have users that run as standard users (without administrator rights) yet remain productive by determining when those users can run apps in an elevated context.
 
-  Your EPM elevation rules can be based on file hashes, certificate rules, and more, all which help to ensure that only the expected and trusted application is allowed to run in the elevated context. Your rules can also manage the child processes that an app might create, and support both user confirmed elevation requests (to ensure they intended to run the file), as well as automatic elevations for files that just need to run without any user interruption.
+  EPM elevation rules can be based on file hashes, certificate rules, and more. The rules you configure help to ensure that only the expected and trusted applications you allow can run as elevated. Rules can manage the child processes that an app creates, support requests by users to elevate a managed process, and allow for automatic elevations of files that just need to run without any user interruption.
 
-  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an additional license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons).
+  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons).
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
