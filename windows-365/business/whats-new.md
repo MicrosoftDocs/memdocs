@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2023
+ms.date: 10/19/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -48,6 +48,16 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of October 18, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Set up Intune so admins can deploy apps to Cloud PCs<!--46943510-->
+
+We’ve published a new help documentation article. For more information, see [Set up Intune so admins can deploy apps to Cloud PCs](apps-install-admin.md).
 
 <!-- ########################## -->
 ## Week of December 5, 2022
