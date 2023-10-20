@@ -31,12 +31,12 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Enable just in time registration in Microsoft Intune    
+# Set up just in time registration in Microsoft Intune    
 **Applies to iOS/iPadOS**  
 
 Set up *just in time (JIT) registration* in Microsoft Intune to enable device users to initiate and complete device enrollment from a work or school app. The Intune Company Portal isn't required when using JIT registration. Instead, JIT registration utilizes the Apple single sign-on (SSO) extension to complete Entra ID registration and compliance checks. Registration and compliance checks can be fully integrated in a designated Microsoft or non-Microsoft app that's configured with the Apple single sign-on (SSO) app extension.  The extension reduces authentication prompts during the device user's session and establishes SSO across the whole device. 
 
-This article describes how to enable just-in-time (JIT) registration by creating an SSO app extension policy in the Microsoft Intune admin center.      
+This article describes how to enable JIT registration by creating an SSO app extension policy in the Microsoft Intune admin center.      
 
 ## Prerequisites  
 JIT registration is supported with the following enrollment types: 
@@ -53,7 +53,7 @@ JIT registration is supported with the following enrollment types:
 * Don't add the bundle ID for the Microsoft Authenticator app to your SSO extension policy. Since it's a Microsoft app, the SSO extension will automatically work with it.  
 
 ## Setup JIT registration     
-Create a single sign-on app extension policy to enable just-in-time (JIT) registration.  
+Create a single sign-on app extension policy that uses the Apple SSO extension to enable just-in-time (JIT) registration.  
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
 3. For **SSO app extension type**, select **Microsoft Entra ID**.  
