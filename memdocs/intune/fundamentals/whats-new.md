@@ -139,7 +139,7 @@ Applies to:
 - Android Enterprise dedicated devices
 - Android Enterprise corporate-owned devices with a work profile
 
-#### Samsung ended support for kiosk mode on Android device administrator (DA) devices<-- 24810356  -->  
+#### Samsung ended support for kiosk mode on Android device administrator (DA) devices<!-- 24810356  -->  
 Samsung marked the [Samsung Knox kiosk APIs](https://docs.samsungknox.com/temp/knox-early-access/eat-39/dev-guide/knox-sdk/deprecated-api-methods.htm#3.7) (opens Samsung's web site) used on Android device administrator as deprecated in Knox 3.7 (Android 11).
 
 Though the functionality might continue to work, there's no guarantee that it will continue working. Samsung won't fix bugs that may arise. For more information on Samsung support for deprecated APIs, go to [What kind of support is offered after an API is deprecated?](https://docs.samsungknox.com/dev/knox-sdk/faqs/general/deprecated-api-support-change.htm) (opens Samsung's web site).
