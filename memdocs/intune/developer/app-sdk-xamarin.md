@@ -37,7 +37,7 @@ ms.collection:
 > The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android). For more information about migrating your apps from Xamarin Forms to .NET MAUI, see [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate). 
 
 > [!NOTE]
-> You may wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
+> You might wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
 
 ## Overview
 The [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) enable [Intune app protection policy](../apps/app-protection-policy.md) in iOS and Android apps built with Xamarin. The bindings allow developers to easily build in Intune app protection features into their Xamarin-based app.
@@ -233,7 +233,7 @@ This is expected because when the Remapper modifies the inheritance of Xamarin c
 * [Compiler Error CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): This error is commonly seen in this form ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. When the Remapper changes the inheritance of some of the Xamarin classes, certain member functions will be changed to `public`. If you override any of these functions, you will need to change the access modifiers for those overrides to be `public` as well.
 
 > [!NOTE]
-> The Remapper re-writes a dependency that Visual Studio uses for IntelliSense auto-completion. Therefore, you may need to reload and rebuild the project when the Remapper is added for IntelliSense to correctly recognize the changes.
+> The Remapper re-writes a dependency that Visual Studio uses for IntelliSense auto-completion. Therefore, you might need to reload and rebuild the project when the Remapper is added for IntelliSense to correctly recognize the changes.
 
 #### Troubleshooting
 * If you encounter a blank, white screen in your application on launch, then you may need to force the navigation calls to execute on the main thread.
