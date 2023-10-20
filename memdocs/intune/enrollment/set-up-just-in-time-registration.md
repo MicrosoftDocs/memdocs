@@ -52,7 +52,7 @@ JIT registration is supported with the following enrollment types:
 
 * Don't add the bundle ID for the Microsoft Authenticator app to your SSO extension policy. Since it's a Microsoft app, the SSO extension will automatically work with it.  
 
-## Setup JIT registration     
+## Set up JIT registration     
 Create a single sign-on app extension policy that uses the Apple SSO extension to enable just-in-time (JIT) registration.  
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
