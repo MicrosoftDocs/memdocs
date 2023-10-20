@@ -80,6 +80,8 @@ items:
         href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
       - name: Configure Slack to use Intune 
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
+      - name: Set up just in time (JIT) registration  
+        href: ./enrollment/set-up-just-in-time-registration.md  
 
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
@@ -1499,7 +1501,13 @@ items:
               href: ./enrollment/automated-device-enrollment-authentication.md
             - name: Walkthrough - Set up enrollment with Apple School Manager
               href: ./enrollment/apple-school-manager-set-up-ios.md
-          - name: Set up Apple User Enrollment
+          - name: Set up Apple device enrollment
+            items:              
+            - name: Overview    
+              href: ./enrollment/ios-device-enrollment.md 
+            - name: Set up web based device enrollment   
+              href: ./enrollment/web-based-device-enrollment-ios.md         
+          - name: Set up Apple user enrollment
             items:
             - name: Overview   
               href: ./enrollment/ios-user-enrollment-supported-actions.md 
