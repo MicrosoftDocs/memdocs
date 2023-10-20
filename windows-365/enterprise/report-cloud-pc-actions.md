@@ -40,9 +40,9 @@ The Cloud PC actions report is in [public preview](..\public-preview.md).
 
 To get to the **Cloud PC actions** report, sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Monitor** > **Cloud PC actions (preview)**.
 
-:::image type="content" source="./media/report-cloud-pc-actions/report.png" alt-text="Screenshot of the Cloud PC actions report." lightbox="./media/report-cloud-pc-actions/report.png":::
-
 ## Report data
+
+:::image type="content" source="./media/report-cloud-pc-actions/report.png" alt-text="Screenshot of the Cloud PC actions report." lightbox="./media/report-cloud-pc-actions/report.png":::
 
 The report shows the following columns:
 
