@@ -501,9 +501,9 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
   - In addition to Microsoft Tunnel for devices enrolled with Intune, you can use **Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../protect/microsoft-tunnel-mam.md) is available as an Intune add-on that requires an extra license.
 
-    For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons).
+    For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-- **Use Windows Local Administrator Password Solution (LAPS) policy** to manage and backup the built-in local administrator account on your Windows devices. Because the local admin account can’t be deleted and has full permissions to the device, management of the built-in Windows administrator account is an important step in securing your organization. Intune policy for Windows LAPS uses the capabilities that are available for Windows devices that run version 21h2 or later. 
+- **Use Windows Local Administrator Password Solution (LAPS) policy** to manage and backup the built-in local administrator account on your Windows devices. Because the local admin account can’t be deleted and has full permissions to the device, management of the built-in Windows administrator account is an important step in securing your organization. Intune policy for Windows LAPS uses the capabilities that are available for Windows devices that run version 21h2 or later.
 
   For more information, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
 
@@ -511,7 +511,7 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
   EPM elevation rules can be based on file hashes, certificate rules, and more. The rules you configure help to ensure that only the expected and trusted applications you allow can run as elevated. Rules can manage the child processes that an app creates, support requests by users to elevate a managed process, and allow for automatic elevations of files that just need to run without any user interruption.
 
-  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons).
+  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
