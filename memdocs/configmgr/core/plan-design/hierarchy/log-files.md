@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 04/01/2022
+ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -389,6 +389,7 @@ The following table lists the log files that contain information related to the 
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Records certificate and proxy account information.|Site server|  
 |CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. |Computer with the service connection point|
+|SMS_AZUREAD_DISCOVERY_AGENT.log | Starting 2303, log file for synchronization of collection membership results to Azure Active Directory. |Computer with the service connection point|
 |CollEval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Primary site and central administration site|  
 |Cloudusersync.log|Records license enablement for users.|Computer with the  service connection point|  
 |Dataldr.log|Records information about the processing of MIF files.|Site server|  

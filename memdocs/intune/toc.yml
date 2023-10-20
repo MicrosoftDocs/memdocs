@@ -96,6 +96,9 @@ items:
         href: ./enrollment/automated-device-enrollment-shared-device-mode.md
         displayName: devices, frontline worker, automated device enrollment  
 
+  - name: Security Copilot + Intune
+    href: ./fundamentals/security-copilot.md
+
   - name: Plan
     items:
     - name: Planning guide
@@ -284,6 +287,26 @@ items:
                 href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Step 5. Manage apps and licenses
                 href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
+
+          - name: Configure apps using Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: configure, app, apps, channel
+            - name: Step 1. Configure the Company Portal
+              href: /microsoft-365/solutions/apps-config-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 2. Configure Microsoft Outlook
+              href: /microsoft-365/solutions/apps-config-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 3. Configure Microsoft 365 Apps
+              href: /microsoft-365/solutions/apps-config-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 4. Configure Microsoft Edge
+              href: /microsoft-365/solutions/apps-config-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 5. Configure Microsoft Teams
+              href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 6. Configure other apps
+              href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json                  
+            - name: Step 7. Verify app configuration
+              href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
 
         - name: Concepts
           items:
