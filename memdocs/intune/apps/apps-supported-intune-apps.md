@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/05/2023
+ms.date: 10/18/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.collection:
 - highpri
 ---
 
-# Microsoft Intune protected apps  
+# Microsoft Intune protected apps
 
 The apps listed in this topic are supported partner and Microsoft apps that are commonly used with Microsoft Intune. Intune protected apps are enabled with a rich set of mobile application protection policies.
 
@@ -73,13 +73,13 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✖|No settings|✖|N/A|N/A|✖|✖|
 |Microsoft Loop|[Android](https://play.google.com/store/apps/details?id=com.microsoft.loop)|✔|No settings|✔|N/A|✖|N/A|N/A|
 |Office (Microsoft 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
-|Microsoft 365 (Office)|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✔|✖|✔|
+|Microsoft 365 (Office)|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✔ Supported for v2.72 or later|✖|✔|
 |Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|
 |Microsoft OneDrive|[iOS](https://apps.apple.com/us/app/onedrive-cloud-storage-for/id477537958)|✔|No settings|✔|N/A|✖|✔|N/A|
 |Microsoft OneNote|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote)|✔|No settings|✔|N/A|✖|✖|N/A|
 |Microsoft OneNote|[iOS](https://apps.apple.com/us/app/microsoft-onenote-for-iphone/id410395246)|✔|No settings|✔|N/A|✖|✖|N/A|
 |Microsoft Outlook|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✔|✖|
-|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔|✔|✔|
+|Microsoft Outlook|[iOS](https://apps.apple.com/us/app/microsoft-outlook/id951937596)|✔|✔ see [Outlook app config](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)|✔|✔|✔ Supports "Block org data" for v4.34.0 or later|✔|✔|
 |Microsoft Planner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.planner)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Planner|[iOS](https://apps.apple.com/us/app/microsoft-planner/id1219301037)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft PowerPoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.powerpoint)|✔|No settings|✔|N/A|✖|✖|✔|
@@ -87,7 +87,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft SharePoint|[Android](https://play.google.com/store/apps/details?id=com.microsoft.sharepoint)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft SharePoint|[iOS](https://apps.apple.com/us/app/microsoft-sharepoint/id1091505266)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Teams|[Android](https://play.google.com/store/apps/details?id=com.microsoft.teams)|✔|No settings|✔|N/A|✔|✔|✔|
-|Microsoft Teams|[iOS](https://apps.apple.com/us/app/microsoft-teams/id1113153706)|✔|No settings|✔|N/A|✔|✔|✔|
+|Microsoft Teams|[iOS](https://apps.apple.com/us/app/microsoft-teams/id1113153706)|✔|No settings|✔|N/A|✔ Supported for v2.0.22 or later|✔|✔|
 |Microsoft To-Do|[Android](https://play.google.com/store/apps/details?id=com.microsoft.todos)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft To-Do|[iOS](https://apps.apple.com/us/app/microsoft-to-do/id1212616790)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Word|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word)|✔|No settings|✔|N/A|✖|✖|✔|
@@ -107,8 +107,6 @@ The below apps support the core Intune App Protection Policy settings.
 |Dynamics 365 for phone|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone)|✔|No settings|
 |Field Service (Dynamics 365)|[Android](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone.fieldServices)|✔|No settings|
 |Field Service (Dynamics 365)|[iOS](https://apps.apple.com/app/field-service-dynamics-365/id1485579247?ls=1)|✔|No settings|
-|Field Service Mobile|Android|✔|No settings|
-|Field Service Mobile|[iOS](https://apps.apple.com/app/field-service-mobile/id1414669075)|✔|No settings|
 |Microsoft 365 Admin|[Android](https://play.google.com/store/apps/details?id=com.ms.office365admin)|✔|No settings|
 |Microsoft 365 Admin|[iOS](https://apps.apple.com/app/microsoft-365-admin/id761397963)|✔|No settings|
 |Microsoft Azure Information Protection Viewer|[Android](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer)|✔|No settings|
