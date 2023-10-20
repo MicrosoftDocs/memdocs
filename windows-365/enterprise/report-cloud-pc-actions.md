@@ -48,7 +48,7 @@ The report shows the following columns:
 
 - **Device name**
 - **Primary user UPN**
-- **Action**: The following actions are include din the report:
+- **Action**: The following actions are included in the report:
   - Create Snapshot
   - Move Region
   - Place Under Review
@@ -60,7 +60,7 @@ The report shows the following columns:
   - Troubleshoot
 - **Status**: There are four possible statuses for an action:
   - **Succeeded**: The action completed successfully.
-  - **Failed**: The action did not complete. You can select **Retry** to try again.
+  - **Failed**: The action didn't complete. You can select **Retry** to try again.
   - **Pending**: The action is in progress. Don't make changes to the Cloud PC (like removing the license).
    -**Review required**: An admin must take action to complete the action. For example, assigning a target license to a device in **Pending** state for the **Resize** action.
 - **Date initiated**
