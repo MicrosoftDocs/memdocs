@@ -1721,8 +1721,10 @@ items:
       - name: Windows 10/11 in cloud configuration
         items:
         - name: Overview
+          displayName: cloud config, flw, windows
           href: ./fundamentals/cloud-configuration.md
-        - name: Ravi's article
+        - name: Step-by-step guide
+          displayName: cloud config, flw, windows
           href: ./fundamentals/cloud-configuration-setup-guide.md
     - name: Move to cloud native endpoints
       items:
