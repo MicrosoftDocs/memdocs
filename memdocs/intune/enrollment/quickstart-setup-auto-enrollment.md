@@ -68,9 +68,7 @@ For this example, you'll configure MDM enrollment settings so that both corporat
 3. Choose the **Enterprise Mobility + Security E5** free trial option.
 4. Select **Free trial** > **Activate**. It can take a minute to activate.
 
-5. Select **Microsoft Intune** to configure Intune.
-
-    ![Screenshot highlighting the Microsoft Itnune option in the list in Azure AD.](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-03.png)
+5. Select **Microsoft Intune** to configure Intune.  
 
 6. Select **Some** from the **MDM user scope** to use MDM auto-enrollment to manage enterprise data on your employees' Windows devices. MDM auto-enrollment will be configured for Azure AD joined devices and bring-your-own-device scenarios.
 
