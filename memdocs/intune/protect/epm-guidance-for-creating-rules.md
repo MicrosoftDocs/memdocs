@@ -76,6 +76,25 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 To help you build more accurate file detection rules, you can use the **Get-FileAttributes** PowerShell cmdlet. Available from the EpmTools PowerShell module, *Get-FileAttributes* can retrieve file attributes for a .exe file and extract its Publisher and CA certificates to a set location that you can use to populate Elevation Rule Properties for a particular application.
 
+Example module import steps and output from Get-FileAttributes run against powershell.exe on Windows version 10.0.22621.2361:
+
+PS C:\Program Files\Microsoft EPM Agent\EpmTools> Import-Module .\EpmCmdlets.dll
+PS C:\Program Files\Microsoft EPM Agent\EpmTools> Get-FileAttributes
+
+cmdlet Get-FileAttributes at command pipeline position 1
+Supply values for the following parameters:
+FilePath: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+FileName      : powershell.exe
+FilePath      : C:\Windows\System32\WindowsPowerShell\v1.0
+FileHash      : D783BA6567FAF10FDFF2D0EA3864F6756862D6C733C7F4467283DA81AEDC3A80
+HashAlgorithm : Sha256
+ProductName   : Microsoft® Windows® Operating System
+InternalName  : POWERSHELL
+Version       : 10.0.22621.2361
+Description   : Windows PowerShell
+CompanyName   : Microsoft Corporation
+
 For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
 
 ### Controlling child process behavior
