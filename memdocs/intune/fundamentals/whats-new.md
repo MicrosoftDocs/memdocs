@@ -112,7 +112,7 @@ Applies to:
 - Android Enterprise
 
 #### Config Refresh settings are in the settings catalog for Windows Insiders<!-- 15060174  -->  
-In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune.
+In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune.
 
 Config Refresh:
 
@@ -314,7 +314,7 @@ For more information about reports for update rings for Windows 10 and later, se
 #### Updating the scope of UpdateEnrollment<!--25077072 -->  
 With the introduction of a new role **UpdateEnrollment**, the scope of **UpdateOnboarding** is getting updated.
 
-The **UpdateOnboarding** setting for custom and built-in roles is modified to only manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. Any built in roles that used **UpdateOnboarding** will now have **UpdateEnrollmentProfiles** included.
+The **UpdateOnboarding** setting for custom and built-in roles is modified to only manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. Any built-in roles that used **UpdateOnboarding** will now have **UpdateEnrollmentProfiles** included.
 
 The resource name is being updated from **Android for work** to **Android Enterprise**.
 
@@ -364,12 +364,12 @@ With this update, be aware of the following limitations on Windows devices:
 
 - 4096-bit key storage is supported only in the *Software Key Storage Provider* (KSP). The following do not support storing keys of this size:
   - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
-  - Windows Hello for Business. There is no work around at this time.
+  - Windows Hello for Business. There is no workaround at this time.
 
 ### Tenant administration
 
-#### Access policies for multiple Administrator Approval are now generally available<!-- 24936423   -->  
-Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies you can protect a resource, like App deployments, by requiring any change to the deployment be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
+#### Access policies for multiple Administrator Approval are now generally available<!-- 24936423   -->
+Access policies for multiple Administrator Approval are out of public preview and are now generally available. With these policies you can protect a resource, like App deployments, by requiring any change to the deployment to be approved by one of a group of users who are *approvers* for the resource, before that change is applied.
 
 For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
 
@@ -502,8 +502,8 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 
 ### Device enrollment
 
-#### Just-in-time registration and compliance remediation for iOS/iPadOS Setup Assistant with modern authentication now generally available<!-- 16276610 -->  
-Just in time registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just in time (JIT) registration, the device user doesn't need to use the Company Portal app for Azure Active Directory registration and compliance checking. JIT registration and compliance remediation is embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Additionally, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md).
+#### Just-in-time registration and compliance remediation for iOS/iPadOS Setup Assistant with modern authentication now generally available<!-- 16276610 -->
+Just in time (JIT) registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just in time registration, the device user doesn't need to use the Company Portal app for Azure Active Directory registration and compliance checking. JIT registration and compliance remediation are embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Additionally, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md).
 
 #### Awaiting final configuration for iOS/iPadOS automated device enrollment now generally available<!-- 17473384  -->  
 Now generally available, *awaiting final configuration* enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:
@@ -554,7 +554,7 @@ You'll find the report in the Report node for EPM in the [Intune admin center](h
 #### New settings available for macOS Antivirus policy<!-- 24191427 -->  
 The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profile for macOS devices has been updated with nine additional settings, and three new settings categories:
 
-**Antivirus engine** – The following settings are new in this this category:
+**Antivirus engine** – The following settings are new in this category:
 
 - **Degree of parallelism for on-demand scans** – Specifies the degree of parallelism for on-demand scans. This corresponds to the number of threads used to perform the scan and impacts the CPU usage, as well as the duration of the on-demand scan.
 - **Enable file hash computation** – Enables or disables file hash computation feature. When this feature is enabled Windows defender will compute hashes for files it scans. This will help in improving the accuracy of Custom Indicator matches. However, enabling Enable file hash computation may impact device performance.
@@ -567,7 +567,7 @@ The [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy
 
 **Tamper  protection** - A new category that includes the following setting:
 
-- **Enforcement level** - Specify if tamper protection is *disabled*, in *audit mode*, or *enforced*.
+- **Enforcement level** - Specify whether tamper protection is *disabled*, in *audit mode*, or *enforced*.
 
 **User interface preferences** – A new category that includes the following settings:
 
@@ -825,7 +825,7 @@ As part of our continuing efforts to improve the Intune reporting infrastructure
 - There is no longer a **User install status** report on the **Monitor** section of the **App configuration policies** workload.
 - The **Device install status** report under the **Monitor** section of the **App configuration policies** workload no longer shows the **Pending state** in the **Status** column.
 
-You can find configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies**.
+You can configure policy reporting in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App configuration policies**.
 
 ## Week of July 3, 2023
 
@@ -867,7 +867,7 @@ For more general information about Intune Android 13 support, go to the [Day Zer
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
 With [Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use Intune's endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren't enrolled with Intune.
 
-Now, you can opt-in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
+Now, you can opt in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
 
 - Intune's endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
 
@@ -877,9 +877,9 @@ Now, you can opt-in to a public preview from within the Microsoft 365 Defender p
 
 - A new onboarding workflow removes the Hybrid Azure AD Join prerequisite. Hybrid Azure AD Join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings management. With this change, those devices can now complete enrollment and start processing policies for security settings management.
 
-- Intune creates a synthetic registration in Azure AD for devices that can't fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed form Azure AD in deference to the full registration.
+- Intune creates a synthetic registration in Azure AD for devices that can't fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed from Azure AD in deference to the full registration.
 
-If you don't opt-in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can't deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile which is currently available for devices enrolled with Intune can't be deployed to devices managed by Defender.
+If you don't opt in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can't deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile which is currently available for devices enrolled with Intune can't be deployed to devices managed by Defender.
 
 Applies to:
 
@@ -1502,7 +1502,7 @@ Applies to:
 ### App management
 
 #### Changes to iCloud app backup and restore behavior on iOS/iPadOS and macOS devices<!-- 16261392  -->  
-As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You can *not* backup managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps don't support this feature), for both user and device licensed VPP/non-VPP apps. This update includes both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
+As an app setting, you can select to **Prevent iCloud app backup** for iOS/iPadOS and macOS devices. You can *not* back up managed App Store apps and line-of-business (LOB) apps on iOS/iPadOS, as well as managed App Store apps on macOS devices (macOS LOB apps don't support this feature), for both user and device licensed VPP/non-VPP apps. This update includes both new and existing App Store/LOB apps sent with and without VPP that are being added to Intune and targeted to users and devices.
 
 Preventing the backup of the specified managed apps ensures that these apps can be properly deployed via Intune when the device is enrolled and restored from backup. If the admin configures this new setting for new or existing apps in their tenant, then managed apps can and will be reinstalled for devices. But, Intune doesn't allow them to be backed up.
 
