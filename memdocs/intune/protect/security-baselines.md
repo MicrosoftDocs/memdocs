@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 11/10/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -103,7 +103,7 @@ The following security baseline instances are available for use with Intune. Use
   > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft 365 Apps for Enterprise**  
-  - [October 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-oct-2023)
+  - [Version 2306 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=v2023) *Released in November 2023.*
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
 - **Microsoft Edge Baseline**

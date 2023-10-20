@@ -39,8 +39,8 @@ groups:
   title: M365 App baseline versions
   prompt: Choose a version
   pivots:
-    - id: office-oct-2023
-      title: October 2023
+    - id: v2306
+      title: Version 2023
     - id: office-may-2023
       title: May 2023
 

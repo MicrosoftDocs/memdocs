@@ -40,11 +40,12 @@ Pivot yml:
   title: M365 App baseline versions
   prompt: Choose a version
   pivots:
-    - id: office-oct-2023
-      title: October 2023
+    - id: v2306
+      title: Version 2306
     - id: office-may-2023
       title: May 2023
 -->
+
 # Microsoft  365 Apps for Enterprise security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Microsoft 365 Apps for Enterprise security baseline for Microsoft Intune.
@@ -76,9 +77,11 @@ To learn more about using security baselines, see:
 For more information about the following settings that are included in this baseline, download the [Microsoft Security Compliance Toolkit 1.0](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and review the *Microsoft 365 Apps for Enterprise-2206-FINAL.zip* file.
 
 ::: zone-end
-::: zone pivot="office-oct-2023"
+::: zone pivot="v2306"
 
-**Microsoft 365 Apps for Enterprise for security baseline October 2023**  
+**Microsoft 365 Apps for Enterprise for security baseline version 2306**  
+
+*Released in November, 2023*
 
 For more information about the following settings that are included in this baseline, download the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and then review the *Microsoft 365 Apps for Enterprise 2306.zip* file.
 
@@ -86,7 +89,7 @@ For more information about the following settings that are included in this base
 
 ## Microsoft 365 Apps for Enterprise
 
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 ### Microsoft Access 2016
 
@@ -168,13 +171,13 @@ For more information about the following settings that are included in this base
   - Baseline default: *Disable all except digitally signed macros*
 
 ::: zone-end
-::: zone pivot="office-oct-2023"
+::: zone pivot="v2306"
 
 - **Block Excel XLL Add-ins that come from an untrusted source**  
   Baseline default: *Block*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 *Excel Options > Security > Trust Center > External Content*
 
@@ -191,7 +194,7 @@ For more information about the following settings that are included in this base
   Baseline default: *Enabled*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 *Excel Options > Security > Trust Center > File Block Settings*
 
@@ -301,7 +304,7 @@ For more information about the following settings that are included in this base
   Baseline default: *Enabled*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 ### Microsoft Office 2016
 
@@ -346,13 +349,13 @@ For more information about the following settings that are included in this base
   Baseline default: *6*
 
 ::: zone-end
-::: zone pivot="office-oct-2023"
+::: zone pivot="v2306"
 
 - **Allow Basic Authentication prompts from network proxies**  
   Baseline default: *Disabled*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 - **Allow VBA to load typelib references by path from untrusted intranet locations (User)**  
   Baseline default: *Disabled*
@@ -376,7 +379,7 @@ For more information about the following settings that are included in this base
   Baseline default: *Disabled*
 
 ::: zone-end
-::: zone pivot="office-oct-2023"
+::: zone pivot="v2306"
 
 - **Encryption mode for Information Rights Management (IRM)**  
   Baseline default: *Enabled*  
@@ -384,7 +387,7 @@ For more information about the following settings that are included in this base
     Baseline default: *Cipher Block Chaining (CBC)*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 - **Encryption type for password protected Office 97-2003 files (User)**  
   Baseline default: *Enabled*  
@@ -1016,7 +1019,7 @@ For more information about the following settings that are included in this base
     Baseline default: *True*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 ### Microsoft Outlook 2016
 
@@ -1119,7 +1122,7 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
     Baseline default: *Disabled*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
   - **Display Level 1 attachments (User)**  
     Baseline default: *Disabled*
@@ -1233,13 +1236,13 @@ The "Outlook Security Mode" policy controls how security settings in Outlook are
 *Security > Trust Center*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 - **Block macros from running in Office files from the internet**
   Baseline default: *Enabled*
 
 ::: zone-end
-::: zone pivot="office-may-2023,office-oct-2023"
+::: zone pivot="office-may-2023,v2306"
 
 - **Require that application add-ins are signed by Trusted Publisher (User)**  
   Baseline default: *Enabled*
