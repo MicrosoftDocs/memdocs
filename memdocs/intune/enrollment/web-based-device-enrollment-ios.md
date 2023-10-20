@@ -75,7 +75,7 @@ Create an enrollment profile for devices enrolling via web-based device enrollme
 Return to **Enrollment types** to see a list of your enrollment profiles. Intune applies enrollment profiles in the order you prioritize them. If a conflict occurs because a user is assigned more than one profile, Intune applies the profile with the higher priority. Drag and drop the profiles in the list to reposition them and change the order in which they're applied.   
 
 ## Step 4: Prepare employees for enrollment  
-When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.  Alternatively, you can provide a URL to the employee that opens the Company Portal website. The link is neccessary in scenarios that don't utilize conditional access because these scenarios don't redirect device users to the web. The link is:  
+When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.  Alternatively, you can provide a URL that opens the Company Portal website. It's necessary to share the link with device users in scenarios that don't utilize conditional access  because these scenarios don't redirect them to the web. The link is:  
 
  `portal.manage.microsoft.com`   
 
@@ -84,7 +84,7 @@ This section provides the high-level enrollment steps for device users. We recom
 1. Sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
 2. Wait while Company Portal downloads a management profile on your device.
 3. Go to your device settings app. Follow the onscreen prompts to install the management profile.  
-4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be be ready for work use until Authenticator is on the device, which can take a few minutes. 
+4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. 
 
 After enrollment is complete, devices users can sign in and authenticate with any of the apps configured with the SSO app extension policy.   
 
