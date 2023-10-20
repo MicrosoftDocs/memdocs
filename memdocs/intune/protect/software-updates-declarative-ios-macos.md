@@ -58,11 +58,11 @@ Use the following information to help you decide which policy type to use.
 
 | Feature | Declarative software update policy | Software update policy|
 | --- | --- | --- |
-| **Installs a specific update** | &nbsp; | &nbsp; |
+| **Configure a specific update to install** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ✔️ | ✔️ |
 | macOS | ✔️ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
-| **Enforces an update** | &nbsp; | &nbsp; |
+| **Enforces an update deadline** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ✔️ | ❌ |
 | macOS | ✔️ | ❌ |
 | &nbsp;|&nbsp; | &nbsp;|
@@ -74,9 +74,17 @@ Use the following information to help you decide which policy type to use.
 | iOS/iPadOS | ❌ | ✔️ |
 | macOS | ❌ | ✔️ |
 | &nbsp;|&nbsp; | &nbsp;|
+| **Downgrade versions** | &nbsp; | &nbsp; |
+| iOS/iPadOS | ❌ | ❌ |
+| macOS | ❌ | ❌ |
+| &nbsp;|&nbsp; | &nbsp;|
 | **Intune admin center policy type** | &nbsp; | &nbsp; |
 | iOS/iPadOS | [Settings catalog](../configuration/settings-catalog.md) |[Update policies for iOS/iPadOS](software-updates-ios.md) |
 | macOS | [Settings catalog](../configuration/settings-catalog.md) | [Update policies for macOS](software-updates-macos.md) |
+| &nbsp;|&nbsp; | &nbsp;|
+| **Minimum supported version** | &nbsp; | &nbsp; |
+| iOS/iPadOS | 17.0 and later (supervised) | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |
+| macOS | 14.0 and later | macOS 12.0 |
 
 ### Precedence
 
@@ -120,9 +128,14 @@ Declarative software updates have precedence over other policies that configure 
 
       If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
 
-    - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
+    - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. This setting uses the `yyyy-mm-ddThh:mm:sss` format. Make sure you enter the correct values. For example:
 
-      After the deadline passes, there's a one hour grace period. Then, the device forces a restart.
+      - To install an update on January 1, 2024 at 6 AM EST, enter `2024-01-01T06:00:000`.
+      - To install an update on December 31, 2023 at 9 PM PST, enter `2023-12-31T21:00:000`.
+
+      If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+
+      If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
 
     - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
@@ -151,8 +164,6 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - Enforced Software Update Non OS Deferred Install Delay (macOS)
 
 :::image type="content" source="./media/software-updates-declarative-ios-macos/settings-catalog-restrictions-delay-updates.png" alt-text="Screenshot that shows the settings catalog restrictions policy settings to delay or defer software updates in Microsoft Intune.":::
-
-
 
 ## Related articles
 
