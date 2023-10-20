@@ -494,13 +494,13 @@ You might need to some LOB apps on some of your devices. Or, there might be some
 
 Cloud config is recommended for devices that need just a few key apps, along with collaboration and browsing.
 
-### ✔️ Deploy resources that users need to access organization resources
+### ✔️ Deploy resources that users need for organization access
 
 Configure essential resources that users might need, which depends on your organization's processes. Essential resources can include certificates, printers, VPN connections, and Wi-Fi profiles.
 
 In Intune, assign these resources to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
 
-### ✔️ Configure preferred tenant domain name
+### ✔️ Configure a tenant domain name
 
 Configure devices to automatically use your tenant's domain name for user sign-ins. When you add a domain name, users don't have to type their full UPN to sign in.
 
@@ -620,7 +620,7 @@ You can monitor the status of the Windows Update ring policy:
 2. Select the update ring you deployed as part of cloud config.
 3. Select **Device status**, **User status**, or **End user update status**. The update ring settings details are shown.
 
-For more information on reporting for Windows Update rings, go to [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports#reports-for-update-rings-for-windows-10-and-later-policy.md).
+For more information on reporting for Windows Update rings, go to [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 ### Compliance policy
 
