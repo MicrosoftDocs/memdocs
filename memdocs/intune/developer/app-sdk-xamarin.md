@@ -104,7 +104,7 @@ for more information.
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
       ```
 
-      Apps may pass in null if the user's UPN is unknown at the time of the call. In this case, users will be prompted to enter both their email address and password.
+      Apps might pass in null if the user's UPN is unknown at the time of the call. In this case, users will be prompted to enter both their email address and password.
       
       If your app already uses MSAL to authenticate users, you can configure a single-sign-on (SSO) experience between your app and the Intune SDK. First, you'll need to override the default AAD settings used by the Intune SDK with those of your app. You can do so via the IntuneMAMSettings dictionary in the app's Info.plist, as mentioned in the [Intune App SDK for iOS Developer Guide](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), or you can do so in code via the AAD override properties of the IntuneMAMSettings class. The Info.plist approach is recommended for applications whose MSAL settings are static while the override properties are recommended for applications that determine those values at runtime. Once all of the SSO settings have been configured, your app should provide the user's UPN to the IntuneMAMEnrollmentManager's RegisterAndEnrollAccount method after it has successfully authenticated:
 
@@ -226,7 +226,7 @@ Once the Remapper is added to your project you will need to perform the MAM equi
         }
 ```
 
-If the replacements are not made then you may encounter the following compilation errors until you make the replacements:
+If the replacements are not made then you might encounter the following compilation errors until you make the replacements:
 * [Compiler Error CS0239](/dotnet/csharp/misc/cs0239). This error is commonly seen in this form
 ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
 This is expected because when the Remapper modifies the inheritance of Xamarin classes, certain functions will be made `sealed` and a new MAM variant is added to override instead.
@@ -236,8 +236,8 @@ This is expected because when the Remapper modifies the inheritance of Xamarin c
 > The Remapper re-writes a dependency that Visual Studio uses for IntelliSense auto-completion. Therefore, you might need to reload and rebuild the project when the Remapper is added for IntelliSense to correctly recognize the changes.
 
 #### Troubleshooting
-* If you encounter a blank, white screen in your application on launch, then you may need to force the navigation calls to execute on the main thread.
-* The Intune SDK Xamarin Bindings do not support apps that are using a cross-platform framework such as MvvmCross due to conflicts between MvvmCross and Intune MAM classes. While some customers may have had success with integration after moving their apps to plain Xamarin.Forms, we do not provide explicit guidance or plugins for app developers using MvvmCross.
+* If you encounter a blank, white screen in your application on launch, then you might need to force the navigation calls to execute on the main thread.
+* The Intune SDK Xamarin Bindings do not support apps that are using a cross-platform framework such as MvvmCross due to conflicts between MvvmCross and Intune MAM classes. While some customers might have had success with integration after moving their apps to plain Xamarin.Forms, we do not provide explicit guidance or plugins for app developers using MvvmCross.
 
 ### Company Portal app
 The Intune SDK Xamarin Bindings rely on the presence of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal. The user does not need to be signed in.
