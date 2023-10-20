@@ -55,6 +55,8 @@ Deploy the web app version of Intune Company Portal so that device users have qu
 
 Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.  
 
+The Microsoft Authenticator app is required for work or school access. We recommend telling employees and students to install Microsoft Authenticator before they beginn device enrollment.  
+
 ## Step 1: Set up just-in-time registration 
 Create a single sign-on app extension policy to enable just-in-time (JIT) registration. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.    
 
@@ -75,7 +77,7 @@ Create an enrollment profile for devices enrolling via web-based device enrollme
 Return to **Enrollment types** to see a list of your enrollment profiles. Intune applies enrollment profiles in the order you prioritize them. If a conflict occurs because a user is assigned more than one profile, Intune applies the profile with the higher priority. Drag and drop the profiles in the list to reposition them and change the order in which they're applied.   
 
 ## Step 4: Prepare employees for enrollment  
-When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.  Alternatively, you can provide a URL that opens the Company Portal website. It's necessary to share the link with device users in scenarios that don't utilize conditional access  because these scenarios don't redirect them to the web. The link is:  
+When an employee attempts to sign into a work app on their personal device, the app alerts them to the enrollment requirement and redirects them to the Company Portal website for enrollment.  Alternatively, you can provide a URL that opens the Company Portal website. It's necessary to share the link with device users in scenarios that don't utilize conditional access because these scenarios don't redirect them to the web. The link is:  
 
  `portal.manage.microsoft.com`   
 
