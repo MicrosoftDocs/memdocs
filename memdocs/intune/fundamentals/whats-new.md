@@ -196,6 +196,36 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
+### Device enrollment
+
+#### Web based device enrollment with JIT registration for personal iOS/iPadOS devices <!-- 15412485  -->  
+Intune supports web-based device enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the Company Portal app. Additionally, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. For more information, see [Set up web based device enrollment for iOS](./enrollment/web-based-device-enrollment-ios.md).
+
+### Device management
+
+#### Remote Help for Android is now Generally available<!--17675897 -->  
+Remote Help is generally available for Android Enterprise Dedicated devices from Zebra and Samsung.
+
+With Remote Help, IT Pros can remotely view the device screen and take full control in both attended and unattended scenarios, to diagnose and resolve issues quickly and efficiently.
+
+Applies to:
+
+- Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
+
+For more information, see [Remote Help on Android](../fundamentals/remote-help-android.md).
+
+#### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->  
+In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
+
+To support this feature, a remote action is now available to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
+
+The remote action **Pause config refresh** can be accessed from the device summary page.
+
+For more information, see:
+
+- [Remote actions](../remote-actions/device-management.md)
+- [Pause Config Refresh Remote action](../remote-actions/pause-config-refresh.md)
+
 ### Device security
 
 #### Configure declarative software updates and passcode policies for Apple devices in the Settings Catalog<!-- 24989083  -->  
@@ -233,6 +263,11 @@ Applies to:
 
 - iOS/iPadOS 17.0 and later
 - macOS 14.0 and later
+
+#### Mvision Mobile is now Trellix Mobile Security<!-- 16208061 -->  
+The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  has transitioned to **Trellix Mobile Security**. With this change we’ve updated our documentation and the Intune admin center UI.  For example, the *Mvision Mobile connector* is now *Trellix Mobile Security*. Existing installs of the Mvision Mobile connector also update to Trellix Mobile Security.
+
+If you have questions about this change, reach out to your Trellix Mobile Security representative.
 
 ### Intune apps
 

@@ -91,34 +91,11 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### Web-based enrollment with JIT registration for personal iOS/iPadOS devices <!-- 15412485  -->  
-Intune will support web-based enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the app. Additionally, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps.
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
-## Device management
-
-### Introducing a remote action to pause the config refresh enforcement interval<!-- 24249019  -->  
-In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
-
-To support this feature, a remote action will be added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
-
-The remote action **Pause config refresh** can be accessed from the device summary page.
-
-For information on currently available Remote actions, see [Remote actions](../remote-actions/device-management.md).
-
-### Remote Help for Android is now generally available<!--17675897  -->  
-Remote Help will be generally available for Android Enterprise Dedicated devices from Zebra and Samsung.
-
-With Remote Help, IT Pros can remotely view the device screen and take full control in both attended and unattended scenarios, to diagnose and resolve issues quickly and efficiently.
-
-Applies to:
-
-- Android Enterprise Dedicated devices, manufactured by Zebra or Samsung
-
-For more information, go to [Remote Help on Android](../fundamentals/remote-help-android.md).
+<!-- ## Device management -->
 
 <!-- *********************************************** -->
 
@@ -148,10 +125,6 @@ When the opt-in public preview behavior becomes generally available, the followi
 
 For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) in the Intune documentation.
 
-###  Mvision Mobile is changing to Trellix Mobile Security<!-- 16208061 -->  
-The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  is transitioning to **Trellix Mobile Security**. With this change we'll be updating Intune UI and our documentation to match. For example, the *Mvision Mobile connector* will soon be *Trellix Mobile Security*.
-
-If you have questions about this change, reach out to your Trellix Mobile Security representative.
 
 <!-- *********************************************** -->
 
