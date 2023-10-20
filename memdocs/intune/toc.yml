@@ -96,6 +96,9 @@ items:
         href: ./enrollment/automated-device-enrollment-shared-device-mode.md
         displayName: devices, frontline worker, automated device enrollment  
 
+  - name: Security Copilot + Intune
+    href: ./fundamentals/security-copilot.md
+
   - name: Plan
     items:
     - name: Planning guide
@@ -284,6 +287,26 @@ items:
                 href: /microsoft-365/solutions/apps-add-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
               - name: Step 5. Manage apps and licenses
                 href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
+
+          - name: Configure apps using Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: configure, app, apps, channel
+            - name: Step 1. Configure the Company Portal
+              href: /microsoft-365/solutions/apps-config-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 2. Configure Microsoft Outlook
+              href: /microsoft-365/solutions/apps-config-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 3. Configure Microsoft 365 Apps
+              href: /microsoft-365/solutions/apps-config-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 4. Configure Microsoft Edge
+              href: /microsoft-365/solutions/apps-config-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 5. Configure Microsoft Teams
+              href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 6. Configure other apps
+              href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json                  
+            - name: Step 7. Verify app configuration
+              href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
 
         - name: Concepts
           items:
@@ -810,16 +833,21 @@ items:
           href: ./protect/derived-credentials.md
         - name: Software updates
           items:
-          - name: iOS/iPadOS update policies
-            href: ./protect/software-updates-ios.md
-          - name: macOS update policies
-            href: ./protect/software-updates-macos.md
           - name: Android Enterprise updates
             items:
             - name: Android FOTA update
               href: ./protect/fota-updates-android.md
             - name: Zebra LG OTA Integration
-              href: ./protect/zebra-lifeguard-ota-integration.md            
+              href: ./protect/zebra-lifeguard-ota-integration.md    
+          - name: iOS/iPadOS & macOS updates
+            items:
+            - name: Declarative software updates
+              displayName: ddm
+              href: ./protect/software-updates-declarative-ios-macos.md    
+            - name: iOS/iPadOS update policies
+              href: ./protect/software-updates-ios.md
+            - name: macOS update policies
+              href: ./protect/software-updates-macos.md    
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
@@ -1601,6 +1629,8 @@ items:
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
           href: ./remote-actions/collect-diagnostics.md
+        - name: Pause config refresh
+          href: ./remote-actions/pause-config-refresh.md  
         - name: Send organizational messages  
           items: 
           - name: Overview 
@@ -1755,22 +1785,22 @@ items:
         displayName: dex
       - name: Intune App SDK for Android
         items:
-        - name: Intune App Developer Guide
-          href: ./developer/app-sdk-android-appendix.md
         - name: Plan the Integration
           href: ./developer/app-sdk-android-phase1.md
         - name: Understand the MSAL Prerequisite
           href: ./developer/app-sdk-android-phase2.md
-        - name: Get started with MAM
+        - name: Get Started with MAM
           href: ./developer/app-sdk-android-phase3.md
-        - name: MAM integration essentials
+        - name: MAM Integration Essentials
           href: ./developer/app-sdk-android-phase4.md
         - name: Multi-Identity
           href: ./developer/app-sdk-android-phase5.md
-        - name: App configuration
+        - name: App Configuration
           href: ./developer/app-sdk-android-phase6.md
-        - name: App participation features
+        - name: App Participation Features
           href: ./developer/app-sdk-android-phase7.md
+        - name: Appendix
+          href: ./developer/app-sdk-android-appendix.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
       - name: Microsoft Tunnel for MAM SDK 

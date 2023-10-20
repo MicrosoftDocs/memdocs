@@ -2189,6 +2189,16 @@
       "source_path": "memdocs/intune/protect/mcafee-mtd-connector-integration.md",
       "redirect_url": "/protect/trellix-mtd-connector-integration",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/misc/doc-test.md",
+      "redirect_url": "/mem/configmgr/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/misc/mms2019docathon.md",
+      "redirect_url": "/mem/configmgr/",
+      "redirect_document_id": false
     }
   ]
 }
