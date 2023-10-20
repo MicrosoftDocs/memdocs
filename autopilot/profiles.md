@@ -46,7 +46,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 3. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will enroll it. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 
     > [!NOTE]
-    > Using the setting **Converting all targeted devices to Autopilot** doesn't automatically convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+    > Using the setting **Converting all targeted devices to Autopilot** doesn't automatically convert existing hybrid Microsoft Entra device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, choose one of these two options:
@@ -58,14 +58,14 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     > [!NOTE]
     > Options that appear dimmed or shaded are currently not supported by the selected deployment mode.
 
-6. In the **Join to Azure AD as** box, choose **Azure AD joined**.
+6. In the **Join to Microsoft Entra ID as** box, choose **Microsoft Entra joined**.
 7. Configure the following options:
     - **Microsoft Software License Terms**: Choose if you want to show the EULA to users.
     - **Privacy settings**: Choose if you want to show privacy settings to users.
       > [!IMPORTANT]
       > The default value for the Diagnostic Data setting varies between Windows versions. For devices running Windows 10, version 1903, the default value is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data) <br>
 
-    - **Hide change account options**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
+    - **Hide change account options**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding).
     - **User account type**: Choose the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
     - **Allow pre-provisioned deployment** ([Prerequisites](pre-provision.md#prerequisites)): Choose **Yes** to allow pre-provisioning support.
 
@@ -78,7 +78,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
         > [!NOTE]
         > Language and keyboard settings requires ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection.
 
-    - **Apply device name template** (requires Azure AD join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a pre-fix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).
+    - **Apply device name template** (requires Microsoft Entra join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a pre-fix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).
   
 8. Select **Next**.
 9. On the **Assignments** page, choose **Selected groups** for **Assign to**.
@@ -98,7 +98,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
     ![Screenshot of Review page.](images/create-profile-review.png)
 
 > [!NOTE]
-> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.<br>
+> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.<br>
 >
 > Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) where you should see the profile status change from **Unassigned** to **Assigning** and finally to **Assigned**. Once the device is showing **Assigned**, open the properties of the device by selecting it, and then ensuring that **Date assigned** is populated. If **Date assigned** is not yet populated, wait until it is populated before deploying the device.
 

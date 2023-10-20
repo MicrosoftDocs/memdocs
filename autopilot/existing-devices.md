@@ -25,11 +25,11 @@ ms.topic: how-to
 
 Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows to your existing devices. The apps you need for work can be automatically installed. If you manage Windows user data with OneDrive for Business, your data is synchronized, so users can resume working right away.
 
-**Windows Autopilot for existing devices** lets you reimage and provision a Windows device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Azure Active Directory (Azure AD) or Active Directory (hybrid Azure AD join).
+**Windows Autopilot for existing devices** lets you reimage and provision a Windows device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).
 
 > [!NOTE]
 >
-> The JSON file for Windows Autopilot for existing devices only supports user-driven Azure AD and user-driven hybrid Azure AD Autopilot profiles. Self-deploying and pre-provisioning Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation.
+> The JSON file for Windows Autopilot for existing devices only supports user-driven Microsoft Entra ID and user-driven hybrid Microsoft Entra Autopilot profiles. Self-deploying and pre-provisioning Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation.
 >
 > However, during the Windows Autopilot for existing devices deployment, if the following conditions are true:
 >
@@ -40,13 +40,13 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 
 > [!TIP]
 >
-> Using Autopilot for existing devices could be used as a method to convert existing hybrid Azure AD devices into Azure AD devices. Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+> Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
 ## Prerequisites
 
 - A currently supported version of Microsoft Configuration Manager current branch.
 - Assigned Microsoft Intune licenses.
-- Azure AD Premium.
+- Microsoft Entra ID P1 or P2.
 - A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
 
 > [!NOTE]
@@ -63,7 +63,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
     :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
 
-1. Go to **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
+1. Go to **Microsoft Entra ID > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
     :::image type="content" source="images/mdm-config.png" alt-text="Configure MDM enrollment in Azure.":::
 
@@ -75,7 +75,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
 > [!NOTE]
 >
-> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. The Microsoft Graph PowerShell modules may require approval of additional permissions in Azure AD when they're first used. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. The Microsoft Graph PowerShell modules may require approval of additional permissions in Microsoft Entra ID when they're first used. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 1. On an internet-connected Windows PC or server, open an elevated Windows PowerShell command window.
 
@@ -102,9 +102,9 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
     Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
     ```
 
-    Windows requests the user and password for your account with a standard Azure AD form. Type your username and password, and then select **Sign in**.
+    Windows requests the user and password for your account with a standard Microsoft Entra ID form. Type your username and password, and then select **Sign in**.
 
-    :::image type="content" source="images/pwd.png" alt-text="Windows form to sign in to your Azure AD account.":::
+    :::image type="content" source="images/pwd.png" alt-text="Windows form to sign in to your Microsoft Entra account.":::
 
     The first time Intune Graph APIs are used on a device, it prompts to enable Microsoft Intune PowerShell read and write permissions. To enable these permissions, select **Consent on behalf or your organization** and then **Accept**.
 
@@ -147,13 +147,13 @@ The version number that identifies the format of the JSON file. <!-- For Windows
 
 _(GUID, required)_
 
-The Azure AD tenant ID that should be used. This property is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces.
+The Microsoft Entra tenant ID that should be used. This property is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces.
 
 #### CloudAssignedTenantDomain
 
 _(String, required)_
 
-The Azure AD tenant name that should be used. For example: `tenant.onmicrosoft.com`.
+The Microsoft Entra tenant name that should be used. For example: `tenant.onmicrosoft.com`.
 
 #### CloudAssignedOobeConfig
 
@@ -171,16 +171,16 @@ This property is a bitmap that shows which Autopilot settings were configured.
 
 _(Number, required)_
 
-This property specifies whether the device should join Azure AD or Active Directory (hybrid Azure AD join).
+This property specifies whether the device should join Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).
 
-- 0: Azure AD-joined
-- 1: Hybrid Azure AD-joined
+- 0: Microsoft Entra joined
+- 1: Microsoft Entra hybrid joined
 
 #### CloudAssignedForcedEnrollment
 
 _(Number, required)_
 
-Specifies that the device should require Azure AD join and MDM enrollment.
+Specifies that the device should require Microsoft Entra join and MDM enrollment.
 
 - 0: Not required
 - 1: required
@@ -195,7 +195,7 @@ A unique GUID (without braces) that's provided to Intune as part of the registra
 
 _(Encoded JSON string, required)_
 
-An embedded JSON string used for branding. It requires that you enable Azure AD organization branding.
+An embedded JSON string used for branding. It requires that you enable Microsoft Entra organization branding.
 
 For example:
 
@@ -354,7 +354,7 @@ For more information, see [How to create collections in Configuration Manager](/
 
 1. Complete the wizard.
 
-The Windows Autopilot for existing devices task sequence results in a device joined to Azure AD.
+The Windows Autopilot for existing devices task sequence results in a device joined to Microsoft Entra ID.
 
 For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](/mem/configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system).
 
@@ -453,7 +453,7 @@ The task sequence runs and does the following actions:
 
 > [!NOTE]
 >
-> If you need to join devices to Active Directory for hybrid Azure AD join scenario, create a **Domain Join** device configuration profile. Target the profile to **All Devices**, since there's no Azure AD device object for the computer to do group-based targeting. For more information, see [User-driven mode for hybrid Azure Active Directory join](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+> If you need to join devices to Active Directory for Microsoft Entra hybrid join scenario, create a **Domain Join** device configuration profile. Target the profile to **All Devices**, since there's no Microsoft Entra device object for the computer to do group-based targeting. For more information, see [User-driven mode for Microsoft Entra hybrid join](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
 
 ## Register the device for Windows Autopilot
 
