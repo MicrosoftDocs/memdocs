@@ -7,7 +7,7 @@ description: Learn about the different levels of protection and configuration in
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/08/2023
+ms.date: 10/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -243,7 +243,16 @@ For more information, see [Level 3 - Advanced device compliance configurations](
 This level focuses on enterprise-level services and features, and can require an infrastructure investment. In this level, you can create policies that:
 
 - Expand password-less authentication to other services in your organization, including certificate based authentication, single-sign on for apps, multi-factor authentication (MFA), and the Microsoft Tunnel VPN gateway.
+- Expand Microsoft Tunnel by deploying Microsoft Tunnel for Mobile Application Management (Tunnel for MAM), which extends Tunnel support to  iOS and Android devices that aren't enrolled with Intune. Tunnel for MAM is available as an Intune add-on.
+
+  For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 - Configure device features that apply to the Windows firmware layer. Use Android common criteria mode.
+- Use Intune policy for Windows Local Administrator Password Solution (LAPS) to help secure the built-in local administrator account on your managed Windows devices.
+
+  For more information, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+- Protect Windows devices through use of Endpoint Privilege Management (EPM), which helps you run your organization’s users as a standard users (without administrator rights) while enabling those same users to complete tasks that require elevated privileges.
+
+  EPM is available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 - Configure specialized devices like kiosks and shared devices.
 - Deploy scripts, if needed.
 
