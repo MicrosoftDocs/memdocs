@@ -33,7 +33,7 @@ ms.collection:
 
 # Migrate from Microsoft 365 Basic Mobility and Security to Intune
 
-Microsoft 365 includes a basic set of policies that protect devices and protect Microsoft 365 apps, like Outlook. These policies are managed in the Microsoft 365 Defender portal and are called **Basic Mobility and Security**. For more information on what Basic Mobility and Security offers, go to [Capabilities of Basic Mobility and Security](/microsoft-365/admin/basic-mobility-security/capabilities).
+Microsoft 365 includes a basic set of policies that protect devices and protect Microsoft 365 apps, like Outlook. These policies are managed in the Microsoft Defender portal and are called **Basic Mobility and Security**. For more information on what Basic Mobility and Security offers, go to [Capabilities of Basic Mobility and Security](/microsoft-365/admin/basic-mobility-security/capabilities).
 
 Many organizations want more or next-level device management features. Specifically, they want the features that are included with Microsoft Intune. For a comparison of the features, go to [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
 
@@ -77,14 +77,14 @@ This article will help you migrate your mobile device management (MDM) from Micr
 Before you migrate from Basic Mobility and Security device management to Intune device management:
 
 1. Be sure you have enough [Intune licenses](licenses.md) to cover all your users managed by Basic Mobility and Security.
-2. Review the [device security policies](/microsoft-365/admin/basic-mobility-security/set-up#step-4-recommended-manage-device-security-policies) in the Microsoft 365 Defender portal. Delete any policies that are no longer needed. Deleting unneeded policies reduces the number of recommendations created by the Intune migration evaluation. The idea is to have fewer recommendations to review after the migration evaluation.
+2. Review the [device security policies](/microsoft-365/admin/basic-mobility-security/set-up#step-4-recommended-manage-device-security-policies) in the Microsoft Defender portal. Delete any policies that are no longer needed. Deleting unneeded policies reduces the number of recommendations created by the Intune migration evaluation. The idea is to have fewer recommendations to review after the migration evaluation.
 3. Review the [membership of groups](/microsoft-365/admin/basic-mobility-security/create-device-security-policies#step-3-deploy-a-policy-to-your-organization) that are currently assigned device security policies.
 
     If these groups include users that are already licensed for Intune, then they can get policies assigned sooner than expected. For more information on the impact of existing Intune licenses, go to [Before you begin](#before-you-begin) (in this article).
 
 4. Review the types of devices currently enrolled in Basic Mobility and Security. Unsupported [OS versions and variants](supported-devices-browsers.md#intune-supported-operating-systems) may continue to work, but they won’t be supported if migrated to Intune.
 
-    Settings applied to unsupported operating systems won’t be moved to Intune. And if the user is already licensed for Intune, then their devices will lose any configuration set by device security policies in the Microsoft 365 Defender portal.
+    Settings applied to unsupported operating systems won’t be moved to Intune. And if the user is already licensed for Intune, then their devices will lose any configuration set by device security policies in the Microsoft Defender portal.
 
 5. Before migration:
 
@@ -95,7 +95,7 @@ Before you migrate from Basic Mobility and Security device management to Intune 
 
 6. You may have to create new Intune policies to replace Basic Mobility and Security policies. For more information on a minimum base set of policies, go to [Get started with Intune](get-started-with-intune.md).
 
-After the migration evaluation process activates, you can't make changes to your device security policies in the Microsoft 365 Defender portal. The existing Basic Mobility and Security policies are still enforced, but changes to these existing policies aren't saved.
+After the migration evaluation process activates, you can't make changes to your device security policies in the Microsoft Defender portal. The existing Basic Mobility and Security policies are still enforced, but changes to these existing policies aren't saved.
 
 > [!IMPORTANT]
 > If you have any of the following products or service, then contact the support team before you proceed:
@@ -128,7 +128,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
     > [!NOTE]
     >
     > - If you navigate away from the Migration evaluation, the only way to return is to open the [Migration evaluation](https://intune.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) link again.
-    > - After you start the migration evaluation, you can't create new or edit existing device security policies in the Microsoft 365 Defender portal.
+    > - After you start the migration evaluation, you can't create new or edit existing device security policies in the Microsoft Defender portal.
 
 3. Select **Recommendations**.
 

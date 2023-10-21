@@ -867,9 +867,9 @@ For more general information about Intune Android 13 support, go to the [Day Zer
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
 With [Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use Intune's endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren't enrolled with Intune.
 
-Now, you can opt-in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
+Now, you can opt-in to a public preview from within the Microsoft Defender portal to gain access to several enhancements for this scenario:
 
-- Intune's endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
+- Intune's endpoint security policies become visible in and can be managed from within the Microsoft Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
 
 - Security settings management supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
 
