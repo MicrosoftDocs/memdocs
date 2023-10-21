@@ -190,7 +190,7 @@ If you use [passwordless authentication](/azure/active-directory/authentication/
 
 No, HAADJ isn't considered cloud-native.
 
-The cloud solution is to AADJ your endpoints. The endpoints and their identities are created and stored in Azure AD. Intune manages the endpoints with settings and policies. These services work with other cloud services, including Microsoft 365, Microsoft 365 Defender, and more.
+The cloud solution is to AADJ your endpoints. The endpoints and their identities are created and stored in Azure AD. Intune manages the endpoints with settings and policies. These services work with other cloud services, including Microsoft 365, Microsoft Defender XDR, and more.
 
 ## Follow the cloud-native endpoints guidance
 
