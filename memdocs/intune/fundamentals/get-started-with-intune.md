@@ -158,8 +158,7 @@ The following articles are good resources:
 
 - [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
 - [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
-- [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md)
-- Security configuration framework with recommendations for [Android Enterprise](../enrollment/android-configuration-framework.md) and [iOS/iPadOS](../enrollment/ios-ipados-configuration-framework.md)
+- [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md)  
 - [Windows security baselines](/windows/security/threat-protection/windows-security-baselines)
 
 ## Step 5 - Enroll your devices
