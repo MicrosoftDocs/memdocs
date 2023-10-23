@@ -76,7 +76,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 If users launch a version of the Android Company Portal app below version 5.0.5333.0 (released November 2021), they will see a prompt encouraging them to update their Android Company Portal app. If a user with an older Android Company Portal version attempts a new device registration using a recent version of the Authenticator app, the process will likely fail. The way to resolve this is to update the Android Company Portal app.
 
 #### Minimum SDK version warning for iOS devices<!-- 9410239  -->  
-The **Min SDK version** for the iOS Conditional Launch setting on iOS devices now includes a warn action. This action will warn end users if the min SDK version requirement is not met. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
+The **Min SDK version** for the iOS Conditional Launch setting on iOS devices now includes a **warn** action. This action will warn end users if the min SDK version requirement is not met. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 
 #### Minimum OS for Apple LOB and store apps<!-- 24623225  -->  
 You can configure the minimum operating system to be the latest Apple OS releases for both Apple line-of-business apps and iOS/iPadOS store apps. You can set the minimum operating system for Apple apps as follows:
