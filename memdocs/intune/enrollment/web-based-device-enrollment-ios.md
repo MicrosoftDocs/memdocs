@@ -53,13 +53,11 @@ Before beginning setup, complete the following tasks:
 - [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)  
 
 ## Best practices   
-Deploy the web app version of Intune Company Portal so that device users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). For more information about how to add a web app, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
-
-Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.  
+Deploy the web app version of Intune Company Portal so that device users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). For more information about how to add a web app, see [Add web apps to Microsoft Intune](../apps/web-app.md). Without the web app, devices users can still access the Company Portal website, but they have to open the browser and enter the website link.  
 
 The Microsoft Authenticator app is required for work or school access. We recommend telling employees and students to install Microsoft Authenticator before they begin device enrollment.  
 
-## Step 1: Set up just-in-time registration 
+## Step 1: Set up just in time registration 
 Create a device configuration, single sign-on app extension policy to enable just-in-time (JIT) registration. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.  
 
 ## Step 2: Create enrollment profile  

@@ -40,9 +40,9 @@ Set up account driven Apple User Enrollment for personal devices enrolling in Mi
 
 This article describes how to set up account driven Apple User Enrollment in Microsoft Intune. You will:   
 
-* Set up just-in-time registration.   
-* Assign Microsoft Authenticator as a required app.   
-* Create an enrollment profile.     
+* Set up JIT registration.   
+* Create an enrollment profile.   
+* Prepare employees and students for enrollment.     
 
 ## Prerequisites
 Microsoft Intune supports account driven Apple User Enrollment on devices running iOS/iPadOS version 15 or later. If you assign an account driven user enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via user enrollment with Company Portal.   
@@ -87,7 +87,7 @@ Deploy the web app version of the Intune Company Portal website so that users ha
 ### Enable federated authentication  
 Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Azure AD, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.  
 
-## Step 1: Set up just-in-time registration and assign Microsoft Authenticator     
+## Step 1: Set up just in time registration and assign Microsoft Authenticator     
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
