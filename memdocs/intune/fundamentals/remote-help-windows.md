@@ -380,7 +380,7 @@ If a conditional access policy is configured as described earlier and if the dev
 
 For remotely starting a session on the user's device, notifications that are sent to the sharer's device when a helper launches a Remote Help session fails if the Microsoft Intune Management Service is not running.
 After the user's device is restarted, there is a delay for the service to start. You can either manually wait for the service to start (30-60 seconds after restart), or manually start the service through services.msc.
-For newly enrolled devices, there is a 24 hour delay before the user's device begins receiving notifications when a helper initiates a session.
+For newly enrolled devices, there is a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
 
 ## What's New for Remote Help

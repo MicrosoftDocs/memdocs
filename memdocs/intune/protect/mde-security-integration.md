@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,9 +38,9 @@ zone_pivot_groups: mde-attach-preview
     - id: mdssc-preview
       title: Opt-in Public Preview
 -->
-# Manage Microsoft Defender for Endpoint on devices with Microsoft Intune
+# Manage endpoint security policies on devices onboarded to Microsoft Defender for Endpoint
 
-When you use Microsoft Defender for Endpoint, you can deploy policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
+When you use Microsoft Defender for Endpoint, you can deploy endpoint security policies from Microsoft Intune to manage the Defender security settings on the devices you’ve onboarded to Defender without enrolling those devices with Intune. This capability is known as *Defender for Endpoint security settings management*.
 
 ::: zone pivot="mdssc-ga"
 **The following describes behavior that is generally available.**
@@ -414,13 +414,21 @@ The following sections guide you through that process.
 
 ### Configure Microsoft Defender for Endpoint
 
-In Microsoft Defender for Endpoint portal, as a security admin, your account needs at minimum permissions to view and edit security settings (Manage security settings in Security Center).
+In Microsoft Defender for Endpoint portal, as a security administrator: 
 
 1. Sign in to [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope** and enable the platforms for security settings management.
 
    :::image type="content" source="./media/mde-security-integration/enable-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft 365 Defender portal." lightbox="./media/mde-security-integration/enable-mde-settings-management-defender.png#lightbox":::
 
+   > [!NOTE]
+   >
+   > If you have the *Manage security settings in Security Center* permission in the Microsoft Defender for Endpoint portal, and are simultaneously enabled to view devices from all Device Groups (no [role-based access control](/microsoft-365/security/defender-endpoint/rbac) limits on your user permissions), you can also perform this action.
+
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
+
+   > [!TIP]
+   >
+   > Use the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
 
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
@@ -428,9 +436,7 @@ In Microsoft Defender for Endpoint portal, as a security admin, your account nee
 
    > [!TIP]
    >
-   > Use the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
-
-4. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Intune. If not already provided, request for your IT administrator to grant applicable users the Microsoft Intune's **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
+   > To ensure your Microsoft Defender for Endpoint portal users have consistent permissions across portals, if not already provided, request that your IT administrator grant them the Microsoft Intune **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
 
 ### Configure Intune
 
