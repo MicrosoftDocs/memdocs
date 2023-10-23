@@ -174,7 +174,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
   - The encryption method of the fixed drive doesn't match the BitLocker policy.
 
-  - To encrypt drives, the BitLocker policy requires either the user to sign in as an Administrator or, if the device is joined to Azure AD, the AllowStandardUserEncryption policy must be set to `1`.
+  - To encrypt drives, the BitLocker policy requires either the user to sign in as an Administrator or, if the device is joined to Microsoft Entra ID, the AllowStandardUserEncryption policy must be set to `1`.
 
   - Windows Recovery Environment (WinRE) isn't configured.
   
