@@ -81,7 +81,6 @@ Use the **Add filter** option on tables to display items that match your criteri
 
 > [!NOTE]
 > There are currently limitations in the following filters:
-
 > - The **Disk type** filter doesn't support the value **Unknown**<!--12829141-->. 
 > - Filtering on **Startup performance score** from **Overview** > **Device Scores** returns devices with a score of "--". <!--12829158-->
 
