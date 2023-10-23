@@ -34,7 +34,7 @@ ms.collection:
 # Set up just in time registration in Microsoft Intune    
 **Applies to iOS/iPadOS**  
 
-Set up *just in time (JIT) registration* in Microsoft Intune to enable device users to initiate and complete device enrollment from a work or school app. The Intune Company Portal isn't required when using JIT registration. Instead, JIT registration utilizes the Apple single sign-on (SSO) extension to complete Entra ID registration and compliance checks. Registration and compliance checks can be fully integrated in a designated Microsoft or non-Microsoft app that's configured with the Apple single sign-on (SSO) app extension.  The extension reduces authentication prompts during the device user's session and establishes SSO across the whole device. 
+Set up *just in time (JIT) registration* in Microsoft Intune to enable device users to initiate and complete device enrollment from a work or school app. The Intune Company Portal isn't required when using JIT registration. Instead, JIT registration utilizes the Apple single sign-on (SSO) extension to complete Microsoft Entra registration and compliance checks. Registration and compliance checks can be fully integrated in a designated Microsoft or non-Microsoft app that's configured with the Apple single sign-on (SSO) app extension.  The extension reduces authentication prompts during the device user's session and establishes SSO across the whole device. 
 
 This article describes how to enable JIT registration by creating an SSO app extension policy in the Microsoft Intune admin center.      
 
@@ -46,7 +46,7 @@ JIT registration is supported with the following enrollment types:
 * Apple automated device enrollment: For enrollments that use Setup Assistant with modern authentication as the [authentication method](automated-device-enrollment-authentication.md).  
 
 ## Best practices for SSO configuration
-* The user's first sign-in after they reach the home screen has to happen in a work or school app that's configured with the SSO extension. Otherwise, Azure AD registration and compliance checks can't be completed. We recommend pointing employees to the Microsoft Teams app, because it's integrated with the latest identity libraries and will provide the most streamlined experience from the user's home screen.
+* The user's first sign-in after they reach the home screen has to happen in a work or school app that's configured with the SSO extension. Otherwise, Microsoft Entra registration and compliance checks can't be completed. We recommend pointing employees to the Microsoft Teams app, because it's integrated with the latest identity libraries and will provide the most streamlined experience from the user's home screen.
 
 * The SSO extension automatically applies to all Microsoft apps, so to avoid authentication problems, don't add the bundle IDs for your Microsoft apps to your policy. You only need to add non-Microsoft apps.  
 
@@ -56,7 +56,7 @@ JIT registration is supported with the following enrollment types:
 Create a single sign-on app extension policy that uses the Apple SSO extension to enable just-in-time (JIT) registration.  
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
-3. For **SSO app extension type**, select **Microsoft Entra ID**.  
+3. For **SSO app extension type**, select **Azure AD**.  
 4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for any non-Microsoft apps using single sign-on (SSO). The SSO extension automatically applies to all Microsoft apps, so to avoid authentication problems, don't add Microsoft apps to your policy. 
 
    Don't add the Microsoft Authenticator app to the SSO extension either.  That app is added later in an app policy.     
