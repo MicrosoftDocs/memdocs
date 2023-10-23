@@ -237,6 +237,8 @@ items:
         href: report-connected-frontline-cloud-pcs.md
       - name: Cloud PCs that aren't available
         href: report-cloud-pcs-not-available.md
+      - name: Cloud PC actions
+        href: report-cloud-pc-actions.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
