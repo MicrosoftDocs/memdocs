@@ -48,14 +48,10 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS device restriction policies.
+When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. <!-- removing while iOS security framework docs are pending freshness update. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS device restriction policies. The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by device type:-->
 
-The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level.
-
-The available levels and settings in each level vary by device type:
-
-- For personal devices, see [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
-- For supervised devices, see [iOS/iPadOS supervised device security configurations](../enrollment/ios-ipados-supervised-device-security-configurations.md)
+<!--- For personal devices, see [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
+- For supervised devices, see [iOS/iPadOS supervised device security configurations](../enrollment/ios-ipados-supervised-device-security-configurations.md)-->     
 
 When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
