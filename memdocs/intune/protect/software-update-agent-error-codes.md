@@ -4,8 +4,8 @@
 title: Software update errors and descriptions in Microsoft Intune
 description: See a list of the Software Update agent error code in Microsoft Intune, including the error code, symbolic name, and error description.
 keywords:
-author: Brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 05/29/2019
 ms.topic: reference

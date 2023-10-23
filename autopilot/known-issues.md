@@ -8,22 +8,20 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 07/14/2023
+ms.date: 10/16/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
   - tier2
 ms.topic: troubleshooting
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Windows Autopilot - known issues
 
-**Applies to:**
-
-- Windows 11
-- Windows 10
-
-This article describes known issues that can often be resolved with configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
+This article describes known issues that can often be resolved with configuration changes, through cumulative updates, or might be resolved automatically in a future release.
 
 > [!NOTE]
 >
@@ -41,11 +39,22 @@ Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK cert
 
 ### Kiosk device profile not auto logging in
 
-There's currently a known issue in Windows Update [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629), which applies to both Windows 10 and Windows 11, where Kiosk device profiles that have auto sign-in enabled won't auto sign in. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After you enter this username with no password, it should take you to the desktop. This issue should be resolved in Windows 10 version 3C (March 2023) or higher or Windows 11 4B (April 2023) or higher.
+There's currently a known issue in the following Windows Updates released in January 2023:
+
+- Windows 11 22H2: [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629)
+- Windows 11 21H2: [KB5022287](https://support.microsoft.com/topic/january-10-2023-kb5022287-os-build-22000-1455-951898ec-2628-4d25-850e-9a44207bc139)
+- Windows 10: [KB5022282](https://support.microsoft.com/topic/january-10-2023-kb5022282-os-builds-19042-2486-19044-2486-and-19045-2486-9587e4e3-c2d7-48a6-86e2-8cd9146b47fd)
+
+where Kiosk device profiles that have auto sign-in enabled won't auto sign in. After Autopilot completes provisioning, the device stays on the sign-in screen prompting for credentials. To work around this known issue, you can manually enter the kiosk user credentials with the username `kioskUser0` and no password. After you enter this username with no password, it should take you to the desktop. This issue should be resolved in cumulative updates released for Windows 11 in April 2023 and Windows 10 in March 2023:
+
+- Windows 11 22H2: [KB5025239](https://support.microsoft.com/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982) or later.
+- Windows 11 21H2: [KB5025224](https://support.microsoft.com/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc) or later.
+- Windows 10: [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or later.
+
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 
-TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. This issue is resolved on newer versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
+TPM attestation for AMD platforms with ASP firmware TPM may fail with error code 0x80070490 on Windows 10 and Windows 11 systems. This issue is resolved on later versions of AMD firmware. Consult with device manufacturers and firmware release notes for which firmware versions contain the update.
 
 ### TPM attestation failure with error code 0x81039001
 
@@ -61,15 +70,15 @@ Autopilot deployments that take longer than one hour may display an incomplete d
 
 ### Autopilot profile not being applied when assigned
 
-In Windows 10 April and some May update releases, there's an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
+In Windows 10 21H2 April 2022 and some May 2022 update releases, there's an issue where the Autopilot profile may fail to apply to the device. Additionally, the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, apply [KB5015020](https://support.microsoft.com/topic/may-19-2022-kb5015020-os-builds-19042-1708-19043-1708-and-19044-1708-out-of-band-9b5bd38a-ab3c-4ada-96b0-b754134fcd2a) cumulative update or later to the device.
 
 ### DefaultuserX profile not deleted
 
-When you use the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin), the `defaultuserX` profile may not be deleted. This CSP isn't currently supported. It's in preview mode only and not recommended for production purposes at this time.
+When you use the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin), the `defaultuserX` profile may not be deleted. 
 
 ### Autopilot reset ran into trouble. Could not find the recovery environment
 
-When you attempt an Autopilot reset, you see the following message: _Autopilot reset ran into trouble. Could not find the recovery environment_. If there isn't an issue with the recovery environment, enter administrator credentials to continue with the reset process.
+When you attempt an Autopilot reset, you see the following message: **Autopilot reset ran into trouble. Could not find the recovery environment**. If there isn't an issue with the recovery environment, enter administrator credentials to continue with the reset process.
 
 ### Device-based Conditional Access policies
 
@@ -88,7 +97,7 @@ When you attempt an Autopilot reset, you see the following message: _Autopilot r
 
     The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or Microsoft Entra hybrid joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
-4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices. This grace period is needed because until the device has been rebooted, the status of BitLocker and Secure Boot haven't been captured, and can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
+4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices. This grace period is needed because until the device has been rebooted, the status of BitLocker and Secure Boot haven't been captured. Since the status hasn't been captured, it can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
 ### Device goes through Autopilot deployment without an assigned profile
 
@@ -104,7 +113,7 @@ This issue was resolved in September 2022.
 
 ### Virtual machine failing at "Preparing your device for mobile management"
 
-This error can be resolved by configuring your virtual machine with a minimum of two processors and 4 GB of memory.
+This error can be resolved by configuring your virtual machine with a minimum of 2 processors and 4 GB of memory.
 
 ### ODJConnectorSvc.exe leaks memory
 
@@ -116,7 +125,10 @@ When ESP fails during the pre-provisioning flow and the user selects the reset b
 
 ### TPM attestation failure on Windows 11 error code 0x81039023
 
-Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039023. This issue is resolved with the [May 10, 2022 Windows cumulative update for Windows 10](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504) and [May 10, 2022 Windows cumulative update for Windows 11](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755).
+Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code **0x81039023**. This issue is resolved with the following cumulative updates released in May 2022:
+
+- Windows 11: [KB5013943](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755).
+- Windows 10: [KB5013942](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504).
 
 <a name='duplicate-device-objects-with-hybrid-azure-ad-deployments'></a>
 
@@ -153,7 +165,7 @@ When [customizations are applied to the company branding settings](/azure/active
 
 ### TPM attestation isn't working on Intel Tiger Lake platforms
 
-TPM attestation support for Intel firmware TPM Tiger Lake platforms is only supported on devices with Windows 10 version 21H2 or later. This issue should be resolved by applying the November 2021 LCU.
+TPM attestation support for Intel firmware TPM Tiger Lake platforms is only supported on devices with Windows 10 version 21H2 or later. This issue should be resolved by applying the November 2021 cumulative update [KB5007253](https://support.microsoft.com/topic/november-22-2021-kb5007253-os-builds-19041-1387-19042-1387-19043-1387-and-19044-1387-preview-d1847be9-46c1-49fc-bf56-1d469fc1b3af) or later.
 
 ### Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP
 
@@ -206,13 +218,13 @@ For more information on this scenario, see [Windows Autopilot self-deploying mod
 | 0x801c03ea | This error indicates that TPM attestation failed, causing a failure to join Microsoft Entra ID with a device token.
 | 0xc1036501 | The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Microsoft Entra ID. For more information, see the blog post [Inside Windows Autopilot self-deploying mode](https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/). |
 
-### Pre-provisioning gives a red screen and the **Microsoft-Windows-User Device Registration/Admin** event log displays **HResult error code 0x801C03F3**
+### Pre-provisioning gives an error screen and the **Microsoft-Windows-User Device Registration/Admin** event log displays **HResult error code 0x801C03F3**
 
 This issue can happen if Microsoft Entra ID can't find a Microsoft Entra device object for the device that you're trying to deploy. This issue occurs if you manually delete the object. To fix it, remove the device from Microsoft Entra ID, Intune, and Autopilot, then re-register it with Autopilot, which recreates the Microsoft Entra device object
 
 To get troubleshooting logs, run the following command: `Mdmdiagnosticstool.exe -area Autopilot;TPM -cab c:\autopilot.cab`
 
-### Pre-provisioning gives a red screen
+### Pre-provisioning gives an error screen
 
 Pre-provisioning isn't supported on a VM.
 

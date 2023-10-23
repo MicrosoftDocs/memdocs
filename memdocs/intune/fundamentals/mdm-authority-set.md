@@ -8,14 +8,14 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/24/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 
 # optional metadata
-# CustomerIntent: As an  IT admin, I want to set an MDM authority before users can enroll their devices so that we can determine how to manage devices.
+# CustomerIntent: As an  IT admin, I want to set the MDM authority before users can enroll their devices so that we can determine how to manage devices.
 #ROBOTS:
 #audience:
 
@@ -62,7 +62,7 @@ For pre-1911 service release tenants, if you haven't yet set the MDM authority, 
     - **Intune MDM Authority**
     - **None**
 
-  ![Screenshot of Intune set mobile device management authority screen](./media/mdm-authority-set/set-mdm-auth.png)
+    :::image type="content" source="./media/mdm-authority-set/set-mdm-auth.png" alt-text="Screenshot of Intune set mobile device management authority screen." lightbox="./media/mdm-authority-set/set-mdm-auth.png":::
 
   A message indicates that you have successfully set your MDM authority to Intune.
 
@@ -117,7 +117,7 @@ To enable coexistence, you must add Intune as the MDM authority for your environ
 3. The **Add MDM Authority blade** displays.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
   
-  ![Screenshot of Add MDM Authority screen](./media/mdm-authority-set/add-mdm-authority.png)
+   :::image type="content" alt-text="Screenshot of Add MDM Authority screen." source="./media/mdm-authority-set/add-mdm-authority.png" lightbox="./media/mdm-authority-set/add-mdm-authority.png":::
 
 ### Migrate users and devices (optional)
 
@@ -159,6 +159,13 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
   - Make sure the newly enrolled device shows up in the new MDM authority.
   - Perform an action, such as Remote Lock, from the Microsoft Intune admin center to the device. If it's successful, then the new MDM authority is managing the device.
 - If you have issues with specific devices, you can unenroll and re-enroll the devices to get them connected to the new authority and managed as quickly as possible.
+
+## Confirm your tenant's MDM authority
+
+To confirm that your MDM authority is set to Intune, use the following steps:
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Tenant status**.
+2. Under the **Tenant details** tab, find **MDM authority**.
 
 ## Next steps
 

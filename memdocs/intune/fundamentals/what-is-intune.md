@@ -39,7 +39,9 @@ To help with these challenges and tasks, use [Microsoft Intune](https://www.micr
 
 :::image type="content" source="./media/what-is-intune/what-is-intune.png" alt-text="Diagram that shows features and benefits of Microsoft Intune.":::
 
-Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app and device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
+Microsoft Intune is a cloud-based endpoint management solution. It manages user access to organizational resources and simplifies app and device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWAoF9]
 
 You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support the [Zero Trust security model](zero-trust-with-microsoft-intune.md).
 
@@ -88,6 +90,8 @@ Some key features and benefits of Intune include:
 - The Microsoft Intune Suite offers **advanced endpoint management and security**. The suite has optional add-on features, including Remote Help, Endpoint Privilege Management, Microsoft Tunnel for MAM, and more.
 
   For more information, go to [Intune Suite add-on features](intune-add-ons.md)
+
+Learn how you can [benefit from modern endpoint management](/training/modules/benefits-microsoft-endpoint-manager?azure-portal=true) with Microsoft Intune.
 
 ## Integrates with other Microsoft services and apps
 

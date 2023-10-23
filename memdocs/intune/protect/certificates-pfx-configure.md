@@ -2,8 +2,8 @@
 title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/23/2023
 ms.topic: how-to 
@@ -26,6 +26,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- certificates
 ---
 # Configure and use PKCS certificates with Intune
 
@@ -95,12 +96,15 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     - Set **Certification Authority** to **Windows Server 2008 R2**
     - Set **Certificate recipient** to **Windows 7 / Server 2008 R2**
 
-5. On the **General** tab, set **Template display name** to something meaningful to you.
+5. On the **General** tab:
+  
+     - set **Template display name** to something meaningful to you.
+     - Uncheck **Publish certificate in Active Directory**.
 
     > [!WARNING]
     > **Template name** by default is the same as **Template display name** with *no spaces*. Note the template name, you need it later.
 
-6. In **Request Handling**, select **Allow private key to be exported**.
+8. In **Request Handling**, select **Allow private key to be exported**.
 
     > [!NOTE]
     >
@@ -108,7 +112,7 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
     >
     > When the certificates install on the device itself, the private key is marked as not exportable.
 
-7. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
+9. In **Cryptography**, confirm that the **Minimum key size** is set to 2048.
 
    Windows and Android devices support use of 4096-bit key size with a PKCS certificate profile. To use this key size, specify 4096 as the *Minimum key size*. 
 
@@ -119,25 +123,25 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
    > - The hardware TPM (Trusted Platform Module). As a workaround you can use the Software KSP for key storage.
    > - Windows Hello for Business. There is no workaround for Windows Hello for Business at this time.
 
-8. In **Subject Name**, choose **Supply in the request**.
-9. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
+10. In **Subject Name**, choose **Supply in the request**.
+11. In **Extensions**, confirm that you see Encrypting File System, Secure Email, and Client Authentication under **Application Policies**.
 
     > [!IMPORTANT]
     > For iOS/iPadOS certificate templates, go to the **Extensions** tab, update **Key Usage**, and confirm that **Signature is proof of origin** isn't selected.
 
-10. In **Security**:
+12. In **Security**:
     1. (Required): Add the Computer Account for the server where you install the Certificate Connector for Microsoft Intune. Allow this account **Read** and **Enroll** permissions.
     1. (Optional but recommended): Remove the Domain Users group from the list of groups or user names allowed permissions on this template by selecting the **Domain Users** group and select *Remove*. Review the other entries in *Groups or user names* for permissions and applicability to your environment.
 
-12. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
-13. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
-14. For the server to manage certificates for enrolled devices and users, use the following steps:
+13. Select **Apply** > **OK** to save the certificate template. Close the **Certificate Templates Console**.
+14. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**. Choose the template that you created in the previous steps. Select **OK**.
+15. For the server to manage certificates for enrolled devices and users, use the following steps:
 
     1. Right-click the Certification Authority, choose **Properties**.
     2. On the security tab, add the Computer account of the server where you run the connector.
     3. Grant **Issue and Manage Certificates** and **Request Certificates** Allow permissions to the computer account.
 
-15. Sign out of the Enterprise CA.
+16. Sign out of the Enterprise CA.
 
 ## Download, install, and configure the Certificate Connector for Microsoft Intune
 

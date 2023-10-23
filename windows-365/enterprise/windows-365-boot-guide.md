@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/23/2023
+ms.date: 09/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -45,7 +45,7 @@ For more information about guided scenarios in general, see [Intune guided scena
 
 ## Prerequisites
 
-- Each physical device must be running Windows 11 Enterprise or Professional.
+- Each physical device and Cloud PC must be running Windows 11 Enterprise or Professional, version 22621.2361 or later.
 - You must have the Intune Service Administrator role.
 
 Before adding physical devices to the group, you must ensure that they meet the [Windows 365 Boot requirements](windows-365-boot-physical-device-requirements.md).
@@ -66,7 +66,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
 1. **Autopilot device name template**: This guided scenario enrolls your devices in Windows Autopilot. When they enroll, you can optionally name your devices using a unique pattern that applies to all devices. Your options:
 
-   - **Apply device name template**: If you don't check this box, then no template or pattern is created when naming your devices. The device will have the OEM name, such as DESKTOP-, followed by some random characters. Select the box to create a unique pattern to name your devices. For example, enter Contoso-%RAND:7% to name all your devices Contoso- followed by seven random characters.
+   - **Apply device name template**: If you don't check this box, then no template or pattern is created when naming your devices. The device gets the OEM name, such as DESKTOP-, followed by some random characters. Select the box to create a unique pattern to name your devices. For example, enter Contoso-%RAND:7% to name all your devices Contoso- followed by seven random characters.
 
      The names:
 
@@ -76,9 +76,9 @@ Choose how your devices are named when they enroll, and choose the prefix of all
      - Can use the %SERIAL% macro to add a hardware-specific serial number.
      - Can use the %RAND:x% macro to add a random string of characters, where x equals the number of characters to add.
 
-   - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix:
+   - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix.
 
-2. **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created will be named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
+2. **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created are named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
 
 3. Select **Next: Endpoint updates**.
 
@@ -96,10 +96,12 @@ Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopa
 
 1. (Optional) On the **Settings** page, select the **VPN profile** and **Wifi profile** to use for Windows 365 Boot physical devices.
 2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
+3. (Optional) Select the **Security baseline profile** to use for Windows 365 Boot physical devices.
+4. (Optional) Select a value for the **Set the maximum connection timeout value** for Windows 365 Boot. The operating system waits for a connection until the selected timeout value has been reached. For more information, see [SetMaxConnectionTimeout policy CSP](/windows/client-management/mdm/policy-csp-clouddesktop#setmaxconnectiontimeout).
 
 ## Step 5 - Assignments
 
-Select the groups that will receive this guided scenario, and all the resources it creates. You can assign existing groups, or create new ones and assign them.
+Select the groups that you want to receive this guided scenario, and all the resources it creates. You can assign existing groups, or create new ones and assign them.
 
 - **Create new group**: Creates a new group, and deploys the guided scenario policies to this group. As devices are added to this group, they receive the resources from this guided scenario.
 

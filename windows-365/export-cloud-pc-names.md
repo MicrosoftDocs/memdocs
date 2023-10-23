@@ -34,7 +34,7 @@ ms.collection:
 
 You can export the Cloud PC name of every Cloud PC on your tenant.  
 
-1. Sign in to a Cloud PC with a user who is assigned the Azure Active Directory (Azure AD) Global Administrator role.
+1. Sign in to a Cloud PC with a user who is assigned the Microsoft Entra Global Administrator role.
 2. Open PowerShell and type ```Install-Module Microsoft.Graph -Scope CurrentUser```.
 3. Enter **Y** in all confirmation dialogs.
 4. Wait for the installation to finish then close PowerShell.

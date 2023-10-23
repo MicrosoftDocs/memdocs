@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2023
+ms.date: 09/27/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -45,7 +45,7 @@ By using Conditional Access policies, you can apply the right access controls wh
 
 Conditional Access policies aren't set for your tenant by default.  You can target CA policies to the Cloud PC first-party app by using either of the following platforms:
 
-- Azure. For more information, see [Azure AD Conditional Access](/azure/active-directory/conditional-access/).
+- Azure. For more information, see [Microsoft Entra Conditional Access](/azure/active-directory/conditional-access/).
 - Microsoft Intune. The steps below explain this process. For more information, see [Learn about Conditional Access and Intune](/mem/intune/protect/conditional-access).
 
 No matter which method you use, the policies will be enforced on the Cloud PC End-user portal and the connection to the Cloud PC.
@@ -57,12 +57,12 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
 5. Select **Cloud apps** > **Include** > **Select apps** > **None** (under **Select**).
 6. In the **Select** pane, search for and select both the following apps:
     - **Windows 365** (you can also search for "cloud" to find this app).
-    - **Windows Virtual Desktop** (this may also appear as **Azure Virtual Desktop**)
+    - **Azure Virtual Desktop** (this may also appear as **Windows Virtual Desktop**)
 
     By choosing both of these apps, you make sure that the policy applies to the Cloud PC End-user portal and the connection to the Cloud PC. If you want to exclude apps, you must also choose both these apps.
     
    >[!NOTE]
-   >If you have configured a provisioning policy to **Use single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
+   >If you have configured a provisioning policy to **Use Microsoft Entra single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
 
 7. If you want to fine-tune your policy, under **Access controls**, choose **0 controls selected**. Under **Grant**, choose the options that you want to apply to all objects assigned to this policy.
 8. If you want to test your policy first, under **Enable Policy**, set **Report-only** to **Off**. If you set it to **On**, the policy will be applied as soon as you create it.

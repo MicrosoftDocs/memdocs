@@ -2,12 +2,12 @@
 # required metadata
 title: Encrypt macOS devices with FileVault disk encryption with Intune 
 titleSuffix: Microsoft Intune
-description: Encrypt macOS devices with the built-in encryption method FileVault, and manage the recovery keys for encrypted devices from within the Microsoft Intune admin center. 
+description: Use Microsoft Intune encryption policy to encrypt macOS devices with FileVault, and manage recovery keys for encrypted macOS devices from within the Microsoft Intune admin center.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 09/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ ms.collection:
 
 # Use FileVault disk encryption for  macOS with Intune
 
-Intune supports macOS FileVault disk encryption. FileVault is a whole-disk encryption program that is included with macOS. You can use Intune to configure FileVault on devices that run **macOS 10.13 or later**.
+Use Microsoft Intune to configure and manage macOS FileVault disk encryption. FileVault is a whole-disk encryption program that is included with macOS. With Intune you can deploy policies that configure FileVault, and then manage recovery keys on devices that run **macOS 10.13 or later**.
 
 Use one of the following policy types to configure FileVault on your managed devices:
 
@@ -103,7 +103,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
    Configure the remaining [FileVault settings](endpoint-protection-macos.md#filevault) to meet your business needs, and then select **Next**.
 
-7. On the **Scope (Tags)** page, choose **Select scope tags** to open the Select tags pane to assign scope tags to the profile.
+7. If applicable, on the **Scope (Tags)** page, choose **Select scope tags** to open the Select tags pane to assign scope tags to the profile.
 
    Select **Next** to continue.
 

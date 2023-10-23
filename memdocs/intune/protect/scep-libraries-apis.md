@@ -3,8 +3,8 @@ title: APIs to onboard 3rd party certificate authorities
 titleSuffix: Microsoft Intune
 description: Add or integrate the SCEP GitHub solution for third party certificate authorities (CA) to issue SCEP certificates to devices in Microsoft Intune. This solution includes Java and C# APIs that validate, send success and failure notifications to Intune, and use SSL socket factory when communicating with Intune. Also view an overview of the steps to test your SCEP CA configuration.
 keywords:
-author: Brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/26/2021
 ms.topic: reference
@@ -26,6 +26,7 @@ ms.custom: seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
+- certificates
 ---
 
 # Use APIs to add third-party CAs for SCEP to Intune

@@ -4,8 +4,8 @@
 title: Learn about using Windows Update for Business in Microsoft Intune
 description: Manage Windows 10 and Windows 11 software updates by using Intune policy for Update rings for Windows and Windows feature updates for Windows Update for Business settings in Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 08/30/2023
 ms.topic: overview
@@ -49,13 +49,9 @@ Intune provides the following policy types to manage updates, which you assign t
 
   You can also use Feature updates policy to [upgrade your devices that run Windows 10 to Windows 11](../protect/windows-10-feature-updates.md#upgrade-devices-to-windows-11).
 
-- **Quality updates for Windows 10 and later**: With Quality updates for Windows 10 and later, you can expedite the install of the most recent Windows 10 and Windows 11 security updates as quickly as possible on devices you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](../protect/windows-10-expedite-updates.md).
+- **Quality updates for Windows 10 and later**: With Quality updates for Windows 10 and later, also referred to as Expedited updates, you can expedite the install of the most recent Windows 10 and Windows 11 security updates as quickly as possible on devices you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](../protect/windows-10-expedite-updates.md).
 
-- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Intune and the Windows Update for Business (WUfB) deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](../protect/windows-driver-updates-policy.md).
-
-- **Quality updates for Windows 10 and later**: Policy for [Quality updates](../protect/windows-10-expedite-updates.md), also referred to as Expedited updates, allows you to expedite the install of the most recent Windows 10 and Windows 11 security updates on your managed devices. Deployment of expedited quality updates is done without the need to pause or edit your existing monthly servicing policies.
-
-- **Driver updates for Windows 10 and later**: With  [Driver updates](../protect/windows-driver-updates-overview.md) you can review, approve for deployment, and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they are installed. review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices.
+- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows 10 and Windows 11 devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they are installed. Intune and the Windows Update for Business (WUfB) deployment service (DS) take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](../protect/windows-driver-updates-policy.md).
 
 ## Policy limitations for Workplace Joined devices
 
