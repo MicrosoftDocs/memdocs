@@ -4,14 +4,14 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 08/30/2023
+ms.date: 09/18/2023
 ms.localizationpriority: high
 ---
 
 ### Apple
 
-- Apple iOS 14.0 and later
-- Apple iPadOS 14.0 and later
+- Apple iOS 15.0 and later
+- Apple iPadOS 15.0 and later
 - macOS 11.0 and later
 
 > [!NOTE]
@@ -25,7 +25,7 @@ In the context of userless iOS/iPadOS devices, there's a difference between *sup
 
 - Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
-- Android open source project device: [requirements](../fundamentals/android-os-project-supported-devices.md)
+- Android open source project device: [See here for the list of Supported devices](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux

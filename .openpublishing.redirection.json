@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-supervised-device-security-configurations.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-personal-device-security-configurations.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-app-configuration-policies.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-device-compliance-security-configurations.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/ios-ipados-configuration-framework.md",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/apps/protect-edge-mam-windows.md",
+      "redirect_url": "/mem/intune/apps/apps/protect-mam-windows",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/byod-technology-decisions.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-planning-guide#personal-devices-vs-organization-owned-devices",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/common-scenarios.md",
+      "redirect_url": "/mem/intune/fundamentals/intune-planning-guide#step-1---determine-your-objectives",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-windows.md",
       "redirect_url": "/mem/intune/user-help/device-enrollment-overview-windows",
       "redirect_document_id": false 
@@ -122,7 +162,7 @@
     },
     {
       "source_path": "memdocs/intune/enrollment/ios-ipados-framework-deployment-methodology.md",
-      "redirect_url": "/mem/intune/enrollment/ios-ipados-configuration-framework",
+      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
       "redirect_document_id": false
     },
     {
@@ -2123,6 +2163,66 @@
     {
       "source_path": "memdocs/autopilot/windows-autopilot-whats-new.md",
       "redirect_url": "/autopilot/windows-autopilot-whats-new",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/ui-changes.md",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/apps/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/configuration/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/enrollment/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/fundamentals/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "memdocs/intune/remote-actions/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/developer/index.yml",
+      "redirect_url": "/mem/intune/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/mcafee-mobile-threat-defense-connector.md",
+      "redirect_url": "/protect/trellix-mobile-threat-defense-connector",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/mcafee-mtd-connector-integration.md",
+      "redirect_url": "/protect/trellix-mtd-connector-integration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/misc/doc-test.md",
+      "redirect_url": "/mem/configmgr/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/configmgr/core/misc/mms2019docathon.md",
+      "redirect_url": "/mem/configmgr/",
       "redirect_document_id": false
     }
   ]

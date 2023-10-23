@@ -5,8 +5,8 @@ title: Create Exchange Conditional Access policy
 titleSuffix: Microsoft Intune
 description: Configure Conditional Access for Exchange on-premises and legacy Exchange Online Dedicated in Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/16/2021
 ms.topic: how-to
@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Configure Exchange on-premises access for Intune

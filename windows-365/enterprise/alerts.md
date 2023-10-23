@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -57,18 +57,25 @@ By default, only active alerts are shown. You can use the **Add filter** option 
   - Active
   - Resolved
   
-### Alert details
+### Alert summary
 
-You can select an alert from the list to see the details of that alert. 
+You can select an alert from the list to see a summary of that alert.
+
+![Screenshot of view alert.](./media/alerts/alert-summary.png)
+
+Select the link next to **Reports** to see more details.
 
 ## Customize alert rule
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts** > **Alert rules**.
-    ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
+
+   ![Screenshot of view alert rules.](./media/alerts/view-alert-rules.png)
 
 2. Select a rule from the list.
 3. On the **System rule** page, make any changes that you want in the **Conditions**, **Settings**, and **Notifications** sections.
-    ![Screenshot of system rule.](./media/alerts/system-rule.png)
+
+   ![Screenshot of system rule.](./media/alerts/system-rule.png)
+
 4. Select **Apply** to save the changes to the rule.
 
 <!-- ########################## -->
