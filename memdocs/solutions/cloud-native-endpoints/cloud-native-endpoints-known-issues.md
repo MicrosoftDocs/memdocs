@@ -3,16 +3,16 @@
 
 title: Common issues and resolutions with cloud-native endpoints
 titleSuffix: Microsoft Intune
-description: Learn more about the known and resolutions when using cloud-native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply. Local Administrator Password Solution (LAPS) isn't supported.
+description: Learn more about the known and resolutions when using cloud-native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 06/06/2023
 ms.topic: conceptual
-ms.service: mem
-ms.subservice: fundamentals
+ms.service: microsoft-intune
+ms.subservice: 
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
@@ -64,7 +64,7 @@ Cloud-native endpoints are joined to Azure AD, and don't exist in on-premises AD
 > [!IMPORTANT]
 > The Azure AD Connect device writeback feature tracks devices that are registered in Azure AD. These devices are shown in on-premises AD as registered devices.
 >
-> Azure AD Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication. 
+> Azure AD Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication.
 >  
 > For information on scenarios supported with device writeback, go to [Azure AD Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
 
@@ -87,7 +87,7 @@ The following list includes common features and services that might use machine 
   - Won't work if the apps use machine account authentication.
   - Won't work if the apps access resources that are secured with groups that include only machine accounts.
 
-  **Recommendation**: 
+  **Recommendation**:
   - If your Win32 apps use machine authentication, then update the app to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
   - Check the authentication and identities of your applications and kiosk devices. Update the authentication and identities to use user account-based security.
 
@@ -123,13 +123,13 @@ The following list includes common features and services that might use machine 
   - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](../../intune/apps/intune-management-extension.md)
   - [Introduction to OneDrive in Microsoft 365](/training/modules/m365-onedrive-collaboration-use/)
 
-## Group policy objects might not apply
+## Group Policy Objects might not apply
 
 It's possible some of your older policies aren't available, or don't apply to cloud-native endpoints.
 
 **Resolution**:
 
-- Using [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md) in Intune, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
+- Using [Group Policy analytics](../../intune/configuration/group-policy-analytics.md) in Intune, you can evaluate your existing Group Policy Objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
   For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](../../intune/configuration/device-profile-assign.md).
@@ -152,7 +152,7 @@ Synchronized user accounts are on-premises AD domain users that are synchronized
 
 Currently, synchronized user accounts with passwords that have **User must change password at next logon** configured can't complete a first-time sign-in to a cloud-native endpoint.
 
-**Resolution**: 
+**Resolution**:
 
 Use Password Hash Sync and Azure AD connect, which forces the **force password change at logon** attribute to sync.
 

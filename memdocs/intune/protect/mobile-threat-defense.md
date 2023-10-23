@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 09/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,10 +33,10 @@ ms.collection:
 
 # Mobile Threat Defense integration with Intune
 
-Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
-
 > [!NOTE]
 > This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
+
+Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
 Intune can use this same data as a source for unenrolled devices using Intune app protection policies. As such, admins can use this information to help protect corporate data within a [Microsoft Intune protected app](../apps/apps-supported-intune-apps.md), and issue a block or selective wipe.
 
@@ -55,6 +55,19 @@ Intune uses a Mobile Threat Defense connector to create a channel of communicati
 
 For example: A connected MTD app reports to the MTD vendor that a phone on your network is currently connected to a network that is vulnerable to Man-in-the-Middle attacks. This information is categorized to an appropriate risk level of low, medium, or high. This risk level is then compared with the risk level allowances you set in Intune. Based on this comparison, access to certain resources of your choice can be revoked while the device is compromised.
 
+### Connector status
+
+Once you add a Mobile Threat Defense connector to your tenant, the status will show one of the following states:
+
+| Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
+|--------------|-----------|------------|------------|
+| **Unavailable**| Connector is/was deprovisioned. The MTD partner will need to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308)
+| **Not Set Up**| Connector setup is not complete.  There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309)
+| **Available**| Connector setup is complete. At least 1 platform toggle must be turned on for this status to change to **Enabled**. | No | No
+| **Enabled**| Connector setup is complete, and at least 1 platform toggle is currently turned on for this connector. | No | No
+| **Unresponsive**| Connector is not responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune will ignore the compliance state.| No | No
+| **Error**| Connector has an error code. Some MTD partners may choose to send this in an error case. | No | No
+
 ## Data that Intune collects for Mobile Threat Defense
 
 If enabled, Intune collects app inventory information from both personal and corporate-owned devices and makes it available for MTD providers to fetch, such as Lookout for Work. You can collect an app inventory from the users of iOS devices.
@@ -70,6 +83,10 @@ If you enable App Sync for iOS/iPadOS devices, inventories from both corporate a
 - App Name
 - App Bundle Size
 - App Dynamic Size
+- Whether the app is ad-hoc code-signed (starting 2309)
+- Whether the app is installed from the app store (starting 2309)
+- Whether the app is a beta app (installed via TestFlight) (starting 2309)
+- Whether the app is a device-based volume purchased app (starting 2309)
 - Whether the app is validated or not
 - Whether the app is managed or not
 

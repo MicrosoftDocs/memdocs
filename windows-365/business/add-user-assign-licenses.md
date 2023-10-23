@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 06/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -34,7 +34,7 @@ ms.collection:
 
 You can add a user and assign them licenses by following these steps:
 
-1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an Azure Active Directory (Azure AD) Global Administrator account.
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with a Microsoft Entra Global Administrator account.
 2. Select **Your organization’s Cloud PCs** > **Add a user**.
 3. Choose **Select products** to see all available licenses that can be assigned to the user.
 4. Select the licenses that you want to assign to the user > **Update**.

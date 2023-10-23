@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 05/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -108,6 +108,8 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 2. Select **Devices** > **Configuration profiles** > **Import ADMX** > **Import**:
 
     :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Intune admin center.":::
+    
+    Alternatively, you can also import from **Devices** > **Windows** > **Configuration profiles** > **Import ADMX**.
 
 3. Upload your files:
 

@@ -5,10 +5,10 @@ title: Scenarios for using Conditional Access with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Learn how Conditional Access is commonly used with Intune compliance policy for devices and apps
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 04/14/2022
+ms.date: 09/11/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- conditional-access
 ---
 
 # Common ways to use Conditional Access with Intune

@@ -23,7 +23,7 @@ The following sections provide additional detail about data collected at each le
 Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[Removed]***, or ***[Moved]***.
 
 > [!IMPORTANT]
-> Configuration Manager doesn't collect site codes, sites names, IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
+> Configuration Manager doesn't collect IP addresses, user names, computer names, physical addresses, or email addresses on the Basic or Enhanced levels. Any collection of this information on the Full level is not purposeful. It is potentially included in advanced diagnostic information like log files or memory snapshots. Microsoft doesn't use this information to identify you, contact you, or develop advertising.
 
 ## Level 1 - Basic
 
@@ -163,7 +163,7 @@ For Configuration Manager version 2303, this level includes the following data:
 
 - Count of crashes for Configuration Manager site server processes, and Watson signature ID, if available
 
-- Hash of key site attributes (site ID, SQL Server broker ID, and site exchange key)
+- ***[Updated]*** Hash of key site attributes (site ID, site codes, sites names, SQL Server broker ID, and site exchange key)
 
 - Status and health of the administration service
 

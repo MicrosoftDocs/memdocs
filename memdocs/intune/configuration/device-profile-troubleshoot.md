@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2023
+ms.date: 06/19/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,9 +53,9 @@ If a device doesn't check in to get the policy or profile after the first notifi
 
 | Platform | Refresh cycle|
 | --- | --- |
+| Android | About every 8 hours |
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
-| Android | About every 8 hours |
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
@@ -63,11 +63,13 @@ If devices recently enroll, then the compliance, non-compliance, and configurati
 
 | Platform | Frequency |
 | --- | --- |
-| iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |  
-| macOS | Every 15 minutes for 1 hour, and then around every 8 hours | 
-| Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
+| Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+| iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+| macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+| Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+
+For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
 
 At any time, users can open the Company Portal app, **Devices** > **Check Status** or **Settings** > **Sync** to immediately check for policy or profile updates. For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
@@ -77,7 +79,7 @@ There are different actions that trigger a notification. For example, when a pol
 
 Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, when a lock, passcode reset, app, or policy assignment action runs.
 
-Other changes, such as revising the contact information in the Company Portal app, don't cause an immediate notification to devices.
+Other changes don't cause an immediate notification to devices, including revising the contact information in the Company Portal app or updates to an `.ipa` file.
 
 The settings in the policy or profile are applied at every check-in. A [Windows 10 MDM policy refresh customer blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
 
@@ -103,7 +105,7 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
-In the Intune admin center, there are few places you can create configuration policies, including Group Policy analytics, Endpoint Security, Security Baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+In the Intune admin center, there are few places you can create configuration policies, including Group Policy analytics, endpoint security, security baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
 
 ### Custom iOS/iPadOS or macOS policies that conflict
 

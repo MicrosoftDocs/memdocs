@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/12/2021
+ms.date: 06/15/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection:
 
 # Applications in Windows 365
 
-As an IT admin, one of the easiest ways to get started with Windows 365 is to create Cloud PCs with default gallery images of Windows 10/11 Enterprise. After provisioning, you can customize the user experience by using Microsoft Endpoint Manager to push apps to your users’ Cloud PCs. These images can include existing Windows client apps already in your Microsoft Endpoint Manager environment. Since these Cloud PC devices are enrolled in Endpoint Manager, you can treat them like any other Windows device in your environment.
+As an IT admin, one of the easiest ways to get started with Windows 365 is to create Cloud PCs with default gallery images of Windows 10/11 Enterprise. After provisioning, you can customize the user experience by using Microsoft Intune to push apps to your users’ Cloud PCs. These images can include existing Windows client apps already in your Microsoft Intune environment. Since these Cloud PC devices are enrolled in Intune, you can treat them like any other Windows device in your environment.
 
 The following apps are available with no need to upload:
 
@@ -53,11 +53,11 @@ If you select the most common application format (Win32), you must encapsulate t
 
 ### .MSI  
 
-MSI format installers are supported by both the Line of Business and Windows app (win32) options within Intune. The latter is more enhanced for app dependencies.  
+Both the Line of Business and Windows app (win32) options within Intune support MSI format installers. The latter is more enhanced for app dependencies.  
 
 ### MSIX  
 
-MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and install files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
+MSIX is Microsoft’s new Windows app package format that provides a modern packaging experience to all Windows apps. The MSIX package format preserves the functionality of existing app packages and installs files. It also enables new, modern packaging and deployment features to Win32, WPF, and Windows Forms apps.  
 
 MSIX combines the best features of MSI, .appx, App-V.
 
@@ -79,7 +79,7 @@ Windows 365 Cloud PCs only support the Microsoft 365 Apps version of Office. For
 
 For information on Universal Print requirements, see [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool).
 
-For information on setting up Universal Print with a Windows 365 Enterprise hybrid Azure Active Directory configuration, see [Enable Hybrid AD/AAD Environment on Universal Print](/universal-print/fundamentals/universal-print-hybrid-ad-aad-environment-setup).
+For information on setting up Universal Print with a Windows 365 Enterprise hybrid Microsoft Entra configuration, see [Enable Hybrid AD / Azure AD Environment on Universal Print](/universal-print/fundamentals/universal-print-hybrid-ad-aad-environment-setup).
 
 <!-- ########################## -->
 ## Next steps

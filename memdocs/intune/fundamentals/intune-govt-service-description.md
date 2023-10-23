@@ -7,7 +7,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: johmar
-ms.date: 03/20/2023
+ms.date: 09/10/2023
 ms.topic: article
 ms.prod:
 ms.service: microsoft-intune
@@ -72,17 +72,17 @@ The following features are available and supported in GCC High and DoD clouds:
 
 ### In the planning phase
 
-The following features are currently not available and aren't supported in GCC High and DoD clouds. Planning is underway to support these features for GCC High and DoD. There is no ETA.
+The following features are currently not available and aren't supported in GCC High and DoD clouds. Planning is underway to support these features for GCC High and DoD. If ETA's are available, then they're listed.
 
 | Feature | Availability |
 | --- | --- |
-| Endpoint Analytics | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to </br>[Endpoint analytics overview](../../analytics/overview.md). |
-| Expedited updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to </br>[Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
-| Feature updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to </br>[Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
-| Linux devices | :::image type="icon" source="../media/icons/i-article.png"::: For more information on Linux devices management, go to </br>[Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md). |
-| Log Analytics |  :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to </br>[Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
-| Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | :::image type="icon" source="../media/icons/i-article.png"::: For more information on these plans, go to </br>[Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing). |
-| Windows Autopilot | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to </br>[Windows Autopilot overview](../../autopilot/windows-autopilot.md). |
+| Expedited updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md). |
+| Feature updates | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
+| Linux devices | :::image type="icon" source="../media/icons/i-article.png"::: **ETA is late 2023**. For more information on Linux devices management, go to [Deployment guide: Manage Linux devices in Microsoft Intune](deployment-guide-platform-linux.md). |
+| Log Analytics |  :::image type="icon" source="../media/icons/i-article.png"::: **ETA is late 2023**. For more information on this feature, go to [Send log data to storage, event hubs, or log analytics from Intune](review-logs-using-azure-monitor.md). |
+| Microsoft Intune Plan 2 </br>and Microsoft Intune Suite | :::image type="icon" source="../media/icons/i-article.png"::: For more information on these plans, go to [Microsoft Intune Plans and Pricing](https://www.microsoft.com/security/business/microsoft-intune-pricing). |
+| Organizational Messages | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Organizational messages in Microsoft Intune](../remote-actions/organizational-messages-overview.md). |
+| Windows Autopilot | :::image type="icon" source="../media/icons/i-article.png"::: For more information on this feature, go to [Windows Autopilot overview](/autopilot/windows-autopilot). |
 
 ### Not available
 

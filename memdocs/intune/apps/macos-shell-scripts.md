@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 05/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,13 +35,13 @@ ms.collection:
 Use shell scripts to extend device management capabilities in Intune, beyond what is supported by the macOS operating system.
 
 > [!NOTE]
-> Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
+> Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Intune. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
 
 ## Prerequisites
 
 Ensure that the following prerequisites are met when composing shell scripts and assigning them to macOS devices.
 
-- Devices are running macOS 10.13 or later.
+- Devices are running macOS 11.0 or later.
 - Devices are managed by Intune.
 - Devices are connected directly to the Internet. Connection through a proxy is not supported. 
 - Shell scripts begin with `#!` and must be in a valid location such as `#!/bin/sh` or `#!/usr/bin/env zsh`.
@@ -55,7 +55,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 - An end user is required to sign in to the device to execute scripts running as a signed-in user.
 - Root user privileges are required if the script requires making changes that a standard user account cannot.
 - Shell scripts will attempt to run more frequently than the chosen script frequency for certain conditions, such as if the disk is full, if the storage location is tampered with, if the local cache is deleted, or if the Mac device restarts.
-- Shell scripts that are running for longer than 15 minutes are stopped and reported as "failed".
+- Shell scripts that are running for longer than 60 minutes are stopped and reported as "failed".
 
 ## Create and assign a shell script policy
 
@@ -68,7 +68,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
    - **Upload script**: Browse to the shell script. The script file must be less than 200 KB in size.
    - **Run script as signed-in user**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script as the root user.
    - **Hide script notifications on devices:** By default, script notifications are shown for each script that is run. End users see a *IT is configuring your computer* notification from Intune on macOS devices.
-   - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once.
+   - **Script frequency:** Select how often the script is to be run. Choose **Not configured** (default) to run a script only once. Scripts with a frequency set will also run after a device restart.
    - **Max number of times to retry if script fails:** Select how many times the script should be run if it returns a non-zero exit code (zero meaning success). Choose **Not configured** (default) to not retry when a script fails.
 5. In **Scope tags**, optionally add scope tags for the script, and select **Next**. You can use scope tags to determine who can see scripts in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown. Select one or more user or device groups that are to receive the script. Choose **Select**. The groups you choose are shown in the list, and will receive your script policy.
@@ -232,7 +232,7 @@ Your assigned-intune role requires **Device configurations** permissions to dele
 
 ## Additional information
 
-When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Endpoint Manager. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
+When you deploy shell scripts or custom attributes for macOS devices from Microsoft Intune, it deploys the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. Rosetta 2 is required to run x64 (Intel) version of apps on Apple Silicon Macs. To install Rosetta 2 on Apple Silicon Macs automatically, you can deploy a shell script in Intune. To view a sample script, see [Rosetta 2 Installation Script](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Rosetta2).
 
 ## Next steps
 

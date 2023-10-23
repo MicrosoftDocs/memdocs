@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/02/2022
+ms.date: 08/07/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -42,11 +42,11 @@ Intune Company Portal is available for Android, iOS, macOS, and Windows.
 ### Android  
 Install Company Portal for Android from these stores:  
 
-* [Portal AppStore](https://portal.facebook.com/help/467356237073256/)(Opens Portal help documentation)  
+* [Portal AppStore](https://portal.facebook.com/help/467356237073256/)(Opens Meta Portal help documentation)  
 * [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)  
 * [Amazon Appstore for Android](https://www.amazon.com/Microsoft-Corporation-Intune-Company-Portal/dp/B092BCFLBJ/)  
 
-If the app stores listed above are unavailable, or you're using a device that doesn't support Google Mobile Services, you can [download Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or fixes automatically. Be sure to regularly update and patch the app yourself.  
+If the app stores listed above are unavailable, or you're using a device that doesn't support Google Mobile Services, you can [download Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or software fixes automatically. Be sure to regularly update and patch the app yourself.  
 
 Google Play Store is not available in People's Republic of China. You can install the Company Portal app from select Chinese app marketplaces instead. For more information, see [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md).   
 
@@ -115,7 +115,7 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 5. Once the screen says that you're signed in to Company Portal, you can close the browser and switch to your work device.  
 
-The following articles describe the enrollment instructions for smart card-enabled devices, and includes the sign-in-from-another-device method. 
+The following articles describe the enrollment instructions for smart card-enabled devices. These articles include the sign-in-from-another-device method. 
 
   * [Enroll with Entrust for iOS](enroll-ios-device-entrust-datacard.md) 
   * [Enroll with Entrust for Android](enroll-android-device-entrust-datacard.md)
@@ -130,29 +130,29 @@ The permissions described in this section apply to the Company Portal app for An
 ### Storage    
 To share diagnostics in the app, you must allow Company Portal access to photos, media, and files on the device. The Intune Company Portal app never accesses photos, media, and files. The permission text is controlled by Google and can't be changed.  
 
-If you approve access, your device can write its data logs to the device SD card. Approval enables logs to be moved via USB cable.  
+* If you approve access, your device can write its data logs to the device SD card. Approval enables logs to be moved via USB cable.  
 
-If you deny access, logs aren't written to the device's SD card. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
+* If you deny access, logs aren't written to the device's SD card. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
 
-To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Storage**.  
+To adjust permissions on your device, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Storage**.  
 
 ### Contacts  
 To enroll your Android device with the app, you must allow Company Portal access to your contacts. The Intune Company Portal app never accesses your contacts. The permission text is controlled by Google and can't be changed.  
 
-If you approve access, Intune can create a work account for you and manage the Azure Active Directory identity that's registered to you on your device.   
+* If you approve access, Intune can create a work account for you and manage the Azure Active Directory identity that's registered to you on your device.   
 
-If you deny access, you can't enroll your device for work. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
+* If you deny access, you can't enroll your device for work. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
 
-To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
+To adjust permissions on your device, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
 
 ### Phone calls  
 During enrollment, Company Portal requests permission to make and manage phone calls. The Intune Company Portal app never actually makes or manages calls. The permission text is controlled by Google and can't be changed.  
 
-If you approve access, you allow your device's phone number and IMEI to be shared with Intune. These numbers are reported as hardware details in Intune and visible to your IT admin.    
+* If you approve access, you allow your device's phone number and IMEI to be shared with Intune. These numbers are reported as hardware details in Intune and visible to your IT admin.    
 
-If you deny access, you can continue to use Company Portal and enroll your device. Your phone number and IMEI number will not be shared or visible to anyone. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.  
+* If you deny access, you can continue to use Company Portal and enroll your device. Your phone number and IMEI number will not be shared or visible to anyone. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.  
 
-To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
+To adjust permissions on your device, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
 
 ## Windows Information Protection policies 
 
@@ -161,10 +161,8 @@ The following message is a result of a misconfiguration in Microsoft Intune and 
 > *Your company support needs to give you access to company resources*  
 > Your company is using Windows Information Protection policies to protect your device. Your company support will need to make sure they allow the Company Portal to access those resources.  
 
-If you are an IT admin, you can resolve this by adding Company Portal to the allowed or exempt apps list in your Windows Information Protection (WIP) app protection policy. For more information about WIP in Intune, see [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).   
+If you are an IT admin, you can resolve this issue by adding Company Portal to the allowed or exempt apps list in your Windows Information Protection (WIP) app protection policy. For more information about WIP in Intune, see [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).   
 
 
 ## Next steps  
-After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 
-
-Stuck or need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Sign in to Company Portal and follow your organization's instructions to set up your device for school or work. Stuck or need help? Contact your IT support person. Check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.    

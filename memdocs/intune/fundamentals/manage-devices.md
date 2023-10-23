@@ -11,7 +11,7 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/19/2023
 ms.topic: conceptual
-ms.service: mem
+ms.service: microsoft-intune
 ms.subservice:
 ms.localizationpriority: high
 ms.technology:
@@ -125,9 +125,9 @@ In Intune, some common security tasks include:
 
   For more specific information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
 
-- **Use Security Baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
+- **Use security baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
-  If you're not sure where to start, then look at Security Baselines and the built-in guided scenarios.
+  If you're not sure where to start, then look at security baseline and the built-in guided scenarios.
 
   For more specific information, go to:
 

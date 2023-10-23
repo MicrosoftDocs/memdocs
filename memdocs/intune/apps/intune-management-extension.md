@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 07/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -40,7 +40,7 @@ This feature applies to:
 - Windows 10 and later (excluding Windows 10 Home)
 
 > [!NOTE]
-> Once the Intune management extension prerequisites are met, the Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device. For more information, see Intune Management Extensions [prerequisites](../apps/intune-management-extension.md#prerequisites).
+> Once the Intune management extension prerequisites are met, the Intune management extension is installed automatically when a PowerShell script or Win32 app, Microsoft Store apps, Custom compliance policy settings or Proactive remediations is assigned to the user or device. For more information, see Intune Management Extensions [prerequisites](../apps/intune-management-extension.md#prerequisites).
 >
 > PowerShell scripts, which are not officially supported on Workplace join (WPJ) devices, can be deployed to WPJ devices. Specifically, device context PowerShell scripts work on WPJ devices, but user context PowerShell scripts are ignored by design. User context scripts will be ignored on WPJ devices and will not be reported to the Microsoft Intune admin center.
 
@@ -67,13 +67,13 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 - PowerShell scripts time out after 30 minutes.
 
 > [!IMPORTANT]
-> Best practices for privacy awareness when using PowerShell scripts and proactive remediation scripts include the following:
+> Best practices for privacy awareness when using PowerShell scripts and Remediation scripts include the following:
 > - Do not include any type of sensitive information in scripts (such as passwords)
 > - Do not include Personally Identifiable Information (PII) in scripts
 > - Do not use scripts to collect PII from devices
 > - Always follow privacy best practices
 >
-> For related information, see [Proactive remediations](/mem/analytics/proactive-remediations).
+> For related information, see [Remediations](../fundamentals//remediations.md).
 
 ## Prerequisites
 
@@ -121,8 +121,8 @@ The Intune management extension has the following prerequisites. Once they're me
     - **Description**: Enter a description for the PowerShell script. This setting is optional, but recommended.
 4. In **Script settings**, enter the following properties, and select **Next**:
     - **Script location**: Browse to the PowerShell script. The script must be less than 200 KB (ASCII).
-    - **Run this script using the logged on credentials**: Select **Yes** to run the script with the user's credentials on the device. Choose **No** (default) to run the script in the system context. Many administrators choose **Yes**. If the script is required to run in the system context, choose **No**.
-    - **Enforce script signature check**: Select **Yes** if the script must be signed by a trusted publisher. Select **No** (default) if there isn't a requirement for the script to be signed.
+    - **Run this script using the logged on credentials**: Select **Yes** (default) to run the script with the user's credentials on the device. Choose **No** to run the script in the system context. Many administrators choose **Yes**. If the script is required to run in the system context, choose **No**.
+    - **Enforce script signature check**: Select **Yes** (default) if the script must be signed by a trusted publisher. Select **No** if there isn't a requirement for the script to be signed.
     - **Run script in 64-bit PowerShell host**: Select **Yes** to run the script in a 64-bit PowerShell host on a 64-bit client architecture. Select **No** (default) runs the script in a 32-bit PowerShell host.
 
       When setting to **Yes** or **No**, use the following table for new and existing policy behavior:

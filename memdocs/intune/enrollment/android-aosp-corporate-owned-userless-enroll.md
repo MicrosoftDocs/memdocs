@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -39,7 +39,9 @@ Set up enrollment in Microsoft Intune for corporate-owned, userless devices buil
 * Intended to be shared by more than one user. 
 * Used to accomplish a specific set of tasks at work. 
 
-This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work. 
+Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment.
+
+With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). Through Company Portal installation, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
 
 ## Prerequisites
 
@@ -56,7 +58,7 @@ You must also:
 
 
 ## Create an enrollment profile  
-Create an enrollment profile to enable enrollment on devices. 
+Create an enrollment profile to enable enrollment on devices.
 
 > [!TIP]
 > Intune also generates a token in plain text form, but that one can't be used to enroll devices.   
@@ -179,6 +181,9 @@ The following remote actions are available for Android (AOSP) devices:
 
 * Wipe  
 * Delete
+* Remote lock
+* Reset passcode
+* Restart
 
 You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).  
 
@@ -215,9 +220,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Weak biometric   
 *  Device compliance reporting is not available for Android (AOSP).   
 
-* Android (AOSP) management is not supported in these environments:  
-    * Intune for Government Community Cloud (GCC) High and Department of Defense (D0D)  
-    * Intune operated by 21Vianet  
+* Android (AOSP) management is not supported in environments using Intune operated by 21Vianet.    
 
 ## Next steps  
 

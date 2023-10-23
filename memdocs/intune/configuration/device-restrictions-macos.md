@@ -38,10 +38,17 @@ ms.collection:
 
 This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
+This feature applies to:
+
+- macOS
+
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
 
 > [!NOTE]
 > The user interface may not match the enrollment types in this article. The information in this article is correct. The user interface is being updated in an upcoming release.
+
+> [!TIP]
+> These settings use Apple's restriction settings. For more information on these settings, see [Apple's mobile device management settings site](https://support.apple.com/guide/deployment/restrictions-for-mac-depba790e53/1/web/1.0) (opens Apple's web site).
 
 ## Before you begin
 
@@ -376,21 +383,21 @@ This feature applies to:
 
   - **Desktop folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Desktop folder.
+    - **Allow**: Allows the app to access files in the user's Desktop folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
 
   - **Documents folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Documents folder.
+    - **Allow**: Allows the app to access files in the user's Documents folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.
 
   - **Downloads folder**: Your options:
     - **Not configured**: Intune doesn't change or update this setting.
-    - **Allow**: Allows the app to access files in the user’s Downloads folder.
+    - **Allow**: Allows the app to access files in the user's Downloads folder.
     - **Block**: Prevents the app from accessing these files.
 
     Requires macOS 10.15 and newer.

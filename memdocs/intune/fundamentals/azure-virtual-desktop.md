@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Using Azure Virtual Desktop single-session with Microsoft Endpoint Manager
+title: Using Azure Virtual Desktop single-session with Microsoft Intune
 titleSuffix: 
-description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Endpoint Manager. 
+description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Intune. 
 keywords:
 author: Smritib17  
 ms.author: smbhardwaj

@@ -4,8 +4,8 @@
 title: Device compliance policies in Microsoft Intune
 description: Get started with using compliance policies, including compliance policy settings and device compliance policies for Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/08/2023
 ms.topic: overview
@@ -27,6 +27,7 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- compliance
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune
@@ -66,30 +67,6 @@ Compliance policy settings include the following settings:
   If you use Conditional Access with your device compliance policies, change this setting to **Not compliant** to ensure that only devices that are confirmed as compliant can access your resources.
 
   If an end user isn't compliant because a policy isn't assigned to them, then the [Company Portal app](../apps/company-portal-app.md) shows No compliance policies have been assigned.
-
-- **Enhanced jailbreak detection** (*applies only to iOS/iPadOS*)
-
-  This setting works only with devices that you target with a device compliance policy that blocks jailbroken devices.  (See [Device Health](compliance-policy-create-ios.md#device-health) settings for iOS/iPadOS).
-
-  This setting has two values:
-
-  - **Disabled** (*default*): This security feature is off. This setting has no effect on your devices that receive device compliance policy that blocks jailbroken devices.
-  - **Enabled**: This security feature is on. Devices that receive device compliance policy to block jailbroken devices use the Enhanced jailbreak detection.
-
-  When enabled on an applicable iOS/iPadOS device, the device:
-
-  - Enables location services at the OS level.
-  - Always allows the Company Portal to use location services.
-  - Uses its location services to trigger jailbreak detection more frequently in the background. The user location data isn't stored by Intune.
-
-  Enhanced jailbreak detection runs an evaluation when:
-
-  - The Company Portal app opens
-  - The device physically moves a significant distance, which is approximately 500 meters or more. Intune can’t guarantee that each significant location change results in a jailbreak detection check, as the check depends on a device's network connection at the time.
-
-  If an Enhanced jailbreak detection evaluation does not run for a certain period of time, the device will be marked as _Jailbroken_, and subsequently as _Not Compliant_.
-
-  On iOS 13 and higher, this feature requires users to select *Always Allow* whenever the device prompts them to continue allowing Company Portal to use their location in the background. If enabled, this will allow more frequent jailbreak detection checks.
 
 - **Compliance status validity period (days)**
 

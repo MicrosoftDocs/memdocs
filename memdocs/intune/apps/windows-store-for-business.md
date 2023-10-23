@@ -38,7 +38,7 @@ ms.collection:
 > [!IMPORTANT]
 > The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users. For related information, see [Deprecation of Microsoft Store for Business and Education](../fundamentals/whats-new.md#deprecation-of-microsoft-store-for-business-and-education).
 
-The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
+The [Microsoft Store for Business](https://businessstore.microsoft.com/store/private-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 
 * You can synchronize the list of apps you have purchased (or that are free) from the store with Intune.
 * Apps that are synchronized appear in the Microsoft Intune admin center; you can assign these apps like any other apps.
@@ -48,6 +48,9 @@ The [Microsoft Store for Business](https://www.microsoft.com/business-store) giv
 * Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Azure AD.
 
 ## Before you start
+
+> [!IMPORTANT]
+> The retirement of the Microsoft Store for Business and the Microsoft Store for Education, originally scheduled for March 31, 2023, has been postponed. Until they are retired, admins can still leverage the connection to Store for Business and Education from their UEM solution to deploy apps to managed Windows 11 devices.
 
 Review the following information before you start syncing and assigning apps from the Microsoft Store for Business:
 

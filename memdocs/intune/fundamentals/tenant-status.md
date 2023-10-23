@@ -5,8 +5,8 @@ title: About the Microsoft Intune tenant status page
 titleSuffix: Microsoft Intune
 description: The Intune tenant status page displays details about your tenant and the status of connectors you've configured, and messages intended for tenants and about the Intune service health. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 01/20/2023
 ms.topic: conceptual
@@ -26,6 +26,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- help-support
 ---
 # View details about your Tenant on the Intune tenant status page
 
@@ -48,6 +49,9 @@ The page is divided into three tabs:
 Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens [What's new in Intune](../fundamentals/whats-new.md). In *What's new*, you can read about the latest features and updates to the Intune service.  
 
 On this tab, you'll also find basic information about your available licenses and how many are assigned to users. Licenses for devices aren't shown.
+
+> [!IMPORTANT]
+> Note that *Total licensed users* refers to all users which have one license containing an Intune SKU, if the Intune SKU is enable or disable they still count as a licensed user.
 
 ## Connector status
 Connector status is a one-stop location to review the status of all available connectors for Intune.  

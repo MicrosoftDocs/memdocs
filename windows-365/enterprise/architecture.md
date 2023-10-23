@@ -38,7 +38,7 @@ Windows 365 provides a per-user per-month license model by hosting Cloud PCs on 
 
 Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. You have two NIC management options:
 
-- If you use Azure Active Directory (Azure AD) Join and a Microsoft hosted network, you don’t need to bring an Azure subscription or manage the NIC.
+- If you use Microsoft Entra join and a Microsoft hosted network, you don’t need to bring an Azure subscription or manage the NIC.
 - If you bring your own network and use an Azure network connection (ANC), the NICs are created by Windows 365 in your Azure subscription.
 
 The NICs are attached to an Azure Virtual Network based on your [Azure network connection (ANC)](azure-network-connections.md) configuration.
@@ -62,39 +62,41 @@ By using your own Azure virtual network, Windows 365 lets you use Virtual Networ
 > [!TIP]
 > For web filtering and network protection for Cloud PCs, consider using the [Network Protection](/microsoft-365/security/defender-endpoint/network-protection) and [Web Protection](/microsoft-365/security/defender-endpoint/web-protection-overview) features of Microsoft Defender for Endpoint. These features can be deployed across both physical and virtual endpoints by using the Microsoft Intune admin center.
 
-## Microsoft Endpoint Manager integration
+## Microsoft Intune integration
 
-[Microsoft Endpoint Manager](/mem/endpoint-manager-overview) is used to manage all of your Cloud PCs. Microsoft Endpoint Manager and associated Windows components have various [network endpoints that must be allowed](/mem/intune/fundamentals/intune-endpoints) through the Virtual Network. Apple and Android endpoints may be safely ignored if you don’t use Microsoft Endpoint Manager for managing those device types.
+[Microsoft Intune](/mem/intune/fundamentals/what-is-intune) is used to manage all of your Cloud PCs. Microsoft Intune and associated Windows components have various [network endpoints that must be allowed](/mem/intune/fundamentals/intune-endpoints) through the Virtual Network. Apple and Android endpoints may be safely ignored if you don’t use Microsoft Intune for managing those device types.
 
 > [!TIP]
-> Be sure to allow access to [Windows Notification Services (WNS)](/mem/intune/fundamentals/intune-endpoints#windows-push-notification-services-wns). You might not immediately notice an impact if access is blocked. However, WNS enables Microsoft Endpoint Manager to trigger actions on Windows endpoints immediately instead of waiting for normal policy polling intervals on those devices or policy polling at startup/logon behavior. WNS [recommends](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) direct connectivity from the Windows client to WNS.
+> Be sure to allow access to [Windows Notification Services (WNS)](/mem/intune/fundamentals/intune-endpoints#windows-push-notification-services-wns). You might not immediately notice an impact if access is blocked. However, WNS enables Microsoft Intune to trigger actions on Windows endpoints immediately instead of waiting for normal policy polling intervals on those devices or policy polling at startup/logon behavior. WNS [recommends](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) direct connectivity from the Windows client to WNS.
 
-You only need to grant access to a subset of endpoints based on your Microsoft Endpoint Manager tenant location. To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. Under **Tenant location**, you’ll see something similar to "North America 0501" or "Europe 0202". The rows in the Microsoft Endpoint Manager documentation are differentiated by geographic region. Regions are indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Because tenants may be relocated within a region, it’s best to allow access to an entire region rather than a specific endpoint in that region.
+You only need to grant access to a subset of endpoints based on your Microsoft Intune tenant location. To find your tenant location (or Azure Scale Unit (ASU)), sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details**. Under **Tenant location**, you’ll see something similar to "North America 0501" or "Europe 0202". The rows in the Microsoft Intune documentation are differentiated by geographic region. Regions are indicated by the first two letters in the names (na = North America, eu = Europe, ap = Asia Pacific). Because tenants may be relocated within a region, it’s best to allow access to an entire region rather than a specific endpoint in that region.
 
-For more information about Microsoft Endpoint Manager service regions and data location information, see [Data storage and processing in Intune](/mem/intune/protect/privacy-data-store-process).
+For more information about Microsoft Intune service regions and data location information, see [Data storage and processing in Intune](/mem/intune/protect/privacy-data-store-process).
 
 ## Identity services
 
-Windows 365 uses both Microsoft Azure AD and on-premises Active Directory Domain Services (AD DS). Azure AD provides:
+Windows 365 uses both Microsoft Entra ID and on-premises Active Directory Domain Services (AD DS). Microsoft Entra ID provides:
 
 - User authentication for Windows 365 (as with any other Microsoft 365 service).
-- Device identity services for Microsoft Endpoint Manager through Hybrid Azure AD Join or Azure AD Join.
+- Device identity services for Microsoft Intune through Microsoft Entra hybrid join or Microsoft Entra join.
 
-When configuring Cloud PCs to use Hybrid Azure AD Join, AD DS provides:
+When configuring Cloud PCs to use Microsoft Entra hybrid join, AD DS provides:
 
 - On-premises domain join for the Cloud PCs.
 - User authentication for the Remote Desktop Protocol (RDP) connections.
 
-When configuring Cloud PCs to use Azure AD Join, Azure AD provides:
+When configuring Cloud PCs to use Microsoft Entra join, Microsoft Entra ID provides:
 
 - The domain join mechanism for the Cloud PCs.
 - User authentication for RDP connections.
 
 For more information on how the identity services affect the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-authentication.md).
 
-### Azure AD
+<a name='azure-ad'></a>
 
-Azure AD provides user authentication and authorization for both the Windows 365 web portal and for the Remote Desktop client apps. Both support modern authentication, which means Azure AD Conditional Access can be integrated to provide:
+### Microsoft Entra ID
+
+Microsoft Entra ID provides user authentication and authorization for both the Windows 365 web portal and for the Remote Desktop client apps. Both support modern authentication, which means Microsoft Entra Conditional Access can be integrated to provide:
 
 - multi-factor authentication
 - location-based restrictions
@@ -104,11 +106,11 @@ Azure AD provides user authentication and authorization for both the Windows 365
   - cookie persistence for the Windows 365 web portal
 - device compliance controls
 
-For more information on how to use Azure AD Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md).
+For more information on how to use Microsoft Entra Conditional Access with Windows 365, see [Set conditional access policies](set-conditional-access-policies.md).
 
 ### Active Directory Domain Services
 
-Windows 365 Cloud PCs can be either Hybrid Azure AD joined or Azure AD Joined. When using Hybrid Azure AD Join, Cloud PCs must domain join to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information, see [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
+Windows 365 Cloud PCs can be either Microsoft Entra hybrid joined or Microsoft Entra joined. When using Microsoft Entra hybrid join, Cloud PCs must domain join to an AD DS domain. This domain must be synchronized with Microsoft Entra ID. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information, see [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
 
 ## User connectivity
 
@@ -129,13 +131,13 @@ Windows 365 Cloud PCs don't support third-party connection brokers.
 
 The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
 
-The following diagrams show the logical architecture for an Azure AD Join configuration using a Microsoft hosted network, an Azure AD Join configuration using a customer's network connection ("bring your own network"), and a Hybrid Azure AD Join configuration using an ANC, respectively.
+The following diagrams show the logical architecture for a Microsoft Entra join configuration using a Microsoft hosted network, a Microsoft Entra join configuration using a customer's network connection ("bring your own network"), and a Microsoft Entra hybrid join configuration using an ANC, respectively.
 
-![Azure AD Join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
+![Screenshot of Microsoft Entra join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
 
-![Azure AD Join architecture with BYO network](media/architecture/aadjbyon.png)
+![Screenshot of Microsoft Entra join architecture with BYO network](media/architecture/aadjbyon.png)
 
-![Hybrid Azure AD Join architecture](./media/architecture/haadjarch.png)
+![Screenshot of Microsoft Entra hybrid join architecture](./media/architecture/haadjarch.png)
 
 All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
 

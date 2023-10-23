@@ -51,7 +51,7 @@ The Microsoft Intune management agent is necessary to be installed on managed ma
 
 ## How can I manually initiate an agent check-in from a Mac?
 
-On a managed Mac that has the agent installed, open **Company Portal**, select the local device, select **Check settings**. This initiates an MDM check-in as well as an agent check-in.
+On a managed Mac that has the agent installed, open **Company Portal**, select the local device, select **Check status**. This initiates an MDM check-in as well as an agent check-in.
 
 Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command to terminate the `IntuneMdmAgent` process. The `IntuneMdmAgent` process restarts immediately, which will initiate a check-in with Intune.
 
@@ -72,7 +72,7 @@ Alternatively, open **Terminal**, run the `sudo killall IntuneMdmAgent` command 
 
 ## How to turn off usage data sent to Microsoft for shell scripts?
 
- To turn off usage data sent to Microsoft from the Intune management agent, open Company Portal and select **Menu** > **Preferences** > *uncheck 'allow Microsoft to collect usage data'*. This will turn off usage data sent for both the agent and Company Portal.
+ To turn off usage data sent to Microsoft from the Intune management agent, open Company Portal, point to **Menu**, select **Preferences**, and then clear the **allow Microsoft to collect usage data** checkbox. This turns off usage data sent for both the agent and Company Portal.
 
 ## Next steps
 

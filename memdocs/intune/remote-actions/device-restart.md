@@ -20,7 +20,7 @@ ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 #ROBOTS:
 #audience:
 
-ms.reviewer: coferro
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -52,7 +52,7 @@ The **Restart** device action causes the device you choose to be restarted (with
     > [!Note]  
     > This command requires a supervised device and the **Device Lock** access right. The device restarts immediately. Passcode-locked iOS/iPadOS devices don't rejoin a Wi-Fi network after restart. After restart, the device might not be able to communicate with the server.
 - macOS - Supported
-- Android and Android Enterprise personally-owned work profile devices - Not supported
+- Android Enterprise personally owned work profile devices - Not supported
 
 ## Restart a device
 

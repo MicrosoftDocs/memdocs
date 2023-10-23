@@ -2,12 +2,13 @@
 # required metadata
 
 title: Unlicensed admins in Microsoft Intune | Microsoft Docs
-description: Learn how to give unlicensed admins permissions to access Intune.
+titleSuffix: Microsoft Intune
+description: This article describes how to give unlicensed admins permissions to access Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/08/2021
+ms.date: 09/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,11 +17,12 @@ ms.technology:
 ms.assetid: 
 
 # optional metadata
+# CustomerIntent: As an  IT admin, I want to give other administrators access to Microsoft Intune without them requiring an Intune license so that right admins have the right access. 
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: craigma
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,15 +44,15 @@ The Unlicensed admins option has been enabled by default on all accounts created
 2. Select **Allow access to unlicensed admins** > **Yes**.
 
     > [!WARNING]
-    > You can’t undo this setting after clicking **Yes**.
+    > You can't undo this setting after clicking **Yes**.
 
-3. From now on, users who sign in to the Microsoft Intune admin center don’t require an Intune license. Their scope of access is defined by the roles assigned to them.
+3. From now on, users who sign in to the Microsoft Intune admin center don't require an Intune license. Their scope of access is defined by the roles assigned to them.
 
 Intune supports up to 350 unlicensed admins per security group, and only applies to direct members. Admins above this limit will experience unpredictable behavior.
 
 It can take up to 48 hours for access changes to take effect.
 
-## Next steps
+## Next step
 
 [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
 

@@ -10,7 +10,7 @@ ms.assetid: cdc74613-5c3d-4eb0-a6fd-d4e4c0ee05f6
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

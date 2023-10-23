@@ -3,11 +3,11 @@
 
 title: Kiosk settings for Windows and Holographic devices in Microsoft Intune
 description: Configure your Windows 10/11 and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
-keywords:
+keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11, Windows Holographic for Business, Windows HoloLens, Windows kiosk
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 08/30/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,19 +33,21 @@ ms.collection:
 
 On Windows devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more.
 
+This scenario is common for frontline workers (FLW). For more information on FLW devices in Microsoft Intune, go to [FLW device management for devices in Microsoft Intune](../fundamentals/frontline-worker-overview.md).
+
 This feature applies to:
 
 - Windows 11
 - Windows 10
 - Windows Holographic for Business
 
-To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+To create kiosk profiles for other platforms, go to [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
 
 Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to groups in your organization.
 
-This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
+This article shows you how to run one app or many apps as a Windows kiosk device using a device configuration profile. For a list of all the settings, and what they do, go to [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
 
 ## Create the profile
 
@@ -75,20 +77,20 @@ This article shows you how to create a device configuration profile. For a list 
         The benefit of a multi-app kiosk, or fixed-purpose device, is to provide an easy-to-understand experience for users by only accessing apps they need. And, also removing from their view the apps they don't need.
 
         > [!NOTE]
-        > Currently, multi-app kiosk is only supported on Windows 10. It's not supported on Windows 11.
+        > Currently, you can use Intune to configure a multi-app kiosk on Windows 10 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
-    For a list of all settings, and what they do, see:
+    For a list of all settings, and what they do, go to:
 
       - [Windows client kiosk settings](kiosk-settings-windows.md)
       - [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md)
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -100,7 +102,7 @@ The next time each device checks in, the policy is applied.
 
 After the [profile is assigned](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
-You can also create kiosk profiles for devices that run the following platforms:
+You can create kiosk profiles for devices that run the following platforms:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#device-experience)

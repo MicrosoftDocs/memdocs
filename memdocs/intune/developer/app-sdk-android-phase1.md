@@ -160,8 +160,8 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 
 ### Android versions
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 33 (Android 13).
-In order to target Android API 33 (Android 13), you must use Intune App SDK `v9.0.0` or later.
+The SDK fully supports Android API 28 (Android 9.0) through Android API 34 (Android 14).
+In order to target Android API 34 (Android 14), you must use Intune App SDK `v10.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).
@@ -191,7 +191,7 @@ To create a new account:
 
 ### App protection policy configuration
 
-[Create and assign app protection policies] in the Microsoft Intune admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Endpoint Manager.
+[Create and assign app protection policies] in the Microsoft Intune admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Intune.
 
 Before you test app protection policy settings within your own application, it's helpful to familiarize yourself with how these settings behave inside other SDK-integrated applications.
 

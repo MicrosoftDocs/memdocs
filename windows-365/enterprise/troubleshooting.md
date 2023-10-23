@@ -36,7 +36,7 @@ This article provides suggestions for troubleshooting Windows 365 issues.
 
 ## Contact help/support
 
-For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Endpoint Manager](/mem/get-support). Support is included as part of your Windows 365 subscription.
+For instructions on how to get help and open a support ticket, see  [How to get support in Microsoft Intune](/mem/get-support). Support is included as part of your Windows 365 subscription.
 
 Since Cloud PCs work like most physical devices, you can use existing troubleshooting documentation to troubleshoot issues with [Windows client](/troubleshoot/windows-client/welcome-windows-client), [Microsoft 365 services](/microsoft-365/), and [Microsoft Intune admin center](/mem/get-support).
 
@@ -48,16 +48,16 @@ After the installation, the optimizations to redirect audio and video to your lo
 
 ## Conditional access
 
-Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Intune admin center or Azure Active Directory.
+Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Intune admin center or Microsoft Entra ID.
 
 Any conditional access policy that you apply will affect:
 
 - Access to the end-user web portal
 - The connection to the Cloud PC from the Remote Desktop apps.
 
-For more information about service dependencies in Azure AD Conditional Access, see [Conditional Access service dependencies](/azure/active-directory/conditional-access/service-dependencies).
+For more information about service dependencies in Microsoft Entra Conditional Access, see [Conditional Access service dependencies](/azure/active-directory/conditional-access/service-dependencies).
 
-Applying a more restrictive policy to Azure Virtual Desktop than the Windows 365 cloud app will result in Azure AD honoring the more restrictive policy. This policy will affect end user connectivity to their Cloud PCs after accessing the Windows 365 end user portal.
+Applying a more restrictive policy to Azure Virtual Desktop than the Windows 365 cloud app will result in Microsoft Entra ID honoring the more restrictive policy. This policy will affect end user connectivity to their Cloud PCs after accessing the Windows 365 end user portal.
 
 For more information on how a given policy may affect your environment, see [Troubleshoot using the What If tool in Conditional Access](/azure/active-directory/conditional-access/what-if-tool).
 
@@ -78,9 +78,9 @@ You can try either of these possible solutions:
 
 The [Azure network connection checks](health-checks.md) help to make sure that network connectivity is working. Always retry the Azure network connection if you suspect networking issues might be causing issues. Using the Azure network connection checks helps make sure that repeated and consistent checks are used as the first troubleshooting step.
 
-Keep in mind that the Azure network connection checks are validating the infrastructure configuration of your environment. They don't run checks to validate any extra configuration or applications deployed to Cloud PCs after provisioning by Microsoft Endpoint Manager or third party agents. These agents or configurations can introduce other issues that the Azure network connection can't test for ahead of provisioning.
+Keep in mind that the Azure network connection checks are validating the infrastructure configuration of your environment. They don't run checks to validate any extra configuration or applications deployed to Cloud PCs after provisioning by Microsoft Intune or third party agents. These agents or configurations can introduce other issues that the Azure network connection can't test for ahead of provisioning.
 
-For example, if you deploy a VPN client to all devices in Microsoft Endpoint Manager, make sure that this client doesn’t:
+For example, if you deploy a VPN client to all devices in Microsoft Intune, make sure that this client doesn’t:
 
 - Break connectivity to Azure Virtual Desktop [endpoints required](requirements-network.md) by Windows 365.
 - Exclude your Cloud PCs for having the VPN client deployed to them.

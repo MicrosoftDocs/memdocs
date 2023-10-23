@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 06/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -48,8 +48,8 @@ To get audit log events for up to seven days for your Windows 365 tenant, follow
 
 ### Install the SDK
 
-1. In PowerShell, run this command: ```Install-Module Microsoft.Graph -Scope CurrentUser```
-2. Verify the installation by running this command:```Get-InstalledModule Microsoft.Graph```
+1. In PowerShell, run this command: ```Install-Module Microsoft.Graph.Beta -Scope CurrentUser -AllowClobber```
+2. Verify the installation by running this command:```Get-InstalledModule Microsoft.Graph.Beta```
 3. To get all Cloud PC Graph endpoints, run this command: ```Get-Command -Module Microsoft.Graph* *virtualEndpoint*```
 
 ### Sign in 
@@ -68,21 +68,21 @@ You can view audit data in multiple ways.
 
 To get the entire list of audit events including the actor (person who performed the action), use the following command:
 
-```Get-MgDeviceManagementVirtualEndpointAuditEvent | Select-Object -Property Actor,ActivityDateTime,ActivityType,ActivityResult -ExpandProperty Actor | Format-Table UserId, UserPrincipalName, ActivityType, ActivityDateTime, ActivityResult```
+```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent | Select-Object -Property Actor,ActivityDateTime,ActivityType,ActivityResult -ExpandProperty Actor | Format-Table UserId, UserPrincipalName, ActivityType, ActivityDateTime, ActivityResult```
 
 #### Get a list of audit events
 
 To get a list of audit events without the audit actor, use the following command:
 
-```Get-MgDeviceManagementVirtualEndpointAuditEvent```
+```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent```
 
-To get all the events, use the **-All** parameter: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -All```
+To get all the events, use the **-All** parameter: ```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -All```
 
-To get only the top N events, use the following parameters: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -All -Top {TopNumber}```
+To get only the top N events, use the following parameters: ```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -All -Top {TopNumber}```
 
 #### Get a single event by event ID
 
-You can use the following command to get a single audit event, where you'll need to provide the {event ID}: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
+You can use the following command to get a single audit event, where you'll need to provide the {event ID}: ```Get-MgBetaDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
 
 <!-- ########################## -->
 ## Next steps

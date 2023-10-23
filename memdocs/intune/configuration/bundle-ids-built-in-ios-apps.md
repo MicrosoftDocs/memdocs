@@ -32,6 +32,10 @@ ms.collection:
 
 When you configure features on iOS/iPadOS devices, you can also add the built-in apps on these devices. This article lists the bundle IDs of some common built-in iOS/iPadOS apps. To find the bundle ID of other apps, contact your software vendor. See Apple's list of [iOS/iPadOS bundle IDs](https://support.apple.com/guide/deployment/bundle-ids-for-native-ios-and-ipados-apps-depece748c41/1/web/1.0) (opens Apple's web site).
 
+This feature applies to:
+
+- iOS/iPadOS
+
 > [!TIP]
 > On macOS devices, you can get the bundle ID using the Terminal app and AppleScript: `osascript -e 'id of app "AppName"'`.
 

@@ -3,8 +3,8 @@
 
 title: Settings you can manage with Intune Endpoint Protection profiles for Windows 10/11 devices
 description: View the available settings in Intune endpoint protection profiles for managed Windows 10 and 11 devices. 
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/22/2022
 ms.topic: reference
@@ -23,6 +23,7 @@ ms.custom: intune-azure; seodec18
 ms.collection:
 - tier3
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Windows settings you can manage through an Intune Endpoint Protection profile
@@ -1145,7 +1146,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Block all notifications**  
 
 - **Windows Security Center icon in the system tray**  
-  **Default**: Not configured  
+  **Default**: Not configured
+  WindowsDefenderSecurityCenter CSP: [HideWindowsSecurityNotificationAreaControl](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#hidewindowssecuritynotificationareacontrol)
 
   Configure the display of the notification area control. The user needs to either sign out and sign in or reboot the computer for this setting to take effect.  
   
@@ -1153,7 +1155,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Hide**  
 
 - **Clear TPM button**  
-  **Default**: Not configured  
+  **Default**: Not configured
+  WindowsDefenderSecurityCenter CSP: [DisableClearTpmButton](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disablecleartpmbutton)
 
   Configure the display of the Clear TPM button.  
   
@@ -1161,7 +1164,8 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
   - **Disable**  
 
 - **TPM firmware update warning**  
-  **Default**: Not configured  
+  **Default**: Not configured
+  WindowsDefenderSecurityCenter CSP: [DisableTpmFirmwareUpdateWarning](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#disabletpmfirmwareupdatewarning)
   
   Configure the display of update TPM Firmware when a vulnerable firmware is detected.  
 

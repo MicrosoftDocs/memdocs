@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/02/2023
+ms.date: 05/25/2023
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals

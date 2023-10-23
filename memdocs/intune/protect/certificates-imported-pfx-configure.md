@@ -2,8 +2,8 @@
 title: Use imported PFX certificates in Microsoft Intune
 description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune. Import certificates, configure certificate templates, and create an Imported PKCS Certificate profile.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 04/27/2023
 ms.topic: how-to
@@ -26,6 +26,7 @@ ms.custom: intune-azure; seodec18
 ms.collection:
 - tier2
 - M365-identity-device-management
+- certificates
 ---
 
 # Configure and use imported PKCS certificates with Intune
@@ -64,6 +65,9 @@ Intune supports import of PFX certificates for the following platforms:
 - iOS/iPadOS
 - macOS
 - Windows 10/11
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Requirements
 
@@ -299,4 +303,4 @@ To learn more about KeyTalk’s integration with Intune, see https://keytalk.com
 
 To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
 
-With this change, you'll be able to improve policy targeting for MDE security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
+With this change, you'll be able to improve policy targeting for Microsoft Defender for Endpoint security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).

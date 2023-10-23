@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 12/01/2021
+ms.date: 10/17/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -72,7 +72,7 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - (_Windows Server 2012 or Windows Server 2012 R2 only_): Install the latest Cumulative Update and uninstall Windows Management Framework 5.1 before attempting the upgrade.
 
-- Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
+- Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled. This includes removing and reinstalling the WSUS Administrative Tools on the CAS or Primary Site Server if the Software Update Point (SUP) is remote.
 
 - If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
 
@@ -203,12 +203,10 @@ When you have more than one Configuration Manager site in a hierarchy, each site
 
 Configuration Manager supports the in-place upgrade of SQL Server to the following versions:
 
+- SQL Server 2022 
 - SQL Server 2019
-
 - SQL Server 2017
-
 - SQL Server 2016
-
 - SQL Server 2014
 
 This support includes the upgrade of SQL Server Express to a newer version of SQL Server Express at secondary sites.
@@ -225,6 +223,7 @@ When you upgrade a site database from an earlier version of SQL Server, the data
 
 For more information about upgrading SQL Server, see the following SQL Server articles:
 
+- [Upgrade to SQL Server 2022](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2022)
 - [Upgrade to SQL Server 2019](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15)
 
 - [Upgrade to SQL Server 2017](/sql/database-engine/install-windows/supported-version-and-edition-upgrades-2017)

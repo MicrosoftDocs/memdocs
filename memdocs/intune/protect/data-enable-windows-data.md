@@ -5,8 +5,8 @@ title: Enable use of Windows diagnostic data by Intune
 titleSuffix: Microsoft Intune
 description: Enable Windows diagnostic data in processor configuration for your tenant to enable its use by Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 11/28/2022
 ms.topic: conceptual
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- privacy
 ---
 
 # Enable use of Windows diagnostic data by Intune
@@ -52,13 +53,14 @@ The following features require you to enable this support:
 
 - [Windows feature update device readiness report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-device-readiness-report) 
 - [Windows feature update compatibility risks report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
+- [Windows driver updates report](../protect/windows-driver-updates-overview.md)
 
 To enable support, set **Enable features that require Windows diagnostic data in processor configuration** to **On**. By default, it's *Off*.
 
 - While there are other methods to enable this support for a tenant, this toggle only reflects your configuration choice for Intune features.
 - Changing this toggle from *On* to *Off* will disable use of Intune features that require this configuration but might not turn off processor configuration configured by other methods.
 
-To learn more about this configuration, see [Significant changes coming to the Windows diagnostic data processor configuration](/windows/privacy/changes-to-windows-diagnostic-data-collection#significant-changes-coming-to-the-windows-diagnostic-data-processor-configuration) in the Windows privacy documentation.
+To learn more about this configuration, see [Enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) in the Windows privacy documentation.
 
 ### Windows license verification
 
@@ -82,3 +84,4 @@ To confirm you own the required licenses for these features, set **I confirm tha
 ## Next steps
 
 To learn more about Windows diagnostic data collection, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) in the Windows privacy documentation.
+

@@ -4,8 +4,8 @@
 title: Use Windows compatibility reports for Windows 10 and Windows 11 updates in Intune
 description: Use the app and driver compatibility reports for Windows 10 and Windows 11 devices before you deploy Intune policies for feature updates or update rings.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 12/09/2022
 ms.topic: how-to
@@ -60,6 +60,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 - Be Azure AD joined or hybrid Azure AD joined
 - Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
+- Have [Windows Health Monitoring configured](../protect/data-enable-windows-data.md#windows-data) to include _Windows Updates_ as part of the scope
 
 Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
 

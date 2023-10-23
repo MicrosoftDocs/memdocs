@@ -266,7 +266,7 @@ The **device** entity lists all enrolled devices under management and their corr
 | windowsOsEdition             | Windows Operating System edition.                                                                                                                                                                              |
 
 > [!NOTE]
-> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#device-properties).
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#managed-device-properties).
 
 ## deviceTypes
 The **deviceType** entity represents the device type referenced by other data warehouse entities. The device type typically describes either the device model, manufacturer, or a combination of both.

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure logging settings in Intune apps| Microsoft Docs
-description: Help your company support fix device issues by using verbose logging
+description: Help your company support fix device issues by using verbose logging in the Intune Company Portal or Microsoft Intune app. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 08/07/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 09/13/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -37,8 +37,8 @@ Follow these steps to deploy Intune Windows client apps to your Cloud PCs.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **All apps** > select an app.
 ![Screenshot of select an app](./media/assign-apps/select-app.png)
 2. On the app page, select **Properties** > **Edit** (next to **Assignments**).
-3. On the **Assignments** page, select **Add group** (under **Group**).
-4. In the **Select groups** to include, select the groups to which you want to assign this app > **Select** > **Review + Save**.
+3. On the **Assignments** page, select **Add group** (under **Required**).
+4. In the **Select groups** pane, select the groups to which you want to assign this app > **Select** > **Review + Save**.
 5. On the **Review + Save** page, select **Save**.
 
 <!-- ########################## -->

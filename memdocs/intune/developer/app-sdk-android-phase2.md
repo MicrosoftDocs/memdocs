@@ -79,7 +79,7 @@ This guide describes how to:
 
 - Add MSAL as a dependency to your Android application.
 - Create an MSAL configuration file.
-- Configure your application's `AndoridManifest.xml`.
+- Configure your application's `AndroidManifest.xml`.
 - Add code to acquire a token.
 
 ### Brokered Authentication

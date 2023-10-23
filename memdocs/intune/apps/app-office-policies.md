@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 05/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -43,7 +43,7 @@ Examples of just a few of the Office app policies include the following:
 - Microsoft PowerPoint: *Turn off Protected View for attachments opened from Outlook*
 
 > [!NOTE]
-> When you select to configure each specific app policy, additional policy details are provided. You can filter the Office policy list to quickly select the recommended **Security Baseline** policies.
+> When you select to configure each specific app policy, additional policy details are provided. You can filter the Office policy list to quickly select the recommended **security baseline** policies.
 
 You can also protect access to Exchange on-premises mailboxes by creating Intune app protection policies for Outlook for iOS/iPadOS and Android enabled with hybrid Modern Authentication. Before using this feature, you must meet the requirements for using the Office cloud policy service. App protection policies are not supported for other apps that connect to on-premises Exchange or SharePoint services. For related information, see [Overview of the Office cloud policy service for Microsoft 365 Apps for enterprise](/deployoffice/overview-office-cloud-policy-service).
 
@@ -67,6 +67,10 @@ After you set up Intune for your organization, you can create an Office app poli
 
    > [!TIP]
    > The **Policy configurations** pane provides the **Health status** for each policy.
+
+## Quiet time notification policies
+
+The global quiet time settings allow you to create policies to schedule quiet time for your end users. These settings automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user work-related notifications received after work hours. You can find these settings in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
 
 ## Additional information
 

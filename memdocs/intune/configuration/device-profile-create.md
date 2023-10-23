@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 06/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -110,7 +110,6 @@ Then, choose the profile. Depending on the platform you choose, the settings you
 - [SCEP certificate](../protect/certificates-scep-configure.md)
 - [Secure assessment (Education) (Windows)](education-settings-configure.md)
 - [Shared multi-user device (Windows)](shared-user-device-settings.md)
-- [Telecom expenses (Android device administrator, iOS, iPadOS)](telecom-expenses-monitor.md)
 - [Trusted certificate](../protect/certificates-configure.md)
 - [VPN](vpn-settings-configure.md)
 - [Wi-Fi](wi-fi-settings-configure.md)
