@@ -40,7 +40,7 @@ Customers may see profile assignment errors, where affected devices show an erro
 <!--7535675-->
 Sometimes hardware inventory for devices fails to process after enabling endpoint analytics. Errors similar to the one shown here may be seen in the Dataldr.log file:
 
-```text
+```console
 Begin transaction: Machine=<machine>
 *** [23000][2627][Microsoft][SQL Server Native Client 11.0][SQL Server]Violation of PRIMARY KEY constraint 'BROWSER_USAGE_HIST_PK'. Cannot insert duplicate key in object 'dbo.BROWSER_USAGE_HIST'. The duplicate key value is (XXXX, Y). : dbo.dBROWSER_USAGE_DATA
 ERROR - SQL Error in
