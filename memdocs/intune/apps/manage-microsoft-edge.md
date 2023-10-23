@@ -160,7 +160,8 @@ To upload your organization's logo and color, first complete the following steps
 > [!NOTE]
 > As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
 > 
-> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization's brand logo and brand color via these [steps](/azure/active-directory/fundamentals/how-to-customize-branding). Banner logo (in the Sign-in form section) will be used as your organization's brand logo and Page background color (in the Basics section) will be used as brand color.
+> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and **Page background color** will be used as brand color.
+
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
@@ -379,8 +380,8 @@ You can manage the settings for Bing Chat Enterprise.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users will see Bing button in bottom bar. Setting “New Bing co-pilot mode” is on by default and can be turned off by users.  <br>**false** Users cannot see Bing button in bottom bar. Setting “New Bing co-pilot mode” will be disabled and cannot be turned on by users|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings are on by default and can be turned off by users.  <br>**false** Bing Chat Enterprise can NOT access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Bing button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Bing button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings are on by default and can be turned off by users <br>**false** Bing Chat Enterprise cannot access to page content.  **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings will be disabled and cannot be turned on by users|
 
 ## Data protection app configuration scenarios
 
@@ -532,6 +533,8 @@ As app configuration policies for managed devices needs device enrollment, any u
 |     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
 |     com.microsoft.intune.mam.managedbrowser.NetworkStackPref    |     EdgeNetworkStackPref    |
+|     com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled | MicrosoftRootStoreEnabled |
+| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | SmartScreenEnabled|
 
 ## Deploy app configuration scenarios with Microsoft Intune
 

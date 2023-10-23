@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2023
+ms.date: 10/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -349,9 +349,9 @@ The tasks depend on the option you configured in the enrollment profile.
 
 These iOS/iPadOS devices are personal or BYOD (bring your own device) devices that can access organization email, apps, and other data. Starting with iOS 13 and newer, this enrollment option targets users or targets devices. It doesn't require resetting the devices.
 
-When you create the enrollment profile, you're asked to choose **User enrollment**, **Device enrollment** or **Determine based on user choice**.
+When you create the enrollment profile, you're asked to choose **User enrollment with Company Portal**, **Device enrollment with Company Portal**, **Account driven user enrollment**, or **Determine based on user choice**.
 
-For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS User or Device enrollment](../enrollment/ios-user-enrollment.md).
+For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS user enrollment](../enrollment/ios-user-enrollment.md) and [Set up iOS/iPadOS device enrollment](../enrollment/ios-device-enrollment.md).  
 
 ---
 | Feature | Use this enrollment option when |
@@ -376,13 +376,15 @@ This task list provides an overview. For more specific information, see [Set up 
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the enrollment profile. When you create the enrollment profile, you have the following options:
 
-  - **Device enrollment**: This option is a typical enrollment for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
+  - **Device enrollment with Company Portal**: This option is a typical enrollment in the Company Portal app for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
 
     - You can deploy certificates that apply to the whole device.
     - Users must install updates. Only devices enrolled using Automated Device Enrollment (ADE) can receive updates using MDM policies or profiles.
-    - A user must be associated with the device. This user can be a device enrollment manager (DEM) account.
+    - A user must be associated with the device. This user can be a device enrollment manager (DEM) account.  
 
-  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.
+  - **Web based device enrollment**: Starting with iOS 15 and newer. This option is just like device enrollment with Company Portal, but enrollment takes place on the web version of Intune Company Portal, eliminating the need for the app. Additionally, this option enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. 
+
+  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.  
 
   - **User enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, such as password, per-app VPN, Wi-Fi, and Siri. If you use User enrollment, and to help secure apps and their data, then we recommend also using app protection policies.
 
@@ -407,8 +409,8 @@ This task list provides an overview. For more specific information, see [Set up 
 
       Since the Outlook app was installed before the user enrollment profile, the user enrollment profile fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
 
-      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you may have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.
-
+      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you may have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.  
+  This option is a typical enrollment for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
 - Assign the enrollment profile to user groups. Don't assign to device groups.
 
 ### User and Device enrollment end user tasks
