@@ -57,7 +57,7 @@ Through the Microsoft Intune admin center, you’ll:
 
 Through the Defender for Endpoint app, iOS/iPadOS and Android Enterprise devices:
 
-- Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
+- Use Microsoft Entra ID to authenticate to the tunnel.
 - Use Active Directory Federation Services (AD FS) to authenticate to the tunnel.
 - Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
@@ -113,11 +113,11 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
   
 **Components**:  
 - **A** – Microsoft Intune.
-- **B**- Azure Active Directory (AD).
+- **B**- Microsoft Entra ID.
 - **C** – Linux server with Podman or Docker CE (See the [Linux server](../protect/microsoft-tunnel-prerequisites.md#linux-server) requirements for details about which versions require Podman or Docker) 
   - **C.1** - Microsoft Tunnel Gateway.
   - **C.2** – Management Agent.
-  - **C.3** – Authentication plugin – Authorization plugin, which authenticates with Azure AD.
+  - **C.3** – Authentication plugin – Authorization plugin, which authenticates with Microsoft Entra.
 - **D** – Public facing IP or FQDN of the Microsoft Tunnel, which can represent a load balancer.
 - **E** – Mobile Device Management (MDM) enrolled device or an unenrolled mobile device using Tunnel for Mobile Application Management.
 - **F** – Firewall
@@ -127,10 +127,10 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 
 **Actions**:  
 - **1** - Intune administrator configures *Server configurations* and *Sites*, Server configurations are associated with Sites.
-- **2** - Intune administrator installs Microsoft Tunnel Gateway and the authentication plugin authenticates Microsoft Tunnel Gateway with Azure AD. Microsoft Tunnel Gateway server is assigned to a site.
+- **2** - Intune administrator installs Microsoft Tunnel Gateway and the authentication plugin authenticates Microsoft Tunnel Gateway with Microsoft Entra. Microsoft Tunnel Gateway server is assigned to a site.
 - **3** - Management Agent communicates to Intune to retrieve your server configuration policies, and to send telemetry logs to Intune.  
 - **4** - Intune administrator creates and deploys VPN profiles and the Defender app to devices.  
-- **5** - Device authenticates to Azure AD. Conditional Access policies are evaluated.  
+- **5** - Device authenticates to Microsoft Entra. Conditional Access policies are evaluated.  
 - **6** - With split tunnel:  
   - **6.a** - Some traffic goes directly to the public internet.  
   - **6.b** - Some traffic goes to your public facing IP address for the Tunnel. The VPN channel will use TCP, TLS, UDP, and DTLS over port 443. This requires inbound and outbound [Firewall ports](../protect/microsoft-tunnel-prerequisites.md#firewall) to be open
@@ -156,9 +156,9 @@ The following outlines where break and inspect isn't supported. References are t
 
 **Additional details**:
 
-- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Non-compliant devices won’t receive an access token from Azure AD and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
+- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Non-compliant devices won’t receive an access token from Microsoft Entra and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
 
-- The Management Agent is authorized against Azure AD using Azure app ID/secret keys.
+- The Management Agent is authorized against Microsoft Entra using Azure app ID/secret keys.
 
 ## Next steps
 
