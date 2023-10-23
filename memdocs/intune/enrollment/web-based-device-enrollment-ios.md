@@ -38,7 +38,11 @@ Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal d
 
 Web-based device enrollment provides a faster and more user-friendly enrollment experience than device enrollment with the Company Portal app. The Company Portal app isn't required because employees and students do everything on the web version and in their device settings. Additionally, web-based device enrollment works with JIT registration. When it's enabled, Intune uses JIT registration with the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps. 
 
-This article describes how to set up web-based device enrollment in the Microsoft Intune admin center, and prepare employees and students in your organization for enrollment.   
+This article describes how to set up web based device enrollment in Microsoft Intune. You will:   
+
+* Set up JIT registration.   
+* Create an enrollment profile.   
+* Prepare employees and students for enrollment.  
 
 ## Prerequisites  
 Microsoft Intune supports web-based device enrollment on devices running iOS/iPadOS version 15 or later. If you assign a web-based enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via app-based device enrollment. App-based device enrollment requires the Company Portal app for iOS/iPadOS.     

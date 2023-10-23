@@ -91,27 +91,7 @@ Apple User Enrollment requires you to create and provide managed Apple IDs to en
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
 
-During account driven user enrollment, Microsoft Authenticator acts as the authentication authority for apps. Complete these steps in the Microsoft Intune admin center to configure just-in-time registration and assign Microsoft Authenticator as a required app.    
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
-3. For **SSO app extension type**, select **Microsoft Azure AD**.
-4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for any non-Microsoft apps using single sign-on (SSO). The SSO extension automatically applies to all Microsoft apps, so to avoid authentication problems, don't add Microsoft apps to your policy. 
-
-   Don't add the Microsoft Authenticator app to the SSO extension either.  That process is done later in an app policy.     
-5. Under **Additional configuration**, add the required key-value pair. Remove trailing spaces before and after the value and key. Otherwise just-in-time registration won't work.   
-    * **Key**: device_registration
-    * **Type**: String
-    * **Value**: {{DEVICEREGISTRATION}}
-4. (Recommended) Add the key-value pair that enables SSO in the Safari browser for all apps in the policy. Remove trailing spaces before and after the value and key. Otherwise just-in-time registration won't work.    
-    * **Key**: browser_sso_interaction_enabled
-    * **Type**: Integer
-    * **Value**: 1
-5. Select **Next**.  
-6. For **Assignments**, assign the profile to all users, or select specific groups. 
-7. Select **Next**.  
-8. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile.   
-9. Go to **Apps** > **All apps** and assign Microsoft Authenticator to groups as a required app. User enrollment supports user-licensed, volume-purchased apps. For more information, see [Assign a volume-purchased app](../apps/vpp-apps-ios.md#assign-a-volume-purchased-app).  
+Configure just-in-time registration and assign Microsoft Authenticator as a required app. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.  
 
 ## Step 2: Create enrollment profile 
 Create an enrollment profile for devices enrolling via account driven user enrollment. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment from the Settings app. 
