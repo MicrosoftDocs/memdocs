@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2023
+ms.date: 10/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -103,21 +103,16 @@ The next step is to enable MDM automatic enrollment in Intune and configure how 
 
 If you already use Windows Autopilot, then skip this step, and go to [Step 3 - Deploy a script to configure Known Folder Move and remove built-in apps](#step-3---configure-onedrive-known-folder-move-and-deploy-a-script-to-remove-built-in-apps).
 
-### ✔️ 1 - Enable MDM automatic enrollment
+### ✔️ 1 - Enable automatic enrollment
 
-Enable automatic enrollment for the users in your organization that you want to use cloud config. Automatic enrollment is required for cloud config.
+Enable automatic enrollment for the users in your organization that you want to use cloud config. Automatic enrollment is required for cloud config. For more information on automatic enrollment, go to [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Overview** > **Windows** > **Windows enrollment** > **Automatic Enrollment**.
 3. Under **MDM user scope**, select one of the following:
 
-    - Select **Some** to apply the cloud configuration to devices used by a subset of users in your organization. At a minimum, select the users for whom you want the cloud configuration to apply.
-
-      You can enable automatic enrollment for more users. For more information on automatic enrollment, go to [Enrollment guide -  Windows automatic enrollment](../fundamentals/deployment-guide-enrollment-windows.md#windows-automatic-enrollment).
-
-      ??I assume this means that if admins want to add more users later, then use automatic enrollment AND apply the cloud config policy to deploy during automatic enrollment. Is that right??
-
-    - Select **All** to apply the cloud configuration to all Windows devices that users in your organization use.
+    - Select **All** to apply the cloud configuration to all Windows devices that users in your organization use. In most cloud config scenarios, **All** is selected.
+    - Select **Some** to apply the cloud configuration to devices used by a subset of users in your organization. If you want to apply your cloud config in a staged approach, then **Some** might be a good choice.
 
 4. Don't configure the MAM user scope, MAM terms of user URL, MDM discovery URL, and MAM compliance URL settings. These MAM settings aren't configured for cloud config.
 5. Select **Save** to save your changes.
@@ -139,18 +134,17 @@ This section provides more information on these enrollment options and configuri
 It's recommended to use Windows Autopilot enrollment and the Enrollment Status Page (ESP). This enrollment method and the ESP provide a consistent end user experience.
 
 - You preregister the devices with the Windows Autopilot deployment service. With Windows Autopilot, admins configure how devices start up and enroll into device management.
-
-- The Enrollment Status Page (ESP) shows the configuration progress. Users stay on the status page until all cloud config settings are applied to the device.
-
-??How are users only standard users??
+- The Intune Windows Autopilot policy also configures the **out-of-box experience (OOBE)** experience. In the OOBE, you select users to be standard users.
+- The Intune Windows Autopilot policy also configures the Enrollment Status Page (ESP). The ESP shows the configuration progress. Users stay on the ESP until all cloud config settings are applied to the device.
 
 To set up Windows Autopilot user-driven enrollment, use the following steps:
 
-1. Add device to Windows Autopilot.
+1. Add devices to Windows Autopilot.
 
-    Register your devices in Windows Autopilot using the steps at [register devices to Windows Autopilot](/autopilot/tutorial/user-driven/azure-ad-join-register-device). The other **necessary steps** in that document are covered in this article with specific recommended settings, using the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) to assign devices.
+    Register your devices in Windows Autopilot using the steps at [Step 3 - Register devices to Windows Autopilot](/autopilot/tutorial/user-driven/azure-ad-join-register-device) (opens a Windows Autopilot article).
 
-    ??Which other necessary steps? This is confusing.??
+    > [!NOTE]
+    > The [Step 3 - Register devices to Windows Autopilot](/autopilot/tutorial/user-driven/azure-ad-join-register-device) Windows Autopilot article is part of a series of steps. For this cloud config, only follow [Step 3 - Register devices to Windows Autopilot](/autopilot/tutorial/user-driven/azure-ad-join-register-device) to register your devices. Don't follow the other steps in series. The other steps in that Windows Autopilot series are for a different Windows Autopilot scenario.
 
     You can also [manually register devices to use Windows Autopilot](/autopilot/add-devices). Manually registering devices is often used to repurpose existing hardware that wasn't previously set up with Windows Autopilot.
 
@@ -178,7 +172,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
         | Automatically configure keyboard    | Yes |
         | Apply device name template    | Optional. You can apply a device name template. Use a name prefix that can help you identify your cloud config devices, like `Cloud-%SERIAL%`.` |
 
-    6. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group), and then select **Next**.
+    6. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article), and then select **Next**.
     7. Review the new profile and then select **Create**.
 
 3. Create and assign an Enrollment Status Page in Intune.
@@ -204,7 +198,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
         >
         > Based on your deployment needs, you can allow the user to use the device if an installation error occurs. If you do allow using the device, when the device checks in with Intune, Intune continues trying to apply the configurations.
 
-    5. In **Assignments**, assign the Enrollment Status Page to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+    5. In **Assignments**, assign the Enrollment Status Page to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
         Select **Next**.
 
@@ -218,7 +212,7 @@ For more information on bulk enrollment, go to [Bulk enrollment for Windows devi
 
 With bulk enrollment:
 
-- After the devices enroll in Intune, then you add them to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group). When they're added to the group, they receive your cloud config.
+- After the devices enroll in Intune, then you add them to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article). When they're added to the group, they receive your cloud config.
 - There isn't an Enrollment Status Page. Users can't view the progress as all the cloud configuration settings are applying. Users can start using the device before cloud config is fully applied.
 - Before you distribute devices to users, Microsoft recommends that you verify that the settings and apps are on the devices.
 
@@ -228,11 +222,12 @@ With MDM automatic enrollment enabled in Intune, during the OOBE, users sign in 
 
 With this enrollment option, you:
 
-1. Configure a Microsoft Intune custom profile to restrict local administrators on devices. Use a group that includes only IT administrators in your environment to be local administrators. The [Policy CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) includes a sample policy definition XML that you can use in your custom profile.
+1. Configure a Microsoft Intune custom profile to restrict local administrators on devices. The [Policy CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) includes a sample policy definition XML that you can use in your custom profile.
 
-    ?? What do we do with the group of only IT admins? It feels like a step is missing. ??
+    > [!TIP]
+    > In this custom profile, there's another setting that adds a group that can be local admins on the device. This local admin group should only include IT administrators in your environment.
 
-2. Assign the custom profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).  
+2. Assign the custom profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).  
 
 ## Step 3 - Configure OneDrive Known Folder Move and deploy a script to remove built-in apps
 
@@ -265,7 +260,7 @@ To configure **Known Folder Move**, use an ADMX template in Intune:
     | Prevent users from redirecting their Windows known folders to their PC | Enabled |
     | Use OneDrive Files On-Demand | Enabled |
 
-7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ### ✔️ 2 - Deploy a script to remove built-in apps
 
@@ -274,31 +269,45 @@ Microsoft created a Windows PowerShell script that:
 - Removes built-in apps from devices.
 - Removes the Microsoft Store app from devices.
 
-The script is deployed device using in Intune.
+The script is deployed device using in Intune. To add and deploy the script, use the following steps:
 
-> [!NOTE]  
-> If you want to keep the Microsoft Store on devices, there's another [script that removes built-in apps but keeps the Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2157781). If you already removed the Microsoft Store, you can redeploy it using Microsoft Intune and the Microsoft Store for Business or Microsoft Store for Education. You can also block end users from installing Store apps outside of your organization's private store on Windows 10/11 Enterprise and Windows 10/11 Education. For more information, go to [Step 8 - Optional configurations](#step-8---optional-configurations) (in this article).
->
-> ??STORE FOR BUSINESS/EDUCATION??
->
-> You can redeploy individual apps that are removed using this script by adding them to your Microsoft Store for Business or Microsoft Store for Education inventory and assigning them to devices using Microsoft Intune. If you do this, Microsoft recommends also keeping the Store app on devices to ensure Store apps stay updated. The provided script tries to remove built-in apps but might not remove all of them. You might need to modify the script to remove all built-in apps on your devices.
+1. Download the [Cloud config Window PowerShell app removal script](https://go.microsoft.com/fwlink/?linkid=2153583). This script removes the Microsoft Store app and the built-in apps.
 
-To add and deploy the script, use the following steps:
-
-1. Download the [Cloud config Window PowerShell app removal script](https://go.microsoft.com/fwlink/?linkid=2153583).
-
-    There's another script version that removes the built-in apps, but keeps the Microsoft Store. Download this script at [Cloud config app removal script - keep Store](https://go.microsoft.com/fwlink/?linkid=2157781).
-
-    The cloud config guided scenario in the Intune admin center deploys the recommended script that removes the Microsoft Store and built-in apps. If you use the guided scenario to deploy cloud config but want to deploy the alternate script, then:
-
-    1. Delete the script deployed through the guided scenario. ??Delete it from the device? Or, delete in Intune? ??
-    2. Replace the script with the alternate script by using the remaining steps in this section. Assign the alternate script to the same group you deployed cloud config to using the guided scenario.
+    > [!NOTE]
+    > If you want to keep the Microsoft Store app on devices, then you can use the [script that removes built-in apps but keeps the Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2157781) instead. To use this script, download it instead and follow the same steps. This script tries to remove built-in apps but might not remove all of them. You might need to modify the script to remove all built-in apps on your devices.
 
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **Windows** >  **Scripts** > **Platform scripts** > **Create**.
 4. In **Basics**, enter a name for your script and select **Next**.
 5. In **Script settings**, upload the script you downloaded. Leave the other settings unchanged and select **Next**.
-6. Assign the script to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+6. Assign the script to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
+
+#### Microsoft Store app
+
+If you previously removed the Microsoft Store app, you can redeploy it using Microsoft Intune. To re-add the Microsoft Store app (or any other apps you want to re-add), add the Microsoft Store app to your private organization app repository. Then, deploy the apps to devices using Intune. The Microsoft Store app helps keep apps updated.
+
+Your private organization app repository can be:
+
+- The Intune Company Portal app or website (preferred)
+
+- The Microsoft Store for Business or Microsoft Store for Education
+
+  Previously, the Microsoft Store app had a Microsoft Store for Business tab. This tab is removed. If you use Microsoft Store for Business, then to access your private app repository, go to the [Microsoft Store for Business website](https://businessstore.microsoft.com/). For more information, go to [Manage access to private store](/microsoft-store/manage-access-to-private-store).
+
+  > [!NOTE]
+  > The Microsoft Store for Business and Microsoft Store for Education will be retired. For more information, go to [Microsoft Store for Business and Microsoft Store for Education](/microsoft-store/microsoft-store-for-business-overview).
+
+Using Intune, on Windows 10/11 Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository. To prevent the installation, use the following steps:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Windows** > **Configuration profiles** > **Create profile**.
+3. Select **Windows 10 and later** for platform and select **Settings catalog** for profile type. Select **Create**.
+4. In **Basics**, enter a name for your profile.
+5. In **Configuration settings**, select **Add settings**.
+6. In the settings picker, search for `private store`. In the search results under the Microsoft App Store category, select **Require Private Store Only**.
+7. In **Configuration settings**, set the **Require Private Store Only** setting to **Only Private store is enabled**. Select **Next**.
+8. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
+9. In **Review + create**  review your profile and select **Create**.
 
 ## Step 4 - Deploy apps
 
@@ -308,7 +317,7 @@ This step deploys Microsoft Edge and the Microsoft 365 Suite, which includes Mic
 
 1. [Add Microsoft Edge to Intune](../apps/apps-windows-edge.md).
 2. For **App settings**, select the **Stable Channel**.
-3. Assign the Microsoft Edge app to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+3. Assign the Microsoft Edge app to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ### ✔️ 2- Deploy Microsoft Teams and other Microsoft 365 apps
 
@@ -341,7 +350,7 @@ This step deploys Microsoft Edge and the Microsoft 365 Suite, which includes Mic
     | Accept the Microsoft Software License Terms on behalf of users | Yes|
   
 9. Select **Next**.
-10. Assign the suite to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+10. Assign the suite to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ## Step 5 - Deploy endpoint security settings
 
@@ -367,7 +376,7 @@ Configure the security baseline in Intune:
 
     Select **Next**.
 
-6. In **Assignments**, select the group that you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+6. In **Assignments**, select the group that you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 7. Select **Create** to create and assign the baseline.
 
 ### ✔️ 2 - Deploy more BitLocker settings with a drive encryption endpoint security profile
@@ -402,7 +411,7 @@ There are more BitLocker settings that help keep your devices secure. Configure 
     | &nbsp; | Configure encryption method for removable data-drives | AES 128bit CBC |
     | &nbsp; | Block write access to removable data-drives not protected by BitLocker | Yes |
 
-7. In **Assignments**, assign the profile to the group that you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+7. In **Assignments**, assign the profile to the group that you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 8. Select **Create** to create and assign the profile.
 
 ## Step 6 - Configure Windows Update settings
@@ -438,7 +447,7 @@ Configure the Update ring in Intune:
     | Grace period | 2 |
     | Auto reboot before deadline | Yes |
 
-5. Assign the Update ring to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+5. Assign the Update ring to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ## Step 7 - Deploy a Windows compliance policy
 
@@ -478,7 +487,7 @@ Create the compliance policy in Intune:
     If you use Conditional Access policies in your organization, then it's recommended to configure a grace period. Grace periods prevent noncompliant devices from immediately losing access to organization resources.
 
 7. You can add an action to email users informing them of noncompliance with steps to get compliant.
-8. Assign the compliance policy to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+8. Assign the compliance policy to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ## Step 8 - Optional configurations
 
@@ -488,7 +497,7 @@ There are more optional policies you can create and deploy with your cloud confi
 
 You might have a few essential LOB apps that all devices need. Choose a minimum number of these apps to deploy. If you deliver apps using a virtualization solution, then also deploy the virtualization client app to devices.
 
-There are no restrictions on the number or size of other apps that can be deployed with the apps added to your cloud configuration. But, Microsoft recommends keeping these other apps to a minimum based on what users need for their roles. Assign these essential apps to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+There are no restrictions on the number or size of other apps that can be deployed with the apps added to your cloud configuration. But, Microsoft recommends keeping these other apps to a minimum based on what users need for their roles. Assign these essential apps to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 You might need to some LOB apps on some of your devices. Or, there might be some apps that have complex packaging or procedure requirements. For these scenarios, consider moving these apps out of your cloud config deployment. Or, keep the devices that need these apps in your existing Windows management model.
 
@@ -498,7 +507,7 @@ Cloud config is recommended for devices that need just a few key apps, along wit
 
 Configure essential resources that users might need, which depends on your organization's processes. Essential resources can include certificates, printers, VPN connections, and Wi-Fi profiles.
 
-In Intune, assign these resources to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+In Intune, assign these resources to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ### ✔️ Configure a tenant domain name
 
@@ -512,7 +521,7 @@ Add the tenant domain name in Intune:
 4. For Profile type, select **Templates** > **Device restrictions** > **Create**.
 5. Enter a name for the profile and select **Next**.
 6. In **Configuration settings**, for **Password**, configure the **Preferred Microsoft Entra ID tenant domain**. Enter the domain name that users should use to sign in to devices.
-7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ### ✔️ Configure recommended settings for OneDrive Known Folder Move
 
@@ -544,37 +553,9 @@ To configure these recommended settings, use Intune:
     > [!NOTE]
     > The SmartScreen settings are also enforced by Microsoft Defender. When you configure the SmartScreen settings through the Microsoft Edge app, Microsoft Edge directly enforces the settings.
 
-7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
+7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
-### ✔️ Redeploy the Microsoft Store app if needed
 
-In [Step 3 - Deploy a script to configure Known Folder Move and remove built-in apps](#step-3---configure-onedrive-known-folder-move-and-deploy-a-script-to-remove-built-in-apps), you might have removed the Microsoft Store. If you want to re-add the Microsoft Store, then use Microsoft Intune and the Microsoft Store for Business or Microsoft Store for Education.
-
-Specifically, add the Microsoft Store app to your organization's app inventory and deploy it to devices using Intune. For more information, go to:
-
-- [Learn more about how to deploy Microsoft Store apps using Microsoft Store for Business or Microsoft Store for Education](https://go.microsoft.com/fwlink/?linkid=2157972).
-- [Get the Microsoft Store app on the Microsoft Store for Business](https://go.microsoft.com/fwlink/?linkid=2157677).
-- [Get the Microsoft Store app on the Microsoft Store for Education](https://go.microsoft.com/fwlink/?linkid=2157678).
-
-??This whole section. Delete or replace these links. ??
-
-#### Block users from installing outside apps
-
-?? This whole section. ??
-
-On Windows 10/11 Enterprise and Education devices, if you keep or redeploy the Microsoft Store on devices, you can prevent users from installing apps outside of your organization's private store.
-
-To prevent users from installing apps outside of your organization's private store, use the following steps:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Windows** > **Configuration profiles** > **Create profile**.
-3. Select **Windows 10 and later** for platform and select **Settings catalog** for profile type. Select **Create**.
-4. In **Basics**, enter a name for your profile.
-5. In **Configuration settings**, select **Add settings**.
-6. In the settings picker, search for `private store`. In the search results under the Microsoft App Store category, select **Require Private Store Only**.
-7. In **Configuration settings**, set the **Require Private Store Only** setting to **Only Private store is enabled**. Select **Next**.
-8. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group).
-9. In **Review + create**  review your profile and select **Create**.
 
 ## Monitor the status of cloud config
 
