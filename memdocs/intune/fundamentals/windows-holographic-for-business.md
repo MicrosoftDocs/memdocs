@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2023
+ms.date: 10/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -114,7 +114,7 @@ Using Intune, you can create device categories to automatically add devices to g
 
 **[Get started with configuration profiles](../configuration/device-profiles.md), and [profile overview](../configuration/device-profile-create.md)**
 
-Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are managed using profiles. For example, you can create a profile that enables Cortana, or uses Microsoft Defender Smart Screen on your devices running Windows Holographic for Business.
+Intune includes settings and features that you can enable or disable on different devices within your organization. These settings and features are managed using profiles. For example, you can create a profile uses Microsoft Defender Smart Screen on your devices running Windows Holographic for Business.
 
 In your profiles, you can use OMA-URI to customize some settings, create device restrictions, and configure a virtual private network (VPN) and Wi-Fi.
 
