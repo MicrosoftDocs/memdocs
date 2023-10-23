@@ -45,7 +45,7 @@ Create an enrollment profile in the admin center to select and configure enrollm
 > [!TIP]
 > We recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. 
 
-Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Azure AD registration within the employee's work apps and reduce the number of times they have to authenticate. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration). You aren't required to use JIT registration with web-based enrollment but we recommend using it to make the enrollment experience faster and easier for your employees and students. 
+Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Microsoft Entra registration within the employee's work apps and reduce the number of times they have to authenticate. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration). You aren't required to use JIT registration with web-based enrollment but we recommend using it to make the enrollment experience faster and easier for your employees and students. 
 
 The following table provides details about app and web-based enrollment.   
 
