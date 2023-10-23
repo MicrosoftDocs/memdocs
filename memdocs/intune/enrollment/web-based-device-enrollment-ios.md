@@ -34,13 +34,11 @@ ms.collection:
 # Set up web based device enrollment for iOS  
 **Applies to iOS/iPadOS**  
 
-Set up web-based device enrollment in Microsoft Intune so that students and employees can initiate and complete device enrollment in a web browser. This method of enrollment utilizes Apple device enrollment and enables you to manage user-owned iOS/iPadOS devices in Microsoft Intune. 
+Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal devices enrolling in Microsoft Intune. This [Apple device enrollment](ios-device-enrollment.md) method gives you access to a limited but appropriate set of device management settings and actions, so you can protect work data without affecting the device user's personal data or apps.  
 
-In this article, you will:   
+Web-based device enrollment provides a faster and more user-friendly enrollment experience than device enrollment with the Company Portal app. The Company Portal app isn't required because employees and students do everything on the web version and in their device settings. Additionally, web-based device enrollment works with JIT registration. When it's enabled, Intune uses JIT registration with the Microsoft Authenticator app for authentication to reduce the number of times users have to sign in during enrollment and when accessing work apps. 
 
-* Set up just-in-time (JIT) registration.  
-* Create an enrollment profile for web-based enrollments.  
-* Prepare employees and students for enrollment.  
+This article describes how to set up web-based device enrollment in the Microsoft Intune admin center, and prepare employees and students in your organization for enrollment.   
 
 ## Prerequisites  
 Microsoft Intune supports web-based device enrollment on devices running iOS/iPadOS version 15 or later. If you assign a web-based enrollment profile to device users running iOS/iPadOS 14.9 or earlier, Microsoft Intune will automatically enroll them via app-based device enrollment. App-based device enrollment requires the Company Portal app for iOS/iPadOS.     
@@ -58,7 +56,7 @@ Without the web app, devices users can still access the Company Portal website, 
 The Microsoft Authenticator app is required for work or school access. We recommend telling employees and students to install Microsoft Authenticator before they begin device enrollment.  
 
 ## Step 1: Set up just-in-time registration 
-Create a single sign-on app extension policy to enable just-in-time (JIT) registration. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.    
+Create a device configuration, single sign-on app extension policy to enable just-in-time (JIT) registration. For steps, see [Set up JIT registration in Intune](set-up-just-in-time-registration.md). Return to this article when you're done so you can continue to the next step.  
 
 ## Step 2: Create enrollment profile  
 Create an enrollment profile for devices enrolling via web-based device enrollment. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment in Safari. 
