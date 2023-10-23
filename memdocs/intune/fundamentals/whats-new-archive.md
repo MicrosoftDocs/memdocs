@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 10/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -5771,7 +5771,7 @@ Attack surface reduction rule merge behavior is as follows:
 
 #### MVISION Mobile – New Mobile Threat Defense partner <!-- 8112625  -->
 
-You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by [MVISION Mobile](../protect/mcafee-mobile-threat-defense-connector.md), a Mobile Threat Defense solution from McAfee that integrates with Microsoft Intune.
+You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by [MVISION Mobile](../protect/trellix-mobile-threat-defense-connector.md), a Mobile Threat Defense solution from McAfee that integrates with Microsoft Intune.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -6860,7 +6860,7 @@ An informational screen in Company Portal for iOS/iPadOS has been updated to bet
 
 #### Updated Android APP Conditional Launch end-user experience<!-- 5736084 -->
 
-The 2006 release of the Android Company Portal has changes that build on the updates from the 2005 release. In 2005, we rolled out an update where end users of Android devices that are issued a warn, block, or wipe by an app protection policy see a full page message describing the reason for the warn, block, or wipe and the steps to remediate the issues. In 2006, first-time users of Android apps assigned an app protection policy will be taken through a guided flow to remediate issues that cause their app access to be blocked.
+The 2006 release of the Android Company Portal has changes that build on the updates from the 2005 release. In 2005, we rolled out an update where end users of Android devices that are issued a warning, block, or wipe by an app protection policy see a full page message describing the reason for the warn, block, or wipe and the steps to remediate the issues. In 2006, first-time users of Android apps assigned an app protection policy will be taken through a guided flow to remediate issues that cause their app access to be blocked.
 
 #### Newly available protected apps for Intune<!-- 7248952 -->
 
@@ -7102,7 +7102,7 @@ For more information, see [User self-service device actions from the Company Por
 Apps that are published as Volume Purchase Program (VPP) available apps will be automatically updated when **Automatic App Updates** is enabled for the VPP token. Previously, VPP available apps did not automatically update. Instead, end-users had to go to the Company Portal and reinstall the app if a newer version was available. Required apps continue to support automatic updates.
 
 #### Android Company Portal user experience<!-- 5736084  -->
-In the 2005 release of Android Company Portal, end-users of Android devices that are issued a warn, block, or wipe by an app protection policy will see a new user experience. Instead of the current dialog experience, end-users will see a full page message describing the reason for the warn, block, or wipe and the steps to remediate the issue. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) and [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md).
+In the 2005 release of Android Company Portal, end-users of Android devices that are issued a warning, block, or wipe by an app protection policy will see a new user experience. Instead of the current dialog experience, end-users will see a full page message describing the reason for the warn, block, or wipe and the steps to remediate the issue. For more information, see [App protection experience for Android devices](../apps/app-protection-policy.md#app-protection-experience-for-android-devices) and [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md).
 
 #### Support for multiple accounts in Company Portal for macOS<!-- 5779449  -->
 The Company Portal on macOS devices now caches user accounts, making sign-in easier. Users no longer need to sign into the Company Portal every time they launch the application. Also, the Company Portal will display an account picker if multiple user accounts are cached, so that users don't have to enter their user name. 
@@ -8231,7 +8231,7 @@ We've updated the UI ex'erience for [creating and editing Windows 10 Update Ring
 - A summary page you can use to review all the configurations you made, before saving and deploying a new update ring. When editing an update ring, the summary shows only the list of items set within the category of properties you edited.
 
 #### UI update for creating and editing iOS software update policy<!-- 4099090       --> 
-We've updated the UI experience for [creating](../protect/software-updates-ios.md#configure-the-policy) and [editing](../protect/software-updates-ios.md#edit-a-policy) iOS software update policies for Intune.  Changes to UI include:  
+We've updated the UI experience for [creating](../protect/software-updates-ios.md#configure-the-update-policy) and [editing](../protect/software-updates-ios.md#edit-an-existing-policy) iOS software update policies for Intune.  Changes to UI include:  
 - A wizard-style format condensed into a single blade, which does away with the blade sprawl seen previously as you configure update policies.   
 - The revised workflow includes Assignments, before completing the initial configuration of the policy.
 - A summary page you can use to review all the configurations you made, before saving and deploying a new policy. When editing a policy, the summary shows only the list of items set within the category of properties you edited.
@@ -9623,7 +9623,7 @@ Android Enterprise
 For iOS devices, you can set Safari settings and configure Software Updates. In this update, these settings are moving to different parts of the Intune UI:
 
 - The Safari settings moved from **Safari** (**Device configuration** > **Profiles** > **New profile** > **iOS** for platform > **Device restrictions** for profile type) to **[Built-in Apps](../configuration/device-restrictions-ios.md#built-in-apps)**.
-- The **Delaying user software update visibility for supervised iOS devices** setting (**Software updates** > **Update policies for iOS**) is moving to **Device restrictions** > **[General](../configuration/device-restrictions-ios.md#general)**.  For details on the impact to existing policies, see [iOS software updates](../protect/software-updates-ios.md#configure-the-policy).
+- The **Delaying user software update visibility for supervised iOS devices** setting (**Software updates** > **Update policies for iOS**) is moving to **Device restrictions** > **[General](../configuration/device-restrictions-ios.md#general)**. For details on the impact to existing policies, see [iOS software updates](../protect/software-updates-ios.md#configure-the-update-policy).
 
 For a list of the settings, see:
 
@@ -10457,6 +10457,8 @@ If anyone tries to delete an Apple MDM Push certificate, a confirmation dialog b
 
 #### Security settings for Windows installer<!-- 2282430 -->
 You can allow users to control app installs. If enabled, installations that stop due to a security violation would be permitted to continue. You can direct the Windows installer to use elevated permissions when it installs any program on a system. Also, you can enable Windows Information Protection (WIP) items to be indexed and the metadata about them stored in an unencrypted location. When the policy is disabled, the WIP protected items are not indexed and don't show up in the results in Cortana or file explorer. The functionality for these options is disabled by default. 
+
+[!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
 
 #### New user experience update for the Company Portal website<!--2000968 -->
 We've added new features, based on feedback from customers, to the Company Portal website. You'll experience a significant improvement in existing functionality and usability from your devices. Areas of the site&ndash;such as device details, feedback and support, and device overview&ndash;have received a new, modern, responsive design. You'll also see:

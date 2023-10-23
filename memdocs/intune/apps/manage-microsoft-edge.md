@@ -162,6 +162,7 @@ To upload your organization's logo and color, first complete the following steps
 > 
 > Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and **Page background color** will be used as brand color.
 
+
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
 |Key |Value |
@@ -416,7 +417,7 @@ Organizations can define which sites users can access within the work or school 
 Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Azure AD account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
 
 > [!NOTE]
-> Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URL that launch Edge, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. Instead, you can use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information inforamtion, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
+> Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URL that launch Edge, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. Instead, you can use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
 
 Use the following key/value pairs to configure either an allowed or blocked site list for Edge for iOS and Android. 
 
