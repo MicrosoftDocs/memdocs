@@ -40,16 +40,7 @@ When you're ready to create policies, you can use the different levels of protec
 
 Your environment and business needs may have different levels defined. You can use these levels as a starting point and then customize them to fit your needs. For example, you can use the device configuration policies in level 1 and the app policies in level 3.
 
-Choose the levels that are right for your organization. There isn't a wrong choice.
-
-> [!TIP]
->
-> On Android and iOS/iPadOS devices, the Enterprise security configuration framework includes a granular list of settings and their recommended values. If you use these platforms, then Microsoft recommends using the framework settings.
->
-> For more information, go to:
->
-> - [**Android** enterprise security configuration framework](../enrollment/android-configuration-framework.md)
-> - [**iOS/iPadOS** enterprise security configuration framework](../enrollment/ios-ipados-configuration-framework.md)
+Choose the levels that are right for your organization. There isn't a wrong choice.  
 
 ## Level 1 - Minimum protection and configuration
 
