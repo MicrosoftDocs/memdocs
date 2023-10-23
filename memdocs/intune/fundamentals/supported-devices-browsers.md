@@ -62,7 +62,7 @@ Microsoft Intune only attempts Samsung Knox activation during enrollment on supp
 
 The Samsung device models in the following table don't support Knox solutions and features. Intune enrolls them as native Android devices.
 
-| **Device Name** | **Device Model Numbers** |
+| Device Name | Device Model Numbers |
 | --- | --- |
 | Galaxy Avant | SM-G386T |
 | Galaxy Core 2/Core 2 Duos | SM-G355H<br>SM-G355M |
