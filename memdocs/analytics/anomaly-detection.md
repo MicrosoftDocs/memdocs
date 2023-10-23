@@ -51,19 +51,19 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 3. Select **Anomalies** tab. The **Anomalies** tab provides a quick overview of the anomalies detected in your organization.
 4. In this example, the **Anomalies** tab shows an *anomaly* with *medium severity* impact. You can add filters to refine the list.
 
-   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics":::
+   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics":::
 
 5. To see more information about a specific item, choose it from the list. You can see details like the name of the app, which devices are affected, when the issue was first detected and last occurred, and any device groups that might be contributing to the problem.
 
-   :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
+   :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" lightbox="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
 
 6. Select a device correlation group from the list for a detailed view of the devices' common factors. Devices are correlated based on one or more shared attributes such as app version, driver update, OS version and device model. You can see the number of devices currently affected by the anomaly and devices at risk of experiencing the anomaly. The prevalence rate also shows you the percentage of affected devices from an anomaly that are members of a correlation group.
 
-   :::image type="content" source="media/anomaly-detection/select-corelation-group.png" alt-text="This is a screenshot showing Device correlation groups":::
+   :::image type="content" source="media/anomaly-detection/select-corelation-group.png" lightbox="media/anomaly-detection/select-corelation-group.png" alt-text="This is a screenshot showing Device correlation groups":::
 
 7. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. You can filter to view devices in specific correlation groups or show all devices affected by that anomaly in your organization. Additionally, the device timeline shows more anomalous events.
 
-   :::image type="content" source="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
+   :::image type="content" source="media/anomaly-detection/affected-devices.png" lightbox="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
 
 ## Statistical Models for determining anomalies
 
