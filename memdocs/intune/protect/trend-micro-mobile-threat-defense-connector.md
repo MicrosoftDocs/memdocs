@@ -55,7 +55,7 @@ For more information about how to integrate Trend Micro with Microsoft Intune, s
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
 - Trend Micro account with administrative access to the Trend Micro Vision One console
 
