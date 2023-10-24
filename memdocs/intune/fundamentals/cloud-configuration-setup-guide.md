@@ -31,9 +31,9 @@ ms.collection:
 - intune-scenario
 ---
 
-# Windows client cloud config step by step setup guide
+# Windows 10 / 11 in cloud configuration step by step setup guide
 
-Cloud config is a device configuration for Windows client devices. It's designed to simplify the end user experience. For more information about what cloud config is, including the minimum requirements, go to [Windows cloud configuration guided scenario overview](cloud-configuration.md).
+Windows 10 / 11 in cloud configuration (cloud config) is a device configuration for Windows client devices. It's designed to simplify the end user experience. For more information about what cloud config is, including the minimum requirements, go to [Windows cloud configuration guided scenario overview](cloud-configuration.md).
 
 With cloud config, you use Microsoft Intune policies to turn a Windows client device into a cloud-optimized device. Windows 10/11 in cloud configuration:
 
@@ -50,7 +50,7 @@ With cloud config, you use Microsoft Intune policies to turn a Windows client de
   - Add essential resources, like Wi-Fi profiles, VPN connections, certificates, and printer drivers that are necessary for user workflows.
 
 > [!TIP]
-> For a more comprehensive guide on Windows 10/11 in cloud configuration, go to [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
+> For a overview on Windows 10 / 11 in cloud configuration and its uses, go to [Windows 10 / 11 in cloud configuration](https://aka.ms/cloud-config).
 
 There are two ways to deploy cloud config:
 
@@ -359,9 +359,9 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
 This step configures endpoint security settings to help keep devices secure, including the built-in Windows security baseline and BitLocker settings.
 
-### ✔️ 1 - Deploy the Windows security baseline
+### ✔️ 1 - Deploy the Windows 10 / 11 MDM security baseline
 
-For Windows in cloud configuration, it's recommended to use the default [Windows security baseline](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines). There are some setting values you can change based on your organization's preference.
+For Windows in cloud configuration, it's recommended to use the Windows 10 / 11 [security baseline](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines). There are some setting values you can change based on your organization's preference.
 
 Configure the security baseline in Intune:
 
