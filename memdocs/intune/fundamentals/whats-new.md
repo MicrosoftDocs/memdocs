@@ -273,7 +273,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 The following device compliance reports are out of public preview and are now generally available:
 
 - [Policy compliance](../fundamentals/reports.md#policy-compliance)
-- [Setting compliance](../fundamentals/reports.md#settomg-compliance)
+- [Setting compliance](../fundamentals/reports.md#setting-compliance)
 
 With this move to general availability, the older versions of both reports have been retired from the Intune admin center and are no longer available.
 
