@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/04/2023
+ms.date: 10/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -51,7 +51,7 @@ You can migrate from Basic Mobility and Security to Microsoft Intune. Migrating 
 
     Assign licenses to users or groups, which will automatically switch the users to Intune device management at the next refresh cycle.
 
-This article will help you migrate your mobile device management (MDM) from Microsoft 365 Basic Mobility and Security to Microsoft Intune.
+This article helps you migrate your mobile device management (MDM) from Microsoft 365 Basic Mobility and Security to Microsoft Intune.
 
 ## Before you begin
 
@@ -63,7 +63,7 @@ This article will help you migrate your mobile device management (MDM) from Micr
 
 - Assigning Intune licenses impacts the migration process. The license assignment controls the migration of devices from Basic Mobility and Security to Intune.
 
-  Users with Intune licenses already assigned can start receiving policies immediately, possibly sooner than you expect. The policies can happen even if the users or devices weren't previously managed by Basic Mobility and Security.
+  Users with Intune licenses already assigned can start receiving policies immediately, possibly sooner than you expect. The policies can happen even if Basic Mobility and Security didn't previously manage the users or devices.
 
   If you want to prevent this behavior, you can unassign the Intune licenses before the migration. You can also create separate groups to help manage when the policies are deployed:
   
@@ -82,13 +82,13 @@ Before you migrate from Basic Mobility and Security device management to Intune 
 
     If these groups include users that are already licensed for Intune, then they can get policies assigned sooner than expected. For more information on the impact of existing Intune licenses, go to [Before you begin](#before-you-begin) (in this article).
 
-4. Review the types of devices currently enrolled in Basic Mobility and Security. Unsupported [OS versions and variants](supported-devices-browsers.md#intune-supported-operating-systems) may continue to work, but they won’t be supported if migrated to Intune.
+4. Review the types of devices currently enrolled in Basic Mobility and Security. Unsupported [OS versions and variants](supported-devices-browsers.md#intune-supported-operating-systems) may continue to work, but they aren't supported if migrated to Intune.
 
-    Settings applied to unsupported operating systems won’t be moved to Intune. And if the user is already licensed for Intune, then their devices will lose any configuration set by device security policies in the Microsoft 365 Defender portal.
+    Settings applied to unsupported operating systems aren't moved to Intune. And if the user is already licensed for Intune, then their devices lose any configuration set by device security policies in the Microsoft 365 Defender portal.
 
 5. Before migration:
 
-    - Don’t assign Intune licenses to users whose devices are managed by Basic Mobility and Security.
+    - Don't assign Intune licenses to users whose devices are managed by Basic Mobility and Security.
     - Don't assign Intune licenses to enable [app protection policies](../apps/app-protection-policy.md), also known as mobile application management (MAM).
 
     Only assign Intune licenses to users after the policy migration is complete. For more information on the impact of Intune licenses, go to [Before you begin](#before-you-begin) (in this article).
@@ -123,7 +123,7 @@ These Intune recommendations are designed to replicate the Basic Mobility and Se
 To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
 1. Complete the steps in the [Step 1 - Prepare](#step-1---prepare) section (in this article).
-2. Open the [Migration evaluation](https://intune.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > select **Start**. It will take a few minutes to complete the evaluation.
+2. Open the [Migration evaluation](https://intune.microsoft.com/#blade/Microsoft_Intune_Workflows/MifoPolicyListBlade) > select **Start**. It takes a few minutes to complete the evaluation.
 
     > [!NOTE]
     >
@@ -197,7 +197,7 @@ At this point, the key steps are complete:
 2. Coexistence is enabled in Intune.
 3. Intune licenses are assigned.
 
-At the next [Intune device refresh cycle](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals), the devices will automatically switch to Intune management and the new policies will start affecting user devices.
+At the next [Intune device refresh cycle](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals), the devices automatically switch to Intune management and the new policies start affecting user devices.
 
 ## What did I just do?
 
@@ -221,13 +221,13 @@ This section describes what happens behind the scenes when you migrate from Basi
 
 ### Start button always appears
 
-Each time you open the [Microsoft Intune admin center Migration evaluation](https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade), the **Start** button shows, even if the evaluation is already generated. If you dismiss the **Start** prompt, then the previously generated recommendations won’t load.
+Each time you open the [Microsoft Intune admin center Migration evaluation](https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade), the **Start** button shows, even if the evaluation is already generated. If you dismiss the **Start** prompt, then the previously generated recommendations won't load.
 
-**Workaround**: Start the evaluation again. It won’t create more or duplicate recommendations or policies. Rerunning the migration detects that the evaluation has already succeeded and loads the previous recommendations.
+**Workaround**: Start the evaluation again. It won't create more or duplicate recommendations or policies. Rerunning the migration detects that the evaluation has already succeeded and loads the previous recommendations.
 
-### Number of sign-in failures before device is wiped setting isn’t migrated
+### Number of sign-in failures before device is wiped setting isn't migrated
 
-The **Number of sign-in failures before device is wiped** setting isn’t migrated to Intune.
+The **Number of sign-in failures before device is wiped** setting isn't migrated to Intune.
 
 **Workaround**: If this setting was enabled in the Basic Mobility and Security policy, then this setting must be manually added to Intune device configuration profiles. For more information on the similar settings you can configure in Intune, go to:
 

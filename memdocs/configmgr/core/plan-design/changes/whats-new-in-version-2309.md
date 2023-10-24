@@ -2,7 +2,7 @@
 title: What's new in version 2309
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
-ms.date: 10/09/2023
+ms.date: 10/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
@@ -18,7 +18,7 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2309 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2203 or later. <!-- baseline only statement:--> When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update. This article summarizes the changes and new features in Configuration Manager, version 2309.
+Update 2309 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2207 or later. This article summarizes the changes and new features in Configuration Manager, version 2309.
                                                                                                                                                                                                                                                                                                                           
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2309.md#post-update-checklist).
 
@@ -163,7 +163,7 @@ For more information, see [Removed and deprecated features for Configuration Man
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2309 release notes](/powershell/sccm/2309-release-notes).
 
 ## Next steps
-At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
+At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).
 
 <!-- As of April 24, 2023, version 2303 is globally available for all customers to install.
 
