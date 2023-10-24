@@ -80,7 +80,7 @@ The user connectivity history report shows when a user started a connection and 
 ### View Connectivity history report
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
-2. Select a connection in the list > **Overview** > **Performance (preview)** > **View report** under **Connectivity status**.
+2. Select a Cloud PC in the list > **Overview** > **Performance (preview)** > **View report** under **Connectivity status**.
 
 ### Activities
 
