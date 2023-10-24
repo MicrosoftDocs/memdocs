@@ -72,6 +72,9 @@ See [Create the profiles](/intune/configuration/device-firmware-configuration-in
 
 You can also [change existing DFCI settings](/intune/configuration/device-firmware-configuration-interface-windows#update-existing-dfci-settings) on devices that are in use. In your existing DFCI profile, change the settings and save your changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
 
+To identify whether a device is DFCI ready, you can use the following Intune Graph API call: 
+managedDevice/deviceFirmwareConfigurationInterfaceManaged 
+
 ## OEMs that support DFCI
 
 - Acer
