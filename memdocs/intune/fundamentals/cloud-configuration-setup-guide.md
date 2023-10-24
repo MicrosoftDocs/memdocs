@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 10/24/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -101,7 +101,7 @@ These extra steps are recommended for existing devices because they provide a st
 
 In this step, you enable MDM automatic enrollment in Intune and configure how devices enroll in Intune.
 
-If you already use Windows Autopilot, then skip this step, and go to [Step 3 - Deploy a script to configure Known Folder Move and remove built-in apps](#step-3---configure-onedrive-known-folder-move-and-deploy-a-script-to-remove-built-in-apps).
+If you already use Windows Autopilot, then skip this step, and go to [Step 3 - Deploy a script to configure Known Folder Move and remove built-in apps](#step-3---configure-onedrive-known-folder-move-and-deploy-a-script-to-remove-built-in-apps) (in this article).
 
 ### ✔️ 1 - Enable automatic enrollment
 
@@ -196,7 +196,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
         > [!NOTE]  
         > If an installation error occurs, it's recommended to block users from using the device. Blocking users makes sure they can only start using the device after cloud config is fully applied.
         >
-        > Based on your deployment needs, you can allow the user to use the device if an installation error occurs. If you do allow using the device, when the device checks in with Intune, Intune continues trying to apply the configurations.
+        > If an installation error occurs, based on your deployment needs, you can allow the user to use the device. If you do allow using the device, when the device checks in with Intune, Intune continues trying to apply the configurations.
 
     5. In **Assignments**, assign the Enrollment Status Page to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -206,7 +206,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
 
 #### Enrollment option 2: Bulk enrollment using a provisioning package
 
-You can enroll devices using a provisioning package created using Windows Configuration Designer or the **Set up School PCs** app.
+You can enroll devices using a provisioning package created using Windows Configuration Designer or the **[Set up School PCs](/education/windows/use-set-up-school-pcs-app)** app.
 
 For more information on bulk enrollment, go to [Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md).
 
@@ -291,7 +291,7 @@ Your private organization app repository can be:
 
 - The Intune Company Portal app or website (preferred)
 
-- The Microsoft Store for Business or Microsoft Store for Education
+- Microsoft Store for Business or Microsoft Store for Education
 
   Previously, the Microsoft Store app had a Microsoft Store for Business tab. This tab is removed. If you use Microsoft Store for Business, then to access your private app repository, go to the [Microsoft Store for Business website](https://businessstore.microsoft.com/). For more information, go to [Manage access to private store](/microsoft-store/manage-access-to-private-store).
 
@@ -306,11 +306,16 @@ To prevent the installation, use the following steps:
 2. Select **Devices** > **Windows** > **Configuration profiles** > **Create profile**.
 3. Select **Windows 10 and later** for platform and select **Settings catalog** for profile type. Select **Create**.
 4. In **Basics**, enter a name for your profile.
-5. In **Configuration settings**, select **Add settings**.
-6. In the settings picker, search for `private store`. In the search results under the Microsoft App Store category, select **Require Private Store Only**.
-7. In **Configuration settings**, set the **Require Private Store Only** setting to **Only Private store is enabled**. Select **Next**.
-8. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
-9. In **Review + create**  review your profile and select **Create**.
+5. In **Configuration settings**:
+
+    1. Select **Add settings**.
+    1. In the settings picker, search for `private store`. In the search results under the Microsoft App Store category, select **Require Private Store Only**.
+    1. Set the **Require Private Store Only** setting to **Only Private store is enabled**.
+
+    Select **Next**.
+
+6. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
+7. In **Review + create**  review your profile and select **Create**.
 
 ## Step 4 - Deploy apps
 
