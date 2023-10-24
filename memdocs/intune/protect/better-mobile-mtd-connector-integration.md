@@ -62,7 +62,7 @@ The Better Mobile app authorization process follows:
 
 - Better Mobile syncs with Microsoft Entra Enrollment Group membership to populate its device's database.
 
-- Allow the Better Mobile admin console to use Microsoft Entra Single Sign On (SSO).
+- Allow the Better Mobile admin console to use Microsoft Entra single sign-on (SSO).
 
 - Allow the Better Mobile app to sign in using Microsoft Entra SSO.
 

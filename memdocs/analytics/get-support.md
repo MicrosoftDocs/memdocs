@@ -2,7 +2,7 @@
 title: Get support for Endpoint analytics
 titleSuffix: Microsoft Intune
 description: Get online and telephone support for Endpoint analytics
-ms.date: 09/22/2020
+ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
