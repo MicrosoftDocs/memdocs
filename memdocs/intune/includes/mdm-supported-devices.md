@@ -25,7 +25,7 @@ In the context of userless iOS/iPadOS devices, there's a difference between *sup
 
 - Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
-- Android open source project device: [See here for the list of Supported devices](../fundamentals/android-os-project-supported-devices.md)
+- Android open source project device: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
