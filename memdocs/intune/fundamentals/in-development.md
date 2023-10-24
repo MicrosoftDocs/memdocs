@@ -95,7 +95,16 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device management -->
+## Device management
+
+### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
+In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
+
+To support this feature, a remote action will be added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
+
+The remote action **Pause config refresh** can be accessed from the device summary page.
+
+For information on currently available Remote actions, see [Remote actions](../remote-actions/device-management.md).
 
 <!-- *********************************************** -->
 

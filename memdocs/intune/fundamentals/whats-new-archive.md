@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/17/2023
+ms.date: 10/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -6332,7 +6332,7 @@ Attack surface reduction rule merge behavior is as follows:
 
 #### MVISION Mobile – New Mobile Threat Defense partner <!-- 8112625  -->
 
-You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by [MVISION Mobile](../protect/mcafee-mobile-threat-defense-connector.md), a Mobile Threat Defense solution from McAfee that integrates with Microsoft Intune.
+You can control mobile device access to corporate resources using Conditional Access based on risk assessment conducted by [MVISION Mobile](../protect/trellix-mobile-threat-defense-connector.md), a Mobile Threat Defense solution from McAfee that integrates with Microsoft Intune.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -8792,7 +8792,7 @@ We've updated the UI ex'erience for [creating and editing Windows 10 Update Ring
 - A summary page you can use to review all the configurations you made, before saving and deploying a new update ring. When editing an update ring, the summary shows only the list of items set within the category of properties you edited.
 
 #### UI update for creating and editing iOS software update policy<!-- 4099090       --> 
-We've updated the UI experience for [creating](../protect/software-updates-ios.md#configure-the-policy) and [editing](../protect/software-updates-ios.md#edit-a-policy) iOS software update policies for Intune.  Changes to UI include:  
+We've updated the UI experience for [creating](../protect/software-updates-ios.md#configure-the-update-policy) and [editing](../protect/software-updates-ios.md#edit-an-existing-policy) iOS software update policies for Intune.  Changes to UI include:  
 - A wizard-style format condensed into a single blade, which does away with the blade sprawl seen previously as you configure update policies.   
 - The revised workflow includes Assignments, before completing the initial configuration of the policy.
 - A summary page you can use to review all the configurations you made, before saving and deploying a new policy. When editing a policy, the summary shows only the list of items set within the category of properties you edited.
@@ -10184,7 +10184,7 @@ Android Enterprise
 For iOS devices, you can set Safari settings and configure Software Updates. In this update, these settings are moving to different parts of the Intune UI:
 
 - The Safari settings moved from **Safari** (**Device configuration** > **Profiles** > **New profile** > **iOS** for platform > **Device restrictions** for profile type) to **[Built-in Apps](../configuration/device-restrictions-ios.md#built-in-apps)**.
-- The **Delaying user software update visibility for supervised iOS devices** setting (**Software updates** > **Update policies for iOS**) is moving to **Device restrictions** > **[General](../configuration/device-restrictions-ios.md#general)**.  For details on the impact to existing policies, see [iOS software updates](../protect/software-updates-ios.md#configure-the-policy).
+- The **Delaying user software update visibility for supervised iOS devices** setting (**Software updates** > **Update policies for iOS**) is moving to **Device restrictions** > **[General](../configuration/device-restrictions-ios.md#general)**. For details on the impact to existing policies, see [iOS software updates](../protect/software-updates-ios.md#configure-the-update-policy).
 
 For a list of the settings, see:
 
