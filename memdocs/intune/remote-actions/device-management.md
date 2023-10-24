@@ -76,7 +76,6 @@ The available actions depend on the device platform and the device configuration
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
   - [Locate device](device-locate.md) (iOS only)
   - [Lost mode](device-lost-mode.md) (iOS only)
-  - [Pause Config Refresh](pause-config-refresh.md) (Windows 11 only)
   - [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
   - [Remote control for Android](teamviewer-support.md)
   - [Remote lock](device-remote-lock.md)
