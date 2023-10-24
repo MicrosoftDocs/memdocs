@@ -2,7 +2,7 @@
 title: Endpoint analytics settings
 titleSuffix: Microsoft Intune
 description: Instructions for configuring settings in Endpoint analytics.
-ms.date: 11/15/2021
+ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: how-to
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # <a name="bkmk_set"></a> Endpoint analytics settings
 
-From the settings page, you can select **General** or **Baseline**. Each of these settings is described below:
+From the settings page, you can select **General** or **Baseline**. Each of these settings is described here:
 
 ## <a name="bkmk_gen"></a> General settings
 
@@ -38,13 +38,13 @@ To assign this setting to a subset of devices, [Create a profile](../intune/conf
 
   - **Health Monitoring**: Select **Enable** to collect event information from supported Windows 10 or later devices
 
-  - **Scope**: Select **Endpoint analytics**. Windows updates scope is not used by endpoint analytics.
+  - **Scope**: Select **Endpoint analytics**. Windows updates scope isn't used by endpoint analytics.
 
 - Use the [Scope tags](../intune/configuration/device-profile-create.md#scope-tags) and [Applicability rules](../intune/configuration/device-profile-create.md#applicability-rules) to filter the profile to specific IT groups or devices in a group that meet a specific criteria.
 
 ### Configuration Manager data connector
 
-To connect your Configuration Manager hierarchy with Endpoint analytics, you'll need to enable [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
+To connect your Configuration Manager hierarchy with Endpoint analytics, you need to enable [Microsoft Intune tenant attach](../configmgr/tenant-attach/device-sync-actions.md). 
 
 Once connected, you can [choose which devices you'd like to target](enroll-configmgr.md#bkmk_cm_enroll) for Endpoint analytics in the Configuration Manager console.
 
@@ -53,7 +53,7 @@ Once connected, you can [choose which devices you'd like to target](enroll-confi
 
 ### <a name="bkmk_consent"></a> Consent to share data
 
-By sharing anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights such as startup performance. The data currently in the reports immediately becomes stale and new data isn't added. Data prior to revoking consent will display for up to 60 days until the historical data is no longer available.
+When you share anonymized data and aggregate metrics, enrolled organizations keep the **All organizations (median)** baseline updated. You can revoke consent to share this data at any time. When you revoke consent, it disables reports that rely on data for calculating insights such as startup performance. The data currently in the reports immediately becomes stale and new data isn't added. Prior to revoking consent, data is displayed for up to 60 days until historical data is no longer available.
 
 To revoke consent:
 
@@ -76,7 +76,7 @@ You can compare your current scores and subscores to others by setting a baselin
    > You must open at least one Endpoint analytics report, such as [Startup performance](startup-performance.md), during your browser session before you are able to create a new baseline.
    
 1. There's a limit of 20 baselines per tenant. You can delete old baselines that are no longer needed.
-1. Your current metrics will be flagged red and show as regressed if they fall below the current baseline in your reports. Because it's perfectly normal for metrics to fluctuate from day to day, you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
+1. Your current metrics are flagged red and shown as regressed if they fall below the current baseline in your reports. It's perfectly normal for metrics to fluctuate from day to day. So you can set a regression threshold, which defaults to 10%. With this threshold, metrics are only flagged as regressed if they've regressed by more than 10%.
 
    [![Endpoint analytics baseline settings page](media/settings-baseline.png)](media/settings-baseline.png#lightbox)
 
