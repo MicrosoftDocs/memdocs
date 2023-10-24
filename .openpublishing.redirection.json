@@ -2227,7 +2227,7 @@
     },
     {
       "source_path": "memdocs/intune/remote-actions/pause-config-refresh.md",
-      "redirect_url": "/mem/intune/remote-actions/device-management.md",
+      "redirect_url": "/mem/intune/remote-actions/device-management",
       "redirect_document_id": false
     }
   ]
