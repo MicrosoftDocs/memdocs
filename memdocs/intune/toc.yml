@@ -1726,9 +1726,15 @@ items:
       - name: Cloud-managed Modern Desktop
         href: ./fundamentals/guided-scenarios-cloud-managed-pc.md   
       - name: Secure Microsoft Office mobile apps
-        href: ./fundamentals/guided-scenarios-office-mobile.md              
+        href: ./fundamentals/guided-scenarios-office-mobile.md
       - name: Windows 10/11 in cloud configuration
-        href: ./fundamentals/cloud-configuration.md
+        items:
+        - name: Overview
+          displayName: cloud config, flw, windows
+          href: ./fundamentals/cloud-configuration.md
+        - name: Step-by-step guide
+          displayName: cloud config, flw, windows
+          href: ./fundamentals/cloud-configuration-setup-guide.md
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits
