@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/fundamentals/frontline-worker-overview.md",
+      "redirect_url": "/mem/solutions/frontline-worker/frontline-worker-overview",
+      "redirect_document_id": true 
+    },
+    {
       "source_path": "memdocs/intune/enrollment/ios-ipados-supervised-device-security-configurations.md",
       "redirect_url": "/mem/intune/fundamentals/deployment-guide-enroll",
       "redirect_document_id": false
@@ -2223,6 +2228,11 @@
     {
       "source_path": "memdocs/configmgr/core/misc/mms2019docathon.md",
       "redirect_url": "/mem/configmgr/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/remote-actions/pause-config-refresh.md",
+      "redirect_url": "/mem/intune/remote-actions/device-management",
       "redirect_document_id": false
     }
   ]
