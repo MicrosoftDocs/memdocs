@@ -635,7 +635,7 @@ Besides Intune logs from `edge://intunehelp/`, you may be asked by Microsoft Sup
 You may also want to click the **Clear** icon to clear logs first in order to get refresh logs.
 
 > [!NOTE]
-> Saving logs also respects Intune App Protection Policy.So you may not be allowed to save diagnostic data to local devices.
+> Saving logs also respects the Intune App Protection Policy. Therefore, you may not be allowed to save diagnostic data to local devices.
 
 ## Next steps
 
