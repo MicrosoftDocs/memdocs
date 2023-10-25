@@ -68,8 +68,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
-## Week of October 23, 2023
-
+## Week of October 23, 2023 (Service release 2310)
 ### App management
 
 #### Update for users of Android Company Portal app<!-- 25109006   -->  
