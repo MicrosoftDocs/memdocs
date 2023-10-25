@@ -44,7 +44,9 @@ Licenses for the Intune add-ons can be added for an additional cost to the licen
 Some capabilities are available to buy as a standalone add-on. Other capabilities are only available with Intune Plan 2 or the Intune Suite.
 
 - **Standalone add-ons**: Some add-on capabilities, such as Remote Help, are available as a Standalone add-on.
-- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices and Microsoft Tunnel for Mobile Application Management.
+
+- **Microsoft Intune Plan 2**: Offers advanced endpoint management capabilities, including management and configuration of specialty devices, Microsoft Tunnel for Mobile Application Management and Firmware-over-the-air updates.
+
 - **Microsoft Intune Suite**: Unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices. The Intune Suite includes Remote Help (standalone) and all capabilities that come with Intune Plan 2.
 
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
@@ -53,6 +55,7 @@ The following table provides a list of add-on capabilities and associated Intune
 |:---|:---:|:---:|:---:|
 |Advanced endpoint analytics| | |✔️|
 |Endpoint Privilege Management |✔️| |✔️|
+|Firmware-over-the-air update| |✔️ | |
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Remote help|✔️| |✔️|
 |Specialized devices management| |✔️|✔️|
@@ -75,6 +78,12 @@ For more information, see [Advanced endpoint analytics](../../analytics/advanced
 Endpoint Privilege Management supports your zero-trust journey by helping your organization achieve a broad user base running with least privilege, while allowing users to still run tasks allowed by your organization to remain productive.
 
 For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
+
+### Firmware-over-the-air update
+
+Firmware over-the-air (FOTA) update allows you to remotely update the firmware of supported devices wirelessly with more control.
+
+For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
 
 ### Microsoft Tunnel for Mobile Application Management
 
@@ -106,9 +115,12 @@ Intune add-on capabilities are disabled in [Microsoft Intune admin center](https
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global or Billing administrator.
 1. Navigate to **Tenant administration** > **Intune add-ons**.
-1. Find the Intune add-on to start a trial. For add-ons that say **Available for trial or purchase** in their status, you don't have a free trial started or any licenses purchased for those add-ons.
-1. Click **View details** to see the details.
-1. Click the **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 admin center. A new tab opens on the **Product details** page for the selected Intune add-on.
+1. The **Your add-ons** tab shows a list of all Intune add-ons in trial or purchased for a billing account in your organization.
+1. The **Capabilities** tab provides some details about each of the Intune add-on capabilities that are available for trial or purchase. For more information, select **Learn more**.
+1. Select **All add-ons** tab. The Intune add-ons that you see are available for trial or purchase. Find the Intune add-on that you require.
+1. For add-ons that say *Available for trial or purchase* in their **Subscription status**, you don't have a free trial started or any licenses purchased for those add-ons.
+1. Under the **Try or Buy** column, select **View details** to know more about whats included and the trial and purchase information.
+1. Select **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 admin center. A new tab opens on the **Product details** page for the selected Intune add-on.
 1. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order.
 1. Navigate to **Tenant administration** > **Intune add-ons** and see that the Intune add-on capability you added is now **Active**.
 
