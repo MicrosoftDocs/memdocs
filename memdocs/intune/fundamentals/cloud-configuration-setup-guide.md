@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2023
+ms.date: 10/25/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -31,9 +31,9 @@ ms.collection:
 - intune-scenario
 ---
 
-# Windows 10 / 11 in cloud configuration step by step setup guide
+# Windows 10/11 in cloud configuration step by step setup guide
 
-Windows 10 / 11 in cloud configuration (cloud config) is a device configuration for Windows client devices. It's designed to simplify the end user experience. For more information about what cloud config is, including the minimum requirements, go to [Windows cloud configuration guided scenario overview](cloud-configuration.md).
+Windows 10/11 in cloud configuration (cloud config) is a device configuration for Windows client devices. It's designed to simplify the end user experience. For more information about what cloud config is, including the minimum requirements, go to [Windows cloud configuration guided scenario overview](cloud-configuration.md).
 
 With cloud config, you use Microsoft Intune policies to turn a Windows client device into a cloud-optimized device. Windows 10/11 in cloud configuration:
 
@@ -50,7 +50,7 @@ With cloud config, you use Microsoft Intune policies to turn a Windows client de
   - Add essential resources, like Wi-Fi profiles, VPN connections, certificates, and printer drivers that are necessary for user workflows.
 
 > [!TIP]
-> For a overview on Windows 10 / 11 in cloud configuration and its uses, go to [Windows 10 / 11 in cloud configuration](https://aka.ms/cloud-config).
+> For a overview on Windows 10/11 in cloud configuration and its uses, go to [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
 
 There are two ways to deploy cloud config:
 
@@ -87,7 +87,10 @@ Use the following steps to create the group:
 
 7. Select **Create**.
 
-When the group is created, you can add preregistered Windows Autopilot devices to this group.
+> [!TIP]
+> When the group is created, you can add preregistered Windows Autopilot devices to this group.
+
+### Existing devices
 
 If you have existing devices enrolled in Intune that you want to use with cloud config, then it's recommended to start fresh with these devices. Specifically:
 
@@ -114,7 +117,7 @@ Enable automatic enrollment for the organization users that you want to use clou
     - Select **All** to apply the cloud configuration to all Windows devices that users in your organization use. In most cloud config scenarios, **All** is selected.
     - Select **Some** to apply the cloud configuration to devices used by a subset of users in your organization. If you want to apply your cloud config in a staged approach, then **Some** might be a good choice.
 
-4. Don't configure the MAM user scope, MAM terms of user URL, MDM discovery URL, and MAM compliance URL settings. So, leave these settings blank. MAM settings aren't configured for cloud config.
+4. Don't configure the MAM user scope, MAM terms of user URL, MDM discovery URL, and MAM compliance URL settings. Leave these settings blank. MAM settings aren't configured for cloud config.
 5. Select **Save** to save your changes.
 
 ### ✔️ 2 - Choose how devices enroll and configure users to be standard users on devices
@@ -300,19 +303,17 @@ Your private organization app repository can be:
 
 Using Intune, on Windows 10/11 Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
 
-To prevent the installation, use the following steps:
+To prevent these outside apps, use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Windows** > **Configuration profiles** > **Create profile**.
 3. Select **Windows 10 and later** for platform and select **Settings catalog** for profile type. Select **Create**.
 4. In **Basics**, enter a name for your profile.
-5. In **Configuration settings**:
+5. In **Configuration settings**, select **Add settings**. Then:
 
-    1. Select **Add settings**.
     1. In the settings picker, search for `private store`. In the search results under the Microsoft App Store category, select **Require Private Store Only**.
-    1. Set the **Require Private Store Only** setting to **Only Private store is enabled**.
-
-    Select **Next**.
+    2. Set the **Require Private Store Only** setting to **Only Private store is enabled**.
+    3. Select **Next**.
 
 6. In **Assignments**, assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 7. In **Review + create**  review your profile and select **Create**.
@@ -364,9 +365,9 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
 This step configures endpoint security settings to help keep devices secure, including the built-in Windows security baseline and BitLocker settings.
 
-### ✔️ 1 - Deploy the Windows 10 / 11 MDM security baseline
+### ✔️ 1 - Deploy the Windows 10/11 MDM security baseline
 
-For Windows in cloud configuration, it's recommended to use the Windows 10 / 11 [security baseline](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines). There are some setting values you can change based on your organization's preference.
+For Windows in cloud configuration, it's recommended to use the Windows 10/11 [security baseline](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines). There are some setting values you can change based on your organization's preference.
 
 Configure the security baseline in Intune:
 
@@ -533,7 +534,7 @@ In Intune, assign these resources to the group you created in [Step 1 - Create a
 
 ### ✔️ Configure recommended settings for OneDrive Known Folder Move
 
-There are more settings that can provide a better user experience for OneDrive **Known Folder Move**. The settings aren't required for **Known Folder Move** to work but are helpful.
+There are more settings that improve the user experience for OneDrive **Known Folder Move**. The settings aren't required for **Known Folder Move** to work but are helpful.
 
 For more information on these settings, go to [OneDrive settings recommended for Known Folder Move](/sharepoint/ideal-state-configuration).
 

@@ -1630,9 +1630,7 @@ items:
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
-          href: ./remote-actions/collect-diagnostics.md
-        - name: Pause config refresh
-          href: ./remote-actions/pause-config-refresh.md  
+          href: ./remote-actions/collect-diagnostics.md  
         - name: Send organizational messages  
           items: 
           - name: Overview 
@@ -1714,9 +1712,20 @@ items:
     items: 
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
-    - name: Frontline worker (FLW)
-      displayName: android, ios, ipados
-      href: ./fundamentals/frontline-worker-overview.md
+    - name: Frontline worker (FLW) device management
+      displayName: android, ios, ipados, windows, kiosk
+      items:
+      - name: FLW Overview
+        href: ../solutions/frontline-worker/frontline-worker-overview.md
+      - name: Android FLW
+        displayName: Android Enterprise, ae, aosp, kiosk
+        href: ../solutions/frontline-worker/frontline-worker-overview-android.md
+      - name: iOS/iPadOS FLW
+        displayName: ios, ipados, shared ipad, kiosk
+        href: ../solutions/frontline-worker/frontline-worker-overview-ios-ipados.md
+      - name: Windows FLW
+        displayName: kiosk, multi-app, single-app
+        href: ../solutions/frontline-worker/frontline-worker-overview-windows.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
