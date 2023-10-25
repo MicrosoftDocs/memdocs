@@ -25,7 +25,9 @@ ms.collection:
 
 # Frontline worker for Windows devices in Microsoft Intune
 
-Windows has different devices and cloud services that can be used for frontline workers (FLW). These devices are used globally and in many industries & scenarios, including digital signage, check-in tasks, presentations, kiosks, and more. You can use physical Windows devices or use Windows 365 Cloud PCs.
+Windows has different devices and cloud services that can be used for frontline workers (FLW). These devices are used globally and in many industries & scenarios, including digital signage, check-in tasks, presentations, kiosks, and more.
+
+You can use physical Windows devices or use Windows 365 Cloud PCs.
 
 Using Intune, you can manage Windows devices used by frontline workers in your organization. This article:
 
@@ -36,7 +38,7 @@ This article applies to:
 
 - Windows devices owned by the organization and enrolled in Intune
 
-For an overview on FLW devices in Intune, go to [FLW device management for Android, iOS/iPadOS, and Windows devices in Intune](frontline-worker-overview.md).
+For an overview on FLW devices in Intune, go to [FLW device management in Intune](frontline-worker-overview.md).
 
 Use this article to get started with Windows FLW devices in Intune. Specifically:
 
@@ -84,12 +86,12 @@ This option uses the Windows Configuration Designer (WCD) app to create a provis
 
 ❌ If you have Microsoft Entra Premium, then use Windows Autopilot. Windows Autopilot requires Entra Premium.
 
-For more information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../intune/enrollment/windows-bulk-enroll.md).
+For more information on using a provisioning package with Intune, go to [Bulk enrollment for Windows devices](../../intune/enrollment/windows-bulk-enroll.md).
 
 ---
 
 > [!NOTE]
-> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-windows.md).
+> There are other Windows enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the Windows enrollment options, go to [Enrollment guide: Enroll Windows client devices in Microsoft Intune](../../intune/fundamentals/deployment-guide-enrollment-windows.md).
 
 ## Step 2 - Shared device or user associated device
 
@@ -105,8 +107,8 @@ These features are configured using Intune device configuration profiles. When t
 
   For more information on this feature, and to get started, go to:
 
-  - [Shared PC or multi-user Windows devices in Intune](../intune/configuration/shared-user-device-settings-windows.md)
-  - [Shared PC or multi-user Windows devices in Intune - Settings list](../intune/configuration/shared-user-device-settings.md)
+  - [Shared PC or multi-user Windows devices in Intune](../../intune/configuration/shared-user-device-settings-windows.md)
+  - [Shared PC or multi-user Windows devices in Intune - Settings list](../../intune/configuration/shared-user-device-settings.md)
 
 - **User associated device**
 
@@ -141,8 +143,8 @@ The following scenarios are common:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration [kiosk profile](../intune/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../intune/configuration/kiosk-settings.md).
+  1. [Add apps to Microsoft Intune](../../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+  2. Create a device configuration [kiosk profile](../../intune/configuration/kiosk-settings.md) and configure the [Windows kiosk profile - settings list](../../intune/configuration/kiosk-settings.md).
 
       The following example shows the kiosk profile settings for a single app. Make sure you add the app to Intune before you configure the kiosk profile.
 
@@ -162,8 +164,8 @@ The following scenarios are common:
 
   To get started, use the following links:
 
-  1. [Add apps to Microsoft Intune](../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../intune/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../intune/configuration/settings-catalog.md).
+  1. [Add apps to Microsoft Intune](../../intune/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
+  2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../intune/configuration/settings-catalog.md).
 
       :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
 

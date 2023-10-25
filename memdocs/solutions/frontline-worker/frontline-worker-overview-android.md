@@ -36,7 +36,7 @@ This article applies to:
 
 - Android devices owned by the organization and enrolled in Intune
 
-For an overview on FLW devices in Intune, go to [FLW device management for Android, iOS/iPadOS, and Windows devices in Intune](frontline-worker-overview.md).
+For an overview on FLW devices in Intune, go to [FLW device management in Intune](frontline-worker-overview.md).
 
 Use this article to get started with Android FLW devices in Intune. Specifically:
 
@@ -129,7 +129,9 @@ The next decision is to decide if the devices are shared with many users or assi
 
     For a list of some of the settings can you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../../intune/configuration/device-restrictions-android-for-work.md).
 
-  - If you're using **Android (AOSP)**, then you can enroll your devices as a **user-associated** device. Remember, Android (AOSP) devices don't support Google Mobile Services (GMS). These devices have one user, and are used exclusively for organization work; not personal use.
+  - If you're using **Android (AOSP)**, then you can enroll your devices as a **user-associated** device. These devices have one user, and are used exclusively for organization work; not personal use.
+
+    Remember, Android (AOSP) devices don't support Google Mobile Services (GMS).
 
     - For more information on Android (AOSP) user-associated enrollment, go to [Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../../intune/enrollment/android-aosp-corporate-owned-user-associated-enroll.md).
     - For a list of some of the settings can you can configure, go to [Android (AOSP) device settings to allow or restrict features using Intune](../../intune/configuration/device-restrictions-android-aosp.md).
@@ -233,7 +235,7 @@ The following scenarios are common for FLW:
 
 Microsoft Entra shared device mode (SDM) is another option for **Android Enterprise dedicated device** enrollments.
 
-Entra SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). It compliments **Scenario 1** and **Scenario 2** described at [Step 3 - Home screen and device experience](#step-3---home-screen-and-device-experience-android) (in this article).
+Entra SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). It compliments **Scenario 1** and **Scenario 2** described at [Step 3 - Home screen and device experience](#step-3---home-screen-and-device-experience) (in this article).
 
 For more information on Entra shared device mode (SDM), go to [Entra shared device mode for FLW](frontline-worker-overview.md#microsoft-entra-shared-device-mode-for-flw).
 
