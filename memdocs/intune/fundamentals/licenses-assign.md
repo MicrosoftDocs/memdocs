@@ -20,7 +20,7 @@ ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic, get-started, has-azure-ad-ps-ref
+ms.custom: intune-classic, get-started, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -112,7 +112,7 @@ A list of the **Account ID**, the **Active Units**, and the **Consumed Units** w
 
 ## Use PowerShell to selectively manage EMS user licenses
 
-Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
+Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Microsoft Graph PowerShell cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
 
 To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Azure Active Directory Module for Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)#bkmk_installmodule) installed. You can install PowerShell on a local computer or on an ADFS server.
 

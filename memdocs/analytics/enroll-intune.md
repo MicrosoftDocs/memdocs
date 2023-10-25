@@ -2,7 +2,7 @@
 title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Intune
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
-ms.date: 05/03/2022
+ms.date: 10/23/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
@@ -59,7 +59,7 @@ Onboarding from  the Endpoint analytics portal is required for Intune managed de
 
 ## <a name="bkmk_view"></a> View the Overview page
 
-You won't see your data immediately. The data needs to be gathered and the results calculated. For startup performance, the device needs to have been restarted at least once. After your data is ready, you'll notice some information on the **Overview** page, explained in more detail.
+You can't see your data immediately. The data needs to be gathered and the results calculated. For startup performance, the device needs to have been restarted at least once. After your data is ready, information is updated on the **Overview** page, explained here in more detail.
 
 [!INCLUDE [Endpoint analytics overview page information](includes/overview-page.md)]
 
