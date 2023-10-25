@@ -39,7 +39,7 @@ Windows 10 version 1803 and above adds event log entries. You can use the log en
 |----------|------|-------------|
 | 100 | Warning | "Autopilot policy [name] not found." This error is typically a temporary problem, while the device is waiting for an Autopilot profile to be downloaded. |
 | 101 | Info | "AutopilotGetPolicyDwordByName succeeded: policy name = [setting name]; policy value = [value]." This message shows Autopilot retrieving and processing numeric OOBE settings. |
-| 103 | Info | "AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value]." This message shows Autopilot retrieving and processing OOBE setting strings such as the Azure AD tenant name. |
+| 103 | Info | "AutopilotGetPolicyStringByName succeeded: policy name = [name]; value = [value]." This message shows Autopilot retrieving and processing OOBE setting strings such as the Microsoft Entra tenant name. |
 | 109 | Info | "AutopilotGetOobeSettingsOverride succeeded: OOBE setting [setting name]; state = [state]." This message shows Autopilot retrieving and processing state-related OOBE settings. |
 | 111 | Info | "AutopilotRetrieveSettings succeeded." This message means that the settings stored in the Autopilot profile that control the OOBE behavior have been retrieved successfully. |
 | 153 | Info | "AutopilotManager reported the state changed from [original state] to [new state]." Usually, this message should say "ProfileState_Unknown" to "ProfileState_Available". This case indicates that a profile was available and downloaded for the device. So, the device is ready to deploy using Autopilot. |
@@ -58,9 +58,9 @@ Autopilot profile settings received from the Autopilot deployment service are st
 
 | Value | Description |
 |-------|-------------|
-| AadTenantId | The GUID of the Azure AD tenant the user signed into. The user receives an error if this entry doesn't match the tenant that was used to register the device. |
-| CloudAssignedTenantDomain | The Azure AD tenant the device has been registered with, for example, "contosomn.onmicrosoft.com." If the device isn't registered with Autopilot, this value will be blank. |
-| CloudAssignedTenantId | The GUID of the Azure AD tenant the device registered with. The GUID corresponds to the tenant domain from the CloudAssignedTenantDomain registry value. If the device isn't registered with Autopilot, this value will be blank.|
+| AadTenantId | The GUID of the Microsoft Entra tenant the user signed into. The user receives an error if this entry doesn't match the tenant that was used to register the device. |
+| CloudAssignedTenantDomain | The Microsoft Entra tenant the device has been registered with, for example, "contosomn.onmicrosoft.com." If the device isn't registered with Autopilot, this value will be blank. |
+| CloudAssignedTenantId | The GUID of the Microsoft Entra tenant the device registered with. The GUID corresponds to the tenant domain from the CloudAssignedTenantDomain registry value. If the device isn't registered with Autopilot, this value will be blank.|
 | IsAutopilotDisabled | If set to 1, this registry value indicates that the device isn't registered with Autopilot. This state could also indicate that the Autopilot profile couldn't be downloaded because of network connectivity or firewall issues, or network timeouts. |
 | TenantMatched | This entry is set to 1 if the user's tenant ID matches the tenant ID that the device was registered with. If this registry value is 0, the user would be shown an error and forced to start over. |
 | CloudAssignedOobeConfig | A bitmap that shows which Autopilot settings were configured. Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16 |
