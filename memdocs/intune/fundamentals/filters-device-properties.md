@@ -207,6 +207,9 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
+  > [!NOTE]
+  > **`deviceTrustType`** is a shared property between Entra ID and Intune, the allowed values under the expression editor are actually different for Entra ID groups and device filters.
+ 
 - **`operatingSystemSKU` (Operating System SKU)**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
