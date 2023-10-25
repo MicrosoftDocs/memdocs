@@ -145,7 +145,7 @@ Samsung marked the [Samsung Knox kiosk APIs](https://docs.samsungknox.com/temp/k
 Though the functionality might continue to work, there's no guarantee that it will continue working. Samsung won't fix bugs that may arise. For more information on Samsung support for deprecated APIs, go to [What kind of support is offered after an API is deprecated?](https://docs.samsungknox.com/dev/knox-sdk/faqs/general/deprecated-api-support-change.htm) (opens Samsung's web site).
 
 Instead, you can manage kiosk devices with Intune using [dedicated device management](../enrollment/android-kiosk-enroll.md).
-
+ 
 Applies to:
 
 - Android device administrator (DA)
