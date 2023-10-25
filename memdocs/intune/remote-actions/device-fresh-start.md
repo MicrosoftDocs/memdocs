@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Reset Windows 10 devices with Microsoft Intune
-description: Use Fresh Start to remove or uninstall apps on Windows 10 PCs by using Microsoft Intune. 
+title: Reset Windows 10 and 11 devices with Microsoft Intune
+description: Use Fresh Start to remove or uninstall apps on Windows 10 and 11 by using Microsoft Intune. 
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 10/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -29,9 +29,9 @@ ms.collection:
 - highpri
 ---
 
-# Use Fresh Start to reset Windows 10 devices with Intune
+# Use Fresh Start to reset Windows 10 and 11 devices with Intune
 
-The **Fresh Start** device action removes any apps that are installed on a PC running Windows 10, version 1709 or later. Fresh Start helps remove pre-installed (OEM) apps that are typically installed with a new PC.
+The **Fresh Start** device action removes any apps that are installed on a PC running Windows 10, version 1709 or later and Windows 11. Fresh Start helps remove pre-installed (OEM) apps that are typically installed with a new PC.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
 2. From the list of devices you manage, choose a Windows 10 desktop device.
