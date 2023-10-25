@@ -199,7 +199,7 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 ### Device enrollment
 
 #### Web based device enrollment with JIT registration for personal iOS/iPadOS devices <!-- 15412485  -->  
-Intune supports web-based device enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the Company Portal app. Additionally, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. For more information, see [Set up web based device enrollment for iOS](./enrollment/web-based-device-enrollment-ios.md).
+Intune supports web-based device enrollment with just in time (JIT) registration for personal devices set up via Apple device enrollment. JIT registration reduces the number of authentication prompts shown to users throughout the enrollment experience and establishes SSO across the device. Enrollment takes place on the web version of Intune Company Portal, eliminating need for the Company Portal app. Additionally, this enrollment method enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. For more information, see [Set up web based device enrollment for iOS](../enrollment/web-based-device-enrollment-ios.md).
 
 ### Device management
 
