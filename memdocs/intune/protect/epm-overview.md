@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/24/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,24 +50,32 @@ Applies to:
 
 Endpoint Privilege Management requires an additional license beyond the *Microsoft Intune Plan 1* license. You can choose between an stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-### Windows Client requirements
+### Requirements
 
-Endpoint Privilege Management has the following operating system requirements:
+Endpoint Privilege Management has the following requirements:
 
-- Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
-- Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/en-us/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)
-- Windows 10, version 22H2 (19045.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
-- Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
-- Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Microsoft Entra joined *or* Microsoft Entra hybrid joined
+- Microsoft Intune Enrollment *or* Microsoft Configuration Manager [co-managed](../../configmgr/comanage/overview.md) devices (no workload requirements)
+- Supported Operating System
+- Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)
+
+> [!NOTE]
+>
+> - Windows 365 (CloudPC) is supported using a supported operting system version
+> - Workplace-join devices are not supported by Endpoint Privilege Management
+> - Azure Virtual Desktop is not supported by Endpoint Privilege Management
+
+Endpoint Privilege Management supports the following operating systems:
+
+- Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
+- Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)
+- Windows 10, version 22H2 (19045.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
 
 > [!IMPORTANT]
-> Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
->
-> Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
->
-> Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
-> 
-> Endpoint Privilege Management is supported for Intune-managed devices, including [co-managed](../../configmgr/comanage/overview.md) devices.
+> - Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
+> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Getting started with Endpoint Privilege Management
 
@@ -147,8 +155,9 @@ Each device that receives Endpoint Privilege Management policies installs the EP
 
 The EPM Tools PowerShell module is available from any device that has received EPM policy. To import the EpmTools PowerShell module:
 
-1. Open PowerShell with admin privileges and go to *C:\Program Files\Microsoft EPM Agent\EpmTools*.
-2. From the **EpmTools** folder, run `Import-Module .\EpmCmdlets.dll`.
+```powershell
+Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
+```
 
 Following are the available cmdlets:
 

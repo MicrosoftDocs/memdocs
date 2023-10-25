@@ -90,9 +90,9 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
       - **Enable App Sync for iOS Devices**:  Set to **On** to allow Defender for Endpoint to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
 
-      - **Send full application inventory data on personally-owned iOS/iPadOS Devices**: This setting controls the application inventory data that Intune shares with Defender for Endpoint when Defender for Endpoint syncs app data and requests the app inventory list.
+      - **Send full application inventory data on personally owned iOS/iPadOS Devices**: This setting controls the application inventory data that Intune shares with Defender for Endpoint when Defender for Endpoint syncs app data and requests the app inventory list.
 
-        When set to **On**, Defender for Endpoint can request a list of applications from Intune for personally-owned iOS/iPadOS devices. This includes unmanaged apps and apps that were deployed through Intune. 
+        When set to **On**, Defender for Endpoint can request a list of applications from Intune for personally owned iOS/iPadOS devices. This includes unmanaged apps and apps that were deployed through Intune. 
 
         When set to **Off**, data about unmanaged apps isn’t provided. Intune does share data for the apps that were deployed through Intune.
 
@@ -107,18 +107,18 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 5. Select **Save**.
 
 > [!TIP]
-> When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
+> When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy, such as Windows Defender ATP device policy, in Microsoft Entra ID. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
 >
 > If the classic policy is deleted, you will need to delete the connection to Intune that was responsible for its creation, and then set it up again. This recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
 >
 > Classic conditional access policies for MTD apps:
 >
-> - Are used by Intune MTD to require that devices are registered in Azure AD so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
+> - Are used by Intune MTD to require that devices are registered in Microsoft Entra so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
 > - Have no effect on any other Cloud apps or Resources.
 > - Are distinct from conditional access policies you might create to help manage MTD.
 > - By default, don't interact with other conditional access policies you use for evaluation.
 >
-> To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
+> To view classic Conditional Access policies, in [Azure](https://portal.azure.com/#home), go to **Microsoft Entra ID** > **Conditional Access** > **Classic policies**.
 
 ## Onboard devices
 
@@ -295,7 +295,7 @@ Use the procedure to [create an application protection policy for either iOS/iPa
 Conditional access policies can use data from Microsoft Defender for Endpoint to block access to resources for devices that exceed the threat level you set. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
 
 > [!TIP]
-> Conditional access is an Azure Active Directory (Azure AD) technology. The *Conditional access* node found in the Microsoft Intune admin center is the node from *Azure AD*.
+> Conditional Access is a Microsoft Entra ID technology. The *Conditional Access* node found in the Microsoft Intune admin center is the node from *Microsoft Entra*.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

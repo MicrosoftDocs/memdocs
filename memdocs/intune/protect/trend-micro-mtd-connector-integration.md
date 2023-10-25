@@ -42,7 +42,7 @@ This article describes the requirements and steps to connect Trend Micro Mobile 
 The following subscriptions and accounts are required to integrate Trend Micro Mobile Security as a Service with Microsoft Intune.
 
 - Microsoft Intune Plan 1 subscription
-- Azure Active Directory (Azure AD) account with Global Administrator rights to grant the following permissions:
+- Microsoft Entra ID account with Global Administrator rights to grant the following permissions:
   - Sign in and read user profile
   - Access the directory as the signed-in user
   - Read directory data
@@ -54,15 +54,15 @@ The following subscriptions and accounts are required to integrate Trend Micro M
 The following authorization process happens when you configure the integration with Trend Micro Mobile Security as a Service:
 
 - Allow Trend Micro Mobile Security as a Service to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day-to-day operation.
-- Allow Trend Micro Mobile Security as a Service to sync Azure AD enrollment group membership to populate its device's database.
-- Allow Trend Micro Vision One management console to use Azure AD Single Sign On (SSO).
-- Allow Trend Micro Mobile as a Service agent app to sign in using Azure AD SSO.
+- Allow Trend Micro Mobile Security as a Service to sync Microsoft Entra ID enrollment group membership to populate its device's database.
+- Allow Trend Micro Vision One management console to use Microsoft Entra single sign-on (SSO).
+- Allow Trend Micro Mobile as a Service agent app to sign in using Microsoft Entra SSO.
 - Allow Trend Micro Mobile Security as a Service to get installed app information to perform malware  scanning.
 - Allow Trend Micro Mobile Security as a Service to add its mobile apps in Intune for deployment.
 - Allow Trend Micro Mobile Security as a Service to create device configuration profiles.
 - Allow Trend Micro Mobile Security as a Service to perform remote actions when necessary.
 
-For more information about consent and Azure AD applications, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin).
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/v2-permissions-and-consent).
 
 ## Configuration Overview
 

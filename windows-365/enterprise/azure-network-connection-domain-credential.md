@@ -32,16 +32,18 @@ ms.collection:
 
 # Azure network connection domain credential life cycle
 
-When you create an Azure network connection (ANC) using a hybrid Azure Active Directory (Azure AD) join type, you must include on-premises domain credential information. This requirement makes it possible for the ANC to communicate with your on-premises resources.
+When you create an Azure network connection (ANC) using a Microsoft Entra hybrid join type, you must include on-premises domain credential information. This requirement makes it possible for the ANC to communicate with your on-premises resources.
 
-This article describes how Windows 365 protects and manages the on-premises domain credentials during the whole hybrid Azure AD join ANC life cycle:
+This article describes how Windows 365 protects and manages the on-premises domain credentials during the whole Microsoft Entra hybrid join ANC life cycle:
 
 1. Providing credentials
 2. Encrypting credentials
 3. Updating credentials
 4. Removing credentials
 
-## Provide Azure Active Directory domain credentials
+<a name='provide-azure-active-directory-domain-credentials'></a>
+
+## Provide Microsoft Entra domain credentials
 
 When you [create an ANC](create-azure-network-connection.md), you must provide credentials of an on-premises Active Directory user account that will be used to domain  join Cloud PCs. You provide this information, including the on-premises user account's username and domain password, on the AD domain page:
 

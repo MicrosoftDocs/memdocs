@@ -4,8 +4,8 @@
 title: Overview of Certificate Connector for Microsoft Intune - Azure | Microsoft Docs
 description: Learn about the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/14/2023
 ms.topic: how-to
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- certificates
 ---
 
 
@@ -91,15 +92,15 @@ Periodically, updates  to the certificate connector are released. Announcements 
 
 **Each new connector release**:
 
-- Is supported for six months after its release date. During this period, automatic updates can install a newer connector version. Updated connector versions can include but aren't limited to bug fixes and performance and feature improvements.
+- Is supported for six months after the release of a new version. During this period, automatic updates can install a newer connector version. Updated connector versions can include but aren't limited to bug fixes and performance and feature improvements.
 
 - If an out of support connector fails, you’ll need to update to the latest supported version.
 
 - If you block the automatic update of the connector, plan to manually update the connector within six months, before support for the installed version ends. After support ends, you’ll need to update the connector to a version that remains in support to receive support for problems with the connector.
 
-- Connectors that are out of support will continue to function for up to 18 months after its release date. After 18 months, a connectors functionality might fail due to service level improvements, updates, or in addressing common security vulnerabilities that might surface in the future.
+- Connectors that are out of support will continue to function for up to 18 months after the release of a new version. After 18 months, a connectors functionality might fail due to service level improvements, updates, or in addressing common security vulnerabilities that might surface in the future.
 
-For example, the connector version 6.2203.12.0 that released on May 4, 2022, will drop from support on November 4, 2022.  The same connector should continue to function (though not be supported) until November 2023. After November 2023 the connector might stop communicating with Intune.
+For example, when the connector version 6.2203.12.0 that released on May 4, 2022, the connector previous version 6.2202.38.0 will drop from support on November 4, 2022. The connector previous version should continue to function (though not be supported) until November 2023. After November 2023 the connector previous version might stop communicating with Intune.
 
 ### Automatic update
 

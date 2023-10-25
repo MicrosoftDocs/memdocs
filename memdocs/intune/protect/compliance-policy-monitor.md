@@ -4,8 +4,8 @@
 title: Monitor results of your device compliance policies in Microsoft Intune
 description: Use the device compliance dashboard to understand overall device compliance the per-policy and per-setting device compliance results.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/21/2023
 ms.topic: how-to
@@ -27,6 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- compliance
 ---
 # Monitor results of your Intune Device compliance policies
 
@@ -83,8 +84,8 @@ The device compliance dashboard is found in the [Microsoft Intune admin center](
 
 - [Device compliance status](#device-compliance-status)
 - [Devices without compliance](#devices-without-compliance)
-- [Policy compliance](#policy-compliance)
-- [Setting compliance](#setting-compliance)
+- [Policy compliance](../fundamentals/reports.md#policy-compliance) (Link opens the *Intune reports* article)
+- [Setting compliance](../fundamentals/reports.md#settings-compliance) (Link opens the *Intune reports* article)
 
 :::image type="content" source="./media/compliance-policy-monitor/compliance-status-tab.png" alt-text="Image of the Intune admin center that shows the charts available on the Compliance status tab.":::
 
@@ -111,17 +112,6 @@ The tile displays a count of devices for each of the following categories:
 
 - **Not compliant**: The device failed to apply one or more device compliance policy settings, or the user hasn't complied with the policies.
 
-### Policy compliance
-
-The **Policy compliance** tile displays the list of compliance policies that are assigned to devices, and the count of compliant and noncompliant devices for each policy.
-
-:::image type="content" source="./media/compliance-policy-monitor/idc-8.png" alt-text="Screen shot that shows the list of policies and how many devices are compliant or noncompliant for each policy.":::
-
-You can select a policy from this tile to open a Policy Compliance view that provides more details about that policy.
-
-> [!TIP]
-> We recommend using the newer [Policy compliance (preview)](../fundamentals/reports.md#policy-compliance-preview) report that replaces this view and includes improved capabilities. Eventually, the older report version will be retired.
-
 ### Devices without compliance
 
 The **Devices without compliance policy** tile displays a count of devices that don't have any compliance policies assigned. The tile name is often truncated in the admin center view as this tile displays only a count of devices:
@@ -132,18 +122,6 @@ If you select this tile, Intune displays a *Device status* view that lists each 
 
 > [!TIP]  
 > Intune includes an organizational report that identifies all devices in your tenant that have not been assigned a compliance policy. See [Devices without compliance policy (Organizational)](../fundamentals/reports.md#devices-without-compliance-policy-organizational).
-
-### Setting compliance
-
-The **Setting compliance** tile displays all the device compliance policy settings from all compliance policies, the platforms the policy settings apply to, and the number of noncompliant devices. At least one device must report a status for a setting before the setting is visible in this view.
-
-Screenshot that shows the list of policies and how many devices are compliant or noncompliant for each policy
-:::image type="content" source="./media/compliance-policy-monitor/idc-10.png" alt-text="Screen shot that shows the list of all the settings from all compliance policies.":::
-
-You can select an individual setting to open a setting detail view that provides more information about devices that report status for that setting.
-
-> [!TIP]
-> We recommend using the newer [Setting compliance (preview)](../fundamentals/reports.md#settings-compliance-preview) report that replaces this report and includes improved capabilities. Eventually, this older report version will be retired.
 
 ## Policy-based device compliance reports
 
@@ -250,8 +228,6 @@ For more information about these reports, see [Device compliance reports](../fun
 In addition to reports from the *Compliance status* tab and from the *Reports* node of the admin center, the following older compliance reports are available. The following reports are  found under the *Compliance* category in the admin center at **Devices** > **Monitor**:
 
 - Noncompliant devices
-- Setting compliance – This report version remains available but will be deprecated as there is an updated version with enhanced capabilities. See the updated report at [Setting compliance (preview)](../fundamentals/reports.md#settings-compliance-preview)
-- Policy compliance – This report version remains available but will be deprecated as there is an updated version with enhanced capabilities.  [Policy compliance (preview)](../fundamentals/reports.md#policy-compliance-preview)
 - Policy noncompliance
 - Windows health attestation report
 

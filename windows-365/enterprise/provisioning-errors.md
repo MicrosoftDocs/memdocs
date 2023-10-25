@@ -34,13 +34,15 @@ ms.collection:
 
 The following errors can occur during Cloud PC provisioning.
 
-## Azure AD service connection point (SCP) misconfigured
+<a name='azure-ad-service-connection-point-scp-misconfigured'></a>
 
-The service connection point (SCP) is used by your Cloud PCs to discover your Azure AD tenant information. You must configure your SCPs by using Azure AD connect for each forest you plan to join Cloud PCs to.
+## Microsoft Entra ID service connection point (SCP) misconfigured
+
+The service connection point (SCP) is used by your Cloud PCs to discover your Microsoft Entra tenant information. You must configure your SCPs by using Microsoft Entra Connect for each forest you plan to join Cloud PCs to.
 
 If the SCP configuration doesn't exist, or can't be discovered by using the vNet declared, provisioning will fail.
 
-To understand more about the SCP and learn how to configure it, see the [Azure AD documentation](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
+To understand more about the SCP and learn how to configure it, see the [Microsoft Entra documentation](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
 **Suggested test**: Confirm with your identity team that the SCP exists for all target forests.
 
@@ -70,20 +72,22 @@ JsonADDomainExtension is the Azure function used to perform this domain join. Ma
 
 **Suggested test**: Attach an Azure VM to the configured vNet and perform a domain join using the credentials provided.
 
-## Hybrid Azure AD join failed
+<a name='hybrid-azure-ad-join-failed'></a>
 
-Windows 365 doesn’t perform any hybrid Azure Active Directory (Azure AD) join function for the customer. Hybrid Azure AD join must be configured and healthy as a pre-requisite for Cloud PC.
+## Microsoft Entra hybrid join failed
 
-If provisioning fails because of hybrid Azure AD join, it’s likely because of an insufficient sync period configured in your AD Sync service. Make sure that Azure AD connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will time out if the Azure AD object doesn’t appear within 90 minutes.
+Windows 365 doesn’t perform any Microsoft Entra hybrid join function for the customer. Microsoft Entra hybrid join must be configured and healthy as a pre-requisite for Cloud PC.
 
-Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 will be replicated fast enough to make it into Azure AD within this five hour timeout window.
+If provisioning fails because of Microsoft Entra hybrid join, it’s likely because of an insufficient sync period configured in your AD Sync service. Make sure that Microsoft Entra Connect is configured to sync the AD computer objects every 30 minutes, and no more than 60 minutes. This step will time out if the Microsoft Entra object doesn’t appear within 90 minutes.
 
-If your organization uses Active Directory Federation Services (ADFS), this registration process is optimized and may result in Cloud PC provisioning completing faster than an Azure AD Connect sync might.
+Another factor to consider is your on-premises AD replication time. Make sure that the domain controller being used for Windows 365 will be replicated fast enough to make it into Microsoft Entra ID within this five hour timeout window.
+
+If your organization uses Active Directory Federation Services (ADFS), this registration process is optimized and may result in Cloud PC provisioning completing faster than a Microsoft Entra Connect sync might.
 
 **Suggested test**: Check to see that the AD object:
 
 - Appears in the correct OU.
-- Is successfully synced to Azure AD before provisioning times out.
+- Is successfully synced to Microsoft Entra ID before provisioning times out.
 
 ## Intune enrollment failed
 
