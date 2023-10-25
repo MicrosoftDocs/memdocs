@@ -123,7 +123,7 @@ For more information on the Settings Catalog, go to [Use the settings catalog to
 
 Applies to:
 
-- Windows 10 and later
+- Windows 11
 
 #### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
