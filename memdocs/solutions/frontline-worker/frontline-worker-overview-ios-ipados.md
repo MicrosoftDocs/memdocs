@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using iOS and iPadOS d
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/09/2023
+ms.date: 10/25/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -25,37 +25,40 @@ ms.collection:
 
 # Frontline worker for iOS/iPadOS devices in Microsoft Intune
 
+iPad devices are a popular device type for frontline workers (FLW). They're used in different scenarios and industries, including field operations, healthcare, aviation, warehouse, data entry, digital forms, and presentations.
 
-This article applies to:
+For iPadOS FLW devices, you can use the **Shared iPad** feature in Intune or use **Microsoft Entra shared device mode** (SDM). For more information, go to [Shared iPad vs Microsoft Entra shared device mode](#shared-ipad-vs-microsoft-entra-shared-device-mode) (in this article).
 
-- iOS and iPadOS devices owned by the organization and enrolled in Intune
-
-iPad devices are a popular device type for frontline workers (FLW). The Shared iPad feature in Intune is designed for frontline workers.
-
-iOS devices can also be used, but it's not common. For iOS FLW devices, it's recommended to use [Azure AD shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and Intune together. In Intune, you enroll the device and create a device restrictions configuration profile. In the profile, you can allow (or prohibit) specific apps, and can hide apps.
+iOS devices can also be used for FLW, but it's not common. For iOS FLW devices, it's recommended to use [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and Intune together. In Intune, you enroll the device and create a device restrictions configuration profile. In the Intune profile, you can allow (or prohibit) specific apps, and can hide apps.
 
 The following diagram shows the iOS/iPadOS options for frontline worker devices in Intune:
 
 :::image type="content" source="./media/ios-ipados-flw-options.png" alt-text="Diagram that shows Apple iOS and iPadOS frontline worker scenario path in Microsoft Intune." lightbox="./media/ios-ipados-flw-options.png":::
 
+The **Shared iPad** feature in Intune is designed for frontline workers. Since iPads are a popular Apple device type for frontline workers (FLW), **this article focuses on iPad devices**.
+
+Use this article to get started with iPad FLW devices in Intune. It includes decisions admins need to make, determining how the device is used, and configuring the home screen & device experience. Specifically:
+
+- [Shared iPad vs. Microsoft Entra shared device mode](#shared-ipad-vs-microsoft-entra-shared-device-mode)
+- [Step 1 - Enroll, enable Shared iPad, and choose a temporary session type](#step-1---enroll-enable-shared-ipad-and-choose-a-temporary-session-type)
+- [Step 2 - Home screen layout and device experience](#step-2---home-screen-layout-and-device-experience)
+
+This article applies to:
+
+- iPadOS devices owned by the organization and enrolled in Intune
+
+For an overview on FLW devices in Intune, go to [FLW device management for Android, iOS/iPadOS, and Windows devices in Intune](frontline-worker-overview.md).
+
 > [!NOTE]
-> For iPadOS devices, Conditional Access isn't supported for Shared iPad. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../intune/enrollment/device-enrollment-shared-ios.md).
+> There are other iOS/iPadOS enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the iOS/iPadOS enrollment options, go to [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
-Since iPads are a popular Apple device type for frontline workers (FLW), **this section focuses on iPad devices**.
+## Shared iPad vs Microsoft Entra shared device mode
 
-iPads are used in different scenarios and industries, including in field operations, healthcare, aviation, warehouse, data entry, digital forms, and presentations.
+For FLW iPad devices, there are two options available - **Shared iPad in Intune** or **Microsoft Entra shared device mode**. For iPad devices, admins must pick one option. This decision impacts how you configure the device.
 
-For FLW iPad devices, there are two options available:
+:::image type="content" source="./media/ios-ipados-flw-enrollment-options.png" alt-text="Diagram that shows all the Shared iPad and Entra shared device mode options for iPadOS frontline worker devices in Microsoft Intune." lightbox="./media/ios-ipados-flw-enrollment-options.png":::
 
-- **Shared iPad**
-  OR
-- **Azure AD shared device mode**
-
-:::image type="content" source="./media/ios-ipados-flw-enrollment-options.png" alt-text="Diagram that shows all the Intune enrollment options for iPadOS frontline worker devices in Microsoft Intune." lightbox="./media/ios-ipados-flw-enrollment-options.png":::
-
-When using iPad devices for FLW, use the following information to help you decide which option is best for your organization.
-
-For iPad devices, admins must pick one option - **Shared iPad** in Intune or **Azure AD shared device mode**. This decision impacts how you configure the device.
+When using iPad devices for FLW, use the following information to help you decide which option is best for your organization:
 
 - **Shared iPad**
 
@@ -63,39 +66,33 @@ For iPad devices, admins must pick one option - **Shared iPad** in Intune or **A
 
   ✔️ If the device is an iPad, then use the Shared iPad feature in Intune. For more information on Shared iPads in Intune, go to [Shared iPad devices in Intune](../intune/enrollment/device-enrollment-shared-ipad.md).
 
-  ❌ If the device is an iOS device, then use Azure AD shared device mode. For more information, go to [Azure AD shared device mode for FLW](frontline-worker-overview.md#azure-ad-shared-device-mode-for-flw) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
+  ❌ If the device is an iOS device, then use Entra shared device mode. For more information, go to [Microsoft Entra shared device mode for FLW](frontline-worker-overview.md#azure-ad-shared-device-mode-for-flw) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
 
-- **Azure AD shared device mode**
+  > [!NOTE]
+  > For iPadOS devices, Conditional Access isn't supported for Shared iPad. For more information, go to [Overview of shared device solutions for iOS/iPadOS](../intune/enrollment/device-enrollment-shared-ios.md).
 
-  Azure AD shared device mode (SDM) is an option for iOS and iPadOS devices and uses the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). Azure AD SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). Azure AD shared device mode isn't supported with Shared iPad feature in Intune.
+- **Microsoft Entra shared device mode**
 
-  For more information on Azure AD shared device mode (SDM), go to [Azure AD shared device mode for FLW](frontline-worker-overview.md#azure-ad-shared-device-mode-for-flw).
+  Microsoft Entra shared device mode (SDM) is an option for iOS and iPadOS devices and uses the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin). Entra SDM offers an app and identity driven sign in/sign out experience, which improves the end user experience and productivity (less sign in prompts). Entra shared device mode isn't supported with Shared iPad feature in Intune.
 
-  When to use Azure AD SDM:
+  For more information on Entra shared device mode (SDM), go to [Microsoft Entra shared device mode for FLW](frontline-worker-overview.md#azure-ad-shared-device-mode-for-flw).
 
-  ✔️ If the device is an iOS device, then use Azure AD shared device mode.
+  When to use Entra SDM:
 
-  ✔️ If the device is an iPad, then you can use Azure AD shared device mode **OR** Shared iPad in Intune.
+  ✔️ If the device is an iOS device, then use Entra shared device mode.
 
-  ❌ If you configured an iPad to be a Shared iPad in Intune, then don't use Azure AD shared device mode. It's not supported.
+  ✔️ If the device is an iPad, then you can use Entra shared device mode **OR** Shared iPad in Intune.
 
-  For end users to have the full sign in/sign out experience, apps must support Azure AD SDM. For more information on Azure AD SDM and iOS/iPadOS devices, go to:
+  ❌ If you configured an iPad to be a Shared iPad in Intune, then don't use Entra shared device mode. It's not supported.
+
+  For end users to have the full sign in/sign out experience, apps must support Entra SDM. For more information on Entra SDM and iOS/iPadOS devices, go to:
 
   - [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices)
   - [Set up automated device enrollment for shared device mode](../intune/enrollment/automated-device-enrollment-shared-device-mode.md)
 
 For a comparison of both options, go to [Shared iOS and iPadOS devices](../intune/enrollment/device-enrollment-shared-ios.md).
 
-> [!NOTE]
-> There are other iOS/iPadOS enrollment options available. This article focuses on the enrollment options commonly used for FLW devices. For more information on all the iOS/iPadOS enrollment options, go to [Enrollment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-ios-ipados.md).
-
-## Shared iPads
-
-Shared iPads are a feature in Intune. If you're not using Shared iPads, then skip this section.
-
-This section focuses on Shared iPads used by frontline workers, including the decisions admins need to make, determining how the device is used, and configuring the home screen & device experience.
-
-### Step 1 - Use Automated Device Enrollment (ADE), enable Shared iPad, and choose a temporary session type
+## Step 1 - Enroll, enable Shared iPad, and choose a temporary session type
 
 For Shared iPad FLW devices, the first step is to create an **Automated Device Enrollment (ADE) profile**. ADE is the required enrollment option for Shared iPads. ADE syncs the devices from Apple Business Manager or Apple School Manager.
 
@@ -107,7 +104,7 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
     - **Guest access**
 
-      **Yes** enables temporary sessions. Users sign in to the device as a guest. They don't enter a Managed Apple ID or password. All user data, sign in info, including browsing history, is deleted when the user signs out.
+      **Yes** enables temporary sessions. Users sign in to the device as a guest. They don't enter a Managed Apple ID or password. When the user signs out, all user data, sign in info, and browsing history are deleted.
 
       For example, in healthcare, a medical patient is assigned a shared iPad to check in or fill out forms. When they're done, they sign out and all their local user data is deleted from the device. The next patient can then sign in to the device as a guest and use the device.
 
@@ -115,7 +112,7 @@ From an Intune perspective, you configure the enrollment profile and assign the 
 
       Partitioned user access is the default behavior for Shared iPads. In Intune, **Not configured** uses this default behavior. Use this option when an iPad is used by many authenticated users at different times.
 
-      Each user signs in to the device with their federated Azure AD credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad. Only the same set of apps used across all device users support partitioned user access.
+      Each user signs in to the device with their federated Entra credentials. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad. Only the same set of apps used across all device users support partitioned user access.
 
       When the user locks their profile, their data remains on the device in their own partition. Then, the device is ready for the next user to sign in and use the device.
 
@@ -130,9 +127,9 @@ For more information on these features, and to get started, go to:
 - [Set up automated device enrollment in Intune](../intune/enrollment/device-enrollment-program-enroll-ios.md)
 - [Set up Shared iPad in Intune](../intune/enrollment/device-enrollment-shared-ipad.md)
 
-### Step 2 - Home screen layout and device experience
+## Step 2 - Home screen layout and device experience
 
-Next, consider what end users do on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
+For Shared iPad FLW devices, next consider what end users do on the devices and the device experience they need for their jobs. This decision impacts how you configure the device.
 
 In Intune, you can create device configuration profiles that configure the home screen and the apps that are shown. Specifically, you create a:
 

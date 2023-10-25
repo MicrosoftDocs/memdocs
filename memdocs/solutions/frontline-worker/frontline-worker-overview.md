@@ -1,10 +1,10 @@
 ---
-title: Get started with frontline worker (FLW) devices
-description: Learn how to manage frontline worker devices using Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Select the best enrollment option, configure the home screen, and more.
+title: Get started with frontline worker (FLW) device management
+description: Learn how to manage frontline worker devices using Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Get guidance on how the devices are used and Intune features built for FLW, like Remote Help. Also, learn about Microsoft Entra shared device mode (SDM) for FLW. 
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/09/2023
+ms.date: 10/25/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -23,7 +23,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Frontline worker device management for Android, iOS/iPadOS, and Windows devices in Microsoft Intune
+# Frontline worker device management overview in Microsoft Intune
 
 A frontline worker (FLW) is a person that works in an essential or critical role to your business. They're typically in direct contact with the public and customers. During a crisis or emergency, such as a pandemic or natural disaster, frontline workers are often at the forefront of the response effort, providing critical services and support.
 
@@ -31,12 +31,12 @@ Some popular examples of frontline workers include healthcare, emergency respond
 
 The articles in this section apply to:
 
-- [Android devices owned by the organization and enrolled in Intune](frontline-worker-overview-android.md)
-- [iOS and iPadOS devices owned by the organization and enrolled in Intune](frontline-worker-overview-ios-ipados.md)
-- [Windows devices owned by the organization and enrolled in Intune](frontline-worker-overview-windows.md)
+- [FLW Android devices owned by the organization and enrolled in Intune](frontline-worker-overview-android.md)
+- [FLW iOS and iPadOS devices owned by the organization and enrolled in Intune](frontline-worker-overview-ios-ipados.md)
+- [FLW Windows devices owned by the organization and enrolled in Intune](frontline-worker-overview-windows.md)
 
 > [!NOTE]
-> FLW devices are typically owned by the organization. End user personal devices can be used as FLW devices, but personal devices aren't covered in these articles. The articles focus on corporate-owned devices.
+> FLW devices are typically owned by the organization. End user personal devices can be used as FLW devices, but personal devices aren't covered in these articles. This set of articles focus on corporate-owned devices.
 
 Frontline workers also rely on devices to enable their productivity, such as devices used to scan barcodes or devices utilized for field operations. If these devices fail, worker productivity and business operation can stop. Often, these types of devices can be categorized as mission critical.
 
@@ -44,7 +44,7 @@ The articles in this section provide guidance on managing and configuring frontl
 
 ## Before you begin
 
-When you're planning for FLW devices (including rugged devices) and how you'll manage them, there are questions you need to answer. These questions help you determine the best device management experience for you, your end user frontline workers, and the needs of your organization.
+When you're planning for FLW devices (including rugged devices) and how you manage them, there are questions you need to answer. These questions help you determine the best device management experience for you, your end user frontline workers, and the needs of your organization.
 
 - Determine how the **devices will be used**.
 
@@ -58,9 +58,9 @@ When you're planning for FLW devices (including rugged devices) and how you'll m
 
   Intune has built-in features that offer shared device management for Android, iPadOS, and Windows devices. This article provides more details about shared devices, and the decisions you need to make.
 
-- Determine the **sign-in/sign-out experience** and how user switching will happen, including device hand-off. For example, before cradling the device for charging, you may want users to sign out of apps.
+- Determine the **sign-in/sign-out experience** and how user switching will happen, including device hand-off. For example, before cradling the device for charging, you might want users to sign out of apps.
 
-  Intune has built-in features that allow users to sign in as a guest, sign in with their Azure AD organization credentials, or only sign into apps. There are also features that use single sign-on and single sign out for your apps. This article provides more details about these features.
+  Intune has built-in features that allow users to sign in as a guest, sign in with their Entra organization credentials, or only sign into apps. There are also features that use single sign-on and single sign out for your apps. This article provides more details about these features.
 
 - Determine the **starting app experience**. For example, users can sign in to the device and then launch an app, or users can get the device and have an app automatically start.
 
@@ -74,11 +74,12 @@ Intune has built-in features that can be used for frontline worker devices, incl
 
 - **[Windows cloud configuration](../intune/fundamentals/cloud-configuration.md)**
 
-  This feature is a guided scenario and can turn a Windows client device into a cloud-optimized device. It simplifes the devices, and secures them with Microsoft-recommended security features.
+  This feature is a guided scenario and can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and secures them with Microsoft-recommended security features.
 
   For more information on this guided scenario and the other guided scenarios available, go to:
 
   - [Guided scenario - Windows 10/11 in cloud configuration](../intune/fundamentals/cloud-configuration.md)
+  - [Step-by-step guide - Windows 10/11 in cloud configuration](../intune/fundamentals/cloud-configuration-setup-guide.md)
   - [Intune guided scenarios overview](../intune/fundamentals/guided-scenarios-overview.md)
 
 - **[Remote Help](remote-help.md)**
@@ -91,26 +92,31 @@ Intune has built-in features that can be used for frontline worker devices, incl
 
 - **[Specialty devices](../intune/fundamentals/specialty-devices-with-intune.md)**
 
-  These devices include augmented reality (AR) & virtual reality (VR) headsets, large smart-screen devices, and some conference room meeting devices, lik Microsoft Teams Rooms devices. They can be managed using Intune policies.
+  These devices include augmented reality (AR) & virtual reality (VR) headsets, large smart-screen devices, and some conference room meeting devices, like Microsoft Teams Rooms devices. They can be managed using Intune policies.
 
 > [!NOTE]
 > Some features may require additional licenses. For more information, go to [ntune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md) or [Microsoft Intune licensing](../intune/fundamentals/licenses.md).
 
-## Azure AD shared device mode for FLW
+## Microsoft Entra shared device mode for FLW
 
-Azure AD shared device mode (SDM) is designed for frontline workers (FLW). It's an Azure AD feature that focuses on building apps so the apps can be used by many users on the same device. Users sign in/sign out of apps, have all their data removed, and have the device ready for the next user.
+Microsoft Entra shared device mode (SDM) is designed for frontline workers (FLW). It's an Entra feature that focuses on building apps so the apps can be used by many users on the same device. Users sign in/sign out of apps, have all their data removed, and have the device ready for the next user.
 
-Some of the benefits of Azure AD SDM include:
+Some of the benefits of Entra SDM include:
 
-- Azure AD SDM supports multiple users on devices designed for one user. Some mobile devices running Android and iOS are designed for single users. Most apps optimize their experience for a single user. Apps built with Azure AD SDM support multiple users on one device.
+- Entra SDM supports multiple users on devices designed for one user. Some mobile devices running Android and iOS are designed for single users. Most apps optimize their experience for a single user. Apps built with Entra SDM support multiple users on one device.
 
-- Azure AD SDM does automatic single sign in and single sign out. Employees can sign in once and get single sign-on (SSO) to all apps that support Azure AD SDM, giving them faster access to information.
+- Entra SDM does automatic single sign in and single sign out. Employees can sign in once and get single sign-on (SSO) to all apps that support Entra SDM, giving them faster access to information.
 
   This feature is good for organizations that use a set of apps in a device pool that's shared by employees. Devices can be immediately ready for use by the next employee with no access to the previous user's data.
 
-- Apps built for Azure AD SDM use the Microsoft Authentication Library (MSAL) and the Microsoft Authenticator app. When a device is in shared device mode, and with (MSAL) and the Microsoft Authenticator app, Microsoft provides information to your app. This information allows the app to modify its behavior based on the state of the user on the device, which helps protect user data.
+- Apps built for Entra SDM use the Microsoft Authentication Library (MSAL) and the Microsoft Authenticator app. When a device is in shared device mode, and with (MSAL) and the Microsoft Authenticator app, Microsoft provides information to your app. This information allows the app to modify its behavior based on the state of the user on the device, which helps protect user data.
 
-For more information on Azure AD SDM, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
+Shared device mode (SDM) is a feature of Microsoft Entra. It's not an Intune feature. On Android, Entra SDM and Intune can work together. On iOS/iPadOS, you must use Entra SDM or use Intune. For more information, go to the following articles:
+
+- [Frontline worker for Android devices in Microsoft Intune](frontline-worker-overview-android.md)
+- [Frontline worker for iOS/iPadOS devices in Microsoft Intune](frontline-worker-overview-ios-ipados.md)
+
+For more information on Entra SDM, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
 
 ## More Microsoft services for FLW
 
