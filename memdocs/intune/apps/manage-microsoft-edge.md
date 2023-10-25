@@ -303,6 +303,31 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode |**true** shows the address bar in kiosk mode <br>**false** (default) hides the address bar when kiosk mode is enabled|
 |com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
 
+### Locked view mode
+
+Edge for iOS and Android can be enabled as locked view mode with MDM policy EdgeLockedViewMode.
+
+|Key  |Value  |
+|:---------|:---------|
+|EdgeLockedViewMode|**false** (default) Locked view mode is disabled <br> **true** Locked view mode is enabled | 
+
+It allows organizations to restrict various browser functionalities, providing a controlled and focused browsing experience.
+
+- The URL address bar becomes read-only, preventing users from making changes to the web address
+- Users are not allowed to create new tabs
+- The contextual search feature on web pages is disabled
+- The following buttons under the overflow menu are disabled
+
+|Buttons | State |
+|:--|:----|
+|New InPrivate tab|Disabled|
+|Send to Devices|Disabled|
+|Drop|Disabled|
+|Add to Phone (Android) |Disabled|
+|Download Page (Android) |Disabled|
+
+The locked view mode is often used together with MAM policy **com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL** or MDM policy    **EdgeNewTabPageCustomURL**, which allow organizations to configure a specific web page that is automatically launched when Edge is opened. Users are restricted to this web page and cannot navigate to other websites, providing a controlled environment for specific tasks or content consumption.
+
 ### Switch network stack between Chromium and iOS 
 By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
 
@@ -368,13 +393,13 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 
 #### Bing Chat Enterprise 
 
-Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Bing button in bottom bar. 
+Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Copilot button in bottom bar. 
 
-There are three settings in Settings->General->New Bing copilot mode for Bing Chat Enterprise.
+There are three settings in **Settings**->**General**->**Copilot** for Bing Chat Enterprise.
 
-- New Bing copilot mode – Control whether to show Bing button on bottom bar
-- Page context – Control whether to allow Bing Chat Enterprise to access page content
-- Show Quick chat panel – Control whether to show quick chat panel when text on a webpage is selected
+- **Show Copilot** – Control whether to show Bing button on bottom bar
+- **Allow access to any web page or PDF** – Control whether to allow Bing Chat Enterprise to access page content or PDF
+- **Quick access on text selection** – Control whether to show quick chat panel when text on a webpage is selected
 
 You can manage the settings for Bing Chat Enterprise.
 
@@ -610,7 +635,7 @@ Besides Intune logs from `edge://intunehelp/`, you may be asked by Microsoft Sup
 You may also want to click the **Clear** icon to clear logs first in order to get refresh logs.
 
 > [!NOTE]
-> Saving logs also respects Intune App Protection Policy.So you may not be allowed to save diagnostic data to local devices.
+> Saving logs also respects the Intune App Protection Policy. Therefore, you may not be allowed to save diagnostic data to local devices.
 
 ## Next steps
 
