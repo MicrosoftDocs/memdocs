@@ -46,7 +46,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
     > [!NOTE]
     >
-    > Using the setting **Converting all targeted devices to Autopilot** doesn't automatically convert existing hybrid Azure AD device in the assigned group(s) into an Azure AD device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+    > Using the setting **Converting all targeted devices to Autopilot** doesn't automatically convert existing Microsoft Entra hybrid device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
 1. Select **Next**.
 
@@ -63,6 +63,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 1. In the **Join to Azure AD as** box, choose **Azure AD joined**.
 
 1. Configure the following options:
+
     - **Microsoft Software License Terms**: Choose if you want to show the EULA to users.
 
     - **Privacy settings**: Choose if you want to show privacy settings to users.
@@ -71,7 +72,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
       >
       > The default value for the Diagnostic Data setting is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data)
 
-    - **Hide change account options**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Azure Active Directory](/azure/active-directory/fundamentals/customize-branding).
+    - **Hide change account options**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding).
 
     - **User account type**: Choose the user's account type (**Administrator** or **Standard** user). We allow the user joining the device to be a local Administrator by adding them to the local Admin group. We don't enable the user as the default administrator on the device.
 
@@ -91,7 +92,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
         >
         > Language and keyboard settings requires ethernet connectivity. Wi-fi connectivity isn't supported because of the requirement to choose a language, locale, and keyboard to make that Wi-fi connection.
 
-    - **Apply device name template** (requires Azure AD join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a prefix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).
+    - **Apply device name template** (requires Microsoft Entra join type): Choose **Yes** to create a template to use when naming a device during enrollment. Names must be 15 characters or less, and can have letters, numbers, and hyphens. Names can't be all numbers. Use the [%SERIAL% macro](/windows/client-management/mdm/accounts-csp) to add a hardware-specific serial number. Or, use the [%RAND:x% macro](/windows/client-management/mdm/accounts-csp) to add a random string of numbers, where x equals the number of digits to add. You can only provide a prefix for hybrid devices in a [domain join profile](./windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile).
   
 1. Select **Next**.
 
