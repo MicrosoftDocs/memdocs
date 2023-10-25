@@ -112,7 +112,10 @@ For more information, see [Managing specialized devices with Microsoft Intune](s
 4. The **All add-ons** tab shows you a list of all Intune add-ons that are available for trial or purchase. For more information on how to Try or buy Intune add-ons, see [Try or buy Intune add-ons](#try-or-buy-intune-add-ons).
 
 5. The **Capabilities** tab provides details about each of the Intune add-on capabilities that are available for trial or purchase. For more information, select **Learn more**.
- 
+
+> [!NOTE]
+> If you are not a global or billing admin, the **your add-ons** tab is not visible. However, the **Capabilities** tab allows you to see what you are eligible to use.
+
 ## Try or buy Intune add-ons
 
 Global and Billing administrators can choose to start free trials or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in the Intune admin center. However, they can't start a free trial or purchase licenses.
