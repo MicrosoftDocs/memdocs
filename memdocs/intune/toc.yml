@@ -1630,9 +1630,7 @@ items:
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
-          href: ./remote-actions/collect-diagnostics.md
-        - name: Pause config refresh
-          href: ./remote-actions/pause-config-refresh.md  
+          href: ./remote-actions/collect-diagnostics.md  
         - name: Send organizational messages  
           items: 
           - name: Overview 
