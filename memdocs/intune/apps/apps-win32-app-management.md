@@ -145,7 +145,7 @@ Set the app availability and other app assignment properties using the following
 
 ## Notifications for Win32 apps
 
-If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notificaiton suppression that you require.
+If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notification suppression that you require.
 
 ## Next steps
 
