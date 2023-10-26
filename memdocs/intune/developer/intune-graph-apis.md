@@ -23,7 +23,7 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, has-azure-ad-ps-ref
+ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier3
 - M365-identity-device-management
@@ -456,9 +456,9 @@ namespace IntuneGraphExample
 }
 ```
 
-### Authenticate Azure AD (PowerShell)
+### Authenticate Microsoft Graph PowerShell
 
-PowerShell scripts can use the AzureAD PowerShell module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
+PowerShell scripts can use the [Microsoft Graph PowerShell](https://review.learn.microsoft.com/en-us/powershell/microsoftgraph/overview?view=graph-powershell-1.0&branch=main) module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## Support multiple tenants and partners
 

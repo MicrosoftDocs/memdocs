@@ -21,7 +21,7 @@ ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
+ms.custom: seodec18, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier1
 - M365-identity-device-management
