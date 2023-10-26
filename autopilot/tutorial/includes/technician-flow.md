@@ -16,13 +16,13 @@ pre-provisioning/hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot process. For Windows Autopilot for pre-provisioned deployment, the Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals.  The first phase is known as the **technician flow** and is normally run by the IT department, OEM, or reseller. The second phase is known as the **user flow** and is normally run by the end-user.
+Once all of the configurations for Windows Autopilot for pre-provisioned deployment have been completed on the Intune and Microsoft Entra ID side, the next step is to start the Autopilot process. For Windows Autopilot for pre-provisioned deployment, the Autopilot process is split into two different phases that run at two different points in time by two different sets of individuals.  The first phase is known as the **technician flow** and is normally run by the IT department, OEM, or reseller. The second phase is known as the **user flow** and is normally run by the end-user.
 
 To start the technician flow, select a device that is part of the device group created in the previous **Create a device group** step, and then follow these steps:
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-4. At the Azure AD sign-in page, **DON'T** sign in or select the **Next**/**Sign in** button. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
+4. At the Microsoft Entra sign-in page, **DON'T** sign in or select the **Next**/**Sign in** button. Instead, press the <kbd>WIN</kbd> key on the keyboard five times. Pressing the <kbd>WIN</kbd> key five times should display a **What would you like to do?** options screen instead.
 
 5. From the **What would you like to do?** options screen:
 
