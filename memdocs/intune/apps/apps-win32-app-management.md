@@ -93,7 +93,7 @@ For available apps, the start time will dictate when the app is visible in the c
 
 > [!IMPORTANT]
 > The **Restart grace period** setting in the **Assignment** section is available only when **Device restart behavior** of the **Program** section is set to either of the following options:
-
+>
 > - **Determine behavior based on return codes** - Commonly set to Hard Reboot, however if return code is mapped to Soft Reboot, the user will only get a reboot notification and restart grace period settings will not be applied.
 > - **Intune will force a mandatory device restart**
 >
