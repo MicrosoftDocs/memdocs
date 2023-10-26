@@ -4,8 +4,8 @@
 title: Use custom compliance settings for Linux and Windows devices in Microsoft Intune
 description: Manage custom compliance settings for Linux and Windows devices by using JSON files and discovery scripts in Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 10/19/2022
 ms.topic: conceptual
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Use custom compliance policies and settings for Linux and Windows devices with Microsoft Intune

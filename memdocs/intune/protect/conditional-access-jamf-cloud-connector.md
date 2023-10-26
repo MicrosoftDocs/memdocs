@@ -5,8 +5,8 @@ title: Configure the Jamf Pro Cloud Connector to integrate Jamf Pro with Microso
 titleSuffix: Microsoft Intune
 description: Use the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/30/2023
 ms.topic: conceptual
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Configure the Jamf Cloud Connector to integrate with Microsoft Intune
@@ -321,3 +322,4 @@ Yes, the changes are logged to the JAMFChangeManagement.log file. To view the Ch
 
 - [Apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md)
 - [Data Jamf sends to Intune](../protect/data-jamf-sends-to-intune.md)
+- [Integrate Jamf Pro with Intune to report compliance to Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).

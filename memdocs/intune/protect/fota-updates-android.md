@@ -40,6 +40,9 @@ You have two ways to manage software updates on android:
 
 - Use Firmware Over-the-Air (FOTA), which works for some OEMs.
 
+    > [!NOTE]
+    > [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md) is required.
+
 - If FOTA isn't available you can use Device restrictions profiles, which work for all OEMs.
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

@@ -46,7 +46,7 @@ To set up VMware Horizon for Windows 365 Enterprise, follow these steps. The fir
 4. [Configure your Horizon Cloud Service Tenant](https://go.microsoft.com/fwlink/?linkid=2242843).
 5. [Configure identity provider](https://go.microsoft.com/fwlink/?linkid=2242843).
 6. [Connect Horizon Cloud Service with Windows 365](https://go.microsoft.com/fwlink/?linkid=2242843).
-7. [Assign VMware licenses to Azure Active Directory users or groups](https://go.microsoft.com/fwlink/?linkid=2242843).
+7. [Assign VMware licenses to Microsoft Entra users or groups](https://go.microsoft.com/fwlink/?linkid=2242843).
 
 ### Turn on the Windows 365 VMware connector in Intune
 

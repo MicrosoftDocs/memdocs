@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,7 +38,7 @@ Reports for Windows LAPS policies are found in the Endpoint security node for Ac
 
 You can use the LAPS policy report to view the configuration and assignments for a LAPS policy, and to drill in and identify the source of conflicts that prevent devices from applying your policies.
 
-To use the report, sign into the Intune admin center and navigate to the Account protection policy node. (**Endpoint security** > **Account protection**). Here you can view a list of all Account protection policies, including the policies for LAPS that use the *Local admin password solution (Windows LAPS) (preview)* profile. You can identify the profile by the *Policy type* column:
+To use the report, sign into the Intune admin center and navigate to the Account protection policy node. (**Endpoint security** > **Account protection**). Here you can view a list of all Account protection policies, including the policies for LAPS that use the *Local admin password solution (Windows LAPS)* profile. You can identify the profile by the *Policy type* column:
 
 :::image type="content" source="./media/windows-laps-reports/laps-policy-list.png" alt-text="Screen shot of the policy list for Account protection policies." lightbox="./media/windows-laps-reports/laps-policy-list.png":::
 
@@ -89,13 +89,13 @@ With the *source profiles* that are in conflict now identified by name, you can 
 
 ## Events and Audit logs
 
-When you use Intune policies to manage Windows LAPS, the following events are audited and logged in Azure Active Directory (Azure AD):
+When you use Intune policies to manage Windows LAPS, the following events are audited and logged in Microsoft Entra ID:
 
 - Automatic password rotation managed by policy
 - Manual password rotation through a device action.
 - Requests to view the password for an account.
 
-For information about Azure AD event logs, see [Audit logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs).
+For information about Microsoft Entra event logs, see [What are Microsoft Entra audit logs](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 ## Next steps
 

@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/24/2023
+ms.date: 10/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,13 +65,13 @@ You can use RSS to be notified when this article is updated. For more informatio
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
-### Advanced application management<!-- 10986080  -->  
-Advanced application management provides you with an enterprise catalog of applications that are easily accessible. It also provides application update capabilities. The enterprise catalog is planned to be available in public preview in late Q2 2023. The application update capabilities are planned to be available in early Q3 2023.
+### Enterprise application management<!-- 10986080  -->  
+Enterprise Application Management provides a catalog of prepackaged applications designed to simplify discovery, delivery, and updates for third and first party apps. Enterprise Application Management will be generally available in early Q1 2024.
 
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
-### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking -->  
+### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking) -->  
 You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
 
 - **ICCID**
@@ -87,141 +87,52 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device configuration
-
-#### Config Refresh will be in the Settings Catalog for Windows Insiders<!-- 15060174 -->
-In the Windows Settings Catalog, you can configure Config Refresh. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune.
-
-For more information on the Settings Catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
-
-Applies to:
-- Windows 10 and later
-
-### Managed Settings now available in the Apple settings catalog <!-- 21083384 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **Settings catalog** for profile type.
-
-**Managed Settings > App Analytics**:
-- Enabled: If true, enable sharing app analytics with app developers. If false, disable sharing app analytics.
-
-Applies to:
-- Shared iPad
-
-**Managed Settings > Accessibility Settings**:
-- Bold Text Enabled
-- Grayscale Enabled
-- Increase Contrast Enabled
-- Reduce Motion Enabled
-- Reduce Transparency Enabled
-- Text Size
-- Touch Accommodations Enabled
-- Voice Over Enabled
-- Zoom Enabled
-
-**Managed Settings > Personal Hotspot**:
-- Enabled: If true, enable Personal Hotspot. If false, disable Personal Hotspot.
-
-**Managed Settings > Software Update Settings**:
-- Recommendation Cadence: This value defines how the system presents software updates to the user.
-
-**Managed Settings > Time Zone**:
-- Time Zone: The Internet Assigned Numbers Authority (IANA) time zone database name.
-
-Applies to:
-- iOS/iPadOS
-
-**Managed Settings > Bluetooth**:
-- Enabled: If true, enable the Bluetooth setting. If false, disable the Bluetooth setting.
-
-**Managed Settings > MDM Options**:
-- Activation Lock Allowed While Supervised: If true, a supervised device registers itself with Activation Lock when the user enables Find My.
-
-Applies to:
-- iOS/iPadOS
-- macOS
-
-For more information on these settings, go to [Apple's developer website](https://developer.apple.com/documentation/devicemanagement/settingscommand/command/settings). For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-### New setting available in the macOS settings catalog<!-- 24809885 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
-
-**Microsoft Defender > Cloud delivered protection preferences**:
-- Cloud Block Level
-
-Applies to:
-- macOS
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
+<!-- ## Device configuration -->
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### SSO support for fully managed and corporate-owned devices with a work profile<!-- 8080357 --> 
-Intune will support single sign-on (SSO) on Android Enterprise devices that are fully managed or corporate-owned with a work profile.  With the addition of SSO, people enrolling their devices will only need to sign in once with their work or school account during enrollment.
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
 ## Device management
 
-### Introducing Remote Help on macOS <!-- 12454029 -->
+### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
+In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
-The Remote Help web app allows users to connect to macOS devices and join a view-only remote assistance session.
+To support this feature, a remote action will be added to allow a pause in action. If an admin needs to make changes or run remediation on a device for troubleshooting or maintenance, they can issue a pause from Intune for a specified period. When the period expires, settings will be enforced again.
 
-For more information on Remote Help, go to [Remote Help](../fundamentals/remote-help.md).
+The remote action **Pause config refresh** can be accessed from the device summary page.
 
-Applies to: 
-- Safari 16.4+
-- macOS 11 Big Sur
-
-### Government tenant support for endpoint security Application Control policy and Managed Installer<!-- 24850055 -->
-We’re adding support to use endpoint security Application Control policies, and to configure a Managed Installer, to both tenants in US Government and tenants in 21Vianet in China.
-
-Support for Application Control policy and Managed installers was originally [released in preview in June 2023](../fundamentals/whats-new.md#new-endpoint-security-application-control-policy-in-preview) as part of the Intune 2306 service release. Application Control policies in Intune are an implementation of Defender Application Control (WDAC).
-
-### Management certificate expiration date<!-- 17648747 -->
-Management certificate expiration date will be available as a column in the **Devices** workload. You will be able to filter on a range of expiration dates for the management certificate and also export a list of devices with an expiration date matching the filter. You will find this information listed in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **All devices**.
-
-### Intune will support iOS/iPadOS 15.x as the minimum version<!-- 24161619  -->  
-Later this year, Apple is expected to release iOS/iPadOS version 17. After the release of iOS/iPadOS 17, the minimum version supported by Intune will be iOS/iPadOS 15.x.
-
-For more information on this change, go to [Plan for change: Intune is moving to support iOS/iPadOS 15 and later](whats-new.md#plan-for-change-intune-is-moving-to-support-iosipados-15-and-later).
-
-> [!NOTE]
-> Userless iOS and iPadOS devices enrolled through Automated Device Enrollment (ADE) have a slightly nuanced support statement due to their shared usage. For more information, go to [Support statement for supported versus allowed iOS/iPadOS versions for user-less devices](https://aka.ms/ADE_userless_support).
-
-Applies to:
-
-- iOS/iPadOS
+For information on currently available Remote actions, see [Remote actions](../remote-actions/device-management.md).
 
 <!-- *********************************************** -->
 
 ## Device security
 
-### Endpoint Privilege Management support for Windows 365 devices<!-- 17016794 -->
-We are adding support to manage application elevations on Windows 365 devices (also known as Cloud PCs) to [Endpoint Privilege Management](../protect/epm-overview.md).  
+### Updated security baseline for Microsoft 365 Apps for Enterprise.<!-- 25021846  -->  
+We're working on an update to the Intune security baseline for Microsoft 365 Apps for Enterprise. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Office apps.
 
-### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972 -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support Linux.  We’re adding a new profile template that you can use with both the Linux devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
-The Linux EDR template will include the following settings for the Device tags category from Defender for Endpoint:
-- **Group tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
-- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+### Defender for Endpoint security settings management enhancements and support for Linux and macOS will soon be generally available<!-- 24190967  -->  
+The improvements introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) will soon be generally available. This change will include support all of the opt-in preview behavior – without having to enable support for preview features in Microsoft Defender for Endpoint.
 
-You can learn more about Defender for Endpoint settings that are available for Linux in [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
+When the opt-in public preview behavior becomes generally available, the following endpoint security profiles for Linux and macOS that were added as part of the opt-in preview will also generally available:
 
-### macOS support with Intune Endpoint security policies for Endpoint detection and response<!--  17757981 -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) will soon support macOS.  We’re adding a new profile template that you can use with both the macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the  [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+**Linux**:
 
-The macOS EDR template will include the following settings for the Device tags category from Defender for Endpoint:
-- **Type of  tag**  – The GROUP tag, tags the device with the specified value. The tag is reflected in the admin center on the device page and can be used for filtering and grouping devices.
-- **Value of tag** - Only one value per tag can be set. The Type of a tag is unique and shouldn’t be repeated in the same profile.
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
 
-You can learn more about Defender for Endpoint settings that are available for macOS in  [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
+**MacOS**:
+
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
+
+For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) in the Intune documentation.
 
 
 <!-- *********************************************** -->
