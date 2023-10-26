@@ -702,7 +702,7 @@ In addition to the Intune SDK, you will need these two components to enable App 
 
 ### MAM-CA remediation flow
 
-![Diagram of MAM-CA remediation flow](./media/app-sdk-ios/app-ca-flow.png)
+:::image type="content" alt-text="Diagram of MAM-CA remediation flow." source="./media/app-sdk-ios/app-ca-flow.png" lightbox="./media/app-sdk-ios/app-ca-flow.png":::
 
 ### New APIs
 Most of the new APIs can be found in the IntuneMAMComplianceManager.h. The app needs to be aware of three differences in behavior explained below.
@@ -862,7 +862,7 @@ The app is responsible for setting the identities appropriately, whether or not 
 
 At any time, every thread has an effective identity for UI tasks and file tasks. This is the identity that's used to check what policies, if any, should be applied. If the identity is "no identity" or the user isn't managed, no policies will be applied. The diagrams below show how the effective identities are determined.
 
-  ![Intune App SDK iOS: Identity determination process](./media/app-sdk-ios/ios-thread-identities.png)
+:::image type="content" alt-text="Intune App SDK iOS: Identity determination process" source="./media/app-sdk-ios/ios-thread-identities.png" lightbox="./media/app-sdk-ios/ios-thread-identities.png":::
 
 ### Thread queues
 
