@@ -89,7 +89,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Operating system language|The language set for the operating system on the device.|Windows, iOS, Android|
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
-|Total storage space|The total storage space on the device (in gigabytes).|Windows, macOS, iOS
+|Total storage space|The total storage space on the device (in gigabytes).|Windows, macOS, iOS|
 |Total physical memory|The total physical memory on the device (in gigabytes).|Windows|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
 | PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
