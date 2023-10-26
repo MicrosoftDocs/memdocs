@@ -70,7 +70,7 @@ Create an enrollment profile for devices enrolling via web-based device enrollme
 5. Select **Next**.  
 6. On the **Settings** page, for **Enrollment type**, select **Web based device enrollment**.  
 7. Select **Next**.  
-8. On the **Assignments** page, assign the profile to all devices, or select specific groups. Are user groups supported?  
+8. On the **Assignments** page, assign the profile to all devices, or select specific groups.
 9. Select **Next**.  
 10. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile. 
 
