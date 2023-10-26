@@ -47,8 +47,13 @@ You might consider resizing a Cloud PC when a user needs:
 
 Resizing supports:
 
-- Both direct and group-based licenses.
+- Direct and group-based licenses.
+- Paid, preview, and trial licenses.
 - Bulk and single device operations.
+
+Resizing doesn't support:
+
+- GPU Cloud PCs. GPU Cloud PCs might show up in the resize flow, but trying to resize a GPU Cloud PC will result in an error.
 
 Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin. Contact your end users and have them save their work and sign out before you begin resizing.
 
@@ -72,8 +77,6 @@ Alternatively, you can assign a custom role that includes the permissions of the
 In order to use **Resize** there must be available licenses in inventory for the resized Cloud PC configuration.
 
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node.
-
-The **Resize** remote action is supported for paid, preview, and trial licenses.
 
 Downsizing may impact support for nested virtualization. For more information, see [Set up virtualization-based workloads support](nested-virtualization.md).
 
