@@ -41,11 +41,12 @@ For information about end-user hardware requirements, see [End-user hardware req
 This table shows examples of the different sizes available for a Cloud PC:
 
 | Cloud PC CPUs, RAM, and storage | Example scenarios | Recommended apps |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | 2vCPU/4GB/256GB<br>2vCPU/4GB/128GB<br>2vCPU/4GB/64GB  | Firstline workers, call centers, education/training/CRM access, mergers and acquisition, short-term and seasonal, customer services.  | Microsoft 365 Apps, Microsoft Teams (Audio only),  OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support. |
 | 2vCPU/8GB/256GB<br>2vCPU/8GB/128GB | Bring-your-own-PC, work from home, market researchers, government, consultants. | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support. |
 | 4vCPU/16GB/512GB<br>4vCPU/16GB/256GB<br>4vCPU/16GB/128GB | Finance, government, consultants, healthcare services, bring-your-own-PC, work from home. | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, Power BI, Dynamics 365, OneDrive, Adobe Reader, Microsoft Edge, line-of-business app, Defender support. |
 | 8vCPU/32GB/512GB<br>8vCPU/32GB/256GB<br>8vCPU/32GB/128GB | Software developers, engineers, content creators, design and engineering workstations. | Microsoft 365 Apps, Microsoft Teams, Outlook, Access, OneDrive, Adobe Reader, Microsoft Edge, Power BI, Visual Studio Code, virtualization-based workloads: Hyper-V, Windows Subsystem for Linux (WSL), line-of-business apps, and Defender support. |
+| (GPU) 4vCPU/16GB/4GBvRAM/512GB<br>(GPU) 8CPU/56GB/12GBvRAM/1TB<br>(GPU) 16vCPU/110GB/16GBvRAM/1TB<br> | Graphic design, image and video rendering, 3D modelling, gaming, data processing and visualization |Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, Adobe, Figma, Autodesk, Revit, Illustrator, Blender, Unity, ArcGIS, Microsoft Edge, Power BI, Visual Studio Code, line-of-business apps, Defender support. |
 
 The recommended gallery image is available in the Provisioning Policy marketplace. For more information, see [Device images overview](device-images.md).
 
