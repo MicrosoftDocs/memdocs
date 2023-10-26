@@ -97,7 +97,7 @@ For the best user experience, make sure to:
 - Configure the Windows Update Ring profiles.
 - Set a time limit for idle Remote Desktop Sessions.
 
-## Features not yet supported Windows 365 Government
+## Features not yet supported Windows 365 Frontline
 
 The following features aren't yet supported for Windows 365 Frontline.
 
