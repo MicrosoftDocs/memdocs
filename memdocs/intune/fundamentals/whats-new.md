@@ -202,6 +202,11 @@ Intune supports web-based device enrollment with just in time (JIT) registration
 
 ### Device management
 
+#### Updates to the Intune add-ons page<!--17395941 -->
+The Intune add-ons page under **Tenant administration** includes **Your add-ons**, **All add-ons** and **Capabilities**. It provides an enhanced view into your trial or purchased licenses, which add-on capabilities you are allowed to use in your tenant, and support for new billing experiences in Microsoft Admin Center.
+
+For more information, go to [Use Intune Suite add-ons capabilities](../fundamentals/intune-add-ons.md)
+
 #### Remote Help for Android is now Generally available<!--17675897 -->  
 Remote Help is generally available for Android Enterprise Dedicated devices from Zebra and Samsung.
 
