@@ -584,7 +584,7 @@ Starting in release 8.0.2, the Intune App SDK can filter `UIActivityViewControll
 When sharing documents via the `UIActivityViewController` and `UIDocumentInteractionController`, iOS displays 'Copy to' actions for each application that supports opening the document being shared. Applications declare the document types they support through the `CFBundleDocumentTypes` setting in their Info.plist. This type of sharing will no longer be available if the policy prohibits sharing to unmanaged applications. As a replacement, user will have to add a non-UI Action extension to their application and link it to the Intune App SDK. The Action extension is merely a stub. The SDK will implement the file sharing behavior. Follow the steps below:
 
 1. Your application must have at least one schemeURL defined under its Info.plist `CFBundleURLTypes` along with its `-intunemam` counterpart. For example:
-    ```objc
+    ```xml
     <key>CFBundleURLSchemes</key>
 	<array>
 		<string>launch-com.contoso.myapp</string>
@@ -806,8 +806,11 @@ guard let authorityURL = URL(string: kAuthority) else {
         self.applicationContext = try MSALPublicClientApplication(configuration: msalConfiguration)
 
 ```
+
 ### How to test App Protection CA
+
 #### Configuring a test user for App Protection CA
+
 1. Log in with your administrator credentials to https://portal.azure.com.
 2. Select **Azure Active Directory** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
 3. Configure conditional access policy by setting the following items:
@@ -1042,7 +1045,7 @@ The **IntuneMAMFrameworkPatcher** command line tool no longer must be run as the
 ### Command line usage
 
 ```bash
-    IntuneMAMFrameworkPatcher -i /path/to/directory_or_binary [-resign] [-verbose]
+IntuneMAMFrameworkPatcher -i /path/to/directory_or_binary [-resign] [-verbose]
 ```
 
 **Parameters**:
@@ -1054,15 +1057,18 @@ The **IntuneMAMFrameworkPatcher** command line tool no longer must be run as the
 
 **Other usages**:
 
-- Remove the patch:<br>
-  ```IntuneMAMFrameworkPatcher -r /path/to/directory_or_binary [-resign] [-verbose]```
-- Verify the patch:<br>
-  ```IntuneMAMFrameworkPatcher -v /path/to/directory_or_binary [-verbose]```
+- Remove the patch:
+
+  `IntuneMAMFrameworkPatcher -r /path/to/directory_or_binary [-resign] [-verbose]`
+
+- Verify the patch:
+
+  `IntuneMAMFrameworkPatcher -v /path/to/directory_or_binary [-verbose]`
 
 **Example script**:
 
 ```bash
-    IntuneMAMFrameworkPatcher -i $BUILT_PRODUCTS_DIR/$EXECUTABLE_FOLDER_PATH -resign -verbose
+IntuneMAMFrameworkPatcher -i $BUILT_PRODUCTS_DIR/$EXECUTABLE_FOLDER_PATH -resign -verbose
 ```
 
 For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started.md).
