@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices: Register device for Windows Autopilot
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
@@ -50,10 +50,10 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
 
 1. In an Autopilot profile that is deployed to a device group that the device is a member of, make sure the option **Convert all targeted devices to Autopilot** is set to **Yes**. For more information on creating and assigning Autopilot profiles, see one of the following articles on creating and assigning an Autopilot profile for each of the different Autopilot scenarios:
 
-   - [User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
-   - [User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
-   - [Pre-provisioning Azure AD join: Create and assign a pre-provisioned Azure AD join Autopilot profile](../pre-provisioning/azure-ad-join-autopilot-profile.md)
-   - [Pre-provisioning hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile](../pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
+   - [User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
+   - [User-driven Microsoft Entra hybrid join: Create and assign user-driven Microsoft Entra hybrid join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
+   - [Pre-provisioning Microsoft Entra join: Create and assign a pre-provisioned Microsoft Entra join Autopilot profile](../pre-provisioning/azure-ad-join-autopilot-profile.md)
+   - [Pre-provisioning Microsoft Entra hybrid join: Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile](../pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
    - [Self-deploying mode: Create and assign self-deploying Autopilot profile](../self-deploying/self-deploying-autopilot-profile.md)
 
 ## Importing the hardware hash CSV file for devices into Intune
@@ -62,13 +62,13 @@ To ensure that the device can run an Autopilot deployment after a reset, you mus
 
 ## Ensure domain join profile is assigned to all devices
 
-For Autopilot scenarios that utilize hybrid Azure AD join and run after the Windows Autopilot deployment for existing devices task sequence completes, at [Step 8: Configure and assign domain join profile](../user-driven/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario or [Step 8: Configure and assign domain join profile](../pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-workflow.md) scenario, make sure that the domain join profile is assigned to **All devices**. The domain join profile needs to be assigned to **All devices** because:
+For Autopilot scenarios that utilize Microsoft Entra hybrid join and run after the Windows Autopilot deployment for existing devices task sequence completes, at [Step 8: Configure and assign domain join profile](../user-driven/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md) scenario or [Step 8: Configure and assign domain join profile](../pre-provisioning/hybrid-azure-ad-join-domain-join-profile.md) for the [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join](../pre-provisioning/hybrid-azure-ad-join-workflow.md) scenario, make sure that the domain join profile is assigned to **All devices**. The domain join profile needs to be assigned to **All devices** because:
 
-- If the existing device hasn't ever joined Azure AD or been registered in Azure AD before the Autopilot deployment runs, then there isn't any Azure AD device for the device in Intune. The Azure AD device is created in Intune when the device joins or registers with Azure AD as part of the Autopilot deployment.
+- If the existing device hasn't ever joined Microsoft Entra ID or been registered in Microsoft Entra ID before the Autopilot deployment runs, then there isn't any Microsoft Entra device for the device in Intune. The Microsoft Entra device is created in Intune when the device joins or registers with Microsoft Entra ID as part of the Autopilot deployment.
 
 - If the existing device hasn't ever registered as an Autopilot device before the Autopilot deployment runs, then there isn't any Autopilot device for the device in Intune. Normally a device has to be an Autopilot device before the Autopilot deployment can run on it. However, for the Windows Autopilot deployment for existing devices scenario, registering the device as an Autopilot device isn't required since it uses the Autopilot profile JSON file instead. The device is instead registered as an Autopilot device after the Autopilot deployment completes via the methods in the [Register device for Windows Autopilot](#register-device-for-windows-autopilot) section.
 
-In both of the above scenarios, there's no device that can be added to a device group before the Autopilot deployment begins. Since there's no device group that contains the device, there's no device group that the domain join profile can be assigned to before the Autopilot deployment begins. Assigning the domain join profile to **All devices** resolves this problem and ensures that the device can pick up the domain join profile before it's either an Azure AD device or Autopilot device.
+In both of the above scenarios, there's no device that can be added to a device group before the Autopilot deployment begins. Since there's no device group that contains the device, there's no device group that the domain join profile can be assigned to before the Autopilot deployment begins. Assigning the domain join profile to **All devices** resolves this problem and ensures that the device can pick up the domain join profile before it's either a Microsoft Entra device or Autopilot device.
 
 ## More information
 
