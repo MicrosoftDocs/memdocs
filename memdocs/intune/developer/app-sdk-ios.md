@@ -289,6 +289,7 @@ WebViewHandledURLSchemes | Array of Strings | Specifies the URL schemes that you
 DocumentBrowserFileCachePath | String | If your app uses the [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) to browse through files in various file providers, you can set this path relative to the home directory in the application sandbox so the Intune SDK can drop decrypted managed files into that folder. | Optional. Defaults to the `/Documents/` directory. |
 VerboseLoggingEnabled | Boolean | If set to YES, Intune will log in verbose mode. | Optional. Defaults to NO |
 FinishLaunchingAtStartup | Boolean | If the app is using `[BGTaskScheduler registerForTaskWithIdentifier:]` then this setting should be set to YES. | Optional. Defaults to NO |
+ValuesToScrubFromLogging | Array of Strings | Specifies Application Configuration values that should be scrubbed from the logs. Alternatively, the valuesToScrubFromLogging property on the IntuneMAMSettings class can be given an array of strings for the same behavior. | Optional. |
 
 ## Receive app protection policy
 
