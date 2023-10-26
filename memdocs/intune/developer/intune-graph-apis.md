@@ -458,7 +458,7 @@ namespace IntuneGraphExample
 
 ### Authenticate Microsoft Graph PowerShell
 
-PowerShell scripts can use the [Microsoft Graph PowerShell](https://review.learn.microsoft.com/en-us/powershell/microsoftgraph/overview?view=graph-powershell-1.0&branch=main) module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
+PowerShell scripts can use the [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview?view=graph-powershell-1.0&branch=main) module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## Support multiple tenants and partners
 
