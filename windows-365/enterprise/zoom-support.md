@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 09/13/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -51,9 +51,8 @@ To optimize Zoom, you’ll need to install the Zoom VDI Client on the Cloud PC a
 ## Install the Zoom VDI client on the Cloud PC
 
 1. Have the user sign in to the Cloud PC as a local administrator and, in their browser, navigate to the [Zoom VDI downloads and backwards compatibility page](https://support.zoom.us/hc/en-us/articles/360041602711).
-2. In the **Download Links** table, under **VDI Release – Version**, select the most recent version (for example, **5.8.4**).
-3. On the **VDI Release Version** page, select **Click here to download VDI Client**.
-4. Run the MSI and follow the installation instructions.
+2. Locate and download the most recent VDI client version.
+3. Run the MSI and follow the installation instructions.
 
 Alternatively, the admin can deploy the Zoom VDI client. For more information about deploying apps, see the [Win32 App management guide](/mem/intune/apps/apps-win32-app-management).
 
@@ -61,7 +60,7 @@ Alternatively, the admin can deploy the Zoom VDI client. For more information ab
 
 1. Sign in to the Windows PC that will be used to access the Cloud PC.
 2. In a browser, navigate to the VDI release version page matching the page you used to install the VDI client. For example, [VDI Release Version 5.8.4]( https://support.zoom.us/hc/en-us/articles/4413719670285).
-3. In the **Compatible Plugins** table, find the row for the VDI client that you installed, and, in the second column, select the appropriate entry for **Azure Virtual Desktop**. For example, **Windows x86 or x64 (Phone and Meetings): 5.8.4.21112**. Only Windows clients are supported for these optimizations.
+3. In the **Compatible Plugins** table, find the VDI client that you installed, and select the appropriate entry for **Azure Virtual Desktop**. For example, **Windows x86 or x64 (Phone and Meetings): 5.8.4.21112**. Only Windows clients are supported for these optimizations.
 4. Run the MSI and follow the installation instructions.
 
 > [!NOTE]  

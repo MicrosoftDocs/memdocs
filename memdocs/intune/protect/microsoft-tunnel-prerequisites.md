@@ -59,16 +59,15 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   |Distribution version   | Container requirements   | Considerations     |
   |-----------------------|--------------------------|--------------------|
   | CentOS 7.4+           | Docker CE                | CentOS 8+ isn't supported |
-  | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
-  | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
-  | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
+  | Red Hat (RHEL) 7.4+   | Docker CE                | Support ends June 2024.                   |
+  | Red Hat (RHEL) 8.4    | Podman 3.0               | Support ends October 2023.                    |
+  | Red Hat (RHEL) 8.5    | Podman 3.0               | Support ends October 2023. This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
   | Red Hat (RHEL) 8.6    | Podman 4.0 *(default)* <br> Podman 3.0  | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.6_release_notes/index#enhancement_containers) are not usable with Podman v4.0. If upgrading and changing containers from v3 to v4.0, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Red Hat (RHEL) 8.7  <!-- This entry is pending podman version details from PM -->  | Podman 4.2 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
    | Red Hat (RHEL) 8.8  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
    | Red Hat (RHEL) 9.0  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
    | Red Hat (RHEL) 9.1  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
    | Red Hat (RHEL) 9.2  <!-- This entry is pending podman version details from PM -->  | Podman 4.4.1 *(default)*   | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.7_release_notes/index#enhancement_containers) are not usable with Podman v4.2 and later. If upgrading and changing containers, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
-  | Ubuntu 18.04           | Docker CE               | Support ends April 2023. See the following note for more information.        |
   | Ubuntu 20.04           | Docker CE               |                    |
   | Ubuntu 22.04           | Docker CE               |                    |
 
@@ -295,7 +294,7 @@ The following considerations can help you configure the Linux server and your en
   ```
 
   > [!NOTE]  
-  > Microsoft Tunnel doesn't support Azure AD App Proxy, or similar proxy solutions.
+  > Microsoft Tunnel doesn't support Microsoft Entra application proxy, or similar proxy solutions.
 
 ### Configure an outbound proxy for Podman
 
@@ -411,7 +410,7 @@ Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only t
 
 The following functionality is supported by all platforms:
 
-- Azure Active Directory (Azure AD) authentication to the Tunnel using username and password.
+- Microsoft Entra authentication to the Tunnel using username and password.
 - Active Directory Federation Services (AD FS) authentication to the Tunnel using username and password.
 - Per-app support.
 - Manual full-device tunnel through a Tunnel app, where the user launches VPN and selects *Connect*.
@@ -424,7 +423,7 @@ Support for a Proxy is limited to the following platforms:
 
 ## Permissions
 
-To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Azure AD administrators have these permissions. You can also add them to [custom roles you create](../fundamentals/create-custom-role.md) for your Intune tenant.
+To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Microsoft Entra administrators have these permissions. You can also add them to [custom roles you create](../fundamentals/create-custom-role.md) for your Intune tenant.
 
 While configuring a role, on the **Permissions** page, expand **Microsoft Tunnel Gateway** and then select the permissions you want to grant.
 
@@ -444,7 +443,7 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 Before you start a server install, we recommend you download and run the most recent version of the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
-- Validates that the Azure Active Directory (Azure AD) account you use to install Microsoft Tunnel has the required roles to complete enrollment.
+- Validates that the Microsoft Entra ID account you use to install Microsoft Tunnel has the required roles to complete enrollment.
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
 
@@ -478,7 +477,7 @@ To use the readiness tool:
 
 3. To validate that the account you'll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 
-   The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error.
+   The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra and to Intune. The tool will report success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
 

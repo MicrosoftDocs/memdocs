@@ -48,15 +48,17 @@ The maximum number of active Windows 365 Frontline Cloud PC sessions in your org
 
 Windows 365 Frontline is currently only available for Azure Global Cloud.
 
+Frontline Cloud PCs can't be accessed directly from Remote Desktop app. Instead, you must use the Windows 365 web portal if you want to access your Frontline Cloud PC with the Remote Desktop app.
+
 ## Licensing
 
 To use Windows 365 Frontline, you must be licensed for:
 
 - Windows 11 Enterprise or Windows 10 Enterprise
 - Microsoft Intune
-- Azure AD P1.
+- Microsoft Entra ID P1.
 
-In addition to being available independently, Windows Enterprise, Intune, and Azure Active Directory (Azure AD) licenses are included in:
+In addition to being available independently, Windows Enterprise, Intune, and Microsoft Entra ID licenses are included in:
 
 - Microsoft 365 E3
 - Microsoft 365 E5

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/11/2023
+ms.date: 10/23/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -43,13 +43,13 @@ Each customer has its specific requirements based on the workload they use to ca
 
 ### [Windows 365 Enterprise](#tab/enterprise)
 
-To use your own network and provision Azure Active Directory (Azure AD) joined Cloud PCs, you must meet the following requirements:
+To use your own network and provision Microsoft Entra joined Cloud PCs, you must meet the following requirements:
 
 - Azure virtual network: You must have a virtual network (vNET) in your Azure subscription in the same region as where the Windows 365 desktops are created.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
-To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, and the following requirements:
+To use your own network and provision Microsoft Entra hybrid joined Cloud PCs, you must meet the above requirements, and the following requirements:
 
 - The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To support this resolution, define your AD DS DNS servers as the DNS servers for the virtual network.
 - The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
@@ -58,18 +58,22 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 All of the Windows 365 Enterprise **General network requirements** apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
 
-#### Azure Active Directory joined Cloud PCs
+<a name='azure-active-directory-joined-cloud-pcs'></a>
 
-To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
+#### Microsoft Entra joined Cloud PCs
+
+To use your own network and provision Microsoft Entra joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
 - Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this network is a US Gov region.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
-#### Hybrid Azure AD joined Cloud PCs
+<a name='hybrid-azure-ad-joined-cloud-pcs'></a>
 
-To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, and the following requirements:
+#### Microsoft Entra hybrid joined Cloud PCs
+
+To use your own network and provision Microsoft Entra hybrid joined Cloud PCs, you must meet the above requirements, and the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
 - The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To support this resolution, define your AD DS DNS servers as the DNS servers for the virtual network.
@@ -81,58 +85,66 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 ### [Windows 365 Enterprise](#tab/ent)
 
-You must allow traffic in your Azure network configuration to the following service URLs and ports:
+You must allow traffic in your network configuration to the following service URLs and ports to support provisioning and management of Cloud PCs and for remote connectivity with Cloud PCs. Although most of the configuration is for the Cloud PC network, end user connectivity occurs from a physical device. Therefore, you must also follow the connectivity guidelines on the physical device network.
 
-- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
-- [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list)
-- rdweb.wvd.microsoft.com
-- rdbroker.wvd.microsoft.com
-- Provisioning and Azure network connection endpoints:
-  - \*.infra.windows365.microsoft.com
-  - cpcsaamssa1prodprap01.blob.core.windows.net
-  - cpcsaamssa1prodprau01.blob.core.windows.net
-  - cpcsaamssa1prodpreu01.blob.core.windows.net
-  - cpcsaamssa1prodpreu02.blob.core.windows.net
-  - cpcsaamssa1prodprna01.blob.core.windows.net
-  - cpcsaamssa1prodprna02.blob.core.windows.net
-  - cpcstcnryprodprap01.blob.core.windows.net
-  - cpcstcnryprodprau01.blob.core.windows.net
-  - cpcstcnryprodpreu01.blob.core.windows.net
-  - cpcstcnryprodpreu02.blob.core.windows.net
-  - cpcstcnryprodprna01.blob.core.windows.net
-  - cpcstcnryprodprna02.blob.core.windows.net
-  - cpcstprovprodpreu01.blob.core.windows.net
-  - cpcstprovprodpreu02.blob.core.windows.net
-  - cpcstprovprodprna01.blob.core.windows.net
-  - cpcstprovprodprna02.blob.core.windows.net
-  - cpcstprovprodprap01.blob.core.windows.net
-  - cpcstprovprodprau01.blob.core.windows.net
-  - prna01.prod.cpcgateway.trafficmanager.net
-  - prna02.prod.cpcgateway.trafficmanager.net
-  - preu01.prod.cpcgateway.trafficmanager.net
-  - preu02.prod.cpcgateway.trafficmanager.net
-  - prap01.prod.cpcgateway.trafficmanager.net
-  - prau01.prod.cpcgateway.trafficmanager.net
+| Device or service | Network connectivity required URLs and ports | Notes |
+| --- | --- | --- |
+| Physical device | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#remote-desktop-clients) | For Remote Desktop client connectivity and updates. |
+| Microsoft Intune service | [Link](/mem/intune/fundamentals/intune-endpoints) | For Intune cloud services like device management, application delivery, and endpoint analytics. |
+| Azure Virtual Desktop session host virtual machine | [Link](/azure/virtual-desktop/safe-url-list?tabs=azure#session-host-virtual-machines) | For remote connectivity between Cloud PCs and the backend Azure Virtual Desktop service. |
+| Windows 365 service | [Link](#windows-365-service) | For provisioning and health checks. |
+
+#### Windows 365 service
+
+The following URLs and ports are required for the provisioning of Cloud PCs and the Azure Network Connection (ANC) health checks:
+
+- \*.infra.windows365.microsoft.com
+- cpcsaamssa1prodprap01.blob.core.windows.net
+- cpcsaamssa1prodprau01.blob.core.windows.net
+- cpcsaamssa1prodpreu01.blob.core.windows.net
+- cpcsaamssa1prodpreu02.blob.core.windows.net
+- cpcsaamssa1prodprna01.blob.core.windows.net
+- cpcsaamssa1prodprna02.blob.core.windows.net
+- cpcstcnryprodprap01.blob.core.windows.net
+- cpcstcnryprodprau01.blob.core.windows.net
+- cpcstcnryprodpreu01.blob.core.windows.net
+- cpcstcnryprodpreu02.blob.core.windows.net
+- cpcstcnryprodprna01.blob.core.windows.net
+- cpcstcnryprodprna02.blob.core.windows.net
+- cpcstprovprodpreu01.blob.core.windows.net
+- cpcstprovprodpreu02.blob.core.windows.net
+- cpcstprovprodprna01.blob.core.windows.net
+- cpcstprovprodprna02.blob.core.windows.net
+- cpcstprovprodprap01.blob.core.windows.net
+- cpcstprovprodprau01.blob.core.windows.net
+- prna01.prod.cpcgateway.trafficmanager.net
+- prna02.prod.cpcgateway.trafficmanager.net
+- preu01.prod.cpcgateway.trafficmanager.net
+- preu02.prod.cpcgateway.trafficmanager.net
+- prap01.prod.cpcgateway.trafficmanager.net
+- prau01.prod.cpcgateway.trafficmanager.net
 - Cloud PC communication endpoints
   - endpointdiscovery.cmdagent.trafficmanager.net
   - registration.prna01.cmdagent.trafficmanager.net
   - registration.preu01.cmdagent.trafficmanager.net
   - registration.prap01.cmdagent.trafficmanager.net
   - registration.prau01.cmdagent.trafficmanager.net
+  - registration.prna02.cmdagent.trafficmanager.net
 - Registration endpoints
   - login.microsoftonline.com
   - login.live.com
   - enterpriseregistration.windows.net
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
-  - hm-iot-in-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
-  - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-preu01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prna02.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-2-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-3-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
-  - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
-  - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
-
+  
 All endpoints connect over port 443 unless otherwise specified.
 
 ### [Windows 365 Government](#tab/gov)
@@ -174,7 +186,9 @@ All endpoints connect over port 443 unless specified otherwise.
 | mam.manage.microsoft.com:443 | GCC |
 | wip.mam.manage.microsoft.com:443 | GCC |
 
-#### Azure Active Directory-dependent URLs
+<a name='azure-active-directory-dependent-urls'></a>
+
+#### Microsoft Entra ID-dependent URLs
 
 | Address:Port | Required for |
 | --- | --- |
@@ -223,7 +237,7 @@ Changing the network routes of a Cloud PC (at the network layer or at the Cloud 
 
 ## DNS requirements
 
-As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to join on-premises Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-premises AD environment.
+As part of the Microsoft Entra hybrid join requirements, your Cloud PCs must be able to join on-premises Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-premises AD environment.
 
 Configure your Azure Virtual Network where the Cloud PCs are provisioned as follows:
 

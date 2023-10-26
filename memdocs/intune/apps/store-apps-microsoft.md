@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 08/28/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,8 +36,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports UWP apps, desktop apps packaged in *.msix*, and now Win32 apps packaged in *.exe* or *.msi* installers.
-Depending on the assignment type, users can then install the applications via the Company Portal, just like most other Windows applications managed by Intune and Configuration Manager.
+Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports Universal Windows Platform (UWP) apps, desktop apps packaged in `.msix`, and now Win32 apps packaged in `.exe` or `.msi` installers.  
 
 > [!IMPORTANT]
 > There are key improvements to the most recent Microsoft Store apps functionality over legacy functionality.
@@ -48,6 +47,7 @@ Depending on the assignment type, users can then install the applications via th
 > - You can monitor the installation progress and results for store apps
 > - Win32 store apps are supported (in preview)  
 > - System context and user context are supported for UWP apps
+>   - When a device is enrolled by being Azure AD registered, system context must be used.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 - Client devices must support at least two core processors to successfully install and run Microsoft Store apps.
 - Client device need to be able to support the [Intune Management Extension (IME)](..\apps\intune-management-extension.md) to install Microsoft Store apps.
-- Client device need access to both the Microsoft Store and the destination content to install Microsoft Store apps. For more information see [Microsoft Store proxy configuration](../fundamentals/intune-endpoints.md#microsoft-store).
+- Client device need access to both the Microsoft Store and the destination content to install Microsoft Store apps. For more information, see [Microsoft Store proxy configuration](../fundamentals/intune-endpoints.md#microsoft-store).
 
 ## Add and deploy a Microsoft Store app
 
@@ -170,24 +170,88 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 > [!NOTE]
 > Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". However, the app will still install correctly on the device.
 >
+> When a device is enrolled as Azure AD Registered, the installation behavior should be set to "System". If an app with the installation behavior set to "User" is assigned as **Available**, the end user will receive the following error when selecting install in the Company Portal: "Requirements Not Met". Make sure the device is _joined_ to Azure, or use System context to rectify this situation. 
+> 
 > UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store policy is set to block auto-update.
 
 ## Common Store policy settings and their impact on Microsoft Store apps
 
 Some Store policies may affect app deployments from the Microsoft Store. The following policy list provides details on how some Store policies can affect app deployments.
 
-For more information on the Microsoft Store experience in Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
+For more information on the Microsoft Store integration with Intune due to the Microsoft Store for Business and Education retirement, go to the [Adding your Microsoft Store for Business and Education apps to the Microsoft Store in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-your-microsoft-store-for-business-and-education-apps-to/ba-p/3788506) blog post.
 
-|     Store Group   Policies    |     Desired   setting    | Impact | Note
-|---|---|---|---|
-|     Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Disable all apps from Microsoft Store | **Not configured** or **Enabled** | **Disabled** turns off the launch of all apps from the Microsoft Store that came pre-installed or were downloaded. | Settings this policy to **Disabled** will disable the launch of all Microsoft Store apps. |
-|     Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Turn off Automatic Download and Install of updates    | **Not configured** or **Disabled** | If you disable this setting, the automatic download and installation of app updates is enabled. | |
-|     Computer Configuration\Policies\Administrative Templates\Windows Components\Desktop App Installer\Enable App Installer Microsoft Store Source | **Not configured** or **Enabled** | If you enable or do not configure this setting, the Microsoft Store source for Windows Package Manager will be available and can be removed. | |
-|     Computer Configuration\Policies\Administrative Templates\Windows Components\Desktop App Installer\Enable App Installer | **Not configured** or **Enabled** | If you enable or do not configure this setting, users will be able to use the Windows Package Manager. | |
-|     Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Turn off the Store application | **Not configured** or **Disabled** | If you disable or don't configure this setting, access to the Store application is allowed. | Enabling this setting will block the Microsoft Store entirely.  This will also stop the Microsoft Store from applying security related updates to built-in Windows Apps. |
+- **Disable all apps from the Microsoft Store** policy
 
-> [!NOTE]
-> If you would like to block installation of arbitrary applications from the Store application by the end user without blocking the Intune and Windows Package Manager store integration, set **Computer Configuration\Policies\Administrative Templates\Windows Components\Store\Only display the private store within the Microsoft Store** to **Enabled**.
+  - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
+
+  | CSP | Intune | On-premises GPO |
+  | --- | --- | --- |
+  | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | [Settings Catalog](../configuration/settings-catalog.md) &#124; Microsoft App Store > Disable Store Originated Apps | Administrative Templates > Windows Components > Store |
+
+- **Turn off Automatic Download and Install of updates** policy
+
+  - Recommended values: **Not configured** or **Disabled**. To prevent end users from blocking or turning off this feature, set the value to **Disabled**.
+
+  | CSP | Intune | On-premises GPO |
+  | --- | --- | --- |
+  | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | [Settings Catalog](../configuration/settings-catalog.md) &#124; Microsoft App Store > Allow apps from the Microsoft app store to auto update | Administrative Templates > Windows Components > Store |
+
+- **Enable App Installer Microsoft Store Source** policy
+
+  - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
+
+  | CSP | Intune | On-premises GPO |
+  | --- | --- | --- |
+  | [DesktopAppInstaller/EnableMicrosoftStoreSource](/windows/client-management/mdm/policy-csp-desktopappinstaller#enablemicrosoftstoresource) | Not built in; use a [custom configuration profile](../configuration/custom-settings-configure.md). | Administrative Templates > Windows Components > Desktop App Installer |
+
+- **Enable App Installer** policy
+
+  - Recommended values: **Not configured** or **Enabled**. To prevent end users from blocking or turning off this feature, set the value to **Enabled**.
+
+  | CSP | Intune | On-premises GPO |
+  | --- | --- | --- |
+  | [DesktopAppInstaller/EnableAppInstaller](/windows/client-management/mdm/policy-csp-desktopappinstaller#enableappinstaller) | Not built in; use a [custom configuration profile](../configuration/custom-settings-configure.md). | Administrative Templates > Windows Components > Desktop App Installer |
+
+- **Turn off the Store application** policy: Your options:
+
+  - **Not configured**: This policy isn't changed or updated. By default, the OS might allow end users to install arbitrary store apps outside of Intune.
+
+  - **Enabled**: When enabled, this setting:
+
+    - Blocks end users from installing arbitrary apps from the Microsoft Store app.
+    - Blocks end users from installing arbitrary apps using `winget.exe`.
+    - Blocks end users from using the Microsoft Store to manually install app updates.
+
+  - **Disabled**: When disabled, this setting:
+
+    - Allows end users to install arbitrary apps from the Microsoft Store app.
+    - Allows end users to install arbitrary apps using `winget.exe`.
+    - Allows end users to use the Microsoft Store to manually install app updates.
+
+  | CSP | Intune | On-premises GPO |
+  | --- | --- | --- |
+  | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
+
+### What you need to know
+
+- The **Turn off the Store application** setting:
+
+  - Doesn't affect Intune's ability to install Microsoft Store apps. In all cases, the new Intune integration with the Microsoft Store is allowed.
+  - Doesn't affect the Microsoft Store's ability to automatically update UWP apps. As long as the **Turn off Automatic Download and Install of updates** ([AllowAppStoreAutoUpdate CSP](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate)) policy isn't enabled, the Microsoft Store automatically updates UWP apps.
+- If you want to allow automatic UWP app updates from the Microsoft Store, including built-in Windows apps, and block users from installing apps from the Microsoft Store or `winget.exe`, then:
+
+  - Set **Turn off Automatic Download and Install of updates** to Disabled or Not configured, **AND**
+  - Set **Turn off the Store application** to Enabled or Not configured.
+
+- For Win32 Store apps, if **Turn off Automatic Download and Install of updates** is set, then the Win32 apps with an active Intune assignment are still automatically updated.
+
+> [!TIP]
+> Using the **Only display the private store within the Microsoft Store app** policy ([RequirePrivateStoreOnly CSP](/windows/client-management/mdm/policy-csp-ApplicationManagement#requireprivatestoreonly)) is still valid. This policy:
+>
+> - Blocks end user access to the Microsoft Store.
+> - Allows the Windows Package Manager `winget` command line interface (CLI) access to the Microsoft Store.
+>
+> So, it's not the preferred choice to prevent end user access to the Microsoft Store. Instead, it's recommended to use the **Turn off the Store application** policy.
 
 ## Unsupported functionality for Microsoft Store apps
 
@@ -195,6 +259,6 @@ Microsoft Store apps don't support the following features:
 
 - Any app that has an ARM64 installer isn't supported.
 
-## Next steps
+## Next step
 
 - [Assign apps to groups](apps-deploy.md)

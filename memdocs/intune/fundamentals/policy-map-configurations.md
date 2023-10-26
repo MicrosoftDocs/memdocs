@@ -39,6 +39,9 @@ If you’re migrating from Basic Mobility and Security to Intune, you can use th
 
 To see these settings in the Office 365 Security and Compliance portal, sign in to the portal and then select **Device security policies** > policy name > **Edit policy** > **Configurations**.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Require encrypted backup
 
 This setting was never supported for Windows or Android in Basic Mobility and Security.

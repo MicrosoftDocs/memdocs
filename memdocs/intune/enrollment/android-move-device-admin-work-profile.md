@@ -33,6 +33,9 @@ ms.collection:
 
 # Move Android devices from device administrator to personally-owned work profile management
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 You can help users move their Android devices from device administrator to personally-owned work profile management by using the compliance setting to **Block devices managed with device administrator**. This setting lets you make devices non-compliant if they're managed with device administrator. 
 
 When users see that they're out of compliance for this reason, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:

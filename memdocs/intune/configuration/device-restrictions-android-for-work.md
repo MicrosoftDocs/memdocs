@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/31/2023
+ms.date: 10/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -49,7 +49,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
+- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
 
 - When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 
@@ -59,7 +59,7 @@ This feature applies to:
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 
-Some settings aren't supported by all enrollment types. To see which settings are supported by the different enrollment types, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each setting is under a heading that indicates the enrollment types that can use the setting.
+Some settings aren't supported by all enrollment types. To see the supported settings by the different enrollment types, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each setting is under a heading that indicates the enrollment types that can use the setting.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="Screenshot that shows the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune.":::
 
@@ -89,7 +89,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **USB file transfer**: **Block** prevents transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow transferring files.
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 - **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.  
-- **Developer settings**: Choose **Allow** to let users access developer settings on the device. When set to **Not configured** (default), Intune doesn’t change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
+- **Developer settings**: Choose **Allow** to let users access developer settings on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from accessing developer settings on the device.
 - **Microphone adjustment**: **Block** prevents users from unmuting the microphone and adjusting the microphone volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to use and adjust the volume of the microphone on the device.
 - **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. These emails only apply when a non-user factory reset is run, such as running a factory reset using the recovery menu.
 
@@ -127,7 +127,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **Status bar**: **Block** prevents access to the status bar, including notifications and quick settings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users access to the status bar.
 - **Wi-Fi setting changes**: **Block** prevents users from changing Wi-Fi settings created by the device owner. Users can create their own Wi-Fi configurations. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the Wi-Fi settings on the device.
 - **USB storage**: Choose **Allow** to access USB storage on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent access to USB storage.
-- **Network escape hatch**: **Enable** allows users to turn on the network escape hatch feature. If a network connection isn't made when the device boots, then the escape hatch asks to temporarily connect to a network and refresh the device policy. After applying the policy, the temporary network is forgotten and the device continues booting. This feature connects devices to a network if:
+- **Network escape hatch**: **Enable** allows users to turn on the network escape hatch feature. If a network connection isn't made when the device boots, then the escape hatch asks to temporarily connect to a network and refresh the device policy. After you apply the policy, the temporary network is forgotten and the device continues booting. This feature connects devices to a network if:
   - There isn't a suitable network in the last policy.
   - The device boots into an app in lock task mode.
   - Users are unable to reach the device settings.
@@ -155,6 +155,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might disable the device home and overview buttons.
   - **Home button only**: Users can see and select the home button. They can't see or select the overview buttons.
   - **Home and overview buttons**: Users can see and select the home and overview buttons.
+
+    When a device is enrolled and using the Managed Home Screen app, enabling the **Overview** button allows end users to skip or ignore the sign in and session PIN screens. The screens are still shown, but users can ignore them, and aren't required to enter anything.       
 
   This setting applies to:
 
@@ -458,7 +460,7 @@ End of comment -->
 ### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to something more secure than **Device default**.
+  - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set-up a passcode on their devices, configure this setting to something more secure than **Device default**.
   - **Password required, no restrictions**
   - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Numeric**: Password must only be numbers, such as `123456789`. Also enter:
@@ -541,6 +543,9 @@ End of comment -->
 
 ### Fully managed, dedicated, and corporate-owned work profile devices
 
+> [!NOTE]
+> If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
+
 - **Allow installation from unknown sources**: **Allow** lets users turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. It allows users to side-load apps on the device using means other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from turning on **Unknown sources**.
 
 - **App auto-updates (work profile-level)**: Devices check for app updates daily. Choose when automatic updates are installed. Your options:
@@ -563,18 +568,35 @@ End of comment -->
   - Only show apps in the Managed Google Play store that are approved, or apps that are required.
   - Uninstall apps that were installed outside of the Managed Google Play store.
 
-If you want to enable side-loading, set the **Allow installation from unknown sources** and **Allow access to all apps in Google Play store** settings to **Allow**.
+- The following settings are part of the Google's delegated scope feature:
+
+  - **Allow other apps to install and manage certificates**: Select **Add** to select existing apps for this permission. You can add multiple apps. The selected apps are granted access to install and manage certificates.
+
+    To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
+
+  - **Allow this app to access Android security logs**: Select the app that should have this permission. You can only select one app. The app is granted access to the security logs.
+
+    To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
+
+  - **Allow this app to access Android network activity logs**: Select the app that should have this permission. You can only select one app. The app is granted access to the network activity logs.
+
+    To use this setting, your Managed Google Play app must use delegated scopes. For more information, go to [Android's built-in app configurations](../developer/app-sdk-android-phase6.md#androids-built-in-app-configurations) and [Android delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes) (opens Android's web site).
+
+  > [!TIP]
+  > If there's a conflict with one of these settings, then the conflict applies to all three settings. Make sure you give the **Allow this app to access Android security logs** and **Allow this app to access Android network activity logs** permissions to only one app. You can give these permissions to the same app, but not different apps.
+  >
+  > For more information, go to [Android Management API - DelegatedScope](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#delegatedscope) (opens Google's web site).
 
 ### Dedicated devices
 
-- **Clear local data in apps not optimized for Shared device mode**: Add any app not optimized for shared device mode to the list. The app's local data will be cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later. 
+- **Clear local data in apps not optimized for Shared device mode**: Add any app not optimized for shared device mode to the list. The app's local data is cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later.
 
   When you use this setting, users can't initiate sign out from non-optimized apps and get single sign-out.
-  - Users will need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune’s Managed Home Screen. 
+  - Users need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune's Managed Home Screen. 
   - For apps that haven't been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. 
-  - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended. 
+  - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended.
   
-  All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization’s needs.
+  All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization's needs.
 
 ## Connectivity
 
@@ -606,7 +628,7 @@ If you want to enable side-loading, set the **Allow installation from unknown so
 
 ### Fully managed and dedicated devices
 
-- **Recommended global proxy**: **Enable** adds a global proxy to the devices. When enabled, HTTP and HTTPS traffic, including some apps on the device, use the proxy you enter. This proxy is only a recommendation. It's possible some apps won't use the proxy. **Not configured** (default) doesn't add a recommended global proxy.
+- **Recommended global proxy**: **Enable** adds a global proxy to the devices. When enabled, HTTP and HTTPS traffic use the proxy you enter, including some apps on the device. This proxy is only a recommendation. It's possible some apps won't use the proxy. **Not configured** (default) doesn't add a recommended global proxy.
 
   For more information on this feature, see [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (opens an Android site).
 
@@ -698,7 +720,7 @@ You can configure the following settings:
 
   - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
-    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
+    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language see your custom message. All other languages see the **All, except when specified** message text.
 
     You can add multiple locales and messages.
 
@@ -716,7 +738,7 @@ You can configure the following settings:
 
   - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
-    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
+    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language see your custom message. All other languages see the **All, except when specified** message text.
 
     You can add multiple locales and messages.
 
@@ -730,7 +752,7 @@ You can configure the following settings:
 
   - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
-    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
+    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language see your custom message. All other languages see the **All, except when specified** message text.
 
     You can add multiple locales and messages.
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/05/2023
+ms.date: 09/25/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,6 +45,11 @@ Tunnel for MAM iOS is a powerful tool that allows organizations to securely mana
 
 In addition to using MAM Tunnel with unenrolled devices, you can also use it with enrolled devices. However, an enrolled device must use either the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
+**Try the interactive demo**  
+The [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS]( https://regale.cloud/Microsoft/viewer/1976/microsoft-tunnel-for-mobile-application-management-for-ios-ipados/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support iOS and iPadOS devices not enrolled with Intune.
+
+## Required SDKs for iOS
+
 To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (LOB) apps to integrate the following three SDKs. Find guidance for integrating each SDK later in this article:
 
 - [Intune App SDK for iOS](../developer/app-sdk-ios.md)
@@ -61,8 +66,8 @@ The following diagram describes the flow from a managed app that has successfull
 
 0. Upon initial launch of the app, a connection is made via the Tunnel for MAM SDK.  
 1. An authentication token is required to authenticate.  
-    1. The device may already have an Azure AD auth token obtained from a previous sign-in using another MAM enabled app on the device (like Outlook, Microsoft Edge, and Microsoft 365 Office mobile apps).  
-2. A TCP Connect (TLS Handshake occurs with the token to the tunnel server.  
+    1. The device may already have a Microsoft Entra auth token obtained from a previous sign-in using another MAM enabled app on the device (like Outlook, Microsoft Edge, and Microsoft 365 Office mobile apps).  
+2. A TCP Connect (TLS Handshake) occurs with the token to the tunnel server.  
 3. If UDP is enabled on the Microsoft Tunnel Gateway, a data-channel connection using DTLS is made.  If UDP is disabled, then TCP is used to establish the data channel to Tunnel gateway.  See TCP, UDP notes in the [Microsoft Tunnel Architecture](../protect/microsoft-tunnel-overview.md#architecture).  
 4. When the mobile app makes a connection to an on-premises corporate resource:  
    1. A Microsoft Tunnel for MAM API connect request for that company resource occurs.
@@ -72,21 +77,6 @@ The following diagram describes the flow from a managed app that has successfull
 > The Tunnel for MAM iOS SDK provides VPN Tunnel. It’s scoped to the networking layer within the app. VPN connections are not displayed in iOS settings.
 >
 > Each active line-of-business (LOB) app that's integrated with Tunnel for MAM iOS-SDK and that runs in the foreground represents an active client connection on the Tunnel Gateway server. The mst-cli command line tool can be used to monitor active client connections. For information about the mst-cli command-line tool, see [Reference for Microsoft Tunnel Gateway](../protect/microsoft-tunnel-reference.md).
-
-### Tunnel Bypass Domain List:
-
-Clients that use the MAM Tunnel don't use Tunnel when accessing the following URLs. 
-
-- login.microsoftonline.com
-- mamservice.manage.microsoft.com
-- msauth.net
-- msftauth.net
-- login.live.com
-- go.microsoft.com
-- browser.events.data.microsoft.com
-- msauthimages.net
-- msftauthimages.net
-- account.activedirectory.windowsazure.com
 
 ## Configure Intune policies for Microsoft Tunnel for MAM iOS
 
@@ -111,15 +101,15 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    1. Select the app you just added, and then **Select**.
 
    > [!NOTE]  
-   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires an Azure AD app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Azure AD app registration and the Xcode app project. Xcode is the Apple Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
+   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires a Microsoft Entra app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Microsoft Entra app registration and the Xcode app project. Xcode is the Apple Integrated Developer Environment that that runs on macOS and used to integrate the Tunnel for MAM iOS SDK with your app.
 
    After selecting an app, select **Next**.
 
    For more information about adding custom apps to policies, see [App configuration policies for Intune App SDK managed apps](../apps/app-configuration-policies-managed-app.md).
 
 4. On the *Settings* tab, expand *Microsoft Tunnel for Mobile Application Management settings and configure the following options:
-   
-  > [!NOTE]  
+
+   > [!NOTE]  
    > When configuring proxy and split tunneling, if the proxy server is configured in the included routes, all traffic will flow through the proxy. If the proxy server is not configured in the included routes, then all traffic will be blocked. Enabling both split tunneling and proxy is not supported.
 
    1. Set *Use Microsoft Tunnel for MAM* to **Yes**.
@@ -127,7 +117,7 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
    1. Next, select **Select a Site**, and choose one of your Microsoft Tunnel Gateway sites. If you haven’t configured a Tunnel Gateway site, see [Configure Microsoft Tunnel](../protect/microsoft-tunnel-configure.md).
    1. If your app requires a trusted certificate, select **Root Certificate**, and then select a trusted certificate profile to use. For more information, see [Configure a trusted certificate profile](#configure-a-trusted-certificate-profile) later in this article.
 
-   For Federated Azure active directory tenants, the following configurations are required to ensure that your applications can authenticate and access the required resources. This configuration will bypass the URL of the publicly available secure token service:
+   For federated Microsoft Entra tenants, the following configurations are required to ensure that your applications can authenticate and access the required resources. This configuration bypasses the URL of the publicly available secure token service:
 
    1. On the *Settings* tab, expand *General configuration settings* and then configure the *Name* and *Value* pair as follows to set up the Edge profile for Tunnel:
 
@@ -143,7 +133,7 @@ Create an app configuration policy for apps that use Tunnel for MAM. This policy
 
    After configuring the Tunnel MAM settings, Select **Next** to open the *Assignments* tab.
 
-5. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure AD user groups that will receive this policy. After configuring groups, select **Next**.
+5. On the *Assignments* tab, select **Add Groups**, and then select one or more Microsoft Entra user groups that will receive this policy. After configuring groups, select **Next**.
 
 6. On the *Review + Create* tab, select **Create** to complete creation of the policy and deploy the policy to the assigned groups.
 
@@ -171,7 +161,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
    > [!NOTE]  
    > Ensure there are no trailing spaces at the end of the General configuration settings. These settings provide *Identity switch* support to Microsoft Edge on iOS. This enables Edge on iOS to automatically connect the VPN when signing in with a *Work account or School account* and to disconnect the VPN when switching to a *Personal account* enabling in-Private browsing.
 
-   For Federated Azure active directory tenants, the following configurations are required to ensure that Edge can authenticate and access the required resources. This configuration will bypass the URL of the publicly available secure token service:
+   For federated Microsoft Entra tenants, the following configurations are required to ensure that Edge can authenticate and access the required resources. This configuration bypasses the URL of the publicly available secure token service:
 
    1. On the *Settings* tab, expand *General configuration settings* and then configure the *Name* and *Value* pair as follows to set up the Edge profile for Tunnel:
 
@@ -189,7 +179,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 
    After any additional configurations for Microsoft Edge are ready, select **Next**.
 
-4. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure AD groups that will receive this policy. After configuring groups, select **Next**.
+4. On the *Assignments* tab, select **Add Groups**, and then select one or more Microsoft Entra groups that will receive this policy. After configuring groups, select **Next**.
 
 5. On the *Review + Create tab*, select **Create** to complete creation of the policy and deploy the policy to the assigned groups.
 
@@ -214,11 +204,11 @@ This policy provides the necessary data protection and establishes a means of de
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/app-protection-custom-lob-app.png" alt-text="Add the custom app to the app protection policy.":::
 
    > [!NOTE]  
-   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires an Azure AD app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Azure AD app registration and the Xcode app project.
+   > LOB apps require Intune App SDK for iOS and MSAL integration. MSAL requires a Microsoft Entra app registration.  Ensure the Bundle ID used in the App configuration policy is the same Bundle ID specified in the Microsoft Entra app registration and the Xcode app project.
 
 5. In the *Data protection*, *Access requirements*, and *Conditional launch* tabs, configure any remaining app protection policy settings based on your deployment and data protection requirements.
 
-6. On the *Assignments* tab, select **Add Groups**, and then select one or more Azure AD user groups that will receive this policy. After configuring groups, select **Next**.
+6. On the *Assignments* tab, select **Add Groups**, and then select one or more Microsoft Entra user groups that will receive this policy. After configuring groups, select **Next**.
 
 The new policy appears in the list of App protection policies.
 
@@ -228,26 +218,26 @@ Apps that use the MAM Tunnel to connect to an on-premises resource protected by 
 
 A trusted certificate profile is required to establish a chain of trust with your on-premises infrastructure. The profile allows the device to trust the certificate that's used by the on-premises web or application server, ensuring secure communication between the app and the server.
 
-Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Azure AD user or device groups. As a result, a trusted certificate profile for any platform can be used. So, an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
+Tunnel for MAM uses the public-key certificate payload contained in the Intune trusted certificate profile but doesn’t require the profile be assigned to any Microsoft Entra user or device groups. As a result, a trusted certificate profile for any platform can be used. So, an iOS device can use a trusted certificate profile for Android, iOS, or Windows to meet this requirement.
 
 > [!IMPORTANT]
 > Tunnel for MAM iOS SDK requires that trusted certificates use the **DER encoded binary X.509 or PEM** certificate format.
 
-During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that will be used.
+During configuration of the app configuration profile for an app that will use Tunnel for MAM, you select the certificate profile that is used.
 For information on configuring these profiles, see [Trusted root certificate profiles for Microsoft Intune](../protect/certificates-trusted-root.md).
 
-## Configure Line of Business apps in the Azure AD portal
+## Configure Line of Business apps in the Microsoft Entra admin center
 
 Line of Business apps that use Microsoft Tunnel for MAM iOS require:
 
 - A *Microsoft Tunnel Gateway* service principal Cloud app
-- Azure AD app registration
+- Microsoft Entra app registration
 
 ### Microsoft Tunnel Gateway service principal
 
 If not already created for Microsoft Tunnel MDM Conditional Access, provision the Microsoft Tunnel Gateway service principal Cloud app. For guidance, see [Use Microsoft Tunnel VPN gateway with Conditional Access policies](../protect/microsoft-tunnel-conditional-access.md#provision-your-tenant).
 
-### Azure AD app registration
+### Microsoft Entra app registration
 
 When you integrate the Tunnel for MAM iOS SDK into a line-of-business app, the following app registration settings must match your Xcode app project:
 
@@ -270,11 +260,11 @@ Depending on your needs, choose one of the following options:
 
 #### Create a new app registration
 
-The Azure AD online docs provide detailed instruction and guidance on how to [create an app registration](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals).
+The Microsoft Entra online docs provide detailed instruction and guidance on how to [create an app registration](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals).
 
 The following guidance is specific to requirements for the Tunnel for MAM iOS SDK integration.
 
-1. In the [Azure AD portal](https://aad.portal.azure.com/) for your tenant, go to *Azure Active Directory*, and then under *Manage*, select **App registrations** > **+ New registration**.
+1. In the [Microsoft Entra admin center ](https://entra.microsoft.com/) for your tenant, expand **Applications**, and then select **App registrations** > **+ New registration**.
 2. On the *Register an application* page:
    - Specify a **Name for the app registration
    - Select **Account in this organizational directory only (*YOUR_TENANT_NAME only - Single tenant*)**.
@@ -316,8 +306,7 @@ The following guidance is specific to requirements for the Tunnel for MAM iOS SD
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/grant-api-permissions-consent.png" alt-text="Grand admin consent.":::
 
-7. Next, while viewing the app registration, select **Token configuration**, and then **+ Add optional claim**. On the *Add optional claim* page, for *Token type* select **Access**, and then for *Claim*, select the checkbox for **acct**. Tunnel for MAM requires this Auth token to authenticate users to Azure AD.
-
+7. Next, while viewing the app registration, select **Token configuration**, and then **+ Add optional claim**. On the *Add optional claim* page, for *Token type* select **Access**, and then for *Claim*, select the checkbox for **acct**. Tunnel for MAM requires this Auth token to authenticate users to Microsoft Entra ID.
    Select **Add** to complete configuration of the Token.
 
    :::image type="content" source="./media/microsoft-tunnel-mam-ios/configure-token.png" alt-text="Configure the authentication token.":::
@@ -341,7 +330,7 @@ When you already have an app registration, you can choose to update it instead o
 - Token configuration
 - Integration assistant
 
-1. In the [Azure AD portal](https://aad.portal.azure.com/), go to **Azure Active Directory**, and then under *Manage*, select **App registrations**. Next, select the app registration that you want to review and update to open its *Overview* pane. Record the values for the *Application (client) ID* and the *Directory (tenant) ID*.
+1. In the [Microsoft Entra admin center ](https://entra.microsoft.com/),  expand **Applications**, and then select  **App registrations**. Next, select the app registration that you want to review and update to open its *Overview* pane. Record the values for the *Application (client) ID* and the *Directory (tenant) ID*.
 
    These values must exactly match the following values in your Xcode app project:
    - info.plist > IntuneMAMSettings
@@ -350,7 +339,7 @@ When you already have an app registration, you can choose to update it instead o
 
 2. Select **Authentication** and review the app platform type. It must be *iOS/macOS* and have a *Bundle ID* and *Redirect URI*. The Redirect URI must be formed as `msauth.Your_Bundle_ID://auth`.
 
-   Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that a *MSAL Configuration* is present. If it isn't, see [Create an Azure AD app and service principal in the portal - Microsoft Entra](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
+   Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that a *MSAL Configuration* is present. If it isn't, see [Create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
 
    As in the previous step, compare the values *Bundle ID* and *Redirect URI* with these values from your Xcode app project:  
    - Project > General > Identity: Bundle ID
@@ -423,7 +412,7 @@ You can choose to use MAM Tunnel with enrolled devices instead of using MDM Tunn
 
 For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel App configuration policy setting while other apps use MDM Tunnel configurations.
 
-**Workaround**: To use MAM Tunnel with enrolled devices, ensure, the Defender for Endpoint iOS app does not have an App configuration policy with Microsoft Tunnel settings configured.
+**Workaround**: To use MAM Tunnel with enrolled devices, ensure, the Defender for Endpoint iOS app doesn't have an App configuration policy with Microsoft Tunnel settings configured.
 
 ### Firebase Integration with Tunnel for MAM iOS
 
@@ -443,15 +432,15 @@ When you create a custom app configuration policy, the newly added app may not a
 2. Select custom apps, add a Bundle or Package ID for iOS, complete the flow, and create the app config policy.
 3. Edit the basic settings. The newly added bundle ID should appear in the list of targeted custom apps.
 
-### Microsoft Azure Authenticator app does not work with Tunnel for MAM iOS Conditional Access  
+### Microsoft Azure Authenticator app doesn't work with Tunnel for MAM iOS Conditional Access  
 
 **Workaround**: If you have a Conditional Access policy for Microsoft Tunnel Gateway that requires multifactor authentication as a Grant Access control, you must implement the "onTokenRequiredWithCallback" method in the Microsoft Tunnel Delegate Class within your Line of Business Applications.
 
-### Federated Azure active directory tenants
+### Federated Microsoft Entra tenants
 
 Create a General configuration setting in App config to exclude the customers STS (federated server URL) to address the MAM-Tunnel connect login issue:
 
-Experienced in Edge browser when users sign-in with work account.Also experienced when users sign-in to LOB app for the 1st time.
+Experienced in Edge browser when users sign-in with work account. Also experienced when users sign-in to LOB app for the first time.
 
 **Workaround**:
 Create a "General configuration setting":
@@ -467,9 +456,13 @@ value: {"bypassedUrls":["ipchicken.com", "whatsmyip.org"]}
 
 Tunnel for MAM doesn't support:  
 
-- On-premises sites using Kerberos or NTLM integrated authentication webserver sign-in.
+- On-premises sites using Kerberos.
+- Certificate-based authentication for websites using Edge
 
 **Workaround**: None.
+
+> [!TIP]
+> Tunnel for MAM on iOS does support NTLM integrated authentication webserver sign-in with Microsoft Edge, but not for Line of Business (LOB) apps. For more information, see [Manage NTLM single sign-on sites](../apps/manage-microsoft-edge.md#manage-ntlm-single-sign-on-sites) in *Manage Microsoft Edge on iOS and Android with Intune*.
 
 ## Next steps
 

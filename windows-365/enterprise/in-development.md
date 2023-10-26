@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 10/18/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -62,19 +62,22 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 In a future update, RDP Shortpath in Windows 365 will support establishing an indirect UDP connection using Traversal Using Relays around NAT (TURN) for symmetric NAT.  TURN is a popular standard for device-to-device networking for low latency, high-throughput data transmission with Azure Communication Services. For more information about TURN and Azure Communication Services, see [Network Traversal Concepts](/azure/communication-services/concepts/network-traversal). For more information about RDP Shortpath, see [Use RDP Shortpath for public networks with Windows 365](rdp-shortpath-public-networks.md).
 
+### Permissions update for placing a Cloud PC under review<!--46608968-->
+
+In a future update, you’ll need an additional role, Storage Blob Data Contributor, to place a Cloud PC under review.
+
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
 <!--***********************************************-->
-<!--## End user experience-->
+## End user experience
 
+### Self-help in Windows 365 Business<!--45828334-->
+
+A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
 
 <!-- ***********************************************-->
-## Miscellaneous
-
-### Single sign on option per tenant (preview)<!--43751308-->
-
-Each tenant will be able to decide if you want to turn on Single Sign On. We'll also add a new Azure Network Connection check will be added to make sure that the network is properly configured for single sign on.
+<!--## Miscellaneous-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -82,6 +85,19 @@ Each tenant will be able to decide if you want to turn on Single Sign On. We'll 
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### Audit logs supported in Azure Log Analytics<!--45693398-->
+
+In a future update, you'll be able to send Windows 365 audit log data directly to Azure Log Analytics, Event Hubs, or certain third party solutions.
+
+### New report: Cloud PCs that can't connect<!--45946128-->
+
+A new report will be available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you'll be able to observe:
+devices that have unhealthy hosts users' connections that consistently or frequently fail systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
+
+### New report: Action status<!--44871923-->
+
+A new report will be available that lets you know which actions have been performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided.
 
 <!-- ***********************************************-->
 ## Provisioning

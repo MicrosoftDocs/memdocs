@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2023
+ms.date: 10/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -58,7 +58,7 @@ For information about adding your organization's line-of-business (LOB) apps to 
 
 ## App protection policies for iOS/iPadOS and Android apps
 
-When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy. For information about creating app protection policies for Windows apps, see [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
+When you create an app protection policy for iOS/iPadOS and Android apps, you follow a modern Intune process flow that results in a new app protection policy. For information about creating app protection policies for Windows apps, see [App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
 ### Create an iOS/iPadOS or Android app protection policy
 
@@ -194,6 +194,9 @@ Because Intune app protection policies target a user's identity, the protection 
 To use these filters when assigning policies, browse to **Apps** > **App protection policies** in the Intune admin center, and then select **Create policy**. You can also edit an existing app protection policy. Navigate to the **Assignments** page and select **Edit filter** to include or exclude filters for the assigned group. 
 
 ### Device Management types
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 - **Unmanaged**: For iOS/iPadOS devices, unmanaged devices are any devices where either Intune MDM management or a 3rd party MDM/EMM solution does not pass the `IntuneMAMUPN` key. For Android devices, unmanaged devices are devices where Intune MDM management has not been detected. This includes devices managed by third-party MDM vendors.
 - **Intune managed devices**: Managed devices are managed by Intune MDM.

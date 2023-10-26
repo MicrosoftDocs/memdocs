@@ -5,10 +5,10 @@ title: Manually configure Jamf Pro integration with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Manually configure Jamf Pro integration with Intune when you can't use the Jamf Cloud Connector.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 10/17/2022
+ms.date: 09/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,9 +29,23 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Manually Integrate Jamf Pro with Intune for compliance
+
+> [!IMPORTANT]
+>
+> **Jamf macOS device support for Conditional Access is being deprecated**.
+>
+> Beginning on September 1, 2024, the platform that Jamf Pro’s Conditional Access feature is built on will no longer be supported.
+>
+> If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
+>
+> If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
+
+> [!TIP]
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
 
 Microsoft Intune supports integrating your Jamf Pro deployment to bring device compliance and Conditional Access policies to your macOS devices. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Azure Active Directory (Azure AD) Conditional Access policies in the same way as for devices managed through Intune.
 

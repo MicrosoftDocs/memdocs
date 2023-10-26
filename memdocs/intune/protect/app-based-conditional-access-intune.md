@@ -5,10 +5,10 @@ title: Use app-based Conditional Access policies with Intune
 titleSuffix: Microsoft Intune
 description: Learn about using app-based Conditional Access policies with Microsoft Intune for both enrolled and unenrolled devices.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 04/14/2022
+ms.date: 09/18/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,19 +29,23 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Use app-based Conditional Access policies with Intune
 
-Intune app protection policies work with Conditional Access, an Azure Active  (Azure AD) capability, to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll.
+Microsoft Intune app protection policies work with Azure Active Directory Conditional Access to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll. Combined, they're referred to app-based Conditional Access.
 
-[App protection policies](../apps/app-protection-policy.md) are rules that ensure an organization's data remains safe or contained in a managed app.
+[App protection policies](../apps/app-protection-policy.md) are rules that ensure an organization's data remains safe or contained in a managed app:
 
-- An app protection policy can be a rule that's enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app.
+- An app protection policy can be a rule that's enforced when a user attempts to access or move your organizations data, or a set of actions that are prohibited or monitored when a user is working inside a managed app.
 - A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
 - You can also block the built-in mail apps on iOS/iPadOS and Android when you allow only the Microsoft Outlook app to access Exchange Online. Additionally, you can block apps that don't have Intune app protection policies applied from accessing SharePoint Online.
 
-App-based Conditional Access with client app management adds a security layer by making sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
+App-based Conditional Access with client app management adds a security layer that makes sure only client apps that support Intune app protection policies can access Exchange online and other Microsoft 365 services.
+
+> [!TIP]
+> In addition to app-based Conditional Access policies, you can use [device-based Conditional Access with Intune](create-conditional-access-intune.md).
 
 ## Prerequisites
 
@@ -60,7 +64,7 @@ App-based Conditional Access [also supports line-of-business (LOB) apps](../prot
 
 ## How app-based Conditional Access works
 
-In this example, the admin has applied app protection policies to the Outlook app followed by a Conditional Access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate e-mail.
+In this example, the admin has applied app protection policies to the Outlook app followed by a Conditional Access rule that adds the Outlook app to an approved list of apps that can be used when accessing corporate email.
 
 > [!NOTE]
 > The following flowchart  can be used for other managed apps.
@@ -71,7 +75,7 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 2. The user gets redirected to the app store to install a broker app when trying to authenticate for the first time. The broker app can be the Microsoft Authenticator for iOS, or Microsoft Company portal for Android devices.
 
-   If users try to use a native e-mail app, they'll be redirected to the app store to then install the Outlook app.
+   If users try to use a native email app, they are redirected to the app store to then install the Outlook app.
 
 3. The broker app gets installed on the device.
 
@@ -87,9 +91,9 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 9. Outlook Cloud Service communicates with Azure AD to retrieve Exchange Online service access token for the user.
 
-10. The Outlook app communicates with Exchange Online to retrieve the user's corporate e-mail.
+10. The Outlook app communicates with Exchange Online to retrieve the user's corporate email.
 
-11. Corporate e-mail is delivered to the user's mailbox.
+11. Corporate email is delivered to the user's mailbox.
 
 ## Next steps
 

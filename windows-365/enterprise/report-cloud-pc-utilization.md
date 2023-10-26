@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2023
+ms.date: 09/26/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -56,37 +56,6 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
   - **Days since last sign in**
 
 You can use the filter options to see only data for a specific usage group.
-
-## Frontline Cloud PCs tab
-
-This report helps you:
-
-- Understand the number of concurrent connections for each Cloud PC size.
-- Make sure you have purchased the right number of licenses for your peak usage.
-
-By reviewing the maximum concurrent connections, you can decide if you need to purchase more licenses to ensure your end users aren't blocked from using their Frontline Cloud PCs.
-
-### Requirements
-
-The following permissions are required to view this report:
-
-- SharedUseLicenseUsageReport
-- SharedUseServicePlans
-
-To assign these permissions, go to **Tenant administration** > **Roles** > **Create** > **Windows 365 role**.
-
-### Report data
-
-On the **Frontline Cloud PCs** tab, the report shows the following data aggregated for the last 28 days:
-
-- Number of currently connected Frontline Cloud PCs.
-- Maximum number of connected Frontline Cloud PCs for each day in the filtered range (7 or 28 days).
-- Maximum concurrency limit.
-- Warnings for approaching and reaching the maximum concurrency limit.
-
-You can use the filter to switch between the Cloud PC sizes you have purchased.
-
-This report is specific to Windows 365 Frontline and doesn't apply to other Windows 365 plans. If no Windows 365 Frontline licenses have been purchased on your tenant, no data is in the report.
 
 ## Other reports
 

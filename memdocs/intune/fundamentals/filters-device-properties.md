@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 10/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,6 +43,9 @@ When you create a filter, you enter the app or device properties to use in your 
 Advanced rule editing is also available. You can use common operators, such as `and`, `contains`, and `startsWith` to create expressions. These expressions are saved and used in your filter.
 
 This article describes the different [managed device properties](#managed-device-properties), [managed app properties](#managed-app-properties), and [operators](#supported-operators) you can use in your filters, and gives examples.
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Managed device properties
 
@@ -85,11 +88,15 @@ You can use the following device properties in your managed device filter rules:
 
 - **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
+  For iOS/iPadOS and macOS devices, use the model identifier. Don't use the model name. Only model identifiers are recognized for Apple devices. For example, for iPhone 8 devices, enter the model identifier as `iPhone10,4` (no spaces).
+
   Examples:
 
   - `(device.model -eq "Surface Book 3")`
   - `(device.model -in ["Surface Book 3", "Surface Book 2"])`
   - `(device.model -startsWith "Surface Book")`
+  - `(device.model -startsWith "MacBookPro18,2")`
+  - `(device.model -startsWith "iPhone10,4")`
 
   This property applies to:
 
@@ -200,6 +207,9 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
+  > [!NOTE]
+  > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune filters article apply to Intune. They don't apply to Microsoft Entra ID.
+ 
 - **`operatingSystemSKU` (Operating System SKU)**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
@@ -363,7 +373,7 @@ You can use the following app properties in your managed app filter rules:
 
 ## Advanced rule editing
 
-When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar to Azure AD dynamic groups: `([entity].[property name] [operation] [value])`.
+When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar to Microsoft Entra dynamic groups: `([entity].[property name] [operation] [value])`.
 
 ### What you need to know
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/07/2023
+ms.date: 08/21/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -72,8 +72,9 @@ Applies to:
 
 ### Prerequisites for tamper protection
 
-Tamper protection is available for devices that are running one of the following versions of Windows:
+Tamper protection is available for devices that are running one of the following operating systems:
 
+- macOS (any supported version)
 - Windows 10 and 11 (including Enterprise multi-session)
 - Windows Server version 1803 or later, Windows Server 2019, Windows Server 2022
 - Windows Server 2012 R2 and Windows Server 2016 ([using the modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-windows-server-2012-r2-and-2016-functionality-in-the-modern-unified-solution))
@@ -166,16 +167,11 @@ The following profiles are supported for devices you manage with Intune:
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
-- Platform: **Windows 10 and later**:
+  - Profile: **Defender Updates controls** - Manage update settings for Microsoft Defender, including the following settings that are taken directly from the [Defender CSP](/windows/client-management/mdm/defender-csp):
 
-  > [!NOTE]  
-  > The *Windows 10 and later* platform is available to create new profiles as part of a public preview for the following profile.
-
-  - Profile: **Defender Updates controls** (public preview) - Manage update settings for Microsoft Defender, including the following settings that are taken directly from the [Defender CSP - Windows Client Management](/windows/client-management/mdm/policy-csp-Defender):
-
-    - Engine Updates Channel
-    - Platform Updates Channel
-    - Security Intelligence Updates Channel
+    - [Engine Updates Channel](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationengineupdateschannel)
+    - [Platform Updates Channel](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationplatformupdateschannel)
+    - [Security Intelligence Updates Channel](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationsecurityintelligenceupdateschannel)
 
 ### Devices managed by Configuration Manager
 

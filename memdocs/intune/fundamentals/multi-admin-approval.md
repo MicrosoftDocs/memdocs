@@ -5,10 +5,10 @@ title: Use multiple administrative approvals in Intune
 titleSuffix: Microsoft Intune
 description: Configure multi-admin approval to protect your tenant against the use of compromised administrative accounts in Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 08/28/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer:
+ms.reviewer: davidra
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -26,11 +26,10 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- setup
 ---
 
 # Use Access policies to require multiple administrative approvals
-
-*This feature is in Public Preview*
 
 To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA).
 
@@ -106,7 +105,7 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 ## More considerations
 
-- With the public preview, Intune doesn't send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.
+- Intune doesn't send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.
 
 - Plan to monitor the status of your requests through the *My requests* page of the *Multi Admin Approval* node in the Microsoft Intune admin center.
 

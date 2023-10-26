@@ -4,8 +4,8 @@
 title: Configure Endpoint protection settings in Microsoft Intune
 description: Create Endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 09/16/2021
 ms.topic: how-to
@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- endpoint-protection
 ms.reviewer: mattcall
 ---
 

@@ -52,7 +52,7 @@ As described in [identity and authentication](./identity-authentication.md#authe
 - The Windows 365 service.
 - The Cloud PC.
 
-The primary control for securing access is by using Azure Active Directory (Azure AD) Conditional Access to conditionally grant access to the Windows 365 service. To secure access to the Cloud PC, see [set conditional access policies](./set-conditional-access-policies.md).
+The primary control for securing access is by using Microsoft Entra Conditional Access to conditionally grant access to the Windows 365 service. To secure access to the Cloud PC, see [set conditional access policies](./set-conditional-access-policies.md).
 
 ## Secure Cloud PC devices
 
