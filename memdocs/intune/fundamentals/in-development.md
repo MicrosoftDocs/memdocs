@@ -62,9 +62,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
-### Android device compliance grace period status<!-- 13498172   -->  
-The Microsoft Company Portal app will show a grace period status for Android devices that don't meet compliance requirements but are still within their given grace period. Users will be able to see the date by which devices must be compliant, as well as the instructions for how to become compliant. If users don't update their device by the given date, the device is marked as noncompliant.
-
 ### Minimum version update for iOS Company Portal<!-- 17964541  -->  
 Users will be required to update to v5.2310.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
