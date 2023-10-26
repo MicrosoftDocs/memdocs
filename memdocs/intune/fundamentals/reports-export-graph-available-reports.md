@@ -146,6 +146,7 @@ The following table contains the possible output when calling the `DeviceInstall
 |-|
 | DeviceName |
 | UserPrincipalName |
+| UserName |
 | Platform |
 | AppVersion |
 | DeviceId |
