@@ -63,7 +63,7 @@ Before you can enroll corporate-owned iOS/iPadOS devices with Apple School Manag
 ### Step 2. Download a token and assign devices
 1. Choose **Create a token via Apple School Manager**, and sign in to Apple School with your company Apple ID. You can use this Apple ID to renew your Apple School Manager token.
 2. In the [Apple School Manager portal](https://school.apple.com), go to **MDM Servers**, and then choose **Add MDM Server** (upper right).
-3. Enter the MDM Server name. The server name is for your reference to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune server.
+3. Enter the MDM server name. The server name is for your reference to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune server.
 4. Choose **Upload File...** in the Apple portal, browse to the .pem file, and choose **Save MDM Server** (lower right).
 5. Choose **Get Token** and then download the server token (.p7m) file to your computer.
 6. Go to **Device Assignments**. Choose your devices by manually entering their serial numbers or order number.  
