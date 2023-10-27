@@ -95,7 +95,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-5. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal instead of the Apple Setup Assistant.  
+5. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal, Setup Assistant (legacy), and Setup Assistant with modern authentication. Select the option.  For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](automated-device-enrollment-authentication.md).  
 
     > [!NOTE]
     > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
