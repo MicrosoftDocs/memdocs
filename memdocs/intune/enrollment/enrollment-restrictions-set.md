@@ -147,7 +147,7 @@ Intune also blocks personal devices using these enrollment methods:
 - [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.  
 
 > [!IMPORTANT] 
-> Devices joined by Workplace Join could be blocked from enrolling if they were ever previously Microsoft Entra ID-joined to the tenant. To avoid a failed enrollment, deregister and remove the device's associated Microsoft Entra object before attempting to join the device by Workplace Join.  
+> Devices joined by Workplace Join could be blocked from enrolling if they were ever previously Microsoft Entra ID-joined to the tenant. To avoid being blocked, deregister and remove the device's associated object in Microsoft Entra ID before attempting to join the device by Workplace Join.  
 
 ## Limitations  
 
