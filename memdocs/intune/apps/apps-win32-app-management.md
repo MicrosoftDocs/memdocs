@@ -91,7 +91,12 @@ You can configure the start time and deadline time for a Win32 app. At the start
 
 For available apps, the start time will dictate when the app is visible in the company portal, and content will be downloaded when the user requests the app from the company portal. You can also enable a restart grace period.
 
-> [!NOTE]
+> [!IMPORTANT]
+> The **Restart grace period** setting in the **Assignment** section is available only when **Device restart behavior** of the **Program** section is set to either of the following options:
+>
+> - **Determine behavior based on return codes** - Commonly set to Hard Reboot, however if return code is mapped to Soft Reboot, the user will only get a reboot notification and restart grace period settings will not be applied.
+> - **Intune will force a mandatory device restart**
+>
 > Win32 apps installed by Intune on a managed device won't be automatically uninstalled from that device if it is unenrolled from Intune management. Admins should restrict app assignment and installation to corporate managed devices to reduce the risk of applications and data becoming unmanaged.
 
 Set the app availability and other app assignment properties using the following steps:
@@ -140,7 +145,7 @@ Set the app availability and other app assignment properties using the following
 
 ## Notifications for Win32 apps
 
-If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notificaiton suppression that you require.
+If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notification suppression that you require.
 
 ## Next steps
 
