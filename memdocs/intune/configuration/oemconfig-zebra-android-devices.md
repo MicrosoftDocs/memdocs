@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: jieyan
+ms.reviewer: akritis
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -54,12 +54,12 @@ To manage Zebra devices, there are two versions of the OEMConfig app:
 
 | OEMConfig app | Supported Android versions | Multiple profile support |
 | --- | --- | --- |
-| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google’s standards and only allows one profile on the device. Be sure to deploy one profile with all the required configuration settings. <br/><br/> If you try to deploy multiple profiles, then the profiles conflict and no settings are configured. |
+| **Zebra OEMConfig Powered by MX** (new app) | - Android 13 and later <br/> - Android 11 | ❌ This new app aligns closely with Google's standards and only allows one profile on the device. Be sure to deploy one profile with all the required configuration settings. <br/><br/> If you try to deploy multiple profiles, then the profiles conflict and no settings are configured. |
 | **Legacy Zebra OEMConfig** | - Android 11 and earlier | ✔️ You can split your Zebra OEMConfig settings into smaller profiles. For example, create a baseline profile that affects all devices. Then, create more profiles that configure settings specific to a device. |
 
 > [!NOTE]
 >
-> - Zebra devices don’t support Android 12.
+> - Zebra devices don't support Android 12.
 > - For more information on the new **Zebra OEMConfig Powered by MX** app, go to [New Zebra OEMConfig app for Android](https://techcommunity.microsoft.com/t5/intune-customer-success/new-zebra-oemconfig-app-for-android-11-and-later/ba-p/3846730).
 
 ## Multiple profiles using the Legacy Zebra OEMConfig app

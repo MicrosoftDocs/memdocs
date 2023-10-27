@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/12/2023
+ms.date: 10/23/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -129,20 +129,22 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - registration.preu01.cmdagent.trafficmanager.net
   - registration.prap01.cmdagent.trafficmanager.net
   - registration.prau01.cmdagent.trafficmanager.net
+  - registration.prna02.cmdagent.trafficmanager.net
 - Registration endpoints
   - login.microsoftonline.com
   - login.live.com
   - enterpriseregistration.windows.net
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
-  - hm-iot-in-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
-  - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-preu01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prna02.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-2-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-3-prod-preu01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
-  - hm-iot-in-2-prod-prna01.azure-devices.net (443 & 5671 outbound)
-  - hm-iot-in-3-prod-prna01.azure-devices.net (443 & 5671 outbound)
-
+  
 All endpoints connect over port 443 unless otherwise specified.
 
 ### [Windows 365 Government](#tab/gov)

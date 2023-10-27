@@ -48,7 +48,7 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 

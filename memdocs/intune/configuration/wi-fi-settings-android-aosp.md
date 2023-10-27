@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 #audience:
 params:
   siblings_only: true
-ms.reviewer: priyar, tycast
+ms.reviewer: priyar, abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

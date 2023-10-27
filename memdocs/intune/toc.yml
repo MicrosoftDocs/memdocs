@@ -80,6 +80,8 @@ items:
         href: ./protect/tutorial-protect-email-on-unmanaged-devices.md
       - name: Configure Slack to use Intune 
         href: ./apps/tutorial-configure-slack-enterprise-grid.md
+      - name: Set up just in time (JIT) registration  
+        href: ./enrollment/set-up-just-in-time-registration.md  
 
       - name: Use automated device enrollment to enroll iOS/iPadOS devices 
         href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
@@ -95,6 +97,9 @@ items:
       - name: Set up enrollment for Azure AD shared device mode  
         href: ./enrollment/automated-device-enrollment-shared-device-mode.md
         displayName: devices, frontline worker, automated device enrollment  
+
+  - name: Security Copilot + Intune
+    href: ./fundamentals/security-copilot.md
 
   - name: Plan
     items:
@@ -285,6 +290,26 @@ items:
               - name: Step 5. Manage apps and licenses
                 href: /microsoft-365/solutions/apps-add-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
 
+          - name: Configure apps using Microsoft Intune
+            items: 
+            - name: Overview
+              href: /microsoft-365/solutions/apps-config-overview?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+              displayName: configure, app, apps, channel
+            - name: Step 1. Configure the Company Portal
+              href: /microsoft-365/solutions/apps-config-step-1?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 2. Configure Microsoft Outlook
+              href: /microsoft-365/solutions/apps-config-step-2?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 3. Configure Microsoft 365 Apps
+              href: /microsoft-365/solutions/apps-config-step-3?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 4. Configure Microsoft Edge
+              href: /microsoft-365/solutions/apps-config-step-4?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 5. Configure Microsoft Teams
+              href: /microsoft-365/solutions/apps-config-step-5?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json
+            - name: Step 6. Configure other apps
+              href: /microsoft-365/solutions/apps-config-step-6?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json                  
+            - name: Step 7. Verify app configuration
+              href: /microsoft-365/solutions/apps-config-step-7?toc=%2Fmem%2Fintune%2Ftoc.json&bc=%2Fmem%2Fintune%2Fbreadcrumb%2Ftoc.json    
+
         - name: Concepts
           items:
           - name: App lifecycle
@@ -295,7 +320,8 @@ items:
           - name: Use Intune without Google Mobile Services
             href: ./apps/manage-without-gms.md
           - name: Data protection for Windows MAM
-            href: ./apps/protect-edge-mam-windows.md      
+            href: ./apps/protect-mam-windows.md
+            displayName: Windows MAM                  
           - name: MAM FAQ
             href: ./apps/mam-faq.yml
             displayName: MAM          
@@ -725,11 +751,11 @@ items:
               items:
               - name: Lookout and Intune integration
                 href: ./protect/lookout-mtd-connector-integration.md
-            - name: Set up MVISION Mobile
-              href: ./protect/mcafee-mobile-threat-defense-connector.md
+            - name: Set up Trellix Mobile Security
+              href: ./protect/trellix-mobile-threat-defense-connector.md
               items:
-              - name: MVISION Mobile and Intune integration
-                href: ./protect/mcafee-mtd-connector-integration.md 
+              - name: Trellix Mobile Security and Intune integration
+                href: ./protect/trellix-mtd-connector-integration.md 
             - name: Set up Pradeo
               href: ./protect/pradeo-mobile-threat-defense-connector.md
               items:
@@ -809,16 +835,21 @@ items:
           href: ./protect/derived-credentials.md
         - name: Software updates
           items:
-          - name: iOS/iPadOS update policies
-            href: ./protect/software-updates-ios.md
-          - name: macOS update policies
-            href: ./protect/software-updates-macos.md
           - name: Android Enterprise updates
             items:
             - name: Android FOTA update
               href: ./protect/fota-updates-android.md
             - name: Zebra LG OTA Integration
-              href: ./protect/zebra-lifeguard-ota-integration.md            
+              href: ./protect/zebra-lifeguard-ota-integration.md    
+          - name: iOS/iPadOS & macOS updates
+            items:
+            - name: Declarative software updates
+              displayName: ddm
+              href: ./protect/software-updates-declarative-ios-macos.md    
+            - name: iOS/iPadOS update policies
+              href: ./protect/software-updates-ios.md
+            - name: macOS update policies
+              href: ./protect/software-updates-macos.md    
           - name: Windows updates
             items:
             - name: Use Windows Update for Business
@@ -1353,18 +1384,23 @@ items:
       - name: Configure enrollment features      
         items:
         - name: Get Apple MDM push certificate   
-          href: ./enrollment/apple-mdm-push-certificate-get.md 
+          href: ./enrollment/apple-mdm-push-certificate-get.md
+          displayName: digital; certificates; notifications; token; PEM; automated device enrollment; user enrollment; device enrollment  
         - name: Add corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
-          displayName: COD   
+          displayName: COD; corporate owned; IMEI; device ownership; serial   
         - name: Add device enrollment manager  
           href: ./enrollment/device-enrollment-manager-enroll.md   
+          displayName: DEM; bulk enrollment; company portal; Azure AD; join; limitations
         - name: Add device categories  
-          href: ./enrollment/device-group-mapping.md  
+          href: ./enrollment/device-group-mapping.md
+          displayName: group; category; categorize; security group;   
         - name: Require multifactor authentication  
           href: ./enrollment/multi-factor-authentication.md   
+          displayName: multi-factor; enrollment; MFA; verification; conditional access
         - name: Create terms and conditions policy  
           href: ./enrollment/terms-and-conditions-create.md
+          displayName: 
         - name: Set up enrollment notifications  
           href: ./enrollment/enrollment-notifications.md
         - name: Configure device enrollment restrictions
@@ -1470,7 +1506,13 @@ items:
               href: ./enrollment/automated-device-enrollment-authentication.md
             - name: Walkthrough - Set up enrollment with Apple School Manager
               href: ./enrollment/apple-school-manager-set-up-ios.md
-          - name: Set up Apple User Enrollment
+          - name: Set up Apple device enrollment
+            items:              
+            - name: Overview    
+              href: ./enrollment/ios-device-enrollment.md 
+            - name: Set up web based device enrollment   
+              href: ./enrollment/web-based-device-enrollment-ios.md         
+          - name: Set up Apple user enrollment
             items:
             - name: Overview   
               href: ./enrollment/ios-user-enrollment-supported-actions.md 
@@ -1488,18 +1530,7 @@ items:
           items: 
           - name: Back up and restore for Automated Device Enrollment 
             href: ./enrollment/backup-restore-ios.md 
-          - name: Security configuration framework for iOS/iPadOS 
-            items:
-            - name: Overview 
-              href: ./enrollment/ios-ipados-configuration-framework.md
-            - name: 1 - Configure app configuration policies
-              href: ./enrollment/ios-ipados-app-configuration-policies.md
-            - name: 2 - Configure device compliance security policies
-              href: ./enrollment/ios-ipados-device-compliance-security-configurations.md
-            - name: 3 - Configure device security policies for personal devices
-              href: ./enrollment/ios-ipados-personal-device-security-configurations.md
-            - name: 4 - Configure device security policies for supervised devices 
-              href: ./enrollment/ios-ipados-supervised-device-security-configurations.md           
+     
      
       - name: Set up Linux enrollment 
         items:
@@ -1599,7 +1630,7 @@ items:
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
-          href: ./remote-actions/collect-diagnostics.md
+          href: ./remote-actions/collect-diagnostics.md  
         - name: Send organizational messages  
           items: 
           - name: Overview 
@@ -1681,9 +1712,20 @@ items:
     items: 
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
-    - name: Frontline worker (FLW)
-      displayName: android, ios, ipados
-      href: ./fundamentals/frontline-worker-overview.md
+    - name: Frontline worker (FLW) device management
+      displayName: android, ios, ipados, windows, kiosk
+      items:
+      - name: FLW Overview
+        href: ../solutions/frontline-worker/frontline-worker-overview.md
+      - name: Android FLW
+        displayName: Android Enterprise, ae, aosp, kiosk
+        href: ../solutions/frontline-worker/frontline-worker-overview-android.md
+      - name: iOS/iPadOS FLW
+        displayName: ios, ipados, shared ipad, kiosk
+        href: ../solutions/frontline-worker/frontline-worker-overview-ios-ipados.md
+      - name: Windows FLW
+        displayName: kiosk, multi-app, single-app
+        href: ../solutions/frontline-worker/frontline-worker-overview-windows.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
@@ -1693,9 +1735,15 @@ items:
       - name: Cloud-managed Modern Desktop
         href: ./fundamentals/guided-scenarios-cloud-managed-pc.md   
       - name: Secure Microsoft Office mobile apps
-        href: ./fundamentals/guided-scenarios-office-mobile.md              
+        href: ./fundamentals/guided-scenarios-office-mobile.md
       - name: Windows 10/11 in cloud configuration
-        href: ./fundamentals/cloud-configuration.md
+        items:
+        - name: Overview
+          displayName: cloud config, flw, windows
+          href: ./fundamentals/cloud-configuration.md
+        - name: Step-by-step guide
+          displayName: cloud config, flw, windows
+          href: ./fundamentals/cloud-configuration-setup-guide.md
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits
@@ -1754,22 +1802,22 @@ items:
         displayName: dex
       - name: Intune App SDK for Android
         items:
-        - name: Intune App Developer Guide
-          href: ./developer/app-sdk-android-appendix.md
         - name: Plan the Integration
           href: ./developer/app-sdk-android-phase1.md
         - name: Understand the MSAL Prerequisite
           href: ./developer/app-sdk-android-phase2.md
-        - name: Get started with MAM
+        - name: Get Started with MAM
           href: ./developer/app-sdk-android-phase3.md
-        - name: MAM integration essentials
+        - name: MAM Integration Essentials
           href: ./developer/app-sdk-android-phase4.md
         - name: Multi-Identity
           href: ./developer/app-sdk-android-phase5.md
-        - name: App configuration
+        - name: App Configuration
           href: ./developer/app-sdk-android-phase6.md
-        - name: App participation features
+        - name: App Participation Features
           href: ./developer/app-sdk-android-phase7.md
+        - name: Appendix
+          href: ./developer/app-sdk-android-appendix.md
       - name: Intune App SDK Xamarin Bindings
         href: ./developer/app-sdk-xamarin.md
       - name: Microsoft Tunnel for MAM SDK 

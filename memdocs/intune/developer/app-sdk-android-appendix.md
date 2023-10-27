@@ -56,7 +56,7 @@ Through the [build tooling], the Intune App SDK attempts to minimize the integra
 Prior to the build tooling, developers needed to perform all replacements manually.
 
 > [!NOTE] 
-> Apps *must* now integrate with the SDK [build tooling], which will perform all of these replacements automatically (except for [manifest replacements]).
+> Apps *must* now integrate with the SDK [build tooling], which will perform all of these replacements automatically.
 
 Android base classes are replaced with their respective MAM equivalents in order to enable Intune management.
 The SDK classes live between the Android base class and the app's own derived version of that class.
@@ -150,10 +150,6 @@ Again, the required build plugin automatically makes these replacements.
 Some classes have most of their methods wrapped, for example, `ClipboardManager`, `ContentProviderClient`, `ContentResolver`,
 and `PackageManager` while other classes have only one or two methods wrapped, for example, `DownloadManager`, `PrintManager`, `PrintHelper`,
 `View`, `DragEvent`, `NotificationManager` and `NotificationManagerCompat`. 
-
-### Manifest Replacements
-It may be necessary to perform some of the above class replacements in the manifest and in Java code. Of special note:
-- Manifest references to `android.support.v4.content.FileProvider` must be replaced with `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
 
 ### MDM and MAM Enrollment
 As discussed in [Stage 4's Registration vs Enrollment], the Intune App SDK will "enroll" accounts that your app registers so that account is protected with policy.
@@ -326,7 +322,6 @@ If you need to test your application under Robolectric, the recommended workarou
 
 <!-- Appendix links -->
 <!-- internal links -->
-[manifest replacements]:#manifest-replacements
 [some method calls must also be replaced]:#wrapped-system-services
 [Pending Intent]:#pendingintent
 [MAMApplication]:#mamapplication
@@ -339,7 +334,7 @@ If you need to test your application under Robolectric, the recommended workarou
 <!-- Other Intune docs -->
 [Review client app protection logs]:/mem/intune/apps/app-protection-policy-settings-log#android-app-protection-policy-settings
 [Android app protection policy settings in Microsoft Intune]:/mem/intune/apps/app-protection-policy-settings-android
-[Use Edge for Android to access managed app logs]:/mem/intune/apps/manage-microsoft-edge#use-edge-for-ios-and-android-to-access-managed-app-logs
+[Use Edge for Android to access managed app logs]:/mem/intune/apps/manage-microsoft-edge#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs
 [Enroll Android devices]:/mem/intune/enrollment/android-enroll 
 
 <!-- Class links -->
