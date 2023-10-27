@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2023
+ms.date: 10/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -207,6 +207,9 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
+  > [!NOTE]
+  > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune filters article apply to Intune. They don't apply to Microsoft Entra ID.
+ 
 - **`operatingSystemSKU` (Operating System SKU)**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   Examples:
@@ -370,7 +373,7 @@ You can use the following app properties in your managed app filter rules:
 
 ## Advanced rule editing
 
-When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar to Azure AD dynamic groups: `([entity].[property name] [operation] [value])`.
+When you create a filter, you can manually create simple or complex rules in the rule syntax editor. You can also use common operators, such as `or`, `contains`, and more. The format is similar to Microsoft Entra dynamic groups: `([entity].[property name] [operation] [value])`.
 
 ### What you need to know
 

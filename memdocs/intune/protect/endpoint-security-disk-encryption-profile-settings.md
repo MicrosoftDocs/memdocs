@@ -101,7 +101,7 @@ Supported platforms and profiles:
 
   If the drive was encrypted before this policy applied, no extra action is taken. If the encryption method and options match that of this policy, configuration should return success. If an in-place BitLocker configuration option doesn't match this policy, configuration will likely return an error.
   
-  To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption. However, on Azure AD Join and Microsoft Account (MSA) registration/login automatic encryption can apply enabling BitLocker at XTS-AES 128-bit encryption.
+  To apply this policy to a disk already encrypted, decrypt the drive and reapply the MDM policy. Windows default is to not require BitLocker drive encryption. However, on Microsoft Entra Join and Microsoft Account (MSA) registration/login automatic encryption can apply enabling BitLocker at XTS-AES 128-bit encryption.
 
   - **Not configured** (*default*) - No BitLocker enforcement takes place.
   - **Yes** - Enforce use of BitLocker.
@@ -133,7 +133,7 @@ Supported platforms and profiles:
   - **Allow standard users to enable encryption during Autopilot**  
     CSP: [BitLocker - AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp)
     - **Not configured** (*default*) – The setting is left as client default, which is to require local admin access to enable BitLocker.
-    - **Yes** - During Azure Active Directory Join (AADJ) silent enable scenarios, users don't need to be local administrators to enable BitLocker.
+    - **Yes** - During Microsoft Entra Join silent enable scenarios, users don't need to be local administrators to enable BitLocker.
 
     For non-silent enablement and Autopilot scenarios, the user must be a local admin to complete the BitLocker setup wizard.
 
@@ -143,8 +143,8 @@ Supported platforms and profiles:
   Add Work Account (AWA, formally Workplace Joined) devices aren't supported for key rotation.
   - **Not configured** (*default*) – The client won’t rotate BitLocker recovery keys.
   - **Disabled**
-  - **Azure AD-joined devices**
-  - **Azure AD and Hybrid-joined devices**
+  - **Microsoft Entra joined devices**
+  - **Microsoft Entra hybrid joined devices**
 
 ### BitLocker - Fixed Drive Settings
 
@@ -156,7 +156,7 @@ Supported platforms and profiles:
 
     Control how BitLocker-protected fixed data-drives are recovered in the absence of the required startup key information.
 
-    - **Not configured** (*default*) - The default recovery options are supported including the data recovery agent (DRA). The end user can specify recovery options and recovery information isn't backed up to Azure Active Directory.
+    - **Not configured** (*default*) - The default recovery options are supported including the data recovery agent (DRA). The end user can specify recovery options and recovery information isn't backed up to Microsoft Entra.
     - **Configure** – Enable access to configure various drive recovery techniques.
 
     When set to *Configure* the following settings are available:
@@ -167,12 +167,12 @@ Supported platforms and profiles:
       - **Allowed**
 
     - **Configure BitLocker recovery package**
-      - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes) in Active Directory.
+      - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes in Active Directory.
       - **Password only** - The recovery key packages might not be accessible when needed.
 
-    - **Require device to back up recovery information to Azure Ad**
-      - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Azure AD fails. This can result in no recovery information being stored externally.
-      - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Azure Active Directory.
+    - **Require device to back up recovery information to Microsoft Entra**
+      - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Microsoft Entra fails. This can result in no recovery information being stored externally.
+      - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Microsoft Entra.
 
     - **User creation of recovery password**  
       - **Blocked** (*default*)
@@ -304,9 +304,9 @@ Supported platforms and profiles:
         - **Password and Key** (*default*) - Include both the BitLocker recovery password that's used by admins and users to unlock protected drives, and recovery key packages that are used by admins for data recovery purposes) in Active Directory.
         - **Password only** - The recovery key packages might not be accessible when needed.
 
-      - **Require device to back up recovery information to Azure Ad**
-        - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Azure AD fails. This can result in no recovery information being stored externally.
-        - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Azure Active Directory.
+      - **Require device to back up recovery information to Microsoft Entra**
+        - **Not configured** (*default*) - BitLocker enablement will complete even if recovery key backup to Microsoft Entra fails. This can result in no recovery information being stored externally.
+        - **Yes** - BitLocker won't complete enablement until recovery keys have been successfully saved to Microsoft Entra.
 
       - **User creation of recovery password**  
         - **Blocked** (*default*)

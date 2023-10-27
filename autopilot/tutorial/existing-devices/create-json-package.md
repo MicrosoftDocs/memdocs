@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices: Create and distribute package for JSON file in Configuration Manager
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)
@@ -41,7 +41,7 @@ Once the JSON files have been created for the Autopilot profile(s), a package ne
 
 > [!IMPORTANT]
 >
-> The JSON files used by Windows Autopilot deployment for existing devices only support [Windows Autopilot user-driven Azure AD join](../user-driven/azure-ad-join-workflow.md) and [Windows Autopilot user-driven hybrid Azure AD join](../user-driven/hybrid-azure-ad-join-workflow.md) Autopilot profiles. When creating the packages for JSON files in Configuration Manager, make sure the JSON files are only for user-driven Azure AD join and user-driven hybrid Azure AD join Autopilot profiles.
+> The JSON files used by Windows Autopilot deployment for existing devices only support [Windows Autopilot user-driven Microsoft Entra join](../user-driven/azure-ad-join-workflow.md) and [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md) Autopilot profiles. When creating the packages for JSON files in Configuration Manager, make sure the JSON files are only for user-driven Microsoft Entra join and user-driven Microsoft Entra hybrid join Autopilot profiles.
 
 To create a package containing the JSON file in Configuration Manager, follow these steps:
 

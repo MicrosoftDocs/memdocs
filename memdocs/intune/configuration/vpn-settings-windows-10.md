@@ -21,7 +21,7 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: abalwan, tycast
+ms.reviewer: abalwan
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
