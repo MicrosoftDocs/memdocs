@@ -20,7 +20,7 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 #ROBOTS:
 #audience:
 
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -176,7 +176,7 @@ When you assign your policies and policies, apply the following general principl
 
   For example, you want policies assigned to devices as soon as they enroll. In this latency-sensitive situation, create a [filter](../fundamentals/filters.md) to target the devices you want, and assign the policy with this filter to user groups. Don't assign to device groups.
 
-  In a userless scenario, create a [filter](../fundamentals/filters.md) to target the devices you want, and assign the policy with the filter to the “All devices” group.
+  In a userless scenario, create a [filter](../fundamentals/filters.md) to target the devices you want, and assign the policy with the filter to the "All devices" group.
 
 - Avoid adding dynamic Azure AD device groups to Excluded groups. Latency in dynamic device group calculation at enrollment can cause undesirable results. For example, unwanted apps and policies might be deployed before the excluded group membership is populated.
 
