@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 12/05/2022
+ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -248,6 +248,12 @@ Microsoft .NET Framework 4.0 is installed on the Configuration Manager console c
 
 .NET Framework 4.0 is installed or enabled on the Configuration Manager secondary site server. This version is required by SQL Server Express.
 
+### ODBC driver for SQL Server
+
+*Applies to: new site or when updating an existing one*
+
+Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite. 
+
 ### Parent database collation
 
 *Applies to: Primary site, secondary site*
@@ -384,6 +390,12 @@ The site isn't using network load balancing (NLB) with any virtual locations for
 *Applies to: Software update point*
 
 Configuration Manager doesn't support software update points on network (NLB) or hardware load balancers (HLB).
+
+### SQL ODBC driver for SQL Server
+
+*Applies to: Central administration site, primary site, secondary site*
+
+Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one.
 
 ### SQL Server Always On availability groups
 

@@ -158,6 +158,10 @@ The following Intune RBAC permissions manage the use of the Remote Help app. Set
   - **View screen** : Yes/No
   - **Take full control** : Yes/No
   - **Unattended control** : Yes/No
+ 
+> [!NOTE]
+> If the **Take full control** permission is set to *Yes*, then by default, the user will have additional permission to **View screen**, even if the user's **View screen** permission is set to *No.*
+> If the **Elevation** permission is set to *Yes*, then by default, the user will have additional permission to **View screen** and **Take full control**, even if the user's **View screen** and **Take full control** permission is set to *No.*
 
 - Category: **Remote tasks**
 - Permissions:

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 10/17/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -100,6 +100,8 @@ When you create a Windows 10/11 device restrictions configuration profile, there
 - **Cortana**: **Block** disables the Cortana voice assistant on the device. When Cortana is off, users can still search to find items on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Cortana.
 
   [Experience/AllowCortana CSP](/windows/client-management/mdm/policy-csp-experience#experience-allowcortana)
+
+  [!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
 
 ## Microsoft Edge Browser
 

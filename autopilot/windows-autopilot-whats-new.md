@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 09/13/2023
+ms.date: 10/11/2023
 ms.collection: 
   - M365-modern-desktop
   - tier2
@@ -19,6 +19,24 @@ appliesto:
 ---
 
 # Windows Autopilot: What's new
+
+## Unblock fix pending state for self-deploying mode for disabled OEMs
+
+Starting in 2310, we're making an update to the self-deployment mode for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time self-deployment mode block, which means that the device could go through self-deployment mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices.  This update only works for OEMs that aren't within the [OEM list](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130) and doesn't work on the fix pending status.
+
+### How to unblock devices
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+
+1. Under **Windows Autopilot Deployment Program**, select **Devices**.
+
+1. Select the device that you want to unblock and the select the **Unblock** button at the top of the page..
 
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
@@ -56,6 +74,8 @@ Downloading the Windows Autopilot policy just got more resilient! A new update i
 ## One step removal of Windows Autopilot registration
 
 Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that you can now remove the Autopilot registration of a device without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 1. In the **Home** screen, select **Devices** in the left hand pane.
 
@@ -166,5 +186,6 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
 
 [What's new in Windows client](/windows/whats-new/)
+
 
 

@@ -89,13 +89,13 @@ With the *source profiles* that are in conflict now identified by name, you can 
 
 ## Events and Audit logs
 
-When you use Intune policies to manage Windows LAPS, the following events are audited and logged in Azure Active Directory (Azure AD):
+When you use Intune policies to manage Windows LAPS, the following events are audited and logged in Microsoft Entra ID:
 
 - Automatic password rotation managed by policy
 - Manual password rotation through a device action.
 - Requests to view the password for an account.
 
-For information about Azure AD event logs, see [Audit logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs).
+For information about Microsoft Entra event logs, see [What are Microsoft Entra audit logs](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 ## Next steps
 
