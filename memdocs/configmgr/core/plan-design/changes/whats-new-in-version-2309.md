@@ -154,8 +154,6 @@ For more information, see [Removed and deprecated features for Configuration Man
 
 ## Other updates
 
-Known issue with Bulk registration token is **fixed** customers will now be able to generate new token while running the BulkRegistrationTokenTool.exe.
-
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2309 release notes](/powershell/sccm/2309-release-notes).
 
 ## Next steps
