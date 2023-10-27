@@ -57,8 +57,7 @@ Before you can enroll corporate-owned iOS/iPadOS devices with Apple School Manag
 
    ![Get an enrollment program token.](./media/apple-school-manager-set-up-ios/image01.png)
 
-2. In the **Enrollment program token** blade, choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple School Manager portal.
-     ![Enrollment Program Token blade.](./media/apple-school-manager-set-up-ios/image02.png)
+2. Select **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple School Manager portal.   
 
 ### Step 2. Download a token and assign devices
 1. Choose **Create a token via Apple School Manager**, and sign in to Apple School with your company Apple ID. You can use this Apple ID to renew your Apple School Manager token.
