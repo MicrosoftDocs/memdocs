@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/22/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,12 +55,13 @@ Endpoint Privilege Management requires an additional license beyond the *Microso
 Endpoint Privilege Management has the following requirements:
 
 - Microsoft Entra joined *or* Microsoft Entra hybrid joined
-- Microsoft Intune Enrollment *or* Microsoft Configuration Manager Co-Managed (no workload requirements)
+- Microsoft Intune Enrollment *or* Microsoft Configuration Manager [co-managed](../../configmgr/comanage/overview.md) devices (no workload requirements)
 - Supported Operating System
 - Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)
 
 > [!NOTE]
 >
+> - Windows 365 (CloudPC) is supported using a supported operting system version
 > - Workplace-join devices are not supported by Endpoint Privilege Management
 > - Azure Virtual Desktop is not supported by Endpoint Privilege Management
 
@@ -72,16 +73,9 @@ Endpoint Privilege Management supports the following operating systems:
 - Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
 - Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
 
-Support for EPM extends to Windows 365 (Cloud PCs) that use a supported client version. Azure Virtual Desktop is not supported at this time.
-
 > [!IMPORTANT]
-> Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
->
-> Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
->
-> Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
->
-> Endpoint Privilege Management is supported for Intune-managed devices, including [co-managed](../../configmgr/comanage/overview.md) devices.
+> - Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
+> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Getting started with Endpoint Privilege Management
 
@@ -161,8 +155,9 @@ Each device that receives Endpoint Privilege Management policies installs the EP
 
 The EPM Tools PowerShell module is available from any device that has received EPM policy. To import the EpmTools PowerShell module:
 
-1. Open PowerShell with admin privileges and go to *C:\Program Files\Microsoft EPM Agent\EpmTools*.
-2. From the **EpmTools** folder, run `Import-Module .\EpmCmdlets.dll`.
+```powershell
+Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
+```
 
 Following are the available cmdlets:
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/05/2023
+ms.date: 10/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -142,7 +142,9 @@ Be sure the device supports OEMConfig, the correct OEMConfig app is added to Int
 
     Select **Next**.
 
-11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device. An OEMConfig profile that exceeds 350 kb isn't assigned, and shows a "pending" status.  
+11. In **Assignments**, select the users or groups that will receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
+
+    The maximum size of any OEMConfig profile is 350 KB. Any profile that exceeds this limit isn't deployed to the device.
 
     For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
@@ -165,6 +167,8 @@ After your profile is deployed, you can check its status:
     - **User status**: Lists the user names with devices affected by this profile, and if the profile successfully deployed. You can select a specific user to get more details.
 
 3. You can also see if individual settings in a profile successfully applied. To see the per-setting status of an OEMConfig profile, select **Devices** > **All devices**, and choose a device from the list. Then, go to **App configuration**, and select your OEMConfig profile. Select an individual setting status to get more information.
+
+    The maximum size of any OEMConfig profile is 350 KB. Any profile that exceeds this limit isn't deployed to the device. Profiles in a pending state or profiles larger that 350KB aren't shown.
 
 > [!NOTE]
 > For Zebra devices, only a single setting row is shown. Selecting the row shows details for all settings in the policy.

@@ -65,7 +65,7 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
         - In versions 2010 and 2103, most customers should use this deployment method.
      
-1. Starting in version 2309,  select **Azure AD tenant name**,  **Azure Ad app name** automtiacally populates. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
+1. Starting in version 2309,  select **Azure AD tenant name**,  **Azure Ad app name** automatically populates. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
    > [!NOTE]
    > Starting in version 2309, We have deprecated the use of first party app for the creation of CMG. Now, CMG uses a third party server app to get bearer tokens.

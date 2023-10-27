@@ -2,7 +2,7 @@
 # required metadata
 
 title: Performance recommendations for Grouping, Targeting and Filtering in Microsoft Intune
-description: When using filters in Microsoft Intune, use Intune virtual groups that don’t require Azure AD syncing, reuse groups to optimize your targeting, make incremental group changes for efficient processing, and use filters to dynamically include and exclude. These recommendations improve performance.
+description: When using filters in Microsoft Intune, use Intune virtual groups that don't require Azure AD syncing, reuse groups to optimize your targeting, make incremental group changes for efficient processing, and use filters to dynamically include and exclude. These recommendations improve performance.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -62,7 +62,7 @@ Azure AD groups are an important part of Intune because these groups are:
 
 ### Virtual groups
 
-The **All users** and **All devices** assignments are Intune “virtual” groups. These virtual groups are available by default in all Intune tenants and don’t come with any management overhead. For example, you don’t need to create or adjust any Azure AD rules to keep their members populated.
+The **All users** and **All devices** assignments are Intune "virtual" groups. These virtual groups are available by default in all Intune tenants and don't come with any management overhead. For example, you don't need to create or adjust any Azure AD rules to keep their members populated.
 
 The **All users** and **All devices** groups are also highly scalable and optimized, mainly because they don't need to be synced from Azure AD in the same way that other groups do.
 
@@ -86,7 +86,7 @@ These recommendations focus on improving performance and reducing latency in wor
 
 | DO | DON'T |
 | --- | --- |
-| ✔️ Use the **All users** and **All devices** virtual groups instead of creating your own version of all users/all devices using Azure AD dynamic dynamic groups. | ❌ Don’t create your own “All users” or “All devices” dynamic groups for policy and app targeting in Intune.
+| ✔️ Use the **All users** and **All devices** virtual groups instead of creating your own version of all users/all devices using Azure AD dynamic dynamic groups. | ❌ Don't create your own "All users" or "All devices" dynamic groups for policy and app targeting in Intune.
 
 Larger groups take longer to sync membership updates between Azure AD and Intune. The "All users" and "All devices" are usually the largest groups you have. If you assign Intune workloads to large Azure AD groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
@@ -95,7 +95,7 @@ The built-in **All users** and **All devices** groups are Intune-only grouping o
 > [!NOTE]
 > For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
-You can also apply this optimization to other large and frequently changing groups you may have, like “All windows devices” or “all iOS devices”. Instead of creating and targeting these groups, you can use the existing "All users" or "All devices" virtual groups, since Intune policies and applications are already scoped by platform.
+You can also apply this optimization to other large and frequently changing groups you may have, like "All windows devices" or "all iOS devices". Instead of creating and targeting these groups, you can use the existing "All users" or "All devices" virtual groups, since Intune policies and applications are already scoped by platform.
 
 When using very large groups in Intune (over 100,000 members), expect some initial delay in targeting. There's a first time setup process that happens between Azure AD and Intune. The first full sync always takes longer than subsequent incremental syncs.
 
@@ -103,15 +103,15 @@ When using very large groups in Intune (over 100,000 members), expect some initi
 
 | DO | DON'T |
 | --- | --- |
-| ✔️ Reuse the same group objects for assigning multiple policies. | ❌ Don’t create duplicate copies of the same group to target different policies. <br/><br/> ❌ Don’t create dedicated “App groups” or “Policy groups”. |
+| ✔️ Reuse the same group objects for assigning multiple policies. | ❌ Don't create duplicate copies of the same group to target different policies. <br/><br/> ❌ Don't create dedicated "App groups" or "Policy groups". |
 
 Behind the scenes, Intune converts Azure AD group members to assignment targeting messages for each user and device. This process is highly optimized when the group objects are the same.
 
-For example, Intune grouping and targeting works best when the “Engineering” user group is targeted with 10 policies. It doesn't work best when the Engineering users are members of 10 different groups, each assigned to a different policy.
+For example, Intune grouping and targeting works best when the "Engineering" user group is targeted with 10 policies. It doesn't work best when the Engineering users are members of 10 different groups, each assigned to a different policy.
 
-We’ve seen a few designs countering this guidance. For example, IT admins create an “Install_Edge” group, create a “Deploy_Edge_Config_Policy” group, and then put the same devices in each group.
+We've seen a few designs countering this guidance. For example, IT admins create an "Install_Edge" group, create a "Deploy_Edge_Config_Policy" group, and then put the same devices in each group.
 
-A similar and not recommended pattern is creating “App groups”. An app group is when each app has several Azure AD groups created for it. For example, to manage the Edge application, an admin creates the following groups:
+A similar and not recommended pattern is creating "App groups". An app group is when each app has several Azure AD groups created for it. For example, to manage the Edge application, an admin creates the following groups:
 
 - Edge_Required
 - Edge_Available
@@ -123,7 +123,7 @@ The admin adds individual user or devices into these groups. These app groups dr
 
 | DO | DON'T |
 | --- | --- |
-| ✔️ Be careful with large group nesting changes in Azure AD.| ❌ Don’t make large group nesting changes all at once. |
+| ✔️ Be careful with large group nesting changes in Azure AD.| ❌ Don't make large group nesting changes all at once. |
 
 A large group membership change in Azure AD can generate bursts of targeting changes in Intune. These bursts can delay targeting of other assignments in your environment.
 
@@ -131,13 +131,13 @@ If your groups are managed by a different set of admins than the admins that man
 
 For example, if an Azure AD admin nests new large groups within an existing group that Intune uses for targeting, then Intune begins syncing all groups and group memberships. The time it takes to process all memberships depends on the number and size of group changes made in Azure AD.
 
-This recommendation also applies when groups are “unnested”. For more information on nested groups, go to [Manage Azure AD groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups).
+This recommendation also applies when groups are "unnested". For more information on nested groups, go to [Manage Azure AD groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups).
 
 ### Use filters to include and exclude
 
 | DO | DON'T |
 | --- | --- |
-| ✔️ Use filters to achieve the correct user+device combination for targeting. | ❌ Don’t mix user groups and device groups when using Include and Exclude groups. |
+| ✔️ Use filters to achieve the correct user+device combination for targeting. | ❌ Don't mix user groups and device groups when using Include and Exclude groups. |
 
 This recommendation is also a support statement. We don't recommend or support creating assignments to user groups and excluding a device group from that assignment, or vice-versa.
 
@@ -149,7 +149,7 @@ Instead of mixed exclusions, we recommend assigning to a user group. Then, use f
 
 When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups, and apply filters to help refine the targeting scope. Keep the best practices in mind:
 
--  Don't create your own version of "All users" or "All devices" groups. Use the Intune virtual groups, as they don’t require Azure AD syncing when a new user or device is added to the environment.
+-  Don't create your own version of "All users" or "All devices" groups. Use the Intune virtual groups, as they don't require Azure AD syncing when a new user or device is added to the environment.
 - To optimize your targeting, reuse groups as much as possible.
 - Take care when making large nesting changes to Intune groups. Intune needs to process all these changes and calculate effective changes for all the members of all the groups impacted by that change. 
 - Intune doesn't support mixed group exclusions. So, use filters to dynamically include and exclude devices in addition to group or virtual group assignments.

@@ -52,7 +52,7 @@ sections:
       - question: |
           Does Windows Autopilot support removing the option to enable a local administrator account?
         answer: |
-          No. Windows Autopilot doesn't support removing the local admin account. However, it does support restricting the user performing Azure Active Directory (Azure AD) domain join in OOBE to a standard account (versus an administrator account by default).
+          No. Windows Autopilot doesn't support removing the local admin account. However, it does support restricting the user performing Microsoft Entra domain join in OOBE to a standard account (versus an administrator account by default).
 
       - question: |
           How can I test the Windows Autopilot CSV file in the Partner Center?
@@ -78,9 +78,9 @@ sections:
       - question: |
           Is there such a thing as a single, worldwide CSP account?
         answer: |
-          No. The CSP sales regions depend on the location of the Azure AD tenant. A CSP partner can only sell or manage customers with a tenant located in the same CSP region. A partner's CSP region is based on the location of the tenant the CSP partner is using to transact. If the customer tenant was created in the US, only a partner that has a CSP enrollment in the US can establish a reseller relationship with this customer.
+          No. The CSP sales regions depend on the location of the Microsoft Entra tenant. A CSP partner can only sell or manage customers with a tenant located in the same CSP region. A partner's CSP region is based on the location of the tenant the CSP partner is using to transact. If the customer tenant was created in the US, only a partner that has a CSP enrollment in the US can establish a reseller relationship with this customer.
           
-          For Autopilot & Intune, the location of the end user or device doesn't matter. An employee located in Germany can enroll a device using the Autopilot profile created in the US tenant and manage it through the Intune service instance in the US. The user in Germany also authenticates in the US-based Azure AD instance.
+          For Autopilot & Intune, the location of the end user or device doesn't matter. An employee located in Germany can enroll a device using the Autopilot profile created in the US tenant and manage it through the Intune service instance in the US. The user in Germany also authenticates in the US-based Microsoft Entra instance.
           
           If a partner wants to manage customers globally, they need to have a global presence. They need multiple CSP enrollments in each of the CSP sales regions where they conduct business.
           
@@ -260,11 +260,11 @@ sections:
       - question: |
           Why did a user end up as an administrator when the Autopilot profile was configured otherwise?
         answer: |
-          Azure AD administrators are always local administrators even if Windows Autopilot is configured to disable this configuration.
+          Microsoft Entra administrators are always local administrators even if Windows Autopilot is configured to disable this configuration.
 
           To help troubleshoot, run `licensingdiag.exe` and send the `.cab` (cabinet) file to `AutopilotHelp@microsoft.com`. If possible, also collect an ETL from Windows Performance Recorder (WPR).
 
-          Often in these cases, users aren't signing into the right Azure AD tenant, or are creating local user accounts.
+          Often in these cases, users aren't signing into the right Microsoft Entra tenant, or are creating local user accounts.
           
           For a complete list of support options, see [Windows Autopilot support](autopilot-support.md).
 
@@ -284,7 +284,7 @@ sections:
           To receive a customized sign-in experience, configure tenant branding in the [Azure portal](https://portal.azure.com).
 
       - question: |
-          What happens if a device is registered with Azure AD but doesn't have a Windows Autopilot profile assigned?
+          What happens if a device is registered with Microsoft Entra ID but doesn't have a Windows Autopilot profile assigned?
         answer: |
           Since no Windows Autopilot profile is assigned to the device, the user sees the default OOBE.
 
@@ -335,16 +335,16 @@ sections:
           For more information, see [Windows Autopilot self-deploying mode](self-deploying.md).
 
       - question: |
-          What's hybrid Azure AD join?
+          What's Microsoft Entra hybrid join?
         answer: |
-          Hybrid Azure AD-joined devices connect to an on-premises Active Directory domain and Azure AD.
+          Microsoft Entra hybrid joined devices connect to an on-premises Active Directory domain and Microsoft Entra ID.
 
-          For more information, see [Introduction to device management in Azure Active Directory](/azure/active-directory/device-management-introduction).
+          For more information, see [Introduction to device management in Microsoft Entra ID](/azure/active-directory/device-management-introduction).
 
       - question: |
           What's Windows Autopilot reset?
         answer: |
-          Windows Autopilot reset removes user apps and settings from a device, but maintains Azure AD domain join and MDM enrollment. This feature is useful when you transfer a device from one user to another.
+          Windows Autopilot reset removes user apps and settings from a device, but maintains Microsoft Entra domain join and MDM enrollment. This feature is useful when you transfer a device from one user to another.
 
           For more information, see [Windows Autopilot reset](windows-autopilot-reset.md).
 
@@ -396,17 +396,17 @@ sections:
       - question: |
           What does the error message "This user isn't authorized to enroll, error code 801c0003" mean?
         answer: |
-          There are limits to the number of devices a particular Azure AD user can enroll in Azure AD, and the number of devices that are supported per user in Intune. These limits are configurable, but not infinite. If you reuse devices, or roll back to previous virtual machine snapshots, this error occurs frequently.
+          There are limits to the number of devices a particular Microsoft Entra user can enroll in Microsoft Entra ID, and the number of devices that are supported per user in Intune. These limits are configurable, but not infinite. If you reuse devices, or roll back to previous virtual machine snapshots, this error occurs frequently.
 
       - question: |
           What happens if a device is registered to a malicious agent?
         answer: |
-          By design, Windows Autopilot doesn't apply a profile until the user signs in with the matching tenant for the configured profile using the Azure AD sign-in process. For example, `badguys.com` registers a device owned by `contoso.com`. At worst, the user is directed to sign in to `badguys.com`. When the user enters their email and password, the sign-in information is redirected through Azure AD to the proper Azure AD authentication and the user is prompted to then sign into `contoso.com`. Since `contoso.com` doesn't match `badguys.com` as the tenant, the malicious profile isn't applied and the user sees the regular OOBE.
+          By design, Windows Autopilot doesn't apply a profile until the user signs in with the matching tenant for the configured profile using the Microsoft Entra sign-in process. For example, `badguys.com` registers a device owned by `contoso.com`. At worst, the user is directed to sign in to `badguys.com`. When the user enters their email and password, the sign-in information is redirected through Microsoft Entra ID to the proper Microsoft Entra authentication and the user is prompted to then sign into `contoso.com`. Since `contoso.com` doesn't match `badguys.com` as the tenant, the malicious profile isn't applied and the user sees the regular OOBE.
 
       - question: |
           Where is Windows Autopilot data stored?
         answer: |
-          Windows Autopilot data is stored within the European Union (EU). It's not stored in a sovereign cloud, even when the Azure AD tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
+          Windows Autopilot data is stored within the European Union (EU). It's not stored in a sovereign cloud, even when the Microsoft Entra tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
 
       - question: |
           Why is Windows Autopilot data stored in the US and not in a sovereign cloud?
@@ -460,6 +460,11 @@ sections:
         answer: |
           TPM provisioning involves generating and processing strong cryptographic keys. Depending on the characteristics of the TPM hardware used on a device, it may take longer than a minute on first boot.
 
+      - question: |
+          Why don't applications install on an Intune managed device when using autologon with Windows Autopilot self-deploing mode?
+        answer: |
+          When using autologon with Windows Autopilot self-deploing mode, autologon uses the KioskUser0 local account. Normally applications are installed during the user portion of the Enrollment Status Page (user ESP). However, user ESP isn't processed for local accounts, including the KioskUser0 local account used by autologon. In order for applications to install when using autologon, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
+ 
   - name: Glossary
     questions:
       - question: |
