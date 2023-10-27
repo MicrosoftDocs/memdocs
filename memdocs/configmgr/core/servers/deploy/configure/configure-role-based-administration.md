@@ -292,7 +292,7 @@ Manage administrative users:
 
 - [Get-CMAdministrativeUser](/powershell/module/configurationmanager/Get-CMAdministrativeUser): Get an administrative user object.
 - [New-CMAdministrativeUser](/powershell/module/configurationmanager/New-CMAdministrativeUser): Create a new administrative user.
-- [New-CMAdministrativeUserPermission](/powershell/module/configurationmanager/New-CMAdministrativeUserPermission): {{ Fill in the Synopsis }}
+- [New-CMAdministrativeUserPermission](/powershell/module/configurationmanager/New-CMAdministrativeUserPermission): Create a permissions object.
 - [Remove-CMAdministrativeUser](/powershell/module/configurationmanager/Remove-CMAdministrativeUser): Remove an administrative user.
 
 Manage roles and scopes on users:
