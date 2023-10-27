@@ -51,7 +51,7 @@ In order for Windows Autopilot to work, users need to be allowed to join devices
 
 1. In the **Devices | Overview** screen, select **Device Settings** in the left hand pane.
 
-1. In the **Devices | Device settings** screen that opens, under **Users may join devices to Microsoft Entra ID**, select either **All** or **Selected**:
+1. In the **Devices | Device settings** screen that opens, under **Users may join devices to Microsoft Entra**, select either **All** or **Selected**:
 
    - If **All** is selected, all users can join their devices to Microsoft Entra ID.
 
