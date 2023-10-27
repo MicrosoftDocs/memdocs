@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2023
+ms.date: 10/27/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -70,7 +70,7 @@ Create an enrollment profile for devices enrolling via web-based device enrollme
 5. Select **Next**.  
 6. On the **Settings** page, for **Enrollment type**, select **Web based device enrollment**.  
 7. Select **Next**.  
-8. On the **Assignments** page, assign the profile to all devices, or select specific groups. Are user groups supported?  
+8. On the **Assignments** page, assign the profile to all devices, or select specific groups.
 9. Select **Next**.  
 10. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile. 
 
@@ -81,7 +81,7 @@ When an employee attempts to sign into a work app on their personal device, the 
 
 Alternatively, you can provide employees and students with a URL that opens the Company Portal website. If you aren't utilizing conditional access, it's important to share the enrollment link with device users so that they know how to initiate enrollment. The link to share is:  
 
- `portal.manage.microsoft.com`   
+ `portal.manage.microsoft.com/conditionalaccess/enrollment`   
 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 
