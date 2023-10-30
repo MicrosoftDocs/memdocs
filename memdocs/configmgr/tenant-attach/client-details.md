@@ -28,9 +28,9 @@ The Microsoft Intune family of products is an integrated solution for managing a
   - Microsoft Edge, version 77 and later
   - Google Chrome
 - The user accounts triggering device actions have the following prerequisites:
-   - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
+   - The user account needs to be a synced user object in Microsoft Entra ID (hybrid identity). This means that the user is synced to Microsoft Entra ID from Active Directory.
      - For Configuration Manager version 2103, and later: </br>
-   Has been discovered with either [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
+   Has been discovered with either [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
      - Staring in Configuration Manager version 2207, you can choose to implement [Intune role-based access control for tenant-attached clients](../cloud-attach/use-intune-rbac.md) to allow cloud-only users access to tenant attached clients
 
 ## Permissions

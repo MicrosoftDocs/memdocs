@@ -61,12 +61,12 @@ For each Windows Installer (msi) deployment type:
 For each device:
 
 - **SMSID**: The unique identifier of your Configuration Manager hierarchy
-- **AADTenantID**: The unique identifier of your Azure Active Directory (Azure AD) tenant
-- **AADDeviceID**: The unique identifier of the device in Azure AD
+- **AADTenantID**: The unique identifier of your Microsoft Entra tenant
+- **AADDeviceID**: The unique identifier of the device in Microsoft Entra ID
 - **Name**: The device's host name
 - **DeviceOS**: The name of the device's operating system. For example, `Microsoft Windows NT Server 6.3`
 - **DeviceOSBuild**: The build version of the device's operating system. For example, `10.0.19041`
-- **AADPrimaryUserID**: The unique identifier of the device's primary user in Azure AD
+- **AADPrimaryUserID**: The unique identifier of the device's primary user in Microsoft Entra ID
 - **Model**: The device model
 - **Manufacturer**: The device manufacturer
 - **SerialNumber**: The device serial number
@@ -86,9 +86,9 @@ For any collection that you select for Endpoint policy deployment:
 - **CountFailed**: The count of devices that failed to process this policy
 - **CountActivated**: The count of devices where the policy is activated
 - **CountEnforced**: The count of devices where the policy is enforced
-- **TenantId**: The unique identifier of your Azure Active Directory (Azure AD) tenant
+- **TenantId**: The unique identifier of your Microsoft Entra tenant
 - **HierarchyId**: The unique identifier of your Configuration Manager hierarchy
-- **DeviceId**: The unique identifier of the device in Azure AD
+- **DeviceId**: The unique identifier of the device in Microsoft Entra ID
 - **ProductStatus**: Provide the current state of the product
 - **ComputerState**: Provide the current state of the device
 - **DefenderEnabled**: Indicates whether the Windows Defender service is running
@@ -135,7 +135,7 @@ The site uploads data to the Azure Application Insights service. Application Ins
 - Site support ID, also known as the hierarchy ID
 - Language information
 - Azure tenant ID
-- Azure AD client ID
+- Microsoft Entra client ID
 - Exceptions and errors that the service connector point generates
 - Status events for the service operation
 
