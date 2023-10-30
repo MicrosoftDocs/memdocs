@@ -147,7 +147,10 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### Enrollment for iOS/iPadOS devices in Azure AD shared device mode moving to general availability<!-- 250199565 -->  
+An Intune enrollment method that lets you enroll iOS/iPadOS devices in Azure AD shared device mode is moving out of public preview. This enrollment method is part of Apple automated device enrollment and available to configure in the Microsoft Intune admin center. Shared device mode enables your frontline workers to share a single device throughout the day, signing in and out as needed.
 
 <!-- *********************************************** -->
 
