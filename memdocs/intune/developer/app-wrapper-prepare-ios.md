@@ -236,7 +236,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-ac**|`<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the GUID in the Client ID field from your app's listing in the App Registration blade. |
 |**-ar**|`<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
 |**-aa**|(Optional when MFA is not used) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
-|**-v**| (Optional) Outputs verbose messages to the console. It is recommended to use this flag to debug any errors. |
+|**-v**| (Optional) Outputs verbose messages to the console. It's recommended to use this flag to debug any errors. |
 |**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |
 |**-x**| (Optional) `<An array of paths to extension provisioning profiles>`. Use this if your app needs extension provisioning profiles.|
@@ -413,7 +413,7 @@ If the App Wrapping Tool for iOS shows an entitlement error, try the following t
 
 To review the existing entitlements of a signed app and provisioning profile:
 
-1. Find the .ipa file and change its the extension to .zip.
+1. Find the .ipa file and change its extension to .zip.
 
 2. Expand the .zip file. This will produce a Payload folder containing your .app bundle.
 
