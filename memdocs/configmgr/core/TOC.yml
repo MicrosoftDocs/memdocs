@@ -815,7 +815,7 @@ items:
       href: clients/manage/collections/collection-evaluation.md
     - name: How to create collections
       href: clients/manage/collections/create-collections.md
-    - name: How to synchronize collection members to Azure AD groups
+    - name: How to synchronize collection members to Microsoft Entra groups
       href: clients/manage/collections/synchronize-collections-aad-group.md
     - name: How to manage collections
       href: clients/manage/collections/manage-collections.md
@@ -943,7 +943,7 @@ items:
         href: clients/manage/cmg/set-up-checklist.md
       - name: 1. Server authentication certificate
         href: clients/manage/cmg/server-auth-cert.md
-      - name: 2. Configure Azure Active Directory
+      - name: 2. Configure Microsoft Entra ID
         href: clients/manage/cmg/configure-azure-ad.md
       - name: 3. Configure client authentication
         href: clients/manage/cmg/configure-authentication.md
@@ -959,7 +959,7 @@ items:
         href: clients/manage/cmg/modify-cloud-management-gateway.md
     - name: Reference
       items:
-      - name: Manually register Azure AD apps for CMG
+      - name: Manually register Microsoft Entra apps for CMG
         href: clients/manage/cmg/manually-register-azure-ad-apps.md
       - name: Security and privacy for CMG
         href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
@@ -969,11 +969,11 @@ items:
         href: clients/manage/cmg/data-flow.md
   - name: Plan for internet-based client management
     href: clients/manage/plan-internet-based-client-management.md
-  - name: Install clients using Azure AD
+  - name: Install clients using Microsoft Entra ID
     href: clients/deploy/deploy-clients-cmg-azure.md
   - name: Token-based authentication for CMG
     href: clients/deploy/deploy-clients-cmg-token.md
-  - name: Azure AD authentication workflow
+  - name: Microsoft Entra authentication workflow
     href: clients/manage/azure-ccmsetup.md
   - name: Use a cloud-based distribution point
     href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md

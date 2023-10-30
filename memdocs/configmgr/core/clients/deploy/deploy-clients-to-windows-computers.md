@@ -220,7 +220,7 @@ In this example, the client installs with the following options:
 For more information, see [About client installation parameters and properties](about-client-installation-properties.md).
 
 > [!TIP]
-> For the procedure to install the Configuration Manager client on a modern Windows device by using Azure Active Directory (Azure AD) identity, see [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md). That procedure is for clients on an intranet or the internet.
+> For the procedure to install the Configuration Manager client on a modern Windows device by using Microsoft Entra identity, see [Install and assign Configuration Manager clients using Microsoft Entra ID for authentication](deploy-clients-cmg-azure.md). That procedure is for clients on an intranet or the internet.
 
 ### Manual installation examples
 
@@ -310,7 +310,7 @@ Deploy the Configuration Manager client to devices that are enrolled with Micros
 
 This procedure is for a traditional client that's connected to an intranet. It uses traditional client authentication methods. To make sure the device remains in a managed state after it installs the client, it must be on the intranet and within a Configuration Manager site boundary.  
 
-For the procedure to install the Configuration Manager client on a Windows device by using Azure AD identity, see [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md).
+For the procedure to install the Configuration Manager client on a Windows device by using Microsoft Entra identity, see [Install and assign Configuration Manager clients using Microsoft Entra ID for authentication](deploy-clients-cmg-azure.md).
 
 After you install the Configuration Manager client, devices don't unenroll from Intune. They can use the Configuration Manager client and MDM enrollment at the same time. For more information, see [Co-management overview](../../../comanage/overview.md).  
 
@@ -326,7 +326,7 @@ After you install the Configuration Manager client, devices don't unenroll from 
     `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<your site code> DNSSUFFIX=<DNS suffix of management point>"`
 
     > [!NOTE]
-    > For an example of a command to use with a Windows client using Azure AD authentication, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
+    > For an example of a command to use with a Windows client using Microsoft Entra authentication, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
 
 3. [Assign the app](../../../../intune/apps/apps-deploy.md) to a group of the enrolled Windows computers.
 
@@ -412,7 +412,7 @@ This example requires the client to be on a network location that's configured i
 ## <a name="BKMK_ClientInternet"></a> Internet-based client management
 
 > [!NOTE]
-> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/overview.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md).
+> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/overview.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager clients using Microsoft Entra ID for authentication](deploy-clients-cmg-azure.md).
 
 When the Configuration Manager site supports [internet-based client management](../manage/plan-internet-based-client-management.md) for clients that are sometimes on an intranet and sometimes on the internet, you have two options when you install clients on the intranet:  
 

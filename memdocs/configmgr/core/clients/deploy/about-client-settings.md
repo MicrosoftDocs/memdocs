@@ -125,7 +125,7 @@ Set this option to **Yes** for users to receive the user policy on internet-base
 
 - The internet-based management point successfully authenticates the user by using Windows authentication (Kerberos or NTLM). For more information, see [Considerations for client communications from the internet](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan).  
 
-- The cloud management gateway successfully authenticates the user by using Azure Active Directory. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
+- The cloud management gateway successfully authenticates the user by using Microsoft Entra ID. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 If you set this option to **No**, or any of the previous requirements aren't met, then a computer on the internet only receives computer policies. If this setting is **No**, but **Enable user policy on clients** is **Yes**, users don't receive user policies until the computer is connected to the intranet.  
 
@@ -149,9 +149,11 @@ If you require user policy in this scenario, and accept any potential performanc
 
 Set this option to **Yes** for clients to obtain content from a content-enabled CMG. This setting doesn't require the device to be internet-based.
 
-### Automatically register new Windows 10 or later domain joined devices with Azure Active Directory
+<a name='automatically-register-new-windows-10-or-later-domain-joined-devices-with-azure-active-directory'></a>
 
-When you configure Azure Active Directory (Azure AD) to support hybrid join, Configuration Manager configures Windows 10 or later devices for this functionality. For more information, see [How to configure hybrid Azure AD joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
+### Automatically register new Windows 10 or later domain joined devices with Microsoft Entra ID
+
+When you configure Microsoft Entra ID to support hybrid join, Configuration Manager configures Windows 10 or later devices for this functionality. For more information, see [How to configure Microsoft Entra hybrid joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
 ### Enable clients to use a cloud management gateway
 
