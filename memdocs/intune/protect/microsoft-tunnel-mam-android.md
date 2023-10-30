@@ -150,26 +150,28 @@ Create an App configuration policy for Microsoft Edge. This policy configures Mi
 
 2. On the *Basics* tab:
 
-   1. Enter a *Name* for the policy, and a *Description (optional)*.
-   2. Click on **Select public apps**, select **Microsoft Edge** for *Android*, and then click **Select**.
+    1. Enter a *Name* for the policy, and a *Description (optional)*.
+    2. Click on **Select public apps**, select **Microsoft Edge** for *Android*, and then click **Select**.
 
-   After Microsoft Edge is listed for *Public apps*, select **Next**.
+    After Microsoft Edge is listed for *Public apps*, select **Next**.
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/public-apps-edge.png" alt-text="Screen shot of configuring an app configuration policy with Microsoft Edge as a public app.":::
+    :::image type="content" source="./media/microsoft-tunnel-mam-android/public-apps-edge.png" alt-text="Screen shot of configuring an app configuration policy with Microsoft Edge as a public app.":::
 
 3. On the *Settings* tab, configure the *Name* and *Value* pair in the *General configuration settings* category as follows:
 
-    | Name | Value | Description |
-    | --- | --- | --- |
-    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode` | True | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When the VPN isn't connected, **Strict Tunnel Mode** blocks traffic to and from your apps. |
-    | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly` | True | When set to `True`, it provides **Identity switch** support to Edge. When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
+    | Name | Description |
+    | --- | --- |
+    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`<br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When the VPN isn't connected, **Strict Tunnel Mode** blocks traffic to and from your apps. |
+    | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly` <br/><br/> **Value**: `True` | When set to `True`, it provides **Identity switch** support to Edge. <br/><br/> When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
 
-   :::image type="content" source="./media/microsoft-tunnel-mam-android/name-value-pair-edge.png" alt-text="Image that shows the Identity switch configuration key and value for MAM Tunnel on unmanaged Android devices in Microsoft Intune.":::
+    The following image shows the `Identity switch` setting in an app configuration policy for Microsoft Edge:
 
-   > [!NOTE]
-   > Ensure there are no trailing spaces at the end of the General configuration setting.
+    :::image type="content" source="./media/microsoft-tunnel-mam-android/name-value-pair-edge.png" alt-text="Image that shows the Identity switch configuration key and value for MAM Tunnel on unmanaged Android devices in Microsoft Intune.":::
 
-   You can use this same policy to configure other Microsoft Edge configurations in the *Microsoft Edge configuration settings* category. After any additional configurations for Microsoft Edge are ready, select **Next**.
+    > [!NOTE]
+    > Ensure there are no trailing spaces at the end of the General configuration setting.
+
+    You can use this same policy to configure other Microsoft Edge configurations in the *Microsoft Edge configuration settings* category. After any additional configurations for Microsoft Edge are ready, select **Next**.
 
 4. On the *Assignments* tab, select **Add Groups**, and then select one or more Microsoft Entra groups that will receive this policy. After configuring groups, select **Next**.
 

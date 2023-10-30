@@ -149,21 +149,24 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App Configuration polices** > **Add** > **Managed Apps**.
 
 2. On the *Basics* tab:
-   1. Enter a *Name* for the policy and a *Description* (optional).
-   2. Click on **Select public apps**, select **Microsoft Edge for iOS/iPadOS**, and then click **Select**.
-   3. After *Microsoft Edge* is listed for *Public apps*, select **Next**.
+
+    1. Enter a *Name* for the policy and a *Description* (optional).
+    2. Click on **Select public apps**, select **Microsoft Edge for iOS/iPadOS**, and then click **Select**.
+    3. After *Microsoft Edge* is listed for *Public apps*, select **Next**.
 
 3. On the *Settings* tab, expand *General configuration settings* and then configure the *Name* and *Value* pair as follows to set up the Edge profile for Tunnel:
 
-    | Name | Value | Description |
-    | --- | --- | --- |
-    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode` | True | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When the VPN isn't connected, **Strict Tunnel Mode** blocks traffic to and from your apps. |
-    | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly` | True | When set to `True`, it provides "Identity switch" support to Edge. When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
-    | &nbsp; | &nbsp; | &nbsp; |
-    | **Federated Microsoft Entra tenants only** | &nbsp; | &nbsp; |
-    | `com.microsoft.tunnel.custom_configuration` | `{"bypassedUrls":["Company'sSTSURL"]}` | Used by federated Microsoft Entra tenants. To make sure that Edge can authenticate and access required resources, this setting is required. It bypasses the URL of the publicly available secure token service. <br/> <br/> The `bypassedUrl` value should include the federation STS endpoint. For example, the value might be like `{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}`. |
+    | Name | Description |
+    | --- | --- |
+    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode` <br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When the VPN isn't connected, **Strict Tunnel Mode** blocks traffic to and from your apps. |
+    | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly`<br/><br/> **Value**: `True` | When set to `True`, it provides **Identity switch** support to Edge. <br/><br/> When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
+    | &nbsp; | &nbsp; |
+    | **Federated Microsoft Entra tenants only** | &nbsp; |
+    | `com.microsoft.tunnel.custom_configuration` <br/><br/> **Value**: `{"bypassedUrls":["Company'sSTSURL"]}` | Used by federated Microsoft Entra tenants. To make sure that Edge can authenticate and access required resources, this setting is required. It bypasses the URL of the publicly available secure token service. <br/> <br/> The `bypassedUrl` value should include the federation STS endpoint. For example, the value might be like `{"bypassedUrls":["ipcustomer.com", "whatsmyip.org"]}`. |
 
-    :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the name and value pair.":::
+    The following image shows the `bypassedUrl` setting in an app configuration policy for Microsoft Edge:
+
+    :::image type="content" source="./media/microsoft-tunnel-mam-ios/ios-bypass.png" alt-text="Image that shows the bypassedUrls configuration key and value for MAM Tunnel on unmanaged iOS devices in Microsoft Intune.":::
 
    > [!NOTE]  
    > Ensure there are no trailing spaces at the end of the General configuration settings.
