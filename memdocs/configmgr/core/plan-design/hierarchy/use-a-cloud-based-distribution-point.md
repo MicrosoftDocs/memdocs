@@ -86,7 +86,7 @@ Deployment and operation of the cloud distribution point includes the following 
 ### Azure Resource Manager
 
 <!--1322209-->
-Create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
+Create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources.
 
 > [!Note]  
 > This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -126,7 +126,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
 - The site server requires **internet access** to deploy and manage the cloud service.  
 
-- When using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Azure AD](../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Azure AD *user discovery* isn't required.  
+- When using the **Azure Resource Manager** deployment method, integrate Configuration Manager with [Microsoft Entra ID](../../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**. Microsoft Entra ID *user discovery* isn't required.  
 
 - A **server authentication certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
 

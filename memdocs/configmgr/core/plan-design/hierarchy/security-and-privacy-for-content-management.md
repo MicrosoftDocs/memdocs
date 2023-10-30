@@ -30,7 +30,7 @@ For distribution points on the intranet, consider the advantages and disadvantag
 
 - When you use _HTTP_ for a distribution point: You can use package access accounts for authorization. The content isn't encrypted when it's transferred over the network.
 
-Consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Azure Active Directory (Azure AD) authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](enhanced-http.md).
+Consider enabling **Enhanced HTTP** for the site. This feature allows clients to use Microsoft Entra authentication to securely communicate with an HTTP distribution point. For more information, see [Enhanced HTTP](enhanced-http.md).
 
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
