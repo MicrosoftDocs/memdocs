@@ -66,7 +66,7 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 1.	Register your apps with Azure AD. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
 2.	Add the custom redirect URL to your app settings. For more information, see [Configuring MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal). 
-3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune app protection service (optional)](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional). 
+3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune Mobile App Management service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service). 
 4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Azure AD application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/app-wrapper-prepare-ios.md#command-line-parameters).
 
    > [!NOTE]

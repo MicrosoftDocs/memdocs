@@ -197,7 +197,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [configuring app-based CA]:/mem/intune/protect/app-based-conditional-access-intune-create
 
 <!-- Microsoft Learn documentation -->
-[give your app access to the Intune app protection service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
+[give your app access to the Intune Mobile App Management service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-mobile-app-management-service
 
 <!-- Other Microsoft links -->
 [Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
