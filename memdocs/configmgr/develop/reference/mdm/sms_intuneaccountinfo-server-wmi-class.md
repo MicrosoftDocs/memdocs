@@ -42,7 +42,7 @@ Class SMS_IntuneAccountInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- The GUID of the Azure Active Directory account.  
+ The GUID of the Microsoft Entra account.  
 
  `IntuneAccountID`  
  Data type: `String`  
