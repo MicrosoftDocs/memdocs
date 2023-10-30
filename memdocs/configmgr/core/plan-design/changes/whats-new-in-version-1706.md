@@ -76,14 +76,16 @@ This release includes improvements for how software update points work with boun
 
 For more information, see [software update points](../../servers/deploy/configure/boundary-groups-software-update-points.md) in the Boundary Groups topic for the Current Branch.
 
-### Azure AD integration with Configuration Manager
+<a name='azure-ad-integration-with-configuration-manager'></a>
+
+### Microsoft Entra integration with Configuration Manager
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
-With this release, we have improved the integration of Configuration Manager and Azure Active Directory (Azure AD).  These improvements streamline how you configure the Azure services you use with Configuration Manager, and help you to manage clients and users who authenticate though Azure AD.
+With this release, we have improved the integration of Configuration Manager and Microsoft Entra ID.  These improvements streamline how you configure the Azure services you use with Configuration Manager, and help you to manage clients and users who authenticate though Microsoft Entra ID.
 
 The improved integration makes the following possible:  
 - Azure Services Wizard – This Wizard provides a common configuration experience that replaces the individual workflows to set up the following Azure services you use with Configuration Manager.
   - **Cloud Management**
-    Enable clients to authenticate by using Azure Active Directory (Azure AD). You can also configure Azure AD User Discovery.
+    Enable clients to authenticate by using Microsoft Entra ID. You can also configure Microsoft Entra user Discovery.
   - **Log Analytics Connector**
     Connect to Azure Log Analytics and sync collection data.
   - **Upgrade Readiness**
@@ -94,11 +96,11 @@ The improved integration makes the following possible:
 
   This is done by using an [Azure server web app](/azure/app-service/app-service-authentication-overview) to provide the subscription and configuration details that you otherwise enter each time you set up a new Configuration Manager component or service with Azure. For more information, see [Azure Services Wizard](../../servers/deploy/configure/azure-services-wizard.md).
 
-- Use Azure AD to authenticate clients on the internet to access your Configuration Manager sites. Azure AD replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](../../clients/deploy/deploy-clients-cmg-azure.md).
+- Use Microsoft Entra ID to authenticate clients on the internet to access your Configuration Manager sites. Microsoft Entra ID replaces the need to configure and use client authentication certificates. This requires the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Microsoft Entra ID for authentication](../../clients/deploy/deploy-clients-cmg-azure.md).
 
-- Install and manage the Configuration Manager client on computers that are located on the internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Azure AD for authentication](../../clients/deploy/deploy-clients-cmg-azure.md).
+- Install and manage the Configuration Manager client on computers that are located on the internet. This requires the use of the cloud management gateway site system role. For more information, see [Install and assign Configuration Manager clients from the internet using Microsoft Entra ID for authentication](../../clients/deploy/deploy-clients-cmg-azure.md).
 
-- Configure Azure AD User Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Azure AD for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Azure AD User Discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
+- Configure Microsoft Entra user Discovery.  Use the Azure Services Wizard to configure this new discovery method. This new method queries your Microsoft Entra ID for user data you can then use along-side traditional discovery data.  Both full and delta synchronization are supported.  For more information see [Microsoft Entra user Discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 ### Peer cache improvements
 <!-- 1252345 -->

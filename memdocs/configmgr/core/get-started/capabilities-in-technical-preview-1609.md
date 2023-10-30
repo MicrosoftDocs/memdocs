@@ -60,7 +60,7 @@ In this release, we've updated [Windows Store for Business integration](../../ap
 
 - Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid online licensed apps (for Intune enrolled devices only).
 - You can now initiate an immediate synchronization between the Windows Store for Business and Configuration Manager.
-- You can now modify the client secret key that you obtained from Azure Active Directory
+- You can now modify the client secret key that you obtained from Microsoft Entra ID
 
 ### Try it out!
 
@@ -76,7 +76,9 @@ In this release, we've updated [Windows Store for Business integration](../../ap
 The procedure to create and deploy a Configuration Manager application from a paid store app is the same as for creating an application from a free app. See the section **Create and deploy a Configuration Manager application from a Windows Store for Business app** in [Manage apps from the Windows Store for Business with Configuration Manager](../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
 
-#### Modify the client secret key from Azure Active Directory
+<a name='modify-the-client-secret-key-from-azure-active-directory'></a>
+
+#### Modify the client secret key from Microsoft Entra ID
 
 1. In the **Administration** workspace of the Configuration Manager console, click **Cloud Services** > **Updates and Servicing** > **Windows Store for Business**.
 2. Select your Windows Store for Business account, and then click **Properties**.

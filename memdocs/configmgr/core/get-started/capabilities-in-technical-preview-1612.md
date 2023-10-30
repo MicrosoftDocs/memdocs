@@ -290,28 +290,30 @@ In your favorite OData query viewer, try queries similar to the following exampl
 > [!NOTE]
 > The example queries shown in the table use *localhost* as the host name in the URL and can be used on the computer running the SMS Provider. If you're running your queries from a different computer, replace localhost with the FQDN of the server with the SMS Provider installed.
 
-## Azure Active Directory onboarding
+<a name='azure-active-directory-onboarding'></a>
 
-Azure Active Directory (AD) onboarding creates a connection between Configuration Manager and Azure Active Directory to be used by other cloud services. This can currently be used for creating the connection needed for the Cloud Management Gateway.
+## Microsoft Entra onboarding
+
+Microsoft Entra onboarding creates a connection between Configuration Manager and Microsoft Entra ID to be used by other cloud services. This can currently be used for creating the connection needed for the Cloud Management Gateway.
 
 Perform this task with an Azure admin, as you will need Azure admin credentials.
 
 #### To create the connection:
 
-2. In the **Administration** workspace, choose **Cloud Services** > **Azure Active Directory** > **Add Azure Active Directory**.
-2. Choose **Sign In** to create the connection with Azure AD.
+2. In the **Administration** workspace, choose **Cloud Services** > **Microsoft Entra ID** > **Add Microsoft Entra ID**.
+2. Choose **Sign In** to create the connection with Microsoft Entra ID.
 
 #### Configuration Manager client requirements
 
 There are several requirements for enabling the creation of user policy in the Cloud Management Gateway.
 
-- The Azure AD onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
-- Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Azure AD).
+- The Microsoft Entra onboarding process must be complete, and the client has to be initially connected to the corporate network to get the connection information.
+- Clients must be both domain-joined (registered in Active Directory) and cloud-domain-joined (registered in Microsoft Entra ID).
 - You must run [Active Directory User Discovery](../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - You must modify the Configuration Manager client to allow user policy requests over the Internet, and deploy the change to the client. Because this change to the client takes place *on the client device*, it can be deployed through the Cloud Management Gateway although you haven't completed the configuration changes needed for user policy.
 - Your management point must be configured to use HTTPS to secure the token on the network, and must have .Net 4.5 installed.
 
-After you make these configuration changes, you can create a user policy and move clients to the Internet to test the policy. User policy requests through the Cloud Management Gateway will be authenticated with Azure AD token-based authentication.
+After you make these configuration changes, you can create a user policy and move clients to the Internet to test the policy. User policy requests through the Cloud Management Gateway will be authenticated with Microsoft Entra token-based authentication.
 
 ## Change to configuring multi-factor authentication for device enrollment
 

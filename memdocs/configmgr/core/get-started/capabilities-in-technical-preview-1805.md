@@ -84,7 +84,7 @@ Follow the instructions to create a phased deployment where you manually configu
 
 ## Cloud distribution point support for Azure Resource Manager
 <!--1322209-->
-When creating an instance of the [cloud distribution point](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
+When creating an instance of the [cloud distribution point](../servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources. This modernized deployment does not require the classic Azure management certificate.  
 
 The cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, we recommend using the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
 
@@ -95,7 +95,7 @@ Configuration Manager does not migrate existing classic cloud distribution point
 
 
 ### Prerequisites  
-- Integration with [Azure AD](../clients/deploy/deploy-clients-cmg-azure.md). Azure AD user discovery is not required.  
+- Integration with [Microsoft Entra ID](../clients/deploy/deploy-clients-cmg-azure.md). Microsoft Entra user discovery is not required.  
 
 - The same [requirements for a cloud distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_requirements), except for the Azure management certificate.  
 
@@ -105,14 +105,14 @@ Configuration Manager does not migrate existing classic cloud distribution point
 
 1. In the Configuration Manager console, **Administration** workspace, expand **Cloud Services**, and select **Cloud Distribution Points**. Click **Create Cloud Distribution Point** in the ribbon.   
 
-2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Azure AD subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.  
+2. On the **General** page, select **Azure Resource Manager deployment**. Click **Sign in** to authenticate with an Azure subscription administrator account. The wizard auto-populates the remaining fields from the Microsoft Entra subscription information stored during the integration prerequisite. If you own multiple subscriptions, select the desired subscription to use. Click **Next**.  
 
 3. On the **Settings** page, provide the server PKI **Certificate file** as usual. This certificate defines the cloud distribution point **Service FQDN** used by Azure. Select the **Region**, and then select a resource group option to either **Create new** or **Use existing**. Enter the new resource group name, or select an existing resource group from the drop-down list.  
 
 4. Complete the wizard.  
 
 > [!NOTE]  
-> For the selected Azure AD server app, Azure assigns the subscription **contributor** permission.  
+> For the selected Microsoft Entra server app, Azure assigns the subscription **contributor** permission.  
 
 Monitor the service deployment progress with **cloudmgr.log** on the service connection point.
 
@@ -179,7 +179,7 @@ Windows Low Extra Delay Background Transport (LEDBAT) is a feature of Windows Se
 
 ## Cloud management dashboard
 <!--1358461-->
-The new **cloud management dashboard** provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.  
+The new **cloud management dashboard** provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Microsoft Entra ID, it also displays data about cloud users and devices.  
 
 The following screenshot is a portion of the cloud management dashboard showing two of the available tiles:  
 ![Cloud management dashboard tiles CMG traffic and Current online clients](media/1358461-cmg-dashboard.png)
@@ -208,7 +208,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Select
 
 3. In the CMG connection analyzer window, select one of the following options to authenticate with the service:  
 
-     1. **Azure AD user**: use this option to simulate communication the same as a cloud-based user identity logged on to an Azure AD-joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Azure AD user account.  
+     1. **Microsoft Entra user**: use this option to simulate communication the same as a cloud-based user identity logged on to a Microsoft Entra joined Windows 10 device. Click **Sign In** to securely enter the credentials for this Microsoft Entra user account.  
 
      2. **Client certificate**: use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](../clients/manage/cmg/configure-authentication.md#pki-certificate).  
 
@@ -262,7 +262,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 
 ## Improved secure client communications
 <!--1356889,1358228,1358460-->
-Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Azure Active Directory (Azure AD) integration reduces some but not all of the certificate requirements. 
+Using HTTPS communication is recommended for all Configuration Manager communication paths, but can be challenging for some customers due to the overhead of managing PKI certificates. The introduction of Microsoft Entra integration reduces some but not all of the certificate requirements. 
 
 This release includes improvements to how clients communicate with site systems. There are two primary goals for these improvements:  
 
@@ -279,18 +279,18 @@ The following scenarios benefit from these improvements:
 
 #### <a name="bkmk_token1"></a> Scenario 1: Client to management point
 <!--1356889-->
-[Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
+[Microsoft Entra joined devices](/azure/active-directory/devices/concept-azure-ad-join) can communicate through a cloud management gateway (CMG) with a management point configured for HTTP. The site server generates a certificate for the management point allowing it to communicate via a secure channel.   
 
 > [!Note]  
 > This behavior is changed from Configuration Manager current branch version 1802, which requires an HTTPS-enabled management point for this scenario. For more information, see [Enable management point for HTTPS](../clients/manage/cmg/configure-authentication.md#enable-management-point-for-https).  
 
 #### <a name="bkmk_token2"></a> Scenario 2: Client to distribution point
 <!--1358228-->
-A workgroup or Azure AD joined client can download content over a secure channel from a distribution point configured for HTTP.   
+A workgroup or Microsoft Entra joined client can download content over a secure channel from a distribution point configured for HTTP.   
 
-#### <a name="bkmk_token3"></a> Scenario 3 Azure AD device identity 
+#### <a name="bkmk_token3"></a> Scenario 3 Microsoft Entra device identity 
 <!--1358460-->
-An Azure AD joined or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user logged in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+A Microsoft Entra joined or [hybrid Microsoft Entra device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without a Microsoft Entra user logged in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 
 ### Prerequisites  
@@ -301,11 +301,11 @@ An Azure AD joined or [hybrid Azure AD device](/azure/active-directory/devices/c
 
 - A cloud management gateway.  
 
-- Onboard the site to Azure AD for cloud management.  
+- Onboard the site to Microsoft Entra ID for cloud management.  
 
-    - If you have already met this prerequisite for your site, you need to update the Azure AD application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Active Directory Tenants**. Select the Azure AD tenant, select the web application in the **Applications** pane, and then click **Update application setting** in the ribbon.  
+    - If you have already met this prerequisite for your site, you need to update the Microsoft Entra application. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Microsoft Entra tenants**. Select the Microsoft Entra tenant, select the web application in the **Applications** pane, and then click **Update application setting** in the ribbon.  
 
-- A client running Windows 10 version 1803 and joined to Azure AD. (This requirement is technically only for [Scenario 3](#bkmk_token3).) 
+- A client running Windows 10 version 1803 and joined to Microsoft Entra ID. (This requirement is technically only for [Scenario 3](#bkmk_token3).) 
 
 
 ### Try it out!

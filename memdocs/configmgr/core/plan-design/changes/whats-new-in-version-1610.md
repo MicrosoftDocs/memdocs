@@ -87,7 +87,7 @@ For details, see [Manage duplicate hardware identifiers](../../clients/manage/ma
 Changes in this release:
 - Previously, you could only deploy free apps from the Windows Store for Business. Configuration Manager now additionally supports deploying paid online licensed apps (for Intune enrolled devices only).
 - You can now initiate an immediate synchronization between the Windows Store for Business and Configuration Manager.
-- You can now modify the client secret key that you obtained from Azure Active Directory.
+- You can now modify the client secret key that you obtained from Microsoft Entra ID.
 - You can delete a subscription to the store.
 
 For details, see [Manage apps from the Windows Store for Business with Configuration Manager](../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).

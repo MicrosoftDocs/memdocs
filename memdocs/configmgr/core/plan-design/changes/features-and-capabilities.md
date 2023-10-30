@@ -30,12 +30,12 @@ Desktop Analytics is a cloud-based service that integrates with Configuration Ma
 
 ## Cloud-attached management
 
-Use features like the cloud management gateway and Azure Active Directory to manage internet-based clients.
+Use features like the cloud management gateway and Microsoft Entra ID to manage internet-based clients.
 
 For more information, see the following articles:
 
 - [Cloud management gateway overview](../../clients/manage/cmg/overview.md)
-- [Plan for Azure AD](../security/plan-for-security.md#azure-active-directory)
+- [Plan for Microsoft Entra ID](../security/plan-for-security.md#azure-active-directory)
 - [Azure services](../../servers/deploy/configure/azure-services-wizard.md)
 
 ## Real-time management

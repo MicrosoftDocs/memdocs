@@ -35,9 +35,9 @@ This article introduces the features that are available in the Technical Preview
 
 ##### Scenario 1: Set up Windows Store for Business synchronization  
 
-1.  In Azure Active Directory, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
+1.  In Microsoft Entra ID, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
 
-    1.  In the **Active Directory** node of [https://portal.azure.com](https://portal.azure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
+    1.  In the **Active Directory** node of [https://portal.azure.com](https://portal.azure.com), select your Microsoft Entra ID, then click **Applications** > **Add**.  
 
     2.  Click **Add an application my organization is developing**.  
 
@@ -47,7 +47,7 @@ This article introduces the features that are available in the Technical Preview
 
     5.  Complete the wizard.  
 
-2.  In Azure Active Directory, create a client key for the registered management tool.  
+2.  In Microsoft Entra ID, create a client key for the registered management tool.  
 
     1.  Highlight the application you just created and click **Configure**.  
 
@@ -61,7 +61,7 @@ This article introduces the features that are available in the Technical Preview
 
     3.  Under **Management Tools**, click **Add a management tool**.  
 
-    4.  In **Search for the tool by name**, type the name of the application you created in AAD previously, then click **Add**.  
+    4.  In **Search for the tool by name**, type the name of the application you created in Microsoft Entra ID previously, then click **Add**.  
 
     5.  Click **Activate** next to the application you just imported.  
 
@@ -73,7 +73,7 @@ This article introduces the features that are available in the Technical Preview
 
 6.  On the **Home** tab, in the **Create** group, click **Add Windows Store for Business Account**.  
 
-7.  Add your tenant ID, client id, and client key from Azure Active Directory, then complete the wizard.  
+7.  Add your tenant ID, client id, and client key from Microsoft Entra ID, then complete the wizard.  
 
 8.  Once you are done, you will see the account you configured in the **Windows Store for Business Accounts** list in the Configuration Manager console.  
 
@@ -141,7 +141,7 @@ To help you understand the use of client Peer Cache, you can view the **Client D
     >  To complete this task with the technical preview and a single distribution point, configure the distribution point to be slow for the network location of all your clients. Then,  distribute the content to a single client.  After that client gets the content, you can distribute the content to additional clients that should find local peers to use as a content source before using the distribution point that is considered to be slow from the client's location.  
 
 ##  <a name="bkmk_passport"></a> Support for Passport for Work as a KSP  
- Configuration Manager lets you integrate with Microsoft Passport for Work which is an alternative sign-in method that uses Active Directory, or an Azure Active Directory account to replace a password, smart card, or virtual smart card.  
+ Configuration Manager lets you integrate with Microsoft Passport for Work which is an alternative sign-in method that uses Active Directory, or a Microsoft Entra account to replace a password, smart card, or virtual smart card.  
 Passport lets you use a user gesture to login, instead of a password. A user gesture might be a simple PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.  
 
 -   You can use Configuration Manager to control which gestures users can and cannot use to login, and to configure PIN complexity requirements.  

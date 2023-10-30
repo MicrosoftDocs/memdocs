@@ -91,9 +91,9 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 ### Set up Windows Store for Business synchronization  
 
-1.  In Azure Active Directory, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
+1.  In Microsoft Entra ID, register Configuration Manager as a "Web Application and/or Web API" management tool. This will give you a client ID that you will need later.  
 
-    1.  In the Active Directory node of [https://portal.azure.com](https://portal.azure.com), select your Azure Active Directory, then click **Applications** > **Add**.  
+    1.  In the Active Directory node of [https://portal.azure.com](https://portal.azure.com), select your Microsoft Entra ID, then click **Applications** > **Add**.  
 
     2.  Click **Add an application my organization is developing**.  
 
@@ -103,7 +103,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
     5.  Complete the wizard.  
 
-2.  In Azure Active Directory, create a client key for the registered management tool.  
+2.  In Microsoft Entra ID, create a client key for the registered management tool.  
 
     1.  Highlight the application you just created and click **Configure**.  
 
@@ -117,7 +117,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
     3.  Under **Management Tools**, click **Add a management tool**.  
 
-    4.  In **Search for the tool by name**, type the name of the application you created in AAD previously, then click **Add**.  
+    4.  In **Search for the tool by name**, type the name of the application you created in Microsoft Entra ID previously, then click **Add**.  
 
     5.  Click **Activate** next to the application you just imported.  
 
@@ -129,7 +129,7 @@ Common actions such as **Retire/Wipe**, **Reset Passcode**, **Remote Lock**, and
 
 6.  On the **Home** tab, in the **Create** group, click **Add Windows Store for Business Account**.  
 
-7.  Add your tenant ID, client id, and client key from Azure Active Directory, then complete the wizard.  
+7.  Add your tenant ID, client id, and client key from Microsoft Entra ID, then complete the wizard.  
 
 8.  Once you are done, you will see the account you configured in the **Windows Store for Business Accounts** list in the Configuration Manager console.  
 

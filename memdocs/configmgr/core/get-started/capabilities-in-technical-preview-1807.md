@@ -184,9 +184,9 @@ If you don't configure these prerequisites, the site sends email notification fo
 
 - Onboard the site to [Azure services](../servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**  
 
-    - Enable [Azure AD User Discovery](../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
+    - Enable [Microsoft Entra user Discovery](../servers/deploy/configure/configure-discovery-methods.md#azureaadisc)  
 
-    - Manually configure the following settings for this native app in Azure AD:  
+    - Manually configure the following settings for this native app in Microsoft Entra ID:  
 
         - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name (FQDN) of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.   
 
@@ -200,7 +200,7 @@ Try to complete the tasks. Then send [Feedback](capabilities-in-technical-previe
 1. In the Configuration Manager console, deploy an application as available to a user collection. On the **Deployment Settings** page, enable it for approval. Then enter a *single* email address to receive notification.  
 
      > [!Note]  
-     > Anyone in your Azure AD organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.  
+     > Anyone in your Microsoft Entra organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.  
 
 2. As a user, request the application in Software Center.  
 
