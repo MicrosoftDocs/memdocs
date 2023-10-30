@@ -58,7 +58,7 @@ This stage of the SDK guide overviews the MSAL integration process as it relates
 
 To simplify the Intune App SDK integration process, **Android app developers are strongly encouraged to fully integrate and test MSAL before downloading the Intune App SDK.**
 The Intune App SDK integration process *does* require code changes around MSAL token acquisition.
-It will be significantly easier to test the Intune-specific token acquisition changes if you have already confirmed your app's original token acquisition implementation works as expected.
+It will be easier to test the Intune-specific token acquisition changes if you have already confirmed your app's original token acquisition implementation works as expected.
 
 To learn more about AAD, see [What is Azure Active Directory?]
 
@@ -67,7 +67,7 @@ To learn more about MSAL, see the [MSAL Wiki] and [list of MSAL libraries].
 ## Register your Application with AAD
 
 Before integrating MSAL into your Android application, follow the instructions to [register your application with Azure Active Directory].
-This will generate a **Client ID** for your application.
+This generates a **Client ID** for your application.
 
 Next, follow the instructions to [give your app access to the Intune app protection service].
 
@@ -95,7 +95,7 @@ This guide assumes that you're enabling brokered authentication within your appl
 
 ### Intune-specific MSAL configuration
 
-Intune has up to four settings you may need to add to your application's `AndroidManifest.xml`.
+Intune has up to four settings you might need to add to your application's `AndroidManifest.xml`.
 These settings help ensure that Intune's authentication policy can be properly enforced and prevent unnecessary authentication prompts for end users.
 
 These settings include:
@@ -197,7 +197,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [configuring app-based CA]:/mem/intune/protect/app-based-conditional-access-intune-create
 
 <!-- Microsoft Learn documentation -->
-[give your app access to the Intune app protection service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
+[give your app access to the Intune Mobile App Management service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-mobile-app-management-service
 
 <!-- Other Microsoft links -->
 [Microsoft Intune admin center]:https://go.microsoft.com/fwlink/?linkid=2109431
