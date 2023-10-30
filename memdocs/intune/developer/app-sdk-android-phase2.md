@@ -58,7 +58,7 @@ This stage of the SDK guide overviews the MSAL integration process as it relates
 
 To simplify the Intune App SDK integration process, **Android app developers are strongly encouraged to fully integrate and test MSAL before downloading the Intune App SDK.**
 The Intune App SDK integration process *does* require code changes around MSAL token acquisition.
-It will be significantly easier to test the Intune-specific token acquisition changes if you have already confirmed your app's original token acquisition implementation works as expected.
+It will be easier to test the Intune-specific token acquisition changes if you have already confirmed your app's original token acquisition implementation works as expected.
 
 To learn more about AAD, see [What is Azure Active Directory?]
 
