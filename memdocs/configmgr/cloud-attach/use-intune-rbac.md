@@ -97,7 +97,7 @@ The following Intune permissions control access to the Configuration Manager clo
 
 ### I have cloud-only users that need access to tenant-attached devices in Intune, will this give them access?
 
-Yes. When a user is cloud only, in this scenario meaning they are in Azure Active Directory (Azure AD) and can access Intune, using Intune RBAC will give them access to tenant-attached devices.
+Yes. When a user is cloud only, in this scenario meaning they are in Microsoft Entra ID and can access Intune, using Intune RBAC will give them access to tenant-attached devices.
 
 ### What if I have multiple Configuration Manager hierarchies connected to my tenant?
 
