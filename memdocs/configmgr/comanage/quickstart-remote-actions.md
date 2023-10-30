@@ -94,7 +94,7 @@ For more information, see [Remotely restart devices with Intune](../../intune/re
 
 The **Fresh Start** device action removes any apps installed on a device running Windows 10, version 1703 or later. Fresh Start helps remove pre-installed (OEM) apps that are typically installed with a new device.
 
-If you choose not to retain user data, the device restores to its out-of-box state. It unenrolls from Azure AD and MDM.
+If you choose not to retain user data, the device restores to its out-of-box state. It unenrolls from Microsoft Entra ID and MDM.
 
 If you have predetermined standards regarding what apps should be on the device, then this action eliminates the ones that don't meet your criteria.
 

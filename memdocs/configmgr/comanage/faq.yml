@@ -53,31 +53,31 @@ sections:
   - name: Authentication
     questions:
       - question: |
-          Is hybrid Azure AD join the only option for co-management?
+          Is Microsoft Entra hybrid join the only option for co-management?
         answer: |
-          No. Hybrid Azure AD join and co-management are two different things:
+          No. Microsoft Entra hybrid join and co-management are two different things:
 
           - _Hybrid Azure AD join_ is a device identity state where the device is joined to an on-premises Active Directory domain and registered in Azure Active Directory (Azure AD).
 
-          - _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. Co-management requires that the device has a cloud identity. This identity can be either hybrid Azure AD join or Azure AD join only.
+          - _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. Co-management requires that the device has a cloud identity. This identity can be either Microsoft Entra hybrid join or Microsoft Entra join only.
 
           For an existing Configuration Manager client that's already joined to Active Directory, it needs to be hybrid joined before you enable co-management.
 
-          For new devices that are only cloud domain-joined with Azure AD, you can enable co-management right away. There's no requirement for hybrid Azure AD join for new co-managed devices.
+          For new devices that are only cloud domain-joined with Microsoft Entra ID, you can enable co-management right away. There's no requirement for Microsoft Entra hybrid join for new co-managed devices.
 
-          For more information, see [Use Azure AD for co-management](quickstart-hybrid-aad.md).
-
-      - question: |
-          Does co-management support Azure AD-joined devices?
-        answer: |
-          Yes. Co-management supports both Azure AD-joined devices and hybrid Azure AD-joined devices. For more information, see [Co-management prerequisites](overview.md#azure-ad).
+          For more information, see [Use Microsoft Entra ID for co-management](quickstart-hybrid-aad.md).
 
       - question: |
-          My environment has too many group policy objects and legacy authenticated apps. Do I have to use hybrid Azure AD?
+          Does co-management support Microsoft Entra joined devices?
         answer: |
-          It depends. Some customers have concerns about Azure AD-joined devices because they need group policies or need Win32 app authentication. More details are needed to understand if it's a real blocker.
+          Yes. Co-management supports both Microsoft Entra joined devices and Microsoft Entra hybrid joined devices. For more information, see [Co-management prerequisites](overview.md#azure-ad).
 
-          For apps, test them on an Azure AD-joined device. Typically only apps that require machine-based authentication won't work, and those aren't common. If the app works on a cloud domain-joined device, then you don't need to hybrid-join your devices because of that app.
+      - question: |
+          My environment has too many group policy objects and legacy authenticated apps. Do I have to use hybrid Microsoft Entra ID?
+        answer: |
+          It depends. Some customers have concerns about Microsoft Entra joined devices because they need group policies or need Win32 app authentication. More details are needed to understand if it's a real blocker.
+
+          For apps, test them on a Microsoft Entra joined device. Typically only apps that require machine-based authentication won't work, and those aren't common. If the app works on a cloud domain-joined device, then you don't need to hybrid-join your devices because of that app.
 
           For group policies, don't try to translate all of your existing group policy objects (GPOs) to Intune policies. For a cloud-managed device, there are some group policies that don't apply to the scenario. If you don't know why a group policy setting is configured, now is an opportunity to determine if it's still needed. Also make sure that you're not still using settings for an app that you no longer use. This process is an opportunity to optimize the performance and configuration requirements of your cloud-managed devices.
 
@@ -117,12 +117,12 @@ sections:
       - question: |
           Can I use Windows Autopilot with co-management?
         answer: |
-          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Autopilot](/autopilot/windows-autopilot) joins it to Azure AD and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
+          Yes. One of the two [paths to co-management](quickstart-paths.md) is to bootstrap with modern provisioning. For a new or repurposed device, [Autopilot](/autopilot/windows-autopilot) joins it to Microsoft Entra ID and enrolls it to Intune. Intune can then deploy the Configuration Manager client and enable co-management.
 
           For more information, see [How to prepare internet-based devices for co-management](how-to-prepare-win10.md).
 
           > [!NOTE]
-          > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
+          > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
 
       - question: |
           How do I manage updates for Windows and Microsoft 365 apps?
@@ -164,7 +164,7 @@ sections:
         answer: |
           No. CMG is a Configuration Manager feature for device connectivity. You should use a CMG if you have Configuration Manager clients on the internet, if they're co-managed or not. A co-managed client in an environment with no CMG would have to rely on VPN connectivity when it roams outside of the on-premises network.
 
-          The scenario to provision Azure AD-joined co-managed devices does require a CMG. It allows an interned-based device to install the Configuration Manager client after the Autopilot process.
+          The scenario to provision Microsoft Entra joined co-managed devices does require a CMG. It allows an interned-based device to install the Configuration Manager client after the Autopilot process.
 
           For more information, see the following articles:
 
