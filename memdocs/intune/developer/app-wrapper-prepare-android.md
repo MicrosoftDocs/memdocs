@@ -75,6 +75,18 @@ Before running the tool, review [Security considerations for running the App Wra
   - Use ProGuard to eliminate unused class references from the app's primary DEX file.
   - For customers using v3.1.0 or higher of the Android Gradle plugin, disable the [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
+## How often should I rewrap my Android application with the Intune App Wrapping Tool?
+
+The main scenarios in which you would need to rewrap your applications are as follows:
+
+- The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Microsoft Intune admin center.
+
+- The Intune App Wrapping Tool for Android has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens every 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
+
+Some best practices for rewrapping include:
+
+- Maintaining signing certificates used during the build process, see [Reusing signing certificates and wrapping apps](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps)
+
 ## Install the App Wrapping Tool
 
 1. From the [GitHub repository](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android), download the installation file InstallAWT.exe for the Intune App Wrapping Tool for Android to a Windows computer. Open the installation file.
@@ -134,18 +146,6 @@ invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped
 ```
 
 The wrapped app and a log file are generated and saved in the output path you specified.
-
-## How often should I rewrap my Android application with the Intune App Wrapping Tool?
-
-The main scenarios in which you would need to rewrap your applications are as follows:
-
-- The application itself has released a new version. The previous version of the app was wrapped and uploaded to the Microsoft Intune admin center.
-
-- The Intune App Wrapping Tool for Android has released a new version that enables key bug fixes, or new, specific Intune application protection policy features. This happens every 6-8 weeks through GitHub repo for the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
-
-Some best practices for rewrapping include:
-
-- Maintaining signing certificates used during the build process, see [Reusing signing certificates and wrapping apps](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps)
 
 ## Reusing signing certificates and wrapping apps
 
