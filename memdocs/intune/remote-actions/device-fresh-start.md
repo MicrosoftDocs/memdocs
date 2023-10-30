@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/06/2023
+ms.date: 10/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -37,14 +37,14 @@ The **Fresh Start** device action removes any apps that are installed on a PC ru
 2. From the list of devices you manage, choose a Windows 10 desktop device.
 3. Click **Fresh Start**.
 4. Select **Retain user data on this device** to:
-   * Keep the device Azure AD joined
-   * Device is enrolled into mobile device management again when an Azure Active Directory enabled user signs into the device.
+   * Keep the device Microsoft Entra joined
+   * Device is enrolled into mobile device management again when a Microsoft Entra ID enabled user signs into the device.
    * Keep the contents of the device user's Home folder, and remove apps and settings
 
    > [!IMPORTANT]
    > If you do not retain user data, the device will be restored to the default OOBE (out-of-box experience) completed state retaining the built in administrator account.
-   > BYOD devices will be unenrolled from Azure AD and mobile device management.
-   > Azure AD joined devices will be enrolled into mobile device management again when an Azure Active Directory enabled user signs into the device.
+   > BYOD devices will be unenrolled from Microsoft Entra ID and mobile device management.
+   > Microsoft Entra joined devices will be enrolled into mobile device management again when an Microsoft Entra ID enabled user signs into the device.
 
 5. Click **OK**.
 6. To see the status of this action, go back to **Devices** and click **Device actions**.  
