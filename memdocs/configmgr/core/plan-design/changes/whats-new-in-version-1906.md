@@ -99,21 +99,25 @@ For more information, see [Management insights](../../servers/manage/management-
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
-### Azure Active Directory user group discovery
+<a name='azure-active-directory-user-group-discovery'></a>
+
+### Microsoft Entra user group discovery
 
 <!--3611956-->
 
-You can now discover user groups and members of those groups from Azure Active Directory (Azure AD). Users found in Azure AD groups that the site hasn't previously discovered are added as user resources in Configuration Manager. A user group resource record is created when the group is a security group. This feature is a [pre-release feature](../../servers/manage/pre-release-features.md) and needs to be enabled.
+You can now discover user groups and members of those groups from Microsoft Entra ID. Users found in Microsoft Entra groups that the site hasn't previously discovered are added as user resources in Configuration Manager. A user group resource record is created when the group is a security group. This feature is a [pre-release feature](../../servers/manage/pre-release-features.md) and needs to be enabled.
 
 For more information, see [Configure discovery methods](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco).
 
-### Synchronize collection membership results to Azure Active Directory groups
+<a name='synchronize-collection-membership-results-to-azure-active-directory-groups'></a>
+
+### Synchronize collection membership results to Microsoft Entra groups
 
 <!--3607475-->
 
-You can now enable the synchronization of collection memberships to an Azure Active Directory (Azure AD) group. This synchronization is a pre-release feature. To enable it, see [Pre-release features](../../servers/manage/pre-release-features.md).
+You can now enable the synchronization of collection memberships to a Microsoft Entra group. This synchronization is a pre-release feature. To enable it, see [Pre-release features](../../servers/manage/pre-release-features.md).
 
-The synchronization allows you to use your existing on-premises grouping rules in the cloud by creating Azure AD group memberships based on collection membership results. Only devices with an Azure Active Directory record are reflected in the Azure AD Group. Both Hybrid Azure AD Joined and Azure Active Directory joined devices are supported.
+The synchronization allows you to use your existing on-premises grouping rules in the cloud by creating Microsoft Entra group memberships based on collection membership results. Only devices with a Microsoft Entra ID record are reflected in the Microsoft Entra group. Both Microsoft Entra hybrid joined and Microsoft Entra joined devices are supported.
 
 For more information, see [Create collections](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync).
 
@@ -231,9 +235,9 @@ For more information, see [Client cache settings](../../clients/deploy/about-cli
 
 ### Improvements to co-management auto-enrollment
 
-- A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Azure Active Directory (Azure AD) *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the [enrollment status](../../../comanage/how-to-monitor.md#co-management-enrollment-status) *Pending user sign in*.<!-- 4454491 -->
+- A new co-managed device now automatically enrolls to the Microsoft Intune service based on its Microsoft Entra ID *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. This change helps to reduce the number of devices with the [enrollment status](../../../comanage/how-to-monitor.md#co-management-enrollment-status) *Pending user sign in*.<!-- 4454491 -->
 
-- For customers that already have devices enrolled to co-management, new devices now enroll immediately once they meet the prerequisites. For example, once the device is joined to Azure AD and the Configuration Manager client is installed.<!--4321130-->
+- For customers that already have devices enrolled to co-management, new devices now enroll immediately once they meet the prerequisites. For example, once the device is joined to Microsoft Entra ID and the Configuration Manager client is installed.<!--4321130-->
 
 For more information, see [Enable co-management](../../../comanage/how-to-enable.md).
 

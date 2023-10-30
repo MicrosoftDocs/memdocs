@@ -57,7 +57,9 @@ You can now create Microsoft Defender antivirus policies in the Microsoft Intune
 <!--7518897, 6024389-->
 You can initiate an application install in real time for a tenant attached device from the Microsoft Intune admin center. Starting with Configuration Manager version 2006, the list of applications available for the device also includes applications deployed to the device's currently logged on user. For more information, see [Tenant attach: Install an application from the admin center](../../../tenant-attach/applications.md).  
 
-### Import previously created Azure AD application during tenant attach onboarding
+<a name='import-previously-created-azure-ad-application-during-tenant-attach-onboarding'></a>
+
+### Import previously created Microsoft Entra application during tenant attach onboarding
 <!--6479246-->
 During a new onboarding, an administrator can specify a previously created application during onboarding to tenant attach. For more information, see [Microsoft Intune tenant attach: Device sync and device actions](../../../tenant-attach/device-sync-actions.md#bkmk_aad_app).
 
@@ -122,14 +124,16 @@ For more information, see [Use the Company Portal app on co-managed devices](../
 <!--7133238-->
 You can now select the Azure China Cloud as your Azure environment when enabling co-management. For more information, see [How to enable co-management](../../../comanage/how-to-enable.md).
 
-### Notification for Azure AD app secret key expiration
+<a name='notification-for-azure-ad-app-secret-key-expiration'></a>
+
+### Notification for Microsoft Entra app secret key expiration
 
 <!--6386392-->
 
 If you configure Azure services to cloud-attach your site, the Configuration Manager console now displays notifications for the following circumstances:
 
-- One or more Azure AD app secret keys will expire soon
-- One or more Azure AD app secret keys have expired
+- One or more Microsoft Entra app secret keys will expire soon
+- One or more Microsoft Entra app secret keys have expired
 
 For more information, see [Renew secret key](../../servers/deploy/configure/azure-services-wizard.md#bkmk_renew).
 
@@ -194,7 +198,7 @@ For more information, see [device restart notifications](../../clients/deploy/de
 ### Improvements to available apps via CMG
 
 <!--6935376-->
-This release fixes an issue with Software Center and Azure Active Directory (Azure AD) authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Azure Active Directory (Azure AD) identity for devices joined to Azure AD. These devices can be cloud-joined or hybrid-joined.
+This release fixes an issue with Software Center and Microsoft Entra authentication. For a client detected as on the intranet but communicating via the cloud management gateway (CMG), previously Software Center would use Windows authentication. When it tried to get the list of user-available apps, it would fail. It now uses Microsoft Entra identity for devices joined to Microsoft Entra ID. These devices can be cloud-joined or hybrid-joined.
 
 For more information, see [Prerequisites to deploy user-available apps](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 

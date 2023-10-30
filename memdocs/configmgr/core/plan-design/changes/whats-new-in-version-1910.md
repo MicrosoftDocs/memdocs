@@ -102,7 +102,7 @@ We've added a number of new CMPivot entities and entity enhancements to aid in t
 - Windows event logs ([WinEvent](../../servers/manage/cmpivot-changes.md#bkmk_WinEvent))
 - File content ([FileContent](../../servers/manage/cmpivot-changes.md#bkmk_File))
 - DLLs loaded by processes ([ProcessModule](../../servers/manage/cmpivot-changes.md#bkmk_ProcessModule))
-- Azure Active Directory information ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
+- Microsoft Entra information ([AADStatus](../../servers/manage/cmpivot-changes.md#bkmk_AadStatus))
 - Endpoint protection status ([EPStatus](../../servers/manage/cmpivot-changes.md#bkmk_EPStatus))
 
 This release also includes several [other enhancements](../../servers/manage/cmpivot-changes.md#bkmk_Other) to CMPivot. For more information, see [CMPivot starting in version 1910](../../servers/manage/cmpivot-changes.md#bkmk_cmpivot1910).
@@ -129,7 +129,7 @@ For more information, see [Microsoft Connected Cache in Configuration Manager](.
 
 You can now add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you can now use the **Evaluate this baseline as part of compliance policy assessment** option. When you add or edit a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**.
 
-For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure Active Directory. You can then use it for conditional access to your Microsoft 365 resources.
+For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Microsoft Entra ID. You can then use it for conditional access to your Microsoft 365 resources.
 
 For more information, see [Include custom configuration baselines as part of compliance policy assessment](../../../compliance/deploy-use/create-configuration-baselines.md#bkmk_CAbaselines).
 

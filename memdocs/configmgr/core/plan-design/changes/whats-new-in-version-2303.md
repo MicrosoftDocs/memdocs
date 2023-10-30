@@ -36,10 +36,12 @@ For more information, see [Microsoft Configuration Manager FAQ](../../understand
 
 ## Cloud-attached management
 <!--14716797-->
-### Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature
-Starting with Configuration Manager version 2303 collection member sync status (Success, In Progress, Failed - with reason for failure) is available in the Collection Cloud Sync dashboard for the chosen collection on the bottom pane. Earlier with Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
+<a name='improvements-to-cloud-sync-collections-to-azure-active-directory-group-synchronization-feature'></a>
 
-For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aad-group.md).
+### Improvements to Cloud Sync (Collections to Microsoft Entra group Synchronization) feature
+Starting with Configuration Manager version 2303 collection member sync status (Success, In Progress, Failed - with reason for failure) is available in the Collection Cloud Sync dashboard for the chosen collection on the bottom pane. Earlier with Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Microsoft Entra group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
+
+For more information, see [Synchronize collections to Microsoft Entra group](../../clients/manage/collections/synchronize-collections-aad-group.md).
 
 <!--13061435-->
 ### Endpoint Security reports in Intune admin center for Tenant Attached devices 

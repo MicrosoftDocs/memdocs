@@ -177,7 +177,7 @@ For more information, see [Co-management dashboard](../../../comanage/how-to-mon
 ### Improvements to internet-based client setup
 
 <!--3607731, fka 1359181-->
-This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Azure Active Directory (Azure AD) information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
+This release further simplifies the Configuration Manager client setup process for clients on the internet. The site publishes additional Microsoft Entra information to the cloud management gateway (CMG). A Microsoft Entra joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Microsoft Entra tenant. Now the only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSiteCode**.
 
 For more information, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
 

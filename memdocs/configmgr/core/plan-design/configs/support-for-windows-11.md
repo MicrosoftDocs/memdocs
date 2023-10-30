@@ -119,7 +119,7 @@ Software Center notifications are currently suppressed during this time. For mor
 
 <!-- 11291031 -->
 
-_Applies to: Azure Active Directory (Azure AD)-joined devices_
+_Applies to: Microsoft Entra joined devices_
 
 If you configure the [authentication level](../hierarchy/plan-for-the-sms-provider.md#authentication) for the site to require **Windows Hello for Business authentication**, the Configuration Manager console on a Windows 11 device can't connect to the site. The adminui.log file on the devices shows the following errors:
 
