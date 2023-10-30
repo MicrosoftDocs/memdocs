@@ -76,9 +76,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 In Intune, you can use the Microsoft Tunnel for mobile application management (MAM) on Android and iOS/iPadOS devices. With the MAM tunnel, unmanaged devices (devices not enrolled in Intune) can access on-premises apps and resources.
 
-There's a new **Strict Tunnel Mode** feature you can configure for Microsoft Edge. This feature blocks traffic to and from your apps when the VPN isn't connected.
+There's a new **Strict Tunnel Mode** feature you can configure for Microsoft Edge. When users sign into Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic.
 
-To configure this feature, create an Edge app configuration policy, and add the following key and value:
+To configure this feature, create an Edge app configuration policy, and add the following setting:
 
 - **Key**: `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`
 - **Value**: `True`
