@@ -102,7 +102,7 @@ For more information, see [How to configure client settings](../deploy/configure
 
 ### Approve
 
-When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest, trusted forests, and connected Azure Active Directory (Azure AD) tenants<!-- MEMDocs#318 -->. This default behavior means that you don't have to manually approve each client. Manually approve workgroup computers or clients from an untrusted forest that you trust, and any other unapproved computers that you trust.
+When the client communicates with site systems using HTTP and a self-signed certificate, you must approve these clients to identify them as trusted computers. By default, the site configuration automatically approves clients from the same Active Directory forest, trusted forests, and connected Microsoft Entra tenants<!-- MEMDocs#318 -->. This default behavior means that you don't have to manually approve each client. Manually approve workgroup computers or clients from an untrusted forest that you trust, and any other unapproved computers that you trust.
 
 > [!IMPORTANT]
 > Although some management functions might work for unapproved clients, this is an unsupported scenario for Configuration Manager.
