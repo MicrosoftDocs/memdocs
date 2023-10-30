@@ -74,7 +74,7 @@ The following properties sync back to the Google Admin console. Any changes made
 ### System info  
 Select **System info** to see a real-time snapshot of the information available from the Google Admin console.  
 
-### Delegated Administration 
+### Delegated administration 
 Device dynamic groups can be created based on device Organizational Units to allow organizations to delegate the view and remote device actions of ChromeOS devices that are synchronized to the Intune portal. This can be achieved by using the dynamic membership property enrollmentProfileName of device dynamic groups in Entra (formally known as Azure AD).
 
 Once the groups are created, they can then be assigned as included groups to the desired scope tags defined in an RBAC role in Intune. This process will then add the scope tag to each of the devices contained in the group to restrict the admin view and access of the ChromeOS devices in the Intune console. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](https://learn.microsoft.com/en-us/mem/intune/fundamentals/scope-tags#to-create-a-scope-tag). 
