@@ -67,7 +67,7 @@ To learn more about MSAL, see the [MSAL Wiki] and [list of MSAL libraries].
 ## Register your Application with AAD
 
 Before integrating MSAL into your Android application, follow the instructions to [register your application with Azure Active Directory].
-This will generate a **Client ID** for your application.
+This generates a **Client ID** for your application.
 
 Next, follow the instructions to [give your app access to the Intune app protection service].
 
@@ -95,7 +95,7 @@ This guide assumes that you're enabling brokered authentication within your appl
 
 ### Intune-specific MSAL configuration
 
-Intune has up to four settings you may need to add to your application's `AndroidManifest.xml`.
+Intune has up to four settings you might need to add to your application's `AndroidManifest.xml`.
 These settings help ensure that Intune's authentication policy can be properly enforced and prevent unnecessary authentication prompts for end users.
 
 These settings include:
