@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2023
+ms.date: 11/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,32 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of October 30, 2023
+
+### Device security
+
+#### Strict Tunnel Mode in Microsoft Edge available for Microsoft Tunnel for MAM on Android and iOS/iPadOS devices<!--24045412-->
+
+In Intune, you can use the Microsoft Tunnel for mobile application management (MAM) on Android and iOS/iPadOS devices. With the MAM tunnel, unmanaged devices (devices not enrolled in Intune) can access on-premises apps and resources.
+
+There's a new **Strict Tunnel Mode** feature you can configure for Microsoft Edge. This feature blocks traffic to and from your apps when the VPN isn't connected.
+
+To configure this feature, create an Edge app configuration policy, and add the following key and value:
+
+- **Key**: `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode`
+- **Value**: `True`
+
+Applies to:
+
+- Android Enterprise version 10 and later
+- iOS/iPadOS version 14 and later
+
+For more information, go to:
+
+- [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
+- [Microsoft Tunnel for MAM - Android](../protect/microsoft-tunnel-mam-android.md)
+- [Microsoft Tunnel for MAM - iOS/iPadOS](../protect/microsoft-tunnel-mam-ios.md)
 
 ## Week of October 23, 2023 (Service release 2310)
 ### App management
@@ -231,8 +257,8 @@ DDM allows you to install a specific update by an enforced deadline. The autonom
 In the settings catalog, the following declarative software update settings are available at **Declarative device management > Software Update**:
 
 - **Details URL**: The web page URL that shows the update details. Typically, this is a web page hosted by your organization that users can select if they need organization-specific help with the update.
-- **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn’t consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
-- **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn’t trigger the software update before this time, then the device force installs it.
+- **Target Build Version**: The target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`. If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+- **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
 For more information on this feature, go to [Manage declarative software updates with the settings catalog](../protect/software-updates-declarative-ios-macos.md).
@@ -257,7 +283,7 @@ Applies to:
 - macOS 14.0 and later
 
 #### Mvision Mobile is now Trellix Mobile Security<!-- 16208061 -->  
-The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  has transitioned to **Trellix Mobile Security**. With this change we’ve updated our documentation and the Intune admin center UI.  For example, the *Mvision Mobile connector* is now *Trellix Mobile Security*. Existing installs of the Mvision Mobile connector also update to Trellix Mobile Security.
+The Intune [Mobile Threat Defense partner](../protect/mobile-threat-defense.md) **Mvision Mobile**  has transitioned to **Trellix Mobile Security**. With this change we've updated our documentation and the Intune admin center UI.  For example, the *Mvision Mobile connector* is now *Trellix Mobile Security*. Existing installs of the Mvision Mobile connector also update to Trellix Mobile Security.
 
 If you have questions about this change, reach out to your Trellix Mobile Security representative.
 
