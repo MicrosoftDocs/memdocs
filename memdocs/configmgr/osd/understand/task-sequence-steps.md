@@ -216,7 +216,7 @@ Select this option to have the destination computer join the specified workgroup
 Select this option to have the destination computer join the specified domain. Specify or browse to the domain, such as `fabricam.com`. Specify or browse to a Lightweight Directory Access Protocol (LDAP) path for an organizational unit. For example: `LDAP//OU=computers, DC=Fabricam.com, C=com`.  
 
 > [!NOTE]
-> When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+> When a Microsoft Entra joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Microsoft Entra ID. Even though it's not Microsoft Entra joined, the client is still managed.
 
 #### Account
 
@@ -1614,7 +1614,7 @@ If one of the updates unexpectedly restarts the computer, retry this step. The s
 Use this step to add the destination computer to a workgroup or domain.  
 
 > [!NOTE]
-> When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+> When a Microsoft Entra joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Microsoft Entra ID. Even though it's not Microsoft Entra joined, the client is still managed.
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
@@ -2543,7 +2543,7 @@ The task sequence step automatically specifies site assignment and the default c
 
 Specify command-line options to use during client installation. For example, enter `/skipprereq: silverlight.exe` to inform CCMSetup.exe to not install the Microsoft Silverlight prerequisite. For more information about available command-line options for CCMSetup.exe, see [About client installation properties](../../core/clients/deploy/about-client-installation-properties.md).  
 
-When you run an OS deployment task sequence on an internet-based client, that's either Azure AD-joined or uses token-based authentication, you need to specify the [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) property in the **Setup Windows and ConfigMgr** step. For example, `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
+When you run an OS deployment task sequence on an internet-based client, that's either Microsoft Entra joined or uses token-based authentication, you need to specify the [CCMHOSTNAME](../../core/clients/deploy/about-client-installation-properties.md#ccmhostname) property in the **Setup Windows and ConfigMgr** step. For example, `CCMHOSTNAME=OTTERFALLS.CLOUDAPP.NET/CCM_Proxy_MutualAuth/12345678907927939`.
 
 ### Options for Setup Windows and ConfigMgr
 
