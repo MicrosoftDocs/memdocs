@@ -79,7 +79,7 @@ Device dynamic groups can be created based on device Organizational Units to all
 
 Once the groups are created, they can then be assigned as included groups to the desired scope tags defined in an RBAC role in Intune. This process will then add the scope tag to each of the devices contained in the group to restrict the admin view and access of the ChromeOS devices in the Intune console. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags#to-create-a-scope-tag). 
 
-The Organizational Unit information will be synchronized to the enrollmentProfilename device object property in Entra using the full path format that is displayed in the System Info in the Intune console (for example: “/OU Level1/OU Level2”. The maximum length of the string is 255 characters. Any string that exceeds the max number of characters will be truncated from the start of the string (for example:  "/OU Level1/OU Level2/.../Level18” will be truncated to “evel1/OU Level2/…/OU Level18”).
+The Organizational Unit information will be synchronized to the enrollmentProfilename device object property in Entra using the full path format that is displayed in the System Info in the Intune console (for example: `/OU Level1/OU Level2`. The maximum length of the string is 255 characters. Any string that exceeds the max number of characters will be truncated from the start of the string (for example:  `/OU Level1/OU Level2/.../Level18` will be truncated to `evel1/OU Level2/…/OU Level18`).
 
 
 ## Next steps  
