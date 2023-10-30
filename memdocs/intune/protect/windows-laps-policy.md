@@ -68,7 +68,7 @@ To help reduce potential conflicts, we recommend assigning a single LAPS policy 
 ### Create a LAPS policy
 
   > [!IMPORTANT]  
-  > Ensure that you have enabled LAPS in Azure AD, as covered in the [Enabling WindowsLAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) documentation.
+  > Ensure that you have enabled LAPS in Microsoft Entra, as covered in the [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-microsoft-entra-id) documentation.
 
 To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -90,7 +90,7 @@ Before you create a policy, you can review details about the available settings 
    :::image type="content" source="./media/windows-laps-policy/specify-the-backup-directory.png" alt-text="Screen shot that shows the options for the Backup Directory setting." lightbox="./media/windows-laps-policy/specify-the-backup-directory.png":::
 
    > [!IMPORTANT]  
-   > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn’t domain joined (but a member of Azure AD), the device can apply the policy settings from Intune without error, but LAPS on the device will not be able to successfully use that configuration to back up the account.
+   > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn’t domain joined (but a member of Microsoft Entra), the device can apply the policy settings from Intune without error, but LAPS on the device will not be able to successfully use that configuration to back up the account.
 
    After configuring *Backup Directory*, review and configure the available settings to meet your organization’s requirements.
 
@@ -124,18 +124,18 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
 ## View account and password details
 
-To view account and password details, an account must have one of the following Azure Active Directory permissions:
+To view account and password details, an account must have one of the following Microsoft Entra permissions:
 
 - `microsoft.directory/deviceLocalCredentials/password/read`
 - `microsoft.directory/deviceLocalCredentials/standard/read`
 
 Use the following methods to grant accounts these permissions:
 
-- Assign one of the following built-in Azure AD roles:
+- Assign one of the following built-in Microsoft Entra roles:
   - Global Admin
   - Cloud Device Admin
 
-Create and assign a custom role in Azure Active Directory that grants these permissions. See [Create and assign a custom role in Azure Active Directory](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
+Create and assign a custom role in Microsoft Entra that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -147,7 +147,7 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
    :::image type="content" source="./media/windows-laps-policy/view-password.png" alt-text="Screen shot that shows the local admin password pane for a Windows device."  lightbox="./media/windows-laps-policy/view-password.png":::
 
-   The following information can be viewed from within the admin center. However, the *Local admin password* can only be viewed when the account was backed up to Azure AD. It can’t be viewed for an account that’s backed up to an on-premises Active Directory (Windows Server Active Directory):
+   The following information can be viewed from within the admin center. However, the *Local admin password* can only be viewed when the account was backed up to Microsoft Entra. It can’t be viewed for an account that’s backed up to an on-premises Active Directory (Windows Server Active Directory):
 
    - **Account name** – The name of the local admin account that was backed up from the device.
    - **Security ID** – The well-known SID for the account that is backed up from the device.
@@ -200,7 +200,7 @@ The following are considerations for manual password rotation:
 
   Here's how this works: A device receives a policy on March 1, which sets *PasswordAgeDays* to 10 days. The result is that the device will automatically rotate its password after 10 days, on March 11. On March 5, an admin manually rotates that device’s password, and action that resets the start date for *PasswordAgeDays* to March 5. As a result, the device will now automatically rotate its password 10 days later, on March 15.
 
-- For Azure AD Joined devices, the device must be online at the time the manual rotation is requested. If the device isn’t online at the time of the request, it results in a failure.
+- For Microsoft Entra joined devices, the device must be online at the time the manual rotation is requested. If the device isn’t online at the time of the request, it results in a failure.
 
 - Password rotation isn't supported as *Bulk Action*. You can only rotate a single device at a time.
 

@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: beflamm, tycast, japoehlm
+ms.reviewer: beflamm, sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

@@ -36,17 +36,17 @@ For scenarios where Windows needs to be reinstalled or updated to a later versio
 Windows Autopilot deployment for existing devices is useful for the following scenarios:
 
 - Repurpose an existing device that isn't yet an Autopilot device.
-- Migrate an on-premises domain joined device that isn't part of Azure AD to an Azure AD join device.
-- Convert an on-premises domain joined device that is hybrid Azure AD joined to an Azure AD join device.
+- Migrate an on-premises domain joined device that isn't part of Microsoft Entra ID to a Microsoft Entra join device.
+- Convert an on-premises domain joined device that is Microsoft Entra hybrid joined to a Microsoft Entra join device.
 - Reinstall Windows on devices that need to be repaired. For example, a device that has a corrupted Windows installation or where the hard drive was replaced.
-- Upgrade older versions of Windows that don't support Azure AD (Windows 8.1) to a version of Windows that does support Azure AD (Windows 10/Windows 11).
+- Upgrade older versions of Windows that don't support Microsoft Entra ID (Windows 8.1) to a version of Windows that does support Microsoft Entra ID (Windows 10/Windows 11).
 - Using custom Windows images instead of the OEM provided Windows installation.
 
 Windows Autopilot deployment for existing devices can be viewed as a method to prepare an existing device for an Autopilot deployment.
 
 > [!NOTE]
 >
-> The JSON file for Windows Autopilot for existing devices only supports user-driven Azure AD and user-driven hybrid Azure AD Autopilot profiles. Self-deploying and pre-provisioning Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation. TPM attestation only works where there's an existing Autopilot device since the TPM attestation information is stored in the Autopilot device object.
+> The JSON file for Windows Autopilot for existing devices only supports user-driven Microsoft Entra ID and user-driven hybrid Microsoft Entra Autopilot profiles. Self-deploying and pre-provisioning Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation. TPM attestation only works where there's an existing Autopilot device since the TPM attestation information is stored in the Autopilot device object.
 >
 > However, during the Windows Autopilot for existing devices deployment, if the following conditions are true:
 >

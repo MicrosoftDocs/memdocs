@@ -21,7 +21,7 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: tycast, japoehlm
+ms.reviewer: sheetg
 #ms.tgt_pltfrm:
 ms.custom: seodec18
 ms.collection:
