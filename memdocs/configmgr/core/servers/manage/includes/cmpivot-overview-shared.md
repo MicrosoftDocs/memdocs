@@ -26,7 +26,7 @@ Entities are objects that can be queried from the client. We currently support t
 
 |Entity|Description|
 |---|---|
-|AadStatus|Status of Azure Active Directory|
+|AadStatus|Status of Microsoft Entra ID|
 |Administrators|Members of the local administrators group|
 |AppCrash|Recent application crash reports|
 |AppVClientApplication|AppV Client Application|

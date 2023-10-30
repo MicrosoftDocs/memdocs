@@ -28,7 +28,7 @@ This article describes the following concepts for you to consider when planning 
 
 - Role-based administration
 
-- Azure Active Directory
+- Microsoft Entra ID
 
 - SMS Provider authentication
 
@@ -86,13 +86,15 @@ With the combination of security roles, security scopes, and collections, you se
 
 For more information, see [Fundamentals of role-based administration](../../understand/fundamentals-of-role-based-administration.md).
 
-## Azure Active Directory
+<a name='azure-active-directory'></a>
 
-Configuration Manager integrates with Azure Active Directory (Azure AD) to enable the site and clients to use modern authentication.
+## Microsoft Entra ID
 
-For more information about Azure AD, see [Azure Active Directory documentation](/azure/active-directory/).
+Configuration Manager integrates with Microsoft Entra ID to enable the site and clients to use modern authentication.
 
-Onboarding your site with Azure AD supports the following Configuration Manager scenarios:
+For more information about Microsoft Entra ID, see [Microsoft Entra documentation](/azure/active-directory/).
+
+Onboarding your site with Microsoft Entra ID supports the following Configuration Manager scenarios:
 
 ### Client scenarios
 

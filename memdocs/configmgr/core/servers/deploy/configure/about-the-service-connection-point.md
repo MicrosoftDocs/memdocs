@@ -28,7 +28,7 @@ The service connection point is a site system role that provides several importa
 
 - Synchronize apps from the [Microsoft Store for Business and Education](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 
-- Discover users and groups in [Azure Active Directory (Azure AD)](about-discovery-methods.md#azureaddisc)
+- Discover users and groups in [Microsoft Entra ID](about-discovery-methods.md#azureaddisc)
 
 - Use [Desktop Analytics](../../../../desktop-analytics/overview.md) to gain insights on Windows 10 update and app readiness
 
@@ -132,7 +132,7 @@ There are several scenarios in which you may need to move the service connection
 - [Site server high availability](site-server-high-availability.md)
 - [Site expansion](../install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site)
 
-After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
+After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Microsoft Entra tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
 
 ## <a name="bkmk_notifications"></a> Console notifications for the service connection point
 <!--11047451-->

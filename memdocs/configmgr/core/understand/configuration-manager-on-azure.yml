@@ -87,9 +87,9 @@ sections:
         answer: |
           Yes. When you move to Azure, the [supported configurations](../plan-design/configs/supported-configurations.md) remain the same, including Active Directory requirements for installing Configuration Manager.
           
-      - question: Can I use Azure Active Directory?
+      - question: Can I use Microsoft Entra ID?
         answer: |
-          No. Azure Active Directory isn't currently supported. Your site servers still need to be members of a [Active Directory domain](../plan-design/configs/support-for-active-directory-domains.md).
+          No. Microsoft Entra ID isn't currently supported. Your site servers still need to be members of a [Active Directory domain](../plan-design/configs/support-for-active-directory-domains.md).
 
   - name: Availability
     questions:

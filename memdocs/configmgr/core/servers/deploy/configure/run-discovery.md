@@ -30,9 +30,9 @@ You use one or more discovery methods in Configuration Manager to find device an
 
 -   Active Directory User Discovery  
 
--   Azure Active Directory User Discovery  
+-   Microsoft Entra user Discovery  
 
--   Azure Active Directory User Group Discovery  
+-   Microsoft Entra user Group Discovery  
 
 -   Heartbeat Discovery  
 
