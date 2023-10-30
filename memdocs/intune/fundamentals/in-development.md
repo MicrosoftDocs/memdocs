@@ -173,8 +173,8 @@ For information on currently available Remote actions, see [Remote actions](../r
 ## Device security
 
 
-### Additional settings for the Linux Antirivurs policy template<!-- 24191424  -->  
-We’re expanding support for Linux by adding  the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
+### Additional settings for the Linux Antivirus policy template<!-- 24191424  -->  
+We’re expanding support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
 
 - cloudblocklevel
 - scanarhives
