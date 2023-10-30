@@ -62,6 +62,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
+### New grace period status added in apps for Android, Android AOSP <!-- 13498172 13498291 -->  
+The Intune Company Portal app for Android and Microsoft Intune app for Android AOSP will show a grace period status for devices that don't meet compliance requirements but are still within their given grace period.  Users will be able to see the date by which devices must be compliant, as well as the instructions for how to become compliant. If users don't update their device by the given date, the device will be marked as noncompliant.  
+
 ### Minimum version update for iOS Company Portal<!-- 17964541  -->  
 Users will be required to update to v5.2310.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
@@ -156,8 +159,14 @@ An Intune enrollment method that lets you enroll iOS/iPadOS devices in Azure AD 
 
 ## Device management
 
-### Feature updates and reports support Windows 11 policies<!--17614166 -->
+### Improvements to new device experience in admin center (public preview)<!-- 24155098, 25103808, 17705028 IDdraft idready -->
+The following changes are coming to the new Devices experience and will be available to try in public preview in the Microsoft Intune admin center:   
+- Additional entry points to platform-specific options: Access the platform pages from the **Devices** navigation menu.   
+- Quick entry to monitoring reports: Select the titles of the metrics cards to go to the corresponding monitoring report.  
+- Improved navigation menu: We added icons back in to provide more color and context as you navigate.  
+Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback. For more information, see [Try new Devices experience](microsoft-intune-admin-center-devices.md).  
 
+### Feature updates and reports support Windows 11 policies<!--17614166 -->
 This new setting for feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins do not need to create or manage groups of eligible and non-eligible devices.
 
 For more information on feature updates, go to [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
