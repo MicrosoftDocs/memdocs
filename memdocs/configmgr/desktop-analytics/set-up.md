@@ -38,9 +38,9 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         If you don't select this option, Desktop Analytics still adds users as members of the security group. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.
 
-        For more information about assigning administrator role permissions in Azure Active Directory and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
+        For more information about assigning administrator role permissions in Microsoft Entra ID and the permissions assigned to **Desktop Analytics Administrators**, see [Administrator role permissions in Microsoft Entra ID](/azure/active-directory/users-groups-roles/directory-assign-admin-roles).  
 
-    - Desktop Analytics preconfigures the **Workspace Owners** security group in Azure Active Directory to create and manage workspaces and deployment plans.
+    - Desktop Analytics preconfigures the **Workspace Owners** security group in Microsoft Entra ID to create and manage workspaces and deployment plans.
 
         To add a user to the group, type their name or e-mail address in the **Enter name or email address** section. When finished, select **Next**.
 
@@ -52,7 +52,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
     - To use an existing workspace for Desktop Analytics, select it, and continue with the next step.  
 
         > [!TIP]  
-        > You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.  
+        > You can only have one Desktop Analytics workspace per Microsoft Entra tenant. Devices can only send diagnostic data to one workspace.  
 
     - To create a workspace for Desktop Analytics, select **Add workspace**.  
 

@@ -56,9 +56,9 @@ To help troubleshoot Desktop Analytics, use the **DesktopAnalyticsLogsCollector.
 1. On the service connection point, go to the following registry key: `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. Set the **LoggingLevel** value to `0`  
 
-## <a name="bkmk_AzureADApps"></a> Azure AD applications
+## <a name="bkmk_AzureADApps"></a> Microsoft Entra applications
 
-Desktop Analytics adds the following applications to your Azure AD:
+Desktop Analytics adds the following applications to your Microsoft Entra ID:
 
 - **Configuration Manager Microservice**: Connects Configuration Manager with Desktop Analytics. This app has no access requirements.  
 
@@ -68,21 +68,23 @@ Desktop Analytics adds the following applications to your Azure AD:
 
 If you need to provision these apps after completing setup, go to the **Connected services** pane. Select **Configure users and apps access**, and provision the apps.  
 
-- **Azure AD app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing setup, see [Create and import app for Configuration Manager](#create-and-import-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
+- **Microsoft Entra app for Configuration Manager**. If you need to provision or troubleshoot connection issues after completing setup, see [Create and import app for Configuration Manager](#create-and-import-app-for-configuration-manager). This app requires  **Write CM Collection Data** and **Read CM Collection Data** on the **Configuration Manager Service** API.  
 
     > [!NOTE]
-    > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment configured with the same commercial ID, to share the Azure AD tenant and Desktop Analytics instance use [different apps](connect-configmgr.md#bkmk_connect) for each hierarchy.
+    > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Microsoft Entra tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment configured with the same commercial ID, to share the Microsoft Entra tenant and Desktop Analytics instance use [different apps](connect-configmgr.md#bkmk_connect) for each hierarchy.
 
 ### Create and import app for Configuration Manager
 
-If you can't create the Azure AD app for Configuration Manager from the Configure Azure Services wizard, or if you want to reuse an existing app, you need to manually create and import it. After completing the [Initial onboarding](set-up.md#initial-onboarding) on the Desktop Analytics portal, use the following steps:
+If you can't create the Microsoft Entra app for Configuration Manager from the Configure Azure Services wizard, or if you want to reuse an existing app, you need to manually create and import it. After completing the [Initial onboarding](set-up.md#initial-onboarding) on the Desktop Analytics portal, use the following steps:
 
-#### Create app in Azure AD
+<a name='create-app-in-azure-ad'></a>
+
+#### Create app in Microsoft Entra ID
 
 > [!TIP]
 > During this process, you'll need to note several values to use later. Open an app like Windows Notepad to paste in the values that you'll copy from the Azure Portal.
 
-1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions, go to **Azure Active Directory**, and select **App registrations**. Then select **New registration**.
+1. Open the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions, go to **Microsoft Entra ID**, and select **App registrations**. Then select **New registration**.
 
 1. In the _Register an application_ pane, configure the following settings:
 
@@ -136,13 +138,13 @@ If you can't create the Azure AD app for Configuration Manager from the Configur
 
 3. On the **App** page, select the appropriate **Azure environment**. Then select **Import** for the web app. Configure the following settings in the **Import Apps** window:  
 
-    - **Azure AD Tenant Name**: This name is how it's named in Configuration Manager  
+    - **Microsoft Entra tenant Name**: This name is how it's named in Configuration Manager  
 
-    - **Azure AD Tenant ID**: The **Directory ID** you copied from Azure AD  
+    - **Microsoft Entra tenant ID**: The **Directory ID** you copied from Microsoft Entra ID  
 
-    - **Client ID**: The **Application ID** you copied from the Azure AD app  
+    - **Client ID**: The **Application ID** you copied from the Microsoft Entra app  
 
-    - **Secret Key**: The key **Value** you copied from the Azure AD app  
+    - **Secret Key**: The key **Value** you copied from the Microsoft Entra app  
 
     - **Secret Key Expiry**: The same expiration date of the key  
 
@@ -162,7 +164,7 @@ If you're having problems creating or importing the app, first check **SMSAdminU
 
 - Make sure the user who signs in has the correct permissions. For more information, see [Prerequisites](overview.md#prerequisites).
 
-- Make sure that the user can sign in to Azure in general. This action determines if there are any general Azure AD authentication issues.
+- Make sure that the user can sign in to Azure in general. This action determines if there are any general Microsoft Entra authentication issues.
 
 - Check status messages for the **SMS_SERVICE_CONNECTOR** component regarding the *Desktop Analytics worker*.
 

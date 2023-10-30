@@ -69,19 +69,19 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 > [!TIP]
 > To clarify some Azure terminology:
 >
-> - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - The Microsoft Entra ID _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
 > - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
 >
 > For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
 
 ### Technical
 
-- An active global Azure subscription and an Azure Active Directory (Azure AD) tenant, with [global administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.
+- An active global Azure subscription and a Microsoft Entra tenant, with [global administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.
 
   > [!IMPORTANT]
   > Desktop Analytics is a Windows service hosted in Azure global that utilizes Windows diagnostic data. While Desktop Analytics is an Azure global service that's available to US government customers, it doesn't meet [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes. For a list of compliance offerings for Microsoft products and services, see the [Microsoft Trust Center](/compliance/regulatory/offering-home?view=o365-worldwide&preserve-view=true). Desktop Analytics isn't available for GCC High or US Department of Defense (DOD) customers. The use of Azure Government subscriptions to host Desktop Analytics workspaces isn't supported.
 
-  - **Workspace owner** permissions to **Set up your workspace**, and the following Azure AD roles:
+  - **Workspace owner** permissions to **Set up your workspace**, and the following Microsoft Entra roles:
 
     - [Desktop Analytics Administrator](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator)
 
@@ -102,10 +102,10 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   - [Full Administrator](../core/understand/fundamentals-of-role-based-administration.md#security-roles) role in Configuration Manager.
 
   > [!NOTE]
-  > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Azure AD tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
+  > Desktop Analytics supports multiple Configuration Manager hierarchies reporting to a single Microsoft Entra tenant.<!-- 4814075 --> If you have multiple hierarchies in your environment, you have the following options:
   >
-  > - Use different Commercial IDs and Azure AD tenants.
-  > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 days after you disconnect a hierarchy for the portal to reflect changes.
+  > - Use different Commercial IDs and Microsoft Entra tenants.
+  > - Configure both hierarchies to use the same Commercial ID to share the Microsoft Entra tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 days after you disconnect a hierarchy for the portal to reflect changes.
 
 - Devices running Windows 10.
 
@@ -146,10 +146,10 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 - An active global Azure subscription.
 
-- An Azure Active Directory (Azure AD) tenant.<!-- memdocs#1939 -->
+- A Microsoft Entra tenant.<!-- memdocs#1939 -->
 
   > [!NOTE]
-  > Most of the equivalent subscriptions for Configuration Manager also include Azure AD. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
+  > Most of the equivalent subscriptions for Configuration Manager also include Microsoft Entra ID. For example, see [Microsoft 365 plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans) and [Enterprise Mobility + Security licensing](https://www.microsoft.com/licensing/product-licensing/enterprise-mobility-security).
 
 - At least one Intune license for you as the administrator to access the Microsoft Intune admin center.
 

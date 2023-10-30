@@ -26,7 +26,7 @@ Only a **Global Administrator** can reset the account in the Azure portal.
 
 ## Behaviors
 
-- This process doesn't change any existing Azure AD users, apps, or permissions
+- This process doesn't change any existing Microsoft Entra users, apps, or permissions
 
 - If you choose to add a new workspace, none of the following user inputs on assets are kept:
     - Importance

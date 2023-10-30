@@ -95,9 +95,9 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         If you don't select this option, Desktop Analytics still adds users as members of the security group. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.
 
-        For more information about assigning administrator role permissions in Azure Active Directory (Azure AD) and the permissions assigned to **Desktop Analytics Administrators**, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator).
+        For more information about assigning administrator role permissions in Microsoft Entra ID and the permissions assigned to **Desktop Analytics Administrators**, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator).
 
-    - Desktop Analytics preconfigures the **Workspace Owners** security group in Azure AD to create and manage workspaces and deployment plans.
+    - Desktop Analytics preconfigures the **Workspace Owners** security group in Microsoft Entra ID to create and manage workspaces and deployment plans.
 
         To add a user to the group, type their name or e-mail address in the **Enter name or email address** section. When finished, select **Next**.
 
@@ -151,27 +151,27 @@ Use this procedure to connect to Desktop Analytics and configure device settings
 
 3. On the **App** page, select the appropriate **Azure environment**. Then select **Browse** for the web app.
 
-4. Select **Create** to easily add an Azure AD app for the Desktop Analytics connection.
+4. Select **Create** to easily add a Microsoft Entra app for the Desktop Analytics connection.
 
 5. Configure the following settings in the **Create Server Application** window:
 
-    - **Application Name**: A friendly name for the app in Azure AD.
+    - **Application Name**: A friendly name for the app in Microsoft Entra ID.
 
-    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.
+    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Microsoft Entra ID. By default this value is `https://ConfigMgrService`.
 
-    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+    - **App ID URI**: This value needs to be unique in your Microsoft Entra tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
       - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
       - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
     - **Secret Key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
-    Select **Sign in**. After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
+    Select **Sign in**. After successfully authenticating to Azure, the page shows the **Microsoft Entra tenant Name** for reference.
 
     > [!NOTE]
     > Complete this step as a **Global Admin**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.
 
-    Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.
+    Select **OK** to create the web app in Microsoft Entra ID and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.
 
 6. On the **Diagnostic Data** page, configure the following settings:
 

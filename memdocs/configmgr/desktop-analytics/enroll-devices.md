@@ -81,7 +81,7 @@ The Desktop Analytics service has no agents to install. Device enrollment requir
 > [!NOTE]
 > If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), use that same workspace for Desktop Analytics. You need to reenroll devices to Desktop Analytics that you previously enrolled in Update Compliance.
 >
-> You can only have one Desktop Analytics workspace per Azure AD tenant. Devices can only send diagnostic data to one workspace.
+> You can only have one Desktop Analytics workspace per Microsoft Entra tenant. Devices can only send diagnostic data to one workspace.
 
 When you [connect Configuration Manager to Desktop Analytics](connect-configmgr.md#bkmk_connect), you configure the settings to enroll devices. These settings include which Desktop Analytics instance the device should send its data, and other configuration options.
 

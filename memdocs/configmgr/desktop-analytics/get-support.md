@@ -27,7 +27,7 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 ## Help and support
 
-To request help for Desktop Analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+To request help for Desktop Analytics, use the **Help and Support** option in the portal under **Troubleshooting + support**. This action files an online support ticket for Desktop Analytics. To create and manage a support incident, your account must have a Microsoft Entra role that includes the action **microsoft.office365.supportTickets/tickets/manage**. For more information, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
 If the issue is more broadly for Configuration Manager than just analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request. Use the **Desktop Analytics** category.
 

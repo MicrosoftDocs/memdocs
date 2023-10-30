@@ -34,11 +34,11 @@ The following illustration shows how diagnostic data flows from individual devic
 
 :::image type="content" source="media/da-data-flow.png" alt-text="Diagram illustrating flow of diagnostic data from devices.":::
 
-1. You sign in to the Microsoft Intune admin center, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
+1. You sign in to the Microsoft Intune admin center, and onboard to Desktop Analytics. You create the Microsoft Entra app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
 
 2. You connect Configuration Manager and enroll devices.
 
-    1. You configure the Desktop Analytics cloud service in Configuration Manager with the Azure AD app details.
+    1. You configure the Desktop Analytics cloud service in Configuration Manager with the Microsoft Entra app details.
 
     2. Within 15 minutes, and every hour after, Configuration Manager synchronizes via the Intune microservice the following data with Desktop Analytics using your tenant ID. The site sends all data over an encrypted HTTPS channel to your Endpoint Manager account in the public cloud.
 

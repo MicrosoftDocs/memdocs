@@ -61,7 +61,7 @@ The Desktop Analytics data ages out based on your data retention policy for the 
 > After November 30, 2022 Administrators will no longer be able to access Desktop Analytics portal.
 ## Remove user and app access
 
-1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Global administrator** role. Go to **Azure Active Directory**.
+1. Sign in to the [Azure portal](https://portal.azure.com) as a user with the **Global administrator** role. Go to **Microsoft Entra ID**.
 
 1. In **Roles and administrators**, search for the **Desktop Analytics administrator** role. Remove its members.
 
@@ -77,7 +77,7 @@ The Desktop Analytics data ages out based on your data retention policy for the 
     - The ConfigMgr app. To find the name of this app, go to the Configuration Manager console. In the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node. Open the properties of the **Desktop Analytics** service, and switch to the **Applications** tab. The **Web app** is this Azure app.
 
         > [!Important]  
-        > Before you make changes to this app in Azure AD, make sure that you're not reusing it with another service in Configuration Manager.
+        > Before you make changes to this app in Microsoft Entra ID, make sure that you're not reusing it with another service in Configuration Manager.
 
 ## Disconnect Configuration Manager
 
