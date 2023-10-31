@@ -53,12 +53,12 @@ As an Intune administrator, you can create and assign email settings to Android 
 
 - **Email app**: Select **Gmail** or **Nine Work**. This app is the client app that connects to the email server you enter.
 - **Email server**: Enter the host name of your Exchange server. For example, enter `outlook.office365.com`.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that's used by this profile. Make sure your users have email addresses that match the attribute you select. Your options:
+- **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that's used by this profile. Make sure your users have email addresses that match the attribute you select. Your options:
 
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
   - **User name**: Gets only the name, such as `user1`.
 
-- **Email address attribute from AAD**: This name is the email attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the email address that's used by this profile. Your options:
+- **Email address attribute from Microsoft Entra ID**: This name is the email attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the email address that's used by this profile. Your options:
   - **User principal name**:  Uses the full principal name, such as `user1@contoso.com` or `user1`, as the email address.
   - **Primary SMTP address**: Uses the primary SMTP address, such as `user1@contoso.com`, to sign in to Exchange.
 

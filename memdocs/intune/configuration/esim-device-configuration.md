@@ -76,7 +76,8 @@ To deploy eSIM to devices, an Administrator completes the following tasks:
 4. Monitor the deployment
 
 This article guides you through these steps.
-## Step 1: Add cellular activation codes
+
+## Step 1 - Add cellular activation codes
 
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
 
@@ -116,9 +117,7 @@ When working with the csv file with the activation codes, be sure you or your mo
 > - Remove the current `.csv`.
 > - Upload a new `.csv` that has all the old device/ICCID pairs and has the new devices you want to add.
 
-<a name='step-2-create-an-azure-ad-device-group'></a>
-
-## Step 2: Create a Microsoft Entra device group
+## Step 2 - Create a Microsoft Entra device group
 
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
@@ -127,7 +126,7 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 > - Only devices are targeted, users aren't targeted.
 > - We recommend creating a static Microsoft Entra device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
 
-## Step 3: Assign eSIM activation codes to devices
+## Step 3 - Assign eSIM activation codes to devices
 
 Assign the profile to the Microsoft Entra group that includes your eSIM devices.
 
@@ -143,7 +142,7 @@ Assign the profile to the Microsoft Entra group that includes your eSIM devices.
 
 eSIM activation codes are used once. After Intune installs an activation code on a device, the eSIM module contacts the mobile operator to download the cellular profile. This contact finishes registering the device with mobile operator network.
 
-## Step 4: Monitor deployment
+## Step 4 - Monitor deployment
 
 ### Review the deployment status
 
@@ -209,7 +208,7 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
 - Be sure your `.csv` file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
 - Create a static device Microsoft Entra group that only includes the eSIM devices that are targeted.
 - If there's an issue with the deployment status, check the following settings:
-  - **File format not proper**: See **Step 1: Add cellular activation codes** (in this article) on how to properly format your file.
+  - **File format not proper**: See **[Step 1 - Add cellular activation codes](#step-1---add-cellular-activation-codes)** (in this article) on how to properly format your file.
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 
 ## Next steps
