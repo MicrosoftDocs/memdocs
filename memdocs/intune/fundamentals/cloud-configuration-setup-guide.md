@@ -513,7 +513,7 @@ Add the tenant domain name in Intune:
 3. For platform, select **Windows 10 and later**.
 4. For Profile type, select **Templates** > **Device restrictions** > **Create**.
 5. Enter a name for the profile and select **Next**.
-6. In **Configuration settings**, for **Password**, configure the **Preferred Azure AD tenant domain**. Enter the Microsoft Entra domain name that users should use to sign in to devices.
+6. In **Configuration settings**, for **Password**, configure the **Preferred Microsoft Entra tenant domain**. Enter the Microsoft Entra domain name that users should use to sign in to devices.
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ### ✔️ Deploy other essential productivity and line of business (LOB) apps
