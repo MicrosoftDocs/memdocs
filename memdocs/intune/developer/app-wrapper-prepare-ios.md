@@ -62,12 +62,14 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
   * The input app must have entitlements set before being processed by the Intune App Wrapping Tool. [Entitlements](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) give the app additional permissions and capabilities beyond those typically granted. See [Setting app entitlements](#setting-app-entitlements) for instructions.
 
-## Register your app with Azure AD
+<a name='register-your-app-with-azure-ad'></a>
 
-1.	Register your apps with Azure AD. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
+## Register your app with Microsoft Entra ID
+
+1.	Register your apps with Microsoft Entra ID. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
 2.	Add the custom redirect URL to your app settings. For more information, see [Configuring MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal). 
 3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune Mobile App Management service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service). 
-4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Azure AD application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/app-wrapper-prepare-ios.md#command-line-parameters).
+4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Microsoft Entra application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/app-wrapper-prepare-ios.md#command-line-parameters).
 
    > [!NOTE]
    > The parameters `-ac` and `-ar` are required parameters. Each app will need a unique set of these parameters. `-aa` is only required for single tenant applications.

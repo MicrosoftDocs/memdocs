@@ -104,11 +104,11 @@ You'll need one of the following developer guides to help you integrate the Intu
 
 ## Enable your iOS or Android app for app based Conditional Access
 
-In addition to enabling your app for app protection policy, the following is required for your app to properly function with Azure ActiveDirectory (AAD) app based Conditional Access:
+In addition to enabling your app for app protection policy, the following is required for your app to properly function with Microsoft Entra app based Conditional Access:
 
-* App is built with the [Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) and enabled for AAD broker authentication.
+* App is built with the [Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) and enabled for Microsoft Entra broker authentication.
 
-* The [AAD Client ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
+* The [Microsoft Entra Client ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
 
 ## Configure Telemetry for your app
 
@@ -182,11 +182,11 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 ### Give your app access to the Intune Mobile App Management service
 
-If your app is using its own custom Azure Active Directory (AAD) settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**. 
+If your app is using its own custom Microsoft Entra settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**. 
 
 Once you have registered your app within an Azure tenant, and it's showing up under **All Applications**, you must give your app access to the Intune Mobile App Management service. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
-1. Go to the **Azure Active Directory** blade.
+1. Go to the **Microsoft Entra ID** blade.
 2. Under **App registrations**, go to the listing set up for the application.
 3. Click **+ Add a permission**.
 4. Click on the **APIs my organization uses**. 
