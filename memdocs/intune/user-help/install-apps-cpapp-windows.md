@@ -46,21 +46,21 @@ Browse and install available work apps in the Intune Company Portal app for Wind
 This article describes how to install, view, and share work apps in the Company Portal app for Windows.    
 
 ## Install apps  
-Before you begin, install [Intune Company Portal for Windows from the Microsoft Store](https://www.microsoft.com/p/company-portal/9wzdncrfj3pz?rtc=2&activetab=pivot:overviewtab).    
+Before you begin, install [Intune Company Portal for Windows from the Microsoft Store](https://apps.microsoft.com/detail/9WZDNCRFJ3PZ).    
 
 1. Open the Company Portal app on your work or school device. Then sign in with your work or school account.  
 2. You can access available apps from the following places in Company Portal:      
 
     * **Home**: Go to **Home** to view your organization's featured apps.  
-    * **Apps**: Go to **Apps** to view all available apps. You can sort and filter through apps. Search results are sorted automatically by relevancy.  
-    * **App categories**: Go to **App categories** to choose apps based on type or function. Apps are sorted into categories picked by your organization, like *featured*, *education*, and *productivity*.  
-    * **Search for apps**: A static search bar sits in the app's navigation pane. You can search available apps by name or publisher.  
+    * **Apps**: Go to **Apps** to view, sort, and filter through all available apps.  
+    * **App categories**: Go to **App categories** to browse apps by type or function. Apps in this area are sorted into categories picked by your organization, like *featured*, *education*, and *productivity*.  
+    * **Search for apps**: Use the static search bar in the navigation pane to search apps by name or publisher.  
 3. Select an app, and then choose **Install**. 
 
 > [!TIP]
 > To select and install more than one app at a time, go to **Apps** and switch the layout view to multi-select mode. Then select the checkbox next to each app you want to install. Choose **Install selected** to install them.  
 > [!IMPORTANT]
-> The app status changes to **Installed** when installation is done. Select **Retry** if a required app fails to install and the option to retry is available. It could take up to ten minutes for the installation status to update itself.    
+> The app's installation status changes to *Installed* when installation is done. Select **Retry** if a required app fails to install and the option to retry is available. It could take up to ten minutes for the installation status to update itself.    
 
 ## View all apps  
 Go to **Apps** to see a list of all available and installed apps on your device. 
