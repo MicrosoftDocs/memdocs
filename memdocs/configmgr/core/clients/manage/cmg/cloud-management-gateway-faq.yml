@@ -67,7 +67,7 @@ sections:
           
           To clarify terms:
           
-          - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+          - The Microsoft Entra _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
           - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
           
           > [!TIP]
@@ -75,7 +75,7 @@ sections:
 
           This question is common in the following scenarios:  
           
-          - When you have distinct test and production Active Directory and Azure AD environments, but one single, centralized Azure hosting subscription.
+          - When you have distinct test and production Active Directory and Microsoft Entra environments, but one single, centralized Azure hosting subscription.
           
           - Your use of Azure has grown organically across different teams.
           
