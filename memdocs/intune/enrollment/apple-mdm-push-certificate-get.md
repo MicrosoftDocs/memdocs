@@ -49,15 +49,15 @@ Use an [Intune-supported web browser](../fundamentals/supported-devices-browsers
 ## Steps to get your certificate
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Enroll devices** > **Apple enrollment** > **Apple MDM Push Certificate**.  
 
-### Step 1. Grant Microsoft permission to send user and device information to Apple
+### Step 1: Grant Microsoft permission to send user and device information to Apple
 Select **I agree.** to give Microsoft permission to send data to Apple.
 
 :::image type="content" source="./media/apple-mdm-push-certificate-get/create-mdm-push-certificate.png" alt-text="Screenshot of the Configure MDM Push Certificate screen with MDM Push not set up.":::
 
-### Step 2. Download the Intune certificate signing request required to create an Apple MDM push certificate
+### Step 2: Download the Intune certificate signing request required to create an Apple MDM push certificate
 Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
 
-### Step 3. Create an Apple MDM push certificate
+### Step 3: Create an Apple MDM push certificate
 1. Select **Create your MDM push Certificate** to go to the Apple Push Certificates Portal. 
 2. Sign in with your organization's Apple ID. 
 3. Select **Create a Certificate**. 
@@ -70,12 +70,12 @@ Select **Download your CSR** to download and save the request file locally. The 
 > * The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
 > * If you later change the Apple ID associated with your certificate, sign in to the Apple Push Certificates Portal with your new Apple ID, redownload the certificate file, and upload it to Intune with your new Apple ID as described in [Step 4](apple-mdm-push-certificate-get.md#step-4-enter-the-apple-id-used-to-create-your-apple-mdm-push-certificate) and [Step 5](apple-mdm-push-certificate-get.md#step-5-browse-to-your-apple-mdm-push-certificate-to-upload) in this article.    
 #### Managed Apple ID  
-If you plan to federate your existing Azure AD accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your new Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).  
+If you plan to federate your existing Microsoft Entra accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your new Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).  
 
-### Step 4. Enter the Apple ID used to create your Apple MDM push certificate
+### Step 4: Enter the Apple ID used to create your Apple MDM push certificate
 Return to the admin center and enter your Apple ID. This is needed to remind you when you need to renew the certificate.  
 
-### Step 5. Browse to your Apple MDM push certificate to upload
+### Step 5: Browse to your Apple MDM push certificate to upload
 1. Select the **Folder** icon. 
 2. Select the certificate file (.pem) you downloaded in the Apple portal. 
 3. Select **Upload** to finish configuring the MDM push certificate. 
