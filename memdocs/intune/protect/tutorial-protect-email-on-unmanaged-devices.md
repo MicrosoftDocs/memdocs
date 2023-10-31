@@ -122,7 +122,7 @@ Next, use the Microsoft Intune admin center to create two Conditional Access pol
 
 - The first policy requires that Modern Authentication clients use the approved Outlook app and multifactor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.
 
-- The second policy requires that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in the Microsoft Entra portal or use the Microsoft Intune admin center, which presents the Conditional Access UI from Microsoft Entra. Because we're already in the admin center, we can create the policy here.
+- The second policy requires that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in the Microsoft Entra admin center or use the Microsoft Intune admin center, which presents the Conditional Access UI from Microsoft Entra. Because we're already in the admin center, we can create the policy here.
 
 When you configure Conditional Access policies in the Microsoft Intune admin center, you're really configuring those policies in the Conditional Access blades from the Azure portal. Therefore, the user interface is a bit different than the interface you use for other policies for Intune.
 

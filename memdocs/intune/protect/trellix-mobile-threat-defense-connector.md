@@ -45,7 +45,7 @@ You can configure Conditional Access policies that are based on Trellix Mobile S
 
 ## Prerequisites
 
-- Microsoft Entra ID Premium
+- Microsoft Entra ID P1 or P2
 - Microsoft Intune Plan 1 subscription
 - Trellix Mobile Security subscription
 

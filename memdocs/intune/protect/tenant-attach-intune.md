@@ -114,7 +114,7 @@ For more information about the tenant attach scenario, see [Enable tenant attach
 
       :::image type="content" source="./media/tenant-attach-intune/tenant-onboarding.png" alt-text="Configure tenant attach" Lightbox="./media/tenant-attach-intune/tenant-onboarding.png":::
 
-4. Select **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates a Microsoft Entra ID application registration to facilitate the sync of collections to the Microsoft Intune admin center.
+4. Select **Next** and then **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync of collections to the Microsoft Intune admin center.
 
 5. On the **Configure upload** page, configure which collections of devices you want to sync.
    You can limit your configuration to device collections or use the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**.
@@ -143,7 +143,7 @@ Tenant attach is now configured, and selected devices sync to Microsoft Intune a
 
 4. Sign in with your *Global Administrator* account when prompted.
 
-5. Select **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates a Microsoft Entra ID application registration to facilitate the sync.
+5. Select **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync.
 
 6. Select **OK** to exit the co-management properties if you're done making changes. Otherwise move to Task 3 to selectively enable device upload to the Microsoft Intune admin center.
 

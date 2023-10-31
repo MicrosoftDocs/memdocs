@@ -57,7 +57,7 @@ Before using these reports, you must attest to having the required licenses on t
 To be eligible for the Windows feature update device readiness and Windows feature update compatibility risks reports, devices must:
 
 - Run a supported version of Windows 10 or later with the latest cumulative update
-- Be Azure AD joined or hybrid Azure AD joined
+- Be Microsoft Entra joined or Microsoft Entra hybrid joined
 - Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 - Have [Windows Health Monitoring configured](../protect/data-enable-windows-data.md#windows-data) to include _Windows Updates_ as part of the scope

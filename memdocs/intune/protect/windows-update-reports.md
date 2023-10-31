@@ -121,7 +121,7 @@ Before you can use the feature updates policy reports, you must configure prereq
   Devices must:
 
   - Meet the [prerequisites for Windows 10 and later feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Feature updates for Windows 10 and later policy in Intune**.
-  - Be Azure Active Directory Joined, or Hybrid Azure Active Directory Joined to support submitting of data for reporting.
+  - Be Microsoft Entra joined, or Microsoft Entra hybrid joined to support submitting of data for reporting.
   - Run Windows 10 1903 or later, or Windows 11. Although Windows 10 and later feature updates policy supports earlier versions of Windows, earlier versions don't support reporting of the data that Intune uses for the feature updates reports.
 
 ### Configure data collection
@@ -193,7 +193,7 @@ To use the report:
    - **Devices** – The name of the device.
    - **UPN** – Intune user identifier (email).
    - **Intune Device ID** – Intune device identifier.
-   - **AAD Device ID** – Azure Active Directory identifier for device.
+   - **Microsoft Entra Device ID** – Microsoft Entra identifier for device.
    - **Last Event Time** – The last time there was new data, or something happened for the device and update.
    - **Update State** – The state of the update for the device. Initial state data is from the service-side, which is the status of the update in the system before it begins to install on the device. When client-side data is available, client-side data is shown, replacing the server-side data.
    - **Update Substate** – A low-level detailed version of the Update State.
@@ -286,10 +286,10 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **CancelledByUser** | User canceled the update. | Retry the installation. |
 | **DamagedMedia**  | The update file or the hard drive is damaged. | Run **Chkdsk /F** on the device with administrator privileges, then retry the update. |
 | **DeploymentConflict** | Device is in more than one deployment of the same update type. Only the first deployment assigned is effective. | Remove the device from any deployments that shouldn't apply. |
-| **DeviceRegistrationInvalidAzureADDeviceId**|The device isn't able to register or authenticate properly with Windows Update  because of an invalid Azure AD Device ID. | Check that the device is joined to the Azure Active Directory tenant making the request. |
+| **DeviceRegistrationInvalidAzureADDeviceId**|The device isn't able to register or authenticate properly with Windows Update  because of an invalid Microsoft Entra Device ID. | Check that the device is joined to the Microsoft Entra tenant making the request. |
 | **DeviceRegistrationInvalidGlobalDeviceId** | The device isn't able to register or authenticate properly with Windows Update  because of an invalid Global Device ID. | The Microsoft Account Sign-In Assistant (MSA) Service might be disabled, preventing Global Device ID assignment. Check that the MSA Service is running or able to run on the device. |
 | **DeviceRegistrationIssue** | The device isn't able to register or authenticate properly with Windows Update. | Check that the device registration information is correct and the device can connect. |
-| **DeviceRegistrationNoTrustType** | The device isn't able to register or authenticate properly with Windows Update because it can't establish Trust. | Check that the device is joined in Azure Active Directory using your account. If the issue persists, the device might need to be unenrolled from Intune first. |
+| **DeviceRegistrationNoTrustType** | The device isn't able to register or authenticate properly with Windows Update because it can't establish Trust. | Check that the device is joined in Microsoft Entra ID using your account. If the issue persists, the device might need to be unenrolled from Intune first. |
 | **DiskFull**  | The installation couldn't complete because the Windows partition is full. | Free up disk space on the Windows partition. Retry the installation. |
 | **DownloadCancelled** | Windows Update couldn't download the update because the update server stopped the connection. | Make sure your network is working and retry the download. If it still fails, check your WSUS server or contact support. |
 | **DownloadConnectionIssue**| Windows Update couldn't connect to the update server and the update couldn't download. | Make sure your network is working and retry the download. If it still fails, contact support. |

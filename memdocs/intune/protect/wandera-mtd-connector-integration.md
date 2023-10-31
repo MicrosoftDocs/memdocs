@@ -40,7 +40,7 @@ Complete the following steps to integrate the Wandera Mobile Threat Defense solu
 Before you start the process to integrate Wandera with Intune, make sure you have the following prerequisites in place:
 
 - Microsoft Intune Plan 1 subscription
-- Microsoft Entra ID administrator credentials and assigned role that is able to grant the following permissions:
+- Microsoft Entra administrator credentials and assigned role that is able to grant the following permissions:
 
   - Sign in and read user profile
   - Access the directory as the signed-in user
@@ -138,7 +138,7 @@ Activation Profiles to be used with MAM must have Associated User set to the Aut
 
 1. In the **Wandera RADAR** portal, select an existing, or create a new, Activation Profile that unenrolled devices with MAM managed applications will use during enrollment in Devices > Activations.
 2. Click the **Deployment Strategies tab then Unmanaged Devices** then scroll to the **Azure Device Provisioning** section.
-3. Enter your **Microsoft Entra Tenant ID** into the appropriate text field. If you don’t have your tenant ID on hand, click the **Get my Tenant ID** link to open Microsoft Entra in a new tab where you can easily copy this value to your clipboard.
+3. Enter your **Microsoft Entra tenant ID** into the appropriate text field. If you don’t have your tenant ID on hand, click the **Get my Tenant ID** link to open Microsoft Entra ID in a new tab where you can easily copy this value to your clipboard.
 4. (Optional) Specify **Group ID(s)** to limit user activations to specific groups.
    - If one or more **Group IDs** are defined, a user activating MAM must be a member of at least one of the specified groups to activate using this Activation Profile.
    - You can set up multiple Activation Profiles configured with the same Azure Tenant ID but with different Group IDs. This allows you to enroll devices into Wandera based upon Azure group membership, enabling differentiated capabilities by group at activation time.

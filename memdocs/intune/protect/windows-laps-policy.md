@@ -135,7 +135,7 @@ Use the following methods to grant accounts these permissions:
   - Global Admin
   - Cloud Device Admin
 
-Create and assign a custom role in Microsoft Entra that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
+Create and assign a custom role in Microsoft Entra ID that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 

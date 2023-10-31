@@ -80,7 +80,7 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
   > [!NOTE]  
   > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
 
-- **Cloud** – Cloud supports backup to your Microsoft Entra for the following scenarios:
+- **Cloud** – Cloud supports backup to your Microsoft Entra ID for the following scenarios:
 
   - Microsoft Entra hybrid join
   - Microsoft Entra join
@@ -125,12 +125,12 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   - Organization: **Read**
   - Remote tasks:  **Rotate Local Admin Password**
 
-- **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra ID permissions:
+- **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra permissions:
 
   - `microsoft.directory/deviceLocalCredentials/password/read`
   - `microsoft.directory/deviceLocalCredentials/standard/read`
 
-  To create custom roles that can grant these permissions, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
+  To create custom roles that can grant these permissions, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
   
 - **View Microsoft Entra audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
@@ -164,7 +164,7 @@ No. Windows LAPS requires the device to be in an enabled state before password r
 
 ### What happens when a device is deleted in Microsoft Entra?
 
-When a device is deleted in Microsoft Entra, the LAPS credential that was tied to that device is lost and the password that is stored in Microsoft Entra is lost. Unless you have a custom workflow to retrieve LAPS passwords and store them externally, there's no method in Microsoft Entra to recover the LAPS managed password for a deleted device.
+When a device is deleted in Microsoft Entra, the LAPS credential that was tied to that device is lost and the password that is stored in Microsoft Entra ID is lost. Unless you have a custom workflow to retrieve LAPS passwords and store them externally, there's no method in Microsoft Entra ID to recover the LAPS managed password for a deleted device.
 
 ### What roles are needed to recover LAPS passwords?
 

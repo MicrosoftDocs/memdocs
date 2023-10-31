@@ -47,7 +47,7 @@ Before starting the process of integrating Pradeo with Intune, make sure you hav
 
 - Microsoft Intune Plan 1 subscription
 
-- Microsoft Entra ID credentials to grant the following permissions:
+- Microsoft Entra credentials to grant the following permissions:
 
   - Sign in and read user profile
 

@@ -80,7 +80,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - Devices must:  
   - Run a version of Windows 10/11 that remains in support.
-  - Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
+  - Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
   - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 
     Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy. The prerequisite to require Telemetry is under review as this feature moves towards general availability.

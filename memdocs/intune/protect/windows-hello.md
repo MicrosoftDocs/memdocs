@@ -47,7 +47,7 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 > Prior to the Anniversary Update (Windows version 1607), you could set two different PINS that could be used to authenticate to resources:
 >
 > - The **device PIN** could be used to unlock the device and connect to cloud resources.
-> - The **work PIN** was used to access Azure AD resources on user's personal devices (BYOD).
+> - The **work PIN** was used to access Microsoft Entra resources on user's personal devices (BYOD).
 >
 > In the Anniversary Update, these two PINS were merged into one single device PIN.
 > Any Intune configuration policies you set to control the device PIN, and additionally, any Windows Hello for Business policies you configured, now both set this new PIN value.
@@ -116,7 +116,7 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 
    - **Allow phone sign-in**:
 
-     If this option is set to **Yes**, users can use a remote passport to serve as a portable companion device for desktop computer authentication. The desktop computer must be Azure Active Directory joined, and the companion device must be configured with a Windows Hello for Business PIN.
+     If this option is set to **Yes**, users can use a remote passport to serve as a portable companion device for desktop computer authentication. The desktop computer must be Microsoft Entra joined, and the companion device must be configured with a Windows Hello for Business PIN.
 
    - **Use security keys for sign-in**:
 
