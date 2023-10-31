@@ -57,7 +57,7 @@ sections:
         answer: |
           No. Microsoft Entra hybrid join and co-management are two different things:
 
-          - _Hybrid Azure AD join_ is a device identity state where the device is joined to an on-premises Active Directory domain and registered in Azure Active Directory (Azure AD).
+          - *Microsoft Entra hybrid join* is a device identity state where the device is joined to an on-premises Active Directory domain and registered in Microsoft Entra ID.
 
           - _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. Co-management requires that the device has a cloud identity. This identity can be either Microsoft Entra hybrid join or Microsoft Entra join only.
 
@@ -122,7 +122,7 @@ sections:
           For more information, see [How to prepare internet-based devices for co-management](how-to-prepare-win10.md).
 
           > [!NOTE]
-          > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
+          > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for Microsoft Entra hybrid join. This limitation is due to the identity change of the device during the Microsoft Entra join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
 
       - question: |
           How do I manage updates for Windows and Microsoft 365 apps?
