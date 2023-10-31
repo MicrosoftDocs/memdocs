@@ -110,8 +110,6 @@ If you're unsure that your devices support eSIM, then contact your device manufa
 
 After your mobile operator confirms that you need to create eSIM profiles on the download server (SM-DP+), go to Microsoft Intune and create a profile for the EIDs tied to the eSIM-capable Windows devices that you want to enable with eSIM.
 
-<a name='create-an-azure-ad-device-group'></a>
-
 ## Create a Microsoft Entra device group
 
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.

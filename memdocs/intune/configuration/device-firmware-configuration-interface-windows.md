@@ -58,8 +58,6 @@ When you reinstall an older Windows version, install a separate OS, or format th
 
   For more information on Windows Autopilot, including any requirements, go to [Windows Autopilot registration overview](/autopilot/registration-overview).
 
-<a name='create-your-azure-ad-security-groups'></a>
-
 ## Create your Microsoft Entra security groups
 
 Windows Autopilot deployment profiles are assigned to Microsoft Entra security groups. Be sure to create groups that include your DFCI-supported devices. For DFCI devices, most organization may create device groups, instead of user groups. Consider the following scenarios:
