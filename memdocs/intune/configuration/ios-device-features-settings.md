@@ -256,7 +256,7 @@ This feature applies to:
   
   The following device information variables are supported:
 
-  - `{{AADDeviceId}}`:  Azure AD device ID
+  - `{{AADDeviceId}}`:  Microsoft Entra device ID
   - `{{AccountId}}`:  Intune tenant ID or account ID
   - `{{AccountName}}`:  Intune tenant name or account name
   - `{{AppleId}}`:  Apple ID of the user
@@ -290,7 +290,7 @@ This feature applies to:
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Realm**: Enter the domain part of the URL. For example, enter `contoso.com`.
-- **Azure AD username attribute**: Intune looks for this attribute for each user in Azure AD. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
+- **Microsoft Entra username attribute**: Intune looks for this attribute for each user in Microsoft Entra ID. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS will prompt users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
@@ -299,7 +299,7 @@ This feature applies to:
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 
-    For example, Contoso has several regions, including Europe, Asia, and North America. Contoso wants their Asia users to use SSO, and the app requires the UPN in the `username@asia.contoso.com` format. When you select **User Principal Name**, the realm for each user is taken from Azure AD, which is `contoso.com`. So for users in Asia, select **User Principal Name**, and enter `asia.contoso.com`. The user's UPN becomes `username@asia.contoso.com`, instead of `username@contoso.com`.
+    For example, Contoso has several regions, including Europe, Asia, and North America. Contoso wants their Asia users to use SSO, and the app requires the UPN in the `username@asia.contoso.com` format. When you select **User Principal Name**, the realm for each user is taken from Microsoft Entra ID, which is `contoso.com`. So for users in Asia, select **User Principal Name**, and enter `asia.contoso.com`. The user's UPN becomes `username@asia.contoso.com`, instead of `username@contoso.com`.
 
   - **Intune device ID**: Intune automatically selects the Intune Device ID.
 
@@ -308,7 +308,7 @@ This feature applies to:
     > [!NOTE]
     > By default, keep the realm empty if you use device ID.
 
-  - **Azure AD device ID**
+  - **Microsoft Entra device ID**
   - **SAM account name**: Intune populates the on-premises Security Accounts Manager (SAM) account name.
 
 - **Apps**: **Add** apps on users devices that can use single sign-on.
@@ -368,12 +368,12 @@ This feature applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS doesn't use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
-  - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
+  - **Microsoft Entra ID**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
   
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
     > [!IMPORTANT]
-    > To achieve SSO with the Microsoft Azure AD SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, see [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
+    > To achieve SSO with the Microsoft Entra SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, see [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
 
   - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
   - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
@@ -384,7 +384,7 @@ This feature applies to:
 
   After users successfully sign in to the Authenticator app, they aren't prompted to sign in to other apps that use the SSO extension. The first time users open managed apps that don't use the SSO extension, they're prompted to select the account that's signed in.
 
-- **Enable shared device mode** (Microsoft Azure AD only): Choose **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Azure AD's shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
+- **Enable shared device mode** (Microsoft Entra-only): Choose **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Microsoft Entra shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
 
   For more information about shared device mode and how to enable it, see [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).  
 
@@ -411,7 +411,7 @@ This feature applies to:
   - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
   - The URLs must begin with `http://` or `https://`.
 
-- **Additional configuration** (Microsoft Azure AD, Redirect, and Credential): Enter additional extension-specific data to pass to the SSO app extension:
+- **Additional configuration** (Microsoft Entra ID, Redirect, and Credential): Enter additional extension-specific data to pass to the SSO app extension:
   - **Key**: Enter the name of the item you want to add, such as `user name` or 'AppAllowList'.  
   - **Type**: Enter the type of data. Your options:
 
@@ -456,12 +456,12 @@ This feature applies to:
   
   - iOS/iPadOS 14 and newer
 
-- **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
+- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
 
-  If you use the **Microsoft Azure AD SSO app extension** type, then:
+  If you use the **Microsoft Entra SSO app extension** type, then:
 
   - These apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in.
-  - The app bundle IDs you enter have permission to use the Microsoft Azure AD SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library (MSAL).
+  - The app bundle IDs you enter have permission to use the Microsoft Entra SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library (MSAL).
 
     The experience for these apps may not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.  
 
