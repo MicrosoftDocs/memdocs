@@ -290,7 +290,7 @@ This feature applies to:
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Realm**: Enter the domain part of the URL. For example, enter `contoso.com`.
-- **Microsoft Entra username attribute**: Intune looks for this attribute for each user in Microsoft Entra ID. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
+- **Azure AD username attribute**: Intune looks for this attribute for each user in Microsoft Entra ID. Intune then populates the respective field (such as UPN) before generating the XML that gets installed on devices. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS will prompt users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
@@ -308,7 +308,7 @@ This feature applies to:
     > [!NOTE]
     > By default, keep the realm empty if you use device ID.
 
-  - **Microsoft Entra device ID**
+  - **Azure AD device ID**: The Microsoft Entra device ID
   - **SAM account name**: Intune populates the on-premises Security Accounts Manager (SAM) account name.
 
 - **Apps**: **Add** apps on users devices that can use single sign-on.
@@ -368,7 +368,7 @@ This feature applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS doesn't use app extensions. To disable an app extension, you can switch the SSO app extension type to **Not configured**.
-  - **Microsoft Entra ID**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
+  - **Microsoft Azure AD**: Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for on-premises Active Directory accounts across all applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
   
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
 
@@ -458,7 +458,7 @@ This feature applies to:
 
 - **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
 
-  If you use the **Microsoft Entra SSO app extension** type, then:
+  If you use the **Microsoft Azure AD** (Microsoft Entra ID) SSO app extension type, then:
 
   - These apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in.
   - The app bundle IDs you enter have permission to use the Microsoft Entra SSO app extension if they don't use any Microsoft libraries, such as Microsoft Authentication Library (MSAL).
