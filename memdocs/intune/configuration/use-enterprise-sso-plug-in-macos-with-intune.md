@@ -106,9 +106,9 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 6. Select **Next**.
 7. In **Configuration settings**, select **Single sign-on app extension**, and configure the following properties:
 
-    - **SSO app extension type**: Select **Microsoft Azure AD**:
+    - **SSO app extension type**: Select **Microsoft Entra ID**:
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Azure AD for macOS in Intune":::
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/macos-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for macOS in Intune":::
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
@@ -164,7 +164,7 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/sso-extension-basic-settings-2.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for macOS devices.":::
 
-6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
+6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Microsoft Entra Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
     The following example is a recommended PLIST file that meets the needs of most organizations:
 
@@ -194,7 +194,7 @@ In the Jamf Pro portal, you create a Computer configuration profile. This prof
 When the device checks in with the Jamf Pro service, it receives this profile.
 
 > [!TIP]
-> If you use Jamf Connect, it is recommended that you follow the [latest Jamf guidance on integrating Jamf Connect with Azure AD](https://learn.jamf.com/bundle/jamf-connect-documentation-current/page/Jamf_Connect_and_Microsoft_Conditional_Access.html). The recommended integration pattern ensures that Jamf Connect works properly with your Conditional Access policies and Azure AD Identity Protection.
+> If you use Jamf Connect, it is recommended that you follow the [latest Jamf guidance on integrating Jamf Connect with Microsoft Entra ID](https://learn.jamf.com/bundle/jamf-connect-documentation-current/page/Jamf_Connect_and_Microsoft_Conditional_Access.html). The recommended integration pattern ensures that Jamf Connect works properly with your Conditional Access policies and Microsoft Entra ID Protection.
 
 # [Other MDMs](#tab/create-profile-other-mdm)
 
