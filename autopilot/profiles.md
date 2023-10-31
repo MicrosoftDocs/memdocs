@@ -151,7 +151,21 @@ To see alerts for unassigned devices, in the [Microsoft Intune admin center](htt
 
 ## Autopilot profile priority
 
-If you have groups assigned to multiple Autopilot profile, the device would receive the oldest created profile to resolve the conflict. If no other profile is applicable to the device and there is a default profile (any Autopilot profile assigned to all devices), then the default profile is applied. If a device is assigned to a security group that is not assigned to Autopilot profile, then it would receive the default profile targeted to all devices. To see when an Autopilot profile is created, select the Autopilot profile name from the Windows Autopilot deployment profiles blade and the created date will be visible under the Overview tab.
+If you have groups assigned to multiple Autopilot profiles, the device would receive the oldest created profile to resolve the conflict. If no other profile is applicable to the device and there's a default profile (any Autopilot profile assigned to all devices), then the default profile is applied. If a device is assigned to a security group that isn't assigned to Autopilot profile, then it would receive the default profile targeted to all devices. To see when an Autopilot profile is created:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+
+1. Under **Windows Autopilot Deployment Program**, select **Deployment Profiles**.
+
+1. In the **Windows Autopilot deployment profiles** screen, under **Name**, select the Autopilot profile name where the create date needs to be viewed.
+
+1. When the Windows Autopilot deployment profile screen opens, the date the Windows Autopilot deployment profile was created is displayed under **Essentials** and next to **Created**.
 
 ## Autopilot deployments report
 
