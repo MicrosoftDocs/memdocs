@@ -294,7 +294,7 @@ This setting applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
-  - **Microsoft Entra ID**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
+  - **Microsoft Azure AD**: Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for on-premises Active Directory accounts across all macOS applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
 
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements.
 
