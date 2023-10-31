@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 #ROBOTS:
 #audience:
-ms.reviewer: mikedano, tycast, japoehlm
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
