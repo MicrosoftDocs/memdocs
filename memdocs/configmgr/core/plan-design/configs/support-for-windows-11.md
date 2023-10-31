@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 10/13/2023
+ms.date: 10/31/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -48,6 +48,7 @@ The following table lists the versions of Windows 11 that you can use as a clien
 
 | Windows 11 version                         | ConfigMgr 2207 | ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 | **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 | **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | 
 <!--
