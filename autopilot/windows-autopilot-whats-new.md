@@ -44,7 +44,7 @@ Starting in 2310, we're making an update to the self-deployment mode for manufac
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-1. Select the device that you want to unblock and the select the **Unblock** button at the top of the page..
+1. Select the device that you want to unblock and the select the **Unblock** button at the top of the page.
 
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
@@ -165,7 +165,7 @@ With the Intune 2202 release, the [enrollment status page](enrollment-status.md)
 
 We made a change to the Windows Autopilot self-deployment mode and pre-provisioning mode experience, adding in a step to delete the device record as part of the device reuse process. This change impacts all Windows Autopilot deployments where the Autopilot profile is set to self-deployment or pre-provisioning mode. This change only affects a device when it's reused or reset, and it attempts to redeploy.
 
-For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452)
+For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 ## Update to the Windows Autopilot sign-in experience
 <!-- 2110 -->
