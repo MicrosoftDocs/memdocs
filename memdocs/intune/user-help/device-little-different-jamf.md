@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Errors you might see if you use Jamf Self Service | Microsoft Docs
-description: Learn more about your Intune-enabled macOS device managed by Jamf.
+title: Resolve Company Portal compliance issues on Macs with Self Service | Microsoft Intune
+description: Resolve Intune Company Portal compliance issues on a Mac that's managed by Jamf.
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2017
+ms.date: 10/31/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,14 +29,20 @@ ms.collection:
 - tier3
 ---
 
-# Performing actions on a macOS device managed by Jamf
+# Resolve Company Portal compliance issues on Macs with Self Service 
+**Applies to macOS**  
 
-Your company uses a combination of tools to make sure that your macOS device can access company resources safely. To make sure that your device can access these resources, you need to go to **Applications** > **Self Service**, and make sure that your device is compliant with company policies or to perform any other actions on your device.
+This article is for employees and students setting up a Mac for work or school, and describes how to resolve device compliance issues in Self Service. The Intune Company Portal app flags Jamf Pro-managed devices for the following compliance issues:  
 
-If you are on the macOS device with the compliance issues that is managed by Jamf, click the **Resolve** button to launch **Self Service**.
+* Account not onboarded.  
+* Device is already enrolled.
 
-__What to do if you see "AccountNotOnboarded" or "Device is already enrolled"__
+These issues are caused by policy conflicts between Company Portal and Self Service. Complete thse recommended steps to resolve these compliance issues and regain access to work or school data on your Mac.  
 
-If you've opened the Company Portal app and a message appears that says, "AccountNotOnboarded," you need to quit the Company Portal app, and go to **Applications** > **Self Service**. Your company will have a device registration policy that you need to install. Click on the policy to install it, then open the Company Portal again.
+1. Open the Self Service app on the Mac you're setting up for work.
+2. Close the Company Portal app.  
+3. In Self Service, install the pending device registration policy from your organization. Select the policy to install it.
+4. Open the Company Portal app again and under **Devices**, select your Mac.
+5. Choose **Check access** to rerun the compliance check and resolve the issue.   
 
-Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+For additional help, contact your IT support person. Sign into the Intune Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Help & support** for contact information.  
