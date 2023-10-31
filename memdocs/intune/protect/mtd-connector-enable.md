@@ -46,7 +46,7 @@ If the classic policy is deleted, you'll need to delete the connection to Intune
 
 Classic conditional access policies for MTD apps:
 
-- Are used by Intune MTD to require that devices are registered in Microsoft Entra so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
+- Are used by Intune MTD to require that devices are registered in Microsoft Entra ID so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
 
 - Have no effect on any other Cloud apps or Resources.
 

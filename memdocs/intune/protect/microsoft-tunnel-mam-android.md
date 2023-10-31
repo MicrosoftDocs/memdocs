@@ -198,7 +198,7 @@ Create an app protection policy to automatically start the Microsoft Tunnel VPN 
 
 5. Continue past the *Access requirements* and *Conditional launch* tabs.
 
-6. On the *Assignments* tab, select **Add Groups**, and then select the same Azure Active Directory groups that you deployed the two app configuration profiles to, and then select **Next**.
+6. On the *Assignments* tab, select **Add Groups**, and then select the same Microsoft Entra groups that you deployed the two app configuration profiles to, and then select **Next**.
 
 7. On the *Review + Create* tab, select **Create** to complete creation of the policy and deploy the policy to the assigned groups.
 

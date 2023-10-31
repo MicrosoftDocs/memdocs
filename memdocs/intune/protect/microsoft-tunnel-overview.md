@@ -162,9 +162,9 @@ The following information outlines where break and inspect isn't supported. Refe
 
 **Additional details**:
 
-- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Noncompliant devices don't receive an access token from Microsoft Entra and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
+- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Noncompliant devices don't receive an access token from Microsoft Entra ID and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
 
-- The Management Agent is authorized against Microsoft Entra using Azure app ID/secret keys.
+- The Management Agent is authorized against Microsoft Entra ID using Azure app ID/secret keys.
 
 ## Next steps
 

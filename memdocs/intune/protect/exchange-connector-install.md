@@ -85,9 +85,9 @@ If the EAS record is new and Intune isn't aware of it, Intune issues a cmdlet (p
 
 6. Intune maps the EAS record to a device record, and saves the device compliance state.
 
-7. The EAS client ID gets registered by the Azure AD Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
+7. The EAS client ID gets registered by the Microsoft Entra Device Registration process, which creates a relationship between the Intune device record, and the EAS client ID.
 
-8. The Azure AD Device Registration saves the device state information.
+8. The Microsoft Entra Device Registration saves the device state information.
 
 9. If the user meets the conditional access policies, Intune issues a cmdlet through the Intune Exchange connector that allows the mailbox to sync.
 
@@ -105,7 +105,7 @@ The following table lists the requirements for the computer on which you install
 | Microsoft Exchange          | On-premises connectors require Microsoft Exchange 2010 SP3 or later or legacy Exchange Online Dedicated. To determine if your Exchange Online Dedicated environment is in the *new* or *legacy* configuration, contact your account manager. |
 | Mobile device management authority           | [Set the mobile device management authority to Intune](../fundamentals/mdm-authority-set.md). |
 | Hardware              | The computer on which you install the connector requires a 1.6 GHz CPU with 2 GB of RAM and 10 GB of free disk space. |
-|  Active Directory synchronization             | Before you use the connector to connect Intune to your Exchange server, [set up Active Directory synchronization](../fundamentals/users-add.md). Your local users and security groups must be synced with your instance of Azure Active Directory. |
+|  Active Directory synchronization             | Before you use the connector to connect Intune to your Exchange server, [set up Active Directory synchronization](../fundamentals/users-add.md). Your local users and security groups must be synced with your instance of Microsoft Entra ID. |
 | Additional software         | The computer that hosts the connector must have a full installation of Microsoft .NET Framework 4.5 and Windows PowerShell 2.0. |
 | Network               | The computer on which you install the connector must be in a domain that has a trust relationship with the domain that hosts your Exchange server.<br /><br />Configure the computer to allow it to access the Intune service through firewalls and proxy servers over ports 80 and 443. Intune uses these domains: <br> - manage.microsoft.com <br> - \*manage.microsoft.com<br> - \*.manage.microsoft.com <br><br> The Intune Exchange connector communicates with the following services: <br> - Intune service: HTTPS port 443 <br> - Exchange Client Access server (CAS): WinRM service port 443<br> - Exchange Autodiscover 443<br> - Exchange Web Services (EWS) 443  |
 

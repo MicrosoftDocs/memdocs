@@ -35,21 +35,23 @@ ms.collection:
 With an environment that meets the [prerequisites](lookout-mobile-threat-defense-connector.md#prerequisites), you can integrate Lookout Mobile Endpoint Security with Intune. The information in this article can guide you in setting up integration and configuring important settings in Lookout for use with Intune.
 
 > [!IMPORTANT]
-> An existing Lookout Mobile Endpoint Security tenant that is not already associated with your Microsoft Entra ID tenant cannot be used for the integration with Microsoft Entra ID and Intune. Contact Lookout support to create a new Lookout Mobile Endpoint Security tenant. Use the new tenant to onboard your Microsoft Entra ID users.
+> An existing Lookout Mobile Endpoint Security tenant that is not already associated with your Microsoft Entra tenant cannot be used for the integration with Microsoft Entra ID and Intune. Contact Lookout support to create a new Lookout Mobile Endpoint Security tenant. Use the new tenant to onboard your Microsoft Entra users.
 
-## Collect Microsoft Entra ID information
+<a name='collect-microsoft-entra-id-information'></a>
+
+## Collect Microsoft Entra information
 
 To integrated Lookout with Intune, you associate your Lookout Mobility Endpoint Security tenant with your Microsoft Entra subscription.
 
 To enable your Lookout Mobile Endpoint Security subscription integration with Intune, you provide the following information to Lookout support (enterprisesupport@lookout.com):
 
-- **Microsoft Entra Tenant ID**
+- **Microsoft Entra tenant ID**
 
-- **Microsoft Entra ID group Object ID** for the group with **full** Lookout Mobile Endpoint Security (MES) Console access.
+- **Microsoft Entra group Object ID** for the group with **full** Lookout Mobile Endpoint Security (MES) Console access.
 
   You create this user group in Microsoft Entra ID to contain the users that have *full access* to sign in to the **Lookout console**. Users must be members of this group, or the optional *restricted access* group, to sign in to the Lookout Console.
 
-- **Microsoft Entra ID group Object ID** for the group with **restricted** Lookout MES Console access *(optional group)*.
+- **Microsoft Entra group Object ID** for the group with **restricted** Lookout MES Console access *(optional group)*.
 
   You create this optional user group in Microsoft Entra ID to contain users that shouldn't have access to several configuration and enrollment-related modules of the Lookout console. Instead, these users have read-only access to the **Security Policy** module of the Lookout console. Users must be members of this optional group, or the required *full access* group, to sign in to the Lookout Console.
 
@@ -61,7 +63,7 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 
    :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-properties.png"alt-text="Microsoft Entra ID":::
 
-3. Next, find the Microsoft Entra ID Group ID for the accounts you use to grant Microsoft Entra ID users access to the Lookout Console. One group is for *full access*, and the second group, for *restricted access* is optional. To get the *Object ID*, for each account:
+3. Next, find the Microsoft Entra group ID for the accounts you use to grant Microsoft Entra users access to the Lookout Console. One group is for *full access*, and the second group, for *restricted access* is optional. To get the *Object ID*, for each account:
 
    1. Go to **Microsoft Entra ID** > **Groups** to open the *Groups - All groups* pane.
 
@@ -83,7 +85,7 @@ After Lookout support creates your Lookout Enterprise account, Lookout support s
 
 ### Initial sign-in
 
-The first sign-in to the Lookout MES Console displays a consent page ([https://aad.lookout.com/les?action=consent](https://aad.lookout.com/les?action=consent)). As a Microsoft Entra ID Global Administrator, sign-in and **Accept**. A subsequent sign-in doesn't require the user to have this level of Microsoft Entra ID privilege.
+The first sign-in to the Lookout MES Console displays a consent page ([https://aad.lookout.com/les?action=consent](https://aad.lookout.com/les?action=consent)). As a Microsoft Entra Global Administrator, sign-in and **Accept**. A subsequent sign-in doesn't require the user to have this level of Microsoft Entra ID privilege.
 
 A consent page is displayed. Choose **Accept** to complete the registration.
 
@@ -105,12 +107,12 @@ The following procedure assumes you've previously created a user group in Micros
 
    ![Image of the connection settings tab with heartbeat frequency configured](./media/lookout-mtd-connector-integration/lookout-mtp-connection-settings.png)
 
-3. Select **Enrollment Management**, and for **Use the following Microsoft Entra security groups to identify devices that should be enrolled in Lookout for Work**, specify the *Group name* of a Microsoft Entra ID group to use with Lookout, and then select **Save changes**.
+3. Select **Enrollment Management**, and for **Use the following Microsoft Entra security groups to identify devices that should be enrolled in Lookout for Work**, specify the *Group name* of a Microsoft Entra group to use with Lookout, and then select **Save changes**.
 
    ![screenshot of the Intune connector enrollment page](./media/lookout-mtd-connector-integration/lookout-mtp-enrollment.png)
 
    **About the groups you use**:
-   - As a best practice, start with a Microsoft Entra ID security group that contains only a few users to test Lookout integration.
+   - As a best practice, start with a Microsoft Entra security group that contains only a few users to test Lookout integration.
    - The **Group name** is case-sensitive as shown in the **Properties** of the security group in the Azure portal.
    - The groups you specify for **Enrollment Management** define the set of users whose devices will enroll with Lookout. When a user is in an enrollment group, their devices in Microsoft Entra ID are enrolled and eligible for activation in Lookout MES. The first time a user opens the *Lookout for Work* application on a supported device, they're prompted to activate it.
 

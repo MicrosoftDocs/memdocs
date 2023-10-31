@@ -472,12 +472,12 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Not configured** - Allow the warning for other disk encryption to be shown.  
 
   > [!TIP]  
-  > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must be set to *Block*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+  > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must be set to *Block*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   When set to *Block*, you can then configure the following setting:  
 
-  - **Allow standard users to enable encryption during Azure AD Join**  
-    *This setting only applies to Azure Active Directory Joined (Azure ADJ) devices, and depends on the previous setting, `Warning for other disk encryption`.*  
+  - **Allow standard users to enable encryption during Microsoft Entra join**  
+    *This setting only applies to Microsoft Entra joined (Azure ADJ) devices, and depends on the previous setting, `Warning for other disk encryption`.*  
     **Default**: Not configured  
     BitLocker CSP: [AllowStandardUserEncryption](/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
@@ -485,7 +485,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
     - **Not configured** only Administrators can enable BitLocker encryption on the device.  
 
   > [!TIP]  
-  > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+  > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Configure encryption methods**  
   **Default**: Not configured  
@@ -561,7 +561,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup PIN with TPM**
 
     > [!TIP]
-    > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   - **Compatible TPM startup key**  
     **Default**: Allow startup key with TPM  
@@ -573,7 +573,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup key with TPM**  
 
     > [!TIP]
-    > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
   - **Compatible TPM startup key and PIN**  
     **Default**: Allow startup key and PIN with TPM  
@@ -584,7 +584,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup key and PIN with TPM**   
 
     > [!TIP]  
-    > To install BitLocker automatically and silently on a device that's Azure AD joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Minimum PIN Length**  
   **Default**: Not configured  
@@ -638,16 +638,16 @@ These settings apply specifically to operating system data drives.
     - **Block** - Users can't see and change the recovery options. When set to 
     - **Not configured** - Users can see and change the recovery options when they turn on BitLocker. 
 
-  - **Save BitLocker recovery information to Azure Active Directory**  
+  - **Save BitLocker recovery information to Microsoft Entra ID**  
     **Default**: Not configured  
 
-    - **Enable** - Store the BitLocker recovery information to Azure Active Directory (Azure AD).  
-    - **Not configured** - BitLocker recovery information isn't stored in Azure AD.  
+    - **Enable** - Store the BitLocker recovery information to Microsoft Entra ID.  
+    - **Not configured** - BitLocker recovery information isn't stored in Microsoft Entra ID.  
 
-  - **BitLocker recovery Information stored to Azure Active Directory**  
+  - **BitLocker recovery Information stored to Microsoft Entra ID**  
     **Default**: Backup recovery passwords and key packages  
 
-    Configure what parts of BitLocker recovery information are stored in Azure AD. Choose from:  
+    Configure what parts of BitLocker recovery information are stored in Microsoft Entra ID. Choose from:  
     - **Backup recovery passwords and key packages**  
     - **Backup recovery passwords only**  
 
@@ -659,16 +659,16 @@ These settings apply specifically to operating system data drives.
 
     - Not configured  
     - Key rotation disabled  
-    - Key rotation enabled for Azure AD-joined deices  
-    - Key rotation enabled for Azure AD and Hybrid-joined devices  
+    - Key rotation enabled for Microsoft Entra joined deices  
+    - Key rotation enabled for Microsoft Entra ID and Hybrid-joined devices  
 
-  - **Store recovery information in Azure Active Directory before enabling BitLocker**  
+  - **Store recovery information in Microsoft Entra ID before enabling BitLocker**  
     **Default**: Not configured  
 
-    Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Azure Active Directory.  
+    Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Microsoft Entra ID.  
 
-    - **Require** - Stop users from turning on BitLocker unless the BitLocker recovery information is successfully stored in Azure AD.  
-    - **Not configured** - Users can turn on BitLocker, even if recovery information isn't successfully stored in Azure AD.  
+    - **Require** - Stop users from turning on BitLocker unless the BitLocker recovery information is successfully stored in Microsoft Entra ID.  
+    - **Not configured** - Users can turn on BitLocker, even if recovery information isn't successfully stored in Microsoft Entra ID.  
 
 - **Pre-boot recovery message and URL**  
   **Default**: Not configured  
@@ -735,26 +735,26 @@ These settings apply specifically to fixed data drives.
     - **Block** - Users can't see and change the recovery options. When set to 
     - **Not configured** - Users can see and change the recovery options when they turn on BitLocker.
 
-  - **Save BitLocker recovery information to Azure Active Directory**  
+  - **Save BitLocker recovery information to Microsoft Entra ID**  
     **Default**: Not configured  
 
-    - **Enable** - Store the BitLocker recovery information to Azure Active Directory (Azure AD).  
-    - **Not configured** - BitLocker recovery information isn't stored in Azure AD.
+    - **Enable** - Store the BitLocker recovery information to Microsoft Entra ID.  
+    - **Not configured** - BitLocker recovery information isn't stored in Microsoft Entra ID.
 
-  - **BitLocker recovery Information stored to Azure Active Directory**  
+  - **BitLocker recovery Information stored to Microsoft Entra ID**  
     **Default**: Backup recovery passwords and key packages  
 
-    Configure what parts of BitLocker recovery information are stored in Azure AD. Choose from:  
+    Configure what parts of BitLocker recovery information are stored in Microsoft Entra ID. Choose from:  
     - **Backup recovery passwords and key packages**  
     - **Backup recovery passwords only**  
 
-  - **Store recovery information in Azure Active Directory before enabling BitLocker**  
+  - **Store recovery information in Microsoft Entra ID before enabling BitLocker**  
     **Default**: Not configured  
 
-    Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Azure Active Directory.  
+    Prevent users from enabling BitLocker unless the computer successfully backs up the BitLocker recovery information to Microsoft Entra ID.  
 
-    - **Require** - Stop users from turning on BitLocker unless the BitLocker recovery information is successfully stored in Azure AD.  
-    - **Not configured** - Users can turn on BitLocker, even if recovery information isn't successfully stored in Azure AD.  
+    - **Require** - Stop users from turning on BitLocker unless the BitLocker recovery information is successfully stored in Microsoft Entra ID.  
+    - **Not configured** - Users can turn on BitLocker, even if recovery information isn't successfully stored in Microsoft Entra ID.  
 
 ### BitLocker removable data-drive settings  
 
