@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/11/2023
+ms.date: 10/31/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -73,7 +73,10 @@ See [Create the profiles](/intune/configuration/device-firmware-configuration-in
 You can also [change existing DFCI settings](/intune/configuration/device-firmware-configuration-interface-windows#update-existing-dfci-settings) on devices that are in use. In your existing DFCI profile, change the settings and save your changes. Since the profile is already assigned, the new DFCI settings take effect when next time the device syncs or the device reboots.
 
 To identify whether a device is DFCI ready, you can use the following Intune Graph API call: 
-managedDevice/deviceFirmwareConfigurationInterfaceManaged 
+
+`managedDevice/deviceFirmwareConfigurationInterfaceManaged`
+
+For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph ](/graph/api/resources/intune-graph-overview).
 
 ## OEMs that support DFCI
 
