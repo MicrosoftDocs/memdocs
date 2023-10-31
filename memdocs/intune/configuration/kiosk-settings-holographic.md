@@ -80,7 +80,7 @@ Apps in this mode are available on the start menu. These apps are the only apps 
 
   - **Auto logon (Windows 10 version 1803 and newer)**: Not supported on Windows Holographic for Business.
   - **Local user accounts**: **Add** the local (to the device) user account. The account you enter signs in to the kiosk.
-  - **Microsoft Entra user or group (Windows 10, version 1803 and later)**: Requires user credentials to sign in to the device. Select **Add** to choose Microsoft Entra users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
+  - **Azure AD user or group (Windows 10, version 1803 and later)**: Requires user credentials to sign in to the device. Select **Add** to choose Microsoft Entra users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
   - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser and Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
