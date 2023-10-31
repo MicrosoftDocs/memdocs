@@ -104,7 +104,7 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
 1. Invite VPP purchasers to join your organization and direct each user to select a unique location. 
 2. Ensure that all VPP purchasers within your organization have completed step 1 before proceeding.
 3. Verify that all purchased apps and licenses have migrated to Apps and Books in Apple Business Manager or Apple School Manager.
-4. Download the new location token by going to **Apple Business (or School) Manager** > **Settings** > **Apps and Books** > **My Server Tokens**.
+4. Download the new location token by going to **Apple Business (or School) Manager** > **Your Name** > **Preferences** > **Payments and Billing** > **Apps and Books** > **Content Tokens** > **Download**.
 5. Update the location token in Microsoft Intune admin center by going to **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens** and manually upload the token.
 
 ## Upload an Apple VPP or Apple Business Manager location token

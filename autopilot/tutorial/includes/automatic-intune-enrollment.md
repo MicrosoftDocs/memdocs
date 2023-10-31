@@ -23,7 +23,7 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
-2. Select **Azure Active Directory**.
+2. Select **Microsoft Entra ID**.
 
 3. In the **Overview** screen, under **Manage** in the left hand pane, select **Mobility (MDM and MAM)**.
 
@@ -41,7 +41,7 @@ In order for Windows Autopilot to work, devices need to be able to enroll in Int
 
         > [!NOTE]
         >
-        > The group(s) selected must be an Azure AD group that contains user objects.
+        > The group(s) selected must be a Microsoft Entra group that contains user objects.
 
 6. In the **Configure** screen, if any changes were made, select **Save**.
 

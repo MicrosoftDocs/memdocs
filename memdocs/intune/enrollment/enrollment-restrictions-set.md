@@ -133,7 +133,7 @@ The following enrollment methods are authorized for corporate enrollment:
 - The device enrolls through [Windows Autopilot](/autopilot/enrollment-autopilot).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
-- The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
+- The enrolling user is using a [device enrollment manager account](device-enrollment-manager-enroll.md).
 
 > [!NOTE]
 > Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it.
@@ -144,7 +144,10 @@ Intune marks devices going through the following types of enrollments as corpora
  
 Intune also blocks personal devices using these enrollment methods:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).
-- [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.  
+- [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.  
+
+> [!IMPORTANT] 
+> Devices joined by Workplace Join could be blocked from enrolling if they were ever previously Microsoft Entra ID-joined to the tenant. To avoid being blocked, deregister and remove the device's associated object in Microsoft Entra ID before attempting to join the device by Workplace Join.  
 
 ## Limitations  
 
@@ -164,6 +167,7 @@ Intune also blocks personal devices using these enrollment methods:
 Select the type of enrollment restriction you want to apply and create the profile:   
  * [Create device platform enrollment restrictions](create-device-platform-restrictions.md)    
  * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
+
 
 
 
