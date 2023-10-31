@@ -32,10 +32,6 @@ The 2310 release of Intune adds more clarity to the manual hardware hash upload 
 
 Starting in 2310, we're making an update to the self-deployment mode for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time self-deployment mode block, which means that the device could go through self-deployment mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices.  This update only works for OEMs that aren't within the [OEM list](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130) and doesn't work on the fix pending status.
 
-### Update: Temporary change
-
-When devices that utilize Windows Autopilot are reused, and there's a new device owner, that new device owner must contact an administrator to acquire the BitLocker recovery key for that device. Administrative unit scoped administrators will lose access to BitLocker recovery keys after device ownership changes. These scoped administrators need to contact a non-scoped administrator for the recovery keys. This change is a temporary change for scoped administrators and will be updated once a solution is in place.
-
 ### How to unblock devices
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -72,8 +68,9 @@ To ensure a smooth transition, notify your help desk of this change. Additionall
 1. Temporarily note the BitLocker recovery key prior to a restore as documented in the [BitLocker recovery guide](/windows/security/operating-system-security/data-protection/bitlocker/bitlocker-recovery-guide-plan).
 1. Contact the help desk or IT Admin to unlock BitLocker self-service access.
 
-**Update: Temporary change**  
-When devices that utilize Windows Autopilot are reused, and there is a new device owner, that new device owner must contact an administrator to acquire the BitLocker recovery key for that device. Administrative unit scoped administrators will lose access to BitLocker recovery keys after device ownership changes. These scoped administrators will need to contact a non-scoped administrator for the recovery keys. This is a temporary change for scoped administrators and will be updated once a solution is in place.
+### Update: Temporary change
+
+When devices that utilize Windows Autopilot are reused, and there's a new device owner, that new device owner must contact an administrator to acquire the BitLocker recovery key for that device. Administrative unit scoped administrators will lose access to BitLocker recovery keys after device ownership changes. These scoped administrators need to contact a non-scoped administrator for the recovery keys. This change is a temporary change for scoped administrators and will be updated once a solution is in place.
 
 ## Win32 app configurable installation time impacts the Enrollment Status Page
 
@@ -201,6 +198,5 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 ## Next steps
 
 - [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new).
-
 - [What's new in Windows client](/windows/whats-new/).
 
