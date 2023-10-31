@@ -43,7 +43,7 @@ Complete the following steps to integrate the Sophos Mobile Threat Defense solut
 Before starting the process of integrating Sophos Mobile with Intune, make sure you have the following:  
 
 - Microsoft Intune Plan 1 subscription
-- Azure Active Directory admin credentials to grant the following permissions:  
+- Microsoft Entra ID admin credentials to grant the following permissions:  
   - Sign in and read user profile  
   - Access the directory as the signed-in user  
   - Read directory data  
@@ -55,10 +55,9 @@ Before starting the process of integrating Sophos Mobile with Intune, make sure 
 The Sophos Mobile app authorization process follows:  
 
 - Allow the Sophos Mobile service to communicate information related to device health state back to Intune.  
-- Sophos Mobile syncs with Azure AD Enrollment Group membership to populate its device's database.  
-- Allow the Sophos Mobile admin console to use Azure AD Single Sign On (SSO).  
-- Allow the Sophos Mobile app to sign in using Azure AD SSO.  
-
+- Sophos Mobile syncs with Microsoft Entra Enrollment Group membership to populate its device's database.  
+- Allow the Sophos Mobile admin console to use Microsoft Entra single sign-on (SSO).  
+- Allow the Sophos Mobile app to sign in using Microsoft Entra SSO
 
 ## To set up Sophos Mobile integration  
 

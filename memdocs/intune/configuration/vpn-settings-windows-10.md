@@ -21,7 +21,7 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: abalwan, tycast
+ms.reviewer: abalwan
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection:
@@ -246,9 +246,6 @@ Example:
     - **Outbound** (default): Only allows traffic to external sites through the VPN. Inbound traffic is blocked from entering the VPN.
 
     To allow inbound and outbound, create two separate rules. Create one rule for inbound, and another rule for outbound.
-
-    > [!NOTE]
-    > This setting is coming in a future release, possibly the 2308 Intune release.
 
   - **Protocol**: Enter the port number of the network protocol you want the VPN to use, from 0-255. For example, enter `6` for TCP, or `17` for UDP.
 

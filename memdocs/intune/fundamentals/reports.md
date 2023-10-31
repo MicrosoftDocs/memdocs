@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2023
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -159,9 +159,9 @@ The report generates one row per device that hasn't been assigned a compliance p
 - **Device model** - Model information such as *Surface Book 2*, or *Galaxy Note 10*.
 - **Device ID**
 
-### Settings compliance (preview)
+### Settings compliance
 
-In public preview, this report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you’ll  see include:
+This report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you’ll  see include:
 
 - Setting name
 - Platform
@@ -170,18 +170,19 @@ In public preview, this report displays compliance settings that are deployed to
 - Not evaluated devices
 - Not applicable devices
 - Conflict devices
+
 By selecting an entry, you can drill in for more detailed information about the setting and devices that report a specific status.
 
 To generate a report that uses current data:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Settings compliance (preview)** tile.
+2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Settings compliance** tile.
 3. Use the drop-down to select which platforms the report will include.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
 
-### Policy compliance (preview)
+### Policy compliance
 
-In public preview, this report displays a list of compliance policies with a count of devices that are compliant or not compliant to each policy. After the report has been generated, The top-level details you’ll see include:
+This report displays a list of compliance policies with a count of devices that are compliant or not compliant to each policy. After the report has been generated, The top-level details you’ll see include:
 
 - Policy name
 - Platform
@@ -196,7 +197,7 @@ By selecting an entry, you can drill in for more detailed information about the 
 To generate a report that uses current data:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Policy compliance (preview)** tile.
+2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Policy compliance** tile.
 3. Use the drop-down to select which platforms the report will include.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
 
@@ -277,7 +278,7 @@ To view the **Feature update failures** report, use the following steps:
 
 The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
 
-Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security Baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
+Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
 
 | Permission | Action | Details |
 |---|---|---|

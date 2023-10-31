@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 09/11/2023
+ms.date: 09/13/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -35,7 +35,7 @@ With **Windows Autopilot for pre-provisioned deployment**, the provisioning proc
 
 :::image type="content" source="images/wg02.png" alt-text="Diagram of the OEM process with partner.":::
 
-Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and later. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Azure Active Directory joined and Hybrid Azure Active Directory joined devices.
+Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and later. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Microsoft Entra joined and Microsoft Entra hybrid joined devices.
 
 ## Prerequisites
 
@@ -49,7 +49,7 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 
 > [!IMPORTANT]
 >
-> - Because the OEM or vendor performs the pre-provisioning process, this process **doesn't require access to an end-user's on-prem domain infrastructure**. The pre-provisioning process is unlike a typical hybrid Azure AD-joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-premises by the end-user.
+> - Because the OEM or vendor performs the pre-provisioning process, this process **doesn't require access to an end-user's on-prem domain infrastructure**. The pre-provisioning process is unlike a typical Microsoft Entra hybrid joined scenario because rebooting the device is postponed. The device is resealed before the time when connectivity to a domain controller is expected, and the domain network is contacted when the device is unboxed on-premises by the end-user.
 >
 > - See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review known issues and their solutions.
 
@@ -59,18 +59,19 @@ Devices slated for pre-provisioning are registered for Autopilot via the normal 
 
 To be ready to try out Windows Autopilot for pre-provisioned deployment, make sure that you can first successfully use existing Windows Autopilot user-driven scenarios:
 
-- User-driven Azure AD join. Make sure that you can deploy devices using Windows Autopilot and join them to an Azure Active Directory tenant.
+- User-driven Microsoft Entra join. Make sure that you can deploy devices using Windows Autopilot and join them to an Azure Active Directory tenant.
 
-- User-driven with Hybrid Azure AD join. To enable the features of hybrid Azure AD join, make sure that you can:
+- User-driven with Microsoft Entra hybrid join. To enable the features of Microsoft Entra hybrid join, make sure that you can:
   - Deploy devices using Windows Autopilot.
   - Join the devices to an on-premises Active Directory domain.
-  - Register the devices with Azure Active Directory.
+  - Register the devices with Microsoft Entra ID.
 
 If these scenarios can't be completed, Windows Autopilot for pre-provisioned deployment also doesn't succeed since it builds on top of these scenarios.
 
-Before starting the pre-provisioning process in the provisioning service facility, you must configure another Autopilot profile setting by using your Intune account:
+Before starting the pre-provisioning process in the provisioning service facility, you must configure another Autopilot profile setting by using your Intune account. A detailed tutorial on how to configure an Autopilot profile for pre-provisioning is available in the following articles:
 
-:::image type="content" source="images/allow-white-glove-oobe.png" alt-text="Screenshot of the Out-of-box experience (OOBE) portal and the highlighted setting to allow pre-provisioning":::
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Azure AD join in Intune](tutorial/pre-provisioning/azure-ad-join-workflow.md)
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md)
 
 The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
 
@@ -89,19 +90,17 @@ The pre-provisioning process applies all device-targeted policies from Intune. T
 
 Windows Autopilot for pre-provisioned deployment supports two distinct scenarios:
 
-- User-driven deployments with Azure AD join. The device is joined to an Azure AD tenant.
-- User-driven deployments with hybrid Azure AD join. The device is joined to an on-premises Active Directory domain, and separately registered with Azure AD.
+- User-driven deployments with Microsoft Entra join. The device is joined to a Microsoft Entra tenant.
+- User-driven deployments with Microsoft Entra hybrid join. The device is joined to an on-premises Active Directory domain, and separately registered with Microsoft Entra ID.
 
-Each of these scenarios consists of two parts, a technician flow and a user flow. At a high level, these parts are the same for Azure AD join and hybrid Azure AD join. The differences are primarily seen by the end user in the authentication steps.
+Each of these scenarios consists of two parts, a technician flow and a user flow. At a high level, these parts are the same for Microsoft Entra join and Microsoft Entra hybrid join. The differences are primarily seen by the end user in the authentication steps.
 
 ### Technician flow
 
 After the customer or IT Admin has targeted all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
-- From the first OOBE screen (which could be a language selection, locale selection screen, or the Azure AD sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
-
-:::image type="content" source="images/choice.png" alt-text="Screenshot of the Windows Autopilot provisioning option.":::
+- From the first OOBE screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
 
 - On the **Windows Autopilot Configuration** screen, it displays the following information about the device:
   - The Autopilot profile assigned to the device.
@@ -115,23 +114,21 @@ After the customer or IT Admin has targeted all the apps and settings they want 
 
 - Validate the information displayed. If any changes are needed, make the changes, and then select **Refresh** to redownload the updated Autopilot profile details.
 
-:::image type="content" source="images/landing.png" alt-text="Screenshot of the Windows Autopilot configuration screen.":::
-
 - Select **Provision** to begin the provisioning process.
 
 If the pre-provisioning process completes successfully:
 
-- A green status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
-:::image type="content" source="images/white-glove-result.png" alt-text="Screenshot of a green configuration screen.":::
+- A success status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
+
 - Select **Reseal** to shut down the device. At that point, the device can be shipped to the end user.
 
 > [!NOTE]
 >
-> Technician flow inherits behavior from [self-deploying mode](self-deploying.md). Per the Self-Deploying Mode documentation, it uses the Enrollment Status Page to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration are done applying. As such, if Enrollment Status Page is disabled, the reseal button may appear before software and configuration is done applying letting you proceed to the user flow before technician flow provisioning is complete. The green screen validates that enrollment was successful, not that the technician flow is necessarily complete.
+> Technician flow inherits behavior from [self-deploying mode](self-deploying.md). Per the Self-Deploying Mode documentation, it uses the Enrollment Status Page to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration are done applying. As such, if Enrollment Status Page is disabled, the reseal button may appear before software and configuration is done applying letting you proceed to the user flow before technician flow provisioning is complete. The success screen validates that enrollment was successful, not that the technician flow is necessarily complete.
 
 If the pre-provisioning process fails:
 
-- A red status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
+- An error status screen appears with information about the device, including the same details presented previously. For example, Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
 - Diagnostic logs can be gathered from the device, and then it can be reset to start the process over again.
 
 ### User flow
@@ -142,15 +139,15 @@ If the pre-provisioning process completed successfully and the device was reseal
 
 - Select the appropriate language, locale, and keyboard layout.
 
-- Connect to a network (if using Wi-Fi). Internet access is always required. If using hybrid Azure AD Join, there must also be connectivity to a domain controller.
+- Connect to a network (if using Wi-Fi). Internet access is always required. If using Microsoft Entra hybrid join, there must also be connectivity to a domain controller.
 
-- If using Azure AD join, on the branded sign-on screen, enter the user's Azure Active Directory credentials.
+- If using Microsoft Entra join, on the branded sign-on screen, enter the user's Microsoft Entra credentials.
 
-- If using hybrid Azure AD Join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
+- If using Microsoft Entra hybrid join, the device will reboot; after the reboot, enter the user's Active Directory credentials.
 
   > [!NOTE]
   >
-  > In certain circumstances, Azure AD credentials may also be prompted for during a hybrid Azure AD join scenario. For example, if ADFS isn't being used.
+  > In certain circumstances, Microsoft Entra credentials may also be prompted for during a Microsoft Entra hybrid join scenario. For example, if ADFS isn't being used.
 
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
@@ -158,7 +155,7 @@ The device ESP reruns during the user flow so that both device and user ESP run 
 
 > [!NOTE]
 >
-> If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+> If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Related articles
 

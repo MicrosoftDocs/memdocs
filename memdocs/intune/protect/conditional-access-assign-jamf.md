@@ -5,8 +5,8 @@ title: Use Intune compliance and Azure AD Conditional Access policies with Jamf 
 titleSuffix: Microsoft Intune
 description: Create Intune compliance policies and Azure AD Conditional Access to help secure Jamf-managed devices.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/30/2023
 ms.topic: how-to
@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- conditional-access
 ---
 
 # Enforce compliance on Macs managed with Jamf Pro
@@ -42,6 +43,9 @@ ms.collection:
 > If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 >
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
+
+> [!TIP]
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
 
 After you integrate Jamf Pro with Intune, configure Intune compliance policies and Azure Active Directory (Azure AD) Conditional Access policies to enforce compliance of macOS devices with your organizational requirements.
 

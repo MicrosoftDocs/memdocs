@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 10/05/2023
 ms.topic: overview
 ms.subservice: protect
 ms.service: microsoft-intune
@@ -37,7 +37,7 @@ Microsoft Intune can help you keep your managed devices secure and up to date wh
 
 This article highlights many of Intune’s built-in capabilities and partner technologies you can integrate with Intune. As you learn more about them, you can bring several together for more comprehensive solutions on your journey towards a zero-trust environment.
 
-From the Microsoft Intune admin center, Intune [supports managed devices](../fundamentals/supported-devices-browsers.md#intune-supported-operating-systems) that run Android, iOS/iPad, macOS, and Windows 10.
+From the Microsoft Intune admin center, Intune [supports managed devices](../fundamentals/supported-devices-browsers.md#intune-supported-operating-systems) that run Android, iOS/iPad, Linux, macOS, and Windows 10 and Windows 11.
 
 When you use Configuration Manager to manage on-premises devices, you can extend Intune policies to those devices by configuring [tenant attach](../protect/tenant-attach-intune.md) or [co-management](../../configmgr/comanage/overview.md).
 
@@ -45,7 +45,9 @@ Intune can also work with information from devices that you manage with third-pa
 
 ## Protect devices through policies
 
-Deploy Intune’s *device configuration and device compliance* policies to configure devices to meet your organizations security goals. Policies support one or more profiles, which are the discrete sets of platform-specific rules you deploy to groups of enrolled devices.
+Deploy Intune’s *endpoint security*, *device configuration*, and *device compliance* policies to configure devices to meet your organizations security goals. Policies support one or more profiles, which are the discrete sets of platform-specific rules you deploy to groups of enrolled devices.
+
+- With [endpoint security policies](../protect/endpoint-security.md), deploy security focused policies that are designed to help you focus on the security of your devices and mitigate risk. The available tasks can help you identify at-risk devices, to remediate those devices, and restore them to a compliant or more secure state.
 
 - With [device configuration policies](../configuration/device-profiles.md), manage profiles that define the settings and features that devices use in your organization. Configure devices for endpoint protection, provision certificates for authentication, set software update behaviors, and more.
 
@@ -55,7 +57,7 @@ Deploy Intune’s *device configuration and device compliance* policies to confi
 
   When you add [Conditional Access](../protect/conditional-access.md) to the mix, configure policies that allow only compliant devices to access your network and organization’s resources. Access restrictions can include file shares and company email. Conditional Access policies also work with the device state data reported by third-party [device compliance partners](../protect/device-compliance-partners.md) you integrate with Intune.
 
-Following are a few of the security settings and tasks you can manage through device policy:
+Following are a few of the security settings and tasks you can manage through available policies:
 
 - **Device encryption** – Manage [BitLocker](../protect/encrypt-devices.md) on Windows 10 devices, and [FileVault](../protect/encrypt-devices-filevault.md) on macOS.
 
@@ -68,14 +70,18 @@ Following are a few of the security settings and tasks you can manage through de
     - Set PIN and password requirements that must be met before gaining access to resources.
     - Enable [Windows Hello for Business](../protect/windows-hello.md) for Windows 10 devices.
 
-- **Virtual private networks (VPNs)** – With VPN profiles, assign VPN settings to devices so they can easily connect to your organization’s network. Intune supports several [VPN connection types](../configuration/vpn-settings-configure.md#vpn-connection-types) and apps, that include both built-in capabilities for some platforms and both first and third-party VPN apps for devices.
+- **Virtual private networks (VPNs)** – With VPN profiles, assign VPN settings to devices so they can easily connect to your organization’s network. Intune supports several [VPN connection types](../configuration/vpn-settings-configure.md#vpn-connection-types) and apps that include both built-in capabilities for some platforms and both first and third-party VPN apps for devices.
 
-- **Software updates** – Manage how and when devices get software updates.
+- **Software updates** – Manage how and when devices get software updates. The following are supported:
 
-  - For [iOS](../protect/software-updates-ios.md), manage device operating system versions, and when devices check for and install updates.
-  - For [Windows 10](../protect/windows-update-for-business-configure.md), you can manage the Windows Update experience for devices. You can configure when devices scan or install updates, hold a set of your managed devices at specific feature versions, and more.
+  - Android *firmware* updates:
+    - [Firmware Over-the-Air (FOTA)](../protect/fota-updates-android.md) - Supported by some OEMs, you can use FOTA to remotely update firmware of devices.
+    - [Zebra LifeGuard Over-the-Air (LG OTA)](../protect/zebra-lifeguard-ota-integration.md) - Manage firmware updates for supported Zebra devices through the Intune admin center.
+  - [iOS](../protect/software-updates-ios.md) - Manage device operating system versions, and when devices check for and install updates.
+  - [macOS](../protect/software-updates-macos.md) - Manage software updates for macOS devices that enrolled as supervised devices.
+  - [Windows 10](../protect/windows-update-for-business-configure.md), you can manage the Windows Update experience for devices. You can configure when devices scan or install updates, hold a set of your managed devices at specific feature versions, and more.
 
-- **Security Baselines** – Deploy [security baselines](../protect/security-baselines.md) to establish a core security posture on your Windows 10 devices. Security baselines are pre-configured groups of Windows settings that are recommended by the relevant product teams. You can use baselines as provided or edit instances of them to meet your security goals for targeted groups of devices.
+- **Security baselines** – Deploy [security baselines](../protect/security-baselines.md) to establish a core security posture on your Windows 10 devices. Security baselines are preconfigured groups of Windows settings that come recommended by the relevant product teams. You can use baselines as provided or edit instances of them to meet your security goals for targeted groups of devices.
 
 ## Protect data through policies
 
@@ -115,29 +121,25 @@ Following are examples of actions you can run that help secure devices and data:
 
 - Retire
 - Wipe
-- Sync (force a device to immediately check in with Intune to find new policies or pending actions)
+- Sync (force a device to immediately check-in with Intune to find new policies or pending actions)
 
-## Integrate with other products
+## Integrate with other products and partner technologies
 
 Intune supports integration with partner apps from both first-party and third-party sources, which expand on its built-in capabilities. You can also integrate Intune with several Microsoft technologies.
 
-### Partner Technologies
+### Compliance partners
 
-Intune can use data from integrated compliance partners and mobile threat defense partners:
-
-- **Compliance partners** – Learn about [device compliance partners](../protect/device-compliance-partners.md) with Intune. When you manage a device with a mobile device management partner other than Intune, you can integrate that compliance data with Azure Active Directory. When integrated, the partner data can be used by Conditional Access policies along-side compliance data from Intune.
-
-- **Mobile Threat defense** – Mobile threat defense apps can scan devices for threats and help you identify the risk of allowing the device to access your organization’s resources and data. You can then use that risk level in various policies, like Conditional Access policies, to help gate access to those resources.
+Learn about using [device compliance partners](../protect/device-compliance-partners.md) with Intune. When you manage a device with a mobile device management partner other than Intune, you can integrate that compliance data with Microsoft Entra ID. When integrated, Conditional Access policies can use the partner data along-side compliance data from Intune.
 
 ### Configuration Manager
 
 You can use many Intune policies and device actions to [protect the devices you manage with Configuration Manager](../protect/endpoint-security-manage-devices.md). To support those devices, configure [co-management](../../configmgr/comanage/overview.md) or [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md). You can also [use both together](../../configmgr/comanage/faq.yml#should-i-use-co-management-or-tenant-attach-) with Intune.
 
-- *Co-management* enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services.
+- With *Co-management*, you can concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services.
 
-- *Tenant attach* sets up synchronization between your Configuration Manager site and your Intune tenant. This synchronization provides you with a single view for all devices that you manage with Microsoft Intune.
+- With *Tenant attach*, you set up synchronization between your Configuration Manager site and your Intune tenant. This synchronization provides you with a single view for all devices that you manage with Microsoft Intune.
 
-After establishing a connection between Intune and Configuration Manager, devices from Configuration Manager are available in the Microsoft Intune admin center. You can then deploy Intune policies to those devices or use device actions to protect them.
+After a connection between Intune and Configuration Manager is established, devices from Configuration Manager are available in the Microsoft Intune admin center. You can then deploy Intune policies to those devices or use device actions to protect them.
 
 Some of the protections you can apply include:
 
@@ -147,11 +149,11 @@ Some of the protections you can apply include:
 - Apply security baselines.
 - Manage Windows Updates.
 
-### Mobile Threat Defense apps
+### Mobile threat defense apps
 
-Mobile Threat Defense (MTD) apps actively scan and analyze devices for threats. When you integrate (connect) [Mobile Threat Defense](../protect/mobile-threat-defense.md) apps with Intune, you gain the apps assessment of a devices threat level. Evaluation of a device threat level is an important tool for protecting your organization’s resources from compromised mobile devices.
+Mobile Threat Defense (MTD) apps actively scan and analyze devices for threats. When you integrate (connect) [Mobile Threat Defense](../protect/mobile-threat-defense.md) apps with Intune, you gain the apps assessment of a devices threat level. Evaluation of a device threat or risk level is an important tool for protecting your organization’s resources from compromised mobile devices. You can then use that threat level in various policies, like Conditional Access policies, to help gate access to those resources.
 
-Use threat-level data with policies for device compliance, app protection, and Conditional Access. These policies use the data to help block non-compliant devices from accessing your organization’s resources.
+Use threat-level data with policies for device compliance, app protection, and Conditional Access. These policies use the data to help block noncompliant devices from accessing your organization’s resources.
 
 With an integrated MTD app:
 
@@ -161,7 +163,7 @@ With an integrated MTD app:
   - Define Conditional Access policies that consider a devices threat level.
   - Define app protection policies to determine when to block or allow access to data, based on the threat level of the device.
 
-- For [devices that don't enroll with Intune](../protect/mtd-app-protection-policy.md) but run an MTD app that's integrated with Intune, use their threat level data with your app protection policies to help block access to your organization’s data.
+- For [devices that don't enroll with Intune](../protect/mtd-app-protection-policy.md) but run an MTD app that integrates with Intune, use their threat level data with your app protection policies to help block access to your organization’s data.
 
 Intune supports integration with:
 
@@ -188,7 +190,7 @@ On its own, Microsoft Defender for Endpoint provides several security focused be
   
 ### Conditional Access
 
-Conditional Access is an Azure Active Directory (Azure AD) capability that [works with Intune](../protect/conditional-access.md) to help protect devices. For devices that register with Azure AD, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
+Conditional Access is a Microsoft Entra ID capability that [works with Intune](../protect/conditional-access.md) to help protect devices. For devices that register with Microsoft Entra ID, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
 
 Combine Conditional Access policy with:
 
@@ -201,6 +203,20 @@ Conditional Access also works with the following to help you keep devices secure
 - Microsoft Defender for Endpoint and third-party MTD apps
 - Device compliance partner apps
 - Microsoft Tunnel
+
+## Add Endpoint Privilege Management
+
+Endpoint Privilege Management (EPM) allows you to run your Windows users as standard users while elevating privileges only when needed, as designed by organizational rules and parameters set by your organization. This design supports the enforcement of least privilege access, a core tenant of a Zero Trust security architecture. EPM enables IT teams to manage standard users more efficiently and limit their attack surface by only allowing employees to run as administrators for specific, approved applications or tasks.
+
+Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+
+By deploying EPM *elevation rules* that you define, you can allow only the applications you trust to run in the elevated context. For example, your rules can require a *file hash* match or the presence of a *certificate* to validate the files integrity before it runs on a device.
+
+> [!TIP]
+>
+> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/intune-add-ons.md) which requires an additional license to use, and supports Windows 10 and Windows 11 devices.
+
+For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
 
 ## Next steps
 

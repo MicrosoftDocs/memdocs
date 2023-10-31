@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 09/29/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -98,7 +98,9 @@ You'll need one of the following developer guides to help you integrate the Intu
 * **[Intune App SDK Xamarin Bindings guide](app-sdk-xamarin.md)**: This document will help you build iOS and Android apps using Xamarin for Intune app protection policies.
 
 > [!IMPORTANT]
-> Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
+> Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
+> 
+> Plan to take mandatory Intune App SDK updates prior to every major OS release to ensure your app continues to run smoothly as OS updates can cause breaking changes. If you do not update to the latest version prior to a major OS release, you may run the risk of encountering a breaking change and/or being unable to apply app protection policies to your app.
 
 ## Enable your iOS or Android app for app based Conditional Access
 
@@ -178,11 +180,11 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
 * **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install). 
 
-### Give your app access to the Intune app protection service (optional)
+### Give your app access to the Intune Mobile App Management service
 
 If your app is using its own custom Azure Active Directory (AAD) settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**. 
 
-Once you have registered your app within an Azure tenant, and it's showing up under **All Applications**, you must give your app access to the Intune app protection service (previously known as MAM service). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
+Once you have registered your app within an Azure tenant, and it's showing up under **All Applications**, you must give your app access to the Intune Mobile App Management service. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
 1. Go to the **Azure Active Directory** blade.
 2. Under **App registrations**, go to the listing set up for the application.

@@ -8,24 +8,24 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 08/10/2023
+ms.date: 09/25/2023
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
   - m365initiative-coredeploy
   - highpri
   - tier2
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
+  - ✅ <a href="https://learn.microsoft.com/hololens/hololens-release-notes" target="_blank">Windows Holographic</a> 
 ---
 
 # Manually register devices with Windows Autopilot
 
-*Applies to:*
+You can perform Windows Autopilot device registration within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-values (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. For this reason, this process is primarily for testing and evaluation scenarios.
 
-- Windows 11
-- Windows 10
-- Windows Holographic, version 2004
-
-You can perform Windows Autopilot device registration within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-values (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. So, this process is primarily for testing and evaluation scenarios.
+You can manually register up to 500 devices per CSV file through the portal. Before proceeding with additional devices, check that the previous CSV file batch has been successfully registered. If you're transferring devices hashes from one tenant to another tenant, see [Support tip: How to transfer Windows Autopilot devices between tenants](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-transfer-windows-autopilot-devices-between/ba-p/3920555) for additional guidance.
 
 Device owners can only register their devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
 
@@ -39,7 +39,7 @@ This article provides step-by-step guidance for manual registration. For more in
 
 - [Intune subscription](/mem/intune/fundamentals/licenses)
 - [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
-- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium)
 
 ## Required permissions
 
@@ -115,7 +115,7 @@ To install the script directly and capture the hardware hash from the local comp
 
    > [!NOTE]
    >
-   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules may require approval of additional permissions in Azure AD when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules may require approval of additional permissions in Microsoft Entra ID when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 1. You're prompted to sign in. An account with the Intune Administrator role is sufficient, and the device hash is uploaded automatically.
 
@@ -176,7 +176,7 @@ Keep these other requirements for the CSV file in mind:
 
 > [!IMPORTANT]
 >
-> Use a plain-text editor with this CSV file, like Notepad. Don't use Microsoft Excel. Because of the requirements, editing an Excel file and saving it as `.csv` doesn't generate a usable file for importing to Intune.
+> Use a plain-text editor such as Notepad with this CSV file. Don't use Microsoft Excel. Editing and saving the CSV file with Microsoft Excel doesn't generate a usable file for importing to Intune.
 
 When you upload a CSV file to assign a user, make sure that you assign valid User Principal Names (UPNs). If you assign an invalid UPN (that is, an incorrect username), your device might be inaccessible until you remove the invalid assignment.
 
@@ -188,11 +188,11 @@ Now that you've captured hardware hashes in a CSV file, you can add Windows Auto
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
-   ![Screenshot of selections in the admin center for importing Windows Autopilot devices.](images/autopilot-import-device.png)
+   :::image type="content" source="images/autopilot-import-device.png" alt-text="Screenshot of selections in the admin center for importing Windows Autopilot devices.":::
 
 1. Under **Add Windows Autopilot devices**, browse to the CSV file that lists the devices that you want to add.
 
-   ![Screenshot of the box for specifying the path to a list of Windows Autopilot devices.](media/enrollment-autopilot/autopilot-import-device-2.png)
+   :::image type="content" source="media/enrollment-autopilot/autopilot-import-device-2.png" alt-text="Screenshot of the box for specifying the path to a list of Windows Autopilot devices.":::
 
 1. Select **Import** to start importing the device information. Importing can take several minutes.
 
@@ -220,7 +220,7 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 
 > [!NOTE]
 >
-> Device names can be configured for all devices but are ignored in Hybrid Azure Active Directory (Azure AD) deployments. The device name still comes from the domain join profile for Hybrid Azure AD devices.
+> Device names can be configured for all devices but are ignored in Hybrid Microsoft Entra deployments. The device name still comes from the domain join profile for Hybrid Microsoft Entra devices.
 
 ## Delete Autopilot devices
 
@@ -230,13 +230,13 @@ You can delete Windows Autopilot devices that aren't enrolled in Intune:
 
 1. Choose the devices that you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
 
-Completely removing a device from your tenant requires you to delete the Intune, Azure AD, and Windows Autopilot device records. You can do all these deletions from Intune, in this order:
+Completely removing a device from your tenant requires you to delete the Intune, Microsoft Entra ID, and Windows Autopilot device records. You can do all these deletions from Intune, in this order:
 
 1. If the devices are enrolled in Intune, [delete them from the Intune All devices pane](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
 
 1. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices that you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
 
-1. Delete the devices from Azure AD at **Devices** > **Azure AD devices**.
+1. Delete the devices from Microsoft Entra ID at **Devices** > **Microsoft Entra devices**.
 
 ## Next steps
 

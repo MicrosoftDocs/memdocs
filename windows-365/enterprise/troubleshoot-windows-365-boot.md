@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 5/25/2023
+ms.date: 09/26/2023
 ms.topic: troubleshooting
 ms.service: windows-365
 ms.subservice: 
@@ -42,7 +42,7 @@ If the user can't access the Cloud PC from the Windows 365 Boot physical device,
     - The browser at windows365.microsoft.com.
     - The Windows 365 app on another (non-Windows 365 Boot) device.
 2. If you can log into the Cloud PC from either method, then there's an issue with the Windows 365 Boot physical device. In this case, confirm that the physical device is correctly configured and has the requisite software versions. For more information, see [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
-3. Admins can try to manually click on **Device sync** to get the policies delivered faster on the device. Users cany try to restart the device.
+3. Admins can try to manually click on **Device sync** to get the policies delivered faster on the device. Users can try to restart the device.
 
 ## Physical device registry key configuration
 
@@ -68,7 +68,7 @@ This command shows all the Microsoft-maintained apps (like QuickAssist, Microsof
 - Windows 365 app version 1.1.162.0 or later.
 - Azure Virtual Desktop (HostApp) app version 1.2.4159. or later.
 
-Windows 365 Boot also requires that the physical device is in the **Beta channel of the Windows Insider Program**.
+Windows 365 Boot also requires the latest version of Windows 11.
 
 ## Remove Windows 365 Boot from the physical device
 
@@ -99,7 +99,7 @@ If you're still unable to troubleshoot the problem, you can contact Microsoft su
 
 ## Collect local logs
 
-Windows 365 and Azure AD log information is helpful to Microsoft support. Collect it beforehand from the following locations:
+Windows 365 and Microsoft Entra ID log information is helpful to Microsoft support. Collect it beforehand from the following locations:
 
 - C:\Users\\{username}\AppData\Local\Temp\DiagOutputDir\Windows365\Logs  
 - C:\Users\\{username}\AppData\Local\Temp\DiagOutputDir\RdClientAutoTrace
@@ -120,7 +120,7 @@ You can find the Windows 365 Session ID in error dialog boxes. For example, the 
 
 ### Correlation ID
 
-You can find the Correlation ID in the interstitial screen displayed during a two-minute timeout.
+You can find the Correlation ID in the interstitial screen displayed during a five-minute timeout.
 
 ![Screenshot of connection issue dialog box.](./media/troubleshoot-windows-365-boot/connection-issue.png)
 

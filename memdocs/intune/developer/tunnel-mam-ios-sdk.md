@@ -96,9 +96,9 @@ The following image describes the flow from a managed app that's successfully in
 :::image type="content" source="./media/tunnel-mam-ios-sdk/tunnel-for-mam-ios-flow.png" alt-text="Drawing of the Microsoft Tunnel Gateway for MAM on iOS/iPadOS architecture in Microsoft Intune." lightbox="./media/tunnel-mam-ios-sdk/tunnel-for-mam-ios-flow.png":::
 
 0. Upon initial launch of the app, a connection is made using the Microsoft Tunnel for MAM SDK for iOS.  
-1. The tunnel gets a device authentication token from Azure AD.
+1. The tunnel gets a device authentication token from Microsoft Entra ID.
 
-    If the device signed in to another MAM enabled app, such as Outlook, Edge, or Microsoft 365 mobile app, then the device may already have an Azure AD authentication token. If a valid authentication token already exists, then the existing token is used.
+    If the device signed in to another MAM enabled app, such as Outlook, Edge, or Microsoft 365 mobile app, then the device may already have a Microsoft Entra authentication token. If a valid authentication token already exists, then the existing token is used.
 
 2. A TCP Connect happens, which is a TLS Handshake between the token and the tunnel server.
 3. If UDP is enabled on the Microsoft Tunnel Gateway, then a data-channel connection using DTLS is made. If UDP is disabled, then TCP establishes the data channel to Tunnel gateway.
@@ -161,7 +161,7 @@ To enable the Tunnel for MAM iOS SDK, use the following steps:
 
 In the `info.plist` for the Xcode app project, confirm the following settings:
 
-- **Bundle ID**: Make sure the same Bundle ID listed in the [Azure AD App registration for the iOS mobile app](../protect/microsoft-tunnel-mam-ios.md) is the same Bundle ID in your app project:
+- **Bundle ID**: Make sure the same Bundle ID listed in the [Microsoft Entra App registration for the iOS mobile app](../protect/microsoft-tunnel-mam-ios.md) is the same Bundle ID in your app project:
 
   To check the Bundle ID:
 
@@ -190,12 +190,12 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
 
       :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-info-url-types-xcode.png" alt-text="Screenshot that shows selecting project, targets, info, URL types in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-info-url-types-xcode.png":::
 
-- **IntuneMAMSettings**: Confirm the following MSAL settings are configured with the appropriate Azure AD app registration values:
+- **IntuneMAMSettings**: Confirm the following MSAL settings are configured with the appropriate Microsoft Entra app registration values:
 
   1. Go to **PROJECT** > **TARGETS** > **Info**.
   2. Select **IntuneMAMSettings**. Confirm your settings:
 
-      - `ADALAuthority`: Enter the Azure AD tenant ID, like `https://login.microsoftonline.com/USE_YOUR_ Directory (tenant) ID`.
+      - `ADALAuthority`: Enter the Microsoft Entra tenant ID, like `https://login.microsoftonline.com/USE_YOUR_ Directory (tenant) ID`.
       - `ADALClientId`: Enter the application client ID.
       - `ADALRedirectUri`: Enter `msauth.$(PRODUCT_BUNDLE_IDENTIFIER):/auth`.
 
@@ -321,7 +321,7 @@ When integrating the Microsoft Tunnel for MAM iOS SDK into mobile apps, the foll
   - Device OS version
 - Admin and account information
   - Intune Tenant ID
-  - Azure AD tenant ID
+  - Microsoft Entra tenant ID
 - Usage measurement:  
   - VPN initialization
   - VPN connect and disconnect events

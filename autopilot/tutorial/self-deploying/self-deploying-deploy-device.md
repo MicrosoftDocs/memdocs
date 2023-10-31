@@ -33,7 +33,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Deploy the device
 
-Once all of the configurations for the Windows Autopilot self-deploying deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
+Once all of the configurations for the Windows Autopilot self-deploying deployment have been completed on the Intune and Microsoft Entra ID side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
 
 To start the Autopilot deployment process on the device, select a device that is part of the device group created in the previous [Create a device group](self-deploying-device-group.md) step, and then follow these steps:
 
@@ -49,7 +49,7 @@ To start the Autopilot deployment process on the device, select a device that is
 
 5. Once **Device setup** and the device ESP process completes, the Windows Autopilot self-deploying deployment is complete, and the Windows sign-on screen appears.
 
-6. At this point, the end-user can sign into the device using their Azure AD credentials. When the user signs in, the user ESP and **Account setup** phase runs. Once user ESP and **Account setup** completes, the provisioning process completes, the Desktop appears, and the end-user can start using the device.
+6. At this point, the end-user can sign into the device using their Microsoft Entra credentials. When the user signs in, the user ESP and **Account setup** phase runs. Once user ESP and **Account setup** completes, the provisioning process completes, the Desktop appears, and the end-user can start using the device.
 
 ## Deployment tips
 

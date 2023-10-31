@@ -5,10 +5,10 @@ title: Enable use of Windows diagnostic data by Intune
 titleSuffix: Microsoft Intune
 description: Enable Windows diagnostic data in processor configuration for your tenant to enable its use by Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/28/2022
+ms.date: 10/05/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- privacy
 ---
 
 # Enable use of Windows diagnostic data by Intune
@@ -57,7 +58,7 @@ The following features require you to enable this support:
 To enable support, set **Enable features that require Windows diagnostic data in processor configuration** to **On**. By default, it's *Off*.
 
 - While there are other methods to enable this support for a tenant, this toggle only reflects your configuration choice for Intune features.
-- Changing this toggle from *On* to *Off* will disable use of Intune features that require this configuration but might not turn off processor configuration configured by other methods.
+- Changing this toggle from *On* to *Off* disables use of Intune features that require this configuration but might not turn off processor configuration configured by other methods.
 
 To learn more about this configuration, see [Enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration) in the Windows privacy documentation.
 

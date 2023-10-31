@@ -4,10 +4,10 @@
 title: Use Windows compatibility reports for Windows 10 and Windows 11 updates in Intune
 description: Use the app and driver compatibility reports for Windows 10 and Windows 11 devices before you deploy Intune policies for feature updates or update rings.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/09/2022
+ms.date: 10/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -91,10 +91,10 @@ To use this report:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
 3. Configure settings:
-   - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
-   - Click on **Select Scope (Tags)** and choose which devices should be in scope for this report.
+   - Select **Select Target OS** and choose the version of Windows you plan to deploy.
+   - Select **Select Scope (Tags)** and choose which devices should be in scope for this report.
    - Optionally select **Ownership** and **Readiness status** to refine the report.
-   - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
+   - Select **Generate report**. This process can take several minutes. You're notified when report generation is complete.
 
 > [!IMPORTANT]
 > The data in this report is made available on-demand only. You must configure the Target OS and Scope (Tags) settings, and then click **Generate report** for data to appear in the report.
@@ -102,7 +102,7 @@ To use this report:
 [![Screen shot of the Windows feature update device readiness report.](./media/windows-update-compatibility-reports/device-readiness-report.png)](./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
 
 >[!NOTE]  
-> When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps above and click **Generate again**.
+> When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps provided and select **Generate again**.
 
 The following columns are available in this report:
 
@@ -118,8 +118,8 @@ The following columns are available in this report:
 The following applies to **Readiness status**:
 
 - **Low risk** - There are no known compatibility risks associated with the device.
-- **Medium risk** - There are only minor, or non-blocking, compatibility risks associated with this device, such as applications that will be automatically removed during upgrade.
-- **High risk** - There are multiple or blocking compatibility risks associated with this device, such as applications that will block an upgrade.
+- **Medium risk** - There are only minor, or non-blocking, compatibility risks associated with this device, such as applications that are automatically removed during upgrade.
+- **High risk** - There are multiple or blocking compatibility risks associated with this device, such as applications that block an upgrade.
 - **Replace device** - The device isn't capable of upgrading to the target OS version.
 - **Upgraded** - The device is already running a version of Windows equal to or greater than the target OS version.
 - **Unknown** - A readiness status couldn't be determined. Ensure that the device is properly configured to send Windows diagnostic data.
@@ -144,14 +144,14 @@ To use this report:
 2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
 3. Configure settings:
 
-   - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
+   - Select **Select Target OS** and choose the version of Windows you plan to deploy.
    - Optionally select **Asset type** and **Risk status** to refine the report.
-   - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
+   - Select **Generate report**. This process can take several minutes. You are notified when report generation is complete.
 
 [![Screen shot of the Windows feature update compatibility risks report.](./media/windows-update-compatibility-reports/compatibility-risks-report.png)](./media/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox)
 
 > [!NOTE]
-> When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps above and click **Generate again**.
+> When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps provided and select **Generate again**.
 
 The following columns are available in this report:
 
@@ -166,7 +166,7 @@ The following columns are available in this report:
 For more information about a specific compatibility risk, including which devices are potentially impacted, select the number in the **Affected devices** column to open the details flyout. The tabs on the details flyout include:
 
 - **Overview** - A summary of the compatibility risk, including asset details and the compatibility assessment. When available, the **Guidance** section provides recommended actions to mitigate the compatibility risk.
-- **Affected devices** - A table of the devices that may be impacted by this compatibility risk.
+- **Affected devices** - A table of the devices that might be impacted by this compatibility risk.
 
 ### Issue descriptions
 
@@ -174,7 +174,7 @@ We use information from the Microsoft app compatibility database to describe any
 
 #### Application is removed during upgrade
 
-Windows detected compatibility issues with an application. The application won't migrate to the new OS version. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
+Windows detected compatibility issues with an application. The application isn't migrated to the new OS version. No action is required for the upgrade to continue. Install a compatible version of the application on the new OS version.
 
 <!-- 3594545 -->
 Windows can partially or fully remove these assets:
@@ -186,7 +186,7 @@ In both the cases, after you upgrade Windows, you can't use the app.
 
 #### Blocking upgrade
 
-Windows detected blocking issues, and can't remove the application during upgrade. It may not work on the new OS version. Before you upgrade, remove the application, reinstall and test it on the new OS version.
+Windows detected blocking issues, and can't remove the application during upgrade. It might not work on the new OS version. Before you upgrade, remove the application, reinstall and test it on the new OS version.
 
 #### Blocking upgrade, but can be reinstalled after upgrading
 
@@ -229,7 +229,7 @@ The application is compatible with the new OS version, but you need to reinstall
 The currently installed version of a driver won't migrate to the new OS version. 
 
 - The driver won't migrate to the new OS version and Windows doesn't have a compatible version. In this case, we recommend checking with the independent hardware vendor (IHV) who manufactures the driver, or the original equipment manufacturer (OEM) who provided the device.
-- A new driver will be installed during upgrade, and a newer version may be available from Windows Update. If the computer automatically receives updates from Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows.
+- A new driver is installed during upgrade, and a newer version is available from a Windows Update. If the computer automatically receives updates from the Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows.
 
 #### Safeguards
 
@@ -327,7 +327,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | Driver | 3 | Blocking upgrade. | Can't upgrade.   |
 
 > [!NOTE]  
-> **Guidance** information is not included in the .csv export file. The mapping table above includes **Guidance** data for each **Issue** type.
+> **Guidance** information is not included in the .csv export file. The mapping table  includes **Guidance** data for each **Issue** type.
 
 ## See also
 

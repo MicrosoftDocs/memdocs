@@ -4,8 +4,8 @@
 title: Network access control integration with Microsoft Intune
 description: Network access control (NAC) solutions check enrollment and compliance for devices with Intune. NAC includes certain behaviors and works with Conditional Access. See the steps to get onboarded, and get a list of partner solutions.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 07/24/2023
 ms.topic: how-to
@@ -20,7 +20,7 @@ ms.assetid: aa7ecff7-8579-4009-8fd6-e17074df67de
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
+- network-access-control
 ---
 
 # Network access control (NAC) integration with Intune
@@ -35,7 +36,7 @@ ms.collection:
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
-> A new NAC service (CR service) was released in July 2021 and many of our NAC partners are transitioning to this new service. While we have extended the timeline for supporting the legacy NAC service through **December 31, 2023**, we recommend you to migrate to the new CR serivce to avoid service disruption.Currently, the following NAC partner product supports the new NAC service:
+> A new NAC service (CR service) was released in July 2021 and many of our NAC partners are transitioning to this new service. While we have extended the timeline for supporting the legacy NAC service through **March 31, 2024**, we recommend you to migrate to the new CR service to avoid service disruption.Currently, the following NAC partner product supports the new NAC service:
 >
 > - Cisco ISE 3.1 and later
 > - Citrix Gateway 13.0-84.11 and later
@@ -84,9 +85,9 @@ The following list is an overview on how NAC integration works when integrated w
 8. Once the device is enrolled and compliant, NAC partner solution gets the state from Intune.
 9. Connection is successfully established which allows the device access to corporate resources.
 
-> [!NOTE] 
+> [!NOTE]
 > NAC partner solutions will typically make two different types of query to Intune to ask about device compliance state:
-> 
+>
 > - Queries filtering based on a known property value of a single device such as its IMEI or Wi-Fi MAC address
 > - Broad, unfiltered queries for all non-compliant devices.
 >
@@ -110,6 +111,7 @@ To learn more about certificate profiles, see: [Use SCEP certificate profiles wi
 The specific device properties that are shared with NAC partners depend on the version of the NAC API the NAC product uses. Contact your NAC partner for more information on which version of the NAC or Compliance Retrieval API your NAC product uses.
 
 Also, the data returned will be limited if:
+
 - The device isn't enrolled in Intune. In this case, no information other than that the device isn't managed by Intune will be shared with the NAC product.
 - The OS prevents the specific device property from being shared with Microsoft. Intune will share empty values back to the NAC product for data properties not shared with Intune by the OS.
 
@@ -138,7 +140,3 @@ Also, the data returned will be limited if:
 - [Integrate Forescout with Intune](https://protect-us.mimecast.com/s/YTj3CmZV3rFkqlOJFGbpF-?domain=docs.forescout.com)
 - [Integrate HPE Aruba ClearPass with Intune](https://asp.arubanetworks.com/downloads/documents/RmlsZTowMTg2ZmY0Yy05MGE5LTExZWItODRiZC0yZjM5OWFjNzc5YTY%3D)
 - [Integrate Squadra security Removable Media Manager (secRMM) with Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.10.0.0/secRMMIntune.pdf)
-
-  
-
-

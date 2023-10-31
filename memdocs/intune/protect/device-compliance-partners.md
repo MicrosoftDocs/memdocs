@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: Device compliance partners in Microsoft Intune
+title: Third-party device compliance partners support in Microsoft Intune
 description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune. 
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 01/31/2022
+ms.date: 09/25/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.reviewer: tycast
 
 # optional metadata
@@ -27,13 +26,18 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Support third-party device compliance partners in Intune
 
-Microsoft Intune can add compliance state data to Azure Active Directory (Azure AD) for the devices you manage with one or more third-party device compliance partners. With this configuration, compliance data from those devices can be [used with your conditional access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access).
+Several third-party device compliance partners have been evaluated as a supported partner solution that you can integrate with Microsoft Intune. When you use a [third-party device compliance partner](#supported-device-compliance-partners), the partner adds the compliance state data it collects to Azure Active Directory (Azure AD). You can then use the device compliance data from the partner along side the compliance results you collect with Intune to power your [conditional access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access) that help to protect your organization and data.
 
-Supported platforms include Android, iOS/iPadOS, and macOS, with support for a platform defined by the device compliance partner you use.
+Third-party partners support one or more of the following platforms:
+
+- Android
+- iOS/iPadOS
+- macOS
 
 By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Azure AD and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through an Azure AD user group.
 
@@ -45,9 +49,9 @@ To enable use data from device compliance partners, complete the following tasks
 
 3. **Enroll your devices to your device compliance partner**.
 
-With these tasks complete, the device compliance partner sends device state details to Intune. Intune then adds this information to Azure AD. For example, devices with a state of non-compliant have that status added to their device record in Azure AD.
+With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Azure AD. For example, devices with a state of non-compliant have that status added to their device record in Azure AD.
 
-The compliance state is then evaluated by conditional access policies, the same as compliance state data for devices managed by Intune.  By default, Intune is a registered compliance partner for iOS and Android. When you add additional partners, you can set the priority order to ensure the correct partner manages device to fit your business needs.
+The compliance state stored in Azure AD is evaluated by conditional access policies, the same as compliance state data for devices managed by Intune. By default, Intune is a registered compliance partner for iOS and Android. When you add more partners, you can set the priority order to ensure the correct partner manages device to fit your business needs.
 
 ## Supported device compliance partners
 
@@ -66,7 +70,6 @@ The following compliance partners are supported as generally available:
 > [!NOTE]
 > If you offer an MDM product and would like to onboard as a device compliance partner, fill out this Form: [Intune partner compliance onboarding.](https://aka.ms/IntunePartnerComplianceOnboarding)
 
-
 ## Prerequisites
 
 - A subscription to Microsoft Intune, and access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -75,7 +78,7 @@ The following compliance partners are supported as generally available:
 
 - A subscription to the device compliance partner.
 
-- Review documentation for your compliance partner for supported device platforms and additional prerequisites.
+- Review documentation for your compliance partner for supported device platforms and that partners prerequisites.
 
 ## Configure Intune to work with a device compliance partner
 
@@ -94,11 +97,11 @@ Enable support for a device compliance partner to use compliance state data from
 
    - To use VMware Workspace ONE as the compliance partner for iOS or Android platforms, select **VMware Workspace ONE mobile compliance**.
 
-   Next, select the drop-down for **Platform**, and select the platform. 
+   Next, select the drop-down for **Platform**, and select the platform.
 
    You're limited to a single partner per platform, even if you have added multiple compliance partners to Azure AD.
 
-4. On **Assignments**, select the user groups that will have devices managed by this partner. With this assignment, you'll change the MDM authority for applicable devices to use this partner. Users who have devices managed by the partner must also be assigned a license for Intune.
+4. On **Assignments**, select the user groups that include devices that are managed by this partner. With this assignment, you change the MDM authority for applicable devices to use this partner. Users who have devices managed by the partner must also be assigned a license for Intune.
 
 5. On the **Review + create** page, review your selections, and then select **Create** to complete this configuration.
 
@@ -132,8 +135,7 @@ Your configuration now appears on the Partner compliance management page.
 To enable a device compliance partner to work with Intune, you must complete configurations specific to that partner. For information on this task, see the documentation for the applicable partner:
 
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
-
-- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)  
+- [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
 
 ## Enroll your devices to your device compliance partner
 
@@ -147,7 +149,7 @@ Sign in to the Azure portal and go to **Azure AD** > **Devices** > [**All device
 
 ## Next steps
 
-Use additional documentation from your third-party partner to create compliance policies for devices.
+Use the documentation from your third-party partner to create compliance policies for devices.
 
 - [Blackberry UEM](https://docs.blackberry.com/en/id-comm-collab/blackberry-workspaces/blackberry-workspaces-plug-in-for-blackberry-uem/4_9/compatibility-matrix/imm1460398825659/ioz1460399956336)
 - [Citrix Endpoint Management - Integrate with Azure AD Conditional Access](https://docs.citrix.com/en-us/citrix-endpoint-management/prepare-to-enroll-devices-and-deliver-resources.html#integrate-with-azure-ad-conditional-access)
