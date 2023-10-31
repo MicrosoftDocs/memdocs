@@ -53,7 +53,7 @@ When you create a Windows 10/11 shared user device configuration profile, there 
 > Devices that run Windows Holographic for Business, including the Microsoft HoloLens, only support the **Account management** settings. If you configure any of the other settings shown in Intune, including **Shared PC mode**, it has no impact on these devices.
 
 - **Account management**: Choose if accounts are automatically deleted. Your options:
-  - **Not configured** (default): Automatically deletes local accounts created by guests, and accounts in AD and Azure AD. When a user signs off the device, or when system maintenance runs, these accounts are deleted.
+  - **Not configured** (default): Automatically deletes local accounts created by guests, and accounts in AD and Microsoft Entra ID. When a user signs off the device, or when system maintenance runs, these accounts are deleted.
 
     Also enter:
 
@@ -67,7 +67,7 @@ When you create a Windows 10/11 shared user device configuration profile, there 
     - **Start delete threshold(%)**: Enter a percentage (0-100) of disk space. When the total disk/storage space drops below the value you enter, the cached accounts are deleted. It continuously deletes accounts to reclaim disk space. Accounts that are inactive the longest are deleted first.
     - **Stop delete threshold(%)**: Enter a percentage (0-100) of disk space. When the total disk/storage space meets the value you enter, the deleting stops.
 
-  - **Disable**: The local, AD, and Azure AD accounts created by guests stay on the device, and aren't deleted.
+  - **Disable**: The local, AD, and Microsoft Entra accounts created by guests stay on the device, and aren't deleted.
 
 ## Next steps
 

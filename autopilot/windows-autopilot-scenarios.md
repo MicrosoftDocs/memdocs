@@ -49,7 +49,7 @@ These scenarios are summarized in the following video.
 ## Windows Autopilot capabilities
 
 ### Temporary Access Pass
-Organizations leveraging [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) can use this feature with Windows Autopilot Azure AD join user driven, pre-provisioning, and self-deploying mode for shared devices. Temporary Access Pass is not supported by the native Windows login credential provider so it requires the enablement of WebSign-in. To enable this feature in your organization you can follow the CSP details outlined in [Policy CSP - Authentication](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin). This feature is not supported with Windows Autopilot hybrid Azure AD join devices and is not applicable on self-deploying mode kiosks.
+Organizations leveraging [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) can use this feature with Windows Autopilot Microsoft Entra join user driven, pre-provisioning, and self-deploying mode for shared devices. Temporary Access Pass is not supported by the native Windows login credential provider so it requires the enablement of WebSign-in. To enable this feature in your organization you can follow the CSP details outlined in [Policy CSP - Authentication](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin). This feature is not supported with Windows Autopilot Microsoft Entra hybrid join devices and is not applicable on self-deploying mode kiosks.
 
 ### Cortana voiceover and speech recognition during OOBE
 
@@ -78,4 +78,3 @@ With Windows Autopilot, you can configure the BitLocker encryption settings to b
 ## Related topics
 
 [Windows Autopilot: What's new](windows-autopilot-whats-new.md)
-
