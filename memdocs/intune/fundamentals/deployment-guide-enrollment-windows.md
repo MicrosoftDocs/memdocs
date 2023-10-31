@@ -143,7 +143,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
   If users sign in with a personal account during the OOBE, they can still join the devices to Microsoft Entra ID using the following steps:
 
   1. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
-  2. In **Alternate actions**, select **Join this device to Microsoft Entra ID**, and enter the information they're asked.
+  2. In **Alternate actions**, select **Join this device to Azure Active Directory**, and enter the information they're asked. This step joins the device to Microsoft Entra ID.
 
   When joined, the devices show as organization owned. In the Intune admin center, devices show as Microsoft Entra joined. Devices are managed by Intune, regardless of who's signed in.  
 
@@ -152,7 +152,7 @@ When users turn on the device, the next steps determine how they're enrolled. Be
 - **BYOD or personal devices**: Users turn on the device, step through the out-of-box experience (OOBE), and sign in with their personal account. To register the device in Microsoft Entra ID:
 
   1. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
-  2. In **Connect**, users choose to enter an **Email address**, or choose to **Join this device to Microsoft Entra ID**:
+  2. In **Connect**, users choose to enter an **Email address**, or choose to **Join this device to Azure Active Directory**:
 
       - **Email address**: Users enter their organization email address. They're asked for more information, including the Intune server name or [CNAME record](../enrollment/windows-enrollment-create-cname.md). Be sure to give them all the information they need to enter.
 
@@ -160,11 +160,11 @@ When users turn on the device, the next steps determine how they're enrolled. Be
 
         If you don't want to manage BYOD or personal devices, be sure users select **Email address**, and enter their organization email address.
 
-      - **Join this device to Microsoft Entra ID**: Users enter the information they're asked, including their organization email address.
+      - **Join this device to Azure Active Directory**: Users enter the information they're asked, including their organization email address.
 
         This option joins the device in Microsoft Entra ID. They show as organization owned, and show as Microsoft Entra joined in the Intune admin center. Devices are managed by Intune, regardless of who's signed in.
 
-        If you want to manage BYOD or personal devices, be sure users select **Join this device to Microsoft Entra ID**. Users should also know that their personal devices will be managed by their IT.
+        If you want to manage BYOD or personal devices, be sure users select **Join this device to Azure Active Directory**. Users should also know that their personal devices will be managed by their IT.
 
   For more information on the end user experience, see [enroll Windows client devices](../user-help/enroll-windows-10-device.md).  
 
@@ -292,11 +292,11 @@ Other than having Intune setup, there are minimal administrator tasks with this 
 
 - If you have existing organization-owned devices and are enrolling them into Intune the first time, then we recommend using [Automatic enrollment](#windows-automatic-enrollment) (in this article).
 
-  Users can use the **Settings** app > **Accounts** to **Join this device to Microsoft Entra ID**. If they do, deploy an [Automatic enrollment](#windows-automatic-enrollment) (in this article) policy to enroll the device in Intune.
+  Users can use the **Settings** app > **Accounts** to **Join this device to Azure Active Directory**, which joins the device to Microsoft Entra ID. If they do, deploy an [Automatic enrollment](#windows-automatic-enrollment) (in this article) policy to enroll the device in Intune.
 
 - If you have new organization-owned devices, then we recommend using [Windows Autopilot](#windows-autopilot) (in this article) or use [Automatic enrollment](#windows-automatic-enrollment) (in this article). In the out-of-box experience (OOBE), users enter their organization account (`user@contoso.com`). This step registers the devices in Microsoft Entra ID. Deploy an [Automatic enrollment](#windows-automatic-enrollment) (in this article) policy to enroll the device in Intune.
 
-  If users use their personal email account in the OOBE, then the device isn't registered in Microsoft Entra ID, and the Automatic enrollment policy isn't deployed. In this scenario, users use the Settings app to **Join this device to Microsoft Entra ID**. When the device is joined in Microsoft Entra ID, the Automatic enrollment policy deploys, and enrolls the device in Intune.
+  If users use their personal email account in the OOBE, then the device isn't registered in Microsoft Entra ID, and the Automatic enrollment policy isn't deployed. In this scenario, users use the Settings app to **Join this device to Azure Active Directory**, which joins the device to Microsoft Entra ID. When the device is joined in Microsoft Entra ID, the Automatic enrollment policy deploys, and enrolls the device in Intune.
 
 ### User enrollment end user tasks
 
@@ -308,7 +308,7 @@ Clearly communicate the options users should choose on personal and organization
 
   2. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
 
-  3. In **Connect**, users choose to enter an **Email address**, or choose to **Join this device to Microsoft Entra ID**:
+  3. In **Connect**, users choose to enter an **Email address**, or choose to **Join this device to Azure Active Directory**:
 
       - **Email address**: Users enter their organization email address and password. They're asked for more information, including the Intune server name or CNAME record. Be sure to give them all the information they need to enter.
 
@@ -316,20 +316,20 @@ Clearly communicate the options users should choose on personal and organization
 
         If you or your users don't want the organization IT to manage BYOD or personal devices, users must select **Email address**.
 
-      - **Join this device to Microsoft Entra ID**: Users enter the information they're asked, including their organization email address and password.
+      - **Join this device to Azure Active Directory**: Users enter the information they're asked, including their organization email address and password.
 
         This option joins the device in Microsoft Entra ID. They show as organization owned, and show as Microsoft Entra joined in the Intune admin center. Devices are managed by Intune, regardless of who's signed in.
 
-        If you want to manage BYOD or personal devices, be sure users select **Join this device to Microsoft Entra ID**. Users should also know that their personal devices will be managed by their IT.
+        If you want to manage BYOD or personal devices, be sure users select **Join this device to Azure Active Directory**. Users should also know that their personal devices will be managed by their IT.
 
 - **Organization-owned devices**: These devices can be existing devices or new devices. If new devices, users turn on the device, step through the out-of-box experience (OOBE), and sign in with their organization account (`user@contoso.com`). This step joins the device in Microsoft Entra ID, and the device is considered organization-owned. The device is fully managed, regardless of who's signed in. Users can open the **Settings** app > **Accounts** > **Access work or school**. It shows they're connected.
 
   For existing devices, or if users sign in with a personal account during the OOBE, they can join the devices to Microsoft Entra ID using the following steps:
 
   1. Open the **Settings** app > **Accounts** > **Access work or school** > **Connect**.
-  2. In **Alternate actions**, select **Join this device to Microsoft Entra ID**, and enter the information they're asked.
+  2. In **Alternate actions**, select **Join this device to Azure Active Directory**, and enter the information they're asked.
 
-  When joined, the devices show as organization owned, and show as Microsoft Entra joined in the Intune admin center. Devices are managed by Intune, regardless of who's signed in.
+   This step joins the device to Microsoft Entra ID. When joined, the devices show as organization owned, and show as Microsoft Entra joined in the Intune admin center. Devices are managed by Intune, regardless of who's signed in.
 
 
 ## Co-management enrollment
