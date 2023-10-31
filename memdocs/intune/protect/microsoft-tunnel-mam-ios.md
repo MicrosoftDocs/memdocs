@@ -158,7 +158,7 @@ Create an App configuration policy for Microsoft Edge. This policy configures Ed
 
     | Name | Description |
     | --- | --- |
-    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode` <br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When users sign into Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. |
+    | `com.microsoft.intune.mam.managedbrowser.StrictTunnelMode` <br/><br/> **Value**: `True` | When set to `True`, it provides **Strict Tunnel Mode** support to Edge. When users sign into Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. <br/><br/> When the VPN reconnects, internet browsing is available again. |
     | `com.microsoft.intune.mam.managedbrowser.TunnelAvailable.IntuneMAMOnly`<br/><br/> **Value**: `True` | When set to `True`, it provides **Identity switch** support to Edge. <br/><br/> When users sign in with **Work account or School account**, Edge automatically connects to the VPN. When users enable in-private browsing, Edge switches to a **Personal account** and disconnects the VPN. |
     | &nbsp; | &nbsp; |
     | **Federated Microsoft Entra tenants only** | &nbsp; |
