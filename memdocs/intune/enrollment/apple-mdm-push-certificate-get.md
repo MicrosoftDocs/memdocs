@@ -60,7 +60,7 @@ Select **I agree.** to give Microsoft permission to send data to Apple.
 Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.
 
 ### Step 3. Create an Apple MDM push certificate
-1. Select **Create your MDM push Certificate** to go to the [Apple Push Certificates Portal](https://identity.apple.com/pushcert/). 
+1. Select **Create your MDM push Certificate** to go to the [Apple Push Certificates Portal](https://identity.apple.com/pushcert). 
 2. Sign in with your organization's Apple ID. 
 3. Select **Create a Certificate**. 
 4. Read and accept the terms and conditions. 
@@ -91,7 +91,7 @@ Renew the MDM push certificate with the same Apple account you used to create it
 3. Choose **Enroll devices** > **Apple enrollment**.
 4. Choose **Apple MDM Push Certificate**.  
 5. Select **Download your CSR** to download and save the request file locally.  
-6. Select **Create your MDM push Certificate** to go to the [Apple Push Certificates Portal](https://identity.apple.com/pushcert/).  
+6. Select **Create your MDM push Certificate** to go to the [Apple Push Certificates Portal](https://identity.apple.com/pushcert).  
 7. Sign into the Apple Push Certificates Portal with the Apple ID you used to create the original certificate, and complete the following steps:  
    1. Find the certificate you want to renew and select **Renew**.
    2. Select **Choose File** and select the new CSR file you downloaded.
