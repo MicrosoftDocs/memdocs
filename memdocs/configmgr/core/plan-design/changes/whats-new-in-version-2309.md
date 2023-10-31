@@ -114,14 +114,14 @@ For more information, see [Manage Windows 11 readiness dashboard](../../../osd/d
 
 ### New Cloud Management Gateway (CMG) creation via Console 
 
-Starting in Configuration Manager current branch version 2309, we have enhanced security of **web (server) app** for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Microsoft Entra tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
+Starting in Configuration Manager current branch version 2309, we have enhanced security of **web (server) app** for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Azure AD tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
 
 :::image type="content" source="media/cmg-console-creation.png" alt-text="A screenshot of the cmg app creation via console.":::
 
 >[!NOTE]
->Pre-existing CMG customers must update their web server app by navigating to Microsoft Entra tenants node --> select the tenant --> select the server app --> click on "update application settings".
+>Pre-existing CMG customers must update their web server app by navigating to Azure Active Directory Tenants node --> select the tenant --> select the server app --> click on "update application settings".
 
-For more information, see [Configure Microsoft Entra ID for CMG](../../clients/manage/cmg/configure-azure-ad.md)
+For more information, see [Configure Azure Active Directory for CMG](../../clients/manage/cmg/configure-azure-ad.md)
 
 ### New Cloud Management Gateway (CMG) creation via PowerShell 
 
@@ -134,7 +134,7 @@ If you try to create the CMG before updating RedirectUrl, you get an error "Your
 PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
 
 >[!NOTE] 
-> For new customers, before creating CMG, create Microsoft Entra web server app and execute the new PowerShell commandlet script.
+> For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
 
 For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway)
 

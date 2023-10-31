@@ -48,7 +48,7 @@ For more information, see [antivirus policies](../../../tenant-attach/deploy-ant
 ### User discovery prerequisite simplification
 <!--8126836 -->
 The discovery prerequisite for user accounts accessing tenant attach features within **Microsoft Intune admin center** was simplified. The hybrid identity needs to be discovered by one of the following discovery methods instead of both:
-- Microsoft Entra user discovery
+- Azure Active Directory user discovery
 - Active Directory user discovery
 
 For more information, see [Tenant attach prerequisites](../../../tenant-attach/prerequisites.md).

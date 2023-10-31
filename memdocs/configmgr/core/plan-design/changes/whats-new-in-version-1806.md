@@ -102,7 +102,7 @@ For more information, see the following articles:
 
 ### Cloud distribution point support for Azure Resource Manager
 <!--1322209-->
-When creating a cloud distribution point, the wizard now provides the option to create an **Azure Resource Manager deployment**. Azure Resource Manager is a modern platform for managing all solution resources as a single entity, called a resource group. When deploying a cloud distribution point with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. 
+When creating a cloud distribution point, the wizard now provides the option to create an **Azure Resource Manager deployment**. Azure Resource Manager is a modern platform for managing all solution resources as a single entity, called a resource group. When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. 
 
 The feature documentation for the cloud distribution point is also revised and enhanced. For more information, see the following articles:
 - [Use a cloud distribution point](../hierarchy/use-a-cloud-based-distribution-point.md)   
@@ -171,11 +171,9 @@ This release includes improvements to how clients communicate with site systems.
 For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).
 
 
-<a name='azure-ad-device-identity'></a>
-
-### Microsoft Entra device identity 
+### Azure AD device identity 
 <!--1358460-->
-An [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join) or [hybrid Microsoft Entra device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without a Microsoft Entra user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
+An [Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join) or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point.  
 
 For more information, see [Enhanced HTTP](../hierarchy/enhanced-http.md).
 
@@ -189,7 +187,7 @@ For more information, see [CMTrace](../../support/cmtrace.md).
 
 ### Cloud management dashboard
 <!--1358461-->
-The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Microsoft Entra ID, it also displays data about cloud users and devices.   
+The new cloud management dashboard provides a centralized view for cloud management gateway (CMG) usage. When the site is onboarded with Azure AD, it also displays data about cloud users and devices.   
 
 This feature also includes the **CMG connection analyzer** for real-time verification to aid troubleshooting. The in-console utility checks the current status of the service, and the communication channel through the CMG connection point to any management points that allow CMG traffic. 
 
@@ -214,11 +212,9 @@ Previously, you had to deploy a cloud distribution point and CMG as separate rol
 
 For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 
-<a name='trusted-root-certificate-isnt-required-with-azure-ad'></a>
-
-#### Trusted root certificate isn't required with Microsoft Entra ID
+#### Trusted root certificate isn't required with Azure AD
 <!--503899-->
-When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Microsoft Entra ID for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
+When you create a CMG, you're no longer required to provide a [trusted root certificate](../../clients/manage/cmg/server-auth-cert.md) on the Settings page. This certificate isn't required when using Azure Active Directory (Azure AD) for client authentication, but used to be required in the wizard. If you're using PKI client authentication certificates, then you still must add a trusted root certificate to the CMG.
 
 
 
@@ -247,7 +243,7 @@ For more information, see [Co-management for Windows 10 devices](../../../comana
 
 ### Support for multiple hierarchies to one Intune tenant
 <!--1357944-->
-Some customers have several Configuration Manager hierarchies and want to consolidate in the future to a single tenant for Microsoft Entra ID and Microsoft Intune. Co-management now supports connecting more than one Configuration Manager environment to the same Intune tenant.
+Some customers have several Configuration Manager hierarchies and want to consolidate in the future to a single tenant for Azure Active Directory and Microsoft Intune. Co-management now supports connecting more than one Configuration Manager environment to the same Intune tenant.
 
 For more information, see [Co-management prerequisites](../../../comanage/overview.md#prerequisites).
  

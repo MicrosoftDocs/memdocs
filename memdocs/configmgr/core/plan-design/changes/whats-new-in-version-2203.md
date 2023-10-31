@@ -182,7 +182,7 @@ The Configuration Manager console now offers a dark theme. For more information,
 
 ### Improvements for sending feedback
 <!--11754191, 12890088-->
-- You now have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Microsoft Entra user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data.
+- You now have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data.
 - The feedback button is now displayed in other console locations.
 
 For more information, see [Product feedback](../../understand/product-feedback.md#recent-changes-to-feedback).
@@ -204,7 +204,7 @@ Based on your feedback, we've made a few improvements to the console and user ex
 - Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query.
 - Added a search filter to the **Products** and **Classifications** tabs in the **Software Update Point Component Properties** <!--10998089, 9575773-->
 - You can now exclude subcontainers when doing **Active Directory System Discovery** and **Active Directory User Discovery** in untrusted domains <!--4655840, 9575773-->
-- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Microsoft Entra ID <!--12433024, 9575773-->
+- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Azure Active Directory <!--12433024, 9575773-->
 - Added the **Collection ID** to the collection summary details tab <!--12630582, 9575773-->
 - Increased the size of the **Membership Rules** pane in the **Properties** page for collections <!--12947295, 9575773 -->
 - Added a **View Script** option for **Run PowerShell Script** steps when using the **View** action for a task sequence <!--12498818, 9575773 -->

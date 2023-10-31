@@ -55,13 +55,11 @@ Cloud management gateway (CMG) deployments can now use a virtual machine scale s
 
 For more information, see [CMG topology design: virtual machine scale sets](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).
 
-<a name='disable-azure-ad-authentication-for-onboarded-tenants'></a>
-
-### Disable Microsoft Entra authentication for onboarded tenants
+### Disable Azure AD authentication for onboarded tenants
 
 <!--8537319-->
 
-You can now disable Microsoft Entra authentication for tenants not associated with users and devices. When you onboard Configuration Manager to Microsoft Entra ID, it allows the site and clients to use modern authentication. Currently, Microsoft Entra device authentication is enabled for all onboarded tenants, whether or not it has devices. For example, you have a separate tenant with a subscription that you use for compute resources to support a cloud management gateway. If there aren't users or devices associated with the tenant, disable Microsoft Entra authentication.
+You can now disable Azure Active Directory (Azure AD) authentication for tenants not associated with users and devices. When you onboard Configuration Manager to Azure AD, it allows the site and clients to use modern authentication. Currently, Azure AD device authentication is enabled for all onboarded tenants, whether or not it has devices. For example, you have a separate tenant with a subscription that you use for compute resources to support a cloud management gateway. If there aren't users or devices associated with the tenant, disable Azure AD authentication.
 
 For more information, see [Configure Azure services](../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).
 
@@ -210,7 +208,7 @@ For more information, see [How to manage collections](../../clients/manage/colle
 ### Improvements to available apps via CMG
 
 <!--7033501-->
-An internet-based, domain-joined device that isn't joined to Microsoft Entra ID and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Microsoft Entra identity. When the user starts Software Center, Windows prompts them to enter their Microsoft Entra credentials. They can then see any available apps.
+An internet-based, domain-joined device that isn't joined to Azure Active Directory (Azure AD) and communicates via a cloud management gateway (CMG) can now get apps deployed as available. The Active Directory domain user of the device needs a matching Azure AD identity. When the user starts Software Center, Windows prompts them to enter their Azure AD credentials. They can then see any available apps.
 
 For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
@@ -391,7 +389,7 @@ The Configuration Manager PowerShell cmdlet library now offers support for Power
 
 <!--6978300-->
 
-With more customers managing remote devices now, this release includes several new and improved Windows PowerShell cmdlets for the cloud management gateway (CMG). You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Microsoft Entra requirements.
+With more customers managing remote devices now, this release includes several new and improved Windows PowerShell cmdlets for the cloud management gateway (CMG). You can use these cmdlets to automate the creation, configuration, and management of the CMG service and Azure Active Directory (Azure AD) requirements.
 
 For more information, see [Configuration Manager version 2010 PowerShell release notes](/powershell/sccm/2010-release-notes).
 

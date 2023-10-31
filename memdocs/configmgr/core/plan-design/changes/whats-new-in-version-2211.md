@@ -26,12 +26,10 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Cloud-attached management
 
-<a name='improvements-to-cloud-sync-collections-to-azure-active-directory-group-synchronization-feature'></a>
+### Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature
+Starting Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
 
-### Improvements to Cloud Sync (Collections to Microsoft Entra group Synchronization) feature
-Starting Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Microsoft Entra group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
-
-For more information, see [Synchronize collections to Microsoft Entra group](../../clients/manage/collections/synchronize-collections-aad-group.md).
+For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aad-group.md).
 
 ## Site infrastructure
 <!--14538358-->
@@ -106,9 +104,9 @@ As previously announced, version 2207 drops support for the following features:
 
 ### Resolved duplicate entries for co-managed device in Intune portal 
 
-Previously, device entities of the co-managed devices appeared as two separate entries on Intune portal. One entry corresponding to Intune and another corresponding to ConfigMgr appeared after enrollment. The entries were permanent in some cases. Various scenarios like device entity counts and policy targeting were impacted. The entries were duplicated because Intune isn't aware of the Microsoft Entra ID of devices coming from ConfigMgr. Intune becomes aware only after the daily discovery cycle runs and reports to Intune via CMGS.
+Previously, device entities of the co-managed devices appeared as two separate entries on Intune portal. One entry corresponding to Intune and another corresponding to ConfigMgr appeared after enrollment. The entries were permanent in some cases. Various scenarios like device entity counts and policy targeting were impacted. The entries were duplicated because Intune isn't aware of the AAD ID of devices coming from ConfigMgr. Intune becomes aware only after the daily discovery cycle runs and reports to Intune via CMGS.
 
-The issue is fixed by propagating correct Microsoft Entra device ID from ConfigMgr during Intune enrollment. This leads to merged entities for co-managed devices in a short period of time (30-40 mins). We no longer have to wait for discovery cycle to run.
+The issue is fixed by propagating correct AAD device ID from ConfigMgr during Intune enrollment. This leads to merged entities for co-managed devices in a short period of time (30-40 mins). We no longer have to wait for discovery cycle to run.
 
 ### Starting with this version, the Configuration Manager client doesn’t support the following operating system
 

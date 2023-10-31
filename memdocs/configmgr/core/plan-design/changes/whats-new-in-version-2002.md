@@ -61,7 +61,7 @@ This release includes the following management insight rules:
 - Two additional rules in the **Cloud Services** group to help you configure your site for adding secure HTTPS communication:<!-- 6268489 -->
 
   - Sites that don't have proper HTTPS configuration
-  - Devices not uploaded to Microsoft Entra ID
+  - Devices not uploaded to Azure AD
 
 For more information, see [Management insights](../../servers/manage/management-insights.md).
 
@@ -81,17 +81,15 @@ For more information, see the following new articles:
 - [What is the administration service?](../../../develop/adminservice/overview.md)
 - [How to set up the administration service](../../../develop/adminservice/set-up.md)
 
-<a name='proxy-support-for-azure-active-directory-discovery-and-group-sync'></a>
-
-### Proxy support for Microsoft Entra discovery and group sync
+### Proxy support for Azure Active Directory discovery and group sync
 
 <!-- 5913817 -->
 
 The site system's proxy settings, including authentication, are now used by:
 
-- Microsoft Entra user discovery
-- Microsoft Entra user group discovery
-- Synchronizing collection membership results to Microsoft Entra groups
+- Azure Active Directory (Azure AD) user discovery
+- Azure AD user group discovery
+- Synchronizing collection membership results to Azure Active Directory groups
 
 For more information, see [Proxy server support](../network/proxy-server-support.md#other-features-that-use-the-proxy).
 
@@ -107,7 +105,7 @@ If the Configuration Manager site server fails to connect to required endpoints 
 
 <!-- 5686290 -->
 
-The cloud management gateway (CMG) supports many types of clients, but even with Enhanced HTTP, these clients require a client authentication certificate. This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Microsoft Entra ID, and don't have a method to install a PKI-issued certificate.
+The cloud management gateway (CMG) supports many types of clients, but even with Enhanced HTTP, these clients require a client authentication certificate. This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate.
 
 Configuration Manager extends its device support with the following methods:
 
@@ -328,7 +326,7 @@ Configuration Manager has expanded its support for onboarding devices to Microso
 
 ### <a name="bkmk_atp"></a> Onboard Configuration Manager clients to Microsoft Defender for Endpoint via the Microsoft Intune admin center
 <!--5691658-->
-You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Microsoft Entra ID or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Microsoft Entra groups.
+You can now deploy Microsoft Defender ATP Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 
 This capability allows customers to manage both Intune MDM and Configuration Manager client EDR/ATP onboarding from a single management experience - the Microsoft Intune admin center. For more information, see [Endpoint detection and response policy for endpoint security in Intune](../../../../intune/protect/endpoint-security-edr-policy.md).
 
@@ -418,8 +416,8 @@ For more information, see [Extend and migrate on-premises site to Microsoft Azur
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
-- [Microsoft Entra user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956-->
-- [Synchronize collection membership results to Microsoft Entra ID](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)<!--3607475-->
+- [Azure Active Directory user group discovery](../../servers/deploy/configure/configure-discovery-methods.md#bkmk_azuregroupdisco)<!--3611956-->
+- [Synchronize collection membership results to Azure Active Directory](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync)<!--3607475-->
 - [CMPivot standalone](../../servers/manage/cmpivot.md#bkmk_standalone)<!--3555890/4692885-->
 - [Client apps for co-managed devices](../../../comanage/workloads.md#client-apps) (previously known as *Mobile apps for co-managed devices*)<!-- 1357892/3600959 -->
 

@@ -89,7 +89,7 @@ In Configuration Manager 1802, the following insights are available:
     - Applications without deployments
 - Cloud Services: <!--1356412-->
     - Assess co-management readiness 
-    - Enable your devices to be Microsoft Entra hybrid joined
+    - Enable your devices to be hybrid Azure Active Directory-joined
     - Modernize your identity and access infrastructure
     -  Upgrade your clients to Windows 10, version 1709 or above 
 - Collections:
@@ -111,7 +111,7 @@ In Configuration Manager 1802, the following insights are available:
 
 ### Cloud management gateway support for Azure Resource Manager
 <!-- 1324735 -->
-When creating an instance of the [cloud management gateway](../../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Microsoft Entra ID to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. For more information, see [CMG topology design](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
+When creating an instance of the [cloud management gateway](../../clients/manage/cmg/overview.md) (CMG), the wizard now provides the option to create an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate. For more information, see [CMG topology design](../../clients/manage/cmg/plan-cloud-management-gateway.md#azure-resource-manager).
 
 > [!IMPORTANT]
 > This capability doesn't enable support for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
@@ -229,11 +229,9 @@ The [deployment wizard for task sequences](../../../osd/deploy-use/deploy-a-task
 <!-- 1357126 -->
 If an end user or desktop technician needs to install multiple applications on a device, Software Center now supports installing multiple selected applications. This behavior allows the user to be more efficient while not waiting for one installation to finish before starting the next. For more information, see [Install multiple applications](../../understand/software-center.md#install-multiple-applications) in the new Software Center user guide.
 
-<a name='use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices'></a>
-
-### Use Software Center to browse and install user-available applications on Microsoft Entra joined devices
+### Use Software Center to browse and install user-available applications on Azure AD-joined devices
 <!-- 1322613 -->
-If you deploy applications as available to users, they can now browse and install them through Software Center on Microsoft Entra devices. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
+If you deploy applications as available to users, they can now browse and install them through Software Center on Azure Active Directory (Azure AD) devices. For more information, see [Prerequisites to deploy user-available applications](../../../apps/plan-design/prerequisites-deploy-user-available-apps.md).
 
 ### Hide installed applications in Software Center
 <!--1357592-->
