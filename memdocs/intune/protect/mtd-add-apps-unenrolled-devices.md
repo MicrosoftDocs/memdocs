@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,8 +61,7 @@ When using Intune app protection policies with Mobile Threat Defense, Intune gui
 However, should you wish to make the app available to end users via the Intune Company Portal, see the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Microsoft Authenticator - iOS App Store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) when completing the **Configure app information** section. Don't forget to [assigning app to groups with Intune](../apps/apps-deploy.md) as the final step.
 
 > [!NOTE]
->
-> For iOS devices, you need the [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Azure AD. The Intune Company Portal works as the broker on Android devices so users can have their identities checked by Azure AD.
+> For iOS devices, you need the [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Microsoft Entra. The Intune Company Portal works as the broker on Android devices so users can have their identities checked by Microsoft Entra.
 
 ## Making Mobile Threat Defense apps available via Intune (optional)
 

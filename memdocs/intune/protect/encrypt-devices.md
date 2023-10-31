@@ -46,7 +46,7 @@ Use one of the following policy types to configure BitLocker on your managed dev
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
 >
-> You can also access important information for BitLocker from your devices, as found in Azure Active Directory (Azure AD).
+> You can also access important information for BitLocker from your devices, as found in Microsoft Entra ID.
 
 ## Permissions to manage BitLocker
 
@@ -127,7 +127,7 @@ A device must meet the following conditions to be eligible for silently enabling
 
 - If end users sign in to the devices as Administrators, the device must run Windows 10 version 1803 or later, or Windows 11.
 - If end users sign in to the devices as Standard Users, the device must run Windows 10 version 1809 or later, or Windows 11.
-- The device must be Azure AD Joined or Hybrid Azure AD Joined.
+- The device must be Microsoft Entra joined or Microsoft Entra hybrid joined.
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only.
 
@@ -148,7 +148,7 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 **Device configuration policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
 - **Warning for other disk encryption** = *Block*.
-- **Allow standard users to enable encryption during Azure AD Join** = *Allow*
+- **Allow standard users to enable encryption during Microsoft Entra join** = *Allow*
 - **User creation of recovery key** = *Allow or Do not allow 256-bit recovery key*
 - **User creation of recovery password** = *Allow or Require 48-digit recovery password*
 
@@ -224,9 +224,9 @@ To change the disk encryption type between full disk encryption and used space o
 
 ### View details for recovery keys
 
-Intune provides access to the Azure AD blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Intune admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
+Intune provides access to the Microsoft Entra ID blade for BitLocker so you can view BitLocker Key IDs and recovery keys for your Windows 10/11 devices, from within the Microsoft Intune admin center. Support to view recovery keys can also [extend to your tenant-attached devices](#view-recovery-keys-for-tenant-attached-devices).
 
-To be accessible, the device must have its keys escrowed to Azure AD.
+To be accessible, the device must have its keys escrowed to Microsoft Entra.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -236,30 +236,30 @@ To be accessible, the device must have its keys escrowed to Azure AD.
 
 4. Hit **Show Recovery Key**. Selecting this generates an audit log entry under 'KeyManagement' activity.
   
-   When keys are available in Azure AD, the following information is available:
+   When keys are available in Microsoft Entra, the following information is available:
    - BitLocker Key ID
    - BitLocker Recovery Key
    - Drive Type
 
-   When keys aren't in Azure AD, Intune will display *No BitLocker key found for this device*.
+   When keys aren't in Microsoft Entra, Intune will display *No BitLocker key found for this device*.
 
 > [!NOTE]
-> Currently, Azure AD supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption will fail due to the failing backup of recovery keys before starting encryption on the device.
+> Currently, Microsoft Entra ID supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption will fail due to the failing backup of recovery keys before starting encryption on the device.
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP). BitLocker CSP is supported on Windows 10 version 1703 and later, Windows 10 Pro version 1809 and later, and Windows 11.
 
-IT admins need to have a specific permission within Azure Active Directory to be able to see device BitLocker recovery keys: `microsoft.directory/bitlockerKeys/key/read`. There are some roles within Azure AD that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Azure AD roles have which permissions, see [Azure AD role descriptions](/azure/active-directory/roles/permissions-reference).
+IT admins need to have a specific permission within Microsoft Entra to be able to see device BitLocker recovery keys: `microsoft.directory/bitlockerKeys/key/read`. There are some roles within Microsoft Entra that come with this permission, including Cloud Device Administrator, Helpdesk Administrator, etc. For more information on which Microsoft Entra roles have which permissions, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
 All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 > [!NOTE]
-> If you delete the Intune object for an Azure AD joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Azure AD joined devices is attached to the Azure AD computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
+> If you delete the Intune object for a Microsoft Entra joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Microsoft Entra joined devices is attached to the Microsoft Entra computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
 
 ### View recovery keys for tenant-attached devices
 
 When you’ve configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
 
-- To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
+- To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Microsoft Entra joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
 - To view the recovery keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related permissions for Configuration Manager of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission. For more information, see [Configure role-based administration for Configuration Manager](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
 
@@ -273,11 +273,11 @@ Devices must meet the following prerequisites to support rotation of the BitLock
 
 - Devices must run Windows 10 version 1909 or later, or Windows 11
 
-- Azure AD-joined and Hybrid-joined devices must have support for key rotation enabled via BitLocker policy configuration:
+- Microsoft Entra joined and Microsoft Entra hybrid joined devices must have support for key rotation enabled via BitLocker policy configuration:
 
-  - **Client-driven recovery password rotation** to *Enable rotation on Azure AD-joined devices* or *Enable rotation on Azure AD and Hybrid-joined devices*
-  - **Save BitLocker recovery information to Azure Active Directory** to *Enabled*
-  - **Store recovery information in Azure Active Directory before enabling BitLocker** to *Required*
+  - **Client-driven recovery password rotation** to *Enable rotation on Microsoft Entra joined devices* or *Enable rotation on Microsoft Entra and Microsoft Entra joined hybrid joined devices*
+  - **Save BitLocker recovery information to Microsoft Entra ID** to *Enabled*
+  - **Store recovery information in Microsoft Entra ID before enabling BitLocker** to *Required*
 
 For information about BitLocker deployments and requirements, see the [BitLocker deployment comparison chart](/windows/security/information-protection/bitlocker/bitlocker-deployment-comparison).
 

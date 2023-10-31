@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/14/2022
+ms.date: 10/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -111,7 +111,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, macOS, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, macOS, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
-|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, macOS, iOS/iPadOS, Android|
+|Microsoft Entra ID registered|If **Yes**, the device is registered with Azure Directory.|Windows, macOS, iOS/iPadOS, Android|
 |Intune registered|If **Yes**, the device is registered with Intune|Windows, macOS, iOS/iPadOS, Android|
 |Compliance|The device's compliance state.|Windows, macOS, iOS/iPadOS, Android|
 |EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, macOS, iOS/iPadOS, Android|

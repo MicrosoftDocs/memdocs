@@ -7,7 +7,7 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -48,7 +48,7 @@ Complete the following steps in Intune. Make sure you're familiar with the proce
 
 > [!TIP]
 >
-> The Intune Company Portal works as the broker on Android devices so users can have their identities checked by Azure AD.
+> The Intune Company Portal works as the broker on Android devices so users can have their identities checked by Microsoft Entra.
 
 ## Configure Microsoft Authenticator for iOS
 
@@ -71,14 +71,14 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 - For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body. Replace the `https://client.bmobi.net` URL with the appropriate console URL.
 
   ```
-   <dict>
-   <key>better_server_url</key>
-   <string>https://client.bmobi.net</string>
-   <key>better_udid</key>
-   <string>{{aaddeviceid}}</string>
-   <key>better_user</key>
-   <string>{{userprincipalname}}</string>
-   </dict>
+  <dict>
+  <key>better_server_url</key>
+  <string>https://client.bmobi.net</string>
+  <key>better_udid</key>
+  <string>{{aaddeviceid}}</string>
+  <key>better_user</key>
+  <string>{{userprincipalname}}</string>
+  </dict>
   ```
 
 ### Check Point Harmony Mobile Protect app configuration policy
@@ -99,18 +99,14 @@ Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead,
 
 ### SentinelOne app configuration policy
 
-- **Android Enterprise**:  
+- **Android Enterprise**:
+
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the SentinelOne Android app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
-  | Configuration key  | Value type | Configuration value  |
-  |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the SentinelOne console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the SentinelOne console  |
+- **iOS**:
 
-- **iOS**:  
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the SentinelOne iOS app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
@@ -136,9 +132,9 @@ Use the same Microsoft Entra ID account previously configured in the [Symantec E
 
     - For **Configuration settings format**, select **Enter XML data**, copy the content from the ***.plist** file, and paste its content into the configuration policy body.
 
-> [!NOTE]
->
-> If you are unable to retrieve the files, contact [Symantec Endpoint Protection Mobile Enterprise Support](https://support.symantec.com/en_US/contact-support.html).
+  > [!NOTE]
+  >
+  > If you are unable to retrieve the files, contact [Symantec Endpoint Protection Mobile Enterprise Support](https://support.symantec.com/en_US/contact-support.html).
 
 ### Sophos Mobile app configuration policy
 
@@ -187,19 +183,19 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
   > [!NOTE]
   >
-  > Unlike iOS, you will need to define a unique Android Enterprise app configuration policy for each Wandera Activation Profile. If you don’t require multiple Wandera Activation Profiles, you may use a single Android app configuration for all target devices. When creating Activation Profiles in Wandera, be sure to select “Azure Active Directory” under the Associated User configuration to ensure Wandera is able to synchronize the device with Intune via UEM Connect.
+  > Unlike iOS, you will need to define a unique Android Enterprise app configuration policy for each Wandera Activation Profile. If you don’t require multiple Wandera Activation Profiles, you may use a single Android app configuration for all target devices. When creating Activation Profiles in Wandera, be sure to select Microsoft Entra under the Associated User configuration to ensure Wandera is able to synchronize the device with Intune via UEM Connect.
 
 - **iOS**:  
-  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Wandera iOS app configuration policy using the following information when prompted.
+  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Wandera iOS app configuration policy using the information below when prompted.
 
-  1. In **RADAR Wandera Portal**, navigate to **Devices > Activations** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.  
-  2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.  
+  1. In **RADAR Wandera Portal**, navigate to **Devices > Activations** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
+  2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.
   3. In **Intune admin center app configuration UI Settings,** define **Configuration settings format > Enter XML data**.
   4. Paste the XML in the app configuration text box.
 
   > [!NOTE]
   >
-  > A single iOS configuration policy may be used across all devices that are to be provisioned with Wandera.
+  > A single iOS configuration policy may be used across all devices that are to be provisioned with Wandera.  
 
 ### Zimperium app configuration policy
 
@@ -272,7 +268,7 @@ Choose the section that corresponds to your MTD provider:
   - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate.  
   - For detailed instructions to re-sign the Lookout for Work iOS apps, see [Lookout for Work iOS app re-signing process](https://personal.support.lookout.com/hc/articles/114094038714) on the Lookout website.
 
-  - **Enable Azure AD authentication for Lookout for Work iOS app users.**
+  - **Enable Microsoft Entra authentication for Lookout for Work iOS app users.**
 
     1. Go to the [Azure portal](https://portal.azure.com), sign in with your credentials, then navigate to the application page.
 
@@ -286,10 +282,9 @@ Choose the section that corresponds to your MTD provider:
 
     > [!NOTE]
     >
-    > For more information, see [configure a native client application with Azure AD](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application).
+    > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application) for more details.
 
   - **Add the Lookout for Work ipa file.**
-
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
 ### Assigning Pradeo
@@ -346,7 +341,7 @@ Choose the section that corresponds to your MTD provider:
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium app store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) for the **Appstore URL**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) for the **Appstore URL**.  
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) for the **Appstore URL**.
 
 ## Next steps
 

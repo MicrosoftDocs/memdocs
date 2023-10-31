@@ -138,7 +138,7 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **5.0.1045.0**
+The most recent version of Remote Help is **5.0.1311.0**
 
 ### Deploy Remote Help as a Win32 app
 
@@ -386,6 +386,13 @@ For newly enrolled devices, there is a 1 hour delay before the user's device beg
 ## What's New for Remote Help
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
+
+### October 25, 2023
+
+Version: 5.0.1311.0
+
+- Disabled the relaying of system audio from the Sharer device to the Helper device which caused an echo when both users were using another app to communicate (such as Teams).
+- Added the capability for Helpers that have elevation permissions to also be able to elevate apps on devices where the Sharer is an Administrator.
 
 ### September 7, 2023
 
