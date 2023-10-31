@@ -20,7 +20,7 @@ ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, has-azure-ad-ps-ref
+ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -30,11 +30,11 @@ ms.collection:
 
 If your Microsoft Intune environment uses both Microsoft Entra Conditional Access, you can use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway.
 
-To support integration of Conditional Access and Microsoft Tunnel, you’ll use Azure AD PowerShell to enable your tenant to support Microsoft Tunnel. After enabling your tenant to support Microsoft Tunnel, you can then create Conditional Access policies that apply to the Microsoft Tunnel app.
+To support integration of Conditional Access and Microsoft Tunnel, you’ll use [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) to enable your tenant to support Microsoft Tunnel. After enabling your tenant to support Microsoft Tunnel, you can then create Conditional Access policies that apply to the Microsoft Tunnel app.
 
 ## Provision your tenant
 
-Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. Use the Azure Active Directory PowerShell module and run a PowerShell script to modify your tenant to add **Microsoft Tunnel Gateway** as a cloud app.  After the tunnel is added as a cloud app, you can select it as part of a Conditional Access policy.
+Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. Use the Microsoft Graph PowerShell module and run a PowerShell script to modify your tenant to add **Microsoft Tunnel Gateway** as a cloud app.  After the tunnel is added as a cloud app, you can select it as part of a Conditional Access policy.
 
 1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
