@@ -197,6 +197,6 @@ The diagnostics page is currently supported for commercial OOBE, and Autopilot u
 
 ## Next steps
 
-- [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new).
-- [What's new in Windows client](/windows/whats-new/).
+- [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new)
+- [What's new in Windows client](/windows/whats-new/)
 
