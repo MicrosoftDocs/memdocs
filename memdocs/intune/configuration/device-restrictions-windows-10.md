@@ -558,7 +558,7 @@ These settings use the [DeviceLock policy CSP](/windows/client-management/mdm/po
 
   [Authentication/AllowSecondaryAuthenticationDevice CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
-- **Preferred Azure AD tenant domain**: Enter an existing domain name in your Microsoft Entra organization. When users in this domain sign in, they don't have to type the domain name. For example, enter `contoso.com`. Users in the `contoso.com` domain can sign in using their user name, such as `abby`, instead of `abby@contoso.com`.
+- **Preferred Microsoft Entra tenant domain**: Enter an existing domain name in your Microsoft Entra organization. When users in this domain sign in, they don't have to type the domain name. For example, enter `contoso.com`. Users in the `contoso.com` domain can sign in using their user name, such as `abby`, instead of `abby@contoso.com`.
 
   [Authentication/PreferredAadTenantDomainName CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
