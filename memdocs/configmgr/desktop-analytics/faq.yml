@@ -33,7 +33,7 @@ sections:
           
           - To confirm that active devices are properly configured, use the [Connection Health dashboard](monitor-connection-health.md). This dashboard doesn't update in real time.
           - Make sure devices are sending diagnostic data to the Desktop Analytics service. For more information, see [Enable data sharing](enable-data-sharing.md).
-          - Provision [Azure AD applications](troubleshooting.md#bkmk_AzureADApps) on your Azure AD.
+          - Provision [Microsoft Entra applications](troubleshooting.md#bkmk_AzureADApps) on your Microsoft Entra ID.
           
           If devices are properly configured, and you're still not seeing data in your workspace, [contact Microsoft support](https://support.serviceshub.microsoft.com/supportforbusiness).
           
@@ -118,7 +118,7 @@ sections:
 
           - Support for scenarios that don't require Configuration Manager. For example, [Intune support](#can-i-use-cloud-enabled-analytics-with-intune-managed-devices-).
           - Licensing prerequisite of any valid Windows license versus E3, E5
-          - Support for multiple workspaces per Azure AD tenant
+          - Support for multiple workspaces per Microsoft Entra tenant
           - Ability to run custom queries and export raw solution data
           - Data model documentation for custom reports
 
