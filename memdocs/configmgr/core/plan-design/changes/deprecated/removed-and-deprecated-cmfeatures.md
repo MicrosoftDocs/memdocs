@@ -5,7 +5,7 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.date: 09/18/2023
+ms.date: 10/31/2023
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
@@ -33,6 +33,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 |Feature|Deprecation first announced|Planned end of support|
 |-------|---------------------------|----------------------|
+| [System Center Update Publisher (SCUP) and integration with ConfigMgr](../../../../sum/tools/updates-publisher.md) <!-- ADO-25642184 --> | October 2023 | Jan 31, 2024 |
 | [Community hub service and integration with ConfigMgr](../../../servers/manage/community-hub.md) <!-- ADO-15799335 --> | October 2022 | The first release after March 1, 2023 |
 | [Windows Information Protection](../../../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md#windows-information-protection) <!-- MAXADO-6010051 --> | July 2022 | TBD |
 | Upgrade from any version of System Center 2012 Configuration Manager to current branch. For more information, see [Upgrade to Configuration Manager current branch](../../../servers/deploy/install/upgrade-to-configuration-manager.md)<!-- 13846745 --> | April 2022 | Version 2303 |
