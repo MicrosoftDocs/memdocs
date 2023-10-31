@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 10/31/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,15 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
+### New grace period status added in apps for Android, Android AOSP <!-- 13498172 13498291 -->  
+The Intune Company Portal app for Android and Microsoft Intune app for Android AOSP will show a grace period status for devices that don't meet compliance requirements but are still within their given grace period.  Users will be able to see the date by which devices must be compliant, as well as the instructions for how to become compliant. If users don't update their device by the given date, the device will be marked as noncompliant.  
+
+### Minimum version update for iOS Company Portal<!-- 17964541  -->  
+Users will be required to update to v5.2310.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you'll likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+
+### Intune APP SDK for .NET MAUI<!-- 17696301   -->  
+Using the Intune APP SDK for .NET MAUI, you'll be able to develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
+
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
@@ -87,15 +96,80 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
+
+### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->  
+In Intune, you can configure the Enterprise single sign-on (SSO) plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Templates > Device features** for profile > **Single sign-on app extension**).
+
+The Company Portal app version will support the platform SSO settings for macOS 13 and later. Platform SSO allows you to sync your Microsoft Entra ID password to local accounts on Macs using the Enterprise Single Sign-On extension.
+
+For more information on the Enterprise SSO plug-in, go to:
+
+- [Use Intune to deploy the Microsoft Enterprise SSO plug-in for Apple devices](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
+- [Entra ID and the Microsoft Enterprise SSO plug-in overview for Apple devices](/azure/active-directory/develop/apple-sso-plugin)
+
+Applies to:
+
+- macOS 13 and later
+
+### New settings available in the Apple settings catalog<!-- 25189345  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+
+**Managed Settings**:
+
+- Data roaming
+- Personal hotspot
+- Voice roaming (deprecated): This setting was deprecated in iOS 16.0 and replaced by Data roaming.
+
+Applies to:
+
+- iOS/iPadOS
+
+**Managed Settings**:
+
+- Diagnostic submission
+
+Applies to:
+
+- Shared iPad
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Use assignment filters on Endpoint Privilege Management (EPM) policies<!-- 25230705   -->  
+You can use assignment filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy, like targeting devices with a specific OS version or a specific manufacturer.
+
+You can use filters on Endpoint Privilege Management (EPM) policies.
+
+For more information about assignment filters, go to [Use filters when assigning your apps, policies, and profiles in Intune](filters.md).
+
+Applies to:
+
+- Windows 10/11
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### Enrollment for iOS/iPadOS devices in Azure AD shared device mode moving to general availability<!-- 25199565 -->  
+An Intune enrollment method that lets you enroll iOS/iPadOS devices in Azure AD shared device mode is moving out of public preview. This enrollment method is part of Apple automated device enrollment and available to configure in the Microsoft Intune admin center. Shared device mode enables your frontline workers to share a single device throughout the day, signing in and out as needed.
 
 <!-- *********************************************** -->
 
 ## Device management
+
+### Improvements to new device experience in admin center (public preview)<!-- 24155098, 25103808, 17705028 IDdraft idready -->
+The following changes are coming to the new Devices experience and will be available to try in public preview in the Microsoft Intune admin center:   
+- Additional entry points to platform-specific options: Access the platform pages from the **Devices** navigation menu.   
+- Quick entry to monitoring reports: Select the titles of the metrics cards to go to the corresponding monitoring report.  
+- Improved navigation menu: We added icons back in to provide more color and context as you navigate.  
+Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback. For more information, see [Try new Devices experience](microsoft-intune-admin-center-devices.md).  
+
+### Feature updates and reports support Windows 11 policies<!--17614166 -->
+This new setting for feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins don't need to create or manage groups of eligible and non-eligible devices.
+
+For more information on feature updates, go to [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
 
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
@@ -110,7 +184,24 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 ## Device security
 
-### Updated security baseline for Microsoft 365 Apps for Enterprise.<!-- 25021846  -->  
+
+### Additional settings for the Linux Antivirus policy template<!-- 24191424  -->  
+We’re expanding support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
+
+- cloudblocklevel
+- scanarhives
+- scanafterdefinitionupdate
+- maximumondemandscanthreads
+- behaviormonitoring
+- enablefilehashcomputation
+- networkprotection
+- enforcementlevel
+- nonexecmountpolicy
+- unmonitoredfilesystems
+
+The Microsoft Defender Antivirus template for Linux is supported for devices managed by Intune, as well as those managed only by Defender through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview#linux) scenario when you use the opt-in public preview.
+
+### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 25021846  -->  
 We're working on an update to the Intune security baseline for Microsoft 365 Apps for Enterprise. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Office apps.
 
 For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
