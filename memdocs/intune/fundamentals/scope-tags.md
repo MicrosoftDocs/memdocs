@@ -102,7 +102,7 @@ When working with scope tags, remember these details:
   - Jamf devices
 - Volume Purchase Program (VPP) apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
 - When an admin creates an object in Intune, all scope tags assigned to that admin will be automatically assigned to the new object.
-- Intune RBAC doesn't apply to Azure Active Directory roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
+- Intune RBAC doesn't apply to Microsoft Entra roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
 - If a role assignment has no scope tag, that IT admin can see all objects based on the IT admins permissions. Admins that have no scope tags essentially have all scope tags.
 - You can only assign a scope tag that you have in your role assignments.
 - You can only target groups that are listed in the Scope (Groups) of your role assignment.
@@ -112,5 +112,3 @@ When working with scope tags, remember these details:
 
 Learn how scope tags behave when there are [multiple role assignments](role-based-access-control.md#multiple-role-assignments).
 Manage your [roles](role-based-access-control.md) and [profiles](../configuration/device-profile-assign.md).
-
-

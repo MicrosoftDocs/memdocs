@@ -391,7 +391,7 @@ If you've enabled [device group mapping](../enrollment/device-group-mapping.md),
 We've improved the device setup workflow in the Company Portal app for iOS/iPadOS. The language is more user-friendly and we've combined screens where possible. We have also made the language more specific to your company by using your company name throughout the setup text.
 
 > [!NOTE]
-> We use the company name you have set in the Azure Portal in **Microsoft Intune** > **Client Apps** > **Company Portal branding** > **Company name**. If you have not set this value, we will use the tenant name set in **Azure Active Directory** > **Properties** > **Name**. If you have not set a company name in Company Portal branding and don't want your tenant name to be displayed, we recommend that you set the company name in the Company Portal branding tab. If you don't want this string to show in the header in Company Portal, you can deselect the checkbox to "Show company name next to logo."
+> We use the company name you have set in the Azure Portal in **Microsoft Intune** > **Client Apps** > **Company Portal branding** > **Company name**. If you have not set this value, we will use the tenant name set in **Microsoft Entra ID** > **Properties** > **Name**. If you have not set a company name in Company Portal branding and don't want your tenant name to be displayed, we recommend that you set the company name in the Company Portal branding tab. If you don't want this string to show in the header in Company Portal, you can deselect the checkbox to "Show company name next to logo."
 
 |Before|After|
 |---|---|
@@ -528,7 +528,7 @@ The apps details page of the Company Portal app for Android will now display the
 
 ### Improved sign in experience across Company Portal apps for all platforms <!--User Story 1132123-->
 
-We are announcing a change that is coming in the next few months that will improve the sign-in experience for the Intune Company Portal apps for Android, iOS/iPadOS, and Windows. The new user experience will automatically appear across all platforms for the Company Portal app when Azure AD makes this change. In addition, users can now sign in to the Company Portal from another device with a generated, single-use code. This is especially useful in cases when users need to sign in without credentials.  
+We are announcing a change that is coming in the next few months that will improve the sign-in experience for the Intune Company Portal apps for Android, iOS/iPadOS, and Windows. The new user experience will automatically appear across all platforms for the Company Portal app when Microsoft Entra ID makes this change. In addition, users can now sign in to the Company Portal from another device with a generated, single-use code. This is especially useful in cases when users need to sign in without credentials.  
 
 Below you can see the previous sign-in experience, the new sign-in experience with credentials, and the new sign-in experience from another device.
 
@@ -598,7 +598,7 @@ The Company Portal app for Windows 10 will now automatically initiate a sync for
 ![An image of the Windows 10 Company Portal app, with the new automatic syncing state showing with a status message indicating that the device is syncing and attempting to download the app.](./media/whats-new-app-ui/w10_download_pending_syncing_after_1706.png)
 
 ### New guided experience for Windows 10 Company Portal <!---1058938--->
-The Company Portal app for Windows 10 will include a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Azure Active Directory (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they do not complete registration and enrollment, but will experience limited functionality.
+The Company Portal app for Windows 10 will include a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Microsoft Entra ID (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they do not complete registration and enrollment, but will experience limited functionality.
 
 This update is only visible on devices running Windows 10 Anniversary Update (build 1607) or higher.
 
