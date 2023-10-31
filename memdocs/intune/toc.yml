@@ -1630,9 +1630,7 @@ items:
         - name: Examine device inventory
           href: ./remote-actions/device-inventory.md
         - name: Collect diagnostics
-          href: ./remote-actions/collect-diagnostics.md
-        - name: Pause config refresh
-          href: ./remote-actions/pause-config-refresh.md  
+          href: ./remote-actions/collect-diagnostics.md  
         - name: Send organizational messages  
           items: 
           - name: Overview 
@@ -1714,9 +1712,20 @@ items:
     items: 
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
-    - name: Frontline worker (FLW)
-      displayName: android, ios, ipados
-      href: ./fundamentals/frontline-worker-overview.md
+    - name: Frontline worker (FLW) device management
+      displayName: android, ios, ipados, windows, kiosk
+      items:
+      - name: FLW Overview
+        href: ../solutions/frontline-worker/frontline-worker-overview.md
+      - name: Android FLW
+        displayName: Android Enterprise, ae, aosp, kiosk
+        href: ../solutions/frontline-worker/frontline-worker-overview-android.md
+      - name: iOS/iPadOS FLW
+        displayName: ios, ipados, shared ipad, kiosk
+        href: ../solutions/frontline-worker/frontline-worker-overview-ios-ipados.md
+      - name: Windows FLW
+        displayName: kiosk, multi-app, single-app
+        href: ../solutions/frontline-worker/frontline-worker-overview-windows.md
     - name: Guided scenarios
       items: 
       - name: Guided scenarios overview
@@ -1726,9 +1735,15 @@ items:
       - name: Cloud-managed Modern Desktop
         href: ./fundamentals/guided-scenarios-cloud-managed-pc.md   
       - name: Secure Microsoft Office mobile apps
-        href: ./fundamentals/guided-scenarios-office-mobile.md              
+        href: ./fundamentals/guided-scenarios-office-mobile.md
       - name: Windows 10/11 in cloud configuration
-        href: ./fundamentals/cloud-configuration.md
+        items:
+        - name: Overview
+          displayName: cloud config, flw, windows
+          href: ./fundamentals/cloud-configuration.md
+        - name: Step-by-step guide
+          displayName: cloud config, flw, windows
+          href: ./fundamentals/cloud-configuration-setup-guide.md
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits

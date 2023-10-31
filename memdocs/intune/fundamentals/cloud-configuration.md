@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Windows cloud configuration in Microsoft Intune
-description: Use a guided scenario to configure Windows 10/11 in a cloud configuration. Cloud config focuses on browsing using Microsoft Intune and Microsoft 365 apps.
+title: Use Windows cloud configuration in a guided scenario
+description: Use a guided scenario to configure Windows 10/11 client devices in a cloud configuration in Microsoft Intune. Cloud config focuses on a simplified device experience for internet browsing and using Microsoft 365 apps, including Microsoft Teams.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 10/19/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,6 +43,11 @@ It's ideal for:
 
 Cloud config makes these devices easy to use, and secures these devices with Microsoft-recommended security features.
 
+There are two ways to deploy cloud config:
+
+- **Option 1 - Automatic** (this article): Use the guided scenario described in this article to automatically create all the groups and policies with their configured values.
+- **Option 2 - Manual**: Use a step-by-step setup guide to deploy cloud config yourself, including manually creating all the policies. For more information on this option, go to [Windows client cloud config setup guide](cloud-configuration-setup-guide.md).
+
 With Windows 10/11 in cloud configuration:
 
 - You can configure new devices, or reuse existing hardware.
@@ -51,7 +56,7 @@ With Windows 10/11 in cloud configuration:
 - You can customize the names of your resources, so they're easy to see and monitor.
 
 > [!TIP]
-> To learn more about Windows 10/11 in cloud configuration, go to [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
+> For a more comprehensive guide on Windows 10/11 in cloud configuration, go to [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
 
 ## What this guided scenario does
 
@@ -220,5 +225,5 @@ When it deploys successfully, you can use the monitoring and reporting features 
 
 ## Related content
 
-- To learn more about guided scenarios, and see the other scenarios are available, go to [Guided scenarios overview](guided-scenarios-overview.md).
-- To learn more about Windows client in a cloud configuration, go to [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
+- [Guided scenarios overview](guided-scenarios-overview.md)
+- [Windows client cloud config step by step setup guide](cloud-configuration-setup-guide.md)
