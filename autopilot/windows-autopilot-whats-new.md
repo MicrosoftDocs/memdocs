@@ -24,9 +24,9 @@ appliesto:
 
 The 2310 release of Intune adds more clarity to the manual hardware hash upload in the console. If a device couldn't be imported, a notification shows the import error along with the specific lines of the CSV file that received the error. The error codes also include more details on why the device failed to upload, whether the device is assigned to another tenant, or the device already registered to the tenant.
 
-![Import Error Screenshot.](media/windows-autopilot-whats-new/importerror1.png)
+:::image type="content" alt-text="Import Error Screenshot." source="media/windows-autopilot-whats-new/importerror1.png":::
 
-![Import error details.](media/windows-autopilot-whats-new/importerror2.png)
+:::image type="content" alt-text="Import error details." source="media/windows-autopilot-whats-new/importerror2.png":::
 
 ## Unblock fix pending state for self-deploying mode for disabled OEMs
 
