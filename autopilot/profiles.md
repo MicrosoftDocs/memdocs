@@ -102,7 +102,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
     > [!NOTE]
     >
-    > When using the assignment **All Devices**, exclusions aren't supported. Attempting to exclude groups while targeting to all devices may cause assignment problems and may require uploading device hashes again.
+    > When the assignment **All Devices** is used, exclusions aren't supported. Attempting to exclude groups while targeting to all devices can cause assignment problems and can require uploading device hashes again.
 
 1. Choose **Select groups to include**, and choose the groups you want to include in this profile.
 
