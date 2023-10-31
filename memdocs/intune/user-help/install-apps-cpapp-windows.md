@@ -37,10 +37,7 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-Browse and install available work apps in the Intune Company Portal app for Windows. This article describes how to access work and school-related apps assigned to you in Company Portal. 
-
-## Types of apps 
-Your workplace may require you to have certain apps installed on your device as long as you're using the device for work. Other apps may be available but not required.    
+Browse and install available work apps in the Intune Company Portal app for Windows. This article describes how to access work and school-related apps assigned to you in Company Portal. Your workplace could require certain apps to be on your device, or make them optional.      
 
 * Optional apps: These apps are selected by your organization and deemed useful and appropriate for work or school. They're available to you but it's up to you whether you want to install them. These are the only kind of apps you can manually install from Company Portal. 
 
@@ -84,7 +81,7 @@ Go to **Apps** to see a list of all available and installed apps on your device.
 * **Version**: The version number of the app. 
 * **Publisher**: The name of the developer or company that distributed the app. A publisher is typically a software vendor or your organization.  
 * **Date Published**: The date that the app was made available to download. Publish date could show an app's initial release or an app's most recent update.
-* **Status**: The current installation status of the app on your device., which could include *Available*, *Installing*, *Installed*, and *Install failed*.  
+* **Status**: The current installation status of the app on your device, which could include *Available*, *Installing*, *Installed*, and *Install failed*.  
 
 Select **Sort by** to rearrange the apps alphabetically by app or publisher name, or chronologically by publish date. Under **Refine**, you can select a category to narrow results to a certain type of app. 
 
@@ -97,7 +94,7 @@ The following information is available for each app:
 * **Version**: The version number of the app. 
 * **Required by your organization**: How the app is assigned and made available to you.  
 * **Publisher**: The name of the developer or company that distributed the app. A publisher is typically a software vendor or your organization.  
-* **Status**: The current installation status of the app on your device., which could include *Available*, *Installing*, *Installed*, and *Install failed*. Required apps could take up to 10 minutes to show an up-to-date status. See the note under [Install apps](#install-apps) for important details about installing required apps.  
+* **Status**: The current installation status of the app on your device, which could include *Available*, *Installing*, *Installed*, and *Install failed*. Required apps could take up to 10 minutes to show an up-to-date status. See the note under [Install apps](#install-apps) for important details about installing required apps.  
 
 ## Installing Microsoft Office  
 Depending on the size of your workplace or school, there could be multiple versions of Office available to install in Company Portal. You should only install one version of Office. If you try to install an additional one, the first one will be uninstalled. If you're unsure which version is best for your role, contact your IT support person for guidance.  
