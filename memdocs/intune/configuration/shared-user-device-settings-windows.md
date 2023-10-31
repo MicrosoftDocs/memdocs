@@ -54,11 +54,11 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
 - **Shared PC mode**: **Enable** turns on shared PC mode. In this mode, only one user signs in to the device at a time. Another user can't sign in until the first user signs out. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Guest account**: Choose to create a Guest option on the sign-in screen. Guest accounts don't require any user credentials or authentication. This setting creates a new local account each time it's used. Your options:
   - **Guest**: Only allows a local guest account to sign in to the device.
-  - **Domain**: Only allows an Azure Active Directory (AD) domain account to sign in to the device.
-  - **Guest and domain**: Allows a local guest account, or an Azure Active Directory (AD) domain account to sign in to the device.
+  - **Domain**: Only allows a Microsoft Entra domain account to sign in to the device.
+  - **Guest and domain**: Allows a local guest account, or a Microsoft Entra domain account to sign in to the device.
 - **Account management**: Choose if accounts are automatically deleted. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
-  - **Enabled**: Accounts created by guests, and accounts in AD and Azure AD are automatically deleted from the devices. When a user signs off the device, or when system maintenance runs, these accounts are removed from the devices.
+  - **Enabled**: Accounts created by guests, and accounts in AD and Microsoft Entra ID are automatically deleted from the devices. When a user signs off the device, or when system maintenance runs, these accounts are removed from the devices.
 
     Also enter:
 
@@ -73,7 +73,7 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
     - **Stop delete threshold(%)**: Enter a percentage (0-100) of disk space. When the total disk/storage space meets the value you enter, the deleting stops.
     - **Inactive account threshold**: Enter the number of consecutive days before deleting the account that hasn't signed in, from 0-60 days.
 
-  - **Disabled**: The local, AD, and Azure AD accounts created by guests stay on the device, and aren't deleted.
+  - **Disabled**: The local, AD, and Microsoft Entra accounts created by guests stay on the device, and aren't deleted.
 
 - **Local Storage**: With local storage, users can save and view files on the device's hard drive. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting.
