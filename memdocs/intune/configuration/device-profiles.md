@@ -146,7 +146,7 @@ This feature supports:
 
 ## Domain join
 
-[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to hybrid Azure AD joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
+[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to Microsoft Entra hybrid joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
 
 This feature supports:
 

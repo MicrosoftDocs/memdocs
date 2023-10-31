@@ -2,7 +2,7 @@
 # required metadata
 
 title: Email settings for Windows 10/11 devices in Microsoft Intune
-description: Create a device configuration email profile that that uses Exchange servers, and retrieves attributes from Azure Active Directory. You can also enable SSL, and synchronize email and schedules on Windows 10/11 client devices using Microsoft Intune.
+description: Create a device configuration email profile that that uses Exchange servers, and retrieves attributes from Microsoft Entra ID. You can also enable SSL, and synchronize email and schedules on Windows 10/11 client devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -50,19 +50,19 @@ This article describes some of the settings you can configure. You can create a 
 
 - **Email server**: Enter the host name of your Exchange server. For example, enter `outlook.office365.com`.
 - **Account name**: Enter the display name for the email account. This name is shown to users on their devices.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory. Intune dynamically generates the username that's used by this profile. Your options:
+- **Username attribute from AAD**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that's used by this profile. Your options:
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
   - **Primary SMTP address**: Gets the name in email address format, such as `user1@contoso.com`.
   - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:  
-    - **User domain name source**: Select **AAD** (Azure Active Directory) or **Custom**.
+    - **User domain name source**: Select **AAD** (Microsoft Entra ID) or **Custom**.
 
-      When getting the attributes from **AAD**, also enter:
-      - **User domain name attribute from AAD**: Choose to get the **Full domain name** or the **NetBIOS name** attribute of the user.
+      When getting the attributes from Microsoft Entra ID, also enter:
+      - **User domain name attribute from AAD**: Choose to get the **Full domain name** or the **NetBIOS name** Microsoft Entra attribute of the user.
 
       When using **Custom** attributes, also enter:
       - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
-- **Email address attribute from AAD**: Intune gets this attribute from Azure Active Directory. Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
+- **Email address attribute from AAD**: Intune gets this attribute from Microsoft Entra ID. Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
   - **User principal name**: Uses the full principal name as the email address, such as `user1@contoso.com` or `user1`.
   - **Primary SMTP address**: Uses the primary SMTP address to sign in to Exchange, such as `user1@contoso.com`.
 
