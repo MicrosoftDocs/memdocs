@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2023
+ms.date: 10/31/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -187,7 +187,6 @@ For a detailed tutorial on configuring and assigning a Windows Autopilot deploym
 
 ## Related articles
 
-[Profile download](troubleshooting.md#profile-download)
-
-[Registering devices](add-devices.md)
+- [Profile download](troubleshooting.md#profile-download)
+- [Registering devices](add-devices.md)
 
