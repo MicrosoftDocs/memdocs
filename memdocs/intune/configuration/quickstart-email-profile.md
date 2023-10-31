@@ -68,8 +68,8 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 7. In **Configuration settings**, enter the following settings (leave the defaults for other settings):
    - **Email server**: For this evaluation step, enter **outlook.office365.com**. This setting specifies the Exchange location (URL) of the email server that the iOS/iPadOS mail app will use to connect to email.
    - **Account name**: Enter **Company Email**.
-   - **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (Azure AD). Intune dynamically generates the username for this profile using this name. For this evaluation step, we'll assume that we want the **User Principal Name** to be used as the username for the profile (for example, user1@contoso.com).
-   - **Email address attribute from AAD**: This setting is the email address from Azure AD that will be used to sign in to Exchange. For this evaluation step, select **User Principal Name**.
+   - **Username attribute from AAD**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username for this profile using this name. For this evaluation step, we'll assume that we want the **User Principal Name** to be used as the username for the profile (for example, user1@contoso.com).
+   - **Email address attribute from AAD**: This setting is the email address from Microsoft Entra ID that will be used to sign in to Exchange. For this evaluation step, select **User Principal Name**.
    - **Authentication method**: For this evaluation step, select **Username and password**. (You can also choose **Certificate** if you've already set up a certificate for Intune.)
 
 8. Select **Next**.
