@@ -107,16 +107,16 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 6. Select **Next**.
 7. In **Configuration settings**, select **Single sign-on app extension**, and configure the following properties:
 
-    - **SSO app extension type**: Select **Microsoft Azure AD**.
+    - **SSO app extension type**: Select **Microsoft Entra ID**.
 
-      :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Azure AD for iOS/iPadOS in Intune.":::
+      :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for iOS/iPadOS in Intune.":::
 
     - **Enable shared device mode**:  
 
       - **Not configured**: Intune doesn't change or update this setting.
 
         For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option.
-      - **Yes**: Select this option **only** if the targeted devices are using Azure AD Shared device mode. For more information, go to [Shared device mode overview](/azure/active-directory/develop/msal-shared-devices).  
+      - **Yes**: Select this option **only** if the targeted devices are using Microsoft Entra shared device mode. For more information, go to [Shared device mode overview](/azure/active-directory/develop/msal-shared-devices).  
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
@@ -172,7 +172,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-urls-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for iOS/iPadOS devices.":::
 
-6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
+6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Microsoft Entra Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
     The following example is a recommended PLIST file that meets the needs of most organizations:
 
