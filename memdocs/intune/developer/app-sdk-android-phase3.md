@@ -125,6 +125,10 @@ Whenever you see `mam` in a stack, first check:
 
 Unless the answer to both is "yes", the MAM code is acting as simple passthrough.
 
+## .NET MAUI
+
+If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.microsoft.com/en-us/apps/maui), see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android).
+
 ## Gradle Build Plugin
 
 If your app doesn't build with Gradle, skip to [Integrating with the Command Line Tool].
