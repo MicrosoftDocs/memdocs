@@ -48,7 +48,7 @@ Headings are driven by article context. -->
 
         > [!NOTE]
         >
-        > This field doesn't support the **%SERIAL%** or **%RAND:x%** variables that can be used with the **Apply device name template** in the Azure AD join scenario.
+        > This field doesn't support the **%SERIAL%** or **%RAND:x%** variables that can be used with the **Apply device name template** in the Microsoft Entra join scenario.
 
    1. Next to **Domain name**, enter the FQDN of the domain that devices should join. This field is required. Make sure to specify the FQDN of the domain and not the NETBIOS name of the domain. For example, enter in **contoso.com** and not just **CONTOSO**.
 
@@ -70,7 +70,7 @@ Headings are driven by article context. -->
 
         > [!NOTE]
         >
-        > It's recommended to select and assign to **Add all devices** instead of selecting and assigning to the device group created in the **Create device group** step. Assigning to all devices ensures that the domain join profile works when using the [Windows Autopilot deployment for existing devices](../existing-devices/existing-devices-workflow.md) scenario with an Autopilot deployment that utilizes hybrid Azure AD join.
+        > It's recommended to select and assign to **Add all devices** instead of selecting and assigning to the device group created in the **Create device group** step. Assigning to all devices ensures that the domain join profile works when using the [Windows Autopilot deployment for existing devices](../existing-devices/existing-devices-workflow.md) scenario with an Autopilot deployment that utilizes Microsoft Entra hybrid join.
 
         > [!NOTE]
         >
