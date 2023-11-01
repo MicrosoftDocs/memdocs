@@ -74,8 +74,6 @@ Two new sizes are now available for Windows 365 Cloud PCs:
 
 These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
 
-Resizing doesn't currently support these two new sizes.
-
 #### New gallery images<!--47114436-->
 
 Two new gallery images are now available for Windows 365 Cloud PCs:
