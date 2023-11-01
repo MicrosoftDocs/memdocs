@@ -71,7 +71,7 @@ The Intune App SDK consists of the following files:
 - **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: This AAR contains
   stubs for Android system classes that are present only on newer
   devices but that are referenced by methods in [MAMActivity]. Newer
-  devices will ignore these stub classes. This AAR is necessary only
+  devices ignore these stub classes. This AAR is necessary only
   if your app performs reflection on classes deriving from
   `MAMActivity`, and **most apps do not need to include it**. The AAR
   contains ProGuard rules to exclude all its classes.
@@ -87,7 +87,7 @@ The Intune App SDK is a standard Android library with no external dependencies.
  2. Select **Import .JAR/.AAR Package**.
  3. Select Microsoft.Intune.MAM.SDK.aar to create a module for the *.AAR- file type.
  4. Right-click the module or modules containing your app code and go to **Module Settings** > **Dependencies tab** > **+ icon** > **Module dependency**.
- 5. Select the MAM SDK AAR module you created and select **OK**. This ensures that your module compiles with the MAM SDK when you build your project.
+ 5. Select the MAM SDK AAR module you created and select **OK**. Adding this reference ensures that your module compiles with the MAM SDK when you build your project.
 
 ### ProGuard
 
@@ -163,7 +163,7 @@ By default, the plugin operates on `project` dependencies and external libraries
 Test compilation isn't affected.
 
 > [!NOTE]
-> Beginning with the 8.0 Intune App SDK, it's no longer possible to process libraries selectively -- all are processed.
+> Beginning with the 8.0 Intune App SDK, it's no longer possible to process libraries selectively. All libraries are processed.
 
 ### Dependencies
 
