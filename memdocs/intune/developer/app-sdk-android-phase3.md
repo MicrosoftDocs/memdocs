@@ -87,7 +87,7 @@ The Intune App SDK is a standard Android library with no external dependencies.
  2. Select **Import .JAR/.AAR Package**.
  3. Select Microsoft.Intune.MAM.SDK.aar to create a module for the *.AAR- file type.
  4. Right-click the module or modules containing your app code and go to **Module Settings** > **Dependencies tab** > **+ icon** > **Module dependency**.
- 5. Select the MAM SDK AAR module you created and select **OK**. This will ensure that your module compiles with the MAM SDK when you build your project.
+ 5. Select the MAM SDK AAR module you created and select **OK**. This ensures that your module compiles with the MAM SDK when you build your project.
 
 ### ProGuard
 
@@ -159,7 +159,7 @@ Then, to apply the plugin, add the following to the `build.gradle` file for your
 apply plugin: 'com.microsoft.intune.mam'
 ```
 
-By default, the plugin will operate on `project` dependencies and external libraries.
+By default, the plugin operates on `project` dependencies and external libraries.
 Test compilation isn't affected.
 
 > [!NOTE]
@@ -386,7 +386,7 @@ Your project must still list the MAM SDK as a dependency.
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, continue to [Stage 4: MAM Integration Essentials].
+After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integration Essentials].
 
 <!-- Stage 3 links -->
 <!-- internal links -->
