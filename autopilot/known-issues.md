@@ -29,6 +29,18 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Enrolled date for Autopilot device is incorrect
+
+The **Enrolled date** in the **Devices | All devices** and **Windows | Windows devices** panes display the date the device was registered to Autopilot instead of the date it was enrolled to Autopilot. For a more accurate date for when the device enrolled to the tenant:
+
+1. Use the Intune Graph API to query the device:
+
+    `devices?$filter=physicalIds/any(p: startswith(p, '[ZTDID]'))&$select=id,deviceId,displayName,physicalIds,createdDateTime`
+
+    For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph ](/graph/api/resources/intune-graph-overview).
+
+1. Use the Windows Autopilot deployment report for recently deployed devices.
+
 ### Filtering Windows Autopilot devices not working as expected
 
 Viewing Windows Autopilot devices within Intune may not work as expected if you're attempting to filter results. While this issue is being worked on, a workaround is to use [Microsoft Graph API](/graph/use-the-api) to properly query and filter necessary devices.
@@ -251,3 +263,4 @@ Using PPKGs in combination with Windows Autopilot isn't recommended.
 [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
 
 [Troubleshooting Windows Autopilot](troubleshooting.md)
+
