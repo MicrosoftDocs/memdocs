@@ -5,8 +5,8 @@ title: Migrate from Microsoft 365 Basic Mobility and Security to Intune
 titleSuffix: Microsoft Intune
 description: Learn how to migrate your mobile device management from Microsoft 365 Basic Mobility and Security to Intune.
 keywords:
-author: Smritib17
-ms.author: smbhardwaj
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 10/05/2023
 ms.topic: how-to
@@ -55,7 +55,7 @@ This article helps you migrate your mobile device management (MDM) from Microsof
 
 ## Before you begin
 
-- When you sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), use an account that has Microsoft Entra Global or License administrator rights.
+- When you sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), use an account that has Microsoft Entra global admin or license admin rights.
 
 - Test the steps in this article on a test users group that have devices enrolled in Basic Mobility and Security. Confirm that the policies behave as you expect.
 
@@ -177,7 +177,7 @@ After the policies are created, they're ready to be assigned. For this migration
 
     For more information on the impact of existing Intune licenses, go to [Before you begin](#before-you-begin) (in this article).
 
-2. **Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** with Microsoft Entra Global or License administrator rights.
+2. **Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** with Microsoft Entra global admin or license admin rights.
 
 3. **Enable [coexistence](mdm-authority-set.md#coexistence)**. When enabled:
 
