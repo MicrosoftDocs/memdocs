@@ -52,6 +52,9 @@ Learn what new features are available in Windows 365 Business.
 <!-- ########################## -->
 ## Week of October 30, 2023 (Service release 2310)
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
 #### Two new sizes for Cloud PCs<!--46653331-->
 
 Two new sizes are now available for Windows 365 Cloud PCs:
@@ -62,6 +65,13 @@ Two new sizes are now available for Windows 365 Cloud PCs:
 These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
 
 Resizing doesn't currently support these two new sizes.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Self-help in Windows 365 Business<!--45828334-->
+
+A new self-help button for end users is now available for Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
 
 <!-- ########################## -->
 ## Week of October 18, 2023
