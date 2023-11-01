@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 11/01/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -71,7 +71,7 @@ The Intune App SDK consists of the following files:
 - **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: This AAR contains
   stubs for Android system classes that are present only on newer
   devices but that are referenced by methods in [MAMActivity]. Newer
-  devices will ignore these stub classes. This AAR is necessary only
+  devices ignore these stub classes. This AAR is necessary only
   if your app performs reflection on classes deriving from
   `MAMActivity`, and **most apps do not need to include it**. The AAR
   contains ProGuard rules to exclude all its classes.
@@ -87,7 +87,7 @@ The Intune App SDK is a standard Android library with no external dependencies.
  2. Select **Import .JAR/.AAR Package**.
  3. Select Microsoft.Intune.MAM.SDK.aar to create a module for the *.AAR- file type.
  4. Right-click the module or modules containing your app code and go to **Module Settings** > **Dependencies tab** > **+ icon** > **Module dependency**.
- 5. Select the MAM SDK AAR module you just created and select **OK**. This will ensure that your module compiles with the MAM SDK when you build your project.
+ 5. Select the MAM SDK AAR module you created and select **OK**. Adding this reference ensures that your module compiles with the MAM SDK when you build your project.
 
 ### ProGuard
 
@@ -125,6 +125,10 @@ Whenever you see `mam` in a stack, first check:
 
 Unless the answer to both is "yes", the MAM code is acting as simple passthrough.
 
+## .NET MAUI
+
+If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.microsoft.com/apps/maui), see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android).
+
 ## Gradle Build Plugin
 
 If your app doesn't build with Gradle, skip to [Integrating with the Command Line Tool].
@@ -155,11 +159,11 @@ Then, to apply the plugin, add the following to the `build.gradle` file for your
 apply plugin: 'com.microsoft.intune.mam'
 ```
 
-By default, the plugin will operate on `project` dependencies and external libraries.
+By default, the plugin operates on `project` dependencies and external libraries.
 Test compilation isn't affected.
 
 > [!NOTE]
-> Beginning with the 8.0 Intune App SDK, it is no longer possible to process libraries selectively -- all are processed.
+> Beginning with the 8.0 Intune App SDK, it's no longer possible to process libraries selectively. All libraries are processed.
 
 ### Dependencies
 
@@ -237,7 +241,7 @@ intunemam {
 This would have the following effects:
 
 - `:product:FooLib` isn't rewritten because it's included in `excludeProjects`
-- `:product:foo-project` is rewritten, except for `com.contoso.SplashActivity` which is skipped because it's in `excludeClasses`
+- `:product:foo-project` is rewritten, except for `com.contoso.SplashActivity`, which is skipped because it's in `excludeClasses`
 - `com.microsoft.bar:baz.1.0.0` is rewritten because all external libraries are included for processing.
 - Variants with the `noMAM` flavor aren't rewritten.
 
@@ -259,7 +263,7 @@ The build plugin can run additional verification to look for possible errors in 
 These checks help to safeguard against potential plugin-induced runtime failures.
 
 To request verification is performed in your build, specify `verify = true` in the `intunemam` configuration block.
-Note that this may add several seconds to the time taken by the plugin's task.
+This may add several seconds to the time taken by the plugin's task.
 
 ```groovy
 intunemam {
@@ -267,7 +271,7 @@ intunemam {
 }
 ```
 
-Generally, a verification failure will represent a bug in the build plugin.
+Generally, a verification failure represents a bug in the build plugin.
 For assistance with a failure, escalate the issue with Microsoft support.
 If you don't have a Microsoft support contract, [open a GitHub issue][MAM SDK GitHub issues].
 
@@ -290,7 +294,7 @@ If your build uses Gradle, and you've followed [prior instructions on the Gradle
 
 The command-line build tool is available in the `BuildTool` folder of the SDK drop.
 It performs the same function as the Gradle plugin detailed above, but can be integrated into custom or non-Gradle build systems.
-As it is more generic, it is more complex to invoke, so the Gradle plugin should be used whenever possible.
+As it's more generic, it's more complex to invoke, so the Gradle plugin should be used whenever possible.
 
 ### Using the Command-Line Tool
 
@@ -325,8 +329,8 @@ This would have the following effects:
 
 - the `product-foo-project` directory is rewritten to `mam-build\product-foo-project`
 - `bar.jar` is rewritten to `mam-build\libs\bar.jar`
-- `zap.jar` is **not** rewritten because it is only listed in `--classpath`
-- The `com.contoso.SplashActivity` class is **not** rewritten even if it is in `--input`
+- `zap.jar` is **not** rewritten because it's only listed in `--classpath`
+- The `com.contoso.SplashActivity` class is **not** rewritten even if it's in `--input`
 
 > [!WARNING] 
 > The build tool does not currently support aar files.
@@ -361,7 +365,7 @@ Clients of bound services are strongly encouraged to check for exceptions thrown
 
 ## Exit Criteria
 
-After you've either configured the build plugin or integrated the command line tool into your build process, validate that it is running successfully:
+After you've either configured the build plugin or integrated the command line tool into your build process, validate that it's running successfully:
 
 - Ensure that your build compiles and builds successfully.
 - Configure the `report` flag, then open the report document and confirm class and method replacements are occurring:
@@ -377,12 +381,12 @@ After you've either configured the build plugin or integrated the command line t
 ### My app previously integrated the SDK without the build plugin; how can I use the build plugin?
 
 Older versions of the Intune App SDK didn't include any automated way to perform class and method replacements, and developers needed to perform these replacements manually in source code.
-If your app had previously integrated this way, it is safe to leverage the build plugin (or command line build tool) without any source code modifications.
+If your app had previously integrated this way, it's safe to apply the build plugin (or command line build tool) without any source code modifications.
 Your project must still list the MAM SDK as a dependency.
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, continue to [Stage 4: MAM Integration Essentials].
+After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integration Essentials].
 
 <!-- Stage 3 links -->
 <!-- internal links -->
