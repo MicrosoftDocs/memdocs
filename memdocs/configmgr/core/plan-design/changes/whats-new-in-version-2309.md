@@ -159,7 +159,7 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 ## Next steps
 <!--At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).-->
 
-As of October 27, 2023, version 2309 is globally available for all customers to install.
+As of November 1, 2023, version 2309 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md).
 
