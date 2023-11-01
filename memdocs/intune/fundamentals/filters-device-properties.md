@@ -194,7 +194,7 @@ You can use the following device properties in your managed device filter rules:
   - Windows 11
   - Windows 10
 
-- **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Microsoft Entra join, Hybrid Microsoft Entra ID, Microsoft Entra registered or unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
+- **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Azure AD joined, Azure AD registered, Hybrid Azure AD joined,  or Unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
 
   Examples:
 
