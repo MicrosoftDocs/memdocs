@@ -40,9 +40,9 @@ appliesto:
 
     - **Group name** and **Group description**: Enter a name and description for your group.
 
-    - **Azure AD roles can be assigned to the group**: Select **No**, Azure AD roles aren't assigned to this group.
+    - **Microsoft Entra roles can be assigned to the group**: Select **No**, Microsoft Entra roles aren't assigned to this group.
 
-      For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
+      For more information, see [Use cloud groups to manage role assignments in Microsoft Entra ID](/azure/active-directory/roles/groups-concept).
 
     - **Membership type**: Choose how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](/mem/intune/fundamentals/groups-add).
 
@@ -56,7 +56,7 @@ appliesto:
 
       - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -contains "[ZTDID]"))`.
 
-      - Intune's group tag field maps to the `OrderID` attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
+      - Intune's group tag field maps to the `OrderID` attribute on Microsoft Entra devices. To create a group that includes all Autopilot devices with a specific group tag (the Microsoft Entra device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
 
       - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
 
@@ -84,7 +84,7 @@ The dynamic device group that includes Autopilot devices automatically adds exis
 
 You can assign a licensed Intune user to a specific Autopilot device. For supported OEMs, this assignment will:
 
-- Pre-populate the Azure Active Directory (Azure AD) User Principal Name (UPN) under the pre-provisioning landing page and Azure AD sign in page.
+- Pre-populate the Microsoft Entra user Principal Name (UPN) under the pre-provisioning landing page and Microsoft Entra sign-in page.
 - Allows setting of a custom greeting name.
 
 For more information including a list of supported OEMs, see [Return of key functionality for Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130).
@@ -95,7 +95,7 @@ For more information including a list of supported OEMs, see [Return of key func
 
 Prerequisites:
 
-- Azure Active Directory [Company Branding](/azure/active-directory/fundamentals/customize-branding) has been configured.
+- Microsoft Entra ID [Company Branding](/azure/active-directory/fundamentals/customize-branding) has been configured.
 
 > [!IMPORTANT]
 >
@@ -132,7 +132,7 @@ If you aren't interested in mobile device management, you can use Autopilot in o
 
 ## Windows Autopilot for existing devices
 
-You can group Windows devices by a correlator ID when enrolling using [Autopilot for existing devices](tutorial/existing-devices/existing-devices-workflow.md) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. The [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) is automatically set to equal **OfflineAutopilotprofile-\<correlator ID\>**. Using the correlator ID from the **enrollmentprofileName** attribute, arbitrary Azure AD dynamic groups can be created.
+You can group Windows devices by a correlator ID when enrolling using [Autopilot for existing devices](tutorial/existing-devices/existing-devices-workflow.md) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. The [Microsoft Entra device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) is automatically set to equal **OfflineAutopilotprofile-\<correlator ID\>**. Using the correlator ID from the **enrollmentprofileName** attribute, arbitrary Microsoft Entra dynamic groups can be created.
 
 >[!WARNING]
 >

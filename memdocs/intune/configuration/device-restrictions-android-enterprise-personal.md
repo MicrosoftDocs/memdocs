@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/04/2023
+ms.date: 10/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, shthilla, chmaguir, chrisbal, priyar
+ms.reviewer: andreibiswas, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -120,7 +120,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
 - **Search work contacts from personal profile**: **Block** prevents users from searching for work contacts in apps in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow searching for work contacts in the personal profile.
 
-- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. The camera on the personal side isn't affected by the setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
+- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. This setting doesn't affect the camera on the personal side. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
 - **Allow widgets from work profile apps**: **Enable** allows users to put widgets exposed by apps on the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable this feature.
 
@@ -154,14 +154,18 @@ These password settings apply to the work profile password on personally owned d
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
+- **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile.
+
+  When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
+
 #### Android 12 and later
 
 - **Password complexity**: Use this setting to set the password complexity requirements. Your options:
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
   - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
-  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
-  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least four characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least eight characters. The alphabetic or alphanumeric length must be at least six characters.
 
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 
@@ -232,8 +236,8 @@ These password settings apply to the device password on personally owned devices
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
   - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
-  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
-  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least four characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least eight characters. The alphabetic or alphanumeric length must be at least six characters.
 
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 

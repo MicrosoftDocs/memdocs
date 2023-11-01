@@ -160,7 +160,8 @@ To upload your organization's logo and color, first complete the following steps
 > [!NOTE]
 > As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
 > 
-> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). Favicon will be used as your organization and Background image will be used as brand color.
+> Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and **Page background color** will be used as brand color.
+
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
@@ -302,6 +303,31 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 |com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode |**true** shows the address bar in kiosk mode <br>**false** (default) hides the address bar when kiosk mode is enabled|
 |com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode <br>**false** (default) hides the bottom bar when kiosk mode is enabled |
 
+### Locked view mode
+
+Edge for iOS and Android can be enabled as locked view mode with MDM policy EdgeLockedViewMode.
+
+|Key  |Value  |
+|:---------|:---------|
+|EdgeLockedViewMode|**false** (default) Locked view mode is disabled <br> **true** Locked view mode is enabled | 
+
+It allows organizations to restrict various browser functionalities, providing a controlled and focused browsing experience.
+
+- The URL address bar becomes read-only, preventing users from making changes to the web address
+- Users are not allowed to create new tabs
+- The contextual search feature on web pages is disabled
+- The following buttons under the overflow menu are disabled
+
+|Buttons | State |
+|:--|:----|
+|New InPrivate tab|Disabled|
+|Send to Devices|Disabled|
+|Drop|Disabled|
+|Add to Phone (Android) |Disabled|
+|Download Page (Android) |Disabled|
+
+The locked view mode is often used together with MAM policy **com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL** or MDM policy    **EdgeNewTabPageCustomURL**, which allow organizations to configure a specific web page that is automatically launched when Edge is opened. Users are restricted to this web page and cannot navigate to other websites, providing a controlled environment for specific tasks or content consumption.
+
 ### Switch network stack between Chromium and iOS 
 By default, Microsoft Edge for both iOS and Android use the Chromium network stack for Microsoft Edge service communication, including sync services, auto search suggestions and sending feedback. Microsoft Edge for iOS also provides the iOS network stack as a configurable option for Microsoft Edge service communication.
 
@@ -367,20 +393,20 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 
 #### Bing Chat Enterprise 
 
-Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Bing button in bottom bar. 
+Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Copilot button in bottom bar. 
 
-There are three settings in Settings->General->New Bing copilot mode for Bing Chat Enterprise.
+There are three settings in **Settings**->**General**->**Copilot** for Bing Chat Enterprise.
 
-- New Bing copilot mode – Control whether to show Bing button on bottom bar
-- Page context – Control whether to allow Bing Chat Enterprise to access page content
-- Show Quick chat panel – Control whether to show quick chat panel when text on a webpage is selected
+- **Show Copilot** – Control whether to show Bing button on bottom bar
+- **Allow access to any web page or PDF** – Control whether to allow Bing Chat Enterprise to access page content or PDF
+- **Quick access on text selection** – Control whether to show quick chat panel when text on a webpage is selected
 
 You can manage the settings for Bing Chat Enterprise.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users will see Bing button in bottom bar. Setting “New Bing co-pilot mode” is on by default and can be turned off by users.  <br>**false** Users cannot see Bing button in bottom bar. Setting “New Bing co-pilot mode” will be disabled and cannot be turned on by users|
-|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings are on by default and can be turned off by users.  <br>**false** Bing Chat Enterprise can NOT access to page content. “Page context” and “Show quick chat panel” option under “New Bing co-pilot mode” settings will be disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Bing button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users cannot see Bing button in bottom bar. Setting **Show Copilot** is disabled and cannot be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) Bing Chat Enterprise can access to page content. **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings are on by default and can be turned off by users <br>**false** Bing Chat Enterprise cannot access to page content.  **Allow access to any web page or PDF** and **Quick access on text selection** option under **Copilot** settings will be disabled and cannot be turned on by users|
 
 ## Data protection app configuration scenarios
 
@@ -416,7 +442,7 @@ Organizations can define which sites users can access within the work or school 
 Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Azure AD account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
 
 > [!NOTE]
-> Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URL that launch Edge, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. Instead, you can use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information inforamtion, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
+> Edge for iOS and Android can block access to sites only when they're accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site. URL that launch Edge, such as `Edge://*`, `Edge://flags`, and `Edge://net-export`, aren't supported in app configuration policy **AllowListURLs** or **BlockListURLs** for managed apps. Instead, you can use app configuration policy [URLAllowList](/deployedge/microsoft-edge-mobile-policies#urlallowlist) or [URLBlocklist](/deployedge/microsoft-edge-mobile-policies#urlblocklist) for managed devices. For related information, see [Microsoft Edge mobile policies](/deployedge/microsoft-edge-mobile-policies).
 
 Use the following key/value pairs to configure either an allowed or blocked site list for Edge for iOS and Android. 
 
@@ -532,6 +558,8 @@ As app configuration policies for managed devices needs device enrollment, any u
 |     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
 |     com.microsoft.intune.mam.managedbrowser.NetworkStackPref    |     EdgeNetworkStackPref    |
+|     com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled | MicrosoftRootStoreEnabled |
+| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | SmartScreenEnabled|
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
@@ -607,7 +635,7 @@ Besides Intune logs from `edge://intunehelp/`, you may be asked by Microsoft Sup
 You may also want to click the **Clear** icon to clear logs first in order to get refresh logs.
 
 > [!NOTE]
-> Saving logs also respects Intune App Protection Policy.So you may not be allowed to save diagnostic data to local devices.
+> Saving logs also respects the Intune App Protection Policy. Therefore, you may not be allowed to save diagnostic data to local devices.
 
 ## Next steps
 

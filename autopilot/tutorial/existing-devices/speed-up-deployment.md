@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices: Speed up the deployment process (optional)
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
 - Step 3: [Create JSON file for Autopilot profile(s)](create-json-file.md)

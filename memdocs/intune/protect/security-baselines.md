@@ -166,7 +166,7 @@ Microsoft continues to publish security baselines for group policies (GPOs) and 
 
 Many customers use the Intune baseline recommendations as a starting point, and then customize them to meet their IT and security demands. Microsoft's Windows 10 and later baseline template was the first baseline to release. This baseline is built as a generic infrastructure that allows customers to eventually import other security baselines based on CIS, NIST, and other standards. <!-- Currently, it's available for Windows and will eventually include iOS/iPadOS and Android. -->
 
-Migrating from on-premises Active Directory group policies to a pure cloud solution using Azure Active Directory (AD) with Microsoft Intune is a journey. To help, use the various tools from the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) that can help you identify cloud-based options from security baselines that can replace your on-premises GPO configurations.
+Migrating from on-premises Active Directory group policies to a pure cloud solution using Microsoft Entra ID with Microsoft Intune is a journey. To help, use the various tools from the [Security Compliance Toolkit](/windows/security/threat-protection/security-compliance-toolkit-10) that can help you identify cloud-based options from security baselines that can replace your on-premises GPO configurations.
 
 ### Where can I find details about using or configuring the settings that are available in a security baseline?
 

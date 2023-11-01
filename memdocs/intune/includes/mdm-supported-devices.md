@@ -25,7 +25,7 @@ In the context of userless iOS/iPadOS devices, there's a difference between *sup
 
 - Android 8.0 and later (including Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
-- Android open source project device: [See here for the list of Supported devices](../fundamentals/android-os-project-supported-devices.md)
+- Android open source project device: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
 ### Linux
@@ -65,7 +65,7 @@ In the context of userless iOS/iPadOS devices, there's a difference between *sup
 > [!NOTE]
 > Not all Windows editions support all available operating system features being configured through MDM. For more information, see the [Windows configuration service provider reference docs](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Each CSP highlights which Windows editions are supported.
 
-Customers with Enterprise Management + Security (EMS) can also use [Azure Active Directory (Azure AD) to register Windows 10 devices](../enrollment/windows-enroll.md).
+Customers with Enterprise Management + Security (EMS) can also use [Microsoft Entra ID to register Windows 10 devices](../enrollment/windows-enroll.md).
 
 For guidelines on using Windows 10 virtual machines with Intune, see [Using Windows 10 virtual machines](../fundamentals/windows-10-virtual-machines.md).
 
