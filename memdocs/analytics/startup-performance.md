@@ -24,7 +24,7 @@ For devices enrolled via Intune, Startup performance insights are only available
   - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
   - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
   - Long-term servicing channel (LTSC) and Home editions aren't currently supported.
-- The devices must be Azure AD joined or hybrid Azure AD joined.
+- The devices must be Microsoft Entra joined or Microsoft Entra hybrid joined.
   - Workplace joined machines aren't currently supported.
 
 For devices that don't meet the above criteria, you're able to [enroll via Configuration Manager](enroll-configmgr.md).

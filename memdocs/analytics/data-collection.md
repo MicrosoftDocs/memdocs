@@ -57,7 +57,7 @@ Endpoint analytics data collection falls into the [optional](../intune/protect/p
   - **ID:** Unique device ID used by Windows Update
   - **localId:** A locally defined unique ID for the device. This ID isn't the human-readable device name. 
   Most likely equal to the value stored at HKLM\Software\Microsoft\SQMClient\MachineId.
-  - **aaddeviceid:** Azure Active Directory device ID
+  - **aaddeviceid:** Microsoft Entra device ID
   - **orgId:** Unique GUID representing the Microsoft 365 Tenant
 - Application inventory, like
   - **name:** Windows
