@@ -43,7 +43,7 @@ You can enroll devices via Configuration Manager or Microsoft Intune.
   - Windows 10 version 1903 or later
   - July 2021 cumulative update or later
   - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
-- Windows devices must be Azure AD joined or hybrid Azure AD joined. Workplace joined or Azure AD registered devices aren't supported.
+- Windows devices must be Microsoft Entra joined or Microsoft Entra hybrid joined. Workplace joined or Microsoft Entra registered devices aren't supported.
 - Network connectivity from devices to the Microsoft public cloud. For more information, see [endpoints](troubleshoot.md#bkmk_endpoints).
 - The [Intune Service Administrator role](/intune/fundamentals/role-based-access-control) is required to [start gathering data](enroll-intune.md#bkmk_onboard).
   - After the administrator selects **Start** for gathering data, other read-only roles can view the data.
@@ -81,9 +81,9 @@ Devices enrolled in Endpoint analytics need a valid license for the use of Micro
 
 ### Built-in role permissions
 
-Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Azure Active Directory](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
+Use the following chart to see which built-in roles already have access to endpoint analytics. For more information about roles, see [Administrator role permissions in Microsoft Entra ID](/azure/active-directory/roles/permissions-reference) and [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md). <!--7567981-->
 
-|Role name|Azure Active Directory role|Intune role|Endpoint analytics permissions|
+|Role name|Microsoft Entra role|Intune role|Endpoint analytics permissions|
 |---|---|---|---|
 |Global Administrator|Yes||Read/write|
 |Intune Service Administrator|Yes||Read/write|
