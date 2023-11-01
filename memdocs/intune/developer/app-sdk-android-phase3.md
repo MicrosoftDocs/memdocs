@@ -263,7 +263,7 @@ The build plugin can run additional verification to look for possible errors in 
 These checks help to safeguard against potential plugin-induced runtime failures.
 
 To request verification is performed in your build, specify `verify = true` in the `intunemam` configuration block.
-Note that this may add several seconds to the time taken by the plugin's task.
+This may add several seconds to the time taken by the plugin's task.
 
 ```groovy
 intunemam {
@@ -271,7 +271,7 @@ intunemam {
 }
 ```
 
-Generally, a verification failure will represent a bug in the build plugin.
+Generally, a verification failure represents a bug in the build plugin.
 For assistance with a failure, escalate the issue with Microsoft support.
 If you don't have a Microsoft support contract, [open a GitHub issue][MAM SDK GitHub issues].
 
@@ -381,7 +381,7 @@ After you've either configured the build plugin or integrated the command line t
 ### My app previously integrated the SDK without the build plugin; how can I use the build plugin?
 
 Older versions of the Intune App SDK didn't include any automated way to perform class and method replacements, and developers needed to perform these replacements manually in source code.
-If your app had previously integrated this way, it's safe to leverage the build plugin (or command line build tool) without any source code modifications.
+If your app had previously integrated this way, it's safe to apply the build plugin (or command line build tool) without any source code modifications.
 Your project must still list the MAM SDK as a dependency.
 
 ## Next Steps
