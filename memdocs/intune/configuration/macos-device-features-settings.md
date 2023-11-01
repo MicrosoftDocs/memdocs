@@ -294,14 +294,14 @@ This setting applies to:
 - **SSO app extension type**: Choose the type of SSO app extension. Your options:
 
   - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
-  - **Microsoft Azure AD**: Uses the Microsoft Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for Active Directory accounts across all macOS applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Azure AD.
+  - **Microsoft Entra ID**: Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for on-premises Active Directory accounts across all macOS applications that support [Apple's Enterprise Single Sign-On](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
 
     The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements.
 
     > [!IMPORTANT]
-    > - The Microsoft Azure AD SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
+    > - The Microsoft Entra SSO extension is in public preview. This preview version is provided without a service level agreement (SLA). It's not recommended to use in production. Certain features might not be supported, or might have restricted behavior. For more information, see [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms).
     >
-    > - To achieve SSO with the Microsoft Azure AD SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
+    > - To achieve SSO with the Microsoft Entra SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
     >
     >   For more information about the Company Portal app, see [What happens if you install the Company Portal app and enroll your macOS device in Intune](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md). 
     > 
@@ -332,7 +332,7 @@ This setting applies to:
   - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
   - The URLs must begin with `http://` or `https://`.
 
-- **Additional configuration** (Microsoft Azure AD, Redirect, Credential): Enter additional extension-specific data to pass to the SSO app extension:
+- **Additional configuration** (Microsoft Entra ID, Redirect, Credential): Enter additional extension-specific data to pass to the SSO app extension:
   - **Key**: Enter the name of the item you want to add, such as `user name`.
   - **Type**: Enter the type of data. Your options:
 
@@ -360,7 +360,7 @@ This setting applies to:
   - macOS 12 and newer
 
 - **Block password changes** (Kerberos only): **Yes** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.  
-- **Enable local password sync** (Kerberos only): Choose **Yes** to sync your users' local passwords to Azure AD. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Azure AD. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
+- **Enable local password sync** (Kerberos only): Choose **Yes** to sync your users' local passwords to Microsoft Entra ID. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Microsoft Entra ID. Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
 
 - **Delay Kerberos extension setup** (Kerberos only): When set to **Yes**, the user isn't prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might immediately prompt the user to set up the Kerberos extension.
 
@@ -428,7 +428,7 @@ This setting applies to:
 
   For more information about shared device mode, see [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
 
-- **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
+- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
 - **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
 - **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you've added in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 - **Preferred KDCs** (Kerberos only): Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don't respond, then the device uses DNS discovery.
