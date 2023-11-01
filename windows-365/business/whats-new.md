@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/19/2023
+ms.date: 11/01/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -48,6 +48,20 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of October 30, 2023 (Service release 2310)
+
+#### Two new sizes for Cloud PCs<!--46653331-->
+
+Two new sizes are now available for Windows 365 Cloud PCs:
+
+- 16vCPU/64GB RAM/512GB storage​
+- 16vCPU/64GB RAM/1TB storage
+
+These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
+
+Resizing doesn't currently support these two new sizes.
 
 <!-- ########################## -->
 ## Week of October 18, 2023
