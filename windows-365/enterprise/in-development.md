@@ -32,10 +32,10 @@ ms.collection:
 
 To help in your readiness and planning, this page lists Windows 365 updates and features that are in development but not yet released. In addition to the information on this page:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
-- When a feature enters production, the feature description will move from this page to [What's new](whats-new.md).
+- If we anticipate that you need to take action before a change, we'll publish a complementary post in Office message center.
+- When a feature enters production, the feature description moves from this page to [What's new](whats-new.md).
 - This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
-- Similar features may be announced at different times for Windows 365 Business.
+- Similar features might be announced at different times for Windows 365 Business.
 
 > [!NOTE]
 > This page reflects our current expectations about Windows 365 capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
