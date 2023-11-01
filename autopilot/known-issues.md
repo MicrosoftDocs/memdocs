@@ -35,9 +35,9 @@ The **Enrolled date** in the **Devices | All devices** and **Windows | Windows d
 
 1. Use the Intune Graph API to query the device:
 
-  `devices?$filter=physicalIds/any(p: startswith(p, '[ZTDID]'))&$select=id,deviceId,displayName,physicalIds,createdDateTime`
+    `devices?$filter=physicalIds/any(p: startswith(p, '[ZTDID]'))&$select=id,deviceId,displayName,physicalIds,createdDateTime`
 
-  For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph ](/graph/api/resources/intune-graph-overview).
+    For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph ](/graph/api/resources/intune-graph-overview).
 
 1. Use the Windows Autopilot deployment report for recently deployed devices.
 
