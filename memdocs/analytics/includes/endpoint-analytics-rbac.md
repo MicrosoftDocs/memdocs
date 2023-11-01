@@ -15,4 +15,4 @@ A read-only user would only need the **Read** permission under either category. 
 
   - **Read** under the **Help Desk Operator**, or **Endpoint Security Manager** [Intune roles](../../intune/fundamentals/role-based-access-control.md).
 
-  - [**Reports Reader**](/azure/active-directory/roles/permissions-reference#reports-reader) Azure AD role.
+  - [**Reports Reader**](/azure/active-directory/roles/permissions-reference#reports-reader) Microsoft Entra role.
