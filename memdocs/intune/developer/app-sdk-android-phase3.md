@@ -96,7 +96,7 @@ The Intune App SDK is a standard Android library with no external dependencies.
 The [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)
 NuGet package must be added as a dependency.
 
-Follow the process for [Install and manage packages in Visual Studio using the NuGet Package Manager](https://learn.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio).
+Follow the process for [Install and manage packages in Visual Studio using the NuGet Package Manager](/nuget/consume-packages/install-use-packages-visual-studio).
 
 The **Microsoft.Intune.MAM.SDK.aar** is bound to create C# references that are scoped to the `Microsoft.Intune.Mam` namespace.
 
