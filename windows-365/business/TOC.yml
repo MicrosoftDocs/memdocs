@@ -17,6 +17,8 @@ items:
     items:
     - name: Users installing apps
       href: apps-install.md   
+    - name: Admins installing apps
+      href: apps-install-admin.md   
   - name: Device and user management
     items:
     - name: Manage your Cloud PCs

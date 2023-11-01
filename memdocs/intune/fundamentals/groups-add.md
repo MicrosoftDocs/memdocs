@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 10/18/2023
 ms.topic: how-to
 #customer intent: As an IT admin, I want to add groups, so that users and devices are organized.
 ms.service: microsoft-intune

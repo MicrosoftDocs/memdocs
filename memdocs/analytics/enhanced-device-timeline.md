@@ -2,7 +2,7 @@
 title: Enhanced device timeline in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about Enhanced device timeline as an advanced feature in Endpoint analytics
-ms.date: 08/16/2023
+ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).
 
-The enhanced device timeline allows you to see a history of events that have occurred on a specific device. When viewing a specific device in Endpoint analytics, the enhanced device timeline is viewable on the **Device timeline** tab.
+The enhanced device timeline allows you to see a history of events that have occurred on a specific device. When you're viewing a specific device in Endpoint analytics, the enhanced device timeline is viewable on the **Device timeline** tab.
 
 :::image type="content" source="media/enhanced-device-timeline.png" alt-text="Enhanced device timeline in endpoint analytics" lightbox="media/enhanced-device-timeline.png":::
 
@@ -35,9 +35,9 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 
 ## Limitations
 
-- When your tenant has advanced features in Endpoint analytics, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score, use the table on the **Device performance** tab and search for the desired device.
+- When your tenant has advanced features in Endpoint analytics, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill-down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score, use the table on the **Device performance** tab and search for the desired device.
 
-- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline is not currently available for Configuration Manager-only devices in tenants that have advanced features in Endpoint analytics.
+- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline isn't currently available for Configuration Manager-only devices in tenants that have advanced features in Endpoint analytics.
 
 ## Next Steps
 

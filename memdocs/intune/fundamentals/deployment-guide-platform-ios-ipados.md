@@ -48,6 +48,8 @@ Before you begin, complete these prerequisites to enable iOS/iPadOS device manag
 
 The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidance and advice to help you determine goals, use-case scenarios, and requirements. It also describes how to create plans for rollout, communication, support, testing, and validation.  
 
+<!-- Removing section, framework pending review and has been removed  
+
 ## Leverage the iOS/iPadOS security configuration framework 
 
 The iOS/iPadOS security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations help you tailor your organization's mobile device security protection to your specific needs.
@@ -73,12 +75,11 @@ The security levels for supervised devices are:
 For more information about the security framework, including specific recommendations and the minimum apps that must be protected, see the articles listed in the following table. 
 
 | Task | Detail | 
-| ---- | ------ | 
-| [Learn about the iOS/iPadOS framework deployment methodology](/mem/intune/enrollment/ios-ipados-configuration-framework)|Learn about the Microsoft-recommended methodology for deploying the security configuration framework. |       
+| ---- | ------ |  
 | [Disallow personal accounts for Microsoft apps on iOS/iPadOS devices](../enrollment/ios-ipados-app-configuration-policies.md) |Configure an app policy that prevents users from signing into a personal account on a work or school device. |  
 | [Configure device compliance security settings](../enrollment/ios-ipados-device-compliance-security-configurations.md)|Apply these security settings to configure a basic or high security level on personally owned and corporate owned devices. |  
 |[Configure device security settings for personal devices ](../enrollment/ios-ipados-personal-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on personally owned devices. | 
-|[Configure device security settings for supervised devices ](../enrollment/ios-ipados-supervised-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on supervised devices. | 
+|[Configure device security settings for supervised devices ](../enrollment/ios-ipados-supervised-device-security-configurations.md)  | Apply these settings to configure a basic, enhanced, or high security level on supervised devices. | -->  
 
 
 ## Create compliance rules  

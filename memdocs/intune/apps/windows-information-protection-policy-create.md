@@ -172,6 +172,8 @@ When the policy is enabled, WIP protected items are indexed and the metadata abo
 
 When the policy is disabled, the WIP protected items are not indexed and do not show up in the results in Cortana or file explorer. There may also be a performance impact on photos and Groove apps if there are many WIP protected media files on the device.
 
+[!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
+
 ## Add encrypted file extensions
 
 In addition to setting the **Allow Windows Search Indexer to search encrypted items** option, you can specify a list of file extensions. Files with these extensions are encrypted when copying from a Server Message Block (SMB) share within the corporate boundary as defined in the network location list. When this policy is not specified, the existing auto-encryption behavior is applied. When this policy is configured, only files with the extensions in the list will be encrypted.

@@ -19,7 +19,7 @@ user-driven/hybrid-azure-ad-join-device-group.md
 
 Headings are driven by article context. -->
 
-Device groups are a collection of devices organized into an Azure AD group. Device groups are used in Autopilot to target devices for specific configurations such as what policies to apply to a device and what applications to install on the device. They're also used by Autopilot to target Enrollment Status Page (ESP) configurations, Autopilot profile configurations, and domain join profiles to devices.
+Device groups are a collection of devices organized into a Microsoft Entra group. Device groups are used in Autopilot to target devices for specific configurations such as what policies to apply to a device and what applications to install on the device. They're also used by Autopilot to target Enrollment Status Page (ESP) configurations, Autopilot profile configurations, and domain join profiles to devices.
 
 Device groups can be either dynamic or assigned:
 
@@ -44,7 +44,7 @@ To create a dynamic device group for use with Autopilot, follow these steps:
 
     3. For **Group description**, enter a description for the device group.
 
-    4. For **Azure AD roles can be assigned to the group**, select **No**.
+    4. For **Microsoft Entra roles can be assigned to the group**, select **No**.
 
     5. For **Membership type**, select **Dynamic Device**.
 
@@ -66,12 +66,12 @@ To create a dynamic device group for use with Autopilot, follow these steps:
 
         3. Once the desired rule has been entered, select **Save** on the toolbar to close the **Dynamic membership rules** window.
 
-            For more information on creating rules for dynamic groups, see [Dynamic membership rules for groups in Azure Active Directory](/azure/active-directory/enterprise-users/groups-dynamic-membership).
+            For more information on creating rules for dynamic groups, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership).
 
 5. In the **New Group** screen, select **Create** which finishes creating the dynamic group.
 
 > [!NOTE]
-> The above steps are creating a dynamic group in Azure AD which is used by Intune and Autopilot. Although the groups can be accessed in the Intune portal, they are Azure AD groups.
+> The above steps are creating a dynamic group in Microsoft Entra which is used by Intune and Autopilot. Although the groups can be accessed in the Intune portal, they are Microsoft Entra groups.
 
 > [!TIP]
 > For Configuration Manager admins, device groups are similar to device based collections. Dynamic device groups are similar to query based device collections while assigned device groups are similar to direct membership device collections.

@@ -149,6 +149,20 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
  > [!IMPORTANT]  
   > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week. 
 
+### October 4, 2023
+
+Image hash values:
+
+- **agentImageDigest**: sha256:6c19b0aa077692b0d70ede9928f02b135122951708f83655041d0a40e8448039
+
+- **serverImageDigest**: sha256:9b477e6bc029d2ebadcafd4db3f516e87f0209b50d44fa2a5933aa7f17e9203b
+
+Changes in this release:
+- Bug fix: add legacy NAT tables for the mstunnel-server container on Cent OS 7 and Red Hat 7 hosts
+- Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
+- Increase mstunnel-server container pid limit to 10000
+
+
 ### October 2, 2023
 
 Image hash values:
@@ -159,7 +173,7 @@ Image hash values:
 
 Changes in this release:
 - Bug fix: Ensure the monitor starts the container when the state is empty 
-- Bug fix for server container: Check /dev/tun permissions only when the server container is running. 
+- Bug fix for server container: Check /dev/tun permissions only when the server container is running 
 - Limit Tunnel server's maximum logging level to verbose to enhance privacy 
 
 ### July 24, 2023
