@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/12/2023
+ms.date: 11/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,6 +85,10 @@ With integration complete and the partner policy in place, you can then create I
    > The **Require the device to be at or under the Device Threat Level** setting supports only **user groups**. Targeting *device groups* with this setting is not supported.
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
+
+## Monitoring risk score sent by Mobile Threat Defense partner
+
+Your Mobile Threat Defense partner can send a risk score for each device for which the MTD app is installed. You can view this under **Reports** > **Device compliance** > **Reports** > **Device Compliance**. Make sure **Device threat level** is selected when opening the **Columns** tab, this may require you to hit **Generate** first. 
 
 > [!IMPORTANT]
 >
