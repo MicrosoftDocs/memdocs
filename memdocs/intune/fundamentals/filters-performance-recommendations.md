@@ -88,7 +88,7 @@ These recommendations focus on improving performance and reducing latency in wor
 
 | DO | DON'T |
 | --- | --- |
-| ✔️ Use the **All users** and **All devices** virtual groups instead of creating your own version of all users/all devices using Microsoft Entra dynamic dynamic groups. | ❌ Don't create your own "All users" or "All devices" dynamic groups for policy and app targeting in Intune.
+| ✔️ Use the **All users** and **All devices** virtual groups instead of creating your own version of all users/all devices using Microsoft Entra dynamic groups. | ❌ Don't create your own "All users" or "All devices" dynamic groups for policy and app targeting in Intune.
 
 Larger groups take longer to sync membership updates between Microsoft Entra ID and Intune. The "All users" and "All devices" are usually the largest groups you have. If you assign Intune workloads to large Microsoft Entra groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
