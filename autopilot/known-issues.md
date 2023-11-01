@@ -29,13 +29,13 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-### Enrolled Date on Autopilot Blade is incorrect
+### Enrolled Date for Autopilot Device on Windows Device Blade is incorrect
 
-The Enrolled Date on the Autopilot devices blade displays the date the device was registered to Autopilot. If you would like a more accurate date for when the device enrolled to the tenant you can;
+The Enrolled Date on the All devices blade displays the date the device was registered to Autopilot. If you would like a more accurate date for when the device enrolled to the tenant you can;
 
 1. Use the Intune Graph API to query the device `devices?$filter=physicalIds/any(p: startswith(p, '[ZTDID]'))&$select=id,deviceId,displayName,physicalIds,createdDateTime`
 
-1. Use the Intune All Devices blade to view enrollment dates
+1. Use the Windows Autopilot deployment report for recenly deployed devices
 
 ### Filtering Windows Autopilot devices not working as expected
 
