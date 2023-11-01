@@ -36,6 +36,8 @@ ms.collection:
 > [!NOTE]
 > Consider reading the [Get Started with Intune App SDK Guide](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
 >
+> If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.microsoft.com/en-us/apps/maui), see [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
+>
 > To download the SDK, see [Download the SDK files](../developer/app-sdk-get-started.md#download-the-sdk-files).
 >
 > If you have issues with integrating the Intune App SDK into your apps, submit a [request for assistance](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/issues) on GitHub.
