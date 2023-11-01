@@ -461,9 +461,9 @@ sections:
           TPM provisioning involves generating and processing strong cryptographic keys. Depending on the characteristics of the TPM hardware used on a device, it may take longer than a minute on first boot.
 
       - question: |
-          Why don't applications install after ESP has finished on an Intune managed device when using autologon with Windows Autopilot self-deploing mode?
+          Why don't applications install after the ESP has finished on an Intune managed device when using autologon with Windows Autopilot self-deploing mode?
         answer: |
-          When using autologon with Windows Autopilot self-deploing mode, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including the KioskUser0 local account, and a device token won't be issued until it is processed. When using autologon, in order for applications to install after ESP has finished, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
+          When using autologon with Windows Autopilot self-deploing mode, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including the KioskUser0 local account, and a device token won't be issued until it is processed. When using autologon, in order for applications to install after the ESP has finished, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
  
   - name: Glossary
     questions:
