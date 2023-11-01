@@ -35,8 +35,6 @@ The tasks in this article help you manage, customize, and secure your devices ru
 
 To use Windows Holographic devices with Intune, create an [Edition Upgrade](../configuration/edition-upgrade-configure-windows-10.md) profile. This upgrade profile upgrades the devices from Windows Holographic to Windows Holographic for Business. For the Microsoft HoloLens, you can buy the Commercial Suite to get the required license for the upgrade. For more information, go to [Upgrade devices running Windows Holographic to Windows Holographic for Business](../configuration/holographic-upgrade.md).
 
-<a name='azure-active-directory'></a>
-
 ## Microsoft Entra ID
 
 Microsoft Entra ID is a great resource to help manage and control your devices running Windows Holographic for Business. Using Intune and Microsoft Entra ID, you can: 
