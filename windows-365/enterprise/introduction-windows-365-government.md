@@ -61,6 +61,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - System alerts and email notifications
 - Windows 365 Switch
 - Windows 365 Boot
+- Audit logs support in Azure Log Analytics
 
 ## Next steps
 
