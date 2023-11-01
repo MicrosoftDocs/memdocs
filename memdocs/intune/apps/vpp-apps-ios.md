@@ -201,6 +201,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 > - When assigning a purchased app with **Uninstall** intent, Intune both reclaims the license and uninstalls the app.
 > - App licenses are not reclaimed when a device is removed from Intune management. 
 > - Intune will revoke app licenses when the user is deleted from Azure AD.
+> - Intune only supports revoking VPP app licenses assigned by Intune and for devices that are managed by Intune and the device Intune device record still exists.
 
 ## Deleting VPP tokens
 <!-- 820879 -->  
