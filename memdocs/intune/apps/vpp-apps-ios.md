@@ -204,7 +204,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 > - Intune only supports revoking VPP app licenses that meet the following conditions:
 >   - The VPP app license must be assigned by Intune
 >   - The VPP app license is for devices that are managed by Intune
->   - The VPP app license relates to devices where the Intune device record still exists for the device.
+>   - The VPP app license relates to devices where the Intune device record still exists for the device
 
 ## Deleting VPP tokens
 <!-- 820879 -->  
