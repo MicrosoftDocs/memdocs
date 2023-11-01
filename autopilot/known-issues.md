@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 10/16/2023
+ms.date: 11/01/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
