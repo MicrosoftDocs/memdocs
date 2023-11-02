@@ -334,7 +334,7 @@ You can use filters for some common app policies on the following platforms. For
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | ✔️ <br/> **Local user group membership** only |
 | Antivirus | ✔️ |
-| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, **App and browser isolation**, and **Device control** |
+| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, and **Application control** |
 | Disk encryption | ❌ |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
