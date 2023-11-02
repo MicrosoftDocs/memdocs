@@ -50,7 +50,7 @@ The following list includes recommended (but not required) prerequisites:
 
 ## Learning objectives
 
-In this topic, you will set up a testing environment to evaluate Intune. Then, you will step through specific actions to better understand and evaluate Intune.
+In this topic, you'll set up a testing environment to evaluate Intune. Then, you'll step through specific actions to better understand and evaluate Intune.
 - Set up the Microsoft Intune free trial
 - Create users and groups
 - Set up device enrollment
@@ -72,11 +72,11 @@ Microsoft Intune provides the following:
 - Greater end users productivity
 - Co-management for cloud and on-premises devices
 
-Learn how the Microsoft Intune family of products helps you maximize your return on investment. For more information see, [Benefits of Microsoft Intune](/training/modules/benefits-microsoft-endpoint-manager/).
+Learn how the Microsoft Intune family of products helps you maximize your return on investment. For more information, see [Benefits of Microsoft Intune](/training/modules/benefits-microsoft-endpoint-manager/).
 
 ## Next steps
 
-Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-up.md). When you complete the sign up process, you'll have a new tenant and you'll understand the basics of working with Microsoft Intune.
+Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-up.md). When you complete the sign-up process, you'll have a new tenant and you'll understand the basics of working with Microsoft Intune.
 
 ## Learn more
 
