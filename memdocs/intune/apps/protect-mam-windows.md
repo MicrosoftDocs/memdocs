@@ -40,7 +40,7 @@ You can enable protected Mobile Application Management (MAM) access to org data 
 - Intune Application Configuration Policies (ACP) to customize the org user experience
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy
 - Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Entra ID (AAD)
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID
 
 > [!NOTE]
 > Intune Mobile Application Management (MAM) for Windows is available for Windows 10, build 19046.3636, KB5031445 or later and Windows 11, build 10.0.22621.2506, KB5031455 (22H2) or later.  This includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later for Windows 11 and v118.0.2088.71 and later for Windows 11) and Windows Security Center (v 1.0.2310.2002 and later). App Protection Conditional Access is generally available.
@@ -60,18 +60,18 @@ As the Intune admin, you need to have the following app management functionality
 - Ability to deploy a selective wipe command to protected applications
 
 Members of your organization (end-users) expect to have the following functionality for their accounts:
-- Ability to log in to Entra ID (AAD) to access sites protected by Conditional Access 
+- Ability to log in to Microsoft Entra ID to access sites protected by Conditional Access 
 - Ability to verify health status of the client device, in the case where a device is considered unhealthy 
 - Ability to have access revoked to resources when a device remains unhealthy 
 - Ability to be informed, with clear remediation steps, when access is controlled by an administrator policy 
 
 > [!NOTE]
-> For information related to Entra ID (AAD), see [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows).
+> For information related to Microsoft Entra ID, see [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows).
 
 ## Conditional Access Compliance 
-Preventing data loss is a part of protecting your organizational data. Data loss prevention (DLP) is only effective if your org data cannot be accessed from any unprotected system or device. App Protection Conditional Access uses Conditional Access (CA) to ensure App Protection Policies (APP) are supported and enforced in a client application before allowing access to protected resources (such as org data).  APP CA will allow end-users with personal Windows devices to use APP managed applications, including Microsoft Edge, to access Entra ID (AAD) resources without fully managing their personal device.
+Preventing data loss is a part of protecting your organizational data. Data loss prevention (DLP) is only effective if your org data cannot be accessed from any unprotected system or device. App Protection Conditional Access uses Conditional Access (CA) to ensure App Protection Policies (APP) are supported and enforced in a client application before allowing access to protected resources (such as org data).  APP CA will allow end-users with personal Windows devices to use APP managed applications, including Microsoft Edge, to access Microsoft Entra resources without fully managing their personal device.
 
-This MAM service syncs compliance state per user, per app, and per device to the Entra ID (AAD) CA service. This includes the threat information received from the Mobile Threat Defense (MTD) vendors starting with Windows Security Center.
+This MAM service syncs compliance state per user, per app, and per device to the Microsoft Entra CA service. This includes the threat information received from the Mobile Threat Defense (MTD) vendors starting with Windows Security Center.
 
 > [!NOTE]
 > This MAM service uses the same conditional access compliance workflow that is used to [manage Microsoft Edge on iOS and Android devices](../apps/manage-microsoft-edge.md).
@@ -81,17 +81,17 @@ When a change is detected, the MAM service updates the device compliance state i
 > [!NOTE]
 > The MAM service evaluates the MTD state in the service. This is done independently from the MAM client and client platform.
 
-The MAM Client communicates the client heath state (or health metadata) to the MAM Service upon check-in. The health state includes any failure of APP Health Checks for **Block** or **Wipe** conditions. In addition, AAD guides end-users through remediation steps when they attempt to access a blocked CA resource.
+The MAM Client communicates the client heath state (or health metadata) to the MAM Service upon check-in. The health state includes any failure of APP Health Checks for **Block** or **Wipe** conditions. In addition, Microsoft Entra ID guides end-users through remediation steps when they attempt to access a blocked CA resource.
 
 ### Conditional Access Compliance
-Organizations can use Entra ID (AAD) Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Microsoft Edge for Windows, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
 
 >[!NOTE]
 > This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for Windows. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
 
-With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Entra ID (AAD) Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started).
+With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
 
 > [!NOTE]
 > To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on Windows devices. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
