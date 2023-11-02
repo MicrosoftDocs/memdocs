@@ -44,7 +44,7 @@ The **Fresh Start** device action removes any apps that are installed on a PC ru
    > [!IMPORTANT]
    > If you do not retain user data, the device will be restored to the default OOBE (out-of-box experience) completed state retaining the built in administrator account.
    > BYOD devices will be unenrolled from Microsoft Entra ID and mobile device management.
-   > Microsoft Entra joined devices will be enrolled into mobile device management again when an Microsoft Entra ID enabled user signs into the device.
+   > Microsoft Entra joined devices will be enrolled into mobile device management again when a Microsoft Entra ID enabled user signs into the device.
 
 5. Click **OK**.
 6. To see the status of this action, go back to **Devices** and click **Device actions**.  

@@ -68,7 +68,7 @@ If you enforce both Intune and Azure device limit restrictions, the following ta
 |iOS and macOS| BYOD: Apple Device Enrollment | Yes | Yes | Yes |  
 |iOS and macOS| Apple Automated Device Enrollment | Yes | Yes | Yes |  
 |Windows 10/11| BYOD: User enrollment | Yes | Yes | Yes |   
-|Windows 10/11| Automatic enrollment + group policy | No | No | Yes |  
+|Windows 10/11| Automatic enrollment + group policy | No | No | No |  
 |Windows 10/11| Automatic enrollment + device enrollment manager | No | Yes | No | 
 |Windows 10/11| Automatic enrollment + bulk device enrollment | No | Yes | No |
 |Windows 10/11| Windows Autopilot | Yes | Yes | No |  
