@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2023
+ms.date: 11/15/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -314,6 +314,7 @@ You can use filters for some common app policies on the following platforms. For
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
 | Endpoint analytics Remediations scripts|✔️ |
+| Endpoint Privilege Management (EPM) |✔️ |
 | Endpoint Protection | ✔️ |
 | Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
 | Identity Protection | ✔️ |
