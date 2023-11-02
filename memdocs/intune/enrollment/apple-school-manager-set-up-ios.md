@@ -57,19 +57,15 @@ Before you can enroll corporate-owned iOS/iPadOS devices with Apple School Manag
 
    ![Get an enrollment program token.](./media/apple-school-manager-set-up-ios/image01.png)
 
-2. In the **Enrollment program token** blade, choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple School Manager portal.
-     ![Enrollment Program Token blade.](./media/apple-school-manager-set-up-ios/image02.png)
+2. Select **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple School Manager portal.   
 
 ### Step 2. Download a token and assign devices
 1. Choose **Create a token via Apple School Manager**, and sign in to Apple School with your company Apple ID. You can use this Apple ID to renew your Apple School Manager token.
 2. In the [Apple School Manager portal](https://school.apple.com), go to **MDM Servers**, and then choose **Add MDM Server** (upper right).
-3. Enter the **MDM Server Name**. The server name is for your reference to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune server.
-   ![Screenshot of Apple School Manager portal with MDM Servers option selected](./media/apple-school-manager-set-up-ios/asm-server-assignment.png)
-
+3. Enter the MDM server name. The server name is for your reference to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune server.
 4. Choose **Upload File...** in the Apple portal, browse to the .pem file, and choose **Save MDM Server** (lower right).
 5. Choose **Get Token** and then download the server token (.p7m) file to your computer.
-6. Go to  **Device Assignments**, and **Choose Device** by manual entry of **Serial Numbers**, **Order Number**, or **Upload CSV File**.
-     ![Screenshot of Apple School Manager portal with Device Assignment option selected](./media/apple-school-manager-set-up-ios/asm-device-assignment.png)
+6. Go to **Device Assignments**. Choose your devices by manually entering their serial numbers or order number.  
 7. Choose the action **Assign to Server**, and choose the **MDM Server** you created.
 8. Specify how to **Choose Devices**, then provide device information and details.
 9. Choose **Assign to Server** and choose the &lt;ServerName&gt; specified for Microsoft Intune, and then choose **OK**.
@@ -98,9 +94,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user, such as a shared device. Use this option for devices that perform tasks without accessing local user data. Apps like the Company Portal app don't work.
 
-5. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal instead of the Apple Setup Assistant.
-
-    ![Authenticate with Company Portal.](./media/apple-school-manager-set-up-ios/authenticatewithcompanyportal.png)
+5. If you chose **Enroll with User Affinity**, you can let users authenticate with Company Portal, Setup Assistant (legacy), and Setup Assistant with modern authentication. Select the option.  For more information about authentication methods, see [Authentication methods for automated device enrollment in Intune](automated-device-enrollment-authentication.md).  
 
     > [!NOTE]
     > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
@@ -133,9 +127,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 12. Choose **OK**.
 
-13. Choose **Setup Assistant Settings** to configure the following profile settings:
-    ![Setup Assistant Customization.](./media/apple-school-manager-set-up-ios/setupassistantcustom.png)
-
+13. Choose **Setup Assistant Settings** to configure the following profile settings:  
 
     |                 Setting                  |                                                                                               Description                                                                                               |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

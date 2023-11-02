@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,8 +37,11 @@ This feature applies to:
 
 - macOS 12 and later (supervised)
 
-> [!NOTE]
-> Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update. 
+  > [!NOTE]
+  > Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update.
+
+> [!TIP]
+> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
 
 With policies for macOS software updates, you can:
 
@@ -78,14 +81,14 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
       - **Notify only**: Download the software update and notify the user through System Settings.
 
-      - **Install later**: Download the software update and install it later. This action is not available for major OS upgrades.
+      - **Install later**: Download the software update and install it later. This action isn't available for major OS upgrades.
 
-        When you configure *Install later* for *All other updates (OS, built-in-apps), the following additional settings are available:
+        When you configure *Install later* for *All other updates (OS, built-in-apps), the following settings are also available:
 
         - **Max User Deferrals**:  
-        When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it’s installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
+        When the *All other updates* update type is configured to *Install later*, this setting allows you to specify the maximum number of times a user can postpone a minor OS update before it's installed. The system prompts the user once a day. Available for devices running macOS 12 and later. 
 
-        - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
+        - **Priority**: When the *All other updates* update type is configured to *Install later*, specify *Low* or *High* values for the scheduling priority for downloading & preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
       - **Not configured**: No action taken on the software update.
 
@@ -96,9 +99,9 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
       - **Update at next check-in**: The update installs on the device the next time it checks in with Intune. This option is the simplest and has no extra configurations.
 
-      - **Update during scheduled time**: You configure one or more windows of time during which the update will install upon check-in.
+      - **Update during scheduled time**: You configure one or more windows of time. During these windows, the update installs upon check-in.
 
-      - **Update outside of scheduled time**: You configure one or more windows of time during which the updates won't install upon check-in.
+      - **Update outside of scheduled time**: You configure one or more windows of time. During these windows, updates don't install upon check-in.
 
    3. **Weekly schedule**: If you choose a schedule type other than *update at next check-in*, configure the following options:
 
@@ -110,11 +113,11 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
       - **Start day**: Choose the day on which the schedule window starts.
 
-      - **Start time**: Choose the time day when the schedule window begins. For example, if you select 5 AM and have a Schedule type of *Update during scheduled time*, 5 AM will be the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, 5 AM will be the start of a period of time that updates can't install.
+      - **Start time**: Choose the time day when the schedule window begins. For example, you select 5 AM and have a Schedule type of *Update during scheduled time*. In this scenario, 5 AM is the time that updates can begin to install. If you chose a Schedule type of *Update outside of a scheduled time*, 5 AM is the start of a period of time that updates can't install.
 
       - **End day**: Choose the day on which the schedule window ends.
 
-      - **End time**: Choose the time of day when the schedule window stops. For example, if you select 1 AM and have a Schedule type of *Update during scheduled time*, 1 AM will be the time when updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM will be the start of a period of time that updates can install.
+      - **End time**: Choose the time of day when the schedule window stops. For example, you select 1 AM and have a Schedule type of *Update during scheduled time*. In this scenario, 1 AM is the time when updates can no longer install. If you chose a Schedule type of *Update outside of a scheduled time*, 1 AM is the start of a period of time that updates can install.
 
    If you don't configure times to start or end, the configuration results in no restriction and updates can be installed at any time.
 
@@ -145,19 +148,19 @@ By default, devices check in with Intune about every 8 hours. If an update is av
 
 ## Delay visibility of updates
 
-When you use update policies for macOS, you might want to hide updates from users of supervised macOS devices for a period of time. You can accomplish this with a settings catalog policy for macOS devices that configure update restriction periods.
+When you use update policies for macOS, you might want to hide updates from users of supervised macOS devices for a specified time period. For this task, use a settings catalog policy for macOS devices that configures update restriction periods.
 
-A restriction period can give you time to test an update before it’s made available to users to install. After the restriction period ends, the update becomes visible to users, and they can choose to install it if your update policies don’t install it first.
+A restriction period can give you time to test an update before it's made available to users to install. After the restriction period ends, the update becomes visible to users, and they can choose to install it if your update policies don't install it first.
 
-If you use device restrictions to hide an update, review your software update policies to ensure they won’t schedule the installation of that update before the restriction period ends. Software update policies will install updates per their schedule regardless of the update being hidden or visible to the device user.
+If you use device restrictions to hide an update, review your software update policies to ensure they don't schedule the installation of that update before the restriction period ends. Software update policies install updates per their schedule regardless of the update being hidden or visible to the device user.
 
-You’ll find settings that can restrict visibility of updates on macOS devices in the **Restrictions** category of the [settings catalog](../configuration/settings-catalog.md). A few examples of settings you can use to defer an update include:
+The settings that can restrict visibility of updates on macOS devices are in the [settings catalog](../configuration/settings-catalog.md) > **Restrictions** category. A few examples of settings you can use to defer an update include:
 
 - Enforced Software Update Delay
 - Enforced Software Update Major OS Deferred Install Delay
 - Enforced Software Update Non OS Deferred Install Delay
 
-You can also find related settings under the **System Updates** > **Software Update** category to manage how users manually interact with updates through their system UI. However, updates from a targeted update policy will override these settings.
+You can also find related settings under the **System Updates** > **Software Update** category to manage how users manually interact with updates through their system UI. However, updates from a targeted update policy override these settings catalog policy settings.
 
 ## Edit a policy
 
@@ -173,11 +176,11 @@ You can edit an existing policy, including changing the restricted times:
 > [!NOTE]  
 > If the **Start time** and **End time** are both set to 12 AM, Intune does not check for restrictions on when to install updates. This means that any configurations you have for **Select times to prevent update installations** are ignored, and updates can install at any time.
 
-## Configure additional macOS software update settings using the Settings Catalog
+## Configure more macOS software update settings using the Settings Catalog
 
 The *Restrictions* category contains the following settings that can be used to delay visibility of macOS software updates on devices (**Devices** > **macOS** > **Device configuration** > **Settings catalog** > **Restrictions**):
 
-- *Enforced Software Update Delay*:  Sets how many days to delay a software update on the device. With this restriction in place, the user doesn’t see a software update until the specified number of days after the software update release date. This value is used by *Force Delayed App Software Updates* and *Force Delayed Software Updates*.
+- *Enforced Software Update Delay*:  Sets how many days to delay a software update on the device. With this restriction in place, the user doesn't see a software update until the specified number of days after the software update release date. This value is used by *Force Delayed App Software Updates* and *Force Delayed Software Updates*.
 
 - *Force Delayed App Software Updates*:  If true, delays user visibility of non-OS Software Updates for built-in software like Safari, XProtect, and Gatekeeper. Requires a supervised device. The delay is 30 days unless *Enforced Software Update Delay* is set to another value.
 
@@ -215,7 +218,7 @@ In the Microsoft Intune admin center, go to **Devices** > **Monitor** >�
 
 Intune displays a list of supervised macOS devices that are targeted by an update policy. The list doesn't include devices that are up-to-date and healthy because macOS devices only return information about installation failures.
 
-For each device on the list, the Installation Status displays the error that was returned by the device. To view the list of potential installation status values, on the *Installation status  for macOS devices* page, select **Filters** and then expand the drop-down list for *Installation Status*.
+For each device on the list, the Installation Status displays the error that the device returns. To view the list of potential installation status values, on the *Installation status  for macOS devices* page, select **Filters** and then expand the drop-down list for *Installation Status*.
 
 ## Next steps
 

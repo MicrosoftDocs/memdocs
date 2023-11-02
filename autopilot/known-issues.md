@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 10/16/2023
+ms.date: 11/01/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -28,6 +28,18 @@ This article describes known issues that can often be resolved with configuratio
 > If you are experiencing issues with Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Enrolled date for Autopilot device is incorrect
+
+The **Enrolled date** in the **Devices | All devices** and **Windows | Windows devices** panes display the date the device was registered to Autopilot instead of the date it was enrolled to Autopilot. For a more accurate date for when the device enrolled to the tenant:
+
+1. Use the Intune Graph API to query the device:
+
+    `devices?$filter=physicalIds/any(p: startswith(p, '[ZTDID]'))&$select=id,deviceId,displayName,physicalIds,createdDateTime`
+
+    For more information, see [Intune devices and apps API overview](/graph/intune-concept-overview) and [Working with Intune in Microsoft Graph ](/graph/api/resources/intune-graph-overview).
+
+1. Use the Windows Autopilot deployment report for recently deployed devices.
 
 ### Filtering Windows Autopilot devices not working as expected
 
@@ -91,11 +103,11 @@ When you attempt an Autopilot reset, you see the following message: **Autopilot 
 
     In this case, Microsoft Intune Enrollment and Microsoft Intune should be included in that exclusion list of policy 1.
 
-    If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), by default Microsoft Intune Enrollment is excluded, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
+    If a policy is in place such that **all cloud apps** require a compliant device (there's no exclusion list), by default Microsoft Intune Enrollment is excluded, so that the device can register with Microsoft Entra ID and enroll with Intune and avoid a circular dependency.
 
-3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Azure AD and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
+3. **Hybrid Microsoft Entra devices**: When Hybrid Microsoft Entra devices are deployed with Autopilot, two device IDs are initially associated with the same device - one Microsoft Entra ID and one hybrid.  The hybrid compliance state displays as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in.
 
-    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or hybrid Azure AD joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
+    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or Microsoft Entra hybrid joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
 4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices. This grace period is needed because until the device has been rebooted, the status of BitLocker and Secure Boot haven't been captured. Since the status hasn't been captured, it can't be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
@@ -103,9 +115,11 @@ When you attempt an Autopilot reset, you see the following message: **Autopilot 
 
 When a device is registered in Autopilot and no profile is assigned, the default Autopilot profile is taken. This behavior is by design. It makes sure that all devices that you register with Autopilot go through the Autopilot experience. If you don't want the device to go through an Autopilot deployment, remove the Autopilot registration.
 
-### White screen during hybrid Azure AD joined deployment
+<a name='white-screen-during-hybrid-azure-ad-joined-deployment'></a>
 
-There's a UI bug on Autopilot hybrid Azure AD joined deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and shouldn't affect the deployment process.
+### White screen during Microsoft Entra hybrid joined deployment
+
+There's a UI bug on Autopilot Microsoft Entra hybrid joined deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and shouldn't affect the deployment process.
 
 This issue was resolved in September 2022.
 
@@ -128,9 +142,11 @@ Some devices may fail TPM attestation on Windows 11 during the pre-provisioning 
 - Windows 11: [KB5013943](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755).
 - Windows 10: [KB5013942](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504).
 
-### Duplicate device objects with hybrid Azure AD deployments
+<a name='duplicate-device-objects-with-hybrid-azure-ad-deployments'></a>
 
-A device object is pre-created in Azure AD once a device is registered in Autopilot. If a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries.
+### Duplicate device objects with hybrid Microsoft Entra deployments
+
+A device object is pre-created in Microsoft Entra ID once a device is registered in Autopilot. If a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
 ### TPM attestation failure on Windows 11 error code 0x81039024
 
@@ -149,7 +165,7 @@ For more information on this issue, see [Troubleshoot Autopilot device import an
 
 ### A non-assigned user can sign in when using user-driven mode with Active Directory Federation Services (ADFS)
 
-In a Windows Autopilot user-driven Azure Active Directory (Azure AD) joined environment, you can pre-assign a user to a device. If the user is a cloud-native Azure AD account, the username is enforced and the user is only asked for their password. There's no way to sign in with another user ID. However, when ADFS is used, the username assignment isn't enforced. A different user than the one assigned can sign in on the device.
+In a Windows Autopilot user-driven Microsoft Entra joined environment, you can pre-assign a user to a device. If the user is a cloud-native Microsoft Entra account, the username is enforced and the user is only asked for their password. There's no way to sign in with another user ID. However, when ADFS is used, the username assignment isn't enforced. A different user than the one assigned can sign in on the device.
 
 ### Intune connector is inactive but still appears in the Intune Connectors
 
@@ -171,7 +187,9 @@ The services responsible for determining the list of apps that should be blockin
 
 Confirm that all of your information is correct at `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\Diagnostics\Autopilot`. For more information, see [Troubleshoot OOBE issues](troubleshoot-oobe.md#windows-10-version-1709-and-above).
 
-### Windows Autopilot user-driven hybrid Azure AD deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile
+<a name='windows-autopilot-user-driven-hybrid-azure-ad-deployments-dont-grant-users-administrator-rights-even-when-specified-in-the-windows-autopilot-profile'></a>
+
+### Windows Autopilot user-driven hybrid Microsoft Entra deployments don't grant users Administrator rights even when specified in the Windows Autopilot profile
 
 This issue occurs when there's another user on the device that already has Administrator rights. For example, a PowerShell script or policy could create another local account that is a member of the Administrators group. To ensure this works properly, don't create another account until after the Windows Autopilot process has completed.
 
@@ -209,12 +227,12 @@ For more information on this scenario, see [Windows Autopilot self-deploying mod
 | Error code | Description |
 | ---------- | ----------- |
 | 0x800705B4 | This general error indicates a timeout. A common cause of this error in self-deploying mode is that the device isn't TPM 2.0 capable. For example, it's a virtual machine. Devices that aren't TPM 2.0 capable can't be used with self-deploying mode. |
-| 0x801c03ea | This error indicates that TPM attestation failed, causing a failure to join Azure AD with a device token.
-| 0xc1036501 | The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Azure AD. For more information, see the blog post [Inside Windows Autopilot self-deploying mode](https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/). |
+| 0x801c03ea | This error indicates that TPM attestation failed, causing a failure to join Microsoft Entra ID with a device token.
+| 0xc1036501 | The device can't do an automatic MDM enrollment because there are multiple MDM configurations in Microsoft Entra ID. For more information, see the blog post [Inside Windows Autopilot self-deploying mode](https://oofhours.com/2019/10/01/inside-windows-autopilot-self-deploying-mode/). |
 
 ### Pre-provisioning gives an error screen and the **Microsoft-Windows-User Device Registration/Admin** event log displays **HResult error code 0x801C03F3**
 
-This issue can happen if Azure AD can't find an Azure AD device object for the device that you're trying to deploy. This issue occurs if you manually delete the object. To fix it, remove the device from Azure AD, Intune, and Autopilot, then re-register it with Autopilot, which recreates the Azure AD device object
+This issue can happen if Microsoft Entra ID can't find a Microsoft Entra device object for the device that you're trying to deploy. This issue occurs if you manually delete the object. To fix it, remove the device from Microsoft Entra ID, Intune, and Autopilot, then re-register it with Autopilot, which recreates the Microsoft Entra device object
 
 To get troubleshooting logs, run the following command: `Mdmdiagnosticstool.exe -area Autopilot;TPM -cab c:\autopilot.cab`
 

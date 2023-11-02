@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/26/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -72,7 +72,7 @@ Read through these enrollment requirements and best practices to prepare for a s
 ### Choose an authentication method  
 Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication, and has features like multi-factor authentication. 
 
-Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Azure AD registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. For how-to steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
+Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Azure AD registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. 
 
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
 
@@ -464,7 +464,7 @@ You'll sometimes need to renew your tokens:
 - Renew your ADE token yearly. The Intune admin center shows the expiration date.
 - If the Apple ID password changes for the user who set up the token in Apple Business Manager, renew your enrollment program token in Intune and Apple Business Manager.
 - If the user who set up the token in Apple Business Manager leaves the organization, renew your enrollment program token in Intune and Apple Business Manager.
-- If you change the Apple ID used to create the ADE token, the change will not affect currently enrolled devices.
+- If you change the Apple ID used to create the ADE token, the change won't affect currently enrolled devices with that token, until they re-enroll. This is unlike the Apple Push Notification Service (APNS) certificate used for the tenant which cannot be changed without requiring all devices to be re-enrolled unless you contact Apple Support to perform the change on the back end. 
 
 ### Renew your tokens
 

@@ -95,10 +95,7 @@ Once the configuration files have been modified, you'll need to restart the Intu
 
 1. Open **services.msc**.
 2. Find and select the **Intune ODJConnector Service**.
-3. Select **Restart**.
-
-![Screenshot of service restart](./media/autopilot-hybrid-connector-proxy/service-restart.png)
-
+3. Select **Restart**.  
 
 ## Specifying an alternative proxy server
 
@@ -155,10 +152,7 @@ Once the configuration files have been modified, you'll need to restart the Intu
 
 1. Open **services.msc**.
 2. Find and select the **Intune ODJConnector Service**.
-3. Select **Restart**.
-
-![Screenshot of service restart](./media/autopilot-hybrid-connector-proxy/service-restart.png)
-
+3. Select **Restart**.  
 
 ## Next steps
 

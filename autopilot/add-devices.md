@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/25/2023
+ms.date: 10/31/2023
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -39,7 +39,7 @@ This article provides step-by-step guidance for manual registration. For more in
 
 - [Intune subscription](/mem/intune/fundamentals/licenses)
 - [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
-- [Azure Active Directory Premium subscription](/azure/active-directory/active-directory-get-started-premium)
+- [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium)
 
 ## Required permissions
 
@@ -115,7 +115,7 @@ To install the script directly and capture the hardware hash from the local comp
 
    > [!NOTE]
    >
-   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules may require approval of additional permissions in Azure AD when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+   > The `Get-WindowsAutopilotInfo` script was updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. Make sure you're using the latest version of the script. The Microsoft Graph PowerShell modules may require approval of additional permissions in Microsoft Entra ID when they're first used. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 1. You're prompted to sign in. An account with the Intune Administrator role is sufficient, and the device hash is uploaded automatically.
 
@@ -220,7 +220,7 @@ After you've uploaded an Autopilot device, you can edit certain attributes of th
 
 > [!NOTE]
 >
-> Device names can be configured for all devices but are ignored in Hybrid Azure Active Directory (Azure AD) deployments. The device name still comes from the domain join profile for Hybrid Azure AD devices.
+> Device names can be configured for all devices but are ignored in Hybrid Microsoft Entra deployments. The device name still comes from the domain join profile for Hybrid Microsoft Entra devices.
 
 ## Delete Autopilot devices
 
@@ -230,14 +230,24 @@ You can delete Windows Autopilot devices that aren't enrolled in Intune:
 
 1. Choose the devices that you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
 
-Completely removing a device from your tenant requires you to delete the Intune, Azure AD, and Windows Autopilot device records. You can do all these deletions from Intune, in this order:
+Completely removing a device from your tenant requires you to delete the Intune, Microsoft Entra ID, and Windows Autopilot device records. You can do all these deletions from Intune, in this order:
 
 1. If the devices are enrolled in Intune, [delete them from the Intune All devices pane](/mem/intune/remote-actions/devices-wipe#delete-devices-from-the-intune-admin-center).
 
 1. Delete the devices from Windows Autopilot at **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**). Choose the devices that you want to delete, and then select **Delete**. The deletion process can take a few minutes to complete.
 
-1. Delete the devices from Azure AD at **Devices** > **Azure AD devices**.
+1. Delete the devices from Microsoft Entra ID at **Devices** > **Microsoft Entra devices**.
+
+## Troubleshooting registration failures
+
+1. **StorageError**: This error is a generic error that can occur for various reasons. Most of the time it's not possible to determine the exact cause of the error until further investigation is done. If you encounter this error, the best course of action is to try again later. If the issue persists, contact support.
+
+1. **ZtdDeviceAssignedToAnotherTenant**: This error occurs when the hardware hash you're uploading matches a device that is already registered to a different tenant. If you see this error, you should search for the serial number corresponding to the duplicate in the CSV file. Then, search for the serial number in the **Windows Autopilot devices** pane in Intune. If the device is already registered, don't import it again.
+
+1. **ZtdDeviceAlreadyAssigned**: This error occurs when the hardware hash you're uploading matches a device that is already registered to your tenant. If you see this error, you should search for the serial number corresponding to the duplicate in the CSV file. Then, search for the serial number in the **Windows Autopilot devices** pane in Intune. If the device is already registered, don't import it again. If the device isn't registered, you can import it again.
+
+1. **ZtdDeviceDuplicated**: This error occurs when there are duplicate hardware hashes in the CSV file. Only one of the duplicates is processed, and the others result in this error. If you see this error, you should look for the other duplicates of the same device to see what the actual result was. If you find a duplicate that was successfully processed, you can remove the duplicate row from the CSV file.
 
 ## Next steps
 
-[Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.
+- [Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.
