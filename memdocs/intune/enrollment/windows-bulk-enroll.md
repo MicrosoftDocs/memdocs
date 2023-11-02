@@ -73,7 +73,7 @@ Microsoft Entra users are standard users on these devices and receive assigned I
 1. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
    ![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-network.png)
 
-1. Select **Enroll in Microsoft Entra ID**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.  
+1. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.  
 
    > [!NOTE]
    > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Microsoft Entra ID.
