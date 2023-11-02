@@ -7,7 +7,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/26/2022  
+ms.date: 11/02/2023  
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -75,11 +75,15 @@ The following properties sync back to the Google Admin console. Any changes made
 Select **System info** to see a real-time snapshot of the information available from the Google Admin console.  
 
 ### Delegated administration 
-Device dynamic groups can be created based on device Organizational Units to allow organizations to delegate the view and remote device actions of ChromeOS devices that are synchronized to the Intune portal. This can be achieved by using the dynamic membership property enrollmentProfileName of device dynamic groups in Entra (formally known as Azure AD).
+You can create dynamic device groups based on a [Google Admin organizational unit](https://knowledge.workspace.google.com/kb/how-to-create-an-organizational-unit-000007002) as a way to delegate administrators to Intune-synced ChromeOS devices. This section describes how to create a dynamic device group so that you can control admin access to the Chrome OS information and remote device actions in the Microsoft Intune admin center.   
 
-Once the groups are created, they can then be assigned as included groups to the desired scope tags defined in an RBAC role in Intune. This process will then add the scope tag to each of the devices contained in the group to restrict the admin view and access of the ChromeOS devices in the Intune console. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags#to-create-a-scope-tag). 
+1. In the Microsoft Intune admin center, [create a group](/mem/intune/fundamentals/groups-add#add-a-new-group) with the following details:  
+   1. For **Membership type**, select **Dynamic Device**.   
+   2. Select **Add a dynamic query**.   
+   3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. Then enter the name of the enrollment profile for **Value**.
+2. Create a scope tag for an Intune RBAC role. The scope tag determines the level of access for the Intune role.  When you get to **Assignments**, include the dynamic device group you previously created. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags#to-create-a-scope-tag).  
 
-The Organizational Unit information will be synchronized to the enrollmentProfilename device object property in Entra using the full path format that is displayed in the System Info in the Intune console (for example: `/OU Level1/OU Level2`. The maximum length of the string is 255 characters. Any string that exceeds the max number of characters will be truncated from the start of the string (for example:  `/OU Level1/OU Level2/.../Level18` will be truncated to `evel1/OU Level2/…/OU Level18`).
+After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfilename* device object property in Microsoft Entra ID, using the full path format that's shown under [Sytem info](#system-info). in the admin center  For example: `/OU Level1/OU Level2`. The maximum length of the string is 255 characters. Intune truncates the first part of the string if it exceeds the max number of characters. For example:  `/OU Level1/OU Level2/.../Level18` becomes `evel1/OU Level2/…/OU Level18`.  
 
 
 ## Next steps  
