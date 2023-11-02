@@ -2,7 +2,7 @@
 # required metadata
 
 title: Windows cloud configuration step by step guide
-description: Use this Windows 10/11 cloud configuration step-by-step setup guide to create your own cloud configuration deployment. You create the Entra group and policies using Microsoft Intune, including the enrollment profile, compliance policy, and security baseline. You also deploy apps and resources that users need to do their jobs.
+description: Use this Windows 10/11 cloud configuration step-by-step setup guide to create your own cloud configuration deployment. You create the Microsoft Entra group and policies using Microsoft Intune, including the enrollment profile, compliance policy, and security baseline. You also deploy apps and resources that users need to do their jobs.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -165,7 +165,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
         | Setting    | Value |
         | --- | --- |
         | Deployment mode |    User-driven |
-        | Join to Azure AD as    | Azure AD joined |
+        | Join to Microsoft Entra ID as    | Microsoft Entra joined |
         | Microsoft Software License Terms | Hide |
         | Privacy settings    | Hide |
         | Hide change account options    | Hide |
@@ -513,7 +513,7 @@ Add the tenant domain name in Intune:
 3. For platform, select **Windows 10 and later**.
 4. For Profile type, select **Templates** > **Device restrictions** > **Create**.
 5. Enter a name for the profile and select **Next**.
-6. In **Configuration settings**, for **Password**, configure the **Preferred Azure AD tenant domain**. Enter the domain name that users should use to sign in to devices.
+6. In **Configuration settings**, for **Password**, configure the **Preferred Microsoft Entra tenant domain**. Enter the Microsoft Entra domain name that users should use to sign in to devices.
 7. Assign the profile to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
 ### ✔️ Deploy other essential productivity and line of business (LOB) apps
