@@ -45,4 +45,4 @@ Report column name: Windows 11 readiness status </br>
    |2|Not capable|
    |3|Capable|
 
-- Column name in `.csv` file: GraphDeviceIsManaged </br> Report column name: Azure AD registered
+- Column name in `.csv` file: GraphDeviceIsManaged </br> Report column name: Microsoft Entra registered

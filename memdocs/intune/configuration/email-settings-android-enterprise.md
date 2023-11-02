@@ -2,7 +2,7 @@
 # required metadata
 
 title: Android Enterprise email settings in Microsoft Intune
-description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Azure Active Directory. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Enterprise personally owned devices with a work profile using Microsoft Intune.
+description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Microsoft Entra ID. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Enterprise personally owned devices with a work profile using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -53,12 +53,12 @@ As an Intune administrator, you can create and assign email settings to Android 
 
 - **Email app**: Select **Gmail** or **Nine Work**. This app is the client app that connects to the email server you enter.
 - **Email server**: Enter the host name of your Exchange server. For example, enter `outlook.office365.com`.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (Azure AD). Intune dynamically generates the username that's used by this profile. Make sure your users have email addresses that match the attribute you select. Your options:
+- **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that's used by this profile. Make sure your users have email addresses that match the attribute you select. Your options:
 
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
   - **User name**: Gets only the name, such as `user1`.
 
-- **Email address attribute from AAD**: This name is the email attribute Intune gets from Azure AD. Intune dynamically generates the email address that's used by this profile. Your options:
+- **Email address attribute from Microsoft Entra ID**: This name is the email attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the email address that's used by this profile. Your options:
   - **User principal name**:  Uses the full principal name, such as `user1@contoso.com` or `user1`, as the email address.
   - **Primary SMTP address**: Uses the primary SMTP address, such as `user1@contoso.com`, to sign in to Exchange.
 
