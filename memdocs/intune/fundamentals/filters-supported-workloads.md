@@ -301,6 +301,7 @@ You can use filters for some common app policies on the following platforms. For
 | Profile type | Supported |
 | --- | --- |
 | Update rings for Windows 10/11 | ✔️ |
+| &nbsp; | &nbsp; |
 | **Device configuration profile** | &nbsp; |
 | Administrative Templates | ✔️ |
 | Custom | ✔️ |
@@ -314,12 +315,10 @@ You can use filters for some common app policies on the following platforms. For
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
 | Endpoint analytics Remediations scripts|✔️ |
-| Endpoint Privilege Management (EPM) |✔️ |
 | Endpoint Protection | ✔️ |
 | Enrollment device platform restrictions | ✔️ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
-| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |
 | Network boundary | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -332,13 +331,16 @@ You can use filters for some common app policies on the following platforms. For
 | Wi-Fi | ✔️ |
 | Wired network | ✔️ |
 | Windows health monitoring | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | ✔️ <br/> **Local user group membership** only |
 | Antivirus | ✔️ |
 | Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, **App and browser isolation**, and **Device control** |
 | Disk encryption | ❌ |
 | Endpoint detection and response | ✔️ |
+| Endpoint Privilege Management (EPM) |✔️ |
 | Firewall | ✔️ |
+| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |
 | Security baselines | ❌ |
 
 ## Not supported on managed devices
