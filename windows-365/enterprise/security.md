@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2023
+ms.date: 11/02/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -83,6 +83,12 @@ The following security components are enabled by default on specific Cloud PC SK
  
 > [!NOTE]
 > Given the technological complexity, the security promise of Microsoft Defender Application Guard (MDAG) may not hold true on VMs and in VDI environments. Hence, MDAG is currently not officially supported on VMs and in VDI environments. However, for testing and automation purposes on non-production machines, you may enable MDAG on a VM by enabling Hyper-V nested virtualization on the host.
+
+## Optional secuirity features
+
+The following security components can be turned on by an admin:
+
+- Microsoft Purview Customer Lockbox. Customer Lockbox ensures that Microsoft can't access a customer's content to do service operations without your explicit approval. You can turn Customer Lockbox on or off in the Microsoft 365 admin center. For more information, see [Microsoft Purview Customer Lockbox](/purview/customer-lockbox-requests).
 
 ## Secure Cloud PC data
 
