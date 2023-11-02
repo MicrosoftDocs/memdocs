@@ -84,7 +84,7 @@ The following security components are enabled by default on specific Cloud PC SK
 > [!NOTE]
 > Given the technological complexity, the security promise of Microsoft Defender Application Guard (MDAG) may not hold true on VMs and in VDI environments. Hence, MDAG is currently not officially supported on VMs and in VDI environments. However, for testing and automation purposes on non-production machines, you may enable MDAG on a VM by enabling Hyper-V nested virtualization on the host.
 
-## Optional secuirity features
+## Optional security features
 
 The following security components can be turned on by an admin:
 
