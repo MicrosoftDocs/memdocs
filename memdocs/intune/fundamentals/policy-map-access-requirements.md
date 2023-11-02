@@ -33,7 +33,7 @@ ms.collection:
 
 # Access requirements policy mapping from Basic Mobility and Security to Intune
 
-This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps Office 365 Security and Compliance portal Access Requirement policies to the equivalent policies in Microsoft Intune admin center. Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
+This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps Office 365 Security and Compliance portal Access Requirement policies to the equivalent policies in Microsoft Intune admin center. Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Microsoft Entra policies to achieve the same result.
 
 If you’re migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 
@@ -62,7 +62,7 @@ All Access Requirements will be deployed in an Intune compliance policy and the 
 ## Require a password
 
 > [!NOTE]
-> All password-related settings only impact local accounts on Windows. User accounts sourced from Azure Active Directory are not managed by these policies.
+> All password-related settings only impact local accounts on Windows. User accounts sourced from Microsoft Entra ID are not managed by these policies.
 
 [!INCLUDE [blockorallow](../includes/block-or-allow.md)]
 
@@ -254,8 +254,8 @@ Three configuration profiles and one compliance policy
     | --- | --- |
     | Email server | outlook.office365.com |
     | Account name | Office 365 email |
-    | Username attribute from AAD | User Principal Name |
-    | Email address attribute from AAD | User Principal Name |
+    | Username attribute from Microsoft Entra ID | User Principal Name |
+    | Email address attribute from Microsoft Entra ID | User Principal Name |
     | SSL | Enable |
 
 - **Devices** > **iOS/iPadOS** > **Configuration profiles** > policy name_O365_i_Email > **Properties** > **Configuration settings Edit**
@@ -264,8 +264,8 @@ Three configuration profiles and one compliance policy
     | --- | --- |
     | Email server | outlook.office365.com |
     | Account name | Office 365 email |
-    | Username attribute from AAD | User Principal Name |
-    | Email address attribute from AAD | User Principal Name |
+    | Username attribute from Microsoft Entra ID | User Principal Name |
+    | Email address attribute from Microsoft Entra ID | User Principal Name |
     | Authentication name | Username and password |
     | SSL | Enable |
 
@@ -276,8 +276,8 @@ Three configuration profiles and one compliance policy
     | --- | --- |
     | Email server | outlook.office365.com |
     | Account name | Office 365 email |
-    | Username attribute from AAD | User Principal Name |
-    | Email address attribute from AAD | User Principal Name |
+    | Username attribute from Microsoft Entra ID | User Principal Name |
+    | Email address attribute from Microsoft Entra ID | User Principal Name |
     | Authentication name | Username and password |
     | SSL | Enable |
 
@@ -300,6 +300,3 @@ The following settings aren't deployed by device security policies, but Intune r
 | Windows 10 | Sync Contacts | true |
 | Windows 10 | Sync Calendar | true |
 | Windows 10 | Sync Tasks | true |
-
-
-
