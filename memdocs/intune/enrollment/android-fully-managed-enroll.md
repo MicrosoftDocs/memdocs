@@ -54,7 +54,7 @@ Complete these prerequisites to ensure a successful enrollment.
   There is no restriction on device manufacturer/OEM if all three requirements are met. 
  * Make sure Android Enterprise is supported in your region. For Android Enterprise requirements, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).  
  * [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).    
- * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have an Azure AD Conditional Access policy with the following configurations, you will need to exclude the Microsoft Intune cloud app from the policy:  
+ * The Android setup process uses a Chrome tab to authenticate device users during enrollment. If you have a Microsoft Entra Conditional Access policy with the following configurations, you will need to exclude the Microsoft Intune cloud app from the policy:  
      * *Require a device to be marked as compliant* setting is used to grant or block access.  
     * The policy applies to **All Cloud apps**, **Android**, and **Browsers**.   
 
@@ -83,8 +83,10 @@ To review, make changes, or delete the profile:
 3. Select **Properties** > **Edit** to make changes to the profile basics or scope tags.  
 4. Select **Token** to retrieve, revoke, or export the token.  
 
-## Step 3: Create dynamic Azure AD group  
-Optionally, create a dynamic Azure AD group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. 
+<a name='step-3-create-dynamic-azure-ad-group'></a>
+
+## Step 3: Create dynamic Microsoft Entra group  
+Optionally, create a dynamic Microsoft Entra group to automatically group devices based on a certain attribute or variable. In this case, we want to use the `enrollmentProfileName` property to group devices that are enrolling with the same profile. 
 
 Add these configurations to your group:    
 * **Group type**: Security

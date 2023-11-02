@@ -33,9 +33,6 @@ ms.collection:
 
 # Disable Activation Lock on Apple devices with Intune
 
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 Microsoft Intune can help you manage Activation Lock, a feature of the Find My iPhone app for iOS/iPadOS and macOS devices. Activation Lock is enabled automatically when a user sets up the Find My iPhone app on a device. After it's enabled, the user's Apple ID and password must be entered before anyone can:
 
 - Turn off Find My iPhone
