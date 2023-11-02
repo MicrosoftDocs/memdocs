@@ -66,9 +66,9 @@ This article provides an overview of the steps to start your Intune deployment.
 
   - **[Intune subscription](licenses.md)**: Included with some Microsoft 365 subscriptions. You also get access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
   - **[Microsoft 365 apps](https://www.microsoft.com/licensing/product-licensing/microsoft-365-apps)**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
-  - **[Azure Active Directory (Azure AD)](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing)**: Included with some Microsoft 365 subscriptions. Azure AD is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription.
+  - **[Microsoft Entra ID](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing)**: Included with some Microsoft 365 subscriptions. Microsoft Entra ID is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription.
 
-    Azure AD Premium, which might cost extra, gives you more features commonly used by organizations, including Conditional Access, multi factor authentication (MFA), and dynamic groups.
+    Microsoft Entra ID P1 or P2, which might cost extra, gives you more features commonly used by organizations, including Conditional Access, multifactor authentication (MFA), and dynamic groups.
 
   - **[Windows Autopilot](/autopilot/licensing-requirements)**: Included with some Microsoft 365 subscriptions. Windows Autopilot gives you modern OS deployment for Windows 10/11 client devices.
   - **Platform specific prerequisites**: Depending on the platforms of your devices, there will probably be other requirements.
@@ -88,7 +88,7 @@ In this step:
 
 ✔️ **Confirm your devices are supported, create your Intune tenant, add users & groups, assign licenses**, and more.
 
-This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Azure AD, including your domain, your users, and your groups.
+This step focuses on setting up Intune and getting it ready for you to manage your user identities, apps, and devices. Intune uses many features in Microsoft Entra ID, including your domain, your users, and your groups.
 
 For more information, go to [Step 1 - Set up Microsoft Intune](deployment-plan-setup.md).
 
@@ -98,7 +98,7 @@ In this step:
 
 ✔️ **On devices that will enroll** in Intune, create a baseline of apps that all devices must have, and then assign these app policies during enrollment. On apps that need extra security, also use app protection policies.
 
-✔️ **On devices that won't enroll** in Intune, use app protection policies and multi-factor authentication (MFA):
+✔️ **On devices that won't enroll** in Intune, use app protection policies and multifactor authentication (MFA):
 
 - App protection policies help protect organization data on personal devices.
 - MFA helps protect your organization's data from unauthorized access.
@@ -112,10 +112,10 @@ If you prefer, you can enroll your devices, and then assign apps. It's your choi
 If users with their own personal devices will access organization resources, then you need to protect any apps that access your organization data using mobile application management (MAM), at a minimum. You can create MAM policies for Outlook, Teams, SharePoint, and other apps. The [Microsoft Intune planning guide](intune-planning-guide.md) has some guidance on managing personal devices.
 
 > [!NOTE]
-> MFA is a feature of Azure AD that must be enabled in your Azure AD tenant. Then, you configure MFA for your apps. For more information, go to:
+> MFA is a feature of Microsoft Entra ID that must be enabled in your Microsoft Entra tenant. Then, you configure MFA for your apps. For more information, go to:
 > 
-> - [How it works: Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-> - [Tutorial: Secure user sign-in events with Azure AD multi-factor authentication](/azure/active-directory/authentication/tutorial-enable-azure-mfa)
+> - [How it works: Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
+> - [Tutorial: Secure user sign-in events with Microsoft Entra multifactor authentication](/azure/active-directory/authentication/tutorial-enable-azure-mfa)
 
 ## Step 3 - Check for compliance and turn on Conditional Access
 
@@ -134,7 +134,7 @@ When users enroll their devices in Intune, the enrollment process can automatica
 If you prefer, you can enroll your devices before checking compliance. It's your choice. At the next Intune check-in, the compliance policies are assigned.
 
 > [!NOTE]
-> Conditional Access is a feature of Azure AD that must be enabled in your Azure AD tenant. Then, you can create Conditional Access policies for your user identities, apps, and devices. For more information, go to:
+> Conditional Access is a feature of Microsoft Entra ID that must be enabled in your Microsoft Entra tenant. Then, you can create Conditional Access policies for your user identities, apps, and devices. For more information, go to:
 >
 > - [Learn about Conditional Access and Intune](../protect/conditional-access.md)
 > - [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md)

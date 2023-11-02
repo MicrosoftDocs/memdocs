@@ -43,7 +43,7 @@ Organizational messages appear in highly visible places in Windows 11, including
 
 Microsoft Intune provides you with pre-written messages in templates designed for the taskbar area, notification area, and Get Started app. You can add a custom destination URL in the message to link employees to additional resources or the next step in their onboarding process. You must include a logo so that employees recognize and know the message is from you.  
 
-Messages are assigned to Azure AD users and scheduled in the admin center. After you create a message, you can track the delivery status and user engagement data for it, and cancel the message if it's no longer needed.   
+Messages are assigned to Microsoft Entra users and scheduled in the admin center. After you create a message, you can track the delivery status and user engagement data for it, and cancel the message if it's no longer needed.   
 
 ## Message types  
 You can create the following types of messages:  
@@ -62,7 +62,7 @@ For all tenant, role, and policy requirements for organizational messages see [P
 Organizational messages have the following known issues and limitations:  
 
 * Assigning messages to devices and mixed groups isn't supported. If an assigned group includes both users and devices, Intune will only send the message to the users. 
-* If you recently onboarded your tenant to Azure AD, it can take 36 to 64 hours before you're able to use the organizational messages feature.
+* If you recently onboarded your tenant to Microsoft Entra ID, it can take 36 to 64 hours before you're able to use the organizational messages feature.
 * When you create an organizational message for the Get Started app, Microsoft Intune automatically sets the delivery end date to 12/31/2035, which is shown in the profile summary. The message will be delivered to targeted groups until that date or until you cancel the message.  
 * Message priority isn't supported. If you schedule multiple messages of the same type for the same time window, targeted employees will receive the messages in a random order.  
 
@@ -73,11 +73,11 @@ This section answers frequently asked questions (FAQ) for organizational message
 No, we'll generate the message based on the theme you select. You can add a custom URL to the message to link people to more detailed information.   
 
 ### What do I need to do if I don’t have the correct permissions?  
-Contact someone in your organization who is an Azure AD Global Administrator, Intune Administrator, or Intune Role Administrator and ask them to assign one of the following roles:  
- * Azure AD Global Administrator 
+Contact someone in your organization who is a Microsoft Entra Global Administrator, Intune Administrator, or Intune Role Administrator and ask them to assign one of the following roles:  
+ * Microsoft Entra Global Administrator 
  * Intune Administrator 
  * Organizational messages manager (Microsoft Intune role) 
- * Organizational messages writer (Azure AD role)  
+ * Organizational messages writer (Microsoft Entra role)  
 
 ### Why do I need to update other policies before I create a message?  
 The required policies described in [Prerequisites](organizational-messages-prerequisites.md) control access to the taskbar, notification area, and Get Started app. If the settings are blocked or not configured as described, employees will not receive the messages.   
