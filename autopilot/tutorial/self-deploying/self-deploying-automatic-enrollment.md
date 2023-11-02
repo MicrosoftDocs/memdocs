@@ -39,7 +39,9 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 [!INCLUDE [Set up Windows automatic enrollment](../includes/automatic-intune-enrollment.md)]
 
-## Next step: Allow users to join devices to Azure AD
+<a name='next-step-allow-users-to-join-devices-to-azure-ad'></a>
+
+## Next step: Allow users to join devices to Microsoft Entra ID
 
 > [!div class="nextstepaction"]
 > [Step 2: Register devices as Autopilot devices](self-deploying-register-device.md)
