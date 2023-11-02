@@ -498,6 +498,10 @@ Security settings management doesn't support Server core installations due to Se
 
 Security settings management doesn't work for a device that has PowerShell *LanguageMode* configured with *ConstrainedLanguage* mode `enabled`. For more information, see [about_Language_Modes](/powershell/module/microsoft.powershell.core/about/about_language_modes) in the PowerShell documentation.
 
+### Managing security through MDE if you were previously using a 3rd party security tool 
+
+If you previously had a third-party security tool on the machine and are now managing it with MDE, you may see some impact on MDE’s capability to manage Security settings in rare cases. In such cases, as a troubleshooting measure, uninstall and reinstall the latest version of MDE on your machine.
+
 ## Next steps
 
 - [Monitor Defender for Endpoint in Intune](../protect/advanced-threat-protection-monitor.md)
