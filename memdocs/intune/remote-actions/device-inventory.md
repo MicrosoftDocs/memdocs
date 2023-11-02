@@ -90,6 +90,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, macOS, iOS|
+|Total physical memory|The total physical memory on the device (in gigabytes).|Windows|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
 | PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
 | PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
