@@ -186,6 +186,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | N/A |
@@ -216,6 +217,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | N/A |
@@ -255,6 +257,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | N/A |
@@ -287,6 +290,7 @@ You can use filters for some common app policies on the following platforms. For
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
 | Wired network | ✔️ |
+| &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | N/A |
 | Antivirus | ❌ |
