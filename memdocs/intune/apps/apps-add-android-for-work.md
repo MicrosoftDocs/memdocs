@@ -268,7 +268,7 @@ For Managed Google Play apps deployed to Android Enterprise personally owned wor
 
 ## Working with Managed Google Play closed testing tracks
 
-You can distribute a non-production version of a Managed Google Play app to devices enrolled in an Android Enterprise scenario (**Android Enterprise personally owned work profile (BYOD)**, **Android Enterprise fully managed (COBO)**, **Android Enterprise dedicated devices enrolled with Microsoft Entra ID shared mode (aka COSU)**, and **Android Enterprise corporate-owned work profile (COPE)**) in order to perform testing. In Intune, you can see whether an app has a pre-production build test track published to it, as well as be able to assign that track to Microsoft Entra user groups or device groups. The workflow for assigning a production version to a group that currently exists is the same as assigning a non-production channel. After deployment, the install status of each track will correspond with the track's version number in Managed Google Play. For more information, see [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213).
+You can distribute a non-production version of a Managed Google Play app to devices enrolled in an Android Enterprise scenario (**Android Enterprise personally owned work profile (BYOD)**, **Android Enterprise fully managed (COBO)**, **Android Enterprise dedicated devices enrolled with Microsoft Entra shared mode (aka COSU)**, and **Android Enterprise corporate-owned work profile (COPE)**) in order to perform testing. In Intune, you can see whether an app has a pre-production build test track published to it, as well as be able to assign that track to Microsoft Entra user groups or device groups. The workflow for assigning a production version to a group that currently exists is the same as assigning a non-production channel. After deployment, the install status of each track will correspond with the track's version number in Managed Google Play. For more information, see [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213).
 
 > [!NOTE]
 > Required app deployments for non-production app tracks are currently unavailable for devices enrolled in Android Enterprise personally owned work profile (BYOD).
@@ -287,9 +287,9 @@ You can enable an Android Enterprise system app for [Android Enterprise dedicate
 
 <a name='mam-policies-with-ae-dedicated-devices-enrolled-with-azure-ad-shared-mode'></a>
 
-## MAM policies with AE dedicated devices enrolled with Microsoft Entra ID shared mode
+## MAM policies with AE dedicated devices enrolled with Microsoft Entra shared mode
 
-Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra ID shared mode can receive MAM policies and can be targeted separately from other Android enterprise devices. Intune-managed Android Enterprise dedicated devices that are not in Shared Device Mode will continue to be blocked from getting MAM. For more information about Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra ID shared mode, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
+Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra shared mode can receive MAM policies and can be targeted separately from other Android enterprise devices. Intune-managed Android Enterprise dedicated devices that are not in Shared Device Mode will continue to be blocked from getting MAM. For more information about Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra shared mode, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
 
 ## Next steps
 
