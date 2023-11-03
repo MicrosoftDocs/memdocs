@@ -161,7 +161,7 @@ The following types of conditions are available:
 
 - **Operating System Language**: Evaluate the OS language of the device where the task sequence runs. This list includes the 257 languages that Windows supports.
 
-- **File Properties**: Evaluate the existence, version or timestamp of any file on the device where the task sequence runs.
+- **File Properties**: Evaluate the existence, version, or timestamp of any file on the device where the task sequence runs.
 
 - **Folder Properties**: Evaluate the existence or timestamp of any folder on the device where the task sequence runs.
 
