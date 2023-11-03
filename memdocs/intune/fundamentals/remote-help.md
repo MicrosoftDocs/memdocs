@@ -102,7 +102,7 @@ This feature applies to:
 - Windows 10 on ARM64 devices
 - Windows 365
 - Android Enterprise Dedicated (Samsung and Zebra devices)
-- macOS 11, 12 and 13
+- macOS 11, 12, 13 and 14
 
 ## Data and privacy
 
