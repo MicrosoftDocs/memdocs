@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 11/01/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -35,6 +35,8 @@ ms.collection:
 
 > [!NOTE]
 > Consider reading the [Get Started with Intune App SDK Guide](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
+>
+> If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.microsoft.com/en-us/apps/maui), see [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS).
 >
 > To download the SDK, see [Download the SDK files](../developer/app-sdk-get-started.md#download-the-sdk-files).
 >
@@ -193,10 +195,12 @@ In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check wheth
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
-### Set up and configure an AAD app registration
-MSAL requires apps to [register](/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be an AAD app registration/client ID/redirect URI associated with the app. 
+<a name='set-up-and-configure-an-aad-app-registration'></a>
 
-If your app doesn't already use MSAL, you'll need to configure an app registration in AAD and specify the client ID and redirect URI that the Intune SDK should use.  
+### Set up and configure a Microsoft Entra app registration
+MSAL requires apps to [register](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be a Microsoft Entra app registration/client ID/redirect URI associated with the app. 
+
+If your app doesn't already use MSAL, you'll need to configure an app registration in Microsoft Entra ID and specify the client ID and redirect URI that the Intune SDK should use.  
 
 If your app currently uses ADAL to authenticate users, see [Migrate applications to MSAL for iOS and macOS](/azure/active-directory/develop/migrate-objc-adal-msal) for more information on migrating your app from ADAL to MSAL.
 
@@ -208,7 +212,7 @@ Follow the [installation](https://github.com/AzureAD/microsoft-authentication-li
 
 ### Configure MSAL
 
-Follow the [configuration](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal) section to configure MSAL. Make sure you follow all the steps in the configuration section. Disregard step one if your app is already registered in AAD. 
+Follow the [configuration](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal) section to configure MSAL. Make sure you follow all the steps in the configuration section. Disregard step one if your app is already registered in Microsoft Entra ID. 
 
 The points below contain additional information to configure MSAL and link to it. Follow these if they apply to your application.
 
@@ -219,7 +223,7 @@ The points below contain additional information to configure MSAL and link to it
 
 ### Configure MSAL settings for the Intune App SDK
 
-Once an app registration has been configured for your application in AAD, you can configure the Intune App SDK to use the settings from your app registration during authentication against AAD. See [Configure settings for the Intune App SDK](#configure-settings-for-the-intune-app-sdk) for information on populating the following settings:  
+Once an app registration has been configured for your application in Microsoft Entra ID, you can configure the Intune App SDK to use the settings from your app registration during authentication against Microsoft Entra ID. See [Configure settings for the Intune App SDK](#configure-settings-for-the-intune-app-sdk) for information on populating the following settings:  
 
 * ADALClientId
 * ADALAuthority
@@ -231,11 +235,11 @@ The following configurations are required:
 
 1. In the project's Info.plist file, under the **IntuneMAMSettings** dictionary with the key name `ADALClientId`, specify the client ID to be used for MSAL calls.
 
-2. If the Azure AD app registration which maps to the client ID configured in step 1 is configured for use in only a single AAD tenant, configure the `ADALAuthority` key under the **IntuneMAMSettings** dictionary within the application's Info.plist file. Specify the Azure AD authority to be used by MSAL for acquiring tokens for the Intune mobile application management service.
+2. If the Microsoft Entra app registration which maps to the client ID configured in step 1 is configured for use in only a single Microsoft Entra tenant, configure the `ADALAuthority` key under the **IntuneMAMSettings** dictionary within the application's Info.plist file. Specify the Microsoft Entra authority to be used by MSAL for acquiring tokens for the Intune mobile application management service.
 
 3. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
 
-   Alternatively, apps can override these Azure AD settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
+   Alternatively, apps can override these Microsoft Entra settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
 
 4. Ensure the steps to give your iOS app permissions to the Intune Mobile App Management (MAM) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune Mobile App Management service](app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service)".  
 
@@ -259,10 +263,10 @@ Some of these settings might have been covered in previous sections, and some do
 
 Setting  | Type  | Definition | Required?
 --       |  --   |   --       |  --
-ADALClientId  | String  | The app's Azure AD client identifier. | Required for all apps. |
-ADALAuthority | String | The app's Azure AD authority in use. You should use your own environment where AAD accounts have been configured. For more information, see [Application configuration options](/azure/active-directory/develop/msal-client-application-configuration). | Required if the app is a custom line-of-business application built for use within a single organization/AAD tenant. If this value is absent, the common AAD authority is used (which is only supported for multi-tenant applications).|
-ADALRedirectUri  | String  | The app's Azure AD redirect URI. | ADALRedirectUri or ADALRedirectScheme is required for all apps.  |
-ADALRedirectScheme  | String  | The app's Azure AD redirect scheme. This can be used in place of ADALRedirectUri if the application's redirect URI is in the format `scheme://bundle_id`. | ADALRedirectUri or ADALRedirectScheme is required for all apps. |
+ADALClientId  | String  | The app's Microsoft Entra client identifier. | Required for all apps. |
+ADALAuthority | String | The app's Microsoft Entra authority in use. You should use your own environment where Microsoft Entra accounts have been configured. For more information, see [Application configuration options](/azure/active-directory/develop/msal-client-application-configuration). | Required if the app is a custom line-of-business application built for use within a single organization / Microsoft Entra tenant. If this value is absent, the common Microsoft Entra authority is used (which is only supported for multi-tenant applications).|
+ADALRedirectUri  | String  | The app's Microsoft Entra redirect URI. | ADALRedirectUri or ADALRedirectScheme is required for all apps.  |
+ADALRedirectScheme  | String  | The app's Microsoft Entra ID redirect scheme. This can be used in place of ADALRedirectUri if the application's redirect URI is in the format `scheme://bundle_id`. | ADALRedirectUri or ADALRedirectScheme is required for all apps. |
 ADALLogOverrideDisabled | Boolean  | Specifies whether the SDK will route all MSAL logs (including MSAL calls from the app, if any) to its own log file. Defaults to NO. Set to YES if the app will set its own MSAL log callback. | Optional. |
 ADALCacheKeychainGroupOverride | String  | Specifies the keychain group to use for the MSAL cache, instead of "com.microsoft.adalcache". Note that this doesn't have the app-id prefix. That will be prefixed to the provided string at runtime. | Optional. |
 AppGroupIdentifiers | Array of strings  | Array of app groups from the app's entitlements com.apple.security.application-groups section. | Required if the app uses application groups. |
@@ -280,7 +284,7 @@ AccentColor | String| Specifies the accent color for the Intune SDK's UI compone
 SecondaryBackgroundColor| String| Specifies the secondary background color for the MTD screens. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.   | Optional. Defaults to white. |
 SecondaryForegroundColor| String| Specifies the secondary foreground color for the MTD screens, like footnote color. Accepts a hexadecimal RGB string in the form of #XXXXXX, where X can range from 0-9 or A-F. The pound sign might be omitted.  | Optional. Defaults to gray. |
 SupportsDarkMode| Boolean | Specifies whether the Intune SDK's UI color scheme should observe the system dark mode setting, if no explicit value has been set for BackgroundColor/ForegroundColor/AccentColor | Optional. Defaults to yes. |
-MAMTelemetryDisabled| Boolean| Specifies if the SDK will not send any telemetry data to its back end.| Optional. Defaults to no. |
+MAMTelemetryDisabled| Boolean| Specifies if the SDK won't send any telemetry data to its back end.| Optional. Defaults to no. |
 MAMTelemetryUsePPE | Boolean | Specifies if MAM SDK will send data to PPE telemetry backend. Use this when testing your apps with Intune policy so that test telemetry data doesn't mix up with customer data. | Optional. Defaults to no. |
 MaxFileProtectionLevel | String | Allows the app to specify the maximum `NSFileProtectionType` it can support. This value will override the policy sent by the service if the level is higher than what the application can support. Possible values: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`. Notice: With the highest file protection level (`NSFileProtectionComplete`), protected files can only be accessed while the device is unlocked. Ten seconds after the device is locked, the app will lose access to protected files.  In some cases, this may cause loss of access to internal components (such as MySQL databases), leading to unexpected behavior. It's recommended that applications that present lockscreen UI elements set this value to `NSFileProtectionCompleteUntilFirstUserAuthentication`. | Optional. Defaults to `NSFileProtectionComplete`. |
 OpenInActionExtension | Boolean | Set to YES for Open in Action extensions. See the Sharing Data via UIActivityViewController section for more information. 
@@ -302,7 +306,7 @@ To receive Intune app protection policy, apps must initiate an enrollment reques
 ### Apps that already use ADAL or MSAL
 
 > [!NOTE]
-> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+> Azure AD Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 Apps which already use ADAL or MSAL should call the `registerAndEnrollAccount` method on the `IntuneMAMEnrollmentManager` instance after the user has been successfully authenticated:
 
@@ -326,7 +330,7 @@ After this API has been invoked, the app can continue to function as normal. If 
 
 ### Apps that don't use ADAL or MSAL
 
-Apps that don't sign in the user using ADAL or MSAL can still receive app protection policy from the Intune MAM service by calling the API to have the SDK handle that authentication. Apps should use this technique when they haven't authenticated a user with Azure AD but still need to retrieve app protection policy to help protect data. An example is if another authentication service is being used for app sign-in, or if the app doesn't support signing in at all. To do this, the application can call the `loginAndEnrollAccount` method on the `IntuneMAMEnrollmentManager` instance:
+Apps that don't sign in the user using ADAL or MSAL can still receive app protection policy from the Intune MAM service by calling the API to have the SDK handle that authentication. Apps should use this technique when they haven't authenticated a user with Microsoft Entra ID but still need to retrieve app protection policy to help protect data. An example is if another authentication service is being used for app sign-in, or if the app doesn't support signing in at all. To do this, the application can call the `loginAndEnrollAccount` method on the `IntuneMAMEnrollmentManager` instance:
 
 ```objc
 /**
@@ -388,7 +392,7 @@ Before the user is signed out, the app should call the following method on the  
 (void)deRegisterAndUnenrollAccount:(NSString *)identity withWipe:(BOOL)doWipe;
 ```
 
-This method must be called before the user account's Azure AD tokens are deleted. The SDK needs the user account's AAD token(s) to make specific requests to the Intune MAM service on behalf of the user.
+This method must be called before the user account's Microsoft Entra tokens are deleted. The SDK needs the user account's Microsoft Entra token(s) to make specific requests to the Intune MAM service on behalf of the user.
 
 If the app will delete the user's corporate data on its own, the `doWipe` flag can be set to false. Otherwise, the app can have the SDK initiate a selective wipe. This will result in a call to the app's selective wipe delegate.
 
@@ -478,7 +482,7 @@ The return value of this method tells the SDK if the application must handle the
 
 ## Customize your app's behavior with APIs
 
-The Intune App SDK has several APIs you can call to get information about the Intune APP policy deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you will use.
+The Intune App SDK has several APIs you can call to get information about the Intune APP policy deployed to the app. You can use this data to customize your app's behavior. The following table provides information on some essential Intune classes you'll use.
 
 Class | Description
 ----- | -----------
@@ -526,7 +530,7 @@ The `isSaveToAllowedForLocation:withAccount:` method takes two arguments. The fi
 The Intune MAM SDK provides support for the following save locations defined in `IntuneMAMPolicy.h`:
 
 * `IntuneMAMSaveLocationOneDriveForBusiness` - This location represents OneDrive for Business locations. The identity associated with the OneDrive account should be passed in as the second argument.
-* `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and AAD Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
+* `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and Microsoft Entra Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. (For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.)
 * `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. 
 * `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument.  (e.g. Uploading a photo to an organization’s LOB cloud service that is tied to the organization account.)
@@ -552,7 +556,7 @@ The `isOpenFromAllowedForLocation:withAccount:` method takes two arguments. The 
 The Intune MAM SDK provides support for the following open locations defined in `IntuneMAMPolicy.h`:
 
 * `IntuneMAMOpenLocationOneDriveForBusiness` - This location represents OneDrive for Business locations. The identity associated with the OneDrive account should be passed in as the second argument.
-* `IntuneMAMOpenLocationSharePoint` - This location represents both SharePoint online and AAD Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
+* `IntuneMAMOpenLocationSharePoint` - This location represents both SharePoint online and Microsoft Entra Hybrid Modern Auth SharePoint on-premises locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMOpenLocationCamera` - This location **only** represents new images taken by the camera. Because there's no account associated with the iOS camera, only `nil` should be passed as the second argument when this location is used. For opening data from the iOS Photo Library, use  `IntuneMAMOpenLocationPhotos`.
 * `IntuneMAMOpenLocationPhotos` - This location **only** represents existing images within the iOS Photo Library. Because there's no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. For opening images taken directly from the iOS camera, use `IntuneMAMOpenLocationCamera`.
 * `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there's no identity, `nil` should be passed instead. (e.g. an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.) 
@@ -692,10 +696,10 @@ For more information about the capabilities of the Graph API, see [Graph API Ref
 For more information about how to create a MAM targeted app configuration policy in iOS, see the section on MAM targeted app config in [How to use Microsoft Intune app configuration policies for iOS/iPadOS](../apps/app-configuration-policies-use-ios.md).
 
 ## App Protection CA support (optional)
-App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature will require changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources will not be able to acquire an access token unless they support this feature.
+App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature will require changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources won't be able to acquire an access token unless they support this feature.
 
 ### Dependencies
-In addition to the Intune SDK, you will need these two components to enable App Protection CA in your app.
+In addition to the Intune SDK, you'll need these two components to enable App Protection CA in your app.
 
 1. iOS Authenticator app
 2. MSAL authentication library 1.0 or greater
@@ -709,9 +713,9 @@ Most of the new APIs can be found in the IntuneMAMComplianceManager.h. The app n
 
 New behavior	| Description	|
 --	| --	|
-App → ADAL/MSAL: Acquire token	| When an application tries to acquire a token, it should be prepared to receive a ERROR_SERVER_PROTECTION_POLICY_REQUIRED. The app can receive this error during their initial account add flow or when accessing a token later in the application lifecycle. When the app receives this error, it will not be granted an access token and needs to be remediated to retrieve any server data.	|
+App → ADAL/MSAL: Acquire token	| When an application tries to acquire a token, it should be prepared to receive a ERROR_SERVER_PROTECTION_POLICY_REQUIRED. The app can receive this error during their initial account add flow or when accessing a token later in the application lifecycle. When the app receives this error, it won't be granted an access token and needs to be remediated to retrieve any server data.	|
 App → Intune SDK: Call remediateComplianceForIdentity	| When an app receives a ERROR_SERVER_PROTECTION_POLICY_REQUIRED from ADAL, or MSALErrorServerProtectionPoliciesRequired from MSAL it should call [[IntuneMAMComplianceManager instance] remediateComplianceForIdentity] to let Intune enroll the app and apply policy. The app may be restarted during this call. If the app needs to save state before restarting, it can do so in restartApplication delegate method in IntuneMAMPolicyDelegate. <br><br>remediateComplianceForIdentity provides all the functionality of registerAndEnrollAccount and loginAndEnrollAccount. Therefore, the app doesn't need to use either of these older APIs.	|
-Intune → App: Delegate remediation notification	|After Intune has retrieved and applied policies, it will notify the app of the result using the IntuneMAMComplianceDelegate protocol. Please refer to IntuneMAMComplianceStatus in IntuneComplianceManager.h for information on how the app should handle each error. In all cases except IntuneMAMComplianceCompliant, the user will not have a valid access token. <br><br>If the app already has managed content and isn't able to enter a compliant status, the application should call selective wipe to remove any corporate content. <br><br>If we can't reach a compliant state, the app should display localized the error message and title string supplied by withErrorMessage and andErrorTitle.	|
+Intune → App: Delegate remediation notification	|After Intune has retrieved and applied policies, it will notify the app of the result using the IntuneMAMComplianceDelegate protocol. Please refer to IntuneMAMComplianceStatus in IntuneComplianceManager.h for information on how the app should handle each error. In all cases except IntuneMAMComplianceCompliant, the user won't have a valid access token. <br><br>If the app already has managed content and isn't able to enter a compliant status, the application should call selective wipe to remove any corporate content. <br><br>If we can't reach a compliant state, the app should display localized the error message and title string supplied by withErrorMessage and andErrorTitle.	|
 
 Example for hasComplianceStatus method of IntuneMAMComplianceDelegate
 
@@ -812,7 +816,7 @@ guard let authorityURL = URL(string: kAuthority) else {
 #### Configuring a test user for App Protection CA
 
 1. Log in with your administrator credentials to https://portal.azure.com.
-2. Select **Azure Active Directory** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
+2. Select **Microsoft Entra ID** > **Security** > **Conditional Access** > **New policy**. Create a new conditional access policy.
 3. Configure conditional access policy by setting the following items:
     - Filling in the **Name** field.
     - Enabling the policy.
@@ -887,7 +891,7 @@ Alternatively, apps can set the file owner identity explicitly by using `IntuneM
 
 If the app creates files that have data from both managed and unmanaged users, the app is responsible for encrypting the managed user's data. You can encrypt data by using the `protect` and `unprotect` APIs in `IntuneMAMDataProtectionManager`.
 
-The `protect` method accepts an identity that can be a managed or unmanaged user. If the user is managed, the data will be encrypted. If the user is unmanaged, a header will be added to the data that's encoding the identity, but the data will not be encrypted. You can use the `protectionInfo` method to retrieve the data's owner.
+The `protect` method accepts an identity that can be a managed or unmanaged user. If the user is managed, the data will be encrypted. If the user is unmanaged, a header will be added to the data that's encoding the identity, but the data won't be encrypted. You can use the `protectionInfo` method to retrieve the data's owner.
 
 ### Share extensions
 
@@ -904,7 +908,7 @@ By default, apps are considered single identity. The SDK sets the process identi
 
 * **App-initiated identity switch**:
 
-    At launch, multi-identity apps are considered to be running under an unknown, unmanaged account. The conditional launch UI will not run, and no policies will be enforced on the app. The app is responsible for notifying the SDK whenever the identity should be changed. Typically, this will happen whenever the app is about to show data for a specific user account.
+    At launch, multi-identity apps are considered to be running under an unknown, unmanaged account. The conditional launch UI won't run, and no policies will be enforced on the app. The app is responsible for notifying the SDK whenever the identity should be changed. Typically, this will happen whenever the app is about to show data for a specific user account.
 
     An example is when the user attempts to open a document, a mailbox, or a tab in a notebook. The app needs to notify the SDK before the file, mailbox, or tab is actually opened. This is done through the `setUIPolicyIdentity` API in `IntuneMAMPolicyManager`. This API should be called whether or not the user is managed. If the user is managed, the SDK will perform the conditional launch checks, like jailbreak detection, PIN, and authentication.
 

@@ -187,7 +187,7 @@ For more information about app configuration, go to the following topics:
 
 The Outlook for iOS and Android app is designed to enable users in your organization to do more from their mobile devices, by bringing together email, calendar, contacts, and other files.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Azure Active Directory Premium features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Outlook for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Outlook for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 For more information about configuring Microsoft Outlook, go to the following topic:
 
@@ -219,7 +219,7 @@ Mobile Application Management (MAM) app protection policies allows you to manage
 
 One of the primary ways that Intune provides mobile app security is through policies. App protection policies allow you to do the following actions:
 
-- Use Azure AD identity to isolate organization data from personal data. So personal information is isolated from organizational IT awareness. Data accessed using organization credentials are given additional security protection.
+- Use Microsoft Entra identity to isolate organization data from personal data. So personal information is isolated from organizational IT awareness. Data accessed using organization credentials are given additional security protection.
 - Help secure access on personal devices by restricting actions users can take with organizational data, such as copy-and-paste, save, and view.
 - Create and deploy on devices that are enrolled in Intune, enrolled in another mobile device management (MDM) service, or not enrolled in any MDM service.
 
@@ -279,7 +279,7 @@ For specific data protection, access requirements, and conditional launch settin
 
 ### Protect Exchange Online email on managed devices
 
-You can use device compliance policies with Conditional Access to make sure that your organization's devices can access Exchange Online email only if they're managed by Intune and using an approved email app. You can create an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. You can also create an Azure Active Directory (Azure AD) Conditional Access policy that requires devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
+You can use device compliance policies with Conditional Access to make sure that your organization's devices can access Exchange Online email only if they're managed by Intune and using an approved email app. You can create an Intune device compliance policy to set the conditions that a device must meet to be considered compliant. You can also create a Microsoft Entra Conditional Access policy that requires devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
 
 For more information about protecting Exchange Online, go to the following topic:
 
@@ -289,10 +289,10 @@ For more information about protecting Exchange Online, go to the following topic
 
 The following list provides the end-user requirements to use app protection policies on apps managed by Intune include the following:
 
-- The end user must have an Azure Active Directory (Azure AD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
-- The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
+- The end user must have a Microsoft Entra account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Microsoft Entra ID.
+- The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
-- The end user must sign into the app using their Azure AD account.
+- The end user must sign into the app using their Microsoft Entra account.
 
 ## Follow the minimum recommended baseline policies
 

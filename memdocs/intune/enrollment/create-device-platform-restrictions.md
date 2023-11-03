@@ -86,7 +86,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
         - iOS/iPadOS supports major.minor.rev.  
 
              > [!TIP]
-             > The min/max range isn't applicable to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. Although Intune doesn't block ADE enrollments that use Company Portal to authenticate, not meeting OS requirements impacts registration because devices can't create the Azure AD device record used to evaluate Conditional Access policies. You can tell that this is the case if a device user receives an error message that says "Couldn't map device record with a user" after they sign in to Company Portal.        
+             > The min/max range isn't applicable to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. Although Intune doesn't block ADE enrollments that use Company Portal to authenticate, not meeting OS requirements impacts registration because devices can't create the Microsoft Entra device record used to evaluate Conditional Access policies. You can tell that this is the case if a device user receives an error message that says "Couldn't map device record with a user" after they sign in to Company Portal.        
 
 8. Select **Next**. 
 9. Optionally, add scope tags to the restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
@@ -150,4 +150,3 @@ Edits are applied to new enrollments and do not affect devices that are already 
 4. Select **Edit**.   
 5. Make your changes and select **Review + save**. 
 6. Review your changes and select **Save**.  
-

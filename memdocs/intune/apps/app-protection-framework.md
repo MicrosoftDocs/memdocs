@@ -76,7 +76,7 @@ Administrators can incorporate the below configuration levels within their ring 
 
 ### Conditional Access Policies
 
-To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+To ensure that only apps supporting App Protection Polices access work or school account data, Microsoft Entra Conditional Access policies are required. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
  See **Require approved client apps or app protection policy with mobile devices** in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection) for steps to implement the specific policies. Finally, implement the steps in [Block legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication) to block legacy authentication capable iOS and Android apps.
 
@@ -241,4 +241,3 @@ Administrators can incorporate the above configuration levels within their ring 
 - [How to create and deploy app protection policies with Microsoft Intune](app-protection-policies.md)
 - [Available Android app protection policy settings with Microsoft Intune](app-protection-policy-settings-android.md)
 - [Available iOS/iPadOS app protection policy settings with Microsoft Intune](app-protection-policy-settings-ios.md)
-

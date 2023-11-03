@@ -202,9 +202,9 @@ To use these filters when assigning policies, browse to **Apps** > **App protect
 - **Intune managed devices**: Managed devices are managed by Intune MDM.
 - **Android device administrator**: Intune-managed devices using the Android Device Administration API.
 - **Android Enterprise**: Intune-managed devices using Android Enterprise Work Profiles or Android Enterprise Full Device Management.
-- **Android Enterprise corporate-owned dedicated devices with Azure AD Shared device mode**: Intune-managed devices using Android Enterprise dedicated devices with Shared device mode. 
+- **Android Enterprise corporate-owned dedicated devices with Microsoft Entra shared device mode**: Intune-managed devices using Android Enterprise dedicated devices with Shared device mode. 
 - **Android (AOSP) user-associated devices**: Intune-managed devices using AOSP user-associated management. 
-- **Android (AOSP) userless devices**: Intune-managed devices using AOSP userless devices. These devices also leverage Azure AD Shared device mode. 
+- **Android (AOSP) userless devices**: Intune-managed devices using AOSP userless devices. These devices also leverage Microsoft Entra shared device mode. 
 
 On Android, Android devices will prompt to install the Intune Company Portal app regardless of which Device Management type is chosen. For example, if you select 'Android Enterprise' then users with unmanaged Android devices will still be prompted.
 

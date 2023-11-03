@@ -48,10 +48,10 @@ For more information about license options, see [Microsoft Intune licensing](../
 ## Role-based access control requirements  
 To create organizational messages in Microsoft Intune, you must be assigned one of these roles: 
 
-* Azure AD Global administrator  
+* Microsoft Entra Global Administrator  
 * Intune administrator  
 * Organizational messages manager (Microsoft Intune role)  
-* Organizational messages writer (Azure AD role)  
+* Organizational messages writer (Microsoft Entra role)  
 
 You can also create a custom role for people managing organization messages by using role-based access control (RBAC). For more information about how to use built-in roles and custom roles, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
 
@@ -125,8 +125,10 @@ If you currently block messages that come from Microsoft, you can continue to do
 2. In the **Overview** tab, go to step 2 under **Before you create a message**.      
 3. **Decide whether to block messages directly from Microsoft, while allowing admin messages to display**: Switch the toggle to **Allow** to allow both Microsoft messages and organizational messages. Switch the toggle to **Block** to block Microsoft messages and allow organizational messages.   
 
-## Attention: New Azure AD tenants        
-If you recently created your Azure AD tenant, the organizational messages feature won't be available to use right away. It will become available 36 to 64 hours after you create the tenant.   
+<a name='attention-new-azure-ad-tenants'></a>
+
+## Attention: New Microsoft Entra tenants        
+If you recently created your Microsoft Entra tenant, the organizational messages feature won't be available to use right away. It will become available 36 to 64 hours after you create the tenant.   
 
 ## Next steps 
 Now that prerequisites are complete, you can [create organizational messages](organizational-messages-create.md) in Microsoft Intune.    
