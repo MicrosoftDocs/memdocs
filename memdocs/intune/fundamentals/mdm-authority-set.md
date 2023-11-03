@@ -112,7 +112,7 @@ Before enabling coexistence with Basic Mobility and Security, consider the follo
 
 To enable coexistence, you must add Intune as the MDM authority for your environment:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Azure AD Global or Intune service administrator rights.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with Microsoft Entra Global or Intune service administrator rights.
 2. Navigate to **Devices**.
 3. The **Add MDM Authority blade** displays.
 4. To switch the MDM authority from *Office 365* to *Intune* and enable coexistence, select **Intune MDM Authority** > **Add**.
@@ -148,7 +148,7 @@ The MDM authority can't be changed back to Unknown. The MDM authority is used by
   - Cert profile
   - Wi-Fi profile
   - Configuration profiles
-- After you change to the new MDM authority, the compliance data in the Microsoft Intune admin center can take up to a week to accurately report. However, the compliance states in Azure Active Directory and on the device are accurate so the device is still protected.
+- After you change to the new MDM authority, the compliance data in the Microsoft Intune admin center can take up to a week to accurately report. However, the compliance states in Microsoft Entra ID and on the device are accurate so the device is still protected.
 - Make sure the new settings intended to overwrite existing settings have the same name as the previous ones to ensure that the old settings are overwritten. Otherwise, the devices might end up with redundant profiles and policies.  
 
    > [!TIP]  

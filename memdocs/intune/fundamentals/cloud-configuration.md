@@ -62,7 +62,7 @@ With Windows 10/11 in cloud configuration:
 
 Using Microsoft Intune, you can use a guided scenario to deploy a cloud configuration. The guided scenario automatically creates all the resources you need, including the following resources:
 
-- Creates a new Azure AD security group, or uses an existing Azure AD security group.
+- Creates a new Microsoft Entra security group, or uses an existing Microsoft Entra security group.
 - Deploys the Microsoft Edge and Microsoft Teams apps. For more information on deploying these apps individually, go to:
   - [Add Microsoft Edge for Windows 10/11](../apps/apps-windows-edge.md)
   - [Add Microsoft 365 apps to Windows 10/11 devices](../apps/apps-add-office365.md)
@@ -104,7 +104,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 - At a minimum, the account creating the guided scenario must have the following licenses:
 
-  - Azure Active Directory Premium P1
+  - Microsoft Entra ID P1
   - Microsoft Intune
   - Microsoft Teams
   - OneDrive for Business
