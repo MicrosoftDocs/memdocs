@@ -99,7 +99,7 @@ A user status list is shown when you select **User install status** in the **Mon
 
 | **User column**     | **Description**                           |
 |---------------------|-------------------------------------------|
-| **Name**            | The name of the user in Azure Active Directory     |
+| **Name**            | The name of the user in Microsoft Entra ID     |
 | **User name**       | The unique name of the user              |
 | **Installations**   | The number of apps installed by the user |
 | **Failures**        | The number of failed app installations for the user     |

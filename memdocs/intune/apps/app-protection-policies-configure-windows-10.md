@@ -36,7 +36,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Enable mobile application management (MAM) for Windows 10/11 by setting the MAM provider in Azure AD. Setting a MAM provider in Azure AD allows you to define the enrollment state when creating a new Windows Information Protection (WIP) policy with Intune. The enrollment state can be either MAM or mobile device management (MDM).
+Enable mobile application management (MAM) for Windows 10/11 by setting the MAM provider in Microsoft Entra ID. Setting a MAM provider in Microsoft Entra ID allows you to define the enrollment state when creating a new Windows Information Protection (WIP) policy with Intune. The enrollment state can be either MAM or mobile device management (MDM).
 
 >[!IMPORTANT]
 > Windows Information Protection (WIP) policies without enrollment has been deprecated. You can no longer create WIP policies for unenrolled devices.
@@ -44,14 +44,14 @@ Enable mobile application management (MAM) for Windows 10/11 by setting the MAM 
 ## To configure the MAM provider
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **All services** and choose **M365 Azure Active Directory** to switch dashboards.
-3. Select **Azure Active Directory**.
+2. Select **All services** and choose **M365 Microsoft Entra ID** to switch dashboards.
+3. Select **Microsoft Entra ID**.
 4. Choose **Mobility (MDM and MAM)** in the **Manage** group.
 5. Click **Microsoft Intune**.
 6. Configure the settings in the  **Restore default MAM URLs** group on the **Configure** pane.
 
    **MAM user scope**  
-   Use MAM auto-enrollment to manage enterprise data on your employees' Windows devices. MAM auto-enrollment will be configured for bring your own device scenarios.<ul><li>**None**<br>Select if no users can be enrolled in MAM.</li><li>**Some**<br>Select Azure AD groups that contain users who will be enrolled in MAM.</li><li>**All**<br>Select if all users can be enrolled in MAM.</li></ul>
+   Use MAM auto-enrollment to manage enterprise data on your employees' Windows devices. MAM auto-enrollment will be configured for bring your own device scenarios.<ul><li>**None**<br>Select if no users can be enrolled in MAM.</li><li>**Some**<br>Select Microsoft Entra groups that contain users who will be enrolled in MAM.</li><li>**All**<br>Select if all users can be enrolled in MAM.</li></ul>
 
    **MAM terms of use URL**  
    The MAM terms of use URL is not supported for Microsoft Intune. This input box must be left blank for protection policies to apply.

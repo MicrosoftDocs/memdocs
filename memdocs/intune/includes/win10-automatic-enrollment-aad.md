@@ -2,10 +2,10 @@
 
 If you enable MDM automatic enrollment, enrollment in Intune will occur when:  
 
-* An Azure AD user adds their work or school account to their personal device.
-* A corporate-owned device joins to your Azure AD. 
+* A Microsoft Entra user adds their work or school account to their personal device.
+* A corporate-owned device joins to your Microsoft Entra ID. 
 
-1. Sign in to the [Azure portal](https://portal.azure.com), and select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+1. Sign in to the [Azure portal](https://portal.azure.com), and select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 
    ![Screenshot shows the Azure portal selections.](../enrollment/media/windows-enroll/auto-enroll-azure-select.png)
 
@@ -23,7 +23,7 @@ If you enable MDM automatic enrollment, enrollment in Intune will occur when:
       >For [corporate devices](../enrollment/enrollment-restrictions-set.md#blocking-personal-windows-devices), the MDM user scope takes precedence if both MDM and MAM user scopes are enabled. The device will get automatically enrolled in the configured MDM.
 
    > [!NOTE]
-   > MDM user scope must be set to an Azure AD group that contains user objects.
+   > MDM user scope must be set to a Microsoft Entra group that contains user objects.
 
    ![Screenshot shows the Azure portal, where you can configure M D M User scope.](../enrollment/media/windows-enroll/auto-enroll-scope.png)
 
@@ -36,4 +36,4 @@ If you enable MDM automatic enrollment, enrollment in Intune will occur when:
 
 ## Multifactor authentication  
 
-Two-factor authentication is not enabled for automatic enrollment by default. We recommend requiring multifactor authentication during device registration. For more information, see [Getting started with the Azure Active Directory Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).  
+Two-factor authentication is not enabled for automatic enrollment by default. We recommend requiring multifactor authentication during device registration. For more information, see [Getting started with the Azure Multi-Factor Authentication Server](/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud).  

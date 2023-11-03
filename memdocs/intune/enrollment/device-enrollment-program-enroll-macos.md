@@ -63,7 +63,7 @@ Automated device enrollment via Apple Business Manager and Apple School Manager 
 
 This section describes how to create an enrollment program token in Intune. The *enrollment program token* (sometimes referred to as an automated device enrollment token) is a necessary component of automated device enrollment because it enables the communication and device management capabilities between Intune and your chosen Apple enrollment program. It allows Intune to sync information from your Apple Business Manager or Apple School Manager account, and apply profiles to devices.  
 
-### Step 1. Download the Intune public key certificate   
+### Step 1: Download the Intune public key certificate   
 
 The public key certificate is needed to request a trust-relationship certificate from Apple Business Manager.     
 
@@ -73,7 +73,7 @@ The public key certificate is needed to request a trust-relationship certificate
 4. Select **I agree** to grant permission to Microsoft to send user and device information to Apple. 
 3. Select **Download your public key** and save the key as a PEM file locally. The key will be used to get the MDM server token in the next step.  
 
-### Step 2. Add MDM server and download server token   
+### Step 2: Add MDM server and download server token   
 
 Add an MDM server for Intune to Apple Business Manager or Apple School Manager, and then download the server token for it.   
 
@@ -90,17 +90,17 @@ Add an MDM server for Intune to Apple Business Manager or Apple School Manager, 
 7. Upload your public key file, and then save your changes. 
 8. Download the server token (.p7m file).   
 
-### Step 3. Assign devices to MDM server   
+### Step 3: Assign devices to MDM server   
 
 Optionally, after you create the MDM server in Apple Business Manager, you can start assigning devices to it. We recommend assigning them now since you're already in Apple Business Manager, but you can come back later if you're not ready. You can use available features like *filters* and *bulk assignment* to simplify assignment selection. For more information and steps, see [Assign, reassign, or unassign devices in Apple Business Manager](https://support.apple.com/guide/apple-business-manager/axmf500c0851/web)(opens Apple Business Manager User Guide).  
 
-### Step 4. Save Apple ID 
+### Step 4: Save Apple ID 
 
 Return to the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and enter the Apple ID used to download the server token. This is the Apple ID you need to use to renew the token every year. Make sure future Intune admins are aware of the Apple ID used, in case you leave your organization and need to transition token management to them. 
 
 ![Screenshot highlighting the Apple ID field in the "Add enrollment program token" pane. ](./media/device-enrollment-program-enroll-ios/image03.png)  
 
-### Step 5. Upload server token and finish     
+### Step 5: Upload server token and finish     
 Upload the server token file to Intune to finish creating the enrollment program token.   
 
 1. Return to the admin center > **Apple token** field. Browse to the server token (.p7m file) on your device. 
@@ -112,7 +112,7 @@ Intune will automatically connect with Apple Business Manager to sync device inf
 
 Create an automated device enrollment profile in the admin center. The profile defines the enrollment experience for your organization's Mac devices, and enforces enrollment policies and settings on enrolling devices. The profile is deployed to assigned devices over-the-air.     
 
-At the end of this procedure, you will assign this profile to Azure AD device groups. 
+At the end of this procedure, you will assign this profile to Microsoft Entra device groups. 
 
 >[!IMPORTANT]
 >To create the profile, you must have an enrollment program token setup in Intune. If you haven't done that yet, see [Create enrollment program token](#create-enrollment-program-token) at the beginning of this article.     
@@ -126,7 +126,7 @@ At the end of this procedure, you will assign this profile to Azure AD device gr
 4. For **Basics**, enter a name and description for the profile so that you can distinguish it from other enrollment profiles. These details aren't visible to device users.  
 
      >[!TIP]
-     > You can use the name field to create a dynamic group in Azure Active Directory, and assign devices to the enrollment profile automatically. Use the profile name to define the *enrollmentProfileName* parameter. For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).  
+     > You can use the name field to create a dynamic group in Microsoft Entra ID, and assign devices to the enrollment profile automatically. Use the profile name to define the *enrollmentProfileName* parameter. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).  
 
 5. Select **Next**. 
 
@@ -137,10 +137,10 @@ At the end of this procedure, you will assign this profile to Azure AD device gr
 
       Option 2 requires additional configuration. Users must authenticate themselves before enrollment to confirm their identity. Select one of the following authentication methods:   
 
-      - **Setup Assistant with modern authentication**: This method requires users to complete all Setup Assistant screens and sign in to the Company Portal app with their Azure AD credentials before they can access resources.  After they sign in to Company Portal, the device:   
+      - **Setup Assistant with modern authentication**: This method requires users to complete all Setup Assistant screens and sign in to the Company Portal app with their Microsoft Entra credentials before they can access resources.  After they sign in to Company Portal, the device:   
 
-        - Registers with Azure AD.  
-        - Is added to the user's device record in Azure AD.  
+        - Registers with Microsoft Entra ID.  
+        - Is added to the user's device record in Microsoft Entra ID.  
         - Can be evaluated for device compliance.  
         - Gains access to resources protected by conditional access.
 
@@ -226,7 +226,7 @@ Optionally, you can select a default enrollment profile. The default profile is 
 
 Distribute prepared devices throughout your organization.  
 
-* New or wiped Macs: New or wiped Macs configured in Apple Business Manager or Apple School Manager will automatically enroll in Microsoft Intune during Setup Assistant when someone turns on the device. If you assigned the device to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal after Setup Assistant is done to finish Azure AD registration and conditional access requirements.  
+* New or wiped Macs: New or wiped Macs configured in Apple Business Manager or Apple School Manager will automatically enroll in Microsoft Intune during Setup Assistant when someone turns on the device. If you assigned the device to a macOS enrollment profile with user affinity, the device user must sign in to the Company Portal after Setup Assistant is done to finish Microsoft Entra registration and conditional access requirements.  
 
 * Existing Macs: You can enroll devices that have already gone through Setup Assistant. Complete these steps to enroll corporate-owned Macs running macOS 10.13 and later.    
 
@@ -243,7 +243,7 @@ Distribute prepared devices throughout your organization.
   8. Follow the onscreen prompts to download the Microsoft Intune management profile, certificates, and policies. 
      >[!TIP]
      > You can confirm which profiles are on the device anytime by returning to **System Preferences** > **Profiles**.  
-  9. If you assigned the device to a macOS enrollment profile with user affinity, sign in to the Company Portal app to complete Azure AD registration and conditional access requirements, and finish enrollment.  
+  9. If you assigned the device to a macOS enrollment profile with user affinity, sign in to the Company Portal app to complete Microsoft Entra registration and conditional access requirements, and finish enrollment.  
 
 ## Renew enrollment program token    
 Complete these steps to renew a server token that's about to expire. This procedure ensures that the associated enrollment program token in Intune remains active.         

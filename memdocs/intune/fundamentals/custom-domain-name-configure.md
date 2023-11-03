@@ -35,14 +35,14 @@ ms.collection:
 
 This topic tells administrators how you can create a DNS CNAME to simplify and customize your logon experience using Microsoft Intune.
 
-When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain name hosted in Azure Active Directory (AD) that looks like **your-domain.onmicrosoft.com**. In this example, **your-domain** is the domain name that you chose when you signed up. **onmicrosoft.com** is the suffix assigned to the accounts you add to your subscription. You can configure your organization's custom domain to access Intune instead of the domain name provided with your subscription.
+When your organization signs up for a Microsoft cloud-based service like Intune, you're given an initial domain name hosted in Microsoft Entra ID that looks like **your-domain.onmicrosoft.com**. In this example, **your-domain** is the domain name that you chose when you signed up. **onmicrosoft.com** is the suffix assigned to the accounts you add to your subscription. You can configure your organization's custom domain to access Intune instead of the domain name provided with your subscription.
 
 Before you create user accounts or synchronize your on-premises Active Directory, we strongly recommend that you decide whether to use only the .onmicrosoft.com domain or to add one or more of your custom domain names. Set up a custom domain before adding users to simplify user management. Setting up a customer domain lets users sign in with the credentials they use to access other domain resources.
 
-When you subscribe to a cloud-based service from Microsoft, your instance of that service becomes a Microsoft  [Azure AD tenant](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant), which provides identity and directory services for your cloud-based service. And, because the tasks to configure Intune to use your organizations custom domain name are the same as for other Azure AD tenants, you can use the information and procedures found in [Add your domain](/azure/active-directory/fundamentals/add-custom-domain).
+When you subscribe to a cloud-based service from Microsoft, your instance of that service becomes a Microsoft  [Microsoft Entra tenant](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant), which provides identity and directory services for your cloud-based service. And, because the tasks to configure Intune to use your organizations custom domain name are the same as for other Microsoft Entra tenants, you can use the information and procedures found in [Add your domain](/azure/active-directory/fundamentals/add-custom-domain).
 
 > [!TIP]
-> To learn more about custom domains, see [Conceptual overview of custom domain names in Azure Active Directory](/azure/active-directory/users-groups-roles/domains-manage).
+> To learn more about custom domains, see [Conceptual overview of custom domain names in Microsoft Entra ID](/azure/active-directory/users-groups-roles/domains-manage).
 
 You cannot rename or remove the initial onmicrosoft.com domain name. You can add, verify, or remove custom domain names used with Intune to keep your business identity clear.
 
@@ -59,6 +59,6 @@ You cannot rename or remove the initial onmicrosoft.com domain name. You can add
     - **Register.com users**: Follow the [step-by-step instructions](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) to create the TXT record.
 5. You may need to create additional DNS records for Intune enrollments. For more information, see [Enable auto-discovery of Intune enrollment server](../enrollment/windows-enrollment-create-cname.md).  
 
-The steps to add and verify a custom domain can also be [performed in Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain).
+The steps to add and verify a custom domain can also be [performed in Microsoft Entra ID](/azure/active-directory/fundamentals/add-custom-domain).
 
 You can learn more [about your initial onmicrosoft.com domain in Microsoft 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A).  
