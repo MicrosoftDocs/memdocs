@@ -37,7 +37,7 @@ Expanding on Intune’s built-in device compliance options, use policies for cus
 This feature applies to:
 
 - Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
-- Windows 10/11
+- Windows 10/11 (Excluding Windows 10/11 Home)
 
 Before you can add custom settings to a policy, you’ll need to prepare a JSON file, and a detection script for use with each supported platform. Both the script and JSON become part of the compliance policy. Each compliance policy supports a single script, and each script can detect multiple settings:
 
