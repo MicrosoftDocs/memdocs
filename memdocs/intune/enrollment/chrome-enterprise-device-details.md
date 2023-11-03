@@ -80,10 +80,16 @@ You can create dynamic device groups based on a [Google Admin organizational uni
 1. In the Microsoft Intune admin center, [create a group](/mem/intune/fundamentals/groups-add#add-a-new-group) with the following details:  
    1. For **Membership type**, select **Dynamic Device**.   
    2. Select **Add a dynamic query**.   
-   3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. Then enter the name of the enrollment profile for **Value**.
+   3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. For **Value**, enter the name of a Google Admin organizational unit.  
 2. Create a scope tag for an Intune RBAC role. The scope tag determines the level of access for the Intune role.  When you get to **Assignments**, include the dynamic device group you previously created. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags#to-create-a-scope-tag).  
 
-After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfilename* device object property in Microsoft Entra ID, using the full path format that's shown under [Sytem info](#system-info). in the admin center  For example: `/OU Level1/OU Level2`. The maximum length of the string is 255 characters. Intune truncates the first part of the string if it exceeds the max number of characters. For example:  `/OU Level1/OU Level2/.../Level18` becomes `evel1/OU Level2/…/OU Level18`.  
+After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfilename* device object property in Microsoft Entra ID, using the full path format that's shown in [Sytem info](#system-info). 
+
+For example: `/OU Level1/OU Level2`. 
+
+The maximum length of the string is 255 characters. Intune truncates the first part of the string if it exceeds the max number of characters. 
+
+For example:  `/OU Level1/OU Level2/.../OU Level18` becomes `evel1/OU Level2/.../OU Level18`.  
 
 
 ## Next steps  
