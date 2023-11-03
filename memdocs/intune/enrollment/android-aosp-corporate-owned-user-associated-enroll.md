@@ -124,7 +124,7 @@ You can create *assigned device groups* or *dynamic device groups* in Intune. Fo
 
 Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name. 
 
-Complete the following steps to create a dynamic Azure AD device group for devices enrolled with an Android (AOSP) corporate-owned, user-associated enrollment profile.  
+Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Android (AOSP) corporate-owned, user-associated enrollment profile.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
@@ -138,7 +138,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
     - In the middle box, choose **Equals**.
     - In the last field, enter the enrollment profile name that you created earlier.  
     
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership).  
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership).  
 5. Choose **Add query** > **Create**.  
 
 
@@ -218,4 +218,3 @@ The following are known limitations when working with AOSP devices in Intune:
 * Create a policy that requires users to accept your [terms and conditions](terms-and-conditions-create.md) before enrollment. 
 
 * For more information about how to get started with AOSP, see [Android source requirements](https://source.android.com/setup/build/requirements)(opens Android source documentation). 
-

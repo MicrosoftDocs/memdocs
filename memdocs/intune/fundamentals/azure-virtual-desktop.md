@@ -41,11 +41,11 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
 
 - Running Windows 10 Enterprise, version 1809 or later, or running Windows 11.
 - Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure. 
-- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods: 
-    - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are hybrid Azure AD joined.
+- [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods: 
+    - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are Microsoft Entra hybrid joined.
     - [Configuration Manager co-management](/configmgr/comanage/overview).
-    - [User self-enrollment via Azure AD Join](/mem/intune/fundamentals/deployment-guide-enroll#user-self-enrollment-in-intune).
-- Azure AD-joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
+    - [User self-enrollment via Microsoft Entra join](/mem/intune/fundamentals/deployment-guide-enroll#user-self-enrollment-in-intune).
+- Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 

@@ -126,7 +126,7 @@ You can choose the following options if you choose variable as the value type:
 
 | Option | Example |
 |----|----|
-| Azure AD Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
+| Microsoft Entra Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | Intune Device ID | b9841cd9-9843-405f-be28-b2265c59ef97 |
 | Domain | contoso.com |

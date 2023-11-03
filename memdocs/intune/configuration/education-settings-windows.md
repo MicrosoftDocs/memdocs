@@ -48,7 +48,7 @@ Create a [Windows 10 secure assessment education device configuration profile](e
 ## Take a test settings
 
 - **Account type**: Choose how users sign in to the test. Your options:
-  - Azure AD account
+  - Azure AD account (Microsoft Entra account)
   - Domain account
   - Local account
   - Local guest account: Only available on devices running Windows 10, version 1903 and later.

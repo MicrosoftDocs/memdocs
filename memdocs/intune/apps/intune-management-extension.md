@@ -2,7 +2,7 @@
 # required metadata
 
 title: Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune
-description: Create and run PowerShell scripts, assign the script policy to Azure Active Directory groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10/11 devices in Microsoft Intune. Read common issues and resolutions. 
+description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10/11 devices in Microsoft Intune. Read common issues and resolutions. 
 keywords:
 author: Erikre
 ms.author: erikre
@@ -50,7 +50,7 @@ User computing is going through a digital transformation. Traditional IT focuses
 
 MDM services, such as Microsoft Intune, can manage mobile and desktop devices running Windows 10. The built-in Windows 10 management client communicates with Intune to run enterprise management tasks. There are some tasks that you might need, such as advanced device configuration and troubleshooting. For Win32 app management, you can use the [Win32 app management](app-management.md) feature on your Windows 10 devices.
 
-The Intune management extension supplements the in-box Windows 10 MDM features. You can create PowerShell scripts to run on Windows 10 devices. For example, create a PowerShell script that does advanced device configurations. Then, upload the script to Intune, assign the script to an Azure Active Directory (AD) group, and run the script. You can then monitor the run status of the script from start to finish.
+The Intune management extension supplements the in-box Windows 10 MDM features. You can create PowerShell scripts to run on Windows 10 devices. For example, create a PowerShell script that does advanced device configurations. Then, upload the script to Intune, assign the script to a Microsoft Entra group, and run the script. You can then monitor the run status of the script from start to finish.
 
 ## Before you begin
 
@@ -58,7 +58,7 @@ The Intune management extension supplements the in-box Windows 10 MDM features. 
 
 - End users aren't required to sign in to the device to execute PowerShell scripts.
 
-- The Intune management extension agent checks after every reboot for any new scripts or changes. After you assign the policy to the Azure AD groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension agent retries the script three times for the next three consecutive Intune management extension agent check-ins.
+- The Intune management extension agent checks after every reboot for any new scripts or changes. After you assign the policy to the Microsoft Entra groups, the PowerShell script runs, and the run results are reported. Once the script executes, it doesn't execute again unless there's a change in the script or policy. If the script fails, the Intune management extension agent retries the script three times for the next three consecutive Intune management extension agent check-ins.
 
 - For shared devices, the PowerShell script will run for every new user that signs in.
 
@@ -81,11 +81,11 @@ The Intune management extension has the following prerequisites. Once they're me
 
 - Devices running Windows 10 version 1607 or later. If the device is enrolled using [bulk auto-enrollment](../enrollment/windows-bulk-enroll.md), devices must run Windows 10 version 1709 or later. The Intune management extension isn't supported on Windows 10 in S mode, as S mode doesn't allow running non-store apps.
   
-- Devices joined to Azure Active Directory (AD), including:  
+- Devices joined to Microsoft Entra ID, including:  
   
-  - Hybrid Azure AD-joined: Devices joined to Azure Active Directory (AAD), and also joined to on-premises Active Directory (AD). See [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
+  - Microsoft Entra hybrid joined: Devices joined to Microsoft Entra ID, and also joined to on-premises Active Directory (AD). See [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
   
-- Azure AD registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure Active Directory (AAD), see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.
+- Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS) for more information. Typically these are Bring Your Own Device (BYOD) devices which have had a work or school account added via Settings>Accounts>Access work or school.
 
 - Devices enrolled in Intune, including:
 
@@ -93,13 +93,13 @@ The Intune management extension has the following prerequisites. Once they're me
   
   - Devices manually enrolled in Intune, which is when:
   
-    - [Auto-enrollment to Intune](../enrollment/quickstart-setup-auto-enrollment.md) is enabled in Azure AD. Users sign in to devices using a local user account, and manually join the device to Azure AD. Then, they sign in to the device using their Azure AD account.
+    - [Auto-enrollment to Intune](../enrollment/quickstart-setup-auto-enrollment.md) is enabled in Microsoft Entra ID. Users sign in to devices using a local user account, and manually join the device to Microsoft Entra ID. Then, they sign in to the device using their Microsoft Entra account.
 
     OR  
 
-    - User signs in to the device using their Azure AD account, and then enrolls in Intune.
+    - User signs in to the device using their Microsoft Entra account, and then enrolls in Intune.
 
-  - Co-managed devices that use Configuration Manager and Intune. When installing Win32 apps, make sure the **Apps** workload is set to **Pilot Intune** or **Intune**. PowerShell scripts will be run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension will be deployed to a device when you target a PowerShell script to the device. Remember, the device must be an Azure AD or Hybrid Azure AD joined device. And, it must be running Windows 10 version 1607 or later. See the following articles for guidance:
+  - Co-managed devices that use Configuration Manager and Intune. When installing Win32 apps, make sure the **Apps** workload is set to **Pilot Intune** or **Intune**. PowerShell scripts will be run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension will be deployed to a device when you target a PowerShell script to the device. Remember, the device must be a Microsoft Entra ID or Microsoft Entra hybrid joined device. And, it must be running Windows 10 version 1607 or later. See the following articles for guidance:
   
     - [What is co-management](/configmgr/comanage/overview)
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
@@ -140,13 +140,13 @@ The Intune management extension has the following prerequisites. Once they're me
 
     2. When finished, select **Next**.
 
-6. Select **Assignments** > **Select groups to include**. An existing list of Azure AD groups is shown.
+6. Select **Assignments** > **Select groups to include**. An existing list of Microsoft Entra groups is shown.
 
     1. Select one or more groups that include the users whose devices receive the script. Choose **Select**. The groups you chose are shown in the list, and will receive your policy.
 
         > [!NOTE]
-        > PowerShell scripts in Intune can be targeted to Azure AD device security groups or Azure AD user security groups.
-        > However, when targeting workplace joined (WPJ) devices, only Azure AD device security groups can be used (user targeting will be ignored). For more information, see [Win32 app support for Workplace join (WPJ) devices](../fundamentals/whats-new-archive.md#win32-app-support-for-workplace-join-wpj-devices-).
+        > PowerShell scripts in Intune can be targeted to Microsoft Entra device security groups or Microsoft Entra user security groups.
+        > However, when targeting workplace joined (WPJ) devices, only Microsoft Entra device security groups can be used (user targeting will be ignored). For more information, see [Win32 app support for Workplace join (WPJ) devices](../fundamentals/whats-new-archive.md#win32-app-support-for-workplace-join-wpj-devices-).
 
     2. Select **Next**.
 
@@ -211,7 +211,7 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
 
 **Possible resolutions**:
 
-- The device isn't joined to Azure AD. Be sure the devices meet the [prerequisites](#prerequisites) (in this article).
+- The device isn't joined to Microsoft Entra ID. Be sure the devices meet the [prerequisites](#prerequisites) (in this article).
 - There are no PowerShell scripts or Win32 apps assigned to the groups that the user or device belongs.
 - The device can't check in with the Intune service. For example, there's no internet access, no access to Windows Push Notification Services (WNS), and so on.
 - The device is in S mode. The Intune management extension isn't supported on devices running in S mode.
@@ -238,7 +238,7 @@ To see if the device is auto-enrolled, you can:
     > [!TIP]
     > The **Microsoft Intune Management Extension** is a service that runs on the device, just like any other service listed in the Services app (services.msc). After a device reboots, this service may also restart, and check for any assigned PowerShell scripts with the Intune service. If the **Microsoft Intune Management Extension** service is set to Manual, then the service may not restart after the device reboots.
 
-- Be sure devices are [joined to Azure AD](/azure/active-directory/user-help/user-help-join-device-on-network). Devices that are only joined to your workplace or organization ([registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Azure AD) won't receive the scripts.
+- Be sure devices are [joined to Microsoft Entra ID](/azure/active-directory/user-help/user-help-join-device-on-network). Devices that are only joined to your workplace or organization ([registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID) won't receive the scripts.
 - Confirm the Intune management extension is downloaded to `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Scripts don't run on Surface Hubs or Windows 10 in S mode.
 - Review the logs for any errors. See [Intune management extension logs](#intune-management-extension-logs) (in this article).

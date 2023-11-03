@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/25/2023
+ms.date: 10/27/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -81,7 +81,7 @@ When an employee attempts to sign into a work app on their personal device, the 
 
 Alternatively, you can provide employees and students with a URL that opens the Company Portal website. If you aren't utilizing conditional access, it's important to share the enrollment link with device users so that they know how to initiate enrollment. The link to share is:  
 
- `portal.manage.microsoft.com`   
+ `portal.manage.microsoft.com/conditionalaccess/enrollment`   
 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 

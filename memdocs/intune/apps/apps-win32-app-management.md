@@ -40,9 +40,9 @@ To use Win32 app management, be sure the following criteria are met:
 
 - Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
-  - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register)
-  - [Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join)
-  - [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid)
+  - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register)
+  - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join)
+  - [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid)
 - Windows application size must not be greater than 8 GB per app.
 
   > [!NOTE]
@@ -93,7 +93,7 @@ For available apps, the start time will dictate when the app is visible in the c
 
 > [!IMPORTANT]
 > The **Restart grace period** setting in the **Assignment** section is available only when **Device restart behavior** of the **Program** section is set to either of the following options:
-
+>
 > - **Determine behavior based on return codes** - Commonly set to Hard Reboot, however if return code is mapped to Soft Reboot, the user will only get a reboot notification and restart grace period settings will not be applied.
 > - **Intune will force a mandatory device restart**
 >
@@ -145,7 +145,7 @@ Set the app availability and other app assignment properties using the following
 
 ## Notifications for Win32 apps
 
-If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notificaiton suppression that you require.
+If needed, you can suppress showing user notifications per app assignment. Follow the steps above and choose either **Show toast notifications for computer restarts** or **Hide all toast notifications** for the **End user notifications** option in the **Edit assignment** pane based on the level of notification suppression that you require.
 
 ## Next steps
 

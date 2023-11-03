@@ -37,7 +37,7 @@ This article provides mapping details between Basic Mobility and Security to Int
 - Organization-wide device access settings 
 - Device security policies Name and Description
 
-Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Azure Active Directory (Azure AD) policies to achieve the same result.
+Because Intune offers more flexibility, each Office policy will translate into multiple Intune and Microsoft Entra policies to achieve the same result.
 
 If you’re migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 
