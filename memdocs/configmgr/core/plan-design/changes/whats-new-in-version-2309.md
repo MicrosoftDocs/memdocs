@@ -2,7 +2,7 @@
 title: What's new in version 2309
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2309 of Configuration Manager current branch.
-ms.date: 11/01/2023
+ms.date: 11/03/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core 
 ms.topic: conceptual
@@ -160,6 +160,9 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 <!--At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2309.md#early-update-ring).-->
 
 As of November 1, 2023, version 2309 is globally available for all customers to install.
+
+>[!NOTE] 
+> For exisiting Fast ring current branch 2309 customers, you will see Slow ring upgrade package in console. Install 2309 Slow ring package to be in production current branch.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md).
 
