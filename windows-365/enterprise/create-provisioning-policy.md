@@ -87,7 +87,7 @@ To select an ANC, follow these steps:
 
 ### Continue creating a provisioning policy
 
-1. On the **General** page, you can check the box so that your users **Use Microsoft Entra single sign-on (preview)**.
+1. On the **General** page, you can check the box so that your users **Use Microsoft Entra single sign-on**.
 2. Select **Next**.
 3. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
