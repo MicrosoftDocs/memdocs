@@ -2,7 +2,7 @@
 # required metadata
 
 title: Resolve enrollment issues on Macs integrated with Jamf | Microsoft Intune
-description: Resolve IIntune Company Portal device enrollment issues on Macs in Jamf Self Service.  
+description: Resolve Intune Company Portal device registration issues on Macs managed by Jamf Pro.  
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
@@ -32,10 +32,10 @@ ms.collection:
 # Resolve Company Portal device registration errors on Macs  
 **Applies to macOS**  
 
-This article is for employees and students setting up a Mac for work or school via Intune Company Portal, and describes how to resolve device registration issues on Macs managed by Jamf Pro. The Intune Company Portal app flags Jamf Pro-managed devices for the following device registration issues:  
+This article is for employees and students setting up a Mac for work or school access using Intune Company Portal, and describes how to resolve device registration issues on Macs managed by Jamf Pro. The Intune Company Portal app flags Jamf Pro-managed devices for the following device registration issues:  
 
 * Account not onboarded.  
-* Device is already enrolled.
+* Device is already enrolled.  
 
 ## Account not onboarded
 
@@ -48,4 +48,4 @@ The following actions may result in multiple instances of your device showing up
 * The device you're using was previously enrolled, and it unenrolled from the Jamf service correctly but didn't successfully unenroll from the Microsoft Intune service.  
 * Several attempts to register the device were made.    
 
-For help resolving this issue, contact your support person or see [Troubleshoot Jamf Pro integration- The device was previously enrolled in Intune](/troubleshoot/mem/intune/device-protection/troubleshoot-jam.mdf#cause-6---the-device-was-previously-enrolled-in-intune) for steps to properly unenroll the device. Sign into the Intune Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Help & support** for your organization's support information.  
+Contact your support person for help with unenrolling your device, or see [Troubleshoot Jamf Pro integration- The device was previously enrolled in Intune](/troubleshoot/mem/intune/device-protection/troubleshoot-jam.mdf#cause-6---the-device-was-previously-enrolled-in-intune) for steps to properly unenroll the device. Sign into the Intune Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Help & support** for your organization's support information.  
