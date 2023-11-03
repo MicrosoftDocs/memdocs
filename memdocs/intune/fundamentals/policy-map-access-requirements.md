@@ -121,7 +121,9 @@ Four compliance policies:
   | 3 | **Require digits, lowercase and uppercase letters** |
   | 4 | **Require digits, lowercase, uppercase, and special characters** |
 
-- **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Number of non-alphanumeric characters in password**. The iOS compliance policy doesn't enforce the number of character sets but only the number of non-alphanumeric characters that must be used. So Office values are translated to the same number of non-alphanumeric characters required.
+- **Devices** > **iOS/iPadOS** > **Compliance policies** > policy name_O365_i > **Properties** > **Compliance settings Edit** > **System Security** > **Number of non-alphanumeric characters in password**.
+
+  The iOS compliance policy doesn't enforce the number of character sets but only the number of non-alphanumeric characters that must be used. So Office values are translated to the same number of non-alphanumeric characters required.
 
   | Office value | Intune value |
   | --- | --- |
@@ -131,7 +133,9 @@ Four compliance policies:
   | 3 | 3 |
   | 4 | 4 |
 
-- **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type**. Android doesn't support distinguishing lowercase and uppercase as different character sets, and so the Office value of 4 can't be enforced. Instead it translates to at least **Alphanumeric with symbols**.
+- **Devices** > **Android** > **Compliance policies** > policy name_O365_A > **Properties** > **Compliance settings Edit** > **System Security** > **Required password type**.
+
+  Android doesn't support distinguishing lowercase and uppercase as different character sets, and so the Office value of 4 can't be enforced. Instead it translates to at least **Alphanumeric with symbols**.
 
   | Office value | Intune value |
   | --- | --- |

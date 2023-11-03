@@ -4,8 +4,8 @@
 title: Miscellaneous policy mapping from Basic Mobility and Security to Intune
 description: A detailed miscellaneous policy map between Basic Mobility and Security access requirements and Intune.
 keywords:
-author: mandia
-ms.author: Mandi Ohlinger
+author: MandiOhlinge
+ms.author: mandia
 manager: dougeby
 ms.date: 11/02/2023
 ms.topic: reference
