@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 11/03/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -100,7 +100,7 @@ Update settings control what bits a device will download, and when. For more inf
 
 ## User experience settings  
 
-User experience settings control the end-user experience for device restart and reminders. For more information about the behavior of each setting, see the   Windows Update CSP documentation.  
+User experience settings control the end-user experience for device restart and reminders. For more information about the behavior of each setting, see the Windows Update CSP documentation.  
 
 - **Automatic update behavior**  
   **Default**: Auto install at maintenance time  
@@ -160,8 +160,10 @@ User experience settings control the end-user experience for device restart and 
 
   - **Reset to default** - Restore the original auto update settings on machines that run the Windows 10 October 2018 Update or later, and that run Windows 11. When you *reset to default*, Windows will automatically determine active hours for the device. Using the active hours, Windows then schedules the best time to install updates and restart the system after updates install.
 
-- **Restart checks**  
-  **Default**: Allow  
+- **Restart checks (EDU Restart)**  
+  **Default**: Allow
+  This setting is being deprecated from update rings but will remain available through settings catalogue. So, if you set this option to *Skip* and saved the policy, then you can find that policy in [Settings catalogue](../configuration/settings-catalog.md).
+
   Windows Update CSP: [Update/SetEDURestart](/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
   - **Allow** - Perform restart checks: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.

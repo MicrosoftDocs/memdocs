@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/25/2023
+ms.date: 11/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -173,7 +173,9 @@ When you use feature updates policy to deploy Windows 11, you can target the pol
 
 However, if a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates will not be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](#update-behavior-when-multiple-policies-target-a-device).
 
-When there are multiple versions of Windows 11 available, you can choose to deploy the latest build. When you deploy the latest build to a group of devices, those devices that already run Windows 11 will update while devices that still run Windows 10 will upgrade to that version of Windows 11 if they meet the upgrade requirements. In this way, you can always upgrade supported Windows 10 devices to the latest Windows 11 version  even if you choose to delay the upgrade of some devices until a future time.
+If a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, and you select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**, then devices that don’t meet the requirements for Windows 11 will install the latest Windows 10 feature update instead. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the device has a WUfB ds license of E3 or better. With this capability, admins do not need to create or manage groups of eligible and non-eligible devices.
+
+When there are multiple versions of Windows 11 available, you can choose to deploy the latest build. When you deploy the latest build to a group of devices, those devices that already run Windows 11 will update while devices that still run Windows 10 will upgrade to that version of Windows 11 if they meet the upgrade requirements. In this way, you can always upgrade supported Windows 10 devices to the latest Windows 11 version even if you choose to delay the upgrade of some devices until a future time.
 
 ### Prepare to upgrade to Windows 11
 
@@ -196,6 +198,10 @@ For more information including general licensing details, see the [Windows 11 do
 ### Create policy for Windows 11
 
 To deploy Windows 11, you’ll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It’s the [same process](#create-and-assign-feature-updates-for-windows-10-and-later-policy) though instead of selecting a Windows 10 version, you’ll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
+
+Also, the admin can choose to assign devices that are not eligible for Windows 11 to the latest Windows 10 feature update instead. To enable this feature, the admin must select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** in the deployment policy. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the device has a WUfB ds license of E3 or better. As a result, admins do not need to create or manage groups of eligible and non-eligible devices.
+
+With this capability, you do not need to create two different deployment policies or two different feature updates. With a single policy, you can get your Windows 10 devices that can't go to Windows 11 to upgrade to the latest Windows 10 version and all the devices that can go to Windows 11 to upgrade to a Windows 11 version that you choose.
 
 - Policies for Windows 11 and Windows 10 can exist side by side in Microsoft Intune.
 - Deploying an older Windows version to a device won’t downgrade the device. Devices only install an update when it's newer than the devices current version.
