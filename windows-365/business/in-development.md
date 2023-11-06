@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 09/08/2023
+ms.date: 11/03/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -53,12 +53,9 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 
 -->
 
-
+<!--
 ## End user experience
-
-### Self-help in Windows 365 Business<!--45828334-->
-
-A new self-help button for end users will be available in a future release of Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot

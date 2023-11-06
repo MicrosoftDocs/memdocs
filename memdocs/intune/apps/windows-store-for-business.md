@@ -45,7 +45,7 @@ The [Microsoft Store for Business](https://businessstore.microsoft.com/store/pri
 * Both Online and Offline licensed versions of Apps are synchronized to Intune. App names will be appended with "Online" or "Offline" in the portal.
 * You can track how many licenses are available, and how many are being used in the admin center.
 * Intune blocks assignment and installation of apps if there are an insufficient number of licenses available.
-* Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Azure AD.
+* Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Microsoft Entra ID.
 
 ## Before you start
 
@@ -61,7 +61,7 @@ Review the following information before you start syncing and assigning apps fro
 - Both online and offline licensed apps that you have purchased from the Microsoft Store for Business are synced into Intune. You can then deploy these apps to device groups or user groups.
 - Online app installations are managed by the store.
 - Offline apps that are free of charge can also be synced to Intune. These apps are installed by Intune, not by the store.
-- To use this capability, devices must be joined to Active Directory Domain Services, Azure AD joined, or workplace-joined.
+- To use this capability, devices must be joined to Active Directory Domain Services, Microsoft Entra joined, or workplace-joined.
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
 
 > [!NOTE]

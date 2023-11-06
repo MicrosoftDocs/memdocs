@@ -47,7 +47,7 @@ To get started, review the following steps:
 
 - ServiceNow integration is now Generally Available. An active Intune Suite or Remote Help trial or add-on license is required. Go to [Remote Help trial or add-on license.](../fundamentals/intune-add-ons.md)
 
-- You must have the Microsoft Azure Active Directory (Azure AD) Global Admin Role or Azure AD Intune Admin role to make updates to the connector. To view the incidents, you must have the Azure AD Global Admin Role or Azure AD Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Azure AD roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
+- You must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role to make updates to the connector. To view the incidents, you must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Microsoft Entra roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
 
 - You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents.  A ServiceNow license needs to be assigned to admins who view incidents. 
 
@@ -142,4 +142,3 @@ CALLERID, NAME, NUMBER, UNIVERSAL PRINCIPAL NAME, URGENCY, IMPACT, SEVERITY, ASS
 - [Get support in Microsoft Intune admin center](../../get-support.md)
 
 - [Use Remote Help](/mem/intune/fundamentals/remote-help)
-
