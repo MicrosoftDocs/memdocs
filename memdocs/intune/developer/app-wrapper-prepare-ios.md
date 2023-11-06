@@ -64,7 +64,7 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 <a name='register-your-app-with-azure-ad'></a>
 
-* Make sure valid signing certificates exist in your system keychain. If you run into app code-signing issues, try the following steps to resolve:
+* Make sure valid signing certificates exist in your system keychain. If you have app code-signing issues, use the following steps to resolve:
   * Reset trust settings for all related certificates
   * Install intermediate certificates in the system keychain as well as login keychain
   * Uninstall and reinstall all related certificates
