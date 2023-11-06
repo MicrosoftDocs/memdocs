@@ -176,7 +176,7 @@ Applies to:
 - Android device administrator (DA)
 
 #### Import and export settings catalog policies<!-- 3470151  -->  
-The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration profiles** > **Create profile** > Select your **platform** > For **Profile**, select **Settings catalog**).
+The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration profiles** > **Create** > **New Policy** >Select your **platform** > For **Profile**, select **Settings catalog**).
 
 The settings catalog policies can be imported and exported:
 
