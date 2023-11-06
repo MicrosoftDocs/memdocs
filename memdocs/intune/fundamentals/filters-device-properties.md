@@ -1,4 +1,4 @@
----
+Devices must be Intune enrolled to use this app property---
 # required metadata
 
 title: Supported filter device and app properties & operators in Microsoft Intune
@@ -278,7 +278,7 @@ You can use the following app properties in your managed app filter rules:
   - Android
   - iOS/iPadOS
 
-- **`deviceManagementType` (Device Management Type)**: On Intune enrolled devices, create a filter rule based on the Intune device management type. Devices must be Intune enrolled to use this app property. Select from the following values using the `-eq` and `-ne` operators: 
+- **`deviceManagementType` (Device Management Type)**: Create a filter rule based on the Intune device management type. Select from the following values using the `-eq` and `-ne` operators: 
 
   - `Unmanaged`
 
