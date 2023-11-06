@@ -64,6 +64,11 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 <a name='register-your-app-with-azure-ad'></a>
 
+* Make sure valid signing certificates exist in your system keychain. If you run into app code-signing issues, try the following steps to resolve:
+  * Reset trust settings for all related certificates
+  * Install intermediate certificates in the system keychain as well as login keychain
+  * Uninstall and reinstall all related certificates
+
 ## Register your app with Microsoft Entra ID
 
 1.	Register your apps with Microsoft Entra ID. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
