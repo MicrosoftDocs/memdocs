@@ -2,12 +2,12 @@
 # required metadata
 
 title: View ChromeOS device information | Microsoft Intune  
-description: View ChromeOS devices and details synced with the Chrome Enterprise connector.  
+description: View ChromeOS devices and details synced with the Chrome Enterprise connector in the Microsoft Intune admin center.  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/02/2023  
+ms.date: 11/06/2023  
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -83,7 +83,7 @@ You can create dynamic device groups based on a [Google Admin organizational uni
    3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. For **Value**, enter the name of a Google Admin organizational unit.  
 2. Create a scope tag for an Intune RBAC role. The scope tag determines the level of access for the Intune role.  When you get to **Assignments**, include the dynamic device group you previously created. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags#to-create-a-scope-tag).  
 
-After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfileName* device object property in Microsoft Entra ID, using the full path format that's shown in [Sytem info](#system-info). 
+After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfileName* device object property in Microsoft Entra ID, using the full path format that's shown in [System info](#system-info). 
 
 For example: `/OU Level1/OU Level2`. 
 
