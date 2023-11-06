@@ -35,15 +35,15 @@ The tasks in this article help you manage, customize, and secure your devices ru
 
 To use Windows Holographic devices with Intune, create an [Edition Upgrade](../configuration/edition-upgrade-configure-windows-10.md) profile. This upgrade profile upgrades the devices from Windows Holographic to Windows Holographic for Business. For the Microsoft HoloLens, you can buy the Commercial Suite to get the required license for the upgrade. For more information, go to [Upgrade devices running Windows Holographic to Windows Holographic for Business](../configuration/holographic-upgrade.md).
 
-## Azure Active Directory
+## Microsoft Entra ID
 
-Azure Active Directory (AD) is a great resource to help manage and control your devices running Windows Holographic for Business. Using Intune and Azure AD, you can: 
+Microsoft Entra ID is a great resource to help manage and control your devices running Windows Holographic for Business. Using Intune and Microsoft Entra ID, you can: 
 
-- **[Join devices to Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)**: In Azure Active Directory (AD), you can add your work-owned Windows 10/11 devices, including devices running Windows Holographic for Business. This feature allows Azure AD to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
+- **[Join devices to Microsoft Entra ID](/azure/active-directory/devices/azureadjoin-plan)**: In Microsoft Entra ID, you can add your work-owned Windows 10/11 devices, including devices running Windows Holographic for Business. This feature allows Microsoft Entra ID to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
 
-  [Device management in Azure AD](/azure/active-directory/devices/overview) provides more details.
+  [Device management in Microsoft Entra ID](/azure/active-directory/devices/overview) provides more details.
 
-- **[Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md)**: You can join large numbers of new Windows devices to Azure Active Directory (AD) and Intune. This feature is called bulk enrollment, and uses provisioning packages. These packages join the devices running Windows Holographic for Business to your Azure AD tenant, and enrolls them in Intune.
+- **[Bulk enrollment for Windows devices](../enrollment/windows-bulk-enroll.md)**: You can join large numbers of new Windows devices to Microsoft Entra ID and Intune. This feature is called bulk enrollment, and uses provisioning packages. These packages join the devices running Windows Holographic for Business to your Microsoft Entra tenant, and enrolls them in Intune.
 
 ## Company Portal app
 
@@ -165,7 +165,7 @@ Before users enroll devices and access your company apps, including email, you c
 
 **[Use Windows Hello for Business](../protect/windows-hello.md)**
 
-Hello for Business is an alternative sign-in method that uses an Azure Active Directory account to replace a password, smart card, or a virtual smart card. With Hello for Business, your Windows Holographic for Business devices can sign in with a PIN with a minimum length set by you.
+Hello for Business is an alternative sign-in method that uses a Microsoft Entra account to replace a password, smart card, or a virtual smart card. With Hello for Business, your Windows Holographic for Business devices can sign in with a PIN with a minimum length set by you.
 
 ## Next steps
 
