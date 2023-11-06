@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2023
+ms.date: 11/06/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -334,7 +334,7 @@ You can use filters for some common app policies on the following platforms. For
 | **Endpoint Security profile** | &nbsp; |
 | Account protection | ✔️ <br/> **Local user group membership** only |
 | Antivirus | ✔️ |
-| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, and **Application control** |
+| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
 | Disk encryption | ❌ |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
