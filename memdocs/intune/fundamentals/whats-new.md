@@ -70,6 +70,11 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of November 6, 2023
 
+### App management
+
+#### Minimum version update for iOS Company Portal<!-- 17964541 -->
+Users are required to update to v5.2311.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+
 ### Device security
 
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->  
@@ -91,6 +96,7 @@ With this change, the default behavior for security settings management includes
 - Endpoint detection and response
  
 For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) in the Intune documentation.
+
 
 ## Week of October 30, 2023
 
@@ -119,6 +125,7 @@ For more information, go to:
 - [Microsoft Tunnel for MAM - iOS/iPadOS](../protect/microsoft-tunnel-mam-ios.md)
 
 ## Week of October 23, 2023 (Service release 2310)
+
 ### App management
 
 #### Update for users of Android Company Portal app<!-- 25109006   -->  
