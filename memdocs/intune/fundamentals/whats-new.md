@@ -72,6 +72,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
+#### Managed Home Screen app configuration additions<!-- 25374056 -->
+Now in public preview, Microsoft Managed Home Screen (MHS) has been updated to improve the core workflows and user experience. In addition to some user interface changes, there is a new top bar navigation where admins can configure device identifying attributes to be displayed. Additionally, users can access settings, sign in/out, and view notifications when permissions are requested on the top bar.
+
+You can add additional settings to configure the Managed Home Screen app for Android Enterprise. Intune now supports the following settings in your Android Enterprise app configuration policy:
+- Enable updated user experience
+- Top Bar Primary Element
+- Top Bar Secondary Element
+- Top Bar User Name Style
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
 #### Minimum version update for iOS Company Portal<!-- 17964541 -->
 Users are required to update to v5.2311.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
