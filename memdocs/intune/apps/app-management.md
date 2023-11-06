@@ -47,7 +47,7 @@ Additionally, you might want to assign and manage apps on devices that are not e
 
 [Intune mobile application management](app-lifecycle.md) refers to the suite of Intune management features that lets you publish, push, configure, secure, monitor, and update mobile apps for your users.
 
-MAM allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) available for public use.
+MAM allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft 365 (Office) apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) available for public use.
 
 Intune MAM supports two configurations:
 
