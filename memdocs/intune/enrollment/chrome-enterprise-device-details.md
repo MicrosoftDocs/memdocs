@@ -75,7 +75,7 @@ The following properties sync back to the Google Admin console. Any changes made
 Select **System info** to see a real-time snapshot of the information available from the Google Admin console.  
 
 ### Delegated administration 
-You can create dynamic device groups based on a [Google Admin organizational unit](https://knowledge.workspace.google.com/kb/how-to-create-an-organizational-unit-000007002) as a way to delegate administrators to Intune-synced ChromeOS devices. This section describes how to create a dynamic device group so that you can control admin access to the Chrome OS information and remote device actions in the Microsoft Intune admin center.   
+You can create dynamic device groups based on a [Google Admin organizational unit](https://knowledge.workspace.google.com/kb/how-to-create-an-organizational-unit-000007002) as a way to delegate administrators to Intune-synced ChromeOS devices. This section describes how to create a dynamic device group so that you can control admin access to the ChromeOS device inventory and remote device actions in the Microsoft Intune admin center.   
 
 1. In the Microsoft Intune admin center, [create a group](/mem/intune/fundamentals/groups-add#add-a-new-group) with the following details:  
    1. For **Membership type**, select **Dynamic Device**.   
@@ -83,7 +83,7 @@ You can create dynamic device groups based on a [Google Admin organizational uni
    3. For **Property**, select **enrollmentProfileName**. Select the **Operator**, depending on how you want the rule to work. For **Value**, enter the name of a Google Admin organizational unit.  
 2. Create a scope tag for an Intune RBAC role. The scope tag determines the level of access for the Intune role.  When you get to **Assignments**, include the dynamic device group you previously created. For more information, see [Use role-based access (RBAC) and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags#to-create-a-scope-tag).  
 
-After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfilename* device object property in Microsoft Entra ID, using the full path format that's shown in [Sytem info](#system-info). 
+After you save the scope tag, it's applied to every device that's part of the dynamic device group. The organizational unit's information syncs with the *enrollmentProfileName* device object property in Microsoft Entra ID, using the full path format that's shown in [Sytem info](#system-info). 
 
 For example: `/OU Level1/OU Level2`. 
 
