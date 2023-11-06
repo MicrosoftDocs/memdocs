@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 11/02/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -184,6 +184,9 @@ The settings catalog policies can be imported and exported:
 - To import a previously exported settings catalog policy, select **Create** > **Import policy** > select the previously exported JSON file.
 
 For more information about the settings catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+> [!NOTE]
+> This feature is continuing to roll out. It may be a couple of weeks before it's available in your tenant.
 
 #### New setting to block users from using the same password to unlock the device and access the work profile on Android Enterprise personally owned devices with a work profile<!-- 6167371  -->  
 On Android Enterprise personally owned devices with a work profile, users can use the same password to unlock the device and access the work profile.

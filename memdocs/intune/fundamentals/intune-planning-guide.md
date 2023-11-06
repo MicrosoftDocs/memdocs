@@ -126,7 +126,7 @@ Some considerations:
 
     If you plan to use biometrics for authentication, be sure your devices support biometrics. Most modern devices do.
 
-  - Implement a [Zero Trust deployment](zero-trust-with-microsoft-intune.md). With Zero Trust, you use the features in Azure AD and Microsoft Intune to secure all endpoints, uses password-less authentication, and more.
+  - Implement a [Zero Trust deployment](zero-trust-with-microsoft-intune.md). With Zero Trust, you use the features in Microsoft Entra ID and Microsoft Intune to secure all endpoints, uses password-less authentication, and more.
 
 - **Configure the data containment policies** that come with the Microsoft 365 apps. These policies help prevent organization data from being shared with other apps and storage locations that aren't managed by IT.
 
@@ -142,7 +142,7 @@ In Intune, distributed IT benefits from the following features:
 
 - **[Scope tags](scope-tags.md)** use role-based access control (RBAC). So, only users in a specific group have permission to manage policies and profiles for users and devices in their scope.
 
-- When you use **[device enrollment categories](../enrollment/device-group-mapping.md)**, devices are automatically added to groups based on categories you create. This feature used Azure AD dynamic groups, and helps make managing devices easier.
+- When you use **[device enrollment categories](../enrollment/device-group-mapping.md)**, devices are automatically added to groups based on categories you create. This feature used Microsoft Entra dynamic groups, and helps make managing devices easier.
 
   When users enroll their device, they choose a category, such as Sales, IT admin, point-of-sale device, and so on. When they're added to a category, these device groups are ready to receive your policies.
 
@@ -242,7 +242,7 @@ If being mobile or supporting remote workers is important to your organization, 
 
   - For users that **don't enroll their personal devices**, then you manage app access and secure app data using app protection policies.
 
-    Use a [Terms and conditions](../enrollment/terms-and-conditions-create.md) statement with a Conditional Access policy. If users don't agree, then they don't get access to apps. If users agree to the statement, then a device record is added to Azure AD, and the device becomes a known entity. When the device is known, you can track what's being accessed from the device.
+    Use a [Terms and conditions](../enrollment/terms-and-conditions-create.md) statement with a Conditional Access policy. If users don't agree, then they don't get access to apps. If users agree to the statement, then a device record is added to Microsoft Entra ID, and the device becomes a known entity. When the device is known, you can track what's being accessed from the device.
 
     Always control access and security using app policies.
 
@@ -310,7 +310,7 @@ For more information, go to [Frontline worker device management in Microsoft Int
 
 Managing devices is a relationship with different services. Intune includes the settings and features you can control on different devices. There are also other services that play a key role:
 
-- **Azure Active Directory (AD) Premium** includes several features that are key to managing devices, including:
+- **Microsoft Entra ID P1 or P2** includes several features that are key to managing devices, including:
 
   - **[Windows Autopilot](/autopilot/enrollment-autopilot)**: Windows client devices can automatically enroll in Intune, and automatically receive your policies.
   - **[Multi-factor authentication](../enrollment/multi-factor-authentication.md) (MFA)**: Users must enter two or more verification methods, such as a PIN, an authenticator app, a fingerprint, and more. MFA is a great option when using app protection policies for personal devices, and organization-owned devices that require extra security.
@@ -346,9 +346,9 @@ Some considerations:
 - You want to enforce the compliance or password rules you create in Intune. At a minimum, you need:
 
   - Intune
-  - Azure AD Premium
+  - Microsoft Entra ID P1 or P2
 
-  Intune and Azure AD Premium are available with **Enterprise Mobility + Security**. For more information, go to [Enterprise Mobility + Security pricing options](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing).
+  Intune and Microsoft Entra ID P1 or P2 are available with **Enterprise Mobility + Security**. For more information, go to [Enterprise Mobility + Security pricing options](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing).
 
 - You want to only manage Microsoft 365 apps on devices. At a minimum, you need:
 
@@ -368,7 +368,7 @@ Some considerations:
 
   - Intune
   - Microsoft 365 apps
-  - Azure AD Premium
+  - Microsoft Entra ID P1 or P2
 
   Since all these services are included in some Microsoft 365 plans, then it might be cost effective to use the Microsoft 365 license.
   For more information, go to [Microsoft 365 licensing plans](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
@@ -430,16 +430,16 @@ Some considerations:
   - [Step 3 - Create compliance policies](deployment-plan-compliance-policies.md)
   - [Step 4 - Create device configuration profiles](deployment-plan-configuration-profile.md)
 
-- **Review the current structure of your groups**. In Intune, you can create and assign policies to user groups, device groups, and dynamic user and device groups (requires Azure AD Premium).
+- **Review the current structure of your groups**. In Intune, you can create and assign policies to user groups, device groups, and dynamic user and device groups (requires Microsoft Entra ID P1 or P2).
 
-  When you create groups in the cloud, such as Intune or Microsoft 365, they're created in Azure AD. You might not see the Azure AD branding, but that's what you're using.
+  When you create groups in the cloud, such as Intune or Microsoft 365, they're created in Microsoft Entra ID. You might not see the Microsoft Entra ID branding, but that's what you're using.
 
   - Creating new groups can be an easy task. They can be created in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [add groups to organize users and devices](groups-add.md).
 
-  - Moving existing distribution lists (DL) to Azure AD might be more challenging. Once they DLs are in Azure AD, these groups are available to Intune and Microsoft 365. For more information, go to:
+  - Moving existing distribution lists (DL) to Microsoft Entra ID might be more challenging. Once they DLs are in Microsoft Entra ID, these groups are available to Intune and Microsoft 365. For more information, go to:
 
-    - [What is hybrid identity with Azure Active Directory?](/azure/active-directory/hybrid/whatis-hybrid-identity)
-    - [Azure AD Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis)
+    - [What is hybrid identity with Microsoft Entra ID?](/azure/active-directory/hybrid/whatis-hybrid-identity)
+    - [Microsoft Entra Connect Sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis)
 
   - If you have existing Office 365 groups, you can move to Microsoft 365. Your existing groups remain, and you get all the features and services of Microsoft 365. For more information, go to:
 

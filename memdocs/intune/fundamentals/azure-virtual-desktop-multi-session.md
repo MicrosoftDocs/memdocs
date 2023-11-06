@@ -70,14 +70,14 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
 - Running Windows 10 multi-session, version 1903 or later, or running Windows 11 multi-session.
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
 - Running an Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
-- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Microsoft Intune using one of the following methods:
-  - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined.
+- [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Microsoft Intune using one of the following methods:
+  - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Microsoft Entra hybrid joined.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
-- Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
+- Microsoft Entra joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Licensing: The appropriate Azure Virtual Desktop and Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, go to [Microsoft Intune licensing](licenses.md).
 
 > [!NOTE]
-> If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
+> If you're joining session hosts to Microsoft Entra Domain Services, you can't manage them using Intune.
 
 > [!IMPORTANT]
 > - If you're using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Intune admin center, like remote sync, won't work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
@@ -120,7 +120,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
     - For each category you pick, select the settings that you want to apply to your new configuration profile.
     - For each setting, select the value that you want for this configuration profile.
 9. Select **Next** when you're done adding settings.
-10. On the **Assignments** page, choose the Azure AD groups containing the devices to which you want this profile assigned > **Next**.
+10. On the **Assignments** page, choose the Microsoft Entra groups containing the devices to which you want this profile assigned > **Next**.
 11. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile > **Next**. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 12. On the **Review + create** page, choose **Create** to create the profile.
 
@@ -237,8 +237,8 @@ The following sections provide troubleshooting guidance for common issues.
 
 |Issue|Detail|
 |---------------|---------------------------------|
-|Enrollment of hybrid Azure AD joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you're using must be version 1.0.2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
-|Enrollment of Azure AD joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you're using isn't updated. The agent must be version 1.0.2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of Microsoft Entra hybrid joined virtual machine fails|<ul><li>Auto-enrollment is configured to use user credentials. Windows 10 or Windows 11 Enterprise multi-session virtual machines must be enrolled using device credentials.<li>The Azure Virtual Desktop agent you're using must be version 1.0.2944.1400 or later.<li>You've more than one MDM provider, which isn't supported.<li>Windows 10 or Windows 11 Enterprise multi-session VM is configured outside of a host pool. Microsoft Intune only supports VMs provisioned as part of a host pool.<li>The Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
+|Enrollment of Microsoft Entra joined virtual machine fails|<ul><li>The Azure Virtual Desktop agent you're using isn't updated. The agent must be version 1.0.2944.1400 or above.<li>Azure Virtual Desktop host pool wasn't created through the Azure Resource Manager template.|
 
 ### Configuration issues
 
