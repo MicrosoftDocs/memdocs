@@ -74,7 +74,7 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
    Beginning in November of 2022, the Windows Update for Business deployment service (WUfB ds) license will be checked and enforced.
   
-   Capabilities supported by client policies on Professional SKU devices will not require a license.  That includes basic controls for deploying a specified feature update and when to start making the update available to devices. The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
+   Capabilities supported by client policies on Professional SKU devices won't require a license.  That includes basic controls for deploying a specified feature update and when to start making the update available to devices. The [Gradual Rollout](/mem/intune/protect/windows-update-rollout-options#make-updates-available-gradually) capability is a cloud only feature, requiring a license that includes the Windows Update for Business deployment service.
   
   If you’re blocked when creating new policies for capabilities that require WUfB ds and you get your licenses to use WUfB through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the WUfB ds license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
@@ -106,14 +106,14 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides for additional capabilities that are not supported for WPJ devices.
+Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update for Business (WUfB) and [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview#capabilities-of-the-windows-update-for-business-deployment-service) (WUfB ds). Where WUfB supports WPJ devices, WUfB ds provides more capabilities that aren't supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
 
 ## Limitations for Feature updates for Windows 10 and later policy
 
 - When you deploy a *Feature updates for Windows 10 and later* policy to a device that also receives an *Update rings for Windows 10 and later* policy, review the update ring for the following configurations:
-  - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates are not delayed by update deferrals that might be configured in an update ring policy.
+  - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates aren't delayed by update deferrals that might be configured in an update ring policy.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
   > [!TIP]
@@ -121,7 +121,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
   >
   > For more information, see [Move from update ring deferrals to feature updates policy](../protect/windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
-- Feature updates for Windows 10 and later policies cannot be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
+- Feature updates for Windows 10 and later policies can't be applied during the Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
@@ -139,11 +139,11 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
-- Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives. The service is utilized by Microsoft Intune and works with your Intune policies for Windows updates to deploy feature updates to devices.
+- Managed devices that receive feature update policy are automatically enrolled with the [Windows Update for Business deployment service](/windows/deployment/update/deployment-service-overview). The deployment service manages the updates a device receives.  Microsoft Intune uses this service and works with your Intune policies for Windows updates to deploy feature updates to devices.
 
-  When a device is no longer assigned to any feature update policies, the device remains enrolled in the deployment service.  This allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that wasn't intended.
+  When a device is no longer assigned to any feature update policies, the device remains enrolled in the deployment service.  This change allows time to assign the device to a different policy and ensure that in the meantime the device doesn’t receive a feature update that wasn't intended.
 
-  This means that when a feature updates policy no longer applies to a device, that device won’t be offered any feature updates until one of the following happens:
+ As a result, when a feature updates policy no longer applies to a device, that device isn't offered any feature update until one of the following happens:
 
   - The device is assigned to a new feature update profile.
   - The device is unenrolled from Intune, which unenrolls the device from feature update management by the Deployment Service.
@@ -171,9 +171,9 @@ You can use policy for *Feature updates for Windows 10 and later* to upgrade dev
 
 When you use feature updates policy to deploy Windows 11, you can target the policy to Windows 10 devices that meet the Windows 11 minimum requirements to upgrade them to Windows 11. Devices that don’t meet the requirements for Windows 11 won’t install the update and remain at their current Windows 10 version.
 
-However, if a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates will not be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](#update-behavior-when-multiple-policies-target-a-device).
+However, if a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](#update-behavior-when-multiple-policies-target-a-device).
 
-If a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, and you select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**, then devices that don’t meet the requirements for Windows 11 will install the latest Windows 10 feature update instead. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the device has a WUfB ds license of E3 or better. With this capability, admins do not need to create or manage groups of eligible and non-eligible devices.
+If a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, and you select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**, then devices that don’t meet the requirements for Windows 11 will install the latest Windows 10 feature update instead. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the device has a WUfB ds license of E3 or better. With this capability, admins don't need to create or manage groups of eligible and non-eligible devices.
 
 When there are multiple versions of Windows 11 available, you can choose to deploy the latest build. When you deploy the latest build to a group of devices, those devices that already run Windows 11 will update while devices that still run Windows 10 will upgrade to that version of Windows 11 if they meet the upgrade requirements. In this way, you can always upgrade supported Windows 10 devices to the latest Windows 11 version even if you choose to delay the upgrade of some devices until a future time.
 
