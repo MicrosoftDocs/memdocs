@@ -201,7 +201,7 @@ To use the report:
    - **Alert Type** – When applicable, Alert Type displays the most recent alert message.
    - **Alert Details** – *This column isn't in use.*
    - **Last Scan Time** – The last time this device ran a scan for Windows Update.
-
+   - **Target Version** – This column gives you feedback on which devices were determined to be not eligible for Windows 11 and so they are now targeted to a Windows 10 version.
    The following information applies to **Update State** and **Update Substate**:
 
    - **Service-side data**:
