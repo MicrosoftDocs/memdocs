@@ -36,7 +36,7 @@ This article explains how to configure the Intune Connector for Active Directory
 
 By default, the Intune Connector for Active Directory will attempt to automatically locate a proxy server on the network using Web Proxy Auto-Discovery (WPAD). If this has been configured on your network, other configuration may not be required. When changes are needed, the following sections describe how to override the default settings, using [the standard .NET Framework capabilities for configuring proxy settings](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings). More options are described in that documentation.
 
-For more information about how connectors work, see [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors).
+For more information about how connectors work, see [Understand Microsoft Entra application proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## Completely bypass outbound proxies
 

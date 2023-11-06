@@ -37,7 +37,7 @@ The **devices** category contains entities for mobile devices that track informa
 - Device enrollment and registration status
 - Device ownership
 - Device management state
-- Device membership to Azure AD status
+- Device membership to Microsoft Entra status
 - Enrollment status
 - Historic information about the device
 - Inventory of apps on the device
@@ -243,7 +243,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 | managementAgentKey         | Key of the management agent   associated with this device.                                                                                                                             |
 | managementStateKey         | Key of the management state   associated with this device, indicating latest state of a remote action or if   it was jailbroken/rooted.                                                |
 | azureADDeviceId            | The   Azure deviceID for this device.                                                                                                                                                  |
-| azureADRegistered          | Whether the device is Azure Active   Directory registered.                                                                                                                             |
+| azureADRegistered          | Whether the device is Microsoft Entra registered.                                                                                                                             |
 | deviceCategoryKey          | Key of the category associated   with this device.                                                                                                                                     |
 | deviceEnrollmentType       | Key of the enrollment type   associated with this device, indicating method of enrollment.                                                                                             |
 | complianceStateKey         | Key of the Compliance state   associated with this device.                                                                                                                             |
@@ -290,7 +290,7 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 | deviceRegistrationStateKey | Key of the device registration state attribute for this   device.                                                                                                                    |
 | ownerTypeKey               | Key of the owner type attribute for this device:   corporate, personal, or unknown.                                                                                                  |
 | managementStateKey         | Key of the management state associated with this device,   indicating latest state of a remote action or if it was jailbroken/rooted.                                                |
-| azureADRegistered          | Whether the device is Azure Active Directory registered.                                                                                                                             |
+| azureADRegistered          | Whether the device is Microsoft Entra registered.                                                                                                                             |
 | complianceStateKey         | A key to ComplianceState.                                                                                                                                                            |
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | jailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
