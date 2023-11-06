@@ -68,6 +68,36 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of November 6, 2023
+
+### App management
+
+#### Minimum version update for iOS Company Portal<!-- 17964541 -->
+Users are required to update to v5.2311.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
+
+### Device security
+
+#### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->  
+
+The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
+
+With this change, the default behavior for security settings management includes all the behavior added for the opt-in preview – without having to enable support for preview features in Microsoft Defender for Endpoint. This includes the general availability and support for the following endpoint security profiles for Linux and macOS:
+ 
+**Linux**:
+ 
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
+ 
+**MacOS**:
+ 
+- Microsoft Defender Antivirus
+- Microsoft Defender Antivirus exclusions
+- Endpoint detection and response
+ 
+For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) in the Intune documentation.
+
+
 ## Week of October 30, 2023
 
 ### Device security
@@ -95,6 +125,7 @@ For more information, go to:
 - [Microsoft Tunnel for MAM - iOS/iPadOS](../protect/microsoft-tunnel-mam-ios.md)
 
 ## Week of October 23, 2023 (Service release 2310)
+
 ### App management
 
 #### Update for users of Android Company Portal app<!-- 25109006   -->  
@@ -336,7 +367,7 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
 - Windows Security Center threat defense integrated with Intune APP to detect local health threats on personal Windows devices
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Entra ID (Azure AD).
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID.
 
 Intune Mobile Application Management (MAM) for Windows is available for Windows 11, build 10.0.22621 (22H2) or later.  This feature includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (v117 stable branch and later) and Windows Security Center (v 1.0.2309.xxxxx and later).  App Protection Conditional Access is in Public Preview.
 
@@ -751,14 +782,15 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 ### Device enrollment
 
 #### Just-in-time registration and compliance remediation for iOS/iPadOS Setup Assistant with modern authentication now generally available<!-- 16276610 -->
-Just in time (JIT) registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just in time registration, the device user doesn't need to use the Company Portal app for Azure Active Directory registration and compliance checking. JIT registration and compliance remediation are embedded into the user's provisioning experience. So, they can view their compliance status and take action within the work app they're trying to access. Also, this registration establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md).
+
+Just in time (JIT) registration and compliance remediation for Setup Assistant with modern authentication are now out of preview and generally available. With just in time registration, the device user doesn't need to use the Company Portal app for Microsoft Entra registration and compliance checking. JIT registration and compliance remediation are embedded into the user's provisioning experience, so they can view their compliance status and take action within the work app they're trying to access. Also, this establishes single-sign on across the device. For more information about how to set up JIT registration, see [Set up Just in Time Registration](../enrollment/automated-device-enrollment-authentication.md).
 
 #### Awaiting final configuration for iOS/iPadOS automated device enrollment now generally available<!-- 17473384  -->  
 Now generally available, *awaiting final configuration* enables a locked experience at the end of Setup Assistant to ensure that critical device configuration policies install on devices. The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:
 
 - iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication
 - iOS/iPadOS 13+ devices enrolling without user affinity  
-- iOS/iPadOS 13+ devices enrolling with Azure AD shared mode  
+- iOS/iPadOS 13+ devices enrolling with Microsoft Entra ID shared mode  
 
 This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device.  Awaiting final configuration is enabled by default for new enrollment profiles. For information about how to enable awaiting final configuration, see [Create an Apple enrollment profile](..//enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
@@ -1123,9 +1155,9 @@ Now, you can opt in to a public preview from within the Microsoft 365 Defender p
 
 - For Windows devices, the Windows Security Experience profile is now supported with security settings management.
 
-- A new onboarding workflow removes the Hybrid Azure AD Join prerequisite. Hybrid Azure AD Join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings management. With this change, those devices can now complete enrollment and start processing policies for security settings management.
+- A new onboarding workflow removes the Microsoft Entra hybrid join prerequisite. Microsoft Entra hybrid join requirements prevented many Windows devices from successfully onboarding to Defender for Endpoint security settings management. With this change, those devices can now complete enrollment and start processing policies for security settings management.
 
-- Intune creates a synthetic registration in Azure AD for devices that can't fully register with Azure AD. Synthetic registrations are device objects created in Azure AD that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed from Azure AD in deference to the full registration.
+- Intune creates a synthetic registration in Microsoft Entra ID for devices that can't fully register with Microsoft Entra ID. Synthetic registrations are device objects created in Microsoft Entra ID that enable devices to receive and report back on Intune policies for security settings management. In addition, should a device with a synthetic registration become fully registered, the synthetic registration is removed from Microsoft Entra ID in deference to the full registration.
 
 If you don't opt in to the Defender for Endpoint Public Preview, the previous behaviors remain in place. In this case, while you can view the Antivirus profiles for Linux, you can't deploy it as its supported only for devices managed by Defender. Similarly, the macOS profile that's currently available for devices enrolled with Intune can't be deployed to devices managed by Defender.
 
@@ -1198,7 +1230,7 @@ You can now enable protected MAM access to org data via Microsoft Edge on person
 - Intune Application Configuration Policies (ACP) to customize the org user experience in Microsoft Edge
 - Intune Application Protection Policies (APP) to secure org data and ensure the client device is healthy when using Microsoft Edge
 - Windows Defender client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
-- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Azure AD
+- Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID
 
 For more information, see [Preview: App protection policy settings for Windows](../apps/app-protection-policy-settings-windows.md).
 
@@ -1346,7 +1378,7 @@ The Intune troubleshooting pane is now generally available.  It provides details
 You can find the troubleshooting pane in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Troubleshooting + support** > **Troubleshoot**.
 
 #### Updated troubleshoot + support pane in Intune<!-- 16240430  -->  
-The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Azure Active Directory, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
+The **Troubleshooting + support** pane in the Intune admin center has been updated by consolidating the **Roles and Scopes** report into a single report. This report now includes all relevant role and scope data from both Intune and Microsoft Entra ID, providing a more streamlined and efficient experience. For related information, see [Use the troubleshooting dashboard to help users at your company](../fundamentals/help-desk-operators.md).
 
 #### Download mobile app diagnostics<!-- 22139638  -->  
 Now generally available, access user-submitted mobile app diagnostics in the Intune admin center, including app logs sent through Company Portal apps, which include Windows, iOS, Android, Android AOSP, and macOS. In addition, you can retrieve app protection logs via Microsoft Edge. For more information, see [Company Portal app logs](../apps/company-portal-app.md#app-logs) and [Use Microsoft Edge for iOS and Android to access managed app logs](../apps/manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
@@ -1408,17 +1440,17 @@ Applies to:
 ### Device management
 
 #### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836 -->  
-To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune now differentiates Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
+To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune now differentiates Windows devices in Microsoft Entra ID as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
 
 With this change, you can improve policy targeting for MDE security configuration. For example, you can use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
 
-For more information about this change, see the Intune Customer Success blog [Windows Server devices now recognized as a new OS in Microsoft Intune, Azure AD, and Defender for Endpoint
+For more information about this change, see the Intune Customer Success blog [Windows Server devices now recognized as a new OS in Microsoft Intune, Microsoft Entra ID, and Defender for Endpoint
 ](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-windows-server-devices-will-now-be-identified-as-a/ba-p/3767773).
 
 ### Tenant administration
 
 #### Organizational messages for Windows 11 now generally available<!-- 15272978 -->  
-Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Azure AD user groups. They're shown just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages continue to appear or reappear based on the frequency you configure in Intune, and until the user has visited the customized URL.
+Use organizational messages to deliver branded, personalized call-to-actions to employees. Select from more than 25 messages that support employees through device onboarding and lifecycle management, in 15 different languages. Messages can be assigned to Microsoft Entra user groups. They're shown just above the taskbar, in the notifications area, or in the Get started app on devices running Windows 11. Messages continue to appear or reappear based on the frequency you configure in Intune, and until the user has visited the customized URL.
 
 Other features and functionality added in this release include:
 
