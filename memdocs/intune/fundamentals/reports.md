@@ -394,7 +394,7 @@ To view the Profile configuration status report:
 
 ## Co-management eligibility report (Organizational)
 
-The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 10 and enroll in Azure Active Directory before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
+The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 10 and enroll in Microsoft Entra ID before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
 
 To see a generated report of device state, you can use the following steps:
 
@@ -542,13 +542,13 @@ To see the report for a device, you can use the following steps:
 
 ## Device group membership report (Organizational)
 
-The **Group membership** report provides the group membership of all Azure AD groups for a specific managed device. The report provides the following columns:
+The **Group membership** report provides the group membership of all Microsoft Entra groups for a specific managed device. The report provides the following columns:
 - Name
 - Object ID
 - Membership Type
 - Direct or Transitive
 
-When you select on a group, you can see the Azure AD pane for the group. You can identify whether the device's membership is assigned or dynamic and whether the device is a direct member or a transitive member. This report supports all device platforms and management types. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+When you select on a group, you can see the Microsoft Entra pane for the group. You can identify whether the device's membership is assigned or dynamic and whether the device is a direct member or a transitive member. This report supports all device platforms and management types. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
 To see the report for a device, you can use the following steps:
 
@@ -558,12 +558,12 @@ To see the report for a device, you can use the following steps:
 
 
 ## Azure Monitor integration reports (Specialist)
-You can customize your own reports to get the data you want. The data in your reports will optionally be available via [Azure Monitor](/azure/azure-monitor/overview) using [Log Analytics](reports.md#log-analytics) and [Azure Monitor workbooks](reports.md#workbooks). These solutions allow you to create custom queries, configure alerts, and make dashboards to show the device compliance data in the manner you want. Additionally, you can retain the activity logs in your Azure storage account, integrate with the reports using [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration), and correlate the reports to Azure AD activity logs. Azure Monitor workbooks can be used in addition to importing dashboards for custom reporting needs.
+You can customize your own reports to get the data you want. The data in your reports will optionally be available via [Azure Monitor](/azure/azure-monitor/overview) using [Log Analytics](reports.md#log-analytics) and [Azure Monitor workbooks](reports.md#workbooks). These solutions allow you to create custom queries, configure alerts, and make dashboards to show the device compliance data in the manner you want. Additionally, you can retain the activity logs in your Azure storage account, integrate with the reports using [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration), and correlate the reports to Microsoft Entra activity logs. Azure Monitor workbooks can be used in addition to importing dashboards for custom reporting needs.
 
 > [!NOTE]
 > Complex reporting functionality require an Azure subscription.
 
-An example specialist report could correlate a set of device details, including ownership data, with compliance data in a custom report. Then, this custom report could be displayed on an existing dashboard in the Azure Active Directory portal.
+An example specialist report could correlate a set of device details, including ownership data, with compliance data in a custom report. Then, this custom report could be displayed on an existing dashboard in the Microsoft Entra admin center.
 
 You can create and view custom reports using the following steps:
 

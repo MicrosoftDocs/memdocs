@@ -74,7 +74,7 @@ You can see the new progress bar on the [what's new in Intune app UI page](whats
 
 #### Bulk Enroll Windows 10 devices <!-- 747607 -->
 
-You can now join large numbers of devices that run the Windows 10 Creators update to Azure Active Directory and Intune with Windows Configuration Designer (WCD). To enable [bulk MDM enrollment](../enrollment/windows-bulk-enroll.md) for your Azure AD tenant, create a provisioning package that joins devices to your Azure AD tenant using Windows Configuration Designer, and apply the package to corporate-owned devices you'd like to bulk enroll and manage. Once the package is applied to your devices, they will Azure AD join, enroll in Intune, and be ready for your Azure AD users to log on.  Azure AD users are standard users on these devices and receive assigned policies and required apps. Self-service and Company Portal scenarios are not supported at this time.
+You can now join large numbers of devices that run the Windows 10 Creators update to Microsoft Entra ID and Intune with Windows Configuration Designer (WCD). To enable [bulk MDM enrollment](../enrollment/windows-bulk-enroll.md) for your Microsoft Entra tenant, create a provisioning package that joins devices to your Microsoft Entra tenant using Windows Configuration Designer, and apply the package to corporate-owned devices you'd like to bulk enroll and manage. Once the package is applied to your devices, they will Microsoft Entra join, enroll in Intune, and be ready for your Microsoft Entra users to log on.  Microsoft Entra users are standard users on these devices and receive assigned policies and required apps. Self-service and Company Portal scenarios are not supported at this time.
 
 ### What's new in the public preview of Intune in the Azure portal<!--736542-->
 
@@ -116,7 +116,7 @@ The existing mobile application management (MAM) administration roles (Contribut
 
 #### Improved sign in experience across Company Portal apps for all platforms <!--User Story 1132123-->
 
-We are announcing a change that is coming in the next few months that will improve the sign-in experience for the Intune Company Portal apps for Android, iOS, and Windows. The new user experience will automatically appear across all platforms for the Company Portal app when Azure AD makes this change. In addition, users can now sign in to the Company Portal from another device with a generated, single-use code. This is especially useful in cases when users need to sign in without credentials.
+We are announcing a change that is coming in the next few months that will improve the sign-in experience for the Intune Company Portal apps for Android, iOS, and Windows. The new user experience will automatically appear across all platforms for the Company Portal app when Microsoft Entra ID makes this change. In addition, users can now sign in to the Company Portal from another device with a generated, single-use code. This is especially useful in cases when users need to sign in without credentials.
 
 You can find screenshots of the previous sign-in experience, the new sign-in experience with credentials, and the new sign-in experience from another device on the [What's new in app UI](whats-new-app-ui.md) page.
 
@@ -211,9 +211,9 @@ The Company Portal website will support apps that are targeted to users who do n
 ### Notices
 
 #### Group migration will not require any updates to groups or policies for iOS devices <!--898837-->
-For every Intune device group pre-assigned by a Corporate Device Enrollment profile, a corresponding dynamic device group will be created in Azure AD based on the Corporate Device Enrollment profile's name, during the migration to Azure Active Directory device groups. This will ensure the as devices enroll, they will be automatically grouped and receive the same policies and apps as the original Intune group.
+For every Intune device group pre-assigned by a Corporate Device Enrollment profile, a corresponding dynamic device group will be created in Microsoft Entra ID based on the Corporate Device Enrollment profile's name, during the migration to Microsoft Entra device groups. This will ensure the as devices enroll, they will be automatically grouped and receive the same policies and apps as the original Intune group.
 
-Once a tenant enters the migration process for grouping and targeting, Intune will automatically create a dynamic Azure AD group to correspond to an Intune group targeted by a Corporate Device Enrollment profile. If the Intune Admin deletes the targeted Intune group, the corresponding dynamic Azure AD group will not be deleted. The group's members and the dynamic query will be cleared, but the group itself will remain until the IT Admin removes it via the Azure AD portal.
+Once a tenant enters the migration process for grouping and targeting, Intune will automatically create a dynamic Microsoft Entra group to correspond to an Intune group targeted by a Corporate Device Enrollment profile. If the Intune Admin deletes the targeted Intune group, the corresponding dynamic Microsoft Entra group will not be deleted. The group's members and the dynamic query will be cleared, but the group itself will remain until the IT Admin removes it via the Microsoft Entra admin center.
 
 Similarly, if the IT Admin changes which Intune group is targeted by a Corporate Device Enrollment profile, Intune will create new dynamic group reflecting the new profile assignment, but will not remove the dynamic group created for the old assignment.
 
@@ -312,7 +312,7 @@ We are now beginning to preview integration with third-party telecom expense man
 ### New Capabilities
 
 __Multi-factor authentication across all platforms__ <!--747590-->
-You can now enforce multi-factor authentication (MFA) on a selected group of users when they enroll an iOS, Android, Windows 8.1+, or Windows Phone 8.1+ device from the Azure Management Portal by configuring MFA on the Microsoft Intune Enrollment application in Azure Active Directory.
+You can now enforce multi-factor authentication (MFA) on a selected group of users when they enroll an iOS, Android, Windows 8.1+, or Windows Phone 8.1+ device from the Azure Management Portal by configuring MFA on the Microsoft Intune Enrollment application in Microsoft Entra ID.
 
 __Ability to restrict mobile device enrollment__ <!--747596-->
 Intune is adding new enrollment restrictions that control which mobile device platforms are allowed to enroll. Intune separates mobile device platforms as iOS, macOS, Android, Windows and Windows Mobile.
@@ -324,7 +324,7 @@ Intune marks all new devices as personal unless the IT admin takes action to mar
 ### Notices
 
 __Multi-Factor Authentication on Enrollment moving to the Azure portal__ <!--VSO 750545-->
-Previously, admins would go to either the Intune console or the Configuration Manager (earlier than release October 2016) console to set MFA for Intune enrollments. With this updated feature, you will now login to the [Microsoft Azure portal](https://portal.azure.com) using your Intune credentials and configure MFA settings through Azure AD. Learn more about this [here](/azure/active-directory/authentication/howto-mfa-mfasettings).
+Previously, admins would go to either the Intune console or the Configuration Manager (earlier than release October 2016) console to set MFA for Intune enrollments. With this updated feature, you will now login to the [Microsoft Azure portal](https://portal.azure.com) using your Intune credentials and configure MFA settings through Microsoft Entra ID. Learn more about this [here](/azure/active-directory/authentication/howto-mfa-mfasettings).
 
 __Company Portal app for Android now available in China__ <!--VSO 658093-->
 We are publishing the Company Portal app for Android for download in China. Due to the absence of Google Play Store in China, Android devices must obtain apps from Chinese app marketplaces. The Company Portal app for Android will be available for download on the following stores:
@@ -364,7 +364,7 @@ The new app will also allow users to leverage additional platform features like 
 
 > [!IMPORTANT]
 > __An Update on Intune and Android for Work__
-> While you can deploy Android for Work apps with an action of __Required__, you can only deploy apps as __Available__ if your Intune groups have been migrated to the new Azure AD groups experience.
+> While you can deploy Android for Work apps with an action of __Required__, you can only deploy apps as __Available__ if your Intune groups have been migrated to the new Microsoft Entra groups experience.
 
 __Intune App SDK for Cordova plugin now supports MAM without enrollment__
 App developers can now use the Intune App SDK for Cordova plugin to enable MAM functionality without device enrollment in their Cordova-based apps for Android and iOS/iPadOS.

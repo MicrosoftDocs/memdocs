@@ -50,7 +50,7 @@ This new setting appears in [Microsoft Intune admin center](https://go.microsoft
 For more information, see [Changes to applications' backup and restore behavior on iOS/iPadOS and macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/changes-to-applications-backup-and-restore-behavior-on-ios/ba-p/3692064) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
 #### Prevent automatic updates for Apple VPP apps<!-- 16876430   -->  
-You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. This setting is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select an Azure AD group* > **App settings**.
+You can control the automatic update behavior for Apple VPP at the per-app assignment level using the **Prevent automatic updates** setting. This setting is available in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **iOS/iPadOS** or **macOS** > *Select a volume purchase program app* > **Properties** > **Assignments** > *Select a Microsoft Entra group* > **App settings**.
 
 Applies to:
 
@@ -87,7 +87,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### The Microsoft Enterprise SSO plug-in for Apple devices is now generally available<!-- 17826329  -->  
-In Microsoft Intune, there's a Microsoft Enterprise SSO plug-in. This plug-in provides single sign-on (SSO) to iOS/iPadOS and macOS apps and websites that use Microsoft Azure AD for authentication.
+In Microsoft Intune, there's a Microsoft Enterprise SSO plug-in. This plug-in provides single sign-on (SSO) to iOS/iPadOS and macOS apps and websites that use Microsoft Entra ID for authentication.
 
 This plug-in is now generally available (GA).
 
@@ -134,12 +134,12 @@ Applies to:
 #### Manage Windows LAPS with Intune policies (public preview)<!-- 11890571  -->  
 Now available in a public preview, manage Windows Local Administrator Password Solution (Windows LAPS) with Microsoft Intune [Account protection policies](../protect/endpoint-security-account-protection-policy.md). To get started, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
 
-[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that allows you to manage and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices.
+[Windows LAPS](/windows-server/identity/laps/laps-overview) is a Windows feature that allows you to manage and backs up the password of a local administrator account on your Microsoft Entra joined or Windows Server Active Directory-joined devices.
 
 To manage LAPS, Intune configures the Windows [LAPS configuration service provider](/windows/client-management/mdm/LAPS-csp) (CSP) that is built in to Windows devices. It takes precedence over other sources of Windows LAPS configurations, like GPOs or the Microsoft Legacy LAPS tool. Some of the capabilities you can use when Intune manages Windows LAPS include:
 
 - Define password requirements like complexity and length that apply to the local administrator accounts on a device.
-- Configure devices to rotate their local admin account passwords on a schedule. And, back up the account and password in your Azure Active Directory or on-premises Active Directory.
+- Configure devices to rotate their local admin account passwords on a schedule. And, back up the account and password in your Microsoft Entra ID or on-premises Active Directory.
 - Use an Intune device action from the admin center to manually rotate the password for an account on your own schedule.
 - View account details from within the Intune admin center, like the account name and password. This information can help you recover devices that are otherwise inaccessible.
 - Use Intune reports to monitor your LAPS policies, and when devices last rotated passwords manually or by schedule.  
@@ -232,7 +232,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Role-based access control
 
 #### New Assign (RBAC) permissions for organizational messages<!-- 16872833  -->  
-The **Assign** RBAC permissions for organizational messages determines who can assign target Azure AD groups to an organizational message. To access RBAC permissions, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Roles**.
+The **Assign** RBAC permissions for organizational messages determines who can assign target Microsoft Entra groups to an organizational message. To access RBAC permissions, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Roles**.
 
 This permission is also added to the **Organizational Messages Manager** built-in role.  Existing custom roles for managing Organizational Messages must be modified to add this permission for users to modify this setting.
 
@@ -380,10 +380,12 @@ Control visibility of the device category prompt in Intune Company Portal. You c
 #### Support for multiple enrollment profiles and tokens for fully managed devices <!-- 14205233  -->  
 Create and manage multiple enrollment profiles and tokens for Android Enterprise fully managed devices. With this new functionality, you can now use the *EnrollmentProfileName* dynamic device property to automatically assign enrollment profiles to fully managed devices. The enrollment token that came with your tenant remains in a default profile. For more information, see [Set up Intune enrollment of Android Enterprise fully managed devices](../enrollment/android-fully-managed-enroll.md).
 
-#### New Azure AD frontline worker experience for iPad (public preview)<!-- 6367427  -->  
+<a name='new-azure-ad-frontline-worker-experience-for-ipad-public-preview---6367427----'></a>
+
+#### New Microsoft Entra frontline worker experience for iPad (public preview)<!-- 6367427  -->  
 *This capability begins to roll out to tenants in mid-April.*
 
-Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are enabled in Azure AD shared mode via zero-touch. For more information about how to configure automated device enrollment for shared device mode, see [Set up enrollment for devices in Azure AD shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).  
+Intune now supports a frontline worker experience for iPhones and iPads using Apple automated device enrollment. You can now enroll devices that are enabled in Microsoft Entra ID shared mode via zero-touch. For more information about how to configure automated device enrollment for shared device mode, see [Set up enrollment for devices in Microsoft Entra shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).  
 
 Applies to:
 
@@ -414,7 +416,7 @@ Applies to:
 - Windows 11
 
 #### Endpoint security firewall policy support for network list manager settings<!-- 9803477  -->  
-We've added a pair of network list manager settings to [endpoint security Firewall policy](../protect/endpoint-security-firewall-policy.md#devices-managed-by-intune). To help determine when an Azure AD device is or isn't on your on-premises domain subnets, you can use the network list manager settings. This information can help firewall rules apply correctly.
+We've added a pair of network list manager settings to [endpoint security Firewall policy](../protect/endpoint-security-firewall-policy.md#devices-managed-by-intune). To help determine when a Microsoft Entra device is or isn't on your on-premises domain subnets, you can use the network list manager settings. This information can help firewall rules apply correctly.
 
 The following settings are found in a new category named *Network List Manager*, that's available in the *Microsoft Defender Firewall* profile template for the *Windows 10, Windows 11, and Windows Server* platform:
 
@@ -595,7 +597,7 @@ Applies to:
 
 #### Organizational messages now support custom destination URLs <!-- 16576068  -->
 
-You can now add any custom destination URL to organizational messages in the taskbar, notifications area, and Get Started app. This feature applies to Windows 11. Messages created with Azure AD-registered domains that are in a scheduled or active state are still supported. For more information, see [Create organizational messages](../remote-actions/organizational-messages-create.md?tabs=taskbar#step-1-create-a-message). 
+You can now add any custom destination URL to organizational messages in the taskbar, notifications area, and Get Started app. This feature applies to Windows 11. Messages created with Microsoft Entra registered domains that are in a scheduled or active state are still supported. For more information, see [Create organizational messages](../remote-actions/organizational-messages-create.md?tabs=taskbar#step-1-create-a-message). 
 
 ## Week of February 20, 2023 (Service release 2302)
 
@@ -919,10 +921,12 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 
-#### Filter app and policy assignments by the device's Azure AD Join type (`deviceTrustType`)<!-- 8110331 -->  
+<a name='filter-app-and-policy-assignments-by-the-devices-azure-ad-join-type-devicetrusttype---8110331---'></a>
+
+#### Filter app and policy assignments by the device's Microsoft Entra join type (`deviceTrustType`)<!-- 8110331 -->  
 When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
 
-A new device filter property `deviceTrustType` is available for Windows 10 and later devices. With this property, you can filter app and policy assignments depending on the Azure AD Join type. The values include **Azure AD Joined**, **Hybrid Azure AD Joined**, and **Azure AD registered**.
+A new device filter property `deviceTrustType` is available for Windows 10 and later devices. With this property, you can filter app and policy assignments depending on the Microsoft Entra join type. The values include **Microsoft Entra joined**, **Microsoft Entra hybrid joined**, and **Microsoft Entra registered**.
 
 For more information on filters and the device properties you can use, go to:
 
@@ -1329,7 +1333,7 @@ Use Microsoft Intune to deliver important messages and call-to-actions to employ
 
 During public preview, you can:
 
-* Select from various preconfigured, common messages to assign to Azure AD user groups.
+* Select from various preconfigured, common messages to assign to Microsoft Entra user groups.
 * Add your organization's logo. 
 * Include a custom destination URL in the message that redirects device users to a specific place.
 * Preview messages in 15 supported languages, in dark and light theme.
@@ -1484,7 +1488,7 @@ Applies to:
 ### Device enrollment
 
 #### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<!-- 15515188 -->  
-Intune supports just in time (JIT) Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. JIT Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Azure AD registration and compliance checks, and establishes single sign-on across the device. JIT Registration is available in public preview for devices enrolling through Apple automated device enrollment and running iOS/iPadOS 13.0 or later. For more information, see [Authentication methods for automated device enrollment](../enrollment/automated-device-enrollment-authentication.md). 
+Intune supports just in time (JIT) Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. JIT Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Microsoft Entra registration and compliance checks, and establishes single sign-on across the device. JIT Registration is available in public preview for devices enrolling through Apple automated device enrollment and running iOS/iPadOS 13.0 or later. For more information, see [Authentication methods for automated device enrollment](../enrollment/automated-device-enrollment-authentication.md). 
 
 ### Device management
 
@@ -1708,7 +1712,7 @@ There's a new setting you can configure:
 - **Lock screen message**: Add a message that's shown on the device lock screen. 
 
 When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
-- `{{AADDeviceId}}`: Azure AD device ID
+- `{{AADDeviceId}}`: Microsoft Entra device ID
 - `{{AccountId}}`: Intune tenant ID or account ID
 - `{{DeviceId}}`: Intune device ID
 - `{{DeviceName}}`: Intune device name
@@ -1829,7 +1833,7 @@ Enrollment notifications inform device users, via email or push notification, wh
 ### Device security
 
 #### Assign compliance policies to the All devices group<!-- 2213410 -->
-The **All devices** option is now available for [compliance policy](../protect/create-compliance-policy.md) assignments. With this option, you can assign a compliance policy to all enrolled devices in your organization that match the policy's platform. You don't need to create an Azure Active Directory group that contains all devices.
+The **All devices** option is now available for [compliance policy](../protect/create-compliance-policy.md) assignments. With this option, you can assign a compliance policy to all enrolled devices in your organization that match the policy's platform. You don't need to create a Microsoft Entra group that contains all devices.
 
 When you include the *All devices* group, you can then exclude individual groups of devices to further refine the assignment scope.
 
@@ -2496,7 +2500,7 @@ The new details that are collected include:
 Feedback settings are now available to address Microsoft 365 enterprise feedback policies for the currently logged in user via the [Microsoft 365 Apps admin center](https://config.office.com/). The settings are used to determine whether feedback can be enabled or must be disabled for a user in the Web Company Portal. For more information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
 
 #### App Protection Policies with Android Enterprise dedicated devices and Android (AOSP) devices<!-- 13819227 -->
-Intune-managed Android Enterprise dedicated devices enrolled with Azure Active Directory (Azure AD) shared mode and Android (AOSP) devices can now receive app protection policies and can be targeted separately from other Android device types. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md). For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
+Intune-managed Android Enterprise dedicated devices enrolled with Microsoft Entra ID shared mode and Android (AOSP) devices can now receive app protection policies and can be targeted separately from other Android device types. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md). For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
 
 ### Device security
 
@@ -2955,7 +2959,7 @@ For more information, go to
 [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 #### View a managed device's group membership<!-- 4100067 -->
-In the monitor section of the **Devices** workload of Intune, you can view the group membership of all Azure AD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All devices** > *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
+In the monitor section of the **Devices** workload of Intune, you can view the group membership of all Microsoft Entra groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All devices** > *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
 
 #### Improved certificate reporting details<!-- 13316515 -->
 We've changed what Intune displays when you view certificate details for devices and certificate profiles. To view the report, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to > **Devices** > **Monitor** > **Certificates**.
@@ -3061,7 +3065,7 @@ The **Managed Apps** pane has been updated to better display managed app details
 Removing an Intune license from a user will no longer revoke app licenses granted through the Microsoft Store for Business or through Apple VPP. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](../apps/windows-store-for-business.md), [Revoking iOS app licenses](../apps/vpp-apps-ios.md#revoking-app-licenses), and [Microsoft Intune licensing](../fundamentals/licenses.md).
 
 #### Reporting for unlicensed users<!-- 10742713b -->
-Intune will no longer remove users from all Intune reports when they're unlicensed. Until the user is deleted from Azure AD, Intune will continue to report the user in most common scenarios. For related information about reporting, see [Intune reports](../fundamentals/reports.md).
+Intune will no longer remove users from all Intune reports when they're unlicensed. Until the user is deleted from Microsoft Entra ID, Intune will continue to report the user in most common scenarios. For related information about reporting, see [Intune reports](../fundamentals/reports.md).
 
 ### Device security
 
@@ -3978,8 +3982,10 @@ Applies to:
 #### Create terms of use for Android (AOSP) user-associated devices<!-- 8506575 -->
 Require Android (AOSP) users to accept your terms and conditions in the Intune Company Portal app before they enroll their devices. This feature is available for corporate-owned, user-associated devices only. For more information about creating terms of use in Intune, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).
 
-### Enforce Azure AD terms of use with Microsoft Intune or Microsoft Intune Enrollment cloud apps<!-- 12522105 -->
-Use the Microsoft Intune cloud app and/or Microsoft Intune Enrollment cloud app to enforce a conditional access, Azure AD Terms of Use acceptance policy on iOS and iPadOS devices during automated device enrollment. This functionality is available when you select Setup Assistant with modern authentication as your authentication method.  Both cloud apps now ensure that users accept the terms of use during enrollment and/or during Company Portal sign-in if required by your conditional access policy.
+<a name='enforce-azure-ad-terms-of-use-with-microsoft-intune-or-microsoft-intune-enrollment-cloud-apps---12522105---'></a>
+
+### Enforce Microsoft Entra terms of use with Microsoft Intune or Microsoft Intune Enrollment cloud apps<!-- 12522105 -->
+Use the Microsoft Intune cloud app and/or Microsoft Intune Enrollment cloud app to enforce a conditional access, Microsoft Entra Terms of Use acceptance policy on iOS and iPadOS devices during automated device enrollment. This functionality is available when you select Setup Assistant with modern authentication as your authentication method.  Both cloud apps now ensure that users accept the terms of use during enrollment and/or during Company Portal sign-in if required by your conditional access policy.
 
 #### New macOS settings in the Settings Catalog<!-- 12987685 -->
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. When you create a Settings Catalog policy, there are new settings available for macOS devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
@@ -4304,7 +4310,7 @@ End users can more easily see the compliance status of their devices from the Co
 You can set the update priority of Managed Google Play apps on dedicated, fully managed, and corporate-owned with a work profile Android Enterprise devices. Select **High Priority** to update an app as soon as the developer has published the update, regardless of charge status, Wi-Fi capability, or end user activity on the device. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
 
 #### Clear app data between sessions for Android Enterprise dedicated devices enrolled with shared device mode (public preview)<!-- 8663319 -->
-Using Intune, you can choose to clear app data for applications that have not integrated with Shared device mode to ensure user privacy between sign-in sessions. Users will be required to initiate a sign out from an application that has integrated with Azure AD's Shared device mode in order for IT-specified apps to have their data cleared. This functionality will be available for Android Enterprise dedicated devices enrolled with shared device mode on Android 9 or later.
+Using Intune, you can choose to clear app data for applications that have not integrated with Shared device mode to ensure user privacy between sign-in sessions. Users will be required to initiate a sign out from an application that has integrated with Microsoft Entra shared device mode in order for IT-specified apps to have their data cleared. This functionality will be available for Android Enterprise dedicated devices enrolled with shared device mode on Android 9 or later.
 
 #### Export underlying discovered apps list data<!-- 9370255 -->
 In addition to exporting the summarized discovered apps list data, you can export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the new experience also provides the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data is a list of every device and each app discovered for that device. This functionality has been added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
@@ -4450,7 +4456,7 @@ To view the keys, your Intune account must have the Intune RBAC permissions to v
 
 Users with the correct permissions can view keys by going to **Devices** > **Windows devices** > *select a device* > **Recovery keys**.
 
-Configuration Manager sites that run version 2107 or later support this feature. For sites that run version 2107, you need to install an update rollup to support Azure AD joined devices. For more information, see [KB11121541](../../configmgr/hotfix/2107/11121541.md).
+Configuration Manager sites that run version 2107 or later support this feature. For sites that run version 2107, you need to install an update rollup to support Microsoft Entra joined devices. For more information, see [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
 #### BitLocker settings added to settings catalog<!-- 10956191 -->  
 We have added 9 [BitLocker settings that were previously only available in Group Policy (GP)](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) to the Microsoft Intune settings catalog. To access the settings, go to **Devices** > **Configuration profiles** and create a settings catalog profile for devices running Windows 10 and later. Then search **BitLocker** in the settings catalog to view all settings related to BitLocker. For more information about the settings catalog, see [Create a policy using settings catalog](../configuration/settings-catalog.md). The added settings include:  
@@ -4469,7 +4475,7 @@ We have added 9 [BitLocker settings that were previously only available in Group
 
 *This feature is in public preview and will roll out to tenants gradually over the next few weeks. You can confirm your tenant has received this capability when the relevant toggles show in both the Microsoft Intune admin center and Microsoft Defender for Endpoint.*
 
-*Security Management with Microsoft Defender for Endpoint* is a new configuration channel. Use this channel to manage the security configuration for Microsoft Defender for Endpoint (MDE) on devices that don't enroll into Microsoft Intune. With this scenario, it's Defender for Endpoint on a device that retrieves, enforces, and reports on the policies for Defender for Endpoint that you deploy from Microsoft Intune. The devices are joined to your Azure AD and are also visible in the Microsoft Intune admin center alongside other devices you manage with Intune and Configuration Manager.
+*Security Management with Microsoft Defender for Endpoint* is a new configuration channel. Use this channel to manage the security configuration for Microsoft Defender for Endpoint (MDE) on devices that don't enroll into Microsoft Intune. With this scenario, it's Defender for Endpoint on a device that retrieves, enforces, and reports on the policies for Defender for Endpoint that you deploy from Microsoft Intune. The devices are joined to your Microsoft Entra ID and are also visible in the Microsoft Intune admin center alongside other devices you manage with Intune and Configuration Manager.
 
 For more information, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Intune](../protect/mde-security-integration.md).
 
@@ -4487,7 +4493,7 @@ With permissions in Remote Help managed by Intune role-based access controls, yo
 The capabilities of Remote Help include:
 
 - **Enable Remote Help for your tenant** –If you choose to turn on Remote Help, its use is enabled tenant-wide.
-- **Requires Organization login** - To use Remote Help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization.
+- **Requires Organization login** - To use Remote Help, both the helper and the sharer must sign in with a Microsoft Entra account from your organization.
 - **Use Remote Help with unenrolled devices** – You can choose to allow help to devices that aren't enrolled with Intune.
 - **Compliance Warnings** - Before connecting to device, a helper sees a non-compliance warning about that device if it's not compliant to its assigned policies. This warning doesn't block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper's access and what the actions they can take while providing assistance.
@@ -4590,7 +4596,7 @@ For more information about how to set up Android (AOSP) management, see [Enroll 
 ### Device security
 
 #### MFA changes to Windows Autopilot enrollment flow<!-- 12376959 part 1 -->
-To improve the baseline security for Azure Active Directory (Azure AD), we changed Azure AD behavior for multifactor authentication (MFA) during device registration. Previously, if a user completed MFA as part of their device registration, the MFA claim was carried over to the user state after registration was complete. Going forward, the MFA claim isn't preserved after registration and users will be prompted to redo MFA for any apps that require MFA by policy. For more information, see [Windows Autopilot MFA changes to enrollment flow](https://techcommunity.microsoft.com/t5/intune-customer-success/windows-autopilot-mfa-changes-to-enrollment-flow/ba-p/2774687).
+To improve the baseline security for Microsoft Entra ID, we changed Microsoft Entra behavior for multifactor authentication (MFA) during device registration. Previously, if a user completed MFA as part of their device registration, the MFA claim was carried over to the user state after registration was complete. Going forward, the MFA claim isn't preserved after registration and users will be prompted to redo MFA for any apps that require MFA by policy. For more information, see [Windows Autopilot MFA changes to enrollment flow](https://techcommunity.microsoft.com/t5/intune-customer-success/windows-autopilot-mfa-changes-to-enrollment-flow/ba-p/2774687).
 
 #### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461 -->
 You can now use the [settings catalog](../configuration/settings-catalog.md) to manage Windows Update settings for quality (security) updates for Windows Enterprise [multi-session VMs](../fundamentals/azure-virtual-desktop-multi-session.md). To find the settings, you can use with multi-session VMs in the settings catalog:
@@ -4701,7 +4707,7 @@ In addition to profiles based on templates, you can add a profile based on the *
 
 #### Configure Managed Home Screen sign-in settings for Android Enterprise dedicated devices<!-- 8684724  -->
 
-You can now configure Managed Home Screen sign-in settings in device configuration when using Android Enterprise dedicated devices enrolled using Azure AD Shared device mode. You no longer need to use app configuration for these settings. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+You can now configure Managed Home Screen sign-in settings in device configuration when using Android Enterprise dedicated devices enrolled using Microsoft Entra shared device mode. You no longer need to use app configuration for these settings. For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
 #### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623   -->
 
@@ -4724,9 +4730,11 @@ You can now use the *Rename* remote action on Android Enterprise dedicated devic
 
 For more information, see [Rename a device in Intune](../remote-actions/device-rename.md)
 
-#### New Azure AD device ID and Intune device ID search parameters added<!--10510385 -->
+<a name='new-azure-ad-device-id-and-intune-device-id-search-parameters-added--10510385---'></a>
 
-When searching devices in **Devices** > **All devices**, you can now search by Azure AD device ID or Intune Device ID. For a list of available device details available in Intune, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).  
+#### New Microsoft Entra device ID and Intune device ID search parameters added<!--10510385 -->
+
+When searching devices in **Devices** > **All devices**, you can now search by Microsoft Entra device ID or Intune Device ID. For a list of available device details available in Intune, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).  
 
 ### Device security
 
@@ -5222,7 +5230,7 @@ Applies to:
 #### Browser access automatically enabled during corporate Android enrollment<!--6613616  -->  
 Browser access is now automatically turned on during new enrollments of the following devices:
 
-- Android Enterprise dedicated devices enrolled with Azure AD Shared device mode
+- Android Enterprise dedicated devices enrolled with Microsoft Entra shared device mode
 - Android Enterprise fully managed devices
 - Android Enterprise corporate-owned work profile devices
 
@@ -5293,7 +5301,7 @@ The **Certificates** report, which shows the current device certificates in use,
 
 #### Improved Conditional Access messaging for Android and iOS/iPadOS users<!-- 9908622 -->
 
-Azure Active Directory has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. For more information about this change, see [What's new in Azure Active Directory](/azure/active-directory/fundamentals/whats-new#improved-conditional-access-messaging-for-android-and-ios).
+Microsoft Entra ID has updated the wording on a Conditional Access screen to better explain access and setup requirements to users. Android and iOS/iPadOS users see this screen when they try to access corporate resources from a device that's not enrolled in Intune management. For more information about this change, see [What's new in Microsoft Entra ID](/azure/active-directory/fundamentals/whats-new#improved-conditional-access-messaging-for-android-and-ios).
 
 #### New tiles provided app install failure count<!-- 6381269  -->
 
@@ -5331,13 +5339,13 @@ Support has ended for the **Restart** remote action on corporate-owned devices w
 
 Windows 10/11 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure, which allows multiple concurrent user sessions. This feature gives users a familiar Windows client experience while IT can benefit from the cost advantages of multi-session and use existing per-user Microsoft 365 licensing.
 
-Microsoft Intune lets you manage multi-session remote desktops with device-based configurations like a shared, user-less Windows client. You can now enroll Hybrid Azure AD joined VMs in Intune automatically and target with OS scope policies and apps.
+Microsoft Intune lets you manage multi-session remote desktops with device-based configurations like a shared, user-less Windows client. You can now enroll Microsoft Entra hybrid joined VMs in Intune automatically and target with OS scope policies and apps.
 
 You can:
 
 - Host multiple concurrent user sessions using the Windows 10/11 Enterprise multi-session SKU exclusive to Azure Virtual Desktop on Azure.
 - Manage multi-session remote desktops with device-based configurations like a shared, user-less Windows 10/11 Enterprise client.
-- Automatically enroll Hybrid Azure AD joined virtual machines in Intune and target them with device scope policies and apps.
+- Automatically enroll Microsoft Entra hybrid joined virtual machines in Intune and target them with device scope policies and apps.
 
 For more information, see [Windows 10/11 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
@@ -5464,14 +5472,14 @@ Using Intune app protection policies, you can add a new conditional launch setti
 
 ### New modern authentication method with Apple Setup Assistant (public preview)<!--4843770 -->
 
-When creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD Multi-Factor Authentication during the setup assistant screens. To gain access to corporate resources protected by Conditional Access, this feature requires another Azure AD sign-in post-enrollment in the Company Portal app. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
+When creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Microsoft Entra multifactor authentication during the setup assistant screens. To gain access to corporate resources protected by Conditional Access, this feature requires another Microsoft Entra sign-in post-enrollment in the Company Portal app. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
 
-Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when the user lands on the home screen after the setup screens. However, the device isn't fully registered with Azure AD until the Company Portal sign in. The device will not show up in a given user's device list in the Azure AD portal until the Company Portal sign in. If the tenant has multifactor authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during enrollment during Setup Assistant. Multifactor authentication isn't required, but it's available for this authentication method within Conditional Access if needed.
+Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when the user lands on the home screen after the setup screens. However, the device isn't fully registered with Microsoft Entra ID until the Company Portal sign in. The device will not show up in a given user's device list in the Microsoft Entra admin center until the Company Portal sign in. If the tenant has multifactor authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during enrollment during Setup Assistant. Multifactor authentication isn't required, but it's available for this authentication method within Conditional Access if needed.
 
 This method has the following options for installing the Company Portal:
 
-- For iOS/iPadOS: The **Install Company Portal** setting will not be there when choosing this flow for iOS/iPadOS. The Company Portal app will be a required app on the device with the correct app configuration policy on the device when the end user goes to the home screen. To gain access to resources protected by Conditional Access and be fully Azure AD registered, after enrollment, users must sign in to the Company Portal app with Azure AD credentials.
-- For macOS: Users must sign into the Company Portal to complete Azure AD registration and gain access to resources protected by Conditional Access. The end user will not be locked to the Company Portal app after landing on the home page. But, another sign-in into the Company Portal app is required to access corporate resources and be compliant.  For more information, see [Add the macOS Company Portal app](../apps/apps-company-portal-macos.md).
+- For iOS/iPadOS: The **Install Company Portal** setting will not be there when choosing this flow for iOS/iPadOS. The Company Portal app will be a required app on the device with the correct app configuration policy on the device when the end user goes to the home screen. To gain access to resources protected by Conditional Access and be fully Microsoft Entra registered, after enrollment, users must sign in to the Company Portal app with Microsoft Entra credentials.
+- For macOS: Users must sign into the Company Portal to complete Microsoft Entra registration and gain access to resources protected by Conditional Access. The end user will not be locked to the Company Portal app after landing on the home page. But, another sign-in into the Company Portal app is required to access corporate resources and be compliant.  For more information, see [Add the macOS Company Portal app](../apps/apps-company-portal-macos.md).
 
 For information on how to use this authentication method on iOS/iPadOS devices, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
@@ -5524,9 +5532,11 @@ For corporate Android Enterprise devices (Dedicated, Fully Managed, and Fully ma
 
 The eSIM identifier (EID) is a unique identifier for the embedded SIM (eSIM). The EID property now appears on the hardware details page for iOS/iPadOS devices.
 
-#### Intune support for provisioning Azure Active Directory shared devices<!--9585326 -->
+<a name='intune-support-for-provisioning-azure-active-directory-shared-devices--9585326---'></a>
 
-The ability to provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Azure AD shared device mode is now Generally Available. For more info on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
+#### Intune support for provisioning Microsoft Entra shared devices<!--9585326 -->
+
+The ability to provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Microsoft Entra shared device mode is now Generally Available. For more info on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
 
 #### View end of support details for your feature update profiles<!-- 9699729   -->
 
@@ -5835,7 +5845,7 @@ To help control who has rights to manage the Microsoft Tunnel, we've added [**Mi
 - **Delete** - Delete Microsoft Tunnel Gateway servers, server configurations, and sites.
 - **Read** - View Microsoft Tunnel Gateway servers, server configurations, and sites.
 
-By default, Intune Administrators and Azure Active Directory administrators have these permissions. You can also add these permissions to [custom roles you create](create-custom-role.md) for your Intune tenant.
+By default, Intune Administrators and Microsoft Entra administrators have these permissions. You can also add these permissions to [custom roles you create](create-custom-role.md) for your Intune tenant.
 
 #### Scope tag support for customization policies for Intune for Government and 21Vianet<!--9419267  --> 
 You can now assign scope tags to Customization policies for Intune for Government and Intune operated by 21Vianet. To do so, go to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Customization** where you see **Scope tags** configuration options.
@@ -6466,13 +6476,13 @@ Applies to:
 #### Configure the macOS Microsoft Enterprise SSO plug-in<!-- 5627576 8278906-->
 
 > [!IMPORTANT]
-> On macOS, the Microsoft Azure AD SSO extension is listed in the Intune user interface, but wasn't working as expected. This feature is now working, and is available to use in public preview.
+> On macOS, the Microsoft Entra SSO extension is listed in the Intune user interface, but wasn't working as expected. This feature is now working, and is available to use in public preview.
 
-The Microsoft Azure AD team created a redirect single sign-on (SSO) app extension. This app extension allows macOS 10.15+ users to access Microsoft apps, organization apps, and websites that support Apple's SSO feature. It authenticates using Azure AD, with one sign-on.
+The Microsoft Entra team created a redirect single sign-on (SSO) app extension. This app extension allows macOS 10.15+ users to access Microsoft apps, organization apps, and websites that support Apple's SSO feature. It authenticates using Microsoft Entra ID, with one sign-on.
 
-With the Microsoft Enterprise SSO plug-in release, you can configure the SSO extension with the new Microsoft Azure AD app extension type in Intune (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile >  **Single sign-on app extension** > SSO app extension type > **Microsoft Azure AD**).
+With the Microsoft Enterprise SSO plug-in release, you can configure the SSO extension with the new Microsoft Entra app extension type in Intune (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Device features** for profile >  **Single sign-on app extension** > SSO app extension type > **Microsoft Entra ID**).
 
-To get SSO with the Microsoft Azure AD SSO app extension type, users need to install and sign in to the Company Portal app on their macOS devices.
+To get SSO with the Microsoft Entra SSO app extension type, users need to install and sign in to the Company Portal app on their macOS devices.
 
 For more information about macOS SSO app extensions, see [Single sign-on app extension](../configuration/device-features-configure.md#single-sign-on-app-extension).
 
@@ -6505,9 +6515,11 @@ For more information about certificate connectors, including a list of connector
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device enrollment
 
-#### Intune support for provisioning Azure Active Directory shared devices<!--6327412 -->
+<a name='intune-support-for-provisioning-azure-active-directory-shared-devices--6327412---'></a>
 
-With Intune, you can now provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Azure AD shared device mode. For more information on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
+#### Intune support for provisioning Microsoft Entra shared devices<!--6327412 -->
+
+With Intune, you can now provision Android Enterprise dedicated devices with Microsoft Authenticator automatically configured into Microsoft Entra shared device mode. For more information on how to use this enrollment type, see [Set up Intune enrollment of Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md).
 
 
 ### New and updated planning, setup, and enrollment deployment guides
@@ -6658,9 +6670,11 @@ You can create a custom attribute profile that enables you to collect custom pro
 
 The Company Portal screen previously titled "You're Halfway There!" has been updated to better explain how work profile management works. Users see this screen if they re-enable Company Portal in the personal profile after they've already gone through work profile enrollment. They might also see this screen during work profile enrollment on some Android OS versions, as shown in the help doc, [Enroll with Android work profile](../user-help/enroll-device-android-work-profile.md).
 
-#### Unified delivery of Azure AD Enterprise and Office Online applications in the Windows Company Portal<!-- 1817861 -->
+<a name='unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal---1817861---'></a>
 
-In the 2006 release, we announced [Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal website](#unified-delivery-of-azure-active-directory-enterprise-and-office-online-applications-in-the-windows-company-portal). The Windows Company Portal supports this feature. On the **Customization** pane of Intune, select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Windows Company Portal. Each end user sees their entire application catalog from the chosen Microsoft service. By default, each app source will be set to **Hide**. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For more information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+#### Unified delivery of Microsoft Entra Enterprise and Office Online applications in the Windows Company Portal<!-- 1817861 -->
+
+In the 2006 release, we announced [Unified delivery of Microsoft Entra Enterprise and Office Online applications in the Company Portal website](#unified-delivery-of-microsoft-entra-enterprise-and-office-online-applications-in-the-windows-company-portal). The Windows Company Portal supports this feature. On the **Customization** pane of Intune, select to **Hide** or **Show** both **Microsoft Entra Enterprise applications** and **Office Online applications** in the Windows Company Portal. Each end user sees their entire application catalog from the chosen Microsoft service. By default, each app source will be set to **Hide**. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For more information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Windows Company Portal app descriptions with rich text<!-- 5146060 -->
 
@@ -6813,9 +6827,11 @@ On a device's hardware details page, you can now see the following information a
 
 You can now reset the work profile password on Android Enterprise corporate-owned devices with a work profile. For more information, see [Reset a passcode](../remote-actions/device-passcode-reset.md#reset-a-passcode).
 
-#### Rename a co-managed device that is Azure Active Directory joined<!--7728043  -->
+<a name='rename-a-co-managed-device-that-is-azure-active-directory-joined--7728043----'></a>
 
-You can now rename a co-managed device that is Azure AD joined. For more information, see [Rename a device in Intune](../remote-actions/device-rename.md).
+#### Rename a co-managed device that is Microsoft Entra joined<!--7728043  -->
+
+You can now rename a co-managed device that is Microsoft Entra joined. For more information, see [Rename a device in Intune](../remote-actions/device-rename.md).
 
 #### Tenant attach: Device timeline in the admin center<!--7220536, CM7141381-->
 
@@ -7070,9 +7086,9 @@ Applies to:
 
 #### Use SSO app extensions on more iOS/iPadOS apps with the Microsoft Enterprise SSO plug-in<!-- 7369991  -->
 
-The [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin) can be used with all apps that support SSO app extensions. In Intune, this feature means the plug-in works with mobile iOS/iPadOS apps that don't use the Microsoft Authentication Library (MSAL) for Apple devices. The apps don't need to use MSAL, but they do need to authenticate with Azure AD endpoints.
+The [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin) can be used with all apps that support SSO app extensions. In Intune, this feature means the plug-in works with mobile iOS/iPadOS apps that don't use the Microsoft Authentication Library (MSAL) for Apple devices. The apps don't need to use MSAL, but they do need to authenticate with Microsoft Entra endpoints.
 
-To configure your iOS/iPadOS apps to use SSO with the plug-in, add the app bundle identifiers in an iOS/iPadOS configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Single sign-on app extension** > **Microsoft Azure AD** for SSO app extension type > **App bundle IDs**).
+To configure your iOS/iPadOS apps to use SSO with the plug-in, add the app bundle identifiers in an iOS/iPadOS configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Single sign-on app extension** > **Microsoft Entra ID** for SSO app extension type > **App bundle IDs**).
 
 To see the current SSO app extension settings you can configure, go to [Single sign-on app extension](../configuration/ios-device-features-settings.md#single-sign-on-app-extension).
 
@@ -7143,7 +7159,7 @@ For more information about these settings, see the settings for [Microsoft Defen
 
 #### Set device compliance state from third-party MDM providers<!-- 6361689 -->
 
-Intune now supports [third-party MDM solutions as a source of device compliance details](../protect/device-compliance-partners.md). This third-party compliance data can be used to enforce Conditional Access policies for Microsoft 365 apps on iOS and Android through integration with Microsoft Intune.  Intune evaluates the compliance details from the third-party provider to determine if a device is trusted, and then sets the conditional access attributes in Azure AD.  You'll continue to create your Azure AD Conditional Access policies from within the Microsoft Intune admin center or the Azure AD portal.
+Intune now supports [third-party MDM solutions as a source of device compliance details](../protect/device-compliance-partners.md). This third-party compliance data can be used to enforce Conditional Access policies for Microsoft 365 apps on iOS and Android through integration with Microsoft Intune.  Intune evaluates the compliance details from the third-party provider to determine if a device is trusted, and then sets the conditional access attributes in Microsoft Entra ID.  You'll continue to create your Microsoft Entra Conditional Access policies from within the Microsoft Intune admin center or the Microsoft Entra admin center.
 
 The following third-party MDM providers are supported with this release, as a public preview:
 
@@ -7389,9 +7405,11 @@ For more information, see [Microsoft Intune Data Warehouse API](../developer/rep
 
 When a hyperlinked phone number is detected in a protected app, Intune check if an assigned app protection policy allows the number to be transferred to a dialer app. You can choose how to handle this type of content transfer when it's initiated from a policy managed app. When creating an app protection policy in Microsoft Intune, select a managed app option from the **Send org data to other apps**, then select an option from **Transfer telecommunications data to**. For more information about this data protection setting, see [Android app protection policy settings in Microsoft Intune](../apps/app-protection-policy-settings-android.md) and [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 
-#### Unified delivery of Azure Active Directory Enterprise and Office Online applications in the Windows Company Portal<!-- 7414033  -->
+<a name='unified-delivery-of-azure-active-directory-enterprise-and-office-online-applications-in-the-windows-company-portal---7414033----'></a>
 
-On the **Customization** pane of Intune, you can select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end-user sees their entire application catalog from the chosen Microsoft service. By default, each app source will be set to **Hide**. This feature will first take effect in the Company Portal website, with support in the Windows Company Portal expected to follow. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For more information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+#### Unified delivery of Microsoft Entra Enterprise and Office Online applications in the Windows Company Portal<!-- 7414033  -->
+
+On the **Customization** pane of Intune, you can select to **Hide** or **Show** both **Microsoft Entra Enterprise applications** and **Office Online applications** in the Company Portal. Each end-user sees their entire application catalog from the chosen Microsoft service. By default, each app source will be set to **Hide**. This feature will first take effect in the Company Portal website, with support in the Windows Company Portal expected to follow. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For more information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 #### Improvements to the Company Portal for macOS enrollment experience<!-- 6444452  -->
 
@@ -7522,7 +7540,7 @@ Applies to:
 
 #### Bring-your-own-devices can use VPN to deploy<!--5015344  -->
 
-The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Hybrid Azure AD Join devices without access to your corporate network using your own third party/partner Win32 VPN client. To see the new toggle, go to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
+The new  Autopilot profile **Skip Domain Connectivity Check** toggle lets you deploy Microsoft Entra hybrid join devices without access to your corporate network using your own third party/partner Win32 VPN client. To see the new toggle, go to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices**  > **Windows** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Out-of-box experience (OOBE)**.
 
 #### Enrollment Status Page profiles can be set to device groups<!--3952138 -->
 
@@ -7562,13 +7580,15 @@ The availability for macOS device remote lock pins has been increased from 7 day
 
 You can change a device's primary user for co-managed Windows devices. For more information on how to find and change it, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md). This feature will be rolling out gradually over the next few weeks.
 
-#### Setting the Intune primary user also sets the Azure AD owner property<!--7319227 -->
+<a name='setting-the-intune-primary-user-also-sets-the-azure-ad-owner-property--7319227---'></a>
 
-This new feature automatically sets the owner property on newly enrolled Hybrid Azure AD joined devices at the same time that the Intune primary user is set. For more information on the primary user, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
+#### Setting the Intune primary user also sets the Microsoft Entra owner property<!--7319227 -->
 
-This behavior is a change to the enrollment process and only applies to newly enrolled devices. For existing Hybrid Azure AD Joined devices, you must manually update the Azure AD Owner property. To update, you can use the [Change primary user feature](../remote-actions/find-primary-user.md#change-a-devices-primary-user) or [a script](https://github.com/microsoftgraph/powershell-intune-samples/tree/master/ManagedDevices).
+This new feature automatically sets the owner property on newly enrolled Microsoft Entra hybrid joined devices at the same time that the Intune primary user is set. For more information on the primary user, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
 
-When Windows 10 devices become Hybrid Azure Active Directory Joined, the first user of the device becomes the primary user in Intune.  Currently, the user isn't set on the corresponding Azure AD device object. This behavior causes an inconsistency when comparing the *owner* property from an Azure AD portal with the *primary user* property in Microsoft Intune admin center. The Azure AD owner property is used for securing access to BitLocker recovery keys. The property isn't populated on Hybrid Azure AD Joined devices. This limitation prevents setup of self-service of BitLocker recovery from Azure AD. This upcoming feature solves this limitation.
+This behavior is a change to the enrollment process and only applies to newly enrolled devices. For existing Microsoft Entra hybrid joined devices, you must manually update the Microsoft Entra Owner property. To update, you can use the [Change primary user feature](../remote-actions/find-primary-user.md#change-a-devices-primary-user) or [a script](https://github.com/microsoftgraph/powershell-intune-samples/tree/master/ManagedDevices).
+
+When Windows 10 devices become Microsoft Entra hybrid joined, the first user of the device becomes the primary user in Intune.  Currently, the user isn't set on the corresponding Microsoft Entra device object. This behavior causes an inconsistency when comparing the *owner* property from a Microsoft Entra admin center with the *primary user* property in Microsoft Intune admin center. The Microsoft Entra owner property is used for securing access to BitLocker recovery keys. The property isn't populated on Microsoft Entra hybrid joined devices. This limitation prevents setup of self-service of BitLocker recovery from Microsoft Entra ID. This upcoming feature solves this limitation.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -7829,7 +7849,7 @@ Microsoft Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterp
 You can use app configuration policies to manage the S/MIME setting for Outlook on devices that run Android Enterprise. You can also choose whether or not to allow the device users to enable or disable S/MIME in Outlook settings. To use app configuration policies for Android, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Apps** > **App configuration policies** > **Add** > **Managed devices**. For more information about configuring settings for Outlook, see [Microsoft Outlook configuration settings](../apps/app-configuration-policies-outlook.md).
 
 #### Pre-release testing for Managed Google Play apps<!-- 2681933  -->
-Organizations that are using [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213) can manage these tracks with Intune. You can selectively assign apps that are published to Google Play's pre-production tracks to pilot groups in order to perform testing. In Intune, you can see whether an app has a pre-production build test track published to it, and be able to assign that track to Azure AD user or device groups. This feature is available for all of our currently supported Android Enterprise scenarios (work profile, fully managed, and dedicated). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can add a Managed Google Play app by selecting **Apps** > **Android** > **Add**. For more information, see [Working with Managed Google Play Closed Testing Tracks](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
+Organizations that are using [Google Play's closed test tracks for app pre-release testing](https://support.google.com/googleplay/android-developer/answer/3131213) can manage these tracks with Intune. You can selectively assign apps that are published to Google Play's pre-production tracks to pilot groups in order to perform testing. In Intune, you can see whether an app has a pre-production build test track published to it, and be able to assign that track to Microsoft Entra user or device groups. This feature is available for all of our currently supported Android Enterprise scenarios (work profile, fully managed, and dedicated). In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can add a Managed Google Play app by selecting **Apps** > **Android** > **Add**. For more information, see [Working with Managed Google Play Closed Testing Tracks](../apps/apps-add-android-for-work.md#working-with-managed-google-play-closed-testing-tracks).
 
 #### Microsoft Teams is now included in Microsoft 365 for macOS<!-- 5903936  -->
 Users who are assigned Microsoft 365 for macOS in Microsoft Intune will now receive Microsoft Teams in addition to the existing Microsoft 365 apps (Word, Excel, PowerPoint, Outlook, and OneNote). Intune will recognize the existing Mac devices that have the other Office for macOS apps installed. Then, it will attempt to install Microsoft Teams the next time the device checks in with Intune. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can find the **Office 365 Suite** for macOS by selecting **Apps** > **macOS** > **Add**. For more information, see [Assign Office 365 to macOS devices with Microsoft Intune](../apps/apps-add-office365-macos.md).
@@ -7879,7 +7899,7 @@ For more information on VPN profiles, see [Create VPN profiles](../configuration
 
 On iOS/iPadOS devices, you can:
 - In SSO profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Single sign-on**), set the Kerberos principal name to be the Security Account Manager (SAM) account name in SSO profiles. 
-- In SSO app extension profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Single sign-on app extension**), configure the iOS/iPadOS Microsoft Azure AD extension with fewer clicks by using a new SSO app extension type. You can enable the Azure AD extension for devices in shared device mode and send extension-specific data to the extension.
+- In SSO app extension profiles (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile > **Single sign-on app extension**), configure the iOS/iPadOS Microsoft Entra extension with fewer clicks by using a new SSO app extension type. You can enable the Microsoft Entra extension for devices in shared device mode and send extension-specific data to the extension.
 
 Applies to:
 - iOS/iPadOS 13.0+
@@ -8026,8 +8046,10 @@ For more information on OEMConfig profiles, see [Use and manage Android Enterpri
 Applies to:
 - Android Enterprise
 
-#### Configure the iOS/iPadOS Microsoft Azure AD SSO app extension<!-- 5672534   -->
-The Microsoft Azure AD team created a redirect single sign-on (SSO) app extension to allow iOS/iPadOS 13.0+ users to gain access to Microsoft apps and websites with one sign-on. All apps that previously had brokered authentication with the Microsoft Authenticator app will continue to get SSO with the new SSO extension. With the Azure AD SSO app extension release, you can configure the SSO extension with the redirect SSO app extension type (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile type > **Single sign-on app extension**).
+<a name='configure-the-iosipados-microsoft-azure-ad-sso-app-extension---5672534-----'></a>
+
+#### Configure the iOS/iPadOS Microsoft Entra SSO app extension<!-- 5672534   -->
+The Microsoft Entra team created a redirect single sign-on (SSO) app extension to allow iOS/iPadOS 13.0+ users to gain access to Microsoft apps and websites with one sign-on. All apps that previously had brokered authentication with the Microsoft Authenticator app will continue to get SSO with the new SSO extension. With the Microsoft Entra SSO app extension release, you can configure the SSO extension with the redirect SSO app extension type (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Device features** for profile type > **Single sign-on app extension**).
 
 Applies to:
 - iOS 13.0 and newer
@@ -8139,7 +8161,7 @@ For more information about this setting, see [Move Android devices from device a
 To align with the announcement of Microsoft Intune at Ignite last year, we have changed the URL for the Microsoft Intune admin center (formerly Microsoft 365 Device Management) to [https://intune.microsoft.com](https://intune.microsoft.com).
 
 #### Change Primary User for Windows devices<!-- 3794742   -->
-You can change the Primary User for Windows hybrid and Azure AD Joined devices. To do so, go to **Intune** > **Devices** > **All devices** > choose a device > **Properties** > **Primary User**. For more information, see [Change a device's primary user](../remote-actions/find-primary-user.md#change-a-devices-primary-user).
+You can change the Primary User for Windows hybrid and Microsoft Entra joined devices. To do so, go to **Intune** > **Devices** > **All devices** > choose a device > **Properties** > **Primary User**. For more information, see [Change a device's primary user](../remote-actions/find-primary-user.md#change-a-devices-primary-user).
 
 A new RBAC permission (Managed Devices / Set primary user) has also been created for this task. The permission has been added to built-in roles including Helpdesk Operator, School Administrator, and Endpoint Security Manager.
 
@@ -8433,7 +8455,7 @@ A new report details each device deployed through Windows Autopilot. For more in
 ### Role-based access control
 
 #### New Intune built-in role Endpoint security manager<!--4253397   -->
-A new Intune built-in role is available: the Endpoint security manager. This new role gives admins full access to the Endpoint Manager node in Intune and ready-only access to other areas. The role is an expansion of the "Security Administrator" role from Azure AD. If you currently just have Global Admins as roles, then there's no changes needed. If you use roles, and you'd like the granularity that the Endpoint Security Manager provides, then assign that role when the role is available. For more information about built-in roles, see [Role-based access control](role-based-access-control.md).
+A new Intune built-in role is available: the Endpoint security manager. This new role gives admins full access to the Endpoint Manager node in Intune and ready-only access to other areas. The role is an expansion of the "Security Administrator" role from Microsoft Entra ID. If you currently just have Global Admins as roles, then there's no changes needed. If you use roles, and you'd like the granularity that the Endpoint Security Manager provides, then assign that role when the role is available. For more information about built-in roles, see [Role-based access control](role-based-access-control.md).
 
 #### Windows 10 administrative templates (ADMX) profiles now support scope tags <!--5137390 -->
 You can now assign scope tags to administrative template profiles (ADMX). To do so, go to **Intune** > **Devices** > **Configuration profiles** > choose an administrative templates profile in the list > **Properties** > **Scope tags**. For more information about scope tags, see [Assign scope tags to other objects](../fundamentals/scope-tags.md#assign-scope-tags-to-other-objects).
@@ -8464,7 +8486,7 @@ As we move closer to the retirement of the Intune Managed Browser, we made chang
 - Microsoft Edge
 - Unmanaged browser 
 
-When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign in to Microsoft Edge with their Azure AD accounts, if they haven't signed already.  This behavior will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. So, your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers using managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
+When you select **Microsoft Edge**, your end users will see conditional access messaging notifying them that Microsoft Edge is required for managed browsing scenarios. They will be prompted to download and sign in to Microsoft Edge with their Microsoft Entra accounts, if they haven't signed already.  This behavior will be the equivalent to having targeted your MAM-enabled apps with the app config setting `com.microsoft.intune.useEdge` set to **True**. Existing app protection policies that used the **Policy managed browsers** setting will now have **Intune Managed Browser** selected, and you will see no change in behavior. So, your users will see messaging to use Microsoft Edge if you've set the **useEdge** app configuration setting to **True**. We encourage all customers using managed browsing scenarios to update their app protection policies with **Restrict web content transfer with other apps** to ensure users are seeing the proper guidance to transition to Microsoft Edge, no matter which app they are launching links from. 
 
 #### Configure app notification content for organization accounts<!-- 2576686  -->
 Intune app protection policies (APP) on Android and iOS devices allow you to control app notification content for Org accounts. You can select an option (Allow, Block org Data, or Blocked) to specify how notifications for org accounts are shown for the selected app. This feature requires support from applications and might not be available for all APP enabled applications. Outlook for iOS version 4.15.0 (or later) and Outlook for Android 4.83.0 (or later) will support this setting. The setting is available in the console, but the functionality will begin to take effect after December 16, 2019. For more about APP, see [What are app protection policies?](../apps/app-protection-policy.md).
@@ -8664,7 +8686,7 @@ Applies to:
 ### Device management
 
 #### Edit device name value for Autopilot devices<!-- 2640074 -->
-You can edit the Device Name value for Azure AD Joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](/autopilot/add-devices#edit-autopilot-device-attributes).
+You can edit the Device Name value for Microsoft Entra joined Autopilot devices.  For more information, see [Edit Autopilot device attributes](/autopilot/add-devices#edit-autopilot-device-attributes).
 
 #### Edit Group Tag value for Autopilot devices<!-- 4816775   -->
 You can edit the Group Tag value for Autopilot devices. For more information, see [Edit Autopilot device attributes](/autopilot/add-devices#edit-autopilot-device-attributes).
@@ -8707,7 +8729,7 @@ You can use an Intune device action to remotely [rotate BitLocker recovery keys]
 Intune now supports SCEP device certificate deployment to Android Enterprise dedicated devices for certificate-based access to Wi-Fi profiles. The Microsoft Intune app must be present on the device for deployment to work. As a result, we've updated the enrollment experience for Android Enterprise dedicated devices. New enrollments still start the same (with QR, NFC, Zero-touch, or device identifier) but now have a step that requires users to install the Intune app. Existing devices will start getting the app automatically installed on a rolling basis.
 
 #### Intune audit logs for business-to-business collaboration<!--5670211 -->
-Business-to-business (B2B) collaboration allows you to securely share your company's applications and services with guest users from any other organization, while maintaining control over your own corporate data. Intune now supports audit logs for B2B guest users. For example, when guest users make changes, Intune can capture this data through audit logs. For more information, see [What is guest user access in Azure Active Directory B2B?](/azure/active-directory/b2b/what-is-b2b)
+Business-to-business (B2B) collaboration allows you to securely share your company's applications and services with guest users from any other organization, while maintaining control over your own corporate data. Intune now supports audit logs for B2B guest users. For example, when guest users make changes, Intune can capture this data through audit logs. For more information, see [What is guest user access in Microsoft Entra B2B?](/azure/active-directory/b2b/what-is-b2b)
 
 #### Security baselines are supported on Microsoft Azure Government<!-- 4062552 -->
 
@@ -9376,10 +9398,12 @@ You can access the Android Device Policy application from the Managed Home Scree
 #### iOS Company Portal updates<!-- 3902931 -->
 Your company name on iOS app management prompts will replace the current "i.manage.microsoft.com" text. For instance, users will see their company name instead of "i.manage.microsoft.com" when users attempt to install an iOS app from the Company Portal or when users allow management of the app. This feature will roll out to all customers over the next few days.
 
-#### Azure AD and APP on Android Enterprise devices<!-- 3574267 -->
-When onboarding fully managed Android Enterprise devices, users will now register with Azure Active Directory (Azure AD) during the initial setup of their new or factory reset device. Previously for a fully managed device, after setup was complete, the user had to manually launch the Microsoft Intune app to start Azure AD registration. Now when the user lands on the device home page after initial setup, the device is both enrolled and registered.
+<a name='azure-ad-and-app-on-android-enterprise-devices---3574267---'></a>
 
-In addition to the Azure AD updates, Intune app protection policies (APP) are now supported on fully managed Android Enterprise devices. This functionality will become available as we roll it out. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+#### Microsoft Entra ID and APP on Android Enterprise devices<!-- 3574267 -->
+When onboarding fully managed Android Enterprise devices, users will now register with Microsoft Entra ID during the initial setup of their new or factory reset device. Previously for a fully managed device, after setup was complete, the user had to manually launch the Microsoft Intune app to start Microsoft Entra registration. Now when the user lands on the device home page after initial setup, the device is both enrolled and registered.
+
+In addition to the Microsoft Entra ID updates, Intune app protection policies (APP) are now supported on fully managed Android Enterprise devices. This functionality will become available as we roll it out. For more information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device configuration
@@ -9581,8 +9605,10 @@ Applies to: iOS
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device enrollment
 
-#### Windows Autopilot support for Hybrid Azure AD Join<!-- 4809146-->
-Windows Autopilot for existing devices now supports Hybrid Azure AD Join (in addition to the existing Azure AD Join support). Applies to Windows 10 version 1809 and later devices. For more information, see [
+<a name='windows-autopilot-support-for-hybrid-azure-ad-join---4809146--'></a>
+
+#### Windows Autopilot support for Microsoft Entra hybrid join<!-- 4809146-->
+Windows Autopilot for existing devices now supports Microsoft Entra hybrid join (in addition to the existing Microsoft Entra join support). Applies to Windows 10 version 1809 and later devices. For more information, see [
 Windows Autopilot for existing devices](/windows/deployment/windows-autopilot/existing-devices).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -9804,8 +9830,10 @@ App installation reports include app version information for Microsoft Store for
 #### Additions to Win32 apps requirement rules<!-- 3676883   -->
 You can create requirement rules based on PowerShell scripts, registry values, and file system information. In Intune, select **Client apps** > **Apps** > **Add**. Then select **Windows app (Win32)** as the **App type** in the **Add app** blade.  Select **Requirements** > **Add** to configure more requirement rules. Then, select either **File type**, **Registry**, or **Script** as the **Requirement type**. For more information, see [Win32 app management](./../apps/app-management.md).
 
-#### Configure your Win32 apps to be installed on Intune enrolled Azure AD joined devices<!-- 3695227  -->
-You can assign your Win32 apps to be installed on Intune enrolled Azure AD joined devices. For more information about Win32 apps in Intune, see [Win32 app management](./../apps/app-management.md).
+<a name='configure-your-win32-apps-to-be-installed-on-intune-enrolled-azure-ad-joined-devices---3695227----'></a>
+
+#### Configure your Win32 apps to be installed on Intune enrolled Microsoft Entra joined devices<!-- 3695227  -->
+You can assign your Win32 apps to be installed on Intune enrolled Microsoft Entra joined devices. For more information about Win32 apps in Intune, see [Win32 app management](./../apps/app-management.md).
 
 #### Device overview shows Primary User<!--3794259  -->
 The Device overview page will show the Primary User, also called the User Device Affinity User (UDA). To see the Primary User for a device, choose **Intune** > **Devices** > **All devices** > choose a device. The Primary User will appear near the top of the **Overview** page.
@@ -9884,7 +9912,7 @@ Still in a public preview, we've expanded our support of Android Enterprise full
 
   On dedicated devices, the device might show as **Not compliant**. Conditional Access isn't available on dedicated devices. Be sure to complete any tasks or actions to get dedicated devices compliant with your assigned policies.
 
-- [Conditional Access](../protect/conditional-access.md) - Conditional Access policies that apply to Android also apply to Android Enterprise fully managed devices. Users can now register their fully managed device in Azure Active Directory using the **Microsoft Intune app**. Then, see and resolve any compliance issues to access organizational resources.
+- [Conditional Access](../protect/conditional-access.md) - Conditional Access policies that apply to Android also apply to Android Enterprise fully managed devices. Users can now register their fully managed device in Microsoft Entra ID using the **Microsoft Intune app**. Then, see and resolve any compliance issues to access organizational resources.
 
 - New end-user app (Microsoft Intune app) - There is a new end-user app for Android fully managed devices called **Microsoft Intune**. This new app is light-weight and modern, and provides similar functionally as the Company Portal app, but for fully managed devices. For more information, see [Microsoft Intune app on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).
 
@@ -10009,7 +10037,7 @@ Applies to: Android
 Use the new [Encryption report (Preview)](../protect/encryption-monitor.md) to view details about the encryption status of your Windows 10 devices. Available details include a devices TPM version, encryption readiness and status, error reporting, and more.  
 
 #### Access BitLocker recovery keys from the Intune portal (in public preview)<!-- 2351547   -->
-You can now use Intune to [view details](../protect/encryption-monitor.md) about BitLocker Key ID and BitLocker recovery keys, from Azure Active Directory.
+You can now use Intune to [view details](../protect/encryption-monitor.md) about BitLocker Key ID and BitLocker recovery keys, from Microsoft Entra ID.
 
 #### Microsoft Edge support for Intune scenarios on iOS and Android devices<!-- 3411007 -->
 Microsoft Edge will support all of the same management scenarios as the Intune Managed Browser with the addition of improvements to end-user experience. Microsoft Edge enterprise features that are enabled by Intune policies include:
@@ -10043,8 +10071,10 @@ Previously, the **Download Power BI file** link in the **Intune Data Warehouse**
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
 
-#### Granting Intune read-only access to some Azure Active Directory roles<!-- 3637917  -->
-Intune read-only access has been granted to the following Azure AD roles. Permissions granted with Azure AD roles supersede permissions granted with Intune role-based access control (RBAC).
+<a name='granting-intune-read-only-access-to-some-azure-active-directory-roles---3637917----'></a>
+
+#### Granting Intune read-only access to some Microsoft Entra roles<!-- 3637917  -->
+Intune read-only access has been granted to the following Microsoft Entra roles. Permissions granted with Microsoft Entra roles supersede permissions granted with Intune role-based access control (RBAC).
 
 Read-only access to Intune audit data:
 
@@ -10134,7 +10164,7 @@ Applies to:
 
 #### Intune Conditional Access UI update<!-- 2432313   -->
 We've made improvements to the UI for Conditional Access in the Intune console. These improvements include:
-- Replaced the Intune *Conditional Access* blade with the blade from Azure Active Directory. This feature ensures you'll have access to the full range of settings and configurations for [Conditional Access](../protect/conditional-access.md) (which remains an Azure AD technology), from within the Intune console. 
+- Replaced the Intune *Conditional Access* blade with the blade from Microsoft Entra ID. This feature ensures you'll have access to the full range of settings and configurations for [Conditional Access](../protect/conditional-access.md) (which remains a Microsoft Entra technology), from within the Intune console. 
 - We've renamed the *On-premises access* blade to *Exchange access*, and relocated the *Exchange service connector* setup to this renamed blade.  This change consolidates where you [configure and monitor details related to Exchange online and on-premises](../protect/exchange-connector-install.md).  
 
 #### Kiosk Browser and Microsoft Edge Browser apps can run on Windows 10 devices in kiosk mode<!-- 2935135   -->
@@ -10222,7 +10252,7 @@ We've expanded the support in Intune for configuring delivery optimization. You 
 ### Device management
 
 #### Rename an enrolled Windows device<!-- 1911112  -->
-You can now rename an enrolled Windows 10 device (RS4 or later). To do, choose **Intune** > **Devices** > **All devices** > choose a device > **Rename device**. This feature does not currently support renaming hybrid Azure AD Windows devices.
+You can now rename an enrolled Windows 10 device (RS4 or later). To do, choose **Intune** > **Devices** > **All devices** > choose a device > **Rename device**. This feature does not currently support renaming hybrid Microsoft Entra Windows devices.
 
 #### Auto-assign scope tags to resources created by an admin with that scope<!-- 3173823  -->
 When an admin creates a resource, any scope tags assigned to the admin will automatically be assigned to those new resources.
@@ -10389,7 +10419,9 @@ To learn more about security baselines, see [Create a Windows 10 security baseli
 This feature applies to:
 Windows 10 and later
 
-#### Non-Administrators can enable BitLocker on Windows 10 devices joined to Azure AD<!-- 2147379   -->
+<a name='non-administrators-can-enable-bitlocker-on-windows-10-devices-joined-to-azure-ad---2147379-----'></a>
+
+#### Non-Administrators can enable BitLocker on Windows 10 devices joined to Microsoft Entra ID<!-- 2147379   -->
 When you enable BitLocker settings on Windows 10 devices (**Device configuration** > **Profiles** > **Create profile** > **Windows 10 and later** for platform > **Endpoint protection** for profile type > **Windows Encryption**), you add BitLocker settings.
 
 This update includes a new BitLocker setting to allow standard users (non-administrators) to enable encryption.
@@ -10584,8 +10616,10 @@ To learn more about these settings, see [iOS](../configuration/device-restrictio
 
 ### Device enrollment
 
-#### Autopilot support for hybrid Azure Active Directory joined devices (Preview)<!-- 1048100-->
-You can now set up hybrid Azure Active Directory joined devices by using Autopilot. Devices must be joined to your organization's network to use the hybrid Autopilot feature. For more information, see [Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
+<a name='autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview---1048100--'></a>
+
+#### Autopilot support for Microsoft Entra hybrid joined devices (Preview)<!-- 1048100-->
+You can now set up Microsoft Entra hybrid joined devices by using Autopilot. Devices must be joined to your organization's network to use the hybrid Autopilot feature. For more information, see [Deploy Microsoft Entra hybrid joined devices using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 This feature is rolling out across the user base over the next few days. Therefore, you might not be able to follow these steps until it rolls out to your account.
 
 #### Select apps tracked on the Enrollment Status Page<!-- 2531007 -->
@@ -10754,8 +10788,10 @@ Applies to: iOS
 Previously, you couldn't remove an email profile from a device *if* it's the only email profile. With this update, this behavior changes. Now, you can remove an email profile, even if it's the only email profile on the device. 
 See [Add email settings to devices using Intune](../configuration/email-settings-configure.md) for details.
 
-#### PowerShell scripts and Azure AD<!-- 2309469 -->
-PowerShell scripts in Intune can be targeted to Azure AD device security groups.
+<a name='powershell-scripts-and-azure-ad---2309469---'></a>
+
+#### PowerShell scripts and Microsoft Entra ID<!-- 2309469 -->
+PowerShell scripts in Intune can be targeted to Microsoft Entra device security groups.
 
 #### New "Required password type" default setting for Android, Android enterprise<!-- 2649963 -->
 When you create a new compliance policy (**Intune** > **Device compliance** > **Policies** > **Create policy** > **Android** or **Android enterprise** for Platform > System Security), the default value for **Required password type** changes:
@@ -10787,7 +10823,9 @@ This update includes the macOS Gatekeeper to evaluate devices for compliance. To
 #### Apply Autopilot profile to enrolled Win 10 devices not already registered for Autopilot<!-- 1558983 -->
 You can apply Autopilot profiles to enrolled Win 10 devices that have not already been registered for Autopilot. In the Autopilot profile, choose the **Convert all targeted devices to Autopilot** option to automatically register non-Autopilot devices with the Autopilot deployment service. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot will provision it.
 
-#### Create and assign multiple Enrollment Status  Page profiles to Azure AD groups<!-- 2526564 -->
+<a name='create-and-assign-multiple-enrollment-status--page-profiles-to-azure-ad-groups---2526564---'></a>
+
+#### Create and assign multiple Enrollment Status  Page profiles to Microsoft Entra groups<!-- 2526564 -->
 You can now [create and assign](../enrollment/windows-enrollment-status.md) multiple Enrollment Status Page profiles to Azure ADD groups.
 
 #### Migration from Device Enrollment Program to Apple Business Manager in Intune<!--2748613-->
@@ -10799,8 +10837,10 @@ Alerts and enrollment failures now appear on separate tabs on the Device enrollm
 #### Enrollment abandonment report<!-- 1382924 -->
 A new report that provides details on abandoned enrollments is available under **Device enrollment** > **Monitor**. For more information, see [Company portal abandonment report](../enrollment/enrollment-report-company-portal-abandon.md).
 
-#### New Azure Active Directory terms of use feature<!-- 2870393 -->
-Azure Active Directory has a **terms of use** feature that you can use instead of existing Intune terms and conditions. The Azure AD **terms of use** feature provides more flexibility on the terms to show and when to show them, better localization support, more control in how terms are rendered, and improved reporting. The Azure AD **terms of use** feature does require Azure Active Directory Premium P1, which is also part of the Enterprise Mobility + Security E3 suite. To learn more, see the [Manage your company's terms and conditions for user access article](../enrollment/terms-and-conditions-create.md).
+<a name='new-azure-active-directory-terms-of-use-feature---2870393---'></a>
+
+#### New Microsoft Entra terms of use feature<!-- 2870393 -->
+Microsoft Entra ID has a **terms of use** feature that you can use instead of existing Intune terms and conditions. The Microsoft Entra ID **terms of use** feature provides more flexibility on the terms to show and when to show them, better localization support, more control in how terms are rendered, and improved reporting. The Microsoft Entra ID **terms of use** feature does require Microsoft Entra ID P1, which is also part of the Enterprise Mobility + Security E3 suite. To learn more, see the [Manage your company's terms and conditions for user access article](../enrollment/terms-and-conditions-create.md).
 
 #### Android Device Owner mode support<!--3188762-->
 For Samsung Knox Mobile Enrollment, Intune now supports enrolling devices to the Android Device Owner mode of management. Users on WiFi or cellular networks can enroll with just a few taps when they turn on their devices for the first time. For more information, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).
@@ -10811,7 +10851,7 @@ For Samsung Knox Mobile Enrollment, Intune now supports enrolling devices to the
 - You can now configure a restart warning prompt for restarts that happen outside of work hours, which support BYOD scenarios.
 
 #### Group Windows Autopilot-enrolled devices by correlator ID<!-- 2075110 -->
-Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Azure AD device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal `OfflineAutopilotprofile-&#9001;correlator ID&#9002;`. This feature allows arbitrary Azure AD dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](/autopilot/enrollment-autopilot#windows-autopilot-for-existing-devices).
+Intune now supports grouping Windows devices by a correlator ID when enrolled using [Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) through Configuration Manager. The correlator ID is a parameter of the Autopilot configuration file. Intune will automatically set the [Microsoft Entra device attribute enrollmentProfileName](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to equal `OfflineAutopilotprofile-&#9001;correlator ID&#9002;`. This feature allows arbitrary Microsoft Entra dynamic groups to be created based off correlator ID via the enrollmentprofileName attribute for offline Autopilot enrollments. For more information, see [Windows Autopilot for existing devices](/autopilot/enrollment-autopilot#windows-autopilot-for-existing-devices).
 
 #### Intune app protection policies<!-- 2984657 -->
 Intune app protection policies allow you to configure various data protection settings for Intune protected apps, such as Microsoft Outlook and Microsoft Word. We've change the look and feel of these settings for both [iOS](../apps/app-protection-policy-settings-ios.md) and [Android](../apps/app-protection-policy-settings-android.md) to make it easier to find individual settings. There are three categories of policy settings:
@@ -10882,7 +10922,7 @@ If you have any of the devices listed below, or want to enroll any of the device
 ### Device management
 
 #### Microsoft 365 Device Management administration center<!-- 3078424 -->
-One of the promises of Microsoft 365 is simplified administration, and over the years we've integrated the back-end Microsoft 365 services to deliver end-to-end scenarios such as Intune and Azure AD Conditional Access. The new [Microsoft 365 administration center](https://endpoint.microsoft.com) is the place to consolidate, simplify, and integrate the admin experience. The specialist workspace for Device Management provides easy access to all of the device and app management information and tasks that your organization needs. We expect this feature to become the primary cloud workspace for enterprise end user computing teams.
+One of the promises of Microsoft 365 is simplified administration, and over the years we've integrated the back-end Microsoft 365 services to deliver end-to-end scenarios such as Intune and Microsoft Entra Conditional Access. The new [Microsoft 365 administration center](https://endpoint.microsoft.com) is the place to consolidate, simplify, and integrate the admin experience. The specialist workspace for Device Management provides easy access to all of the device and app management information and tasks that your organization needs. We expect this feature to become the primary cloud workspace for enterprise end user computing teams.
 
 
 <!-- ########################## -->
@@ -10997,7 +11037,7 @@ You can [block Windows personal devices](../enrollment/enrollment-restrictions-s
 You can [specify a computer name template](/autopilot/profiles) to generate and set the [computer name](/windows/client-management/mdm/accounts-csp) during Autopilot enrollment. Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 #### For Windows Autopilot profiles, hide the change account options on the company sign-in page and domain error page<!--1901669 -->
-There are [new Windows Autopilot profile options](/autopilot/profiles) for admins to hide the change account options on the company sign-in and domain error pages. Hiding these options requires Company Branding to be configured in Azure Active Directory. 
+There are [new Windows Autopilot profile options](/autopilot/profiles) for admins to hide the change account options on the company sign-in and domain error pages. Hiding these options requires Company Branding to be configured in Microsoft Entra ID. 
 Applies to: the most recent [Windows Insider](/windows-insider/about/) build (while in preview).
 
 ### macOS support for Apple Device Enrollment Program<!-- 747651 -->
@@ -11132,9 +11172,9 @@ Applies to Windows 10 and later.
 If you've enabled [device group mapping](../enrollment/device-group-mapping.md), users on Windows 10 will now be prompted to select a device category after enrolling through the **Connect** button in **Settings** > **Accounts** > **Access work or school**. 
 
 #### Use sAMAccountName as the account username for email profiles<!-- 1500307 -->
-You can use the on-premises **sAMAccountName** as the account username for email profiles for Android, iOS, and Windows 10. You can also get the domain from the `domain` or `ntdomain` attribute in Azure Active Directory (Azure AD). Or, enter a custom static domain.
+You can use the on-premises **sAMAccountName** as the account username for email profiles for Android, iOS, and Windows 10. You can also get the domain from the `domain` or `ntdomain` attribute in Microsoft Entra ID. Or, enter a custom static domain.
 
-To use this feature, you must sync the `sAMAccountName` attribute from your on-premises Active Directory environment to Azure AD.
+To use this feature, you must sync the `sAMAccountName` attribute from your on-premises Active Directory environment to Microsoft Entra ID.
 
 Applies to [Android](../configuration/email-settings-android.md), [iOS](../configuration/email-settings-ios.md), [Windows 10 and later](../configuration/email-settings-windows-10.md)
 
@@ -11255,7 +11295,7 @@ A new configuration setting is available to set the language and region for Auto
 A new setting will be available to configure the keyboard for Autopilot profiles during the Out of Box Experience. To see the new setting, choose **Device enrollment** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Deployment mode** = **Self-deploying** > **Defaults configured**.
 
 #### Autopilot profiles moving to group targeting<!-- 1877935 -->
-Autopilot deployment profiles can be assigned to Azure AD groups containing Autopilot devices.
+Autopilot deployment profiles can be assigned to Microsoft Entra groups containing Autopilot devices.
 
 ### Device management
 
@@ -11302,7 +11342,7 @@ To see the Unique Device Identifier (UDID) for iOS and macOS devices, go to **De
 On Microsoft Intune MDM-managed devices, sometimes app installations can fail. When these app installs fail, it can be challenging to understand the failure reason or troubleshoot the issue. We're shipping a Public Preview of our App Troubleshooting features. You will notice a new node under each individual device called **Managed Apps**. This node lists the apps that have been delivered via Intune MDM. Inside the node, there's a list of app install states. If you select an individual app, there's the troubleshooting view for that specific app. In the troubleshooting view, you see the end-to-end lifecycle of the app, such as when the app was created, modified, targeted, and delivered to a device. Also, if the app install was not successful, you'll be presented with the error code and a helpful message about the cause of the error. 
 
 #### Intune app protection policies and Microsoft Edge<!-- 1818968 -->
-The Microsoft Edge browser for mobile devices (iOS and Android) now supports Microsoft Intune app protection policies. Users of iOS and Android devices who sign in with their corporate Azure AD accounts in the Microsoft Edge application will be protected by Intune. On iOS devices, the **Require managed browser for web content** policy allows users to open links in Microsoft Edge when the browser is managed.
+The Microsoft Edge browser for mobile devices (iOS and Android) now supports Microsoft Intune app protection policies. Users of iOS and Android devices who sign in with their corporate Microsoft Entra accounts in the Microsoft Edge application will be protected by Intune. On iOS devices, the **Require managed browser for web content** policy allows users to open links in Microsoft Edge when the browser is managed.
 
 <!-- ########################## -->
 ## May 2018
@@ -11311,7 +11351,7 @@ The Microsoft Edge browser for mobile devices (iOS and Android) now supports Mic
 
 #### Configuring your app protection policies<!-- 2144597 Part 2 -->
 
-In the Azure portal, instead of going to the Intune App Protection service blade, you now just go to Intune. There is now only one location for app protection policies within Intune. All of your app protection policies are on the **Mobile app** blade in Intune under **App protection policies**. This integration helps to simplify your cloud management administration. Remember, all app protection policies are already in Intune and you can modify any of your previously configured policies. Intune App Policy Protection (APP) and Conditional Access (CA) policies are now under **Conditional Access**, which can be found under the **Manage** section in the **Microsoft Intune** blade or under the **Security** section in the **Azure Active Directory** blade. For more information about modifying Conditional Access policies, see [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal). For more information, see [What are app protection policies?](../apps/app-protection-policy.md)
+In the Azure portal, instead of going to the Intune App Protection service blade, you now just go to Intune. There is now only one location for app protection policies within Intune. All of your app protection policies are on the **Mobile app** blade in Intune under **App protection policies**. This integration helps to simplify your cloud management administration. Remember, all app protection policies are already in Intune and you can modify any of your previously configured policies. Intune App Policy Protection (APP) and Conditional Access (CA) policies are now under **Conditional Access**, which can be found under the **Manage** section in the **Microsoft Intune** blade or under the **Security** section in the **Microsoft Entra ID** blade. For more information about modifying Conditional Access policies, see [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal). For more information, see [What are app protection policies?](../apps/app-protection-policy.md)
 
 ### Device configuration
 
@@ -11354,7 +11394,7 @@ In the Azure portal within the Microsoft Intune service, we're going to temporar
 This change will affect both Intune standalone customers and hybrid (Intune with Configuration Manager) customers. This integration will help simplify your cloud management administration.
 
 **What do I need to do to prepare for this change?**
-Tag **Intune** as a favorite instead of the **Intune App Protection** service blade and ensure you're familiar with the App protection policy workflow in the **Mobile** app blade within Intune. We'll redirect for a short period of time and then remove the **App Protection** blade. Remember, all app protection policies are already in Intune and you can modify any of your Conditional Access policies. For more information about modifying Conditional Access policies, see [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal). For more information, see [What are app protection policies?](../apps/app-protection-policy.md) 
+Tag **Intune** as a favorite instead of the **Intune App Protection** service blade and ensure you're familiar with the App protection policy workflow in the **Mobile** app blade within Intune. We'll redirect for a short period of time and then remove the **App Protection** blade. Remember, all app protection policies are already in Intune and you can modify any of your Conditional Access policies. For more information about modifying Conditional Access policies, see [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal). For more information, see [What are app protection policies?](../apps/app-protection-policy.md) 
 
 ### Device configuration
 
@@ -11449,7 +11489,7 @@ On the Enrollment Overview page, you can view the trend of enrollment failures a
 
 #### Defender for Endpoint and Intune are fully integrated<!-- 1629303 -->
 
-[Defender for Endpoint](/windows/security/threat-protection/windows-defender-atp/dashboard-windows-defender-advanced-threat-protection) shows the risk level of Windows 10 devices. In Windows Defender Security Center, you can create a connection to Microsoft Intune. Once created, an Intune compliance policy is used to determine an acceptable threat level. If the threat level is exceeded, an Azure Active Directory (AD) Conditional Access policy can then block access to different apps within your organization.
+[Defender for Endpoint](/windows/security/threat-protection/windows-defender-atp/dashboard-windows-defender-advanced-threat-protection) shows the risk level of Windows 10 devices. In Windows Defender Security Center, you can create a connection to Microsoft Intune. Once created, an Intune compliance policy is used to determine an acceptable threat level. If the threat level is exceeded, a Microsoft Entra Conditional Access policy can then block access to different apps within your organization.
 
 This feature allows Defender for Endpoint to scan files, detect threats, and report any risk on your Windows 10 devices.
 
@@ -11584,7 +11624,7 @@ After a compliance or configuration policy is applied to an iOS device, users ar
 Intune gives you control on installing automatic updates using [Windows Update Ring settings](../protect/windows-update-for-business-configure.md). With this update, you can schedule reoccurring updates, including the week, the day, and the time.
 
 #### Use fully distinguished name as subject for SCEP certificate<!--2221763 -->
-When you create a SCEP certificate profile, you enter the Subject Name. With this update, you can use the fully distinguished name as the subject. For **Subject Name**,  select **Custom**, and then enter `CN={{OnPrem_Distinguished_Name}}`. To use the `{{OnPrem_Distinguished_Name}}` variable, be sure to sync the `onpremisesdistingishedname` user attribute using [Azure Active Directory (AD) Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+When you create a SCEP certificate profile, you enter the Subject Name. With this update, you can use the fully distinguished name as the subject. For **Subject Name**,  select **Custom**, and then enter `CN={{OnPrem_Distinguished_Name}}`. To use the `{{OnPrem_Distinguished_Name}}` variable, be sure to sync the `onpremisesdistingishedname` user attribute using [Microsoft Entra Connect](/azure/active-directory/connect/active-directory-aadconnect) to your Microsoft Entra ID.
 
 ### Device configuration
 
@@ -11675,11 +11715,13 @@ Protect files and folders from unauthorized changes by unfriendly apps.<br><br>*
 
 ### Intune apps
 
-### Azure Active Directory web sites can require the Intune Managed Browser app and support single sign-on for the Managed Browser (Public Preview)<!-- 710595 -->
+<a name='azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview---710595---'></a>
 
-Using Azure Active Directory (Azure AD), you can now restrict access to web sites on mobile devices to the Intune Managed Browser app. In the Managed Browser, web site data will remain secure and separate from end-user personal data. In addition, the Managed Browser will support single sign-on capabilities for sites protected by Azure AD. Signing in to the Managed Browser, or using the Managed Browser on a device with another app managed by Intune, allows the Managed Browser to access corporate sites protected by Azure AD. End users don't have to enter their credentials.
+### Microsoft Entra web sites can require the Intune Managed Browser app and support single sign-on for the Managed Browser (Public Preview)<!-- 710595 -->
 
-This functionality applies to sites like Outlook Web Access (OWA) and SharePoint Online, and other corporate sites like intranet resources accessed through the Azure App Proxy. For more information, see [Access controls in Azure Active Directory Conditional Access](/azure/active-directory/active-directory-conditional-access-controls).
+Using Microsoft Entra ID, you can now restrict access to web sites on mobile devices to the Intune Managed Browser app. In the Managed Browser, web site data will remain secure and separate from end-user personal data. In addition, the Managed Browser will support single sign-on capabilities for sites protected by Microsoft Entra ID. Signing in to the Managed Browser, or using the Managed Browser on a device with another app managed by Intune, allows the Managed Browser to access corporate sites protected by Microsoft Entra ID. End users don't have to enter their credentials.
+
+This functionality applies to sites like Outlook Web Access (OWA) and SharePoint Online, and other corporate sites like intranet resources accessed through the Azure App Proxy. For more information, see [Access controls in Microsoft Entra Conditional Access](/azure/active-directory/active-directory-conditional-access-controls).
 
 #### Company Portal app for Android visual updates<!--976944 -->
 
@@ -11757,7 +11799,7 @@ Intune now gives you the option to authenticate devices by using the Company Por
 - Apple School Manager
 - Apple Configurator Enrollment
 
-When using the Company Portal option, Azure Active Directory multifactor authentication can be enforced without blocking these enrollment methods.
+When using the Company Portal option, Microsoft Entra multifactor authentication can be enforced without blocking these enrollment methods.
 
 When using the Company Portal option, Intune skips user authentication in the iOS Setup Assistant for user affinity enrollment. This feature means that the device is initially enrolled as a userless device, and so doesn't receive configurations or policies of user groups. It only receives configurations and policies for device groups. However, Intune will automatically install the Company Portal app on the Device. The first user to launch and sign in to the Company Portal app will be associated with the device in Intune. At this point, the user will receive configurations and policies of their user groups. The user association cannot be changed without re-enrollment.
 
@@ -11916,7 +11958,7 @@ For details about Windows 10 edition upgrades, see [How to configure Windows 10 
 
 #### Conditional Access policies for Intune is only available from the Azure portal <!-- 1737088 1634311 -->
 
-Starting with this release, you must configure and manage your Conditional Access policies in the [Azure portal](https://portal.azure.com) from **Azure Active Directory** > **Conditional Access**. For your convenience, you can also access this blade from Intune in the Azure portal at **Intune** > **Conditional Access**.
+Starting with this release, you must configure and manage your Conditional Access policies in the [Azure portal](https://portal.azure.com) from **Microsoft Entra ID** > **Conditional Access**. For your convenience, you can also access this blade from Intune in the Azure portal at **Intune** > **Conditional Access**.
 
 #### Updates to compliance emails<!--1637547 -->
 
@@ -11971,10 +12013,10 @@ Each NDES connector pulls certificate requests from Intune.  If one NDES connect
 
 #### Customer subject name can use AAD_DEVICE_ID variable <!-- 1468599 -->
 
-When you create a SCEP certificate profile in Intune, you can now use the AAD_DEVICE_ID variable when you build the custom subject name.   When the certificate is requested using this SCEP profile, the variable is replaced with the Azure AD device ID of the device making the certificate request.
+When you create a SCEP certificate profile in Intune, you can now use the AAD_DEVICE_ID variable when you build the custom subject name.   When the certificate is requested using this SCEP profile, the variable is replaced with the Microsoft Entra device ID of the device making the certificate request.
 
 #### Manage Jamf-enrolled macOS devices with Intune's device compliance engine<!-- 1592747 -->
-You can now use Jamf to send macOS device state information to Intune, which will then evaluate it for compliance with policies defined in the Intune console. Based on the device compliance state and other conditions (such as location, user risk, etc.), Conditional Access will enforce compliance for macOS devices accessing cloud and on-premises applications connected with Azure AD, including Microsoft 365. Find out more about [setting up Jamf integration](../protect/conditional-access-integrate-jamf.md) and [enforcing compliance for Jamf-managed devices](../protect/conditional-access-assign-jamf.md).
+You can now use Jamf to send macOS device state information to Intune, which will then evaluate it for compliance with policies defined in the Intune console. Based on the device compliance state and other conditions (such as location, user risk, etc.), Conditional Access will enforce compliance for macOS devices accessing cloud and on-premises applications connected with Microsoft Entra ID, including Microsoft 365. Find out more about [setting up Jamf integration](../protect/conditional-access-integrate-jamf.md) and [enforcing compliance for Jamf-managed devices](../protect/conditional-access-assign-jamf.md).
 
 #### New iOS device action  <!-- 1424701 -->
 
@@ -11990,7 +12032,7 @@ A new device action has been added so administrators can define and update the r
 
 The resource account is used by a Surface Hub to authenticate with Skype/Exchange so it can join a meeting. You can create a unique resource account so the Surface Hub appears in the meeting as the conference room. For example, the resource account might appear as *Conference Room B41/6233*. The resource account (known as the device account) for the Surface Hub typically needs to be configured for the conference room location and when other resource account parameters need to be changed.
 
-When administrators want to update the resource account on a device, they must provide the current Active Directory/Azure Active Directory credentials associated with the device. If password rotation is on for the device, administrators must go to Azure Active Directory to find the password.
+When administrators want to update the resource account on a device, they must provide the current Active Directory/Microsoft Entra credentials associated with the device. If password rotation is on for the device, administrators must go to Microsoft Entra ID to find the password.
 
 > [!NOTE]
 > All fields get sent down in a bundle and overwrite all fields that were previously configured. Empty fields also overwrite existing fields.
@@ -12008,7 +12050,7 @@ The following are the settings administrators can configure:
 
   - **Password rotation period**
 
-    Ensures the account password is updated automatically by the Surface Hub every week for security reasons. To configure any parameters after setting has been enabled, the account in Azure Active Directory must have the password reset first.
+    Ensures the account password is updated automatically by the Surface Hub every week for security reasons. To configure any parameters after setting has been enabled, the account in Microsoft Entra ID must have the password reset first.
 
   - **SIP (Session Initiation Protocol) address**
 
@@ -12035,7 +12077,7 @@ You can delete the iOS Volume Purchasing Program (VPP) token using the console. 
 
 #### A new entity collection named Current User is limited to currently active user data<!-- 1667026 -->
 
-The **Users** entity collection contains all the Azure Active Directory (Azure AD) users with assigned licenses in your enterprise. For example, a user might be added to Intune and then removed during the last month. While this user isn't present at the time of the report, the user and state are present in the data. You could create a report that would show the duration of the user's historic presence in your data.
+The **Users** entity collection contains all the Microsoft Entra users with assigned licenses in your enterprise. For example, a user might be added to Intune and then removed during the last month. While this user isn't present at the time of the report, the user and state are present in the data. You could create a report that would show the duration of the user's historic presence in your data.
 
 In contrast, the new **Current User** entity collection only contains users who have not been removed. The **Current User** entity collection only contains currently active users. For information about the **current user** entity collection, see [Reference for current user entity](../developer/reports-ref-data-model.md).
 
@@ -12171,7 +12213,7 @@ When resetting Windows 10 version 1709 and later to factory settings, a new capa
 
 The following data is retained through a factory reset:
 - User accounts associated with the device
-- Machine state (domain join, Azure Active Directory-joined)
+- Machine state (domain join, Microsoft Entra joined)
 - MDM enrollment
 - OEM installed apps (store and Win32 apps)
 - User profile
@@ -12209,7 +12251,7 @@ Administrators can now remove Per-App VPN requirements for apps on iOS devices; 
 The System Center Operations Manager management pack for Exchange connector is now available to help you parse the Exchange connector logs. This feature gives you different ways of monitoring the service when you need to troubleshoot issues.
 
 #### Co-management for Windows 10 devices <!-- 1243445 -->
-Co-management is a solution that provides a bridge from traditional to modern management, and it provides you with a path to make the transition using a phased approach. Co-management is a solution where Windows 10 devices are concurrently managed by Configuration Manager and Microsoft Intune. The devices are joined to Active Directory (AD) and Azure Active Directory (Azure AD).  This configuration provides you with a path to modernize over time, at the pace that's right for your organization if you can't move all at once.  
+Co-management is a solution that provides a bridge from traditional to modern management, and it provides you with a path to make the transition using a phased approach. Co-management is a solution where Windows 10 devices are concurrently managed by Configuration Manager and Microsoft Intune. The devices are joined to Active Directory (AD) and Microsoft Entra ID.  This configuration provides you with a path to modernize over time, at the pace that's right for your organization if you can't move all at once.  
 
 #### Restrict Windows Enrollment by OS version<!-- 245498 -->
 As an Intune administrator, you can now specify a minimum and maximum version of Windows 10 for device enrollments. You can set these restrictions in the **Platform Configurations** blade.
@@ -12386,7 +12428,7 @@ The Company Portal app for Android can now use geofencing to protect access to c
 #### Helping your users help themselves with the Company Portal app for Android<!-- 1573324, 1573150, 1558616, 1564878 -->
 
 The Company Portal app for Android has added instruction for end users to help them understand and, where possible, self-solve on new use cases.
-- End users will be guided to the [Azure Active Directory portal](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
+- End users will be guided to the [Microsoft Entra admin center](https://account.activedirectory.windowsazure.com/r/#/profile) to remove a device if they have reached the maximum number of devices that they are allowed to add.
 - End users are given steps to follow to help them [fix activation errors on Samsung Knox devices](../user-help/samsung-knox-errors-android.md) or to [turn off power-saving mode](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-faq). If neither of those solutions resolve their issue, we will provide an explanation of how to [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md).  
 
 #### New 'Resolve' action available for Android devices<!-- 1583480 -->
@@ -12404,7 +12446,7 @@ We have added support for certificate-based authentication (CBA) in the Company 
 Company apps that have been made available with or without enrollment on the Android Company Portal app can now be installed without a prompt to enroll.
 
 #### Windows Autopilot Deployment Program support in Microsoft Intune <!-- 747617  -->
-You can now use Microsoft Intune with Windows Autopilot Deployment Program to empower your users to provision their corporate devices without involving IT. You can customize the out-of-box experience (OOBE) and guide users to join their device to Azure AD and enroll in Intune. Working together, Microsoft Intune and Windows Autopilot eliminate the need to deploy, maintain, and manage operating system images. For details, see [Enroll Windows devices using Windows Autopilot deployment program](/autopilot/enrollment-autopilot).
+You can now use Microsoft Intune with Windows Autopilot Deployment Program to empower your users to provision their corporate devices without involving IT. You can customize the out-of-box experience (OOBE) and guide users to join their device to Microsoft Entra ID and enroll in Intune. Working together, Microsoft Intune and Windows Autopilot eliminate the need to deploy, maintain, and manage operating system images. For details, see [Enroll Windows devices using Windows Autopilot deployment program](/autopilot/enrollment-autopilot).
 
 #### Quickstart for device enrollment <!-- 1425655 --> 
 Quickstart is now available in **Device enrollment** and provides a table of references for managing platforms and configuring the enrollment process. A brief description of each item and links to documentation with step-by-step instructions provides useful documentation to simplify getting started.
@@ -12647,11 +12689,13 @@ In this release, we are adding new [device restriction settings](../configuratio
  
 You can specify the app by URL, package name or from the list of apps you manage.
 
-#### New Azure AD app-based Conditional Access policy UI link from Intune
-<!-- 1016201 -->
-IT admins can now set app-based conditional policies via the new Conditional Access policy UI in the Azure AD workload. The app-based Conditional Access that is in the Intune App Protection section in the Azure portal will remain there for the time being and will be enforced side-by-side. There's also a convenience link to the new Conditional Access policy UI in the Intune workload.
+<a name='new-azure-ad-app-based-conditional-access-policy-ui-link-from-intune'></a>
 
-- Learn more about [app-based Conditional Access on Azure AD](/azure/active-directory/active-directory-conditional-access-technical-reference).
+#### New Microsoft Entra app-based Conditional Access policy UI link from Intune
+<!-- 1016201 -->
+IT admins can now set app-based conditional policies via the new Conditional Access policy UI in the Microsoft Entra workload. The app-based Conditional Access that is in the Intune App Protection section in the Azure portal will remain there for the time being and will be enforced side-by-side. There's also a convenience link to the new Conditional Access policy UI in the Intune workload.
+
+- Learn more about [app-based Conditional Access on Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-technical-reference).
 
 <!-- ########################## -->
 ### July 2017
@@ -12706,7 +12750,7 @@ Intune has updated the troubleshooting display and added to the information that
 - Compliance policies
 - Configuration profiles
 
-In addition, the **Devices** table now includes **Azure AD join type** and **Azure AD compliant** columns. For more information, see [help users troubleshoot problems](help-desk-operators.md).
+In addition, the **Devices** table now includes **Microsoft Entra join type** and **Microsoft Entra compliant** columns. For more information, see [help users troubleshoot problems](help-desk-operators.md).
 
 
 
@@ -12724,7 +12768,7 @@ End users are now able to select which group their device belongs to by tagging 
 ### June 2017
 
 #### New role-based administration access for Intune admins  <!-- 1099990 -->  
-A new Conditional Access admin role is being added to view, create, modify, and delete Azure AD Conditional Access policies. Previously, only global admins and security admins had this permission. Intune admins can be granted with this role permission so that they have access to Conditional Access policies.
+A new Conditional Access admin role is being added to view, create, modify, and delete Microsoft Entra Conditional Access policies. Previously, only global admins and security admins had this permission. Intune admins can be granted with this role permission so that they have access to Conditional Access policies.
 
 
 #### Tag corporate-owned devices with serial number<!-- 1215070 -->  
@@ -12759,7 +12803,7 @@ Offline apps you purchased from the Microsoft Store for Business will now be syn
 The Microsoft Teams app for iOS and Android is now part of approved apps for app-based Conditional Access policies for Exchange and SharePoint Online. The app can be configured through the Intune App Protection blade in the Azure portal to all tenants currently using app-based Conditional Access.
 
 #### Managed browser and app proxy integration<!-- 1287310 -->
-The Intune Managed Browser can now integrate with the Azure AD Application Proxy service to let users access internal web sites even when they are working remotely. Users of the browser enter the site URL as they normally would and the Managed Browser routes the request through the application proxy web gateway. For more information, see [Manage Internet access using Managed browser policies](../apps/manage-microsoft-edge.md).
+The Intune Managed Browser can now integrate with the Microsoft Entra application proxy service to let users access internal web sites even when they are working remotely. Users of the browser enter the site URL as they normally would and the Managed Browser routes the request through the application proxy web gateway. For more information, see [Manage Internet access using Managed browser policies](../apps/manage-microsoft-edge.md).
 
 #### New app configuration settings for the Intune Managed Browser<!-- 682951 -->
 In this release, we've added further configurations for the Intune Managed Browser app for iOS and Android. You can now use an app configuration policy to configure the default home page and bookmarks for the browser.
@@ -12793,13 +12837,13 @@ Based on user feedback, the Company Portal app for Android has added a new menu 
 The Company Portal app for Windows 10 will now automatically initiate a sync for app install requests for devices with Windows 10 Creators Update (version 1709). This behavior will reduce the issue of app installs stalling during the "Pending Sync" state. In addition, users can manually initiate a sync from within the app. You can see these changes on the [what's new in app UI](whats-new-app-ui.md) page.
 
 #### New guided experience for Windows 10 Company Portal<!--1058938-->
-The Company Portal app for Windows 10 will include a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Azure Active Directory (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they don't complete registration and enrollment, but will experience limited functionality.
+The Company Portal app for Windows 10 will include a guided Intune walkthrough experience for devices that have not been identified or enrolled. The new experience provides step-by-step instructions that guide the user through registering into Microsoft Entra ID (required for Conditional Access features) and MDM enrollment (required for device management features). The guided experience will be accessible from the Company Portal home page. Users can continue to use the app if they don't complete registration and enrollment, but will experience limited functionality.
 
 This update is only visible on devices running Windows 10 Anniversary Update (build 1607) or higher. You can see these changes on the [what's new in app UI](whats-new-app-ui.md) page.
 
 
 #### Microsoft Intune and Conditional Access admin centers are generally available
-We're announcing the general availability of both the new Intune in the Azure portal admin console and the Conditional Access admin console. Through Intune in the Azure portal, you can now manage all Intune MAM and MDM capabilities in one consolidated admin experience, and use Azure AD grouping and targeting. Conditional Access in Azure brings rich capabilities across Azure AD and Intune together in one unified console. And from an administrative experience, moving to the Azure platform allows you to use modern browsers.
+We're announcing the general availability of both the new Intune in the Azure portal admin console and the Conditional Access admin console. Through Intune in the Azure portal, you can now manage all Intune MAM and MDM capabilities in one consolidated admin experience, and use Microsoft Entra grouping and targeting. Conditional Access in Azure brings rich capabilities across Microsoft Entra ID and Intune together in one unified console. And from an administrative experience, moving to the Azure platform allows you to use modern browsers.
 
 Intune is now visible without the **preview** label in the Azure portal at portal.azure.com.
 
@@ -12823,7 +12867,7 @@ When end users need to set a start-up PIN on Samsung Knox devices to become comp
 
 #### Apple School Manager (ASM) support with shared iPad<!-- 748864, 770395-->
 
-Intune now supports use of Apple School Manager (ASM) in place of Apple Device Enrollment Program to provide out-of-box enrollment of iOS devices. ASM onboarding is required to use the Classroom app for Shared iPads, and is required to enable syncing data from ASM to Azure Active Directory via Microsoft School Data Sync (SDS). For more information, see [Enable iOS device enrollment with Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md).
+Intune now supports use of Apple School Manager (ASM) in place of Apple Device Enrollment Program to provide out-of-box enrollment of iOS devices. ASM onboarding is required to use the Classroom app for Shared iPads, and is required to enable syncing data from ASM to Microsoft Entra ID via Microsoft School Data Sync (SDS). For more information, see [Enable iOS device enrollment with Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md).
 
 > [!NOTE]
 > Configuring Shared iPads to work with the Classroom app requires iOS Education configurations in Azure are that not yet available.  This functionality will be added soon.
@@ -12888,7 +12932,7 @@ We've added new [Windows device restriction settings](../configuration/device-re
 #### Updates to certificate configuration<!-- 918991 and 823198 -->
 When creating a SCEP certificate profile, for <strong>Subject name format</strong>, the <strong>Custom</strong> option is available for iOS, Android, and Windows devices. Before this update, the <strong>Custom</strong> field was available for iOS devices only. For more information, see [Create a SCEP certificate profile](../protect/certificates-profile-scep.md).
 
-When creating a PKCS certificate profile, for **Subject alternative name**, the **Custom Azure AD attribute** is available. The **Department** option is available when you select **Custom Azure AD attribute**. For more information, see [create a PKCS certificate profile](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile).
+When creating a PKCS certificate profile, for **Subject alternative name**, the **Custom Microsoft Entra attribute** is available. The **Department** option is available when you select **Custom Microsoft Entra attribute**. For more information, see [create a PKCS certificate profile](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile).
 
 #### Configure multiple apps that can run when an Android device is in kiosk mode<!-- 662059 -->
 When an Android device is in kiosk mode, you could previously only configure one app that was allowed to run. You can now configure multiple apps using the app ID, store URL, or by selecting an Android app you already manage. For more information, see [Kiosk mode settings](../configuration/device-restrictions-android.md#kiosk).
@@ -12963,13 +13007,13 @@ You can now assign iOS volume-purchased (VPP) apps as **Available** installs to 
 You can now [synchronize books](../apps/vpp-apps-ios.md) you purchased from the Apple volume-purchase program store with Intune, and assign the books to users.
 
 #### Multi-user management for Samsung Knox Standard devices<!-- 971988 -->
-Devices that run Samsung Knox Standard are now supported for [multi-user management](/mem/intune/fundamentals/deployment-guide-enrollment-android) by Intune. So, end users can sign in and out of the device with their Azure Active Directory credentials. The device is centrally managed whether it's in use or not in use.  When end-users sign-in, they have access to apps and get any policies applied to them. When users sign out, all app data is cleared.
+Devices that run Samsung Knox Standard are now supported for [multi-user management](/mem/intune/fundamentals/deployment-guide-enrollment-android) by Intune. So, end users can sign in and out of the device with their Microsoft Entra credentials. The device is centrally managed whether it's in use or not in use.  When end-users sign-in, they have access to apps and get any policies applied to them. When users sign out, all app data is cleared.
 
 #### Windows device restriction settings<!-- 818566 -->
 We've added support for more [Windows device restriction settings](../configuration/device-restrictions-windows-10.md), like Microsoft Edge browser support, device lock screen customization, start menu customizations, Windows Spotlight search set wallpaper, and proxy setting.
 
 #### Multi-user support for Windows 10 Creators Update<!-- 822547 -->
-We've added support for [multi-user management](../enrollment/windows-enroll.md) for devices that run the Windows 10 Creators Update and are Azure Active Directory domain-joined. When different standard users sign in to the device with their Azure AD credentials, they will receive any apps and policies that were assigned to their user name. Users cannot currently use the Company Portal for self-service scenarios like installing apps.
+We've added support for [multi-user management](../enrollment/windows-enroll.md) for devices that run the Windows 10 Creators Update and are Microsoft Entra domain-joined. When different standard users sign in to the device with their Microsoft Entra credentials, they will receive any apps and policies that were assigned to their user name. Users cannot currently use the Company Portal for self-service scenarios like installing apps.
 
 #### Fresh Start for Windows 10 PCs<!-- 1004830 -->
 A new [Fresh Start device action](../remote-actions/device-fresh-start.md) for Windows 10 PCs is now available.  When you issue this action, any apps that were installed on the PC are removed. The PC is automatically updated to the latest version of Windows. When automatically updated, it can help remove preinstalled OEM apps that are often delivered with a new PC. You can configure if user data is retained when this device action is issued.
@@ -12983,7 +13027,7 @@ You can now create an [edition upgrade policy to upgrade devices](../configurati
 - Windows 10 Professional Education N
 
 #### Bulk Enroll Windows 10 devices<!-- 747607 -->
-You can now join large numbers of devices that run the Windows 10 Creators update to Azure Active Directory and Intune with Windows Configuration Designer (WCD). To enable [bulk MDM enrollment](../enrollment/windows-bulk-enroll.md) for your Azure AD tenant, create a provisioning package. The package should join devices to your Azure AD tenant using Windows Configuration Designer, and apply the package to corporate-owned devices you'd like to bulk enroll and manage. Once the package is applied to your devices, they will join Azure AD, enroll in Intune, and be ready for your Azure AD users to sign in.  Azure AD users are standard users on these devices and receive assigned policies and required apps. Self-service and Company Portal scenarios are not supported currently.
+You can now join large numbers of devices that run the Windows 10 Creators update to Microsoft Entra ID and Intune with Windows Configuration Designer (WCD). To enable [bulk MDM enrollment](../enrollment/windows-bulk-enroll.md) for your Microsoft Entra tenant, create a provisioning package. The package should join devices to your Microsoft Entra tenant using Windows Configuration Designer, and apply the package to corporate-owned devices you'd like to bulk enroll and manage. Once the package is applied to your devices, they will join Microsoft Entra ID, enroll in Intune, and be ready for your Microsoft Entra users to sign in.  Microsoft Entra users are standard users on these devices and receive assigned policies and required apps. Self-service and Company Portal scenarios are not supported currently.
 
 #### New MAM settings for PIN and managed storage locations<!-- 581122, 736644 -->
 Two new app settings are now available to help you with mobile application management (MAM) scenarios:
