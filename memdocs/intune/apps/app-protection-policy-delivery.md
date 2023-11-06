@@ -50,6 +50,9 @@ App protection policy (APP) delivery depends on the license state and Intune ser
 > [!NOTE]
 > Retry intervals may require active app use to occur, meaning the app is launched and in use.  If the retry interval is 24 hours and the user waits 48 hours to launch the app, the Intune APP SDK will retry at 48 hours.
 
+> [!NOTE]
+> Applications that have not checked-in with the Intune MAM Service within the last 90 days may be automatically deregistered from the Intune MAM Service.  When the user next launches the application, the Intune APP SDK will automatically attempt to register the application.  The user may be prompted to connection to the internet and enter  credentials to complete the registration.
+
 ## Handling network connectivity issues
 
 When user registration fails due to network connectivity issues an accelerated retry interval is used. The Intune APP SDK will retry at increasingly longer intervals until the interval reaches 60 minutes or a successful connection is made.  The Intune APP SDK will then continue to retry at 60 minute intervals until a successful connection is made. Then, the Intune APP SDK will return to the standard retry interval based on the user state.
