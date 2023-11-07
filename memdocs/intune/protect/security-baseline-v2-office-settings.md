@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 11/10/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -80,8 +80,6 @@ For more information about the following settings that are included in this base
 ::: zone pivot="v2306"
 
 **Microsoft 365 Apps for Enterprise for security baseline version 2306**  
-
-*Released in November, 2023*
 
 For more information about the following settings that are included in this baseline, download the [Security Compliance Toolkit and Baselines](https://www.microsoft.com/download/details.aspx?id=55319) from the Microsoft Download Center, and then review the *Microsoft 365 Apps for Enterprise 2306.zip* file.
 

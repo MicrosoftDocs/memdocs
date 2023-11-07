@@ -40,7 +40,7 @@ groups:
   prompt: Choose a version
   pivots:
     - id: v2306
-      title: Version 2023
+      title: Version 2306
     - id: office-may-2023
       title: May 2023
 
