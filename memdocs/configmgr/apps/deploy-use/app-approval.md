@@ -132,11 +132,11 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 
-- Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
+- Enable [Microsoft Entra user Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-- Manually configure settings in Azure AD:
+- Manually configure settings in Microsoft Entra ID:
 
-    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.
+    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Microsoft Entra ID**, and select **App registrations**.
 
     1. Select the application that you created for Configuration Manager **Cloud Management** integration.
 
@@ -166,7 +166,7 @@ With these additional optional prerequisites, recipients can approve or deny the
 1. In the Configuration Manager console, [deploy an application](deploy-applications.md) as available to a user collection. On the **Deployment Settings** page, enable it for approval. Then enter one or more email addresses to receive notification. Separate email addresses with a semi-colon (`;`).
 
      > [!NOTE]
-     > Anyone in your Azure AD organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.
+     > Anyone in your Microsoft Entra organization who receives the email can approve the request. Don't forward the email to others unless you want them to take action.
 
 1. As a user, request the application in Software Center.
 
