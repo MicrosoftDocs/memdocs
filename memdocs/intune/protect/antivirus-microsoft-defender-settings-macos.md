@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 10/03/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,55 +24,137 @@ ms.custom: intune-azure
 ms.collection:
 - tier3
 - M365-identity-device-management
-ms.reviewer: laarrizz        
-
+ms.reviewer: laarrizz 
 ---
 
 # Settings for Microsoft Defender for Endpoint for Mac in Microsoft Intune
 
-View the *Antivirus* profile settings you can configure for Microsoft Defender for Endpoint for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
+View the *Microsoft Defender Antivirus* profile settings you can configure for Microsoft Defender for Endpoint for Mac in Microsoft Intune. For more information about these settings, see [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) in the Windows documentation.
 
 Learn about using [Endpoint security policies](../protect/endpoint-security-policy.md) in Intune.
 
-## Microsoft Defender for Endpoint
+## Cloud delivered protection preferences
 
-- **Real-time protection**  
-  Require Defender on macOS devices to use the real-time Monitoring functionality. Real-time monitoring locates and stops malware from installing or running on your device. You can turn off this setting for a short time before it turns back on automatically.
+For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
 
-  - **Not configured** (*default*) - The setting is restored to the system default
-  - **Enabled** - Enforce use of real-time monitoring. Device users can't change this setting.
-  - **Disabled** - The setting is disabled. Device users can't change this setting.
+- **Enable / disable cloud delivered protection**
+  - *Not configured* (*default*)
+  - *Enabled*
+  - *Disabled*
 
-- **Cloud-delivered protection**  
-  By default, Defender sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions. Protection Works best when *Automatic sample submission* is set on.
+- **Enable / disable automatic sample submissions**
+  - *Not configured* (*default*)
+  - *Enabled*
+  - *Disabled*
 
-  - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Enabled** - Cloud-delivered protection is turned on. Device users can't change this setting.
-  - **Disabled** - The setting is disabled. Device users can't change this setting.
+- **Diagnostic collection level**
+  - *Not configured* (*default*)
+  - *Optional*
+  - *Required*
 
-- **Automatic sample submission**  
-  Sends sample files to Microsoft to help protect device users and your organization from potential threats.
+- **Automatic security intelligence updates**
+  - *Not configured* (*default*)
+  - *Enabled*
+  - *Disabled*
 
-  - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Enabled** - Cloud-delivered protection is turned on.  Device users can't change this setting.
-  - **Disabled** - The setting is disabled. Device users can't change this setting.
+## Antivirus engine
 
-- **Diagnostic data collection**
+For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
 
-  Configure how diagnostic and usage data is shared with Microsoft.
+- **Enable real-time protection**  
+  - *Not configured* (*default*)
+  - *Enabled*
+  - *Disabled*
 
-  - **Not configured** (*default*) - The setting is restored to the system default.
-  - **Required**
-  - **Optional**
+- **Enable passive mode**  
+  - *Not configured* (*default*)
+  - *Enabled*
+  - *Disabled*
 
-- **Folders excluded from scan**  
-  Select **Add** and then specify folders to ignore during a scan.
+- **Scan history size**
+  - *Not configured* (*default*)
+  - *Configured* - When configured, specify a number of entries to keep in scan history.
 
-- **Files excluded from scan**  
-  Select **Add** and then specify files to ignore during a scan.
+- **Scan results retention**
+  - *Not configured* (*default*)
+  - *Configured* - When configured, specify the number of days that results are retained in the scan history on the device.
 
-- **File types excluded from scan**  
-  Select **Add** and then specify file extensions to ignore during a scan.
+- **Exclusions merge**
+  - *Not configured* (*default*)
+  - *Admin_only*
+  - *Merge*
 
-- **Processes excluded from scan**  
-  Select **Add** and then specify processes to ignore during a scan.
+- **Scan exclusions**
+  - *Configured* (*default*)
+  - *Not configured*
+
+- **Threat type settings**
+  - *Configured* (*default*)
+  - *Not configured*
+
+- **Threat type settings merge**
+  - *Not configured* (*default*)
+  - *Admin_only*
+  - *Merge*
+
+- **Allowed threats**
+  - *Not configured* (*default*)
+  - *Configured*
+
+- **Disallowed threat actions**
+  - *Not configured* (*default*)
+  - *Configured*
+
+- **Degree of parallelism for on-demand scans**
+  - *Configured* (*default*) (2)
+  - *Not configured*
+
+- **Enable file hash computation**
+  - *False* (*default*)
+  - *True*
+  - *Not configured*
+
+- **Run a scan after definitions are  updated**
+  - *Enabled* (*default*)
+  - *Disabled*
+  - *Not configured*
+
+- **Scanning inside archive files**
+  - *False* (*default*)
+  - *True*
+  - *Not configured*
+
+## Network protection
+
+- **Enforcement level**
+  - *Audit* (*default*)
+  - *Disabled*
+  - *Block*
+  - *Not configured*
+
+## Tamper protection
+
+- **Enforcement level**
+  - *Audit* (*default*)
+  - *Disabled*
+  - *Block*
+  - *Not configured*
+
+## User interface preferences
+
+For details about these settings, see the settings entry in [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) in the Microsoft Defender for Endpoint documentation.
+
+- **Control sign-in to consumer version**
+  - *Enabled* (*default*)
+  - *Disabled*
+  - *Not configured*
+
+- **Show / hide status menu icon**
+  - *Disabled* (*default*)
+  - *Enabled*
+  - *Not configured*
+
+- **User initiated feedback**
+  - *Enabled* (*default*)
+  - *Disabled*
+  - *Not configured*

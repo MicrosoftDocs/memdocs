@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 6 of 8 - Create and assign a user-driven Azure AD join Autopilot profile
-description: How to - Windows Autopilot user-driven Azure AD join - Step 6 of 8 - Create and assign a user-driven Azure AD join Autopilot profile.
+title: Windows Autopilot user-driven Microsoft Entra join - Step 6 of 8 - Create and assign a user-driven Microsoft Entra join Autopilot profile
+description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 6 of 8 - Create and assign a user-driven Microsoft Entra join Autopilot profile.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,11 +18,11 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile
+# User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Autopilot profile
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md)
+- Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
 - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
 - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
@@ -31,21 +31,23 @@ Autopilot user-driven Azure AD join steps:
 - Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Deploy the device](azure-ad-join-deploy-device.md)
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
 
-## Create and assign user-driven Azure AD join Autopilot profile
+<a name='create-and-assign-user-driven-azure-ad-join-autopilot-profile'></a>
+
+## Create and assign user-driven Microsoft Entra join Autopilot profile
 
 The Autopilot profile specifies how the device is configured during Windows Setup and what is shown during the out of box experience (OOBE).
 
 When an admin creates an Autopilot profile for the user-driven scenario, devices with this Autopilot profile are associated with the user enrolling the device. User credentials are required to enroll the device.
 
-The difference between an Autopilot user-driven Azure AD join and an Autopilot hybrid Azure AD join is that the user-driven Azure AD join scenario only joins Azure AD during Autopilot. The hybrid Azure AD join scenario joins both an on-premises domain and Azure AD during Autopilot.
+The difference between an Autopilot user-driven Microsoft Entra join and an Autopilot Microsoft Entra hybrid join is that the user-driven Microsoft Entra join scenario only joins Microsoft Entra ID during Autopilot. The Microsoft Entra hybrid join scenario joins both an on-premises domain and Microsoft Entra ID during Autopilot.
 
 > [!TIP]
 >
 > For Configuration Manager admins, the Autopilot profile is similar to some of the configuration that takes place during a task sequence via an `unattend.xml` file. The `unattend.xml` file is configured during the **Apply Windows Settings** and **Apply Network Settings** steps. Note however that Autopilot doesn't use `unattend.xml` files.
 
-To create a user-driven Azure AD join Autopilot profile, follow these steps:
+To create a user-driven Microsoft Entra join Autopilot profile, follow these steps:
 
 [!INCLUDE [Autopilot profiles before steps](../includes/autopilot-profile-steps-before.md)]
 
@@ -53,7 +55,7 @@ To create a user-driven Azure AD join Autopilot profile, follow these steps:
 
       - For **Deployment mode**, select **User-driven**.
 
-      - For **Join to Azure AD as**, select **Azure AD joined**.
+      - For **Join to Microsoft Entra ID as**, select **Microsoft Entra joined**.
 
       - For **Microsoft Software License Terms**, select **Hide** to skip the EULA page.
 
@@ -67,7 +69,7 @@ To create a user-driven Azure AD join Autopilot profile, follow these steps:
 
         > [!NOTE]
         >
-        > For the Windows Autopilot for pre-provisioned deployment Azure AD join scenario, see [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Azure AD join in Intune](../pre-provisioning/azure-ad-join-workflow.md)
+        > For the Windows Autopilot for pre-provisioned deployment Microsoft Entra join scenario, see [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](../pre-provisioning/azure-ad-join-workflow.md)
 
       - For **Language (Region)**, select **Operating system default** to use the default language for the operating system being configured. If another language is desired, select the desired language from the drop-down list.
 

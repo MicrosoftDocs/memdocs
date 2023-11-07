@@ -152,8 +152,6 @@ When a client can't contact the first management point, it tries each successive
 
 After a client establishes communication with a management point, it continues to use that same management point until:
 
-- 25 hours have passed.
-
 - The client is unable to communicate with the management point for five attempts over a period of 10 minutes.
 
 The client then randomly selects a new management point to use.

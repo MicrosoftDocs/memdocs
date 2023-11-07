@@ -1,13 +1,13 @@
 ---
 title: Upgrade Windows devices to a different version
 titleSuffix: Configuration Manager
-description: Use Configuration Manager to automatically upgrade Windows 10 devices to a different Windows edition.
-ms.date: 07/14/2020
+description: Use Configuration Manager to automatically upgrade Windows 11 and Windows 10 devices to a different Windows edition.
+ms.date: 09/15/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: sheetg09
-ms.author: sheetg
+author: PalikaSingh
+ms.author: palsi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -18,10 +18,14 @@ ms.reviewer: mstewart,aaroncz
 
 *Applies to: Configuration Manager (current branch)*
 
-The **Edition Upgrade Policy** lets you automatically upgrade Windows 10 devices to a different edition.
+The **Edition Upgrade Policy** lets you automatically upgrade Windows 11 and Windows 10 devices to a different edition.
 
 The following upgrade paths are supported:
 
+- From Windows 11 Pro to Windows 11 Enterprise
+- From Windows 11 Home to Windows 11 Education
+- From Windows 11 Pro N to Windows 11 Enterprise N
+- From Windows 11 Home N to Windows 11 Education N
 - From Windows 10 Pro to Windows 10 Enterprise
 - From Windows 10 Home to Windows 10 Education
 - From Windows 10 Mobile to Windows 10 Mobile Enterprise
@@ -32,7 +36,7 @@ The devices must run the Configuration Manager client software. Devices managed 
 
 Before you begin to upgrade devices to the latest version, review the following prerequisites:  
 
-- For desktop editions of Windows 10: A valid product key for the new version of Windows on all devices you target with the policy. This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide. <!--496871-->  
+- For desktop editions of Windows 11 and Windows 10: A valid product key for the new version of Windows on all devices you target with the policy. This product key can be a multiple activation key (MAK), or a generic volume licensing key (GVLK). A GVLK is also referred to as a key management service (KMS) client setup key. For more information, see [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client). For a list of KMS client setup keys, see [Appendix A](/windows-server/get-started/kmsclientkeys) of the Windows Server activation guide. <!--496871-->  
 
 - For Windows 10 Mobile: An XML license file from the Microsoft Volume Licensing Service Center (VLSC). This file contains the licensing information for the new version of Windows on all devices you target with the policy. Download the ISO file for **Windows 10 Mobile Enterprise**, which includes the licensing XML.<!-- SCCMDocs#2033 -->
 
@@ -40,7 +44,7 @@ Before you begin to upgrade devices to the latest version, review the following 
 
 ## Configure the policy  
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select the  **Windows 10 Edition Upgrade** node.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select the  **Windows Edition Upgrade** node.  
 
 2. On the **Home** tab of the ribbon, in the **Create** group, select **Create Edition Upgrade Policy**.  
 
@@ -52,11 +56,11 @@ Before you begin to upgrade devices to the latest version, review the following 
 
     - **Description** (optional) - Optionally, enter a description for the policy that helps you identify it in the Configuration Manager console  
 
-    - **SKU to upgrade device to** - From the drop-down list, select the target edition of Windows 10 desktop or Windows 10 Mobile  
+    - **SKU to upgrade device to** - From the drop-down list, select the target edition of Windows 11 and Windows 10 desktop or Windows 10 Mobile  
 
     - **License information** - Select one of the following options:  
 
-        - **Product Key** - Enter a valid product key for the target Windows 10 desktop edition  
+        - **Product Key** - Enter a valid product key for the target Windows 11 & 10 desktop edition  
 
             > [!NOTE]  
             > After you create a policy containing a product key, you can't edit the product key later. Configuration Manager obscures the key for security reasons. To change the product key, re-enter the entire key.  
@@ -67,9 +71,9 @@ Before you begin to upgrade devices to the latest version, review the following 
 
 ## Deploy the policy  
 
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select the  **Windows 10 Edition Upgrade** node.  
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select the  **Windows Edition Upgrade** node.  
 
-2. Select the Windows 10 edition upgrade policy you want to deploy. On the **Home** tab of the ribbon, in the **Deployment** group, select **Deploy**.  
+2. Select the Windows edition upgrade policy you want to deploy. On the **Home** tab of the ribbon, in the **Deployment** group, select **Deploy**.  
 
 3. Choose the device collection to which you want to deploy the policy.
 

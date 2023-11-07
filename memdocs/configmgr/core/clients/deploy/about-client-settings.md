@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/20/2023
+ms.date: 10/31/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -501,6 +501,13 @@ Then, configure the following additional settings as needed:
 
 - **IPv6 prefixes if required for DirectAccess or other intervening network devices. Use a comma to specify multiple entries**: Enter the necessary IPv6 prefixes for wake-up proxy to function on your network.
 
+### Reduce network packets for Modern Standby devices 
+
+Windows 10 and later operating systems support a low power mode known as **Modern Standby**, and includes wake on lan enabled by default. Some Modern Standby-capable devices may constantly send DHCP and DNS registration packets when in low power state and the legacy method of enabling wake on lan is used by Configuration Manager.
+
+  Choose **No** to continue to use the legacy wake on lan settings (may cause DHCP/DNS registration packets on some Modern Standby devices)
+  
+  Choose **Yes** to allow Configuration Manager to detect if a device is Modern Standby capable and default to using Modern Standby wake on lan implementation.
 
 
 ## Remote tools  
@@ -870,6 +877,13 @@ Set this option to **Yes** to allow clients to use delta content files. This set
 - When this option is set, delta download is used for all Windows update installation files, not just express installation files.
 
   When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587-->
+
+> [!NOTE]
+>For Operating System that can support delta download (Win 10 Version 10.0.16299 or up), delta download endpoint will always get turned on regardless of the Client Agent Settings, and the port number will be honored even if Delta downloads not enabled.
+> 
+>If Delta Download disabled, only UUP update will do delta download, all other updates, regardless of if express or not, will all do full file download.
+> 
+>If Delta Download enabled, all updates will go with delta download code path regardless of if express or not, unless the only DP available is cloud DP.
 
 ### Port that clients use to receive requests for delta content
 

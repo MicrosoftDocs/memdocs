@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 04/11/2022
+ms.date: 09/18/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -95,7 +95,7 @@ There's also a new [management insight](../../servers/manage/management-insights
 
 ### Managing system restarts for .NET updates
 
-Whether you update .NET before updating the site, or setup updates it, .NET may require a restart to complete its installation. After .NET Framework is installed, it may require other updates. These updates may also require the server to restart.
+Whether you update .NET before updating the site, or set up updates it, .NET may require a restart to complete its installation. After .NET Framework is installed, it may require other updates. These updates may also require the server to restart.
 
 If you need to manage the device restarts before you update the site, use the following recommended process:
 
@@ -135,9 +135,18 @@ For more information on all prerequisites including permissions, see [Prerequisi
 
 - The CAS and primary sites require both the x86 and x64 versions of the applicable redistributable file.
 
+### SQL ODBC driver for the site server
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
+
 ### SQL Server Native Client for the site server
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
+
+> [!IMPORTANT]
+> Do not uninstall SQL server native client, we still need for certain roles.
 
 ## Secondary site server
 
@@ -162,6 +171,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ### Default site system roles for the secondary site server
 
 By default, a secondary site installs a **management point** and a **distribution point**. Make sure that the secondary site server meets the prerequisites for these site system roles.
+
+### SQL ODBC driver for the secondary site server
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client for the secondary site server
 
@@ -203,6 +218,12 @@ Web Server (IIS): Every provider attempts to install the [administration service
 
 If you're using the [administration service](../../../develop/adminservice/overview.md), the server that hosts the SMS Provider role requires .NET 4.5 or later. <!-- SCCMDocs issue #1203 --> Starting in version 2107, this role requires .NET version 4.6.2, and version 4.8 is recommended. For more information, [.NET version requirements](#net-version-requirements).
 
+### SQL ODBC driver for the SMS Provider
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
+
 ### SQL Server Native Client for the SMS Provider
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
@@ -215,6 +236,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ### .NET Framework for the AISP
 
 Install a supported version of the .NET Framework. For more information, [.NET version requirements](#net-version-requirements).
+
+### SQL ODBC driver for the AISP
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client for the AISP
 
@@ -248,6 +275,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ### .NET Framework for the CRP
 
 Install a supported version of the .NET Framework. For more information, [.NET version requirements](#net-version-requirements).
+
+### SQL ODBC driver for the CRP
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client for the CRP
 
@@ -334,6 +367,12 @@ For more information, see [Install and configure distribution points](../../serv
 
 - Windows Defender features (Windows Server 2016 or later)
 
+### SQL ODBC driver for the endpoint protection point
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
+
 ### SQL Server Native Client for the endpoint protection point
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
@@ -384,6 +423,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 - The computer that hosts this site system role must have a minimum of 5% of the computer's available memory free to enable the site system role to process requests.
 
 - When this site system role is collocated with another site system role that has this same requirement, this memory requirement for the computer doesn't increase, but remains at a minimum of 5%.
+
+### SQL ODBC driver 
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client
 
@@ -490,6 +535,12 @@ To make sure that clients can successfully communicate with a management point, 
 
 Install a supported version of the .NET Framework. For more information, [.NET version requirements](#net-version-requirements).
 
+### SQL ODBC driver for the MP
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
+
 ### SQL Server Native Client for the MP
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
@@ -508,6 +559,12 @@ Install a supported version of the .NET Framework. For more information, [.NET v
 
 - The instance that you use can be shared with System Center products. The System Center products can't have restrictions for sharing the instance of SQL Server.
 
+### SQL ODBC driver for the RSP
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
+
 ### SQL Server Native Client for the RSP
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
@@ -523,6 +580,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ### Visual C++ Redistributable for the SCP
 
 - Starting in version 2107, Configuration Manager installs the Microsoft Visual C++ 2015-2019 redistributable package (14.28.29914.0) on the service connection point. In version 2103 and earlier, it installs the Visual C++ 2013 version (12.0.40660.0).<!--5170229-->
+
+### SQL ODBC driver for the SCP
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client for the SCP
 
@@ -548,6 +611,12 @@ Install the WSUS server role. For more information, see [Plan for software updat
 
 > [!NOTE]
 > When you use a software update point on a remote site system, install the WSUS Administration Console on the site server.
+
+### SQL ODBC driver for the SUP
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client for the SUP
 
@@ -589,6 +658,12 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 - Enable the Windows feature for .NET Framework 3.5.
 
 - Install a supported version of the .NET Framework. For more information, [.NET version requirements](#net-version-requirements).
+
+### SQL ODBC driver for the SMP
+
+Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date.
+
+For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
 ### SQL Server Native Client for the SMP
 

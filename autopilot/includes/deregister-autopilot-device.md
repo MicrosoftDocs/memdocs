@@ -73,11 +73,11 @@ Once the device has been deregistered from Intune, it can then be deregistered f
 
 > [!IMPORTANT]
 >
-> - For Azure AD join devices, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after these steps are followed.
+> - For Microsoft Entra join devices, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Microsoft Entra ID. Manually deleting the device from Microsoft Entra ID may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Microsoft Entra ID after these steps are followed.
 >
-> - For hybrid Azure AD join devices, delete the computer object from the on-premises Active Directory Domain Services (AD DS) environment. Deleting the computer object from the on-premises AD DS ensures that the computer object isn't resynced back to Azure AD. After the computer object is deleted from the on-premises AD DS environment, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Azure AD. Manually deleting the device from Azure AD may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Azure AD after these steps are followed.
+> - For Microsoft Entra hybrid join devices, delete the computer object from the on-premises Active Directory Domain Services (AD DS) environment. Deleting the computer object from the on-premises AD DS ensures that the computer object isn't resynced back to Microsoft Entra ID. After the computer object is deleted from the on-premises AD DS environment, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Microsoft Entra ID. Manually deleting the device from Microsoft Entra ID may cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Microsoft Entra ID after these steps are followed.
 
-The above steps deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Azure AD. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Azure AD, it's best to complete all the steps. If a device gets into an unrecoverable state, you can contact the appropriate [Microsoft support alias](../autopilot-support.md) for assistance.
+The above steps deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Microsoft Entra ID. It may appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Microsoft Entra ID, it's best to complete all the steps. If a device gets into an unrecoverable state, you can contact the appropriate [Microsoft support alias](../autopilot-support.md) for assistance.
 
 ### Deregister from Autopilot using Microsoft 365 admin center
 
@@ -100,7 +100,7 @@ To deregister an Autopilot device from the Microsoft Partner Center (MPC), a CSP
 Partners deregistering a device from Autopilot in Microsoft Partner Center (MPC) only deregisters the device from Autopilot. It doesn't perform any of the following actions:
 
 - Unenroll the device from the MDM (Intune)
-- Disjoin the device from Azure AD
+- Disjoin the device from Microsoft Entra ID
 
 For the reasons listed above, the OEM or CSP should work with the customer IT administrators to have the device fully removed by following the steps in the [Deregister a device](#deregister-a-device) section.
 

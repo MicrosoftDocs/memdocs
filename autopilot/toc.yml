@@ -58,7 +58,7 @@ items:
       href: enrollment-autopilot.md
     - name: Configure deployment profiles
       href: profiles.md
-    - name: Deploy hybrid Azure AD-joined devices
+    - name: Deploy Microsoft Entra hybrid joined devices
       href: windows-autopilot-hybrid.md
     - name: BitLocker encryption
       href: bitlocker.md
@@ -73,7 +73,7 @@ items:
         href: troubleshoot-device-enrollment.md
       - name: Troubleshoot OOBE issues
         href: troubleshoot-oobe.md
-      - name: Troubleshoot Azure AD-join issues
+      - name: Troubleshoot Microsoft Entra join issues
         href: troubleshoot-aad-join.md
       - name: Policy conflicts
         href: policy-conflicts.md
@@ -88,12 +88,12 @@ items:
       href: tutorial/autopilot-scenarios.md
     - name: Windows Autopilot user-driven mode
       items:
-      - name: User-driven Azure AD join
+      - name: User-driven Microsoft Entra join
         href: tutorial/user-driven/azure-ad-join-workflow.md
         items:
           - name: Step 1 - Set up Windows automatic Intune enrollment
             href: tutorial/user-driven/azure-ad-join-automatic-enrollment.md
-          - name: Step 2 - Allow users to join devices to Azure AD
+          - name: Step 2 - Allow users to join devices to Microsoft Entra ID
             href: tutorial/user-driven/azure-ad-join-allow-users-to-join.md
           - name: Step 3 - Register devices as Autopilot devices
             href: tutorial/user-driven/azure-ad-join-register-device.md
@@ -107,7 +107,7 @@ items:
             href: tutorial/user-driven/azure-ad-join-assign-device-to-user.md
           - name: Step 8 - Deploy the device
             href: tutorial/user-driven/azure-ad-join-deploy-device.md
-      - name: User-driven hybrid Azure AD join
+      - name: User-driven Microsoft Entra hybrid join
         href: tutorial/user-driven/hybrid-azure-ad-join-workflow.md
         items:
           - name: Step 1 - Set up Windows automatic Intune enrollment
@@ -132,12 +132,12 @@ items:
             href: tutorial/user-driven/hybrid-azure-ad-join-deploy-device.md
     - name: Windows Autopilot for pre-provisioned deployment
       items:
-      - name: Pre-provisioned Azure AD join
+      - name: Pre-provisioned Microsoft Entra join
         href: tutorial/pre-provisioning/azure-ad-join-workflow.md
         items:
           - name: Step 1 - Set up Windows automatic Intune enrollment
             href: tutorial/pre-provisioning/azure-ad-join-automatic-enrollment.md
-          - name: Step 2 - Allow users to join devices to Azure AD
+          - name: Step 2 - Allow users to join devices to Microsoft Entra ID
             href: tutorial/pre-provisioning/azure-ad-join-allow-users-to-join.md
           - name: Step 3 - Register devices as Autopilot devices
             href: tutorial/pre-provisioning/azure-ad-join-register-device.md
@@ -153,7 +153,7 @@ items:
             href: tutorial/pre-provisioning/azure-ad-join-technician-flow.md
           - name: Step 9 - User flow
             href: tutorial/pre-provisioning/azure-ad-join-user-flow.md
-      - name: Pre-provisioned hybrid Azure AD join
+      - name: Pre-provisioned Microsoft Entra hybrid join
         href: tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md
         items:
           - name: Step 1 - Set up Windows automatic Intune enrollment

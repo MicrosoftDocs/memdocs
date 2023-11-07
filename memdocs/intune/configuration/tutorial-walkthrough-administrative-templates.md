@@ -71,7 +71,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- A Microsoft 365 E3 or E5 subscription, which includes Intune and Azure Active Directory (AD) premium. If you don't have an E3 or E5 subscription, [try it for free](/microsoft-365/commerce/try-or-buy-microsoft-365).
+- A Microsoft 365 E3 or E5 subscription, which includes Intune and Microsoft Entra ID P1 or P2. If you don't have an E3 or E5 subscription, [try it for free](/microsoft-365/commerce/try-or-buy-microsoft-365).
 
   For more information on what you get with the different Microsoft 365 licenses, see [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -120,7 +120,7 @@ This feature applies to:
     **User**: Enter the administrator account of your Microsoft 365 tenant subscription.  
     **Password**: Enter its password.
 
-This admin center is focused on device management, and includes Azure services, such as Azure AD and Intune. You might not see the **Azure Active Directory** and **Intune** branding, but you're using them.
+This admin center is focused on device management, and includes Azure services, such as Microsoft Entra ID and Intune. You might not see the **Microsoft Entra ID** and **Intune** branding, but you're using them.
 
 You can also open the Intune admin center from the [Microsoft 365 admin center](https://admin.microsoft.com):
 
@@ -198,12 +198,12 @@ In these next steps, you create security groups, and add users to these groups. 
 
 ### Talking points
 
-- Dynamic groups are a feature in Azure AD Premium. If you don't have Azure AD Premium, then you're licensed to only create assigned groups. For more information on dynamic groups, see:
+- Dynamic groups are a feature in Microsoft Entra ID P1 or P2. If you don't have Microsoft Entra ID P1 or P2, then you're licensed to only create assigned groups. For more information on dynamic groups, see:
 
-  - [Dynamic Group Membership in Azure Active Directory (Part 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
-  - [Dynamic Group Membership in Azure Active Directory (Part 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
+  - [Dynamic Group Membership in Microsoft Entra ID (Part 1)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-1)
+  - [Dynamic Group Membership in Microsoft Entra ID (Part 2)](/archive/blogs/pauljones/dynamic-group-membership-in-azure-active-directory-part-2)
 
-- Azure AD Premium includes other services that are commonly used when managing apps and devices, including [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](/azure/active-directory/conditional-access/overview).
+- Microsoft Entra ID P1 or P2 includes other services that are commonly used when managing apps and devices, including [multi-factor authentication (MFA)](/azure/active-directory/authentication/concept-mfa-howitworks) and [conditional access](/azure/active-directory/conditional-access/overview).
 
 - Many administrators ask when to use user groups and when to use device groups. For some guidance, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
 
@@ -219,14 +219,11 @@ In these next steps, you create security groups, and add users to these groups. 
   - West coast IT administrators
   - East coast IT administrators
 
-The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure AD in the Azure portal, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). You can create and manage groups in all these areas for your tenant subscription. **If your goal is device management, use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)**.
+The users and groups created are also seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Microsoft Entra ID in the Azure portal, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). You can create and manage groups in all these areas for your tenant subscription. **If your goal is device management, use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)**.
 
 ### Review group membership
 
-1. In the Intune admin center, select **Users** > select the name of any existing user.
-
-    :::image type="content" source="./media/tutorial-walkthrough-administrative-templates/select-users-endpoint-manager-admin-center.png" alt-text="Screenshot that shows how to select Users in Microsoft Intune and the Intune admin center.":::
-
+1. In the Intune admin center, select **Users** > **All users** > select the name of any existing user.
 2. Review some of the information you can add or change. For example, look at the properties you can configure, such as Job Title, Department, City, Office location, and more. You can use these properties in your dynamic queries when creating dynamic groups.
 3. Select **Groups** to see the membership of this user. You can also remove the user from a group.
 4. Select some of the other options to see more information, and what you can do. For example, look at the assigned license, the user's devices, and more.
