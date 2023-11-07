@@ -95,7 +95,7 @@ Use this procedure to sign in to Desktop Analytics and configure it in your subs
 
         If you don't select this option, Desktop Analytics still adds users as members of the security group. A **Global Admin** needs to manually assign the **Desktop Analytics Administrator** role for the users.
 
-        For more information about assigning administrator role permissions in Microsoft Entra ID and the permissions assigned to **Desktop Analytics Administrators**, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference#desktop-analytics-administrator).
+        For more information about assigning administrator role permissions in Microsoft Entra ID and the permissions assigned to **Desktop Analytics Administrators**, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference#desktop-analytics-administrator).
 
     - Desktop Analytics preconfigures the **Workspace Owners** security group in Microsoft Entra ID to create and manage workspaces and deployment plans.
 
