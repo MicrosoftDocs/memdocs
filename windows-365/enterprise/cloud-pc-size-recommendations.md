@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 10/18/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -46,6 +46,7 @@ This table shows examples of the different sizes available for a Cloud PC:
 | 2vCPU/8GB/256GB<br>2vCPU/8GB/128GB | Bring-your-own-PC, work from home, market researchers, government, consultants. | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, OneDrive, Adobe Reader, Microsoft Edge, line-of-business apps, Defender support. |
 | 4vCPU/16GB/512GB<br>4vCPU/16GB/256GB<br>4vCPU/16GB/128GB | Finance, government, consultants, healthcare services, bring-your-own-PC, work from home. | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, Power BI, Dynamics 365, OneDrive, Adobe Reader, Microsoft Edge, line-of-business app, Defender support. |
 | 8vCPU/32GB/512GB<br>8vCPU/32GB/256GB<br>8vCPU/32GB/128GB | Software developers, engineers, content creators, design and engineering workstations. | Microsoft 365 Apps, Microsoft Teams, Outlook, Access, OneDrive, Adobe Reader, Microsoft Edge, Power BI, Visual Studio Code, virtualization-based workloads: Hyper-V, Windows Subsystem for Linux (WSL), line-of-business apps, and Defender support. |
+| 16vCPU/64GB/512GB<br>16vCPU/64GB/1TB | Software development, engineering, data analysis and visualization, financial services and wealth management. | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, Adobe Reader, Microsoft Edge, Power BI, Tableau, Visual Studio Code, Blackrock Aladdin, Bloomberg, Eclipse, line-of-business apps, Defender support. |
 
 The recommended gallery image is available in the Provisioning Policy marketplace. For more information, see [Device images overview](device-images.md).
 

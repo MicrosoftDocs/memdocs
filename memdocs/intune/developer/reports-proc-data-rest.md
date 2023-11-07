@@ -31,7 +31,7 @@ ms.collection:
 
 # Get data from the Intune Data Warehouse API with a REST client
 
-You can access the Intune Data Warehouse data model through RESTful endpoints. To gain access to your data, your client must authorize with Microsoft Azure Active Directory (Azure AD) using OAuth 2.0. To enable access, first set up a native app in Azure and grant permissions to the Microsoft Intune API. Your local client gets authorization, and then the client can communicate with the Data Warehouse endpoints through the native app.
+You can access the Intune Data Warehouse data model through RESTful endpoints. To gain access to your data, your client must authorize with Microsoft Entra ID using OAuth 2.0. To enable access, first set up a native app in Azure and grant permissions to the Microsoft Intune API. Your local client gets authorization, and then the client can communicate with the Data Warehouse endpoints through the native app.
 
 The steps to set up a client to get data from the  Data Warehouse API require you to:
 
@@ -46,14 +46,14 @@ Use the following steps to learn how to authorize and access the API with a REST
 Create a native app in Azure. This native app is the client app. The client
 running on your local machine references the Intune Data Warehouse API when the local client requests credentials.
 
-1. Sign in to the [Azure Active Directory admin center](https://aad.portal.azure.com/).
-2. Choose **Azure Active Directory** > **App Registrations** to open the **App registrations** pane.
+1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/).
+2. Choose **Microsoft Entra ID** > **App Registrations** to open the **App registrations** pane.
 3. Select **New app registration**.
 4. Type the app details.
     1. Type a friendly name, such as 'Intune Data Warehouse Client' for the **Name**.
     2. Select **Accounts in this organizational directory only (Microsoft only - Single tenant)** for the **Supported account types**.
     3. Type a URL for the **Redirect URI**. The Redirect URI will depend on the specific scenario, however if you plan on using Postman, type
-     `https://www.getpostman.com/oauth2/callback`. You will use the callback for client authentication step when authenticating to Azure AD.
+     `https://www.getpostman.com/oauth2/callback`. You will use the callback for client authentication step when authenticating to Microsoft Entra ID.
 5. Select **Register**.
 6. Note the **Application (client) ID** of this app. You will use the ID in the next section.
 
@@ -61,19 +61,19 @@ running on your local machine references the Intune Data Warehouse API when the 
 
 You now have an app defined in Azure. Grant access from the native app to the Microsoft Intune API.
 
-1. Sign in to the [Azure Active Directory admin center](https://aad.portal.azure.com/).
-2. Choose **Azure Active Directory** > **App Registrations** to open the **App registrations** pane.
+1. Sign in to the [Microsoft Entra admin center](https://aad.portal.azure.com/).
+2. Choose **Microsoft Entra ID** > **App Registrations** to open the **App registrations** pane.
 3. Select the app that you need to grant access. You named the app something such as **Intune Data Warehouse Client**.
 4. Select **API permissions** > **Add a permission**.
 5. Find and select the Intune API. It is named **Microsoft Intune API**.
 6. Select **Delegated Permissions** box and click the **Get data warehouse information from Microsoft Intune** box.
 7. Click **Add permissions**.
-8. Optionally, Select **Grant admin consent for Microsoft** in the Configured permissions pane, then select **Yes**. This will grant access to all accounts in the current directory. This will prevent the consent dialog box from appearing for every user in the tenant. For more information, see [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications).
+8. Optionally, Select **Grant admin consent for Microsoft** in the Configured permissions pane, then select **Yes**. This will grant access to all accounts in the current directory. This will prevent the consent dialog box from appearing for every user in the tenant. For more information, see [Integrating applications with Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications).
 9. Select **Certificates & secrets** > **+ New client secret** and generate a new secret. Make sure to copy it some place safe because you won't be able to access it again.
 
 ## Get data from the Microsoft Intune API with Postman
 
-You can work with the Intune Data Warehouse API with a generic REST client such as Postman. Postman can  provide insight into the features of the API, the underlying OData data model, and troubleshoot your connection to the API resources. In this section, you can find information about generating an Auth2.0 token for your local client. The client will need the token to authenticate with Azure AD and access the API resources.
+You can work with the Intune Data Warehouse API with a generic REST client such as Postman. Postman can  provide insight into the features of the API, the underlying OData data model, and troubleshoot your connection to the API resources. In this section, you can find information about generating an Auth2.0 token for your local client. The client will need the token to authenticate with Microsoft Entra ID and access the API resources.
 
 ### Information you will need to make the call
 
@@ -108,7 +108,7 @@ For more information, see [Intune Data Warehouse API endpoint](reports-api-url.m
 
 ### Make the REST call
 
-To get a new access token for Postman, you must add the Azure AD authorization URL, add your Client ID, and Client Secret. Postman will load the authorization page where you will type your credentials.
+To get a new access token for Postman, you must add the Microsoft Entra authorization URL, add your Client ID, and Client Secret. Postman will load the authorization page where you will type your credentials.
 
 Before you make the call, verify that you have already added the Callback URL to your app in Azure. The Callback URL is `https://www.getpostman.com/oauth2/callback`.
 
@@ -155,7 +155,7 @@ Before you make the call, verify that you have already added the Callback URL to
 
 ## Create a REST client (C#) to get data from the Intune Data Warehouse
 
-The following sample contains a simple REST client. The code uses the **httpClient** class from the .NET library. Once the client gains credentials to Azure AD, the client constructs a GET REST call to retrieve the dates entity from the Data Warehouse API.
+The following sample contains a simple REST client. The code uses the **httpClient** class from the .NET library. Once the client gains credentials to Microsoft Entra ID, the client constructs a GET REST call to retrieve the dates entity from the Data Warehouse API.
 
 > [!NOTE]
 > You can access the following code [sample on GitHub](https://github.com/Microsoft/Intune-Data-Warehouse/blob/master/Samples/CSharp/Program.cs). Refer to the GitHub repo for the latest changes and updates to the sample.

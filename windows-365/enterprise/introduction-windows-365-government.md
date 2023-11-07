@@ -56,12 +56,12 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Citrix HDX Plus for Windows 365
 - Multimedia redirection for improved video playback
 - Microsoft Dev Box
-- Convert Windows 365 licenses to higher level licenses
 - Windows 365 Frontline
 - Admin feedback
 - System alerts and email notifications
 - Windows 365 Switch
 - Windows 365 Boot
+- Audit logs support in Azure Log Analytics
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven hybrid Azure AD join - Step 2 of 10 - Install the Intune Connector
-description: How to - Windows Autopilot user-driven hybrid Azure AD join - Step 2 of 10 - Install the Intune Connector(ESP).
+title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 2 of 10 - Install the Intune Connector
+description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 2 of 10 - Install the Intune Connector(ESP).
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -21,9 +21,9 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/windows-server-release-info" target="_blank">Windows Server 2016</a>
 ---
 
-# User-driven hybrid Azure AD join: Install the Intune Connector
+# User-driven Microsoft Entra hybrid join: Install the Intune Connector
 
-Autopilot user-driven hybrid Azure AD join steps:
+Autopilot user-driven Microsoft Entra hybrid join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](hybrid-azure-ad-join-automatic-enrollment.md)
 > [!div class="checklist"]
 > - **Step 2: Install the Intune Connector**
@@ -31,16 +31,16 @@ Autopilot user-driven hybrid Azure AD join steps:
 - Step 4: [Register devices as Autopilot devices](hybrid-azure-ad-join-register-device.md)
 - Step 5: [Create a device group](hybrid-azure-ad-join-device-group.md)
 - Step 6: [Configure and assign Autopilot Enrollment Status Page (ESP)](hybrid-azure-ad-join-esp.md)
-- Step 7: [Create and assign hybrid Azure AD join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
+- Step 7: [Create and assign Microsoft Entra hybrid join Autopilot profile](hybrid-azure-ad-join-autopilot-profile.md)
 - Step 8: [Configure and assign domain join profile](hybrid-azure-ad-join-domain-join-profile.md)
 - Step 9: [Assign Autopilot device to a user (optional)](hybrid-azure-ad-join-assign-device-to-user.md)
 - Step 10: [Deploy the device](hybrid-azure-ad-join-deploy-device.md)
 
-For an overview of the Windows Autopilot user-driven hybrid Azure AD join workflow, see [Windows Autopilot user-driven hybrid Azure AD join overview](hybrid-azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join workflow, see [Windows Autopilot user-driven Microsoft Entra hybrid join overview](hybrid-azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
-> If you have already set up the Intune Connector as part of the [Windows Autopilot for pre-provisioned deployment hybrid Azure AD join](../pre-provisioning/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
+> If you have already set up the Intune Connector as part of the [Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join](../pre-provisioning/hybrid-azure-ad-join-workflow.md) scenario, you can skip this step and move on to [Step 3: Increase the computer account limit in the Organizational Unit (OU)](hybrid-azure-ad-join-computer-account-limit.md).
 
 ## Install the Intune Connector
 
