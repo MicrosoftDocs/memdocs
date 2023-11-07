@@ -92,7 +92,7 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
     2. Browse to **Identity** > **Devices** > **Overview** > **Device settings**.
     3. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
 
-    For more information, see [Windows Local Administrator Password Solution in Microsoft Entra ID](entra/identity/devices/howto-manage-local-admin-passwords) in the Microsoft Entra documentation.
+    For more information, see [Windows Local Administrator Password Solution in Microsoft Entra ID](/entra/identity/devices/howto-manage-local-admin-passwords) in the Microsoft Entra documentation.
 
 - **On-premises** – On-premises supports back up to Windows Server Active Directory (on-premises Active Directory).
 
