@@ -77,8 +77,14 @@ Users are required to update to v5.2311.1 of the iOS Company Portal. If you have
 
 ### Device security
 
-#### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->  
+#### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 25021846   -->  
+We've released a new version of the Intune security baseline for **Microsoft 365 Apps for Enterprise**, version [**2306**](../protect/security-baselines.md#available-security-baselines.
 
+The Microsoft 365 Office Apps baseline can help you rapidly deploy configurations to your Office Apps that meet the security recommendations of the Office and security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations. You can modify the default baseline to meet the requirements of your organization.
+
+We’ve also updated our [reference article](../protect/security-baseline-v2-office-settings.md&pivots=office-v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
+
+#### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->  
 The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
 
 With this change, the default behavior for security settings management includes all the behavior added for the opt-in preview – without having to enable support for preview features in Microsoft Defender for Endpoint. This includes the general availability and support for the following endpoint security profiles for Linux and macOS:
@@ -102,8 +108,7 @@ For more information, see [Microsoft Defender for Endpoint Security settings man
 
 ### Device security
 
-#### Strict Tunnel Mode in Microsoft Edge available for Microsoft Tunnel for MAM on Android and iOS/iPadOS devices<!--24045412-->
-
+#### Strict Tunnel Mode in Microsoft Edge available for Microsoft Tunnel for MAM on Android and iOS/iPadOS devices<!--24045412-->  
 In Intune, you can use the Microsoft Tunnel for mobile application management (MAM) on Android and iOS/iPadOS devices. With the MAM tunnel, unmanaged devices (devices not enrolled in Intune) can access on-premises apps and resources.
 
 There's a new **Strict Tunnel Mode** feature you can configure for Microsoft Edge. When users sign into Microsoft Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. When the VPN reconnects, internet browsing is available again.
