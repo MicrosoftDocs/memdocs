@@ -62,12 +62,19 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
   * The input app must have entitlements set before being processed by the Intune App Wrapping Tool. [Entitlements](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/AboutEntitlements.html) give the app additional permissions and capabilities beyond those typically granted. See [Setting app entitlements](#setting-app-entitlements) for instructions.
 
-## Register your app with Azure AD
+<a name='register-your-app-with-azure-ad'></a>
 
-1.	Register your apps with Azure AD. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
+* Make sure valid signing certificates exist in your system keychain. If you have app code-signing issues, use the following steps to resolve:
+  * Reset trust settings for all related certificates
+  * Install intermediate certificates in the system keychain as well as login keychain
+  * Uninstall and reinstall all related certificates
+
+## Register your app with Microsoft Entra ID
+
+1.	Register your apps with Microsoft Entra ID. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
 2.	Add the custom redirect URL to your app settings. For more information, see [Configuring MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal). 
-3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune app protection service (optional)](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional). 
-4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Azure AD application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/app-wrapper-prepare-ios.md#command-line-parameters).
+3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune Mobile App Management service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service). 
+4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Microsoft Entra application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/app-wrapper-prepare-ios.md#command-line-parameters).
 
    > [!NOTE]
    > The parameters `-ac` and `-ar` are required parameters. Each app will need a unique set of these parameters. `-aa` is only required for single tenant applications.
@@ -236,7 +243,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-ac**|`<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the GUID in the Client ID field from your app's listing in the App Registration blade. |
 |**-ar**|`<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
 |**-aa**|(Optional when MFA is not used) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
-|**-v**| (Optional) Outputs verbose messages to the console. It is recommended to use this flag to debug any errors. |
+|**-v**| (Optional) Outputs verbose messages to the console. It's recommended to use this flag to debug any errors. |
 |**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |
 |**-x**| (Optional) `<An array of paths to extension provisioning profiles>`. Use this if your app needs extension provisioning profiles.|
@@ -413,7 +420,7 @@ If the App Wrapping Tool for iOS shows an entitlement error, try the following t
 
 To review the existing entitlements of a signed app and provisioning profile:
 
-1. Find the .ipa file and change its the extension to .zip.
+1. Find the .ipa file and change its extension to .zip.
 
 2. Expand the .zip file. This will produce a Payload folder containing your .app bundle.
 

@@ -42,9 +42,9 @@ Devices intended for dedicated use can be enrolled in Microsoft Intune in two di
 
 * As a standard Android Enterprise dedicated device. These devices are enrolled into Intune without a user account and aren't associated with a user. These devices aren't intended for personal apps, or apps such as Outlook or Gmail that require user-specific account data.
 
-* As a standard Android Enterprise dedicated device that's automatically set up with Microsoft Authenticator and configured for [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment
+* As a standard Android Enterprise dedicated device that's automatically set up with Microsoft Authenticator and configured for [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment
 
-  These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). When the Company Portal app is deployed to devices with this enrollment mode, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
+  These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). When the Company Portal app is deployed to devices with this enrollment mode, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
 
 This article describes how to set up and configure Microsoft Intune to enroll dedicated devices. For more information about Android Enterprise management solutions, see [Get started with Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012)(opens Android Enterprise Help Center). 
 
@@ -79,7 +79,7 @@ You must create an enrollment profile so that you can enroll your dedicated devi
     - **Token expiration date**: The date when the token expires. Intune enforces a maximum of 65 years.
     - **Token type**: Choose the type of token you want to use to enroll dedicated devices.
         - **Corporate-owned dedicated device (default)**: This token enrolls devices as a standard Android Enterprise dedicated device. These devices require no user credentials at any point. This is the default token type that dedicated devices will enroll with unless updated by Admin at time of token creation.
-        - **Corporate-owned dedicated device with Azure AD shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Azure AD Shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Azure AD Microsoft Authentication Library and global sign-in/sign-out calls.
+        - **Corporate-owned dedicated device with Microsoft Entra ID shared mode**: This token enrolls devices as a standard Android Enterprise dedicated device and, during enrollment, deploys Microsoft's Authenticator app configured into Microsoft Entra shared device mode. With this option, users can achieve single sign-in and single sign-out across apps on the device that are integrated with the Microsoft Entra Microsoft Authentication Library and global sign-in/sign-out calls.
     - **Token expiration date**: Enter the date you want the token to expire, up to 65 years in the future. The token expires on the selected date at 12:59:59 PM in the time zone it was created. Acceptable date format: `MM/DD/YYYY` or `YYYY-MM-DD`  
 3. Choose **Create** to save the profile.  
 
@@ -112,7 +112,7 @@ When applied, these actions don't have any effect on devices that are already en
 
 ### Create a device group
 
-You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Azure AD device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
+You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Microsoft Entra device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
@@ -125,7 +125,7 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
     - **Add devices where**: enrollmentProfileName
     - In the middle box, choose **Equals**.
     - In the last field, enter the enrollment profile name that you created earlier.
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 5. Choose **Add query** > **Create**.
 
 ## Enroll the dedicated devices
@@ -134,7 +134,7 @@ You can now [enroll your dedicated devices](android-dedicated-devices-fully-mana
 
 > [!NOTE]
 > The **Microsoft Intune** app will be automatically installed during enrollment of a dedicated device.  This app is required for enrollment and cannot be uninstalled.
-> The **Microsoft Authenticator** app will be automatically installed during enrollment of a dedicated device when using the token type **Corporate-owned dedicated device with Azure AD shared mode**. This app is required for this enrollment method and cannot be uninstalled.
+> The **Microsoft Authenticator** app will be automatically installed during enrollment of a dedicated device when using the token type **Corporate-owned dedicated device with Microsoft Entra ID shared mode**. This app is required for this enrollment method and cannot be uninstalled.
 
 ## Managing apps on Android Enterprise dedicated devices
 

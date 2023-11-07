@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/31/2023
+ms.date: 11/03/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: 
@@ -33,6 +33,8 @@ ms.collection:
 # Endpoint management at Microsoft
 
 This article provides an overview of endpoint management solutions at Microsoft.
+
+:::image type="content" source="./media/endpoint-management-microsoft.png" alt-text="Endpoint management for Microsoft includes Microsoft Intune, Windows Autopilot and Endpoint analytics. It also integrates with Microsoft Entra ID, on-premises Configuration Manager, mobile threat defense partners, Security Copilot, Microsoft 365 apps and more." lightbox="./media/endpoint-management-microsoft.png":::
 
 ## Microsoft Intune
 

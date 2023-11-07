@@ -56,7 +56,7 @@ Each script package consists of a detection script, a remediation script, and me
 
 Whether enrolling devices via Intune or Configuration Manager, Remediation scripting has the following requirements:
 
-- Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
+- Devices must be Microsoft Entra joined or Microsoft Entra hybrid joined and meet one of the following conditions:
 
   - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
   - A [co-managed](../../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
