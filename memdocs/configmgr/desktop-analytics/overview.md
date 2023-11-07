@@ -76,7 +76,7 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
 
 ### Technical
 
-- An active global Azure subscription and a Microsoft Entra tenant, with [global administrator](/azure/active-directory/roles/permissions-reference#global-administrator) permissions. [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.
+- An active global Azure subscription and a Microsoft Entra tenant, with [global administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) permissions. [Microsoft Accounts](/windows/security/identity-protection/access-control/microsoft-accounts) aren't supported.
 
   > [!IMPORTANT]
   > Desktop Analytics is a Windows service hosted in Azure global that utilizes Windows diagnostic data. While Desktop Analytics is an Azure global service that's available to US government customers, it doesn't meet [US Government Community Compliance (GCC)](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/gcc#us-government-community-compliance) attributes. For a list of compliance offerings for Microsoft products and services, see the [Microsoft Trust Center](/compliance/regulatory/offering-home?view=o365-worldwide&preserve-view=true). Desktop Analytics isn't available for GCC High or US Department of Defense (DOD) customers. The use of Azure Government subscriptions to host Desktop Analytics workspaces isn't supported.
