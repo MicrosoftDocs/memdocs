@@ -85,6 +85,8 @@ For more information about how employees and students can access these actions i
 
 ## Limitations 
 
+Intune enrollment with Apple device enrollment has the following known issues and limitations. 
+
 * Device users must download the management profile in Safari. When a user gets blocked by conditional access policies, they are given a link that redirects them to device enrollment. The link opens in their default browser. If the default browser is not Safari, the users should copy and paste the link into Safari so that enrollment can continue. 
 
 * After the management profile downloads, device users have a limited amount of time to go to the Settings app and install the profile. If they wait top long to do it, they'll receive a message letting them know that the management profile can't be found. They must select **enroll again** to restart the enrollment process and download the management profile again. 
@@ -95,15 +97,10 @@ For more information about how employees and students can access these actions i
 
 * Web based device enrollment can be used without JIT registration. However, users in that scenario can't currently use the Company Portal app to enroll. To prepare for this scenario, we recommend deploying a web clip of the Company Portal website to users, because the web clip functions the same as the Company Portal app during enrollment.
 
-
-## Known issues  
-
-* There's a bug that occurs iOS devices running version 17.0.3. During web based device enrollment, Safari incorrectly reports the device OS version, causing enrollment to fail.
-  * Issue: Although web based device enrollment works on devices running major and minor OS versions, we have seen it fail on devices targeted with more granular OS requirements. Specifically, it happens when the OS version in an enrollment restriction contains the build number. For example, enrollment works when an enrollment restriction requires at least iOS 17.0 to enroll. But if you change the restriction to 17.0.3, enrollment may start failing on devices running 17.0.3.  
-  * Solution: We are currently working to fix this issue. We recommend the followng workarounds:
+* There's a bug that occurs during web based device enrollment on iOS devices running version 17.0.3.  Safari incorrectly reports the device OS version, causing enrollment to fail. This bug appears when you add a build number to the OS version in an Intune enrollment restriction. For example, web based device enrollment works when the Intune enrollment restriction requires the device to be running at least iOS 17.0. But if you change the restriction to 17.0.3, enrollment fails on devices running 17.0.3.  We are currently working to fix this issue. We recommend the following workarounds:
     * On the first web enrollment page, tell the device user to switch to mobile view in Safari. Then reload the page.   
     * If the problem persists, tell the device user to clear their cookies in Safari and start enrollment over again.  
-    * Use another enrollment type if you want to apply more granular restrictions than the major and minor version numbers.   
+    * Use another enrollment type if you want to apply more granular OS version restrictions.   
 
 ## Next steps  
 
