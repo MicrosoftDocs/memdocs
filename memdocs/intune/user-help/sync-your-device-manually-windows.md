@@ -81,8 +81,6 @@ Sync devices running Windows 10 or later from the system Settings app.
 
     * If your screen shows the **Work access** option, jump to [Work access steps](#work-access-steps) in this article.  
 
-      ![Screenshot of the account settings section highlighting the Work access option with a red rectangle.](./media/win10pc-sync-3-work-access.png)  
-
 ### Access work or school steps  
 
 1. Select **Access work or school**.

@@ -17,6 +17,12 @@ metadata:
   ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2309
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 24341484 Summary of changes in 2309
+            url: 2309/24341484.md
   - title: Configuration Manager 2303
     linkLists:
       - linkListType: overview

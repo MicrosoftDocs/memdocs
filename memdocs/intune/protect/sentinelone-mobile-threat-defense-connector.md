@@ -45,7 +45,7 @@ You can configure Conditional Access policies based on SentinelOne risk assessme
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 

@@ -84,10 +84,6 @@ The following table lists historical versions of Configuration Manager current b
 
 | Version                          | Availability date | Support end date   | Baseline | In-console update |
 |----------------------------------|-------------------|--------------------|----------|-------------------|
-| **2309** <br /> (5.00.9120)      | October 9, 2021   | April 9, 2025      | No       | Yes               |
-| **2303** <br /> (5.00.9106)      | April 10, 2023    | June 10, 2024      | Yes      | Yes               |
-| **2211** <br /> (5.00.9096)      | December 5, 2022  | June 5, 2024       | No       | Yes               |
-| **2207** <br /> (5.00.9088)      | August 12, 2022   | February 12, 2023  | No       | Yes               |
 | **2203** <br /> (5.00.9078)      | April 6, 2022     | October 6, 2023    | Yes      | Yes               |
 | **2111** <br /> (5.00.9068)      | December 1, 2021  | June 1, 2023       | No       | Yes               |
 | **2107** <br /> (5.00.9058)      | August 2, 2021    | February 2, 2023   | No       | Yes               |

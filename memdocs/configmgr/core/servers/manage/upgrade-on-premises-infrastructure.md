@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 12/01/2021
+ms.date: 10/17/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -72,7 +72,7 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - (_Windows Server 2012 or Windows Server 2012 R2 only_): Install the latest Cumulative Update and uninstall Windows Management Framework 5.1 before attempting the upgrade.
 
-- Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
+- Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled. This includes removing and reinstalling the WSUS Administrative Tools on the CAS or Primary Site Server if the Software Update Point (SUP) is remote.
 
 - If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
 

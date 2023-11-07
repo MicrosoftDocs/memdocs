@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices: Install required modules to obtain Autopilot profile(s) from Intune
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up a Windows Autopilot profile](setup-autopilot-profile.md)
 > [!div class="checklist"]
 > - **Step 2: Install required modules to obtain Autopilot profile(s) from Intune**
@@ -39,7 +39,7 @@ For an overview of the Windows Autopilot deployment for existing devices workflo
 
 > [!NOTE]
 >
-> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. The Microsoft Graph PowerShell modules may require approval of additional permissions in Azure AD when they're first used. The code snippets was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. The Microsoft Graph PowerShell modules may require approval of additional permissions in Microsoft Entra ID when they're first used. The code snippets was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 After making sure there's a valid Autopilot profile, the next step is to download the existing Autopilot profiles from Intune as JSON files. The JSON files contain all of the information regarding the Intune tenant and the Autopilot profile. After the JSON files are downloaded from Intune, Configuration Manager packages that contain the JSON files are created. The Configuration Manager packages are then used to install the JSON file on the device during the Windows Autopilot deployment for existing devices task sequence.
 
@@ -90,7 +90,7 @@ Once the required modules are installed, the following steps can be taken to ver
 
 1. Paste the command into the elevated PowerShell window and then select **Enter** on the keyboard to run the command.
 
-1. A **Sign in to your account** window appears. Sign in with an Azure AD account that has access to Intune and the Autopilot profiles.
+1. A **Sign in to your account** window appears. Sign in with a Microsoft Entra account that has access to Intune and the Autopilot profiles.
 
 1. Copy the following command by selecting **Copy** at the top right corner of the below **PowerShell** code block:
 

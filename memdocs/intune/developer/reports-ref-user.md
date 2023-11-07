@@ -35,7 +35,7 @@ The **Users** category contains the **user** entity that defines user properties
 
 ## users
 
-The **user** entity lists all the Azure Active Directory (Azure AD) users with assigned licenses in your enterprise.
+The **user** entity lists all the Microsoft Entra users with assigned licenses in your enterprise.
 
 The **user** entity collection contains user data. These records include user states during the data collection period, even if the user has been removed. For example, a user may be added to Intune and then removed during the course of the last month. While this user is not present at the time of the report, the user and state are present in the data from the prior month. You could create a report that would show the duration of the user's historic presence in your data.
 

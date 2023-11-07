@@ -45,7 +45,7 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 ## Pre-requisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 

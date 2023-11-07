@@ -45,7 +45,7 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 - Enrolled as [Android Enterprise corporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
 - Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md)
 - Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md)
-- Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
+- Joined to Microsoft Entra ID with work or school credentials. [Devices that are Microsoft Entra registered](/azure/active-directory/devices/overview) will be marked as personal.
 - Set as corporate in the [device's properties list](#change-device-ownership)
 
 After enrollment, you can [change the ownership setting](#change-device-ownership) between **Personal** and **Corporate**.

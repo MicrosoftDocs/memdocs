@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/02/2023
+ms.date: 10/23/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -129,6 +129,7 @@ The following URLs and ports are required for the provisioning of Cloud PCs and 
   - registration.preu01.cmdagent.trafficmanager.net
   - registration.prap01.cmdagent.trafficmanager.net
   - registration.prau01.cmdagent.trafficmanager.net
+  - registration.prna02.cmdagent.trafficmanager.net
 - Registration endpoints
   - login.microsoftonline.com
   - login.live.com

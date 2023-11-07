@@ -1,8 +1,8 @@
 ---
 
-title: How to use Azure AD to access Intune APIs in Microsoft Graph
+title: How to use Microsoft Entra ID to access Intune APIs in Microsoft Graph
 titleSuffix: Microsoft Intune
-description: Describes steps needed for apps to use Azure AD to access the Intune APIs in Microsoft Graph.
+description: Describes steps needed for apps to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph.
 keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
@@ -23,24 +23,24 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure, has-azure-ad-ps-ref
+ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier3
 - M365-identity-device-management
 ---
-# How to use Azure AD to access the Intune APIs in Microsoft Graph
+# How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph
 
-The [Microsoft Graph API](https://developer.microsoft.com/graph/) now supports Microsoft Intune with specific APIs and permission roles.  The Microsoft Graph API uses Azure Active Directory (Azure AD) for authentication and access control.  
+The [Microsoft Graph API](https://developer.microsoft.com/graph/) now supports Microsoft Intune with specific APIs and permission roles.  The Microsoft Graph API uses Microsoft Entra ID for authentication and access control.  
 Access to the Intune APIs in Microsoft Graph requires:
 
 - An application ID with:
 
-  - Permission to call Azure AD and the Microsoft Graph APIs.
+  - Permission to call Microsoft Entra ID and the Microsoft Graph APIs.
   - Permission scopes relevant to the specific application tasks.
 
 - User credentials with:
 
-  - Permission to access the Azure AD tenant associated with the application.
+  - Permission to access the Microsoft Entra tenant associated with the application.
   - Role permissions required to support the application permission scopes.
 
 - The end user to grant permission to the app to perform applications tasks for their Azure tenant.
@@ -57,9 +57,9 @@ This article:
 
 To learn more, see:
 
-- [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
-- [Getting start with Azure AD authentication](/azure/devops/integrate/get-started/authentication/oauth)
-- [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
+- [Authorize access to web applications using OAuth 2.0 and Microsoft Entra ID](/azure/active-directory/develop/active-directory-protocols-oauth-code)
+- [Getting start with Microsoft Entra authentication](/azure/devops/integrate/get-started/authentication/oauth)
+- [Integrating applications with Microsoft Entra ID](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Understand OAuth 2.0](https://oauth.net/2/)
 
 ## Register apps to use the Microsoft Graph API
@@ -72,7 +72,7 @@ To register an app to use Microsoft Graph API:
     - The tenant admin account.
     - A tenant user account with the **Users can register applications** setting enabled.
 
-2. Select **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **App registrations**.
+2. Select **All services** > **M365 Microsoft Entra ID** > **Microsoft Entra ID** > **App registrations**.
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
@@ -90,7 +90,7 @@ To register an app to use Microsoft Graph API:
 
         <img src="../media/azure-ad-app-new.png" width="209" height="140" alt="New app properties and values" />
 
-        To learn more, see [Authentication Scenarios for Azure AD](/azure/active-directory/develop/active-directory-authentication-scenarios).
+        To learn more, see [Authentication Scenarios for Microsoft Entra ID](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. From the application pane:
 
@@ -106,16 +106,16 @@ To register an app to use Microsoft Graph API:
 
 ### Data warehouse and reporting permissions
 
-When you add an application through the Azure Active Directory admin center, you can choose the Intune API permissions based on the requirements of your application. 
+When you add an application through the Microsoft Entra admin center, you can choose the Intune API permissions based on the requirements of your application. 
 
   - **get_data_warehouse** - Use this API permission to grant access to the Intune data warehouse API from Microsoft Intune. For more information, see [Using the Microsoft Intune Data Warehouse](./reports-nav-create-intune-reports.md).
 
 ### Partner solution APIs  
 
-The following Intune API permissions are available when adding an application through the Azure Active Directory admin center:
+The following Intune API permissions are available when adding an application through the Microsoft Entra admin center:
 
   - **get_device_compliance** - This API permission is used to get device state and compliance information from Microsoft Intune. This API permission is used by Network Access Control partners. For more information, see [Network Access Control integration with Intune](../protect/network-access-control-integrate.md).
-  - **manage_partner_compliance_policy** - This API permission is used to manage partner compliance policies with Microsoft Intune. This API permission allows the app to send partner compliance policies and its Azure AD Group assignment to Microsoft Intune without a signed-in user. It is used by device compliance partners. For more information, see [Third party device compliance partners](../protect/device-compliance-partners.md).
+  - **manage_partner_compliance_policy** - This API permission is used to manage partner compliance policies with Microsoft Intune. This API permission allows the app to send partner compliance policies and its Microsoft Entra group assignment to Microsoft Intune without a signed-in user. It is used by device compliance partners. For more information, see [Third party device compliance partners](../protect/device-compliance-partners.md).
   - **pfx_cert_provider** - This API permission is used to send PFX certificates to Intune for a specific user. Intune delivers the certificate to all devices enrolled by the user. For more information, see [PFX Import Powershell](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
   - **scep_challenge_provider** - This API permission is used to send SCEP challenges to Intune for certificate request validation. It is used by Certification Authority partners. For more information, see [Partner Certification Authority](../protect/certificate-authority-add-scep-overview.md).
   - **update_device_attributes** - This API permission is used to send device information to Intune from device compliance and mobile threat defense partners. For more information, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md) and [Third party device compliance partners](../protect/device-compliance-partners.md).
@@ -151,12 +151,12 @@ If you receive a large amount of data while requesting your app listing when usi
 
 ## Intune permission scopes
 
-Azure AD and Microsoft Graph use permission scopes to control access to corporate resources.  
+Microsoft Entra ID and Microsoft Graph use permission scopes to control access to corporate resources.  
 
 Permission scopes (also called the _OAuth scopes_) control access to specific Intune entities and their properties. This section summarizes the permission scopes for Intune API features.
 
 To learn more:
-- [Azure AD authentication](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
+- [Microsoft Entra authentication](/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Application permission scopes](/azure/active-directory/develop/active-directory-v2-scopes)
 
 When you grant permission to Microsoft Graph, you can specify the following scopes to control access to Intune features:
@@ -314,9 +314,11 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Branding
   - Mobile Threat Defense
 
-## Azure AD authentication examples
+<a name='azure-ad-authentication-examples'></a>
 
-This section shows how to incorporate Azure AD into your C# and PowerShell projects.
+## Microsoft Entra authentication examples
+
+This section shows how to incorporate Microsoft Entra ID into your C# and PowerShell projects.
 
 In each example, you'll need to specify an application ID that has at least the `DeviceManagementManagedDevices.Read.All` permission scope (discussed earlier).
 
@@ -349,7 +351,9 @@ If this happens, verify that:
 - Your code is similar to the displayed samples.
 
 
-### Authenticate Azure AD in C\#
+<a name='authenticate-azure-ad-in-c'></a>
+
+### Authenticate Microsoft Entra ID in C\#
 
 This example shows how to use C# to retrieve a list of devices associated with your Intune account.
 
@@ -456,17 +460,19 @@ namespace IntuneGraphExample
 }
 ```
 
-### Authenticate Azure AD (PowerShell)
+<a name='authenticate-azure-ad-using-microsoft-graph-powershell'></a>
 
-PowerShell scripts can use the AzureAD PowerShell module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
+### Authenticate Microsoft Entra ID using Microsoft Graph PowerShell
+
+PowerShell scripts can use the Microsoft Graph PowerShell module for authentication.  To learn more, see [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## Support multiple tenants and partners
 
-If your organization supports organizations with their own Azure AD tenants, you may want to permit your clients to use your application with their respective tenants.
+If your organization supports organizations with their own Microsoft Entra tenants, you may want to permit your clients to use your application with their respective tenants.
 
 To do so:
 
-1. Verify that the client account exists in the target Azure AD tenant.
+1. Verify that the client account exists in the target Microsoft Entra tenant.
 
 2. Verify that your tenant account allows users to register applications (see **User settings**).
 
@@ -504,7 +510,7 @@ Also:
 
 - Use https://admin.microsoft.com to assign an Intune license to your user account.
 
-- Update application code to authenticate to the client's Azure AD tenant domain, rather than your own.
+- Update application code to authenticate to the client's Microsoft Entra tenant domain, rather than your own.
 
     For example, suppose your tenant domain is `contosopartner.onmicrosoft.com` and your client's tenant domain is `northwind.onmicrosoft.com`, you would update your code to authenticate to your client's tenant.
 
