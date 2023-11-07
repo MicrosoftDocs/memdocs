@@ -55,7 +55,7 @@ To enroll into Intune using KME, you must first register your company on the Sam
 
 2. [Supported devices](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): KME is available on all Samsung devices with a minimum of Knox 2.4 for Android enrollment and a minimum of Knox 2.8 for Android enterprise enrollment.
 
-3. [Network requirements](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm): Make sure that the necessary firewall and network access rules are permitted on your network.
+3. [Network requirements](https://docs.samsungknox.com/admin/knox-mobile-enrollment/get-started/firewall-exceptions/): Make sure that the necessary firewall and network access rules are permitted on your network.
 
 4. [Register for a Samsung account](https://www2.samsungknox.com/en/user/register): A Samsung account is needed to register and enable KME and manage all Knox Enterprise entitlements in a single place.
 
@@ -87,7 +87,7 @@ When your company is successfully registered, you can create your MDM profile fo
 
 ### For Android Enterprise
 
-For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) instructions.
+For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsungknox.com/admin/knox-configure/knox-configure-wearables/get-started/create-a-profile/) instructions.
 
 | MDM Profile Fields| Required? | Values |
 |-------------------|-----------|-------|
@@ -108,12 +108,12 @@ For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsu
 ## Add devices
 
 To assign MDM Profiles to devices, supported Samsung Knox devices must be added to the Knox Portal using one of the following methods:
-- **Using Samsung-Approved Reseller(s):** Use this method if you're purchasing devices from one of the Samsung-approved resellers. Resellers can auto-upload devices for you when approved. [Visit the Samsung Knox Enrollment User Guide to learn how to add resellers](https://docs.samsungknox.com/KME-Getting-Started/Content/Register_resellers.htm).
+- **Using Samsung-Approved Reseller(s):** Use this method if you're purchasing devices from one of the Samsung-approved resellers. Resellers can auto-upload devices for you when approved. [Visit the Samsung Knox Enrollment User Guide to learn how to add resellers](https://docs.samsungknox.com/admin/knox-asset-intelligence/how-to-guides/register-resellers/).
 
 - **Using the Knox Deployment App (KDA):** Use this method if you have existing devices that need to be enrolled using KME. You can either use Bluetooth or NFC to add devices to the Knox Portal using this method. [Visit the Samsung Knox Enrollment User Guide to learn about using the KDA](https://docs.samsungknox.com/admin/knox-mobile-enrollment/about-kda.htm).
 
 ## Assign an MDM profile to devices
-You must assign an MDM profile to added devices in the Knox Portal before they can be enrolled. [Visit the Samsung Knox Enrollment User Guide to learn about device configuration](https://docs.samsungknox.com/KME-Getting-Started/Content/configure-devices.htm).
+You must assign an MDM profile to added devices in the Knox Portal before they can be enrolled. [Visit the Samsung Knox Enrollment User Guide to learn about device configuration](https://docs.samsungknox.com/admin/knox-configure/how-to-guides/devices/use-the-configuration-service/).
 
 ## Configure how end users sign in
 
@@ -133,7 +133,7 @@ For devices enrolled in Intune using KME for Android, you can configure how an e
 
 After creating and assigning an MDM profile, associating a user name, and identifying the devices as corporate-owned in Intune, you can distribute devices to users.
 
-Still need help? Check out the complete [KME User Guide](https://docs.samsungknox.com/KME-Getting-Started/Content/get-started.htm).
+Still need help? Check out the complete [KME User Guide](https://docs.samsungknox.com/admin/knox-authentication-manager/get-started/get-started-as-a-user/).
 
 ## Frequently asked questions
 
@@ -149,6 +149,6 @@ Still need help? Check out the complete [KME User Guide](https://docs.samsungkno
 
 
 ## Getting support
-Learn more about [how to get support for Samsung KME](https://docs.samsungknox.com/KME-Getting-Started/Content/to-get-kme-support.htm).
+Learn more about [how to get support for Samsung KME](https://docs.samsungknox.com/admin/knox-mobile-enrollment/how-to-guides/provide-device-user-support/).
 
 
