@@ -53,7 +53,7 @@ You must understand a few concepts when adding a WIP policy:
 
 ### Types of apps
 
-- **Recommended apps:** A pre-populated list of (mostly Microsoft Office) apps that allow you to easily import into the policy.
+- **Recommended apps:** A pre-populated list of (mostly Microsoft 365 (Office)) apps that allow you to easily import into the policy.
 - **Store apps:** You can add any app from the Windows store to the policy.
 - **Windows desktop apps:** You can add any traditional Windows desktop apps to the policy (for example, .exe, .dll)
 
