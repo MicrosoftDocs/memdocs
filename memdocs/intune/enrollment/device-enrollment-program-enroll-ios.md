@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/26/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -51,7 +51,7 @@ The following table shows the features and scenarios supported with automated de
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ |
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
-| Devices are in Azure AD shared mode. | ✔️ |
+| Devices are in Microsoft Entra ID shared mode. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), or [User and Device enrollment](../enrollment/ios-user-enrollment.md). |
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |  
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |  
@@ -72,10 +72,7 @@ Read through these enrollment requirements and best practices to prepare for a s
 ### Choose an authentication method  
 Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication, and has features like multi-factor authentication. 
 
-Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Azure AD registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. For how-to steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
-
-  > [!IMPORTANT]
-  > JIT Registration is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).     
+Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app for Microsoft Entra registration and compliance. To use JIT Registration, you'll need to create a device configuration policy *before* you create the Apple enrollment profile and configure Setup Assistant with modern authentication. 
 
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
 
@@ -86,12 +83,14 @@ Supervised mode provides more management control over corporate-owned devices, s
 
 Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device enrollment should always be in supervised mode, which you can turn on in the enrollment profile. For more information about supervised mode, see [Turn on iOS/iPadOS supervised mode](../remote-actions/device-supervised-mode.md). Microsoft Intune ignores the *is_supervised* flag for devices running iOS/iPadOS 13.0 and later because these devices are automatically put in supervised mode at the time of enrollment. 
 
-### Enrolling devices in Azure AD shared device mode  
+<a name='enrolling-devices-in-azure-ad-shared-device-mode'></a>
+
+### Enrolling devices in Microsoft Entra shared device mode  
 
 > [!IMPORTANT]
 > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-You can set up automated device enrollment for devices in [Azure AD shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). Shared device mode enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in shared device mode, see [Automated device enrollment for Azure AD shared device mode](automated-device-enrollment-shared-device-mode.md).  
+You can set up automated device enrollment for devices in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). Shared device mode enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in shared device mode, see [Automated device enrollment for Microsoft Entra shared device mode](automated-device-enrollment-shared-device-mode.md).  
 
 ### Deploying the Company Portal app  
 
@@ -213,7 +212,7 @@ Now that you've installed your token, you can create an enrollment profile for a
 5. Select **Next**.
 
     > [!IMPORTANT]
-    > If you make changes to existing enrollment profile settings, the new changes won't take effect on assigned devices until devices are reset back to factory settings and reactivated. Reactivation occurs when the Remote Management Payload is received on ADE devices. Renaming the device name template is the only change you can make that doesn't require a factory reset.  
+    > If you make changes to an existing enrollment profile, the new settings won't take effect on assigned devices until devices are reset back to factory settings and reactivated. The device name template setting is the only setting you can change that doesn't require a factory reset to take effect. Changes to the naming template take effect at the next check-in.    
 
 6. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
 
@@ -221,7 +220,7 @@ Now that you've installed your token, you can create an enrollment profile for a
     - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.  
 
       In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
-    - **Enroll with Azure AD shared mode**: Select this option to enroll devices that will be in shared mode. 
+    - **Enroll with Microsoft Entra ID shared mode**: Select this option to enroll devices that will be in shared mode. 
 
 7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).   
 
@@ -233,7 +232,7 @@ Now that you've installed your token, you can create an enrollment profile for a
      - **Setup Assistant (legacy)**
      - **Setup Assistant with modern authentication**  
 
-8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
+8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Microsoft Entra registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
 9. If you select a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Select **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in with Company Portal.
 
@@ -250,15 +249,12 @@ Now that you've installed your token, you can create an enrollment profile for a
 
     Supervised devices give you more management options and disabled Activation Lock by default. Microsoft recommends that you use ADE as the mechanism for enabling supervised mode, especially if you're deploying large numbers of iOS/iPadOS devices. Apple Shared iPad for Business devices must be supervised.
 
-    Users are notified that their devices are supervised in two ways:
-
-    - The lock screen says: **This iPhone is managed by *company name*.**
-    - The **Settings** > **General** > **About** screen says: **This iPhone is supervised. *Company name* can monitor your Internet traffic and locate this device.**
+    Users are notified that their devices are supervised in the **Settings** app. In the app at the top of their screen, a static message tells them **This iPhone is supervised and managed by *`<your organization>`***.  
 
      > [!NOTE]
      > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](https://support.apple.com/guide/apple-configurator-mac).
 
-11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed. If you enable locked enrollment, the button in the Settings app that lets users remove a management profile will be hidden and users won't be able to unenroll their device. If you're setting up devices in Azure AD shared mode, select **Yes**.    
+11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed. If you enable locked enrollment, the button in the Settings app that lets users remove a management profile will be hidden and users won't be able to unenroll their device. If you're setting up devices in Microsoft Entra ID shared mode, select **Yes**.    
 
     Locked enrollment works a little differently, at first, on devices not originally purchased through Apple Business Manager but later added to be a part of automated device enrollment: users on these devices will see the remove management button in the Settings app for the first 30 days after activating their device. After that provisional period, the option will be hidden. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859) (opens Apple Configurator Help docs). 
   
@@ -279,7 +275,7 @@ Now that you've installed your token, you can create an enrollment profile for a
 
     * **Maximum cached users**: Enter the number of users that you expect to use the shared iPad. You can cache up to 24 users on a 32-GB or 64-GB device. If you choose a low number, it might take a while for your users' data to appear on their devices after they sign in. If you choose a high number, your users could run out of disk space.  
 
-    * **Maximum seconds after screen lock before password is required**: Enter the number of seconds from 0 to 14,400. If the screen lock exceeds this amount of time, a device password will be required to unlock the device. Available for devices in Shared iPad mode running iPadOS 13.0 and later.  
+    * **Maximum seconds after screen lock before password is required**: Enter the amount of time in seconds. Accepted values include: 0, 60, 300, 900, 3600, and 14400. If the screen lock exceeds this amount of time, a device password will be required to unlock the device. Available for devices in Shared iPad mode running iPadOS 13.0 and later.  
 
     * **Maximum seconds of inactivity until user session logs out**: The minimum allowed value for this setting is 30. If there isn't any activity after the defined period, the user session ends and signs the user out. If you leave the entry blank or set it to zero (0), the session won't end due to inactivity. Available for devices in Shared iPad mode running iPadOS 14.5 and later.  
 
@@ -316,7 +312,7 @@ Now that you've installed your token, you can create an enrollment profile for a
          The locked experience works on devices targeted with new and existing enrollment profiles. Supported devices include:      
          * iOS/iPadOS 13+ devices enrolling with Setup Assistant with modern authentication  
          * iOS/iPadOS 13+ devices enrolling without user affinity   
-         * iOS/iPadOS 13+ devices enrolling with Azure AD shared mode   
+         * iOS/iPadOS 13+ devices enrolling with Microsoft Entra ID shared mode   
 
          This setting is applied once during the out-of-box automated device enrollment experience in Setup Assistant. The device user doesn't experience it again unless they re-enroll their device. **Yes** is the default setting for new enrollment profiles.  
 
@@ -326,10 +322,6 @@ Now that you've installed your token, you can create an enrollment profile for a
       * User affinity: **Enroll without user affinity** (Step 6 in this section)
       * Shared iPad: **Yes**  (Step 12 in this section)  
       
-      > [!IMPORTANT]
-      > This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
- 
-
 16. Optionally, create a device name template to quickly identify devices assigned this profile in the admin center. Intune uses your template to create and format device names. The names are given to devices when they enroll and upon each successive check-in. To create a template: 
  1. Under **Apply device name template**, select **Yes** .
  2. In the **Device Name Template** box, enter the template you want to use to construct device names. The template can include the device type and serial number. It can't contain more than 63 characters, including the variables. Example: `{{DEVICETYPE}}-{{SERIAL}}`    
@@ -354,13 +346,15 @@ Now that you've installed your token, you can create an enrollment profile for a
 
 21. To save the profile, select **Create**.  
 
-### Dynamic groups in Azure Active Directory
+<a name='dynamic-groups-in-azure-active-directory'></a>
 
-You can use the enrollment **Name** field to create a dynamic group in Azure Active Directory (Azure AD). For more information, see [Azure Active Directory dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+### Dynamic groups in Microsoft Entra ID
+
+You can use the enrollment **Name** field to create a dynamic group in Microsoft Entra ID. For more information, see [Microsoft Entra dynamic groups](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
 
 You can use the profile name to define the [enrollmentProfileName parameter](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) to assign devices with this enrollment profile.
 
-Prior to device setup, and to ensure quick delivery to devices with user affinity, make sure the enrolling user is a member of an Azure AD user group.   
+Prior to device setup, and to ensure quick delivery to devices with user affinity, make sure the enrolling user is a member of a Microsoft Entra user group.   
 
 If you assign dynamic groups to enrollment profiles, there might be a delay in delivering applications and policies to devices after the enrollment.
 
@@ -474,7 +468,7 @@ You'll sometimes need to renew your tokens:
 - Renew your ADE token yearly. The Intune admin center shows the expiration date.
 - If the Apple ID password changes for the user who set up the token in Apple Business Manager, renew your enrollment program token in Intune and Apple Business Manager.
 - If the user who set up the token in Apple Business Manager leaves the organization, renew your enrollment program token in Intune and Apple Business Manager.
-- If you change the Apple ID used to create the ADE token, the change will not affect currently enrolled devices.
+- If you change the Apple ID used to create the ADE token, the change won't affect currently enrolled devices with that token, until they re-enroll. This is unlike the Apple Push Notification Service (APNS) certificate used for the tenant which cannot be changed without requiring all devices to be re-enrolled unless you contact Apple Support to perform the change on the back end. 
 
 ### Renew your tokens
 

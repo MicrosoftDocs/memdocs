@@ -48,13 +48,17 @@ The following steps help you deploy a Windows update package to Intune.
 
     `wusa.exe <full path of the .msu file> /quiet /norestart -Wait`
 
-    For example, if the *windows10.0-kb4532693-x64_e22f60a077a0ec5896266a18cc3daf26bfc29e16.msu* file is in the current folder, type the following command in **Install command**:
+    For example, if the *windows10.0-kb5031356-x64_65d5bbc39ccb461472d9854f1a370fe018b79fcc.msu* file is in the current folder, type the following command in **Install command**:
 
-    `wusa.exe .\windows10.0-kb4532693-x64_e22f60a077a0ec5896266a18cc3daf26bfc29e16.msu /quiet /norestart -Wait`
+    `wusa.exe .\windows10.0-kb5031356-x64_65d5bbc39ccb461472d9854f1a370fe018b79fcc.msu /quiet /norestart -Wait`
 
     **Uninstall command:**  
 
-    `wusa.exe /uninstall /kb:<KB number> /quiet`
+    `dism /online /remove-package /PackageName:<package name> /Quiet /NoRestart`
+
+    For example, if the Package_for_RollupFix\~31bf3856ad364e35\~amd64~~19041.3570.1.0 is the package name for the Windows update package, type the following command in **Uninstall command**. About how to check the package name to be used in Uninstall command, see [Uninstalling Windows updates on managed devices using Intune](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/uninstalling-windows-updates-on-managed-devices-using-intune/ba-p/3778267).
+
+    `dism /online /remove-package /PackageName:Package_for_RollupFix~31bf3856ad364e35~amd64~~19041.3570.1.0 /Quiet /NoRestart`
 
     The following image provides an example of the **Program** page:
 
@@ -99,7 +103,8 @@ The following steps help you deploy a Windows update package to Intune.
     **Sample script file (DetectKB.ps1)**:
 
     ```powershell
-    $result = systeminfo.exe | findstr KB<KB number>
+   $sysinfo = systeminfo.exe
+   $result = $sysinfo -match KB<KB number>
 
     if ($result)
      {

@@ -20,7 +20,7 @@ ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,6 +41,9 @@ This feature applies to:
 - Android Enterprise personally owned devices with a work profile
 - Windows
 - EAP-based Wi-Fi
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 > [!IMPORTANT]
 >

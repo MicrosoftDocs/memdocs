@@ -64,7 +64,7 @@ Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll the
 Intune supports the following enrollment methods for company-owned macOS devices. Select a hyperlinked method to open its setup steps. 
 
 - [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.   
-- [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Azure Active Directory account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
+- [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Microsoft Entra account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
 - [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.  
 
 ## Bootstrap tokens   
@@ -137,10 +137,10 @@ hw.model = "MacBookAir10,1"
 ```  
 Enter any string of alphanumeric characters for the serial number. For hardware model, we recommend using the model of the device that's running the VM. To find your Mac's hardware model, select the Apple menu and go to **About This Mac** > **System Report** > **Model Identifier**.   
 
-See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
+VMware Fusion is only supported on Intel Macs. See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
 
 ### Apple Silicon 
-No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop and VMware Fusion are supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
+No changes are required for virtual machines running on Apple Silicon hardware. Parallel Desktop is supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
 
 ## User-approved enrollment
 

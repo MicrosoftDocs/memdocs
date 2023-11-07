@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/01/2023
+ms.date: 07/05/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -43,6 +43,8 @@ Here you'll see some info to give you a quick idea of how your Cloud PCs are doi
 - **Provisioning** status: A summary of the Cloud PC state in your organization.
 - **Connection health**:  A summary of the Azure network connection health in your organization.  
 
+If you have more Frontline Cloud PCs provisioned than available licenses, a warning appears on this page. Also, you can't provision new Cloud PCs until you deprovision Cloud PCs to match the number allowed.
+
 ## All Cloud PCs page
 
 The **All Cloud PCs** page displays a summary and list view detailing the state information for each of the Cloud PCs in your organization.
@@ -55,7 +57,7 @@ If a user has multiple Windows 365 SKUs assigned to them, they get multiple Clou
 
 **Name**: The name of the Cloud PC, which is composed of the assigned provisioning policy and the assigned user’s name. For example, My first provisioning policy – Henry Ross.
 
-**Device name**: The Windows computer name, which is also used in Intune and Azure AD.
+**Device name**: The Windows computer name, which is also used in Intune and Microsoft Entra ID.
 
 **Image**: The image used during provisioning. This image might not be the current Cloud PC version. For example, an administrator may have updated Windows using Windows Update for Business and this update wouldn’t be reflected in this list view.  
 
@@ -76,7 +78,7 @@ If a user has multiple Windows 365 SKUs assigned to them, they get multiple Clou
 - **Failed**: The provisioning process failed for this Cloud PC. Select the link to get a detailed reason for the failure, troubleshoot, and retry provisioning.
 - **In grace period**: When a license/assignment change occurs for a user with a current Cloud PC, the Cloud PC object is marked as **In grace period**. Grace periods help admins avoid licensing/targeting mistakes that might cause users to lose access to their Cloud PC.
 
-  With the nature of dynamic Azure AD groups, users can become unassigned to a provisioning policy or Windows 365 license. As license and provisioning policies are required for a Cloud PC to function, removing either or both results in the end user losing access to their Cloud PC.
+  With the nature of dynamic Microsoft Entra groups, users can become unassigned to a provisioning policy or Windows 365 license. As license and provisioning policies are required for a Cloud PC to function, removing either or both results in the end user losing access to their Cloud PC.
 
   When a Cloud PC enters a grace period, an alert is triggered. The alert appears in the Microsoft Intune admin center as a pop-up notification. For more information about customizing alerts, including setting up e-mail notifications, see [Alerts in Windows 365](alerts.md).
 

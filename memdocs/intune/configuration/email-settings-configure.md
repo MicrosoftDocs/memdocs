@@ -20,7 +20,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast, japoehlm
+ms.reviewer: sheetg
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -49,9 +49,11 @@ You can use email profiles to configure email settings for the following devices
 
 This article shows you how to create an email profile in Microsoft Intune. It also includes links to the different platforms for more specific settings.
 
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 ## Before you begin
 
-- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Azure Active Directory (Azure AD) properties in the email profile of the user during enrollment. The email app your organization uses must support Azure ID identities.
+- Email profiles are deployed for the user who enrolled the device. To configure the email profile, Intune uses the Microsoft Entra properties in the email profile of the user during enrollment. The email app your organization uses must support Azure ID identities.
 
 - Email is based on identity and user settings. Email profiles are typically assigned to user groups, not device groups. Some considerations:
 
@@ -147,7 +149,7 @@ After the app is deployed and installed:
 
 # [Other email apps](#tab/other-email-apps-android)
 
-**Other email apps** that support Azure AD identities are available in the managed Play Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+**Other email apps** that support Microsoft Entra identities are available in the managed Play Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
 
 After the app is deployed and installed:
 
@@ -205,7 +207,7 @@ The **Built-in Mail app** is preinstalled with the OS and can be used to access 
 
 # [Other email apps](#tab/other-email-apps-ios)
 
-**Other email apps** that support Azure AD identities are available in the App Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+**Other email apps** that support Microsoft Entra identities are available in the App Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
 
 After the app is deployed and installed:
 
@@ -260,7 +262,7 @@ The **Built-in Mail app** is preinstalled with the OS and can be used to access 
 
 # [Other email apps](#tab/other-email-apps-windows)
 
-**Other email apps** that support Azure AD identities are available in the Microsoft Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
+**Other email apps** that support Microsoft Entra identities are available in the Microsoft Store. To use these email apps, add the app to Intune, and assign the app to your users or user groups. The app also installs.
 
 After the app is deployed and installed:
 

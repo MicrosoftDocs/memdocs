@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2023
+ms.date: 10/23/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -92,17 +92,17 @@ This task list provides an overview. For more specific information, see [Apple B
     - You want to use multi-factor authentication (MFA).
     - You want to prompt users to update their expired password when they first sign in.
     - You want to prompt users to reset their expired passwords during enrollment.
-    - You want devices registered in Azure AD. When they're registered, you can use features available with Azure AD, such as conditional access.
+    - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, such as conditional access.
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install **Company Portal** app during enrollment without user Apple IDs.
-    - You want to lock the device until the **Company Portal** app installs. After it installs, users sign in to the Company Portal app with their organization Azure AD account. Then, the device is unlocked, and users can use it.
+    - You want to lock the device until the **Company Portal** app installs. After it installs, users sign in to the Company Portal app with their organization Microsoft Entra account. Then, the device is unlocked, and users can use it.
 
   - Select the **Setup Assistant (legacy)** when:
 
     - You want to wipe the device.
     - You don't want to use modern authentication features, such as MFA.
-    - You don't want to register devices in Azure AD. Setup Assistant (legacy) authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Azure AD, then you don't need to install the Company Portal app. Keep using the Setup Assistant (legacy).
+    - You don't want to register devices in Microsoft Entra ID. Setup Assistant (legacy) authenticates the user with the Apple `.p7m` token. If it's acceptable to not register devices in Microsoft Entra ID, then you don't need to install the Company Portal app. Keep using the Setup Assistant (legacy).
 
-      If you want devices registered in Azure AD, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant (legacy), you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
+      If you want devices registered in Microsoft Entra ID, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant (legacy), you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
 
   - Select the **Setup Assistant with modern authentication** when:
 
@@ -110,7 +110,7 @@ This task list provides an overview. For more specific information, see [Apple B
     - You want to use multi-factor authentication (MFA).
     - You want to prompt users to update their expired password when they first sign in.
     - You want to prompt users to reset their expired passwords during enrollment.
-    - You want devices registered in Azure AD. When they're registered, you can use features available with Azure AD, such as conditional access.
+    - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, such as conditional access.
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install the **Company Portal** app during enrollment without user Apple IDs.
     - You want users to use the device, even when the Company Portal app isn't installed.
 
@@ -121,12 +121,12 @@ This task list provides an overview. For more specific information, see [Apple B
   >
   > - If you want to use the device before the Company Portal app installs, then use the **Setup Assistant with modern authentication**.
   > 
-  >   During the Setup Assistant, users must enter their organization Azure AD credentials (`user@contoso.com`). When they enter their credentials, the enrollment starts, and the Company Portal app installs. If you want, users can also enter their Apple ID to access Apple specific features, such as Apple Pay.
+  >   During the Setup Assistant, users must enter their organization Microsoft Entra credentials (`user@contoso.com`). When they enter their credentials, the enrollment starts, and the Company Portal app installs. If you want, users can also enter their Apple ID to access Apple specific features, such as Apple Pay.
   > 
-  >   After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Azure AD, and shows as non-compliant in a user's device list in Azure AD. The device shows as compliant in the Microsoft Intune admin center.
+  >   After the Setup Assistant completes, users can use the device. When the home screen shows, the enrollment is complete, and user affinity is established. The device isn't fully registered with Microsoft Entra ID, and shows as non-compliant in a user's device list in Microsoft Entra ID. The device shows as compliant in the Microsoft Intune admin center.
   > 
-  >   After the Company Portal app installs, which takes some time, users open the Company Portal app, and sign with their organization Azure AD account (`user@contoso.com`) again. During this second login, any conditional access policies are evaluated, and Azure AD registration is complete. Users can install and use organizational resources, including LOB apps. The device shows as compliant in Azure AD.
-  > - If you don't want to use the device before the Company Portal app installs, then use the **Company Portal** app option. The **Company Portal** app option locks the device until the Company Portal app installs. When the install completes, the Company Portal app opens automatically. Users sign in with their Azure AD organization account (`user@contoso.com`), and can use the device.
+  >   After the Company Portal app installs, which takes some time, users open the Company Portal app, and sign with their organization Microsoft Entra account (`user@contoso.com`) again. During this second login, any conditional access policies are evaluated, and Microsoft Entra registration is complete. Users can install and use organizational resources, including LOB apps. The device shows as compliant in Microsoft Entra ID.
+  > - If you don't want to use the device before the Company Portal app installs, then use the **Company Portal** app option. The **Company Portal** app option locks the device until the Company Portal app installs. When the install completes, the Company Portal app opens automatically. Users sign in with their Microsoft Entra organization account (`user@contoso.com`), and can use the device.
 
 - If you use the Company Portal app, then decide how the Company Portal app will be installed on the devices. Make this decision before you create the enrollment profile.
 
@@ -188,28 +188,28 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
   2. The Setup Assistant prompts the user for information.
   3. The Company Portal app automatically opens, and should lock the device in a kiosk-style mode. It can take some time for the Company Portal app to open. Users sign in with their organization credentials (`user@contoso.com`), and the device is enrolled in Intune.
 
-      This step registers the device in Azure AD. Users can install and use apps used by your organization, including LOB apps.
+      This step registers the device in Microsoft Entra ID. Users can install and use apps used by your organization, including LOB apps.
 
 - **Enroll with user affinity + Setup Assistant (legacy) - Company Portal app**:
 
   :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/ade-user-affinity-setup-assistant-legacy-no-company-portal-app.png" alt-text="In the Intune admin center and Microsoft Intune, enroll iOS/iPadOS devices using automated device enrollment (ADE). Select enroll with user affinity, use the Setup Assistant for authentication, and don't install the Company Portal app.":::
 
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`).
-  2. The Setup Assistant prompts the user for information, and enrolls the device in Intune. The device isn't registered in Azure AD.
+  2. The Setup Assistant prompts the user for information, and enrolls the device in Intune. The device isn't registered in Microsoft Entra ID.
 
 - **Enroll with user affinity + Setup Assistant with modern authentication**:
 
   :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/ade-user-affinity-setup-assistant-modern-authentication.png" alt-text="In the Intune admin center and Microsoft Intune, enroll iOS/iPadOS devices using automated device enrollment (ADE). Select enroll with user affinity, and use the Setup Assistant for authentication. The Company Portal app automatically installs.":::
 
-  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`) and their organization Azure AD credentials (`user@contoso.com`).
+  1. When the device is turned on, the Apple Setup Assistant runs. Users enter their Apple ID (`user@iCloud.com` or `user@gmail.com`) and their organization Microsoft Entra credentials (`user@contoso.com`).
 
-      When users enter their Azure AD credentials, the enrollment starts.
+      When users enter their Microsoft Entra credentials, the enrollment starts.
 
   2. Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete. The device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices.
 
-      At this point, the device isn't fully registered with Azure AD and shows as non-compliant in Azure AD. The device shows it's compliant in the Microsoft Intune admin center.
+      At this point, the device isn't fully registered with Microsoft Entra ID and shows as non-compliant in Microsoft Entra ID. The device shows it's compliant in the Microsoft Intune admin center.
 
-  3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Azure AD registration in the Company Portal app, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies and the device shows as being compliant in Azure AD.
+  3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Microsoft Entra registration in the Company Portal app, which fully registers the device with Microsoft Entra ID. Users then gain access to corporate resources protected by conditional access policies and the device shows as being compliant in Microsoft Entra ID.
 
   4. If you don't **Install Company Portal app with VPP**, and want to use the Company Portal app, then:
 
@@ -217,9 +217,9 @@ When you create an enrollment profile in the [Intune admin center](https://go.mi
 
           This extra sign-in step slows the enrollment, especially if users don't sign in immediately.
 
-          If they don't sign in to the app store, then the Company Portal app doesn't install. If the app isn't installed, then users can't register the device in Azure AD. Since the device hasn't completed registration, the device shows as non-compliant in Azure AD. Any resources depending on conditional access aren't available.
+          If they don't sign in to the app store, then the Company Portal app doesn't install. If the app isn't installed, then users can't register the device in Microsoft Entra ID. Since the device hasn't completed registration, the device shows as non-compliant in Microsoft Entra ID. Any resources depending on conditional access aren't available.
 
-      2. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Azure AD registration in the Company Portal app, which fully registers the device with Azure AD. At the next check-in, users gain access to corporate resources protected by conditional access policies.
+      2. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Microsoft Entra registration in the Company Portal app, which fully registers the device with Microsoft Entra ID. At the next check-in, users gain access to corporate resources protected by conditional access policies.
 
 - **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
 
@@ -264,7 +264,7 @@ This task list provides an overview. For more specific information, see [Apple C
     - You want to use multi-factor authentication (MFA).
     - You want to prompt users to update their expired password when they first sign in.
     - You want to prompt users to reset their expired passwords during enrollment.
-    - You want devices registered in Azure AD. When they're registered, you can use features available with Azure AD, such as conditional access.
+    - You want devices registered in Microsoft Entra ID. When they're registered, you can use features available with Microsoft Entra ID, such as conditional access.
     - You want to automatically install **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install **Company Portal** app during enrollment.
 
   - Select the **Setup Assistant** when:
@@ -272,9 +272,9 @@ This task list provides an overview. For more specific information, see [Apple C
     - You don't want to use modern authentication features, such as MFA.
     - You want to wipe the device.
     - You want to import serial numbers.
-    - You don't want to register devices in Azure AD. Setup Assistant authenticates the user with the exported enrollment profile that you copy to the device. If it's acceptable to not register devices in Azure AD, then you don't need to install the Company Portal app. Keep using the Setup Assistant.
+    - You don't want to register devices in Microsoft Entra ID. Setup Assistant authenticates the user with the exported enrollment profile that you copy to the device. If it's acceptable to not register devices in Microsoft Entra ID, then you don't need to install the Company Portal app. Keep using the Setup Assistant.
 
-      If you want devices registered in Azure AD, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant, you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
+      If you want devices registered in Microsoft Entra ID, then install the **Company Portal** app. When you create the enrollment profile and select Setup Assistant, you can install the Company Portal app. We recommend installing the **Company Portal** app during enrollment.
 
 - If you use the Company Portal app, then the Company Portal app must be installed on devices using an app configuration policy. We recommend creating this policy before you create the enrollment profile.
 
@@ -329,7 +329,7 @@ The tasks depend on the option you configured in the enrollment profile.
 
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their organization credentials (`user@contoso.com`). This step enrolls the device in Intune.
   2. The Setup Assistant prompts the user for information, including the Apple ID (`user@iCloud.com` or `user@gmail.com`).
-  3. The Company Portal app automatically installs from the app store. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). This step registers the device in Azure AD. Users can install and use apps used by your organization, including LOB apps.
+  3. The Company Portal app automatically installs from the app store. Users open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). This step registers the device in Microsoft Entra ID. Users can install and use apps used by your organization, including LOB apps.
 
 - **Enroll with user affinity + Setup Assistant - Company Portal app**:
 
@@ -337,7 +337,7 @@ The tasks depend on the option you configured in the enrollment profile.
 
   1. When the device is turned on, the Apple Setup Assistant runs. Users enter their organization credentials (`user@contoso.com`). This step enrolls the device in Intune.
   2. The Setup Assistant prompts the user for information, including the Apple ID (`user@iCloud.com` or `user@gmail.com`). This step pushes the Intune management profile to the device.
-  3. Users install the management profile. The profile checks-in with the Intune service, and enrolls the device. The device isn't registered in Azure AD.
+  3. Users install the management profile. The profile checks-in with the Intune service, and enrolls the device. The device isn't registered in Microsoft Entra ID.
 
 - **Enroll without user affinity**: You're using Direct enrollment. No actions. Be sure they don't install the Company Portal app from the Apple app store.
 
@@ -349,9 +349,9 @@ The tasks depend on the option you configured in the enrollment profile.
 
 These iOS/iPadOS devices are personal or BYOD (bring your own device) devices that can access organization email, apps, and other data. Starting with iOS 13 and newer, this enrollment option targets users or targets devices. It doesn't require resetting the devices.
 
-When you create the enrollment profile, you're asked to choose **User enrollment**, **Device enrollment** or **Determine based on user choice**.
+When you create the enrollment profile, you're asked to choose **User enrollment with Company Portal**, **Device enrollment with Company Portal**, **Account driven user enrollment**, or **Determine based on user choice**.
 
-For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS User or Device enrollment](../enrollment/ios-user-enrollment.md).
+For the specific enrollment steps, and its prerequisites, see [Set up iOS/iPadOS user enrollment](../enrollment/ios-user-enrollment.md) and [Set up iOS/iPadOS device enrollment](../enrollment/ios-device-enrollment.md).  
 
 ---
 | Feature | Use this enrollment option when |
@@ -376,13 +376,15 @@ This task list provides an overview. For more specific information, see [Set up 
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll iOS/iPadOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create the enrollment profile. When you create the enrollment profile, you have the following options:
 
-  - **Device enrollment**: This option is a typical enrollment for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
+  - **Device enrollment with Company Portal**: This option is a typical enrollment in the Company Portal app for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
 
     - You can deploy certificates that apply to the whole device.
     - Users must install updates. Only devices enrolled using Automated Device Enrollment (ADE) can receive updates using MDM policies or profiles.
-    - A user must be associated with the device. This user can be a device enrollment manager (DEM) account.
+    - A user must be associated with the device. This user can be a device enrollment manager (DEM) account.  
 
-  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.
+  - **Web based device enrollment**: Starting with iOS 15 and newer. This option is just like device enrollment with Company Portal, but enrollment takes place on the web version of Intune Company Portal, eliminating the need for the app. Additionally, this option enables employees and students without managed Apple IDs to enroll devices and access volume-purchased apps. 
+
+  - **Determine based on user choice**: Gives end users a choice when they enroll. Depending on their selection, **User enrollment** or **Device enrollment** is used.  
 
   - **User enrollment**: Starting with iOS 13 and newer. This option configures a specific set of features and organization apps, such as password, per-app VPN, Wi-Fi, and Siri. If you use User enrollment, and to help secure apps and their data, then we recommend also using app protection policies.
 
@@ -407,8 +409,8 @@ This task list provides an overview. For more specific information, see [Set up 
 
       Since the Outlook app was installed before the user enrollment profile, the user enrollment profile fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
 
-      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you may have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.
-
+      Once uninstalled, users can sync the device manually, and possibly reapply the user enrollment profile. Or, you may have to create an app configuration policy to deploy Outlook, and make it a required app. Then, deploy an app protection policy to secure the app and its data.  
+  This option is a typical enrollment for personal devices. The device is managed, not just specifics apps or features. With this option, consider the following information:
 - Assign the enrollment profile to user groups. Don't assign to device groups.
 
 ### User and Device enrollment end user tasks

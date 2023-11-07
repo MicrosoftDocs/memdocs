@@ -7,7 +7,7 @@ keywords: sdk, Xamarin, intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 11/01/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -34,13 +34,13 @@ ms.collection:
 # Microsoft Intune App SDK Xamarin Bindings
 
 > [!NOTE]
-> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android/9.5.2-beta2). For more information about migrating your apps from Xamarin Forms to .NET MAUI, see [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate). 
+> The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android). For .NET MAUI support on iOS, see [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS). See [Xamarin Support Policy](https://dotnet.microsoft.com/platform/support/policy/xamarin) and [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate) for more information about Xamarin support and migrating your apps from Xamarin Forms to .NET MAUI.
 
 > [!NOTE]
-> You may wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
+> You might wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
 
 ## Overview
-The [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) enable [Intune app protection policy](../apps/app-protection-policy.md) in iOS and Android apps built with Xamarin. The bindings allow developers to easily build in Intune app protection features into their Xamarin-based app.
+The [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) enable [Intune app protection policy](../apps/app-protection-policy.md) in iOS and Android apps built with Xamarin. The bindings allow developers to easily build-in Intune app protection features into their Xamarin-based app.
 
 The Microsoft Intune App SDK Xamarin Bindings let you incorporate Intune app protection policies (also known as APP or MAM policies) into your apps developed with Xamarin. A MAM-enabled application is one that is integrated with the Intune App SDK. IT administrators can deploy app protection policies to your mobile app when Intune actively manages the app.
 
@@ -66,9 +66,9 @@ Xamarin apps built with the Intune App SDK Xamarin Bindings can now receive Intu
 
 Review the [license terms](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK Xamarin Bindings, you agree to such license terms. If you do not accept them, do not use the software.
 
-The Intune SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis). 
+The Intune SDK relies on [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/v2-overview) for its [authentication](/azure/active-directory/develop/authentication-vs-authorization) and conditional launch scenarios, which require apps to be configured with [Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-whatis). 
 
-If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Azure Active Directory, ensure the steps to give your Xamarin app permissions to the Intune Mobile Application Management (MAM) service are followed. Use the instructions in the "[Give your app access to the Intune app protection service](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" section of the [getting started with the Intune SDK guide](app-sdk-get-started.md).
+If your application is already configured to use MSAL, and has its own custom client ID used to authenticate with Microsoft Entra ID, ensure the steps to give your Xamarin app permissions to the Intune Mobile Application Management (MAM) service are followed. Use the instructions in the "[Give your app access to the Intune Mobile App Management service](app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service)" section of the [getting started with the Intune SDK guide](app-sdk-get-started.md).
 
 ## Security Considerations
 
@@ -104,9 +104,9 @@ for more information.
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
       ```
 
-      Apps may pass in null if the user's UPN is unknown at the time of the call. In this case, users will be prompted to enter both their email address and password.
+      Apps might pass in null if the user's UPN is unknown at the time of the call. In this case, users will be prompted to enter both their email address and password.
       
-      If your app already uses MSAL to authenticate users, you can configure a single-sign-on (SSO) experience between your app and the Intune SDK. First, you'll need to override the default AAD settings used by the Intune SDK with those of your app. You can do so via the IntuneMAMSettings dictionary in the app's Info.plist, as mentioned in the [Intune App SDK for iOS Developer Guide](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), or you can do so in code via the AAD override properties of the IntuneMAMSettings class. The Info.plist approach is recommended for applications whose MSAL settings are static while the override properties are recommended for applications that determine those values at runtime. Once all of the SSO settings have been configured, your app should provide the user's UPN to the IntuneMAMEnrollmentManager's RegisterAndEnrollAccount method after it has successfully authenticated:
+      If your app already uses MSAL to authenticate users, you can configure a single-sign-on (SSO) experience between your app and the Intune SDK. First, you'll need to override the default Microsoft Entra settings used by the Intune SDK with those of your app. You can do so via the IntuneMAMSettings dictionary in the app's Info.plist, as mentioned in the [Intune App SDK for iOS Developer Guide](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), or you can do so in code via the Microsoft Entra ID override properties of the IntuneMAMSettings class. The Info.plist approach is recommended for applications whose MSAL settings are static while the override properties are recommended for applications that determine those values at runtime. Once all of the SSO settings have been configured, your app should provide the user's UPN to the IntuneMAMEnrollmentManager's RegisterAndEnrollAccount method after it has successfully authenticated:
 
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
@@ -226,18 +226,18 @@ Once the Remapper is added to your project you will need to perform the MAM equi
         }
 ```
 
-If the replacements are not made then you may encounter the following compilation errors until you make the replacements:
+If the replacements are not made then you might encounter the following compilation errors until you make the replacements:
 * [Compiler Error CS0239](/dotnet/csharp/misc/cs0239). This error is commonly seen in this form
 ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
 This is expected because when the Remapper modifies the inheritance of Xamarin classes, certain functions will be made `sealed` and a new MAM variant is added to override instead.
-* [Compiler Error CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): This error is commonly seen in this form ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. When the Remapper changes the inheritance of some of the Xamarin classes, certain member functions will be changed to `public`. If you override any of these functions, you will need to change those the access modifiers for those overrides to be `public` as well.
+* [Compiler Error CS0507](/dotnet/csharp/language-reference/compiler-messages/cs0507): This error is commonly seen in this form ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. When the Remapper changes the inheritance of some of the Xamarin classes, certain member functions will be changed to `public`. If you override any of these functions, you will need to change the access modifiers for those overrides to be `public` as well.
 
 > [!NOTE]
-> The Remapper re-writes a dependency that Visual Studio uses for IntelliSense auto-completion. Therefore, you may need to reload and rebuild the project when the Remapper is added for IntelliSense to correctly recognize the changes.
+> The Remapper re-writes a dependency that Visual Studio uses for IntelliSense auto-completion. Therefore, you might need to reload and rebuild the project when the Remapper is added for IntelliSense to correctly recognize the changes.
 
 #### Troubleshooting
-* If you encounter a blank, white screen in your application on launch, then you may need to force the navigation calls to execute on the main thread.
-* The Intune SDK Xamarin Bindings do not support apps that are using a cross-platform framework such as MvvmCross due to conflicts between MvvmCross and Intune MAM classes. While some customers may have had success with integration after moving their apps to plain Xamarin.Forms, we do not provide explicit guidance or plugins for app developers using MvvmCross.
+* If you encounter a blank, white screen in your application on launch, then you might need to force the navigation calls to execute on the main thread.
+* The Intune SDK Xamarin Bindings do not support apps that are using a cross-platform framework such as MvvmCross due to conflicts between MvvmCross and Intune MAM classes. While some customers might have had success with integration after moving their apps to plain Xamarin.Forms, we do not provide explicit guidance or plugins for app developers using MvvmCross.
 
 ### Company Portal app
 The Intune SDK Xamarin Bindings rely on the presence of the [Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android app on the device to enable app protection policies. The Company Portal retrieves app protection policies from the Intune service. When the app initializes, it loads policy and code to enforce that policy from the Company Portal. The user does not need to be signed in.

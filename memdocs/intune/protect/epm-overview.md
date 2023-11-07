@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/07/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,24 +50,32 @@ Applies to:
 
 Endpoint Privilege Management requires an additional license beyond the *Microsoft Intune Plan 1* license. You can choose between an stand-alone license that adds only EPM, or license EPM as part of the Microsoft Intune Suite. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-### Windows Client requirements
+### Requirements
 
-Endpoint Privilege Management has the following operating system requirements:
+Endpoint Privilege Management has the following requirements:
 
-- Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
-- Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/en-us/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)
-- Windows 10, version 22H2 (19045.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
-- Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
-- Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/en-us/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Microsoft Entra joined *or* Microsoft Entra hybrid joined
+- Microsoft Intune Enrollment *or* Microsoft Configuration Manager [co-managed](../../configmgr/comanage/overview.md) devices (no workload requirements)
+- Supported Operating System
+- Clear line of sight (without SSL-Inspection) to the [required endpoints](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management)
+
+> [!NOTE]
+>
+> - Windows 365 (CloudPC) is supported using a supported operting system version
+> - Workplace-join devices are not supported by Endpoint Privilege Management
+> - Azure Virtual Desktop is not supported by Endpoint Privilege Management
+
+Endpoint Privilege Management supports the following operating systems:
+
+- Windows 11, version 22H2 (22621.1344 or later) with [KB5022913](https://support.microsoft.com/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9)
+- Windows 11, version 21H2 (22000.1761 or later) with [KB5023774](https://support.microsoft.com/topic/march-28-2023-kb5023774-os-build-22000-1761-preview-67b4cfda-120a-422f-98c0-35124ddba839)
+- Windows 10, version 22H2 (19045.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 21H2 (19044.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
+- Windows 10, version 20H2 (19042.2788 or later) with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23)
 
 > [!IMPORTANT]
-> Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
->
-> Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
->
-> Only devices with a Hybrid Azure Active Directory join or Azure Active Directory join are supported. Workplace join is not a supported trust type.
-> 
-> Endpoint Privilege Management is supported for Intune-managed devices, including [co-managed](../../configmgr/comanage/overview.md) devices.
+> - Elevation settings policy will show as not applicable if a device is not at the minimum version specified above.
+> - Endpoint Privilege Management has some new networking requirements, see [Network Endpoints for Intune](../../intune/fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
 
 ## Getting started with Endpoint Privilege Management
 
@@ -86,9 +94,15 @@ When you configure the *elevation settings* and *elevation rules* policies menti
 
 - **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
-  When you use Endpoint Privilege Management, there are two options for elevation behavior:
+  When you use Endpoint Privilege Management, there are a few options for elevation behavior:
+
   - For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
   - For user confirmed rules, end users use a new right-click context menu *Run with elevated access*. User confirmed rules require the end-user to complete some additional requirements before the application is allowed to elevate. These requirements provide an extra layer of protection by making the user acknowledge that the app will run in an elevated context, before that elevation occurs.
+
+  > [!NOTE]
+  >Each elevation rule can also set the elevation behavior for child processes that the elevated process creates.
+
+- **Child process controls** - When processes are elevated by EPM, you can control how the creation of child processes is governed by EPM. This allows you to have granular control over any subprocesses that may be created by your elevated application.
 
 - **Client-side components** – To use Endpoint Privilege Management, Intune provisions a small set of components on the device that receive elevation policies and enforces them. The components are provisioned only when an elevation settings policy is received, and the policy has expressed the intent to *enable* Endpoint Privilege management.
 
@@ -130,6 +144,32 @@ In addition to the dedicated roles, the following built-in roles for Intune also
 
  For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
+## EpmTools PowerShell module
+
+Each device that receives Endpoint Privilege Management policies installs the EPM Microsoft Agent to manage those policies. The agent includes the *EpmTools* PowerShell module, a set of cmdlets that you can import to a device. You can use the cmdlets from EpmTools to:
+
+- Diagnose and troubleshoot issues with Endpoint Privilege Management. 
+- Get File attributes directly from a file or application for which you want to build a detection rule.
+
+### Install the EpmTools PowerShell module
+
+The EPM Tools PowerShell module is available from any device that has received EPM policy. To import the EpmTools PowerShell module:
+
+```powershell
+Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
+```
+
+Following are the available cmdlets:
+
+- **Get-Policies**: Retrieves a list of all policies received by the Epm Agent for a given PolicyType (ElevationRules, ClientSettings).
+- **DeclaredConfiguration**: Retrieves a list of WinCD documents that identify the policies targeted to the device.
+- **Get-DeclaredConfigurationAnalysis**: Retrieves a list of WinDC documents of type MSFTPolicies and checks if the policy is already present in Epm Agent (Processed column).
+- **Get-ElevationRules**: Query the EpmAgent lookup functionality and retrieves rules given lookup and target. Lookup is supported for FileName  and CertificatePayload.
+- **Get-ClientSettings**: Process all existing client settings policies to display the effective client settings used by the EPM Agent.
+- **Get-FileAttributes**: Retrieves File Attributes for a .exe file and extracts its Publisher and CA certificates to a set location that can be used to populate Elevation Rule Properties for a particular application.
+
+For more information about each cmdlet, review the **readme.txt** file from the *EpmTools* folder on the device.
+
 ## Next steps
 
 - [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
@@ -137,4 +177,3 @@ In addition to the dedicated roles, the following built-in roles for Intune also
 - [Reports for Endpoint Privilege Management](../protect/epm-policies.md)
 - [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
 - [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
-

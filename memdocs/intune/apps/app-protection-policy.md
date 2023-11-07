@@ -88,7 +88,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 
 Intune app protection policies platform support aligns with Office mobile application platform support for Android and iOS/iPadOS devices. For details, see the **Mobile apps** section of [Office System Requirements](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg). 
 
-Preview: In addition, you can create app protection policies for Windows devices. For details, see [App protection experience for Windows devices]().
+Preview: In addition, you can create app protection policies for Windows devices. For details, see [App protection experience for Windows devices](#preview-app-protection-experience-for-windows-devices).
 
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies on Android.  
@@ -163,13 +163,13 @@ The Intune SDK development team actively tests and maintains support for apps bu
 
 The following list provides the end-user requirements to use app protection policies on an Intune-managed app:
 
-- The end user must have an Azure Active Directory (Azure AD) account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Azure Active Directory.
+- The end user must have a Microsoft Entra account. See [Add users and give administrative permission to Intune](../fundamentals/users-add.md) to learn how to create Intune users in Microsoft Entra ID.
 
-- The end user must have a license for Microsoft Intune assigned to their Azure Active Directory account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
+- The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](../fundamentals/licenses-assign.md) to learn how to assign Intune licenses to end users.
 
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-- The end user must sign into the app using their Azure AD account.
+- The end user must sign into the app using their Microsoft Entra account.
 
 ## App protection policies for Microsoft Office apps
 
@@ -180,7 +180,7 @@ There are a few additional requirements that you want to be aware of when using 
 The additional requirements to use the [Outlook mobile app](https://products.office.com/outlook) include the following:
 
 - The end user must have the Outlook mobile app installed to their device.
-- The end user must have an [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) mailbox and license linked to their Azure Active Directory account.
+- The end user must have an [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) mailbox and license linked to their Microsoft Entra account.
 
   >[!NOTE]
   > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true) and does not support Exchange in Office 365 Dedicated.
@@ -189,7 +189,7 @@ The additional requirements to use the [Outlook mobile app](https://products.off
 
 The additional requirements to use the [Word, Excel, and PowerPoint](https://products.office.com/business/office) apps include the following:
 
-- The end user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Azure Active Directory account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- The end user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to their Microsoft Entra account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) following these [instructions](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - The end user must have a managed location configured using the granular save as functionality under the "Save copies of org data" application protection policy setting. For example, if the managed location is OneDrive, the [OneDrive](https://onedrive.live.com/about/) app should be configured in the end user's Word, Excel, or PowerPoint app.
 
@@ -204,7 +204,7 @@ A managed location (i.e. OneDrive) is needed for Office. Intune marks all data i
 
 ### Skype for Business
 
-There are additional requirements to use Skype for Business. See [Skype for Business](https://products.office.com/skype-for-business/it-pros) license requirements. For Skype for Business (SfB) hybrid and on-prem configurations, see [Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) and [Modern Auth for SfB OnPrem with Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910), respectively.
+There are additional requirements to use Skype for Business. See [Skype for Business](https://products.office.com/skype-for-business/it-pros) license requirements. For Skype for Business (SfB) hybrid and on-prem configurations, see [Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) and [Modern Auth for SfB OnPrem with Microsoft Entra ID](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910), respectively.
 
 ## App protection Global policy
 
@@ -266,7 +266,7 @@ For iOS/iPadOS devices, even if the PIN is shared between apps from different pu
 The Intune PIN works based on an inactivity-based timer (the value of **Recheck the access requirements after (minutes)**). As such, Intune PIN prompts show up independently from the built-in app PIN prompts for Outlook and OneDrive which often are tied to app launch by default. If the user receives both PIN prompts at the same time, the expected behavior should be that the Intune PIN takes precedence.
 
 **Intune PIN security**<br>
-The PIN serves to allow only the correct user to access their organization's data in the app. Therefore, an end user must sign in with their work or school account before they can set or reset their Intune app PIN. This authentication is handled by Azure Active Directory via secure token exchange and is not transparent to the [Intune SDK](../developer/app-sdk.md). From a security perspective, the best way to protect work or school data is to encrypt it. Encryption is not related to the app PIN but is its own app protection policy.
+The PIN serves to allow only the correct user to access their organization's data in the app. Therefore, an end user must sign in with their work or school account before they can set or reset their Intune app PIN. This authentication is handled by Microsoft Entra ID via secure token exchange and is not transparent to the [Intune SDK](../developer/app-sdk.md). From a security perspective, the best way to protect work or school data is to encrypt it. Encryption is not related to the app PIN but is its own app protection policy.
 
 **Protecting against brute force attacks and the Intune PIN**<br>
 As part of the app PIN policy, the IT administrator can set the maximum number of times a user can try to authenticate their PIN before locking the app. After the number of attempts has been met, the [Intune SDK](../developer/app-sdk.md) can wipe the "corporate" data in the app.
@@ -281,7 +281,7 @@ Since the PIN is shared amongst apps with the same publisher, if the wipe goes t
 If you observe the PIN being wiped on some devices, the following is likely happening: Since the PIN is tied to an identity, if the user signed in with a different account after a wipe, they will be prompted to enter a new PIN. However, if they sign in with a previously existing account, a PIN stored in the keychain already can be used to sign in.
 
 **Setting a PIN twice on apps from the same publisher?**<br>
-MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Yammer) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
+MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
 In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Another change was introduced in the Intune SDK for iOS v 14.6.0 that causes all PINs in 14.6.0+ to be handled separately from any PINs in previous versions of the SDK.
 
@@ -346,7 +346,7 @@ The IT administrator can deploy and set app protection policy for [Microsoft Edg
 
 Intune app protection policies allow control over app access to only the Intune licensed user. One of the ways to control access to the app is to require either Apple's Touch ID or Face ID on supported devices. Intune implements a behavior where if there is any change to the device's biometric database, Intune prompts the user for a PIN when the next inactivity timeout value is met. Changes to biometric data include the addition or removal of a fingerprint, or face. If the Intune user does not have a PIN set, they are led to set up an Intune PIN.
 
-The intent of this process is to continue keeping your organization's data within the app secure and protected at the app level. This feature is only available for iOS/iPadOS, and requires the participation of applications that integrate the Intune SDK for iOS/iPadOS, version 9.0.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Yammer.
+The intent of this process is to continue keeping your organization's data within the app secure and protected at the app level. This feature is only available for iOS/iPadOS, and requires the participation of applications that integrate the Intune SDK for iOS/iPadOS, version 9.0.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Viva Engage.
   
 ### iOS share extension
 

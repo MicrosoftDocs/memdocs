@@ -37,6 +37,9 @@ ms.collection:
 
 Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Intune has many templates that include groups of settings that are specific to a feature, such as certificates, VPN, email, and more.
 
 Some profile examples include:
@@ -143,7 +146,7 @@ This feature supports:
 
 ## Domain join
 
-[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to hybrid Azure AD joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
+[Domain join](domain-join-configure.md) configures on-premises Active Directory domain information. This information is deployed to Microsoft Entra hybrid joined devices when provisioned using Windows Autopilot and Intune. This profile tells devices which domain and OU to join.
 
 This feature supports:
 
@@ -189,7 +192,7 @@ This feature supports:
 - Windows 11
 - Windows 10
 
-## eSIM cellular - Public preview
+## eSIM cellular
 
 [eSIM cellular profiles](esim-device-configuration.md) lets administrators configure cellular data plans on your managed devices for internet and data access. After getting activation codes from your mobile operator, use Intune to import these activation codes, and then assign to your eSIM capable devices.
 

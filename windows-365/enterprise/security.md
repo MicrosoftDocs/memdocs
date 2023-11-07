@@ -52,7 +52,7 @@ As described in [identity and authentication](./identity-authentication.md#authe
 - The Windows 365 service.
 - The Cloud PC.
 
-The primary control for securing access is by using Azure Active Directory (Azure AD) Conditional Access to conditionally grant access to the Windows 365 service. To secure access to the Cloud PC, see [set conditional access policies](./set-conditional-access-policies.md).
+The primary control for securing access is by using Microsoft Entra Conditional Access to conditionally grant access to the Windows 365 service. To secure access to the Cloud PC, see [set conditional access policies](./set-conditional-access-policies.md).
 
 ## Secure Cloud PC devices
 
@@ -76,10 +76,13 @@ The following security components are enabled by default on specific Cloud PC SK
 
 - **Virtualization-based workloads**
     - **Description**: Virtualization-based workloads typically require the Windows device to enable the Hyper-V feature and run the workloads in an isolated space, to protect the Windows OS from any security threats.
-    - **Security features supported**:
+    - **Security features**:
         - [Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview)
         - [Windows Sandbox](/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview)
     - **Required configuration**: Cloud PC must have 4 vCPU and 16-GB RAM or more. For more information, see [set up virtualization-based workloads support](nested-virtualization.md#requirements).
+ 
+> [!NOTE]
+> Given the technological complexity, the security promise of Microsoft Defender Application Guard (MDAG) may not hold true on VMs and in VDI environments. Hence, MDAG is currently not officially supported on VMs and in VDI environments. However, for testing and automation purposes on non-production machines, you may enable MDAG on a VM by enabling Hyper-V nested virtualization on the host.
 
 ## Secure Cloud PC data
 

@@ -30,7 +30,7 @@ ms.collection:
 
 # Manage RDP device redirections for Cloud PCs
 
-Remote Desktop Protocol (RDP) can be used to create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. For security reasons, you might want to override the default and block these redirections.
+Remote Desktop Protocol (RDP) can be used to create redirections that let users connect to peripherals (like cameras, USB drives, and printers) from remote devices like Cloud PCs. By default, these redirections are enabled for Cloud PCs. Update these redirections according to your organization's policies.
 
 To understand which redirections are supported based on which platform is used to access the Cloud PC, see [Compare the clients: redirections](/windows-server/remote/remote-desktop-services/clients/remote-desktop-app-compare).
 
@@ -53,8 +53,8 @@ The following redirections can be managed by using the appropriate setting:
 
 There are two ways to manage these redirections:
 
-- Settings Catalog: Use a device configuration policy in Microsoft Intune. Supports both Azure Active Directory (Azure AD) join and hybrid Azure AD join Cloud PCs.
-- Group Policy Object (GPO): Use GPOs in Windows Server Active Directory. Supports hybrid Azure AD join Cloud PCs only.
+- Settings Catalog: Use a device configuration policy in Microsoft Intune. Supports both Microsoft Entra join and Microsoft Entra hybrid join Cloud PCs.
+- Group Policy Object (GPO): Use GPOs in Windows Server Active Directory. Supports Microsoft Entra hybrid join Cloud PCs only.
 
 Follow the appropriate guidance to manage RDP device redirections.
 

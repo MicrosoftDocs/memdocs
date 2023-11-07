@@ -3,11 +3,11 @@
 
 title: Kiosk settings for Windows 10/11 in Microsoft Intune
 description: Configure your Windows 10/11 client devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune. 
-keywords:
+keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2023
+ms.date: 08/30/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode.
+On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
 This article describes some of the settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure your Windows client devices to run in kiosk mode.
 
@@ -127,7 +127,7 @@ Runs only one app on the device, such as a web browser or Store app.
       `office.com`
 
     > [!NOTE]
-    > Windows 10/11 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Azure Active Directory (AD) credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
+    > Windows 10/11 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
 
   - **Add Store app**: Select **Add a store app**, and choose an app from the list.
 
@@ -147,7 +147,10 @@ Runs only one app on the device, such as a web browser or Store app.
 
 ## Multi-app kiosk
 
-Runs multiple app on the device. Apps in this mode are available on the start menu. These apps are the only apps the user can open. If an app has a dependency on another app, then add both apps to the allowed apps list. For example, Internet Explorer 64-bit has a dependency on Internet Explorer 32-bit. So, you must allow `C:\Program Files\internet explorer\iexplore.exe` and `C:\Program Files (x86)\Internet Explorer\iexplore.exe`.
+> [!NOTE]
+> Currently, you can use Intune to configure a multi-app kiosk on Windows 10 devices. For more information about Windows 11 multi-app kiosk support, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+
+Runs multiple apps on the device. Apps in this mode are available on the start menu. These apps are the only apps the user can open. If an app has a dependency on another app, then add both apps to the allowed apps list. For example, Internet Explorer 64-bit has a dependency on Internet Explorer 32-bit. So, you must allow `C:\Program Files\internet explorer\iexplore.exe` and `C:\Program Files (x86)\Internet Explorer\iexplore.exe`.
 
 - **Select a kiosk mode**: Select **Multi app kiosk**.
 
@@ -159,7 +162,7 @@ Runs multiple app on the device. Apps in this mode are available on the start me
 
   - **Auto logon (Windows 10 version 1803 and later)**: Use on kiosks in public-facing environments that don't require the user to sign in, similar to a guest account. This setting uses the [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Local user account**: **Add** the local (to the device) user account. The account you enter signs in to the kiosk.
-  - **Azure AD user or group (Windows 10 version 1803 and later)**: Select **Add**, and choose Azure AD users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
+  - **Microsoft Entra user or group (Windows 10 version 1803 and later)**: Select **Add**, and choose Microsoft Entra users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
   - **HoloLens visitor**: The visitor account is a guest account that doesn't require any user credentials or authentication, as described in [shared PC mode concepts](/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Browser and Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
@@ -200,7 +203,7 @@ Runs multiple app on the device. Apps in this mode are available on the start me
         To allow specific websites, upload a .csv file that includes a list of the allowed websites. If you don't add a .csv file, all websites are allowed.
 
       > [!NOTE]
-      > Windows 10 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Azure Active Directory (AD) credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
+      > Windows 10 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
 
   - **Applications**
 
@@ -227,7 +230,7 @@ Runs multiple app on the device. Apps in this mode are available on the start me
 
 - **Use alternative Start layout**: Select **Yes** to enter an XML file that describes how the apps appear on the start menu, including the order of the apps. Use this option if you require more customization in your start menu. [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout) has some guidance, and sample XML.
 
-- **Windows Taskbar**: Choose to **Show** or **hide** the taskbar. By default, the taskbar isn't shown. Icons, such as the Wi-Fi icon, are shown, but the settings can't be changed by end users.
+- **Windows Taskbar**: Choose to **Show** or **hide** the taskbar. By default, the taskbar isn't shown. Icons, such as the Wi-Fi icon, are shown, but end users can't change the settings.
 
 - **Allow Access to Downloads Folder**: Choose **Yes** to allow users to access the Downloads folder in Windows Explorer. By default, access to the Downloads folder is disabled. This feature is commonly used for end users to access items downloaded from a browser.
 

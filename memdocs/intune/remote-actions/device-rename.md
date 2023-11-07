@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: abstarr
+ms.reviewer: Elcox 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -39,7 +39,7 @@ For more information, on modifying the Management name and renaming in the Compa
 - [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).
 - [Rename device from the Intune Company Portal app for Windows](../user-help/rename-your-device-cpapp.md). 
 
-If a device isn't listed here, it's not supported. This feature doesn't support renaming hybrid Azure AD Windows devices.
+If a device isn't listed here, it's not supported. This feature doesn't support renaming hybrid Microsoft Entra Windows devices.
 
 You can rename the following types of devices:
 
@@ -50,7 +50,7 @@ You can rename the following types of devices:
 - iOS/iPadOS supervised devices with iOS 9.3 and later
 - macOS 10 - Corporate-owned devices
 - Windows - Corporate-owned devices
-- Corporate-owned co-managed devices that are Azure AD joined
+- Corporate-owned co-managed devices that are Microsoft Entra joined
 
 > [!NOTE]
 > Renaming of Android Enterprise devices will only change the **Device name** in the Intune admin center and not on the device itself. The Device name in Intune is a friendly name that users are free to change.

@@ -66,7 +66,7 @@ You must configure the MAM provider before you can create a WIP policy. Learn mo
 
 Additionally, you need to have the following license and update:
 
-- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) license
+- [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) license
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 ## To add a WIP policy
@@ -172,6 +172,8 @@ When the policy is enabled, WIP protected items are indexed and the metadata abo
 
 When the policy is disabled, the WIP protected items are not indexed and do not show up in the results in Cortana or file explorer. There may also be a performance impact on photos and Groove apps if there are many WIP protected media files on the device.
 
+[!INCLUDE [cortana-app-deprecation](../includes/cortana-app-deprecation.md)]
+
 ## Add encrypted file extensions
 
 In addition to setting the **Allow Windows Search Indexer to search encrypted items** option, you can specify a list of file extensions. Files with these extensions are encrypted when copying from a Server Message Block (SMB) share within the corporate boundary as defined in the network location list. When this policy is not specified, the existing auto-encryption behavior is applied. When this policy is configured, only files with the extensions in the list will be encrypted.
@@ -185,7 +187,7 @@ After you created your WIP app protection policy, you need to deploy it to your 
 
 1. On the **App policy** pane, choose your newly created app protection policy, choose **User groups** > **Add user group**.
 
-    A list of user groups, made up of all the security groups in your Azure Active Directory, opens in the **Add user group** pane.
+    A list of user groups, made up of all the security groups in your Microsoft Entra ID, opens in the **Add user group** pane.
 
 2. Choose the group you want your policy to apply to, then choose **Select** to deploy the policy.
 

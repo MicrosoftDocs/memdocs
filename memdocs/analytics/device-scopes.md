@@ -1,8 +1,8 @@
 ---
-title: Device scopes in Endpoint Analytics
-titleSuffix: Microsoft Intune
-description: Learn about Device scopes as an advanced feature in Endpoint Analytics
-ms.date: 02/22/2023
+title: Device scopes in Endpoint analytics
+titleSuffix: Microsoft Endpoint Manager
+description: Learn about Device scopes as an advanced feature in Endpoint analytics
+ms.date: 10/23/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.author: smbhardwaj
 manager: dougeby
 ms.localizationpriority: high
 ---
-# Device scopes in Endpoint Analytics
+# Device scopes in Endpoint analytics
 
 > [!NOTE]
 > This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune/fundamentals/intune-add-ons.md).

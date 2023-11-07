@@ -85,7 +85,7 @@ Select the VPN connection type from the following list of vendors:
 - **Citrix SSO**
 - **Zscaler**
 
-  To use Conditional Access, or allow users to bypass the Zscaler sign-in screen, you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+  To use Conditional Access, or allow users to bypass the Zscaler sign-in screen, you must integrate Zscaler Private Access (ZPA) with your Microsoft Entra account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **NetMotion Mobility**
 - **IKEv2**
 
@@ -119,7 +119,7 @@ Select the VPN connection type from the following list of vendors:
 ## Base VPN settings
 
 - **Connection name**: End users see this name when they browse their device for a list of available VPN connections.
-- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Azure Active Directory (AD) is used.
+- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Microsoft Entra ID is used.
 - **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
 - **Authentication method**: Choose how devices authenticate to the VPN server.

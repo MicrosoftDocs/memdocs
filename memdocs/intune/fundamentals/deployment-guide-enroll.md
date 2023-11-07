@@ -32,7 +32,7 @@ ms.collection:
 
 # Step 5 – Enroll devices in Microsoft Intune
 
-In the final phase of deployment, devices are registered or joined in Azure Active Directory (Azure AD), enrolled in Microsoft Intune, and checked for compliance.
+In the final phase of deployment, devices are registered or joined in Microsoft Entra ID, enrolled in Microsoft Intune, and checked for compliance.
 
 :::image type="content" source="./media/deployment-guide-enroll/deployment-plan-enroll.png" alt-text="Diagram that shows getting started with Microsoft Intune with step 5, which is enrolling devices to be managed by Intune.":::
 
@@ -47,9 +47,9 @@ This article describes:
 ## Getting started       
 If this is your first time deploying enrollment profiles with Intune, or you're trying a new configuration, start small and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. If everything is going well, assign the enrollment profile to more pilot groups. For more information and suggestions, see the [Planning guide: Step 5 - Create a rollout plan](intune-planning-guide.md#step-5---create-a-rollout-plan).  
 
-Registration in Azure AD is a required step for Intune management. Before a device can enroll in Intune, the user of the device must authenticate and establish a device identity in your org's Azure AD. This step grants the user single sign-on access to cloud-based work apps and other resources. It's important to know which identity option you're utilizing because it determines the enrollment methods you can use, and also determines the sign-in experience for the device user. Identity options include:       
-   * *Azure AD registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Azure AD work account. 
-   * *Azure AD joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Azure AD work account.  
+Registration in Microsoft Entra ID is a required step for Intune management. Before a device can enroll in Intune, the user of the device must authenticate and establish a device identity in your org's Microsoft Entra ID. This step grants the user single sign-on access to cloud-based work apps and other resources. It's important to know which identity option you're utilizing because it determines the enrollment methods you can use, and also determines the sign-in experience for the device user. Identity options include:       
+   * *Microsoft Entra registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Microsoft Entra ID work account. 
+   * *Microsoft Entra joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Microsoft Entra ID work account.  
 
 ## Pre-enrollment configurations  
 Prepare devices for enrollment by configuring enrollment features, such as enrollment restrictions, device categorization, and device enrollment managers. These configurations help improve and simplify the enrollment experience for you and device users, and help you stay organized in the admin center.  Configure them before you create the enrollment profile. 
@@ -67,9 +67,11 @@ If devices are currently enrolled in another MDM provider, unenroll the devices 
 | Android Enterprise fully managed (COBO) | Yes |
 | Android Enterprise dedicated devices (COSU) | Yes |
 | Android device administrator (DA) | No |
-| iOS/iPadOS | Yes |
+| iOS/iPadOS (BYOD) | No |
+| iOS/iPadOS (ADE) | Yes |
 | Linux | No |
-| macOS | Yes |
+| macOS (BYOD) | No |
+| macOS (ADE) | Yes |
 | Windows | No |
 
 -----  
@@ -77,7 +79,7 @@ If devices are currently enrolled in another MDM provider, unenroll the devices 
 Devices that don't require a reset begin installing Intune profiles as soon as they enroll. Previously configured settings may remain on devices if you don't change them in Intune prior to enrollment.   
 
 ### Add device enrollment managers     
-We recommend utilizing device enrollment managers when you need to enroll and prepare a large number of devices for distribution. A device enrollment manager account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15 devices. A device enrollment manager is a non-administrator Azure AD user who can:
+We recommend utilizing device enrollment managers when you need to enroll and prepare a large number of devices for distribution. A device enrollment manager account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15 devices. A device enrollment manager is a non-administrator Microsoft Entra user who can:
 
 * Enroll up to 1000 corporate-owned devices in Intune
 * Sign in to Intune Company Portal to get company apps
@@ -103,12 +105,12 @@ For more information, see:
 ### Create terms and conditions policy    
 Use an Intune terms and conditions policy to disclose legal disclaimers and compliance requirements to device users before enrollment. This policy requires the devices user to accept your org's terms and conditions before they enroll their device or access protected resources. The terms and conditions are shown to targeted users in the Intune Company Portal app. 
 
-If you're looking for more control, including where the terms appear, consider configuring *Azure Active Directory (Azure AD) terms of use*. Azure AD terms are shown to users when they sign in to targeted apps and resources and offer more granular settings than Intune terms and conditions.   
+If you're looking for more control, including where the terms appear, consider configuring *Microsoft Entra terms of use*. Microsoft Entra terms are shown to users when they sign in to targeted apps and resources and offer more granular settings than Intune terms and conditions.   
 
 For more information, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).  
 
 ### Require multifactor authentication  
-Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a conditional access policy with an MFA policy. Azure AD Premium is required.  
+Require users to authenticate via multi-factor authentication (MFA) during enrollment. If you require MFA, people wanting to enroll devices must authenticate with a second device and two forms of credentials before they can enroll their device. This is a one-time conditional step, and ensures that the person on the device is who they say they are.  You can enable this behavior for all platforms except Linux by using a conditional access policy with an MFA policy. Microsoft Entra ID P1 or P2 is required.  
 
 For more information, see [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).   
 
@@ -130,9 +132,11 @@ You can enroll personal or corporate-owned Android devices in Intune. We recomme
 * Android Enterprise dedicated  
 
 ### Android enrollment methods  
-The following tabs describe the Intune-supported Android and AOSP enrollment options. 
+
+The following tabs describe the Intune-supported Android and AOSP enrollment options.
 
 # [Corporate owned](#tab/work-profile)  
+
 * [Corporate-owned devices with a work profile](../enrollment/android-corporate-owned-work-profile-enroll.md): Enroll corporate-owned devices that are also approved for personal use. This method creates a separate work profile on the device so that the user can switch between their personal apps and work apps easily and securely. The device user enrolls the device through the Microsoft Intune app. As an admin, you can manage the apps and data in the work profile.  This method aligns with the *Android Enterprise corporate-owned work profile* management solution.  
  
 * [Fully managed](../enrollment/android-dedicated-devices-fully-managed-enroll.md): Enroll corporate-owned devices exclusively for work and not personal use. There's one user associated with the enrolled device. You can manage the entire device and enforce policy controls not available with the Android Enterprise work profile method. This method aligns with the *Android Enterprise fully managed* management solution.  
@@ -145,16 +149,14 @@ The following tabs describe the Intune-supported Android and AOSP enrollment opt
 * [Zero-touch enrollment](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch): We recommend using zero-touch enrollment for bulk enrollments and to simplify enrollment for remote workers. This method lets you prepare corporate-owned devices ahead of time so that they automatically provision and enroll as fully manged devices when users turn them on.     
 
 # [User owned](#tab/user-owned-android)  
+
 [Personally owned devices with a work profile](../enrollment/android-work-profile-enroll.md): Support enrollment for personal devices in BYOD scenarios. During enrollment, a separate work profile is created on the device so that people can switch between their personal apps and work apps easily and securely. The device owner enrolls their device through the Intune Company Portal app. As an admin, you can manage the apps and data in the work profile. This method aligns with the *Android Enterprise work profile for personally owned devices* management solution.    
 
 
 ---
 
 >[!NOTE]
-> Android Enterprise device management capabilities supersede Android device administrator capabilities so we recommend using Android Enterprise management solutions when possible. We still recommend the [Android device administrator management solution](../enrollment/android-move-device-admin-work-profile.md) for these scenarios:  
-> * For Microsoft Teams certified Android devices.
-> * When the device is in an area where Android Enterprise is unavailable.  
-> * When devices are incapable of integrating with Google Mobile Services, and the AOSP enrollment options won't work with them. For more information about using Android device administrator when Google Mobile Services is unavailable, see [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md).   
+> Microsoft Intune also supports [Android device administrator management](../enrollment/android-enroll-device-administrator.md), but will be ending support on devices with access to Google Mobile Services (GMS) on August 30, 2024. After that date, device enrollment, technical support, bug fixes, and security fixes will be unavailable. For more information, read [Ending support for Android device administrator on GMS devices](https://aka.ms/Intune-Android-DA-blog).  
 
 ## Enrollment for Apple devices 
 This section describes the enrollment options available for iOS/iPadOS and Mac devices in Intune. 
@@ -204,19 +206,24 @@ The following table describes the supported enrollment methods for devices runni
 # [Automatic enrollment](#tab/automatic-enrollment)
 Make enrollment in Intune easier for employees and students by enabling automatic enrollment for Windows. For more information, see [Enable automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment). 
 
-* [Azure Active Directory Join with automatic enrollment](/azure/active-directory/devices/concept-azure-ad-join): This option is supported on devices that are procured by you or the device user for work use. Enrollment occurs during the out-of-box-experience, after the user signs in with their work account and joins Azure AD.  This solution is for when you don't have access to the device, such as in remote work environments. When these devices enroll, their device ownership changes to *corporate-owned*, and you get access to management features that aren't available on devices marked as personal-owned. 
+* [Microsoft Entra join with automatic enrollment](/azure/active-directory/devices/concept-azure-ad-join): This option is supported on devices that are procured by you or the device user for work use. Enrollment occurs during the out-of-box-experience, after the user signs in with their work account and joins Microsoft Entra ID or by choosing to join the device in Microsoft Entra ID when connecting a work or school account from the Settings app ([as described in Windows device enrollment guide - End user tasks](./deployment-guide-enrollment-windows.md#automatic-enrollment-end-user-tasks)). This solution is for when you don't have access to the device, such as in remote work environments. When these devices enroll, their device ownership changes to corporate-owned and you get access to management features that aren't available on devices marked as personal-owned. 
 
-* [Windows Autopilot user-driven or self-deploying mode](../../autopilot/tutorial/autopilot-scenarios.md): Automatic enrollment is supported with the user-driven or self-deploying Windows Autopilot out-of-box-experience (OOBE), and is best for corporate-owned desktops, laptops, and kiosks. Device users get desktop access after required software and policies are installed. An Azure AD Premium license is required.  
+* [Windows Autopilot user-driven or self-deploying mode](/autopilot/tutorial/autopilot-scenarios): Automatic enrollment is supported with the Windows Autopilot user-driven (for both the Microsoft Entra hybrid join and Microsoft Entra join scenarios) or self-deploying (Microsoft Entra join only) profiles and can be used for corporate-owned desktops, laptops, and kiosks. Device users get desktop access after required software and policies are installed. A Microsoft Entra ID P1 or P2 license is required. We recommend using only Microsoft Entra join, which provides the best user experience and is easier to configure. In scenarios where on-premises Active Directory is still needed, Microsoft Entra hybrid join can be used but you have to [install the Intune connector for Active Directory](/autopilot/windows-autopilot-hybrid), and your devices must be able to connect to a domain controller via either an on-premises network or VPN connection. 
 
-* [Windows Autopilot for Hybrid Azure AD join](../../autopilot/windows-autopilot-hybrid.md): Automatic enrollment is supported with Windows Autopilot for hybrid Azure AD-joined devices. During the Windows Autopilot out-of-box-experience, the Intune connector for Active Directory enables devices in Active Directory domain services to join to Azure AD, and then automatically enroll in Intune. You have to [install the Intune connector for Active Directory](../enrollment/autopilot-hybrid-connector-proxy.md) on an on-premises server and register devices in Windows Autopilot.  We recommend this enrollment solution for on-premises environments that use Active Directory domain services and can't currently move their identities to Azure AD. 
+* [Co-management with Configuration Manager](../../configmgr/comanage/quickstart-paths.md): Co-management is best for environments that already manage devices with Configuration Manager, and want to integrate Microsoft Intune workloads. Co-management is the act of moving workloads from Configuration Manager to Intune and telling the Windows client who the management authority is for that particular workload. For example, you can manage devices with compliance policies and device configuration workloads in Intune, and utilize Configuration Manager for all other features, like app deployment and security policies.
 
-* [Co-management with Configuration Manager](../../configmgr/comanage/quickstart-paths.md): Co-management is best for environments that already manage devices with Configuration Manager, and want to integrate Microsoft Intune workloads. Co-management is the act of moving workloads from Configuration Manager to Intune and telling the Windows client who the management authority is for that particular workload. For example, you can manage devices with compliance policies and device configuration workloads in Intune, and utilize Configuration Manager for all other features, like app deployment and security policies.   
+* [Enrollment using Group Policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy): A Group Policy can be used to trigger the automatic enrollment of Microsoft Entra hybrid joined devices without any user interaction. The enrollment process starts in the background (via a scheduled task) after a Microsoft Entra ID-synced user signs in on the device. We recommend this method in environments where devices are Microsoft Entra hybrid joined and not managed using Configuration Manager. 
 
-# [User owned](#tab/byod-enrollment) 
-[Automatic enrollment for BYOD](../enrollment/windows-enroll.md): Automatic enrollment is available for users in BYOD scenarios who want to enroll their personal devices. Employees and students who are Intune-licensed can initialize registration and automatic enrollment by signing into the Company Portal app with their work or school account.  
+# [BYOD enrollment](#tab/byod-enrollment) 
+These options can be used by users in BYOD scenarios who want to enroll their personal devices without joining them to a domain.
+* [Connect a work or school account](./deployment-guide-enrollment-windows.md#automatic-enrollment-end-user-tasks): Users go to the Settings app on their device and add their work or school account. They add their work email address without selecting a domain joining option. 
+* [Enrollment using the Intune Company Portal app](../user-help/enroll-windows-10-device.md): Users sign in to the Intune Company Portal app with their work account to enroll their devices. They can install Company Portal from Microsoft Store. 
+* Enrollment via a Microsoft 365 app sign-in: Users sign into a Microsoft 365 app or service, such as Exchange Online, from an unmanaged and unregistered device with their work account. On the sign-in prompt, they select **Allow my organization to manage my device**.   
+
+In all of these BYOD scenarios, the devices are Microsoft Entra registered and managed by Intune. If both the MDM and MAM user scopes are enabled for a user in the [Intune automatic enrollment configuration](../enrollment/windows-enroll.md), then the MAM user scope will take precedence and the device will not be enrolled and managed by Intune.  
 
 # [Bulk enrollment via provisioning package](#tab/bulk-enrollment)
-Workplace join and enroll a large number of corporate-owned devices in Azure AD and Intune without needing to reimage them. This process requires you to create a provisioning package using the Windows Configuration Designer app. You can apply the package during the device OOBE, or upload it on the device in the Settings app.   
+Workplace join and enroll a large number of corporate-owned devices in Microsoft Entra ID and Intune without needing to reimage them. This process requires you to create a provisioning package using the Windows Configuration Designer app. You can apply the package during the device OOBE, or upload it on the device in the Settings app.   
 
 ---   
 
@@ -224,7 +231,7 @@ Workplace join and enroll a large number of corporate-owned devices in Azure AD 
 There are other Windows enrollment options in Intune to help improve or simplify the device management experience for you and your employees:     
 
 * [Co-management settings](../../configmgr/comanage/autopilot-enrollment.md#configure): Enable co-management settings to integrate Configuration Manager workloads with Intune. Co-management enables you to use both Intune and Configuration Manager features to manage devices.  
-* [CNAME validation](../enrollment/windows-enrollment-create-cname.md): Validate a domain name server (DNS) alias (CNAME record type) you created to redirect enrollment requests to Intune servers. The alias simplifies enrollment for users in the absence of Azure AD Premium and automatic enrollment.    
+* [CNAME validation](../enrollment/windows-enrollment-create-cname.md): Validate a domain name server (DNS) alias (CNAME record type) you created to redirect enrollment requests to Intune servers. The alias simplifies enrollment for users in the absence of Microsoft Entra ID P1 or P2 and automatic enrollment.    
 * [Enrollment Status Page](../enrollment/windows-enrollment-status.md): Enable the Enrollment Status Page so that people going through device setup can view and track installation progress.  
 
 ## Report and troubleshoot  

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 07/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,7 +39,7 @@ Intune supports a variety of app types, including web apps. A web app is a clien
 
 Before you can manage and assign an app for your users, add the app to Intune. 
 
-Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS devices, a shortcut to the web app is added to the home screen. For Android Device Admin devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
+Intune creates a shortcut to the web app on the user's device. For iOS/iPadOS devices, a shortcut to the web app is added to the home screen. For macOS devices, end users can pin web apps to the dock on their macOS device. For Android Device Admin devices, a shortcut to the web app is added to the Intune company portal widget and the widget needs to be pinned manually by the user. For Windows devices, a shortcut to the web app is placed on the Start Menu.
 
 > [!Note]
 > A browser must be installed on the user's device to launch web apps. 
@@ -55,7 +55,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **Select app type** pane, under the available **Other** types, select **Web link**.
+3. In the **Select app type** pane, under the **Other** types, select **Web link**. Other options include **iOS/iPadOS web clip**, **macOS web clip**, and **Windows web link**.
 4. Click **Select**. The **Add app** steps are displayed.
 5. On the **App information** page, add the following information:
     - **Name**:  Enter the name of the app as it is to be displayed in the company portal. 
@@ -66,9 +66,18 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
     - **Publisher**: Enter the name of the publisher of this app.
     - **App URL**: Enter the URL of the website that hosts the app that you want to assign.
+    - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
+    - **Full screen**: [iOS/iPadOS only] If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there’s no URL or search bar, and no bookmarks.
+    - **Ignore manifest scope**: [iOS/iPadOS only] If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip’s URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
+    - **Precomposed**: [iOS/iPadOS only] If configured to **Yes**, prevents Apple's application launcher (SpringBoard) from adding "shine" to the icon.
+    - **Target application bundle identifier**: [iOS/iPadOS only] Enter the application bundle identifier that specifies the application that opens the URL. Available in iOS 14 and later.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
-    - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in the Intune managed browser. This browser must be installed on their device.
+    - **Information URL**: Link people to a website or documentation that has more information about the app. The information URL will be visible to users in Company Portal.
+    - **Privacy URL**: Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL will be visible to users in Company Portal.
+    - **Developer**: The name of the company or Individual that developed the app. This information will be visible to people signed into the admin center.
+    - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name will be visible to people signed in to the admin center.
+    - **Notes**: Add additional notes about the app. Notes will be visible to people signed in to the admin center.
     - **Logo**: Upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
 6. Click **Next** to display the **Scope tags** page.
 7. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).

@@ -32,7 +32,7 @@ ms.collection:
 
 # Evaluate Microsoft Intune
 
-Microsoft Intune, which is a part of the Microsoft Intune family of products, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Azure Active Directory (Azure AD) for identity and access control and Azure Information Protection and advanced threat protection products for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices while keeping your organization's information protected. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true).
+Microsoft Intune, which is a part of the Microsoft Intune family of products, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows 10/11 devices. It integrates closely with Microsoft Entra ID for identity and access control and Azure Information Protection and advanced threat protection products for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices while keeping your organization's information protected. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true).
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -50,7 +50,7 @@ The following list includes recommended (but not required) prerequisites:
 
 ## Learning objectives
 
-In this topic, you will set up a testing environment to evaluate Intune. Then, you will step through specific actions to better understand and evaluate Intune.
+In this topic, you'll set up a testing environment to evaluate Intune. Then, you'll step through specific actions to better understand and evaluate Intune.
 - Set up the Microsoft Intune free trial
 - Create users and groups
 - Set up device enrollment
@@ -72,11 +72,11 @@ Microsoft Intune provides the following:
 - Greater end users productivity
 - Co-management for cloud and on-premises devices
 
-Learn how the Microsoft Intune family of products helps you maximize your return on investment. For more information see, [Benefits of Microsoft Intune](/training/modules/benefits-microsoft-endpoint-manager/).
+Learn how the Microsoft Intune family of products helps you maximize your return on investment. For more information, see [Benefits of Microsoft Intune](/training/modules/benefits-microsoft-endpoint-manager/).
 
 ## Next steps
 
-Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-up.md). When you complete the sign up process, you'll have a new tenant and you'll understand the basics of working with Microsoft Intune.
+Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-up.md). When you complete the sign-up process, you'll have a new tenant and you'll understand the basics of working with Microsoft Intune.
 
 ## Learn more
 

@@ -56,8 +56,6 @@ The following table provides a side-by-side comparison of each method.
 | Enrollment initiated by device user | ✔️ |✔️|
 | Enrollment location | User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place within a single screen in the device settings app. |User is prompted to enroll device when they sign into an app with their work account. Enrollment takes place over a series of screens in the Company Portal app, Safari web browser, and device settings app.|
 | Supervision|❌|❌| 
-| BYOD and personal devices | ✔️ |✔️ |
-| BYOD and personal devices | ✔️ |✔️ |
 | Version | iOS/iPadOS 15 or later |iOS 13 or later <br/><br/> iPadOS 13.1 or later |
 | Required apps | Microsoft Authenticator |Intune Company Portal app for iOS <br> </br> Microsoft Authenticator |  
 
@@ -69,8 +67,7 @@ Microsoft Intune supports a specific subset of device management options for dev
 Supported device configuration policies and management capabilities include: 
 
 - VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../configuration/vpn-setting-configure-per-app.md). Safari domains are not supported. 
-- Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../configuration/wi-fi-settings-ios.md).  
-- Enhanced jailbreak detection: For more information about enabling jailbreak detection in a compliance policy, see [Compliance policy settings](../protect/device-compliance-get-started.md#compliance-policy-settings).   
+- Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../configuration/wi-fi-settings-ios.md).
 - Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md). 
 - Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information about these actions and how they work, see [Manage devices with Microsoft Intune](../remote-actions/device-management.md).  
 

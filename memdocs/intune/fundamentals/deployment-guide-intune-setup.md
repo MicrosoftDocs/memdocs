@@ -61,8 +61,6 @@ Use this guide to determine the best migration approach, and get some guidance &
 
 - Your Intune deployment might be different from a previous MDM deployment. Intune uses identity-driven access control. It doesn't require a network proxy to access organization data from devices outside your network.
 
-  Review the [common ways to use Intune](common-scenarios.md).
-
 ## Currently don't use anything
 
 If you currently don't use any MDM or mobile application management (MAM) provider, then you have some options:
@@ -109,7 +107,7 @@ Users must unenroll their devices from the current MDM provider before they enro
 
     Give users specific unenroll steps. Include guidance from your existing MDM provider on how to unenroll devices. Clear and helpful communication minimizes end user downtime, dissatisfaction, and helpdesk calls.
 
-4. Optional, but recommended. If you have Azure AD Premium, also **use [conditional access](../protect/conditional-access.md)** to block devices until they enroll in Intune.
+4. Optional, but recommended. If you have Microsoft Entra ID P1 or P2, also **use [conditional access](../protect/conditional-access.md)** to block devices until they enroll in Intune.
 
     For more information, go to [Step 3 – Plan for compliance policies](deployment-plan-compliance-policies.md).
 
@@ -198,14 +196,14 @@ Most existing Configuration Manager customers want to keep using Configuration M
 
 These steps are an overview, and are only included for those users who want a 100% cloud solution. With this option, you:
 
-- Register existing on-premises Active Directory Windows client devices as devices in Azure Active Directory (AD).
+- Register existing on-premises Active Directory Windows client devices as devices in Microsoft Entra ID.
 - Move your existing on-premises Configuration Manager workloads to Intune.
 
 This option is more work for administrators, but can create a more seamless experience for existing Windows client devices. For new Windows client devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4---start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
-1. Set up [hybrid Active Directory and Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan) for your devices. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. When devices are in Azure AD, they're also available to Intune.
+1. Set up [hybrid Active Directory and Microsoft Entra ID](/azure/active-directory/devices/hybrid-azuread-join-plan) for your devices. Microsoft Entra hybrid joined devices are joined to your on-premises Active Directory, and registered with your Microsoft Entra ID. When devices are in Microsoft Entra ID, they're also available to Intune.
 
-    Hybrid Azure AD support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
+    Hybrid Microsoft Entra ID support Windows devices. For other prerequisites, including sign-in requirements, see [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
 3. [Set up Intune](deployment-plan-setup.md), including setting the MDM Authority to Intune.
@@ -217,7 +215,7 @@ This option is more work for administrators, but can create a more seamless expe
 Devices are ready to be enrolled in Intune, and receive your policies.
 
 > [!IMPORTANT]
-> Hybrid Azure AD supports only Windows devices. Configuration Manager supports Windows and macOS devices. For macOS devices managed in Configuration Manager, you can:
+> Hybrid Microsoft Entra ID supports only Windows devices. Configuration Manager supports Windows and macOS devices. For macOS devices managed in Configuration Manager, you can:
 >
 > 1. Uninstall the Configuration Manager client. When you uninstall, the devices aren't receiving your policies, including policies that provide protection. They're vulnerable until they enroll in Intune and start receiving your new policies.
 > 2. Enroll the devices in Intune to receive policies.
@@ -244,7 +242,9 @@ Devices are ready to be enrolled in Intune, and receive your policies.
 
 ## Currently use on-premises group policy
 
-In the cloud, MDM providers, like Intune, manage settings and features on devices. Group policies objects (GPO) aren't used. When you manage devices, Intune device configuration profiles replace on-premises GPO. Device configuration profiles use settings exposed by Apple, Google, and Microsoft.
+In the cloud, MDM providers, like Intune, manage settings and features on devices. Group policy objects (GPO) aren't used. 
+
+When you manage devices, Intune device configuration profiles replace on-premises GPO. Device configuration profiles use settings exposed by Apple, Google, and Microsoft.
 
 Specifically:
 
@@ -252,7 +252,7 @@ Specifically:
 - On Apple devices, these profiles use the [Device management payloads](https://developer.apple.com/documentation/devicemanagement).
 - On Windows devices, these profiles use the [Windows configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference).
 
-When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
+When moving devices from group policy, use [Group policy analytics](../configuration/group-policy-analytics.md). Group Policy analytics is a tool and feature in Intune that analyzes your GPOs. In Intune, you import your GPOs, and see which policies are available (and not available) in Intune. For the policies that are available in Intune, you can create a settings catalog policy using the settings you imported. For more information on this feature, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Intune](../configuration/group-policy-analytics-migrate.md).
 
 Next, [Step 1: Set up Microsoft Intune](deployment-plan-setup.md).
 
@@ -264,7 +264,7 @@ For more information, go to [Migrate from Microsoft 365 Basic Mobility and Secur
 
 ## Tenant to tenant migration
 
-A tenant is your organization in Azure Active Directory (AD), like Contoso. It includes a dedicated Azure AD service instance that Contoso receives when it gets a Microsoft cloud service, like Microsoft Intune or Microsoft 365. Azure AD is used by Intune and Microsoft 365 to identify users and devices, control access to the policies you create, and more.
+A tenant is your organization in Microsoft Entra ID, like Contoso. It includes a dedicated Microsoft Entra service instance that Contoso receives when it gets a Microsoft cloud service, like Microsoft Intune or Microsoft 365. Microsoft Entra ID is used by Intune and Microsoft 365 to identify users and devices, control access to the policies you create, and more.
 
 In Intune, you can export and import some of your policies using [Microsoft Graph](/graph/api/resources/intune-graph-overview) and Windows PowerShell.
 

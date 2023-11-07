@@ -34,7 +34,7 @@ ms.collection:
 
 # Add an iOS/iPadOS line-of-business app to Microsoft Intune
 
-Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. You will first need to join the iOS Developer Enterprise Program. For more information about how to do this see [Apple's website](https://developer.apple.com/programs/ios/enterprise/).
+Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. You will first need to join the iOS Developer Enterprise Program.
 
 > [!NOTE]
 > Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You cannot use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
@@ -116,7 +116,7 @@ For an iOS LOB app targeted with available intent, auto-update of the applicatio
 - The end user must request the specific Intune app from the Company Portal and the app must be successfully installed, or the app is already installed on the device.
 - The targeting for the user has not changed (app assignment with available intent is not removed and user is not removed from the group membership in the life cycle of the app assignment).
 - If the previous version of the app is installed through required intent, then the available app update will not happen. The app will be updated automatically as long as the user/device is part of required intent group.
-- If the app has both available and required deployments targeted, the resolved intent becomes 'RequiredAndAvailable'. **Note:** You cannot create **Available** and **Required** deployments to the same AAD Group, but you can use different AAD group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
+- If the app has both available and required deployments targeted, the resolved intent becomes 'RequiredAndAvailable'. **Note:** You cannot create **Available** and **Required** deployments to the same Microsoft Entra group, but you can use different Microsoft Entra group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
 
 ## Next steps
 

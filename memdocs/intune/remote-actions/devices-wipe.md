@@ -2,12 +2,12 @@
 # required metadata
 
 title: Retire or wipe devices using Microsoft Intune
-description: Retire or wipe a device on an Android, Android work profile, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Azure Active Directory.
+description: Retire or wipe a device on an Android, Android work profile, AOSP, iOS/iPadOS, macOS, or Windows device using Microsoft Intune. Also delete a device from Microsoft Entra ID.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 10/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -35,7 +35,7 @@ By using the **Retire** or **Wipe** actions, you can remove devices from Intune 
 
 ## Wipe
 
-The **Wipe** action restores a device to its factory default settings. The user data is kept if you choose the **Retain enrollment state and user account** checkbox. Otherwise, all data, apps, and settings are removed.
+The **Wipe** device action restores a device to its factory default settings. The user data is kept if you choose the **Retain enrollment state and user account** checkbox. Otherwise, all data, apps, and settings are removed.
 
 |Wipe action|**Retain enrollment state and user account**|Removed from Intune management|Description|
 |:-------------:|:------------:|:------------:|------------|
@@ -47,7 +47,7 @@ The **Wipe** action restores a device to its factory default settings. The user 
 
 > [!IMPORTANT]
 >
-> The Wipe action doesn't remove the Autopilot registration from the device. To remove the Autopilot registration from the device, see [Deregister from Autopilot using Intune](/mem/autopilot/registration-overview#deregister-from-autopilot-using-intune)
+> The Wipe action doesn't remove the Autopilot registration from the device. To remove the Autopilot registration from the device, see [Deregister from Autopilot using Intune](/autopilot/registration-overview#deregister-from-autopilot-using-intune)
 
 The **Retain enrollment state and user account** option is only available for Windows 10 version 1709 or later.
 
@@ -66,7 +66,7 @@ A wipe is useful for resetting a device before you give the device to a new user
     |Retained during a wipe |Not retained|
     | -------------|------------|
     |User accounts associated with the device|User files|
-    |Machine state \(domain join, Azure AD-joined)| User-installed apps \(store and Win32 apps)|
+    |Machine state \(domain join, Microsoft Entra joined)| User-installed apps \(store and Win32 apps)|
     |Mobile device management (MDM) enrollment|Non-default device settings|
     |OEM-installed apps \(store and Win32 apps)||
     |User profile||
@@ -79,15 +79,44 @@ A wipe is useful for resetting a device before you give the device to a new user
 
 If the device is on and connected, the **Wipe** action propagates across all device types in less than 15 minutes.
 
+## Supported platforms for Wipe device action
+
+**Wipe** is supported on the following platforms:
+
+- Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
+- Android Open Source Project (AOSP) devices
+- iOS/iPadOS
+- macOS
+- Windows
+
+**Wipe** isn't supported on:
+
+- Android Enterprise personally owned devices with a work profile
+- Linux
+
 ## Retire
 
 The **Retire** action removes managed app data (where applicable), settings, and email profiles that were assigned by using Intune. The device is removed from Intune management. Removal happens the next time the device checks in and receives the remote **Retire** action. The device still shows up in Intune until the device checks in. If you want to remove stale devices immediately, use the [Delete action](devices-wipe.md#delete-devices-from-the-intune-admin-center) instead.
 
-**Retire** leaves the user's personal data on the device.  
+### Retire a device
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. In the **Devices** pane, select **All devices**.
+3. Select the name of the device that you want to retire.
+4. In the pane that shows the device name, select **Retire**. To confirm, select **Yes**.
+
+If the device is on and connected, the **Retire** action propagates across all device types in less than 15 minutes.
+
+### Effect of the **Retire** action on data that remains on the device
+
+When you use the **Retire** device action, the user's personal data is not removed from the device.  
 
 The following tables describe what data is removed, and the effect of the **Retire** action on data that remains on the device after company data is removed.
 
-### iOS
+#### iOS
+
+> [!IMPORTANT]
+> Retired devices might not be automatically deleted resulting in the device record remaining in Intune for 180 days unless issued a **Delete** action.
 
 |Data type|iOS|
 |-------------|-------|
@@ -97,9 +126,12 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Certificate profile settings|Certificates are removed and revoked.|
 |Management agent|The management profile is removed.|
 |Email|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Azure AD Device Record |The Azure AD record isn't removed.|
+|Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
-### Android device administrator
+#### Android device administrator
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 |Data type|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
@@ -113,20 +145,17 @@ The following tables describe what data is removed, and the effect of the **Reti
 |Certificate profile settings|Certificates are revoked but not removed.|Certificates are removed and revoked.|
 |Management agent|Device Administrator privilege is revoked.|Device Administrator privilege is revoked.|
 |Email|N/A (Android devices don't support Email profiles)|Email profiles that are provisioned through Intune are removed. Cached email on the device is deleted.|
-|Azure AD unjoin|The Azure AD record is removed.|The Azure AD record is removed.|
+|Microsoft Entra unjoin|The Microsoft Entra ID record is removed.|The Microsoft Entra ID record is removed.|
 
-### Android Enterprise personally owned devices with a work profile
+#### Android Enterprise personally owned devices with a work profile
 
-Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe isn't supported for Android personally owned work profiles.
+Removing company data from an Android personally owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune.
 
-### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
-
-- The **Wipe** action is supported on Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
+#### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
 
 - The **Retire** action is supported on Android Enterprise Corporate-Owned Work Profile devices. When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
 
-
-### macOS
+#### macOS
 
 |Data type|macOS|
 |-------------|-------|
@@ -135,9 +164,9 @@ Removing company data from an Android personally owned work profile device remov
 |Certificate profile settings|Certificates that were deployed through MDM are removed and revoked.|
 |Management agent|The management profile is removed.|
 |Outlook|If Conditional Access is enabled, the device doesn't receive new mail.|
-|Azure AD Device Record |The Azure AD record isn't removed.|
+|Microsoft Entra Device Record |The Microsoft Entra ID record isn't removed.|
 
-### Windows
+#### Windows
 
 |Data type|Windows 8.1 (MDM) and Windows RT 8.1|Windows RT|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|
@@ -146,19 +175,10 @@ Removing company data from an Android personally owned work profile device remov
 |Wi-Fi and VPN profile settings|Removed.|Removed.|Removed.|
 |Certificate profile settings|Certificates are removed and revoked.|Certificates are removed and revoked.|Certificates are removed and revoked.|
 |Email|Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows.|Not supported.|Removes email that's EFS-enabled including emails and attachments in the Mail app for Windows. Removes mail accounts provisioned by Intune.|
-|Azure AD unjoin|No.|No.|The Azure AD record is removed.|
+|Microsoft Entra unjoin|No.|No.|The Microsoft Entra ID record is removed.|
 
 > [!NOTE]
-> For Windows 10 devices that join Azure AD during initial Setup (OOBE), the retire command will remove all Azure AD accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data. 
-
-### Retire
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the **Devices** pane, select **All devices**.
-3. Select the name of the device that you want to retire.
-4. In the pane that shows the device name, select **Retire**. To confirm, select **Yes**.
-
-If the device is on and connected, the **Retire** action propagates across all device types in less than 15 minutes.
+> For Windows 10 devices that join Microsoft Entra ID during initial Setup (OOBE), the retire command will remove all Microsoft Entra accounts from the device. Follow the steps at [Start your PC in Safe mode](https://support.microsoft.com/en-us/help/12376/windows-10-start-your-pc-in-safe-mode) to login as a local admin and regain access to the user's local data.
 
 ## Manually unenroll devices
 
@@ -170,7 +190,7 @@ Device owners can manually unenroll their devices as explained in the following 
 - [Remove your Windows device from management](../user-help/unenroll-your-device-from-intune-windows.md)
 
 > [!TIP]
-> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Azure AD records. To remove record of the Intune device, sign in to Microsoft Intune and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Azure AD record, if applicable, because the cleanups rule will not remove it.  
+> When a Windows device user un-enrolls their device via the Settings app, Intune does not automatically delete the Intune device or Microsoft Entra ID records. To remove record of the Intune device, sign in to Microsoft Intune and delete the device manually, or wait for your device cleanup rules to take effect. You must also manually delete the Microsoft Entra ID record, if applicable, because the cleanups rule will not remove it.  
 
 ## Delete devices from the Intune admin center
 
@@ -205,13 +225,15 @@ The device clean-up rule doesn't trigger a wipe or retire.
 >
 > You need the permission **Managed Device Cleanup Settings with Update** set to **Yes** to update the device cleanup rules. This permission is part of [Intune Roles](../fundamentals/role-based-access-control.md).
 
-## Delete devices from the Azure Active Directory portal
+<a name='delete-devices-from-the-microsoft-entra-portal'></a>
 
-You might need to delete devices from Azure AD due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
+## Delete devices from the Microsoft Entra admin center
 
-1. Sign in to [Azure Active Directory in the Azure portal](https://azure.microsoft.com/services/active-directory/) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Azure AD**.
-2. Create an Azure subscription if you don't have one. The subscription shouldn't require a credit card or payment if you have a paid account (select the **Register your free Azure Active Directory** subscription link).
-3. Select **Azure Active Directory**, and then select your organization.
+You might need to delete devices from Microsoft Entra ID due to communication issues or missing devices. You can use the **Delete** action to remove device records from the Azure portal for devices that you know are unreachable and unlikely to communicate with Azure again. The **Delete** action doesn't remove a device from management.
+
+1. Sign in to [Microsoft Entra ID in the Azure portal](https://azure.microsoft.com/services/active-directory/) by using your admin credentials. You can also sign in to the [Microsoft 365 admin center](https://admin.microsoft.com). From the menu, select **Admin centers** > **Microsoft Entra ID**.
+2. Create an Azure subscription if you don't have one. The subscription shouldn't require a credit card or payment if you have a paid account (select the **Register your free Microsoft Entra ID** subscription link).
+3. Select **Microsoft Entra ID**, and then select your organization.
 4. Select the **Users** tab.
 5. Select the user that's associated with the device that you want to delete.
 6. Select **Devices**.

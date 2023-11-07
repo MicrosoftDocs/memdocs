@@ -15,13 +15,12 @@ ms.technology:
 # optional metadata
 
 #ROBOTS:
-#audience:
  
 ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.custom: intune-azure, has-azure-ad-ps-ref
 ms.collection:
 - tier2
 - M365-identity-device-management
@@ -29,7 +28,7 @@ ms.collection:
 
 # Use Conditional Access with Microsoft Tunnel in Intune
 
-If your Microsoft Intune environment uses both Azure Active Directory (AD) and Conditional Access, you can use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway.
+If your Microsoft Intune environment uses both Microsoft Entra Conditional Access, you can use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway.
 
 To support integration of Conditional Access and Microsoft Tunnel, you’ll use Azure AD PowerShell to enable your tenant to support Microsoft Tunnel. After enabling your tenant to support Microsoft Tunnel, you can then create Conditional Access policies that apply to the Microsoft Tunnel app.
 

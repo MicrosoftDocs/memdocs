@@ -149,7 +149,46 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
  > [!IMPORTANT]  
   > Container releases take place in stages. If you notice that your container images are not the most recent, please be assured that they will be updated and delivered within the following week. 
 
+### October 4, 2023
 
+Image hash values:
+
+- **agentImageDigest**: sha256:6c19b0aa077692b0d70ede9928f02b135122951708f83655041d0a40e8448039
+
+- **serverImageDigest**: sha256:9b477e6bc029d2ebadcafd4db3f516e87f0209b50d44fa2a5933aa7f17e9203b
+
+Changes in this release:
+- Bug fix: add legacy NAT tables for the mstunnel-server container on Cent OS 7 and Red Hat 7 hosts
+- Bug fix: add SELinux policy to allow TCP DNS traffic for the containers on Red Hat hosts
+- Increase mstunnel-server container pid limit to 10000
+
+
+### October 2, 2023
+
+Image hash values:
+
+- **agentImageDigest**: sha256:92fc18c61cdadcb9ed1392f9ae3b3f633e1143924a3e370adc82088fc882ef5f
+
+- **serverImageDigest**: sha256:e465e4f7a9a5977950abd44dde1e418a57db5eb9dbb0456e4acc735153589581
+
+Changes in this release:
+- Bug fix: Ensure the monitor starts the container when the state is empty 
+- Bug fix for server container: Check /dev/tun permissions only when the server container is running 
+- Limit Tunnel server's maximum logging level to verbose to enhance privacy 
+
+### July 24, 2023
+
+Image hash values:
+
+- **agentImageDigest**: sha256:683f756e15678264599f005f2eefe128e30a39ad74673da84426837b67bc0837
+
+- **serverImageDigest**: sha256:7665f4407f8f5a0b67d352c7c7291fa5d4011c55bd718b6e390247e85585b3c1
+
+Changes in this release:
+
+- Minor bug fixes
+- Server upgrades
+  
 ### June 12, 2023
 
 Image hash values:
@@ -257,8 +296,9 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- Set process limit to 6000 in the server container 
+- Set process limit to 6000 in the server container
 
+<!-- Archive of past releases
 
 ### June 30, 2022
 
@@ -299,9 +339,6 @@ Image hash values:
 Changes in this release:
 - Minor bug fixes
 - Access log enhancements
-
-
-<!-- Archive of past releases
 
 
 ### February 16, 2022

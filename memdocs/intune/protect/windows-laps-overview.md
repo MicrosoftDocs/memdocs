@@ -1,12 +1,12 @@
 ---
 title: Manage Windows LAPS with Microsoft Intune policies
-description: Use Microsoft Intune application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, backup accounts and passwords to Azure AD, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
+description: Use Microsoft Intune application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, back up accounts and passwords to Microsoft Entra ID, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,7 @@ Every Windows machine has a built-in local administrator account that can’t be
 You can use Microsoft Intune endpoint security policies for [account protection](../protect/endpoint-security-account-protection-policy.md) to manage LAPS on devices that have enrolled with Intune. Intune policies can:
 
 - Enforce password requirements for local admin accounts
-- Back up a local admin account from devices to your Active Directory (AD) or Azure AD
+- Back up a local admin account from devices to your Active Directory (AD) or Microsoft Entra
 - Schedule rotation of those account passwords to help keep them safe.
 
 You can also view details about the managed local admin accounts in the Intune Admin center, and manually rotate their account passwords outside of a scheduled rotation.
@@ -48,7 +48,7 @@ Intune support for Windows LAPS includes the following capabilities:
 
 - **Set password requirements** – Define password requirements including complexity and length for the local administrator account on a device.
 - **Rotate passwords** – With policy you can have devices automatically rotate the local admin account passwords on a schedule. You can also use the Intune admin center to manually rotate the password for a device as a device action.
-- **Backup accounts and passwords** – You can choose to have devices back up their account and password in either Azure Active Directory (Azure AD) in the cloud, or your on-premises Active Directory. Passwords are stored using strong encryption.
+- **Backup accounts and passwords** – You can choose to have devices back up their account and password in either Microsoft Entra ID in the cloud, or your on-premises Active Directory. Passwords are stored using strong encryption.
 - **Configure post authenticating actions** – Define actions that a device takes when its local admin account password expires. Actions range from resetting the managed account to use a new secure password, logging off the account, or doing both and then powering down the device. You can also manage how long the device waits after the password expires before taking these actions.
 - **View account details** – Intune administrators with sufficient role-based administrative control (RBAC) permissions can view information about a devices local admin account and its current password. You can also see when that password was last rotated (reset) and when it's next scheduled to rotate.
 - **View reports** – Intune provides reports on password rotation including details about past manual and scheduled password rotation.
@@ -71,7 +71,7 @@ The following are requirements for Intune to support Windows LAPS in your tenant
 
 - **Intune subscription** - *Microsoft Intune Plan 1*, which is the basic Intune subscription. You can also use Windows LAPS with a free trial subscription for Intune.
 
-- **Active Directory subscription** – *Azure Active Directory Free*, which is the free version of Azure AD that’s included when you subscribe to Intune. With Azure AD Free, you can use all the features of LAPS.
+- **Microsoft Entra ID** – *Microsoft Entra ID Free*, which is the free version of Microsoft Entra ID that’s included when you subscribe to Intune. With Microsoft Entra ID Free, you can use all the features of LAPS.
   
 ### Active Directory support
 
@@ -80,17 +80,17 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
   > [!NOTE]  
   > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
 
-- **Cloud** – Cloud supports back up to your Azure AD for the following scenarios:
+- **Cloud** – Cloud supports backup to your Microsoft Entra for the following scenarios:
 
-  - Hybrid (Hybrid Azure AD join)
-  - Azure AD Join
+  - Microsoft Entra hybrid join
+  - Microsoft Entra join
 
-    Support for *Azure AD Join* requires you to enable LAPS in your Azure AD. The following steps can help you complete this configuration. For the larger context, view these steps in the Azure AD documentation at [Enabling Windows LAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Hybrid Azure AD Join* does not require LAPS to be enabled in Azure AD.
+    Support for *Microsoft Entra join* requires you to enable LAPS in your Microsoft Entra ID. The following steps can help you complete this configuration. For the larger context, view these steps in the Microsoft Entra documentation at [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Microsoft Entra hybrid join* does not require LAPS to be enabled in Microsoft Entra.
 
-    **Enable LAPS in Azure AD**:  
-    1. Sign in to the **Azure portal** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
-    1. Browse to **Azure Active Directory** > **Devices** > **Device settings**.
-    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true)
+    **Enable LAPS in Microsoft Entra**:  
+    1. Sign in to the **Microsoft Entra admin center** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
+    1. Browse to **Devices** > **Overview** > **Local administrator password recovery**.
+    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
 
 
 
@@ -125,19 +125,14 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   - Organization: **Read**
   - Remote tasks:  **Rotate Local Admin Password**
 
-- **Retrieve local Administrator password** – To view password details, your account must have one of the following Azure Active Directory permissions:
+- **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra ID permissions:
 
   - `microsoft.directory/deviceLocalCredentials/password/read`
   - `microsoft.directory/deviceLocalCredentials/standard/read`
+
+  To create custom roles that can grant these permissions, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
   
-  During the public preview, these permissions aren't available to add to custom Azure AD roles. Instead, your account must be assigned one of the following Azure AD built-in rules, which include these permissions by default:
-
-  - **Global Administrator**
-  - **Cloud Device Administrator**
-
-  In the future, Azure AD will add support for assigning the required permissions to custom Azure AD roles.
-
-- **View Azure AD audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
+- **View Microsoft Entra audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
 For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
@@ -163,17 +158,17 @@ The CSP-based policy from Intune overrides all other sources of LAPS policy, suc
 
 No. Windows LAPS can only manage accounts that already exist on the device. If a policy specifies an account by name that doesn't exist on the device, the policy applies and doesn’t report an error. However, no account is backed up.
 
-### Does Windows LAPS rotate and backup the password for a device that is disabled in Azure AD?
+### Does Windows LAPS rotate and backup the password for a device that is disabled in Microsoft Entra?
 
 No. Windows LAPS requires the device to be in an enabled state before password rotation and backup operations can apply.
 
-### What happens when a device is deleted in Azure AD?
+### What happens when a device is deleted in Microsoft Entra?
 
-When a device is deleted in Azure AD, the LAPS credential that was tied to that device is lost and the password that is stored in Azure AD is lost. Unless you have a custom workflow to retrieve LAPS passwords and store them externally, there's no method in Azure AD to recover the LAPS managed password for a deleted device.
+When a device is deleted in Microsoft Entra, the LAPS credential that was tied to that device is lost and the password that is stored in Microsoft Entra is lost. Unless you have a custom workflow to retrieve LAPS passwords and store them externally, there's no method in Microsoft Entra to recover the LAPS managed password for a deleted device.
 
 ### What roles are needed to recover LAPS passwords?
 
-The following built-in roles Azure AD roles have permission to recover LAPS passwords: Global Admin, Cloud Device Admin, and Intune Service Admin.
+The following built-in roles Microsoft Entra roles have permission to recover LAPS passwords: Global Admin, Cloud Device Admin, and Intune Service Admin.
 
 ### What roles are needed to read LAPS metadata?
 
@@ -182,14 +177,6 @@ The following built-in roles are supported to view metadata about LAPS including
 ### Why is the Local admin password button greyed out and inaccessible?
 Currently, access to this area requires the Rotate local Administrator password Intune permission. See [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-<!--  REMOVED until this is validated as accurate: 
-### Are custom roles supported?
-
-Yes. If you have Azure AD Premium, you can create a custom role with the following RBAC permissions:
-
-- To read LAPS metadata: *microsoft.directory/deviceLocalCredentials/standard/read*
-- To read LAPS passwords: *microsoft.directory/deviceLocalCredentials/password/read*
--->
 ### What happens when the account specified by policy is changed?
 
 Because Windows LAPS can only manage one local admin account on a device at a time, the original account is no longer managed by LAPS policy. If policy has the device back up that account, the new account is backed up and details about the previous account are no longer available from within the Intune admin center or from the Directory that is specified to store the account information.

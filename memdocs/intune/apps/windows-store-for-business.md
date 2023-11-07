@@ -38,14 +38,14 @@ ms.collection:
 > [!IMPORTANT]
 > The Microsoft Store for Business connector is no longer accessible in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Apps added from the Microsoft Store for Business or Microsoft Store for Education will no longer sync with Intune. Apps that have previously synced will continue to be available and deploy to devices and users. For related information, see [Deprecation of Microsoft Store for Business and Education](../fundamentals/whats-new.md#deprecation-of-microsoft-store-for-business-and-education).
 
-The [Microsoft Store for Business](https://www.microsoft.com/business-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
+The [Microsoft Store for Business](https://businessstore.microsoft.com/store/private-store) gives you a place to find and purchase apps for your organization, individually, or in volume. By connecting the store to Microsoft Intune, you can manage volume-purchased apps from the portal. For example:
 
 * You can synchronize the list of apps you have purchased (or that are free) from the store with Intune.
 * Apps that are synchronized appear in the Microsoft Intune admin center; you can assign these apps like any other apps.
 * Both Online and Offline licensed versions of Apps are synchronized to Intune. App names will be appended with "Online" or "Offline" in the portal.
 * You can track how many licenses are available, and how many are being used in the admin center.
 * Intune blocks assignment and installation of apps if there are an insufficient number of licenses available.
-* Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Azure AD.
+* Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Microsoft Entra ID.
 
 ## Before you start
 
@@ -61,7 +61,7 @@ Review the following information before you start syncing and assigning apps fro
 - Both online and offline licensed apps that you have purchased from the Microsoft Store for Business are synced into Intune. You can then deploy these apps to device groups or user groups.
 - Online app installations are managed by the store.
 - Offline apps that are free of charge can also be synced to Intune. These apps are installed by Intune, not by the store.
-- To use this capability, devices must be joined to Active Directory Domain Services, Azure AD joined, or workplace-joined.
+- To use this capability, devices must be joined to Active Directory Domain Services, Microsoft Entra joined, or workplace-joined.
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
 
 > [!NOTE]

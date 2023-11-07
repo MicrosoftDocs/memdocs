@@ -88,11 +88,11 @@ Alternate redirection methods aren't supported with Intune. For example, you can
 
 ## Registration CNAME  
 
-Azure Active Directory uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered to Azure AD (also called *workplace joined*). If you plan to use conditional access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
+Microsoft Entra ID uses a different CNAME during device registration for iOS/iPadOS, Android, and Windows devices. Intune conditional access requires devices to be registered to Microsoft Entra ID (also called *workplace joined*). If you plan to use conditional access, you should configure the *EnterpriseRegistration* CNAME for each company name you have.  
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+| CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | 1 hour |
 
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
@@ -105,11 +105,9 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-|CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
-|CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |  
+|CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
+|CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | 1 hour |  
 
 For more information about automatic enrollment for Windows, see [Set up automatic enrollment](../enrollment/windows-enroll.md).  
 
 ## Next steps
-
-

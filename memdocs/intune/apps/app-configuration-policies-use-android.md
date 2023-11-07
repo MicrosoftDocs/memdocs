@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 10/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -49,7 +49,8 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
 - On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use an app configuration policy and the steps in this article. App configuration policies support Gmail and Nine Work email apps.
 - On Android Enterprise personally owned devices with a work profile, create an [Android Enterprise email device configuration profile](../configuration/email-settings-android-enterprise.md). When you create the profile, you can configure settings for email clients that support app configuration policies. When using the configuration designer, Intune includes email settings specific to Gmail and Nine Work apps.
-- On Android device administrator, create an [Android device administrator email device configuration profile](../configuration/email-settings-android.md) for Samsung Knox devices. When you create the profile, you can configure Exchange email settings, such as `outlook.office365.com`.
+<!-- commenting this bullet out for workitem: device admin end of support, 13891824
+- On Android device administrator, create an [Android device administrator email device configuration profile](../configuration/email-settings-android.md) for Samsung Knox devices. When you create the profile, you can configure Exchange email settings, such as `outlook.office365.com`.-->
 
 ## Create an app configuration policy
 
@@ -77,7 +78,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     :::image type="content" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-01.png" alt-text="Screenshot of configuration policy - Settings":::
 
     > [!NOTE]
-    > This setting only works for personally-owned work profile and corporate-owned work profile devices.
+    > This setting only works for personally owned work profile and corporate-owned work profile devices.
     > 
     > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
@@ -97,8 +98,6 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     :::image type="content" alt-text="Screenshot of policy assignments - Edit filter" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" :::
 
 16. Click **Select groups to exclude** to display the related pane.
-
-    :::image type="content" alt-text="Screenshot of policy assignments - Select groups to exclude page" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-05.png" :::
 
 17. Choose the groups you want to exclude and then click **Select**.
 
@@ -127,7 +126,7 @@ You can choose the following options if you choose variable as the value type:
 
 | Option | Example |
 |----|----|
-| Azure AD Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
+| Microsoft Entra Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | Intune Device ID | b9841cd9-9843-405f-be28-b2265c59ef97 |
 | Domain | contoso.com |
@@ -171,9 +170,9 @@ When the assigned app is run on a device, it runs with the settings that you con
 Applies to:<br>
 Android 11+
 
-Personally-owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
+Personally owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
 
-You can allow users using Android personally-owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances.
+You can allow users using Android personally owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances.
 
 For an app to provide this experience, the app needs to integrate with Google's connected apps SDK, so only limited apps support it. You can turn on the connected apps setting proactively, and when apps add support, users will be able to enable the connected apps experience.
 
@@ -215,7 +214,7 @@ For example, an app uses the device's microphone. The user is prompted to grant 
 
 ## Additional information
 
-- [Assign a Managed Google Play app to Android Enterprise personally-owned and corporate-owned work profile devices](apps-add-android-for-work.md#assign-a-managed-google-play-app-to-android-enterprise-personally-owned-and-corporate-owned-work-profile-devices)
+- [Assign a Managed Google Play app to Android Enterprise personally owned and corporate-owned work profile devices](apps-add-android-for-work.md#assign-a-managed-google-play-app-to-android-enterprise-personally-owned-and-corporate-owned-work-profile-devices)
 - [Deploying Outlook for iOS/iPadOS and Android app configuration settings](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## Next steps

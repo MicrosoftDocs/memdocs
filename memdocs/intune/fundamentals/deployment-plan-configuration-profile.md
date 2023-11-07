@@ -7,7 +7,7 @@ description: Step 4 to deploy device configuration profiles as part of the minim
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2023
+ms.date: 10/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -56,7 +56,7 @@ When you create device configuration profiles, there are different levels and ty
 
 - **Level 3 - High device configuration**: In this level, Microsoft recommends you create policies that:
 
-  - Move to password-less authentication, including using certificates, configuring single sign-on (SSO) to apps, enabling multi-factor authentication (MFA), and configuring Microsoft Tunnel.
+  - Move to password-less authentication, including using certificates, configuring single sign-on (SSO) to apps, enabling multifactor authentication (MFA), and configuring Microsoft Tunnel.
   - Add extra layers of security using Android common criteria mode or creating DFCI policies for Windows devices.
   - Use the built-in features to configure kiosk devices, dedicated devices, shared devices, and other specialized devices.
   - Deploy existing shell scripts.
@@ -481,23 +481,37 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
   - **Configure single sign-on** (SSO) for a more seamless experience when users open business apps, like Microsoft 365 apps. Users sign-in once and then are automatically signed-in to all the apps that support your SSO configuration.
 
-    To learn about using SSO in Intune and Azure AD, go to:
+    To learn about using SSO in Intune and Microsoft Entra ID, go to:
 
-    - [**Android**: Enable cross-app SSO on Android using MSAL in Azure AD](/azure/active-directory/develop/msal-android-single-sign-on)
+    - [**Android**: Enable cross-app SSO on Android using MSAL in Microsoft Entra ID](/azure/active-directory/develop/msal-android-single-sign-on)
     - [**iOS/iPadOS, macOS**: Use the Enterprise SSO plug-in in Intune and other MDMs](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-    - [**Windows**: Configure SSO with Azure AD](/azure/active-directory/manage-apps/what-is-single-sign-on)
+    - [**Windows**: Configure SSO with Microsoft Entra ID](/azure/active-directory/manage-apps/what-is-single-sign-on)
 
-  - **Use multi-factor authentication** (MFA). When you move to password-less, MFA adds an extra layer of security, and can help protect your organization from phishing attacks. You can use MFA with authenticator apps, like Microsoft Authenticator, or with a phone call or text message. You can also use MFA when users enroll their devices in Intune.
+  - **Use multifactor authentication** (MFA). When you move to password-less, MFA adds an extra layer of security, and can help protect your organization from phishing attacks. You can use MFA with authenticator apps, like Microsoft Authenticator, or with a phone call or text message. You can also use MFA when users enroll their devices in Intune.
 
-    Multi-factor authentication is a feature of Azure AD and can be used with Azure AD accounts. For more information, go to:
+    Multifactor authentication is a feature of Microsoft Entra ID and can be used with Microsoft Entra accounts. For more information, go to:
 
-    - [Azure AD identity protection overview](/azure/active-directory/identity-protection/overview-identity-protection)
-    - [Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-    - [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
+    - [Microsoft Entra ID Protection overview](/azure/active-directory/identity-protection/overview-identity-protection)
+    - [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
+    - [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
 
   - **Set up Microsoft Tunnel** for your Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and Conditional Access.
 
-    Microsoft Tunnel uses Intune, Azure AD, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
+    Microsoft Tunnel uses Intune, Microsoft Entra ID, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
+
+  - In addition to Microsoft Tunnel for devices enrolled with Intune, you can use **Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../protect/microsoft-tunnel-mam.md) is available as an Intune add-on that requires an extra license.
+
+    For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+
+- **Use Windows Local Administrator Password Solution (LAPS) policy** to manage and backup the built-in local administrator account on your Windows devices. Because the local admin account can’t be deleted and has full permissions to the device, management of the built-in Windows administrator account is an important step in securing your organization. Intune policy for Windows LAPS uses the capabilities that are available for Windows devices that run version 21h2 or later.
+
+  For more information, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+
+- Use **Microsoft Intune Endpoint Privilege Management** (EPM) to reduce the attack surface of your Windows devices. EPM empowers you to have users that run as standard users (without administrator rights) yet remain productive by determining when those users can run apps in an elevated context.
+
+  EPM elevation rules can be based on file hashes, certificate rules, and more. The rules you configure help to ensure that only the expected and trusted applications you allow can run as elevated. Rules can manage the child processes that an app creates, support requests by users to elevate a managed process, and allow for automatic elevations of files that just need to run without any user interruption.
+
+  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
@@ -511,13 +525,16 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
   # [Android](#tab/android-kiosk)
 
-  - **Android device administrator**
-    - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-android.md#kiosk)
-
   - **Android Enterprise**:
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
     - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices)
+
+  - **Android device administrator**
+    - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
+    - [Device settings to run as a kiosk](../configuration/device-restrictions-android.md#kiosk)
+    
+     [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 
   # [iOS/iPadOS](#tab/ios-kiosk)
 

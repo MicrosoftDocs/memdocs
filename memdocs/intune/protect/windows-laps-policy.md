@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ When you’re ready to manage the *Windows Local Administrator Password Solution
 Before creating policies, be familiar with the information in [Microsoft Intune support for Windows LAPS](../protect/windows-laps-overview.md), which includes:
 
 - An overview of Intune’s Windows LAPS policy and capabilities.
-- The perquisites for using Intune policies for LAPS.
+- The prerequisites for using Intune policies for LAPS.
 - The role-based admin control (RBAC) permissions your account needs to have to manage LAPS policy.
 - Frequently asked questions that can provide insight to configuring and using Intune LAPS policy.
 
@@ -50,7 +50,7 @@ Applies to:
 
 ## About Intune LAPS policy
 
-Intune’s provides support to configure Windows LAPS on devices through the **Local admin password solution (Windows LAPS) (preview)** profile, available through endpoint security policies for [account protection](../protect/endpoint-security-account-protection-policy.md).
+Intune’s provides support to configure Windows LAPS on devices through the **Local admin password solution (Windows LAPS)** profile, available through endpoint security policies for [account protection](../protect/endpoint-security-account-protection-policy.md).
 
 Intune policies manage LAPS by using the Windows LAPS configuration service provider (CSP). Windows LAPS CSP configurations [take precedence](/windows-server/identity/laps/laps-management-policy-settings#supported-policy-roots) over, and overwrite, any existing configurations from other LAPS sources, like GPOs or the [Legacy Microsoft LAPS](https://www.microsoft.com/en-us/download/details.aspx?id=46899) tool.
 
@@ -58,7 +58,7 @@ Windows LAPS allows for the management of a single local administrator account p
 
 > [!NOTE]  
 > Ensure the [prerequisites](../protect/windows-laps-overview.md#prerequisites) for Intune to support Windows LAPS in your tenant are met before creating policies.
-
+>
 > Intune’s LAPS policies do not create new accounts or passwords. Instead, they manage an account that’s already on the device.
 
 Configure and assign LAPS policies carefully. The Windows LAPS CSP supports a single configuration for each LAPS setting on a device. Devices that receive multiple Intune policies that include conflicting settings can fail to process policy. Conflicts can also prevent the backup of the managed local admin account and password to your tenants Directory.
@@ -68,7 +68,7 @@ To help reduce potential conflicts, we recommend assigning a single LAPS policy 
 ### Create a LAPS policy
 
   > [!IMPORTANT]  
-  > Ensure that you have enabled LAPS in Azure AD, as covered in the [Enabling WindowsLAPS with Azure AD](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad) documentation.
+  > Ensure that you have enabled LAPS in Microsoft Entra, as covered in the [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-microsoft-entra-id) documentation.
 
 To create or manage LAPS policy, your account must have applicable rights from the **Security baseline** category. By default, these permissions are included in the built-in role *Endpoint Security Manager*. To use custom roles, ensure the custom role includes the rights from the *Security baselines* category. See [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -78,7 +78,7 @@ Before you create a policy, you can review details about the available settings 
 
    :::image type="content" source="./media/windows-laps-policy/create-laps-policy.png" alt-text="Screen shot that shows where in the admin center you create a LAPS policy." lightbox="./media/windows-laps-policy/create-laps-policy.png":::
 
-   Set the *Platform* to **Windows 10 and later**, *Profile* to **Local admin password solution (Windows LAPS) (preview)**, and then select **Create**.
+   Set the *Platform* to **Windows 10 and later**, *Profile* to **Local admin password solution (Windows LAPS)**, and then select **Create**.
 
 2. On **Basics**, enter the following properties:
 
@@ -90,7 +90,7 @@ Before you create a policy, you can review details about the available settings 
    :::image type="content" source="./media/windows-laps-policy/specify-the-backup-directory.png" alt-text="Screen shot that shows the options for the Backup Directory setting." lightbox="./media/windows-laps-policy/specify-the-backup-directory.png":::
 
    > [!IMPORTANT]  
-   > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn’t domain joined (but a member of Azure AD), the device can apply the policy settings from Intune without error, but LAPS on the device will not be able to successfully use that configuration to back up the account.
+   > When configuring a policy, keep in mind that the backup directory type in the policy must be supported by the join type of the device the policy is assigned to. For example, if you set the directory to Active Directory and the device isn’t domain joined (but a member of Microsoft Entra), the device can apply the policy settings from Intune without error, but LAPS on the device will not be able to successfully use that configuration to back up the account.
 
    After configuring *Backup Directory*, review and configure the available settings to meet your organization’s requirements.
 
@@ -110,7 +110,7 @@ Before you create a policy, you can review details about the available settings 
 
 ## View Device actions status
 
-When your account has permissions equivalent to the *Security Baselines* permissions that grant rights to all policy templates in the Endpoint security workload, you can use the Intune admin center to view the status of device actions that have been requested for the device.
+When your account has permissions equivalent to the *Security baselines* permissions that grant rights to all policy templates in the Endpoint security workload, you can use the Intune admin center to view the status of device actions that have been requested for the device.
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -124,10 +124,18 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
 ## View account and password details
 
-During the public preview, your account must be assigned one of the following built-in Azure AD roles that grant access to view an account name and password:
+To view account and password details, an account must have one of the following Microsoft Entra permissions:
 
-- Global Admin
-- Cloud Device Admin
+- `microsoft.directory/deviceLocalCredentials/password/read`
+- `microsoft.directory/deviceLocalCredentials/standard/read`
+
+Use the following methods to grant accounts these permissions:
+
+- Assign one of the following built-in Microsoft Entra roles:
+  - Global Admin
+  - Cloud Device Admin
+
+Create and assign a custom role in Microsoft Entra that grants these permissions. See [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra ID documentation.
 
 For more information, see [Role based access controls for LAPS](../protect/windows-laps-overview.md#role-based-access-controls-for-laps).
 
@@ -139,7 +147,7 @@ For more information, see [Role based access controls for LAPS](../protect/windo
 
    :::image type="content" source="./media/windows-laps-policy/view-password.png" alt-text="Screen shot that shows the local admin password pane for a Windows device."  lightbox="./media/windows-laps-policy/view-password.png":::
 
-   The following information can be viewed from within the admin center. However, the *Local admin password* can only be viewed when the account was backed up to Azure AD. It can’t be viewed for an account that’s backed up to an on-premises Active Directory (Windows Server Active Directory):
+   The following information can be viewed from within the admin center. However, the *Local admin password* can only be viewed when the account was backed up to Microsoft Entra. It can’t be viewed for an account that’s backed up to an on-premises Active Directory (Windows Server Active Directory):
 
    - **Account name** – The name of the local admin account that was backed up from the device.
    - **Security ID** – The well-known SID for the account that is backed up from the device.
@@ -192,7 +200,7 @@ The following are considerations for manual password rotation:
 
   Here's how this works: A device receives a policy on March 1, which sets *PasswordAgeDays* to 10 days. The result is that the device will automatically rotate its password after 10 days, on March 11. On March 5, an admin manually rotates that device’s password, and action that resets the start date for *PasswordAgeDays* to March 5. As a result, the device will now automatically rotate its password 10 days later, on March 15.
 
-- For Azure AD Joined devices, the device must be online at the time the manual rotation is requested. If the device isn’t online at the time of the request, it results in a failure.
+- For Microsoft Entra joined devices, the device must be online at the time the manual rotation is requested. If the device isn’t online at the time of the request, it results in a failure.
 
 - Password rotation isn't supported as *Bulk Action*. You can only rotate a single device at a time.
 

@@ -130,15 +130,15 @@ See [Policy for protecting backup data] in [Stage 7: App Participation Features]
 
 ### Does my application have resources that should be protected by Conditional Access?
 
-[Conditional Access (CA)] is an [Azure Active Directory (AAD)]
-feature that can be used to control access to AAD resources.
+[Conditional Access (CA)] is an [Microsoft Entra ID]
+feature that can be used to control access to Microsoft Entra resources.
 Intune administrators can define CA rules that allow resource access only from devices or apps that are managed by Intune.
 
 Intune supports two types of CA: **device-based CA** and **app-based CA**, also known as [App Protection CA].
 Device-based CA blocks access to protected resources until the entire device is managed by Intune.
 App-based CA blocks access to protected resources until the specific app is managed by Intune App Protection Policies.
 
-If your app acquires any AAD access tokens and accesses resources that can be CA-protected, you'll need to follow [Support App Protection CA] in [Stage 7: App Participation Features].
+If your app acquires any Microsoft Entra access tokens and accesses resources that can be CA-protected, you'll need to follow [Support App Protection CA] in [Stage 7: App Participation Features].
 
 ### Does my application have a distinct theme that needs to persist across UI shown by the Intune App SDK?
 
@@ -160,8 +160,11 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 
 ### Android versions
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 33 (Android 13).
-In order to target Android API 33 (Android 13), you must use Intune App SDK `v9.0.0` or later.
+> [!NOTE]
+> Ensure that your app is compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk).
+
+The SDK fully supports Android API 28 (Android 9.0) through Android API 34 (Android 14).
+In order to target Android API 34 (Android 14), you must use Intune App SDK `v10.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).
@@ -191,7 +194,7 @@ To create a new account:
 
 ### App protection policy configuration
 
-[Create and assign app protection policies] in the Microsoft Intune admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Endpoint Manager.
+[Create and assign app protection policies] in the Microsoft Intune admin center. In addition to creating app protection policies, you can create and assign an [app configuration policy] in Intune.
 
 Before you test app protection policy settings within your own application, it's helpful to familiarize yourself with how these settings behave inside other SDK-integrated applications.
 
@@ -259,7 +262,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Android app protection policy settings]:/mem/intune/apps/app-protection-policy-settings-android
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
-[Azure Active Directory (AAD)]:https://azure.microsoft.com/services/active-directory/
+[Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
 [App Protection CA]:/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection
 [application configuration policies for managed Android Enterprise devices]:/mem/intune/apps/app-configuration-policies-use-android
 [application configuration policies for managed apps]:/mem/intune/apps/app-configuration-policies-managed-app

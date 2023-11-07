@@ -301,14 +301,16 @@ _Released January 2018_
 
 ### Intune Data Warehouse application-only authentication <!-- 1867540 -->
 
-You can set up an application using Azure Active Directory (Azure AD) and authenticate to the Intune Data Warehouse. For more information see, [Intune Data Warehouse application-only authentication](data-warehouse-app-only-auth.md).
+You can set up an application using Microsoft Entra ID and authenticate to the Intune Data Warehouse. For more information see, [Intune Data Warehouse application-only authentication](data-warehouse-app-only-auth.md).
 
-### Azure AD and Intune credential requirements <!-- 2077525 -->
+<a name='azure-ad-and-intune-credential-requirements----2077525---'></a>
+
+### Microsoft Entra ID and Intune credential requirements <!-- 2077525 -->
 
 - An Intune license is no longer required to be assigned to the user when accessing the Intune Data Warehouse (including the API).
 - The Intune role name has been changed from **Reports** to **Intune data warehouse**. 
 
-    For more information, see [Azure AD and Intune credential requirements](reports-api-url.md#azure-ad-and-intune-credential-requirements).
+    For more information, see [Microsoft Entra ID and Intune credential requirements](reports-api-url.md#azure-ad-and-intune-credential-requirements).
 
 ### OData query options <!-- 2077711 -->
 
@@ -324,7 +326,7 @@ _Released November  2017_
 
 ### A new entity collection named Current User is limited to currently active user data <!-- 1544273 -->
 
-The **Users** entity collection contains all the Azure Active Directory (Azure AD) users with assigned licenses in your enterprise. These records include user states during the data collection period, even if the user has been removed. For example, a user may be added to Intune and then removed during the course of the last month. While this user is not present at the time of the report, the user and state are present in the data. You could create a report that would show the duration of the user's historic presence in your data.
+The **Users** entity collection contains all the Microsoft Entra users with assigned licenses in your enterprise. These records include user states during the data collection period, even if the user has been removed. For example, a user may be added to Intune and then removed during the course of the last month. While this user is not present at the time of the report, the user and state are present in the data. You could create a report that would show the duration of the user's historic presence in your data.
 
 In contrast, the new **Current User** entity collection only contains users who have not been removed. The **Current User** entity collection only contains currently active users. For information about the **current user** entity collection, see [Reference for current user entity](reports-ref-data-model.md).
 

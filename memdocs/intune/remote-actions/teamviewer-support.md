@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer: coferro
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -39,6 +39,9 @@ This feature applies to:
 - iOS/iPadOS
 - macOS
 - Windows
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Prerequisites
 

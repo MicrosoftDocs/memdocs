@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2023
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -159,7 +159,49 @@ The report generates one row per device that hasn't been assigned a compliance p
 - **Device model** - Model information such as *Surface Book 2*, or *Galaxy Note 10*.
 - **Device ID**
 
-## Noncompliant devices report (Operational)
+### Settings compliance
+
+This report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you’ll  see include:
+
+- Setting name
+- Platform
+- Compliant devices
+- Noncompliant devices
+- Not evaluated devices
+- Not applicable devices
+- Conflict devices
+
+By selecting an entry, you can drill in for more detailed information about the setting and devices that report a specific status.
+
+To generate a report that uses current data:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Settings compliance** tile.
+3. Use the drop-down to select which platforms the report will include.
+4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
+
+### Policy compliance
+
+This report displays a list of compliance policies with a count of devices that are compliant or not compliant to each policy. After the report has been generated, The top-level details you’ll see include:
+
+- Policy name
+- Platform
+- Compliant devices
+- Noncompliant devices
+- Not evaluated devices
+- Not applicable devices
+- Conflict devices
+
+By selecting an entry, you can drill in for more detailed information about the policy and devices that report a specific status.
+
+To generate a report that uses current data:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Reports** > **Device compliance** > **Reports** tab, and select the **Policy compliance** tile.
+3. Use the drop-down to select which platforms the report will include.
+4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
+
+### Noncompliant devices report (Operational)
 
 The **Noncompliant devices** report provides data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
@@ -236,7 +278,7 @@ To view the **Feature update failures** report, use the following steps:
 
 The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
 
-Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security Baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
+Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
 
 | Permission | Action | Details |
 |---|---|---|
@@ -352,7 +394,7 @@ To view the Profile configuration status report:
 
 ## Co-management eligibility report (Organizational)
 
-The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 10 and enroll in Azure Active Directory before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
+The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 10 and enroll in Microsoft Entra ID before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
 
 To see a generated report of device state, you can use the following steps:
 
@@ -500,13 +542,13 @@ To see the report for a device, you can use the following steps:
 
 ## Device group membership report (Organizational)
 
-The **Group membership** report provides the group membership of all Azure AD groups for a specific managed device. The report provides the following columns:
+The **Group membership** report provides the group membership of all Microsoft Entra groups for a specific managed device. The report provides the following columns:
 - Name
 - Object ID
 - Membership Type
 - Direct or Transitive
 
-When you select on a group, you can see the Azure AD pane for the group. You can identify whether the device's membership is assigned or dynamic and whether the device is a direct member or a transitive member. This report supports all device platforms and management types. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+When you select on a group, you can see the Microsoft Entra pane for the group. You can identify whether the device's membership is assigned or dynamic and whether the device is a direct member or a transitive member. This report supports all device platforms and management types. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
 
 To see the report for a device, you can use the following steps:
 
@@ -516,12 +558,12 @@ To see the report for a device, you can use the following steps:
 
 
 ## Azure Monitor integration reports (Specialist)
-You can customize your own reports to get the data you want. The data in your reports will optionally be available via [Azure Monitor](/azure/azure-monitor/overview) using [Log Analytics](reports.md#log-analytics) and [Azure Monitor workbooks](reports.md#workbooks). These solutions allow you to create custom queries, configure alerts, and make dashboards to show the device compliance data in the manner you want. Additionally, you can retain the activity logs in your Azure storage account, integrate with the reports using [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration), and correlate the reports to Azure AD activity logs. Azure Monitor workbooks can be used in addition to importing dashboards for custom reporting needs.
+You can customize your own reports to get the data you want. The data in your reports will optionally be available via [Azure Monitor](/azure/azure-monitor/overview) using [Log Analytics](reports.md#log-analytics) and [Azure Monitor workbooks](reports.md#workbooks). These solutions allow you to create custom queries, configure alerts, and make dashboards to show the device compliance data in the manner you want. Additionally, you can retain the activity logs in your Azure storage account, integrate with the reports using [security information and event management (SIEM) tools](/microsoft-365/security/office-365-security/siem-server-integration), and correlate the reports to Microsoft Entra activity logs. Azure Monitor workbooks can be used in addition to importing dashboards for custom reporting needs.
 
 > [!NOTE]
 > Complex reporting functionality require an Azure subscription.
 
-An example specialist report could correlate a set of device details, including ownership data, with compliance data in a custom report. Then, this custom report could be displayed on an existing dashboard in the Azure Active Directory portal.
+An example specialist report could correlate a set of device details, including ownership data, with compliance data in a custom report. Then, this custom report could be displayed on an existing dashboard in the Microsoft Entra admin center.
 
 You can create and view custom reports using the following steps:
 

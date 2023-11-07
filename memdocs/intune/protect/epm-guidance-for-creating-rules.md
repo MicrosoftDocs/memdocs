@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -70,6 +70,44 @@ This means that file names are *highly susceptible* to change. Files that are si
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
+
+### Rules based on attributes gathered by PowerShell
+
+To help you build more accurate file detection rules, you can use the **Get-FileAttributes** PowerShell cmdlet. Available from the EpmTools PowerShell module, *Get-FileAttributes* can retrieve file attributes and the certificate chain material for a file and you can use the output to populate elevation rule properties for a particular application.
+
+Example module import steps and output from Get-FileAttributes run against powershell.exe on Windows version 10.0.19044.2728:
+
+```powershell
+PS C:\Windows\system32> Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
+PS C:\Windows\system32> Get-FileAttributes -FilePath C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -CertOutputPath C:\CertsForPoSH\
+
+
+FileName      : powershell.exe
+FilePath      : C:\Windows\System32\WindowsPowerShell\v1.0
+FileHash      : 9F914D42706FE215501044ACD85A32D58AAEF1419D404FDDFA5D3B48F66CCD9F
+HashAlgorithm : Sha256
+ProductName   : Microsoft® Windows® Operating System
+InternalName  : POWERSHELL
+Version       : 10.0.19041.546
+Description   : Windows PowerShell
+CompanyName   : Microsoft Corporation
+
+```
+
+> [!NOTE]
+> The certificate chain for Powershell.exe is output to the C:\CertsForPoSH directory listed in the command above.
+
+For more information, see [EpmTools PowerShell module](../protect/epm-overview.md#epmtools-powershell-module).
+
+### Controlling child process behavior
+
+Child process behavior allows you to control the context when a child process is created by a process elevated with EPM. This behavior allows you to further restrict processes which normally would be automatically delegated the context of it's parent process.
+
+Windows automatically delegates the context of a parent to a child, so take special care in controlling the behavior for your allowed applications. Ensure you evaluate what is needed when you create elevation rules, and implement the principle of least privilege.
+
+> [!NOTE]
+>
+> Changing the child process behavior may have compatiability issues with certain applications that expect the default Windows behavior. Make sure you thoroughly test applications when manipulating the child process behavior.
 
 ## Deploying rules created with Endpoint Privilege Management
 

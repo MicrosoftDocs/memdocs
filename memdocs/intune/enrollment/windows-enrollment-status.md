@@ -44,7 +44,7 @@ ms.collection:
  
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process. 
 
-The ESP can be deployed during the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join, and any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario.  
+The ESP can be deployed during the default out-of-box experience (OOBE) for Microsoft Entra join, and any [Windows Autopilot](/autopilot/index) provisioning scenario.  
 
 To deploy the ESP to devices, you have to create an ESP profile in Microsoft Intune. Within the profile, you can configure the ESP settings that control:  
 
@@ -103,7 +103,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          - **All**: All assigned apps must be installed before users can use their devices.  
          - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings. 
 
-      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](../../autopilot/pre-provision.md). This setting is only available if you've added *blocking apps* and only applies to devices going through pre-provisioning. Your options:  
+      - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](/autopilot/pre-provision). This setting is only available if you've added *blocking apps* and only applies to devices going through pre-provisioning. Your options:  
          - **No**: An attempt will be made to install the blocking apps. Autopilot deployment will fail if a blocking app fails to install. No attempt is made to install non-blocking apps. When the end user receives the resealed device and signs in for the first time, the ESP will attempt to install the non-blocking apps. 
          - **Yes**: An attempt will be made to install all required apps. Autopilot deployment will fail if a blocking app fails to install. If a non-blocking app that's targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP will reattempt to install the apps that it couldn't in the technician phase. This is the default setting for pre-provisioned deployments.   
          
@@ -143,12 +143,12 @@ Intune applies the default profile to all users and all devices when no other ES
 
 
 ## Prioritize profiles       
-If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. The profile set to 1 has the highest priority.
+If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. The profile set to 1 has the highest priority. Intune applies the default ESP profile when no other profiles are assigned to the device or user.  
 
  Intune applies profiles in the following order:  
 
 1. Intune applies the highest-priority profile assigned to the device. 
-2. If no profiles are targeted at the device, Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. In white glove and self-deploying scenarios, only profiles targeted at devices can be applied.   
+2. If no profiles are targeted at the device, Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. In pre-provisioning and self-deploying scenarios, Intune only applies profiles targeted at devices.  
 3. If no profiles are assigned to the device or user, Intune applies the default ESP profile.    
 
 To prioritize your profiles:  
@@ -187,12 +187,12 @@ During device preparation, the enrollment status page tracks these tasks for the
 * Register your device for mobile management    
 
 #### Secure your hardware
-This task ensures that the device completes the Trusted Platform Module (TPM) key attestation and validates its identity with Azure AD. Azure AD sends a token to the device, which is used during Azure AD join. 
+This task ensures that the device completes the Trusted Platform Module (TPM) key attestation and validates its identity with Microsoft Entra ID. Microsoft Entra ID sends a token to the device, which is used during Microsoft Entra join. 
 
 This step is required for self-deploying mode and white glove deployment. It isn't needed for Windows Autopilot scenarios in user-driven mode.   
 
 #### Join your organization's network  
-The device uses the token received in the previous step to join Azure AD. This step is required in self-deploying mode and white glove deployment. Devices in user-driven mode have already completed this task by time they open the ESP.  
+The device uses the token received in the previous step to join Microsoft Entra ID. This step is required in self-deploying mode and white glove deployment. Devices in user-driven mode have already completed this task by time they open the ESP.  
 
 ### Register your device for mobile management
 The device enrolls in Microsoft Intune for mobile device management (MDM). 
@@ -264,7 +264,7 @@ It also tracks the following types of apps when they're assigned to all devices,
   - Per machine LoB MSI apps   
   - LoB store apps, online store apps, and offline store apps 
 
-Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning if you're using Hybrid Azure AD join.   
+Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning if you're using Microsoft Entra hybrid join.   
 
 ### Known issues
 
@@ -274,16 +274,16 @@ This section lists the known issues for the enrollment status page.
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during device setup forces the user to enter their credentials before the account setup phase. User credentials aren't preserved during reboot. Instruct the device users to enter their credentials to continue to the account setup phase.  
 - The ESP always times out on devices running Windows 10, version 1903 and earlier, and
-enrolled via the *Add work and school account* option. The ESP waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
-- Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Azure AD.  
+enrolled via the *Add work and school account* option. The ESP waits for Microsoft Entra registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
+- Hybrid Microsoft Entra Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Microsoft Entra Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Microsoft Entra ID.  
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
 - ESP is stuck for a long time or never completes the "Identifying" phase. Intune computes the ESP policies during the identifying phase. A device may never complete computing ESP policies if the current user doesn't have an Intune licensed assigned.  
 - Configuring Microsoft Defender Application Control causes a prompt to reboot during Autopilot. Configuring Microsoft Defender Application (AppLocker CSP) requires a reboot. When this policy is configured, it may cause a device to reboot during Autopilot. Currently, there's no way to suppress or postpone the reboot.
 - When the [DeviceLock policy](/windows/client-management/mdm/policy-csp-devicelock) is enabled as part of an ESP profile, the OOBE or user desktop autologon could fail unexpectantly for two reasons.
-  - If the device didn't reboot before exiting the ESP Device setup phase, the user may be prompted to enter their Azure AD credentials. This prompt occurs instead of a successful autologon where the user sees the Windows first login animation.
-  - The autologon will fail if the device rebooted after the user entered their Azure AD credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
+  - If the device didn't reboot before exiting the ESP Device setup phase, the user may be prompted to enter their Microsoft Entra credentials. This prompt occurs instead of a successful autologon where the user sees the Windows first login animation.
+  - The autologon will fail if the device rebooted after the user entered their Microsoft Entra credentials but before exiting the ESP Device setup phase. This failure occurs because the ESP Device setup phase never completed. The workaround is to reset the device.
 - ESP doesn't apply to a Windows device that was enrolled with Group Policy (GPO).
 - Scripts that run in user context ('Run this script using the logged on credentials' on the script properties is set to 'yes') may not execute during ESP.  As a workaround, execute scripts in System context by changing this setting to 'no'.
 

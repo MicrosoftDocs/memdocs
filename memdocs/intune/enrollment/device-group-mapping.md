@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/09/2023
+ms.date: 06/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,7 +40,7 @@ ms.collection:
 * Windows 10
 * Windows 11
 
-Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Intune admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
+Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune will automatically add all devices that fall within that category to the corresponding device group in Intune. To enable categories in your tenant, you must create a category in the Microsoft Intune admin center and set up dynamic Microsoft Entra security groups.  
  
 This article describes how to configure and edit device categories.   
 
@@ -63,11 +63,13 @@ Decide if it's necessary to show the device category selection prompt to end use
 7. Select **Next**.  
 8. Select **Create**. The new category is added to your **Device categories** list.   
 
-You'll use the device category name when you create Azure Active Directory (Azure AD) security groups in the next step.  
+You'll use the device category name when you create Microsoft Entra security groups in the next step.  
 
-### Step 2: Create Azure AD security groups 
+<a name='step-2-create-azure-ad-security-groups'></a>
 
-To enable automatic grouping, you must create a dynamic group using attribute-based rules in Azure AD. For instructions, see [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Azure AD documentation. Create an advanced rule for your group using the **deviceCategory** attribute and the category name you created in Step 1 of this article. 
+### Step 2: Create Microsoft Entra security groups 
+
+To enable automatic grouping, you must create a dynamic group using attribute-based rules in Microsoft Entra ID. For instructions, see [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Microsoft Entra documentation. Create an advanced rule for your group using the **deviceCategory** attribute and the category name you created in Step 1 of this article. 
 
 For example, to create a rule that automatically groups devices belonging in the HR category, use the following rule syntax: `device.deviceCategory -eq "HR"`    
 
@@ -78,9 +80,9 @@ The category is listed in the **Device category** column. To add the column to y
 When you delete a category, devices assigned to it appear as **Unassigned**.  
 
 ### Change the category of a device  
-If you edit a category, be sure to update any Azure AD security groups that reference the category in their rules.  
+If you edit a category, be sure to update any Microsoft Entra security groups that reference the category in their rules.  
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices**.  
 2. Select a device.  
 3. Select **Properties**.  
 4. Change the category listed under **Device category**.  

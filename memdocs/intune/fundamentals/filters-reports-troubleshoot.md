@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -75,7 +75,7 @@ In the following example, you can see this information for the **TestDevice**:
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Intune." lightbox="./media/filters-reports-troubleshoot/filter-properties-single-device.png":::
 
 > [!IMPORTANT]
-> Filter evaluation reports for devices don't show the results of any Azure AD conditional access evaluations. To troubleshoot conditional access issues, use the  Azure AD sign-in logs. For more information, go to [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
+> Filter evaluation reports for devices don't show the results of any Microsoft Entra Conditional Access evaluations. To troubleshoot conditional access issues, use the  Microsoft Entra sign-in logs. For more information, go to [Sign-in logs in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-sign-ins).
 
 ### Workload filter evaluation reports
 
@@ -164,7 +164,7 @@ If you create two managed app filter policies and they conflict, then the filter
 
 Overlapping can cause conflicts and Intune helps avoid conflicts.
 
-Intune prevents you from creating multiple assignments to the same Azure AD group. It's not recommended to assign apps or policies to the same target user or device with more than one intent. For example, when you deploy an app, you can't select a group for an **Available** assignment, and then the same group for a **Required** assignment.
+Intune prevents you from creating multiple assignments to the same Microsoft Entra group. It's not recommended to assign apps or policies to the same target user or device with more than one intent. For example, when you deploy an app, you can't select a group for an **Available** assignment, and then the same group for a **Required** assignment.
 
 An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, go to [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
 

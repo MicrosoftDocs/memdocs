@@ -9,7 +9,7 @@ ms.assetid: 39e47528-ea59-4d32-8baf-d017d3a44426
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to configure data through the Configuration Manager console or directly editing the DCM Digest XML file.
 ms.reviewer: mstewart,aaroncz 

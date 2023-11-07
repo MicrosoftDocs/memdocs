@@ -79,7 +79,7 @@ There are different actions that trigger a notification. For example, when a pol
 
 Devices check in with Intune when they receive a notification to check in, or during the scheduled check-in. When you target a device or user with an action, then Intune immediately notifies the device to check in to receive these updates. For example, when a lock, passcode reset, app, or policy assignment action runs.
 
-Other changes, such as revising the contact information in the Company Portal app, don't cause an immediate notification to devices.
+Other changes don't cause an immediate notification to devices, including revising the contact information in the Company Portal app or updates to an `.ipa` file.
 
 The settings in the policy or profile are applied at every check-in. A [Windows 10 MDM policy refresh customer blog post](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) may be a good resource.
 
@@ -105,7 +105,7 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
-In the Intune admin center, there are few places you can create configuration policies, including Group Policy analytics, Endpoint Security, Security Baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+In the Intune admin center, there are few places you can create configuration policies, including Group Policy analytics, endpoint security, security baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
 
 ### Custom iOS/iPadOS or macOS policies that conflict
 
@@ -129,7 +129,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
     - Allow data roaming
     - Allow automatic synchronization while roaming
 
-  - **Windows devices**: After you remove or unassign the profile, have the Azure AD user sign in to the device, and [sync with the Intune service](../user-help/sync-your-device-manually-windows.md).
+  - **Windows devices**: After you remove or unassign the profile, have the Microsoft Entra user sign in to the device, and [sync with the Intune service](../user-help/sync-your-device-manually-windows.md).
 
     Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
 
@@ -153,9 +153,9 @@ To learn more about the version and SKU requirements for the different settings,
 
 ## When devices enroll, there's a delay in applying apps and policies assigned to dynamic device groups
 
-During enrollment, you can use Azure AD dynamic device groups. For example, you can create a dynamic device group based on a device's name or enrollment profile.
+During enrollment, you can use Microsoft Entra dynamic device groups. For example, you can create a dynamic device group based on a device's name or enrollment profile.
 
-The enrollment profile is applied to the device record during initial device setup. Azure AD dynamic grouping isn't instant. The device may not be in the dynamic group for some time, possibly minutes to hours depending on other changes being made in your tenant.
+The enrollment profile is applied to the device record during initial device setup. Microsoft Entra dynamic grouping isn't instant. The device may not be in the dynamic group for some time, possibly minutes to hours depending on other changes being made in your tenant.
 
 If the device isn't added to the group, then your apps and policies aren't assigned to the device during the initial Intune check-in. The policies may not apply until the next scheduled check-in.
 
@@ -165,7 +165,7 @@ For more information on dynamic groups, go to:
 
 - [Add groups to organize users and devices in Intune](../fundamentals/groups-add.md)
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
-- [Dynamic membership rules for groups in Azure AD](/azure/active-directory/enterprise-users/groups-dynamic-membership)
+- [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
 ## Next steps
 

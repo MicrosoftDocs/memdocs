@@ -77,7 +77,7 @@ Because different device platforms support different compliance capabilities or 
 
 - **Level 1** – [**Minimal device compliance**](#level-1---minimal-device-compliance). These are configurations that we recommend all tenants have in place.
 - **Level 2** – [**Enhanced device compliance settings**](#level-2---enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
-- **Level 3** – [**Advanced device compliance configurations**](#level-3---advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Conditional Access from Azure AD.
+- **Level 3** – [**Advanced device compliance configurations**](#level-3---advanced-device-compliance-configurations). High level recommendations include those that require deeper integration with other products, such as Microsoft Entra Conditional Access.
 
 Generally, our recommendations place settings that are considered key configurations that are common across platforms at the minimal compliance level, providing a strong return for your investment. Settings listed for at higher levels can involve more complexity, such as settings that require integration of third-party products. Be sure to review all the range recommendations and be ready to adjust your own deployment plan to fit your organization’s needs and expectations.
 
@@ -183,7 +183,7 @@ We recommend using the following settings in your enhanced device compliance pol
 | **Applications** <br><br> **Android Enterprise**:<br> - Block apps from unknown sources<br> - Company Portal app runtime integrity <br>  - Manage source locations for apps <br>  - Google Play services  <br> - SafteyNet options for attestation and evaluation  <br><br> **iOS/iPadOS** <br> - Restricted apps<br><br> **macOS**:<br> - Allow apps from specific locations<br> - Block apps from unknown sources<br> - Firewall settings<br><br> **Windows**:<br> - Block apps from unknown sources<br> - Firewall settings  |  Configure  requirements for various applications. <br><br> For Android, manage the use and operation of  applications like Google Play, SafteyNet, and evaluation of the Company Portal app runtime integrity. <br><br> For all platforms, when supported,  manage where apps can be installed from, and which apps shouldn't be allowed on devices that access your organizations resources. <br><br> For macOS and Windows, compliance settings support requiring an active and configured Firewall.  |
 | **Encryption**<br><br> **Android Enterprise**:<br> - Require encryption of data storage<br><br> **Android AOSP**:<br> - Require encryption of data storage<br><br> **macOS**:<br> - Require encryption of data storage<br><br> **Linux**: <br> - Require encryption of data storage<br><br> **Windows**:<br> - Require encryption of data storage<br> - BitLocker  | Add compliance settings that require the encryption of data storage. Windows also supports requiring use of BitLocker.  |
 | **Password configurations** <br><br> **Android Enterprise**:<br> - Password expiration, and reuse<br><br> **iOS/iPadOS**: <br> - Password expiration, and reuse<br><br> **macOS**: <br> - Password expiration, and reuse<br><br> **Windows**: <br>- Password expiration, and reuse  | Add password compliance settings to ensure passwords are rotated periodically, and that passwords aren't reused frequently.  |
-| **System level file and boot protection** <br><br> **Android ASOP**:<br> - Rooted devices <br><br> **Android Enterprise**: <br> - Block USB debugging on device<br> - Rooted devices  <br><br> **iOS/iPadOS** <br> - Jailbroken devices<br><br> **macOS**:<br> - Require system integrity protection <br><br> **Windows**:<br>  - Require code integrity<br> - Require Secure Boot to be enabled on the device<br> - Trusted Platform Module (TPM)  | Configure the platform specific options that evaluate devices for system level or kernel level risks.  |
+| **System level file and boot protection** <br><br> **Android AOSP**:<br> - Rooted devices <br><br> **Android Enterprise**: <br> - Block USB debugging on device<br> - Rooted devices  <br><br> **iOS/iPadOS** <br> - Jailbroken devices<br><br> **macOS**:<br> - Require system integrity protection <br><br> **Windows**:<br>  - Require code integrity<br> - Require Secure Boot to be enabled on the device<br> - Trusted Platform Module (TPM)  | Configure the platform specific options that evaluate devices for system level or kernel level risks.  |
 
 ## Level 3 - Advanced device compliance configurations
 
@@ -217,7 +217,7 @@ To learn more about using Mobile Threat Defense software with Intune, start with
 
 ### Use data from third-party compliance partners
 
-Intune supports the use of third-party compliance partners where the partner serves as the mobile device management (MDM) authority for a group of devices. When you use a supported compliance partner, you use that partner to configure device compliance for the devices that solution manages. You also configure that partner solution to pass the compliance results to Intune, which then stores that data in Azure AD along with compliance data from Intune. The third-party compliance data is then available for use by Intune when evaluating device compliance policies, and for use by Conditional Access policies.
+Intune supports the use of third-party compliance partners where the partner serves as the mobile device management (MDM) authority for a group of devices. When you use a supported compliance partner, you use that partner to configure device compliance for the devices that solution manages. You also configure that partner solution to pass the compliance results to Intune, which then stores that data in Microsoft Entra ID along with compliance data from Intune. The third-party compliance data is then available for use by Intune when evaluating device compliance policies, and for use by Conditional Access policies.
 
 In some environments, Intune might serve as the only MDM authority you need to use, as by default, Intune is a registered compliance partner for the Android, iOS/iPadOS, and Windows platforms. Other platforms require other compliance partners to serve as a devices MDM authority, like use of Jamf Pro for macOS devices.
 
@@ -237,7 +237,7 @@ To learn more about perquisites, supported platforms, and the JSON and script co
 
 ### Integrate compliance with Conditional Access
 
-Conditional Access is an Azure Active Directory (Azure AD) capability that works with Intune to help protect devices. For devices that register with Azure AD, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
+Conditional Access is a Microsoft Entra capability that works with Intune to help protect devices. For devices that register with Microsoft Entra, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
 
 Combine Conditional Access policy with:
 

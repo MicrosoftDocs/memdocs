@@ -20,7 +20,7 @@ ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
 #ROBOTS:
 #audience:
 
-ms.reviewer: coferro
+ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,8 +31,6 @@ ms.collection:
 ---
 
 # Enable lost mode on iOS/iPadOS devices with Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 The **Lost mode** device action helps you enable lost mode on lost or stolen iOS/iPadOS devices. This mode lets you enter a message and a phone number that appears on the lock screen of the device. To use lost mode, the device must be a corporate-owned iOS/iPadOS device that is in supervised mode.
 

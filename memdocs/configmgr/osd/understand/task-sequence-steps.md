@@ -1734,7 +1734,7 @@ Select this option to prevent Sysprep from resetting the product activation flag
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
 
-The [Windows Autopilot for existing devices](../../../autopilot/existing-devices.md) task sequence uses this step with this option.
+The [Windows Autopilot for existing devices](/autopilot/existing-devices) task sequence uses this step with this option.
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
@@ -2504,9 +2504,11 @@ This step performs the following actions:
 
 The task sequence continues running the next step.  
 
-> [!Note]  
-> Windows group policy normally doesn't process until after the task sequence is complete. This behavior is consistent across different versions of Windows. Other custom actions during the task sequence can trigger group policy evaluation. For more information on the order of operations, see [Run a script after setup is complete (SetupComplete.cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd). <!-- 2841304 -->
-
+> [!NOTE]
+>
+> The task sequence transitions from Windows PE to the newly installed Windows OS during the **Setup Windows and ConfigMgr** task. When the newly installed Windows starts for the first time, Windows Setup runs. At the end of Windows Setup, the task sequence is relaunched by the Windows Setup script **SetupComplete.cmd**. This results in the task sequence running entirely within Windows Setup. Windows group policy normally doesn't process until after Windows Setup is complete, so therefore group policy isn't processed until the task sequence is complete. This behavior is consistent across different versions of Windows. For more information on the order of operations, see [Run a script after setup is complete (SetupComplete.cmd)](/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup#run-a-script-after-setup-is-complete-setupcompletecmd).<!-- 2841304 -->
+>
+> Although group policy doesn't normally run until Windows Setup and the task sequence completes, Windows or the task sequence doesn't block group policy from running. Certain actions such as scripts or application installs during the task sequence can trigger group policy evaluation. For example, the [Install Software Updates](#BKMK_InstallSoftwareUpdates) task may trigger group policy evaluation when setting the WSUS server.
 
 ### Variables for Setup Windows and ConfigMgr
 

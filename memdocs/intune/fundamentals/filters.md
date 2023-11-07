@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2023
+ms.date: 06/26/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -61,6 +61,7 @@ This feature applies to:
 
   - Android device administrator
   - Android Enterprise
+  - Android (AOSP)
   - iOS/iPadOS
   - macOS
   - Windows 10/11
@@ -71,6 +72,9 @@ This feature applies to:
   - iOS/iPadOS
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## How filters work
 
@@ -124,6 +128,7 @@ There are some general restrictions when creating filters:
       - **Managed devices**:
         - Android device administrator
         - Android Enterprise
+        - Android (AOSP)
         - iOS/iPadOS
         - macOS
         - Windows 10 and later

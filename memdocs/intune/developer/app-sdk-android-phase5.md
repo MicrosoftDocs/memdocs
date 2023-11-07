@@ -654,7 +654,7 @@ Consider closing your app manually after completing your custom wipe handler ste
 Plan to dedicate significant time for validating your app's integration of multi-identity. Before you start testing:
 
 - Create and assign app protection policy to an account. This will be your test managed account.
-- Create, but don't assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Azure Active Directory accounts, you can use an existing non-AAD account as the unmanaged test account.
+- Create, but don't assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Microsoft Entra accounts, you can use an existing non-AAD account as the unmanaged test account.
 - Refamiliarize yourself with how policy is enforced inside your app. Multi-identity testing requires you to easily distinguish when your app is and isn't operating with policy enforced. The app protection policy setting to block screenshots is effective at quickly testing policy enforcement.
 - Consider the entire set of UI your app offers. Enumerate the screens where account data is displayed. Does your app only ever present a single account's data at once, or can it present data belonging to multiple accounts at the same time?
 - Consider the entire set of files your app creates. Enumerate which of these files contain data belonging to an account, as opposed to system-level data.
@@ -718,6 +718,7 @@ For these tests, install your app and the Intune Company Portal; log in with bot
 - Log in to the other managed app with the managed test account. Even if the other managed app is multi-identity, only log in with the managed account.
 
 If your app has the ability to send data to other apps, like Microsoft Outlook sending a document attachment to Microsoft Office:
+
 | Scenario | Steps |
 | - | - |
 | Managed identity send to unmanaged app | - Switch to the managed account. <br> - Navigate to where your app can send data. <br> - Attempt to send data to an unmanaged app. <br> - You should be blocked from sending data to the unmanaged app. |
@@ -730,6 +731,7 @@ Your app may also passively receive data from other apps, like Microsoft Office 
 The receive app protection policy setting covers both scenarios.
 
 If your app has the ability to actively import data from other apps:
+
 | Scenario | Steps |
 | - | - |
 | Managed identity import from unmanaged app | - Switch to the managed account. <br> - Navigate to where your app can import data from other apps. <br> - Attempt to import data from an unmanaged app. <br> - You should be blocked from importing data from unmanaged apps. |

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use Microsoft Defender for Endpoint in Microsoft Intune
-description: Use Microsoft Defender for Endpoint with Intune, including setup and configuration, onboarding of your Intune devices, and then use a devices Defender for Endpoint risk assessment with your Intune device compliance and conditional access policies to protect network resources.
+description: Learn about using Microsoft Defender for Endpoint with Intune, including setup and configuration, onboarding of your Intune devices, and then use a devices Defender for Endpoint risk assessment with your Intune device compliance and conditional access policies to protect network resources.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/09/2021
+ms.date: 09/11/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -84,7 +84,7 @@ For devices that run Android, you can use Intune policy to modify the configurat
 **Subscriptions**:  
 To use Microsoft Defender for Endpoint with Intune, you must have the following subscriptions:
 
-- **Microsoft Defender for Endpoint** - This subscription provides you access to the Microsoft Defender Security Center (ATP portal).  
+- **Microsoft Defender for Endpoint** - This subscription provides you access to the Microsoft Defender Security Center ([Microsoft 365 Defender](https://go.microsoft.com/fwlink/p/?linkid=2077139)).  
 
   For Defender for Endpoint licensing options, see **Licensing requirements** in [Minimum requirements for Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements) and [How to set up a Microsoft 365 E5 Trial Subscription](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription).
 
@@ -97,7 +97,7 @@ The following platforms are supported for Intune with Microsoft Defender for End
 
 - Android
 - iOS/iPadOS
-- Windows 10/11 (Hybrid Azure Active Directory Joined or Azure Active Directory Joined)
+- Windows 10/11 (Microsoft Entra hybrid joined or Microsoft Entra Joined)
 
 For the system requirements for Microsoft Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements).
 

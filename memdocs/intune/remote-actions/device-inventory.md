@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/14/2022
+ms.date: 10/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -79,7 +79,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |--------------|----------------------|----|  
 |Name|The name of the device.|Windows, macOS, iOS, Android|
 |Management name|An easily recognizable device name used only in the Intune admin center. Changing this name does not change the device name or the name in the Company Portal. For more information on how to change the device name, see [Rename a device with Microsoft Intune](device-rename.md).|Windows, macOS, iOS, Android <br/><br/> NOTE: Management names won't automatically populate for Android Enterprise dedicated, fully managed, and corporate-owned with work profile devices that were enrolled before November 2021. However, the admin may still edit the management name.|
-|UDID|The device's Unique Device identifier.|Windows, macOS, iOS|
+|UDID|The device's Unique Device identifier.|macOS, iOS|
 |Intune Device ID|A GUID that uniquely identifies the device.|Windows, macOS, iOS, Android|
 |Serial number|The device's serial number from the manufacturer.|Windows, macOS, iOS, iPadOS, Android <br/><br/> Intune doesn't display serial number for Android personally owned work profile devices running Android 12 and newer.|
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
@@ -90,6 +90,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, macOS, iOS|
+|Total physical memory|The total physical memory on the device (in gigabytes).|Windows|
 |Free storage space|The unused storage space on the device (in gigabytes).|Windows, iOS|
 | PowerPrecision+ Battery Health | State-of-Health rating as determined by Zebra (PowerPrecision+ batteries only). | Android |
 | PowerPrecision Battery Charge Cycles Consumed | Number of full charge cycles consumed as determined by Zebra (PowerPrecision batteries only). | Android |
@@ -111,7 +112,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, macOS, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, macOS, iOS/iPadOS, Android|
 |Activation lock bypass code|The code that can be used to disable the activation lock.|iOS|
-|Azure AD registered|If **Yes**, the device is registered with Azure Directory.|Windows, macOS, iOS/iPadOS, Android|
+|Microsoft Entra registered|If **Yes**, the device is registered with Azure Directory.|Windows, macOS, iOS/iPadOS, Android|
 |Intune registered|If **Yes**, the device is registered with Intune|Windows, macOS, iOS/iPadOS, Android|
 |Compliance|The device's compliance state.|Windows, macOS, iOS/iPadOS, Android|
 |EAS activated|If **Yes**, then the device is synchronized with an Exchange mailbox.|Windows, macOS, iOS/iPadOS, Android|
@@ -123,7 +124,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Resident users|Shows the number of users currently on the shared iPad device, or defaults to null if the number of users can't be determined.|iOS/iPadOS|
 
 >[!NOTE]
- > - For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
+ > - For Windows 10 devices that are registered with [Windows Autopilot service](/autopilot/add-devices), Enrolled date displays the time when devices were registered with Autopilot instead of the time when they were enrolled.
  > - For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases. 
 
 ## Next steps
