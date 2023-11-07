@@ -82,7 +82,7 @@ We've released a new version of the Intune security baseline for **Microsoft 365
 
 The Microsoft 365 Office Apps baseline can help you rapidly deploy configurations to your Office Apps that meet the security recommendations of the Office and security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations. You can modify the default baseline to meet the requirements of your organization.
 
-We’ve also updated our [reference article](../protect/security-baseline-v2-office-settings.md&pivots=v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
+We’ve also updated our [reference article](../protect/security-baseline-v2-office-settings.md?pivots=v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
 
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->  
 The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
