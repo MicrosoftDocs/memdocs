@@ -47,15 +47,15 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
 5. In most cases, you can create an app for the Desktop Analytics connection with this wizard. Select **Create**.<!-- 3572123 -->
 
     > [!TIP]
-    > If you can't create the app from this wizard, you can manually create the app in Azure AD, and then import into Configuration Manager. For more information, see [Create and import app for Configuration Manager](troubleshooting.md#create-and-import-app-for-configuration-manager).
+    > If you can't create the app from this wizard, you can manually create the app in Microsoft Entra ID, and then import into Configuration Manager. For more information, see [Create and import app for Configuration Manager](troubleshooting.md#create-and-import-app-for-configuration-manager).
 
 6. Configure the following settings in the **Create Server Application** window:
 
-    - **Application Name**: A friendly name for the app in Azure AD.
+    - **Application Name**: A friendly name for the app in Microsoft Entra ID.
 
-    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.
+    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Microsoft Entra ID. By default this value is `https://ConfigMgrService`.
 
-    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+    - **App ID URI**: This value needs to be unique in your Microsoft Entra tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
        - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
        - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
@@ -65,12 +65,12 @@ Use this procedure to connect Configuration Manager to Desktop Analytics, and co
     > [!TIP]
     > Take note of the expiration date and make sure to [Renew the secret key](../core/servers/deploy/configure/azure-services-wizard.md#bkmk_renew) before its expiration to ensure uninterrupted access to the service.
 
-    Select **Sign in** . After successfully authenticating to Azure, the page shows the **Azure AD Tenant Name** for reference.
+    Select **Sign in** . After successfully authenticating to Azure, the page shows the **Microsoft Entra tenant Name** for reference.
 
     > [!NOTE]
     > Complete this step as a **Global administrator**. These credentials aren't saved by Configuration Manager. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard.
 
-    Select **OK** to create the web app in Azure AD and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.
+    Select **OK** to create the web app in Microsoft Entra ID and close the Create Server Application dialog. On the Server App dialog, select **OK**. Then select **Next** on the App page of the Azure Services Wizard.
 
 7. On the **Diagnostic Data** page, configure the following settings:
 
