@@ -39,7 +39,7 @@ The Company Portal apps, Company Portal website, and Intune app on Android are w
 > [!NOTE]
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 >
-> The minimum supported version of the iOS Company Portal app is v4.16.0. If users are running v4.14.1 or below, they will be prompted for an update at login.
+> The minimum supported version of the iOS Company Portal app is v5.2311.1. If users are running an older version, they will be prompted for an update at login.
 
 ## Customizing the user experience
 
