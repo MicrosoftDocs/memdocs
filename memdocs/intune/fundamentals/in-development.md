@@ -206,25 +206,6 @@ We're working on an update to the Intune security baseline for Microsoft 365 App
 
 For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
-### Defender for Endpoint security settings management enhancements and support for Linux and macOS will soon be generally available<!-- 24190967  -->  
-The improvements introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) will soon be generally available. This change will include support all of the opt-in preview behavior – without having to enable support for preview features in Microsoft Defender for Endpoint.
-
-When the opt-in public preview behavior becomes generally available, the following endpoint security profiles for Linux and macOS that were added as part of the opt-in preview will also generally available:
-
-**Linux**:
-
-- Microsoft Defender Antivirus
-- Microsoft Defender Antivirus exclusions
-- Endpoint detection and response
-
-**MacOS**:
-
-- Microsoft Defender Antivirus
-- Microsoft Defender Antivirus exclusions
-- Endpoint detection and response
-
-For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) in the Intune documentation.
-
 
 <!-- *********************************************** -->
 
