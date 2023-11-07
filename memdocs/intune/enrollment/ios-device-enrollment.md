@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 11/07/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -83,7 +83,7 @@ Employees and students can access management options for their personal devices 
 
 For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md).  
 
-## Limitations   
+## Limitations 
 
 * Device users must download the management profile in Safari. When a user gets blocked by conditional access policies, they are given a link that redirects them to device enrollment. The link opens in their default browser. If the default browser is not Safari, the users should copy and paste the link into Safari so that enrollment can continue. 
 
@@ -93,7 +93,17 @@ For more information about how employees and students can access these actions i
 
 * Device users can sign into any of their work or school apps to complete enrollment, except for Microsoft Defender. If they try to sign into Microsoft Defender before any other app, they will be redirected back to Safari for enrollment. 
 
-* Web based device enrollment can be used without JIT registration. However, users in that scenario can't currently use the Company Portal app to enroll. To prepare for this scenario, we recommend deploying a web clip of the Company Portal website to users, because the web clip functions the same as the Company Portal app during enrollment.   
+* Web based device enrollment can be used without JIT registration. However, users in that scenario can't currently use the Company Portal app to enroll. To prepare for this scenario, we recommend deploying a web clip of the Company Portal website to users, because the web clip functions the same as the Company Portal app during enrollment.
+
+
+## Known issues  
+
+* There's a bug that occurs iOS devices running version 17.0.3. During web based device enrollment, Safari incorrectly reports the device OS version, causing enrollment to fail.
+  * Issue: Although web based device enrollment works on devices running major and minor OS versions, we have seen it fail on devices targeted with more granular OS requirements. Specifically, it happens when the OS version in an enrollment restriction contains the build number. For example, enrollment works when an enrollment restriction requires at least iOS 17.0 to enroll. But if you change the restriction to 17.0.3, enrollment may start failing on devices running 17.0.3.  
+  * Solution: We are currently working to fix this issue. We recommend the followng workarounds:
+    * On the first web enrollment page, tell the device user to switch to mobile view in Safari. Then reload the page.   
+    * If the problem persists, tell the device user to clear their cookies in Safari and start enrollment over again.  
+    * Use another enrollment type if you want to apply more granular restrictions than the major and minor version numbers.   
 
 ## Next steps  
 
