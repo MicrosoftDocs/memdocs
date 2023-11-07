@@ -79,7 +79,7 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 Given that an app could have multiple superseded apps, it is possible for an app to update a set of apps while replacing another set of apps at the same time.
 
 > [!NOTE]
-> End-users won't be able to check whether a specific Win32 app supersedence operation is an update or replacement in the Company Portal. In addition, when multiple apps supersede an app with available targeting in the Company Portal, the superseded app's details page will navigate to the app page of the first superseding app that was set up. For example, if app A is superseded by app B and C, and app B supersedes app A first, then app A's detail page in the Company Portal will navigate to App B.
+> End-users won't be able to check whether a specific Win32 app supersedence operation is an update or replacement in the Company Portal. In addition, when multiple apps supersede an app with available targeting in the Company Portal, the superseded app's details page will navigate to the app page of the first superseding app that was set up. For example, if app A is superseded by apps B and C, and app B supersedes app A first, then app A's detail page in the Company Portal will navigate to App B.
 
 Understanding how supersedence is applied when updating an app versus replacing an app can be illustrated based on the following scenario.
 
