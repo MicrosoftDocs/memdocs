@@ -83,7 +83,7 @@ Employees and students can access management options for their personal devices 
 
 For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md).  
 
-## Limitations 
+## Known issues and limitations 
 
 Intune enrollment with Apple device enrollment has the following known issues and limitations. 
 
@@ -97,7 +97,9 @@ Intune enrollment with Apple device enrollment has the following known issues an
 
 * Web based device enrollment can be used without JIT registration. However, users in that scenario can't currently use the Company Portal app to enroll. To prepare for this scenario, we recommend deploying a web clip of the Company Portal website to users, because the web clip functions the same as the Company Portal app during enrollment.
 
-* There's a bug that occurs during web based device enrollment on iOS devices running version 17.0.3.  Safari incorrectly reports the device OS version, causing enrollment to fail. This bug appears when you add a build number to the OS version in an Intune enrollment restriction. For example, web based device enrollment works when the Intune enrollment restriction requires the device to be running at least iOS 17.0. But if you change the restriction to 17.0.3, enrollment fails on devices running 17.0.3.  We are currently working to fix this issue. We recommend the following workarounds:
+* There's a bug that occurs during web based device enrollment on iOS devices running version 17.0.3.  Safari incorrectly reports the device OS version, causing enrollment to fail. This bug appears when you add a build number to the OS version in an Intune enrollment restriction. For example, web based device enrollment works when the Intune enrollment restriction requires the device to be running at least iOS 17.0. But if you change the restriction to 17.0.3, enrollment fails on devices running 17.0.3.
+
+  We are currently working to fix this issue. We recommend these solutions:  
     * On the first web enrollment page, tell the device user to switch to mobile view in Safari. Then reload the page.   
     * If the problem persists, tell the device user to clear their cookies in Safari and start enrollment over again.  
     * Use another enrollment type if you want to apply more granular OS version restrictions.   
