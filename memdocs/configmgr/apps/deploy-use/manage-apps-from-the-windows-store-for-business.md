@@ -25,7 +25,7 @@ The [Microsoft Store for Business and Education](/microsoft-store/) is where you
 
 The Microsoft Store for Business and Education supports two types of app:
 
-- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Devices running Windows 10 or later should be Microsoft Entra joined or Microsoft Entra hybrid joined. They can also be [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register). <!-- MEMDocs#1587-->
+- **Online**: This license type requires users and devices to connect to the store to get an app and its license. Devices running Windows 10 or later should be Microsoft Entra joined or Microsoft Entra hybrid joined. They can also be [Microsoft Entra registered](/entra/identity/devices/concept-device-registration). <!-- MEMDocs#1587-->
 
 - **Offline**: This type lets you cache apps and licenses to deploy directly within your on-premises network. Devices don't need to connect to the store or have a connection to the internet.
 
