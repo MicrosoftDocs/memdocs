@@ -100,7 +100,7 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 > [!NOTE]
 >
-> - The Global administrator role or an Intune administrator role is a temporary requirement at the time of installation.
+> - The Global Administrator role or an Intune Administrator role is a temporary requirement at the time of installation.
  - After you sign in to the Intune connector, it can take several minutes to appear in the **Intune Connector for Active Directory** page of the Microsoft Intune admin center. It appears only if it can successfully communicate with the Intune service.
 
 After the Intune Connector is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, the **Admin** and **Operational** logs are found.
