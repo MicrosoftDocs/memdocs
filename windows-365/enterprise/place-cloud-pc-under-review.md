@@ -71,8 +71,9 @@ After setting up an Azure storage account with permissions as explained above, y
 3. Select the Azure subscription and the Azure storage account to which the Windows 365 service was given **Storage Account Contributor** and **Storage Blob Data Contributor** permissions.
 
    Under **Access during review**, if you choose
-   - **Block Access**, the Cloud PC will be powered off so the user cannot access the Cloud PC. This is useful in cases where you may want to contain a security threat by shutting the Cloud PC down, and then performing analysis of the snapshot later in an isolated environment.
-   - **Allow Access**, the Cloud PC user can continue to use the Cloud PC even as you create a snapshot in the storage account. 
+   - **Block Access**, the Cloud PC will be immediately powered off so the user cannot access the Cloud PC, and then the snapshot will be created. This is useful in cases where you may want to contain a security threat by shutting the Cloud PC down, and then performing analysis of the snapshot later in an isolated environment.
+   - **Allow Access**, the Cloud PC user can continue to use the Cloud PC even as you create a snapshot in the storage account.
+   - 
     ![Screenshot of choose a subscription and storage](./media/place-cloud-pc-under-review/subscription-storage.png)
 
 5. Select **Place under review**. Based on the disk size of the Cloud PC and storage account destination region, it can range from minutes to a few hours for each snapshot to be saved to the storage account.
