@@ -22,7 +22,7 @@ A device that has been registered as an Autopilot device can also be assigned to
 
 > [!TIP]
 >
-> For testing purposes, especially for hybrid Azure AD scenarios, it may be better to first test an Autopilot deployment before assigning the device to a user. Not assigning a user limits the scope of applications, policies, and configurations processed during the Autopilot process.
+> For testing purposes, especially for hybrid Microsoft Entra scenarios, it may be better to first test an Autopilot deployment before assigning the device to a user. Not assigning a user limits the scope of applications, policies, and configurations processed during the Autopilot process.
 
 > [!TIP]
 >

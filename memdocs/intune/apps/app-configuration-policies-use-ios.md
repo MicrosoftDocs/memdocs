@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 10/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -88,8 +88,6 @@ Once you have selected the included groups for your application configuration po
     :::image type="content" alt-text="Screenshot of Policy assignments - Edit filter" source="./media/app-configuration-policies-use-ios/app-config-policy02a.png" :::
 
 14. Click **Select groups to exclude** to display the related pane.
-
-    :::image type="content" alt-text="Screenshot of Policy assignments - Select groups to exclude pane" source="./media/app-configuration-policies-use-ios/app-config-policy03.png" :::
 
 15. Choose the groups you want to exclude and then click **Select**.
 

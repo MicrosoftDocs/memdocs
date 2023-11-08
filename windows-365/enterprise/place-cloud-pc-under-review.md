@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2023
+ms.date: 10/30/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -44,7 +44,7 @@ To place a Cloud PC under review, you must meet the following requirements:
 ## Set up your Azure storage account
 
 To place a Cloud PC under review, you must first have an Azure storage account in the same tenant as the Cloud PC. For more information to help you decide which type of account fits your needs, see [Storage account overview](/azure/storage/common/storage-account-overview). We recommend that you create and maintain a dedicated storage account with dedicated access controls for auditing Cloud PCs.
-As part of the process to place Cloud PCs under review, Windows 365 requires the **Storage Account Contributor** role for your Azure storage account.
+As part of the process to place Cloud PCs under review, Windows 365 requires the **Storage Account Contributor** and **Storage Blob Data Contributor** roles for your Azure storage account.
 
 1. [Create a Storage Account](/azure/storage/common/storage-account-create) in the Azure subscription of your choice. To create the account, you can use PowerShell, Azure CLI, Azure Resource Manager Template, or Azure portal.
 2. Configure the storage account with the following settings;
@@ -56,7 +56,7 @@ As part of the process to place Cloud PCs under review, Windows 365 requires the
         - Minimum TLS version: **Version 1.2**
     - **Networking**
         - **Network access**: **Enable public access from all networks**
-3. [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access). The minimum permission required for the Windows 365 service to place a Cloud PC under review is Storage Account Contributor.
+3. [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access). The minimum permissions required for the Windows 365 service to place a Cloud PC under review are Storage Account Contributor and Storage Blob Data Contributor.
 
 ## Place a Cloud PC under review
 
@@ -64,13 +64,13 @@ After setting up an Azure storage account with permissions as explained above, y
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select  **Devices** > **All Devices** > choose a device.
     ![Screenshot of choose a device](./media/place-cloud-pc-under-review/choose-device.png)
-    
+
 2. Select the ellipses (**…**) > **Place cloud PC under review**.
     ![Screenshot of place a Cloud PC under review](./media/place-cloud-pc-under-review/place-cloud-pc-under-review.png)
-    
-3. Select the Azure subscription and the Azure storage account to which the Windows 365 service was given **Storage Account Contributor** permissions.
+
+3. Select the Azure subscription and the Azure storage account to which the Windows 365 service was given **Storage Account Contributor** and **Storage Blob Data Contributor** permissions.
     ![Screenshot of choose a subscription and storage](./media/place-cloud-pc-under-review/subscription-storage.png)
-    
+
 4. Select **Place under review**. Based on the disk size of the Cloud PC and storage account destination region, it can range from minutes to a few hours for each snapshot to be saved to the storage account.
 
 To make the snapshot tamper-evident, you should create a file hash of the snapshot when it has been saved in the storage account. One way of creating the file hash is to use the [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash) cmdlet. For best performance, the Get-FileHash cmdlet should be run against a copy of the downloaded file or be run against the snapshot in the Azure storage account from a resource located in the same Azure region.

@@ -41,7 +41,7 @@ Enter Microsoft Intune. Intune is a cloud-based service that can control devices
 
 The goal of any organization that's managing devices is to secure devices and the data they access. This task includes organization owned devices and personally owned devices that access your organization resources.
 
-From a service perspective, Intune uses Azure Active Directory (AD) for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
+From a service perspective, Intune uses Microsoft Entra ID for device storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your devices.
 
@@ -85,7 +85,7 @@ Device compliance is a significant part of managing devices. Your organization w
 
 You can create compliance policies that block simple passwords, require a firewall, set the minimum OS version, and more. You can use these policies and built-in reporting to see noncompliant devices and see the noncompliant settings on these devices. This information gives you an idea of the overall health of the devices accessing your organization resources.
 
-Conditional Access is a feature of Azure AD. With Conditional Access, you can enforce compliance. For example, if a device doesn't meet your compliance rules, then you can block access to organization resources, including Outlook, SharePoint, Teams, and more. Conditional Access helps your organization secure your data and protect your devices.
+Conditional Access is a feature of Microsoft Entra ID. With Conditional Access, you can enforce compliance. For example, if a device doesn't meet your compliance rules, then you can block access to organization resources, including Outlook, SharePoint, Teams, and more. Conditional Access helps your organization secure your data and protect your devices.
 
 For more information, go to:
 
@@ -97,7 +97,7 @@ For more information, go to:
 
 All devices have features that you can control and manage using policies. For example, you can block the built-in camera, allow Bluetooth pairing, manage the power button, and more.
 
-For many organizations, it's common to create device groups. Device groups are Azure AD groups that only include devices. They don't include user identities.
+For many organizations, it's common to create device groups. Device groups are Microsoft Entra groups that only include devices. They don't include user identities.
 
 When you have device groups, you create policies that focus on the device experience or task, like running a single app or scanning bar codes. You can also create policies that include settings that you want to always be on the device, regardless of who's using the device.
 

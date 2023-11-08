@@ -48,10 +48,10 @@ IT administrators can remotely wipe corporate data from an Intune-managed app. T
 IT administrators can force web links in the app to be opened with the [Microsoft Edge app](../apps/manage-microsoft-edge.md). This functionality ensures that links that appear in a corporate environment are kept within the domain of Intune-managed apps.
 
 ### Enforce a PIN policy
-IT administrators can require the end-user to enter a PIN before accessing corporate data in the app. This ensures that the person using the app is the same person who initially signed in with their work or school account. When end users configure their PIN, the Intune App SDK uses Azure Active Directory to verify the credentials of end-users against the enrolled Intune account.
+IT administrators can require the end-user to enter a PIN before accessing corporate data in the app. This ensures that the person using the app is the same person who initially signed in with their work or school account. When end users configure their PIN, the Intune App SDK uses Microsoft Entra ID to verify the credentials of end-users against the enrolled Intune account.
 
 ### Require users to sign in with a work or school account for app access
-IT administrators can require users to sign in with their work or school account to access the app. The Intune App SDK uses Azure Active Directory to provide a single sign-on experience, where the credentials, once entered, are reused for subsequent logins. We also support authentication of identity management solutions federated with Azure Active Directory.
+IT administrators can require users to sign in with their work or school account to access the app. The Intune App SDK uses Microsoft Entra ID to provide a single sign-on experience, where the credentials, once entered, are reused for subsequent logins. We also support authentication of identity management solutions federated with Microsoft Entra ID.
 
 ### Check device health and compliance
 IT administrators can a check the health of the device and its compliance with Intune policies before end-users access the app. On iOS/iPadOS, this policy checks if the device has been jailbroken. On Android, this policy checks if the device has been rooted.

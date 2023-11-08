@@ -57,7 +57,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 4. Under **Create Enrollment Profile** in the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Device users do not see these details.
 
   >[!TIP] 
-  >You can use the name field to create a dynamic membership rule for Azure AD groups. The *enrollmentProfileName* parameter lets you quickly assign devices with this enrollment profile to the appropriate groups. For more information, see [Dynamic group rule syntax](/azure/active-directory/enterprise-users/groups-dynamic-membership#rules-for-devices).  
+  >You can use the name field to create a dynamic membership rule for Microsoft Entra groups. The *enrollmentProfileName* parameter lets you quickly assign devices with this enrollment profile to the appropriate groups. For more information, see [Dynamic group rule syntax](/azure/active-directory/enterprise-users/groups-dynamic-membership#rules-for-devices).  
 
 5. For **User Affinity**, choose **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps requiring user affiliation (including the Company Portal app used for installing line-of-business apps) won't work. Required for Direct Enrollment.
 

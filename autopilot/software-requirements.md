@@ -28,7 +28,7 @@ ms.custom:
 - Windows 10
 - Windows Holographic, version 2004 or later
 
-Windows Autopilot depends on specific features available in Windows client, Azure Active Directory (Azure AD), and MDM services, such as Microsoft Intune. To use Windows Autopilot and access these features, some software requirements must be met.
+Windows Autopilot depends on specific features available in Windows client, Microsoft Entra ID, and MDM services, such as Microsoft Intune. To use Windows Autopilot and access these features, some software requirements must be met.
 
 > [!NOTE]
 > For a list of OEMs that currently support Windows Autopilot, see the Participant device manufacturers section at [Windows Autopilot](https://aka.ms/windowsAutopilot).

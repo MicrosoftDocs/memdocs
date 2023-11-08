@@ -294,7 +294,7 @@ The following considerations can help you configure the Linux server and your en
   ```
 
   > [!NOTE]  
-  > Microsoft Tunnel doesn't support Azure AD App Proxy, or similar proxy solutions.
+  > Microsoft Tunnel doesn't support Microsoft Entra application proxy, or similar proxy solutions.
 
 ### Configure an outbound proxy for Podman
 
@@ -410,7 +410,7 @@ Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only t
 
 The following functionality is supported by all platforms:
 
-- Azure Active Directory (Azure AD) authentication to the Tunnel using username and password.
+- Microsoft Entra authentication to the Tunnel using username and password.
 - Active Directory Federation Services (AD FS) authentication to the Tunnel using username and password.
 - Per-app support.
 - Manual full-device tunnel through a Tunnel app, where the user launches VPN and selects *Connect*.
@@ -423,7 +423,7 @@ Support for a Proxy is limited to the following platforms:
 
 ## Permissions
 
-To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Azure AD administrators have these permissions. You can also add them to [custom roles you create](../fundamentals/create-custom-role.md) for your Intune tenant.
+To manage the Microsoft Tunnel, users must have permissions that are included in the **Microsoft Tunnel Gateway** permissions group in Intune. By default, Intune Administrators and Microsoft Entra administrators have these permissions. You can also add them to [custom roles you create](../fundamentals/create-custom-role.md) for your Intune tenant.
 
 While configuring a role, on the **Permissions** page, expand **Microsoft Tunnel Gateway** and then select the permissions you want to grant.
 
@@ -443,7 +443,7 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 Before you start a server install, we recommend you download and run the most recent version of the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
-- Validates that the Azure Active Directory (Azure AD) account you use to install Microsoft Tunnel has the required roles to complete enrollment.
+- Validates that the Microsoft Entra ID account you use to install Microsoft Tunnel has the required roles to complete enrollment.
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
 
@@ -477,7 +477,7 @@ To use the readiness tool:
 
 3. To validate that the account you'll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 
-   The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error.
+   The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra and to Intune. The tool will report success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
 

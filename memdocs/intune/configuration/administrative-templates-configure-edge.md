@@ -115,7 +115,7 @@ This article shows you how to configure Microsoft Edge policy settings using adm
 
 13. In **Assignments**, select **Next**.
 
-    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select an Azure Active Directory (Azure AD) group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](device-profile-assign.md).
+    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
     :::image type="content" source="./media/administrative-templates-configure-edge/add-azure-ad-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center.":::
 
