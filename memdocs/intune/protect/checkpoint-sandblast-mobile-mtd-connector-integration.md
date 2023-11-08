@@ -47,7 +47,7 @@ Before starting the process of integrating Check Point Harmony Mobile with Intun
 
 - Microsoft Intune Plan 1 subscription
 
-- Microsoft Entra ID admin credentials to grant the following permissions:
+- Microsoft Entra admin credentials to grant the following permissions:
 
   - Sign in and read user profile
 
@@ -65,9 +65,9 @@ The Harmony Mobile Protect app authorization process consists of the following s
 
 - Allow the Check Point Harmony Mobile service to communicate information related to device health state back to Intune.
 
-- CheckPoint Harmony Mobile syncs with Microsoft Entra ID Enrollment Group membership to populate its device's database.
+- CheckPoint Harmony Mobile syncs with Microsoft Entra Enrollment Group membership to populate its device's database.
 
-- Allow Check Point Harmony admin console to use Microsoft Entra ID single sign-on (SSO).
+- Allow Check Point Harmony admin console to use Microsoft Entra single sign-on (SSO).
 
 - Allow the Harmony Mobile Protect app to sign in using Microsoft Entra SSO.
 
