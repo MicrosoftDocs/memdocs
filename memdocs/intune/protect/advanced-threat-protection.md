@@ -97,7 +97,7 @@ The following platforms are supported for Intune with Microsoft Defender for End
 
 - Android
 - iOS/iPadOS
-- Windows 10/11 (Microsoft Entra hybrid joined or Microsoft Entra Joined)
+- Windows 10/11 (Microsoft Entra hybrid joined or Microsoft Entra joined)
 
 For the system requirements for Microsoft Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements).
 
