@@ -44,7 +44,7 @@ Before starting the process of integrating SentinelOne with Intune, make sure yo
 
 - Microsoft Intune Plan 1 subscription
 
-- Azure Active Directory Global Administrator admin credentials to grant the following permissions:
+- Microsoft Entra ID Global Administrator admin credentials to grant the following permissions:
 
   - Sign in and read user profile
 
@@ -62,17 +62,17 @@ The SentinelOne app authorization process follows:
 
 - Grant the SentinelOne service permissions to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day to day operation.
 
-- SentinelOne syncs with Azure Active Directory (AD) Enrollment Group membership to populate its device's database.
+- SentinelOne syncs with Microsoft Entra enrollment group membership to populate its device's database.
 
-- Allow SentinelOne Management Console to use Azure AD Single Sign On (SSO).
+- Allow SentinelOne Management Console to use Microsoft Entra single sign-on (SSO).
 
-- Allow the SentinelOne app to sign in using Azure AD SSO.
+- Allow the SentinelOne app to sign in using Microsoft Entra SSO.
 
-For more information about consent and Azure Active Directory applications, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) in the Azure Active Directory article *Permissions and consent in the Azure Active Directory v2.0 endpoint*.
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/permissions-consent-overview#request-the-permissions-from-a-directory-admin) in the Microsoft Entra documentation.
 
 ## To set up SentinelOne integration
 
-1. Go to [SentinelOne Management Console]( https://console.mobile.sentinelone.net) and sign in with your credentials. To perform the SentinelOne integration setup process, you must sign in with an Azure Active Directory user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the SentinelOne apps to communicate with Intune.  
+1. Go to [SentinelOne Management Console]( https://console.mobile.sentinelone.net) and sign in with your credentials. To perform the SentinelOne integration setup process, you must sign in with a Microsoft Entra user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the SentinelOne apps to communicate with Intune.  
 
 2. Choose **Management** from the left menu.
 
@@ -80,16 +80,16 @@ For more information about consent and Azure Active Directory applications, see 
 
 4. Choose **Add MDM,** then select **Microsoft Intune** from the **MDM provider** list.
 
-5. After you set Microsoft Intune as the MDM service, the **Microsoft Intune Configuration** window pops up, choose the **Add Azure Active Directory** for each option: **SentinelOne Management Console**, **SentinelOne iOS and Android apps**, to authorize SentinelOne to communicate with Intune and Azure AD through Azure AD Single Sign-On.
+5. After you set Microsoft Intune as the MDM service, the **Microsoft Intune Configuration** window pops up, choose the **Add Microsoft Entra ID** for each option: **SentinelOne Management Console**, **SentinelOne iOS and Android apps**, to authorize SentinelOne to communicate with Intune and Microsoft Entra through Microsoft Entra single sign-on.
 
     > [!IMPORTANT]  
     > You must add the SentinelOne Management Console and SentinelOne iOS and Android apps to complete the integration process with Intune.
 
-6. Choose **Accept** to authorize the SentinelOne app to communicate with Intune and Azure Active Directory.
+6. Choose **Accept** to authorize the SentinelOne app to communicate with Intune and Microsoft Entra ID.
 
-7. After you add the **SentinelOne Management Console** and the **SentinelOne iOS and Android apps** apps to Azure AD, add the Azure AD security groups. This addition allows SentinelOne to synchronize the Azure AD security group with its service.
+7. After you add the **SentinelOne Management Console** and the **SentinelOne iOS and Android apps** apps to Microsoft Entra, add the Microsoft Entra security groups. This addition allows SentinelOne to synchronize the Microsoft Entra security group with its service.
 
-8. Choose **Finish** to save the configuration and start the first Azure AD security group synchronization.
+8. Choose **Finish** to save the configuration and start the first Microsoft Entra security group synchronization.
 
 9. Sign out of the SentinelOne MTD console.
 

@@ -71,7 +71,7 @@ To enable your Lookout Mobile Endpoint Security subscription integration with In
 
    4. Repeat the process for the *restricted access* group if you use that group.
 
-      :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-group-id.png" alt-text="Azure AD group Object ID":::
+      :::image type="content" source="./media/lookout-mtd-connector-integration/azure-ad-group-id.png" alt-text="Microsoft Entra group Object ID":::
 
    After you gather this information, contact Lookout support (email: enterprisesupport@lookout.com). Lookout Support works with your primary contact to onboard your subscription and create your Lookout Enterprise account, using the information that you provide.
 
@@ -105,7 +105,7 @@ The following procedure assumes you've previously created a user group in Micros
 
    ![Image of the connection settings tab with heartbeat frequency configured](./media/lookout-mtd-connector-integration/lookout-mtp-connection-settings.png)
 
-3. Select **Enrollment Management**, and for **Use the following Azure AD security groups to identify devices that should be enrolled in Lookout for Work**, specify the *Group name* of a Microsoft Entra ID group to use with Lookout, and then select **Save changes**.
+3. Select **Enrollment Management**, and for **Use the following Microsoft Entra security groups to identify devices that should be enrolled in Lookout for Work**, specify the *Group name* of a Microsoft Entra ID group to use with Lookout, and then select **Save changes**.
 
    ![screenshot of the Intune connector enrollment page](./media/lookout-mtd-connector-integration/lookout-mtp-enrollment.png)
 

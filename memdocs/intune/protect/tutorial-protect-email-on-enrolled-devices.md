@@ -3,7 +3,7 @@
 
 title: Tutorial - Protect Exchange Online email on managed devices
 titleSuffix: Microsoft Intune
-description: Learn to secure Exchange Online with iOS Intune compliance policies and Azure AD Conditional Access to require managed devices and the Outlook app.
+description: Learn to secure Exchange Online with iOS Intune compliance policies and Microsoft Entra Conditional Access to require managed devices and the Outlook app.
 keywords:
 author: brenduns
 ms.author: brenduns
@@ -39,15 +39,15 @@ In this tutorial, you'll learn how to:
 
 > [!div class="checklist"]
 > * Create an Intune iOS device compliance policy to set the conditions that a device must meet to be considered compliant.
-> * Create an Azure Active Directory (Azure AD) Conditional Access policy that requires iOS devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
+> * Create a Microsoft Entra Conditional Access policy that requires iOS devices to enroll in Intune, comply with Intune policies, and use the approved Outlook mobile app to access Exchange Online email.
 
-If you don't have an Microsoft Intune Plan 1 subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+If you don't have a Microsoft Intune Plan 1 subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
 ## Prerequisites
 
 You'll need a test tenant with the following subscriptions for this tutorial:
 
-- Azure Active Directory Premium ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 
 - Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
@@ -106,7 +106,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 ## Create the Conditional Access policy
 
-Now we'll create a Conditional Access policy that requires all device platforms to enroll in Intune and comply with our Intune compliance policy before they can access Exchange Online. We'll also require the Outlook app for email access. Conditional Access policies are configurable in either the Azure AD portal or the Microsoft Intune admin center. Since we're already in the admin center, we'll create the policy here.
+Now we'll create a Conditional Access policy that requires all device platforms to enroll in Intune and comply with our Intune compliance policy before they can access Exchange Online. We'll also require the Outlook app for email access. Conditional Access policies are configurable in either the Microsoft Entra portal or the Microsoft Intune admin center. Since we're already in the admin center, we'll create the policy here.
 
 1. In Microsoft Intune admin center, select **Endpoint security** > **Conditional Access** > **New policy**.
 
@@ -118,9 +118,9 @@ Now we'll create a Conditional Access policy that requires all device platforms 
 
    1. On the **Include** tab, choose **Select apps**.
 
-   2. Choose **Select**. 
+   2. Choose **Select**.
 
-   3. In the applications list, select **Office 365 Exchange Online**, and then choose **Select**. 
+   3. In the applications list, select **Office 365 Exchange Online**, and then choose **Select**.
 
    4. Select **Done**.
   

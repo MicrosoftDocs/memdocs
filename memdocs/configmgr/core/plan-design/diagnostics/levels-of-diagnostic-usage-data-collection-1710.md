@@ -50,7 +50,7 @@ For Configuration Manager version 1710, this level includes the following:
 
 - Basic database configuration (processors, cluster configuration, and configuration of distributed views)
 
-- Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Azure Active Directory Services.
+- Basic discovery statistics (discovery count and minimum/maximum/average group sizes) including when the site is running entirely with Microsoft Entra services.
 
 - Basic Endpoint Protection information (antimalware client versions)
 
@@ -206,13 +206,13 @@ For Configuration Manager version 1710, this level includes the following:
 
 - **Cloud services:**
 
-  - Azure Active Directory discovery statistics
+  - Microsoft Entra discovery statistics
 
   - Configuration and usage statistics of Cloud Management Gateway, including counts of regions and environments, and authentication/authorization statistics
 
-  - Count of Azure Active Directory applications and services connected to Configuration Manager
+  - Count of Microsoft Entra applications and services connected to Configuration Manager
 
-  - Count of clients joined to Azure Active Directory Services
+  - Count of clients joined to Microsoft Entra services
 
   - Count of collections synced to Azure Log Analytics
 

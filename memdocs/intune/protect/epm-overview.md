@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/10/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -155,8 +155,9 @@ Each device that receives Endpoint Privilege Management policies installs the EP
 
 The EPM Tools PowerShell module is available from any device that has received EPM policy. To import the EpmTools PowerShell module:
 
-1. Open PowerShell with admin privileges and go to *C:\Program Files\Microsoft EPM Agent\EpmTools*.
-2. From the **EpmTools** folder, run `Import-Module .\EpmCmdlets.dll`.
+```powershell
+Import-Module 'C:\Program Files\Microsoft EPM Agent\EpmTools\EpmCmdlets.dll'
+```
 
 Following are the available cmdlets:
 

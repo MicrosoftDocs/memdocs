@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Use Intune compliance and Azure AD Conditional Access policies with Jamf Pro
+title: Use Intune compliance and Microsoft Entra Conditional Access policies with Jamf Pro
 titleSuffix: Microsoft Intune
-description: Create Intune compliance policies and Azure AD Conditional Access to help secure Jamf-managed devices.
+description: Create Intune compliance policies and Microsoft Entra Conditional Access to help secure Jamf-managed devices.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -45,15 +45,15 @@ ms.collection:
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 > [!TIP]
-> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
 
-After you integrate Jamf Pro with Intune, configure Intune compliance policies and Azure Active Directory (Azure AD) Conditional Access policies to enforce compliance of macOS devices with your organizational requirements.
+After you integrate Jamf Pro with Intune, configure Intune compliance policies and Microsoft Entra Conditional Access policies to enforce compliance of macOS devices with your organizational requirements.
 
 This article can help you with the following tasks:
 
 - Create Conditional Access policies.
 - Configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf.
-- Configure devices to register with Azure AD when the device user signs in to the Company Portal app they start from within the *Jamf Self Service* app. Device registration establishes an identity in Azure AD that allows the device to be evaluated by Conditional Access policies for access to company resources.
+- Configure devices to register with Microsoft Entra ID when the device user signs in to the Company Portal app they start from within the *Jamf Self Service* app. Device registration establishes an identity in Microsoft Entra ID that allows the device to be evaluated by Conditional Access policies for access to company resources.
 
 The procedures in this article require access to both the Intune and Jamf Pro consoles. Intune supports two methods to integrate Jamf Pro, which you configure separately from the procedures in this article:
 
@@ -68,21 +68,21 @@ After integration is configured, device users learn about Jamf Pro and Intune in
 
 2. Select **Devices** > **Compliance policies**. If you're using a previously created policy, select that policy in the admin center and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
-3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Azure Active Directory (Azure AD) users and security groups receive this policy. **Jamf integration with Intune doesn't support compliance policy that targets device groups.**
+3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Microsoft Entra users and security groups receive this policy. **Jamf integration with Intune doesn't support compliance policy that targets device groups.**
 
    > [!NOTE]
-   > Jamf integration with Intune only supports Azure AD user groups. Device compliance policies that are targeted to device groups will not apply.
+   > Jamf integration with Intune only supports Microsoft Entra user groups. Device compliance policies that are targeted to device groups will not apply.
 
 4. When you select **Save**, the policy deploys to the users.
 
-Policies you deploy target the devices that are used by the assigned users. Those devices are evaluated for compliance. Compliant devices are marked as compliant for the setting "*Require device to be marked as compliant*" in Azure AD.  
+Policies you deploy target the devices that are used by the assigned users. Those devices are evaluated for compliance. Compliant devices are marked as compliant for the setting "*Require device to be marked as compliant*" in Microsoft Entra ID.  
 
 > [!NOTE]
 > Intune requires full disk encryption to be compliant.
 
 ## Deploy the Company Portal app for macOS in Jamf Pro
 
-Create a policy in Jamf Pro to deploy the Intune Company Portal. This policy deploys the company portal app so that it's available in Jamf Self Service. Create this policy before you create policy in Jamf Pro for users to register devices with Azure AD.
+Create a policy in Jamf Pro to deploy the Intune Company Portal. This policy deploys the company portal app so that it's available in Jamf Self Service. Create this policy before you create policy in Jamf Pro for users to register devices with Microsoft Entra ID.
 
 To complete the following procedure, you need access to a macOS device and the Jamf Pro portal.
 
@@ -110,9 +110,11 @@ To complete the following procedure, you need access to a macOS device and the J
 
 10. Select the **Scope** tab to specify on which computers the Company Portal app should install. Select **Save**. The policy runs on scoped devices the next time the selected trigger occurs on the computer and the criteria in the **General** payload is met.
 
-## Create a policy in Jamf Pro to have users register their devices with Azure Active Directory  
+<a name='create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory'></a>
 
-After you [deploy the Company Portal](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) for macOS through Jamf Pro Self-Service, you can create the Jamf Pro policy that registers a user's device with Azure AD.
+## Create a policy in Jamf Pro to have users register their devices with Microsoft Entra ID  
+
+After you [deploy the Company Portal](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) for macOS through Jamf Pro Self-Service, you can create the Jamf Pro policy that registers a user's device with Microsoft Entra ID.
 
 Device registration requires a device user to manually select the Intune Company Portal app from within Jamf Self Service. We recommend you [contact your end users](/mem/intune/fundamentals/intune-planning-guide) through email, Jamf Pro notifications, or any other method your organization uses to direct them to complete this action to get their devices registered.
 
@@ -145,5 +147,5 @@ Get information on how to [remove a Jamf-managed device in the Jamf Pro docs](ht
 
 ## Next steps
 
-- [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Get started with Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [Get started with Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

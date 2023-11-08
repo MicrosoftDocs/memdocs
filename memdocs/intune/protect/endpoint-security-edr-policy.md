@@ -46,7 +46,7 @@ Endpoint detection and response capabilities of Microsoft Defender for Endpoint 
 
 EDR policies include platform-specific profiles to manage settings for EDR. The profiles automatically include an *onboarding package* for Microsoft Defender for Endpoint. Onboarding packages are how devices are configured to work with Microsoft Defender for Endpoint. After a device onboards, you can start to use threat data from that device.
 
-EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, create separate EDR policies for the different types of devices you manage.
+EDR policies deploy to groups of devices in Microsoft Entra ID that you manage with Intune, and to collections of on-premises devices that you manage with Configuration Manager, including Windows servers. The EDR policies for the different management paths require different onboarding packages. Therefore, create separate EDR policies for the different types of devices you manage.
 
 Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -169,7 +169,7 @@ If you're planning to enable co-management, be familiar with co-management, its 
 
 The following are supported for devices you manage with Intune:
 
-- Platform: **Windows 10, Windows 11, and Windows Server** - Intune deploys the policy to devices in your Azure AD groups.
+- Platform: **Windows 10, Windows 11, and Windows Server** - Intune deploys the policy to devices in your Microsoft Entra groups.
   - Profile: **Endpoint detection and response**
 
 ## Create and deploy EDR policies
@@ -217,7 +217,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 8. On the **Assignments** page, select the groups or collections that receive this policy. The choice depends on the platform and profile you selected:
 
-   - For Intune, select groups from Azure AD.
+   - For Intune, select groups from Microsoft Entra.
    - For Configuration Manager, select collections from Configuration Manager that you've synced to Microsoft Intune admin center and enabled for Microsoft Defender for Endpoint policy.
 
    You can choose not to assign groups or collections at this time, and later edit the policy to add an assignment.
