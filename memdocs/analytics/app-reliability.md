@@ -2,7 +2,7 @@
 title: Application reliability in endpoint analytics
 description: Get details about application reliability in endpoint analytics
 titleSuffix: Microsoft Intune
-ms.date: 03/31/2022
+ms.date: 10/20/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -39,8 +39,9 @@ Each application on the **App performance** tab is assigned an **App reliability
 
 The **App performance** tab uses data from the past 14 days to show reliability insights for each desktop application in your organization. The following applications are included in the report:
 
-- Foreground applications with a measurable amount of usage in your organization. This ensures that the report is focused on end-user impacting issues.
-- Applications with either an active device count that's greater than 5, or a count greater than 2% of the total number of your tenant's enrolled devices, whichever is larger. This helps filter out noise and ensures that calculations are made across a sufficient number of devices to be meaningful.
+- Foreground applications with a measurable amount of usage in your organization. Including these applications ensures that the report is focused on end-user impacting issues.
+
+- Applications with either an active device count that's greater than 5, or a count greater than 2% of the total number of your tenant's enrolled devices, whichever is larger. Including these applications helps to filter out noise and ensures that calculations are made across a sufficient number of devices to be meaningful.
 
 :::image type="content" source="media/5659073-app-performance-tab.png" alt-text="Application performance tab in endpoint analytics" lightbox="media/5659073-app-performance-tab.png":::
 
@@ -74,7 +75,7 @@ For each application in the report, the following data is provided:
 
 Selecting an app name in the table from **App performance** opens **App performance details**. **App performance details** contain two tabs:
 
-- **App versions**: This tab allows you to compare the number of **App crashes** and number of unique **Devices with crashes** across different versions of the application over the past 14 days. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You may also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
+- **App versions**: This tab allows you to compare the number of **App crashes** and number of unique **Devices with crashes** across different versions of the application over the past 14 days. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You might also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
 - **OS versions**: This tab compares the **Mean time to failure** for the application across different versions of Windows. This information can be helpful for identifying potential correlations between OS version and application issues.
 
 :::image type="content" source="media/5659073-app-performance-details.png" alt-text="Application performance details in endpoint analytics" lightbox="media/5659073-app-performance-details.png":::
@@ -97,7 +98,7 @@ Selecting a device name opens the **Application reliability** tab for that devic
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 
-**Scenario**: In certain uncommon situations, devices may be missing from the **Application reliability** report. You can determine how many devices are reporting application reliability data by looking at the number of records in the table on the **Device performance** tab of the **Application reliability** report.
+**Scenario**: In certain uncommon situations, devices might be missing from the **Application reliability** report. You can determine how many devices are reporting application reliability data by looking at the number of records in the table on the **Device performance** tab of the **Application reliability** report.
 
 **Impacted devices**: This issue affects devices enrolled in endpoint analytics from Configuration Manager that are unable to download a required ServiceCertificate policy. Without this policy, devices can't report application reliability data to endpoint analytics.
 
@@ -108,7 +109,7 @@ Selecting a device name opens the **Application reliability** tab for that devic
 > - Are actively being used
 > - Have had sufficient time to start reporting data
 
-Use the following script to determine if a device is impacted by this issue:
+Use the following script to determine if the issue impacts a device:
 
 ```powershell
 $query = "SELECT * FROM CCM_PendingPolicyState WHERE PolicyID=""B27D9CFC-84AD-0AF8-9DF1-23EE05E8C05D"""
@@ -123,7 +124,7 @@ foreach ($value in $obj)
 } 
 ```
 
-**Mitigation**: Run the following script on affected devices to force a download of the updated ServiceCertificate policy state. This will resolve the issue, allowing the device to start uploading application reliability data. Allow up to 72 hours to start seeing data in the endpoint analytics portal.
+**Mitigation**: Run the following script on affected devices to force a download of the updated ServiceCertificate policy state. When you complete all the steps, the issue is resolved and allows the device to start uploading application reliability data. Allow up to 72 hours to start seeing data in the endpoint analytics portal.
 
 ```vbscript
 On Error Resume Next

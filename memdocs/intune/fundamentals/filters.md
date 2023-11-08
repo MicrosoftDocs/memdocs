@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: scottduf
+ms.reviewer: gokarthi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

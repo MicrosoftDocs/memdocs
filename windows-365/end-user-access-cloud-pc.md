@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/11/2023
+ms.date: 10/26/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -242,7 +242,7 @@ The following Windows 365 features aren't available on LG TV:
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
 
-For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). For a comparison of features by client, see [Compare the clients: features](/windows-server/remote/remote-desktop-services/clients/remote-desktop-features#client-features).
+For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients). For a comparison of features by client, see [Compare the clients: features](/azure/virtual-desktop/compare-remote-desktop-clients).
 
 ### Install the Microsoft Remote Desktop app
 

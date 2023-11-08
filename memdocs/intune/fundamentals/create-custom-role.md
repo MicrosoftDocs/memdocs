@@ -35,7 +35,7 @@ ms.collection:
 You can create a custom Intune role that includes any permissions required for a specific job function. For example, if an IT department group manages applications, policies, and configuration profiles, you can add all those permissions together in one custom role. After creating a custom role, you can [assign](assign-role.md)
  it to any users that need those permissions.
 
-To create, edit, or assign roles, your account must have one of the following permissions in Azure AD:
+To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID:
 - **Global Administrator**
 - **Intune Service Administrator**
 
@@ -72,7 +72,7 @@ The following permissions are available when creating custom roles.
 
 | Permission | Description |
 | --- | --- |
-| Android FOTA/Assign | Assign Android firmware over-the-air (FOTA) deployments to Azure AD security groups. |
+| Android FOTA/Assign | Assign Android firmware over-the-air (FOTA) deployments to Microsoft Entra security groups. |
 | Android FOTA/Delete | Delete and cancel pending Android firmware over-the-air (FOTA) deployments and delete deployment history. |
 | Android FOTA/Create | Create and manage all aspects of Android firmware over-the-air (FOTA) deployments. |
 | Android FOTA/Read | View Android firmware over-the-air (FOTA) deployments, including history and reporting. |
@@ -105,13 +105,13 @@ The following permissions are available when creating custom roles.
 | Customization/Update | Update customization options for the Company Portal. | 
 | Derived Credentials/Modify | Configure the Derived Credentials for your Microsoft Intune tenant. | 
 | Derived Credentials/Read | View the Derived Credentials for your Microsoft Intune tenant. | 
-| Device compliance policies/Assign | Assign device compliance policies to Azure AD security groups, and assign Exchange on-premises access to Azure AD security groups. | 
+| Device compliance policies/Assign | Assign device compliance policies to Microsoft Entra security groups, and assign Exchange on-premises access to Microsoft Entra security groups. | 
 | Device compliance policies/Create | Create new device compliance policies. | 
 | Device compliance policies/Delete | Delete device compliance policies or delete Exchange ActiveSync connectors. | 
 | Device compliance policies/Read | View device compliance policies and the list of Exchange Active Sync Connectors, or view the settings for Exchange on-premises access. | 
 | Device compliance policies/Update | Change device compliance policies, Exchange ActiveSync connectors and Exchange on-premises access settings. | 
 | Device compliance policies/View reports | View, generate, and export device compliance reports. | 
-| Device configurations/Assign | Assign device configuration profiles or assign device enrollment restrictions to Azure AD security groups. | 
+| Device configurations/Assign | Assign device configuration profiles or assign device enrollment restrictions to Microsoft Entra security groups. | 
 | Device configurations/Create | Create new device configuration profiles, or create new device enrollment restrictions. | 
 | Device configurations/Delete | Delete device configuration profiles, or delete device enrollment restrictions. | 
 | Device configurations/Read | View device configuration profiles, or view device enrollment restrictions. | 
@@ -142,7 +142,7 @@ The following permissions are available when creating custom roles.
 | Filters/Read | View filters.  | 
 | [Filters/Update](/mem/intune/fundamentals/filters#change-an-existing-filter) | Edit filters. | 
 | Intune data warehouse/Read | View all data and reports from the data warehouse. Data can be used by Power BI or other reporting services. | 
-| Managed apps/Assign | Assign application protection policies to Azure AD security groups. | 
+| Managed apps/Assign | Assign application protection policies to Microsoft Entra security groups. | 
 | Managed apps/Create | Create new application protection policies. | 
 | Managed apps/Delete | Delete application protection policies. | 
 | Managed apps/Read | View application protection policies and status. | 
@@ -162,7 +162,7 @@ The following permissions are available when creating custom roles.
 | Microsoft Tunnel Gateway/Delete | Delete Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel. | 
 | Microsoft Tunnel Gateway/Read | View Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel. | 
 | Microsoft Tunnel Gateway/Update | Update Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel. | 
-| Mobile apps/Assign | Assign mobile applications or eBooks to Azure AD security groups. | 
+| Mobile apps/Assign | Assign mobile applications or eBooks to Microsoft Entra security groups. | 
 | Mobile apps/Create | Add new mobile applications to Intune such as store apps, line-of-business apps, web-links or built-in apps. You can also add books purchased through the Apple Volume Purchase Program or add eBook categories. You can setup iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
 | Mobile apps/Delete | Delete mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also delete books purchased through the Apple Volume Purchase Program or delete eBook categories. You can delete iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
 | Mobile apps/Read | View mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also view books purchased through the Apple Volume Purchase Program or add eBook categories. You can view iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
@@ -183,7 +183,7 @@ The following permissions are available when creating custom roles.
 | Organizational messages/Update organizational message control | Enable or block organizational messages directly from Microsoft, while allowing admin messages to display. | 
 | Partner Device Management/Modify | Configure the Compliance Connector for Jamf. | 
 | Partner Device Management/Read | View the Compliance Connector for Jamf. | 
-| Policy Sets/Assign | Assign Policy Sets to Azure AD security groups. | 
+| Policy Sets/Assign | Assign Policy Sets to Microsoft Entra security groups. | 
 | Policy Sets/Create | Create a new Policy Set. | 
 | Policy Sets/Delete | Delete Policy Sets. | 
 | Policy Sets/Read | View Policy Sets. | 
@@ -221,19 +221,19 @@ The following permissions are available when creating custom roles.
 | Remote tasks/Update device account | Allows changing the device account associated with Surface Hub devices, and set authentication options such as password rotation. | 
 | Remote tasks/Windows defender | Initiates a Windows Defender signature update. | 
 | Remote tasks/Wipe | Initiates a wipe of the device. Also called a factory reset. The Factory reset action restores a device to its factory default settings. The user data is kept or wiped depending on whether or not you choose the Retain enrollment state and user account checkbox. | 
-| Roles/Assign | Assign Intune built-in or custom roles to Azure AD security groups | 
+| Roles/Assign | Assign Intune built-in or custom roles to Microsoft Entra security groups | 
 | Roles/Create | Create new Intune custom roles. Built-in roles are created by Intune automatically. | 
 | Roles/Delete | Delete a custom Intune role. You cannot delete built-in roles. | 
 | Roles/Read | View permissions, role assignments, member groups and scope groups for any built-in or custom Intune role. | 
 | Roles/Update | Update custom role permissions and role assignments for built-in or custom roles. Role assignments define the administrators and end user scope for the role.  | 
-| Security baselines/Assign | Assign security baseline profiles to Azure AD security groups. | 
+| Security baselines/Assign | Assign security baseline profiles to Microsoft Entra security groups. | 
 | Security baselines/Create | Create new security baseline profiles. | 
 | Security baselines/Delete | Delete security baseline profiles. | 
 | Security baselines/Read | View security baseline profiles or profiles reporting or Template reporting for all security baseline workspace. | 
 | Security baselines/Update | Update security baseline profiles. | 
 | Security tasks/Read | View security tasks. | 
 | Security tasks/Update | Update security tasks. | 
-| Terms and conditions/Assign | Assign terms and conditions to Azure AD security groups. | 
+| Terms and conditions/Assign | Assign terms and conditions to Microsoft Entra security groups. | 
 | Terms and conditions/Create | Create new terms and conditions. | 
 | Terms and conditions/Delete | Delete an existing terms and conditions. | 
 | Terms and conditions/Read | View terms and conditions. | 
@@ -244,5 +244,3 @@ The following permissions are available when creating custom roles.
 ## Next steps
 - [Assign a role to a user](assign-role.md)
 - [Learn more about role-based access control in Intune](role-based-access-control.md)
-
-

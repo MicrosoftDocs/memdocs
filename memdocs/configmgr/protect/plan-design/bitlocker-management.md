@@ -132,9 +132,9 @@ BitLocker management doesn't support all client types that are supported by Conf
 
 - BitLocker management isn't supported on virtual machines (VMs) or on server editions. For example, BitLocker management won't start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they aren't encrypted.
 
-- In version 2010 and earlier, Azure Active Directory (Azure AD)-joined, workgroup clients, or clients in untrusted domains aren't supported. In these earlier versions of Configuration Manager, BitLocker management only supports devices that are joined to on-premises Active Directory including hybrid Azure AD-joined devices. This configuration is to authenticate with the recovery service to escrow keys.
+- In version 2010 and earlier, Microsoft Entra joined, workgroup clients, or clients in untrusted domains aren't supported. In these earlier versions of Configuration Manager, BitLocker management only supports devices that are joined to on-premises Active Directory including Microsoft Entra hybrid joined devices. This configuration is to authenticate with the recovery service to escrow keys.
 
-  Starting in version 2103, Configuration Manager supports all client join types for BitLocker management. However, the client-side BitLocker user interface component is still only supported on Active Directory-joined and hybrid Azure AD-joined devices.
+  Starting in version 2103, Configuration Manager supports all client join types for BitLocker management. However, the client-side BitLocker user interface component is still only supported on Active Directory-joined and Microsoft Entra hybrid joined devices.
 
 - Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM). There's no change to the setup process for BitLocker management. This improvement supports domain-joined and hybrid domain-joined devices.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/recovery-service.md).
 

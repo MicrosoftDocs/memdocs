@@ -20,7 +20,7 @@ ms.reviewer: amsaeedi
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intune-classic, get-started, has-azure-ad-ps-ref
+ms.custom: intune-classic, get-started, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
 - tier1
 - M365-identity-device-management
@@ -37,7 +37,7 @@ Whether you manually add users or synchronize from your on-premises Active Direc
 
 ## Assign an Intune license in the Microsoft Intune admin center
 
-You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Azure AD.
+You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to manually add cloud-based users and assign licenses to both cloud-based user accounts and accounts synchronized from your on-premises Active Directory to Microsoft Entra ID.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All Users** > choose a user > **Licenses** > **Assignments**.
 
@@ -47,9 +47,11 @@ You can use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/
 
 3. The user account now has the permissions needed to use the service and enroll devices into management.
 
-## Assign an Intune license by using Azure Active Directory
+<a name='assign-an-intune-license-by-using-azure-active-directory'></a>
 
-You can also assign Intune licenses to users by using Azure Active Directory. For more information, see the [License users in Azure Active Directory article](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal).
+## Assign an Intune license by using Microsoft Entra ID
+
+You can also assign Intune licenses to users by using Microsoft Entra ID. For more information, see the [License users in Microsoft Entra article](/azure/active-directory/active-directory-licensing-group-assignment-azure-portal).
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
 
@@ -108,13 +110,13 @@ To view the number of free and used licenses on a Microsoft Intune subscription,
 A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
 
 > [!NOTE]
-> To confirm your Azure Active Directory Premium and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
+> To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
 
 ## Use PowerShell to selectively manage EMS user licenses
 
-Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Azure Active Directory Premium or Intune services in the EMS package. You can assign one or a subset of services using [Azure Active Directory PowerShell cmdlets](/previous-versions/azure/jj151815(v=azure.100)).
+Organizations that use Microsoft Enterprise Mobility + Security (formerly Enterprise Mobility Suite) might have users who only require Microsoft Entra ID P1 or P2 or Intune services in the EMS package. You can assign one or a subset of services using [Microsoft Graph PowerShell cmdlets](/powershell/module/microsoft.graph.users.actions/set-mguserlicense).
 
-To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Azure Active Directory Module for Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)#bkmk_installmodule) installed. You can install PowerShell on a local computer or on an ADFS server.
+To selectively assign user licenses for EMS services, open PowerShell as an administrator on a computer with the [Microsoft Graph PowerShel](/powershell/microsoftgraph/installation) installed. You can install PowerShell on a local computer or on an ADFS server.
 
 You must create a new license SKU definition that applies only to the desired service plans. To do this, disable the plans you don't want to apply. For example, you might create a license SKU definition that does not assign an Intune license. To see a list of available services, type:
 

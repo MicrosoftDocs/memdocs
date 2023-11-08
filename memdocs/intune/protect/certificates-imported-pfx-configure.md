@@ -35,9 +35,9 @@ Microsoft Intune supports the use of imported public key pair (PKCS) certificate
 
 > [!IMPORTANT]
 > 
-> As announced in [this Microsoft Tech Community blog](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363), support for Azure Active Directory Authentication Library (ADAL) ends in December 2022. For your PowerShell scripts or custom code to continue to work to import user PFX certificates to Intune, they must be updated to leverage [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) (MSAL). Additionally, the global Intune application ID should be updated with the unique Application (client) ID assigned to your app after registering it in [Azure Active Directory (Azure AD) to prevent future authentication issues](/azure/active-directory/develop/quickstart-register-app).
+> As announced in [this Microsoft Tech Community blog](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363), support for Azure Active Directory Authentication Library (ADAL) ends in December 2022. For your PowerShell scripts or custom code to continue to work to import user PFX certificates to Intune, they must be updated to leverage [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) (MSAL). Additionally, the global Intune application ID should be updated with the unique Application (client) ID assigned to your app after registering it in [Microsoft Entra ID to prevent future authentication issues](/azure/active-directory/develop/quickstart-register-app).
 > 
-> On GitHub, the sample PowerShell script to help simplify importing PFX certificates has been updated to reference MSAL and the Azure AD Application (client) ID. Script samples in this article are also updated where applicable. 
+> On GitHub, the sample PowerShell script to help simplify importing PFX certificates has been updated to reference MSAL and the Microsoft Entra Application (client) ID. Script samples in this article are also updated where applicable. 
 > 
 > For more information, view the [PFXImport PowerShell Project](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell#pfximport-powershell-project) readme file on GitHub, and  download the updated sample script.
  
@@ -220,13 +220,13 @@ Select the Key Storage Provider that matches the provider you used to create the
 
 8. To validate the certificate was imported, run `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
 
-9.	As a best practice to clean up the Azure AD token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
+9.	As a best practice to clean up the Microsoft Entra token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
 
 For more information about other available commands, see the readme file at [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## Create a PKCS imported certificate profile
 
-After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Azure Active Directory groups.
+After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Microsoft Entra groups.
 
 > [!NOTE]
 > After you create a PKCS imported certificate profile, the **Intended Purpose** and **Key storage provider** (KSP) values in the profile are read-only and can't be edited. If you need a different value for either of these settings, create and deploy a new profile. 
@@ -301,6 +301,6 @@ To learn more about KeyTalk’s integration with Intune, see https://keytalk.com
 [Use SCEP for certificates](certificates-scep-configure.md)
 ### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836  iddraft -->
 
-To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Azure Active Directory as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
+To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Microsoft Entra ID as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
 
 With this change, you'll be able to improve policy targeting for Microsoft Defender for Endpoint security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).

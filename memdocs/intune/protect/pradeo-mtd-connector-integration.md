@@ -47,7 +47,7 @@ Before starting the process of integrating Pradeo with Intune, make sure you hav
 
 - Microsoft Intune Plan 1 subscription
 
-- Azure Active Directory admin credentials to grant the following permissions:
+- Microsoft Entra ID credentials to grant the following permissions:
 
   - Sign in and read user profile
 
@@ -65,11 +65,11 @@ The Pradeo app authorization process follows:
 
 - Allow the Pradeo service to communicate information related to device health state back to Intune.
 
-- Pradeo syncs with Azure AD Enrollment Group membership to populate its device's database.
+- Pradeo syncs with Microsoft Entra Enrollment Group membership to populate its device's database.
 
-- Allow Pradeo admin console to use Azure AD Single Sign On (SSO).
+- Allow Pradeo admin console to use Microsoft Entra single sign-on (SSO).
 
-- Allow the Pradeo app to sign in using Azure AD SSO.
+- Allow the Pradeo app to sign in using Microsoft Entra SSO.
 
 ## To set up Pradeo integration
 

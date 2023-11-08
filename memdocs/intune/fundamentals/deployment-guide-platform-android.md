@@ -39,7 +39,7 @@ Before you begin, complete these prerequisites to enable Android device manageme
 * [Add users](users-add.md) and [groups](groups-add.md)
 * [Assign licenses to users](licenses-assign.md)
 * [Set mobile device management authority](mdm-authority-set.md)
-* [Have Global Administrator or Intune administrator Azure Active Directory permissions](role-based-access-control.md)  
+* [Have Global Administrator or Intune administrator Microsoft Entra permissions](role-based-access-control.md)  
 
 ## Plan for your deployment  
 
@@ -92,7 +92,7 @@ The following tasks apply to both Android Enterprise and Android device administ
 | [Create a compliance policy](../protect/create-compliance-policy.md)|Get step-by-step guidance on how to create and assign a compliance policy to user and device groups.   |
 | [Add actions for noncompliance](../protect/actions-for-noncompliance.md) |Choose what happens when devices no longer meet the conditions of your compliance policy. You can add actions for noncompliance when you configure a device compliance policy, or later by editing the policy. |  
 | Create [a device-based](../protect/create-conditional-access-intune.md) or [app-based](../protect/app-based-conditional-access-intune-create.md) Conditional Access policy.|Specify the app or services you want to protect and define the conditions for access.
-|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2.  For example, you can block apps that use basic and form-based authentication. Before you block any access, sign in to Azure AD and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things (like meeting room calendar kiosks) you forgot about or are unaware of. |
+|[Block access to apps that don't use modern authentication](../protect/app-modern-authentication-block.md)  | Create an app-based Conditional Access policy to block apps that use authentication methods other than OAuth2.  For example, you can block apps that use basic and form-based authentication. Before you block any access, sign in to Microsoft Entra ID and review the [authentication methods activity report](/azure/active-directory/authentication/howto-authentication-methods-activity) to see if users are using basic authentication to access essential things (like meeting room calendar kiosks) you forgot about or are unaware of. |
 
 ## Configure endpoint security
 
@@ -166,7 +166,7 @@ As you set up apps and app policies, think about your organization's requirement
 
 ## Enroll devices  
 
-Enrolling devices allows them to receive the policies you create, so have your Azure AD user groups and device groups ready.  
+Enrolling devices allows them to receive the policies you create, so have your Microsoft Entra user groups and device groups ready.  
 
 Intune supports the following enrollment methods for Android devices:  
 
