@@ -87,7 +87,7 @@ For more information about how employees and students can access these actions i
 
 Intune enrollment with Apple device enrollment has the following known issues and limitations. 
 
-* Due to Apple restrictions, device users must download the management profile in Safari. 
+* Due to Apple restrictions, device users going through web based device enrollment must download the management profile in Safari. 
 
 * After the management profile downloads, device users have a limited amount of time to go to the Settings app and install the profile. If they wait top long to do it, they'll receive a message letting them know that the management profile can't be found. They must select **enroll again** to restart the enrollment process and download the management profile again. 
 
