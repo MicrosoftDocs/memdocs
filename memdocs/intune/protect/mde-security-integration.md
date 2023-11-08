@@ -49,10 +49,10 @@ This scenario extends the Microsoft Intune Endpoint Security surface to devices 
 
 Applies to:
 
+- Windows 10 and Windows 11
+- Windows server (2012 R2 and up)
 - Linux
 - macOS
-- Windows 10
-- Windows 11
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview-2.png" alt-text="Conceptual presentation of the Microsoft Defender for Endpoint-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview-2.png":::
 
