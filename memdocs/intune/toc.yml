@@ -94,7 +94,7 @@ items:
         href: ./fundamentals/microsoft-intune-admin-center-devices.md
         displayName: devices, admin center, microsoft intune   
 
-      - name: Set up enrollment for Azure AD shared device mode  
+      - name: Set up enrollment for Microsoft Entra shared device mode  
         href: ./enrollment/automated-device-enrollment-shared-device-mode.md
         displayName: devices, frontline worker, automated device enrollment  
 
@@ -702,7 +702,7 @@ items:
             href: ./protect/conditional-access-jamf-cloud-connector.md
           - name: Integrate Jamf Pro with Intune for compliance
             href: ./protect/conditional-access-integrate-jamf.md
-          - name: Integrate Jamf Pro with Intune to report compliance to Entra ID
+          - name: Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID
             href: ./protect/jamf-managed-device-compliance-with-entra-id.md
           - name: Enforce compliance on Macs managed with Jamf Pro
             href: ./protect/conditional-access-assign-jamf.md
@@ -1407,7 +1407,7 @@ items:
           items:  
           - name: Overview  
             href: ./enrollment/enrollment-restrictions-set.md  
-          - name: Intune device limits vs. Azure AD device limits    
+          - name: Intune device limits vs. Microsoft Entra device limits    
             href: ./enrollment/device-limit-intune-azure.md   
           - name: Create device platform restrictions 
             href: ./enrollment/create-device-platform-restrictions.md  
@@ -1752,9 +1752,9 @@ items:
       - name: Tutorial-Get started with cloud native Windows endpoints
         displayName: cloud native endpoints, windows
         href: ../solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
-      - name: Azure AD concepts and on-premises resources
+      - name: Microsoft Entra concepts and on-premises resources
         items:
-        - name: Azure AD joined vs. Hybrid Azure AD joined
+        - name: Microsoft Entra joined vs. Microsoft Entra hybrid joined
           displayName: cloud native endpoints, windows
           href: ../solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md
         - name: Access on-premises resources
@@ -1776,7 +1776,7 @@ items:
     items:
     - name: Access Intune APIs in Microsoft Graph
       items:
-      - name: Use Azure AD to access Intune APIs in Microsoft Graph
+      - name: Use Microsoft Entra ID to access Intune APIs in Microsoft Graph
         href: ./developer/intune-graph-apis.md
       - name: Intune API reference
         href: /graph/api/resources/intune-graph-overview

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2023
+ms.date: 11/1/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -51,6 +51,52 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of October 30, 2023 (Service release 2310)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Permissions update for placing a Cloud PC under review<!--46608968-->
+
+You now need an additional role, Storage Blob Data Contributor, to place a Cloud PC under review. For more information, see [Place a Windows 365 Enterprise Cloud PC under review](place-cloud-pc-under-review.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Two new sizes for Cloud PCs<!--46653331-->
+
+Two new sizes are now available for Windows 365 Cloud PCs:
+
+- 16vCPU/64GB RAM/512GB storage​
+- 16vCPU/64GB RAM/1TB storage
+
+These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
+
+#### New gallery images<!--47114436-->
+
+Two new gallery images are now available for Windows 365 Cloud PCs:
+
+- Windows 11 Preview + Microsoft 365 Apps 23H2
+- Winodws 11 Preview + OS Optimizations 23H2
+
+You can choose the new gallery images when [creating a provisioning policy](create-provisioning-policy.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### New Graph API for Windows 365 Frontline<!--46770829-->
+
+A new graph API is now available for Windows 365 Frontline.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Audit logs supported in Azure Log Analytics<!--45693398-->
+
+You can now send Windows 365 audit log data directly to Azure Log Analytics, Event Hub, or certain third-party solutions. For more information, see [Send Windows 365 audit logs to diagnostic settings in Azure Monitor](get-cloud-pc-audit-logs-using-powershell.md#send-windows-365-audit-logs-to-diagnostic-settings-in-azure-monitor).
+
 
 <!-- ########################## -->
 ## Week of September 25, 2023 (Service release 2309)

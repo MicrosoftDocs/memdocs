@@ -6,7 +6,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/15/2023
+ms.date: 11/07/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -88,11 +88,11 @@ Intune policy for Windows LAPS can configure a device to back up a local adminis
     Support for *Microsoft Entra join* requires you to enable LAPS in your Microsoft Entra ID. The following steps can help you complete this configuration. For the larger context, view these steps in the Microsoft Entra documentation at [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Microsoft Entra hybrid join* does not require LAPS to be enabled in Microsoft Entra.
 
     **Enable LAPS in Microsoft Entra**:  
-    1. Sign in to the **Microsoft Entra admin center** as a [Cloud Device Administrator](/azure/active-directory/roles/permissions-reference#cloud-device-administrator).
-    1. Browse to **Devices** > **Overview** > **Local administrator password recovery**.
-    1. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
+    1. Sign in to the [**Microsoft Entra admin center**](https://entra.microsoft.com/) as a [Cloud Device Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-device-administrator).
+    2. Browse to **Identity** > **Devices** > **Overview** > **Device settings**.
+    3. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
 
-
+    For more information, see [Windows Local Administrator Password Solution in Microsoft Entra ID](/entra/identity/devices/howto-manage-local-admin-passwords) in the Microsoft Entra documentation.
 
 - **On-premises** – On-premises supports back up to Windows Server Active Directory (on-premises Active Directory).
 

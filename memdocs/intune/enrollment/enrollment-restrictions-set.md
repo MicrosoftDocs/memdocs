@@ -136,18 +136,18 @@ The following enrollment methods are authorized for corporate enrollment:
 - The enrolling user is using a [device enrollment manager account](device-enrollment-manager-enroll.md).
 
 > [!NOTE]
-> Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it.
+> Since a co-managed device enrolls in the Microsoft Intune service based on its Microsoft Entra device token, and not a user token, only the default Intune enrollment restriction will apply to it.
 
 Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling (unless registered with Autopilot) because these methods don't offer the Intune administrator per-device control:  
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).
-- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx).
+- [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Microsoft Entra join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network).
  
 Intune also blocks personal devices using these enrollment methods:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network).
 - [MDM enrollment only](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.  
 
 > [!IMPORTANT] 
-> Devices joined by Workplace Join could be blocked from enrolling if they were ever previously Microsoft Entra ID-joined to the tenant. To avoid being blocked, deregister and remove the device's associated object in Microsoft Entra ID before attempting to join the device by Workplace Join.  
+> Devices joined by Workplace Join could be blocked from enrolling if they were ever previously Microsoft Entra joined to the tenant. To avoid being blocked, deregister and remove the device's associated object in Microsoft Entra ID before attempting to join the device by Workplace Join.  
 
 ## Limitations  
 
@@ -157,44 +157,13 @@ Intune also blocks personal devices using these enrollment methods:
 
   * Co-managed enrollments  
   * Group Policy (GPO) enrollments  
-  * Azure Active Directory (Azure AD) joined enrollments, including bulk enrollments  
+  * Microsoft Entra joined enrollments, including bulk enrollments  
   * Windows Autopilot enrollments  
   * Device enrollment manager enrollments
 
-  Instead, you can configure a hard limit for these enrollment types in Azure AD. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).  
+  Instead, you can configure a hard limit for these enrollment types in Microsoft Entra ID. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).  
 
 ## Next steps  
 Select the type of enrollment restriction you want to apply and create the profile:   
  * [Create device platform enrollment restrictions](create-device-platform-restrictions.md)    
  * [Create device limit enrollment restrictions](create-device-limit-restrictions.md)  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
