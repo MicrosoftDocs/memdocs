@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/28/2023
+ms.date: 11/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -121,6 +121,9 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 ### Step 3: Creating assignments
 
 You can choose how you want to assign Microsoft Store apps to users and devices.
+
+> [!NOTE]
+> If you assign an app to a device that is located in a region where that app is not supported or where that app does not meet the age restrictions, the app will not install on the device. However, if the device is moved to a region that supports the app, the app will install on the device. 
 
 The following table provides assignment type details:
 

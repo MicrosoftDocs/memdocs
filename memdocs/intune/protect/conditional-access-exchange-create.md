@@ -64,14 +64,14 @@ Before you can configure Conditional Access, verify the following configurations
 
 - When Conditional Access policies are configured and targeted to a user, before a user can connect to their email, the **device** they use must be:
   - Either **enrolled** with Intune or is a domain joined PC.
-  - **Registered in Azure Active Directory**. Additionally, the client Exchange ActiveSync ID must be registered with Azure Active Directory.
+  - **Registered in Microsoft Entra ID**. Additionally, the client Exchange ActiveSync ID must be registered with Microsoft Entra ID.
 
-- Azure AD Device Registration Service (DRS) is activated automatically for Intune and Microsoft 365 customers. Customers who have already deployed the ADFS Device Registration Service don't see registered devices in their on-premises Active Directory. **This does not apply to Windows PCs and devices**.
+- Microsoft Entra Device Registration Service (DRS) is activated automatically for Intune and Microsoft 365 customers. Customers who have already deployed the ADFS Device Registration Service don't see registered devices in their on-premises Active Directory. **This does not apply to Windows PCs and devices**.
 
 - **Compliant** with device compliance policies deployed to that device.
 
 - If the device doesn't meet Conditional Access settings, the user is presented with one of the following messages when they sign in:
-  - If the device isn't enrolled with Intune, or isn't registered in Azure Active Directory, a message displays with instructions about how to install the Company Portal app, enroll the device, and activate email. This process also associates the device's Exchange ActiveSync ID with the device record in Azure Active Directory.
+  - If the device isn't enrolled with Intune, or isn't registered in Microsoft Entra ID, a message displays with instructions about how to install the Company Portal app, enroll the device, and activate email. This process also associates the device's Exchange ActiveSync ID with the device record in Microsoft Entra ID.
   - If the device isn't compliant, a message displays that directs the user to the Intune Company Portal website, or the Company Portal app. From the company portal, they can find information about the problem and how to remediate it.
 
 ### Support for mobile devices
@@ -104,7 +104,7 @@ Before you can configure Conditional Access, verify the following configurations
   8. Set up [device-based conditional access](/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
-> Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook for Android and iOS/iPadOS is not supported via the Exchange on-premises connector. If you want to leverage Microsoft Entra Conditional Access policies and Intune App Protection Policies with Outlook for iOS/iPadOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS/iPadOS and Android](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### Support for PCs
 
