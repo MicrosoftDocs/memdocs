@@ -206,8 +206,6 @@ With this capability, you do not need to create two different deployment policie
 
 You cannot set the checkbox for an existing policy because changing the checkbox value ends the current deployment and starts two new deployments. To change your deployment settings, delete the current feature update policy and create a new policy with the checkbox selected.
 
-
-
 - Deploying an older Windows version to a device won’t downgrade the device. Devices only install an update when it's newer than the devices current version.
 - Deploying a Windows 11 update to a Windows 10 device that supports Windows 11, [upgrades that device](#upgrade-devices-to-windows-11).  
 
