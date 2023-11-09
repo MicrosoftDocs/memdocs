@@ -62,6 +62,8 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 - **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
 
+- **Windows Hyper-V Firewall Rules** - Microsoft Defender Hyper-V Firewall allows administrators to define granular Firewall rules. Define firewall rules with specific ports, protocols, applications and networks, to allow or block network traffic to virtualized guests.
+
 > [!NOTE]  
 > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
 >
