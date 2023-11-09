@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2023
+ms.date: 11/9/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -69,7 +69,7 @@ Usage data is elevation data that is used by customers to determine what elevati
 ||Device Identifier|Identifier (GUID) unique to the device.|
 ||User Name|Identifier ("AzureAd\User") of the user completing the elevation.|
 ||Justification|Justification string (if provided) provided by the user when completing the elevation|
-||File name|Name of the file (String) that completed the elevation|
+||File name|Name of the file *including the path* (String) that completed the elevation|
 ||Event Id|Internal identifier (Integer) used to identify the type of elevation described in the event.|
 ||Event Name|Internal Name (String) used to identify the type of elevation described in the event.|
 ||Time Created|Time the event was generated on the device.|
