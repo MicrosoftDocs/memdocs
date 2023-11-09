@@ -332,10 +332,10 @@ You can use filters for some common app policies on the following platforms. For
 | Wired network | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ <br/> **Local user group membership** only |
+| Account protection | ✔️ <br/> **Local user group membership** and **Local admin password solution (Windows LAPS)** |
 | Antivirus | ✔️ |
 | Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
-| Disk encryption | ❌ |
+| Disk encryption | ✔️ |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
 | Security baselines | ❌ |

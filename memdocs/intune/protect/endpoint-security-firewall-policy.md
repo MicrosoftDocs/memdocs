@@ -58,12 +58,6 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
  For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
-- **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
-
-- **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
-
-- **Windows Hyper-V Firewall Rules** - Microsoft Defender Hyper-V Firewall allows administrators to define granular Firewall rules. Define firewall rules with specific ports, protocols, applications and networks, to allow or block network traffic to virtualized guests.
-
 > [!NOTE]  
 > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
 >
@@ -81,6 +75,8 @@ For information about configuring settings in the following profiles, see the [F
   > Use  of the **Policy App Id** setting, which is described in the [*MdmStore/FirewallRules/{FirewallRuleName}/PolicyAppId*](/windows/client-management/mdm/Firewall-csp?WT.mc_id=Portal-fx#mdmstorefirewallrulesfirewallrulenamepolicyappid) CSP, requires that your environment use *Windows Defender Application Control* (WDAC) tagging. For more information see the following Windows Defender articles:  
   > - [About application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control)
   > - [WDAC Application ID (AppId) Tagging guide](/windows/security/threat-protection/windows-defender-application-control/appidtagging/windows-defender-application-control-appid-tagging-guide)
+
+- **Hyper-V Firewall Rules** - Microsoft Defender Hyper-V Firewall allows administrators to define granular Firewall rules. Define firewall rules with specific ports, protocols, applications and networks, to allow or block network traffic to virtualized guests.
 
 #### Add reusable settings groups to profiles for Firewall rules
 

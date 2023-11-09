@@ -201,7 +201,8 @@ To use the report:
    - **Alert Type** – When applicable, Alert Type displays the most recent alert message.
    - **Alert Details** – *This column isn't in use.*
    - **Last Scan Time** – The last time this device ran a scan for Windows Update.
-
+   - **Target Version** – This column is useful in policy reports as it shows the friendly name of the update being targeted on the device. This field can be particularly useful when the [win10 sxs] checkbox is selected to identify when and which devices were determined to be ineligible for the update and are now being targeted with the Win10 update.
+   
    The following information applies to **Update State** and **Update Substate**:
 
    - **Service-side data**:

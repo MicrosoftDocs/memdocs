@@ -40,11 +40,8 @@ ms.collection:
 
 Group policy administrative templates, also known as ADMX templates, include settings you can configure on Windows client devices, including PCs. The ADMX template settings are available by different services. These settings are used by Mobile Device Management (MDM) providers, including Microsoft Intune. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, and more.
 
-ADMX templates are available for the following services:
-
-- **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/enterprise).
-- **Office**: Download at [Microsoft 365 Apps, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
-- **Windows**: Built in to the Windows client OS.
+> [!TIP]
+> For an overview of ADMX templates in Intune, including the ADMX templates built-in to Intune, go to [Use Windows 10/11 ADMX templates in Microsoft Intune](administrative-templates-windows.md).
 
 For more information on ADMX policies, go to [Understanding ADMX-backed policies](/windows/client-management/mdm/understanding-admx-backed-policies).
 
