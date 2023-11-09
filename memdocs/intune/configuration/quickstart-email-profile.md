@@ -90,10 +90,10 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 ## Clean up resources
 
-If you don't plant to use this profile for other tutorials or testing, then you can delete it:
+If you don't use this profile for other tutorials or testing, then you can delete it:
 
 1. In the Intune admin center, select**Devices** > **Device configuration**.
-2. Select the **iOS/iPadOS require work email** test profile you created, and then select **Delete**.
+2. Select the **iOS/iPadOS require work email** profile you created, and then select **Delete**.
 
 ## Next steps
 
