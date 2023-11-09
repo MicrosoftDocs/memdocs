@@ -155,17 +155,8 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
   :::image type="content" source="./media/encrypt-devices/silent-encryption-configuration.png" alt-text="Two BitLocker settings required to enable silent encryption.":::
 
   In addition to the two required settings, consider use of *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)*.  the storage of  encrypted devcies can
-<!-- OLD >
-- **Hide prompt about third-party encryption** = *Yes*
-- **Allow standard users to enable encryption during Autopilot** = *Yes*
-- **Require Key File Creation** = *Allowed or Blocked*
-- **Recovery Password Creation** = *Allowed or Required*
 
-> [!WARNING]  
-> In the Endpoint Security policy, some of these settings are not visible if **Startup Authentication Required*,  **System Drive Recovery**, or **Fixed Drive Recovery** are set to *Not Configured* 
---> 
-
-- **Device configuration [Endpoint protection](../configuration/endpoint-protection-configure) policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
+- **Device configuration [Endpoint protection](../configuration/endpoint-protection-configure.md) policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
   - **Warning for other disk encryption** = *Block*.
   - **Allow standard users to enable encryption during Microsoft Entra join** = *Allow*
