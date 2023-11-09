@@ -34,7 +34,7 @@ ms.collection:
 
 # Use app-based Conditional Access policies with Intune
 
-Microsoft Intune app protection policies work with Azure Active Directory Conditional Access to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll. Combined, they're referred to app-based Conditional Access.
+Microsoft Intune app protection policies work with Microsoft Entra Conditional Access to help protect your organizational data on devices your employees use. These policies work on devices that enroll with Intune and on employee owned devices that don't enroll. Combined, they're referred to app-based Conditional Access.
 
 [App protection policies](../apps/app-protection-policy.md) are rules that ensure an organization's data remains safe or contained in a managed app:
 
@@ -51,14 +51,14 @@ App-based Conditional Access with client app management adds a security layer th
 
 Before you create an app-based Conditional Access policy, you must have:
 
-- **Enterprise Mobility + Security (EMS)** or an **Azure AD Premium subscription**
-- Users must be licensed for EMS or Azure AD
+- **Enterprise Mobility + Security (EMS)** or an **Microsoft Entra ID P1 or P2 subscription**
+- Users must be licensed for EMS or Microsoft Entra ID
 
-For more information, see [Enterprise Mobility pricing](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) or [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/).
+For more information, see [Enterprise Mobility pricing](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) or [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ## Supported apps
 
-A list of apps that support app-based Conditional Access can be found in [Conditional Access: Conditions](/azure/active-directory/conditional-access/concept-conditional-access-conditions#client-apps) in the Azure AD documentation.
+A list of apps that support app-based Conditional Access can be found in [Conditional Access: Conditions](/azure/active-directory/conditional-access/concept-conditional-access-conditions#client-apps) in the Microsoft Entra documentation.
 
 App-based Conditional Access [also supports line-of-business (LOB) apps](../protect/app-modern-authentication-block.md), but these apps need to use [Microsoft 365 modern authentication](/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016?view=o365-worldwide&preserve-view=true).
 
@@ -71,7 +71,7 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 ![App-based Conditional Access process illustrated in a flow-chart](./media/app-based-conditional-access-intune/ca-intune-common-ways-3.png)
 
-1. The user tries to authenticate to Azure AD from the Outlook app.
+1. The user tries to authenticate to Microsoft Entra ID from the Outlook app.
 
 2. The user gets redirected to the app store to install a broker app when trying to authenticate for the first time. The broker app can be the Microsoft Authenticator for iOS, or Microsoft Company portal for Android devices.
 
@@ -79,17 +79,17 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 3. The broker app gets installed on the device.
 
-4. The broker app starts the Azure AD registration process, which creates a device record in Azure AD. This process isn't the same as the mobile device management (MDM) enrollment process, but this record is necessary so the Conditional Access policies can be enforced on the device.
+4. The broker app starts the Microsoft Entra registration process, which creates a device record in Microsoft Entra ID. This process isn't the same as the mobile device management (MDM) enrollment process, but this record is necessary so the Conditional Access policies can be enforced on the device.
 
-5. The broker app confirms the Azure AD device ID, the user, and the application. This information is passed to the Azure AD sign-in servers to validate access to the requested service.
+5. The broker app confirms the Microsoft Entra device ID, the user, and the application. This information is passed to the Microsoft Entra sign-in servers to validate access to the requested service.
 
-6. The broker app sends the App Client ID to Azure AD as part of the user authentication process to check if it's in the policy approved list.
+6. The broker app sends the App Client ID to Microsoft Entra ID as part of the user authentication process to check if it's in the policy approved list.
 
-7. Azure AD allows the user to authenticate and use the app based on the policy approved list. If the app isn't on the list, Azure AD denies access to the app.
+7. Microsoft Entra ID allows the user to authenticate and use the app based on the policy approved list. If the app isn't on the list, Microsoft Entra ID denies access to the app.
 
 8. The Outlook app communicates with Outlook Cloud Service to initiate communication with Exchange Online.
 
-9. Outlook Cloud Service communicates with Azure AD to retrieve Exchange Online service access token for the user.
+9. Outlook Cloud Service communicates with Microsoft Entra ID to retrieve Exchange Online service access token for the user.
 
 10. The Outlook app communicates with Exchange Online to retrieve the user's corporate email.
 

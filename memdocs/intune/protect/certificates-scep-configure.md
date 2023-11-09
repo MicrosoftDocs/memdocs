@@ -76,9 +76,9 @@ To support SCEP, the following on-premises infrastructure must run on servers th
 
 #### Support for NDES on the internet
 
-To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use a reverse proxy like *Azure AD Application Proxy*, *Microsoft’s Web Application Proxy Server*, or a third-party reverse proxy service or device.
+To allow devices on the internet to get certificates, you must publish your NDES URL external to your corporate network. To do this, you can use a reverse proxy like *Microsoft Entra application proxy*, *Microsoft’s Web Application Proxy Server*, or a third-party reverse proxy service or device.
 
-- **Azure AD Application Proxy** – You can use the Azure AD Application Proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This solution allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Azure AD Application Proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
+- **Microsoft Entra application proxy** – You can use the Microsoft Entra application proxy instead of a dedicated Web Application Proxy (WAP) Server to publish your NDES URL to the internet. This solution allows both intranet and internet facing devices to get certificates. For more information, see [Integrate with Microsoft Entra application proxy on a Network Device Enrollment Service (NDES) server](/azure/active-directory/manage-apps/active-directory-app-proxy-protect-ndes).
 
 - **Web Application Proxy Server** - Use a server that runs Windows Server 2012 R2 or later as a Web Application Proxy (WAP) server to publish your NDES URL to the internet. This solution allows both intranet and internet facing devices to get certificates.
 
@@ -111,7 +111,7 @@ To configure the connector to support SCEP, use an account that has permissions 
 
 ### Network requirements
 
-In addition to the [network requirements](../protect/certificate-connector-prerequisites.md) for the certificate connector, we recommend publishing the NDES service through a reverse proxy, such as the [Azure AD application proxy, Web Access Proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application), or a third-party proxy. If you don't use a reverse proxy, then allow TCP traffic on port 443 from all hosts and IP addresses on the internet to the NDES service.
+In addition to the [network requirements](../protect/certificate-connector-prerequisites.md) for the certificate connector, we recommend publishing the NDES service through a reverse proxy, such as the [Microsoft Entra application proxy, Web Access Proxy](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application), or a third-party proxy. If you don't use a reverse proxy, then allow TCP traffic on port 443 from all hosts and IP addresses on the internet to the NDES service.
 
 Allow all ports and protocols necessary for communication between the NDES service and any supporting infrastructure in your environment. For example, the computer that hosts the NDES service needs to communicate with the CA, DNS servers, domain controllers, and possibly other services or servers within your environment, like Configuration Manager.
 
@@ -395,7 +395,7 @@ On the NDES server, add a **Server authentication certificate**.
      - A **Subject Alternative Name**: Set DNS entries for every URL your NDES is responding to, such as the internal FQDN and the external URLs.
 
      > [!NOTE]
-     > If you are using Azure AD App Proxy, the AAD App Proxy connector will translate the requests from the external URL to the internal URL.
+     > If you are using Microsoft Entra application proxy, the Microsoft Entra application proxy connector will translate the requests from the external URL to the internal URL.
      > As such, NDES will only respond to requests directed to the internal URL, usually the FQDN of the NDES Server.
      >
      > In this situation, the external URL is not required.
