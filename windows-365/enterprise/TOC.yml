@@ -81,6 +81,10 @@ items:
           href: edit-azure-network-connection.md
         - name: Delete Azure network connection
           href: delete-azure-network-connection.md
+      - name: Identity and access management
+        items:
+        - name: Configure single sign-on
+          href: configure-single-sign-on.md
       - name: Provide a localized Windows experience
         items:
         - name: Provide a localized Windows experience
