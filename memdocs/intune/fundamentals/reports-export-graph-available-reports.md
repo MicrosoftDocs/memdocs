@@ -584,9 +584,9 @@ The following table contains the possible output when calling the `DevicesWithIn
 | DeviceName  | Device name  |
 | CreatedDate  | Enrollment date  |
 | LastContact  | Last check-in  |
-| ReferenceId  | Azure AD Device ID  |
+| ReferenceId  | Microsoft Entra Device ID  |
 | OSVersion  | OS version  |
-| GraphDeviceIsManaged  | Azure AD registered  |
+| GraphDeviceIsManaged  | Microsoft Entra registered  |
 | EasID  | EAS activation ID  |
 | SerialNumber  | Serial number  |
 | Manufacturer  | Manufacturer  |

@@ -53,7 +53,7 @@ The following tables list the ports and services that the Intune client accesses
 
 |**Endpoint**|**IP address**|
 |---------------------|-----------|
-|*.manage.microsoft.us | 52.243.26.209 <br> 52.247.173.11 <br> 52.227.183.12 <br>52.227.180.205 <br> 52.227.178.107 <br> 13.72.185.168 <br> 52.227.173.179 <br> 52.227.175.242 <br> 13.72.39.209 <br> 52.243.26.209 <br> 52.247.173.11 |
+|*.manage.microsoft.us | 52.227.99.114 <br> 20.141.108.112 <br> 13.72.17.166 <br> 52.126.185.115 <br> 52.227.211.91 <br> 23.97.10.212 <br> 52.227.29.124 <br> 52.247.174.16 <br> 52.227.29.244 <br> 52.227.208.144 <br> 52.227.1.233 <br> 20.141.104.221 <br> 52.247.134.218 <br> 20.141.78.227 <br> 13.77.236.201  |
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
 ## US Government customer designated endpoints:

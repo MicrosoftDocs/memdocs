@@ -113,7 +113,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 >
 > Classic conditional access policies for MTD apps:
 >
-> - Are used by Intune MTD to require that devices are registered in Microsoft Entra so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
+> - Are used by Intune MTD to require that devices are registered in Microsoft Entra ID so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
 > - Have no effect on any other Cloud apps or Resources.
 > - Are distinct from conditional access policies you might create to help manage MTD.
 > - By default, don't interact with other conditional access policies you use for evaluation.
@@ -295,7 +295,7 @@ Use the procedure to [create an application protection policy for either iOS/iPa
 Conditional access policies can use data from Microsoft Defender for Endpoint to block access to resources for devices that exceed the threat level you set. You can block access from the device to corporate resources, such as SharePoint or Exchange Online.
 
 > [!TIP]
-> Conditional Access is a Microsoft Entra ID technology. The *Conditional Access* node found in the Microsoft Intune admin center is the node from *Microsoft Entra*.
+> Conditional Access is a Microsoft Entra technology. The *Conditional Access* node found in the Microsoft Intune admin center is the node from *Microsoft Entra*.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
