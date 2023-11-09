@@ -7,7 +7,7 @@ keywords: Enterprise SSO plug-in, Microsoft Intune
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2023
+ms.date: 11/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -50,7 +50,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
   - iOS/iPadOS 13.0 and newer
 - The Microsoft Authenticator app must be installed on the device.
 
-  The Microsoft Authenticator app can be installed manually by users, or deployed using Intune. For information on how to install the Microsoft Authenticator app, go to [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
+  Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Intune. For information on how to install the Microsoft Authenticator app, go to [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md).
 
 # [Jamf Pro](#tab/prereq-jamf-pro)
 
@@ -59,7 +59,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
   - iOS/iPadOS 13.0 and newer
 - The Microsoft Authenticator app must be installed on the device.
 
-  The Microsoft Authenticator app can be installed manually by users, or by deploying the app through Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
+  Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
 
 - **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
 
@@ -69,7 +69,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
 - The MDM solution must support configuring [Single Sign-on MDM payload settings for Apple devices](https://support.apple.com/guide/deployment/extensible-single-sign-on-payload-settings-depfd9cdf845/web) with a device policy.
 - The device must support the plug-in:
   - iOS/iPadOS 13.0 and newer
-- The Microsoft Authenticator app must be installed on the device. The Microsoft Authenticator app can be installed manually by users, or deployed with an MDM policy.
+- The Microsoft Authenticator app must be installed on the device. Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using an MDM policy.
 
 --- 
 
@@ -172,7 +172,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 
     :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extensions-urls-jamf.png" alt-text="Screenshot that shows the Jamf Pro portal and the SSO URLs for iOS/iPadOS devices.":::
 
-6. In **Custom Configuration**, you'll define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Microsoft Enterprise SSO plug-in for Apple devices documentation](/entra/identity-platform/apple-sso-plugin#manual-configuration-for-other-mdm-services).
+6. In **Custom Configuration**, you define other required properties. Jamf Pro requires that these properties are configured using an uploaded PLIST file. To see the full list of configurable properties, go to [Microsoft Enterprise SSO plug-in for Apple devices documentation](/entra/identity-platform/apple-sso-plugin#manual-configuration-for-other-mdm-services).
 
     The following example is a recommended PLIST file that meets the needs of most organizations:
 
