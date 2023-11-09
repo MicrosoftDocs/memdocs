@@ -140,9 +140,7 @@ For more information, see [New-CMCloudManagementGateway](/powershell/module/conf
 
 ### Attack Surface Reduction (ASR) capability now marks Server SKU as compliant only after enforcement  
 <!--9217349-->
-Prior to the Attack Surface Reduction capability in Windows Server, rules were marked compliant by default. As this rule setting becomes available to Server SKU, it's enforced through Config Manager. Now the Server SKU will be marked as compliant for an Attack Surface Reduction rule, only after enforcement of the rule.
-
-For more information, see [Bulk registration token]( ../../clients/deploy/deploy-clients-cmg-token.md#bulk-registration-token)  
+Prior to the Attack Surface Reduction capability in Windows Server, rules were marked compliant by default. As this rule setting becomes available to Server SKU, it's enforced through Config Manager. Now the Server SKU will be marked as compliant for an Attack Surface Reduction rule, only after enforcement of the rule. Note this fix only applies to environments where the Endpoint Protection workload is managed by Intune; If the *Manage Endpoint Protection client on client computers* is set to *Yes* in Device Settings, the original behavior still applies.
 
 ## Deprecated features
 
