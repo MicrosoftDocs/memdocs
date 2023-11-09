@@ -28,7 +28,6 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 ms.reviewer: aanavath
-
 ---
 
 # Manage approved apps for Windows devices with App Control for Business policy and Managed Installers for Microsoft Intune
@@ -48,13 +47,9 @@ The information in this article can help you configure both the Intune Managemen
 For more information, see [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/wdac-and-applocker-overview#windows-defender-application-control) in the Windows Security documentation.
 
 > [!NOTE]
->
 > **App Control for Business policy vs Application control profiles**:
->
->Intune *App Control for Business policies* use the [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp). Intune’s Attack surface reduction policies use the [AppLocker CSP](/windows/client-management/mdm/applocker-csp) for their *Application control profiles*.
->
-> Windows introduced the **ApplicationControl CSP** to replace the **AppLocker CSP**. Windows continues to support the AppLocker CSP but no longer adds no features to it. Instead, development continues through the ApplicationControl CSP.
-
+> Intune *App Control for Business policies* use the [ApplicationControl CSP](/windows/client-management/mdm/applicationcontrol-csp). Intune’s Attack surface reduction policies use the [AppLocker CSP](/windows/client-management/mdm/applocker-csp) for their *Application control profiles*.
+> Windows introduced the **ApplicationControl CSP** to replace the **AppLocker CSP**. Windows continues to support the AppLocker CSP but no longer adds new features to it. Instead, development continues through the ApplicationControl CSP.
 Applies to:
 
 - Windows 10
@@ -445,3 +440,4 @@ If setting Configuration Manager as the Managed Installer is desired, you can al
 ## Next Steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+
