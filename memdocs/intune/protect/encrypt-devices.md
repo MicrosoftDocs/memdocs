@@ -156,7 +156,7 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 
   In addition to the two required settings, consider use of *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)*.  the storage of  encrypted devcies can
 
-- **Device configuration [Endpoint protection](../configuration/endpoint-protection-configure.md) policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
+- **Device configuration [Endpoint protection](../protect/endpoint-protection-configure.md) policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
   - **Warning for other disk encryption** = *Block*.
   - **Allow standard users to enable encryption during Microsoft Entra join** = *Allow*
