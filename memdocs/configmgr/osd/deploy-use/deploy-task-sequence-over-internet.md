@@ -39,9 +39,9 @@ Use this setting for deployments of a Windows in-place upgrade task sequence to 
 Starting in version 2006, you can deploy a task sequence with a boot image to a device that communicates through the CMG. The user needs to start the task sequence from Software Center.<!--6997525-->
 
 > [!NOTE]
-> When an Azure Active Directory (Azure AD)-joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Azure AD. Even though it's not Azure AD-joined, the client is still managed.
+> When a Microsoft Entra joined client runs an OS deployment task sequence, the client in the new OS won't automatically join Microsoft Entra ID. Even though it's not Microsoft Entra joined, the client is still managed.
 >
-> When you run an OS deployment task sequence on an internet-based client, that's either Azure AD-joined or uses token-based authentication, you need to specify the **CCMHOSTNAME** property in the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step.
+> When you run an OS deployment task sequence on an internet-based client, that's either Microsoft Entra joined or uses token-based authentication, you need to specify the **CCMHOSTNAME** property in the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step.
 
 ### Use bootable media to install a Windows imaging task sequence
 

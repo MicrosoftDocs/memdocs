@@ -56,7 +56,7 @@ When you create device configuration profiles, there are different levels and ty
 
 - **Level 3 - High device configuration**: In this level, Microsoft recommends you create policies that:
 
-  - Move to password-less authentication, including using certificates, configuring single sign-on (SSO) to apps, enabling multi-factor authentication (MFA), and configuring Microsoft Tunnel.
+  - Move to password-less authentication, including using certificates, configuring single sign-on (SSO) to apps, enabling multifactor authentication (MFA), and configuring Microsoft Tunnel.
   - Add extra layers of security using Android common criteria mode or creating DFCI policies for Windows devices.
   - Use the built-in features to configure kiosk devices, dedicated devices, shared devices, and other specialized devices.
   - Deploy existing shell scripts.
@@ -481,23 +481,23 @@ This level expands on what you've configured in levels 1 and 2. It adds extra se
 
   - **Configure single sign-on** (SSO) for a more seamless experience when users open business apps, like Microsoft 365 apps. Users sign-in once and then are automatically signed-in to all the apps that support your SSO configuration.
 
-    To learn about using SSO in Intune and Azure AD, go to:
+    To learn about using SSO in Intune and Microsoft Entra ID, go to:
 
-    - [**Android**: Enable cross-app SSO on Android using MSAL in Azure AD](/azure/active-directory/develop/msal-android-single-sign-on)
+    - [**Android**: Enable cross-app SSO on Android using MSAL in Microsoft Entra ID](/azure/active-directory/develop/msal-android-single-sign-on)
     - [**iOS/iPadOS, macOS**: Use the Enterprise SSO plug-in in Intune and other MDMs](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-    - [**Windows**: Configure SSO with Azure AD](/azure/active-directory/manage-apps/what-is-single-sign-on)
+    - [**Windows**: Configure SSO with Microsoft Entra ID](/azure/active-directory/manage-apps/what-is-single-sign-on)
 
-  - **Use multi-factor authentication** (MFA). When you move to password-less, MFA adds an extra layer of security, and can help protect your organization from phishing attacks. You can use MFA with authenticator apps, like Microsoft Authenticator, or with a phone call or text message. You can also use MFA when users enroll their devices in Intune.
+  - **Use multifactor authentication** (MFA). When you move to password-less, MFA adds an extra layer of security, and can help protect your organization from phishing attacks. You can use MFA with authenticator apps, like Microsoft Authenticator, or with a phone call or text message. You can also use MFA when users enroll their devices in Intune.
 
-    Multi-factor authentication is a feature of Azure AD and can be used with Azure AD accounts. For more information, go to:
+    Multifactor authentication is a feature of Microsoft Entra ID and can be used with Microsoft Entra accounts. For more information, go to:
 
-    - [Azure AD identity protection overview](/azure/active-directory/identity-protection/overview-identity-protection)
-    - [Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-    - [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
+    - [Microsoft Entra ID Protection overview](/azure/active-directory/identity-protection/overview-identity-protection)
+    - [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
+    - [Require multifactor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
 
   - **Set up Microsoft Tunnel** for your Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and Conditional Access.
 
-    Microsoft Tunnel uses Intune, Azure AD, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
+    Microsoft Tunnel uses Intune, Microsoft Entra ID, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
 
   - In addition to Microsoft Tunnel for devices enrolled with Intune, you can use **Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../protect/microsoft-tunnel-mam.md) is available as an Intune add-on that requires an extra license.
 

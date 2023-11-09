@@ -207,7 +207,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Motorola Mobility | com.motorola.oemconfig.rel | [Moto OEMConfig Guide](https://motorola-global-portal.custhelp.com/app/answers/prod_answer_detail/a_id/160503 ) |
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Point Mobile | device.apps.emkitagent | |
-| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
 | Seuic | com.seuic.seuicoemconfig | | 
 | Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
