@@ -41,7 +41,7 @@ To take advantage of this change, make sure your environment is up to date:
     - Enterprise
     - Professional
     - Education
-  - The device must be joined to Azure Active Directory.
+  - The device must be joined to Microsoft Entra ID.
 
   > [!IMPORTANT]
   > Devices with an older OS version like Windows 7 will continue to show in Desktop Analytics until January 31, 2022. Use Desktop Analytics to update those devices to a supported version of Windows 10. After that date, Desktop Analytics will only display devices with supported versions of Windows 10.
