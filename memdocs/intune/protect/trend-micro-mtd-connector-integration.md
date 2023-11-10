@@ -42,7 +42,7 @@ This article describes the requirements and steps to connect Trend Micro Mobile 
 The following subscriptions and accounts are required to integrate Trend Micro Mobile Security as a Service with Microsoft Intune.
 
 - Microsoft Intune Plan 1 subscription
-- Microsoft Entra ID account with Global Administrator rights to grant the following permissions:
+- Microsoft Entra account with Global Administrator rights to grant the following permissions:
   - Sign in and read user profile
   - Access the directory as the signed-in user
   - Read directory data
@@ -54,7 +54,7 @@ The following subscriptions and accounts are required to integrate Trend Micro M
 The following authorization process happens when you configure the integration with Trend Micro Mobile Security as a Service:
 
 - Allow Trend Micro Mobile Security as a Service to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day-to-day operation.
-- Allow Trend Micro Mobile Security as a Service to sync Microsoft Entra ID enrollment group membership to populate its device's database.
+- Allow Trend Micro Mobile Security as a Service to sync Microsoft Entra enrollment group membership to populate its device's database.
 - Allow Trend Micro Vision One management console to use Microsoft Entra single sign-on (SSO).
 - Allow Trend Micro Mobile as a Service agent app to sign in using Microsoft Entra SSO.
 - Allow Trend Micro Mobile Security as a Service to get installed app information to perform malware  scanning.
