@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 11/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,18 +32,16 @@ ms.collection:
 - conditional-access
 ---
 
-# Configure Exchange on-premises access for Intune
+# Configure Exchange on-premises access for Intune  
+
+> [!IMPORTANT]
+> Support for the on-premises Intune Exchange connector is ending on January 15, 2024. After this date, the Exchange connector will no longer sync with Exchange. If you use the Exchange connector, we recommend taking one of the following actions before January 15, 2024:  
+   >* [Migrate your Exchange mailboxes to Exchange online](/exchange/hybrid-deployment/move-mailboxes)
+   >* [Set up hybrid modern authentication](/microsoft-365/enterprise/hybrid-modern-auth-overview)  
 
 This article shows you how to configure Conditional Access for Exchange on-premises based on device compliance.
 
-If you have an Exchange Online Dedicated environment and need to find out whether it is in the new or the legacy configuration, contact your account manager. To control email access to Exchange on-premises or to your legacy Exchange Online Dedicated environment, configure Conditional Access to Exchange on-premises in Intune.
-
-> [!IMPORTANT]
-> The information in this article applies to customers who are supported to use an Exchange Connector.
->
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, you’re Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
->
-> Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
+If you have an Exchange Online Dedicated environment and need to find out whether it is in the new or the legacy configuration, contact your account manager. To control email access to Exchange on-premises or to your legacy Exchange Online Dedicated environment, configure Conditional Access to Exchange on-premises in Intune.  
 
 ## Before you begin
 
