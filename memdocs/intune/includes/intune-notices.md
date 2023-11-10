@@ -11,6 +11,34 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
+### Wrapped iOS apps and iOS apps using the Intune App SDK will require Azure AD app registration
+
+We're making updates to improve the security of the Intune mobile application management (MAM) service. This update will require iOS wrapped apps and SDK integrated apps to be [registered with Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) (formerly Azure Active Directory (Azure AD)) by March 31, 2024 to continue receiving MAM policy. 
+
+#### How does this affect you or your users?
+
+If you have wrapped apps or SDK integrated apps that aren't registered with Azure AD, these apps will be unable to connect to the MAM service to receive policy and your users will not be able to access apps that are not registered.
+
+#### How can you prepare?
+
+Prior to this change, you will need to register the apps with Azure AD. See below for detailed instructions.
+
+1. Register your apps with Azure AD by following these instructions: [Register an application with the Microsoft identity platform](/entra/identity-platform/quickstart-register-app).
+1. Add the custom redirect URL to your app settings as documented [here](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal).
+1. Give your app access to the Intune MAM service, for instructions see [here](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service).
+1. Once the above changes are completed, configure your apps for Microsoft Authentication Library (MSAL):
+   1. For wrapped apps: Add the Azure AD application client ID into the command-line parameters with the Intune App Wrapping Tool as outlined in the documentation: [Wrap iOS apps with the Intune App Wrapping Tool | Microsoft Learn](../developer/app-wrapper-prepare-ios.md#command-line-parameters) -ac and -ar are required parameters. Each app will need a unique set of these parameters. -aa is only required for single tenant applications.
+   1. For SDK integrated apps see, [Microsoft Intune App SDK for iOS developer guide | Microsoft Learn](../developer/app-sdk-ios.md#configure-msal-settings-for-the-intune-app-sdk). ADALClientId and ADALRedirectUri/ADALRedirectScheme are now required parameters. ADALAuthority is only required for single tenant applications.
+1. Deploy the app.
+1. To validate the above steps:
+   1. Target "com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration" application configuration policy and set it to Enabled - [Configuration policies for Intune App SDK managed apps - Microsoft Intune | Microsoft Learn](../apps/app-configuration-policies-managed-app.md)
+   1. Target App Protection Policy to the application. Enable the [“Work or school account credentials for access” policy](../apps/app-protection-policy-settings-ios.md#access-requirements) and set “Recheck the access requirements after (minutes of inactivity)” setting to a low number like 1.
+1. Then launch the application on a device and verify if the sign-in (which should be required every minute on app launch) happens successfully with the configured parameters.
+1. Note that if you only do step #6 and #7 before doing the other steps, you may be blocked on application launch. You will also notice the same behavior if some of the parameters are incorrect.
+1. Once you’ve completed the validation steps, you can undo the changes made in step #6.
+> [!NOTE]
+> Intune will soon require an Azure AD device registration for iOS devices using MAM. If you have Conditional Access policies enabled, your devices should already be registered, and you will not notice any change. For more information see, [Microsoft Entra registered devices - Microsoft Entra | Microsoft Learn](/entra/identity/devices/concept-device-registration).
+
 ### Plan for Change: Transition Jamf macOS devices from Conditional Access to Device Compliance
 
 We've been working with Jamf on a migration plan to help customers transition macOS devices from Jamf Pro’s Conditional Access integration to their Device Compliance integration. The Device Compliance integration uses the newer Intune partner compliance management API, which involves a simpler setup than the partner device management API and brings macOS devices onto the same API as iOS devices managed by Jamf Pro. The platform Jamf Pro’s Conditional Access feature is built on will no longer be supported after September 1, 2024.
@@ -33,7 +61,7 @@ To support the upcoming release of iOS/iPadOS 17, update to the latest versions 
 
 ### Plan for Change: Removal of Microsoft Graph Beta API Android LOB app properties ‘identityVersion’ and ‘identityName’
 
-With Intune’s October (2310) service release, we'll be removing the Android line-of-business (LOB) app properties “identityVersion” and “identityName” from the Microsoft Graph Beta API [managedAndroidLobApp resource type](/graph/api/resources/intune-apps-managedandroidlobapp?view=graph-rest-beta). The same data can be found using the Graph API "versionCode” and “versionName” properties.
+With Intune’s October (2310) service release, we'll be removing the Android line-of-business (LOB) app properties “identityVersion” and “identityName” from the Microsoft Graph Beta API managedAndroidLobApp resource type. The same data can be found using the Graph API "versionCode” and “versionName” properties.
 
 #### How does this affect you or your users?
 
