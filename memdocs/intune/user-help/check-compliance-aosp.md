@@ -33,7 +33,7 @@ ms.collection:
 
 *Applies to Microsoft Intune app for AOSP*  
 
-Use the Microsoft Intune app to remotely check the compliance status of an enrolled device, and confirm or resolve access issues caused by noncompliant settings. During a status check, the Intune app checks your device settings to make sure they meet your organization's requirements. If your device isn't compliant with requirements, your organization may limit or restrict it from accessing work resources until you make changes.  
+Use the Microsoft Intune app to remotely check the compliance status of an enrolled device, and confirm or resolve access issues caused by noncompliant settings. During a status check, the Intune app checks your device settings to make sure they meet your organization's requirements. If your device isn't compliant with requirements, your organization might limit or restrict it from accessing work resources until you make changes.  
 
 >[!TIP]
 > After you update the settings on a noncompliant device, start a compliance check to register the changes with the Intune app.   
@@ -52,9 +52,9 @@ Complete these steps to check compliance and refresh the device settings status 
 ## Device settings status  
 
 The device settings status tells you the following information about your enrolled device:    
-    * **In Compliance**: Your device is allowed to access work or school resources.  
-    * **In grace**: Your device is allowed to access work or school resources, but one or more settings don't meet your organization's requirements. Update your device settings by the date shown to keep your access.  
-    * **Not in Compliancet**: Your device isn't allowed to access work or school resources. Make the required changes to gain access.  
+* **In Compliance**: Your device is allowed to access work or school resources.  
+* **In grace**: Your device is allowed to access work or school resources, but one or more settings don't meet your organization's requirements. Update your device settings by the date shown to keep your access.  
+* **Not in Compliance**: Your device isn't allowed to access work or school resources. Make the required changes to gain access.  
 
 ## Compliance notifications  
 Microsoft Intune app notifications fall into two categories: 
