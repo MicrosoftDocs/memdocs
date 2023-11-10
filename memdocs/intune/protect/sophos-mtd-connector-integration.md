@@ -43,7 +43,7 @@ Complete the following steps to integrate the Sophos Mobile Threat Defense solut
 Before starting the process of integrating Sophos Mobile with Intune, make sure you have the following:  
 
 - Microsoft Intune Plan 1 subscription
-- Microsoft Entra ID admin credentials to grant the following permissions:  
+- Microsoft Entra admin credentials to grant the following permissions:  
   - Sign in and read user profile  
   - Access the directory as the signed-in user  
   - Read directory data  
