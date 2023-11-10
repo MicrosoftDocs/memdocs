@@ -309,7 +309,7 @@ Edge for Android can be enabled as a kiosk app with the following settings:
 
 ### Locked view mode
 
-Edge for iOS and Android can be enabled as locked view mode with MDM policy EdgeLockedViewMode.
+Edge for iOS and Android can be enabled as locked view mode with MDM policy EdgeLockedViewModeEnabled.
 
 |Key  |Value  |
 |:---------|:---------|
