@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/07/2023
+ms.date: 11/15/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,7 +29,7 @@ ms.collection:
 - tier2
 ---
 
-# Check compliance on your AOSP device  
+# Check compliance in Microsoft Intune app for AOSP 
 
 *Applies to Microsoft Intune app for AOSP*  
 
@@ -45,12 +45,21 @@ Complete these steps to check compliance and refresh the device settings status 
 
 2. Tap **Devices** and then select your device.  
 
-3. Under **Device Settings Status**, tap **Refresh**.  Wait while the Intune app checks device settings.  
+3. Under **Device Settings Status**, tap **Refresh**.  Wait while the Intune app checks device settings and updates the device settings status.  
 
-4. The device settings status appears as **In Compliance** or **Not in Compliance**. A compliant device can access work resources as normal. If your device is noncompliant and you're required to make changes, you receive a compliance notification in the Intune app. Tap the notification for more information.  
+4. If your device is noncompliant and you're required to make changes, you receive a compliance notification in the Intune app. Tap the notification for more information.  
+
+## Device settings status  
+
+The device settings status tells you the following information about your enrolled device:    
+    * **In Compliance**: Your device is allowed to access work or school resources.  
+    * **In grace**: Your device is allowed to access work or school resources, but one or more settings don't meet your organization's requirements. Update your device settings by the date shown to keep your access.  
+    * **Not in Compliancet**: Your device isn't allowed to access work or school resources. Make the required changes to gain access.  
 
 ## Compliance notifications  
 Microsoft Intune app notifications fall into two categories: 
 
 * Device compliance: A compliance notification alerts you when your device falls out of compliance with your organization's requirements. Notifications persist until you address or resolve the issue.  
 * Organizational notifications: You can receive, dismiss, and delete notifications that you receive from your organization.  
+
+For more help and support, contact your IT support person. Go to the **Support** tab in the Company Portal app for contact information, or access support details and device actions on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
