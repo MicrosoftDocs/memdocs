@@ -313,7 +313,7 @@ Edge for iOS and Android can be enabled as locked view mode with MDM policy Edge
 
 |Key  |Value  |
 |:---------|:---------|
-|EdgeLockedViewMode|**false** (default) Locked view mode is disabled <br> **true** Locked view mode is enabled | 
+|EdgeLockedViewModeEnabled |**false** (default) Locked view mode is disabled <br> **true** Locked view mode is enabled | 
 
 It allows organizations to restrict various browser functionalities, providing a controlled and focused browsing experience.
 
