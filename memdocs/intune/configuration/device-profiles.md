@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 11/09/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,8 +35,11 @@ ms.collection:
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
 
-Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices. Assigning device configuration profiles to user's devices at your organization help those users become productive quickly.
+Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles" and can help your end users be productive on their devices faster.
 
+You can create profiles for different devices and different platforms, including Android, iOS/iPadOS, macOS, and Windows. There are some configuration settings that are unique to each platform. It's also common to have many device profiles for each platform, ranging from antivirus settings to custom settings.
+
+When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups. 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
@@ -50,10 +53,14 @@ Some profile examples include:
 - Run an Android device as dedicated kiosk device that can run one app, or run many apps.
 - On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 
-You determine the specific capabilities and apply the unique settings for your organization. You also determine the groups of users and devices that require these capabilities and settings. It is common to have many device profiles for each supported platform, ranging from device anti-virus settings, to custom settings that aren't built into Intune as templates yet.
-
 > [!NOTE]
-> If you currently manage on-premises devices using Microsoft Configuration Manager, consider implementing co-management to cloud attach your on-premises devices. Co-management allows you to concurrently manage Windows 10 or Windows 11 devices with both Configuration Manager and Microsoft Intune. Once you implement co-management, you can create the device profiles and policies you need in Intune based on those you currently have in Configuration Manager. For more information about co-management, see [Understand co-management using Microsoft Configuration Manager](../../configmgr/comanage/overview.md). For related information, see [Prepare Intune for co-management](../../configmgr/core/get-started/capabilities-in-technical-preview-1709.md#prepare-intune-for-co-management).
+> If you manage on-premises devices using Microsoft Configuration Manager, then you can use co-management to cloud attach your on-premises devices. With co-management, you manage Windows client devices with Configuration Manager and Microsoft Intune.
+>
+> You can create the device profiles and policies you need in Intune based on policies you currently have in Configuration Manager. For more information about co-management, go [Understand co-management using Microsoft Configuration Manager](../../configmgr/comanage/overview.md). For related information, see [Prepare Intune for co-management](../../configmgr/core/get-started/capabilities-in-technical-preview-1709.md#prepare-intune-for-co-management).
+
+## Templates
+
+Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. Templates are available when you choose either iOS/iPadOS, macOS, Windows 10 and later, or Windows 10 as the platform.
 
 ### Fundamental device configuration profiles
 
@@ -77,6 +84,7 @@ Protective device configuration profiles to consider:
 - [Manage Android Enterprise devices with OEMConfig](#oemconfig)
 - [Configure certificates](#certificates)
 - [Configure Microsoft Edge settings](..\configuration\administrative-templates-configure-edge.md)
+- Security baselines
 
 ### Comprehensive device configuration profiles
 
@@ -87,20 +95,9 @@ Comprehensive device configuration profiles to consider:
 - [Administrative templates](#administrative-templates-and-group-policy)
 - [Custom profiles](#custom-profile)
 - [Settings catalog](#settings-catalog)
+- Security baselines
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
-
-## Platforms
-
-When creating a new device configuration profile, you must first select the platform for the configuration profile. The available configuration settings are unique for each platform. The available platforms are included in the following list:
-- Android device administrator
-- Android (AOSP)
-- Android Enterprise
-- iOS/iPadOS
-- macOS
-- Windows 10 and later
-- Windows 8.1 and later
-- Windows 10X
 
 ## Profile types
 
@@ -197,16 +194,6 @@ This feature supports:
 - Windows 11
 - Windows 10
 - Windows 10 Team
-
-### Security baselines
-
-Security baselines are groups of pre-configured Windows settings that help you apply and enforce granular security settings recommended by the relevant security teams at Microsoft. You can also customize each baseline you deploy to enforce only those settings and values that your organization requires. When you create a security baseline profile in Intune, you're creating a template that consists of multiple device configuration profiles.
-
-Intune security baselines apply to Windows 10 and 11 and fall into the following areas:
-- Security Baseline for Windows 10 and later
-- Microsoft Defender for Endpoint Baseline
-- Microsoft Edge Baseline
-- Windows 365 Security Baseline
 
 ## Domain join
 
@@ -339,17 +326,13 @@ This feature supports:
 > [!TIP]
 > macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
-## Templates
-
-Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. Templates are available when you choose either iOS/iPadOS, macOS, Windows 10 and later, or Windows 10 as the platform.
-
 ## Settings catalog
 
-The [settings catalog](settings-catalog.md) lists the settings you can configure. It's not template, or a logical grouping of settings. The setting catalog simplifies how you create a policy, and how you see all the available settings. More settings are continually being added as well.
+The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but the setting catalog is cloud native.
 
 On Windows, there are thousands of settings available, including many settings not found in the templates. When you want a complete list of all the settings, use the settings catalog to create your policy. If you want to use a logical grouping of settings, then continue to use the templates.
 
-On macOS, you can configure Microsoft Edge version 77 and newer using the settings catalog. In your policy, you configure individual settings. It doesn't require a preference file.
+[Tasks you can complete using the Intune settings satalog](settings-catalog-common-features.md) is a good resource.
 
 This feature supports:
 
@@ -454,10 +437,6 @@ This feature supports:
 This feature supports:
 
 - Android device administrator (Mobility Extensions)
-
-## Refresh cycle times
-
-Intune uses different refresh cycles to check for updates to configuration profiles. If the device recently enrolled, the check-in runs more frequently. Policy and profile refresh cycles lists the estimated refresh times. At any time, users can open the Company Portal app, and sync the device to immediately check for profile updates.
 
 ## Manage and troubleshoot
 
