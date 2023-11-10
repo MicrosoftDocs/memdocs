@@ -44,7 +44,7 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 
 - Enable MAM Strict Mode.
 - Register for critical notifications from the SDK.
-- Implement and register an authentication callback to provide AAD tokens from MSAL to the SDK.
+- Implement and register an authentication callback to provide Microsoft Entra tokens from MSAL to the SDK.
 - Register new accounts for MAM management after authenticating with MSAL.
 - Unregister accounts on log-out to remove corporate data.
 - (Recommended) Incorporate MAM logging into your app.
@@ -217,7 +217,7 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given account and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its [registerAuthenticationCallback] method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's `Application` subclass.
+1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request a Microsoft Entra token for the given account and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its [registerAuthenticationCallback] method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's `Application` subclass.
 
 2. The `acquireToken` method should acquire the access token for the requested resource ID for the given account. If it can't acquire the requested token, it should return null.
 
@@ -275,7 +275,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     }
     ```
 
-3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it is an inconvenient time to show a UI -- the app can provide a token at a later time by calling the [updateToken] method. The same UPN, AAD ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The app should call this method as soon as possible after returning null from the provided callback.
+3. In case the app is unable to provide a token when the SDK calls `acquireToken()`  -- for example, if silent authentication fails and it is an inconvenient time to show a UI -- the app can provide a token at a later time by calling the [updateToken] method. The same UPN, Microsoft Entra ID, and resource ID that were requested by the prior call to `acquireToken()` must be passed to `updateToken()`, along with the token that was finally acquired. The app should call this method as soon as possible after returning null from the provided callback.
 
     > [!WARNING]
     > Do not call `updateToken()` from within your implementation of `acquireToken()`. `updateToken()` should be used in the case where `acquireToken()` is unable to acquire a token.
@@ -286,12 +286,12 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 #### Authentication Implementation Notes
 
-- Apps are encouraged to acquire AAD tokens **prior to** calling [registerAccountForMAM].
+- Apps are encouraged to acquire Microsoft Entra tokens **prior to** calling [registerAccountForMAM].
 After registering an account, apps will receive a callback to the [MAMServiceAuthenticationCallback] interface on a different thread.
 Providing a valid token in that callback allows enrollment to proceed.
 The app will get the enrollment result via notification.
 
-- If the app doesn't return a valid AAD token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`.
+- If the app doesn't return a valid Microsoft Entra token, the final result from the enrollment attempt will be `AUTHORIZATION_NEEDED`.
 If the app receives this Result via notification, it is strongly recommended to expedite the enrollment process by acquiring the token for the account and resource previously requested from [acquireToken] and calling the [updateToken] method to initiate the enrollment process again.
 
 - The app's registered `MAMServiceAuthenticationCallback` will also be called to acquire a token for periodic app protection policy refresh check-ins.
@@ -316,18 +316,18 @@ Result getRegisteredAccountStatus(String upn);
 ```
 
 1. To register an account for management, the app should call `registerAccountForMAM()`.
-An account is identified by both its UPN and its AAD user ID.
-The tenant ID is also required to associate enrollment data with the account's AAD tenant.
+An account is identified by both its UPN and its Microsoft Entra user ID.
+The tenant ID is also required to associate enrollment data with the account's Microsoft Entra tenant.
 The account's authority may also be provided to allow enrollment against specific sovereign clouds; for more information see [Sovereign Cloud Registration](#sovereign-cloud-registration).
 The SDK may attempt to enroll the app for the given account in the MAM service; if enrollment fails, it will periodically retry enrollment until enrollment succeeds or the account is unregistered.
 The retry period will typically be 12-24 hours.
 The SDK provides the status of enrollment attempts asynchronously via notifications.
 
 2. The best time to call `registerAccountForMAM` is after the user has signed into the app and is successfully authenticated using MSAL.
-The account's AAD user ID and tenant ID are returned from the MSAL authentication call as part of the [`IAccount`] related to the [`IAuthenticationResult`].
+The account's Microsoft Entra user ID and tenant ID are returned from the MSAL authentication call as part of the [`IAccount`] related to the [`IAuthenticationResult`].
     - The account comes from the `IAuthenticationResult.getAccount()` method and contains the pertinent account information.
     - The tenant ID comes from the `IAccount.getTenantId()` method.
-    - The AAD ID comes from the `IAccount.getId()` method.
+    - The Microsoft Entra account ID comes from the `IAccount.getId()` method.
 
 3. To unregister an account from Intune management, the app should call `unregisterAccountForMAM()`.
 If the account has been successfully enrolled and is managed, the SDK will unenroll the account and wipe its data.

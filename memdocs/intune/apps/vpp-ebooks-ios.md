@@ -82,16 +82,10 @@ You can synchronize the data held by Apple with Intune at any time by choosing *
 1. Select **Apps** > **eBooks** > **All eBooks**.
 2. On the list of books pane, choose the book you want to assign, and then choose '**...**' > **Assign Groups**.
 3. On the <*book name*> - **Groups Assigned** pane, choose **Manage** > **Groups Assigned**.
-4. Choose **Assign Groups** then, on the **Select groups** pane, choose the Azure AD user groups to which you want to assign the book. Device groups are currently not supported.
+4. Choose **Assign Groups** then, on the **Select groups** pane, choose the Microsoft Entra user groups to which you want to assign the book. Device groups are currently not supported.
 Choose an assignment action of **Available**, or **Required**. 
 5. Once you are done, choose **Save**.
 
 ## Next steps
 
 See [How to monitor apps](apps-monitor.md) for information to help you monitor book assignments.
-
-
-
-
-
-

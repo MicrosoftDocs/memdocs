@@ -45,7 +45,7 @@ In this tutorial, you'll learn how to:
 
 To complete this tutorial, you need a test tenant with the following subscriptions for this tutorial:
 
-- Microsoft Entra Premium - [free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)
+- Microsoft Entra ID P1 - [free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)
 - Microsoft Intune Plan 1 subscription - [free trial](../fundamentals/free-trial-sign-up.md)
 - Microsoft 365 Apps for business subscription that includes Exchange - [free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938)
 
@@ -122,7 +122,7 @@ Next, use the Microsoft Intune admin center to create two Conditional Access pol
 
 - The first policy requires that Modern Authentication clients use the approved Outlook app and multifactor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.
 
-- The second policy requires that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in the Microsoft Entra portal or use the Microsoft Intune admin center, which presents the Conditional Access UI from Microsoft Entra. Because we're already in the admin center, we can create the policy here.
+- The second policy requires that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in the Microsoft Entra admin center or use the Microsoft Intune admin center, which presents the Conditional Access UI from Microsoft Entra. Because we're already in the admin center, we can create the policy here.
 
 When you configure Conditional Access policies in the Microsoft Intune admin center, you're really configuring those policies in the Conditional Access blades from the Azure portal. Therefore, the user interface is a bit different than the interface you use for other policies for Intune.
 

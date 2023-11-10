@@ -51,9 +51,9 @@ Whether you're performing user-driven or self-deploying device deployments, the 
 
 1. A network connection is established. The connection can be a wireless (Wi-fi) or wired (Ethernet) connection.
 2. The Windows Autopilot profile is downloaded. When you use a wired connection, or manually establish a wireless connection, the profile downloads from the Autopilot deployment service as soon as the network connection is in place.
-3. User authentication occurs. When performing a user-driven deployment, the user will enter their Azure Active Directory credentials, which will be validated.
-4. Azure Active Directory join occurs. For user-driven deployments, the device will be joined to Azure AD using the specified user credentials. For self-deploying scenarios, the device will be joined without specifying any user credentials.
-5. Automatic MDM enrollment occurs. As part of the Azure AD join process, the device will enroll in the MDM service configured in Azure AD (for example, Microsoft Intune).
+3. User authentication occurs. When performing a user-driven deployment, the user will enter their Microsoft Entra credentials, which will be validated.
+4. Microsoft Entra join occurs. For user-driven deployments, the device will be joined to Microsoft Entra ID using the specified user credentials. For self-deploying scenarios, the device will be joined without specifying any user credentials.
+5. Automatic MDM enrollment occurs. As part of the Microsoft Entra join process, the device will enroll in the MDM service configured in Microsoft Entra ID (for example, Microsoft Intune).
 6. Settings are applied. If the [enrollment status page](enrollment-status.md) is configured, most settings will be applied while the enrollment status page is displayed. If not configured or available, settings will be applied after the user is signed in.
 
 ## Profile download
@@ -87,10 +87,10 @@ When an Internet-connected Windows device boots up, it will attempt to connect t
 
 For troubleshooting, key activities to perform are:
 
-- Review configuration: Has Azure Active Directory and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
+- Review configuration: Has Microsoft Entra ID and Microsoft Intune (or an equivalent MDM service) been configured as specified in [Windows Autopilot configuration requirements](configuration-requirements.md)?
 - Check network connectivity: Can the device access the services described in [Windows Autopilot networking requirements](networking-requirements.md)?
-- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Azure AD credentials page customized with organization-specific details as expected?
-- Azure AD join issues: Is the device able to [join Azure Active Directory](troubleshoot-aad-join.md)?
+- Autopilot out-of-box experience (OOBE) behavior: Are the [expected OOBE](troubleshoot-oobe.md) screens displayed? Is the Microsoft Entra credentials page customized with organization-specific details as expected?
+- Microsoft Entra join issues: Is the device able to [join Microsoft Entra ID](troubleshoot-aad-join.md)?
 - MDM enrollment issues: IS the device able to [enroll in Microsoft Intune](troubleshoot-device-enrollment.md) (or an equivalent MDM service)?
 - Review logs that are automatically collected upon Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics). <!--1895390-->
 
@@ -100,7 +100,7 @@ See the following topics for help with troubleshooting specific issues:
 
 - [Troubleshoot device enrollment](troubleshoot-device-enrollment.md)
 - [Troubleshoot OOBE issues](troubleshoot-oobe.md)
-- [Troubleshoot AAD join issues](troubleshoot-aad-join.md)
+- [Troubleshoot Microsoft Entra join issues](troubleshoot-aad-join.md)
 - [Policy conflicts](policy-conflicts.md)
 - [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
 - [Known issues](known-issues.md)

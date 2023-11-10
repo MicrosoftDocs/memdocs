@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/01/2023
+ms.date: 10/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano
+ms.reviewer: mikedano, beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -50,6 +50,8 @@ This feature applies to:
 - **macOS**
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
+
+  Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../protect/software-updates-declarative-ios-macos.md), passcode restrictions, and more.
 
 - **Windows 10/11**
 
@@ -94,7 +96,7 @@ For information on some features you can configure using the settings catalog, g
     > [!TIP]
     >
     > - On macOS, the categories are temporarily removed. To find a specific setting, use the **Microsoft Edge - All** category, or search for the setting name. For a list of the setting names, go to [Microsoft Edge - Policies](/deployedge/microsoft-edge-policies).
-    > 
+    >
     > - Use the **Learn more** link in the tooltip to see if a setting is obsolete, and to see the supported versions.
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
@@ -109,13 +111,13 @@ For information on some features you can configure using the settings catalog, g
 
     - Intune doesn't change or update this setting. The minus is the same as **Not configured**. When set to **Not configured**, the setting is no longer managed.
     - The setting is removed from the policy. The next time you open your policy, the setting isn't shown. You can add it again.
-    - The next time devices check in, the setting is no longer locked. It can be changed by another policy or by the device user.
+    - The next time devices check in, the setting is no longer locked. Another policy or device user can change the policy.
 
     > [!TIP]
-    > 
+    >
     > - In the Windows setting tooltips, **Learn more** links to the CSP.
     > - When a setting allows multiple values, it's recommended to add each value separately.
-    > 
+    >
     >   For example, you can enter multiple values in the **Bluetooth** > **Services Allowed List** setting. Enter each value on a separate line:
     >   :::image type="content" source="./media/settings-catalog/setting-with-multiple-values.png" alt-text="Screenshot that shows a setting with multiple values on a separate line in the Settings Catalog in Microsoft Intune and the Intune admin center":::
     >
@@ -162,10 +164,30 @@ There are thousands of settings available in the settings catalog. To make it ea
 Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
 1. Go to **Devices** > **Configuration profiles**.
-2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (**…**).
+2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (`…`).
 3. Select **Duplicate**.  
 4. Enter a new name and description for the policy.
 5. **Save** your changes.
+
+## Import and export a profile
+
+This feature applies to:
+
+- Windows 10 and later
+
+When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
+
+1. Go to **Devices** > **Configuration profiles**.
+
+2. To export an existing policy, select the profile > select the ellipsis context menu (`…`) > **Export JSON**:
+
+    :::image type="content" source="./media/settings-catalog/export-settings-catalog-policy.png" alt-text="Screenshot that shows how to export a settings catalog policy as JSON in Microsoft Intune and Intune admin center.":::
+
+3. To import a previously exported settings catalog policy, select **Create** > **Import policy**:
+
+    :::image type="content" source="./media/settings-catalog/import-settings-catalog-policy.png" alt-text="Screenshot that shows how to import an existing settings catalog policy in Microsoft Intune and Intune admin center.":::
+
+    Select the JSON file you exported and name your new policy. **Save** your changes.
 
 ## Reporting and conflicts
 
@@ -191,7 +213,7 @@ You create the policy, and assign it to your groups. In the Intune admin center,
     - Select the number of devices in compliance, conflict, or error. And, see a list of users or devices in that state.
     - Search, sort, filter, export, and go to the next and previous pages.
 
-5. In the admin center, select **Devices** > **Monitor** > **Assignment failures**. If your Settings Catalog policy failed to deploy because of an error or conflict, it will show in this list. You can also **Export** to a `.csv` file.
+5. In the admin center, select **Devices** > **Monitor** > **Assignment failures**. If your Settings Catalog policy failed to deploy because of an error or conflict, it shows in this list. You can also **Export** to a `.csv` file.
 
 6. Select the policy to see the devices. Then, select a specific device to see the setting that failed, and a possible error code.
 

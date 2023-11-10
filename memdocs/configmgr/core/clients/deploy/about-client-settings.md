@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 10/12/2023
+ms.date: 10/31/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -877,6 +877,13 @@ Set this option to **Yes** to allow clients to use delta content files. This set
 - When this option is set, delta download is used for all Windows update installation files, not just express installation files.
 
   When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** client setting is enabled. <!--6598587-->
+
+> [!NOTE]
+>For Operating System that can support delta download (Win 10 Version 10.0.16299 or up), delta download endpoint will always get turned on regardless of the Client Agent Settings, and the port number will be honored even if Delta downloads not enabled.
+> 
+>If Delta Download disabled, only UUP update will do delta download, all other updates, regardless of if express or not, will all do full file download.
+> 
+>If Delta Download enabled, all updates will go with delta download code path regardless of if express or not, unless the only DP available is cloud DP.
 
 ### Port that clients use to receive requests for delta content
 
