@@ -36,7 +36,7 @@ ms.collection:
 # Set up the on-premises Intune Exchange connector
 
 > [!IMPORTANT]
-> We are ending support for the on-premises Intune Exchange connector on January 15, 2024. After this date, the Exchange connector will no longer sync with Exchange. If you use the Exchange connector, we recommend taking one of the following actions before January 15, 2024:  
+> Support for the on-premises Intune Exchange connector is ending on January 15, 2024. After this date, the Exchange connector will no longer sync with Exchange. If you use the Exchange connector, we recommend taking one of the following actions before January 15, 2024:  
    >* [Migrate your Exchange mailboxes to Exchange online](/exchange/hybrid-deployment/move-mailboxes)
    >* [Set up hybrid modern authentication](/microsoft-365/enterprise/hybrid-modern-auth-overview)  
 
