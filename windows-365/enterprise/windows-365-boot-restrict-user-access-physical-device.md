@@ -36,7 +36,7 @@ Windows 365 Boot physical devices are intended to let users interact with their 
 
 Windows 365 Boot doesn't automatically set these policies to fully restrict end users from accessing certain resources on the physical device. Admins should review the following CSPs and decide which ones to implement on the physical device to meet your organization's security requirements.
 
-A new CSP policy in [public preview](..\public-preview.md) is available. You can use this policy to further restrict devices automatically. For more information, see [TBS](whats-new.md).
+A new CSP policy in [(..\public-preview.md) is available. You can use this policy to further restrict devices automatically. For more information, see [TBS](whats-new.md).
 
 ## Prevent access to physical device's Task Manager
 
