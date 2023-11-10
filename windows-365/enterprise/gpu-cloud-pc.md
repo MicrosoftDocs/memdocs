@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Windows 365 size recommendations
+title: GPU Cloud PCs in Windows 365
 titleSuffix:
-description: Learn about the different Cloud PC sizes that are available with different SKUs in Windows 365.
+description: Learn about GPU-enabled Cloud CPs in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 11/15/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: chbrinkh
+ms.reviewer: sefriend
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# GPU Cloud PCs in Windows 365
+# GPU Cloud PCs in Windows 365 (preview)
 
 Graphic Processing Unit (GPU)-enabled Cloud PCs are suitable for graphics intense workloads that need to be performance optimized. Such workloads include graphic design, image and video rendering, 3D modeling, gaming, data processing and visualization applications that require a GPU to perform. GPU-enabled Cloud PCs require fewer vCPUs for optimized performance because they can offload rendering to the GPU.
 
