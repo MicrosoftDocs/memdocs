@@ -92,7 +92,7 @@ On the **Program** page, configure the app installation and removal commands for
 
     For example, if your app's file name is **MyApp123**, add the following:
 
-    `msiexec /p "MyApp123.msp"`
+    `msiexec /p "MyApp123.msi"`
     
     If the application is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) that the package supports. For example:
 
