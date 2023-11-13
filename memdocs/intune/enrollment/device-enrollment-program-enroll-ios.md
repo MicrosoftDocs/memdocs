@@ -87,7 +87,7 @@ Corporate-owned devices running iOS/iPadOS 11+ and enrolled via automated device
 
 ### Enrolling devices in shared device mode   
 
-You can set up automated device enrollment for devices in [shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). *Shared device mode* is a feature of Microsoft Entra that enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in shared device mode, see [Automated device enrollment for shared device mode](automated-device-enrollment-shared-device-mode.md).  
+You can set up automated device enrollment for devices in [shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). *Shared device mode* is a feature of Microsoft Entra ID that enables frontline workers to share a single device throughout the day, signing in and out as needed. For more information about how to enable enrollment for devices in Microsoft Entra shared device mode, see [Automated device enrollment for shared device mode](automated-device-enrollment-shared-device-mode.md).  
 
 ### Deploying the Company Portal app  
 
