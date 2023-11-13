@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/16/2023
+ms.date: 10/20/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Get Windows 365 audit logs by using PowerShell
+# Get Windows 365 audit logs
 
 Audit logs for Windows 365 include a record of activities that generate a change in a Cloud PC. Create, update (edit), delete, assign, and remote actions all create audit events that administrators can review for most Cloud PC actions that go through Graph. By default, auditing is enabled for all customers. It can't be disabled.
 
@@ -41,6 +41,18 @@ Users with the following permissions can review audit logs:
 - Global Administrator
 - Intune Service Administrator
 - Administrators assigned to an Intune role with **Audit data - Read** permissions
+
+## Send Windows 365 audit logs to diagnostic settings in Azure Monitor
+
+Azure monitor's diagnostic settings let you export platform logs and metrics to the destination of your choice. You can create up to five different diagnostic settings to send different logs and metrics to independent destinations. For more information, see [Diagnostic settings in Azure Monitor](/azure/azure-monitor/essentials/diagnostic-settings).
+
+### To create a diagnostic setting for sending logs
+
+1. Make sure you have an Azure account.
+2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Diagnostic settings** (under **Azure monitor**)> **Add Diagnostic settings**.
+3. Under **Logs**, select **Windows365AuditLogs**.
+4. Under **Destination details**, select the destination and provide details.
+5. Select **Save**.
 
 ## Use Graph API and PowerShell to retrieve audit events
 

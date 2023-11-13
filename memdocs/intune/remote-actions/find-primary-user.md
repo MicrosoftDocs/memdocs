@@ -42,7 +42,7 @@ An Intune device can have zero or one primary user assigned to it. When there's 
 
 ## Change a device's primary user
 
-For Windows 10 devices that are Microsoft Entra Joined or Hybrid Microsoft Entra Joined, the primary user of a device can be updated.
+For Windows 10 devices that are Microsoft Entra joined or Microsoft Entra hybrid joined, the primary user of a device can be updated.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a Windows device > **Properties** > **Change primary user**.
@@ -52,7 +52,7 @@ After the primary user is updated, it will also be updated in Intune and Microso
 
 >[!NOTE]
 >- Supported on Windows devices only. Enrollment is required to assign a new primary user on iOS and Android devices. 
->- Supported on Microsoft Entra Joined and Hybrid Microsoft Entra Joined devices only. Not supported on devices that are Microsoft Entra ID Registered only.
+>- Supported on Microsoft Entra joined and Microsoft Entra hybrid joined devices only. Not supported on devices that are Microsoft Entra registered only.
 >- To be assigned as the Primary user, the user must be licensed for Intune.
 >- Updates to the primary user across Intune and Microsoft Entra ID can take up to 10 minutes to be reflected.
 >- Changing the primary user of the device does not make any changes to local group membership such as adding or removing users from the "Administrators" local group.
@@ -99,9 +99,9 @@ Intune automatically adds primary user to devices during or soon after enrollmen
 | Android | Android Corporate-Owned, Dedicated devices | None | Not applicable |
 
 ## Primary user and Microsoft Entra device owner
-In some cases, the Intune primary user may be different from the Microsoft Entra Device's **Owner** property (viewable under **Devices** > **Microsoft Entra ID Devices**). The Microsoft Entra ID Device owner is added during a device's registration into Microsoft Entra ID.
+In some cases, the Intune primary user may be different from the Microsoft Entra Device's **Owner** property (viewable under **Devices** > **Microsoft Entra Devices**). The Microsoft Entra Device owner is added during a device's registration into Microsoft Entra ID.
 
-For newly-enrolled Microsoft Entra ID devices, the Microsoft Entra ID **Owner** property is automatically set at the same time that the Intune primary user is set.
+For newly-enrolled Microsoft Entra devices, the Microsoft Entra ID **Owner** property is automatically set at the same time that the Intune primary user is set.
 
 ## Next steps
 [Manage your Intune devices.](device-management.md)

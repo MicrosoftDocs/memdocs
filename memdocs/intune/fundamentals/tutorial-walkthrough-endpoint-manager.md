@@ -99,7 +99,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device Compliance**.
 
     Compliance requirements are essentially rules, such as requiring a device PIN, or requiring device encryption. Device compliance policies define the rules and settings that a device must follow to be considered compliant. To use device compliance, you must have:
-    - An Intune and an Azure Active Directory (Azure AD) Premium subscription
+    - An Intune and a Microsoft Entra ID P1 or P2 subscription
     - Devices running a supported platform
     - Devices must be enrolled in Intune
     - Devices that are enrolled to either one user or no primary user.
@@ -173,7 +173,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     You can add users directly to Intune or synchronize users from your on-premises Active Directory. Once added, users can enroll devices and access company resources. You can also give users additional permissions to access Intune. For more information, see [Add users and grant administrative permission to Intune](users-add.md).
 
-11. From the navigation pane, select **Groups** to display details about the Azure Active Directory (Azure AD) groups included in Intune. As an Intune admin, you use groups to manage devices and users.
+11. From the navigation pane, select **Groups** to display details about the Microsoft Entra groups included in Intune. As an Intune admin, you use groups to manage devices and users.
 
     ![Screenshot of the Microsoft Intune admin center - Groups](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-11.png)
 
@@ -213,7 +213,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     ![Screenshot of the Microsoft Intune admin center - Help and support](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png)
 
-    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
+    To create a support ticket, your account must be assigned as an administrator role in Microsoft Entra ID. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
 
     For more information, see [How to get support in Microsoft Intune](../../get-support.md).
 

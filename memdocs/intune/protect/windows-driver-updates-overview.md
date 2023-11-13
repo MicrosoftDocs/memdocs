@@ -66,7 +66,7 @@ To use Windows Driver Update management, your organization must have the followi
 
 - **Intune**: Your tenant requires the *Microsoft Intune Plan 1* subscription.
 
-- **Azure Active Directory (Azure AD)**: *Azure AD Free* (or greater) subscription.
+- **Microsoft Entra ID**: *Microsoft Entra ID Free* (or greater) subscription.
 
 ### Device & Edition requirements
 
@@ -100,7 +100,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 - Run a version of Windows 10/11 that remains in support.
 
-- Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
+- Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
 
 - Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
 
@@ -157,7 +157,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
   
 **Windows Driver Update Management architecture**:
 
-1. Microsoft Intune provides the Azure Active Directory IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
+1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
 2. WUfB-DS configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
 3. Devices send data to Microsoft so that Windows Update can identify the applicable driver updates for a device during its regular Windows Update scans for updates.  Any approved updates install on the device.
 4. WUfB-DS reports Windows diagnostic data back to Intune for reports.

@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 11/10/2023
 
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -36,11 +36,9 @@ ms.collection:
 # Set up the on-premises Intune Exchange connector
 
 > [!IMPORTANT]
-> The information in this article applies to customers who are supported to use an Exchange Connector.
->
-> Beginning in July of 2020, support for the Exchange connector is deprecated, and replaced by Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).  If you have an Exchange Connector set up in your environment, your Intune tenant remains supported for its use, and you’ll continue to have access to UI that supports its configuration. You can continue to use the connector or configure HMA and then uninstall your connector.
->
->Use of HMA does not require Intune to setup and use the Exchange Connector. With this change, the UI to configure and manage the Exchange Connector for Intune has been removed from the Microsoft Intune admin center, unless you already use an Exchange connector with your subscription.
+> Support for the on-premises Intune Exchange connector is ending on January 15, 2024. After this date, the Exchange connector will no longer sync with Intune. If you use the Exchange connector, we recommend taking one of the following actions before January 15, 2024:  
+   >* [Migrate your Exchange mailboxes to Exchange online](/exchange/hybrid-deployment/move-mailboxes)
+   >* [Set up hybrid modern authentication](/microsoft-365/enterprise/hybrid-modern-auth-overview)  
 
 To help protect access to Exchange, Intune relies on an on-premises component that's known as the Microsoft Intune Exchange connector. This connector is also called the *Exchange ActiveSync on-premises connector* in some locations of the Intune admin center.
 
