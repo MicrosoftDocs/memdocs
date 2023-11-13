@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 11/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -35,9 +35,6 @@ ms.collection:
 # Set up enrollment for devices in shared device mode  
 
 *Applies to iOS/iPadOS*  
-
-> [!NOTE]
-> This feature appears as **Azure AD shared mode** in the Microsoft Intune admin center. 
 
 Set up automated device enrollment for devices in [shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). *Shared device mode* is a feature of Microsoft Entra ID that enables frontline workers to securely share a single device throughout the day, signing in and out as needed. This experience utilizes the [Microsoft Enterprise SSO plug-in](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md) to limit the number of times employees have to sign in during a session.      
 
@@ -96,7 +93,7 @@ Configure a single-sign on (SSO) app extension policy for shared device mode. Cr
 * **Profile type**: Templates
 * **Template name**: Device features
 * Expand **Single sign-on app extension**, and then configure:    
-    * **SSO app extension type**: Azure AD
+    * **SSO app extension type**: Microsoft Entra ID
     * **Enable shared device mode**: Yes  
     * **Key**: device_registration
     * **Type**: String
