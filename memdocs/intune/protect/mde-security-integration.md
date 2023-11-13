@@ -46,6 +46,13 @@ When you manage devices through security settings management:
 
 - When a device receives a policy, the Defender for Endpoint components on the device enforce the policy and report on the device's status. The device's status is available in the Microsoft Intune admin center and the Microsoft 365 Defender portal.
 
+Applies to:
+
+- Windows 10 and Windows 11
+- Windows server (2012 R2 and up)
+- Linux
+- macOS
+
 This scenario extends the Microsoft Intune Endpoint Security surface to devices that aren't capable of enrolling in Intune. When a device is managed by Intune (enrolled to Intune) the device doesn't process policies for Defender for Endpoint security settings management. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview-2.png" alt-text="Conceptual presentation of the Microsoft Defender for Endpoint-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview-2.png":::
 
