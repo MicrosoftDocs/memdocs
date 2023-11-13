@@ -125,8 +125,6 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 - [New Microsoft Intune Devices experience - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-devices-experience/ba-p/3777342)  
 - [Try new Devices experience - Microsoft Learn](microsoft-intune-admin-center-devices.md)
 
-
-
 ### Device security
 
 #### Additional settings for the Linux Antivirus policy template<!-- 24191424 -->  
@@ -143,7 +141,7 @@ We’ve expanded support for Linux by adding the following settings to the *Micr
 - nonexecmountpolicy
 - unmonitoredfilesystems
 
-The Microsoft Defender Antivirus template for Linux is supported for devices [managed by Intune](../protect/endpoint-security-antivirus-policy.md), as well as those managed only by Defender through the [Defender for Endpoint security settings management]( protect/mde-security-integration?pivots=mdssc-preview#linux) scenario.
+The Microsoft Defender Antivirus template for Linux is supported for devices [managed by Intune](../protect/endpoint-security-antivirus-policy.md), as well as those managed only by Defender through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
 #### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 25021846   -->  
 We've released a new version of the Intune security baseline for **Microsoft 365 Apps for Enterprise**, version [**2306**](../protect/security-baselines.md#available-security-baselines).
