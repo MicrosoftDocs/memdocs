@@ -75,8 +75,8 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### New grace period status added in apps for Android, Android AOSP <!-- 13498172 13498291  -->  
 The Intune Company Portal app for Android and Microsoft Intune app for Android AOSP now show a grace period status for devices that don't meet compliance requirements but are still within their given grace period.  Users can see the date by which devices must be compliant, as well as the instructions for how to become compliant. If users don't update their device by the given date, the device is marked as noncompliant. For more information, see the following docs:
 
-- [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance#available-actions-for-noncompliance}
-- [Check compliance in Intune app for AOSP](../user-help/check-compliance-aosp.md) 
+- [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
+- [Check compliance in Intune app for AOSP](../user-help/check-compliance-aosp.md)
 - [Check compliance in Company Portal for Android](../user-help/check-compliance-on-your-device-android.md)
 
 ### Device configuration
