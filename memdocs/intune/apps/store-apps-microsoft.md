@@ -222,18 +222,19 @@ For more information on the Microsoft Store integration with Intune due to the M
   - **Enabled**: When enabled, this setting:
 
     - Blocks end users from installing arbitrary apps from the Microsoft Store app.
-    - Blocks end users from installing arbitrary apps using `winget.exe`.
     - Blocks end users from using the Microsoft Store to manually install app updates.
 
   - **Disabled**: When disabled, this setting:
 
     - Allows end users to install arbitrary apps from the Microsoft Store app.
-    - Allows end users to install arbitrary apps using `winget.exe`.
     - Allows end users to use the Microsoft Store to manually install app updates.
+
+  > [!NOTE]
+  > The Windows Package Manager command-line tool `winget.exe` is not affected by this policy.
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
+  | [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>[ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | [Settings Catalog](../configuration/settings-catalog.md) </br>[Administrative templates](../configuration/administrative-templates-windows.md) &#124; Windows Components > Store > Turn off the Store Application | Administrative Templates > Windows Components > Store |
 
 ### What you need to know
 
