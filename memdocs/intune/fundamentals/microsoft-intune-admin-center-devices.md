@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/02/2023
+ms.date: 11/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: 
@@ -59,13 +59,15 @@ You can switch back and forth between the current UI and public preview without 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**.
 3. On the **Overview** page, select the notification banner that says **Preview upcoming changes to Devices and provide feedback**.  
-4. The **Devices preview** page opens. Select **Try it now** to opt in.
+4. The **Devices preview** page opens. Select **Try it now** to opt in.  
+
+:::image type="content" source="./media/ublic-preview-toggle-intune-2311.png" alt-text="Screenshot highlighting the public preview opt-in banner and Try it now button in the Microsoft Intune admin center." lightbox="./media/public-preview-toggle-intune.png":::  
 
 You remain in public preview until you switch it back, even if you close the browser. To exit public preview and return to the current version of the admin center:  
 
 1. Go to **Overview**.
 2. Flip the switch next to **Use Devices preview**. Wait while Intune refreshes the UI.  
-3. Optionally, when prompted, provide feedback about your experience with the Devices public preview. Select **x** to return to the admin center without giving feedback.
+3. Optionally, when prompted, provide feedback about your experience with the Devices public preview. Select **x** to return to the admin center without giving feedback.  
 
 ## Overview
 
