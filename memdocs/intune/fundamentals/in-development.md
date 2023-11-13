@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2023
+ms.date: 11/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -112,31 +112,6 @@ Applies to:
 
 - macOS 13 and later
 
-### New settings available in the Apple settings catalog<!-- 25189345  -->  
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
-
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
-
-**Managed Settings**:
-
-- Data roaming
-- Personal hotspot
-- Voice roaming (deprecated): This setting was deprecated in iOS 16.0 and replaced by Data roaming.
-
-Applies to:
-
-- iOS/iPadOS
-
-**Managed Settings**:
-
-- Diagnostic submission
-
-Applies to:
-
-- Shared iPad
-
-For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
 ### Use assignment filters on Endpoint Privilege Management (EPM) policies<!-- 25230705   -->  
 You can use assignment filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy, like targeting devices with a specific OS version or a specific manufacturer.
 
@@ -177,30 +152,7 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 <!-- *********************************************** -->
 
-## Device security
-
-
-### Additional settings for the Linux Antivirus policy template<!-- 24191424  -->  
-We’re expanding support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
-
-- cloudblocklevel
-- scanarhives
-- scanafterdefinitionupdate
-- maximumondemandscanthreads
-- behaviormonitoring
-- enablefilehashcomputation
-- networkprotection
-- enforcementlevel
-- nonexecmountpolicy
-- unmonitoredfilesystems
-
-The Microsoft Defender Antivirus template for Linux is supported for devices managed by Intune, as well as those managed only by Defender through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview#linux) scenario when you use the opt-in public preview.
-
-### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 25021846  -->  
-We're working on an update to the Intune security baseline for Microsoft 365 Apps for Enterprise. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Office apps.
-
-For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
-
+<!-- ## Device security -->
 
 <!-- *********************************************** -->
 

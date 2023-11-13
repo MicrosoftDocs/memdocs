@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2023
+ms.date: 11/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,73 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of November 13, 2023 (Service release 2311)
+
+### Device configuration
+
+#### New settings available in the Apple settings catalog<!-- 25189345  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
+
+**Managed Settings**:
+
+- Data roaming
+- Personal hotspot
+- Voice roaming (deprecated): This setting is deprecated in iOS 16.0. Data roaming is the replacement setting.
+
+Applies to:
+
+- iOS/iPadOS
+
+**Managed Settings**:
+
+- Diagnostic submission
+
+Applies to:
+
+- Shared iPad
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Device security
+
+#### Additional settings for the Linux Antivirus policy template<!-- 24191424 -->  
+We’ve expanded support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
+
+- cloudblocklevel
+- scanarhives
+- scanafterdefinitionupdate
+- maximumondemandscanthreads
+- behaviormonitoring
+- enablefilehashcomputation
+- networkprotection
+- enforcementlevel
+- nonexecmountpolicy
+- unmonitoredfilesystems
+
+The Microsoft Defender Antivirus template for Linux is supported for devices [managed by Intune](../protect/endpoint-security-antivirus-policy.md), as well as those managed only by Defender through the [Defender for Endpoint security settings management]( protect/mde-security-integration?pivots=mdssc-preview#linux) scenario.
+
+#### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 25021846   -->  
+We've released a new version of the Intune security baseline for **Microsoft 365 Apps for Enterprise**, version [**2306**](../protect/security-baselines.md#available-security-baselines).
+
+The Microsoft 365 Office Apps baseline can help you rapidly deploy configurations to your Office Apps that meet the security recommendations of the Office and security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations. You can modify the default baseline to meet the requirements of your organization.
+
+We’ve also updated our [reference article](../protect/security-baseline-v2-office-settings.md?pivots=v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 25417889, 25161990, 25174019  -->  
+The following protected apps are now available for Microsoft Intune:
+
+- Hey DAN for Intune by Civicom, Inc.
+- Microsoft Azure by Microsoft Corporation (iOS)
+- KeePassium for Intune by KeePassium Labs (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+
 
 ## Week of November 6, 2023
 
