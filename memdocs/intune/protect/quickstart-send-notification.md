@@ -40,9 +40,9 @@ In this topic, you'll use Microsoft Intune to send an email notification to the 
 > [!NOTE]
 > The remote action to send an email notification is not supported on devices that are managed by a [device compliance partner](../protect/device-compliance-partners.md).
 > 
-> For localization, admin must configure the target language from Intune admin center when creating the notification message template. The notification message language sent to the user will be based on the preferred language configured for the user in AAD. 
+> For localization, admin must configure the target language from Intune admin center when creating the notification message template. The notification message language sent to the user will be based on the preferred language configured for the user in Microsoft Entra ID. 
 
-By default, when Intune detects a device that isn't compliant, Intune immediately marks the device as noncompliant. Azure Active Directory (Azure AD) [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) then blocks the device. When a device isn't compliant, Intune allows you to add actions for noncompliance, which gives you flexibility to decide what to do. For example, you can give users a grace period to be compliant before blocking noncompliant devices.
+By default, when Intune detects a device that isn't compliant, Intune immediately marks the device as noncompliant. Microsoft Entra [Conditional Access](/azure/active-directory/active-directory-conditional-access-azure-portal) then blocks the device. When a device isn't compliant, Intune allows you to add actions for noncompliance, which gives you flexibility to decide what to do. For example, you can give users a grace period to be compliant before blocking noncompliant devices.
 
 One action to take when a device doesn't meet compliance is to send email to the devices user. You can also customize an email notification before sending it. Specifically, you can customize the recipients, subject, and message body, including company logo, and contact information. Intune also includes details about the noncompliant device in the email notification.
 
@@ -50,7 +50,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Prerequisites
 
-When using device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. If you've completed the [Create a device compliance policy](quickstart-set-password-length-android.md) evaluation step, you're using Azure Active Directory. For more information about Azure AD, see [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) and [common ways to use Conditional Access with Intune](../protect/conditional-access-intune-common-ways-use.md).
+When using device compliance policies to block devices from corporate resources, Microsoft Entra Conditional Access must be set up. If you've completed the [Create a device compliance policy](quickstart-set-password-length-android.md) evaluation step, you're using Microsoft Entra ID. For more information about Microsoft Entra ID, see [Conditional Access in Microsoft Entra ID](/azure/active-directory/active-directory-conditional-access-azure-portal) and [common ways to use Conditional Access with Intune](../protect/conditional-access-intune-common-ways-use.md).
 
 
 ## Sign in to Intune

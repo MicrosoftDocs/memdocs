@@ -50,11 +50,11 @@ For more information about how to integrate BlackBerry UES with Microsoft Intune
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 
-- BlackBerry UES account with access to UES management console 
+- BlackBerry UES account with access to UES management console
 
 ## How do Intune and the BlackBerry MTD connector help protect your company resources?
 

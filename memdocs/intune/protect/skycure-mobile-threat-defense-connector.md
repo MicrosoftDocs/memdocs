@@ -56,7 +56,7 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 ## Pre-requisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
 - Microsoft Intune Plan 1 subscription
 

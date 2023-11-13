@@ -20,7 +20,7 @@ ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -51,7 +51,7 @@ Some VPNs allow username and password authentication with per-app VPN. Meaning, 
 
 ## Per-app VPN with Microsoft Tunnel or Zscaler
 
-Microsoft Tunnel and Zscaler Private Access (ZPA) integrate with Azure Active Directory (Azure AD) for authentication. When using Tunnel or ZPA, you don't need the [trusted certificate](#create-a-trusted-certificate-profile) or [SCEP or PKCS certificate](#create-a-scep-or-pkcs-certificate-profile) profiles (described in this article).
+Microsoft Tunnel and Zscaler Private Access (ZPA) integrate with Microsoft Entra ID for authentication. When using Tunnel or ZPA, you don't need the [trusted certificate](#create-a-trusted-certificate-profile) or [SCEP or PKCS certificate](#create-a-scep-or-pkcs-certificate-profile) profiles (described in this article).
 
 If you have a per-app VPN profile set up for Zscaler, then opening one of the associated apps doesn't automatically connect to ZPA. Instead, the user needs to sign into the Zscaler app. Then, remote access is limited to the associated apps.
 
@@ -73,7 +73,7 @@ To prove its identity, the VPN server presents the certificate that must be acce
 
 ## Create a group for your VPN users
 
-Create or choose an existing group in Azure Active Directory (Azure AD). This group must include the users or devices that will use per-app VPN. For the steps to create a new group, go to [Add groups to organize users and devices](../fundamentals/groups-add.md).
+Create or choose an existing group in Microsoft Entra ID. This group must include the users or devices that will use per-app VPN. For the steps to create a new group, go to [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
 ## Create a trusted certificate profile
 
@@ -149,7 +149,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
 ## Associate an app with the VPN profile
 
-After adding your VPN profile, associate the app and Azure AD group to the profile.
+After adding your VPN profile, associate the app and Microsoft Entra group to the profile.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps**.
 2. Select an app from the list > **Properties** > **Assignments** > **Edit**.

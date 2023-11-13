@@ -654,7 +654,7 @@ Consider closing your app manually after completing your custom wipe handler ste
 Plan to dedicate significant time for validating your app's integration of multi-identity. Before you start testing:
 
 - Create and assign app protection policy to an account. This will be your test managed account.
-- Create, but don't assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Azure Active Directory accounts, you can use an existing non-AAD account as the unmanaged test account.
+- Create, but don't assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Microsoft Entra accounts, you can use an existing non-AAD account as the unmanaged test account.
 - Refamiliarize yourself with how policy is enforced inside your app. Multi-identity testing requires you to easily distinguish when your app is and isn't operating with policy enforced. The app protection policy setting to block screenshots is effective at quickly testing policy enforcement.
 - Consider the entire set of UI your app offers. Enumerate the screens where account data is displayed. Does your app only ever present a single account's data at once, or can it present data belonging to multiple accounts at the same time?
 - Consider the entire set of files your app creates. Enumerate which of these files contain data belonging to an account, as opposed to system-level data.

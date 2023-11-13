@@ -46,7 +46,7 @@ You can configure Conditional Access policies based on Sophos Mobile risk assess
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
 - Sophos Mobile Threat Defense subscription
 

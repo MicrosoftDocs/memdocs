@@ -47,7 +47,7 @@ To create a self-deploying mode Autopilot profile, follow these steps:
 
       - For **Deployment mode**, select **Self-Deploying (preview)**.
 
-      - **Join to Azure AD as** defaults to **Azure AD joined**, is greyed out, and can't be changed. Only **Azure AD joined** is available because self-deploying mode only supports Azure AD join. Self-deploying modes doesn't support hybrid Azure AD join.
+      - **Join to Microsoft Entra ID as** defaults to **Microsoft Entra joined**, is greyed out, and can't be changed. Only **Microsoft Entra joined** is available because self-deploying mode only supports Microsoft Entra join. Self-deploying modes doesn't support Microsoft Entra hybrid join.
 
       - **Microsoft Software License Terms** defaults to **Hide**, is greyed out, and can't be changed.
 

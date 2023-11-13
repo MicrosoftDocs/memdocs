@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot for pre-provisioned deployment Azure AD join - Step 4 of 9 - Create a device group
-description: How to - Windows Autopilot for pre-provisioned deployment Azure AD join - Step 4 of 9 - Create a device group.
+title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 4 of 9 - Create a device group
+description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 4 of 9 - Create a device group.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,11 +18,11 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provision Azure AD join: Create a device group
+# Pre-provision Microsoft Entra join: Create a device group
 
-Windows Autopilot for pre-provisioned deployment Azure AD join steps:
+Windows Autopilot for pre-provisioned deployment Microsoft Entra join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md)
+- Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
 - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
 > [!div class="checklist"]
 > - **Step 4: Create a device group**
@@ -32,7 +32,7 @@ Windows Autopilot for pre-provisioned deployment Azure AD join steps:
 - Step 8: [Technician flow](azure-ad-join-technician-flow.md)
 - Step 9: [User flow](azure-ad-join-user-flow.md)
 
-For an overview of the Windows Autopilot for pre-provisioned deployment Azure AD join workflow, see [Windows Autopilot for pre-provisioned deployment Azure AD join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot for pre-provisioned deployment Microsoft Entra join workflow, see [Windows Autopilot for pre-provisioned deployment Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
 
 > [!NOTE]
 >
