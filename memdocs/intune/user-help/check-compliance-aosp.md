@@ -61,5 +61,3 @@ The device settings status tells you the following information about your enroll
 * **Compliant**: Your device is allowed to access work or school resources.  
 * **Can access resources, but action required**: Your device is allowed to access work or school resources, but one or more settings don't meet your organization's requirements. Update your device settings by the date shown to keep your access.  
 * **Not compliant**: Your device isn't allowed to access work or school resources. Make the required changes to gain access.  
-
-For more help and support, contact your IT support person. Go to the **Support** tab in the Company Portal app for contact information, or access support details and device actions on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
