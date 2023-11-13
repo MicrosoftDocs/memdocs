@@ -70,6 +70,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of November 13, 2023 (Service release 2311)
 
+### App management
+
+#### New grace period status added in apps for Android, Android AOSP <!-- 13498172 13498291  -->  
+The Intune Company Portal app for Android and Microsoft Intune app for Android AOSP now show a grace period status for devices that don't meet compliance requirements but are still within their given grace period.  Users can see the date by which devices must be compliant, as well as the instructions for how to become compliant. If users don't update their device by the given date, the device is marked as noncompliant. For more information, see the following docs:
+
+- [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance#available-actions-for-noncompliance}
+- [Check compliance in Intune app for AOSP](../user-help/check-compliance-aosp) 
+- [Check compliance in Company Portal for Android](../user-help/check-compliance-on-your-device-android)
+
 ### Device configuration
 
 #### New settings available in the Apple settings catalog<!-- 25189345  -->  
@@ -97,6 +106,27 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
+### Device enrollment
+
+#### Enrollment for iOS/iPadOS devices in shared device mode now generally available<!-- 25199565   -->  
+Now generally available to configure in the Microsoft Intune admin center, set up automated device enrollment for iOS/iPadOS devices that are in shared device mode. Shared device mode is a feature of Microsoft Entra that enables your frontline workers to share a single device throughout the day, signing in and out as needed. For more information, see [Set up enrollment for devices in shared device mode](../enrollment/automated-device-enrollment-shared-device-mode.md).
+
+### Device management
+
+#### Improvements to new device experience in admin center (public preview) <!-- 24155098, 25103808, 17705028   -->  
+We've made the following changes to the new Devices experience in the Microsoft Intune admin center:
+
+- Additional entry points to platform-specific options: Access the platform pages from the **Devices** navigation menu.
+- Quick entry to monitoring reports: Select the titles of the metrics cards to go to the corresponding monitoring report.
+- Improved navigation menu: We added icons back in to provide more color and context as you navigate.
+
+Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback. For more information, see:
+
+- [New Microsoft Intune Devices experience - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/new-microsoft-intune-devices-experience/ba-p/3777342)  
+- [Try new Devices experience - Microsoft Learn](microsoft-intune-admin-center-devices.md)
+
+
+
 ### Device security
 
 #### Additional settings for the Linux Antivirus policy template<!-- 24191424 -->  
@@ -121,6 +151,31 @@ We've released a new version of the Intune security baseline for **Microsoft 365
 The Microsoft 365 Office Apps baseline can help you rapidly deploy configurations to your Office Apps that meet the security recommendations of the Office and security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations. You can modify the default baseline to meet the requirements of your organization.
 
 We’ve also updated our [reference article](../protect/security-baseline-v2-office-settings.md?pivots=v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
+
+#### Deprecation and replacement of two  settings found in the Linux and macOS endpoint security Antivirus policies<!-- 25234740  -->  
+We have deprecated two settings that are found in the *Antivirus engine* category of [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profiles of both macOS and Linux. These profiles are available as part of  Intune’s endpoint security Antivirus policies.
+
+For each platform, the two deprecated settings are replaced by a single new setting that aligns to how the device configurations are managed by Microsoft Defender for Endpoint.
+
+The following are the two deprecated settings:
+
+- *Enable real-time protection* now appears as *Enable real-time protection (deprecated)*
+- *Enable passive mode* now appears as *Enable passive mode (deprecated)*
+
+The new setting that replaces the two deprecated settings:
+
+- *Enforcement level* - By default, Enforcement level is set to *Passive* and supports options of *Real time* and *On demand*.
+
+These settings are also available from the Intune [settings catalog](../configuration/settings-catalog.md) for each platform, where the old settings are also marked as deprecated and replaced by the new setting.
+
+With this change, a device that has either of the *deprecated* settings configured will continue to apply that configuration until the device is targeted by the new setting *Enforcement level*. Once targeted by Enforcement Level, the deprecated settings no longer are applied to the device.
+
+The *deprecated* settings will be removed from the Antivirus profiles and the settings catalog in a future update to Intune.
+
+Applies to:
+
+- Linux
+- macOS
 
 ### Intune apps
 

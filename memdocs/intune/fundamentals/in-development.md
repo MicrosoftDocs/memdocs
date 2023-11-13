@@ -62,12 +62,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
-### New grace period status added in apps for Android, Android AOSP <!-- 13498172 13498291 -->  
-The Intune Company Portal app for Android and Microsoft Intune app for Android AOSP will show a grace period status for devices that don't meet compliance requirements but are still within their given grace period.  Users will be able to see the date by which devices must be compliant, as well as the instructions for how to become compliant. If users don't update their device by the given date, the device will be marked as noncompliant.  
-
-### Minimum version update for iOS Company Portal<!-- 17964541  -->  
-Users will be required to update to v5.2311.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you'll likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
-
 ### Intune APP SDK for .NET MAUI<!-- 17696301   -->  
 Using the Intune APP SDK for .NET MAUI, you'll be able to develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
 
@@ -80,7 +74,7 @@ Enterprise Application Management provides a catalog of prepackaged applications
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
-### Support for multi-SIM iOS/iPadOS device inventory<!--17016690 (replaced 16360290 for tracking) -->  
+### Support for multi-SIM iOS/iPadOS device inventory<!--17016690  -->  
 You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
 
 - **ICCID**
@@ -125,21 +119,11 @@ Applies to:
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### Enrollment for iOS/iPadOS devices in Azure AD shared device mode moving to general availability<!-- 25199565 -->  
-An Intune enrollment method that lets you enroll iOS/iPadOS devices in Azure AD shared device mode is moving out of public preview. This enrollment method is part of Apple automated device enrollment and available to configure in the Microsoft Intune admin center. Shared device mode enables your frontline workers to share a single device throughout the day, signing in and out as needed.
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
 ## Device management
-
-### Improvements to new device experience in admin center (public preview)<!-- 24155098, 25103808, 17705028 IDdraft idready -->
-The following changes are coming to the new Devices experience and will be available to try in public preview in the Microsoft Intune admin center:   
-- Additional entry points to platform-specific options: Access the platform pages from the **Devices** navigation menu.   
-- Quick entry to monitoring reports: Select the titles of the metrics cards to go to the corresponding monitoring report.  
-- Improved navigation menu: We added icons back in to provide more color and context as you navigate.  
-Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback. For more information, see [Try new Devices experience](microsoft-intune-admin-center-devices.md).  
 
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
