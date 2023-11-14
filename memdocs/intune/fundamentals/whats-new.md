@@ -102,7 +102,7 @@ Applies to:
 
 #### Use the endpoint security Firewall policy for Microsoft Defender Firewall manage firewall settings for Windows Hyper-V<!--  25767542  -->
 
-We've added new settings to the *Microsoft Defender Firewall*  profile for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Microsoft Defender Firewall**.
+We've added new settings to the *Microsoft Defender Firewall*  profile for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Microsoft Defender Firewall**.
 
 The following settings have been added to the *Firewall* category:
 
