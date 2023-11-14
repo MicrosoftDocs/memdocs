@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2022
+ms.date: 11/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -442,16 +442,17 @@ This feature applies to:
 
 ### Settings apply to: All enrollment types
 
-> [!IMPORTANT]
-> The Restricted apps setting does not prevent users from installing and launching specified applications. Devices that have restricted apps installed will populate the Devices with restricted apps report under Devices > Monitor. 
-
-> [!NOTE]
-> When configuring an Approved apps list, the Restricted apps setting will report an error if an app is installed that isn't on the Approved apps list. When configuring a Prohibited apps list, this setting will report an error if an app is installed that is on the Prohibited apps list.
+The restricted apps settings don't prevent users from installing and opening specific apps. Instead, devices with restricted apps installed populate the **Devices with restricted apps** report in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Devices** > **Monitor**).
 
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, users might have access to apps you assign, and built-in apps.
   - **Approved apps**: List the apps that users are allowed to install. Users must not install other apps. If users install apps that aren't allowed, then it's reported in Intune. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list.
+
+    If an app is installed that isn't on the approved apps list, then the restricted apps setting reports an error.
+
   - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune.
+
+    If an app is installed that's on the prohibited apps list, then the restricted apps setting reports an error.
 
 - **Apps list**: **Add** apps to your list:
   - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
