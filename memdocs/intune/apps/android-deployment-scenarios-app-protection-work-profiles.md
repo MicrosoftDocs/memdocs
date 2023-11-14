@@ -14,7 +14,7 @@ ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
 ms.technology:
-ms.reviewer: chrisbal
+ms.reviewer: esalter
 
 # optional metadata
 
