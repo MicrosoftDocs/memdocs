@@ -61,13 +61,13 @@ You can switch back and forth between the current UI and public preview without 
 3. On the **Overview** page, select the notification banner that says **Preview upcoming changes to Devices and provide feedback**.  
 4. The **Devices preview** page opens. Select **Try it now** to opt in.  
 
-:::image type="content" source="./media/ublic-preview-toggle-intune-2311.png" alt-text="Screenshot highlighting the public preview opt-in banner and Try it now button in the Microsoft Intune admin center." lightbox="./media/public-preview-toggle-intune.png":::  
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/public-preview-toggle-intune-2311.png" alt-text="Screenshot highlighting the public preview opt-in banner and Try it now button in the Microsoft Intune admin center." lightbox="./media/microsoft-intune-admin-center-devices/public-preview-toggle-intune-2311.png":::  
 
-You remain in public preview until you switch it back, even if you close the browser. To exit public preview and return to the current version of the admin center:  
+You remain in public preview until you switch it back, even if you close the browser. To exit public preview and return to the current version of the admin center, flip the switch next to **Use Devices preview** again.  
 
-1. Go to **Overview**.
-2. Flip the switch next to **Use Devices preview**. Wait while Intune refreshes the UI.  
-3. Optionally, when prompted, provide feedback about your experience with the Devices public preview. Select **x** to return to the admin center without giving feedback.  
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/device-preview-toggle.png" alt-text="Screenshot highlighting the Use Devices preview toggle in the Microsoft Intune admin center." :::
+
+Wait while Intune refreshes the UI. In the feedback form, give us feedback about your experience with the Devices public preview. Select **x** to return to the admin center without giving feedback.  
 
 ## Overview
 
