@@ -83,7 +83,7 @@ Overview options include:
 * **Additional monitoring reports**: Access reports associated with your key metrics.  
 * **Other devices**: Access other device workloads, such as configuration for the Chrome OS enterprise connector.  
 
-This page also highlights key metrics about active issues, such as enrollment failures and Windows 365 provisioning failures, happening across devices. Select a metric for more information about the issue. Select **Refresh** to refresh all data on the page.    
+This page also highlights key metrics about active issues, such as enrollment failures and Windows 365 provisioning failures, happening across devices. Select a metric for more information about the issue.     
 
 ## All devices workload
 
@@ -166,6 +166,7 @@ Within this area, you can access the following subworkloads:
 * **Policies**: Create and manage device compliance policies.
 * **Notifications**: Create and send custom notifications to device users on managed iOS/iPadOS and Android devices.  
 * **Retire noncompliant devices**: Remove all company data from a device and remove the device from Intune management.
+* **Compliance settings**: Configure the compliance service for devices.   
 * **Scripts**: Add and manage scripts used for custom compliance settings.
 
 For more information about device compliance, see [Compliance overview](../protect/device-compliance-get-started.md).  
@@ -195,8 +196,8 @@ Go to **Apple updates** to monitor and manage software update policies for Apple
 Within this area, you can access the following subworkloads:  
 
 * **Monitor**: Access key metrics and active issues associated with Apple update policies.
-* **iOS/iPadOS updates**: Create and manage policies for iOS/iPadOS updates.
-* **macOS updates**: Create and manage policies for macOS updates.
+* **iOS/iPadOS update policies**: Create and manage policies for iOS/iPadOS updates.
+* **macOS update policies**: Create and manage policies for macOS updates.
 
 For more information about software update policies for Apple devices, see:
 
