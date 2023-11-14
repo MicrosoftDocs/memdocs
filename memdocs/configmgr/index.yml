@@ -47,7 +47,7 @@ conceptualContent:
         - text: Overview of cloud management gateway (CMG)
           url: ./core/clients/manage/cmg/overview.md
           itemType: overview
-        - text: Plan for Azure AD
+        - text: Plan for Microsoft Entra ID
           url: ./core/plan-design/security/plan-for-security.md#azure-active-directory
           itemType: architecture
     - title: Co-management

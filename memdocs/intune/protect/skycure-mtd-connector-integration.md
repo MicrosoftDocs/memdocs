@@ -53,24 +53,26 @@ You can make sure your network is properly configured for integration with SEP M
 
 SEP Mobile supports two modes of integration with Intune:
 
-- **Read-only integration (Basic setup):** Only inventories devices from Microsoft Entra and populates them in the Symantec Endpoint Protection Mobile Management console.
+- **Read-only integration (Basic setup):** Only inventories devices from Microsoft Entra ID and populates them in the Symantec Endpoint Protection Mobile Management console.
 <br>
   - If the **Report the health and risk of devices to Intune**, and **Also report security incidents to Intune** boxes are not selected in the Symantec Endpoint Protection Mobile Management console, the integration is read-only and therefore will never change a device's state (compliant or noncompliant) in Intune.
 <br></br>
 - **Full integration:** Allows SEP Mobile to report devices on risk and security incident details to Intune, which creates a bi-directional communication between both cloud services.
 
-### How are the SEP Mobile apps used with Microsoft Entra and Intune?
+<a name='how-are-the-sep-mobile-apps-used-with-microsoft-entra-and-intune'></a>
 
-- **iOS app:** Allows end-users to sign in to Microsoft Entra using an iOS/iPadOS app.
+### How are the SEP Mobile apps used with Microsoft Entra ID and Intune?
 
-- **Android app:** Allows end-users to sign in to Microsoft Entra using an Android app.
+- **iOS app:** Allows end-users to sign in to Microsoft Entra ID using an iOS/iPadOS app.
+
+- **Android app:** Allows end-users to sign in to Microsoft Entra ID using an Android app.
 
 - **Management app:** This is the SEP Mobile Microsoft Entra multi-tenant app which enables service-to-service communication with Intune.
 
 ## To set up the read-only integration between Intune and SEP Mobile
 
 > [!IMPORTANT]
-> The SEP Mobile admin credentials must consist of an e-mail account that belongs to a valid user in the Microsoft Entra, otherwise the login will fail. SEP Mobile uses Microsoft Entra to authenticate its admin using single sign-on (SSO).
+> The SEP Mobile admin credentials must consist of an e-mail account that belongs to a valid user in the Microsoft Entra, otherwise the login will fail. SEP Mobile uses Microsoft Entra ID to authenticate its admin using single sign-on (SSO).
 
 1. Go to [Symantec Endpoint Protection Mobile Management Console](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection/all/getting-up-and-running-on-for-the-first-time-v45150512-d43e1033/logging-on-to-the-console-v8025272-d23e2462.html).
 
@@ -136,7 +138,7 @@ SEP Mobile syncs the devices running its Mobile Threat Defense service with the 
 
 3. Go to the **Settings** > **Integrations** > **Intune** > **EMM Integration Selection** section.
 
-4. In the **Directory ID** box, paste the Tenant ID you copied from Microsoft Entra in the previous section and save the settings.
+4. In the **Directory ID** box, paste the Tenant ID you copied from Microsoft Entra ID in the previous section and save the settings.
 
     ![Image showing Directory ID in the SEP Mobile portal](./media/skycure-mtd-connector-integration/symantec-portal-directory-ID.png)
 

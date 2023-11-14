@@ -45,13 +45,13 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Prerequisites
 You'll need a test tenant with the following subscriptions for this tutorial:
-- Azure Active Directory Premium ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft Entra ID P1 or P2 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 - Intune subscription ([free trial](../fundamentals/free-trial-sign-up.md))
 
 You will also need a [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) plan.
 
 ## Configure your Slack Enterprise Grid plan
-Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructions](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) and [connect Azure Active Directory](/azure/active-directory/saas-apps/slack-tutorial) as your Grid plan's identity provider (IDP).
+Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructions](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) and [connect Microsoft Entra ID](/azure/active-directory/saas-apps/slack-tutorial) as your Grid plan's identity provider (IDP).
 
 ## Sign in to Intune
 Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator or an Intune Service Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.

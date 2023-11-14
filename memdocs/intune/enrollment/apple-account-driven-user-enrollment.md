@@ -55,7 +55,7 @@ Before beginning setup, complete the following tasks:
 
 You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To do this, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `“https://contoso.com/.well-known/com.apple.remotemanagement”`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.    
 
-Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *YourAADTenantID* variable in the base URL with your organization's Azure AD tenant ID.   
+Create the file in JSON format, with the content type set to `application/json`.  We've provided the following JSON samples that you can copy and paste into your file. Use the one that aligns with your environment. Replace the *YourAADTenantID* variable in the base URL with your organization's Microsoft Entra tenant ID.   
 
    Microsoft Intune environments:  
    ```json
@@ -85,7 +85,7 @@ We recommend extra configurations to help improve the enrollment experience for 
 Deploy the web app version of the Intune Company Portal website so that users have quick access to device status, device actions, and compliance information. The web app appears on the home screen and functions as a link to the [Company Portal website](https://portal.manage.microsoft.com/). Without the web app, devices users can still access the Company Portal website but have to open the browser and type the address into the search field. For more information about how to add a web app, see [Add web apps to Microsoft Intune](../apps/web-app.md).  
 
 ### Enable federated authentication  
-Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Azure AD, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.  
+Apple User Enrollment requires you to create and provide managed Apple IDs to enrolling users. If you enable federated authentication, which consists of linking Apple Business Manager with Microsoft Entra ID, you don't have to create and provide unique Apple IDs to each user. Instead, a device user can sign in to their apps with the same credentials they use for their work account. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/guide/apple-business-manager/intro-to-federated-authentication-axmb19317543/1/web/1) in the Apple Business Manager User Guide.  
 
 ## Step 1: Set up just in time registration and assign Microsoft Authenticator     
 > [!IMPORTANT]

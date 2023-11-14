@@ -33,15 +33,15 @@ ms.collection:
 
 # Add groups to organize users and devices
 
-Intune uses Azure Active Directory (Azure AD) groups to manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices.
+Intune uses Microsoft Entra groups to manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices.
 
 > [!NOTE]
-> Default groups created from [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) are not security enabled. You must explicitly create security enabled Microsoft 365 groups in [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), the [Azure AD admin center](https://portal.azure.com/), or [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+> Default groups created from [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) are not security enabled. You must explicitly create security enabled Microsoft 365 groups in [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), the [Microsoft Entra admin center](https://portal.azure.com/), or [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 You can add the following types of groups:
 
 - **Assigned groups** - Manually add users or devices into a static group. 
-- **Dynamic groups** (Requires Azure AD Premium) - Automatically add users or devices to user groups or device groups based on an expression you create.
+- **Dynamic groups** (Requires Microsoft Entra ID P1 or P2) - Automatically add users or devices to user groups or device groups based on an expression you create.
 
   For example, when a user is added with the manager title, the user is automatically added to an **All managers** users group. Or, when a device has the iOS/iPadOS device OS type, the device is automatically added to an **All iOS/iPadOS devices** devices group.
 
@@ -59,7 +59,7 @@ Use the following steps to create a new group.
     - **Security**: Security groups define who can access resources, and are recommended for your groups in Intune. For example, you can create groups for users, such as **All Charlotte employees** or **Remote workers**. Or, create groups for devices, such as **All iOS/iPadOS devices** or **All Windows 10 student devices**.
 
       > [!TIP]
-      > The users and groups created can also be seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Azure Active Directory admin center, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). In your organization tenant, you can create and manage groups in all these areas.
+      > The users and groups created can also be seen in the [Microsoft 365 admin center](https://admin.microsoft.com), Microsoft Entra admin center, and [Microsoft Intune in the Azure portal](https://go.microsoft.com/fwlink/?linkid=2090973). In your organization tenant, you can create and manage groups in all these areas.
       >
       > If your primary role is device management, we recommend you use the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -82,11 +82,11 @@ Use the following steps to create a new group.
 
     For more information on these membership types, and creating dynamic expressions, see:
 
-    - [Create a basic group and add members using Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-    - [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
+    - [Create a basic group and add members using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
+    - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership)
 
     > [!NOTE]
-    > In this admin center, when you create users or groups, you might not see the **Azure Active Directory** branding. But, that's what you're using.
+    > In this admin center, when you create users or groups, you might not see the **Microsoft Entra ID** branding. But, that's what you're using.
 
 6. Choose **Create** to add the new group. Your group is shown in the list.
 
@@ -113,7 +113,7 @@ You can also use [device categories](../enrollment/device-group-mapping.md) to a
 
 When assigning policies and apps in the Intune admin center, you can choose to assign to **All users** or **All devices** groups, which are automatically created by Intune. 
 
-The **All devices** group targets all devices that are enrolled into management. The **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you don't create them or view them in Azure Active Directory. They're convenient to use because they're already in your tenant, and they're a faster targeting unit than Azure AD groups.
+The **All devices** group targets all devices that are enrolled into management. The **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you don't create them or view them in Microsoft Entra ID. They're convenient to use because they're already in your tenant, and they're a faster targeting unit than Microsoft Entra groups.
 
 > [!TIP]
 > To create the basic compliance requirements of your organization, you can create a default policy that applies to all groups and devices. Then, create more specific policies for the broadest categories of users and devices. For example, you might create email policies for each of the device operating systems.
@@ -128,5 +128,5 @@ For more guidance on using Filters, go to:
 ## See also
 
 - [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
-- [Manage access to resources with Azure AD groups](/azure/active-directory/active-directory-manage-groups)
+- [Manage access to resources with Microsoft Entra groups](/azure/active-directory/active-directory-manage-groups)
 - [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md)
