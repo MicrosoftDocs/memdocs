@@ -82,6 +82,14 @@ Users are required to update to v5.2311.1 of the iOS Company Portal. If you have
 The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
 
 With this change, the default behavior for security settings management includes all the behavior added for the opt-in preview – without having to enable support for preview features in Microsoft Defender for Endpoint. This includes the general availability and support for the following endpoint security profiles for Linux and macOS:
+
+### Device management
+
+### Feature updates and reports support Windows 11 policies<!--17614166 -->
+
+The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins do not need to create or manage groups of eligible and non-eligible devices.
+
+For more information on feature updates, go to [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
  
 **Linux**:
  
@@ -96,7 +104,6 @@ With this change, the default behavior for security settings management includes
 - Endpoint detection and response
  
 For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) in the Intune documentation.
-
 
 ## Week of October 30, 2023
 
