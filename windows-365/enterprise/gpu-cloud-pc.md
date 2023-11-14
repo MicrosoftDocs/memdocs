@@ -36,13 +36,13 @@ GPU-enabled Cloud PCs are suitable for graphics intense workloads that need to b
 
 Three GPU offerings are available for Window 365 Enterprise Cloud PCs:
 
-| GPU ffering | Intended for | 
+| GPU offering | Intended for | 
 | --- | --- |
 | Windows 365 Enterprise GPU 4 vCPU, 16-GB RAM, 4-GB vRAM, 512 GB | Applications that benefit from basic graphic acceleration on one 3840x2160 display or up to two 1920x1080p displays. |
 | Windows 365 Enterprise GPU 8 vCPU, 56-GB RAM, 12-GB vRAM, 1 TB | Applications with greater specification requirements and high-end graphics workloads on up to four 3840x2160 displays. |
 | Windows 365 Enterprise GPU 16 vCPU, 110-GB RAM, 16-GB vRAM, 1 TB | Graphics intensive workloads that demand high performance and have strict latency requirements. |
 
-For more details on these offerings, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md).
+For more information on these offerings, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md).
 
 Windows 365 GPU configurations are powered by NVIDIA and AMD.
 
