@@ -32,7 +32,7 @@ ms.collection:
 
 # GPU Cloud PCs in Windows 365 (preview)
 
-Windows 365 offers GPU-enabled Cloud PCs that are suitable for graphics intense workloads that need to be performance optimized. These offerings can help with graphic design, image and video rendering, 3D modeling, gaming, data processing and visualization applications that require a GPU to perform.
+Windows 365 offers GPU-enabled Cloud PCs that are suitable for graphics intense workloads that need to be performance optimized. These offerings can help with graphic design, image and video rendering, 3D modeling, data processing and visualization applications that require a GPU to perform.
 
 Three GPU offerings are available for Window 365 Enterprise Cloud PCs:
 
