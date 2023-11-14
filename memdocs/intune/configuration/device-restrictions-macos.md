@@ -36,7 +36,7 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
+This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, and more.
 
 This feature applies to:
 
@@ -442,8 +442,13 @@ This feature applies to:
 
 ### Settings apply to: All enrollment types
 
-- **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
+> [!IMPORTANT]
+> The Restricted apps setting does not prevent users from installing and launching specified applications. Devices that have restricted apps installed will populate the Devices with restricted apps report under Devices > Monitor. 
 
+> [!NOTE]
+> When configuring an Approved apps list, the Restricted apps setting will report an error if an app is installed that isn't on the Approved apps list. When configuring a Prohibited apps list, this setting will report an error if an app is installed that is on the Prohibited apps list.
+
+- **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
   - **Not configured** (default): Intune doesn't change or update this setting. By default, users might have access to apps you assign, and built-in apps.
   - **Approved apps**: List the apps that users are allowed to install. Users must not install other apps. If users install apps that aren't allowed, then it's reported in Intune. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list.
   - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune.
