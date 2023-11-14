@@ -175,6 +175,18 @@ Applies to:
 - Linux
 - macOS
 
+#### Microsoft Defender Firewall profiles are renamed to Windows Firewall<!-- 25171457 -->  
+To align to Firewall branding changes in Windows, we are updating the names of Intune profiles for endpoint security Firewall policies. In profiles that have *Microsoft Defender Firewall* in the name we are replacing that with *Windows Firewall*.
+
+The following platforms have profiles that are affected, with only the profile names being affected by this change:
+
+- Windows 10 and later (ConfigMgr)
+- Windows 10, Windows 11, and Windows Server
+
+Applies to:
+
+- Windows 10/11
+
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 25417889, 25161990, 25174019  -->  
