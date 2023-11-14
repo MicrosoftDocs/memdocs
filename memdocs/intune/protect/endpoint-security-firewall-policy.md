@@ -58,10 +58,6 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
  For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
-- **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
-
-- **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
-
 > [!NOTE]  
 > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
 >

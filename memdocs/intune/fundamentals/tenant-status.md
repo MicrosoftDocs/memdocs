@@ -39,7 +39,7 @@ The Microsoft Intune tenant status page is a centralized hub where you can view 
 You can also view the status of the Intune connectors you've configured, and health messages for the Intune service and general messages for Tenants.
 
 > [!TIP]
-> A tenant is an instance of Azure Active Directory (Azure AD). Your subscription to Intune is hosted by an Azure AD Tenant. For more information, see [Set up a tenant](/azure/active-directory/develop/quickstart-create-new-tenant) in the Azure AD documentation.
+> A tenant is an instance of Microsoft Entra ID. Your subscription to Intune is hosted by a Microsoft Entra tenant. For more information, see [Set up a tenant](/azure/active-directory/develop/quickstart-create-new-tenant) in the Microsoft Entra documentation.
 
 To view the dashboard, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration**, and then select **Tenant Status**.
 
@@ -94,19 +94,19 @@ View details for active incidents and advisories in the Microsoft Intune admin c
 
 When you select an incident, the incident details are presented directly in the Tenant Status page. To view past advisories and incidents, select **See past Incidents/Advisories**. The Microsoft 365 admin center opens and you can then view advisories and incidents from the last 30 days for your tenant.  
 
-To view information for *Service health*, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
+To view information for *Service health*, your account must have the **Global Administrator** or **Service support administrator** role in Microsoft Entra ID or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
 
 ### Issues in your environment that require action  
 The **Issues in your environment that require action** section displays messages that are sent to alert tenant administrators about issues that might require action to resolve.
 
-To view information for *Issues in your environment that require action*, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
+To view information for *Issues in your environment that require action*, your account must have the **Global Administrator** or **Service support administrator** role in Microsoft Entra ID or the Microsoft 365 admin center. To assign these permissions, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with Global Administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for Roles, select *Service support administrator* or *Global Administrator*, and then **Save** your edit to assign the permissions.  
 
 ### Intune Message center  
 View informational communications from the Intune service team without having to navigate to the Office Message Center. Communications include messages about changes that have recently happened to the Intune service, or that are on the way for your tenant.  
 
 By default, the 10 most recent and active messages display. To view older messages, select **See past Messages** to open the *Message center* in the Microsoft 365 admin center.  
 
-To view information for Intune News, your account must have the **Global Administrator** or **Service support administrator** role in Azure Active Directory, or the **Message Center reader** role in the Microsoft 365 admin center.  To assign this permission, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for *Roles*, select *Teams Communications Administrator*, and then **Save** your edit to assign the permissions.  
+To view information for Intune News, your account must have the **Global Administrator** or **Service support administrator** role in Microsoft Entra ID, or the **Message Center reader** role in the Microsoft 365 admin center.  To assign this permission, sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with administrator permissions. Select **Users > Active Users**, and then select the account that requires access. Select **Edit** for *Roles*, select *Teams Communications Administrator*, and then **Save** your edit to assign the permissions.  
 
 ## Next steps
 
