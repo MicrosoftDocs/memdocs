@@ -147,7 +147,7 @@ You can synchronize the app names, metadata and license information for your pur
 1. Select **Apps** > **All apps**.
 2. On the list of apps pane, choose the app you want to assign, and then choose **Properties**. Select **Edit** next to **Assignments**.
 3. On the **Assignments** tab, choose whether the app will be **Required** or **Available for enrolled devices**.
-4. Choose **Add group** under the assignment type you've selected, then on the **Select groups** pane choose the Azure AD user or device groups to which you want to assign the app.
+4. Choose **Add group** under the assignment type you've selected, then on the **Select groups** pane choose the Microsoft Entra user or device groups to which you want to assign the app.
 
     > [!NOTE]
     > When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is "device". Existing assignments remain unchanged.
@@ -197,10 +197,10 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 | Revoke app license | After changing the app assignment to **Uninstall**, you can reclaim an app license from the user or device using the **Revoke license** action. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. | After changing the app assignment to **Uninstall**, you can reclaim an app license from the user or device using the **Revoke license** action. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. |
 
 >[!NOTE]
-> - Intune reclaims app licenses when an employee leaves the company and is no longer part of the AAD groups.
+> - Intune reclaims app licenses when an employee leaves the company and is no longer part of the Microsoft Entra groups.
 > - When assigning a purchased app with **Uninstall** intent, Intune both reclaims the license and uninstalls the app.
 > - App licenses are not reclaimed when a device is removed from Intune management. 
-> - Intune will revoke app licenses when the user is deleted from Azure AD.
+> - Intune will revoke app licenses when the user is deleted from Microsoft Entra ID.
 > - Intune only supports revoking VPP app licenses that meet the following conditions:
 >   - The VPP app license must be assigned by Intune
 >   - The VPP app license is for devices that are managed by Intune

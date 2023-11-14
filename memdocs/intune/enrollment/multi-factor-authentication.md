@@ -3,7 +3,7 @@
 
 title: Require multifactor authentication for Intune device enrollment
 titleSuffix: Microsoft Intune
-description: How to require multifactor authentication in Azure AD for Intune device enrollment.
+description: How to require multifactor authentication in Microsoft Entra ID for Intune device enrollment.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -42,14 +42,14 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-You can use Intune together with Azure Active Directory (Azure AD) conditional access policies to require multifactor authentication (MFA) during device enrollment. If you require MFA, employees and students wanting to enroll devices must first authenticate with a second device and two forms of credentials.  MFA requires them to authenticate using two or more of these verification methods:  
+You can use Intune together with Microsoft Entra Conditional Access policies to require multifactor authentication (MFA) during device enrollment. If you require MFA, employees and students wanting to enroll devices must first authenticate with a second device and two forms of credentials.  MFA requires them to authenticate using two or more of these verification methods:  
 
 - Something you know, such as a password or PIN.  
 - Something you have that can't be duplicated, such as a trusted device or phone.        
 - Something you are, such as a fingerprint.  
 
 ## Prerequisites  
-To implement this policy, you must assign Azure Active Directory Premium P1 or later to users.   
+To implement this policy, you must assign Microsoft Entra ID P1 or later to users.   
 
 ## Configure Intune to require multifactor authentication at device enrollment
 
@@ -59,7 +59,7 @@ Complete these steps to enable multi-factor authentication during Microsoft Intu
 > Don't configure **Device based access rules** for Microsoft Intune enrollment.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Go to **Devices** > **Conditional access**. This area is the same as the conditional access area available in Azure AD. For more information about the available settings, see [Cloud apps or actions](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#authentication-context-preview).  
+1. Go to **Devices** > **Conditional access**. This area is the same as the conditional access area available in Microsoft Entra ID. For more information about the available settings, see [Cloud apps or actions](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#authentication-context-preview).  
 1. Select **New policy**.
 1. Name your policy.      
 1. Select the **Users or workload identities** category.

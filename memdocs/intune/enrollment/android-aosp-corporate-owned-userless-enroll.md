@@ -39,7 +39,7 @@ Set up enrollment in Microsoft Intune for corporate-owned, userless devices buil
 * Intended to be shared by more than one user. 
 * Used to accomplish a specific set of tasks at work. 
 
-Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment.
+Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account, aren't associated with a specific user, and are configured with [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment.
 
 With Shared device mode enabled, these devices allow for single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). Through Company Portal installation, users also get single sign-out from [apps that have integrated with Intune's SDK](../apps/apps-supported-intune-apps.md), even for apps that don't yet participate with Shared device mode. 
 
@@ -135,7 +135,7 @@ You can create *assigned device groups* or *dynamic device groups* in Intune. Fo
 
 Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name. 
 
-Complete the following steps to create a dynamic Azure AD device group for devices enrolled with an Android (AOSP) corporate-owned, userless enrollment profile.  
+Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Android (AOSP) corporate-owned, userless enrollment profile.  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
@@ -149,7 +149,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
     - In the middle box, choose **Equals**.
     - In the last field, enter the enrollment profile name that you created earlier.  
 
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Choose **Add query** > **Create**.  
 
 

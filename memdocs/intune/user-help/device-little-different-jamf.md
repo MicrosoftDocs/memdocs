@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Errors you might see if you use Jamf Self Service | Microsoft Docs
-description: Learn more about your Intune-enabled macOS device managed by Jamf.
+title: Resolve enrollment issues on Macs integrated with Jamf | Microsoft Intune
+description: Resolve Intune Company Portal device registration issues on Macs managed by Jamf Pro.  
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2017
+ms.date: 11/03/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,14 +29,23 @@ ms.collection:
 - tier3
 ---
 
-# Performing actions on a macOS device managed by Jamf
+# Resolve Company Portal device registration errors on Macs  
+**Applies to macOS**  
 
-Your company uses a combination of tools to make sure that your macOS device can access company resources safely. To make sure that your device can access these resources, you need to go to **Applications** > **Self Service**, and make sure that your device is compliant with company policies or to perform any other actions on your device.
+This article is for employees and students setting up a Mac for work or school access using Intune Company Portal, and describes how to resolve device registration issues on Macs managed by Jamf Pro. The Intune Company Portal app flags Jamf Pro-managed devices for the following device registration issues:  
 
-If you are on the macOS device with the compliance issues that is managed by Jamf, click the **Resolve** button to launch **Self Service**.
+* Account not onboarded.  
+* Device is already enrolled.  
 
-__What to do if you see "AccountNotOnboarded" or "Device is already enrolled"__
+## Account not onboarded
 
-If you've opened the Company Portal app and a message appears that says, "AccountNotOnboarded," you need to quit the Company Portal app, and go to **Applications** > **Self Service**. Your company will have a device registration policy that you need to install. Click on the policy to install it, then open the Company Portal again.
+For a device to successfully enroll and register for work, you must use Jamf Self Service to open the Intune Company Portal. If you open the Company Portal app any other way, the device enrolls and registers without its connection to Jamf, which results in the *Account not onboarded* message.  
 
-Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+To resolve this issue, exit Company Portal. Then open the Jamf Self Service app and select the Company Portal app that's available there to begin device registration.    
+
+## Device is already enrolled   
+The following actions may result in multiple instances of your device showing up in the Intune Company Portal and failed enrollment:  
+* The device you're using was previously enrolled, and it unenrolled from the Jamf service correctly but didn't successfully unenroll from the Microsoft Intune service.  
+* Several attempts to register the device were made.    
+
+Contact your support person for help with unenrolling your device, or see [Troubleshoot Jamf Pro integration- The device was previously enrolled in Intune](/troubleshoot/mem/intune/device-protection/troubleshoot-jamf#cause-6---the-device-was-previously-enrolled-in-intune) for steps to properly unenroll the device. Sign into the Intune Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) and go to **Help & support** for your organization's support information.  
