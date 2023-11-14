@@ -43,10 +43,6 @@ To make sure the BitLocker encryption algorithm you want is set before automatic
 
 3. Enable the Autopilot [enrollment status page](enrollment-status.md) for these devices. If you don't enable this feature, the policy won't apply before encryption starts.
 
-The following image is an example of the Endpoint Security disk encryption settings.
-
-:::image type="content" source="media/bitlocker/endpoint-security-disk-encryption-policy.png" alt-text="Screenshot example of the Endpoint Security disk encryption settings.":::
-
 ## Full disk or used space-only encryption
 
 There are two types of encryption, full disk or used space-only. The type of encryption is automatically determined by configuration of [silent enablement](/mem/intune/protect/encrypt-devices#silently-enable-bitlocker-on-devices) and hardware support for modern standby. You can enforce it by configuring the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) setting. Like the encryption algorithm, the encryption type is used when BitLocker is first enabled. For more information on the expected encryption type behavior, see [Manage BitLocker policy](/mem/intune/protect/encrypt-devices#full-disk-vs-used-space-only-encryption).
