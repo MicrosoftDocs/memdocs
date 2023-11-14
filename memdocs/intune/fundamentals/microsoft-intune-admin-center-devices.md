@@ -106,9 +106,7 @@ For more information about device details, see [See device details in Intune](..
 
 ## Device onboarding workload  
 
-Under **Device onboarding**, you can access onboarding options for cloud PC creation and enrollment. This section describes the public preview experience for the updated Enrollement page.  
-
-Go to **Enrollment** to access enrollment subworkloads for all device operating systems. 
+Under **Device onboarding**, you can access onboarding options for cloud PC creation and enrollment. Go to the updated **Enrollment**  page to access enrollment subworkloads for all device operating systems. 
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/enrollment-devices-experience.png" alt-text="Screenshot of a tenant's Enrollment page, highlighting the subworkloads." :::  
 
@@ -144,7 +142,7 @@ Monitored data and relevant reports are located in the same place as your manage
 
 ### Configuration   
 
-Go to **Devices** > **Configuration** to monitor and manage device configuration policies in Microsoft Intune. 
+Go to **Configuration** to monitor and manage device configuration policies in Microsoft Intune. 
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/configuration-devices-experience.png" alt-text="Screenshot of a tenant's Configuration page, highlighting the subworkloads." ::: 
 
@@ -158,7 +156,7 @@ For more information about device configuration, see [Apply features settings on
 
 ### Compliance   
 
-Go to **Devices** > **Compliance** to monitor and manage device compliance policies in Microsoft Intune.  
+Go to **Compliance** to monitor and manage device compliance policies in Microsoft Intune.  
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/compliance-devices-experience.png" alt-text="Screenshot of a tenant's Compliance page, highlighting the subworkloads." :::  
 
@@ -174,7 +172,7 @@ For more information about device compliance, see [Compliance overview](../prote
 
 ### Windows 10 and later updates 
 
-Go to **Devices** > **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. 
+Go to **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. 
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/windows-10-devices-experience.png" alt-text="Screenshot of a tenant's Windows 10 and later updates page, highlighting the subworkloads." :::  
 
@@ -190,7 +188,7 @@ For more information about Windows updates, see [Manage Windows 10 and Windows 1
 
 ### Apple updates
 
-Go to **Devices** > **Apple updates** to monitor and manage software update policies for Apple devices.  
+Go to **Apple updates** to monitor and manage software update policies for Apple devices.  
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/apple-updates-devices-experience.png" alt-text="Screenshot of a tenant's Apple updates page, highlighting the subworkloads." :::  
 
