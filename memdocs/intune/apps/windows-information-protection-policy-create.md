@@ -18,7 +18,7 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 
 ms.reviewer: manchen
