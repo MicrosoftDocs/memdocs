@@ -8,19 +8,17 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2022
+ms.date: 11/14/2023
 ms.collection:
   - M365-modern-desktop
   - tier2
 ms.topic: how-to
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 # Setting the BitLocker encryption algorithm for Autopilot devices
-
-*Applies to:*
-
-- Windows 11
-- Windows 10
 
 BitLocker [automatically encrypts](/windows-hardware/design/device-experiences/oem-bitlocker#bitlocker-automatic-device-encryption) internal drives during the out of box experience (OOBE) for devices that support [Modern Standby](/windows-hardware/design/device-experiences/modern-standby) or meet the [Hardware Security Testability Specification (HSTI)](/windows-hardware/test/hlk/testref/hardware-security-testability-specification). By default, BitLocker uses XTS-AES 128-bit used space only for automatic encryption.
 
@@ -61,16 +59,11 @@ To enforce the type of drive encryption used:
 
 3. Enable the Autopilot [enrollment status page](enrollment-status.md) for these devices. If you don't enable this feature, the policy won't apply before encryption starts.
 
-The following image is an example of the settings catalog profile.
-
-:::image type="content" source="media/bitlocker/settings-catalog-drive-type.png" alt-text="Screenshot example of the BitLocker drive type configuration in the settings catalog.":::
-
 ## Requirements
 
-A supported version of Windows 11 or Windows 10.
+A supported version of Windows.
 
 ## Next steps
 
-[BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview)
-
-[Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices)
+- [BitLocker overview](/windows/security/information-protection/bitlocker/bitlocker-overview)
+- [Manage BitLocker policy for Windows devices with Intune](/mem/intune/protect/encrypt-devices)
