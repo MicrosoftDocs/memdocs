@@ -32,7 +32,7 @@ ms.collection:
 
 # GPU Cloud PCs in Windows 365 (preview)
 
-GPU-enabled Cloud PCs are suitable for graphics intense workloads that need to be performance optimized. These offerings can help with graphic design, image and video rendering, 3D modeling, gaming, data processing and visualization applications that require a GPU to perform. GPU-enabled Cloud PCs require fewer vCPUs for optimized performance because they can offload rendering to the GPU.
+Windows 365 offers GPU-enabled Cloud PCs that are suitable for graphics intense workloads that need to be performance optimized. These offerings can help with graphic design, image and video rendering, 3D modeling, gaming, data processing and visualization applications that require a GPU to perform.
 
 Three GPU offerings are available for Window 365 Enterprise Cloud PCs:
 
@@ -44,9 +44,11 @@ Three GPU offerings are available for Window 365 Enterprise Cloud PCs:
 
 For more information on these offerings, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md).
 
-Windows 365 GPU configurations are powered by NVIDIA and AMD.
+Other details about GPU-enabled Cloud PCs include:
 
-These GPU offerings define the minimum specs provided for vCPU, RAM, and vRAM. It's possible that customers might get more vCPU, RAM, and/or vRAM depending on capacity in the customer's deployment region. Customers never get less vCPU, RAM, and/or vRAM than their license specifies.  
+- Windows 365 GPU configurations are powered by NVIDIA and AMD.
+- These GPU offerings define the minimum specs provided for vCPU, RAM, and vRAM. It's possible that customers might get more vCPU, RAM, and/or vRAM depending on capacity in the customer's deployment region. Customers never get less vCPU, RAM, and/or vRAM than their license specifies.
+- GPU-enabled Cloud PCs require fewer vCPUs for optimized performance because they can offload rendering to the GPU.
 
 For more information about how to choose your GPU configuration, see [Announcing Windows 365 GPU-enabled Cloud PCs now in Public Preview](https://aka.ms/w365/gpu/blog).
 
