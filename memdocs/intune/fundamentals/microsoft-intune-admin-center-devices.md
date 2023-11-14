@@ -2,7 +2,7 @@
 # required metadata
 
 title: Try new Devices experience in Microsoft Intune 
-description: Walkthrough the new Devices workload, now in public preview in the Microsoft Intune admin center.  
+description: Walk through the new Devices workload, now in public preview in the Microsoft Intune admin center.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -63,7 +63,9 @@ You can switch back and forth between the current UI and public preview without 
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/public-preview-toggle-intune-2311.png" alt-text="Screenshot highlighting the public preview opt-in banner and Try it now button in the Microsoft Intune admin center." lightbox="./media/microsoft-intune-admin-center-devices/public-preview-toggle-intune-2311.png":::  
 
-You remain in public preview until you switch it back, even if you close the browser. To exit public preview and return to the current version of the admin center, flip the switch next to **Use Devices preview** again.  
+### Exit public preview  
+
+You remain in public preview, even if you close the browser. To exit public preview and return to the current version of the admin center, flip the switch next to **Use Devices preview**.  
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/device-preview-toggle-off.png" alt-text="Screenshot highlighting the Use Devices preview toggle in the Microsoft Intune admin center." :::
 
