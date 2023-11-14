@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/09/2023
+ms.date: 11/14/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,7 @@ ms.collection:
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
 
-Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles" and can help your end users be productive on their devices faster.
+Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". When you configure device features using configuration profile, you can help your end users be productive on their devices faster.
 
 You can create profiles for different devices and different platforms, including Android, iOS/iPadOS, macOS, and Windows. There are some configuration settings that are unique to each platform. It's also common to have many device profiles for each platform, ranging from antivirus settings to custom settings.
 
@@ -58,56 +58,19 @@ Some profile examples include:
 >
 > You can create the device profiles and policies you need in Intune based on policies you currently have in Configuration Manager. For more information about co-management, go [Understand co-management using Microsoft Configuration Manager](../../configmgr/comanage/overview.md). For related information, see [Prepare Intune for co-management](../../configmgr/core/get-started/capabilities-in-technical-preview-1709.md#prepare-intune-for-co-management).
 
-## Templates
+## Use templates or the settings catalog
 
-Templates include a logical grouping of settings that configure a feature or concept, such as VPN, email, kiosk devices, and more. Templates are available when you choose either iOS/iPadOS, macOS, Windows 10 and later, or Windows 10 as the platform.
+In Intune, for most platforms, when you create a device configuration profile, you have two policy types: **Templates** or the **[Settings Catalog](settings-catalog.md)**. The settings catalog lists all the settings you can configure, and all in one place. Templates include a logical grouping of settings that configure a feature or concept, like email, kiosk devices, and device firmware.
 
-### Fundamental device configuration profiles
-
-Before you enroll your organization's devices into Microsoft Intune, you should create your fundamental device configuration profiles. These are the configuration profiles that are commonly set up at a company or organization. Consider creating and assigning these configuration profiles first.
-
-Fundamental device configuration profiles to consider:
-- [Device restrictions](#device-restrictions)
-- [Email settings](#email)
-- [VPN settings](#vpn)
-- [Wi-Fi settings](#wi-fi)
-
-### Protective device configuration profiles
-
-In addition to the fundamental configuration profiles, you should consider adding more involved device configuration profiles. The following information describes these types of protective device configuration profiles. Unlike the fundamental configuration profiles that most organizations will add, these profiles should be added as needed.
-
-Protective device configuration profiles to consider:
-- [Derived credentials](#derived-credential)
-- [Domain join](#domain-join)
-- [Endpoint protection](#endpoint-protection)
-- [Enable Microsoft Defender anti-virus settings](#microsoft-defender-for-endpoint)
-- [Manage Android Enterprise devices with OEMConfig](#oemconfig)
-- [Configure certificates](#certificates)
-- [Configure Microsoft Edge settings](..\configuration\administrative-templates-configure-edge.md)
-- Security baselines
-
-### Comprehensive device configuration profiles
-
-Beyond fundamental and protective device configuration profiles, you should be aware of the following configuration control and concepts that Microsoft Intune provides. Intune provides a wide variety of device configuration control. These following areas can help you become familiar with the total configuration capabilities offered by Intune.
-
-Comprehensive device configuration profiles to consider:
-- [Group Policy analytics](#administrative-templates-and-group-policy)
-- [Administrative templates](#administrative-templates-and-group-policy)
-- [Custom profiles](#custom-profile)
-- [Settings catalog](#settings-catalog)
-- Security baselines
+The templates focus on different parts of device management, including accessing resources (VPN, Wi-Fi), security (antivirus, firewall, certificates), and Group Policy Objects (ADMX administrative templates). You can create a baseline of profiles that all devices must have, or you can configure specific features based on your oganization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../fundamentals/protection-configuration-levels.md).
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
 
-## Profile types
-
-A profile type is a device configuration area, feature, or capability that contains specific device settings. As mentioned above, each platform has a unique set of available device configuration settings. To select a setting, you start by selecting a **Platform** and then a **Profile type**. For instance, if you choose **iOS/iPadOS** as the platform, you can select **Templates** for the profile type. Next, you can select a template name from the provided list. For instance, you can select the **Email** template to configure an email server, SSL communication, and other built-in email settings. Because capabilities are different for each platform, your available profile types and templates are also different.
-
 ## Administrative templates and Group policy
 
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates are a subset of the overall configuration profile templates. Also, these templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
+[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
 
-[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers. Group Policy is supported on Windows 10/11.
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
 
 This feature supports:
 
@@ -116,7 +79,9 @@ This feature supports:
 
 ## Certificates
 
-You use [certificates in Intune](../protect/certificates-configure.md) to authenticate your users to reach applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users won't need to enter usernames and passwords, which can make their access seamless. Certificates are also used for signing and encryption of email using S/MIME. Common types of certificates used in Intune include trusted root certificates, Simple Certificate Enrollment Protocol (SCEP) certificates, and Public Key Cryptography Standards (PKCS) certificates.
+You use [certificates in Intune](../protect/certificates-configure.md) to authenticate your users so they can access applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users don't need to enter usernames and passwords.
+
+Certificates are also used for signing and encryption email using S/MIME. Common types of certificates used in Intune include trusted root certificates, Simple Certificate Enrollment Protocol (SCEP) certificates, and Public Key Cryptography Standards (PKCS) certificates.
 
 This feature supports:
 
@@ -155,7 +120,9 @@ This feature supports:
 
 ## Derived credential
 
-In an environment where smart cards are required for authentication or encryption and signing, you can use Intune to provision mobile devices with a certificate that's derived from a user's smart card. That certificate is called a [derived credential](../protect/derived-credentials.md). Intune [supports several derived credential issuers](../protect/derived-credentials.md#supported-issuers), though you can use only a single issuer per tenant at a time. Derived credentials are commonly used with device configuration profile types such as Wi-Fi, VPN, app authentication, Email, or S/MIME signing and encryption. However, each platform that supports derived credentials has a different set of supported device configuration settings.
+If your organization uses smart cards for authentication, signing, or encryption, then you can use [derived credentials](../protect/derived-credentials.md). In Intune, you can configure and deploy a certificate that's derived from a user's smart card. Derived credentials are commonly used for Wi-Fi & VPN connections, app & email authentication, or S/MIME signing and encryption.
+
+Intune [supports several derived credential issuers](../protect/derived-credentials.md#supported-issuers). Each platform also has their own set of device configuration settings.
 
 This feature supports:
 
@@ -182,7 +149,9 @@ This feature supports:
 
 ## Device restrictions
 
-[Device restrictions](device-restrictions-configure.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS/iPadOS device users from using the device camera. Additionally, you could create a device restriction profile that manages access to the App store or restricts certain apps from being installed on the device. Other examples include restricting device users from viewing corporate documents in unmanaged apps, requiring a password to access the device, or requiring devices to use only Wi-Fi networks set up via configuration profiles.
+[Device restrictions](device-restrictions-configure.md) controls security, hardware, data sharing, and more settings on the devices. For example, create a device restriction profile that prevents iOS/iPadOS device users from using the device camera.
+
+There are also settings that manage access to app stores, restrict users from viewing corporate documents in unmanaged apps, require a password to unlock the device, or require devices to use only specific Wi-Fi networks.
 
 This feature supports:
 
@@ -328,7 +297,7 @@ This feature supports:
 
 ## Settings catalog
 
-The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but the setting catalog is cloud native.
+The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
 
 On Windows, there are thousands of settings available, including many settings not found in the templates. When you want a complete list of all the settings, use the settings catalog to create your policy. If you want to use a logical grouping of settings, then continue to use the templates.
 
