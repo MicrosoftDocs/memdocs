@@ -65,19 +65,23 @@ You can switch back and forth between the current UI and public preview without 
 
 You remain in public preview until you switch it back, even if you close the browser. To exit public preview and return to the current version of the admin center, flip the switch next to **Use Devices preview** again.  
 
-:::image type="content" source="./media/microsoft-intune-admin-center-devices/device-preview-toggle.png" alt-text="Screenshot highlighting the Use Devices preview toggle in the Microsoft Intune admin center." :::
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/device-preview-toggle-off.png" alt-text="Screenshot highlighting the Use Devices preview toggle in the Microsoft Intune admin center." :::
 
 Wait while Intune refreshes the UI. In the feedback form, give us feedback about your experience with the Devices public preview. Select **x** to return to the admin center without giving feedback.  
 
-## Overview
+## Overview  
 
-Go to **Devices** > **Overview** to access workloads by OS platform, view key metrics about assigned policies, and access associated reports.  Overview options include:
+Go to **Devices** > **Overview** to access workloads by OS platform, view key metrics about assigned policies, and access associated reports.  
+
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/overview-devices-experience.png" alt-text="Screenshot of a tenant's Overview page." :::
+
+Overview options include: 
 
 * **Manage devices by platform**: Select an OS platform to pivot between management workloads by platform.  
 * **Additional monitoring reports**: Access reports associated with your key metrics.  
 * **Other devices**: Access other device workloads, such as configuration for the Chrome OS enterprise connector.  
 
-This page also highlights key metrics about active issues, such as enrollment failures and Windows 365 provisioning failures, happening across devices. Select a metric for more information about the issue.
+This page also highlights key metrics about active issues, such as enrollment failures and Windows 365 provisioning failures, happening across devices. Select a metric for more information about the issue. Select **Refresh** to refresh all data on the page.    
 
 ## All devices
 
@@ -97,14 +101,18 @@ Under **Device onboarding**, you can access these onboarding options (workloads 
 * **Cloud PC creation**  
 * **Enrollment** - *New*  
 
-Go to **Enrollment** to access these subworkloads:  
+Go to **Enrollment** to access enrollment subworkloads for all device operating systems. 
+
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/enrollment-devices-experience.png" alt-text="Screenshot of a tenant's Enrollment page, highlighting the subworkloads." :::  
+
+Enrollment subworkloads include:  
 
 * **Monitor**: Access reports and list views associated with enrollment profiles, policies, and Windows Autopilot deployment.
 * **Windows**: Set up enrollment for devices running Windows 10 or Windows 11.
 * **Apple**: Set up enrollment for iOS/iPadOS and Mac devices.  
 * **Android**: Set up enrollment for supported Android devices.
 * **Corporate device identifiers**: Add and manage corporate identifiers for devices that should have corporate-owned status.  
-* **Device enrollment manager**: Add and manage device enrollment managers that oversee or help with enrolling devices.
+* **Device enrollment manager**: Add and manage device enrollment managers that oversee or help with enrolling devices.  
 
 For more information about getting started with enrollment, see [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
 
@@ -129,7 +137,11 @@ Monitored data and relevant reports are located in the same place as your manage
 
 ### Configuration
 
-Go to **Devices** > **Configuration** to monitor and manage device configuration policies in Microsoft Intune. Within Configuration, you can access these subworkloads:
+Go to **Devices** > **Configuration** to monitor and manage device configuration policies in Microsoft Intune. 
+
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/configuration-devices-experience.png" alt-text="Screenshot of a tenant's Configuration page, highlighting the subworkloads." ::: 
+
+Configuration subworkloads include:
 
 * **Monitor**: Access key metrics, reports, and list views associated with device configuration profiles.
 * **Policies**: Create and manage device configuration policies.
@@ -139,7 +151,11 @@ For more information about device configuration, see [Apply features settings on
 
 ### Compliance
 
-Go to **Devices** > **Compliance** to monitor and manage device compliance policies in Microsoft Intune. Within Compliance, you can access these subworkloads:  
+Go to **Devices** > **Compliance** to monitor and manage device compliance policies in Microsoft Intune.  
+
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/compliance-devices-experience.png" alt-text="Screenshot of a tenant's Compliance page, highlighting the subworkloads." :::  
+
+Within Compliance, you can access these subworkloads:  
 
 * **Monitor**: Access key metrics, reports, and list views associated with device compliance.
 * **Policies**: Create and manage device compliance policies.
@@ -151,7 +167,11 @@ For more information about device compliance, see [Compliance overview](../prote
 
 ### Windows 10 and later updates
 
-Go to **Devices** > **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. Within this area, you can access the following subworkloads:  
+Go to **Devices** > **Windows 10 and later updates** to monitor and manage software update policies for devices running Windows 10 or Windows 11. 
+
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/windows-10-devices-experience.png" alt-text="Screenshot of a tenant's Windows 10 and later updates page, highlighting the subworkloads." :::  
+
+Within this area, you can access the following subworkloads:  
 
 * **Monitor**: Access key metrics and active issues associated with Windows software update policies.
 * **Update rings**: Create and manage update ring policies for Windows 10 and Windows 11 updates.
@@ -159,11 +179,15 @@ Go to **Devices** > **Windows 10 and later updates** to monitor and manage softw
 * **Quality updates**: Create and manage policies for quality updates.  
 * **Driver updates**: Create and manage policies for driver updates.
 
-For more information about Windows updates, see [Manage Windows 10 and Windows 11 software updates in Intune](../protect/windows-update-for-business-configure.md).
+For more information about Windows updates, see [Manage Windows 10 and Windows 11 software updates in Intune](../protect/windows-update-for-business-configure.md).  
 
 ### Apple updates
 
-Go to **Devices** > **Apple updates** to monitor and manage software update policies for Apple devices. Within this area, you can access the following subworkloads:  
+Go to **Devices** > **Apple updates** to monitor and manage software update policies for Apple devices.  
+
+:::image type="content" source="./media/microsoft-intune-admin-center-devices/apple-updates-devices-experience.png" alt-text="Screenshot of a tenant's Apple updates page, highlighting the subworkloads." :::  
+
+Within this area, you can access the following subworkloads:  
 
 * **Monitor**: Access key metrics and active issues associated with Apple update policies.
 * **iOS/iPadOS updates**: Create and manage policies for iOS/iPadOS updates.
