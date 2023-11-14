@@ -22,7 +22,7 @@ Customer intent: As an Intune admin, I want to learn how to configure Slack to u
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
