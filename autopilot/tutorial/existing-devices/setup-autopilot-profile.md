@@ -20,7 +20,7 @@ appliesto:
 
 # Windows Autopilot deployment for existing devices: Set up a Windows Autopilot profile
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 > [!div class="checklist"]
 > - **Step 1: Set up a Windows Autopilot profile**
 - Step 2: [Install required modules to obtain Autopilot profile(s) from Intune](install-modules.md)
@@ -43,10 +43,10 @@ Windows Autopilot deployment for existing devices isn't an Autopilot deployment 
 - Installs a fresh copy of Windows.
 - Installs a JSON file that contains the information for an existing Autopilot profile.
 
-The first step in a Windows Autopilot for existing devices deployment is to make sure there's already an existing valid Autopilot profile in Intune so that the JSON file can be created. Since the JSON file only supports the user-driven Azure AD join and user-driven hybrid Azure AD join Autopilot scenarios, one of the following steps from the respective scenario workflows can be used to create a valid Autopilot profile:
+The first step in a Windows Autopilot for existing devices deployment is to make sure there's already an existing valid Autopilot profile in Intune so that the JSON file can be created. Since the JSON file only supports the user-driven Microsoft Entra join and user-driven Microsoft Entra hybrid join Autopilot scenarios, one of the following steps from the respective scenario workflows can be used to create a valid Autopilot profile:
 
-- [User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
-- [User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
+- [User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Autopilot profile](../user-driven/azure-ad-join-autopilot-profile.md)
+- [User-driven Microsoft Entra hybrid join: Create and assign user-driven Microsoft Entra hybrid join Autopilot profile](../user-driven/hybrid-azure-ad-join-autopilot-profile.md)
 
 > [!NOTE]
 >

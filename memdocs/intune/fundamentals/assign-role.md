@@ -34,7 +34,7 @@ ms.collection:
 
 You can assign a [built-in](role-based-access-control.md#built-in-roles) or [custom](create-custom-role.md) role to an Intune user.
 
-To create, edit, or assign roles, your account must have one of the following permissions in Azure AD:
+To create, edit, or assign roles, your account must have one of the following permissions in Microsoft Entra ID:
 - **Global Administrator**
 - **Intune Service Administrator**
 
@@ -49,9 +49,9 @@ To create, edit, or assign roles, your account must have one of the following pe
 5. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. You also have the option to choose all users and/or all devices. Choose **Next**.
   
       > [!NOTE] 
-      > The **All users** and **All devices** are [Intune virtual groups](groups-add.md) and not Azure Active Directory (Azure AD) security groups. As a result, for **Scope (Groups)** assignment purposes you cannot use them as parents of Azure AD security groups. If you need both **All users** and **All devices** and specific Azure AD security groups for **Scope (Groups)** assignments, you must add them separately with separate assignments. Otherwise, even if the **Scope (Groups)** assignment for a role is set to **All Users** the admin in this role won't have access to specific Azure AD user groups.
+      > The **All users** and **All devices** are [Intune virtual groups](groups-add.md) and not Microsoft Entra security groups. As a result, for **Scope (Groups)** assignment purposes you cannot use them as parents of Microsoft Entra security groups. If you need both **All users** and **All devices** and specific Microsoft Entra security groups for **Scope (Groups)** assignments, you must add them separately with separate assignments. Otherwise, even if the **Scope (Groups)** assignment for a role is set to **All Users** the admin in this role won't have access to specific Microsoft Entra user groups.
       >  
-      > For Azure AD security groups, nesting is supported.
+      > For Microsoft Entra security groups, nesting is supported.
 
 7. On the **Scope (Tags)** page, choose tags where this role assignment will be applied. Choose **Next**.
 
@@ -63,5 +63,3 @@ To create, edit, or assign roles, your account must have one of the following pe
 ## Next steps
 - [Learn more about role-based access control in Intune](role-based-access-control.md)
 - [Create a custom role](create-custom-role.md)
-
-

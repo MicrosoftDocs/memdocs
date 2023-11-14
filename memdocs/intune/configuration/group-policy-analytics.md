@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2023
+ms.date: 11/01/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -57,9 +57,7 @@ This article shows you how to export your on-premises GPOs, import the GPOs into
 
 ## Before you begin
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** permission.
-
-For example, the **Endpoint Security Manager** role has the **Security baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security baselines** and the **Device Configuration** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 
 ## Export a GPO as an XML file
 

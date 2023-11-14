@@ -39,7 +39,7 @@ ms.collection:
 
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device. During the session, the support staff can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
-In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions.
+In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the app. It's through your Microsoft Entra ID that the proper trusts are established for the Remote Help sessions.
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
@@ -94,8 +94,8 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.monitor.azure.com              | Required for telemetry and remote service initialization|
 |\*.support.services.microsoft.com | Primary endpoint used for the Remote Help application|
 |\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
-|\*.aadcdn.msauth.net              | Required for logging in to the application Microsoft Azure Active Directory|
-|\*.aadcdn.msftauth.net            | Required for logging in to the application Microsoft Azure Active Directory|
+|\*.aadcdn.msauth.net              | Required for logging in to the application Microsoft Entra ID|
+|\*.aadcdn.msftauth.net            | Required for logging in to the application Microsoft Entra ID|
 |\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
 |\*.graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
 |\*.login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
@@ -138,7 +138,7 @@ Some users may choose to opt out of automatic updates. However, when a new versi
 
 Download the latest version of Remote Help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of Remote Help is **5.0.1045.0**
+The most recent version of Remote Help is **5.0.1311.0**
 
 ### Deploy Remote Help as a Win32 app
 
@@ -387,6 +387,13 @@ For newly enrolled devices, there is a 1 hour delay before the user's device beg
 
 Updates for Remote Help are released periodically. When we update Remote Help, you can read about the changes here.
 
+### October 25, 2023
+
+Version: 5.0.1311.0
+
+- Disabled the relaying of system audio from the Sharer device to the Helper device which caused an echo when both users were using another app to communicate (such as Teams).
+- Added the capability for Helpers that have elevation permissions to also be able to elevate apps on devices where the Sharer is an Administrator.
+
 ### September 7, 2023
 
 Version: 5.0.1045.0
@@ -461,4 +468,3 @@ Version 4.0.0.0 - GA release
 ## Next steps
 
 [Get support in Microsoft Intune admin center](../../get-support.md)
-

@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, shthilla, chmaguir, chrisbal, priyar
+ms.reviewer: andreibiswas, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

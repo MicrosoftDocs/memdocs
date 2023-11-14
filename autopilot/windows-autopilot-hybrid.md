@@ -1,7 +1,7 @@
 ---
-title: Enrollment for hybrid Azure AD-joined devices
+title: Enrollment for Microsoft Entra hybrid joined devices
 titleSuffix: Windows Autopilot
-description: Use Windows Autopilot to enroll hybrid Azure AD-joined devices in Microsoft Intune.
+description: Use Windows Autopilot to enroll Microsoft Entra hybrid joined devices in Microsoft Intune.
 author: frankroj
 ms.author: frankroj
 manager: aaroncz
@@ -20,14 +20,14 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Deploy hybrid Azure AD-joined devices by using Intune and Windows Autopilot
+# Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot
 
-You can use Intune and Windows Autopilot to set up hybrid Azure Active Directory (Azure AD)-joined devices. To do so, follow the steps in this article.  For more information about hybrid Azure AD join, see [Understanding hybrid Azure AD join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
+You can use Intune and Windows Autopilot to set up Microsoft Entra hybrid joined devices. To do so, follow the steps in this article.  For more information about Microsoft Entra hybrid join, see [Understanding Microsoft Entra hybrid join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
 ## Prerequisites
 
-- Successfully configured your [hybrid Azure AD-joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
-- If you have configured [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) as part of Azure Active Directory Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
+- Successfully configured your [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
+- If you have configured [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
 ### Device enrollment prerequisites
 
@@ -39,9 +39,9 @@ The device to be enrolled must follow these requirements:
 - Successfully ping the domain controller of the domain you're trying to join.
 - If using Proxy, WPAD Proxy settings option must be enabled and configured.
 - Undergo the out-of-box experience (OOBE).
-- Use an authorization type that Azure Active Directory supports in OOBE.
+- Use an authorization type that Microsoft Entra ID supports in OOBE.
 
-Although not required, configuring hybrid Azure AD join for Active Directory Federated Services (AD FS) enables a faster Windows Autopilot Azure AD registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.  
+Although not required, configuring Microsoft Entra hybrid join for Active Directory Federated Services (AD FS) enables a faster Windows Autopilot Microsoft Entra registration process during deployments. Federated customers that aren't supporting the use of passwords and using AD FS need to follow the steps in the article [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login) to properly configure the authentication experience.  
 
 ### Intune connector server prerequisites
 
@@ -63,9 +63,9 @@ Although not required, configuring hybrid Azure AD join for Active Directory Fed
 
 ## Set up Windows automatic MDM enrollment
 
-1. Sign in to Azure, in the left pane, select **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+1. Sign in to Azure, in the left pane, select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 
-1. Make sure users who deploy Azure AD-joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
+1. Make sure users who deploy Microsoft Entra joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
 1. Use the default values in the **MDM Terms of use URL**, **MDM Discovery URL**, and **MDM Compliance URL** boxes, and then select **Save**.
 
@@ -73,7 +73,7 @@ Although not required, configuring hybrid Azure AD join for Active Directory Fed
 
 The Intune Connector for your Active Directory creates autopilot-enrolled computers in the on-premises Active Directory domain. The computer that hosts the Intune Connector must have the rights to create the computer objects within the domain.
 
-In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where hybrid Azure AD-joined devices are created.
+In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where Microsoft Entra hybrid joined devices are created.
 
 The organizational unit that's granted the rights to create computers must match:
 
@@ -82,7 +82,7 @@ The organizational unit that's granted the rights to create computers must match
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
 
-1. Right-click the organizational unit to use to create hybrid Azure AD-joined computers > **Delegate Control**.
+1. Right-click the organizational unit to use to create Microsoft Entra hybrid joined computers > **Delegate Control**.
 
     :::image type="content" source="./media/windows-autopilot-hybrid/delegate-control.png" alt-text="Screenshot of the Delegate Control command.":::
 
@@ -173,7 +173,7 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 1. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
 
     - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
+    - Intune's Group Tag field maps to the OrderID attribute on Microsoft Entra devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
     - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
 
 1. Select **Save** > **Create**.
@@ -203,18 +203,19 @@ If you're buying new devices, some OEMs can register the devices for you. For mo
 Before they're enrolled in Intune, *registered* Autopilot devices are displayed in three places (with names set to their serial numbers):
 
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
-- The **Azure AD devices** pane in the Intune in the Azure portal. Select **Devices** > **Azure AD Devices**.
-- The **Azure AD All Devices** pane in Azure Active Directory in the Azure portal by selecting **Devices** > **All Devices**.
+- The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.
+- The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal by selecting **Devices** > **All Devices**.
 
 After your Autopilot devices are *enrolled*, they're displayed in four places:
 
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
-- The **Azure AD devices** pane in the Intune in the Azure portal. Select **Devices** > **Azure AD Devices**.
-- The **Azure AD All Devices** pane in Azure Active Directory in the Azure portal. Select **Devices** > **All Devices**.
+- The **Microsoft Entra devices** pane in the Intune in the Azure portal. Select **Devices** > **Microsoft Entra Devices**.
+- The **Microsoft Entra All Devices** pane in Microsoft Entra ID in the Azure portal. Select **Devices** > **All Devices**.
 - The **All Devices** pane in the Intune in the Azure portal. Select **Devices** > **All Devices**.
 
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
-A device object is precreated in Azure AD once a device is registered in Autopilot. When a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries.
+
+A device object is precreated in Microsoft Entra ID once a device is registered in Autopilot. When a device goes through a hybrid Microsoft Entra deployment, by design, another device object is created resulting in duplicate entries.
 
 ## BYO VPNs
 
@@ -261,9 +262,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, select **User-driven**.
 
-1. In the **Join to Azure AD as** box, select **Hybrid Azure AD joined**.
+1. In the **Join to Microsoft Entra ID as** box, select **Microsoft Entra hybrid joined**.
 
-1. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for hybrid Azure Active Directory join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support).
+1. If you're deploying devices off of the organization's network using VPN support, set the **Skip Domain Connectivity Check** option to **Yes**. For more information, see [User-driven mode for Microsoft Entra hybrid join with VPN support](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join-with-vpn-support).
 
 1. Configure the remaining options on the **Out-of-box experience (OOBE)** page as needed.
 
@@ -279,7 +280,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 > [!NOTE]
 >
-> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
+> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
@@ -330,7 +331,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 > [!NOTE]
 >
-> The naming capabilities for Windows Autopilot for Hybrid Azure AD Join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
+> The naming capabilities for Windows Autopilot for Microsoft Entra hybrid join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
 
 ## Uninstall the ODJ Connector
 

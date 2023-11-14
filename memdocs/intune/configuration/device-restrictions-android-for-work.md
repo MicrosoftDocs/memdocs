@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, shthilla, chmaguir, chrisbal, priyar
+ms.reviewer: andreibiswas, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -410,7 +410,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >  - If the system's lock screen timeout is longer than the number of seconds for device to show the screensaver, then the screensaver shows until the lock screen appears.
         >  - If the system's lock screen timeout is shorter than the number of seconds the device is inactive, then the screensaver shows as soon as the device's lock screen appears.
 
-      - **MHS Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with Azure AD Shared device mode.
+      - **MHS Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with Microsoft Entra shared device mode.
 
         When enabled, also configure:
 
@@ -760,7 +760,7 @@ You can configure the following settings:
 
   When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
 
-  - `{{AADDeviceId}}`: Azure AD device ID
+  - `{{AADDeviceId}}`: Microsoft Entra device ID
   - `{{AccountId}}`: Intune tenant ID or account ID
   - `{{DeviceId}}`: Intune device ID
   - `{{DeviceName}}`: Intune device name

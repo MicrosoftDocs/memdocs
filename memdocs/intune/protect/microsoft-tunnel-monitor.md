@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2022
+ms.date: 11/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -254,12 +254,6 @@ For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-micr
 **Solution**: Restart the server using `mst-cli server restart` after the Linux server reboots.
 
 If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*.
-
-#### Users can't connect to resources while using Microsoft Edge<!-- 13119847 -->
-
-**Issue**: After you've [migrated from the stand-alone tunnel client app to Microsoft Defender for Endpoint](../protect/microsoft-tunnel-migrate-app.md) and are then using Microsoft Edge, users are unable to access any internal or external websites. Users might also see a message similar to: `You’re not Connected`.
-
-**Solution**: This issue can occur when the standalone Tunnel client app remains installed while the Microsoft Defender for Endpoint app is in use. To resolve this issue, uninstall the standalone Tunnel client app. It's also possible to uninstall the standalone client app prior to installing Microsoft Defender for Endpoint, but doing so might leave your devices unable to use Microsoft Tunnel until the new Tunnel app is in place and fully configured.  
 
 ## Next steps
 
