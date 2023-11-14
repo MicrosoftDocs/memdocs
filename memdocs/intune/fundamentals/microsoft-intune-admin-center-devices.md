@@ -110,7 +110,7 @@ Under **Device onboarding**, you can access onboarding options for cloud PC crea
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/enrollment-devices-experience.png" alt-text="Screenshot of a tenant's Enrollment page, highlighting the subworkloads." :::  
 
-Enrollment subworkloads include:  
+Within the Enrollment area, you can access the following subworkloads:   
 
 * **Monitor**: Access reports and list views associated with enrollment profiles, policies, and Windows Autopilot deployment.
 * **Windows**: Set up enrollment for devices running Windows 10 or Windows 11.
@@ -146,7 +146,7 @@ Go to **Configuration** to monitor and manage device configuration policies in M
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/configuration-devices-experience.png" alt-text="Screenshot of a tenant's Configuration page, highlighting the subworkloads." ::: 
 
-Configuration subworkloads include:
+Within this area, you can access the following subworkloads:  
 
 * **Monitor**: Access key metrics, reports, and list views associated with device configuration profiles.
 * **Policies**: Create and manage device configuration policies.
@@ -160,7 +160,7 @@ Go to **Compliance** to monitor and manage device compliance policies in Microso
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/compliance-devices-experience.png" alt-text="Screenshot of a tenant's Compliance page, highlighting the subworkloads." :::  
 
-Within Compliance, you can access these subworkloads:  
+Within this area, you can access the following subworkloads:   
 
 * **Monitor**: Access key metrics, reports, and list views associated with device compliance.
 * **Policies**: Create and manage device compliance policies.
