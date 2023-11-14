@@ -32,13 +32,15 @@ ms.collection:
 
 # GPU Cloud PCs in Windows 365 (preview)
 
-Graphic Processing Unit (GPU)-enabled Cloud PCs are suitable for graphics intense workloads that need to be performance optimized. Such workloads include graphic design, image and video rendering, 3D modeling, gaming, data processing and visualization applications that require a GPU to perform. GPU-enabled Cloud PCs require fewer vCPUs for optimized performance because they can offload rendering to the GPU.
+GPU-enabled Cloud PCs are suitable for graphics intense workloads that need to be performance optimized. These offerings can help with graphic design, image and video rendering, 3D modeling, gaming, data processing and visualization applications that require a GPU to perform. GPU-enabled Cloud PCs require fewer vCPUs for optimized performance because they can offload rendering to the GPU.
 
 Three GPU offerings are available for Window 365 Enterprise Cloud PCs:
 
-- Windows 365 Enterprise GPU 4 vCPU, 16-GB RAM, 4-GB vRAM, 512 GB
-- Windows 365 Enterprise GPU 8 vCPU, 56-GB RAM, 12-GB vRAM, 1 TB  
-- Windows 365 Enterprise GPU 16 vCPU, 110-GB RAM, 16-GB vRAM, 1 TB
+| GPU ffering | Intended for | 
+| --- | --- |
+| Windows 365 Enterprise GPU 4 vCPU, 16-GB RAM, 4-GB vRAM, 512 GB | Applications that benefit from basic graphic acceleration on one 3840x2160 display or up to two 1920x1080p displays. |
+| Windows 365 Enterprise GPU 8 vCPU, 56-GB RAM, 12-GB vRAM, 1 TB | Applications with greater specification requirements and high-end graphics workloads on up to four 3840x2160 displays. |
+| Windows 365 Enterprise GPU 16 vCPU, 110-GB RAM, 16-GB vRAM, 1 TB | Graphics intensive workloads that demand high performance and have strict latency requirements. |
 
 For more details on these offerings, see [Cloud PC size recommendations](cloud-pc-size-recommendations.md).
 
@@ -48,15 +50,17 @@ These GPU offerings define the minimum specs provided for vCPU, RAM, and vRAM. I
 
 For more information about how to choose your GPU configuration, see [Announcing Windows 365 GPU-enabled Cloud PCs now in Public Preview](https://aka.ms/w365/gpu/blog).
 
-## Registry keys
+## Registry keys and drivers on GPU Cloud PCs
 
-Registry keys and supported drivers are automatically installed on GPU-enabled Cloud PCs as part of the provisioning process. You don't need to manually install registry keys. 
+Registry keys are automatically set during the provisioning process.
+
+Supported drivers are automatically installed as part of the provisioning process. You don't need to manually install drivers.
 
 ## In public preview
 
 The GPU offerings are in [public preview](../public-preview.md). During this time, GPU offerings are available:
 
-- Through a limited application process using [this form](https://aka.ms/win365gpu).
+- Through a limited application process using [this form](https://aka.ms/win365gpu). Select customers will get private access to purchase licenses, after which they can use the normal [provisioning policy process](create-provisioning-policy.md) to create GPU-enabled Cloud PCs. For more information about licensing, see [Windows 365 Licensing](https://www.microsoft.com/licensing/product-licensing/windows-365).
 - For Windows 365 Enterprise only.
 - In the following regions:
   - East US
