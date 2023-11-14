@@ -54,14 +54,7 @@ This article describes how to opt in to the public preview and access these upda
 
 ## Opt in to public preview  
 
-To try the new Devices experience in the admin center:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Go to **Devices** > **Overview**. 
-3. Select the notification banner that says **Preview upcoming changes to Devices and provide feedback**.  
-4. The **Devices preview** page opens. Select **Try it now** to opt in.  
-
-You can switch back and forth between the current UI and public preview without impacting other admins in your tenant.  
+You can switch back and forth between the current UI and public preview without impacting other admins in your tenant. To try the new Devices experience, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Overview**. Select the notification banner that says **Preview upcoming changes to Devices and provide feedback**. Then select **Try it now** to opt in.  
 
 :::image type="content" source="./media/microsoft-intune-admin-center-devices/public-preview-toggle-intune-2311.png" alt-text="Screenshot highlighting the public preview opt-in banner and Try it now button in the Microsoft Intune admin center." lightbox="./media/microsoft-intune-admin-center-devices/public-preview-toggle-intune-2311.png":::   
 
