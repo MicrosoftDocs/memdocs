@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Microsoft Enterprise SSO plug-in in Microsoft Intune
+title: Microsoft Enterprise SSO plug-in for iOS/iPadOS and macOS
 description: Overview of Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro and other MDM solution providers. The Enterprise SSO plug-in is available on iOS/iPadOS and macOS devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2023
+ms.date: 11/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration

@@ -166,11 +166,6 @@ The following changes are coming to the new Devices experience and will be avail
 - Improved navigation menu: We added icons back in to provide more color and context as you navigate.  
 Flip the toggle in the Microsoft Intune admin center to try out the new experience while it's in public preview and share your feedback. For more information, see [Try new Devices experience](microsoft-intune-admin-center-devices.md).  
 
-### Feature updates and reports support Windows 11 policies<!--17614166 -->
-This new setting for feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins don't need to create or manage groups of eligible and non-eligible devices.
-
-For more information on feature updates, go to [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
-
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
@@ -183,7 +178,6 @@ For information on currently available Remote actions, see [Remote actions](../r
 <!-- *********************************************** -->
 
 ## Device security
-
 
 ### Additional settings for the Linux Antivirus policy template<!-- 24191424  -->  
 We’re expanding support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
@@ -205,7 +199,6 @@ The Microsoft Defender Antivirus template for Linux is supported for devices man
 We're working on an update to the Intune security baseline for Microsoft 365 Apps for Enterprise. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Office apps.
 
 For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
-
 
 <!-- *********************************************** -->
 

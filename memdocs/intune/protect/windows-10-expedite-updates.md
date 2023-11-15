@@ -100,7 +100,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
 
-- Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
+- Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
 
 - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
