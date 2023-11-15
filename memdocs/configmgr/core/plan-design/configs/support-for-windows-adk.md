@@ -2,7 +2,7 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 10/31/2023
+ms.date: 11/15/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -28,7 +28,7 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
     > Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
     
     > [!Note]
-    > VBScript is not currently working in WinPE. It is expected to be fixed in an upcoming servicing update.
+    > ADK for Windows 11, version 22H2 (updated September 2023): VBScript is not currently working in WinPE. It is expected to be fixed in an upcoming servicing update.
 
 ## Windows ADK versions
 
@@ -36,7 +36,6 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 | Windows ADK version            | ConfigMgr 2207| ConfigMgr 2211 | ConfigMgr 2303 | ConfigMgr 2309  |
 |--------------------------------|----------------|----------------|----------------|----------------|
-| **Windows 11**<br>(10.1.22631)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
 | **Windows 11**<br>(10.1.22621.1)| ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
 | **Windows 11**<br>(10.1.22000) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png)| ![Supported](media/green-check.png) |
 | **Windows Server 2022**<br>(10.1.20348)  | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |![Supported](media/green-check.png)|![Supported](media/green-check.png) |

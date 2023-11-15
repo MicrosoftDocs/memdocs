@@ -13,7 +13,7 @@ ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: medium
 ms.technology:
-ms.reviewer: smithre4
+ms.reviewer: scottduf
 
 # optional metadata
 #ROBOTS:

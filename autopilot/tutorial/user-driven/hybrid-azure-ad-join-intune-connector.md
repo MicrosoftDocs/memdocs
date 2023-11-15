@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 06/26/2023
+ms.date: 11/14/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -100,8 +100,8 @@ For an overview of the Windows Autopilot user-driven Microsoft Entra hybrid join
 
 > [!NOTE]
 >
-> - The Global administrator role is a temporary requirement at the time of installation.
- - After you sign in to the Intune connector, it can take several minutes to appear in the **Intune Connector for Active Directory** page of the Microsoft Intune admin center. It appears only if it can successfully communicate with the Intune service.
+> - The account used to enroll the Intune connector is only a temporary requirement at the time of installation. The account isn't used going forward after the server is enrolled.
+> - It can take several minutes for the newly enrolled server to appear in the **Intune Connector for Active Directory** page of the Microsoft Intune admin center. The enrolled server only appears if it can successfully communicate with the Intune service.
 
 After the Intune Connector is installed, it will start logging in the **Event Viewer** under the path **Applications and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Under this path, the **Admin** and **Operational** logs are found.
 
