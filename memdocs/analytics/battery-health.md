@@ -32,6 +32,15 @@ The battery health report is part of advanced Endpoint analytics features and is
 
 In addition to the prerequisites for [advanced Endpoint analytics](advanced-endpoint-analytics#prerequisites), this report also requires that devices need to be battery-powered for them to show up in this report. For advanced analytics capabilities, including battery health, battery-powered devices should be either Intune-only managed or Co-managed.
 
+## Battery health report
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Report** > **Endpoint analytics** > **Battery health**.
+3. The Battery health report page shows an **Overview** tab, **Device performance** tab, **Model performance** tab, **OS performance** tab, and an **App impact** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
+<!--  until I get a screenshot , I am commenting this out
+
+   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics"::: -->
+
 ## Battery Health Score
 
 The battery health score provides an overview of the health status of laptop's batteries and is calculated as a weighted average of your organization's battery capacity score and battery runtime score, helping you identify batteries that need to be replaced.
