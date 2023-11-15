@@ -90,7 +90,7 @@ These updates are also available for Windows 365 Frontline.
 
 #### New GPU offerings for Cloud PCs (preview)<!--46699074-->
 
-Three new GPU offerings are now available for Window 365 Enterprise Cloud PCs. For more information, see [GPU Cloud PCs](gpu-cloud-pcs.md)
+Three new GPU offerings are now available for Window 365 Enterprise Cloud PCs. For more information, see [GPU Cloud PCs](gpu-cloud-pc.md)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End user experience
@@ -104,7 +104,8 @@ Windows App lets users securely connect to Windows devices and apps. Supported r
 - Microsoft Dev Box
 - Remote Desktop Services
 - Remote PC
-Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers. To learn more, see [What is Windows?](https://learn.microsoft.com/windows-app/overview).
+
+Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers.
 
 <!-- ########################## -->
 ## Week of October 30, 2023 (Service release 2310)

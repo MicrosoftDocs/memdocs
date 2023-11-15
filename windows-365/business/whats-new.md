@@ -64,7 +64,8 @@ Windows App lets users securely connect to Windows devices and apps. Supported r
 - Microsoft Dev Box
 - Remote Desktop Services
 - Remote PC
-Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers. To learn more, see [What is Windows?](https://learn.microsoft.com/windows-app/overview).
+
+Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers.
 
 <!-- ########################## -->
 ## Week of October 30, 2023 (Service release 2310)
