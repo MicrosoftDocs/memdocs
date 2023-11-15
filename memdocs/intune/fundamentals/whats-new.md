@@ -106,6 +106,32 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
+#### Settings to manage Windows Subsystem for Linux are now available in the Windows settings catalog<!-- 17757930  -->  
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+We’ve added settings to the Windows settings catalog for *Windows Subsystem for Linux* (WSL). These settings enable Intune integration with WSL so admins can manage deployments of WSL and controls into Linux instances themselves.
+
+To find these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Configuration profiles** > **Create** > **New Policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
+
+**Windows Subsystem for Linux**:
+
+- Allow the Inbox version of the Windows Subsystem For Linux
+- Allow WSL1
+- Allows custom kernel configuration
+- Allows the Windows Subsystem for Linux
+- Disable custom networking configuration
+- Disable custom system distribution configuration
+- Disable firewall configuration
+- Disable kernel command line configuration
+- Disable kernel debugging
+- Disable nested virtualization
+- Disable passthrough disk mount
+- Disable the debug shell
+
+Applies to:
+
+- Windows 10/11
+
 ### Device enrollment
 
 #### Enrollment for iOS/iPadOS devices in shared device mode now generally available<!-- 25199565   -->  
@@ -183,6 +209,29 @@ The following platforms have profiles that are affected, with only the profile n
 - Windows 10 and later (ConfigMgr)
 - Windows 10, Windows 11, and Windows Server
 
+#### Use the endpoint security Firewall policy for Microsoft Defender Firewall to manage firewall settings for Windows Hyper-V<!--  25767542  -->
+
+We've added new settings to the *Microsoft Defender Firewall*  profile for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Microsoft Defender Firewall**.
+
+The following settings have been added to the *Firewall* category:
+
+- **Target** - When *Target* is set to **Windows Subsystem for Linux**, the following child settings are applicable:  
+  - Enable Public Network Firewall
+  - Enable Private Network Firewall
+  - Allow Host Policy Merge
+  - Enable Domain Network Firewall
+  - Enable Loopback
+
+For more information about these settings, see [Windows Defender Firewall with Advanced Security](/windows/security/operating-system-security/network-security/windows-firewall/windows-firewall-with-advanced-security).
+
+Applies to:
+
+- Windows 10/11
+
+#### New Endpoint Security Firewall policy profile for Windows Hyper-V Firewall Rules<!-- 10946486  -->
+
+We've released a new profile named *Windows Hyper-V Firewall Rules* that you can find through the *Windows 10, Windows 11, and Windows Server* platform path for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md#devices-managed-by-intune). Use this profile to manage the firewall settings and rules that apply to specific Hyper-V containers on Windows, including applications like the Windows Subsystem for Linux (WSL) and the Windows Subsystem for Android (WSA).
+
 Applies to:
 
 - Windows 10/11
@@ -197,8 +246,6 @@ The following protected apps are now available for Microsoft Intune:
 - KeePassium for Intune by KeePassium Labs (iOS)
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-
 
 ## Week of November 6, 2023
 
@@ -700,7 +747,7 @@ The EDR template for macOS includes the following settings for the *Device tags*
 To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
 #### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972  -->  
-Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we've added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune). Use this prifle with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection  and response* (EDR) now support Linux. To enable this support, we've added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune). Use this profile with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for Linux includes the following settings for the *Device tags* category from Defender for Endpoint:
 
@@ -1286,9 +1333,9 @@ For more general information about Intune Android 13 support, go to the [Day Zer
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS in public preview<!-- 14743017, 15319901, 18713045, 18713050, 17757959 17757967, 17758270  -->  
 With [Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use Intune's endpoint security policies to manage Defender security settings on devices that onboard to Defender for Endpoint but aren't enrolled with Intune.
 
-Now, you can opt in to a public preview from within the Microsoft 365 Defender portal to gain access to several enhancements for this scenario:
+Now, you can opt in to a public preview from within the Microsoft Defender portal to gain access to several enhancements for this scenario:
 
-- Intune's endpoint security policies become visible in and can be managed from within the Microsoft 365 Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
+- Intune's endpoint security policies become visible in and can be managed from within the Microsoft Defender portal. This enables security admins to remain in the Defender portal to manage Defender and the Intune endpoint security policies for Defender security settings management.
 
 - Security settings management supports deploying Intune endpoint security Antivirus policies to devices that run Linux and macOS.
 
