@@ -28,12 +28,11 @@ ms.collection:
 - tier2
 - M365-identity-device-management
 
+zone_pivot_groups: dcv2-edge-baselines
+
 ---
 
-<!-- Add when pivots are needed:
- 
-Metadata:
-zone_pivot_groups: dcv2-edge-baselines
+<!-- Pivot details: 
 
 - id: dcv2-edge-baselines
   title: Microsoft Edge baseline versions
@@ -44,6 +43,7 @@ zone_pivot_groups: dcv2-edge-baselines
     - id: edge-v117
       title: Edge v117 (November 2023)
 -->
+
 # Microsoft Edge security baseline settings reference for Microsoft Intune
 
 This article is a reference for the settings that are available in the Microsoft Edge security baseline for Microsoft Intune and applies to versions of that baseline that released in May 2023 or later.
