@@ -151,7 +151,7 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Limitations  
 
-* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode, bulk enrollment (WCD), or Azure Virtual desktop, Intune enforces the default policy.  
+* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode and Autopilot for pre-provisioned deployment, bulk enrollment (WCD), or Azure Virtual desktop, Intune enforces the default policy.  
 
 * Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
 
