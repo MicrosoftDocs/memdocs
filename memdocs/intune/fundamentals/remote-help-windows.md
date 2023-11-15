@@ -283,7 +283,7 @@ Remote Help logs data during installation and during Remote Help sessions, which
 
 Automatic firewall rule creation from the Remote Help installer has been removed. However, if needed, System administrators can create firewall rules.
 
-Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Defender Firewall. In some situations when it's necessary, the following Remote Help executables should be allowed through the firewall:
+Depending on the environment that Remote Help is utilized in, it may be necessary to create firewall rules to allow Remote Help through the Windows Firewall. In some situations when it's necessary, the following Remote Help executables should be allowed through the firewall:
 
 - C:\Program Files\Remote help\RemoteHelp.exe
 - C:\Program Files\Remote help\RHService.exe
