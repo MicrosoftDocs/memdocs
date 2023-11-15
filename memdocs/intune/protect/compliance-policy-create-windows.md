@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 5/5/2021
+ms.date: 11/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -189,20 +189,20 @@ Applies only to co-managed devices running Windows 10/11. Intune-only devices re
    [DeviceStatus CSP - DeviceStatus/Compliance/EncryptionCompliance](/windows/client-management/mdm/devicestatus-csp)
 
   > [!NOTE]
-  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate Bitlocker status at the TPM level. However, when leveraging this setting, be aware that a reboot may be required before the device will reflect as compliant.
+  > The **Encryption of data storage on a device** setting generically checks for the presence of encryption on the device, more specifically at the OS drive level. Currently, Intune supports only the encryption check with BitLocker. For a more robust encryption setting, consider using **Require BitLocker**, which leverages Windows Device Health Attestation to validate BitLocker status at the TPM level. However, when leveraging this setting, be aware that a reboot may be required before the device will reflect as compliant.
 
 ### Device Security  
 
 - **Firewall**:  
-  - **Not configured** (*default*) - Intune doesn't control the Microsoft Defender Firewall, nor change existing settings.
-  - **Require** - Turn on the Microsoft Defender Firewall, and prevent users from turning it off.
+  - **Not configured** (*default*) - Intune doesn't control the Windows Firewall, nor change existing settings.
+  - **Require** - Turn on the Windows Firewall, and prevent users from turning it off.
 
   [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
   > - If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
   >
-  > - If a configuration is applied (for example, via a group policy) to a device that configures Defender Firewall to allow all inbound traffic, or turns off the firewall, setting **Firewall** to **Require** will return **Not compliant**, even if Intune device configuration policy turns Firewall on. This is because the group policy object overrides the Intune policy. To fix this issue, we recommend that you remove any conflicting group policy settings, or that you migrate your Firewall-related group policy settings to Intune device configuration policy. In general, we recommend that you [keep default settings](/windows/security/threat-protection/windows-firewall/best-practices-configuring#keep-default-settings), including blocking inbound connections. For more information, see [Best practices for configuring Windows Defender Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
+  > - If a configuration is applied (for example, via a group policy) to a device that configures Windows Firewall to allow all inbound traffic, or turns off the firewall, setting **Firewall** to **Require** will return **Not compliant**, even if Intune device configuration policy turns Firewall on. This is because the group policy object overrides the Intune policy. To fix this issue, we recommend that you remove any conflicting group policy settings, or that you migrate your Firewall-related group policy settings to Intune device configuration policy. In general, we recommend that you [keep default settings](/windows/security/threat-protection/windows-firewall/best-practices-configuring#keep-default-settings), including blocking inbound connections. For more information, see [Best practices for configuring Windows Firewall](/windows/security/threat-protection/windows-firewall/best-practices-configuring).
 
 - **Trusted Platform Module (TPM)**:  
   - **Not configured** (*default*) -  Intune doesn't check the device for a TPM chip version.
