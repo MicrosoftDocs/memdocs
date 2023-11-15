@@ -100,9 +100,8 @@ Applies to:
 
 ### Device security
 
-#### Use the endpoint security Firewall policy for Microsoft Defender Firewall to manage firewall settings for Windows Hyper-V<!--  25767542  -->
-
-We've added new settings to the *Microsoft Defender Firewall*  profile for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Microsoft Defender Firewall**.
+#### Use the endpoint security Firewall policy for Windows Firewall to manage firewall settings for Windows Hyper-V<!--  25767542  -->  
+We've added new settings to the *Windows Firewall* profile (formerly *Microsoft Defender Firewall*) for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Windows Firewall**.
 
 The following settings have been added to the *Firewall* category:
 
@@ -113,7 +112,7 @@ The following settings have been added to the *Firewall* category:
   - Enable Domain Network Firewall
   - Enable Loopback
 
-For more information about these settings, see [Windows Defender Firewall with Advanced Security](/windows/security/operating-system-security/network-security/windows-firewall/windows-firewall-with-advanced-security).
+For more information about these settings, see [Windows Firewall with Advanced Security](/windows/security/operating-system-security/network-security/windows-firewall/windows-firewall-with-advanced-security).
 
 Applies to:
 
@@ -131,7 +130,7 @@ Applies to:
 
 ### App management
 
-#### Minimum version update for iOS Company Portal<!-- 17964541 -->
+#### Minimum version update for iOS Company Portal<!-- 17964541 -->  
 Users are required to update to v5.2311.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
 ### Device security
