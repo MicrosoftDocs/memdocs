@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/17/2023
+ms.date: 11/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,7 +80,11 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 
     Select **Next**.
 
-11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+11. In **Applicability rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. For more information on applicability rules, go to [Applicability rules](device-profile-create.md#applicability-rules).
+
+    Select **Next**.
+
+12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 It's now ready for you to [deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](/autopilot/windows-autopilot-hybrid).
 
