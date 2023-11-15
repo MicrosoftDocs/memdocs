@@ -140,9 +140,6 @@ The following credential types are supported for Cloud PC authentication:
 
 ### Single sign-on (SSO)
 
->[!Important]
->Single sign-on is in [public preview](../public-preview.md) for Microsoft Entra joined and Microsoft Entra hybrid joined Cloud PCs.
-
 Single sign-on (SSO) allows the connection to skip the Cloud PC VM credential prompt and automatically sign the user in to Windows through Microsoft Entra authentication. Microsoft Entra authentication provides other benefits including passwordless authentication and support for third-party identity providers. Single sign-on is available on Cloud PCs (either [gallery images](device-images.md#gallery-images) or [custom images](device-images.md#custom-images)) using the following operating systems:
 
 - Windows 11 Enterprise with the [2022-10 Cumulative Updates for Windows 11 (KB5018418)](https://support.microsoft.com/kb/KB5018418) or later installed.
@@ -158,10 +155,7 @@ Without SSO, the client prompts users for their Cloud PC credentials for every c
 
 Once you're connected to your Cloud PC, you may be prompted for authentication inside the session. This section explains how to use credentials other than username and password in this scenario.
 
-### In-session passwordless authentication (preview)
-
-> [!IMPORTANT]
-> In-session passwordless authentication is currently in [public preview](../public-preview.md).
+### In-session passwordless authentication
 
 Windows 365 supports in-session passwordless authentication using [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) or security devices like FIDO keys when using the [Windows Desktop client](../end-user-access-cloud-pc.md#remote-desktop). Passwordless authentication is enabled automatically when the Cloud PC and local PC are using the following operating systems:
 

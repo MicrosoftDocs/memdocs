@@ -60,6 +60,10 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
     - **Azure Virtual Desktop** (app ID 9cdead84-a844-4324-93f2-b2e6bb768d07). This app may also appear as **Windows Virtual Desktop**. This app is used to authenticate to the Gateway during the connection and when the client sends diagnostic information to the service.
     - **Microsoft Remote Desktop** (app ID a4a365df-50f1-4397-bc59-1a1564b8bb9c) and **Windows Cloud Login** (app ID 270efc09-cd0d-444b-a71f-39af4910ec45). These apps are only needed when **Use Microsoft Entra single sign-on (preview)** is enabled in a provisioning policy. These apps are used to authenticate users to the Cloud PC.
 
+    By choosing both the first two apps, you make sure that the policy applies to the Cloud PC End-user portal and the connection to the Cloud PC. If you want to exclude apps, you must also choose both these apps.
+    
+   >[!NOTE]
+   >If you have configured a provisioning policy to **Use Microsoft Entra single sign-on**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
      It's recommended to match conditional access policies between these apps. This ensures that the policy applies to the Cloud PC End-user portal, the connection to the Gateway and the Cloud PC for a consistent experience. If you want to exclude apps, you must also choose all of these apps.
 
      > [!IMPORTANT]
