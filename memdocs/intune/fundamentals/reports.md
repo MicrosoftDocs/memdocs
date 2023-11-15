@@ -18,7 +18,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-
+ms.reviewer: jlynn
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure

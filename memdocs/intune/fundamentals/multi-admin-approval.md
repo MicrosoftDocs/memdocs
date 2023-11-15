@@ -50,6 +50,8 @@ To create an access policy, your account must be assigned the [*Intune Service A
 
 To be an approver, an account must be in the group that’s assigned to the access policy for a specific type of resource.
 
+If your organization allows unlicensed administrators for Intune roles, all approver groups must also be a member group of one or more Intune role assignments. 
+
 ## How multi admin approval and Access policies work
 
 **When an admin edits** or creates a new object for an area that’s protected by an access policy, they see an option on the *Save + Review* surface where they can enter a description of the change as a *business justification*.
