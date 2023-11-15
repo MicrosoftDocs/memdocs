@@ -6588,7 +6588,7 @@ On a device, hardware that is specified in an allowlist can install or update. H
 
 #### Improvements to endpoint security Firewall rules<!-- 7732448    -->
 
-We've made several changes to improve the experience of configuring firewall rules in the [Microsoft Defender Firewall rules profile](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules) for endpoint security Firewall policy.
+We've made several changes to improve the experience of configuring firewall rules in the [Microsoft Defender Firewall rules profile](../protect/endpoint-security-firewall-profile-settings.md) for endpoint security Firewall policy.
 
 Improvements include:
 - Improved layout in the UI, including section headers to organize the view.
@@ -7155,7 +7155,7 @@ We've added support to **Import** or **Export** a list of address ranges using .
 
 We've also improved validation of both local and remote address range entry to help prevent duplicate or invalid entries.
 
-For more information about these settings, see the settings for [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules).
+For more information about these settings, see the settings for [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-profile-settings.md).
 
 #### Set device compliance state from third-party MDM providers<!-- 6361689 -->
 
