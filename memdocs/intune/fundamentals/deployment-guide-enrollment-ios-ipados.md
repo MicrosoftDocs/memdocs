@@ -135,13 +135,14 @@ This task list provides an overview. For more specific information, see [Apple B
 
   Don't install the Company Portal app from the app store directly on ADE-enrolled devices. Instead, install the Company Portal app using the following options:
 
-  - **VPP token + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Install Company Portal with VPP**. No other steps are needed.
+  - **VPP token + Enrolling new devices**: If you have the Volume Purchase Program (VPP), and you're enrolling new devices, then the Company Portal app is included. When you create the enrollment profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Install Company Portal with VPP**. However, aditional steps are needed for the app to automatically update afterwards.
 
     This option:
 
     - Includes the correct Company Portal app version.
-    - You don't have to create another policy to deploy the Company Portal app to devices.
-    - The Company Portal app must be updated manually by you, or your users. Or, in the Intune admin center, you can enable automatic app updates in the app token settings. Then, the Company Portal app is automatically updated.
+    - Makes a one time only install of the Company Portal app.
+    - Requires an additional **"Required"** deployment of the VPP version of Company portal, so Intune can continue pushing app updates. [Deploying the Company Portal app
+](https://learn.microsoft.com/en-us/mem/intune/enrollment/device-enrollment-program-enroll-ios#deploying-the-company-portal-app).
 
   - **No VPP token + Enrolling new devices**: No administrator tasks. Make sure users enter their Apple ID in Setup Assistant.
 
