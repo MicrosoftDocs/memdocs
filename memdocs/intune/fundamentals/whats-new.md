@@ -84,7 +84,7 @@ The Intune Company Portal app for Android and Microsoft Intune app for Android A
 #### New settings available in the Apple settings catalog<!-- 25189345  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
 
 **Managed Settings**:
 
@@ -103,6 +103,12 @@ Applies to:
 Applies to:
 
 - Shared iPad
+
+**Microsoft Defender > Antivirus engine**:
+
+- Enable passive mode (deprecated): This setting is deprecated. Enforcement level is the replacement setting.
+- Enable real-time protection (deprecated): This setting is deprecated. Enforcement level is the replacement setting.
+- Enforcement level
 
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
