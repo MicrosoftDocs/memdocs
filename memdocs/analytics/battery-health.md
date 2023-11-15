@@ -30,7 +30,7 @@ The battery health report is part of advanced Endpoint analytics features and is
 
 ## Prerequisites
 
-In addition to the prerequisites for [advanced Endpoint analytics](advanced-endpoint-analytics#prerequisites), this report also requires that devices need to be battery-powered for them to show up in this report. For advanced analytics capabilities, including battery health, battery-powered devices should be either Intune-only managed or Co-managed.
+In addition to the prerequisites for [advanced Endpoint analytics](advanced-endpoint-analytics.md#prerequisites), this report also requires that devices need to be battery-powered for them to show up in this report. For advanced analytics capabilities, including battery health, battery-powered devices should be either Intune-only managed or Co-managed.
 
 ## Battery health report
 
