@@ -59,7 +59,7 @@ Use the steps in this article as a template to allow or deny specific apps from 
 
     OR
 
-  - **Global Administrator** or **Intune Service Administrator** Azure AD role
+  - **Global Administrator** or **Intune Service Administrator** Microsoft Entra role
 
   For more information on Intune roles, go to [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md).
 
