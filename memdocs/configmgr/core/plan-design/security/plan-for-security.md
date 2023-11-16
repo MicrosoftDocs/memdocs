@@ -92,7 +92,7 @@ For more information, see [Fundamentals of role-based administration](../../unde
 
 Configuration Manager integrates with Microsoft Entra ID to enable the site and clients to use modern authentication.
 
-For more information about Microsoft Entra ID, see [Microsoft Entra documentation](/azure/entra/).
+For more information about Microsoft Entra ID, see [Microsoft Entra documentation](/entra/).
 
 Onboarding your site with Microsoft Entra ID supports the following Configuration Manager scenarios:
 
