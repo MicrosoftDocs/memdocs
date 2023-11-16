@@ -33,11 +33,11 @@ ms.collection:
 
 # Intune Data Warehouse application-only authentication
 
-You can set up an application using Azure Active Directory (Azure AD) and authenticate to the Intune Data Warehouse. This process is useful for websites, apps, and background processes where the application should not have access to user credentials. Using the following steps, you authorize your application with Azure AD using OAuth 2.0.
+You can set up an application using Microsoft Entra ID and authenticate to the Intune Data Warehouse. This process is useful for websites, apps, and background processes where the application should not have access to user credentials. Using the following steps, you authorize your application with Microsoft Entra ID using OAuth 2.0.
 
 ## Authorization
 
-Azure Active Directory (Azure AD) uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Azure AD tenant. This guide shows you how to authenticate your application using C#. The OAuth 2.0 authorization code flow is described in section 4.1 of the OAuth 2.0 specification. For more information, see [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code).
+Microsoft Entra ID uses OAuth 2.0 to enable you to authorize access to web applications and web APIs in your Microsoft Entra tenant. This guide shows you how to authenticate your application using C#. The OAuth 2.0 authorization code flow is described in section 4.1 of the OAuth 2.0 specification. For more information, see [Authorize access to web applications using OAuth 2.0 and Microsoft Entra ID](/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
 
 ## Azure KeyVault
@@ -49,13 +49,13 @@ The following process uses a private method to process and convert an app key. T
 In this section, you provide details about the Web app you would like to point to at Intune. A web app is a client-server application. The server provides the web app, which includes the UI, content, and functionality. This type of app is separately maintained on the Web. You use Intune to grant a web app access to Intune. The data flow is initiated by the web app. 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select  **All services** > **M365 Azure Active Directory** > **Azure Active Directory** > **App registrations**.
+2. Select  **All services** > **M365 Microsoft Entra ID** > **Microsoft Entra ID** > **App registrations**.
 3. Click **New registration** to display the **Register an application** pane.
 4. In the **Register an application** pane, add your app details:
 
     - An app name, such as *Intune App-Only Auth*.
     - The **Supported account type**. 
-    - The **Redirect URI** of the application. This is the location users automatically navigate to during the authentication process. They are required to prove that they are who they say they are. For more information, see [What is application access and single sign-on with Azure Active Directory?](/azure/active-directory/active-directory-appssoaccess-whatis)
+    - The **Redirect URI** of the application. This is the location users automatically navigate to during the authentication process. They are required to prove that they are who they say they are. For more information, see [What is application access and single sign-on with Microsoft Entra ID?](/azure/active-directory/active-directory-appssoaccess-whatis)
 
 5. Click **Register**.
 
@@ -64,7 +64,7 @@ In this section, you provide details about the Web app you would like to point t
 
 ## Create a key (password)
 
-In this section, Azure AD generates a key value for your app.
+In this section, Microsoft Entra ID generates a key value for your app.
 
 1. On the **App registrations** pane, select your newly created app to display the app pane.
 2. Select **Certificates & secrets** near the top of the pane to display the **Certificates & secrets** pane.

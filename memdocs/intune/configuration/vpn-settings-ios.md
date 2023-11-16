@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/19/2023
+ms.date: 11/15/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -85,32 +85,16 @@ Select the VPN connection type from the following list of vendors:
 - **Citrix SSO**
 - **Zscaler**
 
-  To use Conditional Access, or allow users to bypass the Zscaler sign-in screen, you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+  To use Conditional Access, or allow users to bypass the Zscaler sign-in screen, you must integrate Zscaler Private Access (ZPA) with your Microsoft Entra account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **NetMotion Mobility**
 - **IKEv2**
 
   [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
 
-- **Microsoft Tunnel (standalone client)(preview)**
-
-  Applies to the Microsoft Tunnel client app.
-
-  > [!Important]
-  >
-  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
-  >
-  > - On July 29, 2022, the standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
-  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
-  >
-  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
-
 - **Microsoft Tunnel**
 
   Applies to the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
 
-  > [!Important]
-  > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
-  
 - **Custom VPN**
 
 > [!NOTE]
@@ -119,7 +103,7 @@ Select the VPN connection type from the following list of vendors:
 ## Base VPN settings
 
 - **Connection name**: End users see this name when they browse their device for a list of available VPN connections.
-- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Azure Active Directory (AD) is used.
+- **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Microsoft Entra ID is used.
 - **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
 - **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
 - **Authentication method**: Choose how devices authenticate to the VPN server.
@@ -292,7 +276,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN
 
-- **Type of automatic VPN**: Select the VPN type you want to configure: On-demand VPN or per-app VPN:
+- **Type of automatic VPN**: Select the VPN type you want to configure - On-demand VPN or per-app VPN. Make sure you only use one option. Using them both simultaneously causes connection issues.
 
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
@@ -397,7 +381,6 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 These settings apply to the following VPN connection types:
 
-- **Microsoft Tunnel (standalone client) (preview)**
 - **Microsoft Tunnel**
 
 **Settings**:

@@ -129,7 +129,7 @@ The following settings are shown depending on the connection type you select. No
 
   For more information, including creating custom EAP XML, see [EAP configuration](/windows/client-management/mdm/eap-configuration).
 
-- **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to devices joined to Azure Active Directory (AD).
+- **Device tunnel** (IKEv2 only): **Enable** connects the device to the VPN automatically without any user interaction or sign in. This setting applies to devices joined to Microsoft Entra ID.
 
   To use this feature, you must configure the following settings:
 
@@ -283,7 +283,7 @@ Example:
 
 ## Conditional Access
 
-- **Conditional Access for this VPN connection**: Enables device compliance flow from the client. When enabled, the VPN client communicates with Azure Active Directory (AD) to get a certificate to use for authentication. The VPN should be set up to use certificate authentication, and the VPN server must trust the server returned by Azure AD.
+- **Conditional Access for this VPN connection**: Enables device compliance flow from the client. When enabled, the VPN client communicates with Microsoft Entra ID to get a certificate to use for authentication. The VPN should be set up to use certificate authentication, and the VPN server must trust the server returned by Microsoft Entra ID.
 
 - **Single sign-on (SSO) with alternate certificate**: For device compliance, use a certificate different from the VPN authentication certificate for Kerberos authentication. Enter the certificate with the following settings:
 
