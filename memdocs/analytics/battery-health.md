@@ -2,7 +2,7 @@
 title: Battery Health report in Endpoint analytics
 titleSuffix: Microsoft Intune
 description: Learn about the battery health report as an advanced feature in Endpoint analytics
-ms.date: 11/13/2023
+ms.date: 11/16/2023
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -14,9 +14,6 @@ ROBOTS: NOINDEX,NOFOLLOW
 ---
 
 # Introduction
-
-> [!NOTE]
-> This feature is in private preview.
 
 The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience.
 
@@ -75,17 +72,25 @@ Insights for this scenario highlight the devices for which the **App Impact** ta
 
 ## Reporting Tabs
 
-The Battery health page has reporting tabs that provide support for the insights, including:
+The Battery health page has reporting tabs that provide support for insights:
 
-**Device performance tab**: This tab provides battery health metrics and a score for all your battery-powered devices. You can sort by a particular metric (for example, **Max capacity**) to see which battery-powered devices have the worst scores for that metric to help with troubleshooting. You can also search for a battery-powered device by name. If you select a battery-powered device, you can see its runtime trend, its score vis-à-vis the model's average score in the organization, and the top apps that consumed its battery in the last 14 days. These details can help you identify any corrective actions needed to improve the user experience.
+### Device performance tab
+
+This tab provides battery health metrics and a score for all your battery-powered devices. You can sort by a particular metric (for example, **Max capacity**) to see which battery-powered devices have the worst scores for that metric to help with troubleshooting. You can also search for a battery-powered device by name. If you select a battery-powered device, you can see its runtime trend, its score vis-à-vis the model's average score in the organization, and the top apps that consumed its battery in the last 14 days. These details can help you identify any corrective actions needed to improve the user experience.
 
 The cycle count is the number of times the battery has discharged 100% of its capacity, but not necessarily at one time. For example, if a battery discharges 50% of its capacity on day 1, 30% on day 2, and 20% on day 3, then its cycle count goes up by 1 after these three days.
 
-**Model performance tab**: This tab lets you see the battery health metrics and scores by battery-powered device models, which can help you identify whether problems are isolated to particular models.
+### Model performance tab
 
-**Operating systems performance tab**: This tab lets you see the battery health metrics and scores by OS versions, which can help you identify whether problems are isolated to particular OS versions.
+This tab lets you see the battery health metrics and scores by battery-powered device models, which can help you identify whether problems are isolated to particular models.
 
-**App impact tab**: This tab lets you see the organization's cumulative battery usage per app in the last 14 days. You can see the number of battery-powered devices for which the associated battery usage of an app and the percentage of the cumulative battery charge that the app consumed is recorded. This information helps to troubleshoot apps that might be consuming an inordinate amount of battery.
+### Operating systems performance tab
+
+This tab lets you see the battery health metrics and scores by OS versions, which can help you identify whether problems are isolated to particular OS versions.
+
+### App impact tab
+
+This tab lets you see the organization's cumulative battery usage per app in the last 14 days. You can see the number of battery-powered devices for which the associated battery usage of an app and the percentage of the cumulative battery charge that the app consumed is recorded. This information helps to troubleshoot apps that might be consuming an inordinate amount of battery.
 
 > [!NOTE]
 > The battery power used by an app varies by the activity that a user engages in. For example, using Microsoft Teams for chatting vs in an audio/video call with screen share results in very different battery drains. The data in the *App impact* tab accounts for all activity using an app.
@@ -110,8 +115,8 @@ Batteries that have low design capacity (For example, devices designed to hold l
 
 For more information, go to:
 
- - [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)
+- [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)
 
- - [Use Intune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../intune/fundamentals/intune-add-ons.md)
 
- - [Device scopes](device-scopes.md)
+- [Device scopes](device-scopes.md)
