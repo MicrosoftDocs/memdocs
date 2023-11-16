@@ -25,7 +25,7 @@ You can get BitLocker recovery keys for a tenant-attached device from the Micros
 
 - Configuration Manager site version 2107 or later
 
-    To support devices that are joined to Azure Active Directory (Azure AD), install the [update rollup](../hotfix/2107/11121541.md) for Configuration Manager version 2107.<!-- 11285470 -->
+    To support devices that are joined to Microsoft Entra ID, install the [update rollup](../hotfix/2107/11121541.md) for Configuration Manager version 2107.<!-- 11285470 -->
 
 - Apply a Configuration Manager [BitLocker management](../protect/deploy-use/bitlocker/deploy-management-agent.md) policy to the device.
 

@@ -3,12 +3,12 @@
 
 title: Set up automated device enrollment for shared device mode 
 titleSuffix: Microsoft Intune
-description: Learn how to set up automated device enrollment for iOS/iPadOS devices in Microsoft Entra ID shared mode.    
+description: Learn how to set up Apple automated device enrollment for iOS/iPadOS devices in shared device mode, a feature of Microsoft Entra.    
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 11/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -32,18 +32,15 @@ ms.collection:
 - highpri
 ---  
 
-# Set up enrollment for devices in Microsoft Entra shared device mode  
+# Set up enrollment for devices in shared device mode  
 
 *Applies to iOS/iPadOS*  
 
-> [!IMPORTANT]
-> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+Set up automated device enrollment for devices in [shared device mode](/azure/active-directory/develop/msal-ios-shared-devices). *Shared device mode* is a feature of Microsoft Entra ID that enables frontline workers to securely share a single device throughout the day, signing in and out as needed. This experience utilizes the [Microsoft Enterprise SSO plug-in](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md) to limit the number of times employees have to sign in during a session.      
 
-Set up automated device enrollment for devices in Microsoft Entra shared device mode. *Shared device mode* enables frontline workers to securely share a single device throughout the day, signing in and out as needed. The foundation for this experience is made up of [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-ios-shared-devices) and the [Microsoft Enterprise SSO plug-in](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md).    
+Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment.  Microsoft Intune supports zero-touch provisioning for devices in shared device mode, which means that the device can be set up and enrolled in Intune with minimal interaction from the frontline worker.     
 
-Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment.  Microsoft Intune supports zero-touch provisioning for devices in Microsoft Entra ID shared mode, which means that the device can be set up and enrolled in Intune with minimal interaction from the frontline worker.     
-
-This article describes how to enable automated device enrollment for devices in shared device mode. You will:  
+In this article, you will:  
 
 * Create an Apple enrollment profile
 * Create a dynamic Microsoft Entra group for automatic grouping
@@ -78,7 +75,7 @@ Create a dynamic Microsoft Entra group using the `enrollmentProfileName` propert
 * Add a dynamic query with the following rule: 
     * **Property**: enrollmentProfileName
     * **Operator**: Equals
-    * **Value**: Enter the name of the enrollment profile you created for devices in Microsoft Entra ID shared mode. 
+    * **Value**: Enter the name of the enrollment profile you created for devices in  shared device mode. 
 
 For more information about how to create a dynamic group for shared devices in Microsoft Entra ID, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
@@ -87,7 +84,7 @@ For more information about how to create a dynamic group for shared devices in M
 Create an assignment filter to quickly target devices assigned to your enrollment profile. Add a rule with the following parameters:   
 * **Property**: enrollmentProfileName  
 * **Operator**: Equals
-* **Value**: Enter the name of the enrollment profile you created for devices in Microsoft Entra ID shared mode.  
+* **Value**: Enter the name of the enrollment profile you created for devices in shared device mode.  
 
 For more information about how to create an assignment filter rule, see [Create a filter](../fundamentals/filters.md#prerequisites).  
 

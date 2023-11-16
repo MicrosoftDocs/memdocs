@@ -46,7 +46,7 @@ When co-management is already enabled, edit the co-management properties to enab
 <!-- : : : image type="content" source="../../analytics/media/13058986-configure-upload-configmgr.png" alt-text="Upload devices to Microsoft Intune admin center." : : : -->
  
 1. Sign in with your *Global Administrator* account when prompted.
-1. Select **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
+1. Select **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync.
 1. Choose **OK** to exit the co-management properties once you've done making changes.
 
 
@@ -69,8 +69,8 @@ When co-management isn't enabled, use the instructions below to enable device up
    - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
 
    [![Co-management Configuration Wizard](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
-1. Choose **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
-     - Optionally, you can import a previously created Azure AD application during tenant attach onboarding. For more information, see the [Import a previously created Azure AD application](#bkmk_aad_app) section.
+1. Choose **Next** and then **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync.
+     - Optionally, you can import a previously created Microsoft Entra application during tenant attach onboarding. For more information, see the [Import a previously created Microsoft Entra application](#bkmk_aad_app) section.
 1. On the **Configure upload** page, select the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
     - When a single collection is selected, its child collections are also uploaded. <!--8717629-->
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
