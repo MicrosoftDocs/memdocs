@@ -159,7 +159,6 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 
 ### Device security
 
-<<<<<<< HEAD
 #### Additional settings for the Linux Antivirus policy template<!-- 24191424 -->  
 We’ve expanded support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
 
