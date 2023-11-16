@@ -108,7 +108,7 @@ Revoking or exporting a token/QR code won't have any effect on devices that are 
 
 ### Create a device group
 
-You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Azure AD device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
+You can target apps and policies to either assigned or dynamic device groups. You can configure dynamic Microsoft Entra device groups to automatically populate devices that are enrolled with a particular enrollment profile by following these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Groups** > **All groups** > **New group**.
 2. In the **Group** blade, fill out the required fields as follows:
@@ -121,7 +121,7 @@ You can target apps and policies to either assigned or dynamic device groups. Yo
     - **Add devices where**: enrollmentProfileName
     - In the middle box, choose **Equals**.
     - In the last field, enter the enrollment profile name that you created earlier.
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Azure AD](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Choose **Add query** > **Create**.
 
 ## Enroll the corporate-owned work profile devices

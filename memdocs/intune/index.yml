@@ -367,8 +367,8 @@ additionalContent:
     - title: Related services
       items:
         # Card
-        - title: Azure Active Directory
-          summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
+        - title: Microsoft Entra ID
+          summary: Microsoft Entra ID is a cloud-based identity and access management service.
           url: /azure/active-directory/
         # Card
         - title: Windows client docs for IT Pros
