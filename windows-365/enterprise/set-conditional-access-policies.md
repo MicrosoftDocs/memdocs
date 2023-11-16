@@ -69,10 +69,10 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
      > If you do not see the Windows Cloud Login app when configuring your conditional access policy, use the steps below to create the app. You must have Owner or Contributor permissions on the subscription to make these changes:
      >
      >  1. Sign into the [Azure Portal](https://portal.azure.com).
-     >  1. Select Subscriptions from the list of Azure Services.
+     >  1. Select **Subscriptions** from the list of Azure Services.
      >  1. Select your Subscription name.
-     >  1. Select Resource providers then select Microsoft.DesktopVirtualization.
-     >  1. Select Register at the top.
+     >  1. Select **Resource providers** then select **Microsoft.DesktopVirtualization**.
+     >  1. Select **Register** at the top.
      >
      > Once the resource provider has been registered, you should see the Windows Cloud Login app in the conditional access policy configuration when selecting apps to apply the policy to. If you are not using Azure Virtual Desktop, you can unregister the Microsoft.DesktopVirtualization resource provider once the Windows Cloud Login app is available.
 7. If you want to fine-tune your policy, under **Access controls**, choose **0 controls selected**. Under **Grant**, choose the options that you want to apply to all objects assigned to this policy.
