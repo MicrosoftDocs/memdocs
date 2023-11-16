@@ -182,7 +182,7 @@ This certificate has a key length of 1024 bits.
 
 The cloud management gateway (CMG) requires server authentication certificates. These certificates allow the service to provide HTTPS communication to clients over the internet. For more information, see [CMG server authentication certificate](../../clients/manage/cmg/server-auth-cert.md).
 
-Clients require another type of authentication to communicate with a CMG and the on-premises management point. They can use Azure Active Directory, a PKI certificate, or a site token. For more information, see [Configure client authentication for cloud management gateway](../../clients/manage/cmg/configure-authentication.md).
+Clients require another type of authentication to communicate with a CMG and the on-premises management point. They can use Microsoft Entra ID, a PKI certificate, or a site token. For more information, see [Configure client authentication for cloud management gateway](../../clients/manage/cmg/configure-authentication.md).
 
 Clients don't require a client PKI certificate to use cloud-based storage. After they authenticate to the management point, the management point issues a Configuration Manager access token to the client. The client presents this token to the CMG to access the content. The token is valid for eight hours.
 
