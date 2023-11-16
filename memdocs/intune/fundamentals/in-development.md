@@ -136,7 +136,32 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 <!-- *********************************************** -->
 
+<<<<<<< HEAD
 <!-- ## Device security -->
+=======
+## Device security
+
+### Additional settings for the Linux Antivirus policy template<!-- 24191424  -->  
+We’re expanding support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
+
+- cloudblocklevel
+- scanarhives
+- scanafterdefinitionupdate
+- maximumondemandscanthreads
+- behaviormonitoring
+- enablefilehashcomputation
+- networkprotection
+- enforcementlevel
+- nonexecmountpolicy
+- unmonitoredfilesystems
+
+The Microsoft Defender Antivirus template for Linux is supported for devices managed by Intune, as well as those managed only by Defender through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview#linux) scenario when you use the opt-in public preview.
+
+### Updated security baseline for Microsoft 365 Apps for Enterprise<!-- 25021846  -->  
+We're working on an update to the Intune security baseline for Microsoft 365 Apps for Enterprise. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Office apps.
+
+For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
+>>>>>>> 15a80e625b472279a67d069e234951e7beae9cf9
 
 <!-- *********************************************** -->
 

@@ -121,18 +121,18 @@ To find these settings, in the [Microsoft Intune admin center](https://go.micros
 
 **Windows Subsystem for Linux**:
 
-- Allow the Inbox version of the Windows Subsystem For Linux
+- Allow kernel debugging
+- Allow custom networking configuration
+- Allow custom system distribution configuration
+- Allow kernel command line configuration
+- Allow custom kernel configuration
 - Allow WSL1
-- Allows custom kernel configuration
-- Allows the Windows Subsystem for Linux
-- Disable custom networking configuration
-- Disable custom system distribution configuration
-- Disable firewall configuration
-- Disable kernel command line configuration
-- Disable kernel debugging
-- Disable nested virtualization
-- Disable passthrough disk mount
-- Disable the debug shell
+- Allow the Windows Subsystem for Linux
+- Allow the Inbox version of the Windows Subsystem For Linux
+- Allow user setting firewall configuration
+- Allow nested virtualization
+- Allow passthrough disk mount
+- Allow the debug shell
 
 Applies to:
 
@@ -159,6 +159,7 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 
 ### Device security
 
+<<<<<<< HEAD
 #### Additional settings for the Linux Antivirus policy template<!-- 24191424 -->  
 We’ve expanded support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
 
@@ -215,9 +216,8 @@ The following platforms have profiles that are affected, with only the profile n
 - Windows 10 and later (ConfigMgr)
 - Windows 10, Windows 11, and Windows Server
 
-#### Use the endpoint security Firewall policy for Microsoft Defender Firewall to manage firewall settings for Windows Hyper-V<!--  25767542  -->
-
-We've added new settings to the *Microsoft Defender Firewall*  profile for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Microsoft Defender Firewall**.
+#### Use the endpoint security Firewall policy for Windows Firewall to manage firewall settings for Windows Hyper-V<!--  25767542  -->  
+We've added new settings to the *Windows Firewall* profile (formerly *Microsoft Defender Firewall*) for endpoint security [Firewall policy](../protect/endpoint-security-firewall-policy.md). The new settings can be used to manage Windows Hyper-V settings. To configure the new settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Firewall** > Platform: **Windows 10, Windows 11, and Windows Server** > Profile: **Windows Firewall**.
 
 The following settings have been added to the *Firewall* category:
 
@@ -228,7 +228,7 @@ The following settings have been added to the *Firewall* category:
   - Enable Domain Network Firewall
   - Enable Loopback
 
-For more information about these settings, see [Windows Defender Firewall with Advanced Security](/windows/security/operating-system-security/network-security/windows-firewall/windows-firewall-with-advanced-security).
+For more information about these settings, see [Windows Firewall with Advanced Security](/windows/security/operating-system-security/network-security/windows-firewall/windows-firewall-with-advanced-security).
 
 Applies to:
 
@@ -257,13 +257,12 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### App management
 
-#### Minimum version update for iOS Company Portal<!-- 17964541 -->
+#### Minimum version update for iOS Company Portal<!-- 17964541 -->  
 Users are required to update to v5.2311.1 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
 ### Device security
 
 #### Defender for Endpoint security settings management enhancements and support for Linux and macOS are generally available<!-- 24190967 -->  
-
 The improvements that were introduced in the Defender for Endpoint security settings management [opt-in public preview](../fundamentals/whats-new.md#defender-for-endpoint-security-settings-management-enhancements-and-support-for-linux-and-macos-in-public-preview) are now generally available.
 
 With this change, the default behavior for security settings management includes all the behavior added for the opt-in preview – without having to enable support for preview features in Microsoft Defender for Endpoint. This includes the general availability and support for the following endpoint security profiles for Linux and macOS:
@@ -294,8 +293,7 @@ For more information, see [Microsoft Defender for Endpoint Security settings man
 
 ### Device security
 
-#### Strict Tunnel Mode in Microsoft Edge available for Microsoft Tunnel for MAM on Android and iOS/iPadOS devices<!--24045412-->
-
+#### Strict Tunnel Mode in Microsoft Edge available for Microsoft Tunnel for MAM on Android and iOS/iPadOS devices<!--24045412-->  
 In Intune, you can use the Microsoft Tunnel for mobile application management (MAM) on Android and iOS/iPadOS devices. With the MAM tunnel, unmanaged devices (devices not enrolled in Intune) can access on-premises apps and resources.
 
 There's a new **Strict Tunnel Mode** feature you can configure for Microsoft Edge. When users sign into Microsoft Edge with an organization account, if the VPN isn't connected, then **Strict Tunnel Mode** blocks internet traffic. When the VPN reconnects, internet browsing is available again.

@@ -52,6 +52,7 @@ On the **All Cloud PCs** tab, the report shows the following data aggregated for
 - List of individual Cloud PCs with the following columns:
   - **Device name**
   - **Primary user UPN**
+  - **PC type**
   - **Total time connected**: The total hours that the user has been connected to the Cloud PC over the last 28 days.
   - **Days since last sign in**
 
