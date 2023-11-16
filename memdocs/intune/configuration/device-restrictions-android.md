@@ -61,11 +61,11 @@ Create an [Android device administrator device restrictions configuration profil
 - **Screen capture (Samsung Knox only)**: **Block** prevents screenshots. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.
 - **Voice assistant (Samsung Knox only)**: **Block** disables the S Voice service. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the S Voice service and app on devices. This setting doesn't apply to Bixby or the voice assistant for accessibility that reads the screen content aloud.
 - **YouTube (Samsung Knox only)**: **Block** prevents users from using the YouTube app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the YouTube app on devices.
-- **Shared devices (Samsung Knox only)**: Configure a managed Samsung Knox Standard device as shared. **Allow** lets users sign in and out of devices with their Azure AD credentials. Devices stay managed, whether they're in use or not.
+- **Shared devices (Samsung Knox only)**: Configure a managed Samsung Knox Standard device as shared. **Allow** lets users sign in and out of devices with their Microsoft Entra credentials. Devices stay managed, whether they're in use or not.
 
   When used in with a SCEP certificate profile, this feature allows users to share a device with the same apps for all users. But, each user has their own SCEP user certificate. When users sign out, all app data is cleared. This feature is limited to LOB apps only.
 
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent multiple users from signing in to the Company Portal app on devices using their Azure AD credentials.
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent multiple users from signing in to the Company Portal app on devices using their Microsoft Entra credentials.
 - **Block date and time changes (Samsung Knox)**: **Block** prevents users from changing the date and time settings on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to change the date and time settings.
 
 ## Password

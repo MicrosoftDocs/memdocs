@@ -2,7 +2,7 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 10/13/2022
+ms.date: 11/15/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -26,6 +26,9 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 
     > [!IMPORTANT]
     > Windows PE is a separate installer. Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
+    
+    > [!Note]
+    > ADK for Windows 11, version 22H2 (updated September 2023): VBScript is not currently working in WinPE. It is expected to be fixed in an upcoming servicing update.
 
 ## Windows ADK versions
 

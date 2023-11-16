@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/19/2023
+ms.date: 11/15/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -48,6 +48,46 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of November 13, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows App now available in public preview<!--46667283-->
+
+Windows App lets users securely connect to Windows devices and apps. Supported remote devices include:
+
+- Azure Virtual Desktop
+- Windows 365 Cloud PC
+- Microsoft Dev Box
+- Remote Desktop Services
+- Remote PC
+
+Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers.
+
+<!-- ########################## -->
+## Week of October 30, 2023 (Service release 2310)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Two new sizes for Cloud PCs<!--46653331-->
+
+Two new sizes are now available for Windows 365 Cloud PCs:
+
+- 16vCPU/64GB RAM/512GB storage​
+- 16vCPU/64GB RAM/1TB storage
+
+These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Self-help in Windows 365 Business<!--45828334-->
+
+A new self-help button for end users is now available for Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
 
 <!-- ########################## -->
 ## Week of October 18, 2023

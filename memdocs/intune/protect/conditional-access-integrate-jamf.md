@@ -45,11 +45,11 @@ ms.collection:
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
 > [!TIP]
-> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
+> For guidance for integrating Jamf Pro with Intune and Microsoft Entra ID, including how to configure Jamf Pro to deploy the Intune Company Portal app to devices you manage with Jamf Pro, see [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
 
-Microsoft Intune supports integrating your Jamf Pro deployment to bring device compliance and Conditional Access policies to your macOS devices. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Azure Active Directory (Azure AD) Conditional Access policies in the same way as for devices managed through Intune.
+Microsoft Intune supports integrating your Jamf Pro deployment to bring device compliance and Conditional Access policies to your macOS devices. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Microsoft Entra Conditional Access policies in the same way as for devices managed through Intune.
 
-When Jamf Pro integrates with Intune, you can sync the inventory data from macOS devices with Intune, through Azure AD. Intune's compliance engine then analyzes the inventory data to generate a report. Intune's analysis is combined with intelligence about the device user's Azure AD identity to drive enforcement through Conditional Access. Devices that are compliant with the Conditional Access policies can gain access to protected company resources.
+When Jamf Pro integrates with Intune, you can sync the inventory data from macOS devices with Intune, through Microsoft Entra ID. Intune's compliance engine then analyzes the inventory data to generate a report. Intune's analysis is combined with intelligence about the device user's Microsoft Entra identity to drive enforcement through Conditional Access. Devices that are compliant with the Conditional Access policies can gain access to protected company resources.
 
 This article can help you manually integrate Jamf Pro with Intune.
 
@@ -65,8 +65,8 @@ After you configure integration, you'll then [configure Jamf and Intune to enfor
 You need the following to configure Conditional Access with Jamf Pro:
 
 - Jamf Pro 10.1.0 or later
-- Microsoft Intune and Microsoft Azure AD Premium P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
-- Global admin role in Azure AD.
+- Microsoft Intune and Microsoft Entra ID P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
+- Global admin role in Microsoft Entra ID.
 - A user with Microsoft Intune Integration privileges in Jamf Pro
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
@@ -98,9 +98,11 @@ To connect Intune with Jamf Pro:
 2. Enable Intune to integrate with Jamf Pro.
 3. Configure Conditional Access in Jamf Pro.
 
-### Create an application in Azure Active Directory
+<a name='create-an-application-in-azure-active-directory'></a>
 
-1. In the [Azure portal](https://portal.azure.com), go to **Azure Active Directory** > **App Registrations**, and then select **New registration**.
+### Create an application in Microsoft Entra ID
+
+1. In the [Azure portal](https://portal.azure.com), go to **Microsoft Entra ID** > **App Registrations**, and then select **New registration**.
 
 2. On the **Register an application** page, specify the following details:
 
@@ -140,7 +142,7 @@ To connect Intune with Jamf Pro:
 
    ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
-The app registration process in Azure AD is complete.
+The app registration process in Microsoft Entra ID is complete.
 
 > [!NOTE]
 > If the client secret expires, you must create a new client secret in Azure and then update the Conditional Access data in Jamf Pro. Azure allows you to have both the old secret and new key active to prevent service disruptions.
@@ -151,7 +153,7 @@ The app registration process in Azure AD is complete.
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Partner device management**.
 
-3. Enable the *Compliance Connector for Jamf* by pasting the Application ID you saved during the previous procedure into the **Specify the Azure Active Directory App ID for Jamf** field.
+3. Enable the *Compliance Connector for Jamf* by pasting the Application ID you saved during the previous procedure into the **Specify the Microsoft Entra App ID for Jamf** field.
 
 4. Select **Save**.
 
@@ -163,8 +165,8 @@ The app registration process in Azure AD is complete.
    2. Select the check box for **Enable Intune Integration for macOS**. When this setting is enabled, Jamf Pro sends inventory updates to Microsoft Intune. Clear the selection if you want to disable the connection but save your configuration.
    3. Select **Manual** under **Connection type**.
    4. From the **Sovereign Cloud** pop-up menu, select the location of your Sovereign Cloud from Microsoft.
-   5. Select **Open administrator consent URL** and follow the onscreen instructions to allow the Jamf Native macOS Connector app to be added to your Azure AD tenant.
-   6. Add the **Azure AD Tenant Name** from Microsoft Azure.
+   5. Select **Open administrator consent URL** and follow the onscreen instructions to allow the Jamf Native macOS Connector app to be added to your Microsoft Entra tenant.
+   6. Add the **Microsoft Entra tenant Name** from Microsoft Azure.
    7. Add the **Application ID** and **Client Secret** (previously called Application Key) for the Jamf Pro application from Microsoft Azure.
    8. Select **Save**. Jamf Pro tests your settings and verifies your success.
 
