@@ -278,6 +278,9 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 - **Type of automatic VPN**: Select the VPN type you want to configure: On-demand VPN or per-app VPN:
 
+  > [!NOTE]
+  >  While the VPN configuration profile does not impose restrictions on editing per-app or on-demand VPN settings, only one of these settings should be utilized. Employing both simultaneously can lead to connection issues. 
+
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
 
