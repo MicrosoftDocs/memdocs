@@ -41,6 +41,7 @@ The Windows Autopilot Reset process automatically keeps information from the exi
 Windows Autopilot Reset blocks the user from accessing the desktop until this information is restored, including reapplying any provisioning packages. For devices enrolled in an MDM service, Windows Autopilot Reset also blocks until an MDM sync is completed. When Autopilot reset is used on a device, the device's primary user is removed. The next user who signs in after the reset will be set as the primary user.
 
 > [!NOTE]
+>
 > The Autopilot Reset does not support Microsoft Entra hybrid joined devices; a full device wipe is required. When a hybrid device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device
 
 ## Scenarios
@@ -64,7 +65,7 @@ The device is then ready to use. With a local Autopilot Reset, devices are retur
 To enable local Autopilot Reset in Windows 10:
 
 1. [Enable the policy for the feature](#enable-local-windows-autopilot-reset)
-2. [Trigger a reset for each device](#trigger-local-windows-autopilot-reset)
+1. [Trigger a reset for each device](#trigger-local-windows-autopilot-reset)
 
 ### Enable local Windows Autopilot Reset
 
@@ -101,16 +102,14 @@ On the device where the local Windows Autopilot reset is being performed:
 
 1. If you created a provisioning package, plug in the USB drive that contains the provisioning package.
 
-2. From the Windows device lock screen, enter the keystroke <kbd>CTRL</kbd> + <kbd>WIN</kbd> + <kbd>R</kbd>.
+1. From the Windows device lock screen, enter the keystroke <kbd>CTRL</kbd> + <kbd>WIN</kbd> + <kbd>R</kbd>.
 
     These keystrokes open up a custom sign-in screen for the local Autopilot Reset. The screen serves two purposes:
     
     1. Confirm/verify that the end user has the right to trigger Local Autopilot Reset
-    2. Notify the user in case a provisioning package, created using Windows Configuration Designer, is being used as part of the process.
+    1. Notify the user in case a provisioning package, created using Windows Configuration Designer, is being used as part of the process.
 
-    ![Screenshot that shows the custom login screen for local Autopilot Reset.](images/autopilot-reset-customlogin.png)
-
-3. To trigger the local Autopilot Reset, sign into the device with an account that has local admin credentials.
+1. To trigger the local Autopilot Reset, sign into the device with an account that has local admin credentials.
 
  Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
