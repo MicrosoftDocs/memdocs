@@ -190,7 +190,7 @@ On its own, Microsoft Defender for Endpoint provides several security focused be
   
 ### Conditional Access
 
-Conditional Access is a Microsoft Entra ID capability that [works with Intune](../protect/conditional-access.md) to help protect devices. For devices that register with Microsoft Entra ID, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
+Conditional Access is a Microsoft Entra capability that [works with Intune](../protect/conditional-access.md) to help protect devices. For devices that register with Microsoft Entra ID, Conditional Access policies can use device and compliance details from Intune to enforce access decisions for users and devices.
 
 Combine Conditional Access policy with:
 

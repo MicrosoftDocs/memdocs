@@ -296,7 +296,7 @@ The following table lists the log files that are on the Configuration Manager si
 |sitecomp.log|Records details about the maintenance of the installed site components on all site system servers in the site.|Site server|  
 |sitectrl.log|Records site setting changes made to site control objects in the database.|Site server|  
 |sitestat.log|Records the availability and disk space monitoring process of all site systems.|Site server|
-|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Azure Active Directory (Azure AD) user and user group discovery. | Site server|
+|SMS_AZUREAD_DISCOVERY_AGENT.log| Log file for Microsoft Entra user and user group discovery. | Site server|
 |SMS_BUSINESS_APP_PROCESS_MANAGER.log|Log file for component that synchronizes apps from the Microsoft Store for Business.|Site server|
 |SMS_DataEngine.log|Log file for management insights.|Site server|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
@@ -357,7 +357,7 @@ The following table lists the log files that contain information related to the 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CcmIsapi.log|Records client messaging activity on the endpoint.|Site system server|
-|CCM_STS.log|Records activities for authentication tokens, either from Azure Active Directory or site-issued client tokens.|Site system server|
+|CCM_STS.log|Records activities for authentication tokens, either from Microsoft Entra ID or site-issued client tokens.|Site system server|
 |ClientAuth.log|Records signing and authentication activity.|Site system server|
 |MP_CliReg.log|Records the client registration activity processed by the management point.|Site system server|  
 |MP_Ddr.log|Records the conversion of XML.ddr records from clients, and then copies them to the site server.|Site system server|  
@@ -388,8 +388,8 @@ The following table lists the log files that contain information related to the 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Records certificate and proxy account information.|Site server|  
-|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. |Computer with the service connection point|
-|SMS_AZUREAD_DISCOVERY_AGENT.log | Starting 2303, log file for synchronization of collection membership results to Azure Active Directory. |Computer with the service connection point|
+|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Microsoft Entra ID. |Computer with the service connection point|
+|SMS_AZUREAD_DISCOVERY_AGENT.log | Starting 2303, log file for synchronization of collection membership results to Microsoft Entra ID. |Computer with the service connection point|
 |CollEval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Primary site and central administration site|  
 |Cloudusersync.log|Records license enablement for users.|Computer with the  service connection point|  
 |Dataldr.log|Records information about the processing of MIF files.|Site server|  
