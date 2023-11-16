@@ -20,7 +20,7 @@ Customer intent: As an Intune admin, I want to learn where to find the different
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: tycast
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure

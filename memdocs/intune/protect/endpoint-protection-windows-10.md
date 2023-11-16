@@ -6,7 +6,7 @@ description: View the available settings in Intune endpoint protection profiles 
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/22/2022
+ms.date: 11/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 
@@ -32,19 +32,19 @@ ms.collection:
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 Microsoft Intune includes many settings to help protect your devices. This article describes the settings in the device configuration *Endpoint protection* template. To manage device security, you can also use [endpoint security policies](../protect/endpoint-security-policy.md), which focus directly on subsets of device security. 
-To configure Microsoft Defender Antivirus, see [Windows device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).  
+To configure Microsoft Defender Antivirus, see [Windows device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).
 
 ## Before you begin  
 
-[Create an endpoint protection device configuration profile](endpoint-protection-configure.md).  
+[Create an endpoint protection device configuration profile](endpoint-protection-configure.md).
 
-For more information about configuration service providers (CSPs), see [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).  
+For more information about configuration service providers (CSPs), see [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
-## Microsoft Defender Application Guard  
+## Microsoft Defender Application Guard
 
 For Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. With Application Guard, sites that aren't in your isolated network boundary open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
 
-Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
+Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.
 
 - **Application Guard**  
   **Default**: Not configured  
@@ -55,19 +55,19 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 
 - **Clipboard behavior**  
   **Default**: Not configured  
-   Application Guard CSP: [Settings/ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)  
+  Application Guard CSP: [Settings/ClipboardSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardsettings)
 
   Choose what copy and paste actions are allowed between the local PC and the Application Guard virtual browser.  
   - **Not configured**  
-  - **Allow copy and paste from PC to browser only**  
-  - **Allow copy and paste from browser to PC only**  
-  - **Allow copy and paste between PC and browser**  
+  - **Allow copy and paste from PC to browser only**
+  - **Allow copy and paste from browser to PC only**
+  - **Allow copy and paste between PC and browser**
   - **Block copy and paste between PC and browser**  
 
 - **Clipboard content**  
   This setting is available only when *Clipboard behavior* is set to one of the *allow* settings.  
   **Default**: Not configured  
-  Application Guard CSP: [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
+  Application Guard CSP: [Settings/ClipboardFileType](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)
 
   Select the allowed clipboard content.  
   - **Not configured**  
@@ -81,7 +81,7 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 
   - **Block** - Block content from unapproved websites from loading.  
   - **Not configured** - Non-enterprise sites can open on the device.  
- 
+
 - **Print from virtual browser**  
   **Default**: Not configured  
   Application Guard CSP: [Settings/PrintingSettings](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#printingsettings)  
@@ -114,7 +114,7 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
 - **Graphics acceleration**  
  **Default**: Not configured  
   Application Guard CSP: [Settings/AllowVirtualGPU](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowvirtualgpu)  
-      
+
   - **Enable** - Load graphic-intensive websites and video faster by getting access to a virtual graphics processing unit.  
   - **Not configured** Use the device's CPU for graphics; Don't use the virtual graphics processing unit.  
 
@@ -125,86 +125,86 @@ Application Guard is only available for 64-bit Windows devices. Using this profi
   - **Enable** - Users can download files from the virtualized browser onto the host operating system.  
   - **Not configured** - Keeps the files local on the device, and doesn't download files to the host file system.  
 
-## Microsoft Defender Firewall  
- 
-### Global settings  
+## Windows Firewall
 
-These settings are applicable to all network types.  
+### Global settings
+
+These settings are applicable to all network types.
 
 - **File Transfer Protocol**  
   **Default**: Not configured  
-   Firewall CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)  
+   Firewall CSP: [MdmStore/Global/DisableStatefulFtp](/windows/client-management/mdm/firewall-csp#disablestatefulftp)
 
   - **Block** - Disable stateful FTP.  
-  - **Not configured** - The firewall does stateful FTP filtering to allow secondary connections.  
+  - **Not configured** - The firewall does stateful FTP filtering to allow secondary connections.
 
 - **Security association idle time before deletion**  
   **Default**: *Not configured*  
-   Firewall CSP: [MdmStore/Global/SaIdleTime](/windows/client-management/mdm/firewall-csp#saidletime)  
+  Firewall CSP: [MdmStore/Global/SaIdleTime](/windows/client-management/mdm/firewall-csp#saidletime)
 
-   Specify an idle time in seconds, after which security associations are deleted.   
+   Specify an idle time in seconds, after which security associations are deleted.
 
 - **Pre-shared key encoding**  
   **Default**: Not configured  
-   Firewall CSP: [MdmStore/Global/PresharedKeyEncoding](/windows/client-management/mdm/firewall-csp#presharedkeyencoding)  
+  Firewall CSP: [MdmStore/Global/PresharedKeyEncoding](/windows/client-management/mdm/firewall-csp#presharedkeyencoding)
 
-   - **Enable** - Encode presheared keys using UTF-8.  
-   - **Not configured** - Encode presheared keys using the local store value.  
+  - **Enable** - Encode presheared keys using UTF-8.
+  - **Not configured** - Encode presheared keys using the local store value.
 
 - **IPsec exemptions**  
   **Default**: *0 selected*  
-   Firewall CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
+  Firewall CSP: [MdmStore/Global/IPsecExempt](/windows/client-management/mdm/firewall-csp#ipsecexempt)
 
-   Select one or more of the following types of traffic to be exempt from IPsec:  
-   - **Neighbor discover IPv6 ICMP type-codes**  
-   - **ICMP**  
-   - **Router discover IPv6 ICMP type-codes**  
-   - **Both IPv4 and IPv6 DHCP network traffic**  
+  Select one or more of the following types of traffic to be exempt from IPsec:  
+  - **Neighbor discover IPv6 ICMP type-codes**
+  - **ICMP**
+  - **Router discover IPv6 ICMP type-codes**
+  - **Both IPv4 and IPv6 DHCP network traffic**
 
 - **Certificate revocation list verification**  
   **Default**: Not configured  
-  Firewall CSP: [MdmStore/Global/CRLcheck](/windows/client-management/mdm/firewall-csp#crlcheck)  
+  Firewall CSP: [MdmStore/Global/CRLcheck](/windows/client-management/mdm/firewall-csp#crlcheck)
 
   Choose how the device verifies the certificate revocation list. Options include:  
   - **Disable CRL verification**  
   - **Fail CRL verification on revoked certificate only**  
   - **Fail CRL verification on any error encountered**.  
- 
 
 - **Opportunistically match authentication set per keying module**  
   **Default**: Not configured  
-  Firewall CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)  
-  
-  - **Enable** Keying modules must ignore only the authentication suites that they don't support.  
-  - **Not configured**, Keying modules must ignore the entire authentication set if they don't support all of the authentication suites specified in the set.  
+  Firewall CSP: [MdmStore/Global/OpportunisticallyMatchAuthSetPerKM](/windows/client-management/mdm/firewall-csp#opportunisticallymatchauthsetperkm)
 
+  - **Enable** Keying modules must ignore only the authentication suites that they don't support.
+  - **Not configured**, Keying modules must ignore the entire authentication set if they don't support all of the authentication suites specified in the set.
 
 - **Packet queuing**  
   **Default**: Not configured  
-  Firewall CSP: [MdmStore/Global/EnablePacketQueue](/windows/client-management/mdm/firewall-csp#enablepacketqueue)  
+  Firewall CSP: [MdmStore/Global/EnablePacketQueue](/windows/client-management/mdm/firewall-csp#enablepacketqueue)
 
-  Specify how software scaling on the receive side is enabled for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This setting confirms the packet order is preserved. Options include:  
-  - **Not configured**  
-  - **Disable all packet queuing**  
-  - **Queue inbound encrypted packets only**  
-  - **Queue packets after decryption is performed for forwarding only**  
-  - **Configure both inbound and outbound packets**  
+  Specify how software scaling on the receive side is enabled for the encrypted receive and clear text forward for the IPsec tunnel gateway scenario. This setting confirms the packet order is preserved. Options include:
 
-### Network settings  
+  - **Not configured**
+  - **Disable all packet queuing**
+  - **Queue inbound encrypted packets only**
+  - **Queue packets after decryption is performed for forwarding only**
+  - **Configure both inbound and outbound packets**
 
-The following settings are each listed in this article a single time, but all apply to the three specific network types:  
-- **Domain (workplace) network**  
-- **Private (discoverable) network**  
-- **Public (non-discoverable) network**  
+### Network settings
 
-#### General settings  
+The following settings are each listed in this article a single time, but all apply to the three specific network types:
 
-- **Microsoft Defender Firewall**  
+- **Domain (workplace) network**
+- **Private (discoverable) network**
+- **Public (non-discoverable) network**
+
+#### General
+
+- **Windows Firewall**  
   **Default**: Not configured  
-  Firewall CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)  
+  Firewall CSP: [EnableFirewall](/windows/client-management/mdm/firewall-csp#enablefirewall)
   
   - **Enable** - Turn on the firewall, and advanced security. 
-  - **Not configured** Allows all network traffic, regardless of any other policy settings.  
+  - **Not configured** Allows all network traffic, regardless of any other policy settings.
 
 - **Stealth mode**  
   **Default**: Not configured  
@@ -228,7 +228,7 @@ The following settings are each listed in this article a single time, but all ap
   Firewall CSP: [Shielded](/windows/client-management/mdm/firewall-csp#shielded)  
 
   - **Not configured**
-  - **Block** - When the Microsoft Defender Firewall is on and this setting is set to *Block*, all incoming traffic is blocked, regardless of other policy settings.
+  - **Block** - When the Windows Firewall is on and this setting is set to *Block*, all incoming traffic is blocked, regardless of other policy settings.
   - **Allow** - When set to *Allow*, this setting is turned off - and incoming traffic is allowed based on other policy settings.
 
 - **Unicast responses to multicast broadcasts**  
@@ -266,9 +266,9 @@ The following settings are each listed in this article a single time, but all ap
   - **Block** - The default firewall action isn't run on inbound connections.  
   - **Allow** - Default firewall actions run on inbound connections.  
 
-#### Rule merging  
+#### Rule merging
 
-- **Authorized application Microsoft Defender Firewall rules from the local store**  
+- **Authorized application Windows Firewall rules from the local store**  
   **Default**: Not configured  
   Firewall CSP: [AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)  
 
@@ -277,7 +277,7 @@ The following settings are each listed in this article a single time, but all ap
   - **Allow** -
    Choose **Enable** Applies firewall rules in the local store so they're recognized and enforced.  
 
-- **Global port Microsoft Defender Firewall rules from the local store**  
+- **Global port Windows Firewall rules from the local store**  
   **Default**: Not configured  
   Firewall CSP: [GlobalPortsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#globalportsallowuserprefmerge)  
 
@@ -285,7 +285,7 @@ The following settings are each listed in this article a single time, but all ap
   - **Block** - The global port firewall rules in the local store are ignored and not enforced.  
   - **Allow** - Apply global port firewall rules in the local store to be recognized and enforced.  
 
-- **Microsoft Defender Firewall rules from the local store**  
+- **Windows Firewall rules from the local store**  
   **Default**: Not configured  
   Firewall CSP: [AllowLocalPolicyMerge](/windows/client-management/mdm/firewall-csp#allowlocalpolicymerge)  
 
@@ -301,13 +301,13 @@ The following settings are each listed in this article a single time, but all ap
   - **Block** -  The connection security rules from the local store are ignored and not enforced, regardless of the schema version and connection security rule version.  
   - **Allow** - Apply connection security rules from the local store, regardless of schema or connection security rule versions.  
 
-### Firewall rules  
+### Firewall rules
 
 You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices).  
 
 Custom Firewall rules support the following options:  
 
-#### General settings:  
+#### General settings
 
 - **Name**  
   **Default**: *No name*  
@@ -359,7 +359,7 @@ Custom Firewall rules support the following options:
 
 Specify the local and remote addresses to which this rule applies.  
 
-- **Local addresses**    
+- **Local addresses**  
   **Default**: Any address  
   Firewall CSP: [FirewallRules/*FirewallRuleName*/LocalPortRanges](/windows/client-management/mdm/firewall-csp#localportranges)  
 
@@ -379,6 +379,7 @@ Specify the local and remote addresses to which this rule applies.
   Select **Any address** or **Specified address**.  
 
   When you use *Specified address*, you add one or more addresses as a comma-separated list of remote addresses that are covered by the rule. Tokens aren't case-sensitive. Valid tokens include:  
+
   - Use an asterisk "*" for *any* remote address. If you use an asterisk, it must be the only token you use.  
   - `Defaultgateway`  
   - `DHCP`  
@@ -394,7 +395,8 @@ Specify the local and remote addresses to which this rule applies.
   - An IPv4 address range in the format of "start address - end address" with no spaces included.  
   - An IPv6 address range in the format of "start address - end address" with no spaces included.  
 
-#### Port and protocol settings  
+#### Port and protocol settings
+
 Specify the local and remote ports to which this rule applies.  
 
 - **Protocol**  
@@ -498,7 +500,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
   - **Encryption for operating system drives**  
     **Default**: XTS-AES 128-bit  
-   
+
     Choose the encryption method for operating system drives. We recommend you use the XTS-AES algorithm.  
     - **AES-CBC 128-bit**  
     - **AES-CBC 256-bit**  
@@ -507,7 +509,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
 
   - **Encryption for fixed data-drives**  
     **Default**: AES-CBC 128-bit  
-   
+
     Choose the encryption method for fixed (built-in) data drives. We recommend you use the XTS-AES algorithm.  
     - **AES-CBC 128-bit**  
     - **AES-CBC 256-bit**  
@@ -523,7 +525,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
     - **XTS-AES 128-bit**  
     - **XTS-AES 256-bit**  
 
-### BitLocker OS drive settings  
+### BitLocker OS drive settings
 
 These settings apply specifically to operating system data drives.  
 
@@ -1025,7 +1027,7 @@ Choose apps to be audited by or that are trusted to be run by Microsoft Defender
     After being enabled on a device, Application Control can only be disabled by changing the mode from *Enforce* to *Audit only*. Changing the mode from *Enforce* to *Not Configured* results in Application Control continuing to be enforced on assigned devices.  
 
   - **Not Configured** - Application Control isn't added to devices. However, settings that were previously added continue to be enforced on assigned devices. 
- 
+
   - **Audit only** - Applications aren't blocked. All events are logged in the local client's logs.  
 
     > [!NOTE]
@@ -1214,7 +1216,7 @@ You can choose to **Display in app and in notifications**, **Display only in app
   - **IT support website URL**  
     **Default**: *Not configured*  
     WindowsDefenderSecurityCenter CSP: [URL](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-url)  
- 
+
 ## Local device security options  
 
 Use these options to configure the local security settings on Windows 10/11 devices.  
@@ -1348,7 +1350,6 @@ Use these options to configure the local security settings on Windows 10/11 devi
   **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-  
   - **Enable** - Hide the username.  
   - **Not configured** - Show the last username.  
 
@@ -1390,7 +1391,7 @@ Use these options to configure the local security settings on Windows 10/11 devi
 - **LAN Manager hash value stored on password change**  
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
-   
+
   Determine if the hash value for passwords is stored the next time the password is changed. 
   - **Not configured** - The hash value isn't stored  
   - **Block** - The LAN Manager (LM) stores the hash value for the new password.  
@@ -1411,7 +1412,7 @@ Use these options to configure the local security settings on Windows 10/11 devi
 
     - **Security descriptor**  
       **Default**: *Not configured*  
-    
+
 - **Minimum Session Security For NTLM SSP Based Clients**  
   **Default**: None  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedclients)  
@@ -1438,7 +1439,6 @@ Use these options to configure the local security settings on Windows 10/11 devi
   **Default**: LM and NTLM  
   LocalPoliciesSecurityOptions CSP: [NetworkSecurity_LANManagerAuthenticationLevel](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-networksecurity-lanmanagerauthenticationlevel)  
 
-
   - **LM and NTLM**  
   - **LM, NTLM and NTLMv2**  
   - **NTLM**  
@@ -1461,7 +1461,6 @@ Use these options to configure the local security settings on Windows 10/11 devi
   **Default**: Not configured  
    LocalPoliciesSecurityOptions CSP: [Shutdown_ClearVirtualMemoryPageFile](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   - **Enable** - Clear the virtual memory pagefile when the device is powered down.  
   - **Not configured** - Doesn't clear the virtual memory.  
 
@@ -1469,11 +1468,10 @@ Use these options to configure the local security settings on Windows 10/11 devi
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-  
   - **Block** - Hide the shutdown option on the Windows sign-in screen. Users must sign in to the device, and then shut down.  
   - **Not configured** - Allow users to shut down the device from the Windows sign-in screen.  
 
-### User account control  
+### User account control
 
 - **UIA integrity without secure location**  
   **Default**: Not Configured  
@@ -1496,7 +1494,7 @@ Use these options to configure the local security settings on Windows 10/11 devi
   - **Enabled** - Enforce the PKI certification path validation for an executable file before it can run.  
   - **Not configured** - Don't enforce PKI certification path validation before an executable file can run.  
 
-#### UIA elevation prompt behavior​  
+#### UIA elevation prompt behavior​
 
 - **Elevation prompt for admins**  
   **Default**: Prompt for consent for non-Windows binaries  
@@ -1526,7 +1524,6 @@ Use these options to configure the local security settings on Windows 10/11 devi
 - **Route elevation prompts to user's interactive desktop**  
   **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
-
 
   - **Enabled** - All elevation requests to go to the interactive user's desktop rather than the secure desktop. Any prompt behavior policy settings for administrators and standard users are used.  
   - **Not configured** - Force all elevation requests go to the secure desktop, regardless of any prompt behavior policy settings for administrators and standard users.
@@ -1558,7 +1555,6 @@ Use these options to configure the local security settings on Windows 10/11 devi
   **Default**: Not Configured  
   LocalPoliciesSecurityOptions CSP: [UserAccountControl_RunAllAdministratorsInAdminApprovalMode](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   - **Enabled**- Enable Admin Approval Mode.  
   - **Not configured** - Disable Admin Approval Mode and all related UAC policy settings.  
 
@@ -1584,7 +1580,6 @@ Use these options to configure the local security settings on Windows 10/11 devi
   **Default**: Not configured  
   LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsAlways](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)  
 
-
   - **Enable** - The Microsoft network client doesn't communicate with a Microsoft network server unless that server agrees to SMB packet signing.  
   - **Not configured** - SMB packet signing is negotiated between the client and server.  
 
@@ -1609,7 +1604,7 @@ Use these options to configure the local security settings on Windows 10/11 devi
 - **Xbox Game Save Task**  
   **Default**: Not configured  
   CSP: [TaskScheduler/EnableXboxGameSaveTask](/windows/client-management/mdm/policy-csp-taskscheduler#taskscheduler-enablexboxgamesavetask)  
-   
+
   This setting determines whether the Xbox Game Save Task is Enabled or Disabled.  
   - **Enabled**
   - **Not configured**
@@ -1626,12 +1621,12 @@ Use these options to configure the local security settings on Windows 10/11 devi
 - **Xbox Live Auth Manager Service**  
   **Default**: Manual  
   CSP: [SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxliveauthmanagerservicestartupmode)  
- 
+
   This setting determines the Live Auth Manager Service's start type.  
   - **Manual**
   - **Automatic**
   - **Disabled**
- 
+
 - **Xbox Live Game Save Service**  
   **Default**: Manual  
   CSP: [SystemServices/ConfigureXboxLiveGameSaveServiceStartupMode](/windows/client-management/mdm/policy-csp-systemservices#systemservices-configurexboxlivegamesaveservicestartupmode)  

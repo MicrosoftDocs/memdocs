@@ -2122,7 +2122,7 @@ For more information on this report, go to [Noncompliant devices and settings re
 
 #### Disable use of UDP connections on your Microsoft Tunnel Gateway servers<!-- 9295335 -->
 
-You can now disable the use of UDP by your Microsoft Tunnel Servers. When you disable use of UDP, the VPN server supports only TCP connections from tunnel clients. To support use of only TCP connections, your devices must use the generally available version of [Microsoft Defender for Endpoint as the Microsoft Tunnel client app](../protect/microsoft-tunnel-migrate-app.md) as the tunnel client app.
+You can now disable the use of UDP by your Microsoft Tunnel Servers. When you disable use of UDP, the VPN server supports only TCP connections from tunnel clients. To support use of only TCP connections, your devices must use the generally available version of [Microsoft Defender for Endpoint as the Microsoft Tunnel client app](../protect/microsoft-tunnel-configure.md) as the tunnel client app.
 
 To disable UDP, [create or edit a *Server configuration* for Microsoft Tunnel Gateway](../protect/microsoft-tunnel-configure.md#create-a-server-configuration) and select the checkbox for the new option named **Disable UDP Connections**.
 
@@ -3332,7 +3332,7 @@ As of August 30, 2022, the connection type is named **Microsoft Tunnel**.
 
 With this release, by the end of June, both the standalone Tunnel client app and the preview version of Defender for Endpoint as the Tunnel client app for iOS will be deprecated and be dropped from support. Soon after that deprecation, the standalone Tunnel client app will no longer function and will no longer support opening connections to Microsoft Tunnel.
 
-If you're still using the standalone tunnel app for iOS, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). Migrate before support for the standalone app ends and its support to connect to Tunnel stops working.
+If you're still using the standalone tunnel app for iOS, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-configure.md). Migrate before support for the standalone app ends and its support to connect to Tunnel stops working.
 
 
 #### Attack surface reduction rules profile<!-- 8858871 -->
@@ -4131,7 +4131,7 @@ This public preview applies to:
 
 - iOS/iPadOS
 
-For this preview, you download a preview version of Microsoft Defender for Endpoint from the Apple app store, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md).
+For this preview, you download a preview version of Microsoft Defender for Endpoint from the Apple app store, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-configure.md).
 
 #### New Account protection policy to configure users in local groups on devices in public preview<!--5663034 -->
 In public preview, you can use a new profile for Intune Account protection policies to manage the membership of the built-in local groups on Windows 10 and 11 devices. 
@@ -5283,7 +5283,7 @@ The Microsoft Defender for Endpoint app that supports Microsoft Tunnel functiona
 - You no longer need to opt in to use Defender of Endpoint as the tunnel app on Android.
 - The standalone app for Android is now deprecated and will be removed from the Google app store when support ends on January 31, 2022.
 
-Plan to download and use the updated Microsoft Defender for Endpoint app for Microsoft Tunnel app for Android. If you participated in the preview, update your devices with the new version of Defender for Endpoint from the Google Play store. If you still use the standalone tunnel app, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
+Plan to download and use the updated Microsoft Defender for Endpoint app for Microsoft Tunnel app for Android. If you participated in the preview, update your devices with the new version of Defender for Endpoint from the Google Play store. If you still use the standalone tunnel app, plan to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-configure.md) before support for the standalone app ends.
 
 The standalone tunnel app for iOS remains in preview.  
 
@@ -5798,7 +5798,7 @@ This public preview applies to:
   - Corporate-owned work profile
   - Personally owned work profile
 
-For this preview, you must opt in to gain access to the preview version of Microsoft Defender for Endpoint, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md).
+For this preview, you must opt in to gain access to the preview version of Microsoft Defender for Endpoint, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-configure.md).
 
 ### Intune apps  
 
@@ -6588,7 +6588,7 @@ On a device, hardware that is specified in an allowlist can install or update. H
 
 #### Improvements to endpoint security Firewall rules<!-- 7732448    -->
 
-We've made several changes to improve the experience of configuring firewall rules in the [Microsoft Defender Firewall rules profile](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules) for endpoint security Firewall policy.
+We've made several changes to improve the experience of configuring firewall rules in the [Microsoft Defender Firewall rules profile](../protect/endpoint-security-firewall-profile-settings.md) for endpoint security Firewall policy.
 
 Improvements include:
 - Improved layout in the UI, including section headers to organize the view.
@@ -7155,7 +7155,7 @@ We've added support to **Import** or **Export** a list of address ranges using .
 
 We've also improved validation of both local and remote address range entry to help prevent duplicate or invalid entries.
 
-For more information about these settings, see the settings for [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-profile-settings.md#microsoft-defender-firewall-rules).
+For more information about these settings, see the settings for [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-profile-settings.md).
 
 #### Set device compliance state from third-party MDM providers<!-- 6361689 -->
 
