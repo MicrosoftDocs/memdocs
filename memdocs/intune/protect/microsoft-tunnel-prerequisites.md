@@ -443,7 +443,7 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 Before you start a server install, we recommend you download and run the most recent version of the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
-- Validates that the Microsoft Entra ID account you use to install Microsoft Tunnel has the required roles to complete enrollment.
+- Validates that the Microsoft Entra account you use to install Microsoft Tunnel has the required roles to complete enrollment.
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
 
@@ -477,7 +477,7 @@ To use the readiness tool:
 
 3. To validate that the account you'll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 
-   The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra and to Intune. The tool will report success or an error.
+   The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra ID and to Intune. The tool will report success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
 

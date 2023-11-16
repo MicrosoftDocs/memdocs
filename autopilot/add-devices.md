@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/25/2023
+ms.date: 10/31/2023
 ms.topic: how-to
 ms.collection: 
   - M365-modern-desktop
@@ -238,6 +238,16 @@ Completely removing a device from your tenant requires you to delete the Intune,
 
 1. Delete the devices from Microsoft Entra ID at **Devices** > **Microsoft Entra devices**.
 
+## Troubleshooting registration failures
+
+1. **StorageError**: This error is a generic error that can occur for various reasons. Most of the time it's not possible to determine the exact cause of the error until further investigation is done. If you encounter this error, the best course of action is to try again later. If the issue persists, contact support.
+
+1. **ZtdDeviceAssignedToAnotherTenant**: This error occurs when the hardware hash you're uploading matches a device that is already registered to a different tenant. If you see this error, you should search for the serial number corresponding to the duplicate in the CSV file. Then, search for the serial number in the **Windows Autopilot devices** pane in Intune. If the device is already registered, don't import it again.
+
+1. **ZtdDeviceAlreadyAssigned**: This error occurs when the hardware hash you're uploading matches a device that is already registered to your tenant. If you see this error, you should search for the serial number corresponding to the duplicate in the CSV file. Then, search for the serial number in the **Windows Autopilot devices** pane in Intune. If the device is already registered, don't import it again. If the device isn't registered, you can import it again.
+
+1. **ZtdDeviceDuplicated**: This error occurs when there are duplicate hardware hashes in the CSV file. Only one of the duplicates is processed, and the others result in this error. If you see this error, you should look for the other duplicates of the same device to see what the actual result was. If you find a duplicate that was successfully processed, you can remove the duplicate row from the CSV file.
+
 ## Next steps
 
-[Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.
+- [Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.

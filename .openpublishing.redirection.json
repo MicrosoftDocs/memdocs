@@ -2234,6 +2234,11 @@
       "source_path": "memdocs/intune/remote-actions/pause-config-refresh.md",
       "redirect_url": "/mem/intune/remote-actions/device-management",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "memdocs/intune/protect/microsoft-tunnel-migrate-app.md",
+      "redirect_url": "/mem/intune/protect/microsoft-tunnel-configure",
+      "redirect_document_id": false
     }
   ]
 }

@@ -56,14 +56,14 @@ The optional data collected from clients aren't required to successful run Intun
 Optional diagnostic data collected by Intune client apps may cover the following areas:
 
 - Microsoft-generated user information
-  - Azure AD User ID
+  - Microsoft Entra user ID
   - Device ID
   - Correlation ID
   - App Session ID
   - User Session ID
 - Admin and account information
   - Tenant ID
-  - Azure AD tenant ID
+  - Microsoft Entra tenant ID
 - Hardware and software information
   - Device OS version
   - Device model
@@ -78,7 +78,7 @@ Optional diagnostic data collected by Intune client apps may cover the following
     - Runtime failure
     - Task schedule failure
     - Enrollment failure
-    - Azure AD authentication failure
+    - Microsoft Entra authentication failure
   - Crash report
   - Consent state
   - Compliance status

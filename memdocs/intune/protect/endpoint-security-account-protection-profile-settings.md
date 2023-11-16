@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 11/13/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,7 +43,6 @@ Supported platforms and profiles:
 - **Windows 10 and later**:
   - Profile: **Account protection** *(Preview)*
 
-
 ## Account protection profile
 
 ### Account protection
@@ -52,10 +51,11 @@ Supported platforms and profiles:
 
   Windows Hello for Business is an alternative method for signing into Windows by replacing passwords, Smart Cards, and Virtual Smart Cards.
   - **Not configured** (*default*) - Devices provision Windows Hello for Business.
-  - **Disabled** - Devices provision Windows Hello for Business.
+  - **Disabled** - Devices provision Windows Hello for Business. With this configuration, more settings are available that support configurations for PIN, Trusted Platform Module (TPM), and more.
   - **Enabled** - Devices don't provision Windows Hello for Business for any user
   
 > [!IMPORTANT]
+>
 > Due to how Intune determines the scope and applicability of Windows Hello for Business policy, the device may log **Event ID 454** as a result of applying policy. This can be safely ignored when policy is being successful applied (and enforced).
 
 - **Enable to use security keys for sign-in**
@@ -65,7 +65,7 @@ Supported platforms and profiles:
   - **Yes**
 
 - **Turn on credential guard**  
-  [CSP: []DeviceGuard](https://go.microsoft.com/fwlink/?linkid=872424)
+  [CSP: DeviceGuard](https://go.microsoft.com/fwlink/?linkid=872424)
 
   Credential Guard uses Windows Hypervisor to provide protections. Credential Guard requires hardware support for Secure Boot and DMA protections. This setting is only successful on devices that meet the hardware requirements.
   - **Not configured** (*default*) - Disable the use of Credential Guard, which is the Windows default.

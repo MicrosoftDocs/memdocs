@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2023
+ms.date: 10/31/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -100,6 +100,10 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
     :::image type="content" source="images/create-profile-assignments.png" alt-text="Screenshot of Assignments page.":::
 
+    > [!NOTE]
+    >
+    > When the assignment **All Devices** is used, exclusions aren't supported. Attempting to exclude groups while targeting to all devices can cause assignment problems and can require uploading device hashes again.
+
 1. Choose **Select groups to include**, and choose the groups you want to include in this profile.
 
 1. If you want to exclude any groups, choose **Select groups to exclude**, and choose the groups you want to exclude.
@@ -145,6 +149,24 @@ Alerts show how many Autopilot program devices don't have Autopilot deployment p
 
 To see alerts for unassigned devices, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Overview** > **Enrollment alerts** > **Unassigned devices**.
 
+## Autopilot profile priority
+
+If you have groups assigned to multiple Autopilot profiles, the device would receive the oldest created profile to resolve the conflict. If no other profile is applicable to the device and there's a default profile (any Autopilot profile assigned to all devices), then the default profile is applied. If a device is assigned to a security group that isn't assigned to Autopilot profile, then it would receive the default profile targeted to all devices. To see when an Autopilot profile is created:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+1. In the **Home** screen, select **Devices** in the left hand pane.
+
+1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+
+1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+
+1. Under **Windows Autopilot Deployment Program**, select **Deployment Profiles**.
+
+1. In the **Windows Autopilot deployment profiles** screen, under **Name**, select the Autopilot profile name where the create date needs to be viewed.
+
+1. When the Windows Autopilot deployment profile screen opens, the date the Windows Autopilot deployment profile was created is displayed under **Essentials** and next to **Created**.
+
 ## Autopilot deployments report
 
 You can see details on each device deployed through Windows Autopilot.
@@ -165,6 +187,6 @@ For a detailed tutorial on configuring and assigning a Windows Autopilot deploym
 
 ## Related articles
 
-[Profile download](troubleshooting.md#profile-download)
+- [Profile download](troubleshooting.md#profile-download)
+- [Registering devices](add-devices.md)
 
-[Registering devices](add-devices.md)
