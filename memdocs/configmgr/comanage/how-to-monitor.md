@@ -63,13 +63,13 @@ A funnel chart that shows the number of devices with the following states from t
 
 Shows the breakdown of device status in the following categories:
 
-- Success, hybrid Azure AD-joined  
-- Success, Azure AD-joined  
-- Enrolling, hybrid Azure AD-joined  
-- Failure, hybrid Azure AD-joined  
-- Failure, Azure AD-joined  
+- Success, Microsoft Entra hybrid joined  
+- Success, Microsoft Entra joined  
+- Enrolling, Microsoft Entra hybrid joined  
+- Failure, Microsoft Entra hybrid joined  
+- Failure, Microsoft Entra joined  
 - Pending user sign in  
-   - To reduce the number of devices in this pending state, a new co-managed device automatically enrolls to the Microsoft Intune service based on its Azure AD *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. To support this behavior, the device needs to be running Windows 10, version 1803 or later. If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
+   - To reduce the number of devices in this pending state, a new co-managed device automatically enrolls to the Microsoft Intune service based on its Microsoft Entra ID *device* token. It doesn't need to wait for a user to sign in to the device for auto-enrollment to start. To support this behavior, the device needs to be running Windows 10, version 1803 or later. If the device token fails, it falls back to previous behavior with the user token. Look in the **ComanagementHandler.log** for the following entry:
     > `Enrolling device with RegisterDeviceWithManagementUsingAADDeviceCredentials`
 
 Select a state in the tile to drill through to a list of devices in that state.  
@@ -93,24 +93,24 @@ There are hundreds of possible errors. The following table lists the most common
 
 | Error | Description |
 |---------|---------|
-| 2147549183 (0x8000FFFF) | MDM enrollment hasn't been configured yet on Azure AD, or the enrollment URL isn't expected.<br><br>[Enable automatic enrollment](/intune/windows-enroll#enable-windows-automatic-enrollment) |
+| 2147549183 (0x8000FFFF) | MDM enrollment hasn't been configured yet on Microsoft Entra ID, or the enrollment URL isn't expected.<br><br>[Enable automatic enrollment](/intune/windows-enroll#enable-windows-automatic-enrollment) |
 | 2149056536 (0x80180018)<br>MENROLL_E_USERLICENSE | License of user is in bad state blocking enrollment<br><br>[Assign licenses to users](/intune/licenses-assign) |
-| 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | When trying to automatically enroll to Intune, but the Azure AD configuration isn't fully applied. This issue should be transient, as the device retries after a short time. |
+| 2149056555 (0x8018002B)<br>MENROLL_E_MDM_NOT_CONFIGURED | When trying to automatically enroll to Intune, but the Microsoft Entra configuration isn't fully applied. This issue should be transient, as the device retries after a short time. |
 | 2149056554 (0x‭8018002A‬)<br>&nbsp; | The user canceled the operation<br><br>If MDM enrollment requires multi-factor authentication, and the user hasn't signed in with a supported second factor, Windows displays a toast notification to the user to enroll. If the user doesn't respond to toast notification, this error occurs. This issue should be transient, as Configuration Manager will retry and prompt the user. Users should use multi-factor authentication when they sign in to Windows. Also educate them to expect this behavior, and if prompted, take action. |
 | 2149056532 (0x80180014)<br>MENROLL_E_DEVICENOTSUPPORTED | Mobile device management isn't supported. Check device restrictions. |
 | 2149056533 (0x80180015)<br>MENROLL_E_NOTSUPPORTED | Mobile device management isn't supported. Check device restrictions. |
-| 2149056514 (0x80180002)<br>MENROLL_E_DEVICE_AUTHENTICATION_ERROR | Server failed to authenticate the user<br><br> There's no Azure AD token for the user. Make sure the user can authenticate to Azure AD. |
+| 2149056514 (0x80180002)<br>MENROLL_E_DEVICE_AUTHENTICATION_ERROR | Server failed to authenticate the user<br><br> There's no Microsoft Entra token for the user. Make sure the user can authenticate to Microsoft Entra ID. |
 | 2147942450 (0x‭80070032‬)<br>&nbsp; | MDM auto-enrollment is only supported on Windows RS3 and above.<br><br>Make sure the device meets the [minimum requirements](overview.md#windows) for co-management. |
-| 3400073293 | ADAL user realm account response unknown<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
+| 3400073293 | ADAL user realm account response unknown<br><br>Check your Microsoft Entra configuration, and make sure that users can successfully authenticate. |
 | 3399548929 | Need user sign-in<br><br>This issue should be transient. It occurs when the user quickly signs out before the enrollment task happens. |
-| 3400073236 | ADAL security token request failed.<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
+| 3400073236 | ADAL security token request failed.<br><br>Check your Microsoft Entra configuration, and make sure that users can successfully authenticate. |
 | 2149122477 | Generic HTTP issue |
-| 3400073247 | ADAL-integrated Windows authentication is only supported in federated flow<br><br>[Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) |
+| 3400073247 | ADAL-integrated Windows authentication is only supported in federated flow<br><br>[Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) |
 | 3399942148 | The server or proxy wasn't found.<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. | 
 | 2149056532 | Specific platform or version is not supported<br><br>Make sure the device meets the [minimum requirements](overview.md#windows) for co-management. |
 | 2147943568 | Element not found<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
 | 2192179208 | Not enough memory resources are available to process this command.<br><br>This issue should be transient, it should resolve itself when the client retries. |
-| 3399614467 | ADAL Authorization grant failed for this assertion<br><br>Check your Azure AD configuration, and make sure that users can successfully authenticate. |
+| 3399614467 | ADAL Authorization grant failed for this assertion<br><br>Check your Microsoft Entra configuration, and make sure that users can successfully authenticate. |
 | 2149056517 | Generic Failure from management server, such as DB access error<br><br>This issue should be transient. If it persists, contact Microsoft Support. |
 | 2149134055 | Winhttp name not resolved<br><br>The client can't resolve the name of the service. Check the DNS configuration. |
 | 2149134050 | internet timeout<br><br>This issue should be transient, when the client can't communicate with cloud. If it persists, make sure the client has consistent connectivity to Azure. |
