@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 03/23/2023
+ms.date: 11/16/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -134,7 +134,7 @@ Once the reset is complete, the device is again ready for use.
 
 ## Troubleshooting
 
-Windows Autopilot Reset requires that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device. If it isn't configured and enabled, an error such as `Error code: ERROR_NOT_SUPPORTED (0x80070032)` is reported.
+Windows Autopilot Reset requires that the [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device. Before starting the reset, Windows Autopilot Reset will check if WinRE is configured and enabled. If it isn't configured and enabled, then the Windows Autopilot reset will fail immediately on the device and an error such as `Error code: ERROR_NOT_SUPPORTED (0x80070032)` is reported in the logs.
 
 To make sure WinRE is enabled, use the [REAgentC.exe tool](/windows-hardware/manufacture/desktop/reagentc-command-line-options) to run the following command:
 
