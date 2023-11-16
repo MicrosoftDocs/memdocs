@@ -14,15 +14,13 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 
 # Windows Autopilot Reset
-
-**Applies to:**
-
-- Windows 11
-- Windows 10
 
 Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. Specifically, Windows Autopilot Reset:
 
