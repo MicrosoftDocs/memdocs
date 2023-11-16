@@ -34,7 +34,7 @@ ms.collection:
 
 This article walks you through the process of configuring single sign-on (SSO) using Microsoft Entra authentication for Windows 365. When you enable SSO, you can use passwordless authentication and third-party Identity Providers that federate with Microsoft Entra ID to sign in to your Cloud PC. When enabled, this feature provides a single sign-on experience both when authenticating to the Cloud PC and inside the session when accessing Microsoft Entra ID-based apps and websites.
 
-For information on using passwordless authentication within the session, see [In-session passwordless authentication (Preview)](identity-authentication.md#in-session-passwordless-authentication-preview).
+For information on using passwordless authentication within the session, see [In-session passwordless authentication](identity-authentication.md#in-session-passwordless-authentication).
 
 To get started, following the steps to [Configure single sign-on](/azure/virtual-desktop/configure-single-sign-on) for Azure Virtual Desktop with the following caveats:
 
@@ -44,4 +44,4 @@ To get started, following the steps to [Configure single sign-on](/azure/virtual
 
 ## Next steps
 
-- Check out [In-session passwordless authentication (Preview)](identity-authentication.md#in-session-passwordless-authentication-preview) to learn how to enable passwordless authentication.
+- Check out [In-session passwordless authentication](identity-authentication.md#in-session-passwordless-authentication) to learn how to enable passwordless authentication.
