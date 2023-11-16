@@ -48,6 +48,7 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - Ivanti Connect Secure 9.1R16 and later
 > - Aruba ClearPass with Microsoft Intune Extension v6 and later
 > - Forescout eyeExtend Microsoft Module v1.0.1 and later
+> - Portnox Cloud
 >
 > Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
 
