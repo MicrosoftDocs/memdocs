@@ -2,7 +2,7 @@
 # required metadata
 
 title: Configure Email settings for iOS/iPadOS devices in Microsoft Intune
-description: See a list of all the email settings you can configure and add to iOS and iPadOS devices in Microsoft Intune, including using Exchange servers, and getting attributes from Azure Active Directory. You can also enable SSL, authenticate users with certificates or username/password, and synchronize email on iOS/iPadOS devices using device configuration profiles in Microsoft Intune.
+description: See a list of all the email settings you can configure and add to iOS and iPadOS devices in Microsoft Intune, including using Exchange servers, and getting attributes from Microsoft Entra ID. You can also enable SSL, authenticate users with certificates or username/password, and synchronize email on iOS/iPadOS devices using device configuration profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -53,18 +53,18 @@ This article describes all the email settings available for devices running iOS/
 
 - **Email server**: Enter the host name of your Exchange server.
 - **Account name**: Enter the display name for the email account. This name is shown to users on their devices.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory. Intune dynamically generates the username that's used by this profile. Your options:
+- **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that's used by this profile. Your options:
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`
   - **Primary SMTP address**: Gets the name in email address format, such as `user1@contoso.com`
   - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:  
-    - **User domain name source**: Choose **AAD** (Azure Active Directory) or **Custom**.
-      - **AAD**: Get the attributes from Azure AD. Also enter:
-        - **User domain name attribute from AAD**: Choose to get the **Full domain name** (`contoso.com`) or the **NetBIOS name** (`contoso`) attribute of the user.
+    - **User domain name source**: Choose **Microsoft Entra ID** or **Custom**.
+      - **Microsoft Entra ID**: Get the attributes from Microsoft Entra ID. Also enter:
+        - **User domain name attribute from Microsoft Entra ID**: Choose to get the **Full domain name** (`contoso.com`) or the **NetBIOS name** (`contoso`) attribute of the user.
 
       - **Custom**: Get the attributes from a custom domain name. Also enter:
         - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
-- **Email address attribute from AAD**: Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
+- **Email address attribute from Microsoft Entra ID**: Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
   - **User principal name**: Use the full principal name as the email address, such as `user1@contoso.com` or `user1`.
   - **Primary SMTP address**: Use the primary SMTP address to sign in to Exchange, such as `user1@contoso.com`.
 - **Authentication method**: Choose how users to authenticate to the email server. Your options:
@@ -84,7 +84,7 @@ This article describes all the email settings available for devices running iOS/
 
   - When OAuth is enabled, end users have a different "Modern Authentication" email sign-in experience that supports multifactor authentication (MFA). 
 
-  - Some organizations disable the end user's ability to do [self-service application access](/azure/active-directory/manage-apps/manage-self-service-access). In this scenario, the Modern Authentication sign-in may fail until an Administrator creates the "iOS Accounts" enterprise app, and grant users access to the app in Azure AD.
+  - Some organizations disable the end user's ability to do [self-service application access](/azure/active-directory/manage-apps/manage-self-service-access). In this scenario, the Modern Authentication sign-in may fail until an Administrator creates the "iOS Accounts" enterprise app, and grant users access to the app in Microsoft Entra ID.
 
     The default action is to add an application using the [Application Access Panel](/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Add App** feature **without business approval**. For more information, see [assign users to applications](/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
