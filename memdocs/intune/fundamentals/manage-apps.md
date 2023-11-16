@@ -40,7 +40,7 @@ App management can be challenging and Intune can help. Microsoft Intune is a clo
 
 Microsoft Intune supports Android, iOS/iPadOS, macOS and Windows client devices. So, you can use Intune's app management features across your many devices.
 
-From a service perspective, Intune uses Azure Active Directory (AD) for identity management. To use some apps, these Azure AD user identities must have licenses assigned to them. The Microsoft Intune admin center can also help you manage licensing.
+From a service perspective, Intune uses Microsoft Entra ID for identity management. To use some apps, these Microsoft Entra user identities must have licenses assigned to them. The Microsoft Intune admin center can also help you manage licensing.
 
 This article discusses concepts and features you should consider when managing and securing apps.
 

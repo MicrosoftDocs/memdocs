@@ -43,7 +43,7 @@ ms.collection:
 >
 > If you need help, contact [***Jamf Customer Success***](https://jamf.service-now.com/csm). For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
-This article can help you install the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Azure Active Directory (Azure AD) Conditional Access policies in the same way as for devices managed through Intune.
+This article can help you install the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Microsoft Entra Conditional Access policies in the same way as for devices managed through Intune.
 
 We recommend use of the Jamf Cloud Connector as it automates many of the steps that are required when you manually configure integration as documented in [Integrate Jamf Pro with Intune for compliance](../protect/conditional-access-integrate-jamf.md).
 
@@ -73,7 +73,7 @@ For more information about the Jamf Cloud Connector, see [Configuring the macOS 
 - Jamf Pro 10.18 or later
 - A Jamf Pro user account with Conditional Access privileges  
 - Microsoft Intune
-- Microsoft Azure AD Premium
+- Microsoft Entra ID P1 or P2
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
 
@@ -129,11 +129,11 @@ If you have not previously set up a connection between Jamf Pro and Intune, or i
 
 5. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go **Tenant administration** > **Partner device management**.
 
-   On the **Partner device management** node, delete the **Application ID** in the **Specify the Azure Active Directory App ID for Jamf** field, and then select **Save**.
+   On the **Partner device management** node, delete the **Application ID** in the **Specify the Microsoft Entra App ID for Jamf** field, and then select **Save**.
 
    The Application ID is the ID of the Azure Enterprise app that is created in Azure when you set up a manual integration if Jamf Pro.
 
-6. Sign in to the [Azure portal](https://portal.azure.com/) with an account that has Global Admin permissions, and go to **Azure Active Directory** > **Enterprise applications**.
+6. Sign in to the [Azure portal](https://portal.azure.com/) with an account that has Global Admin permissions, and go to **Microsoft Entra ID** > **Enterprise applications**.
 
    Locate the two Jamf apps and delete them. New applications will be automatically created when you configure the Jamf Cloud Connector in the next procedure.
 
@@ -178,7 +178,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 6. From the **Sovereign Cloud** pop-up menu, select the location of your Sovereign Cloud from Microsoft. If you're replacing your previous integration with the Jamf Cloud Connector, you can skip this step if the location has been specified.
 
 7. Select one of the following landing page options for computers that aren't recognized by Microsoft Azure:
-   - **The Default Jamf Pro Device Registration page** - Depending on the state of the macOS device, this option redirects users to either the Jamf Pro device enrollment portal (to enroll with Jamf Pro) or the Intune Company Portal app (to register with Azure AD).
+   - **The Default Jamf Pro Device Registration page** - Depending on the state of the macOS device, this option redirects users to either the Jamf Pro device enrollment portal (to enroll with Jamf Pro) or the Intune Company Portal app (to register with Microsoft Entra ID).
    - **The Access Denied page**
    - **Custom URL**
   
@@ -196,7 +196,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
    The *Application ID* is copied to your system clipboard for use in the next step, and the **Partner device management** node in the *Microsoft Intune admin center* opens. (**Tenant administration** > **Partner device management**).
 
-10. On the **Partner device management** node, *Paste* the **Application ID** in to the **Specify the Azure Active Directory App ID for Jamf** field, and then select **Save**.
+10. On the **Partner device management** node, *Paste* the **Application ID** in to the **Specify the Microsoft Entra App ID for Jamf** field, and then select **Save**.
 
     ![Configure partner device management](./media/conditional-access-jamf-cloud-connector/partner-device-management.png)
 
@@ -210,7 +210,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
     ![Connection status is active](./media/conditional-access-jamf-cloud-connector/active-connection-status.png)
 
-When the connection between Jamf Pro and Microsoft Intune is successfully established, Jamf Pro sends inventory information to Microsoft Intune for each computer that is registered with Azure AD (registering with Azure AD is an end-user workflow). You can view the Conditional Access Inventory State for a user and a computer in the Local User Account category of a computer's inventory information in Jamf Pro.
+When the connection between Jamf Pro and Microsoft Intune is successfully established, Jamf Pro sends inventory information to Microsoft Intune for each computer that is registered with Microsoft Entra ID (registering with Microsoft Entra ID is an end-user workflow). You can view the Conditional Access Inventory State for a user and a computer in the Local User Account category of a computer's inventory information in Jamf Pro.
 
 After you integrate one instance of Jamf Pro by using the Jamf Cloud Connector, you can use this same procedure to configure more instances of Jamf Pro with the same Intune subscription in your Azure tenant.  
 
@@ -296,7 +296,7 @@ Device inventory data is stored in the Jamf Pro database.
 
 ### What credentials are stored?
 
-No credentials are stored. When you configure the Cloud Connector, you must consent to adding the Jamf multi-tenant app and the native macOS connector app to their Azure AD tenant. Once the multi-tenant application is added, the Cloud Connector requests access tokens to interact with the Azure API. Application access can be revoked in Microsoft Azure at any time to restrict access.
+No credentials are stored. When you configure the Cloud Connector, you must consent to adding the Jamf multi-tenant app and the native macOS connector app to their Microsoft Entra tenant. Once the multi-tenant application is added, the Cloud Connector requests access tokens to interact with the Azure API. Application access can be revoked in Microsoft Azure at any time to restrict access.
 
 ### How is data encrypted?
 
@@ -322,4 +322,4 @@ Yes, the changes are logged to the JAMFChangeManagement.log file. To view the Ch
 
 - [Apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md)
 - [Data Jamf sends to Intune](../protect/data-jamf-sends-to-intune.md)
-- [Integrate Jamf Pro with Intune to report compliance to Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).
+- [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).

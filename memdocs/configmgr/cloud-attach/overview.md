@@ -88,7 +88,7 @@ Once you co-manage the devices, you can specify which workloads to move, such as
 
 ## Benefits of Cloud Attaching Configuration Manager with Intune:
 
-1. Enhanced Security: Cloud attaching Configuration Manager with Intune brings advanced security features to your organization's device management strategy. With Intune's cloud-powered security capabilities, such as Conditional Access, Azure AD authentication, and threat detection, combined with Configuration Manager's robust endpoint protection, compliance settings, and software updates, you can ensure that your devices are protected against emerging threats and vulnerabilities.
+1. Enhanced Security: Cloud attaching Configuration Manager with Intune brings advanced security features to your organization's device management strategy. With Intune's cloud-powered security capabilities, such as Conditional Access, Microsoft Entra authentication, and threat detection, combined with Configuration Manager's robust endpoint protection, compliance settings, and software updates, you can ensure that your devices are protected against emerging threats and vulnerabilities.
 
 1. Modern Management: By cloud attaching Configuration Manager with Intune, you can unlock the power of modern management for your organization's devices. Intune allows for cloud-based management of Windows, macOS, iOS, and Android devices, providing a unified and consistent management experience across platforms. You can take advantage of modern management features like zero-touch provisioning, remote device management, app deployment, and device enrollment, making it easier to manage devices from anywhere, at any time.
 

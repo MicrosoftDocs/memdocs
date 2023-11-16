@@ -94,7 +94,7 @@ These roles can delete the connection between Microsoft Intune and the Google Ad
 * Intune Service Administrator  
 * Custom Intune role that has *Chrome Enterprise delete connection settings permission*  
 
-Deleting your connection removes all ChromeOS devices and Chrome Enterprise connection settings from Intune and Azure Active Directory. After the existing connection is deleted, you'll have space in your tenant to create a new connection.  
+Deleting your connection removes all ChromeOS devices and Chrome Enterprise connection settings from Intune and Microsoft Entra ID. After the existing connection is deleted, you'll have space in your tenant to create a new connection.  
 
 To delete the connection in the Microsoft Intune admin center:  
 1. Go to **Tenant administration** > **Connectors and tokens**.  

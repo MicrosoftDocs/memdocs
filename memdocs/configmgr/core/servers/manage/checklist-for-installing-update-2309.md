@@ -2,7 +2,7 @@
 title: Checklist for 2309
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2309.
-ms.date: 10/16/2023
+ms.date: 11/01/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -62,15 +62,15 @@ The first time you use a Configuration Manager console after the update has fini
 
 <!-- SCCMDocs#1397 -->
 
-<!-- As of September 18, 2023, version 2309 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of November 1, 2023, version 2309 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. 
 
-At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2309: 
+<!-- At this time, version 2309 is released for the early update ring. To install this update, you need to opt in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2309:-->
 
-[Version 2309 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+<!--[Version 2309 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target-->
 
 <!--Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable. -->
-
-> [!NOTE]
+<!--
+[!NOTE]
 > The version 2309 update is only applicable to sites running version 2203 or later.
 
 To opt in to the early update ring:
@@ -85,10 +85,10 @@ To opt in to the early update ring:
 
 1. Check for updates. For more information, see [Get available updates](prepare-in-console-updates.md#get-available-updates).
 
-The version 2309 update should now be available in the console.
+The version 2309 update should now be available in the console-->
 
-> [!IMPORTANT]
-> This script only adds your site to the early update ring for version 2309. It's not a permanent change.
+<!-- [!IMPORTANT]
+> This script only adds your site to the early update ring for version 2309. It's not a permanent change.-->
 
 ## Pre-update checklist
 
