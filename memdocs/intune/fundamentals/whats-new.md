@@ -81,18 +81,18 @@ To find these settings, in the [Microsoft Intune admin center](https://go.micros
 
 **Windows Subsystem for Linux**:
 
-- Allow the Inbox version of the Windows Subsystem For Linux
+- Allow kernel debugging
+- Allow custom networking configuration
+- Allow custom system distribution configuration
+- Allow kernel command line configuration
+- Allow custom kernel configuration
 - Allow WSL1
-- Allows custom kernel configuration
-- Allows the Windows Subsystem for Linux
-- Disable custom networking configuration
-- Disable custom system distribution configuration
-- Disable firewall configuration
-- Disable kernel command line configuration
-- Disable kernel debugging
-- Disable nested virtualization
-- Disable passthrough disk mount
-- Disable the debug shell
+- Allow the Windows Subsystem for Linux
+- Allow the Inbox version of the Windows Subsystem For Linux
+- Allow user setting firewall configuration
+- Allow nested virtualization
+- Allow passthrough disk mount
+- Allow the debug shell
 
 Applies to:
 

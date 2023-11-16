@@ -37,6 +37,8 @@ Learn what new features are available in Windows 365 Enterprise.
 > [!NOTE]
 > Each monthly update may roll out over several weeks and might not be immediately available to all customers.
 
+For information about Windows App and its features, see [What's new in Windows App](/windows-app/whats-new?tabs=windows).
+
 <!-- Common categories:  
 ### App management
 ### Device configuration
@@ -66,7 +68,7 @@ This feature isn’t supported on Android, iOS, or web clients. Enabling this fe
 
 #### Watermarking support in Windows 365 settings catalog<!--45779621-->
 
-You can now implement watermarking for your Cloud PCs by using the settings catalog. Alongside screen capture, watermarking is a deterrent to data leaks and data loss. For more information, see [Watermarking in Azure Virtual Desktop](/azure/virtual-desktop/screen-capture-protection) and [Configure the administrative template](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
+You can now implement watermarking for your Cloud PCs by using the settings catalog. Alongside screen capture, watermarking is a deterrent to data leaks and data loss. For more information, see [Watermarking in Azure Virtual Desktop](/azure/virtual-desktop/watermarking) and [Configure the administrative template](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
 #### Customer Lockbox support (preview)<!--46807263-->
 
