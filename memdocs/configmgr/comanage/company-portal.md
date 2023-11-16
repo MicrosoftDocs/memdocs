@@ -24,7 +24,7 @@ Starting in version 2006, the Company Portal app is now the cross-platform app p
 
 The Company Portal supports the following actions:
 
-- Launch the Company Portal app on co-managed devices and sign in with Azure Active Directory (Azure AD) single sign-on (SSO).
+- Launch the Company Portal app on co-managed devices and sign in with Microsoft Entra single sign-on (SSO).
 - View available and installed Configuration Manager apps in the Company Portal alongside Intune apps.
 - Install available Configuration Manager apps from the Company Portal and receive installation status information.
 
@@ -62,7 +62,7 @@ For more information, see the following articles:
 
 - The user accounts that sign in to these devices require the following configurations:
 
-  - An Azure AD identity
+  - A Microsoft Entra identity
 
   - Assigned an Intune license
 
@@ -91,7 +91,7 @@ For more information on branding the Company Portal for your organization, see [
 
 ## Use the Company Portal
 
-1. Launch the Company Portal from the Start menu. The currently signed-in user is automatically signed in to the Company Portal based on their Azure AD identity.
+1. Launch the Company Portal from the Start menu. The currently signed-in user is automatically signed in to the Company Portal based on their Microsoft Entra identity.
 
 1. Select the **Apps** page. You should see Configuration Manager apps in the list.
 
