@@ -206,7 +206,7 @@ To ensure that all devices enrolled in Defender for Endpoint security settings m
 
 Use the following guidance for your Dynamic groups:
 
-- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, WindowsServer, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
+- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, Windows Server, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
 
 - If necessary, dynamic groups containing exclusively devices that are managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices that are managed by Defender for Endpoint via the security settings management functionality, and devices remain in this group only while managed by Defender for Endpoint.
 
