@@ -129,6 +129,9 @@ Applies to:
 
 ## Device management
 
+### Variables supported in noncompliant email notifications<!-- 6111965  -->  
+Use variables to personalize email notifications that are sent when a user's device becomes noncompliant. The variables included in the template, such as `{{username}}` or `{{devicename}}`, will be replaced by the actual username or device name in the email that users receive. Variables will be supported for all platforms.
+
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
@@ -147,9 +150,6 @@ For information on currently available Remote actions, see [Remote actions](../r
 We’re working on an update to the Intune security baseline for Microsoft Edge v117. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Edge.
 
 For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
-
-
-
 
 <!-- *********************************************** -->
 
