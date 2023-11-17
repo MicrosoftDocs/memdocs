@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/06/2023
+ms.date: 11/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -58,17 +58,23 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
 6. In the **Select** pane, search for and select the following apps as needed:
     - **Windows 365** (app ID 0af06dc6-e4b5-4f28-818e-e78e62d137a5). You can also search for "cloud" to find this app. This app is used when retrieving the list of resources for the user and when users initiate actions on their Cloud PC like Restart.
     - **Azure Virtual Desktop** (app ID 9cdead84-a844-4324-93f2-b2e6bb768d07). This app may also appear as **Windows Virtual Desktop**. This app is used to authenticate to the Gateway during the connection and when the client sends diagnostic information to the service.
-    - **Microsoft Remote Desktop** (app ID a4a365df-50f1-4397-bc59-1a1564b8bb9c) and **Windows Cloud Login** (app ID 270efc09-cd0d-444b-a71f-39af4910ec45). These apps are only needed when **Use Microsoft Entra single sign-on (preview)** is enabled in a provisioning policy. These apps are used to authenticate users to the Cloud PC.
+    - **Microsoft Remote Desktop** (app ID a4a365df-50f1-4397-bc59-1a1564b8bb9c) and **Windows Cloud Login** (app ID 270efc09-cd0d-444b-a71f-39af4910ec45). These apps are only needed when you [configure single sign-on](configure-single-sign-on.md) in a provisioning policy. These apps are used to authenticate users to the Cloud PC.
 
-    By choosing both the first two apps, you make sure that the policy applies to the Cloud PC End-user portal and the connection to the Cloud PC. If you want to exclude apps, you must also choose both these apps.
-    
-   >[!NOTE]
-   >If you have configured a provisioning policy to **Use Microsoft Entra single sign-on**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
      It's recommended to match conditional access policies between these apps. This ensures that the policy applies to the Cloud PC End-user portal, the connection to the Gateway and the Cloud PC for a consistent experience. If you want to exclude apps, you must also choose all of these apps.
 
      > [!IMPORTANT]
      > With SSO enabled, authentication to the Cloud PC uses the **Microsoft Remote Desktop** Entra ID app today. An upcoming change will transition the authentication to the **Windows Cloud Login** Entra ID app. To ensure a smooth transition, you need to add both Entra ID apps to your CA policies.
 
+     > [!NOTE]
+     > If you don't see the Windows Cloud Login app when configuring your conditional access policy, use the steps below to create the app. You must have Owner or Contributor permissions on the subscription to make these changes:
+     >
+     >  1. Sign into the [Azure Portal](https://portal.azure.com).
+     >  1. Select **Subscriptions** from the list of Azure Services.
+     >  1. Select your Subscription name.
+     >  1. Select **Resource providers** then select **Microsoft.DesktopVirtualization**.
+     >  1. Select **Register** at the top.
+     >
+     > After the resource provider is registered, the Windows Cloud Login app appears in the conditional access policy configuration when selecting apps to apply the policy to. If you aren't using Azure Virtual Desktop, you can unregister the Microsoft.DesktopVirtualization resource provider after the Windows Cloud Login app is available.
 7. If you want to fine-tune your policy, under **Access controls**, choose **0 controls selected**. Under **Grant**, choose the options that you want to apply to all objects assigned to this policy.
 8. If you want to test your policy first, under **Enable Policy**, set **Report-only** to **Off**. If you set it to **On**, the policy will be applied as soon as you create it.
 9. Select **Create** to create the policy.
