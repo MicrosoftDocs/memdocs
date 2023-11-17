@@ -91,9 +91,6 @@ devices that have unhealthy hosts users' connections that consistently or freque
 
 A new report will be available that lets you know which actions have been performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided.
 
-<!-- ***********************************************-->
-## Monitor and troubleshoot
-
 ### New alert rule: Cloud PCs that aren't available<!--47321010-->
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
