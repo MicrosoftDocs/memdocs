@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2020
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,12 +46,9 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 ## Prerequisites
 
 - Microsoft Entra ID P1
-
 - Microsoft Intune Plan 1 subscription
-
 - Zimperium Mobile Threat Defense subscription
-
-  - For more information, see [Zimperium website](https://www.zimperium.com/zips-mobile-ips).
+  - For more information, see [Zimperium website](https://www.zimperium.com/zips-mobile-ips)
 
 ## How do Intune and Zimperium help protect your company resources?
 
@@ -76,9 +73,7 @@ See below a few scenarios when integrating Zimperium with Intune:
 When malicious apps such as malware are detected on devices, you can block devices until the threat is resolved:
 
 - Connecting to corporate e-mail
-
 - Syncing corporate files with the OneDrive for Work app
-
 - Accessing company apps
 
 *Block when malicious apps are detected:*
