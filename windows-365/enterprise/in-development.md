@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/01/2023
+ms.date: 11/17/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice: 
@@ -92,6 +92,17 @@ devices that have unhealthy hosts users' connections that consistently or freque
 A new report will be available that lets you know which actions have been performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided.
 
 <!-- ***********************************************-->
+## Monitor and troubleshoot
+
+### New alert rule: Cloud PCs that aren't available<!--47321010-->
+
+A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
+
+### New filter option for the Connected Frontline Cloud PCs report<!--47323230-->
+
+A new filter will be added to the Connected Frontline Cloud PCs report. This new filter will show hourly data for various data periods.
+
+<!-- ***********************************************-->
 ## Provisioning
 
 ### New health check: UDP TURN (preview)<!--44505391-->
@@ -99,8 +110,16 @@ A new report will be available that lets you know which actions have been perfor
 A new UDP TURN check will be added to the Azure Network Connections health checks. For more information about health checks, see [Azure network connections health checks](health-checks.md).
 
 <!-- ***********************************************-->
-<!--## Security
--->
+## Security
+
+### FQDN requirement changes<!--46731885-->
+
+In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
+
+### Watermarking for Cloud PCs<!--45779621-->
+
+You'll be able to to turn on watermarking for Windows 365 Cloud PCs. Watermarking, alongside screen capture protection, helps prevent sensitive information from being captured on client endpoints. When you enable watermarking, QR code watermarks appear on the Cloud PC desktop. The QR code contains the connection ID of a remote session that admins can use to trace the session.
+
 
 <!-- ***********************************************
 ## Windows 365 app-->
