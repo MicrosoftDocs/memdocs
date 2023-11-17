@@ -37,7 +37,7 @@ When you use Microsoft Defender for Endpoint, you can deploy endpoint security p
 
 When you manage devices through security settings management:
 
-- You can use the Microsoft Intune admin center or the Microsoft Defender portal to configure policies for endpoint security for Defender for Endpoint and assign those policies to Microsoft Entra ID groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
+- You can use the Microsoft Intune admin center or the Microsoft 365 Defender portal to configure policies for endpoint security for Defender for Endpoint and assign those policies to Microsoft Entra ID groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
   To view guidance on managing the Intune endpoint security policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
 
@@ -74,7 +74,7 @@ Security settings management isn't yet supported with Government clouds. For mor
 ### Connectivity requirements
 
 Devices must have access to the following endpoint:
- 
+
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
 > [!NOTE]
@@ -162,6 +162,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 4. Defender for Endpoint reports the status of the policy back to Microsoft Intune.
 
 > [!IMPORTANT]
+>
 > Security settings management uses a synthetic registration for devices that don’t fully register in Microsoft Entra ID, and drops the Microsoft Entra hybrid join prerequisite. With this change, Windows devices that previously had enrollment errors will begin onboarding to Defender and then receive and process the security settings management policies.
 >
 > To filter for devices that were unable to enroll due to failing to meet the Microsoft Entra hybrid join prerequisite, navigate to the **Devices** list in the Microsoft Defender portal, and filter by enrollment status. Because these devices are not fully registered, their device attributes show **MDM** = **Intune** and **Join Type** = **Blank**. These devices will now enroll with security settings management using the synthetic registration.

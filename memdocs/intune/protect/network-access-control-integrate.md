@@ -48,6 +48,7 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > - Ivanti Connect Secure 9.1R16 and later
 > - Aruba ClearPass with Microsoft Intune Extension v6 and later
 > - Forescout eyeExtend Microsoft Module v1.0.1 and later
+> - Portnox Cloud
 >
 > Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
 
@@ -75,7 +76,7 @@ The following list is an overview on how NAC integration works when integrated w
 
 ![Conceptual image of how NAC works with Intune](./media/network-access-control-integrate/ca-intune-common-ways-2.png)
 
-1. Register the NAC partner solution with Azure Active Directory (Azure AD), and grant delegated permissions to the Intune NAC API.
+1. Register the NAC partner solution with Microsoft Entra ID, and grant delegated permissions to the Intune NAC API.
 2. Configure the NAC partner solution with the appropriate settings including the Intune discovery URL.
 3. Configure the NAC partner solution for certificate authentication.
 4. User connects to corporate Wi-Fi access point or makes a VPN connection request.
@@ -128,7 +129,7 @@ Also, the data returned will be limited if:
 | OS version | Yes | Yes | Yes | No |
 | Device model | Yes | Yes | Yes | No |
 | Manufacturer | Yes | Yes | Yes | No |
-| Azure Active Directory device ID | Yes | Yes | Yes | No |
+| Microsoft Entra device ID | Yes | Yes | Yes | No |
 | Last contact time with Intune | Yes | Yes | Yes | No |
 | Intune device ID | No | No | No | Yes |
 

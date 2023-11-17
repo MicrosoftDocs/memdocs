@@ -18,7 +18,7 @@ ms.collection: tier3
 
 <!-- Intune 11300628 -->
 
-When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app introduces component timing and policy delays.
+When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first enrolls to Microsoft Entra ID and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app introduces component timing and policy delays.
 
 Now you can configure co-management settings in Intune, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
@@ -89,7 +89,7 @@ The following components are required to support Autopilot into co-management:
 
 - Register the device for Autopilot. For more information, see [Windows Autopilot registration overview](/autopilot/registration-overview).
 
-  - Azure AD-joined only
+  - Microsoft Entra joined only
 
   - User-driven scenario only
 
@@ -126,16 +126,16 @@ Use these recommendations for a more successful deployment:
 
 Autopilot into co-management currently doesn't support the following functionality:
 
-- Hybrid Azure AD-joined devices - If the device is targeted with co-management settings policy, in Hybrid Azure AD-Join scenario, the autopilot provisioning times out during ESP phase.
+- Microsoft Entra hybrid joined devices - If the device is targeted with co-management settings policy, in Microsoft Entra hybrid join scenario, the autopilot provisioning times out during ESP phase.
 
 > [!NOTE]
-  > For Windows 11 devices in Hybrid Azure AD-joined scenario, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, along with Configuration Manager client installation, registry value **ConfigInfo** in registry path **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server** must be set to **2** which will set the management authority as Configuration Manager.
+  > For Windows 11 devices in Microsoft Entra hybrid joined scenario, the management authority will be set to Intune, during the Autopilot process. Installing Configuration Manager client as Win32 app does not change management authority to Configuration Manager and thus Intune will continue to manage all the co-management workloads. To mitigate this, along with Configuration Manager client installation, registry value **ConfigInfo** in registry path **HKLM\SOFTWARE\Microsoft\DeviceManageabilityCSP\Provider\MS DM Server** must be set to **2** which will set the management authority as Configuration Manager.
 
 - Autopilot pre-provisioning, also known as _white glove_ provisioning
 
 - Workloads switched to **Pilot Intune** with pilot collections. This functionality is dependent upon collection evaluation, which doesn't happen until after the client is installed and registered. Since the client won't get the correct policy until later in the Autopilot process, it can cause indeterminate behaviors.
 
-- Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Azure AD is recommended for client authentication. For more information, see [Plan for CMG client authentication: Azure AD](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
+- Clients that authenticate with PKI certificates. You can't provision the certificate on the device before the Configuration Manager client installs and needs to authenticate to the CMG. Microsoft Entra ID is recommended for client authentication. For more information, see [Plan for CMG client authentication: Microsoft Entra ID](../core/clients/manage/cmg/plan-client-authentication.md#azure-ad).
 
 ## Configure
 
