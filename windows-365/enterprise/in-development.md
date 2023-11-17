@@ -89,7 +89,7 @@ devices that have unhealthy hosts users' connections that consistently or freque
 
 ### New report: Action status<!--44871923-->
 
-A new report will be available that lets you know which actions have been performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided.
+A new report will be available that lets you know which actions were performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided.
 
 ### New alert rule: Cloud PCs that aren't available<!--47321010-->
 
@@ -111,11 +111,11 @@ A new UDP TURN check will be added to the Azure Network Connections health check
 
 ### FQDN requirement changes<!--46731885-->
 
-In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
+In a future update, Windows 365 will remove a large number of FQDNs from the current published list and move them to the existing *.infra.windows365.microsoft.com wildcard FQDN. This change will reduce the initial configuration requirements and the change rate of connectivity requirements. For Windows 365 Government, the FQDNs will be moved to *.infra.windows365.microsoft.us.
 
 ### Watermarking for Cloud PCs<!--45779621-->
 
-You'll be able to to turn on watermarking for Windows 365 Cloud PCs. Watermarking, alongside screen capture protection, helps prevent sensitive information from being captured on client endpoints. When you enable watermarking, QR code watermarks appear on the Cloud PC desktop. The QR code contains the connection ID of a remote session that admins can use to trace the session.
+You'll be able to turn on watermarking for Windows 365 Cloud PCs. Watermarking, alongside screen capture protection, helps prevent sensitive information from being captured on client endpoints. When you enable watermarking, QR code watermarks appear on the Cloud PC desktop. The QR code contains the connection ID of a remote session that admins can use to trace the session.
 
 
 <!-- ***********************************************
