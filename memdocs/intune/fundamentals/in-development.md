@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 11/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,10 @@ You can use RSS to be notified when this article is updated. For more informatio
 <!-- ***********************************************-->
 
 ## App management  
+
+#### Windows MAM supported in government cloud environments<!-- 25273622  -->  
+Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments will now be able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md) and [Data protection for Windows MAM](../apps/protect-mam-windows.md).
+
 
 ### Intune APP SDK for .NET MAUI<!-- 17696301   -->  
 Using the Intune APP SDK for .NET MAUI, you'll be able to develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
