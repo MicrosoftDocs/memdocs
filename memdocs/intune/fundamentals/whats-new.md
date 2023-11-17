@@ -202,6 +202,9 @@ With this change, a device that has either of the *deprecated* settings configur
 
 The *deprecated* settings will be removed from the Antivirus profiles and the settings catalog in a future update to Intune.
 
+> [!NOTE]
+> The changes for Linux are now available. The macOS settings are marked as deprecated, but the *Enforcement level* setting will not be available until December.
+
 Applies to:
 
 - Linux
