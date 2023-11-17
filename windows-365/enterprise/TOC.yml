@@ -151,8 +151,6 @@ items:
         href: security-guidelines.md
       - name: Deploy security baselines 
         href: deploy-security-baselines.md
-      - name: Set conditional access policies
-        href: set-conditional-access-policies.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
       - name: Enable screen capture protection
@@ -161,6 +159,12 @@ items:
         href: /azure/virtual-desktop/watermarking?context=/windows-365/context/pr-context
       - name: Restrict Office 365 access to Cloud PCs 
         href: restrict-office-365-cloud-pcs.md
+    - name: Identity and access management
+      items:
+      - name: Set conditional access policies
+        href: set-conditional-access-policies.md
+      - name: Configure single sign-on
+        href: configure-single-sign-on.md
     - name: Apps
       items:
       - name: App overview
