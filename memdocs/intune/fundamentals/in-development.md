@@ -140,7 +140,16 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 <!-- *********************************************** -->
 
-<!-- ## Device security -->
+## Device security  
+
+### Updated security baseline for Microsoft Edge v117<!-- 25021903 -->  
+
+We’re working on an update to the Intune security baseline for Microsoft Edge v117. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Edge.
+
+For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
+
+
+
 
 <!-- *********************************************** -->
 
