@@ -88,8 +88,11 @@ You can use scope tags to determine who can see client app information in Intune
 ## Step 3 - Assignments
 
 1. Select the **Required**, **Available for enrolled devices**, **Available with or without enrollment**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
-2. Click **Next** to display the **Review + create** page.
 
+1. Click **Next** to display the **Review + create** page.
+
+> [!NOTE]
+> Users may receive the "Open in iTunes?" prompt when installing LOB apps from the iOS Company Portal. Instruct users to click 'Open' to install the LOB app. 
 ## Step 4 - Review + create
 
 1. Review the values and settings you entered for the app.
@@ -125,3 +128,4 @@ For an iOS LOB app targeted with available intent, auto-update of the applicatio
 - Learn more about the ways in which you can monitor the properties and assignment of your app. See [How to monitor app information and assignments](apps-monitor.md).
 
 - Learn more about the context of your app in Intune. See [Overview of device and app lifecycles](../fundamentals/device-lifecycle.md).
+
