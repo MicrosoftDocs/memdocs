@@ -44,4 +44,4 @@ For the list of data that Jamf Pro shares with Intune, see [Appendix: Inventory 
 
 ## Next steps
 
-Get information on how to [remove a Jamf-managed device](https://docs.jamf.com/technical-papers/jamf-pro/microsoft-intune/10.9.0/Deleting_a_Computer_from_the_Microsoft_Azure_and_Intune_Portals.html) from Intune and Azure Active Directory. You can also file a support ticket with [Jamf support](https://www.jamf.com/support/) for additional help.
+Get information on how to [remove a Jamf-managed device](https://docs.jamf.com/technical-papers/jamf-pro/microsoft-intune/10.9.0/Deleting_a_Computer_from_the_Microsoft_Azure_and_Intune_Portals.html) from Intune and Microsoft Entra ID. You can also file a support ticket with [Jamf support](https://www.jamf.com/support/) for additional help.

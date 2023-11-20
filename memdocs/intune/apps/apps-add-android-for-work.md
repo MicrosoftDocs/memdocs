@@ -162,7 +162,7 @@ To create a Managed Google Play web link:
 7. Add an app **Title**, the web app **URL**, select how the app should be displayed, and select an app icon.
 8. Click **Create**.
 9. Close the Managed Google Play pane if you are done adding apps.
-1. Click **Sync** on the **App app** pane to sync with the Managed Google Play service.
+1. Click **Select** and **Sync** on the **App app** pane to sync with the Managed Google Play service.
 
     > [!NOTE]
     > Web apps may take several minutes to become available to sync. If the app does not appear the first time you perform a sync, wait a couple minutes, click the **Select** button for the web app you want to sync, and then initiate a new sync.

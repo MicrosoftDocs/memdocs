@@ -82,7 +82,7 @@ Tamper protection is available for devices that are running one of the following
 > [!NOTE]
 > Devices are required to be onboarded to Microsoft Defender for Endpoint (P1 or P2). Devices may see a delay enabling tamper protection if previously not onboarded to Microsoft Defender for Endpoint. Tamper protection will enable on the first device check-in after onboarding to Microsoft Defender for Endpoint.
 
-You can use Intune to manage tamper protection on Windows devices as part of Windows Security Experience profile (an Antivirus policy). This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario.
+You can use Intune to manage tamper protection on Windows devices as part of Windows Security Experience profile (an Antivirus policy). This includes both devices you manage with Intune, and devices you manage with Configuration Manager through the tenant attach scenario. Tamper protection is also now available for Azure Virtual Desktop. 
 
 #### Intune managed devices
 

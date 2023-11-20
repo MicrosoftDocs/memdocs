@@ -35,7 +35,7 @@ Used by clients to connect to a distribution point and access content. If allowe
 
 This account is also used by pull-distribution points to download content from a source distribution point in a remote forest.  
 
-Some scenarios no longer require a network access account. You can enable the site to use Enhanced HTTP with Azure Active Directory authentication.<!--1358228-->
+Some scenarios no longer require a network access account. You can enable the site to use Enhanced HTTP with Microsoft Entra authentication.<!--1358228-->
 
 For more information, see [Network access account](accounts.md#network-access-account).
 

@@ -51,11 +51,11 @@ A list of device identifiers (serial numbers and IMEIs) is automatically added t
 ## Prerequisites
 
 To enroll into Intune using KME, you must first register your company on the Samsung Knox portal by following these steps:
-1. [Make sure KME is available in your country/region](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): KME is available in over 55 countries/regions. Ensure that your country/region of deployment is supported.
+1. [Make sure KME is available in your country/region](https://www.samsungknox.com/en/solutions/it-solutions/knox-mobile-enrollment/supported-locations): KME is available in over 55 countries/regions. Ensure that your country/region of deployment is supported.
 
 2. [Supported devices](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): KME is available on all Samsung devices with a minimum of Knox 2.4 for Android enrollment and a minimum of Knox 2.8 for Android enterprise enrollment.
 
-3. [Network requirements](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm): Make sure that the necessary firewall and network access rules are permitted on your network.
+3. [Network requirements](https://docs.samsungknox.com/admin/knox-mobile-enrollment/get-started/firewall-exceptions/): Make sure that the necessary firewall and network access rules are permitted on your network.
 
 4. [Register for a Samsung account](https://www2.samsungknox.com/en/user/register): A Samsung account is needed to register and enable KME and manage all Knox Enterprise entitlements in a single place.
 
@@ -87,7 +87,7 @@ When your company is successfully registered, you can create your MDM profile fo
 
 ### For Android Enterprise
 
-For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) instructions.
+For step-by-step guidance, see [Create a Profile](https://docs.samsungknox.com/admin/knox-mobile-enrollment/get-started/step-2-create-a-profile/) in the Knox Mobile Enrollment documentation.  
 
 | MDM Profile Fields| Required? | Values |
 |-------------------|-----------|-------|
@@ -108,12 +108,12 @@ For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsu
 ## Add devices
 
 To assign MDM Profiles to devices, supported Samsung Knox devices must be added to the Knox Portal using one of the following methods:
-- **Using Samsung-Approved Reseller(s):** Use this method if you're purchasing devices from one of the Samsung-approved resellers. Resellers can auto-upload devices for you when approved. [Visit the Samsung Knox Enrollment User Guide to learn how to add resellers](https://docs.samsungknox.com/KME-Getting-Started/Content/Register_resellers.htm).
+- **Using Samsung-Approved Reseller(s):** Use this method if you're purchasing devices from one of the Samsung-approved resellers. Resellers can auto-upload devices for you when approved. [Visit the Samsung Knox Enrollment User Guide to learn how to add resellers](https://docs.samsungknox.com/admin/knox-mobile-enrollment/how-to-guides/manage-resellers/).
 
 - **Using the Knox Deployment App (KDA):** Use this method if you have existing devices that need to be enrolled using KME. You can either use Bluetooth or NFC to add devices to the Knox Portal using this method. [Visit the Samsung Knox Enrollment User Guide to learn about using the KDA](https://docs.samsungknox.com/admin/knox-mobile-enrollment/about-kda.htm).
 
 ## Assign an MDM profile to devices
-You must assign an MDM profile to added devices in the Knox Portal before they can be enrolled. [Visit the Samsung Knox Enrollment User Guide to learn about device configuration](https://docs.samsungknox.com/KME-Getting-Started/Content/configure-devices.htm).
+You must assign an MDM profile to added devices in the Knox Portal before they can be enrolled. For more information, see [Assign a profile](https://docs.samsungknox.com/admin/knox-mobile-enrollment/get-started/step-3-assign-a-profile/) in the Knox Mobile Enrollment documentation.  
 
 ## Configure how end users sign in
 
@@ -131,9 +131,7 @@ For devices enrolled in Intune using KME for Android, you can configure how an e
 
 ## Distribute devices
 
-After creating and assigning an MDM profile, associating a user name, and identifying the devices as corporate-owned in Intune, you can distribute devices to users.
-
-Still need help? Check out the complete [KME User Guide](https://docs.samsungknox.com/KME-Getting-Started/Content/get-started.htm).
+After creating and assigning an MDM profile, associating a user name, and identifying the devices as corporate-owned in Intune, you can distribute devices for [enrollment](https://docs.samsungknox.com/admin/knox-mobile-enrollment/get-started/step-4-complete-device-enrollment/) (opens Samsung Knox documentation) . For information about how to create a rollout plan, communicate changes throughout your organization, and support end users, see the [Microsoft Intune planning guide](../fundamentals/intune-planning-guide.md#step-5---create-a-rollout-plan).  
 
 ## Frequently asked questions
 
@@ -149,6 +147,6 @@ Still need help? Check out the complete [KME User Guide](https://docs.samsungkno
 
 
 ## Getting support
-Learn more about [how to get support for Samsung KME](https://docs.samsungknox.com/KME-Getting-Started/Content/to-get-kme-support.htm).
+Learn more about [how to get support for Samsung KME](https://docs.samsungknox.com/admin/knox-mobile-enrollment/how-to-guides/provide-device-user-support/).  
 
 
