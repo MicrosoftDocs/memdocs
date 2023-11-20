@@ -71,7 +71,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
   - iOS/iPadOS 13.0 and newer
 - The Microsoft Authenticator app must be installed on the device. Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using an MDM policy.
 
---- 
+---
 
 > [!NOTE]
 > On iOS/iPadOS devices, Apple requires that the SSO app extension and the Microsoft Authenticator app be installed. Users don't need to use or configure the Microsoft Authenticator app, it just needs to be installed on the device.
@@ -124,7 +124,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
 
-      When you're done configuring the recommended settings, the settings look similar to the following values in your Intune configuration profile:
+      When you're done configuring the settings and allow all Microsoft & Apple apps, then the settings look similar to the following values in your Intune configuration profile:
 
       :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO plug-in on iOS/iPadOS devices in Intune.":::
 
