@@ -124,7 +124,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       [!INCLUDE [Apple SSO Recommended Settings Table Boilerplate](../includes/apple-enterprise-sso-recommended-settings-ios-intune-and-generic-mdm-boilerplate.md)]
 
-      When you're done configuring the settings and allow all Microsoft & Apple apps, then the settings look similar to the following values in your Intune configuration profile:
+      When you're done configuring the settings and are allowing Microsoft & Apple apps, then the settings look similar to the following values in your Intune configuration profile:
 
       :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-sso-extension-additional-configuration.png" alt-text="Screenshot that shows the end user experience configuration options for the Enterprise SSO plug-in on iOS/iPadOS devices in Intune.":::
 
