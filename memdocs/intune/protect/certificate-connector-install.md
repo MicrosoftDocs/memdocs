@@ -83,7 +83,7 @@ Each time **Certificate Connector for Microsoft Intune** starts on a server you�
 :::image type="content" source="./media/certificate-connector-install/begin-connector-configuration.png" alt-text="Welcome page of the Certificate Connector for Microsoft Intune wizard.":::
 
 > [!TIP]
-> When you run **Certificate Connector for Microsoft Intune** to modify a previously configure connector, you won’t see the *Azure AD Sign In* page. This is because the connector has already been authenticated to your Azure Active Directory.
+> When you run **Certificate Connector for Microsoft Intune** to modify a previously configure connector, you won’t see the *Microsoft Entra sign-in* page. This is because the connector has already been authenticated to your Microsoft Entra ID.
 
 Use the following procedure to both configure a new connector and modify a previously configured connector.
 
@@ -112,15 +112,15 @@ Use the following procedure to both configure a new connector and modify a previ
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
+6. On the *Microsoft Entra sign-in* page, select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. You’ll then be asked to authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
-   :::image type="content" source="./media/certificate-connector-install/authenticate-to-azure-ad.png" alt-text="Authenticate to your Azure Active Directory.":::
+   :::image type="content" source="./media/certificate-connector-install/authenticate-to-azure-ad.png" alt-text="Authenticate to your Microsoft Entra ID.":::
 
-   After you successfully authenticate to your Azure Active Directory, select **Next** to continue:
+   After you successfully authenticate to your Microsoft Entra ID, select **Next** to continue:
 
-   :::image type="content" source="./media/certificate-connector-install/azure-ad-sign-in-success.png" alt-text="Successful sign in to Azure Active Directory.":::
+   :::image type="content" source="./media/certificate-connector-install/azure-ad-sign-in-success.png" alt-text="Successful sign in to Microsoft Entra ID.":::
 
 7. On the *Configure* page, Intune applies your selections to the connector. If successful, the utility continues to the *Finish* page where you select **Exit** to complete configuration of the connector.
 

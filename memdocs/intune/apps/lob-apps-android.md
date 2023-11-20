@@ -20,7 +20,7 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

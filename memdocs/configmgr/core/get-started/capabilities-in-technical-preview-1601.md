@@ -60,22 +60,22 @@ In the 1601 Technical Preview, we have added support for the following features:
 
 -   **Conditional access support for PCs that are managed by Configuration Manager**  
 
-     You can now set conditional access policies for PCs managed by Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Azure AD through the  compliance policy, and to monitor and report on Azure AD registration.  
+     You can now set conditional access policies for PCs managed by Configuration Manager, which will require that the PCs be compliant with the compliance policy in order to access Exchange Online and SharePoint Online services.  With this new functionality, you can also register PCs with Microsoft Entra ID through the  compliance policy, and to monitor and report on Microsoft Entra registration.  
 
     > [!NOTE]  
     >  Conditional Access is not yet supported on Windows 10.  
 
     Following are the prerequisites  to use this feature:  
 
-    -   Azure Active Directory Premium subscription and ADFS Sync.  
+    -   Microsoft Entra ID P1 or P2 subscription and ADFS Sync.  
 
     -   A Microsoft Intune Subscription. The Microsoft Intune Subscription  should be configured in Configuration Manager Console.  
 
-    -   [Prerequisites for Azure AD auto-registration](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
+    -   [Prerequisites for Microsoft Entra auto-registration](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     To use the option, you must create a compliance policy in Configuration Manager with specific rules described below, and set a conditional access policy in the Intune console.  Also, to make sure only compliant PCs are allowed access, you must set the Windows PC requirement to **Devices must be compliant** option. Following are the compliant policy rules that are applicable to PCs managed by Configuration Manager.  
 
-    -   **Require registration in Azure ActiveDirectory:** This rule checks if the user's device is  work place joined to Azure AD, and if not, the device is automatically registered in Azure AD. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
+    -   **Require registration in Microsoft Entra ID:** This rule checks if the user's device is  work place joined to Microsoft Entra ID, and if not, the device is automatically registered in Microsoft Entra ID. Automatic registration is only supported on Windows 8.1. For Windows 7 PCs, deploy an MSI to perform the auto registration. For more information, see [here](/azure/active-directory/devices/hybrid-azuread-join-plan?rnd=1).  
 
     -   **All required updates installed with a deadline older than a certain number of days:** This rule checks to see  if the user's device has all required updates (specified in the **Required automatic updates** rule) within deadline and grace period specified by you, and automatically install the any pending required updates.  
 

@@ -286,19 +286,19 @@ For more information, go to:
 
 ### Enable single sign-on (SSO) to your apps and services
 
-When you enable SSO, users can automatically sign in to apps and services using their Azure AD organization account, including some mobile threat defense partner apps.
+When you enable SSO, users can automatically sign in to apps and services using their Microsoft Entra organization account, including some mobile threat defense partner apps.
 
 Specifically:
 
-- On Windows devices, SSO is automatically built in and used to sign in to apps and websites that use Azure AD for authentication, including Microsoft 365 apps. You can also enable SSO on VPN and Wi-Fi policies.
+- On Windows devices, SSO is automatically built in and used to sign in to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps. You can also enable SSO on VPN and Wi-Fi policies.
 
-- On iOS/iPadOS and macOS devices, you can use the Microsoft Enterprise SSO plug-in to automatically sign in to apps and websites that use Azure Active Directory (AD) for authentication, including Microsoft 365 apps.
+- On iOS/iPadOS and macOS devices, you can use the Microsoft Enterprise SSO plug-in to automatically sign in to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
 
 - On Android devices, you can use the Microsoft Authentication Library (MSAL) to enable SSO to Android apps.
 
   For more information, go to:
 
-  - [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso)
+  - [How SSO to on-premises resources works on Microsoft Entra joined devices](/azure/active-directory/devices/azuread-join-sso)
   - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
   - [Enable cross-app SSO on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on)
 

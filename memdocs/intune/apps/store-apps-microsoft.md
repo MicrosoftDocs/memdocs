@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/28/2023
+ms.date: 11/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -122,6 +122,9 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 
 You can choose how you want to assign Microsoft Store apps to users and devices.
 
+> [!NOTE]
+> If you assign an app to a device that is located in a region where that app is not supported or where that app does not meet the age restrictions, the app will not install on the device. However, if the device is moved to a region that supports the app, the app will install on the device. 
+
 The following table provides assignment type details:
 
 |     Assignment type    |     Assignment options    |     Description    |
@@ -154,7 +157,7 @@ Apps that are deployed from the Microsoft Store are automatically kept up to dat
 
 ### Intune management of Microsoft Store Win32 apps
 
-When a Microsoft Store Win32 app is published to a device as **Required**, but it's already installed (either manually or via the [Microsoft Store for Business](../apps/windows-store-for-business.md)), Intune takes over the management of the application.
+When a Microsoft Store Win32 app is published to a device as **Required**, but the app is not detected due to a mismatch of the installed version or context, Intune will reinstall the app in the targeted installation context.
 
 For available Microsoft Store Win32 apps, the end user must select install in the Company Portal before Intune takes over management and automatic updates for the app. Intune doesn't try to reinstall the app.
 

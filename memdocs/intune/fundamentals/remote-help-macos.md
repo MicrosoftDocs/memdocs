@@ -39,7 +39,7 @@ ms.collection:
 
 Remote Help is a cloud-based solution for secure help desk connections with role-based access controls. With the connection, your support staff can remote connect to the user's device.
 
-In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the web app. It's through your Azure Active Directory (Azure AD) that the proper trusts are established for the Remote Help sessions. During the session, the support staff can view the device's display.
+In this article, users who provide help are referred to as *helpers*, and users that receive help are referred to as *sharers* as they share their session with the helper. Both helpers and sharers sign in to your organization to use the web app. It's through your Microsoft Entra ID that the proper trusts are established for the Remote Help sessions. During the session, the support staff can view the device's display.
 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
@@ -65,7 +65,7 @@ General prerequisites for Remote Help are listed here [Prerequisites for Remote 
 
 The prerequisites for Remote Help on macOS are listed under [Supported devices](#supported-devices).
 
-If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help. 
+If your organization, by default, restricts remote assistance to enrolled devices only, Single Sign-On (SSO) is a prerequisite for accessing Remote Help.
 
 ## Supported devices
 
@@ -76,6 +76,8 @@ If your organization, by default, restricts remote assistance to enrolled device
 - 12 Monterey
 
 - 13 Ventura
+
+- 14 Sonoma 
 
 ### Browser versions
 
@@ -100,8 +102,8 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 |\*.registrar.skype.com            | Required for Azure Communication Service|
 |\*.support.services.microsoft.com | Primary endpoint used for the Remote Help application|
 |\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
-|\*.aadcdn.msauth.net              | Required for logging in to the application Microsoft Azure Active Directory|
-|\*.aadcdn.msftauth.net            | Required for logging in to the application Microsoft Azure Active Directory|
+|\*.aadcdn.msauth.net              | Required for logging in to the application Microsoft Entra ID|
+|\*.aadcdn.msftauth.net            | Required for logging in to the application Microsoft Entra ID|
 |\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
 |\*.login.microsoftonline.com      | Required for Microsoft sign in service. Might not be available in preview in all markets or for all localizations|
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|

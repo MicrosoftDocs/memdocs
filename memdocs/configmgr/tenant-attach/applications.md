@@ -75,8 +75,8 @@ User available applications appear in the **Applications** node for a ConfigMgr 
 
 Deploying applications to a user has the following limitations:
 - Multi-user session scenarios aren't supported.
-- Azure AD joined devices aren't currently supported.
-   - Devices that are both domain joined and Azure AD joined are supported.
+- Microsoft Entra joined devices aren't currently supported.
+   - Devices that are both domain joined and Microsoft Entra joined are supported.
 
 ## <a name="bkmk_repair"></a> Uninstall, repair, re-evaluate, or reinstall an application
 <!--7979972, 8227649-->

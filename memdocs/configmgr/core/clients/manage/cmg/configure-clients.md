@@ -61,7 +61,7 @@ There are two methods to install the Configuration Manager client on devices tha
 
   - The Configuration Manager site is properly configured to use PKI certificates for client authentication. Additionally, the client systems each have a valid, unique, and trusted client authentication certificate previously issued to them.
 
-  - The systems are Azure Active Directory (Azure AD) domain-joined or hybrid Azure AD domain-joined.
+  - The systems are Microsoft Entra domain-joined or hybrid Microsoft Entra domain-joined.
 
 ## Configure off-premises clients for CMG
 
@@ -75,9 +75,9 @@ You can connect devices to a recently configured CMG where the following conditi
 
   - A valid, unique, and trusted client authentication certificate previously issued to it.
 
-  - Azure AD domain-joined
+  - Microsoft Entra domain-joined
 
-  - Hybrid Azure AD domain-joined
+  - Hybrid Microsoft Entra domain-joined
 
 - You don't want to or can't completely reinstall the existing client.
 
