@@ -35,7 +35,7 @@ Many organizations are moving their security configuration to Microsoft Intune t
 
 Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**, which is a PowerShell script.
 
-When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10/11 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Microsoft Entra ID groups to configure MDM and co-managed clients.
+When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10/11 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Microsoft Entra groups to configure MDM and co-managed clients.
 
 Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):
 
@@ -140,4 +140,4 @@ Users assigned the Intune roles for Endpoint Security Manager, Intune Service Ad
 
 ## Next steps
 
-After creating Endpoint security policies for Firewall rules, assign those policies to Microsoft Entra ID groups to configure both your MDM and co-managed clients. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
+After creating Endpoint security policies for Firewall rules, assign those policies to Microsoft Entra groups to configure both your MDM and co-managed clients. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).

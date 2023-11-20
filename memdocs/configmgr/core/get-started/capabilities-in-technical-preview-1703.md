@@ -91,7 +91,7 @@ When you set up a connection between Configuration Manager and the Windows Store
 
 - The **Computer$** account of each computer that hosts an instance of the SMS Provider must be able to use the folder you specified.
 
-In Azure Active Directory, register Configuration Manager as a web application or Web API management tool. This creates the client ID that you will need later.
+In Microsoft Entra ID, register Configuration Manager as a web application or Web API management tool. This creates the client ID that you will need later.
 
 ### Use the wizard to configure the WSfB cloud service
 

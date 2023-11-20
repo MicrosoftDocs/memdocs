@@ -8,31 +8,25 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 05/25/2023
+ms.date: 11/17/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
   - tier2
 ms.topic: troubleshooting
+appliesto:
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
+  - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
 
 # Troubleshoot Autopilot device import and enrollment
 
-*Applies to:*
-
-- Windows 11
-- Windows 10
-
 See the following sections for information about issues that can occur when importing and enrolling devices into Intune.
 
 ## Error code 0x80180014 when re-enrolling using self-deployment or pre-provisioning mode
 
-After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If you try to redeploy the device, then the `0x80180014` error code is returned:
-
-:::image type="content" source="./images/troubleshoot-device-enrollment/0x80180014-error-code-enrollment-status-page.png" alt-text="Enrollment status page shows 0x80180014 error code on devices using self-deployment mode or pre-provisioning mode.":::
-
-:::image type="content" source="./images/troubleshoot-device-enrollment/0x80180014-error-code-pre-provisioning-page.png" alt-text="Pre-provisioning page shows 0x80180014 error code on devices using self-deployment mode or pre-provisioning mode.":::
+After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If you try to redeploy the device, then the `0x80180014` error code is returned
 
 The ETW logs may show the following error:
 
@@ -40,8 +34,7 @@ The ETW logs may show the following error:
 
 ### Cause A for error code 0x80180014
 
-Microsoft Intune changed the Windows Autopilot self-deployment mode (Public Preview) and Pre-Provisioning mode (formerly known as white glove, in Public Preview) experience.
-To reuse a device, you must delete the device record created by Intune.
+Microsoft Intune changed the Windows Autopilot self-deployment mode (Public Preview) and Pre-Provisioning mode experience. To reuse a device, you must delete the device record created by Intune.
 
 This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
 
@@ -83,7 +76,7 @@ The "A" characters at the end of the hash are effectively empty data. Each chara
 
 #### Resolution for Cannot convert device hash error
 
-To fix this issue, the hash needs to be modified, then the new value tested, until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine. We're just looking for it to not throw the error "Invalid length for a Base-64 char array or string". 
+To fix this issue, the hash needs to be modified, then the new value tested, until PowerShell succeeds in decoding the hash. The result is mostly illegible, which is fine. We're just looking for it to not throw the error "Invalid length for a Base-64 char array or string".
 
 To test the base64, you can use the following PowerShell:
 
@@ -91,11 +84,13 @@ To test the base64, you can use the following PowerShell:
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("DEVICE HASH"))
 ```
 
-So, as an example (this example isn't a device hash, but it's misaligned unpadded Base64 so it's good for testing):
+So, as an example:
 
 ```powershell
 [System.Text.Encoding]::ascii.getstring( [System.Convert]::FromBase64String("Q29udG9zbwAAA"))
 ```
+
+This particular example isn't a device hash, but it's a misaligned unpadded Base64 so it's good for testing.
 
 Now for the padding rules. The padding character is "=". The padding character can only be at the end of the hash, and there can only be a maximum of two padding characters. Here's the basic logic.
 

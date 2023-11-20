@@ -45,7 +45,7 @@ Cloud integrations, as well as any features included with Configuration Manager 
 - Co-management
 - Desktop Analytics
 - Cloud management gateway
-- Azure Active Directory integration
+- Microsoft Entra integration
 - Apps from the Microsoft Store for Business
 
 ## Find LTSB documentation

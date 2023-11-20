@@ -19,7 +19,7 @@ items:
       href: quickstart-remote-actions.md
     - name: Client health
       href: quickstart-client-health.md
-    - name: Hybrid Azure AD
+    - name: Hybrid Microsoft Entra ID
       href: quickstart-hybrid-aad.md
     - name: Windows Autopilot
       href: quickstart-autopilot.md
@@ -27,7 +27,7 @@ items:
     items:
     - name: Paths to co-management
       href: quickstart-paths.md
-    - name: Set up hybrid Azure AD
+    - name: Set up hybrid Microsoft Entra ID
       href: quickstart-setup-hybrid-aad.md
     - name: Upgrade Windows 10
       href: quickstart-upgrade-win10.md

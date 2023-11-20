@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,22 +38,16 @@ Complete the following steps to integrate the SentinelOne Mobile Threat Defense 
 
 ## Before you begin
 
-The following steps are done in the [SentinelOne Management Console](https://console.mobile.sentinelone.net) and will enable a connection to SentinelOne’s service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are done in the [SentinelOne Management Console](https://console.mobile.sentinelone.net) and enable a connection to SentinelOne’s service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating SentinelOne with Intune, make sure you have the following subscription and credentials:
 
 - Microsoft Intune Plan 1 subscription
-
 - Microsoft Entra Global Administrator admin credentials to grant the following permissions:
-
   - Sign in and read user profile
-
   - Access the directory as the signed-in user
-
   - Read directory data
-
   - Send device information to Intune
-
 - Admin credentials to access the SentinelOne Management Console.
 
 ### SentinelOne app authorization
@@ -63,9 +57,7 @@ The SentinelOne app authorization process follows:
 - Grant the SentinelOne service permissions to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day to day operation.
 
 - SentinelOne syncs with Microsoft Entra enrollment group membership to populate its device's database.
-
 - Allow SentinelOne Management Console to use Microsoft Entra single sign-on (SSO).
-
 - Allow the SentinelOne app to sign in using Microsoft Entra SSO.
 
 For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/permissions-consent-overview#request-the-permissions-from-a-directory-admin) in the Microsoft Entra documentation.
@@ -82,8 +74,9 @@ For more information about consent and Microsoft Entra applications, see [Introd
 
 5. After you set Microsoft Intune as the MDM service, the **Microsoft Intune Configuration** window pops up, choose the **Add Microsoft Entra ID** for each option: **SentinelOne Management Console**, **SentinelOne iOS and Android apps**, to authorize SentinelOne to communicate with Intune and Microsoft Entra ID through Microsoft Entra single sign-on.
 
-    > [!IMPORTANT]  
-    > You must add the SentinelOne Management Console and SentinelOne iOS and Android apps to complete the integration process with Intune.
+   > [!IMPORTANT]
+   >
+   > You must add the SentinelOne Management Console and SentinelOne iOS and Android apps to complete the integration process with Intune.
 
 6. Choose **Accept** to authorize the SentinelOne app to communicate with Intune and Microsoft Entra ID.
 
