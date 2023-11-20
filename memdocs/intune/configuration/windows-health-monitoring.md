@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/17/2023
+ms.date: 11/20/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,6 +43,11 @@ This feature applies to:
 - Windows 10 version 1903 and newer devices enrolled in Intune
 
 This article shows you how to create the profile, and enable the monitoring.
+
+## Before you begin
+
+- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, go to [What is Endpoint analytics?](../../analytics/overview.md).
+- If you use co-management, then to use this profile, the Device Configuration workload must be in Intune. For more information on these features, go to [What is co-management?](../../configmgr/comanage/overview.md) and [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 
 ## Create the profile
 
