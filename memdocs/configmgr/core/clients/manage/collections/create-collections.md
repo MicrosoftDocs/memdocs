@@ -214,12 +214,12 @@ You can use PowerShell to create and import collections. For more information, s
 
 - [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
 
-## <a name="bkmk_aadcollsync"></a> Synchronize members to Azure AD groups
+## <a name="bkmk_aadcollsync"></a> Synchronize members to Microsoft Entra groups
 
-[Synchronize collection members to Azure AD groups](synchronize-collections-aad-group.md)
+[Synchronize collection members to Microsoft Entra groups](synchronize-collections-aad-group.md)
 
 ## Next steps
 
 [Manage collections](manage-collections.md)
 
-[Synchronize collection members to Azure AD groups](synchronize-collections-aad-group.md)
+[Synchronize collection members to Microsoft Entra groups](synchronize-collections-aad-group.md)

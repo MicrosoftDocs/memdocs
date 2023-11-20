@@ -18,7 +18,7 @@ ms.collection: tier3
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
-The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can deploy Microsoft Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
+The Microsoft Intune family of products is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Intune admin center**. You can deploy Microsoft Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Microsoft Entra ID or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Microsoft Entra groups.
 
 <!--Adding Include for Prerequisites-->
 

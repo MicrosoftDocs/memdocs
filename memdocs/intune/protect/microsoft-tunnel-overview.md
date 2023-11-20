@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/26/2023
+ms.date: 11/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,7 +55,7 @@ Through the Microsoft Intune admin center, you’ll:
 - Download the Microsoft Tunnel installation script that you run on the Linux servers.
 - Configure aspects of Microsoft Tunnel Gateway like IP addresses, DNS servers, and ports.
 - Deploy VPN profiles to devices to direct them to use the tunnel.
-- Deploy the Microsoft Tunnel client apps to your devices.
+- Deploy the Microsoft Defender for Endpoint (the Tunnel client app) to your devices.
 
 Through the Defender for Endpoint app, iOS/iPadOS and Android Enterprise devices:
 
@@ -67,27 +67,12 @@ You can install multiple Linux servers to support Microsoft Tunnel, and combine 
 
 To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses Microsoft Tunnel for its connection type.
 
-<!-- Deprecating this note. It should no longer be relevant to maintain. >
-  > [!Important]
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app on Android and iOS devices, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)(preview)**.
-  > 
-  > For Android:  
-  > - As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
-  >
-  > For iOS/iPadOS:  
-  > - On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
-  >   - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
-  >   - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
-  >
-  >   To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
--->
-
 Features of the VPN profiles for the tunnel include:
 
 - A friendly name for the VPN connection that is visible to your end users.
 - The site that the VPN client connects to.
 - Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN automatically connects and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
-- For iOS devices that have the Tunnel client app configured to support per-app VPNs and [*TunnelOnly*](../protect/microsoft-tunnel-migrate-app.md#modify-a-vpn-profile-for-microsoft-tunnel) mode set to True, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multifactor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
+- For iOS devices that have the Microsoft Defender for Endpoint configured to support per-app VPNs and *TunnelOnly* mode set to *True*, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multifactor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
 - Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
 - On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. (iOS/iPadOS)
 - Proxy support (iOS/iPadOS, Android 10+)
@@ -162,9 +147,9 @@ The following information outlines where break and inspect isn't supported. Refe
 
 **Additional details**:
 
-- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Noncompliant devices don't receive an access token from Microsoft Entra and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
+- Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Noncompliant devices don't receive an access token from Microsoft Entra ID and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
 
-- The Management Agent is authorized against Microsoft Entra using Azure app ID/secret keys.
+- The Management Agent is authorized against Microsoft Entra ID using Azure app ID/secret keys.
 
 ## Next steps
 

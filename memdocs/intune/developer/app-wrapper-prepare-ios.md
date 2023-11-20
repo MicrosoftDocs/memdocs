@@ -64,6 +64,11 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 <a name='register-your-app-with-azure-ad'></a>
 
+* Make sure valid signing certificates exist in your system keychain. If you have app code-signing issues, use the following steps to resolve:
+  * Reset trust settings for all related certificates
+  * Install intermediate certificates in the system keychain as well as login keychain
+  * Uninstall and reinstall all related certificates
+
 ## Register your app with Microsoft Entra ID
 
 1.	Register your apps with Microsoft Entra ID. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
@@ -218,13 +223,10 @@ Open the macOS Terminal and run the following command:
 
 You can use the following command line parameters with the App Wrapping Tool:
 
-> [!NOTE]
-> If you are using MFA authentication the -aa, -ac, and -ar parameters are not optional. You need to specify them in order to allow the MFA redirection to work during the sign-in process.
->
-> **Example:** The following example command runs the App Wrapping Tool, incorporating the required commands when MFA is used in the authentication process.
+> **Example:** The following example command runs the App Wrapping Tool, incorporating the required commands when wrapping an application for use within a single tenant.
 > 
 >```bash
->./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/common -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v true
+>./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/<tenantID> -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v true
 >```
 
 
@@ -237,7 +239,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-h**| Shows detailed usage information about the available command line properties for the App Wrapping Tool. |
 |**-ac**|`<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the GUID in the Client ID field from your app's listing in the App Registration blade. |
 |**-ar**|`<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
-|**-aa**|(Optional when MFA is not used) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
+|**-aa**|(Required for single tenant apps) `<Authority URI of the input app>` i.e `https://login.microsoftonline.com/<tenantID>/` |
 |**-v**| (Optional) Outputs verbose messages to the console. It's recommended to use this flag to debug any errors. |
 |**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |

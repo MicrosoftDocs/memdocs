@@ -27,18 +27,18 @@ Autopilot reduces the time, resources, and complexity associated with deploying,
 
 Windows Autopilot supports several scenarios, all of which are maximized with co-management:
 
-- Users can drive their own deployments of new devices into Azure Active Directory (Azure AD)
+- Users can drive their own deployments of new devices into Microsoft Entra ID
 
-- You can set up self-deploying new device deployments into Azure AD for shared devices and kiosks
+- You can set up self-deploying new device deployments into Microsoft Entra ID for shared devices and kiosks
 
-- With Windows Autopilot for existing devices, use Configuration Manager to migrate an existing device from earlier versions of Windows and Active Directory to later versions of Windows and Azure AD
+- With Windows Autopilot for existing devices, use Configuration Manager to migrate an existing device from earlier versions of Windows and Active Directory to later versions of Windows and Microsoft Entra ID
 
 In the following video, senior program manager Danny Guillory and principal program manager Andrew McMurray discuss and demo Windows Autopilot with co-management:
 
 > [!VIDEO https://aka.ms/docs/player?id=86b3188d-1f01-4655-b001-2274f072e910]
 
 > [!NOTE]
-> [Introducing Autopilot into co-management](./autopilot-enrollment.md). When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first enrolls to Azure Active Directory (Azure AD) and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
+> [Introducing Autopilot into co-management](./autopilot-enrollment.md). When you use [Windows Autopilot](/autopilot/windows-autopilot) to provision a device, it first enrolls to Microsoft Entra ID and Microsoft Intune. If the intended end-state of the device is co-management, previously this experience was difficult because of installation of Configuration Manager client as Win32 app which introduces component timing and policy delays.
 
 ## Benefits
 
@@ -56,7 +56,7 @@ Windows Autopilot uses the OEM-optimized version of Windows that's preinstalled 
 
 ### Improve the user experience
 
-The best user experience causes the least disruption and helps them get back to focusing on their work. Windows Autopilot offers a simple approach to help your users get set up quickly with a few simple clicks and their Azure AD credentials. For many organizations with a large field of remote employees, use Windows Autopilot to ship new devices straight from the manufacturer.
+The best user experience causes the least disruption and helps them get back to focusing on their work. Windows Autopilot offers a simple approach to help your users get set up quickly with a few simple clicks and their Microsoft Entra credentials. For many organizations with a large field of remote employees, use Windows Autopilot to ship new devices straight from the manufacturer.
 
 ### Use Autopilot and Configuration Manager to migrate existing Windows devices to Windows 10 or later
 
@@ -77,9 +77,9 @@ With Autopilot, you can now provide a hands-free OS deployment to unmanned devic
 
 ## Case study
 
-The German logistics and rail freight company DB Schenker uses Autopilot to increase employee productivity and free its IT teams from working on day-to-day support tasks. DB Schenker has moved away from traditional imaging and replaced it with provisioning via the cloud. They now use Azure AD-join and Intune to get new devices up and running quickly.
+The German logistics and rail freight company DB Schenker uses Autopilot to increase employee productivity and free its IT teams from working on day-to-day support tasks. DB Schenker has moved away from traditional imaging and replaced it with provisioning via the cloud. They now use Microsoft Entra join and Intune to get new devices up and running quickly.
 
-Rather than have their remote workers waste time traveling to a location with IT services, DB Schenker now uses Windows Autopilot. They ship their workers hardware directly from the manufacturer to their local field office. The worker connects the new device to the internet, and they sign in with their Azure AD credentials. The device then connects to the applications and services that DB Schenker's IT department assigns to the user's individual profile.
+Rather than have their remote workers waste time traveling to a location with IT services, DB Schenker now uses Windows Autopilot. They ship their workers hardware directly from the manufacturer to their local field office. The worker connects the new device to the internet, and they sign in with their Microsoft Entra credentials. The device then connects to the applications and services that DB Schenker's IT department assigns to the user's individual profile.
 
 ## Value proposition
 

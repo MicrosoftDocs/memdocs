@@ -48,8 +48,6 @@ For guidance on dynamic groups, go to [Create simpler, more efficient rules for 
 
 Before getting into the recommendations, let's review the grouping, targeting, and filtering features available in Intune.
 
-<a name='azure-active-directory-groups'></a>
-
 ### Microsoft Entra groups
 
 Intune almost exclusively uses Microsoft Entra groups for grouping and targeting. When you select **Groups** in the Microsoft Intune admin center, you're looking at Microsoft Entra groups.

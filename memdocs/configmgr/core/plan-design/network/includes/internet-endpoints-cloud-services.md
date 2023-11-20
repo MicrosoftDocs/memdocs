@@ -11,8 +11,8 @@ ms.localizationpriority: medium
 This section covers the following features:
 
 - Cloud management gateway (CMG)
-- Azure Active Directory (Azure AD) integration
-- Azure AD-based discovery
+- Microsoft Entra integration
+- Microsoft Entra ID-based discovery
 - Cloud distribution point (CDP)
 
   > [!NOTE]
@@ -42,7 +42,7 @@ For Configuration Manager to deploy the CMG service in Azure, the service connec
   - `management.azure.com` (Azure public cloud)
   - `management.usgovcloudapi.net` (Azure US Government cloud)
 
-- For Azure AD user discovery: Microsoft Graph endpoint `https://graph.microsoft.com/`
+- For Microsoft Entra user discovery: Microsoft Graph endpoint `https://graph.microsoft.com/`
 
 ### CMG connection point for cloud services
 
@@ -67,7 +67,7 @@ Any Configuration Manager client that needs to communicate with a CMG needs acce
 |--------------------|----------------------------------------|-----------------------------------------|
 | _Deployment_ name  | `<prefix>.<region>.cloudapp.azure.com` | `<prefix>.usgovcloudapp.net`            |
 | Storage endpoint   | `<prefix>.blob.core.windows.net`       | `<prefix>.blob.core.usgovcloudapi.net`  |
-| Azure AD endpoint  | `login.microsoftonline.com`            | `login.microsoftonline.us`              |
+| Microsoft Entra endpoint  | `login.microsoftonline.com`            | `login.microsoftonline.us`              |
 
 ### Configuration Manager console for cloud services
 
@@ -75,4 +75,4 @@ Any device with the Configuration Manager console needs access to the following 
 
 | Type | Azure public cloud | Azure US Government cloud |
 |--|--|--|
-| Azure AD endpoints | `login.microsoftonline.com`<br>`aadcdn.msauth.net`<br>`aadcdn.msftauth.net` | `login.microsoftonline.us` |
+| Microsoft Entra endpoints | `login.microsoftonline.com`<br>`aadcdn.msauth.net`<br>`aadcdn.msftauth.net` | `login.microsoftonline.us` |
