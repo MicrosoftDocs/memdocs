@@ -62,7 +62,7 @@ For more information and guidance, go to:
 
 You can manage new devices and existing devices. Intune supports Android, iOS/iPadOS, Linux, macOS, and Windows devices.
 
-There are some things you should know. For example, if existing devices are managed by another MDM provider, they may need to be factory reset. If the devices are using an older OS version, they may not be supported.
+There are some things you should know. For example, if existing devices are managed by another MDM provider, then they might need to be factory reset. If the devices are using an older OS version, they might not be supported.
 
 If your organization is investing in new devices, then it's recommended to start with a cloud approach using Intune.
 
@@ -101,14 +101,15 @@ For many organizations, it's common to create device groups. Device groups are M
 
 When you have device groups, you create policies that focus on the device experience or task, like running a single app or scanning bar codes. You can also create policies that include settings that you want to always be on the device, regardless of who's using the device.
 
-You can group devices by OS platform, by function, by location, and anything else you prefer.
+You can group devices by OS platform, by function, by location, and other features you prefer.
 
-Device groups can also include devices that are shared with many users or aren't associated with a specific user. These dedicated or kiosk devices are typically used by front line workers and can also be managed by Intune.
+Device groups can also include devices that are shared with many users or aren't associated with a specific user. These dedicated or kiosk devices are typically used by frontline workers (FLW) and can also be managed by Intune.
 
 When the groups are ready, you can assign your policies to these device groups.
 
 For more information, go to:
 
+- [FLW device management in Intune](../../solutions/frontline-worker/frontline-worker-overview.md)
 - [Get started with Microsoft 365 for frontline workers](/microsoft-365/frontline/flw-overview)
 - [Windows device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md)
 - [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../configuration/shared-user-device-settings.md)
