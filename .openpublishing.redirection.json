@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/user-help/how-to-reconnect-a-compromised-ios-device.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/how-do-i-find-the-serial-number-on-my-device-macos.md",
+      "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
+      "redirect_document_id": false 
+    },
+    {
+      "source_path": "memdocs/intune/user-help/device-limit-wpj-macos.md",
+      "redirect_url": "/mem/intune/user-help/device-limit-wpj-ios",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/fundamentals/frontline-worker-overview.md",
       "redirect_url": "/mem/solutions/frontline-worker/frontline-worker-overview",
       "redirect_document_id": true 
