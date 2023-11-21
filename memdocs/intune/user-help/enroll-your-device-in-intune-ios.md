@@ -70,9 +70,9 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
     * Tap **(Organization) owns this device** if you received your device from your organization. Then skip to [Secure entire device](#secure-entire-device) in this article to finish setup.  
     * Tap **I own this device** if you're using a personal device that you brought from home. Then continue to the next step.  
 
-  If you don't see this screen, skip to [Secure entire device](#secure-entire-device) to in this article.  
-    
-    ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/ios-device-type-1909.PNG)  
+  If you don't see this screen, skip to [Secure entire device](#secure-entire-device) to in this article.   
+      
+   ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/ios-device-type-1909.PNG)  
 
 
 6. Choose how to protect the data on your device once it's enrolled.  
