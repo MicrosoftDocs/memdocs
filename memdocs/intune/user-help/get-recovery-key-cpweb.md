@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Get a recovery key for a macOS device from the Intune Company Portal website  
-description: View the recovery key for an enrolled macOS device on the Company portal webiste.   
+title: Get Mac recovery key from Intune Company Portal website  
+description: View the recovery key for an enrolled macOS device on the Company portal website.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -39,7 +39,7 @@ Use the Company Portal website to get a recovery key for your locked macOS devic
 
 ## Get recovery key from Company Portal website
 
-This option is available for Macs that were encrypted by your organization using FileVault. It's not available for Macs that you've personally encrypted.
+This option is available for Macs that were encrypted by your organization using FileVault. It's not available for Macs that you have personally encrypted.
 
 1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com).
 2. Open the menu and go to **Devices**.  
@@ -56,7 +56,7 @@ If a key isn't found but your device is properly encrypted, contact your organiz
 
 ## Get recovery key from Company Portal app for iOS  
 
-Retrieve your personal recovery key (FileVault key) using the Company Portal app for iOS. This option is not available for devices that you've personally encrypted. 
+Retrieve your personal recovery key (FileVault key) using the Company Portal app for iOS. This option isn't available for devices that you have personally encrypted. 
 
 The personal recovery key must belong to a device that's enrolled in Microsoft Intune, and encrypted with FileVault through Microsoft Intune. 
 

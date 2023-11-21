@@ -36,13 +36,15 @@ ms.collection:
 * iOS/iPadOS
 * macOS  
 
+Learn more about the device compliance and enrollment messages sent by the Intune Company Portal app. This article describes the types of notifications applicable to iPhones, iPads, and Macs enrolling for work or school.    
+
 ## Find serial number  
 
-The serial number for your device uniquely identifies it, and can help your IT support person during troubleshooting or support tasks, such as replacing your device with a new one. For more information and steps for your Apple device, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858).  
+The serial number for your device uniquely identifies it. It can be helpful to provide this ID to your IT support person during troubleshooting or support tasks, such as replacing your device with a new one. For more information, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858) on Apple Support.  
 
 ## Reconnect compromised iOS device
 
-A *jailbroken* device means that the device has been changed to enable unrestricted access to certain critical files, which can compromise security and be a threat to work or school data.  \When this happens, your iOS/iPadOS device loses access to work or school resources. You likely need to reset your device to factory settings. We recommend that you contact your IT support person for help. 
+A *jailbroken* device means that the device has been changed to enable unrestricted access to certain critical files. Jailbroken devices can compromise security and cause a threat to work or school data. If this occurs, your device loses access to work or school resources. You likely need to reset your device to factory settings. We recommend that you contact your IT support person for help. 
 
 
 Need additional help? Contact your IT support person. For contact information, check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

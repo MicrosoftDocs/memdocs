@@ -48,7 +48,7 @@ If the problem you're experiencing prevents you from accessing Help & support in
 
 ## Request help and send logs
 
-Email your organization about any problems you experience in Company Portal. Select **Upload logs & contact support* to start describing the problem in an email. Your organization uses the information you provide to troubleshoot. If more help is needed to determine the problem, your organization will use the diagnostic ID in the email to reach out to the Microsoft support team.  
+Email your organization about any problems you experience in Company Portal. Select **Upload logs & contact support* to start describing the problem in an email. Your organization uses the information you provide to troubleshoot. If more help is needed to determine the problem, your organization uses the diagnostic ID in the email to reach out to the Microsoft support team.  
 
 For the step-by-step procedure, see [Send logs to your company support from the Company Portal app for Windows 10/11](send-logs-to-your-it-admin-cp-windows.md).  
 
@@ -66,8 +66,8 @@ Select **Report problem to Microsoft**. On the **Feedback for Microsoft** page, 
 * Leave a review for the app in Microsoft Store   
 
 ## IT pro and administrator documentation  
-Other help and support documentation is available for IT pros and Intune administrators on Microsof Learn:  
+For help and support documentation for IT pros and Intune administrators, see:   
 
-* [Microsoft Learn](/): Home to the technical documentation where you can explore all guides and articles by product.
+* [Microsoft Learn](/): Home to the technical documentation where you can explore all guides and articles by product.  
 * [Microsoft Intune product family documentation](../../index.yml): Official product documentation for Microsoft Intune product family, which includes Microsoft Intune, Microsoft Configuration Manager, and Windows Autopilot.  
-* [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.
+* [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune): Help and support docs for troubleshooting device enrollment issues in Microsoft Intune.  
