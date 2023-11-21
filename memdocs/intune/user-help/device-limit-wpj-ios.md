@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 11/21/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -35,10 +35,10 @@ ms.collection:
 * iOS/iPadOS
 * macOS  
 
-To prevent unauthorized access to internal data, your school or workplace might limit the number of devices you can register. If you reach the device limit, we recommend removing one of your devices or contacting your support person to increase the device limit.    
+To prevent unauthorized access to internal data, your school or workplace might limit the number of devices you can register. If you reach the device limit, we recommend removing one of your devices or contacting your support person to increase the device limit. Your options:      
 
 * Remove a device in Company Portal.
-* Remove a device in the [MyApps portal](https://myapps.microsoft.com). Sign in with your work or school account. Select your profile picture > **View  account** > **Manage devices**.  
+<!-- * Remove a device in the [MyApps portal](https://myapps.microsoft.com). Sign in with your work or school account. Select your profile picture > **View  account** > **Manage devices**.  --> 
 * Contact your IT support person to see if they can increase the number of devices you're allowed to register. 
 
 Sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's support information.  
