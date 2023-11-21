@@ -150,7 +150,7 @@ items:
       href: turn-off-microsoft-usage-data-collection-ios.md
     - name: Remove device from Intune
       href: unenroll-your-device-from-intune-ios.md
-    - name: Company Portal notifications for Apple devices    
+    - name: Company Portal notifications     
       href: how-do-i-find-the-serial-number-on-my-device-ios.md
   - name: Get iOS/iPadOS apps
     items:
@@ -162,10 +162,6 @@ items:
     items:
     - name: An existing company email account was found
       href: existing-company-email-account-found.md
-    - name: Device limit has been reached
-      href: device-limit-wpj-ios.md
-    - name: Identify your device
-      href: you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md
     - name: Update iOS/iPadOS version
       href: you-need-to-update-your-ios-device.md
     - name: iOS/iPadOS version isn't supported 
@@ -220,8 +216,6 @@ items:
       href: you-need-to-update-your-macos-device.md
     - name: Device assigned to someone else
       href: unable-to-get-macOS-device-managed.md 
-    - name: Identify your device
-      href: you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md
     - name: Help for JAMF-managed devices in Intune
       href: device-little-different-jamf.md
   - name: Get help

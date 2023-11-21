@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Find serial number on enrolled Apple device  | Microsoft Intune
-description: Locate the serial number on your enrolled work device.  
+title: Device compliance and enrollment messages for Apple devices | Microsoft Intune
+description: Learn more about the device compliance and enrollment messages you receive in the Intune Company Portal app.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/21/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,21 +30,32 @@ ms.collection:
 - tier3
 ---
 
-# Device enrollment help for Apple devices   
+# Device compliance and enrollment messages for Apple devices          
 
 **Applies to:**  
 * iOS/iPadOS
 * macOS  
 
-Learn more about the device compliance and enrollment messages you receive in the Intune Company Portal app. The topics described in this article are applicable to iPhones, iPads, and Macs.      
-
-## Find serial number  
-
-The serial number for your device uniquely identifies it. It can be helpful to provide this ID to your IT support person during troubleshooting or support tasks, such as replacing your device with a new one. For more information, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858) on Apple Support.  
+Learn more about policies the Intune Company Portal app helps enforce on iPhones, iPads, and Macs enrolling for work or school. 
 
 ## Reconnect compromised iOS device
 
 A *jailbroken* device means that the device has been changed to enable unrestricted access to certain critical files. Jailbroken devices can compromise security and cause a threat to work or school data. If this occurs, your device loses access to work or school resources. You likely need to reset your device to factory settings. We recommend that you contact your IT support person for help. 
 
+## Device limit reached  
+
+To prevent unauthorized access to internal data, your school or workplace might limit the number of devices you can register. If you reach the device limit, we recommend removing one of your devices or contacting your support person to increase the device limit. Your options:  
+
+* Remove a device in Company Portal.
+* Contact your IT support person and ask if they can increase the number of devices you're allowed to register.  
+
+## Identify device  
+
+If you're prompted to identify your device during enrollment, at least one of your devices has already been enrolled and assigned to your account using a method other than the Company Portal app. Select your device from the list in Company Portal to identify your device. 
+
+If your device isn't listed:  
+1. Select **new device**.  
+2. Select **Continue**.
+3. Enter the last four characters of your device's serial number. For more information, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858) on Apple Support.  
 
 Need additional help? Contact your IT support person. For contact information, check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
