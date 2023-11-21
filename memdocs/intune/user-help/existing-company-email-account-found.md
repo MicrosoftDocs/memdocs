@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/21/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -34,12 +34,18 @@ ms.collection:
 
 **Applies to iOS/iPadOS**  
 
-If you set up your work email on your device prior to device enrollment, your organization might require you to remove it. To meet their requirement, disconnect the email account. Then sync your device in the Intune Company Portal app to refresh your email account.   
+If you set up your work email on your device prior to device enrollment, your organization might require you to remove the account and resync it. 
 
-1. Remove the account that's linked to your work email. For steps to remove an account, see [Add and remove email accounts on iPhone](https://support.apple.com/guide/iphone/add-and-remove-email-accounts-iph44d1ae58a/ios) on the Apple support website. 
-2. Open the Company Portal app on your device.  
-3. Select your device.  
-4. Select **Check settings**. Wait while your device syncs your new email settings.
-5. Sign in to your email with your work account.   
+## Step 1: Disconnect account  
+
+Disconnect the email account that's linked to your work account. For steps, see [Add and remove email accounts on iPhone](https://support.apple.com/guide/iphone/add-and-remove-email-accounts-iph44d1ae58a/ios) (opens Apple Support).  
+
+## Step 2: 
+After you disconnect the account, sync your device in the Intune Company Portal app.  
+
+1. Open the Company Portal app on your device.  
+2. Select your device.  
+3. Select **Check settings**. Wait while your device syncs your new email settings.
+4. Sign in to your email with your work account.   
 
 Need more help? Contact your IT support person. For contact information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account.  
