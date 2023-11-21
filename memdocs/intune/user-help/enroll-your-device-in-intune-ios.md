@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Set up iOS device access to your company resources | Microsoft Docs
-description: Describes how to get your iOS device managed by Intune
+title: Set up personal iOS device in Intune Company Portal app | Microsoft Docs
+description: Describes how to enroll and register a personal iPhone or iPad for work or school in the Intune Company Portal app.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -36,12 +36,14 @@ ms.collection:
 
 **Applies to iOS/iPadOS**  
 
-Enroll your personal device with the Intune Company Portal app to get secure access to work or school resources such as Wi-fi, email, files, and apps. As you use your device for work, the Company Portal app notifies you of important policies, updates, and requirements to help keep you productive and your device secure. You can also get approved apps from your school or workplace and access device management options in Company Portal.     
+Enroll your personal device with the Intune Company Portal app to get secure access to work or school resources such as Wi-fi, email, files, and apps. 
+
+As you use your device for work, the Company Portal app notifies you of important policies, updates, and requirements so you can work productively and securely. You can also get approved apps from your organization and access device management options in Company Portal. 
+
+ This article describes how to use the Company Portal app to set up and maintain work access on your personal device.
 
 > [!IMPORTANT]
 > We do not sell any data collected by our service to any third parties for any reason.  
-
- This article describes how to use the Company Portal app to set up and maintain work access on your personal device.
 
 </br>
 
@@ -52,7 +54,7 @@ Enroll your personal device with the Intune Company Portal app to get secure acc
 
 
 ## Prerequisites  
-Device enrollment via the Intune Company Portal app is supported on personal devices running iOS 14.0 and later. Install the Company Portal app from the [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414). You also need the Safari web browser on your device.  
+Device enrollment via the Intune Company Portal app is supported on devices running iOS 14.0 and later. Install the Company Portal app from the [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414). You also need the Safari web browser on your device.  
 
 ## Enroll device  
 
@@ -66,14 +68,16 @@ Maintain a Wi-Fi connection until all steps are complete. Pausing for more than 
 
     ![Example screenshot of Company Portal, "Set up access" screen.](./media/ios-enrollment-checklist-1909.PNG)  
 
-4. The **Select device and enrollment type** screen appears and prompts for your device type. Tap **I own this device** if you're using a personal device that you brought from home. Then continue to the next step.  
+4. The **Select device and enrollment type** screen appears and prompts for your device type.
 
-    If you don't see this screen, skip to [Secure entire device](#secure-entire-device) to finish setup.  
+  * Tap **(Organization) owns this device** if you received your device from your organization. Then skip to [Secure entire device](#secure-entire-device) in this article to finish setup.  
+    * Tap **I own this device** if you're using a personal device that you brought from home. Then continue to the next step.  
+    If you don't see this screen, skip to [Secure entire device](#secure-entire-device) to in this article.  
     
     ![Example screenshot of Company Portal, "Select device and enrollment type" screen, device type options.](./media/ios-device-type-1909.PNG)  
 
 
-5. Choose how to protect the data on your device once it's enrolled.  
+6. Choose how to protect the data on your device once it's enrolled.  
     * Tap **Secure entire device** to secure all apps and data on the device. Then go to [Secure entire device](enroll-your-device-in-intune-ios.md#secure-entire-device) to finish setup.
     * Tap **Secure work-related apps and data only** to secure only the apps and data you access with your work account. Then go to [Secure work-related apps and data](enroll-your-device-in-intune-ios.md#secure-work-related-apps-and-data).  
 
