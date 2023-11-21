@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Remove existing email account for Company Portal| Microsoft Docs
+title: Remove existing email account on work device| Microsoft Docs
 description: Remove an existing work account found by Intune Company Portal. 
 keywords:
 author: lenewsad

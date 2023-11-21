@@ -31,17 +31,15 @@ ms.collection:
 - tier2
 ---
 
-# Get a recovery key for a macOS device  
+# Get a recovery key for a macOS device    
 
-**Applies to macOS**  
-
-Use the Company Portal website to get a recovery key for your locked macOS device. If you forget your device password, you can sign in to the Company Portal from another device to retrieve your key.  
+Get a recovery key for your locked Mac. If you forget the password on the Mac you use for work or school and are locked out, you can sign in to the Company Portal on another device to retrieve your key. 
 
 ## Get recovery key from Company Portal website
 
 This option is available for Macs that were encrypted by your organization using FileVault. It's not available for Macs that you have personally encrypted.
 
-1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com).
+1. On any device, sign in to the [Company Portal website](https://portal.manage.microsoft.com).  
 2. Open the menu and go to **Devices**.  
 2. Select the encrypted Mac.  
 3. Select **Get recovery key**.  
@@ -69,7 +67,7 @@ Using the Company Portal app, you can open the Safari web view and retrieve your
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage FileVault encryption for macOS devices, see [Use device encryption with Intune](/intune/protect/encrypt-devices).  
+If you're an IT support person and want to configure and manage FileVault encryption for macOS devices, see [Use device encryption with Intune](../protect/encrypt-devices.md).  
 
 ## Next steps
 

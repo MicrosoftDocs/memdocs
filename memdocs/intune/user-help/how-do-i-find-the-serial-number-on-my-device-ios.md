@@ -36,7 +36,7 @@ ms.collection:
 * iOS/iPadOS
 * macOS  
 
-Learn more about the device compliance and enrollment messages sent by the Intune Company Portal app. This article describes the types of notifications applicable to iPhones, iPads, and Macs enrolling for work or school.    
+Learn more about the device compliance and enrollment messages you receive in the Intune Company Portal app. The topics described in this article are applicable to iPhones, iPads, and Macs.      
 
 ## Find serial number  
 

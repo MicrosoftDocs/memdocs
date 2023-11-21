@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/21/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -29,26 +29,22 @@ ms.collection:
 - tier2
 ---
 
-# Get help and support in Company Portal for Windows devices  
+# Get help and support in Company Portal app for Windows   
 
-**Applies to**
-- Windows 10  
-- Windows 11 
-
-Go to  **Help & support** in the Intune Company Portal app to troubleshoot app and access problems. You can:  
+Go to  **Help & support** in the Intune Company Portal app for Windows to troubleshoot app and access problems. You can:  
 
 * Request help and send logs  
 * Report problems with the app 
 * View helpdesk contact details
 * Find answers to your frequently asked questions (FAQs)  
 
-If the problem you're experiencing prevents you from accessing Help & support in the Company Portal app, try to access the page on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). Sign in with your work or school account.  
+If the problem you're experiencing prevents you from accessing help and support options in the Company Portal app, try to access them on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). Sign in with your work or school account.  
 
 ![Example screenshot of the Company Portal app for Windows 10/11, Help & support page, highlighting each section title.](./media/1812_UCP_Help_Support_sections.png)  
 
 ## Request help and send logs
 
-Email your organization about any problems you experience in Company Portal. Select **Upload logs & contact support* to start describing the problem in an email. Your organization uses the information you provide to troubleshoot. If more help is needed to determine the problem, your organization uses the diagnostic ID in the email to reach out to the Microsoft support team.  
+Email your organization about any problems you experience in Company Portal. Select **Upload logs & contact support** to open the email template in your preferred mail app. In the body of the email, describe the problem. 
 
 For the step-by-step procedure, see [Send logs to your company support from the Company Portal app for Windows 10/11](send-logs-to-your-it-admin-cp-windows.md).  
 
