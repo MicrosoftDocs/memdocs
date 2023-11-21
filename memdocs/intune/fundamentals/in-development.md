@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 11/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,10 @@ You can use RSS to be notified when this article is updated. For more informatio
 <!-- ***********************************************-->
 
 ## App management  
+
+#### Windows MAM supported in government cloud environments<!-- 25273622  -->  
+Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments will now be able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md) and [Data protection for Windows MAM](../apps/protect-mam-windows.md).
+
 
 ### Intune APP SDK for .NET MAUI<!-- 17696301   -->  
 Using the Intune APP SDK for .NET MAUI, you'll be able to develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
@@ -125,6 +129,9 @@ Applies to:
 
 ## Device management
 
+### Variables supported in noncompliant email notifications<!-- 6111965  -->  
+Use variables to personalize email notifications that are sent when a user's device becomes noncompliant. The variables included in the template, such as `{{username}}` or `{{devicename}}`, will be replaced by the actual username or device name in the email that users receive. Variables will be supported for all platforms.
+
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
@@ -136,7 +143,13 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 <!-- *********************************************** -->
 
-<!-- ## Device security -->
+## Device security  
+
+### Updated security baseline for Microsoft Edge v117<!-- 25021903 -->  
+
+We’re working on an update to the Intune security baseline for Microsoft Edge v117. This update will bring support for recent settings so you can continue to maintain best-practice configurations for Edge.
+
+For information about security baselines with Intune, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
 <!-- *********************************************** -->
 
