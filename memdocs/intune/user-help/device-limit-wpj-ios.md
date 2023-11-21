@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Registered iOS device limit has been reached
-titlesuffix: Intune Company Portal
-description: Steps to take if the limit of iOS devices you can register has been reached.
+title: Resolve device limitations for Apple devices      
+titlesuffix: Microsoft Intune
+description: Learn what to do if you reach the device limit when enrolling an Apple device with Intune Company Portal.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/18/2018
+ms.date: 11/17/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: elocholi
+ms.reviewer: 
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -30,12 +30,15 @@ ms.collection:
 - tier2
 ---
 
-# The limit of iOS devices you can register has been reached
+# Resolve device limitation error in Company Portal  
+**Applies to**:
+* iOS/iPadOS
+* macOS  
 
-Every company sets a limit to the number of devices that each person can use to access company resources. This helps keep company information safe, and makes sure that each user is authorized to access it from specific devices and locations. There are three things that you can do if you see a message that tells you that you **Couldn't register your device** because you've reached the limit of the number of devices:
+To prevent unauthorized access to internal data, your school or workplace might limit the number of devices you can register. If you reach the device limit, we recommend removing one of your devices or contacting your support person to increase the device limit.    
 
-1. Remove one of your devices from management in the Company Portal.
-2. Remove one of your devices from the [MyApps portal](https://myapps.microsoft.com) and select **Profile** in the top-right corner of the page. 
-3. Contact your company support to see if they can increase the number of devices you're allowed to register. 
+* Remove a device in Company Portal.
+* Remove a device in the [MyApps portal](https://myapps.microsoft.com). Sign in with your work or school account. Select your profile picture > **View  account** > **Manage devices**.  
+* Contact your IT support person to see if they can increase the number of devices you're allowed to register. 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for your organization's support information.  

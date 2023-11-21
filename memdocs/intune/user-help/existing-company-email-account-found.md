@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Existing work email account was found | Microsoft Docs
-description: Describes how to update your device so that you can access your work or school email again.
+title: Remove existing email account for Company Portal| Microsoft Docs
+description: Remove an existing work account found by Intune Company Portal. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/30/2021
+ms.date: 11/20/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,26 +30,16 @@ ms.collection:
 - tier2
 ---
 
-# An existing email account was found
+# Remove existing email account 
 
-If you set up your work email on your device prior to enrollment, your organization may require you to remove it. 
+**Applies to iOS/iPadOS**  
 
-Doing this allows your organization to set you up with an email profile that meets their network and security requirements. After you disconnect, you'll just need to sync your device and you'll regain access to your email. 
+If you set up your work email on your device prior to device enrollment, your organization might require you to remove it. To meet their requirement, disconnect the email account. Then sync your device in the Intune Company Portal app to refresh your email account.   
 
-Complete the following steps on your device to disconnect the existing account and update device settings. If you don't complete these steps, you may lose or have limited mobile access to your work account. Instructions are for devices running iOS/iPadOS 14 and later. Labels and setting names may be different for devices running on earlier versions.  
+1. Remove the account that's linked to your work email. For steps to remove an account, see [Add and remove email accounts on iPhone](https://support.apple.com/guide/iphone/add-and-remove-email-accounts-iph44d1ae58a/ios) on the Apple support website. 
+2. Open the Company Portal app on your device.  
+3. Select your device.  
+4. Select **Check settings**. Wait while your device syncs your new email settings.
+5. Sign in to your email with your work account.   
 
-1. Go to **Settings** > **Mail** > **Accounts** to  find your connected accounts. 
- 
-2. Select and remove the account that you've linked to your work email. 
-
-3. Open the Company Portal app on your device.  
-
-4. Under your list of devices, select the device you want to update.
-
-5. Select **Check settings**. Within a few moments, your device will sync your new email settings.
-
-6. Sign in to your email account. 
-
-## Next steps
-
-Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Need more help? Contact your IT support person. For contact information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account.  

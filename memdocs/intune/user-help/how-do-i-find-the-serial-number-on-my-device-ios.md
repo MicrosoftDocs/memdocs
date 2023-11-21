@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: How do I find the serial number on my iOS device?
-description: The serial number for your device uniquely identifies it, and can help your company support with certain tasks, like replacing your device with a new one.
+title: Find serial number on enrolled Apple device  | Microsoft Intune
+description: Locate the serial number on your enrolled work device.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 11/20/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,12 +30,19 @@ ms.collection:
 - tier3
 ---
 
-# How do I find the serial number on my iOS device?
+# Device enrollment help for Apple devices   
 
-The serial number for your device uniquely identifies it, and can help your company support with certain tasks, like replacing your device with a new one. To locate the serial number:
+**Applies to:**  
+* iOS/iPadOS
+* macOS  
 
-1. Go to the __Home__ screen.
-2. Tap the __Settings__ app, then __General__.
-3. Tap __About__, then scroll to __Serial Number__.
+## Find serial number  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+The serial number for your device uniquely identifies it, and can help your IT support person during troubleshooting or support tasks, such as replacing your device with a new one. For more information and steps for your Apple device, see [Find the serial number of your Apple product](https://support.apple.com/en-us/102858).  
+
+## Reconnect compromised iOS device
+
+A *jailbroken* device means that the device has been changed to enable unrestricted access to certain critical files, which can compromise security and be a threat to work or school data.  \When this happens, your iOS/iPadOS device loses access to work or school resources. You likely need to reset your device to factory settings. We recommend that you contact your IT support person for help. 
+
+
+Need additional help? Contact your IT support person. For contact information, check the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

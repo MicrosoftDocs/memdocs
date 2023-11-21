@@ -158,8 +158,6 @@ items:
       href: use-microsoft-tunnel-iOS.md 
   - name: Update device settings
     items:
-    - name: Reconnect a compromised iOS device
-      href: how-to-reconnect-a-compromised-ios-device.md
     - name: An existing company email account was found
       href: existing-company-email-account-found.md
     - name: Device limit has been reached
@@ -221,13 +219,9 @@ items:
     - name: Update operating system version 
       href: you-need-to-update-your-macos-device.md
     - name: Device assigned to someone else
-      href: unable-to-get-macOS-device-managed.md
-    - name: Locate your serial number
-      href: how-do-i-find-the-serial-number-on-my-device-macos.md
+      href: unable-to-get-macOS-device-managed.md 
     - name: Identify your device
       href: you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md
-    - name: Device limit has been reached
-      href: device-limit-wpj-macos.md
     - name: Help for JAMF-managed devices in Intune
       href: device-little-different-jamf.md
   - name: Get help
