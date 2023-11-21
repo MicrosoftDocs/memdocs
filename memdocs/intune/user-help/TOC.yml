@@ -150,6 +150,8 @@ items:
       href: turn-off-microsoft-usage-data-collection-ios.md
     - name: Remove device from Intune
       href: unenroll-your-device-from-intune-ios.md
+    - name: Company Portal notifications for Apple devices    
+      href: how-do-i-find-the-serial-number-on-my-device-ios.md
   - name: Get iOS/iPadOS apps
     items:
     - name: Where to find work or school apps for iOS/iPadOS
@@ -164,8 +166,6 @@ items:
       href: device-limit-wpj-ios.md
     - name: Identify your device
       href: you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md
-    - name: Locate your serial number
-      href: how-do-i-find-the-serial-number-on-my-device-ios.md
     - name: Update iOS/iPadOS version
       href: you-need-to-update-your-ios-device.md
     - name: iOS/iPadOS version isn't supported 

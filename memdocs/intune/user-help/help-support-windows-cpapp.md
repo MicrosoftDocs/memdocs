@@ -40,19 +40,11 @@ Go to  **Help & support** in the Intune Company Portal app for Windows to troubl
 
 If the problem you're experiencing prevents you from accessing help and support options in the Company Portal app, try to access them on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). Sign in with your work or school account.  
 
-![Example screenshot of the Company Portal app for Windows 10/11, Help & support page, highlighting each section title.](./media/1812_UCP_Help_Support_sections.png)  
-
 ## Request help and send logs
 
 Email your organization about any problems you experience in Company Portal. Select **Upload logs & contact support** to open the email template in your preferred mail app. In the body of the email, describe the problem. 
 
 For the step-by-step procedure, see [Send logs to your company support from the Company Portal app for Windows 10/11](send-logs-to-your-it-admin-cp-windows.md).  
-
-## View helpdesk contact details  
-Use your organization's helpdesk details, such as phone number, emails, and website to quickly troubleshoot work or school access.  
-
-## Find answers to frequently asked questions  
-Under **Frequently asked questions** find answers to the most common questions people ask when enrolling their devices. Select a question to go to the relevant help article on Microsoft Learn. 
 
 ## Report app problems to Microsoft  
 Select **Report problem to Microsoft**. On the **Feedback for Microsoft** page, choose from the following options:    
@@ -60,6 +52,12 @@ Select **Report problem to Microsoft**. On the **Feedback for Microsoft** page, 
 * Report a problem or bug that you see in the app  
 * Send a suggestion or idea you have for the app  
 * Leave a review for the app in Microsoft Store   
+
+## View helpdesk contact details  
+Use your organization's helpdesk details, such as phone number, emails, and website to quickly troubleshoot work or school access.  
+
+## Find answers to frequently asked questions  
+Under **Frequently asked questions** find answers to the most common questions people ask when enrolling their devices. Select a question to go to the relevant help article on Microsoft Learn.  
 
 ## IT pro and administrator documentation  
 For help and support documentation for IT pros and Intune administrators, see:   
