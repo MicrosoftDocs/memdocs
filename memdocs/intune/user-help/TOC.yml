@@ -150,7 +150,7 @@ items:
       href: turn-off-microsoft-usage-data-collection-ios.md
     - name: Remove device from Intune
       href: unenroll-your-device-from-intune-ios.md
-    - name: Company Portal notifications     
+    - name: Compliance and setting requirements        
       href: how-do-i-find-the-serial-number-on-my-device-ios.md
   - name: Get iOS/iPadOS apps
     items:

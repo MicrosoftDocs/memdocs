@@ -38,13 +38,11 @@ Go to  **Help & support** in the Intune Company Portal app for Windows to troubl
 * View helpdesk contact details
 * Find answers to your frequently asked questions (FAQs)  
 
-If the problem you're experiencing prevents you from accessing help and support options in the Company Portal app, try to access them on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). Sign in with your work or school account.  
+If the problem you're experiencing prevents you from accessing help and support options in the Company Portal app, you can access support options on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## Request help and send logs
 
-Email your organization about any problems you experience in Company Portal. Select **Upload logs & contact support** to open the email template in your preferred mail app. In the body of the email, describe the problem. 
-
-For the step-by-step procedure, see [Send logs to your company support from the Company Portal app for Windows 10/11](send-logs-to-your-it-admin-cp-windows.md).  
+Email your organization about any problems you experience in Company Portal. Select **Upload logs & contact support** to open the email template in your preferred mail app. In the body of the email, describe the problem. For more information, see [Send logs to your company support from the Company Portal app for Windows](send-logs-to-your-it-admin-cp-windows.md).  
 
 ## Report app problems to Microsoft  
 Select **Report problem to Microsoft**. On the **Feedback for Microsoft** page, choose from the following options:    

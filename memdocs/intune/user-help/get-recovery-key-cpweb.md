@@ -54,9 +54,7 @@ If a key isn't found but your device is properly encrypted, contact your organiz
 
 ## Get recovery key from Company Portal app for iOS  
 
-Retrieve your personal recovery key (FileVault key) using the Company Portal app for iOS. This option isn't available for devices that you have personally encrypted. 
-
-The personal recovery key must belong to a device that's enrolled in Microsoft Intune, and encrypted with FileVault through Microsoft Intune. 
+Retrieve your personal recovery key (FileVault key) using the Company Portal app for iOS. This option isn't available for devices that you have personally encrypted. The personal recovery key must belong to a device that's enrolled in Microsoft Intune, and encrypted with FileVault through Microsoft Intune.  
 
 1. Open the Intune Company Portal app.  
 2. Select **Get recovery key**. The Company Portal website opens in Safari and shows the key.  
@@ -65,8 +63,4 @@ The personal recovery key must belong to a device that's enrolled in Microsoft I
 
 ## IT pro support
 
-If you're an IT support person and want to configure and manage FileVault encryption for macOS devices, see [Use device encryption with Intune](../protect/encrypt-devices.md).  
-
-## Next steps
-
-For more information about Company Portal website features and capabilities, see [Using the Intune Company Portal website](using-the-intune-company-portal-website.md).    
+If you're an IT support person and want to configure and manage FileVault encryption, see [Use device encryption with Intune](../protect/encrypt-devices.md).  

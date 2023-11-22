@@ -30,17 +30,17 @@ ms.collection:
 - tier3
 ---
 
-# Device compliance and enrollment messages for Apple devices          
+# Compliance and setting requirements for Apple devices          
 
 **Applies to:**  
 * iOS/iPadOS
 * macOS  
 
-Learn more about policies the Intune Company Portal app helps enforce on iPhones, iPads, and Macs enrolling for work or school. 
+Learn more about the policies the Intune Company Portal app enforces on iPhones, iPads, and Macs used for work or school.    
 
 ## Reconnect compromised iOS device
 
-A *jailbroken* device means that the device has been changed to enable unrestricted access to certain critical files. Jailbroken devices can compromise security and cause a threat to work or school data. If this occurs, your device loses access to work or school resources. You likely need to reset your device to factory settings. We recommend that you contact your IT support person for help. 
+A *jailbroken* device is a device that has been altered to enable unrestricted access to certain critical files. Jailbroken devices can compromise security and cause a threat to work or school data. If Company Portal detects a jailbroken device, it revokes access to work or school resources. You likely need to reset your device to factory settings to return your device to its original configuration. We recommend that you contact your IT support person for help and other possible options.   
 
 ## Device limit reached  
 
