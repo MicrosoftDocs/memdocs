@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2023
+ms.date: 11/21/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice:
@@ -35,7 +35,7 @@ ms.collection:
 
 Managing and protecting user identities is a significant part of any endpoint management strategy and solution. Identity management includes the user accounts and groups that access your organization resources.
 
-:::image type="content" source="./media/manage-identities/identities-different-user-types.png" alt-text="Diagram that shows addings users to the Microsoft Intune admin center and assigning policies to different user types in Microsoft Intune." lightbox="./media/manage-identities/identities-different-user-types.png":::
+:::image type="content" source="./media/manage-identities/identities-different-user-types.png" alt-text="Diagram that shows adding users to the Microsoft Intune admin center and assigning policies to different user and device types in Microsoft Intune." lightbox="./media/manage-identities/identities-different-user-types.png":::
 
 Admins have to manage account membership, authorize and authenticate access to resources, manage settings that affect user identities, and secure & protect the identities from malicious intent.
 
@@ -59,7 +59,7 @@ An important decision is to determine how to get the user accounts and groups in
 
 - If you **currently use Microsoft 365** and have your users and groups in the Microsoft 365 admin center, then these users and groups are also available in the Intune admin center.
 
-  Microsoft Entra ID and Intune use a "tenant", which is your organization, such as Contoso or Microsoft. If you have multiple tenants, sign into the Intune admin center in the same Microsoft 365 tenant as your existing users and groups. Your users and groups will automatically be shown and available.
+  Microsoft Entra ID and Intune use a "tenant", which is your organization, such as Contoso or Microsoft. If you have multiple tenants, sign into the Intune admin center in the same Microsoft 365 tenant as your existing users and groups. Your users and groups are automatically shown and available.
 
   For more information on what a tenant is, go to [Quickstart: Set up a tenant](/azure/active-directory/develop/quickstart-create-new-tenant).
 
@@ -83,7 +83,7 @@ For more information and guidance, go to [Known issues and limitations with clou
 
 ## Roles and permissions control access
 
-For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles focused on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
+For the different admin-type of tasks, Intune uses role-based access control (RBAC). The roles you assign determine the resources an admin can access in the Intune admin center, and what they can do with those resources. There are some built-in roles that focus on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
 
 Since Intune uses Microsoft Entra ID, you also have access to the built-in Microsoft Entra roles, such as Global Administrator and Intune Service Administrator.
 
@@ -97,7 +97,7 @@ When users sign into their devices the first time, the device becomes associated
 
 Any policies assigned or deployed to the user identity go with the user to all of their devices. When a user is associated with the device, they can access their email accounts, their files, their apps, and more.
 
-When you don't associate a user with a device, then the device is considered user-less. This scenario is common for kiosks devices dedicated to a specific task and devices that are shared with multiple users.
+When you don't associate a user with a device, then the device is considered user-less. This scenario is common for kiosks devices dedicated to a specific task, and devices that are shared with multiple users.
 
 In Intune, you can create policies for both scenarios on Android, iOS/iPadOS, macOS, and Windows. When getting ready to manage these devices, be sure you know the intended purpose of the device. This information helps in the decision making process when devices are being enrolled.
 
