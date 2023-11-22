@@ -4,8 +4,8 @@
 title: Configure compliance policies
 titleSuffix: Microsoft Intune
 description: Description for configuring compliance policies
-author: lenewsad
-ms.author: lenewsad
+author: lanewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 11/22/2023
 ms.topic: conceptual
