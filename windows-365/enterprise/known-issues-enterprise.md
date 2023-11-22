@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 11/21/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -33,6 +33,14 @@ ms.collection:
 # Known issues: Windows 365 Enterprise and Frontline
 
 The following items are known issues for Windows 365 Enterprise.
+
+## Watermarking support in Windows 365
+
+Watermarking support is configured on session hosts and enforced by the Remote Desktop client. The settings for Watermarking support can be configured via Group Policy (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting will not allow administrators to look up device information from leaked images for Cloud PCs.  
+
+**Troubleshooting steps**: Ensure that the QR code embedded content setting is configured to **Device ID** either in the GPO or in the Intune Settings Catalog for the Intune Configuration profile used to configure Watermarking support.
+
+For more information, see [Administrative template for Azure Virtual Desktop](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 
