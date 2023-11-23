@@ -277,7 +277,7 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### Are the user experience settings from an Update Ring policy applied for driver updates?
 
-- Yes, the user experience settings like the automatic update behavior, active hours, notifications, etc. are applied for the driver updates as well.
+- Yes, user experience settings such as automatic update behavior, active hours, notifications, and so on are applied for driver updates as well.
 
 ### Why does it take up to 24 hours for the driver update inventory to be returned?
 
