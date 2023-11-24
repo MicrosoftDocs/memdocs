@@ -95,7 +95,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2305**
+- **Technical preview version 2311**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
@@ -132,7 +132,7 @@ The following features are available with the most recent Configuration Manager 
 
 - [Folder support for Scripts node in Software Library](2023/technical-preview-2311.md)
 - [Automated diagnostic Dashboard for Software Update Issues](2023/technical-preview-2311.md)
-- [New parameter SoftwareUpdateO365Language to Save-CMSoftwareUpdate cmdlet](2023/technical-preview-2311.md)
+- [New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet](2023/technical-preview-2311.md)
 - [Support for ARM64 Operating System Deployment](2023/technical-preview-2311.md)
 - [Resource access profiles and deployments will block Configuration manager upgrade](2023/technical-preview-2311.md)
 - [WildCard Support added in Defender Exploit Guard policy for Controlled Folders](2023/technical-preview-2311.md)
