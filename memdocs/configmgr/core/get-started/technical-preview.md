@@ -131,7 +131,6 @@ The following features are available with the most recent Configuration Manager 
 ### Technical preview version 2311
 
 - [Folder support for Scripts node in Software Library](2023/technical-preview-2311.md)
-- [Automated diagnostic Dashboard for Software Update Issues](2023/technical-preview-2311.md)
 - [New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet](2023/technical-preview-2311.md)
 - [Support for ARM64 Operating System Deployment](2023/technical-preview-2311.md)
 - [Resource access profiles and deployments will block Configuration manager upgrade](2023/technical-preview-2311.md)
