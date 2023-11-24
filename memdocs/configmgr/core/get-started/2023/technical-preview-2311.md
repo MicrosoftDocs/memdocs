@@ -25,7 +25,6 @@ Review the [technical preview](../technical-preview.md) article before installin
 
 The following sections describe the new features to try out in this version:
 [!INCLUDE [Folder support for Scripts node in Software Library](includes/2311/24475159.md)]
-[!INCLUDE [Automated diagnostic Dashboard for Software Update Issues](includes/2311/17668422.md)]
 [!INCLUDE [New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet](includes/2311/21209172.md)]
 [!INCLUDE [Support for ARM64 Operating System Deployment](includes/2311/14959666.md)]
 [!INCLUDE [Resource access profiles and deployments will block Configuration manager upgrade](includes/2311/24784009.md)]
