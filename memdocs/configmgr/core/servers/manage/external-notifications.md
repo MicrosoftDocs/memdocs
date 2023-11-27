@@ -230,7 +230,7 @@ The process to trigger an event depends upon the type of subscription:
 ### Configuration Manager Console
 Starting in version 2309, when Azure Logic Apps generate notifications or alerts related to specific events or conditions, Configuration Manager can now capture and display these notifications. This integration enables the monitoring of Azure Logic App notifications directly within the Configuration Manager console, providing a centralized location for tracking critical events, taking appropriate actions and maintain a high level of operational efficiency. 
 
-To use this feature a valid **Azure AD Web app** is required. Please deploy the Azure services for **Administration Service Management** under Administration\Overview\Cloud Services\Azure Services. If the service is already deployed, admin can use the existing web application to view **Run details** from Azure logic app.
+To use this feature a valid **Microsoft Entra Web app** is required. Please deploy the Azure services for **Administration Service Management** under Administration\Overview\Cloud Services\Azure Services. If the service is already deployed, admin can use the existing web application to view **Run details** from Azure logic app.
 
 For more information, see [Configure Azure services for use with Configuration Manager](../deploy/configure/azure-services-wizard.md).
 
@@ -239,7 +239,7 @@ Use the following process to view Run Details of subscription:
 1. In the Configuration Manager console  click **Monitoring**.
 2. In the Monitoring workspace, click **External Service Notifications** and select the desired subscription.
 3. Click on **Show Details**. 
-4. In the dialog box, Select the Azure Environment, Azure AD tenant name from the drop down and SignIn using your **Azure Admin Account**. 
+4. In the dialog box, Select the Azure Environment, Microsoft Entra tenant name from the drop down and SignIn using your **Azure Admin Account**. 
 5. Select the Subscription ID and enter the **Resource group** name and **Workflow** name.
 6. Click on **Get Run Details** button to view the **Run Details**.
 

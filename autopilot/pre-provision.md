@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 09/13/2023
+ms.date: 11/17/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -20,10 +20,6 @@ appliesto:
 ---
 
 # Windows Autopilot for pre-provisioned deployment (Public preview)
-
-> [!NOTE]
->
-> The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in this documentation to **white glove** have been replaced with: **pre-provisioning**.  The term **white glove** might still appear in some blogs and other articles about Windows Autopilot. These references correspond to the pre-provisioning process described in this article.
 
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This functionality lets end users get their devices business-ready by using a simple process.
 
@@ -46,6 +42,7 @@ In addition to [Windows Autopilot requirements](software-requirements.md), Windo
 - An Intune subscription.
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
 - Network connectivity. Using wireless connectivity requires selecting region, language and keyboard before you're able to connect and start provisioning.
+- An enrollment status page (ESP) profile must be targeted to the device.
 
 > [!IMPORTANT]
 >
@@ -59,7 +56,7 @@ Devices slated for pre-provisioning are registered for Autopilot via the normal 
 
 To be ready to try out Windows Autopilot for pre-provisioned deployment, make sure that you can first successfully use existing Windows Autopilot user-driven scenarios:
 
-- User-driven Microsoft Entra join. Make sure that you can deploy devices using Windows Autopilot and join them to an Azure Active Directory tenant.
+- User-driven Microsoft Entra join. Make sure that you can deploy devices using Windows Autopilot and join them to a Microsoft Entra ID tenant.
 
 - User-driven with Microsoft Entra hybrid join. To enable the features of Microsoft Entra hybrid join, make sure that you can:
   - Deploy devices using Windows Autopilot.
@@ -70,8 +67,8 @@ If these scenarios can't be completed, Windows Autopilot for pre-provisioned dep
 
 Before starting the pre-provisioning process in the provisioning service facility, you must configure another Autopilot profile setting by using your Intune account. A detailed tutorial on how to configure an Autopilot profile for pre-provisioning is available in the following articles:
 
-- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Azure AD join in Intune](tutorial/pre-provisioning/azure-ad-join-workflow.md)
-- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment hybrid Azure AD join in Intune](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md)
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune](tutorial/pre-provisioning/azure-ad-join-workflow.md)
+- [Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join in Intune](tutorial/pre-provisioning/hybrid-azure-ad-join-workflow.md)
 
 The pre-provisioning process applies all device-targeted policies from Intune. Those policies include certificates, security templates, settings, apps, and more - anything targeting the device. Additionally, any Win32 or LOB apps are installed if they meet the following conditions:
 
@@ -97,7 +94,7 @@ Each of these scenarios consists of two parts, a technician flow and a user flow
 
 ### Technician flow
 
-After the customer or IT Admin has targeted all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
+After the customer or IT Admin targets all the apps and settings they want for their devices through Intune, the pre-provisioning technician can begin the pre-provisioning process. The technician could be a member of the IT staff, a services partner, or an OEM - each organization can decide who should perform these activities. Regardless of the scenario, the process done by the technician is the same:
 
 - Boot the device.
 - From the first OOBE screen (which could be a language selection, locale selection screen, or the Microsoft Entra sign-in page), don't select **Next**. Instead, press the Windows key five times to view another options dialog. From that screen, choose the **Windows Autopilot provisioning** option and then select **Continue**.
@@ -165,7 +162,7 @@ The device ESP reruns during the user flow so that both device and user ESP run 
 - [What is a device identity?](/azure/active-directory/devices/overview).
 - [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
 - [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
-- [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/device-join-plan).
+- [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 - [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).

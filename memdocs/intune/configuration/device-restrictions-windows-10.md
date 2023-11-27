@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2023
+ms.date: 11/16/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -176,7 +176,8 @@ These settings use the [Bluetooth policy CSP](/windows/client-management/mdm/pol
 These settings use the [accounts policy CSP](/windows/client-management/mdm/policy-csp-accounts), which also lists the supported Windows editions.
 
 > [!IMPORTANT]
-> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Microsoft Entra ID. For example, you're using [Autopilot pre-provisioned](/autopilot/pre-provision) (previously called white glove). Typically, users are shown a Microsoft Entra sign-in window. When these settings are set to **Block** or **Disable**, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+>
+> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Microsoft Entra ID. For example, you're using [Autopilot pre-provisioned](/autopilot/pre-provision). Typically, users are shown a Microsoft Entra sign-in window. When these settings are set to **Block** or **Disable**, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 - **Microsoft account**: **Block** prevents users from associating a Microsoft account with the device. **Block** may also affect some enrollment scenarios that rely on users to complete the enrollment process. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and using a Microsoft account.
 - **Non-Microsoft account**: **Block** prevents users from adding non-Microsoft accounts using the user interface. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add email accounts that aren't associated with a Microsoft account.

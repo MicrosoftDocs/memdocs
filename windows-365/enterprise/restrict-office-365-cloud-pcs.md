@@ -65,7 +65,7 @@ This article describes how to limit access to Office 365 services. You can use t
 11. Select **Create** to complete the creation of policy.
 
 >[!NOTE]
->If you have configured a provisioning policy to **Use Microsoft Entra single sign-on (preview)**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
+>If you have configured a provisioning policy to **Use Microsoft Entra single sign-on**, you may need to also add the **Microsoft Remote Desktop** to the exclude list in Step 6 for single sign-on connections to work as expected.
 
 ## Other devices
 
