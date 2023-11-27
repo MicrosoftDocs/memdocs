@@ -136,7 +136,7 @@ After you expand the site, you need to reconfigure the following Azure services 
 - [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
 - [Tenant attach](../../../../tenant-attach/device-sync-actions.md)
 
-The easiest method is to renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
+The easiest method is to renew the Microsoft Entra tenant secret key. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
 
 Instead of renewing the secret key, remove and then recreate the connection to that service.
 

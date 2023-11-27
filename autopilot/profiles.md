@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 10/31/2023
+ms.date: 11/17/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -22,7 +22,7 @@ appliesto:
 
 # Configure Autopilot profiles
 
-After you have [created a device group](enrollment-autopilot.md), you can apply a Windows Autopilot deployment profile to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for your end users.
+After the [device group](enrollment-autopilot.md) is created, you can apply a Windows Autopilot deployment profile to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for your end users.
 
 You can create Autopilot profiles through:
 
@@ -80,8 +80,6 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
       > [!NOTE]
       >
-      > The **pre-provision** feature use to be known as **white glove**. References to **White Glove OOBE** in Intune refer to the Autopilot [pre-provisioning](pre-provision.md) process.
-      >
       > When setting **Allow pre-provisioned deployment** to **No**, it's still possible to press the Windows key five times during OOBE to invoke pre-provisioning and progress down that path. However, Intune enforces this setting and a pre-provisioning failure with error code 0x80180005 occurs.
 
     - **Language (Region)**: Choose the language to use for the device. This option is available in all Deployment modes.
@@ -126,13 +124,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
 ## Edit an Autopilot deployment profile
 
-After you've created an Autopilot deployment profile, you can edit certain parts of the deployment profile.
+After the Autopilot deployment profile is created, you can edit certain parts of the deployment profile.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Deployment profiles**.
 
 1. Select the profile you would like to edit.
 
-1. Select **Properties** on the left to change the name or description of the deployment profile. Select **Save** after you make changes.
+1. Select **Properties** to change the name or description of the deployment profile. Select **Save** after you make changes.
 
 1. Select **Settings** to make changes to the OOBE settings. Select **Save** after you make changes.
 
@@ -173,16 +171,16 @@ You can see details on each device deployed through Windows Autopilot.
 To see the report, go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Monitor** > **Autopilot deployments**.
 The data is available for 30 days after deployment.
 
-This report is in preview. Device deployment records are currently triggered only by new Intune enrollment events. Deployments that don't trigger a new Intune enrollment don't appear this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
+This report is in preview. Only new Intune enrollment events trigger device deployment records. Deployments that don't trigger a new Intune enrollment don't appear in this report. This case includes any kind of reset that maintains enrollment and the user portion of Autopilot pre-provisioning.
 
 ## Autopilot profile tutorials
 
-For a detailed tutorial on configuring and assigning a Windows Autopilot deployment profile for each of the Windows Autopilot scenarios using Intune, see the following articles:
+The following articles are tutorials on configuring and assigning a Windows Autopilot deployment profile for each of the Windows Autopilot scenarios via Intune:
 
-- [User-driven Azure AD join: Create and assign user-driven Azure AD join Autopilot profile](tutorial/user-driven/azure-ad-join-autopilot-profile.md)
-- [User-driven hybrid Azure AD join: Create and assign user-driven hybrid Azure AD join Autopilot profile](tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md)
-- [Pre-provision Azure AD join: Create and assign a pre-provisioned Azure AD join Autopilot profile](tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md)
-- [Pre-provision hybrid Azure AD join: Create and assign a pre-provisioned hybrid Azure AD join Autopilot profile](tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
+- [User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Autopilot profile](tutorial/user-driven/azure-ad-join-autopilot-profile.md)
+- [User-driven Microsoft Entra hybrid join: Create and assign user-driven Microsoft Entra hybrid join Autopilot profile](tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md)
+- [Pre-provision Microsoft join: Create and assign a pre-provisioned Microsoft Entra join Autopilot profile](tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md)
+- [Pre-provision Microsoft Entra hybrid join: Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile](tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
 - [Self-deploying mode: Create and assign self-deploying Autopilot profile](tutorial/self-deploying/self-deploying-autopilot-profile.md)
 
 ## Related articles

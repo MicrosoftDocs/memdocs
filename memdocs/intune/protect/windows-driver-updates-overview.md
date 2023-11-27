@@ -275,6 +275,10 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 - The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but is not a deferral period. The deferral period delays when updates are first offered to a device.
 
+### Are the user experience settings from an Update Ring policy applied for driver updates?
+
+- Yes, user experience settings such as automatic update behavior, active hours, notifications, and so on are applied for driver updates as well.
+
 ### Why does it take up to 24 hours for the driver update inventory to be returned?
 
 - To make driver inventory available, there are several steps that must be completed. The most important is that after the policy is submitted and devices are enrolled for management, Windows Updates must wait for each device to do its daily scan for updates. This process occurs daily, so it can take up to 24 hours for all healthy devices to check in. After this, Intune needs to process the results of the scan to provide the inventory of available driver updates.
