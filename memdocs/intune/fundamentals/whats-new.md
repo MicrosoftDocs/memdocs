@@ -68,6 +68,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
+## Week of November 27, 2023
+
+### App management
+
+#### Intune APP SDK for .NET MAUI<!-- 17696301 -->
+Using the Intune APP SDK for .NET MAUI, you can develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
+
 ## Week of November 13, 2023 (Service release 2311)
 
 ### App management
