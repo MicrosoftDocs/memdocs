@@ -71,12 +71,13 @@ To deploy eSIM to your devices using Intune, the following are needed:
 To deploy eSIM to devices, an Administrator completes the following tasks:
 
 1. Import activation codes provided by your mobile operator
-2. Create an Azure Active Directory (Azure AD) device group that includes your eSIM capable devices
-3. Assign the Azure AD group to your imported subscription pool
+2. Create a Microsoft Entra device group that includes your eSIM capable devices
+3. Assign the Microsoft Entra group to your imported subscription pool
 4. Monitor the deployment
 
 This article guides you through these steps.
-## Step 1: Add cellular activation codes
+
+## Step 1 - Add cellular activation codes
 
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
 
@@ -116,18 +117,18 @@ When working with the csv file with the activation codes, be sure you or your mo
 > - Remove the current `.csv`.
 > - Upload a new `.csv` that has all the old device/ICCID pairs and has the new devices you want to add.
 
-## Step 2: Create an Azure AD device group
+## Step 2 - Create a Microsoft Entra device group
 
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
 >
 > - Only devices are targeted, users aren't targeted.
-> - We recommend creating a static Azure AD device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
+> - We recommend creating a static Microsoft Entra device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
 
-## Step 3: Assign eSIM activation codes to devices
+## Step 3 - Assign eSIM activation codes to devices
 
-Assign the profile to the Azure AD group that includes your eSIM devices.
+Assign the profile to the Microsoft Entra group that includes your eSIM devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **eSIM cellular profiles**.
@@ -136,12 +137,12 @@ Assign the profile to the Azure AD group that includes your eSIM devices.
 
     :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune.":::
 
-5. When you select your groups, you're choosing an Azure AD group. To select multiple groups, use the **Ctrl** key, and select the groups.
+5. When you select your groups, you're choosing a Microsoft Entra group. To select multiple groups, use the **Ctrl** key, and select the groups.
 6. When done, **Save** your changes.
 
 eSIM activation codes are used once. After Intune installs an activation code on a device, the eSIM module contacts the mobile operator to download the cellular profile. This contact finishes registering the device with mobile operator network.
 
-## Step 4: Monitor deployment
+## Step 4 - Monitor deployment
 
 ### Review the deployment status
 
@@ -191,10 +192,10 @@ You can monitor and view a detailed list of devices you can view in Device Statu
 
 ## Remove the eSIM profile from device
 
-When you remove the device from the Azure AD group, the eSIM profile is also removed. Be sure to:
+When you remove the device from the Microsoft Entra group, the eSIM profile is also removed. Be sure to:
 
-1. Confirm you're using the eSIM devices Azure AD group.
-2. Go to the Azure AD group, and remove the device from the group.
+1. Confirm you're using the eSIM devices Microsoft Entra group.
+2. Go to the Microsoft Entra group, and remove the device from the group.
 3. When the removed device contacts Intune, the updated policy is evaluated, and the eSIM profile removed.
 
 The eSIM profile is also removed when the device is [retired](../remote-actions/devices-wipe.md#retire) or unenrolled by the user, or when the [reset device remote action](../remote-actions/devices-wipe.md#wipe) runs on the device.
@@ -205,9 +206,9 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
 ## Best practices & troubleshooting
 
 - Be sure your `.csv` file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
-- Create a static device Azure AD group that only includes the eSIM devices that are targeted.
+- Create a static device Microsoft Entra group that only includes the eSIM devices that are targeted.
 - If there's an issue with the deployment status, check the following settings:
-  - **File format not proper**: See **Step 1: Add cellular activation codes** (in this article) on how to properly format your file.
+  - **File format not proper**: See **[Step 1 - Add cellular activation codes](#step-1---add-cellular-activation-codes)** (in this article) on how to properly format your file.
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 
 ## Next steps

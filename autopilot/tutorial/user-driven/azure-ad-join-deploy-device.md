@@ -1,6 +1,6 @@
 ---
-title: Windows Autopilot user-driven Azure AD join - Step 8 of 8 - Deploy the device
-description: How to - Windows Autopilot user-driven Azure AD join - Step 8 of 8 - Deploy the device.
+title: Windows Autopilot user-driven Microsoft Entra join - Step 8 of 8 - Deploy the device
+description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 8 of 8 - Deploy the device.
 ms.prod: windows-client
 ms.localizationpriority: medium
 author: frankroj
@@ -18,11 +18,11 @@ appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# User-driven Azure AD join: Deploy the device
+# User-driven Microsoft Entra join: Deploy the device
 
-Autopilot user-driven Azure AD join steps:
+Autopilot user-driven Microsoft Entra join steps:
 - Step 1: [Set up Windows automatic Intune enrollment](azure-ad-join-automatic-enrollment.md)
-- Step 2: [Allow users to join devices to Azure AD](azure-ad-join-allow-users-to-join.md)
+- Step 2: [Allow users to join devices to Microsoft Entra ID](azure-ad-join-allow-users-to-join.md)
 - Step 3: [Register devices as Autopilot devices](azure-ad-join-register-device.md)
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
 - Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
@@ -31,21 +31,21 @@ Autopilot user-driven Azure AD join steps:
 > [!div class="checklist"]
 > - **Step 8: Deploy the device**
 
-For an overview of the Windows Autopilot user-driven Azure AD join workflow, see [Windows Autopilot user-driven Azure AD join overview](azure-ad-join-workflow.md#workflow)
+For an overview of the Windows Autopilot user-driven Microsoft Entra join workflow, see [Windows Autopilot user-driven Microsoft Entra join overview](azure-ad-join-workflow.md#workflow)
 
 ## Deploy the device
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RW15DG8]
 
-Once all of the configurations for the Windows Autopilot user-driven Azure AD join deployment have been completed on the Intune and Azure AD side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
+Once all of the configurations for the Windows Autopilot user-driven Microsoft Entra join deployment have been completed on the Intune and Microsoft Entra ID side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
 
 To start the Autopilot deployment process on the device, select a device that is part of the device group created in the previous [Create a device group](azure-ad-join-device-group.md) step, and then follow these steps:
 
 [!INCLUDE [Network connectivity](../includes/network-connectivity.md)]
 
-4. Once the Autopilot process begins, the Azure AD sign-in page appears. At the Azure AD sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Azure AD credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
+4. Once the Autopilot process begins, the Microsoft Entra sign-in page appears. At the Microsoft Entra sign-in page, if a user was assigned to the device, their username may be pre-populated in this screen. Enter the Microsoft Entra credentials for the user and then select **Next** (Windows 10) or **Sign in** (Windows 11) to sign in. If necessary, proceed through the multi-factor authentication (MFA) screens.
 
-5. After authenticating with Azure AD, the Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
+5. After authenticating with Microsoft Entra ID, the Enrollment Status Page (ESP) appears. The Enrollment Status Page (ESP) displays progress during the provisioning process across three phases:
 
    - **Device preparation** (Device ESP)
    - **Device setup** (Device ESP)

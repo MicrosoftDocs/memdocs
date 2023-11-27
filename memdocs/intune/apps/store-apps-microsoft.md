@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/28/2023
+ms.date: 11/03/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -47,7 +47,7 @@ Admins can browse, deploy, and monitor Microsoft Store applications inside Intun
 > - You can monitor the installation progress and results for store apps
 > - Win32 store apps are supported (in preview)  
 > - System context and user context are supported for UWP apps
->   - When a device is enrolled by being Azure AD registered, system context must be used.
+>   - When a device is enrolled by being Microsoft Entra registered, system context must be used.
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 ## Add and deploy a Microsoft Store app
 
-Use the following steps to add and deploy a Microsoft Store app.
+A Global administrator or Intune administrator can use the following steps to add and deploy a Microsoft Store app. 
 
 ### Step 1: Add an app from the Microsoft Store
 
@@ -122,6 +122,9 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 
 You can choose how you want to assign Microsoft Store apps to users and devices.
 
+> [!NOTE]
+> If you assign an app to a device that is located in a region where that app is not supported or where that app does not meet the age restrictions, the app will not install on the device. However, if the device is moved to a region that supports the app, the app will install on the device. 
+
 The following table provides assignment type details:
 
 |     Assignment type    |     Assignment options    |     Description    |
@@ -154,7 +157,7 @@ Apps that are deployed from the Microsoft Store are automatically kept up to dat
 
 ### Intune management of Microsoft Store Win32 apps
 
-When a Microsoft Store Win32 app is published to a device as **Required**, but it's already installed (either manually or via the [Microsoft Store for Business](../apps/windows-store-for-business.md)), Intune takes over the management of the application.
+When a Microsoft Store Win32 app is published to a device as **Required**, but the app is not detected due to a mismatch of the installed version or context, Intune will reinstall the app in the targeted installation context.
 
 For available Microsoft Store Win32 apps, the end user must select install in the Company Portal before Intune takes over management and automatic updates for the app. Intune doesn't try to reinstall the app.
 
@@ -170,7 +173,7 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 > [!NOTE]
 > Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". However, the app will still install correctly on the device.
 >
-> When a device is enrolled as Azure AD Registered, the installation behavior should be set to "System". If an app with the installation behavior set to "User" is assigned as **Available**, the end user will receive the following error when selecting install in the Company Portal: "Requirements Not Met". Make sure the device is _joined_ to Azure, or use System context to rectify this situation. 
+> When a device is enrolled as Microsoft Entra registered, the installation behavior should be set to "System". If an app with the installation behavior set to "User" is assigned as **Available**, the end user will receive the following error when selecting install in the Company Portal: "Requirements Not Met". Make sure the device is _joined_ to Azure, or use System context to rectify this situation. 
 > 
 > UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store policy is set to block auto-update.
 

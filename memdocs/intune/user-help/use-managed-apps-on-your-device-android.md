@@ -50,7 +50,7 @@ Managed apps enforce your organization's app and data protection policies, which
 
 * Access to specific websites  
 
-* Access to internal company websites using Microsoft Edge and the Azure Active Directory proxy  
+* Access to internal company websites using Microsoft Edge and the Microsoft Entra ID proxy  
 
 * Minimum app and OS version  
 

@@ -23,7 +23,7 @@ appliesto:
 Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. In addition, once the Windows Autopilot Reset has begun, it blocks the user from accessing the desktop until information is restored, including reapplying any provisioning packages. Windows Autopilot Reset also blocks the new user from accessing the desktop until an Intune sync is completed.
 
 > [!IMPORTANT]
-> Windows Autopilot Reset only supports Azure AD join devices. Windows Autopilot Reset doesn't support hybrid Azure AD join devices. For hybrid Azure AD join devices, a [full device wipe](/mem/intune/remote-actions/devices-wipe) is required. When a hybrid Azure AD device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device. You can also consider using the [Windows Autopilot deployment for existing devices](/mem/autopilot/tutorial/existing-devices/existing-devices-workflow) scenario to wipe the device.
+> Windows Autopilot Reset only supports Microsoft Entra join devices. Windows Autopilot Reset doesn't support Microsoft Entra hybrid join devices. For Microsoft Entra hybrid join devices, a [full device wipe](/mem/intune/remote-actions/devices-wipe) is required. When a hybrid Microsoft Entra device goes through a full device reset, it may take up to 24 hours for it to be ready to be deployed again. You can expedite this request by re-registering the device. You can also consider using the [Windows Autopilot deployment for existing devices](/mem/autopilot/tutorial/existing-devices/existing-devices-workflow) scenario to wipe the device.
 
 ## Information removed and reset by a Windows Autopilot Reset
 
@@ -38,17 +38,17 @@ The Windows Autopilot Reset process removes or resets the following information 
 
 The Windows Autopilot Reset process automatically keeps the following information from the existing device:
 
-- Maintains the device's identity connection to Azure AD.
+- Maintains the device's identity connection to Microsoft Entra ID.
 - Maintains the device's management connection to Intune.
 - Wi-Fi connection details.
 - Provisioning packages previously applied to the device.
 - A provisioning package present on a USB drive when the reset process is started.
-- Azure Active Directory device membership and Intune enrollment information.
+- Microsoft Entra device membership and Intune enrollment information.
 - SCEP certificates.
 
 ## Windows Autopilot Reset requirements
 
-- Enrolled in Azure AD. Only Azure AD join devices are supported. Hybrid Azure AD join devices aren't supported.
+- Enrolled in Microsoft Entra ID. Only Microsoft Entra join devices are supported. Microsoft Entra hybrid join devices aren't supported.
 - Enrolled in Intune.
 - [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference) is correctly configured and enabled on the device where Windows Autopilot Reset is used.
 - User initiating [local Windows Autopilot Reset](local-autopilot-reset.md) must be a local administrator on the device.

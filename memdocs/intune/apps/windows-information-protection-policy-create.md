@@ -18,10 +18,10 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX,NOFOLLOW
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -53,7 +53,7 @@ You must understand a few concepts when adding a WIP policy:
 
 ### Types of apps
 
-- **Recommended apps:** A pre-populated list of (mostly Microsoft Office) apps that allow you to easily import into the policy.
+- **Recommended apps:** A pre-populated list of (mostly Microsoft 365 (Office)) apps that allow you to easily import into the policy.
 - **Store apps:** You can add any app from the Windows store to the policy.
 - **Windows desktop apps:** You can add any traditional Windows desktop apps to the policy (for example, .exe, .dll)
 
@@ -66,7 +66,7 @@ You must configure the MAM provider before you can create a WIP policy. Learn mo
 
 Additionally, you need to have the following license and update:
 
-- [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) license
+- [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) license
 - [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 ## To add a WIP policy
@@ -187,7 +187,7 @@ After you created your WIP app protection policy, you need to deploy it to your 
 
 1. On the **App policy** pane, choose your newly created app protection policy, choose **User groups** > **Add user group**.
 
-    A list of user groups, made up of all the security groups in your Azure Active Directory, opens in the **Add user group** pane.
+    A list of user groups, made up of all the security groups in your Microsoft Entra ID, opens in the **Add user group** pane.
 
 2. Choose the group you want your policy to apply to, then choose **Select** to deploy the policy.
 

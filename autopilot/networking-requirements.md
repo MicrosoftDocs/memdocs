@@ -56,13 +56,15 @@ After a network connection is in place, each Windows device will contact the Win
 
 Windows Autopilot requires Windows Activation services. For more information about the URLs that need to be accessible for the activation services, see [Windows activation or validation fails with error code 0x8004FE33](https://support.microsoft.com/topic/windows-activation-or-validation-fails-with-error-code-0x8004fe33-a9afe65e-230b-c1ed-3414-39acd7fddf52).
 
-### Azure Active Directory (Azure AD)
+<a name='azure-active-directory-azure-ad'></a>
 
-User credentials are validated by Azure AD, and the device can also be joined to Azure AD. For more information, see [Office 365 IP Address and URL Web service](/microsoft-365/enterprise/microsoft-365-ip-web-service).
+### Microsoft Entra ID
+
+User credentials are validated by Microsoft Entra ID, and the device can also be joined to Microsoft Entra ID. For more information, see [Office 365 IP Address and URL Web service](/microsoft-365/enterprise/microsoft-365-ip-web-service).
 
 ### Microsoft Intune
 
-Once authenticated, Azure AD will trigger enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
+Once authenticated, Microsoft Entra ID will trigger enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
 
 - [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use)
 - [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
@@ -118,21 +120,23 @@ If the WNS services aren't available, the Autopilot process will still continue 
 
 ### Microsoft Store, Microsoft Store for Business & Education
 
-Apps in the Microsoft Store can be pushed to the device, triggered via Intune (MDM). App updates and additional apps may also be needed when the user first logs in. For more information, see [Prerequisites for Microsoft Store for Business and Education](/microsoft-store/prerequisites-microsoft-store-for-business). (It also includes Azure AD and Windows Notification Services).
+Apps in the Microsoft Store can be pushed to the device, triggered via Intune (MDM). App updates and additional apps may also be needed when the user first logs in. For more information, see [Prerequisites for Microsoft Store for Business and Education](/microsoft-store/prerequisites-microsoft-store-for-business). (It also includes Microsoft Entra ID and Windows Notification Services).
 
 If the Microsoft Store isn't accessible, the Autopilot process will still continue without Microsoft Store apps.
 
 ### Microsoft 365
 
-As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise may be required. For more information, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). This article includes all Office services, DNS names, IP addresses. It also includes Azure AD and other services that may overlap with the services listed above.
+As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise may be required. For more information, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). This article includes all Office services, DNS names, IP addresses. It also includes Microsoft Entra ID and other services that may overlap with the services listed above.
 
 ### Certificate revocation lists (CRLs)
 
 Some of these services will also need to check certificate revocation lists (CRLs) for certificates used in the services. For a full list, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges) and [Office 365 Certificate Chains](/microsoft-365/compliance/encryption-office-365-certificate-chains).
 
-### Hybrid Azure AD join
+<a name='hybrid-azure-ad-join'></a>
 
-The device can be hybrid Azure AD joined. The computer should be on the internal network for hybrid Azure AD join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+### Microsoft Entra hybrid join
+
+The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
 
 ### <a name="tpm"></a> Autopilot self-deploying mode and Autopilot pre-provisioning
 
