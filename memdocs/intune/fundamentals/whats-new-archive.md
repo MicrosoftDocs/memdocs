@@ -3213,7 +3213,7 @@ There's a new **Software updates** page for tenant attached devices. This page d
 #### Microsoft Defender for Endpoint support for App Sync on iOS/iPadOS<!-- 9768396 -->
 *Before you can use this capability, you must opt in to a Microsoft Defender for Endpoint Preview. To opt in, contact `mdatpmobile@microsoft.com`.* 
 
-When you use Microsoft Defender for Endpoint as your Mobile Threat Defense application, you can [configure Defender for Endpoint to request Application Inventory data](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
+When you use Microsoft Defender for Endpoint as your Mobile Threat Defense application, you can [configure Defender for Endpoint to request Application Inventory data](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
 
 - **Enable App Sync for iOS Devices**:  Set to **On** to allow Microsoft Defender for Endpoint to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
 
