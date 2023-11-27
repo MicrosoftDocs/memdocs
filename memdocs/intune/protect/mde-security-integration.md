@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2023
+ms.date: 11/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -307,9 +307,13 @@ In Microsoft Defender for Endpoint portal, as a security administrator:
 
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
+   > [!IMPORTANT]
+   >
+   > Use of [*Microsoft Defender for Endpoint’s Dynamic tag capability*](/microsoft-365/security/defender/configure-asset-rules?view=o365-worldwide&preserve-view=true) to tag devices with *MDE-Management* isn’t currently supported with security settings management. Devices tagged through this capability won’t successfully enroll. This issue remains under investigation.
+
    > [!TIP]
    >
-   > Use the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
+   > Use the proper device tags to test and validate your rollout on a small number of devices. When selecting the *All devices*, any device that falls into the scope configured will automatically be enrolled.
 
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 
