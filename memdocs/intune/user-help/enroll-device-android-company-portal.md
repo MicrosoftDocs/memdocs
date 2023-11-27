@@ -2,12 +2,12 @@
 # required metadata
 
 title: Enroll Android device with Intune Company Portal | Microsoft Docs
-description: Describes how to enroll an Android device in Intune with the Company Portal app. 
+description: Describes how to set up an Android device for work or school with the Company Portal app. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/21/2023
+ms.date: 11/21/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -107,7 +107,7 @@ During enrollment, you might be asked to choose a category that best describes h
 
 ## Next steps  
 
-Before you try to install a school or work app, go to **Settings** > **Security**, and turn on **Unknown sources**. If you don't turn on this option, you'll see the following message when you try to install an app: "Install blocked. For security reasons, your device is set to block installations of apps obtained from unknown sources." You can tap **Settings** on the message to go directly to **Unknown sources**.  
+Before you try to install a school or work app, modify device settings to allow app installations from unknown sources. If you don't make this change on your device, apps installations will be blocked. Go to **Settings** > **Security and privacy** > **Install unknown apps**.  
 
 If you get an error while you try to enroll your device in Intune, you can [email your company support](send-logs-to-your-it-admin-by-email-android.md).  
 
