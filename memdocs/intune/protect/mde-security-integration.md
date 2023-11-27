@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2023
+ms.date: 11/27/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -270,14 +270,13 @@ To support use with Microsoft Defender security settings management, your polici
   >
   > While endpoints do not require a restart in order to apply modified settings or new policies, we are aware of an issue where the *AllowOnAccessProtection* and *DisableLocalAdminMerge* settings might at times require end users to restart their devices for these settings to update. We are currently investigating this issue in order to provide a resolution.
 
-
 - **Attack surface reduction** (ASR) policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run *Windows 10*, *Windows 11*, and *Windows Server*. 
 
   For current guidance about which settings apply to the different platforms and versions, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
   > [!TIP]
   >
-  > To help keep supported endpoints up to date, consider using the [modern unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints?view=o365-worldwide#onboarding-steps-summary) for Windows Server 2012 R2 and 2016.
+  > To help keep supported endpoints up to date, consider using the [modern unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#onboarding-steps-summary) for Windows Server 2012 R2 and 2016.
 
   Also see:
   - [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
@@ -307,9 +306,13 @@ In Microsoft Defender for Endpoint portal, as a security administrator:
 
 2. Initially, we recommend testing the feature for each platform by selecting the platforms option for **On tagged devices**, and then tagging the devices with the `MDE-Management` tag.
 
+   > [!IMPORTANT]
+   >
+   > Use of [*Microsoft Defender for Endpoint’s Dynamic tag capability*](/microsoft-365/security/defender/configure-asset-rules?view=o365-worldwide&preserve-view=true) to tag devices with *MDE-Management* isn’t currently supported with security settings management. Devices tagged through this capability won’t successfully enroll. This issue remains under investigation.
+
    > [!TIP]
    >
-   > Use the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
+   > Use the proper device tags to test and validate your rollout on a small number of devices. When selecting the *All devices*, any device that falls into the scope configured will automatically be enrolled.
 
 3. Configure the feature for Microsoft Defender for Cloud onboarded devices and Configuration Manager authority settings to fit your organization's needs:
 

@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 07/31/2023
+ms.date: 11/24/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -95,7 +95,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2305**
+- **Technical preview version 2311**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
@@ -128,14 +128,13 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2307
+### Technical preview version 2311
 
-- [Windows 11 Edition Upgrade using Configuration Manager policy settings](2023/technical-preview-2307.md)
-- [Windows 11 Upgrade Readiness Dashboard](2023/technical-preview-2307.md)
-- [Option to schedule scripts' runtime](2023/technical-preview-2307.md)
-- [External service notification Run details from Azure Logic application](2023/technical-preview-2307.md)
-- [Maintenance window creation using PS cmdlet](2023/technical-preview-2307.md)
-- [Update Orchestrator Service (USO) for Windows 11 22H2 or later with windows native reboot experience](2023/technical-preview-2307.md)
+- [Folder support for Scripts node in Software Library](2023/technical-preview-2311.md)
+- [New parameter SoftwareUpdateO365Language is added to Save-CMSoftwareUpdate cmdlet](2023/technical-preview-2311.md)
+- [Support for ARM64 Operating System Deployment](2023/technical-preview-2311.md)
+- [Resource access profiles and deployments will block Configuration manager upgrade](2023/technical-preview-2311.md)
+- [WildCard Support added in Defender Exploit Guard policy for Controlled Folders](2023/technical-preview-2311.md)
 
 
 > [!NOTE]
@@ -153,6 +152,17 @@ The following features were released with previous versions of the Configuration
 
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
+
+
+### Technical preview version 2307
+
+- [Windows 11 Edition Upgrade using Configuration Manager policy settings](2023/technical-preview-2307.md)
+- [Windows 11 Upgrade Readiness Dashboard](2023/technical-preview-2307.md)
+- [Option to schedule scripts' runtime](2023/technical-preview-2307.md)
+- [External service notification Run details from Azure Logic application](2023/technical-preview-2307.md)
+- [Maintenance window creation using PS cmdlet](2023/technical-preview-2307.md)
+- [Update Orchestrator Service (USO) for Windows 11 22H2 or later with windows native reboot experience](2023/technical-preview-2307.md)
+
 
 ### Technical preview version 2305
 
