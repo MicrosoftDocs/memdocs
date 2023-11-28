@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/14/2023
+ms.date: 12/13/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -238,7 +238,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Defender f
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For *Connection type* select **Microsoft Tunnel**, and then configure the following details:
+4. On the **Configuration settings** tab, set *Connection type* to **Microsoft Tunnel**, and then expand the following categories and configure the following details:
 
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
@@ -254,9 +254,13 @@ After the Microsoft Tunnel installs and devices install the Microsoft Defender f
      - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If *Per-app VPN* is set to *Enable*, only the traffic from apps you select go through the tunnel.
 
    - **Proxy**:  
-     - Configure proxy server details for your environment.  
-       > [!NOTE]  
+     - Configure proxy server details for your environment.
+
+       > [!NOTE]
+       >
        > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
+
+     - When you use a single proxy server in your environment, you can configure a **Proxy exclusion list**. For information about using this option, see [use a proxy exclusion list](#use-a-proxy-exclusion-list-for-android-enterprise) later in this article.
 
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
@@ -307,6 +311,41 @@ After the Microsoft Tunnel installs and devices install the Microsoft Defender f
 > 5. Select **Save**.
 >
 > :::image type="content" source="./media/microsoft-tunnel-configure/on-demand-vpn-rule.png" alt-text="Screen shot of the Add Row pane where you configure the on-demand rule.":::
+
+### Use a proxy exclusion list for Android Enterprise
+
+When you use a single direct proxy server in your environment, you can use a proxy exclusion list in your Microsoft Tunnel VPN profiles for Android Enterprise. Proxy exclusion lists are supported for Microsoft Tunnel and Microsoft Tunnel for MAM.
+
+> [!IMPORTANT]
+>
+> The proxy exclusion list is supported only when you use a single proxy direct proxy server. They are not supported in environments where multiple proxy servers are in use.
+
+The proxy exclusion list in the VPN profile supports entry of specific domains that are then excluded from your direct proxy configuration for devices that receive and use the profile.  
+
+The following are supported formats for exclusion list entries:
+
+- Full URLs with exact subdomain matches. For example, `sub.contoso.com`
+- A leading wildcard in URLs. For example, using the full URL example, we can replace the leading sub domain name (sub) with an asterisk to expand support to include all subdomains of contso.com:  `*.contoso.com `
+- IPv4 and IPv6 addresses
+
+Unsupported formats include:
+
+- Internal wildcards. For example: `con*oso.com`, `contos*.com`, and `contoso.*`
+
+#### Configure the proxy exclusion list
+
+You can configure the exclusion list when you edit or create a [Microsoft Tunnel VPN Profile](../protect/microsoft-tunnel-configure#android) for the Android Enterprise platform.
+
+While on the Configuration settings page after you set the Connection type to Microsoft Tunnel:
+
+1. Expand **Proxy**, and then for *Proxy exclusion list*, select **Manage proxy exclusions**.
+2. On the *Proxy exclusion list* pane:
+   - In the text entry box, specify a single URL or IP address. Each time you add an entry, an additional text entry box is provided for additional entries.
+   - Select **Import** to open the *Import proxy exclusions* pane, where you can then import a list that is in CSV file format.
+   - Select **Export** to export the current exclusion list form this profile, in CSV file format.
+3. Select **OK** to save your proxy exclusion list configuration, and continue editing the VPN profile.
+
+   :::image type="content" source="./media/microsoft-tunnel-configure/proxy-exclusions.png" alt-text="Screen shot of the proxy exclusion list pane in the Intune admin center.":::
 
 ## Use custom settings for Microsoft Defender for Endpoint
 
