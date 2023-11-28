@@ -307,7 +307,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Defender f
 > 1. On the Configuration setting page, expand the *On-Demand VPN Rules* section.
 > 2. For *On-demand rules* select **Add** to open the *Add Row* pane.
 > 3. On the *Add Row* pane, set *I want to do the following* to **Connect VPN**, and then for *I want to restrict* select a restriction, like **All domains**.
-> 4. Optionally, you can add a URL to the *But only if this URL probe succeeds* field. 
+> 4. Optionally, you can add a URL to the *But only if this URL probe succeeds* field.
 > 5. Select **Save**.
 >
 > :::image type="content" source="./media/microsoft-tunnel-configure/on-demand-vpn-rule.png" alt-text="Screen shot of the Add Row pane where you configure the on-demand rule.":::
@@ -324,8 +324,8 @@ The proxy exclusion list in the VPN profile supports entry of specific domains t
 
 The following are supported formats for exclusion list entries:
 
-- Full URLs with exact subdomain matches. For example, `sub.contoso.com`
-- A leading wildcard in URLs. For example, using the full URL example, we can replace the leading sub domain name (sub) with an asterisk to expand support to include all subdomains of contso.com:  `*.contoso.com `
+- Full URLs with exact subdomain match. For example, `sub.contoso.com`
+- A leading wildcard in URLs. For example, using the full URL example, we can replace the leading sub domain name (sub) with an asterisk to expand support to include all subdomains of contso.com: `*.contoso.com `
 - IPv4 and IPv6 addresses
 
 Unsupported formats include:
@@ -334,7 +334,7 @@ Unsupported formats include:
 
 #### Configure the proxy exclusion list
 
-You can configure the exclusion list when you edit or create a [Microsoft Tunnel VPN Profile](../protect/microsoft-tunnel-configure#android) for the Android Enterprise platform.
+You can configure the exclusion list when you edit or create a [Microsoft Tunnel VPN Profile](../protect/microsoft-tunnel-configure.md#android) for the Android Enterprise platform.
 
 While on the Configuration settings page after you set the Connection type to Microsoft Tunnel:
 
@@ -342,7 +342,7 @@ While on the Configuration settings page after you set the Connection type to Mi
 2. On the *Proxy exclusion list* pane:
    - In the text entry box, specify a single URL or IP address. Each time you add an entry, an additional text entry box is provided for additional entries.
    - Select **Import** to open the *Import proxy exclusions* pane, where you can then import a list that is in CSV file format.
-   - Select **Export** to export the current exclusion list form this profile, in CSV file format.
+   - Select **Export** to export the current exclusion list from this profile, in CSV file format.
 3. Select **OK** to save your proxy exclusion list configuration, and continue editing the VPN profile.
 
    :::image type="content" source="./media/microsoft-tunnel-configure/proxy-exclusions.png" alt-text="Screen shot of the proxy exclusion list pane in the Intune admin center.":::
@@ -353,7 +353,7 @@ Intune supports Microsoft Defender for Endpoint as both an MTD app and as the Mi
 
 For devices [enrolled](/mem/intune/fundamentals/deployment-guide-enrollment-android) as *Android Enterprise personally-owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
 
-If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD , then you continue to use the app tunnel configuration profile to configure Microsoft Defender for Endpoint as a Tunnel Client.
+If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD, then you continue to use the app tunnel configuration profile to configure Microsoft Defender for Endpoint as a Tunnel Client.
 
 ### Add app configuration support for Microsoft Defender for Endpoint to a VPN profile for Microsoft Tunnel
 
@@ -385,7 +385,7 @@ The Microsoft Tunnel VPN feature in Defender for Endpoint is European Union Data
 
 In the meantime, Microsoft Tunnel customers with EU tenants can enable *TunnelOnly* mode in the Defender for Endpoint Client app. To configure this, use the following steps:
 
-1. Follow the steps found in [Install and configure Microsoft Tunnel VPN solution for Microsoft Intune | Microsoft Learn](../protect/microsoft-tunnel-configure.md#add-app-configuration-support-for-microsoft-defender-for-endpoint-to-a-vpn-profile-for-microsoft-tunnel) to create an app configuration policy which disables Defender for Endpoint functionality.
+1. Follow the steps found in [Install and configure Microsoft Tunnel VPN solution for Microsoft Intune | Microsoft Learn](../protect/microsoft-tunnel-configure.md#add-app-configuration-support-for-microsoft-defender-for-endpoint-to-a-vpn-profile-for-microsoft-tunnel) to create an app configuration policy, which disables Defender for Endpoint functionality.
 
 2. Create a key called **TunnelOnly** and set the value to **True**.
 
