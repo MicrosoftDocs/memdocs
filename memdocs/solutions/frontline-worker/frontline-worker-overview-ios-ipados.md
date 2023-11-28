@@ -4,7 +4,7 @@ description: Learn how to manage frontline worker devices using iOS and iPadOS d
 ms.author: mandia
 author: MandiOhlinger
 manager: dougeby
-ms.date: 10/25/2023
+ms.date: 11/21/2023
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -144,7 +144,7 @@ In Intune, you can create device configuration profiles that configure the home 
 
   :::image type="content" source="./media/ios-ipados-device-restrictions-kiosk.png" alt-text="A device restrictions policy with the device settings configured for iOS and iPadOS devices in Microsoft Intune." lightbox="./media/ios-ipados-device-restrictions-kiosk.png":::
 
-  In this policy, you can also create a list of approved apps, prohibited apps, and hide some system apps. For more information on the settings you can configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune/configuration/device-restrictions-ios.md).
+  In this policy, you can also create a list of approved apps and hide some system apps. For more information on the settings you can configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune/configuration/device-restrictions-ios.md).
 
 For a list of the Shared iPad settings you can configure, go to [Configure settings for Shared iPads](../../intune/enrollment/device-enrollment-shared-ipad.md#configure-settings-for-shared-ipads).
 

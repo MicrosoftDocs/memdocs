@@ -194,7 +194,7 @@ To download the source files, the client computer needs to communicate with a di
 
 - Depending upon the use case, you may also require one or both of the following technologies:
 
-  - Azure Active Directory
+  - Microsoft Entra ID
 
   - Cloud management gateway
 

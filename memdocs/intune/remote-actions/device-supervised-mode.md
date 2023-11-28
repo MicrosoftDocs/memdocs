@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 11/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -46,6 +46,9 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 ## Turn on supervised mode after enrollment
 
 After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (which will reset the device). You can't configure a device for Supervised mode in Intune after enrollment.
+
+Apple Configurator for iPhone can also be used to supervise devices.
+For more information, see the [Apple support doc](https://support.apple.com/guide/apple-configurator/intro-apd4015ec300/1.1/ios/17.0).
 
 ## Identify a supervised device
 

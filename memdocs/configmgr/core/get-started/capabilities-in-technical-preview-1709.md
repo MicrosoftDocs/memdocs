@@ -75,7 +75,7 @@ As you select different platforms, notice that only the settings relevant to the
 
 ## Co-management for Windows 10 devices    
 <!-- 1350871 -->
-Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Azure AD at the same time (hybrid Azure AD). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It's a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. 
+Many customers want to manage Windows 10 devices in the same way they manage mobile devices using a simplified, lower cost, cloud-based solution. However, making the transition from traditional management to modern management can be challenging. Starting with the Windows 10, version 1607 (also known as the Anniversary Update), you can join a Windows 10 device to on-premises Active Directory (AD) and cloud-based Microsoft Entra ID at the same time (hybrid Microsoft Entra ID). Co-management takes advantage of this improvement and enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Intune. It's a solution that provides a bridge from traditional to modern management and gives you a path to make the transition using a phased approach. 
 
 ### Prerequisites
 You must have the following prerequisites in place before you can enable co-management. There are general prerequisites, and different prerequisites for existing Configuration Manager clients and devices that are not clients.
@@ -87,7 +87,7 @@ After you create a co-management policy, you cannot edit the policy. To change t
 The following are general prerequisites for you to enable co-management:  
 
 - Technical Preview for Configuration Manager version 1709
-- Azure AD 
+- Microsoft Entra ID 
 - EMS or Intune license for all users
 - Intune subscription &#40;MDM authority in Intune set to **Intune**&#41;
 
@@ -96,7 +96,7 @@ The following are general prerequisites for you to enable co-management:
 
 #### Additional prerequisites for existing Configuration Manager clients
 - Windows 10, version 1709 (Fall Creators Update) and later
-- Hybrid Azure AD joined (joined to AD and Azure AD)
+- Microsoft Entra hybrid joined (joined to AD and Microsoft Entra ID)
 
 #### Additional prerequisites for new Windows 10 devices
 - Windows 10, version 1709 (Fall Creators Update) and later
@@ -132,7 +132,7 @@ The following diagram provides an architectural overview of co-management and ho
 ![Co-management architectural diagram](./media/co-management-arch-cm1709tp.svg)
 
 ### Scenarios to enable co-management  
-You can enable co-management for both Windows 10 devices enrolled in Microsoft Intune and existing Windows 10 Configuration Manager clients. Both scenarios result in Windows 10 devices concurrently managed by Configuration Manager and Intune, as well as joined to AD and Azure AD.  
+You can enable co-management for both Windows 10 devices enrolled in Microsoft Intune and existing Windows 10 Configuration Manager clients. Both scenarios result in Windows 10 devices concurrently managed by Configuration Manager and Intune, as well as joined to AD and Microsoft Entra ID.  
 
 #### Devices enrolled in Intune  
 When Windows 10 devices are enrolled in Intune, you can install the Configuration Manager client on the devices (using a specific command-line argument) to prepare the clients for co-management. Then, you enable co-management from the Configuration Manager console to start moving specific workloads to Intune for specific Windows 10 devices.  
@@ -140,15 +140,15 @@ When Windows 10 devices are enrolled in Intune, you can install the Configuratio
 For Windows 10 devices that are not yet enrolled in Intune, you can use automatic enrollment in Azure to enroll the devices. For new Windows 10 devices, you can use Windows Autopilot to configure the Out of Box Experience (OOBE), which includes automatic enrollment that enrolls devices in Intune.  
 
 #### Configuration Manager clients
-When you have Windows 10 devices that are Configuration Manager clients, you can enroll these devices and enable co-management from the Configuration Manager console. Configuration Manager triggers automatic enrollment into Intune based on the Azure AD tenant information.  
+When you have Windows 10 devices that are Configuration Manager clients, you can enroll these devices and enable co-management from the Configuration Manager console. Configuration Manager triggers automatic enrollment into Intune based on the Microsoft Entra tenant information.  
 
 ### Prepare Windows 10 devices for co-management
-You can enable co-management on Windows 10 devices that are joined to AD and Azure AD, and enrolled in Intune and a client in Configuration Manager. For new Windows 10 devices, and for devices that are already enrolled in Intune, install the Configuration Manager client before they can be co-managed. For Windows 10 devices that are already Configuration Manager clients, you can enroll the devices with Intune and enable co-management in the Configuration Manager console.
+You can enable co-management on Windows 10 devices that are joined to AD and Microsoft Entra ID, and enrolled in Intune and a client in Configuration Manager. For new Windows 10 devices, and for devices that are already enrolled in Intune, install the Configuration Manager client before they can be co-managed. For Windows 10 devices that are already Configuration Manager clients, you can enroll the devices with Intune and enable co-management in the Configuration Manager console.
 
 #### Command line to install Configuration Manager client
 Create an app in Intune for Windows 10 devices that are not already Configuration Manager clients. When you create the app in the next sections, use the following command line:
 
-ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62;/ CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47;/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*AAD tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for AAD Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Resource ID*&#62;"
+ccmsetup.msi CCMSETUPCMD="/mp:&#60;*URL of cloud management gateway mutual auth endpoint*&#62;/ CCMHOSTNAME=&#60;*URL of cloud management gateway mutual auth endpoint*&#62; SMSSiteCode=&#60;*Sitecode*&#62; SMSMP=https:&#47;/&#60;*FQDN of MP*&#62; AADTENANTID=&#60;*Microsoft Entra tenant ID*&#62; AADTENANTNAME=&#60;*Tenant name*&#62; AADCLIENTAPPID=&#60;*Server AppID for Microsoft Entra Integration*&#62; AADRESOURCEURI=https:&#47;/&#60;*Resource ID*&#62;"
 
 For example, if you had the following values:
 
@@ -159,13 +159,13 @@ For example, if you had the following values:
 
 - **FQDN of management point (MP)**: sccmmp.corp.contoso.com    
 - **Sitecode**: PS1    
-- **Azure AD tenant ID**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
-- **Azure AD tenant name**: contoso    
-- **Azure AD client app ID**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
-- **AAD Resource ID URI**: ConfigMgrServer    
+- **Microsoft Entra tenant ID**: 72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
+- **Microsoft Entra tenant name**: contoso    
+- **Microsoft Entra client app ID**: bef323b3-042f-41a6-907a-f9faf0d1XXXX     
+- **Microsoft Entra Resource ID URI**: ConfigMgrServer    
 
   > [!Note]    
-  > Use the **IdentifierUri** value found in the **vSMS_AAD_Application_Ex** SQL view for the **AAD Resource ID URI** value.
+  > Use the **IdentifierUri** value found in the **vSMS_AAD_Application_Ex** SQL view for the **Microsoft Entra Resource ID URI** value.
 
 You would use the following command line:
 
@@ -180,21 +180,21 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 > 5. Click **Cancel** to exit the wizard.
 
 #### New Windows 10 devices
-For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience, which includes joining the device to AD and Azure AD, as well as enrolling the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.  
+For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience, which includes joining the device to AD and Microsoft Entra ID, as well as enrolling the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.  
 1. Enable Autopilot for the new Windows 10 devices. For details, see [Overview of Windows Autopilot](/windows/deployment/windows-10-auto-pilot).  
-2. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).
-3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
+2. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).
+3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Microsoft Entra ID](/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 
 #### Windows 10 devices not enrolled in Intune or a Configuration Manager client
 For Windows 10 devices that are not enrolled in Intune or have the Configuration Manager client, you can use automatic enrollment to enroll the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.
-1. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).  
-2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
+1. Configure automatic enrollment in Microsoft Entra ID for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).  
+2. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Microsoft Entra ID](/sccm/core/clients/deploy/deploy-clients-cmg-azure).
 
 #### Windows 10 devices enrolled in Intune
-For Windows 10 devices that are already enrolled in Intune, create an app in Intune to deploy the Configuration Manager client. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
+For Windows 10 devices that are already enrolled in Intune, create an app in Intune to deploy the Configuration Manager client. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Microsoft Entra ID](/sccm/core/clients/deploy/deploy-clients-cmg-azure).  
 
 ### Switch Configuration Manager workloads to Intune
-In the previous section, you prepared Windows 10 devices for co-management. These devices are now joined to AD and Azure AD, and they are enrolled in Intune and have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Azure AD or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune.
+In the previous section, you prepared Windows 10 devices for co-management. These devices are now joined to AD and Microsoft Entra ID, and they are enrolled in Intune and have the Configuration Manager client. You likely still have Windows 10 devices that are joined to AD and have the Configuration Manager client, but not joined to Microsoft Entra ID or enrolled in Intune. The following procedure provides the steps to enable co-management, prepare the rest of your Windows 10 devices (Configuration Manager clients without Intune enrollment) for co-management, and allows you to start switching specific Configuration Manager workloads to Intune.
 
 1. In the Configuration Manager console, go to **Administration** > **Overview** > **Cloud Services** > **Co-management**.    
 2. On the Home tab, in the Manage group, choose **Configure co-management** to open the Co-management Onboarding Wizard.    

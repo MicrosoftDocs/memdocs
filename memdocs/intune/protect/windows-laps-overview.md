@@ -127,8 +127,8 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
 
 - **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra permissions:
 
-  - `microsoft.directory/deviceLocalCredentials/password/read`
-  - `microsoft.directory/deviceLocalCredentials/standard/read`
+  - `microsoft.directory/deviceLocalCredentials/password/read` to read LAPS metadata and passwords.
+  - `microsoft.directory/deviceLocalCredentials/standard/read` to read LAPS metadata excluding passwords.
 
   To create custom roles that can grant these permissions, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
   

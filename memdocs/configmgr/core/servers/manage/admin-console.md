@@ -164,7 +164,7 @@ You can message other Configuration Manager administrators from the **Console Co
 
 ### Prerequisites
 
-- For starting a chat with an administrator, the account you want to chat with needs to have been discovered with [Azure AD or AD User Discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
+- For starting a chat with an administrator, the account you want to chat with needs to have been discovered with [Microsoft Entra ID or AD User Discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - Microsoft Teams installed on the device from which you run the console.
 note
 - All [prerequisites to view connected consoles](#bkmk_connections-prereq)
