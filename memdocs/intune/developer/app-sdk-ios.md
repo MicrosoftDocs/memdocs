@@ -1127,6 +1127,45 @@ Yes, the IT admin can send a selective wipe command to the application. This wil
 
 Yes! Please see the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
 
+### Where should I set my custom Intune-related classes such as EnrollmentDelegate, ComplianceDelegate, and PolicyDelegate to listen to enrollment, compliance, and policy status?
+
+All delegate classes should be assigned in the UIApplicationDelegate `application(_:willFinishLaunchingWithOptions:)` lifecycle method:
+ `func application(
+    _ application: UIApplication,
+    willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+) -> Bool {
+	// Assign your custom delegate class to intune manager.
+ 	// 
+}'
+
+This is because Intune initializes and completes all delegation before the `application(_:didFinishLaunchingWithOptions:)` instance method. Moreover, assigning a delegate in init() can result in an unpredictable method because lifecycle methods can be invoked multiple times based on application running status while the init method would only be called during class initialization.
+
+### I have integrated my application with Intune SDK, however, my application does not invoke the `application(_:willFinishLaunchingWithOptions:)` instance lifecycle method. Why?
+If you have integrated with IntuneSDK, `AppDelegate` class should be your `UIApplicationMain` class. If not, this may result in certain `UIApplicationDelegate` lifecycle instance methods not getting invoked.
+
+### MAM-CA policy is enabled by the IT admin. My application uses OneAuth for Azure AD authentication and has integrated with Intune SDK with CA-related changes, however, some users with old iPhone devices are unable to sign in to the app and logs show the `UserCancelled` error status. What could possibly be wrong?
+
+If you have already implemented all code and configuration changes to enable and handle MAM CA policy, ensure your application is able to handle MSAL response. The following delegate instance method should be part of your `AppDelegate` class to handle MSAL response:
+
+```
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+	return MALOneAuth.handleMSALResponse(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
+}
+```
+
+But if your application uses `SceneDelegate`, add the following delegate instance method in your `SceneDelegate` class instead:
+
+```
+func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+    guard let urlContext = URLContexts.first else {
+	return
+    }
+    let url = urlContext.url
+    let sourceApp = urlContext.options.sourceApplication
+    MALOneAuth.handleMSALResponse(url, sourceApplication: sourceApp)
+}
+```
+
 ### How can I troubleshoot my app?
 
 The Intune SDK for iOS 9.0.3+ supports the ability to add a diagnostics console within the mobile app for testing policies and logging errors. `IntuneMAMDiagnosticConsole.h` defines the `IntuneMAMDiagnosticConsole` class interface, which developers can use to display the Intune diagnostic console. This allows end users or developers during test to collect and share Intune logs to help diagnose any issue they may have. This API is optional for integrators.
