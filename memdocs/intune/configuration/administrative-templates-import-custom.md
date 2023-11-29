@@ -72,18 +72,22 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
   
   In the following example, the`kerberos.admx` file requires the `Windows.admx` file:
   
-```xml
- <policyNamespaces>
-    <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
-    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
-  </policyNamespaces>
-```
+  ```xml
+   <policyNamespaces>
+      <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
+      <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+    </policyNamespaces>
+  ```
 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
 
 - Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
 
-  If `Windows.admx` is required and not uploaded, then you can get the `ADMX file referenced not found NamespaceMissing:Microsoft.Policies.Windows. Please upload it first.` error message.
+  If `Windows.admx` is required and not uploaded, then you can get the following error message:
+
+  ```error
+  ADMX file referenced not found NamespaceMissing:Microsoft.Policies.Windows. Please upload it first.
+  ```
 
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
 
