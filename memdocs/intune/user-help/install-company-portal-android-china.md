@@ -48,7 +48,7 @@ Company Portal is also available from the [Baidu App Store](https://go.microsoft
    3. Select the Company Portal ![Company Portal icon](./media/company-portal-logo-small-2101.png) listing.  
 
 
-If the app stores listed above are unavailable, you can download [Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually.  
+If the app stores are unavailable, you can download [Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or fixes automatically. You must be sure to regularly update and patch the app manually.  
 
 ## Next steps  
 After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 

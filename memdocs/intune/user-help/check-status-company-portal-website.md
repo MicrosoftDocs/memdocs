@@ -38,7 +38,7 @@ ms.collection:
 * macOS   
 * Windows 10/11     
 
-Remotely check the status of a device from the Company Portal website. During a status check. Company Portal assesses the selected device to determine whether or not it has work access. 
+Remotely check the status of a device from the Company Portal website. During a status check, Company Portal assesses the selected device to determine whether or not it has work access. 
 
 ## Check status  
 To check the status of a device:  
