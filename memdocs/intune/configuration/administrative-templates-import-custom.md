@@ -85,9 +85,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
   If `Windows.admx` is required and not uploaded, then you can get the following error message:
 
-  ```error
-  ADMX file referenced not found NamespaceMissing:Microsoft.Policies.Windows. Please upload it first.
-  ```
+  `ADMX file referenced not found NamespaceMissing:Microsoft.Policies.Windows. Please upload it first.`
 
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
 
