@@ -83,6 +83,10 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
 - Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
 
+    > [!NOTE]
+    >
+    > An error uploading an ADMX file with the error text "ADMX file referenced not found NamespaceMissing:Microsoft.Policies.Windows. Please upload it first." indicates the required `Windows.admx` pre-requisite was not previously uploaded.
+
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
 
 - Not all areas of the registry can be set using custom ADMX. For more information on the registry locations that can be used, go to [Win32 and Desktop Bridge app ADMX policy Ingestion Overview](/windows/client-management/win32-and-centennial-app-policy-configuration#overview).
