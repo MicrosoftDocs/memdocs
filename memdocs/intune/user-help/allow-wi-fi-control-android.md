@@ -2,12 +2,12 @@
 # required metadata
 
 title: Allow Company Portal to control Wi-Fi - Microsoft Intune | Microsoft Docs
-description: Learn how to give Wi-Fi control to Company Portal. 
+description: Give Intune Company Portal app permission to control Wi-Fi on work or school device.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user

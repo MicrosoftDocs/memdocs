@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -39,7 +39,8 @@ ms.collection:
 
 The User Access Control settings help prevent potentially harmful programs and software from making changes to your device. If you've received a message about adjusting these controls on an enrolled work or school device, it means that your organization requires your device to have more protection from User Access Control.
 
-## Adjust protection level    
+## Adjust protection level  
+Adjust the protection level to meet your organization's requirements.    
 
 1. Go to **Start** and open **Control Panel**.
 2. Select **System and Security**.
@@ -50,12 +51,12 @@ The User Access Control settings help prevent potentially harmful programs and s
 4. Select **OK** to save your changes. 
 5. Select **Yes** when prompted to confirm the changes.  
 
-## Check device settings  
-After you make changes to User Account Control, return to Company Portal and sync your device. 
+## Check access in Company Portal    
+After you make changes to User Account Control, return to Company Portal and run a check on your device to register the changes with the app.  
 
 1. Open Company Portal for Windows.
-2. Go to **Settings**.
-3. Select **Sync**. 
+2. Go to **Devices** and select your device.  
+3. Select **Check access**.  
 
 ## Next steps  
 Still need help? Contact your IT support person. For contact information, go to **Help & support** in the Company Portal app, or sign into the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for helpdesk details.  

@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,7 +32,7 @@ ms.collection:
 ---
 # Move to new device management setup  
 
-If your organization requires you to move to a new device management setup, you'll need to follow the onscreen steps to add an Android work profile. A work profile separates the work data on your device from the personal data. Your organization will manage the work profile, which consists of only school or work-related files and data. Your organization won't see or manage the personal data on your device. 
+If your organization requires you to move to a new device management setup, you'll need to follow the onscreen steps to add an Android work profile. A work profile separates the work data on your device from the personal data. Your school or workplace can manage the work profile, which consists of only school or work-related files and data. Your organization can't see or manage the personal data on your device. 
 
 Complete the following steps to set up your work profile. For a more detailed look at the Android work profile enrollment process, see [Enroll device with Android work profile](./enroll-device-android-work-profile.md).  
 

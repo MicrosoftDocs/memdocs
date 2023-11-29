@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -43,7 +43,7 @@ ms.collection:
  
 Get the latest version of the Microsoft Intune Company Portal app on your Android, iOS, macOS, or Windows device. We recommend using the latest version of the Company Portal app on your device because it contains the latest bug fixes and security updates. 
 
-Your organization might require you to update the app on your device when:  
+You might be required to update the app on your work or school device when:  
 
 * A newer version of Company Portal becomes available.  
 * Your version of Company Portal is no longer supported.  
@@ -90,4 +90,4 @@ You can turn on automatic updates to ensure that you don't miss updates. For mor
 
 ## Next steps  
 
-Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

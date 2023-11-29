@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -47,7 +47,7 @@ If you're using a PC and consider yourself an advanced user, you can enable Secu
 Code integrity is a threat protection feature that checks the drivers and system files on your device for signs of corruption or malicious software. For code integrity to work on your device, another security feature called Secure Boot must be enabled.  
 
 
-## IT pro support  
+## Microsoft Learn resources for IT administrators   
 
 If you're a Microsoft Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows 10/11 device compliance policy](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 

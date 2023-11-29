@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/20/2023
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -37,8 +37,8 @@ Install the Intune Company Portal app to access school or work resources from yo
 
 * [Google Play](https://go.microsoft.com/fwlink/?linkid=871947) (not available everywhere)
 * [Lenovo](https://go.microsoft.com/fwlink/?linkid=2125082)
-* Huawei
-* OPPO 
+* Huawei  
+* OPPO  
 <!--* [Xiaomi](https://go.microsoft.com/fwlink/?linkid=836947)-->
 
 Company Portal is also available from the [Baidu App Store](https://go.microsoft.com/fwlink/?linkid=2133565). To find it:  
