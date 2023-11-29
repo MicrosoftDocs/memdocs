@@ -150,7 +150,7 @@ The default page layout is **Custom**, top site shortcust are on, wallpaper is o
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcust are on, wallpaper is off, and news feed is on|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** turn on top site shortcuts <br> **wallpaper** turn on wallpaper <br> **newsfeed** turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> Separate values with `|`. For example, `topsites|newsfeed` turn top sites shortcuts and news feed|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** turn on top site shortcuts <br> **wallpaper** turn on wallpaper <br> **newsfeed** turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout <br> **false** The page layout are disabled and users can NOT change any page layout options, value specified by IT admin via the policy or default values will be used |
  
 ### New Tab Page experiences
