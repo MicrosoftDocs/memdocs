@@ -57,10 +57,7 @@ Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Por
 
    ![Device details page for a selected device on the Company Portal website, with a list of links at the top showing Rename, Remove, Reset Device, Reset Passcode, and Remote Lock. ](./media/rename-reset-device-1808.png)   
 
-4. When prompted, choose **Sign out**. When prompted again, sign back in. Sign back in to the Company Portal website within five minutes, or Company Portal won't reset the device passcode.  
-
-   > [!NOTE]
-   > You must sign back in to confirm your identity. This step prevents malicious attempts to reset your device passcode.  
+4. When prompted, choose **Sign out**. When prompted again, sign back in. Sign back in to the Company Portal website within five minutes, or Company Portal won't reset the device passcode. You must sign back in to confirm your identity. This step prevents malicious attempts to reset your device passcode.  
 
    ![Example screenshots showing a prompt to sign out of the Company Portal. The buttons for user input are Sign Out and Cancel.](./media/iwp-reset-passcode-popup-1808.png)
 
@@ -73,9 +70,9 @@ Remotely reset an enrolled device's PIN or passcode. Sign in to the [Company Por
 6. If you're resetting the passcode for an iOS device, its existing passcode is removed. For Android devices, you are issued a temporary passcode to unlock the device and set a new passcode. 
 
    > [!NOTE]
-   > You can find the temporary password for Android devices in the Company Portal, under the device's details page. See the section [Set up a new passcode](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode) for more OS-specific passcode descriptions.  
+   > You can find the temporary password for an Android device in Company Portal. Select the device to drill down into device details.     
    
-7. On your device, go to **Settings** and change your passcode. 
+7. On your device, go to the **Settings** app and change your passcode. 
 
 8. Select the notification that appears on the Company Portal website. Confirm that the password was successfully reset.  
 

@@ -64,10 +64,8 @@ Complete the following step to rename a device through the [context menu](/windo
 
 Still need help? Contact your IT support person. For contact information, sign into the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account. 
 
-
-## Microsoft Learn for IT administrators           
-
-The rename action in the Company Portal app gives you the chance to rename the device to something that's easy to recognize. This change only applies to the name in Company Portal, and not to the device name or management name that appears in the Microsoft Intune admin center. For more information about managing device details in the admin center, see:  
-
-- [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
-- [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).
+>[!NOTE]
+>The rename action in the Company Portal app gives employees and students the chance to rename enrolled devices to something that's easy to recognize. This change only applies to the name in Company Portal, and not to the device name or management name that appears in the Microsoft Intune admin center. If you're an IT administrator and need more information about managing device details in the admin center, see:  
+>
+>- [Rename a device with Microsoft Intune](../remote-actions/device-rename.md).
+>- [View device details with Microsoft Intune](../remote-actions/device-inventory.md#hardware-device-details).

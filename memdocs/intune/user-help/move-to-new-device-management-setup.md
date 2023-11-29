@@ -32,9 +32,9 @@ ms.collection:
 ---
 # Move to new device management setup  
 
-If your organization requires you to move to a new device management setup, you'll need to follow the onscreen steps to add an Android work profile. A work profile separates the work data on your device from the personal data. Your school or workplace can manage the work profile, which consists of only school or work-related files and data. Your organization can't see or manage the personal data on your device. 
+If your organization requires you to move to a new device management setup, you'll need to follow the onscreen steps to add an Android work profile. A work profile separates the work data on your device from the personal data. Your school or workplace can manage the work profile, which consists of only school or work-related files and data. They can't see or manage the personal data on your device. 
 
-Complete the following steps to set up your work profile. For a more detailed look at the Android work profile enrollment process, see [Enroll device with Android work profile](./enroll-device-android-work-profile.md).  
+Complete the steps in this article to set up your work profile. For a more detailed look at the Android work profile enrollment process, see [Enroll device with Android work profile](./enroll-device-android-work-profile.md).  
 
  1. On the **Update device settings** screen, you'll see a message titled **Move to new device management setup**. Read over the information for a brief explanation of the required change and then tap **RESOLVE**. If you don't see the resolve button, go to Google Play and install the latest version of the Company Portal app.  
 

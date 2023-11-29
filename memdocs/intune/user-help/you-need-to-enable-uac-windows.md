@@ -37,10 +37,10 @@ ms.collection:
 * Windows 10  
 * Windows 11  
 
-The User Access Control settings help prevent potentially harmful programs and software from making changes to your device. If you've received a message about adjusting these controls on an enrolled work or school device, it means that your organization requires your device to have more protection from User Access Control.
+The User Access Control settings help prevent potentially harmful programs and software from making changes to your device. If you've received a message about adjusting these controls on an enrolled work or school device, it means that your organization requires your device to have more protection. This article describes how to adjust the protection level to meet your organization's requirements. 
 
 ## Adjust protection level  
-Adjust the protection level to meet your organization's requirements.    
+You can adjust User Account Control settings in the Control Panel.  
 
 1. Go to **Start** and open **Control Panel**.
 2. Select **System and Security**.
