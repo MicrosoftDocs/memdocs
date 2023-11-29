@@ -3,12 +3,12 @@
 
 title: Move to new device management setup | Microsoft Docs
 titlesuffix: Microsoft Intune
-description: What to do when you're told to move to a new device management setup. 
+description: Move your work device to the new device management setup.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/19/2020
+ms.date: 11/20/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune

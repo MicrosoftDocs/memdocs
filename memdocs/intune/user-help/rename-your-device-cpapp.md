@@ -35,6 +35,7 @@ ms.collection:
 Rename a device to make it easier to recognize from other devices. The Company Portal app for Windows lets you rename the following types of connected devices:  
 
 * Windows 10
+* Windows 11  
 * iOS
 * Android  
 
