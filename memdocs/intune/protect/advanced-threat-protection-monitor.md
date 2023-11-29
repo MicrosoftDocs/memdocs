@@ -7,7 +7,7 @@ keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 11/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,7 +39,7 @@ Monitor the state of devices that have the Microsoft Defender for Endpoint compl
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Monitor** > **Policy compliance**.
+2. Select **Devices** > **Monitor** > **Policy noncompliance**.
 
 3. Find your Microsoft Defender for Endpoint policy in the list, and see which devices are compliant or noncompliant.
 
@@ -51,7 +51,7 @@ For more information about reports, see [Intune reports](../fundamentals/reports
 
 ## View onboarding status
 
-To view the onboarding status of your Intune-managed devices, go to **Endpoint security** > **Microsoft Defender for Endpoint**. From this page, you can also create a device configuration profile to onboard more devices to Microsoft Defender for Endpoint.
+To view the onboarding status of your Intune-managed devices, go to **Endpoint security** > **Microsoft Defender for Endpoint**. At the bottom of this page is a visualization report for **Devices onboarded onto Microsoft Defender for Endpoint**, which displays the count of devices that report status from the Defender for Endpoint sensor.
 
 ## Next steps
 
