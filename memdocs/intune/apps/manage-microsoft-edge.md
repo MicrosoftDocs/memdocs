@@ -144,6 +144,15 @@ Edge supports the following settings for configuration:
 
 These settings can be deployed to the app regardless of device enrollment status.
 
+### New Tab Page layout
+The default page layout is **Custom**, top site shortcust are on, wallpaper is off, and news feed is on and users can change the page layout. You can manage page layout.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcust are on, wallpaper is off, and news feed is on|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** turn on top site shortcuts <br> **wallpaper** turn on wallpaper <br> **newsfeed** turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> Separate values with `|`. For example, `topsites|newsfeed` turn top sites shortcuts and news feed|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout <br> **false** The page layout are disabled and users can NOT change any page layout options, value specified by IT admin via the policy or default values will be used |
+ 
 ### New Tab Page experiences
 
 When you sign in into Edge for iOS and Android, opening a new tab page delivers the familiar productivity content and new pivots that organize news feeds relevant to your organization's industry and interests in one view. The New Tab Page experience provides links for your organization's home page, top sites, and industry news.
@@ -221,7 +230,7 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.bookmarks |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the   bookmark URL. Separate the title and URL with the `|` character.<br>For example: `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
+|com.microsoft.intune.mam.managedbrowser.bookmarks |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the bookmark URL. Separate the title and URL with the `|` character.<br>For example: `Microsoft Bing|https://www.bing.com`<br><br>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
 
 #### My Apps bookmark
 
