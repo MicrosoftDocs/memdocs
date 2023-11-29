@@ -59,7 +59,6 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Frontline
 - Admin feedback
 - System alerts and email notifications
-- Windows 365 Boot
 - GPU Cloud PCs
 - Audit logs support in Azure Log Analytics
 
