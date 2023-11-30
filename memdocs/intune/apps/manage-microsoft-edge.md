@@ -406,25 +406,33 @@ By default, pop-ups is blocked. Organizations can manage the behavior.
 |com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting |**1** Allow all sites to show pop-ups. <br>**2** (Default) Do not allow any site to show pop-ups.|
 
 ### Allow pop-up on specific sites
-If this policy is not configured, the value from the DefaultPopupsSetting policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that can open pop-up. 
+If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that can open pop-up. 
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
 
 ### Block pop-up on specific sites
-If this policy is not configured, the value from the DefaultPopupsSetting policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
+If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
 
 ### Default search provider
-Organizations can configure search
+By default, Edge uses the default search provider to perform a search when users enter non-URL texts in the address bar. Users can change the search provider list. Organizations can manage the search provider behavior.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting |**1** Allow all sites to show pop-ups. <br>**2** (Default) Do not allow any site to show pop-ups.|
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled |**true** Enable the default search provider. Users can perform a search by entering non-URL texts in the address bar, but users cannot change the search provider list.<br> **false** Disable the default search provider. Users can change the search provider list，but cannot perform a search when entering non-URL texts in the address bar. |
+
+### Configure search provider
+Organizations can configure a search provider for users. In order to configure search provider, it's required to enable policy **DefaultSearchProviderEnabled** first. 
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `My Intranet Search`  |
 
 #### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
