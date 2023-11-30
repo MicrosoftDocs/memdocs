@@ -35,7 +35,7 @@ ms.collection:
 
 # What is Microsoft Intune app management?
 
-Microsoft Intune is a cloud-based service that protects your organization's data by using mobile device management (MDM) and mobile application management (MAM). You can use Intune to protect your organization's data at the app level (MAM) on both company devices and users' personal devices, such as smartphones, tablets, and laptops. Intune provides data protection for devices that have been enrolled in Intune. In addition, Intune provide data protection for apps have been enhanced to support Intune and deployed using Intune.
+Microsoft Intune is a cloud-based service that protects your organization's data by using mobile device management (MDM) and mobile application management (MAM). You can use Intune protect your organization's data at the app level (MAM) on both company devices and users' personal devices, such as smartphones, tablets, and laptops. Intune provide data protection for apps have been enhanced to support Intune and deployed using Intune, as well as data protection for devices that have been enrolled in Intune.
 
 The benefits of app management in Microsoft Intune include:
 - **Data protection**: Intune helps protect organization (corporate) data by controlling how apps are used and ensuring that sensitive information isn't leaked or shared inappropriately.
