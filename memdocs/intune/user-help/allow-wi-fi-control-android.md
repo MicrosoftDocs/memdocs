@@ -2,12 +2,12 @@
 # required metadata
 
 title: Allow Company Portal to control Wi-Fi - Microsoft Intune | Microsoft Docs
-description: Learn how to give Wi-Fi control to Company Portal. 
+description: Give permission to Intune Company Portal app to control Wi-Fi on work or school device.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/23/2020
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -31,15 +31,14 @@ ms.collection:
 
 # Allow Company Portal to control Wi-Fi  
 
-Company Portal must get user permission to control Wi-Fi on certain devices. Company Portal needs this permission in order to receive Wi-Fi network configurations from Intune. If you don't allow Company Portal to control your Wi-Fi, Intune won't be able to deliver Wi-Fi configurations to your device, which could prevent you from connecting to your organization's Wi-Fi network.   
+The Intune Company Portal app needs user permission to control Wi-Fi on certain devices enrolling for work or school. *Wi-fi control* enables Company Portal to receive Wi-Fi network configurations from Microsoft Intune. 
 
-You'll be prompted to allow Wi-Fi control if you're on a device that's:
+Company Portal prompts for permission during enrollment.  If you don't give Wi-Fi control to Company Portal, it could prevent you from connecting to your organization's Wi-Fi network.   
+
+Wi-Fi control is needed on devices that meet the following criteria:
 
 * Running Android version 10 or later and 
-* Enrolling or already enrolled in Intune using Android device administrator
-
-Company Portal prompts for permission during enrollment. If you enrolled your device in Intune before October 2020, you'll receive the prompt the next time your organization updates their Wi-Fi policy. 
-  
+* Enrolling or already enrolled in Intune using Android device administrator  
 
 ## Edit Wi-Fi control      
 
