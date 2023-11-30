@@ -427,12 +427,12 @@ By default, Edge uses the default search provider to perform a search when users
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled |**true** Enable the default search provider. Users can perform a search by entering non-URL texts in the address bar, but users cannot change the search provider list.<br> **false** Disable the default search provider. Users can change the search provider list，but cannot perform a search when entering non-URL texts in the address bar. |
 
 ### Configure search provider
-Organizations can configure a search provider for users. In order to configure search provider, it's required to enable policy **DefaultSearchProviderEnabled** first. 
+Organizations can configure a search provider for users. To configure a search provider, it's required to enable the policy **DefaultSearchProviderEnabled** first. 
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
-|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `My Intranet Search`  |
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`  |
 
 #### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
