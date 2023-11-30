@@ -60,19 +60,19 @@ Optionally, you can use a [device-only subscription](https://techcommunity.micro
 
 > [!NOTE]
 >
-> Self-deploying mode does not presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Microsoft Entra ID and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
+> Self-deploying mode doesn't presently associate a user with the device (since no user ID or password is specified as part of the process). As a result, some Microsoft Entra ID and Intune capabilities (such as BitLocker recovery, installation of apps from the Company Portal, or Conditional Access) may not be available to a user that signs into the device. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md) and [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
 
 ## Requirements
 
 > [!IMPORTANT]
 >
-> You cannot automatically re-enroll a device through Autopilot after an initial deployment in self-deploying mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, choose **Devices** &gt; **All devices** &gt; choose the devices you want to delete &gt; **Delete**.  For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
+> You can't automatically re-enroll a device through Autopilot after an initial deployment in self-deploying mode. Instead, delete the device record in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). From the admin center, select **Devices** > **All devices** > select the devices you want to delete > **Delete**.  For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
 Self-deploying mode uses a device's TPM 2.0 hardware to authenticate the device into an organization's Microsoft Entra tenant. Therefore, devices without TPM 2.0 can't be used with this mode. Devices must also support TPM device attestation. All new Windows devices should meet these requirements. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm). For Windows Autopilot software requirements, see [Windows Autopilot software requirements](./software-requirements.md).
 
 > [!IMPORTANT]
 >
-> If you attempt a self-deploying mode deployment on a device that does not have support TPM 2.0 or on a virtual machine, the process will fail when verifying the device with an 0x800705B4 timeout error (Hyper-V virtual TPMs are not supported). Also note that Windows 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809. 
+> If you attempt a self-deploying mode deployment on a device that doesn't have support TPM 2.0 or on a virtual machine, the process fails when verifying the device with an **0x800705B4** timeout error. This includes Hyper-V virtual TPMs.
 >
 > See [Windows Autopilot known issues](known-issues.md) and [Troubleshoot Autopilot device import and enrollment](troubleshoot-device-enrollment.md) to review other known errors and solutions.
 
@@ -107,6 +107,6 @@ When using Windows Autopilot to deploy in self-deploying mode, the following end
 
 >[!NOTE]
 >
->Deploying Exchange ActiveSync (EAS) policies using self-deploying mode for kiosk deployments will cause auto-logon functionality to fail.
+> Deploying Exchange ActiveSync (EAS) policies using self-deploying mode for kiosk deployments causes autologon functionality to fail.
 
 In case the observed results don't match these expectations, consult the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.

@@ -41,11 +41,11 @@ Once the diagnostic page is enabled, you can select the **View Diagnostics butto
 
 > [!NOTE]
 >
-> By default diagnostics will be automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
+> By default diagnostics are automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics)
 
 > [!NOTE]
 >
-> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
+> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` isn't blocked on the network.
 
 ## Windows Autopilot flow
 
