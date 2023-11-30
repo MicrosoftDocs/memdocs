@@ -419,6 +419,13 @@ If this policy is not configured, the value from the DefaultPopupsSetting policy
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
 
+### Default search provider
+Organizations can configure search
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting |**1** Allow all sites to show pop-ups. <br>**2** (Default) Do not allow any site to show pop-ups.|
+
 #### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
 
