@@ -147,19 +147,22 @@ After onboarding a device using the configuration package, you don't need to do 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
-3. For **Platform**, select **Windows 10 and Later**.
+3. For **Platform**, select **Windows 10, Windows 11, and Windows Server**.
 4. For **Profile type**, select **Endpoint detection and response**, and then select **Create**.
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
 6. On the **Configuration settings** page, configure the following options for **Endpoint Detection and Response**:
 
-   - **Sample sharing for all files**: Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
-   - **Expedite telemetry reporting frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender for Endpoint service more frequently.
+   - **Microsoft Defender for Endpoint client configuration package type**: Select *Auto from connector* to use the onboarding package (blob) from your Defender for Endpoint deployment.
+   - **Sample Sharing**: Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
+   - **[Deprecated] Telemetry Reporting Frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender for Endpoint service more frequently.
+
+   :::image type="content" source="./media/advanced-threat-protection-configure/automatic-package-configuration.png" alt-text="Screen shot of the configuration options for Endpoint Detection and Response.":::
 
    > [!NOTE]
    >
-   > The preceding screen capture shows your configuration options after you’ve configured a connection between Intune and Microsoft Defender for Endpoint. When connected, the details for the onboarding and offboarding blobs are automatically generated and transferred to Intune.
+   > The preceding screen capture shows your configuration options after you’ve configured a connection between Intune and Microsoft Defender for Endpoint. When connected, the details for the onboarding and offboarding blobs are automatically generated and transfer to Intune.
    >
-   > If you haven’t configured this connection successfully, the setting *Microsoft Defender for Endpoint client configuration package type* displays with options to specify onboarding and offboarding blobs.
+   > If you haven’t configured this connection successfully, the setting *Microsoft Defender for Endpoint client configuration package type* only includes options to specify onboard and offboard blobs.
 
 7. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 
