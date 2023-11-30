@@ -145,13 +145,13 @@ Edge supports the following settings for configuration:
 These settings can be deployed to the app regardless of device enrollment status.
 
 ### New Tab Page layout
-The **Custom** layout is the default layout for the new tab page. It shows top site shortcuts, news feed, and no wallpaper. Users can change the layout to suit their preferences. You can also manage the layout settings.
+The **Custom** layout is the default layout for the new tab page. It shows top site shortcuts, news feed, and no wallpaper. Users can change the layout to suit their preferences. Organizations can also manage the layout settings.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** turns on top site shortcuts <br> **wallpaper** turns on wallpaper <br> **newsfeed** turns on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the value specified via the policy or default values will be used |
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
  
 ### New Tab Page experiences
 
@@ -271,7 +271,6 @@ By default, users can choose to send optional diagnostic data from **Settings**-
 > [!NOTE]
 > **Optional diagnostic data** setting is also prompted to users during the First Run Experience (FRE). Organizations can skip this step by using the MDM policy [EdgeDisableShareUsageData](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata)
 
-
 #### Disable specific features
 
 Edge for iOS and Android allows organizations to disable certain features that are enabled by default. To disable these features, configure the following setting:
@@ -301,7 +300,6 @@ You can control whether sites can store cookies for your users within Edge for A
 
 > [!NOTE]
 > Edge for iOS does not support controlling cookies.
-
 
 ### Kiosk mode experiences on Android devices
 
@@ -399,6 +397,27 @@ By default, users can click through warning pages shows when users navigate to s
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed |**true** (default) Allow users to click through SSL warning pages. <br>**false** Prevent users from clicking through SSL warning pages.|
+
+### Pop-ups settings
+By default, pop-ups is blocked. Organizations can manage the behavior.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting |**1** Allow all sites to show pop-ups. <br>**2** (Default) Do not allow any site to show pop-ups.|
+
+### Allow pop-up on specific sites
+If this policy is not configured, the value from the DefaultPopupsSetting policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that can open pop-up. 
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
+
+### Block pop-up on specific sites
+If this policy is not configured, the value from the DefaultPopupsSetting policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that are blocked from opening pop-up.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`|
 
 #### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
