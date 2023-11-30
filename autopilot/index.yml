@@ -110,7 +110,7 @@ landingContent:
   # Card (optional)
   - title: Windows Autopilot Tutorials
     linkLists:
-    - linkListType: tutorials
+    - linkListType: tutorial
       links:
       - text: Windows Autopilot user-driven Microsoft Entra join
         url: tutorial/user-driven/azure-ad-join-workflow.md
