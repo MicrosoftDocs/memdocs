@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 11/28/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:   
 #audience:
 
-ms.reviewer: samyada
+ms.reviewer: benflamm
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
@@ -45,7 +45,7 @@ After you disconnect the account, sync your device in the Intune Company Portal 
 
 1. Open the Company Portal app.  
 2. Select your device.  
-3. Select **Check settings**. Wait while your device syncs your new email settings.
+3. Select **Check status**. Wait while your device syncs your new email settings.
 4. Sign in to your email with your work account.   
 
 Need more help? Contact your IT support person. For contact information, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) with your work or school account.  

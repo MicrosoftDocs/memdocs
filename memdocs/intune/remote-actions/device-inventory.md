@@ -101,7 +101,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Manufacturer|The manufacturer of the device.|Windows, macOS, iOS/iPadOS, Android|
 |Model|The model of the device.|Windows, macOS, iOS/iPadOS, Android|
 |Phone number|The phone number assigned to the device.|Windows, iOS/iPadOS, Android <br/><br/> NOTE: Reporting for phone number isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards won't write the data and therefore the phone number isn't reported in such cases.|
-|Subscribe carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android|
+|Subscriber carrier|The device's wireless carrier.|Windows, iOS/iPadOS, Android  <br/><br/> NOTE: Reporting for subscriber carrier isn't supported for Android Enterprise corporate-owned work profile devices. For Android Enterprise fully managed and dedicated devices, reporting for subscriber carrier is supported; however, certain SIM cards don't write the data and therefore the subscriber carrier isn't reported in such cases.|
 |Cellular technology|The radio system used by the device.|Windows, iOS/iPadOS, Android|
 |Wi-Fi MAC|The device's Media Access Control address.|Windows, macOS, iOS/iPadOS, Android<br><br>**NOTE**: As of October 2021, Intune doesn't display Wi-Fi MAC addresses for newly enrolled personally owned work profile devices and devices managed with device administrator running Android 9 and later. |
 |Ethernet MAC|The primary Ethernet MAC address for the device. For macOS devices with no ethernet, the device reports the Wi-Fi MAC address.|macOS|

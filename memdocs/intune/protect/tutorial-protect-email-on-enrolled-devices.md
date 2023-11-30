@@ -119,7 +119,6 @@ The Conditional Access policy will:
 
 Conditional Access policies are configurable in either the Microsoft Entra admin center or the Microsoft Intune admin center. Since we're already in the admin center, we can create the policy here.
 
-
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
