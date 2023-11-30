@@ -145,19 +145,17 @@ Edge supports the following settings for configuration:
 These settings can be deployed to the app regardless of device enrollment status.
 
 ### New Tab Page layout
-The default page layout is **Custom**, top site shortcust are on, wallpaper is off, and news feed is on and users can change the page layout. You can manage page layout.
+The **Custom** layout is the default layout for the new tab page. It shows top site shortcuts, news feed, and no wallpaper. Users can change the layout to suit their preferences. You can also manage the layout settings.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcust are on, wallpaper is off, and news feed is on|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** turn on top site shortcuts <br> **wallpaper** turn on wallpaper <br> **newsfeed** turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout <br> **false** The page layout are disabled and users can NOT change any page layout options, value specified by IT admin via the policy or default values will be used |
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** turns on top site shortcuts <br> **wallpaper** turns on wallpaper <br> **newsfeed** turns on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the value specified via the policy or default values will be used |
  
 ### New Tab Page experiences
 
-When you sign in into Edge for iOS and Android, opening a new tab page delivers the familiar productivity content and new pivots that organize news feeds relevant to your organization's industry and interests in one view. The New Tab Page experience provides links for your organization's home page, top sites, and industry news.
-
-Edge for iOS and Android offers organizations several options for adjusting the New Tab Page experience.
+Edge for iOS and Android offers organizations several options for adjusting the New Tab Page experience including organization logo, brand color, your home page, top sites, and industry news.
 
 #### Organization logo and brand color
 
@@ -172,7 +170,6 @@ To upload your organization's logo and color, first complete the following steps
 > As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
 > 
 > Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and **Page background color** will be used as brand color.
-
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
