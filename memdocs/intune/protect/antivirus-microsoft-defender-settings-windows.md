@@ -368,5 +368,5 @@ CSP: [AllowUserUIAccess](/windows/client-management/mdm/policy-csp-defender#defe
 
 - **No** - The Defender User Interface (UI) is inaccessible and notifications ware suppressed.
 
-      - **Yes**
+- **Yes**
 
