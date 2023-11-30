@@ -386,7 +386,7 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled |**true** (default) Use built-in certificate verifier and Microsoft Root Store to verify certificates. <br>**false** Use system certificate verifier and system root certificates as the source of public trust to verify certificates.|
+|com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled |**true** (default) Use built-in certificate verifier and Microsoft Root Store to verify certificates <br>**false** Use system certificate verifier and system root certificates as the source of public trust to verify certificates |
 
 > [!NOTE]
 > A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](/mem/intune/protect/microsoft-tunnel-mam-android).
@@ -396,14 +396,14 @@ By default, users can click through warning pages shows when users navigate to s
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed |**true** (default) Allow users to click through SSL warning pages. <br>**false** Prevent users from clicking through SSL warning pages.|
+|com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed |**true** (default) Allow users to click through SSL warning pages <br>**false** Prevent users from clicking through SSL warning pages|
 
 ### Pop-ups settings
 By default, pop-ups is blocked. Organizations can manage the behavior.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting |**1** Allow all sites to show pop-ups. <br>**2** (Default) Do not allow any site to show pop-ups.|
+|com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting |**1** Allow all sites to show pop-ups <br>**2** (Default) Do not allow any site to show pop-ups|
 
 ### Allow pop-up on specific sites
 If this policy is not configured, the value from the **DefaultPopupsSetting** policy (if set) or the user's personal configuration is used for all sites. Organizations can define a list of sites that can open pop-up. 
@@ -424,15 +424,15 @@ By default, Edge uses the default search provider to perform a search when users
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled |**true** Enable the default search provider. Users can perform a search by entering non-URL texts in the address bar, but users cannot change the search provider list.<br> **false** Disable the default search provider. Users can change the search provider list，but cannot perform a search when entering non-URL texts in the address bar. |
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled |**true** Enable the default search provider <br> **false** Disable the default search provider |
 
 ### Configure search provider
-Organizations can configure a search provider for users. To configure a search provider, it's required to enable the policy **DefaultSearchProviderEnabled** first. 
+Organizations can configure a search provider for users. To configure a search provider, it's required to configure policy **DefaultSearchProviderEnabled** first. 
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | The corresponding value is a string <br> **Example** `My Intranet Search`  |
-|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`  |
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | The corresponding value is a string <br> **Example** `https://search.my.company/search?q={searchTerms}`|
 
 #### Open external apps
 When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
