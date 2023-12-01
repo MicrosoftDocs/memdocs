@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/29/2023
+ms.date: 12/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,6 +71,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of November 27, 2023
 
 ### App management
+
+#### Configure offline caching in Microsoft 365 (Office) for Android devices<!-- 25008682 -->
+When the **Save As to Local Storage** setting is set to **blocked** in an [app protection policy](../apps/app-protection-policies.md), you can use a configuration key in an app configuration policy to enable or disable offline caching. This setting is only applicable to the Microsoft 365 (Office) app on Android. For more information, see [Data protection settings in Microsoft 365 (Office)](../apps/manage-microsoft-office.md#data-protection-settings-in-microsoft-365-office).
 
 #### Win32 app grace period settings on a device<!-- 17644728 -->
 On a device where a Win32 app with grace period settings has been deployed, low-rights users with non-administrative privileges can now interact with the grace period UX. Admins on the device will continue to be able to interact with the grace period UX on the device. For more information about grace period behavior, see [Set Win32 app availability and notifications](../apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
