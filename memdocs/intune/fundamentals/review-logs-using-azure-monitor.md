@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 11/30/2023
-ms.topic: how-to, faq
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
@@ -219,7 +219,7 @@ Once the data is sent from Intune, then it typically shows in the Azure Monitor 
 
 The new retention policy is applied to logs collected after the change. Logs collected before the policy change are unaffected.
 
-## How much does it cost to store my data?
+### How much does it cost to store my data?
 
 The storage costs depend on the size of your logs and the retention period you choose. For a list of the estimated costs for tenants, which depend on the log volume generated, go to [Storage size for activity logs](#storage-size-for-activity-logs) (in this article).
 
