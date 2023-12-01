@@ -45,15 +45,13 @@ You must have a Samsung Knox account to access Knox Mobile Enrollment services i
 
 ## Create profile  
 
-To use Microsoft Intune and Knox Mobile Enrollment together, create a profile in the Knox Admin Portal with the following configurations: 
+To use Microsoft Intune and Knox Mobile Enrollment together, create a profile in the Knox Admin Portal. Add Microsoft Intune to the profile as your enterprise mobility management (EMM) solution. 
 
-* EMM: **Microsoft Intune** 
-* EMM agent APK: `https://aka.ms/intune_kme_deviceowner`
-* Custom JSON data: `{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "enter Intune enrollment token string"}`  
+**Custom JSON data** appears optional in the Knox Admin Portal, but Microsoft Intune requires it for a successful enrollment. Enter the following JSON data:   
 
-Custom JSON data appears optional in the Knox Admin Portal, but Microsoft Intune requires it for a successful enrollment.  
+ `{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "enter Intune enrollment token string"}`  
 
-Additionally, configure these device settings in the profile:  
+ Add your enrollment token to the string where indicated. Additionally, configure these device settings in the profile:  
 
    * **QR code for enrollment** (optional): Add a QR code to speed up device enrollment. 
    * **System applications**: Leave all system apps enabled to ensure all apps are available in the profile. If you don't select this value, some default system apps are excluded from the apps tray. 
@@ -62,7 +60,8 @@ Additionally, configure these device settings in the profile:
 ## Upload devices  
 Assign your profile to Android devices uploaded in the Knox Admin Portal. Supported upload methods include:  
  
-* Samsung-approved resellers: A Samsung-approved reseller can automatically upload your organization's purchased devices in the Knox Admin Portal, where you can manage them. Use this option if you purchase devices through a Samsung-approved reseller. 
+* Samsung-approved resellers: A Samsung-approved reseller can automatically upload your organization's purchased devices in the Knox Admin Portal, where you can manage them. Use this option if you purchase devices through a Samsung-approved reseller.  
+
 * Knox Deployment App: You don't need to work with a reseller to upload devices in the Knox Deployment App. We recommend using the app for enrolling existing devices that were previously set up in Knox Mobile Enrollment. You can use Bluetooth or NFC to add devices to the Knox Admin Portal.  
 
 ## Resources  
