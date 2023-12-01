@@ -26,10 +26,6 @@ Configuration Manager supports the installation of the console on the following 
 
 - **Windows Server 2016**: Standard, Datacenter
 
-- **Windows Server 2012 R2** (x64): Standard, Datacenter
-
-- **Windows Server 2012** (x64): Standard, Datacenter
-
 - **Windows 11** (x64): Pro, Enterprise
 
 - **Windows 10** (x86, x64): Pro, Enterprise
