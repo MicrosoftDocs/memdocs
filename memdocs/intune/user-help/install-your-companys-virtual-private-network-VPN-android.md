@@ -2,12 +2,12 @@
 # required metadata
 
 title: Install your company's Virtual Private Network (VPN) | Microsoft Docs
-description: How to install your company's Virtual Private Network (VPN).
+description: Install your organization's Virtual Private Network (VPN) on your work or school device. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 11/29/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -31,15 +31,9 @@ ms.collection:
 ---
 
 
-# How to install your company's Virtual Private Network (VPN)
+# Install Virtual Private Network (VPN)  
+**Applies to Android**  
 
-If your company support has configured a VPN application to enable you to  connect to your company's resources, you'll see a notification on your Android device indicating that you need to install a VPN app. Follow these steps to install the VPN app:
+To install your organization's required VPN app on your device, tap the Company Portal notification. Google Play Store opens the store listing for the VPN app. After you install the app, tap **Install corporate VPN profile** and follow the onscreen prompts to set up your work VPN.   
 
-1. Pull down the notification drawer, and tap **Tap to install this required app**.
-
-2. In the **Play Store**, click **INSTALL** and follow the prompts to install the app.
-
-3. Tap **Install corporate VPN profile** and follow the prompts. The installation steps may be slightly different, depending on which VPN provider your company is using.
-
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For helpdesk details, sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
