@@ -1,11 +1,6 @@
 {
   "redirections": [
     {
-      "source_path": "memdocs/intune/enrollment/android-samsung-knox-mobile-enroll.md",
-      "redirect_url": "/mem/intune/fundamentals/deployment-guide-enrollment-android",
-      "redirect_document_id": false 
-    },
-    {
       "source_path": "memdocs/intune/user-help/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
       "redirect_document_id": false 
