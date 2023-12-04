@@ -74,5 +74,4 @@ Learn more about working with Microsoft Entra ID by reading the [Authentication 
 
 Find OData resources at [odata.org](https://www.odata.org).
   
-Review the OData Version 4.0 standard at [OData Version 4.0]
-(https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
+Review the OData Version 4.0 standard at [OData Version 4.0](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
