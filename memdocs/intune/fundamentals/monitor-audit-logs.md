@@ -4,8 +4,8 @@
 title: Audit changes and events in Microsoft Intune
 description: Learn how to review audit logs that record Microsoft Intune activities.
 keywords: 
-ms.author: dougeby
-author: dougeby
+ms.author: mandia
+author: MandiOhlinger
 manager: dougeby
 ms.date: 10/24/2023
 ms.topic: how-to
