@@ -61,7 +61,7 @@ This article provides an overview of the steps to start your Intune deployment.
 
   - **[Intune subscription](licenses.md)**: Included with some Microsoft 365 subscriptions. You also get access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
   - **[Microsoft 365 apps](https://www.microsoft.com/licensing/product-licensing/microsoft-365-apps)**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
-  - **[Microsoft Entra ID](https://www.microsoft.com/security/business/microsoft-entra-pricing)**: Microsoft Entra ID is used for the identity management for users, groups, and devices, and comes with your Intune subscription and possibly your Microsoft 365 subscription.
+  - **[Microsoft Entra ID](https://www.microsoft.com/security/business/microsoft-entra-pricing)**: Microsoft Entra ID is used for the identity management for users, groups, and devices. It comes with your Intune subscription and possibly your Microsoft 365 subscription.
 
     Microsoft Entra ID P1 or P2, which might cost extra, gives you more features commonly used by organizations, including Conditional Access, multifactor authentication (MFA), and dynamic groups.
 
@@ -189,7 +189,7 @@ If you use Configuration Manager, then there are two steps to cloud attach your 
 
 1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based Intune admin center.
 
-2. [Co-management](/mem/configmgr/comanage/overview): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages some workloads.
+2. [Co-management](/mem/configmgr/comanage/overview): Manage Windows client devices with Configuration Manager and Microsoft Intune. Configuration Manager manages some workloads, and Intune manages other workloads.
 
     For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage compliance & Conditional Access policies.
 

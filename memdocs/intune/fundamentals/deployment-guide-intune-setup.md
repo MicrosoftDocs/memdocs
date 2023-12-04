@@ -199,7 +199,7 @@ These steps are an overview, and are only included for those users who want a 10
 - Register existing on-premises Active Directory Windows client devices as devices in Microsoft Entra ID.
 - Move your existing on-premises Configuration Manager workloads to Intune.
 
-This option is more work for administrators, but can create a more seamless experience for existing Windows client devices. For new Windows client devices, we recommended to [start from scratch with Microsoft 365 and Intune](#option-4---start-from-scratch-with-microsoft-365-and-intune) (in this article).
+This option is more work for administrators, but can create a more seamless experience for existing Windows client devices. For new Windows client devices, we recommend you [start from scratch with Microsoft 365 and Intune](#option-4---start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
 1. Set up [hybrid Active Directory and Microsoft Entra ID](/entra/identity/devices/hybrid-join-plan) for your devices. Microsoft Entra hybrid joined devices are joined to your on-premises Active Directory, and registered with your Microsoft Entra ID. When devices are in Microsoft Entra ID, they're also available to Intune.
 
