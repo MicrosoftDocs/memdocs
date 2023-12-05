@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/25/2021
+ms.date: 07/12/2023
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,22 +30,20 @@ ms.collection:
 - tier1
 ---
 
-# Remove device from Company Portal for Android
+# Remove device from Company Portal for Android  
 
-Remove an enrolled device so that it's no longer managed by your organization. After you remove the device:  
+Remove an enrolled device so that it's no longer managed by your organization. After you remove the device from Company Portal:  
 
-* The device loses access to your organization's internal apps and websites.  
-* The device no longer appears in Company Portal.
-* You can't install apps from Company Portal.
-* Any settings that were changed on your device when you added it (for example, disabling the camera or requiring a certain password length) no longer apply.  
-* If your device was set up just so you can receive work emails, your device won't appear in the Company Portal anymore.
+* The device loses access to your organization's internal apps and websites.   
+* The device no longer appears in Company Portal. This applies to enrolled devices and devices you set up just to access work emails.  
+* You can no longer install apps in Company Portal.  
+* Setting requirements and restrictions, such as device PIN, disabling the camera, or prohibiting screenshots, are no longer enforced. 
 
 > [!NOTE]
-> You can't unenroll or remove your corporate-owned device from the 
-> Microsoft Intune app. The device was enrolled during initial device setup and must be enrolled to access your organization's resources.  
+> This article is for devices set up via the [Intune Company Portal app for Android](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). It doesn't apply to devices enrolled using the [Microsoft Intune app](https://play.google.com/store/apps/details?id=com.microsoft.intune). You can't unenroll or remove a corporate-owned device from the Microsoft Intune app.   
 
 ## Remove device in Company Portal app  
-1. Sign in to Company Portal.
+1. Sign in to the Company Portal app with your work account.  
 2. Select **Devices** and then select the device you want to remove. 
 
     ![Screenshot of Company Portal app, highlighting a device called "My Android".](./media/remove-device-from-company-portal-2101-01.png) 
@@ -59,7 +57,7 @@ Remove an enrolled device so that it's no longer managed by your organization. A
     ![Screenshot of Company Portal app, "Remove this device?" confirmation, highlighting the "OK" option.](./media/remove-device-from-company-portal-2101-03.png)  
 
 ## Disable Company Portal device management 
-Another way to remove your device from Intune is to disable the Company Portal app. After you disable the app, you can uninstall it. If you're planning to disable the app temporarily, be aware that you'll need to re-enroll your device when you're ready to use the app again.     
+Another way to remove your device from management is to disable the Company Portal app. Then you can uninstall the app from your device.    
 
 1. Sign in to Company Portal.   
 2. Tap the main menu.    
@@ -70,47 +68,50 @@ Another way to remove your device from Intune is to disable the Company Portal a
 
     ![Screenshot of Company Portal app, highlighting "Remove Company Portal" option in menu.](./media/remove-intune-company-portal-android-2101-02.png) 
 
-4. Tap **OK** to remove Company Portal and unenroll the device you're on.  
+4. Tap **OK** to remove Company Portal and unenroll the device you're on.   
 
-    ![Screenshot of Company Portal app,"Remove Company Portal?" confirmation, highlightin the "OK" option.](./media/remove-intune-company-portal-android-2101-03.png) 
+    ![Screenshot of Company Portal app,"Remove Company Portal?" confirmation, highlighting the "OK" option.](./media/remove-intune-company-portal-android-2101-03.png)  
+
+>![NOTE]
+> You can temporarily disable the app without uninstalling it if you plan to use it again. After you re-enable the app you must also re-enroll your device.  
 
 ## Uninstall the Company Portal app
 
-Company Portal is a device management app and can't be uninstalled until you remove your device from it. Once that's done, tap and hold the Company Portal app icon until you see **Uninstall**. Tap **Uninstall** to remove the app.    
+Company Portal is a device management app and can't be uninstalled until you remove your device from it. After you remove the device, tap and hold the Company Portal app icon until the app menu appears. Then tap **Uninstall** to remove the app.    
 
-Alternatively, you can go to **Settings** > **Apps** > **Company Portal** > **Uninstall**.  
+Alternatively, go to your device **Settings** > **Apps** and select **Company Portal** > **Uninstall**.  
 
 ## Remove the Company Portal app as a device administrator  
 
-As a last resort, you can remove your device and uninstall the app by removing Company Portal as device administrator. 
+As a last resort, you can remove the Company Portal app as a device administrator. Doing this will allow you to unenroll your device and uninstall the app.  
 
-For example, if you declined the Microsoft terms of use while initially trying to sign in to the Company Portal app, all subsequent sign-in attempts will be blocked. These steps will help you bypass the Company Portal to remove your device from management.    
+>[!TIP] 
+> If you decline the Microsoft terms of use when signing into the Company Portal app, all subsequent sign-in attempts will be blocked. Follow the steps in this section to remove the app as a device administrator, and then uninstall the app. If you didn't mean to decline the Microsoft terms of use, you can reinstall the app and start over.
 
-The actual names of each setting might vary on your Android device.  
+Device administrator settings may appear differently on your device. Use the option that aligns with your device experience. 
 
 **Option 1**:  
 
-1. Select **Settings** > **Security** > **Additional Security Settings** > **Device Administrators**.  
+1. Go to device **Settings** > **Security** > **Additional Security Settings** > **Device Administrators**.  
 2. Clear the **Company Portal** selection.  
 
 **Option 2**:
 
-1. Select **Settings** > **Lock screen and security** > **Other security settings** > **Device admin apps**.
-2. Clear the **Company Portal** selection.
-
+1. Select **Settings** > **Security and privacy** > **Other security settings** > **Device admin apps**.
+2. Clear the **Company Portal** selection.  
 
 ## Remove data collected by the Company Portal app  
 
 To remove all data that the Company Portal app for Android stores on your device:  
 
-- Clear app data by tapping **Applications** > **[*name of app*]** > **Clear data**.
-- Delete the following folder: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.  
-
+1. Clear app data.  
+   1. Go to device **Settings** > **Apps**.
+   1. Tap **Company Portal** > **Clear data**.  
+2. Delete the following folder from your device: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal    
 
 ### Effects of removing required apps  
-If you have a company-owned device, your organization might require that Company Portal be on your device at all times. If you uninstall it, you could lose access to protected company resources such as email, apps, Wi-Fi, or VPN, until the app is reinstalled. For more information about installing, updating, or removing required apps, see [Add apps to Microsoft Intune](/intune/apps/apps-add#apps-that-are-added-automatically-by-intune).
-
+If you have a company-owned device, your organization might require Company Portal on your device. If you uninstall it, you could lose access to protected work resources such as email, apps, Wi-Fi, or VPN. You can regain access by reinstalling the app and enrolling your device. 
 
 ## Next steps  
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your IT support person. For contact information, sign in to the Company Portal app and select the **Support** tab.  You can also access helpdesk information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). 

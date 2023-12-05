@@ -9,7 +9,7 @@ ms.assetid: 8d8a7a1d-1ba4-4867-b1b5-042e186e5656
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties and requirements of the SMS_FileUsageSummary server class.
 ms.reviewer: mstewart,aaroncz 

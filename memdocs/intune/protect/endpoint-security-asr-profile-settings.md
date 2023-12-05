@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/20/2023
+ms.date: 04/18/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -61,6 +61,11 @@ Supported platforms and profiles:
 ## Attack surface reduction (MDM)
 
 ### App and browser isolation profile
+
+> [!NOTE]  
+> This section details the settings in App and browser isolation profiles created before April 18, 2023. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
 
 #### App and browser isolation
 
@@ -226,7 +231,7 @@ Supported platforms and profiles:
 - **Block persistence through WMI event subscription**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
-  This attack surface reduction (ASR) rule is controlled via the following GUID: 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2
+  This attack surface reduction (ASR) rule is controlled via the following GUID: e6db77e5-3df2-4cf1-b95a-636979351e5b
 
   This rule prevents malware from abusing WMI to attain persistence on a device. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
 

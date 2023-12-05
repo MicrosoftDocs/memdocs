@@ -1,8 +1,8 @@
 ---
 author: smritib17
 ms.author: smbhardwaj
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: include
 ms.date: 11/15/2021
 ms.localizationpriority: high
@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 - You can compare your current score to other scores by setting a baseline.
   - There's a built-in baseline for **All organizations (median)** to see how you compare to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time. For more information, see [baseline settings](../settings.md#bkmk_baselines).
-   - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
+  - Baseline markers are shown for your overall score and subscores. If any of the scores have regressed by more than the configurable threshold from the selected baseline, the score is displayed in red and the top-level score is flagged as needing attention.
   - A status of **insufficient data** means you don't have enough devices reporting to provide a meaningful score. We currently require at least five devices.
 
 - **Insights and recommendations** is a prioritized list to improve your score. This list is filtered to the subnode's context when you navigate.

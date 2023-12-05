@@ -22,6 +22,9 @@ The phrase **Pilot group** is used throughout the co-management feature and conf
 
 Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites).
 
+> [!TIP]
+> As a companion to this article, we recommend using the [co-management setup guide](https://go.microsoft.com/fwlink/?linkid=2224782) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment.
+
 ## Enable co-management for versions 2111 and later
 
 [!INCLUDE [Enable Co-management starting in version 2111](includes/enable-co-management-2111.md)]

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/06/2023
+ms.date: 10/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, shthilla, chmaguir, chrisbal, priyar
+ms.reviewer: andreibiswas, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -47,7 +47,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
+- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
 
 - When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 
@@ -82,6 +82,17 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   - **Allow all account types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
 
+    You can also configure:
+
+    - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains in the following format:
+
+      ```csv
+      contoso.com
+      microsoft.com
+      ```
+
+      Or, add the domains individually using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
+
     This setting requires:
 
     - Google Play app version 80970100 or higher
@@ -89,9 +100,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
   - **Block all account types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
 
   > [!NOTE]
-  >
-  > - On corporate owned devices with work profile (COPE), Google accounts can't be added to the **Settings** app > **Accounts** > **Work**.
-  > - This setting uses the [Restrict accounts in Google Play](https://developer.android.com/work/dpc/security#google-play-accounts) feature (opens Android's web site).
+  > On personally owned devices with a work profile (BYOD) and corporate owned devices with work profile (COPE), Google accounts can't be added to the **Settings** app > **Accounts** > **Work**.
 
 - **Contact sharing via Bluetooth**: **Enable** allows sharing and access to personally owned devices with a work profile contacts from another device, including a car, that's paired using Bluetooth. Enabling this setting may allow certain Bluetooth devices to cache work contacts upon first connection. Disabling this policy after an initial pairing/sync may not remove work contacts from a Bluetooth device.
 
@@ -145,14 +154,18 @@ These password settings apply to the work profile password on personally owned d
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
+- **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile.
+
+  When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
+
 #### Android 12 and later
 
 - **Password complexity**: Use this setting to set the password complexity requirements. Your options:
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
   - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
-  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
-  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least four characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least eight characters. The alphabetic or alphanumeric length must be at least six characters.
 
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 
@@ -223,8 +236,8 @@ These password settings apply to the device password on personally owned devices
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
   - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
-  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
-  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least four characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least eight characters. The alphabetic or alphanumeric length must be at least six characters.
 
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 

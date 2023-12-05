@@ -5,10 +5,10 @@ title: Collect diagnostics from a Windows device
 titleSuffix: Microsoft Intune
 description: Learn how to collect diagnostics from a Windows device.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 08/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -36,7 +36,7 @@ ms.collection:
 The **Collect diagnostics** remote action lets you collect and download Windows device logs without interrupting the user. Only non-user locations and file types are accessed.
 
 <!--1895390-->
-The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon an Autopilot failure on a device. When an Autopilot failure occurs, logs will be processed on the failed device and then automatically captured and uploaded to Intune.
+The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon an Autopilot failure on a device. When an Autopilot failure occurs, logs will be processed on the failed device and then automatically captured and uploaded to Intune. A device can automatically capture one set of logs per day.
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
@@ -49,13 +49,13 @@ The diagnostic collection is stored for 28 days and then deleted. Each device ca
 
 The *Collect diagnostics* remote action is supported for:
 
-- Intune or co-managed devices.
-- Windows 10 version 1909 and later.
+- Intune or co-managed devices
+- Windows 10 version 1909 and later
 - Windows 11
-- Microsoft HoloLens 2 2004 and later.
-- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions.
-- Corporate-owned devices.
-- Devices that are online and able to communicate with the service during diagnostics. 
+- Microsoft HoloLens 2 2004 and later
+- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions
+- Corporate-owned devices
+- Devices that are online and able to communicate with the service during diagnostics
 
 > [!NOTE]
 > For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
@@ -79,9 +79,9 @@ To use the *Collect diagnostics* action:
 To view the diagnostics collected after an Autopilot failure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Monitor** > **Autopilot deployments (preview)**.
-3. In the middle pane, select a device.
-4. On the right hand **Properties** pane, under **Device Diagnostics**, select **Download**.
+2. Navigate to **Devices** > **Windows Devices**.
+3. Select a device.
+4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.
 
 ## Data collected
@@ -162,6 +162,7 @@ Files:
 - %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
 - %ProgramData%\USOShared\logs\system\\*.etl
 - %ProgramData Microsoft Update Health Tools\Logs\\*.etl
+- %temp%\CloudDesktop\*.log
 - %temp%\MDMDiagnostics\battery-report.html
 - %temp%\MDMDiagnostics\energy-report.html
 - %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab

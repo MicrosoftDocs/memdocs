@@ -9,7 +9,7 @@ ms.assetid: 677fcbd0-9b4d-4e44-8601-3975dc59c9b9
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: An overview of SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
 ms.reviewer: mstewart,aaroncz 

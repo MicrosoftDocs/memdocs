@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/28/2022
+ms.date: 06/16/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice: 
@@ -34,7 +34,7 @@ ms.collection:
 
 You can assign some licenses on [windows365.microsoft.com](https://windows365.microsoft.com).  For full license management, use the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with an Azure Active Directory (Azure AD) Global Administrator account.
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) with a Microsoft Entra Global Administrator account.
 2. Select **Your organization’s Cloud PCs**.
 3. Select the user whose licenses you want to manage.
 4. Select **Licenses and apps**.

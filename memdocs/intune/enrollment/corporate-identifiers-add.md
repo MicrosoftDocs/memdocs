@@ -45,7 +45,7 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 - Enrolled as [Android Enterprise corporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
 - Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md)
 - Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md)
-- Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
+- Joined to Microsoft Entra ID with work or school credentials. [Devices that are Microsoft Entra registered](/azure/active-directory/devices/overview) will be marked as personal.
 - Set as corporate in the [device's properties list](#change-device-ownership)
 
 After enrollment, you can [change the ownership setting](#change-device-ownership) between **Personal** and **Corporate**.
@@ -53,6 +53,9 @@ After enrollment, you can [change the ownership setting](#change-device-ownershi
 ## Identify corporate-owned devices with IMEI or serial number
 
 As an Intune admin, you can create and import a comma-separated value (.csv) file that lists 14-digit IMEI numbers or serial numbers. Intune uses these identifiers to specify device ownership as corporate during device enrollment. Each IMEI or serial number can have details specified in the list for administrative purposes.
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 This feature is supported for the following platforms:
 

@@ -5,8 +5,8 @@ title: Privacy and personal data in Intune
 titleSuffix: Microsoft Intune
 description: Learn what personal data is collected and processed in Intune.
 keywords: privacy, GDPR, personal data
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 09/01/2020
 ms.topic: conceptual
@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- privacy
 ---
 
 

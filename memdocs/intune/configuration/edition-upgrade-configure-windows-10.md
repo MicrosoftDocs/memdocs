@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ ms.collection:
 
 As part of your mobile device management (MDM) solution, you may want to upgrade your Windows 10/11 devices. For example, you want to upgrade your Windows 10 Professional devices to Windows 10 Enterprise. Or, you want the Windows 10 device to switch out of S mode.
 
-[Windows 10 S mode](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) (opens another Microsoft web site) is designed for security and performance. You can use Intune to switch out of S mode. Switching out of S mode is one way. And once you switch out of S mode, you can't go back to Windows 10 S mode. See some [commonly-asked questions](https://support.microsoft.com/help/4020089/windows-10-in-s-mode-faq) about S mode.
+[Windows 10 S mode](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) (opens another Microsoft web site) is designed for security and performance. You can use Intune to switch out of S mode. Switching out of S mode is one way. And once you switch out of S mode, you can't go back to Windows 10 S mode. See some [commonly asked questions](https://support.microsoft.com/help/4020089/windows-10-in-s-mode-faq) about S mode.
 
 This feature applies to:
 
@@ -112,18 +112,18 @@ The following table lists the supported upgrade paths for the Windows 10 edition
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
-7. In **Configuration settings**, enter the settings you want to configure. For a list of all settings, and what they do, see:
+7. In **Configuration settings**, enter the settings you want to configure. For a list of all settings, and what they do, go to:
 
     - [Windows 10 upgrade and S mode](edition-upgrade-windows-settings.md)
     - [Windows Holographic for Business](holographic-upgrade.md)
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 

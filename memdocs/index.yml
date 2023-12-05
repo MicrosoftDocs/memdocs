@@ -56,7 +56,7 @@ productDirectory:
     - title: Windows Autopilot docs
       imageSrc: ./media/autopilot.svg
       summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
-      url: ./autopilot/index.yml      
+      url: /autopilot/index      
     # Card
     - title: Endpoint analytics docs
       imageSrc: ./media/endpoint-analytics.svg

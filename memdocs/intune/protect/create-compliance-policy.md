@@ -4,8 +4,8 @@
 title: Create device compliance policies in Microsoft Intune
 description: Create device compliance policies for Microsoft Intune.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/08/2023
 ms.topic: how-to
@@ -26,6 +26,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- compliance
 ---
 
 # Create a compliance policy in Microsoft Intune
@@ -48,7 +49,7 @@ To use device compliance policies, be sure you:
 - Use the following subscriptions:
 
   - Intune
-  - If you use Conditional Access, then you need Azure Active Directory (AD) Premium edition. [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Azure AD.
+  - If you use Conditional Access, then you need Microsoft Entra ID P1 or P2 edition. [Microsoft Entra pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Microsoft Entra ID.
 
 - Use a supported platform:
 
@@ -59,6 +60,8 @@ To use device compliance policies, be sure you:
   - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
   - macOS
   - Windows 10/11
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 - Enroll devices in Intune (required to see the compliance status)
 

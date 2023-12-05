@@ -9,7 +9,7 @@ ms.assetid: 3a3d65ac-be3c-471c-9819-2bbb28be3b15
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how DetermineIfRebootPending is simplified from Managed Object Format code and defines the method.
 ms.reviewer: mstewart,aaroncz 

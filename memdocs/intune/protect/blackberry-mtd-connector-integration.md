@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/30/2023
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,7 +43,7 @@ The following subscriptions and accounts are required to integrate UES with Micr
 
 - Microsoft Intune Plan 1 subscription
 
-- Azure Active Directory (Azure AD) account with Global Administrator rights to grant the following permissions:
+- Microsoft Entra account with Global Administrator rights to grant the following permissions:
 
   - Sign in and read user profile
 
@@ -61,24 +61,24 @@ The following authorization process happens when you connect the BlackBerry Prot
 
 - Allow BlackBerry UES to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day-to-day operation.
 
-- Allow BlackBerry UES to sync Azure AD enrollment group membership to populate its device's database.
+- Allow BlackBerry UES to sync Microsoft Entra enrollment group membership to populate its device's database.
 
-- Allow BlackBerry UES management console to use Azure AD Single Sign On (SSO).
+- Allow BlackBerry UES management console to use Microsoft Entra single sign-on (SSO).
 
-- Allow BlackBerry Protect app to sign in using Azure AD SSO.
+- Allow BlackBerry Protect app to sign in using Microsoft Entra SSO.
 
-For more information about consent and Azure AD applications, see [Request the permissions from a directory admin](/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin).
+For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/v2-permissions-and-consent).
 
 ## Set up BlackBerry Protect Mobile MTD connector
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.
-2. Go to **All services** > **Tenant administration**.
-3. Select **Connectors and tokens**.  
+2. Go to ***Tenant administration**.
+3. Select **Connectors and tokens**.
 4. Under **Cross platform**, select **Mobile Threat Defense**.
 5. Select **Add**.
-6. For **Select the Mobile Threat Defense connector to setup,** choose **BlackBerry Protect Mobile**. 
-7. Select **Open the BlackBerry Protect Mobile admin console**. Keep the Microsoft Intune admin center tab open for later.
-8. Sign in with your Azure AD account, and then follow the instructions in [Integrating UES with Intune to respond to mobile threats](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/setup/setup/Setting-up-BlackBerry-Protect/Integrating-EMM-to-respond-to-mobile-threats) (opens BlackBerry UES docs) to complete setup.  
+6. For **Select the Mobile Threat Defense connector to setup,** choose **CylancePROTECT Mobile**.
+7. Select **Open the CylancePROTECT Mobile admin console**. Keep the Microsoft Intune admin center tab open for later.
+8. Sign in with your Microsoft Entra account, and then follow the instructions in [Integrating UES with Intune to respond to mobile threats](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/setup/setup/Setting-up-BlackBerry-Protect/Integrating-EMM-to-respond-to-mobile-threats) (opens BlackBerry UES docs) to complete setup.
 9. After you finish setup in the UES management console, return to your tab in the Microsoft Intune admin center.
 10. Under **MDM Compliance Policy Settings**, turn on the following settings:
     * **Connect Android devices to BlackBerry Protect Mobile**

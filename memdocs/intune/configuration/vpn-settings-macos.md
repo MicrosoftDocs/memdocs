@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: abalwan
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -34,6 +34,10 @@ ms.collection:
 This article shows you the Intune settings you can use to configure VPN connections on devices running macOS.
 
 Depending on the settings you choose, not all values in the following list are configurable.
+
+This feature applies to:
+
+- macOS
 
 ## Before you begin
 

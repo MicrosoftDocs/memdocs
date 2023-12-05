@@ -129,7 +129,7 @@ Starting in version 2006, you can use Windows PowerShell cmdlets for this task. 
 
 1. Select **OK** to deploy the policy.
 
-You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab.
+You can create multiple deployments of the same policy. To view additional information about each deployment, select the policy in the **BitLocker Management** node, and then in the details pane, switch to the **Deployments** tab. You can also use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 > [!IMPORTANT]
 > If a remote desktop protocol (RDP) connection is active, the MBAM client doesn't start BitLocker Drive Encryption actions. Close all remote console connections and sign in to a console session with a domain user account. Then BitLocker Drive Encryption begins and the client uploads recovery keys and packages. If you sign in with a local user account, BitLocker Drive Encryption doesn't start.
@@ -137,8 +137,6 @@ You can create multiple deployments of the same policy. To view additional infor
 > You can use RDP to remotely connect to the console session of the device with the `/admin` switch. For example: `mstsc.exe /admin /v:<IP address of device>`
 >
 > A _console session_ is either when you're at the computer's physical console, or a remote connection that's the same as if you're at the computer's physical console.
-
-Starting in version 2006, you can use Windows PowerShell cmdlets for this task. For more information, see [New-CMSettingDeployment](/powershell/module/configurationmanager/new-cmsettingdeployment).
 
 ## Monitor
 

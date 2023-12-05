@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 06/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,7 @@ ms.collection:
 
 # Understand App Protection Policy delivery timing
 
-Learn the different deployment windows for app protection policies to understand when changes should appear on your end-user devices.
+Learn about the different delivery timing for app protection policies to understand when changes should appear on your end-user devices.
 
 ## Delivery timing summary
 

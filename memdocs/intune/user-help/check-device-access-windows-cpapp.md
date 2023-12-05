@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/11/2022
+ms.date: 08/04/2023
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -37,7 +37,10 @@ Organizations enforce requirements&ndash;such as encryption and password limits&
 
 The **Check access** action evaluates your device's settings and its access status. The **Device details** page lists the settings you need to adjust to regain access. 
 
-Complete the steps in this article to check access from the Company Portal app for Windows.  
+Complete the steps in this article to check access from the Company Portal app for Windows. 
+
+> [!NOTE]
+> If you don't have the Company Portal app installed, you can still [use the Company Portal website to check access](check-status-company-portal-website.md).
 
 ## Check access from Device details page  
 1. Open the Company Portal app for Windows and go to **My Devices**.  

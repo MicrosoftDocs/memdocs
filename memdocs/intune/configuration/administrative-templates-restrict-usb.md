@@ -2,12 +2,12 @@
 # required metadata
 
 title: Restrict USB devices using administrative templates in Microsoft Intune
-description: Use Administrative templates in Microsoft Intune to restrict USB devices, including thumb drives, flash drives, USB cameras, and more. Use other settings to allow specific USB devices on Windows 10/11 devices.
+description: Use ADMX administrative templates in Microsoft Intune to restrict USB devices, including thumb drives, flash drives, USB cameras, and more. Use other settings to allow specific USB devices on Windows 10/11 devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 09/05/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,10 @@ Many organizations want to block specific types of USB devices, such as USB flas
 
 You can use Administrative Templates (ADMX) templates to configure these settings in a policy, and then deploy this policy to your Windows devices. For more information on Administrative Templates, and what they are, see [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md).
 
-This article shows you how to create an ADMX policy with USB settings, and use a log file to troubleshoot devices that shouldn't be blocked.
+This article shows you:
+
+- How to create an ADMX policy with USB settings in the Intune admin center
+- How to use a log file to troubleshoot devices that shouldn't be blocked
 
 Applies to:
 
@@ -43,6 +46,8 @@ Applies to:
 - Windows 10
 
 ## Create the profile
+
+This policy gives an example of how to block (or allow) features that affect USB devices. You can use this policy as a starting point, and then add or remove settings as needed for your organization.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -68,13 +73,13 @@ Applies to:
 
       In the following example, the **Keyboard**, **Mouse**, and **Multimedia** classes are allowed:
 
-      :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-using-drivers-setting.png" alt-text="Screenshot that shows how to set the Allow installation of devices using drivers that match these device setup classes setting in Intune and how to add your class GUIDs.":::
+      :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-using-drivers-setting.png" alt-text="Screenshot that shows how to use Microsoft Intune to set the Allow installation of devices using drivers that match these device setup classes setting and add your class GUIDs.":::
 
       Select **OK**.
 
     - **Allow installation of devices that match any of these Device IDs**: Select **Enabled**. Then, add the device/hardware IDs for devices you want to allow:
 
-       :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-that-match-setting.png" alt-text="Screenshot that shows how to set the Allow installation of devices that match any of these Device IDs setting in Intune and how to add your hardware IDs.":::
+       :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-that-match-setting.png" alt-text="Screenshot that shows how to use Intune to set the Allow installation of devices that match any of these Device IDs setting and add your hardware IDs.":::
 
       To get the device/hardware ID, you can use Device Manager, find the device, and look at the properties. For the specific steps, see [find the hardware ID on a Windows device](/windows-hardware/drivers/install/hardware-ids).
 
@@ -121,7 +126,7 @@ To find the GUID of your device, use the following steps:
 2. In the file:
 
     1. Search for **Restricted installation of devices not described by policy**. 
-    2. In this section, find the `Class GUID of device changed to: {GUID}` text. This `{GUID}` needs added to your policy.
+    2. In this section, find the `Class GUID of device changed to: {GUID}` text. Add this `{GUID}` to your policy.
 
         In the following example, you see the `Class GUID of device changed to: {36fc9e60-c465-11cf-8056-444553540000}` text:
 

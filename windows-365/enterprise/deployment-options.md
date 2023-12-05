@@ -37,10 +37,10 @@ You have two options for network deployment of the Windows 365 service:
 - Use a Microsoft-hosted network
   - Recommended option.
   - Ideal for the Windows 365 Software-as-a-Service (SaaS) features of simplicity, reliability, and scalability.
-  - Supports the Azure Active Directory join identity model.
+  - Supports the Microsoft Entra join identity model.
   - No requirement for Azure subscription or expertise.
 - Use Azure Network Connections (ANC)
-  - Supports both Azure AD join and hybrid Azure AD join identity models.
+  - Supports both Microsoft Entra join and Microsoft Entra hybrid join identity models.
 
 ## Microsoft-hosted network
 
@@ -58,9 +58,11 @@ You don’t have to bring in your own Azure subscription(s), plan, design, deplo
 
 This option is analogous to providing an employee with a laptop to use at home. You as an organization don’t control the network the device sits on. You do fully control how the Windows device is configured, secured, and how it connects to your on-premises network. With Windows 365, this control is possible thanks to the end-to-end Zero Trust Security Framework-aligned adaptive security controls and configurations.
 
-For example, users can be authenticated with adaptive controls of Azure AD Conditional Access. Corporate connectivity can be delivered by using VPN. Internet security can use a cloud-based secure web gateway (SWG). The advantage is that devices can be deployed at scale in a short timeframe whenever needed on a high bandwidth, resilient network.
+For example, users can be authenticated with adaptive controls of Microsoft Entra Conditional Access. Corporate connectivity can be delivered by using VPN. Internet security can use a cloud-based secure web gateway (SWG). The advantage is that devices can be deployed at scale in a short timeframe whenever needed on a high bandwidth, resilient network.
 
-### Diagram: Microsoft-hosted network option - Azure AD join only
+<a name='diagram-microsoft-hosted-network-option---azure-ad-join-only'></a>
+
+### Diagram: Microsoft-hosted network option - Microsoft Entra join only
 
 This diagram shows the Microsoft-hosted network with the Cloud PC and virtual network card within a subscription managed by Microsoft.
 
@@ -79,9 +81,9 @@ This diagram shows the Microsoft-hosted network with the Cloud PC and virtual ne
 
 Before using the Microsoft-hosted network option, review these considerations:
 
-- This option isn’t compatible with the Hybrid Azure AD join model. This option is a Cloud-only deployment with no connectivity to on-premises Active Directory Domain Services infrastructure. If you have Group Policy Object-based management policies that can’t be converted to Intune, then this option isn't the right one for you.
+- This option isn’t compatible with the Microsoft Entra hybrid join model. This option is a Cloud-only deployment with no connectivity to on-premises Active Directory Domain Services infrastructure. If you have Group Policy Object-based management policies that can’t be converted to Intune, then this option isn't the right one for you.
 - No control of the VNet. The virtual NIC is Microsoft-managed. Therefore, all network controls must be implemented on the Cloud PC itself, similar to physical devices in a work-from-home scenario.
-- No direct access to on-premises resources. A VPN or private access solution is required to access these resources. When using VPNs with a Cloud PC, use [split tunneling]( https://techcommunity.microsoft.com/t5/windows-365/optimizing-rdp-connectivity-for-windows-365/m-p/3554327) to make sure that RDP traffic isn’t routed through the VPN.
+- No direct access to on-premises resources. A VPN or private access solution is required to access these resources. When using VPNs with a Cloud PC, use [split tunneling](https://techcommunity.microsoft.com/t5/windows-365/optimizing-rdp-connectivity-for-windows-365/m-p/3554327) to make sure that RDP traffic isn’t routed through the VPN.
 - Requires a cloud native management operation model like Intune.
 - Port 25 is blocked.
 - Ping/ICMP is blocked.
@@ -91,7 +93,7 @@ Before using the Microsoft-hosted network option, review these considerations:
 
 ## Azure Network Connection option
 
-With the Azure Network Connection (ANC) deployment option, you’re completely in charge of the VNet and its configuration. If you’re using a hybrid Azure AD join model, you must use this deployment option. This option provides line-of-sight to your on-premises Azure Directory resources and lets you customize network and security goals like:
+With the Azure Network Connection (ANC) deployment option, you’re completely in charge of the VNet and its configuration. If you’re using a Microsoft Entra hybrid join model, you must use this deployment option. This option provides line-of-sight to your on-premises Azure Directory resources and lets you customize network and security goals like:
 
 - Traffic routes.
 - Ports and protocols.
@@ -105,26 +107,34 @@ You select the VNet from those in your Azure subscription. You’ll configure pr
 
 Azure Network Connection supports two identity deployment models:
 
-- Azure AD join
-- Hybrid Azure AD join
+- Microsoft Entra join
+- Microsoft Entra hybrid join
 
-### Azure AD join
+<a name='azure-ad-join'></a>
 
-When using Azure AD join, you’re not required to create a connection from the VNet to your on-premises network. You must merely make sure that there is outbound internet connectivity to the required endpoints. However, you might want to add an on-premises connection for accessing resources located in your on-premises file servers and applications. You can create the connection by using ExpressRoute or site-to-site VPN, but these options present extra cost and complexity.
+### Microsoft Entra join
 
-For simplicity, when using Azure AD join, we recommend that you use the Microsoft-hosted network option previously explained. In that case, you can use a VPN or private access solution over the internet to access corporate resources.
+When using Microsoft Entra join, you’re not required to create a connection from the VNet to your on-premises network. You must merely make sure that there is outbound internet connectivity to the required endpoints. However, you might want to add an on-premises connection for accessing resources located in your on-premises file servers and applications. You can create the connection by using ExpressRoute or site-to-site VPN, but these options present extra cost and complexity.
 
-#### Diagram: ANC option - Azure AD join
+For simplicity, when using Microsoft Entra join, we recommend that you use the Microsoft-hosted network option previously explained. In that case, you can use a VPN or private access solution over the internet to access corporate resources.
 
-![Diagram of ANC Azure AD join option](./media/deployment-options/azure-network-connection-azure-ad-join.png)
+<a name='diagram-anc-option---azure-ad-join'></a>
 
-### Hybrid Azure AD join
+#### Diagram: ANC option - Microsoft Entra join
 
-With Hybrid Azure AD join, a connection to the on-premises network is required from the VNet. The only way to reach the DC infrastructure located there is to use the ANC deployment option. This connection is a critical component so care should be taken to ensure reliability and redundancy.
+![Diagram of ANC Microsoft Entra join option](./media/deployment-options/azure-network-connection-azure-ad-join.png)
 
-#### Diagram: ANC option - Hybrid Azure AD join
+<a name='hybrid-azure-ad-join'></a>
 
-![Diagram of ANC hybrid Azure AD join option](./media/deployment-options/azure-network-connection-hybrid-azure-ad-join.png)
+### Microsoft Entra hybrid join
+
+With Microsoft Entra hybrid join, a connection to the on-premises network is required from the VNet. The only way to reach the DC infrastructure located there is to use the ANC deployment option. This connection is a critical component so care should be taken to ensure reliability and redundancy.
+
+<a name='diagram-anc-option---hybrid-azure-ad-join'></a>
+
+#### Diagram: ANC option - Microsoft Entra hybrid join
+
+![Diagram of ANC Microsoft Entra hybrid join option](./media/deployment-options/azure-network-connection-hybrid-azure-ad-join.png)
 
 ### Benefits of the ANC option
 

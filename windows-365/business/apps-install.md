@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 05/09/2023
 audience: Admin
 ms.topic: how-to
 ms.service: windows-365

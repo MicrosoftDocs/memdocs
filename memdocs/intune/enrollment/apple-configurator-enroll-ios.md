@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: iOS/iPadOS device enrollment - Apple Configurator-Setup Assistant
+title: iOS/iPadOS direct enrollment - Apple Configurator-Setup Assistant
 titleSuffix: Microsoft Intune
 description: Learn how to use the Apple Configurator to enroll corporate-owned iOS/iPadOS devices with Setup Assistant.
 keywords:
@@ -62,7 +62,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 
 2. Choose **Profiles** > **Create**.
 
-3. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use the name to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
+3. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
 
     :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
@@ -100,12 +100,13 @@ Enrollment with Apple Configuration has the following limitations:
 
 ### Add Apple Configurator serial numbers
 
-1. Create a two-column, comma-separated value (.csv) list without a header. Add the serial number in the left column, and the details in the right column. The current maximum for the list is 5,000 rows. In a text editor, the .csv list looks like this:
-
-    F7TLWCLBX196,device details</br>
-    DLXQPCWVGHMJ,device details
-
-   Learn [how to find an iOS/iPadOS device serial number](https://support.apple.com/HT204073).
+1. In a text editor, create a two-column, comma-separated value (.csv) list without a header. Add the serial number in the left column, and device details in the right column, using the following format:  <br/><br/>
+   `Serial number,device details`  
+   
+   You can include any kind of detail about the device. For example: <br/><br/>
+   `F7TLWCLBX196,iPad Air (5th generation) - Blue`  
+    
+   The current maximum for the list is 5,000 rows. For information about how to find an iOS/iPadOS device serial number, see [Find the serial number or IMEI on your iPhone, iPad, or iPod touch](https://support.apple.com/HT204073) (opens Apple Support website).  
 2. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator** > **Devices** > **Add**.
 
 5. Select an **Enrollment profile** to apply to the serial numbers you're importing. If you want the new serial number details to overwrite any existing details, choose **Overwrite details for existing identifiers**.

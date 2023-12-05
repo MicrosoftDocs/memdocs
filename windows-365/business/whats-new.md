@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 11/15/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -50,6 +50,56 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
+## Week of November 13, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows App now available in public preview<!--46667283-->
+
+Windows App lets users securely connect to Windows devices and apps. Supported remote devices include:
+
+- Azure Virtual Desktop
+- Windows 365 Cloud PC
+- Microsoft Dev Box
+- Remote Desktop Services
+- Remote PC
+
+Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers.
+
+<!-- ########################## -->
+## Week of October 30, 2023 (Service release 2310)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Two new sizes for Cloud PCs<!--46653331-->
+
+Two new sizes are now available for Windows 365 Cloud PCs:
+
+- 16vCPU/64GB RAM/512GB storage​
+- 16vCPU/64GB RAM/1TB storage
+
+These 16 vCPU licenses can be purchased and assigned in the same way that you purchase and assign other Windows 365 licenses.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Miscellaneous
+
+#### Self-help in Windows 365 Business<!--45828334-->
+
+A new self-help button for end users is now available for Windows 365 Business. End users will be able to click the **?** button and ask questions to find relevant help topics.
+
+<!-- ########################## -->
+## Week of October 18, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Set up Intune so admins can deploy apps to Cloud PCs<!--46943510-->
+
+We’ve published a new help documentation article. For more information, see [Set up Intune so admins can deploy apps to Cloud PCs](apps-install-admin.md).
+
+<!-- ########################## -->
 ## Week of December 5, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -75,9 +125,9 @@ Admins can select the **Language and region** option under **Update organization
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143 wnready-->
+#### New setting to easily enroll Business Cloud PCs in Microsoft Intune<!--40009143 wnready-->
 
-Windows 365 Business admins can now set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager. For more information, see [Update organization settings](change-organization-default-settings.md).
+Windows 365 Business admins can now set a toggle that automatically enrolls new Cloud PCs in to Microsoft Intune. For more information, see [Update organization settings](change-organization-default-settings.md).
 
 <!-- ########################## -->
 ## Week of October 17, 2022
@@ -176,7 +226,7 @@ Users can now restore a Cloud PC to a state from a previous point in time. Multi
 
 #### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
 
-To make it easier for admins to set up Windows 365, a link has been added to the Microsoft 365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
+To make it easier for admins to set up Windows 365, a link has been added to the Microsoft 365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [intune.microsoft.com](https://intune.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
 
 #### Higher Cloud PC screen resolution option (preview)<!--38301718 wnready-->
 
@@ -187,7 +237,7 @@ Cloud PC users can now choose a higher screen resolution when they connect to th
 
 #### New documentation article: Windows 365 approved partners
 
-We’ve published a new help documentation article. For more information, see [Windows 365 approved partners](../partners.md).
+We've published a new help documentation article. For more information, see [Windows 365 approved partners](../partners.md).
 
 <!-- ########################## -->
 ## Week of December 6, 2021 (Service release 2111)

@@ -39,6 +39,10 @@ Microsoft Intune includes many settings to help manage and protect your devices.
 
 As part of your mobile device management (MDM) solution, use these settings to control the Windows client edition and Window 10 S mode options for your Windows devices.
 
+This feature applies to:
+
+- Windows 10
+
 For more information on this feature, see [Upgrade Windows 10/11 editions or enable S mode](edition-upgrade-configure-windows-10.md).
 
 For information on other options to upgrade Windows editions, see [Windows 10/11 edition upgrade](/windows/deployment/upgrade/windows-10-edition-upgrades).

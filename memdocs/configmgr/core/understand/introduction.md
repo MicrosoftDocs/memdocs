@@ -28,7 +28,7 @@ The following Microsoft management solutions are all now part of the **Microsoft
 - [Configuration Manager](../../index.yml)
 - [Intune](../../../intune/index.yml)
 - [Endpoint analytics](../../../analytics/index.yml)
-- [Autopilot](../../../autopilot/index.yml)
+- [Autopilot](/autopilot/index)
 
 For more information, see [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).
 
@@ -63,7 +63,7 @@ Configuration Manager extends and works alongside many Microsoft technologies an
 
 Configuration Manager also uses:  
 
-- Active Directory Domain Services and Azure Active Directory for security, service location, configuration, and to discover the users and devices that you want to manage.  
+- Active Directory Domain Services and Microsoft Entra ID for security, service location, configuration, and to discover the users and devices that you want to manage.  
 - Microsoft SQL Server as a distributed change management database—and integrates with SQL Server Reporting Services (SSRS) to produce reports to monitor and track management activities.  
 - Site system roles that extend management functionality and use the web services of Internet Information Services (IIS).
 - Delivery Optimization, Windows Low Extra Delay Background Transport (LEDBAT), Background Intelligent Transfer Service (BITS), BranchCache, and other peer caching technologies to help manage content on your networks and between devices.

@@ -9,7 +9,7 @@ ms.assetid: 9453f2e6-006a-4932-b67f-fda5e149133a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how the CCM_RequestedAppPolicy Activation class represents a requested application policy activation.
 ms.reviewer: mstewart,aaroncz 

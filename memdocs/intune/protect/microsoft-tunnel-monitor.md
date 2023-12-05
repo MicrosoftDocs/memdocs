@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2022
+ms.date: 11/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -157,7 +157,7 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
   - *Feb 25 16:37:56 MSTunnelTest-VM ocserv-access[9528]: ACCESS_LOG,41150dc4-238x-4dwv-9q89-55e987f30c32,f5132455-ef2dd-225a-a693-afbbqed482dce,tcp,169.254.54.149:49462,10.88.0.5:80,112,60,10*
 
   > [!IMPORTANT]
-  > In **ocserv-access**, the *deviceId* value identifies the unique installation instance of Microsoft Defender that runs on a device, and does not identify either the Intune device ID or Azure AD device ID. If Defender is uninstalled and then reinstalled on a device, a new instance for the *DeviceId** is generated.
+  > In **ocserv-access**, the *deviceId* value identifies the unique installation instance of Microsoft Defender that runs on a device, and does not identify either the Intune device ID or Microsoft Entra device ID. If Defender is uninstalled and then reinstalled on a device, a new instance for the *DeviceId** is generated.
 
   To enable access logging:
 
@@ -174,7 +174,7 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
   - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c,5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
 
   > [!IMPORTANT]
-  > In **OCSERV_TELEMETRY**, the *deviceId* value identifies the unique installation instance of Microsoft Defender that runs on a device, and does not identify either the Intune device ID or Azure AD device ID. If Defender is uninstalled and then reinstalled on a device, a new instance for the *DeviceId** is generated.
+  > In **OCSERV_TELEMETRY**, the *deviceId* value identifies the unique installation instance of Microsoft Defender that runs on a device, and does not identify either the Intune device ID or Microsoft Entra device ID. If Defender is uninstalled and then reinstalled on a device, a new instance for the *DeviceId** is generated.
 
 Command line examples for *journalctl*:
 
@@ -254,12 +254,6 @@ For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-micr
 **Solution**: Restart the server using `mst-cli server restart` after the Linux server reboots.
 
 If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*.
-
-#### Users can't connect to resources while using Microsoft Edge<!-- 13119847 -->
-
-**Issue**: After you've [migrated from the stand-alone tunnel client app to Microsoft Defender for Endpoint](../protect/microsoft-tunnel-migrate-app.md) and are then using Microsoft Edge, users are unable to access any internal or external websites. Users might also see a message similar to: `You’re not Connected`.
-
-**Solution**: This issue can occur when the standalone Tunnel client app remains installed while the Microsoft Defender for Endpoint app is in use. To resolve this issue, uninstall the standalone Tunnel client app. It's also possible to uninstall the standalone client app prior to installing Microsoft Defender for Endpoint, but doing so might leave your devices unable to use Microsoft Tunnel until the new Tunnel app is in place and fully configured.  
 
 ## Next steps
 

@@ -2,12 +2,12 @@
 # required metadata
 title: Encrypt macOS devices with FileVault disk encryption with Intune 
 titleSuffix: Microsoft Intune
-description: Encrypt macOS devices with the built-in encryption method FileVault, and manage the recovery keys for encrypted devices from within the Microsoft Intune admin center. 
+description: Use Microsoft Intune encryption policy to encrypt macOS devices with FileVault, and manage recovery keys for encrypted macOS devices from within the Microsoft Intune admin center.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 09/26/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,7 +32,7 @@ ms.collection:
 
 # Use FileVault disk encryption for  macOS with Intune
 
-Intune supports macOS FileVault disk encryption. FileVault is a whole-disk encryption program that is included with macOS. You can use Intune to configure FileVault on devices that run **macOS 10.13 or later**.
+Use Microsoft Intune to configure and manage macOS FileVault disk encryption. FileVault is a whole-disk encryption program that is included with macOS. With Intune you can deploy policies that configure FileVault, and then manage recovery keys on devices that run **macOS 10.13 or later**.
 
 Use one of the following policy types to configure FileVault on your managed devices:
 
@@ -103,7 +103,7 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
    Configure the remaining [FileVault settings](endpoint-protection-macos.md#filevault) to meet your business needs, and then select **Next**.
 
-7. On the **Scope (Tags)** page, choose **Select scope tags** to open the Select tags pane to assign scope tags to the profile.
+7. If applicable, on the **Scope (Tags)** page, choose **Select scope tags** to open the Select tags pane to assign scope tags to the profile.
 
    Select **Next** to continue.
 
@@ -149,6 +149,9 @@ Select **Next**.
 To view information about devices that receive FileVault policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
 
 When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the device user.
+
+ > [!NOTE]
+ > A device that reports error code -2016341107 / 0x87d1138d generally means the end user has not accepted the FileVault prompt to begin encryption. 
 
 For managed devices, Intune can escrow a copy of the personal recovery key. Escrow of keys enables Intune administrators to rotate keys to help protect devices, and users to recover a lost or rotated personal recovery key.
 

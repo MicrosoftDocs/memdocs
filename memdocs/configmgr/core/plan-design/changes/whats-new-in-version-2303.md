@@ -167,11 +167,11 @@ The following additional hotfixes are available to address specific issues:
 -->
 
 ## Next steps
-At this time, version 2303 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).
+<!-- At this time, version 2303 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2303.md#early-update-ring).-->
 
-<!-- As of December 19, 2022, version 2211 is globally available for all customers to install.
+ As of April 24, 2023, version 2303 is globally available for all customers to install.
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2211](../../servers/manage/checklist-for-installing-update-2211.md).).--->
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2303](../../servers/manage/checklist-for-installing-update-2303.md).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.

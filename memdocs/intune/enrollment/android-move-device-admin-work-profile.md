@@ -33,6 +33,9 @@ ms.collection:
 
 # Move Android devices from device administrator to personally-owned work profile management
 
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+
 You can help users move their Android devices from device administrator to personally-owned work profile management by using the compliance setting to **Block devices managed with device administrator**. This setting lets you make devices non-compliant if they're managed with device administrator. 
 
 When users see that they're out of compliance for this reason, they can tap **Resolve**. They'll be taken to a checklist that will  guide them through:
@@ -46,7 +49,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 - Set up Android personally-owned work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise personally-owned work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to personally-owned work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity. This increase is so that the users can enroll into personally-owned work profile management.
-  - [Configure Azure Active Directory device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
+  - [Configure Microsoft Entra device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
   - Adjust the [Intune device limit restrictions](create-device-limit-restrictions.md) by setting the device limit. 
 
 ## Create device compliance policy

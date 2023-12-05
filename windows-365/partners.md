@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/18/2022
+ms.date: 06/16/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -44,7 +44,7 @@ Securely stream the Microsoft Windows 365 Cloud PC experience to high-performing
 
 - Highly secure Windows 10 IoT LTSC 2021 and in-house Linux-based operating systems.
 - A wide range of hardware with customization options available.
-- Options to manage and deploy Cloud PCs by using Microsoft Endpoint Manager and/or the 10ZiG Manager™ for increased safety, remote access, and ease of use.
+- Options to manage and deploy Cloud PCs by using Microsoft Intune and/or the 10ZiG Manager™ for increased safety, remote access, and ease of use.
 
 For more information, visit the [10ZiG website](https://www.10zig.com/resources/vdi-blog/microsoft-windows-365-cloud).
 
@@ -90,7 +90,7 @@ For more information, visit the [Nerdio website](https://getnerdio.com/windows-3
 
 Spot by NetApp delivers fully managed, continuously optimized cloud desktops as a service.
 
-For more information, read about Spot on the [NetApp website](https://spot.io/products/spotpc/).
+For more information, read about Spot on the [NetApp website](https://spot.io/product/spot-security/).
 
 ## Rimo3
 

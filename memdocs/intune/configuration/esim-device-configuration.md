@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 05/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: rashok
+ms.reviewer: hejimenez
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,7 +29,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Configure eSIM cellular profiles in Intune (public preview)
+# Configure eSIM cellular profiles using imported activation codes in Intune (public preview)
 
 eSIM is an embedded SIM chip, and lets you connect to the Internet over a cellular data connection on an eSIM-capable device, such as the [Surface LTE Pro](https://www.microsoft.com/surface/business/surface-pro). With an eSIM, you don't need to get a SIM card from your mobile operator. As a global traveler, you can also switch between mobile operators and data plans to always stay connected.
 
@@ -40,33 +40,44 @@ This feature applies to:
 - Windows 11
 - Windows 10
 
-In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
+In Intune, you can bulk activate eSIM codes using the following options:
 
-To deploy eSIM to your devices using Intune, the following are needed:
+- **Option 1 - Import activation codes (this article)**
 
-- **eSIM capable devices**, such as the Surface LTE: See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Or, see a list of [some of the known eSIM capable devices](#esim-capable-devices) (in this article).
-- **Windows 10 Fall creators update PC** (1709 or later) that is enrolled and MDM managed by Intune
-- **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
+  In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
+
+- **Option 2 - Use an eSIM download server with the Settings Catalog**
+
+  For more information on this option, go to [Configure eSIM download server using Microsoft Intune](esim-device-configuration-download-server.md).
+
+This article describes how to import the activation codes in bulk, and then deploy these codes to your eSIM-capable devices. This feature is in [public preview](../fundamentals/public-preview.md).
 
 > [!NOTE]
 > You can create a custom OMA-URI profile using the [eUICCs CSP](/windows/client-management/mdm/euiccs-csp). Be sure to deploy one custom profile for each device. The profile must include the device ICCID and matching activation code from the carrier for each device.
+
+## Prerequisites
+
+To deploy eSIM to your devices using Intune, the following are needed:
+
+- **eSIM capable devices**, such as the Surface LTE: See [if your device supports eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+
+  If you're unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, go to [Use an eSIM to get a cellular data connection on your Windows client device](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+
+- **Windows 10 Fall creators update PC** (1709 or later) that is enrolled and MDM managed by Intune
+- **Activation codes** provided by your mobile operator. These one time-use activation codes are added to Intune, and deployed to your eSIM capable devices. Contact your mobile operator to acquire eSIM activation codes.
 
 ## Deploy eSIM to devices - overview
 
 To deploy eSIM to devices, an Administrator completes the following tasks:
 
 1. Import activation codes provided by your mobile operator
-2. Create an Azure Active Directory (Azure AD) device group that includes your eSIM capable devices
-3. Assign the Azure AD group to your imported subscription pool
+2. Create a Microsoft Entra device group that includes your eSIM capable devices
+3. Assign the Microsoft Entra group to your imported subscription pool
 4. Monitor the deployment
 
 This article guides you through these steps.
 
-## eSIM capable devices
-
-If you’re unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows client device](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
-
-## Step 1: Add cellular activation codes
+## Step 1 - Add cellular activation codes
 
 Cellular activation codes are provided by your mobile operator in a comma-separated file (csv). When you have this file, add it to Intune using the following steps:
 
@@ -106,18 +117,18 @@ When working with the csv file with the activation codes, be sure you or your mo
 > - Remove the current `.csv`.
 > - Upload a new `.csv` that has all the old device/ICCID pairs and has the new devices you want to add.
 
-## Step 2: Create an Azure AD device group
+## Step 2 - Create a Microsoft Entra device group
 
 Create a Device group that includes the eSIM capable devices. [Add groups](../fundamentals/groups-add.md) lists the steps.
 
 > [!NOTE]
 >
 > - Only devices are targeted, users aren't targeted.
-> - We recommend creating a static Azure AD device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
+> - We recommend creating a static Microsoft Entra device group that includes your eSIM devices. Using a group confirms you target only eSIM devices.
 
-## Step 3: Assign eSIM activation codes to devices
+## Step 3 - Assign eSIM activation codes to devices
 
-Assign the profile to the Azure AD group that includes your eSIM devices.
+Assign the profile to the Microsoft Entra group that includes your eSIM devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **eSIM cellular profiles**.
@@ -126,12 +137,12 @@ Assign the profile to the Azure AD group that includes your eSIM devices.
 
     :::image type="content" source="./media/esim-device-configuration/include-exclude-groups.png" alt-text="Include the device group to assign the profile in Microsoft Intune.":::
 
-5. When you select your groups, you're choosing an Azure AD group. To select multiple groups, use the **Ctrl** key, and select the groups.
+5. When you select your groups, you're choosing a Microsoft Entra group. To select multiple groups, use the **Ctrl** key, and select the groups.
 6. When done, **Save** your changes.
 
 eSIM activation codes are used once. After Intune installs an activation code on a device, the eSIM module contacts the mobile operator to download the cellular profile. This contact finishes registering the device with mobile operator network.
 
-## Step 4: Monitor deployment
+## Step 4 - Monitor deployment
 
 ### Review the deployment status
 
@@ -181,10 +192,10 @@ You can monitor and view a detailed list of devices you can view in Device Statu
 
 ## Remove the eSIM profile from device
 
-When you remove the device from the Azure AD group, the eSIM profile is also removed. Be sure to:
+When you remove the device from the Microsoft Entra group, the eSIM profile is also removed. Be sure to:
 
-1. Confirm you're using the eSIM devices Azure AD group.
-2. Go to the Azure AD group, and remove the device from the group.
+1. Confirm you're using the eSIM devices Microsoft Entra group.
+2. Go to the Microsoft Entra group, and remove the device from the group.
 3. When the removed device contacts Intune, the updated policy is evaluated, and the eSIM profile removed.
 
 The eSIM profile is also removed when the device is [retired](../remote-actions/devices-wipe.md#retire) or unenrolled by the user, or when the [reset device remote action](../remote-actions/devices-wipe.md#wipe) runs on the device.
@@ -195,9 +206,9 @@ The eSIM profile is also removed when the device is [retired](../remote-actions/
 ## Best practices & troubleshooting
 
 - Be sure your `.csv` file is properly formatted. Confirm the file doesn't include duplicate codes, doesn't include multiple mobile operators, or doesn't include different data plans. Remember, each file must be unique to a mobile operator and cellular data plan.
-- Create a static device Azure AD group that only includes the eSIM devices that are targeted.
+- Create a static device Microsoft Entra group that only includes the eSIM devices that are targeted.
 - If there's an issue with the deployment status, check the following settings:
-  - **File format not proper**: See **Step 1: Add cellular activation codes** (in this article) on how to properly format your file.
+  - **File format not proper**: See **[Step 1 - Add cellular activation codes](#step-1---add-cellular-activation-codes)** (in this article) on how to properly format your file.
   - **Cellular activation failure, contact mobile operator**: The activation code may not be activated within their network. Or, the profile download and cellular activation failed.
 
 ## Next steps

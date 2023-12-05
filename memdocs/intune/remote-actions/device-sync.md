@@ -37,7 +37,10 @@ The **Sync** device action forces the selected device to immediately check in wi
 - Windows
 - iOS
 - macOS
-- Android (Device administrator and Android for Work only)
+- Android (Device administrator and personally owned work profile only)
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Sync a device
 
@@ -45,8 +48,6 @@ The **Sync** device action forces the selected device to immediately check in wi
 2. Select **Devices** > **All devices**.
 3. In the list of devices you manage, select a device to open its *Overview* pane, and then select **Sync**.
 4. To confirm, select **Yes**.
-
-To see the status of the sync action, choose **Devices** > **Monitor** > **Device actions**.
 
 You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 

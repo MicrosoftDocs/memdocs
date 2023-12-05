@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/08/2022
+ms.date: 06/19/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -64,6 +64,10 @@ The **Remoting connection** tab lists the following information:
 - Good = 0-30 seconds
 - Average = 30-60 seconds
 - Poor = more than 60 seconds
+
+**Core boot**: Average time it takes to reach the sign-in prompt after a device is turned on. Excludes operating system update time.
+
+**Core sign-in**: Average time it takes to get to a responsive desktop after a user signs in. Excludes new user sign-in and first sign-in after a feature update.
 
 **Insights and recommendations** provide information about the actions that you can take to improve scores for specific Cloud PCs that have poor or average ratings.
 

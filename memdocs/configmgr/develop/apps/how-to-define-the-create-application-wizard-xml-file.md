@@ -9,7 +9,7 @@ ms.assetid: 5e09cee5-b251-42d0-b927-e1d6019f3695
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: How to create a custom deployment technology XML File for the Create Application Wizard/.
 ms.reviewer: mstewart,aaroncz 

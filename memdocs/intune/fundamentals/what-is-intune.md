@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/26/2022
+ms.date: 09/05/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,13 +33,15 @@ ms.collection:
 
 # Microsoft Intune securely manages identities, manages apps, and manages devices
 
-As organizations move to support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Employees and students need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
+As organizations support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Employees and students need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
 
 To help with these challenges and tasks, use [Microsoft Intune](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune).
 
 :::image type="content" source="./media/what-is-intune/what-is-intune.png" alt-text="Diagram that shows features and benefits of Microsoft Intune.":::
 
-Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app and device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
+Microsoft Intune is a cloud-based endpoint management solution. It manages user access to organizational resources and simplifies app and device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RWAoF9]
 
 You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support the [Zero Trust security model](zero-trust-with-microsoft-intune.md).
 
@@ -48,23 +50,24 @@ This article lists some features and benefits of Microsoft Intune.
 > [!TIP]
 >
 > - To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
-> - For more information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
+> - For information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
 
 ## Key features and benefits
 
 Some key features and benefits of Intune include:
 
-- You can **manage users and devices**, including devices owned by your organization and personally owned devices. Microsoft Intune supports Android, Android Open Source Project (AOSP), iOS/iPadOS, macOS, and Windows client devices. With Intune, you can use these devices to securely access organization resources with policies you create.
+- You can **manage users and devices**, including devices owned by your organization and personally owned devices. Microsoft Intune supports Android, Android Open Source Project (AOSP), iOS/iPadOS, Linux Ubuntu Desktop, macOS, and Windows client devices. With Intune, you can use these devices to securely access organization resources with policies you create.
 
   For more information, go to:
 
   - [Manage identities using Microsoft Intune](manage-identities.md)
   - [Manage devices using Microsoft Intune](manage-devices.md)
+  - [Supported operating systems in Microsoft Intune](supported-devices-browsers.md)
 
   > [!NOTE]
   > If you manage on-premises Windows Server, you can use Configuration Manager.
 
-- Intune **simplifies app management** with a built-in app experience, including app deployment, updates, and removal. You can connect to and distribute apps from your private app stores, enable Microsoft 365 apps, deploy Win32 apps, create app protection policies, and manage access to apps and their data.
+- Intune **simplifies app management** with a built-in app experience, including app deployment, updates, and removal. You can connect to and distribute apps from your private app stores, enable Microsoft 365 apps, deploy Win32 apps, create app protection policies, and manage access to apps & their data.
 
   For more information, go to [Manage apps using Microsoft Intune](manage-apps.md).
 
@@ -82,7 +85,13 @@ Some key features and benefits of Intune include:
 
   For more information, go to [Walkthrough the Intune admin center](tutorial-walkthrough-endpoint-manager.md). To sign in to the admin center, go to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-  This admin center uses [Microsoft Graph](/graph/overview) REST APIs to programmatically access the Intune service. Every action in the admin center is a Microsoft Graph call. If you’re not familiar with Graph, and want to learn more, go to [Graph integrates with Microsoft Intune](/graph/intune-concept-overview).
+  This admin center uses [Microsoft Graph](/graph/overview) REST APIs to programmatically access the Intune service. Every action in the admin center is a Microsoft Graph call. If you're not familiar with Graph, and want to learn more, go to [Graph integrates with Microsoft Intune](/graph/intune-concept-overview).
+
+- The Microsoft Intune Suite offers **advanced endpoint management and security**. The suite has optional add-on features, including Remote Help, Endpoint Privilege Management, Microsoft Tunnel for MAM, and more.
+
+  For more information, go to [Intune Suite add-on features](intune-add-ons.md)
+
+Learn how you can [benefit from modern endpoint management](/training/modules/benefits-microsoft-endpoint-manager?azure-portal=true) with Microsoft Intune.
 
 ## Integrates with other Microsoft services and apps
 
@@ -98,14 +107,14 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   - [Frequently asked questions about co-management](../../configmgr/comanage/faq.yml)
   - [How to enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
-- **[Windows Autopilot](../../autopilot/windows-autopilot.md)** for modern OS deployment and provisioning
+- **[Windows Autopilot](/autopilot/windows-autopilot)** for modern OS deployment and provisioning
 
   With Windows Autopilot, you can provision new devices and send these devices directly to users from an OEM or device provider. For existing devices, you can reimage these devices to use Windows Autopilot and deploy the latest Windows version.
 
   For more specific information, go to:
 
-  - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
-  - [Windows Autopilot deployment for existing devices](../../autopilot/existing-devices.md)
+  - [Windows Autopilot overview](/autopilot/windows-autopilot)
+  - [Windows Autopilot deployment for existing devices](/autopilot/existing-devices)
 
 - **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
 
@@ -239,7 +248,7 @@ This section includes some common features that you can configure in Intune.
 
 Windows Hello for Business helps protect against phishing attacks and other security threats. It also helps users sign in to their devices and apps more quickly and easily.
 
-Windows Hello for Business replaces passwords using a PIN or biometrics, such as fingerprint, facial recognition. This biometric information is stored locally on the devices and is never sent to external devices or servers.
+Windows Hello for Business replaces passwords with a PIN or biometric, such as fingerprint or facial recognition. This biometric information is stored locally on the devices and is never sent to external devices or servers.
 
 For more information, go to:
 
@@ -249,7 +258,7 @@ For more information, go to:
 
 ### Create a VPN connection for remote users
 
-VPN policies gives users secure remote access to your organization network.
+VPN policies give users secure remote access to your organization network.
 
 Using common VPN connection partners, including Check Point, Cisco, Microsoft Tunnel, NetMotion, Pulse Secure, and more, you can create a VPN policy with your network settings. When the policy is ready, you deploy this policy to your users and devices that need to connect to your network remotely.
 
@@ -260,6 +269,7 @@ For more information, go to:
 - [Create VPN profiles to connect to VPN servers in Intune](../configuration/vpn-settings-configure.md)
 - [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md)
 - [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md)
+- [Microsoft Tunnel for MAM](../protect/microsoft-tunnel-mam.md)
 
 ### Create a Wi-Fi connection for on-premises users
 
@@ -276,19 +286,19 @@ For more information, go to:
 
 ### Enable single sign-on (SSO) to your apps and services
 
-When you enable SSO, users can automatically sign in to apps and services using their Azure AD organization account, including some mobile threat defense partner apps.
+When you enable SSO, users can automatically sign in to apps and services using their Microsoft Entra organization account, including some mobile threat defense partner apps.
 
 Specifically:
 
-- On Windows devices, SSO is automatically built in and used to sign in to apps and websites that use Azure AD for authentication, including Microsoft 365 apps. You can also enable SSO on VPN and Wi-Fi policies.
+- On Windows devices, SSO is automatically built in and used to sign in to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps. You can also enable SSO on VPN and Wi-Fi policies.
 
-- On iOS/iPadOS and macOS devices, you can use the Microsoft Enterprise SSO plug-in to automatically sign in to apps and websites that use Azure Active Directory (AD) for authentication, including Microsoft 365 apps.
+- On iOS/iPadOS and macOS devices, you can use the Microsoft Enterprise SSO plug-in to automatically sign in to apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
 
 - On Android devices, you can use the Microsoft Authentication Library (MSAL) to enable SSO to Android apps.
 
   For more information, go to:
 
-  - [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso)
+  - [How SSO to on-premises resources works on Microsoft Entra joined devices](/azure/active-directory/devices/azuread-join-sso)
   - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
   - [Enable cross-app SSO on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on)
 
