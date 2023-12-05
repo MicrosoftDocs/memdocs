@@ -1468,8 +1468,8 @@ items:
             href: ./enrollment/android-move-device-admin-work-profile.md  
         - name: Samsung Knox enrollment solutions  
           items: 
-          - name: Enable Samsung Knox Mobile Enrollment
-            href: ./enrollment/android-samsung-knox-mobile-enroll.md
+          - name: Use Samsung Knox Mobile Enrollment 
+            href: ./enrollment/android-samsung-knox-mobile-enroll.md  
         - name: Enrollment configurations    
           items:        
           - name: Security configuration framework for Android Enterprise  

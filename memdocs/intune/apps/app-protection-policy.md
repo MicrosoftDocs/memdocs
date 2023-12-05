@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 11/30/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -30,17 +30,25 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
+- AIreviewed
 ---
 
 # App protection policies overview
 
-App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
+Intune app protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. These policies allow you to control how data is accessed and shared by apps on mobile devices. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app in Intune is a [protected app](../apps/apps-supported-intune-apps.md) that has Intune app protection policies applied to it and is managed by Intune.
 
-Mobile Application Management (MAM) app protection policies allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft 365 (Office) apps, can be managed by Intune MAM. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) available for public use.
+There are several [benefits](../apps/app-protection-policy.md#benefits-of-using-app-protection-policies) of using Intune app protection policies, including protecting corporate data on mobile devices without requiring device enrollment and controlling how data is accessed and shared by apps on mobile devices.
+
+Examples of using app protection policies with Microsoft Intune include:
+- Requiring a PIN or fingerprint to access corporate email on a mobile device
+- Preventing users from copying and pasting corporate data into personal apps
+- Restricting access to corporate data to only approved apps
+
+Many productivity apps, such as the Microsoft 365 (Office) apps, can be managed using Intune MAM. See the official list of [Microsoft Intune protected apps](apps-supported-intune-apps.md) available for public use.
 
 ## How you can protect app data
 
-Your employees use mobile devices for both personal and work tasks. While making sure your employees can be productive, you want to prevent data loss, intentional and unintentional. You'll also want to protect company data that is accessed from devices that are not managed by you.
+Your employees use mobile devices for both personal and work tasks. While making sure your employees can be productive, you want to prevent data loss, intentional and unintentional. You'll also want to protect company data that is accessed from devices that aren't managed by you.
 
 You can use Intune app protection policies **independent of any mobile-device management (MDM) solution**. This independence helps you protect your company's data with or without enrolling devices in a device management solution. By implementing **app-level policies**, you can restrict access to company resources and keep data within the purview of your IT department.
 
