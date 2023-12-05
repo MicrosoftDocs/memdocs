@@ -103,11 +103,11 @@ You need one of the following license subscriptions for each device that gets co
 
 Connected Cache in Configuration Manager requires an _on-premises_ distribution point, with the following configurations:
 
-- Running Windows Server 2012 or later
+- Running Windows Server 2012 or later.
 
 - Microsoft .NET Framework version 4.7.2 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
 
-- The default web site enabled on port 80
+- The default web site enabled on port 80.
 
 - Don't preinstall the IIS [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
 
