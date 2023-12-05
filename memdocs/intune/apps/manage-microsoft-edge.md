@@ -145,14 +145,18 @@ Edge supports the following settings for configuration:
 These settings can be deployed to the app regardless of device enrollment status.
 
 ### New Tab Page layout
-The **Custom** layout is the default layout for the new tab page. It shows top site shortcuts, news feed, and no wallpaper. Users can change the layout to suit their preferences. Organizations can also manage the layout settings.
+The **Custom** layout is the default one for the new tab page. It shows top site shortcuts and news feed without wallpaper. Users can change the layout according to their preferences. Organizations can also manage the layout settings.
 
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
- 
+
+> [!NOTE]
+> **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes affect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
+
+
 ### New Tab Page experiences
 
 Edge for iOS and Android offers organizations several options for adjusting the New Tab Page experience including organization logo, brand color, your home page, top sites, and industry news.
@@ -168,7 +172,6 @@ To upload your organization's logo and color, first complete the following steps
 
 > [!NOTE]
 > As Azure Active Directory (Azure AD) Graph is deprecated, it has entered its retire phase. See details on [Migrate Azure AD Graph Overview](/graph/migrate-azure-ad-graph-overview). As a result, organization logo and brand color maintained within Intune Admin center will be inaccessible when Azure Active Directory (Azure AD) Graph is completely retired.
-> 
 > Therefore, starting version v116 of Edge for iOS and Android, organization logo and brand color will be retrieved from Microsoft Graph. You need to maintain your organization logo and brand color via [steps](/azure/active-directory/fundamentals/how-to-customize-branding). **Banner logo** will be used as your organization and **Page background color** will be used as brand color.
 
 Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
@@ -370,7 +373,7 @@ As there's only one persistent website data store in Edge for iOS, by default th
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** (default) The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** The website data store will be used by work or school account first regardless of the sign-in order |
+|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account first regardless of the sign-in order |
 
 #### Microsoft Defender SmartScreen
 
@@ -611,6 +614,14 @@ As app configuration policies for managed devices needs device enrollment, any u
 | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | SmartScreenEnabled|
 |     com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled | MicrosoftRootStoreEnabled |
 | com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed | SSLErrorOverrideAllowed|
+|com.microsoft.intune.mam.managedbrowser.DefaultPopupsSetting | DefaultPopupsSetting|
+|com.microsoft.intune.mam.managedbrowser.PopupsAllowedForUrls | PopupsAllowedForUrls|
+|com.microsoft.intune.mam.managedbrowser.PopupsBlockedForUrls | PopupsBlockedForUrls|
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled	| DefaultSearchProviderEnabled|
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
+|com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
+
+
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
