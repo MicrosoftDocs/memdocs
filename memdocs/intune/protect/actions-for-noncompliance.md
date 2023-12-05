@@ -201,7 +201,7 @@ Add variables to the message to create a more custom email with dynamic content.
 
    Select **Next** to continue.  
 
-4. On the **Notification message templates** page, configure one or more messages.  
+5. On the **Notification message templates** page, configure one or more messages.  
 
       > [!div class="mx-imgBorder"]
    > ![Example of the Notification messages templates page for a notification message in Intune, showing all required fields filled in.](./media/actions-for-noncompliance/actions-for-noncompliance-4.png)  
@@ -210,17 +210,19 @@ Add variables to the message to create a more custom email with dynamic content.
    For each message, specify the following details:
 
    - **Locale**: Select the language that correlates to the device user's locale.  
-   - **Subject**: The maximum number of characters for the Subject is 78, and the maximum number of characters for the message body text is 2000.    
-   - **Message**: To create a message with dynamic content, insert the token of a supported variable. For a list of supported variables, see the table under [Create a notification message template](#create-a-notification-message-template).  
+   - **Subject**: Add the subject line for the email. You can enter up to 78 characters.     
+   - **Message**: Create a message explaining the reason for noncompliance. You can enter up to 2000 characters.    
+   
+   To create a template with dynamic content, insert the token of a supported variable in the subject line or message. For a list of supported variables, see the table under [Create a notification message template](#create-a-notification-message-template) in this article.  
 
-   Before you continue, select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
+5. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
 
    Select **Next** to continue.
 
-8. On the **Scope tags** page, select tags to limit visibility and management of this message to specific Intune admin groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+6. On the **Scope tags** page, select tags to limit visibility and management of this message to specific Intune admin groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).  
 
    Select **Next** to continue.  
-6. On the **Review + create** page, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.  
+7. On the **Review + create** page, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.  
 
 ### View and edit notifications
 
