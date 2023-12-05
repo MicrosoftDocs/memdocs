@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/25/2023
+ms.date: 12/05/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -67,10 +67,13 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
-  - **WPA-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
 
-"
-We recommend prioritizing the use of WPA over WEP in your Wi-Fi settings due to the enhanced security features of the WPA protocol. WPA employs a robust 256-bit encryption key, a significant improvement compared to the 64-bit and 128-bit keys utilized by the WEP system, ensuring a higher level of protection for your wireless network."
+    > [!WARNING]
+    > On Android 12 and later, Google deprecated support for WEP pre-shared keys (PSK) in Wi-Fi configuration profiles. It's possible WEP might still work. But, it's not recommended and is considered obsolete. Instead, use WPA pre-shared keys (PSK) in your Wi-Fi configuration profiles.
+    >
+    > For more information, go to the [Android developer reference - WifiConfiguration.GroupCipher](https://developer.android.com/reference/android/net/wifi/WifiConfiguration.GroupCipher#summary).
+
+  - **WPA-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
 
 - **Proxy settings**: Select a proxy configuration. Your options:
 
