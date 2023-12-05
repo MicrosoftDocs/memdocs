@@ -69,6 +69,9 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
   - **WPA-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
 
+"
+We recommend prioritizing the use of WPA over WEP in your Wi-Fi settings due to the enhanced security features of the WPA protocol. WPA employs a robust 256-bit encryption key, a significant improvement compared to the 64-bit and 128-bit keys utilized by the WEP system, ensuring a higher level of protection for your wireless network."
+
 - **Proxy settings**: Select a proxy configuration. Your options:
 
   - **None**: No proxy settings are configured.
