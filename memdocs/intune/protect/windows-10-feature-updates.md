@@ -61,6 +61,8 @@ When a device receives a policy for Feature updates:
 
 > [!IMPORTANT]
 > This feature is not supported on GCC and GCC High/DoD cloud environments.
+> 
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
