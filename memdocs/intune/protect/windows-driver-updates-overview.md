@@ -60,6 +60,11 @@ Windows driver update management applies to:
 
 ## Prerequisites
 
+> [!IMPORTANT]
+> This feature is not supported on GCC cloud environment.
+>
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
+
 To use Windows Driver Update management, your organization must have the following licenses, subscriptions, and network configurations: 
 
 ### Subscriptions
