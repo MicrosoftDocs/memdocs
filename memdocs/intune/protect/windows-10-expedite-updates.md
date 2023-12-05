@@ -31,19 +31,19 @@ ms.collection:
 
 # Expedite Windows quality updates in Microsoft Intune
 
-With *Quality updates for Windows 10 and Later* policy, you can expedite the install of the most recent Windows 10/11 security updates as quickly as possible on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly servicing policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn’t deploy the update for some time.
+With *Quality updates for Windows 10 and Later* policy, you can expedite the installation of the most recent Windows 10/11 security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn’t deploy the update for some time.
 
 Not all updates can be expedited. Currently, only Windows 10/11 security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](../protect/windows-10-update-rings.md).
 
 ## How expedited updates work
 
-With expedited updates, you can speed installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
+With expedited updates, you can expedite the installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
 
-To speed installation, expedite is able to check for expedited updates more frequently than the normal Windows Update scan frequency. This process enables devices to start the download and install of an expedited update as soon as possible, without having to wait for the device to check in for updates.
+Expedited update policies temporarily override deferrals and other settings to install updates as quickly as possible. This process enables devices to start the download and install of an expedited update without having to wait for the device to check in for updates.
 
-The actual time that a device starts to update depends on the device being online, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
+The actual time required for a device to start an update depends on the device internet connectivity, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
-- For each expedite update policy you select a single update to deploy based on its release date. By using the release date, you don’t have to create separate policies to deploy different instances of that update to devices that have different versions of Windows, like Windows 10 version 1809, 1909, and so on.
+- For each expedited update policy, you select a single update to deploy based on its release date. By using the release date, you don’t have to create separate policies to deploy different instances of that update to devices that have different versions of Windows, like Windows 10 version 1809, 1909, and so on.
 
 - Windows Update evaluates the build and architecture of each device, and then delivers the version of the update that applies.
 
@@ -60,7 +60,7 @@ The actual time that a device starts to update depends on the device being onlin
 
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
 
