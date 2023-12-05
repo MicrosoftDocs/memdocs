@@ -44,7 +44,9 @@ Join new Windows devices to Microsoft Entra ID and Intune. To bulk enroll device
 > - Intune Administrator
 > - Password Administrator  
 >
-> You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Users**. For more details, see [Give admin permissions in Microsoft Intune admin center](../fundamentals/users-add.md#give-admin-permissions-in-microsoft-intune-admin-center).   
+> You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Users**. For more details, see [Give admin permissions in Microsoft Intune admin center](../fundamentals/users-add.md#give-admin-permissions-in-microsoft-intune-admin-center).
+>
+> Also, ensure that the Microsoft.Azure.SyncFabric (AppID 00000014-0000-0000-c000-000000000000) Service Principal is present in your Azure tenant by using the Get-AzureADServicePrincipal command. If the Service Principal is not present, Windows Configuration Designer (WCD) will not be able to retrieve the token, and will give an error.
 
 Microsoft Entra users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
 
