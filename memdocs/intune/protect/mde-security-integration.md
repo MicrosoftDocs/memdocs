@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/27/2023
+ms.date: 12/06/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -76,11 +76,6 @@ Security settings management isn't yet supported with Government clouds. For mor
 Devices must have access to the following endpoint:
 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
-
-> [!NOTE]
-> You need to configure an endpoint system-wide proxy in an environment that is not connected to the internet. Use of only the EDR static proxy configuration is not sufficient.
->
-> If your organization uses Secure Socket Layer (SSL) inspection, the endpoints should be excluded from inspection.
 
 ### Supported platforms
 
