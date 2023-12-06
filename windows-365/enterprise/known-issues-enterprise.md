@@ -155,19 +155,19 @@ Some GCC High government customers whose resources are deployed to microsoft.us 
 
 **Possible cause**: The issue occurs when the web client or the Safari browser blocks third-party cookies. Third-party cookies are cookies set by a domain other than the one you're visiting.  
 
-For GCC High customers with resources deployed to microsoft.us environments, the microsoft.us cookies are considered third-party cookies by the web client or the Safari browser. This is because the web client/Safari browser uses the Cloud PC’s domain name, which is different from microsoft.us, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the microsoft.us cookies from:
+For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC’s domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the microsoft.us cookies from:
 
 - being stored.
 - used for authentication and authorization.
 
 As a result, you can’t connect to your Cloud PC session.
 
-**Troubleshooting steps**: Allow third-party cookies from microsoft.us in your
+**Troubleshooting steps**: Allow third-party cookies from `microsoft.us` in your
 
 - web client or Safari browser settings, or
 - through Group Policy.
 
-This change lets the web client/Safari browser store and use the microsoft.us cookies for connecting to your Cloud PC session.  
+This change lets the web client/Safari browser store and use the `microsoft.us` cookies for connecting to your Cloud PC session.  
 
 ## Next steps
 
