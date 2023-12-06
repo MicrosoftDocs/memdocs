@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/26/2023
+ms.date: 12/06/2023
 ms.topic: how-to
 ms.service: windows-365
 ms.subservice:
@@ -119,7 +119,7 @@ When you select **Open in browser** for a Cloud PC on the windows365.microsoft.c
 
 To change settings from within the Cloud PC:
 
-1. Select the gear icon > **In Session**.
+1. Select the gear icon.
 2. Select the options you want change > **Update**.
 
 The changes will appear the next time you restart the Cloud PC.
@@ -154,7 +154,7 @@ You can restrict users from transferring files by using RDP drive redirection. F
 
 Users can collect logs of their Cloud PC sessions. The logs are collected from the browser and the user can choose the save location.
 
-To turn on log collection, in the client, select the gear icon > **Capture logs**.
+To turn on log collection, in the client, select the information icon > **Capture logs**.
 
    ![Capture logs.](media/get-users-started/settings-logs.png)
 
@@ -162,7 +162,7 @@ To turn on log collection, in the client, select the gear icon > **Capture logs*
 
 You can turn on hardware acceleration when using the web client to access your Cloud PC. This option decreases network latency, improving the web client Cloud PC experience. This option is turned on by default.
 
-To turn hardware acceleration on or off, in the client, select the gear icon > **In Session** > **Use hardware acceleration**.
+To turn hardware acceleration on or off, in the client, select the gear icon > **Use hardware acceleration**.
 
 ### High DPI
 
@@ -170,7 +170,7 @@ You can use the **High DPI** toggle to render the web client using the native re
 
 The High Dots Per Inch (DPI) setting adjusts the display resolution to match the physical size of the screen and the distance between the user and the screen.
 
-To choose this option, select the gear icon > **In Session** > **High DPI**.
+To choose this option, select the gear icon > **High DPI**.
 
 ### Alternative keyboard layout
 
@@ -221,7 +221,7 @@ To turn on keyboard shortcuts for your Cloud PC:
 
 When **Keyboard shortcuts** is turned on, the web client opens in full-screen mode. Keyboard shortcuts only work in full-screen mode. Full screen using F11 isn't supported. You must use the full screen mode from the toolbar.
 
-To turn off keyboard shortcuts, in your web client, select **Settings** > **In session** > deselect **Keyboard shortcuts** > **Update**.
+To turn off keyboard shortcuts, in your web client, select **Settings** > deselect **Keyboard shortcuts** > **Update**.
 
 ### LG webOS 23
 

@@ -87,17 +87,9 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 A new report will be available that provides metrics that help admins evaluate tenant level device connection status and reliability.  For example, you'll be able to observe:
 devices that have unhealthy hosts users' connections that consistently or frequently fail systemic issues, like an Azure infrastructure issue, that is impacting the ability of a user to connect.
 
-### New report: Action status<!--44871923-->
-
-A new report will be available that lets you know which actions were performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided.
-
 ### New alert rule: Cloud PCs that aren't available<!--47321010-->
 
 A new alert rule will be available to notify you when Cloud PCs aren't available (not immediately available for Windows 365 Frontline). For more information about alerts in general, see [Alerts in Windows 365](alerts.md).
-
-### New filter option for the Connected Frontline Cloud PCs report<!--47323230-->
-
-A new filter will be added to the Connected Frontline Cloud PCs report. This new filter will show hourly data for various data periods.
 
 <!-- ***********************************************-->
 ## Provisioning
