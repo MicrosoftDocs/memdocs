@@ -38,7 +38,7 @@ This page lists recent known issues with [Windows 365 Boot](windows-365-boot-ove
 
 Wi-fi connections that require captive browser-based authentication or consent aren't supported.
 
-User-based wi-fi profiles that require the user to sign-in to connect to wi-fi aren't supported. New users who have never signed in before converting the device to a Windows 365 Boot device can't use the device to connect it to the network.
+User-based wi-fi profiles that require the user to sign-in to connect to wi-fi aren't supported. New users who never signed in before converting the device to a Windows 365 Boot device can't use the device to connect it to the network.
 
 ## VPN support
 
@@ -156,7 +156,7 @@ Windows 365 Boot is configured by using the [CloudDesktop CSP](/windows/client-m
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
 3. Make sure that the “Cloud Desktop” configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
-4. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
+4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
@@ -170,7 +170,7 @@ Windows 365 Boot is configured through the [Windowslogon CSP](/windows/client-ma
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles**.
 2. Search for the Device configuration profile that contains “Windows 365 Boot Device Configuration Policy” in its name.
 3. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
-4. Select **Device assignment status** and make sure that the configuration policy has been successfully applied to it.
+4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
 5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](windows-365-boot-physical-device-requirements.md).
@@ -212,7 +212,7 @@ This error can occur when a device is removed from and then re-enrolled in Windo
 Resources created by the Windows 365 Boot guided scenario can be applied to both:
 
 - Microsoft Entra joined devices
-- Microsoft Entra hybrid joined devices in tenants where certain workloads have been switched to Intune. For Microsoft Entra hybrid joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
+- Microsoft Entra hybrid joined devices in tenants where certain workloads were switched to Intune. For Microsoft Entra hybrid joined devices, Windows Update policies, device configuration, and client apps workloads must be switched to Intune.
 
 **Troubleshooting steps**: To determine if your device is Microsoft Entra hybrid joined, see [Using the Azure portal](/azure/active-directory/devices/howto-hybrid-join-verify#using-the-azure-portal). If your device is Microsoft Entra hybrid joined, see [Comanagement workloads](/mem/configmgr/comanage/workloads) to see what workloads are configured in your environment.
 
