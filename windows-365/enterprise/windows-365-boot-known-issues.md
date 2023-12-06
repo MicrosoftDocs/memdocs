@@ -232,13 +232,21 @@ The provider app could not be found. Try signing in from another device.
 To resolve this issue here, contact support.
 ```
 
-This occurs when the provider app was uninstalled, or isn't available or installed on the end user's physical device.
+This occurs in the following scenarios:
+
+- The provider app was uninstalled.
+- The provider app isn't available or installed on the end user's physical device.
+- The provider app was installed at the user scope manually prior to the device being set up for Boot.
 
 **Troubleshooting steps**: The end user can use any of these options:
 
 - Sign in from another device.
 - Wait for the app to install on the physical device.
 - Contact the user's IT admin and ask them to push the app to the device.
+- If you suspect the app was installed in user scope, use the following steps:
+    1. Contact the user's IT admin to remove the device from Boot mode by removing it from the device group.
+    2. Uninstall the provider app installed in user scope.
+    3. Put the device back to Boot mode device group (the system scope apps should be delivered by Intune if set up through Guided Scenario).
 
 If the issue persists, contact support.
 
