@@ -151,11 +151,11 @@ Cloud PCs provisioned after July 2022 don’t encounter this issue.
 
 ## Cloud PC connection issues for GCC High government customers<!--47633105-->
 
-Some GCC High government customers whose resources are deployed to microsoft.us environments may encounter issues connecting to their Cloud PC using web clients or the Safari browser.
+Some GCC High government customers whose resources are deployed to `microsoft.us`` environments may encounter issues connecting to their Cloud PC using web clients or the Safari browser.
 
 **Possible cause**: The issue occurs when the web client or the Safari browser blocks third-party cookies. Third-party cookies are cookies set by a domain other than the one you're visiting.  
 
-For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC’s domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the microsoft.us cookies from:
+For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC’s domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
 
 - being stored.
 - used for authentication and authorization.
