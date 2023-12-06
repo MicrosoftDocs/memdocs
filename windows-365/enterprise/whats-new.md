@@ -55,7 +55,7 @@ For information about Windows App and its features, see [What's new in Windows A
 -->
 
 <!-- ########################## -->
-## Week of Decmeber 04, 2023 (Service release 2311)
+## Week of December 04, 2023 (Service release 2311)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
