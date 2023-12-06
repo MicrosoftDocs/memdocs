@@ -39,7 +39,7 @@ Not all updates can be expedited. Currently, only Windows 10/11 security updates
 
 With expedited updates, you can expedite the installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
 
-Expedited update policies temporarily override deferrals and other settings to install updates as quickly as possible. This process enables devices to start the download and install of an expedited update without having to wait for the device to check in for updates.
+Expedited update policies temporarily override deferrals and other settings to install updates as quickly as possible. This process enables devices to start the download and installation of an expedited update without having to wait for the device to check in for updates.
 
 The actual time required for a device to start an update depends on the device internet connectivity, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
