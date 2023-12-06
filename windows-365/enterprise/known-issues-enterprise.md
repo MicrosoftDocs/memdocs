@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 11/21/2023
+ms.date: 12/06/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -36,7 +36,7 @@ The following items are known issues for Windows 365 Enterprise.
 
 ## Watermarking support in Windows 365
 
-Watermarking support is configured on session hosts and enforced by the Remote Desktop client. The settings for Watermarking support can be configured via Group Policy (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting will not allow administrators to look up device information from leaked images for Cloud PCs.  
+Watermarking support is configured on session hosts and enforced by the Remote Desktop client. The settings for Watermarking support can be configured via Group Policy (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting doesn't allow administrators to look up device information from leaked images for Cloud PCs.  
 
 **Troubleshooting steps**: Ensure that the QR code embedded content setting is configured to **Device ID** either in the GPO or in the Intune Settings Catalog for the Intune Configuration profile used to configure Watermarking support.
 
@@ -94,13 +94,16 @@ When using single sign-on, you're currently be prompted to authenticate to Micro
 
 ## Single sign-on user connections are being denied through Microsoft Entra Conditional Access <!--42317382-->
 
-**Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra which may be the cause of the failed connection.
+**Possible cause**: To log in through single sign-on, the remote desktop client requests an access token to the **Microsoft Remote Desktop** app in Microsoft Entra, which may be the cause of the failed connection.
 
 **Troubleshooting**: Follow the steps to [troubleshoot sign-in problems](/azure/active-directory/conditional-access/troubleshoot-conditional-access).
 
 ## Single sign-on users are immediately disconnected when the Cloud PC locks
 
-When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that the user can relaunch the connection through the remote desktop client and perform the Microsoft Entra ID-based single sign-on authentication flow.
+When single sign-on isn't used, users have the option to see the Cloud PC lock screen and enter credentials to unlock their Windows session. However, when single sign-on is used, the Cloud PC fully disconnects the session so that user can:'
+
+1. Can relaunch the connection through the remote desktop client.
+2. perform the Microsoft Entra ID-based single sign-on authentication flow.
 
 <a name='single-sign-on-users-arent-asked-to-reauthenticate-to-azure-ad-when-connecting-from-an-unmanaged-device---35593334--'></a>
 
@@ -112,7 +115,7 @@ When using single sign-on, all authentication behavior (including supported cred
 
 ## I don’t see the Cloud PC reports on the Intune admin center Devices > Overview page
 
-If you’ve turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report won’t be on the **Overview** page.
+If you turned on the **Use Devices preview** setting in the Intune admin center, the **Cloud PC performance (preview)** tab, **Cloud PCs with connection quality issues** report, and **Cloud PCs with low utilization** report aren't on the **Overview** page.
 
 **Troubleshooting steps**: Turn off the **Use Devices preview** toggle in the upper right corner of the **Devices** > **Overview** page.
 
@@ -123,7 +126,7 @@ If you’ve turned on the **Use Devices preview** setting in the Intune admin ce
 - MSFT Attack Surface Reduction rules (for example, Manage attack surface reduction settings with endpoint security policies in Microsoft Intune | Microsoft Learn), or
 - Third party solutions that block the install language script execution during the post-provisioning process.  
 
-Cloud PCs provisioned after July 2022 won’t encounter this issue.
+Cloud PCs provisioned after July 2022 don’t encounter this issue.
 
 **Troubleshooting steps**: Determine the root cause:
 
@@ -145,6 +148,26 @@ Cloud PCs provisioned after July 2022 won’t encounter this issue.
 - In an elevated command window, run the following command to reboot the job:
 
     `Remove-DSCConfiguration -Stage Pending,Current,Previous -Verbose`
+
+## Cloud PC connection issues for GCC High government customers<!--47633105-->
+
+Some GCC High government customers whose resources are deployed to `microsoft.us`` environments may encounter issues connecting to their Cloud PC using web clients or the Safari browser.
+
+**Possible cause**: The issue occurs when the web client or the Safari browser blocks third-party cookies. Third-party cookies are cookies set by a domain other than the one you're visiting.  
+
+For GCC High customers with resources deployed to `microsoft.us` environments, the `microsoft.us` cookies are considered third-party cookies by the web client or the Safari browser. This consideration is because the web client/Safari browser uses the Cloud PC’s domain name, which is different from `microsoft.us`, to determine the first-party domain. If the web client/Safari browser blocks third-party cookies, it prevents the `microsoft.us` cookies from:
+
+- being stored.
+- used for authentication and authorization.
+
+As a result, you can’t connect to your Cloud PC session.
+
+**Troubleshooting steps**: Allow third-party cookies from `microsoft.us` in your
+
+- web client or Safari browser settings, or
+- through Group Policy.
+
+This change lets the web client/Safari browser store and use the `microsoft.us` cookies for connecting to your Cloud PC session.  
 
 ## Next steps
 
