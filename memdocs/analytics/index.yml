@@ -56,7 +56,7 @@ landingContent:
   # Card
   - title: Advanced Endpoint analytics
     linkLists:
-      - linkListType: Advanced analytics
+      - linkListType: how-to-guide
         links:
           - text: Anomaly detection
             url: anomaly-detection.md
