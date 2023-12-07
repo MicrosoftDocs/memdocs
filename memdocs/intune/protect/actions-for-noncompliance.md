@@ -191,7 +191,7 @@ Add variables to the message to create a personalized email with dynamic content
 4. On the **Header and footer settings** page, add your company details and logo. 
 
    > [!div class="mx-imgBorder"]
-   > ![Example of the Header and footer settings page for a notification message in Intune.](./media/actions-for-noncompliance/actions-for-noncompliance-3.png)  
+   > ![Screenshot that shows example of the Header and footer settings page for a notification message in Intune.](./media/actions-for-noncompliance/actions-for-noncompliance-3.png)  
 
    Your options:  
    - **Email header – Show company logo** (default = *Enable*) - Upload a logo to add your organization's branding to the email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
@@ -204,7 +204,7 @@ Add variables to the message to create a personalized email with dynamic content
 5. On the **Notification message templates** page, configure one or more messages.  
 
       > [!div class="mx-imgBorder"]
-   > ![Example of the Notification messages templates page for a notification message in Intune, showing all required fields filled in.](./media/actions-for-noncompliance/actions-for-noncompliance-4.png)  
+   > ![Screenshot that shows example of the Notification messages templates page for a notification message in Intune, showing all required fields filled in.](./media/actions-for-noncompliance/actions-for-noncompliance-4.png)  
 
 
    For each message, specify the following details:
