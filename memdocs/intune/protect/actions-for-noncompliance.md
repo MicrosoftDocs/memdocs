@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/08/2023
+ms.date: 12/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -173,7 +173,7 @@ To send email to your users, create a notification message template and associat
 
 A *notification message template* can include multiple messages that are each for a different locale. When you specify multiple messages and locales, non-compliant end users receive the appropriate localized message based on their O365 preferred language. 
 
-Add variables to the message to create a more custom email with dynamic content. The following table describes the variables you can use in the subject line and body of the message.  
+Add variables to the message to create a personalized email with dynamic content. The following table describes the variables you can use in the subject line and body of the message.  
 
 | Variable name | Token to use | Description |
 | --- | --- |--- |
