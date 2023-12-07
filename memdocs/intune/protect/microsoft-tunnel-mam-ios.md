@@ -53,7 +53,7 @@ The [Microsoft Tunnel for Mobile Application Management for iOS/iPadOS]( https:/
 To use the Microsoft Tunnel for MAM iOS, you must update your Line of Business (LOB) apps to integrate the following three SDKs. Find guidance for integrating each SDK later in this article:
 
 - [Intune App SDK for iOS](../developer/app-sdk-ios.md)
-- [Microsoft Authentication Library](../developer/app-sdk-ios.md#setup-msal) (MSAL)
+- [Microsoft Authentication Library](../developer/app-sdk-ios-phase2.md#setup-msal) (MSAL)
 - [Tunnel for MAM iOS SDK](../developer/tunnel-mam-ios-sdk.md)
 
 ## Tunnel for MAM iOS SDK Architecture

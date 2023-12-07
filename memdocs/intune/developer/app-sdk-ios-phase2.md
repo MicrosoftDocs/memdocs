@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for iOS developer guide 
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app.
+title: Microsoft Intune App SDK for iOS developer guide - MSAL prerequisite and setup 
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. MSAL prerequisite and setup
 keywords:
 author: Erikre
 ms.author: erikre
@@ -65,7 +65,7 @@ The points below contain additional information to configure MSAL and link to it
 
 ### Configure MSAL settings for the Intune App SDK
 
-Once an app registration has been configured for your application in Microsoft Entra ID, you can configure the Intune App SDK to use the settings from your app registration during authentication against Microsoft Entra ID. See [Configure settings for the Intune App SDK](#configure-settings-for-the-intune-app-sdk) for information on populating the following settings:  
+Once an app registration has been configured for your application in Microsoft Entra ID, you can configure the Intune App SDK to use the settings from your app registration during authentication against Microsoft Entra ID. See [Configure settings for the Intune App SDK](#configure-msal-settings-for-the-intune-app-sdk) for information on populating the following settings:  
 
 * ADALClientId
 * ADALAuthority

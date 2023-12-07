@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for iOS developer guide 
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app.
+title: Microsoft Intune App SDK for iOS developer guide - Scenario-based guidance
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. Scenario-based guidance
 keywords:
 author: Erikre
 ms.author: erikre
@@ -39,7 +39,7 @@ The Intune App SDK has several APIs you can call to get information about the In
 
 Class | Description
 ----- | -----------
-IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune APP policy deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity](app-sdk-ios.md#enable-multi-identity-optional). |
+IntuneMAMPolicyManager.h | The IntuneMAMPolicyManager class exposes the Intune APP policy deployed to the application. Notably, it exposes APIs that are useful for [Enabling multi-identity](#enable-multi-identity-optional). |
 IntuneMAMPolicy.h | The IntuneMAMPolicy class exposes some MAM policy settings that apply to the app. Most of these policy settings are exposed so the app can customize its UI. Most policy settings are enforced by the SDK and not the app. However, there are some exceptions. App developers should review the comments in this header to determine which APIs are applicable to their application's scenarios. |
 IntuneMAMFileProtectionManager.h | The IntuneMAMFileProtectionManager class exposes APIs the app can use to explicitly secure files and directories based on a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply the appropriate MAM policy. Using this class is optional. |
 IntuneMAMDataProtectionManager.h | The IntuneMAMDataProtectionManager class exposes APIs the app can use to secure data buffers given a supplied identity. The identity can be managed by Intune or unmanaged, and the SDK will apply encryption appropriately. |
@@ -236,7 +236,7 @@ MAM targeted configuration (also know as MAM app config) allows an app to receiv
 
 Intune administrators can target and deploy configuration data via the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and Intune Graph API. As of version 7.0.1 of the Intune App SDK for iOS, apps that are participating in MAM targeted configuration can be provided MAM targeted configuration data via the MAM Service. The application configuration data is pushed through our MAM Service directly to the app instead of through the MDM channel. The Intune App SDK provides a class to access the data retrieved from these consoles. The following items are prerequisites:
 
-* The app needs to be enrolled with the Intune MAM service before you access the MAM targeted config UI. For more information, see [Receive app protection policy](#receive-app-protection-policy).
+* The app needs to be enrolled with the Intune MAM service before you access the MAM targeted config UI. For more information, see [Receive app protection policy](../developer/app-sdk-ios-phase3.md#receive-app-protection-policy).
 
 * Include `IntuneMAMAppConfigManager.h` in your app's source file.
 
