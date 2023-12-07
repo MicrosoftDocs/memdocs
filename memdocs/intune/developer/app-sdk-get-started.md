@@ -99,7 +99,7 @@ It's a good idea to sign up for a GitHub account that you can use to fork and pu
 
 You'll need one of the following developer guides to help you integrate the Intune App SDK into your app:
 
-* **[Intune App SDK for iOS Developer Guide](app-sdk-ios.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
+* **[Intune App SDK for iOS Developer Guide](app-sdk-ios-phase1.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
 
 * **[Intune App SDK for Android Developer Guide](/mem/intune/developer/app-sdk-android-phase1)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
 
