@@ -333,7 +333,7 @@ When you already have an app registration, you can choose to update it instead o
 
 2. Select **Authentication** and review the app platform type. It must be *iOS/macOS* and have a *Bundle ID* and *Redirect URI*. The Redirect URI must be formed as `msauth.Your_Bundle_ID://auth`.
 
-   Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that a *MSAL Configuration* is present. If it isn't, see [Create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
+   Next, select **View** to view the details of the *Bundle ID* and *Redirect URI*. Ensure that an *MSAL Configuration* is present. If it isn't, see [Create a Microsoft Entra application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal#app-registration-app-objects-and-service-principals) for guidance.
 
    As in the previous step, compare the values *Bundle ID* and *Redirect URI* with these values from your Xcode app project:  
    - Project > General > Identity: Bundle ID
