@@ -60,7 +60,7 @@ For this example, you'll configure MDM enrollment settings so that both corporat
 > [!IMPORTANT]
 > For Windows BYOD devices, the MAM user scope takes precedence if both the MAM user scope and the MDM user scope (automatic MDM enrollment) are enabled for all users or the same groups of users. The device will not be MDM enrolled, and Microsoft Purview Information Protection policies will apply if you configured them.  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **All services** > **M365 Microsoft Entra ID** > **All services** > **Microsoft Entra ID** > **Mobility (MDM and MAM)**.  
+1. Go to the [Microsoft Intune Enrollment configuration blade in the Microsoft Entra admin center](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/MdmConfiguration.ReactView/appName/Microsoft%20Intune%20Enrollment/appId/d4ebce55-015a-49b5-a083-c84d1797ae8c).  
 2. Select **Get a free Premium trial to use this feature**. Selecting this option will allow auto enrollment using the Microsoft Entra ID Free Premium trial.  
 3. Choose the **Enterprise Mobility + Security E5** free trial option.  
 4. Select **Free trial** > **Activate**. It can take a minute to activate.  
