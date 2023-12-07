@@ -29,9 +29,9 @@ ms.collection:
 - highpri
 ---
 
-# Manage declarative software updates with the settings catalog
+# Managed software updates with the settings catalog
 
-You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure declarative software updates for iOS/iPadOS and macOS devices. With declarative software updates in Intune, you can:
+You can use the Intune [settings catalog](../configuration/settings-catalog.md) to configure managed software updates for iOS/iPadOS and macOS devices. With managed software updates in Intune, you can:
 
 - Choose an update to install using its OS version or build version.
 - Enforce a deadline for the device to automatically install an update.
@@ -51,13 +51,13 @@ Apple's declarative device management (DDM) allows you to install a specific upd
 > - [Apple's session on exploring advances in declarative device management](https://developer.apple.com/videos/play/wwdc2023/10041/) (opens Apple's website)
 > - [The software update configuration in Apple's developer documentation](https://developer.apple.com/documentation/devicemanagement/softwareupdateenforcementspecific#discussion) (opens Apple's website)
 
-## Declarative software updates vs software update policies
+## Managed software updates vs software update policies
 
-On Apple devices in Intune, you can create software update policies or declarative software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
+On Apple devices in Intune, you can create software update policies or managed software update policies. Both policy types can manage the install of software updates on devices. However, there are some differences between the two policy types.
 
 Use the following information to help you decide which policy type to use.
 
-| Feature | Declarative software update policy | Software update policy|
+| Feature | Managed software update policy | Software update policy|
 | --- | --- | --- |
 | **Configure a specific update to install** | &nbsp; | &nbsp; |
 | iOS/iPadOS | ✔️ | ✔️ |
@@ -89,20 +89,20 @@ Use the following information to help you decide which policy type to use.
 
 ### Precedence
 
-Declarative software updates have precedence over other policies that configure software updates. If you configure declarative software updates and also have other software update policies assigned, then it's possible the other update policies have no effect.
+Managed software updates have precedence over other policies that configure software updates. If you configure managed software updates and also have other software update policies assigned, then it's possible the other update policies have no effect.
 
 **iOS/iPadOS precedence order**:
 
-1. Declarative software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
+1. Managed software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
 2. Update policies (**Devices** > **Update policies for iOS/iPadOS**)
 
 **macOS precedence order**:
 
-1. Declarative software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
+1. Managed software updates (**Settings catalog** > **Declarative Device Management** > **Software Update**)
 2. Update policies (**Devices** > **Update policies for macOS**)
 3. Software updates (**Settings catalog** > **System Updates** > **Software Update**)
 
-## Configure the DDM software updates policy
+## Configure the managed software updates policy
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -145,15 +145,15 @@ Declarative software updates have precedence over other policies that configure 
 
     Select **Next**.
 
-8. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
-
-    Select **Next**.
-
+1. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
+> [!IMPORTANT]
+> Assignment filters are not supported for DDM-based policies.
+ Select **Next**.
 9. In **Review + create**, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Delay visibility of updates
 
-When you configure declarative software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
+When you configure managed software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
 
 A restriction period gives you time to test an update before it's available to users. After the restriction period ends, users can see the update. If your update policies don't install it first, then users can choose to install the update.
 
@@ -172,3 +172,4 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - [macOS software update policies in Intune](software-updates-macos.md)
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
+
