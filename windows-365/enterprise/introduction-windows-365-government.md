@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2023
+ms.date: 12/08/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -61,6 +61,7 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - System alerts and email notifications
 - GPU Cloud PCs
 - Audit logs support in Azure Log Analytics
+- [New Microsoft Teams client](/microsoftteams/new-teams-desktop-admin)
 
 ## Next steps
 
