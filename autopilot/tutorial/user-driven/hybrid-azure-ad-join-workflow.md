@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 12/07/2023
+ms.date: 12/08/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -34,7 +34,7 @@ Before beginning, refer to the [Plan your Microsoft Entra hybrid join implementa
 
 ## Windows Autopilot user-driven Microsoft Entra hybrid join overview
 
-Windows Autopilot user-driven Microsoft Entra hybrid join is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an OEM or reseller to the end-user without the need for IT intervention. Windows Autopilot user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+Windows Autopilot user-driven Microsoft Entra hybrid join is an Autopilot solution that automates the configuration of Windows on a new device. The device is normally delivered directly from an OEM or reseller to the end-user without the need for IT intervention. Windows Autopilot user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
@@ -50,7 +50,7 @@ Windows Autopilot user-driven deployments can perform the following tasks during
 - Installs applications.
 - Applies device configuration policies such as BitLocker and Windows Hello for Business.
 - Checks for compliance.
-- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it's fully configured.
+- The Enrollment Status Page (ESP) prevents an end-user from using the device until the device is fully configured.
 
 Windows Autopilot user-driven deployments consist of two phases:
 
@@ -77,7 +77,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!NOTE]
 >
-> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
+> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step might make more sense in a production environment.
 
 ## Walkthrough
 
