@@ -117,9 +117,9 @@ sections:
           No. OEMs just send the CBRs as usual to Microsoft. No images are sent to Microsoft to enable Windows Autopilot. Windows Autopilot only customizes OOBE and allows policy configurations.
 
       - question: |
-          Are there any customer issues with upgrading from Windows 8 to Windows 10 or Windows 11?
+          Are there any customer issues with upgrading to a currently supported version of Windows?
         answer: |
-          The devices must be running a supported version of Windows 10 or Windows 11 general availability channel to enroll in Windows Autopilot deployment. Otherwise, there's generally no issue. For more information, see [Windows Autopilot - known issues](known-issues.md).
+          The devices must be running a supported version of Windows general availability channel to enroll in Windows Autopilot deployment. Otherwise, there's generally no issue. For more information, see [Windows Autopilot - known issues](known-issues.md).
 
       - question: |
           Will the existing CBR with 4K hardware hash ever change?
@@ -308,7 +308,7 @@ sections:
       - question: |
           What is co-management?
         answer: |
-          Co-management enables you to concurrently manage Windows 10 or later devices by using both Microsoft Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
+          Co-management enables you to concurrently manage currently supported versions of Windows by using both Microsoft Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
 
           When a Windows device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
@@ -364,7 +364,7 @@ sections:
       - question: |
           What's Autopilot for existing devices?
         answer: |
-          Autopilot for existing devices offers an upgrade path to Windows 10 or Windows 11 for all existing Windows 8.1 devices.
+          Autopilot for existing devices offers an upgrade path to currently supported versions of Windows for an existing Windows device.
 
           For more information, see [Autopilot for existing devices](existing-devices.md).
 

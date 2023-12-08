@@ -158,7 +158,7 @@ Windows Autopilot requires that devices be Microsoft Entra joined. If you have a
 
 In addition to these core requirements for user-driven Microsoft Entra hybrid join, the following extra requirements apply to on-premises devices:
 
-- The device has a supported version of Windows 10 or Windows 11.
+- The device has a currently supported version of Windows.
 
 - The device is connected to the internal network and has access to an Active Directory domain controller.
 
@@ -180,7 +180,7 @@ With the addition of VPN support for this scenario, you can configure the Micros
 
 In addition to the [core requirements](#requirements-for-user-driven-mode-with-hybrid-azure-ad) for user-driven mode with Microsoft Entra hybrid join, the following extra requirements apply to a remote scenario with VPN support:
 
-- A supported version of Windows 10 or Windows 11.
+- A currently supported supported version of Windows.
 
 - In the Microsoft Entra hybrid join profile for Autopilot, enable the following option: **Skip domain connectivity check**.
 

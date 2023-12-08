@@ -45,7 +45,7 @@ For additional details about each of these services and their specific requireme
 
 ### Windows Autopilot Deployment Service
 
-After a network connection is in place, each Windows device will contact the Windows Autopilot Deployment Service. With Windows 10 version 1903 and above, the following URLs are used:
+After a network connection is in place, each Windows device will contact the Windows Autopilot Deployment Service. The following URLs are used:
 
 - `https://ztd.dds.microsoft.com`
 - `https://cs.dds.microsoft.com`
@@ -65,8 +65,8 @@ Microsoft Entra ID validates user credentials, and the device can also be joined
 
 Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
 
-- [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use)
-- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
+- [Intune network configuration requirements and bandwidth](/mem/intune/fundamentals/network-bandwidth-use).
+- [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
 
 ### Autopilot automatic device diagnostics collection
 
@@ -84,10 +84,10 @@ If Windows Update is inaccessible, the Autopilot process still continues but cri
 
 Autopilot contacts the [Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) service when downloading the apps and updates. This contact establishes peer-to-peer sharing of content so that only a few devices need to download it from the internet.
 
-- Windows Updates
-- Microsoft Store apps and app updates
-- Office Updates
-- Intune Win32 Apps
+- Windows Updates.
+- Microsoft Store apps and app updates.
+- Office Updates.
+- Intune Win32 Apps.
 
 If the Delivery Optimization Service is inaccessible, the Autopilot process still continues with Delivery Optimization downloads from the cloud without peer-to-peer.
 
@@ -101,7 +101,7 @@ To resolve DNS names for all services, the device communicates with a DNS server
 
 ### Diagnostics data
 
-Starting in Windows 10, version 1903, diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-enterprise-diagnostic-data).
+Diagnostic data collection is enabled by default. To disable Windows Analytics and related diagnostics capabilities, see [Manage enterprise diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#manage-enterprise-diagnostic-data).
 
 If the device can't send diagnostic data, the Autopilot process still continues. However, services that depend on diagnostic data, such as Desktop Analytics, doesn't work.
 
@@ -159,4 +159,4 @@ Deploying proxy settings for Windows Autopilot should be configured on the proxy
 
 ## Next steps
 
-[Windows Autopilot licensing requirements](licensing-requirements.md)
+- [Windows Autopilot licensing requirements](licensing-requirements.md).
