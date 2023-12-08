@@ -51,7 +51,7 @@ You may be confused by the use of the term *entity* and *table*. The data model 
 
 ## Install Power BI Desktop
 
-Install the latest version of Power BI Desktop. You can download Power BI Desktop from: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Install the latest version of Power BI Desktop. You can download Power BI Desktop from [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop).
 
 ## Connect to the OData feed for the Intune Data Warehouse for your tenant
 
