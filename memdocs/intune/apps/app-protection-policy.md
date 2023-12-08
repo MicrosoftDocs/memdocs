@@ -190,7 +190,7 @@ The additional requirements to use the [Outlook mobile app](https://products.off
 - The end user must have the Outlook mobile app installed to their device.
 - The end user must have an [Microsoft 365 Exchange Online](https://products.office.com/exchange/exchange-online) mailbox and license linked to their Microsoft Entra account.
 
-  >[!NOTE]
+  > [!NOTE]
   > The Outlook mobile app currently only supports Intune App Protection for Microsoft Exchange Online and [Exchange Server with hybrid modern authentication](/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth?view=exchserver-2019&preserve-view=true) and does not support Exchange in Office 365 Dedicated.
 
 ### Word, Excel, and PowerPoint
@@ -203,7 +203,7 @@ The additional requirements to use the [Word, Excel, and PowerPoint](https://pro
 
 - If the managed location is OneDrive, the app must be targeted by the app protection policy deployed to the end user.
 
-  >[!NOTE]
+  > [!NOTE]
   > The Office mobile apps currently only support SharePoint Online and not SharePoint on-premises.
 
 ### Managed location needed for Office
@@ -248,7 +248,7 @@ Consider the following examples for the work or "corporate" context:
 > [!NOTE]
 > Outlook has a combined email view of both "personal" and "corporate" emails. In this situation, the Outlook app prompts for the Intune PIN on launch.
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > Although Edge is in "corporate" context, users can intentionally move OneDrive "corporate" context files to an unknown personal cloud storage location. To avoid this, see [Manage restricted web sites](manage-microsoft-edge.md#manage-restricted-web-sites) and configure the allowed/blocked site list for Edge.
 
 ### Intune app PIN
@@ -267,7 +267,7 @@ The IT admin can define the Intune app protection policy setting **Recheck the a
 
 For iOS/iPadOS devices, even if the PIN is shared between apps from different publishers, the prompt will show up again when the **Recheck the access requirements after (minutes)** value is met again for the app that is not the main input focus. So, for example, a user has app *A* from publisher *X* and app *B* from publisher *Y*, and those two apps share the same PIN. The user is focused on app *A* (foreground), and app *B* is minimized. After the **Recheck the access requirements after (minutes)** value is met and the user switches to app *B*, the PIN would be required.
 
-  >[!NOTE]
+  > [!NOTE]
   > In order to verify the user's access requirements more often (i.e. PIN prompt), especially for a frequently used app, it is recommended to reduce the value of the 'Recheck the access requirements after (minutes)' setting.
 
 **Built-in app PINs for Outlook and OneDrive**<br>
@@ -289,7 +289,7 @@ Since the PIN is shared amongst apps with the same publisher, if the wipe goes t
 If you observe the PIN being wiped on some devices, the following is likely happening: Since the PIN is tied to an identity, if the user signed in with a different account after a wipe, they will be prompted to enter a new PIN. However, if they sign in with a previously existing account, a PIN stored in the keychain already can be used to sign in.
 
 **Setting a PIN twice on apps from the same publisher?**<br>
-MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
+MAM (on iOS/iPadOS) currently allows application-level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (i.e. WXP, Outlook, Managed Browser, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios-phase1.md). Without this, the passcode settings are not properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
 In order to support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Another change was introduced in the Intune SDK for iOS v 14.6.0 that causes all PINs in 14.6.0+ to be handled separately from any PINs in previous versions of the SDK.
 
@@ -299,8 +299,11 @@ This behavior is specific to the PIN on iOS/iPadOS applications that are enabled
 
   >[!NOTE]
   > For example, if app A is built with a version prior to 7.1.12 (or 14.6.0) and app B is built with a version greater than or equal to 7.1.12 (or 14.6.0) from the same publisher, the end user will need to set up PINs separately for A and B if both are installed on an iOS/iPadOS device.
+  >
   > If an app C that has SDK version 7.1.9 (or 14.5.0) is installed on the device, it will share the same PIN as app A.
+  >
   > An app D built with 7.1.14 (or 14.6.2) will share the same PIN as app B.  
+  >
   > If only apps A and C are installed on a device, then one PIN will need to be set. The same applies to if only apps B and D are installed on a device.
 
 ### App data encryption
@@ -331,7 +334,7 @@ For more information about remote wipe for MDM, see [Remove devices by using wip
 
 [Full device wipe](../remote-actions/devices-wipe.md) removes all user data and settings from **the device** by restoring the device to its factory default settings. The device is removed from Intune.
 
-  >[!NOTE]
+  > [!NOTE]
   > Full device wipe, and selective wipe for MDM can only be achieved on devices enrolled with Intune mobile device management (MDM).
 
 **Selective wipe for MDM**<br>
