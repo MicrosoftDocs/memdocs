@@ -72,7 +72,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### Add unmanaged PKG-type applications to managed macOS devices [General Availability]<!-- 17296091   -->  
+#### Support to add unmanaged PKG-type applications to managed macOS devices is now general available<!-- 17296091   -->  
 You can now upload and deploy unmanaged PKG-type applications to managed macOS devices using the Intune MDM agent for macOS devices. This feature enables you to deploy custom PKG installers, such as unsigned apps and component packages. You can add a PKG app in the Intune admin center by selecting **Apps** > **macOS** > **Add** > **macOS app (PKG)** for app type.
 
 For more information, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md). To deploy managed PKG-type app, you can continue to [add macOS line-of-business (LOB) apps to Microsoft Intune](../apps/lob-apps-macos.md). For more information about the Intune MDM agent for macOS devices, see [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md).
