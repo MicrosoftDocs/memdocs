@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 12/06/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -59,8 +59,6 @@ The following features aren't yet supported for Windows 365 GCC or GCCH.
 - Windows 365 Frontline
 - Admin feedback
 - System alerts and email notifications
-- Windows 365 Switch
-- Windows 365 Boot
 - GPU Cloud PCs
 - Audit logs support in Azure Log Analytics
 

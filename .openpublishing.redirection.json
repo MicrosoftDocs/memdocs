@@ -246,6 +246,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "memdocs/intune/developer/app-sdk-ios.md",
+      "redirect_url": "/mem/intune/developer/app-sdk-ios-phase1",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "memdocs/intune/developer/app-sdk-android-testing-guide.md",
       "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
       "redirect_document_id": false

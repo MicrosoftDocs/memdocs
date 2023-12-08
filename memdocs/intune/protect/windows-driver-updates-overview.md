@@ -60,6 +60,11 @@ Windows driver update management applies to:
 
 ## Prerequisites
 
+> [!IMPORTANT]
+> This feature is not supported on GCC cloud environment.
+>
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
+
 To use Windows Driver Update management, your organization must have the following licenses, subscriptions, and network configurations: 
 
 ### Subscriptions
@@ -274,6 +279,10 @@ To help avoid issues that require rolling back a driver from large numbers of de
 ### Is there a way to set a deadline for drivers?
 
 - The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but is not a deferral period. The deferral period delays when updates are first offered to a device.
+
+### Are the user experience settings from an Update Ring policy applied for driver updates?
+
+- Yes, user experience settings such as automatic update behavior, active hours, notifications, and so on are applied for driver updates as well.
 
 ### Why does it take up to 24 hours for the driver update inventory to be returned?
 

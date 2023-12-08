@@ -1468,8 +1468,8 @@ items:
             href: ./enrollment/android-move-device-admin-work-profile.md  
         - name: Samsung Knox enrollment solutions  
           items: 
-          - name: Enable Samsung Knox Mobile Enrollment
-            href: ./enrollment/android-samsung-knox-mobile-enroll.md
+          - name: Use Samsung Knox Mobile Enrollment 
+            href: ./enrollment/android-samsung-knox-mobile-enroll.md  
         - name: Enrollment configurations    
           items:        
           - name: Security configuration framework for Android Enterprise  
@@ -1793,7 +1793,17 @@ items:
       - name: App Wrapping Tool for iOS
         href: ./developer/app-wrapper-prepare-ios.md
       - name: Intune App SDK for iOS
-        href: ./developer/app-sdk-ios.md
+        items:
+        - name: Plan the integration
+          href: ./developer/app-sdk-ios-phase1.md
+        - name: MSAL prerequisite and setup
+          href: ./developer/app-sdk-ios-phase2.md
+        - name: Intune SDK integration into your iOS app
+          href: ./developer/app-sdk-ios-phase3.md
+        - name: Scenario-based guidance
+          href: ./developer/app-sdk-ios-phase4.md
+        - name: Appendix
+          href: ./developer/app-sdk-ios-appendix.md
       - name: App Wrapping Tool for Android
         href: ./developer/app-wrapper-prepare-android.md
         displayName: dex
