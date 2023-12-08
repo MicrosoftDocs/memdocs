@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2023
+ms.date: 12/05/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -59,6 +59,12 @@ Create an [Android (AOSP) device configuration profile](wi-fi-settings-configure
 
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key** (PSK). When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+
+    > [!WARNING]
+    > On Android 12 and later, Google deprecated support for WEP pre-shared keys (PSK) in Wi-Fi configuration profiles. It's possible WEP might still work. But, it's not recommended and is considered obsolete. Instead, use WPA pre-shared keys (PSK) in your Wi-Fi configuration profiles.
+    >
+    > For more information, go to the [Android developer reference - WifiConfiguration.GroupCipher](https://developer.android.com/reference/android/net/wifi/WifiConfiguration.GroupCipher#summary).
+
   - **WPA-Pre-shared key**: Enter the password in **Pre-shared key** (PSK). When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
 
 ## Enterprise
