@@ -141,7 +141,7 @@ Before you make the call, verify that you have already added the Callback URL to
 
 13. Select **Get New Access Token**.
 
-    :::image type="content" alt-text="Information for the access token" source="./media/reports-proc-data-rest/reports-postman_getnewtoken.png":::
+    :::image type="content" alt-text="Information for the access token." source="./media/reports-proc-data-rest/reports-postman_getnewtoken.png":::
 
 14. Type your credentials in the Active AD authorization page. The list of tokens in Postman now contains the token named `Bearer`.
 15. Select **Use Token**. The list of headers contains the new key value of Authorization and the value `Bearer <your-authorization-token>`.
@@ -151,7 +151,7 @@ Before you make the call, verify that you have already added the Callback URL to
 1. Select **Send**.
 2. The return data appears in the Postman response body.
 
-    :::image type="content" alt-text="Postman client status equals 200 OK" source="./media/reports-proc-data-rest/reports-postman_200OK.png" lightbox="./media/reports-proc-data-rest/reports-postman_200OK.png":::
+    :::image type="content" alt-text="Postman client status equals 200 OK." source="./media/reports-proc-data-rest/reports-postman_200OK.png" lightbox="./media/reports-proc-data-rest/reports-postman_200OK.png":::
 
 ## Create a REST client (C#) to get data from the Intune Data Warehouse
 
@@ -172,7 +172,7 @@ The following sample contains a simple REST client. The code uses the **httpClie
 6. Select **I Accept** to accept the NuGet package license.
 7. Open `Program.cs` from the Solution Explorer.
 
-    :::image type="content" alt-text="Program.cs and Solution Explorer in Visual Studio" source="./media/reports-proc-data-rest/reports-get_rest_data_in.png" lightbox="./media/reports-proc-data-rest/reports-get_rest_data_in.png":::
+    :::image type="content" alt-text="Program.cs and Solution Explorer in Visual Studio." source="./media/reports-proc-data-rest/reports-get_rest_data_in.png" lightbox="./media/reports-proc-data-rest/reports-get_rest_data_in.png":::
 
 8. Replace the code in *Program.cs* with the following code:
 
