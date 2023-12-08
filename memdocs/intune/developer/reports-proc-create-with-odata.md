@@ -84,7 +84,7 @@ Install the latest version of Power BI Desktop. You can download Power BI Deskto
 
 You can import multiple tables to analyze not just the data in a single table but related data across tables. Power BI has a feature called **autodetect** that attempts to find and create relationships for you. The tables in the Data Warehouse have been built to work with the autodetect feature in Power BI. However, even if Power BI doesn't automatically find the relationships, you can still manage the relationships.
 
-![Manage relationships of related data across tables.](./media/reports-proc-create-with-odata/reports-create-03-managerelationships.png)
+:::image type="content" alt-text="Manage relationships of related data across tables." source="./media/reports-proc-create-with-odata/reports-create-03-managerelationships.png":::
 
 1. Select **Manage Relationships**.
 2. Select **Autodetect...** if Power BI has not already detected the relationships.
