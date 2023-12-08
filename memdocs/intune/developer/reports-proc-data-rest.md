@@ -79,16 +79,16 @@ You can work with the Intune Data Warehouse API with a generic REST client such 
 
 You need the following information to make a REST call using Postman:
 
-| Attribute        | Description                                                                                                                                                                          | Example                                                                                       |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| Callback URL     | Set this as the callback URL in your app settings page.                                                                                                                              | `https://www.getpostman.com/oauth2/callback`                                                    |
-| Token Name       | A string used to pass the credentials to the Azure app. The process generates your token so you can make a call to the Data Warehouse API.                          | Bearer                                                                                        |
+| Attribute        | Description          | Example        |
+|------------------|----------------------|----------------|
+| Callback URL     | Set this as the callback URL in your app settings page.   | `https://www.getpostman.com/oauth2/callback`   |
+| Token Name       | A string used to pass the credentials to the Azure app. The process generates your token so you can make a call to the Data Warehouse API. | Bearer |
 | Auth URL         | This is the URL used to authenticate. | https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/ |
-| Access Token URL | This is the URL used to grant the token.                                                                                                                                              | https://login.microsoftonline.com/common/oauth2/token |
-| Client ID        | You created, and noted this when creating the native app in Azure.                                                                                               | 4184c61a-e324-4f51-83d7-022b6a81b991                                                          |
-| Client Secret        | You created, and noted this when creating the native app in Azure.                                                                                               | Ksml3dhDJs+jfK1f8Mwc8                                                          |
-| Scope (Optional) | Blank                                                                                                                                                                               | You can leave the field blank.                                                                     |
-| Grant Type       | The token is an authorization code.                                                                                                                                                  | Authorization code                                                                            |
+| Access Token URL | This is the URL used to grant the token.      | https://login.microsoftonline.com/common/oauth2/token |
+| Client ID        | You created, and noted this when creating the native app in Azure.   | 4184c61a-e324-4f51-83d7-022b6a81b991 |
+| Client Secret    | You created, and noted this when creating the native app in Azure.  | Ksml3dhDJs+jfK1f8Mwc8  |
+| Scope (Optional) | Blank  | You can leave the field blank.   |
+| Grant Type       | The token is an authorization code.       | Authorization code   |
 
 ### OData endpoint
 
