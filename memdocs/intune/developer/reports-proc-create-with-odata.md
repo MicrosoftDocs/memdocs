@@ -118,7 +118,7 @@ You can add a filter to your treemap so that you can answer additional questions
 
    Under the `OwnerTypes` table, there's a data field called `OwnerTypeKey`that contains a data as to whether a device is company-owned or personal. Since you would like to show friendly names in this filter, look for the `ownerTypes` table and drag the **ownerTypeName** to the Slicer. This example shows how the data model supports relationships between tables.
 
-![Treemap with filter - Supports relationships between tables](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
+:::image type="content" alt-text="Treemap with filter - Supports relationships between tables" source="./media/reports-proc-create-with-odata/reports-create-08_ownertype.png":::
 
 You now have an interactive filter that can be used to toggle between company owned and personally owned devices. Use this filter to see how the distribution changes.
 
