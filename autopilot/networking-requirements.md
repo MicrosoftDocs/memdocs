@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/30/2023
+ms.date: 12/08/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -30,7 +30,7 @@ Windows Autopilot depends on various internet-based services. Access to these se
 - Ensure Domain Name Services (DNS) name resolution for internet DNS names.
 - Allow access to all hosts via port 80 (HTTP), 443 (HTTPS), and 123 (UDP/NTP).
 
-Additional configuration may be required to grant access to required services in environments that:
+Additional configuration might be required to grant access to required services in environments that:
 
 - Have more restrictive internet access.
 - Require authentication before internet access can be obtained.
@@ -119,13 +119,13 @@ If the WNS services aren't available, the Autopilot process still continues with
 
 ### Microsoft Store, Microsoft Store for Business & Education
 
-Apps in the Microsoft Store can be pushed to the device, triggered via Intune (MDM). App updates and additional apps may also be needed when the user first logs in. For more information, see [Prerequisites for Microsoft Store for Business and Education](/microsoft-store/prerequisites-microsoft-store-for-business). (It also includes Microsoft Entra ID and Windows Notification Services).
+Apps in the Microsoft Store can be pushed to the device by triggering them via Intune (MDM). App updates and additional apps might also be needed when the user first logs in. For more information, see [Prerequisites for Microsoft Store for Business and Education](/microsoft-store/prerequisites-microsoft-store-for-business). (It also includes Microsoft Entra ID and Windows Notification Services).
 
 If the Microsoft Store isn't accessible, the Autopilot process still continues without Microsoft Store apps.
 
 ### Microsoft 365
 
-As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise may be required. For more information, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). This article includes all Office services, DNS names, IP addresses. It also includes Microsoft Entra ID and other services that may overlap with the previously listed services listed.
+As part of the Intune device configuration, installation of Microsoft 365 Apps for enterprise might be required. For more information, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). This article includes all Office services, DNS names, IP addresses. It also includes Microsoft Entra ID and other services that might overlap with the previously listed services listed.
 
 ### Certificate revocation lists (CRLs)
 
@@ -134,6 +134,10 @@ Some of these services also need to check certificate revocation lists (CRLs) fo
 <a name='hybrid-azure-ad-join'></a>
 
 ### Microsoft Entra hybrid join
+
+> [!IMPORTANT]
+>
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 The device can be Microsoft Entra hybrid joined. The computer should be on the internal network for Microsoft Entra hybrid join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
 
@@ -151,7 +155,7 @@ For each firmware TPM provider, make sure that the appropriate URL is accessible
 
 ### Proxy settings
 
-Deploying proxy settings for Windows Autopilot should be configured on the proxy server itself. Implementing proxy settings via Intune policy isn't fully supported as it may cause issues and unexpected behavior with privileged access deployments.
+Deploying proxy settings for Windows Autopilot should be configured on the proxy server itself. Implementing proxy settings via Intune policy isn't fully supported as it might cause issues and unexpected behavior with privileged access deployments.
 
 ## Next steps
 

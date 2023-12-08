@@ -8,7 +8,7 @@ ms.reviewer: jubaptis
 manager: aaroncz
 author: frankroj
 ms.author: frankroj
-ms.date: 11/17/2023
+ms.date: 12/08/2023
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -21,6 +21,10 @@ appliesto:
 
 # Windows Autopilot for pre-provisioned deployment (Public preview)
 
+> [!IMPORTANT]
+>
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+
 Windows Autopilot helps organizations easily provision new devices by using the preinstalled OEM image and drivers. This functionality lets end users get their devices business-ready by using a simple process.
 
 :::image type="content" source="images/wg01.png" alt-text="Diagram of the OEM process.":::
@@ -31,13 +35,13 @@ With **Windows Autopilot for pre-provisioned deployment**, the provisioning proc
 
 :::image type="content" source="images/wg02.png" alt-text="Diagram of the OEM process with partner.":::
 
-Pre-provisioned deployments use Microsoft Intune in Windows 10, version 1903 and later. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Microsoft Entra joined and Microsoft Entra hybrid joined devices.
+Pre-provisioned deployments use Microsoft Intune in currently supported versions of Windows. Such deployments build on existing Windows Autopilot [user-driven scenarios](user-driven.md) and support user-driven mode scenarios for both Microsoft Entra joined and Microsoft Entra hybrid joined devices.
 
 ## Prerequisites
 
 In addition to [Windows Autopilot requirements](software-requirements.md), Windows Autopilot for pre-provisioned deployment also requires:
 
-- Windows 10, version 1903 or later, or Windows 11
+- A currently supported version of Windows
 - Windows Pro, Enterprise, or Education editions
 - An Intune subscription.
 - Physical devices that support TPM 2.0 and device attestation. Virtual machines aren't supported. The pre-provisioning process uses Windows Autopilot self-deploying capabilities, so TPM 2.0 is required. The TPM attestation process also requires access to a set of HTTPS URLs that are unique for each TPM provider. For more information, see the entry for Autopilot self-Deploying mode and Autopilot pre-provisioning in [Networking requirements](networking-requirements.md#tpm).
@@ -59,9 +63,15 @@ To be ready to try out Windows Autopilot for pre-provisioned deployment, make su
 - User-driven Microsoft Entra join. Make sure that you can deploy devices using Windows Autopilot and join them to a Microsoft Entra ID tenant.
 
 - User-driven with Microsoft Entra hybrid join. To enable the features of Microsoft Entra hybrid join, make sure that you can:
+
   - Deploy devices using Windows Autopilot.
   - Join the devices to an on-premises Active Directory domain.
   - Register the devices with Microsoft Entra ID.
+
+  > [!IMPORTANT]
+  >
+  > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+
 
 If these scenarios can't be completed, Windows Autopilot for pre-provisioned deployment also doesn't succeed since it builds on top of these scenarios.
 
@@ -88,7 +98,12 @@ The pre-provisioning process applies all device-targeted policies from Intune. T
 Windows Autopilot for pre-provisioned deployment supports two distinct scenarios:
 
 - User-driven deployments with Microsoft Entra join. The device is joined to a Microsoft Entra tenant.
+
 - User-driven deployments with Microsoft Entra hybrid join. The device is joined to an on-premises Active Directory domain, and separately registered with Microsoft Entra ID.
+
+  > [!IMPORTANT]
+  >
+  > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
 Each of these scenarios consists of two parts, a technician flow and a user flow. At a high level, these parts are the same for Microsoft Entra join and Microsoft Entra hybrid join. The differences are primarily seen by the end user in the authentication steps.
 
@@ -107,7 +122,7 @@ After the customer or IT Admin targets all the apps and settings they want for t
 
     > [!NOTE]
     >
-    > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. The Autopilot team has published an [open-source sample of the companion app](https://github.com/Microsoft/WindowsAutopilotCompanion) that integrates with Intune by using the Graph API.
+    > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. The Autopilot team created an open-source sample of a companion app that integrates with Intune by using the Graph API. It's available on [GitHub](https://github.com/Microsoft/WindowsAutopilotCompanion).
 
 - Validate the information displayed. If any changes are needed, make the changes, and then select **Refresh** to redownload the updated Autopilot profile details.
 
@@ -121,7 +136,7 @@ If the pre-provisioning process completes successfully:
 
 > [!NOTE]
 >
-> Technician flow inherits behavior from [self-deploying mode](self-deploying.md). Per the Self-Deploying Mode documentation, it uses the Enrollment Status Page to hold the device in a provisioning state and prevent the user from proceeding to the desktop after enrollment but before software and configuration are done applying. As such, if Enrollment Status Page is disabled, the reseal button may appear before software and configuration is done applying letting you proceed to the user flow before technician flow provisioning is complete. The success screen validates that enrollment was successful, not that the technician flow is necessarily complete.
+> Technician flow inherits behavior from [self-deploying mode](self-deploying.md). Self-Deploying Mode uses the Enrollment Status Page to hold the device in a provisioning state. The device being in a provisioning state prevents the user from proceeding to the desktop after enrollment but before software and configuration are done applying. As such, if Enrollment Status Page is disabled, the reseal button can appear before software and configuration is done applying. This behavior can allow proceeding to the user flow before the technician flow provisioning is complete. The success screen validates that enrollment was successful, not that the technician flow is necessarily complete.
 
 If the pre-provisioning process fails:
 
@@ -144,15 +159,15 @@ If the pre-provisioning process completed successfully and the device was reseal
 
   > [!NOTE]
   >
-  > In certain circumstances, Microsoft Entra credentials may also be prompted for during a Microsoft Entra hybrid join scenario. For example, if ADFS isn't being used.
+  > In certain circumstances, Microsoft Entra credentials can also be prompted for during a Microsoft Entra hybrid join scenario. For example, if ADFS isn't being used.
 
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 
-The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This change allows ESP to install other policies that may have been assigned to the device after it was provisioned in the technician phase.  
+The device ESP reruns during the user flow so that both device and user ESP run when the user logs in. This behavior allows the ESP to install other policies that are assigned to the device after the device has completed the technician phase.  
 
 > [!NOTE]
 >
-> If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+> If the Microsoft Account Sign-In Assistant (wlidsvc) is disabled during the Technician Flow, the Microsoft Entra sign-in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be the desired behavior.
 
 ## Related articles
 
