@@ -94,7 +94,7 @@ We’ve also updated our [reference article](../protect/security-baseline-v2-edg
 ### Device management
 
 #### Support for variables in noncompliant email notifications<!-- 6111965  -->  
-Use variables to personalize email notifications that are sent when a user's device becomes noncompliant. The variables included in the template, such as `{{username}}` and `{{devicename}}`, are replaced by the the actual user name or device name in the email that users receive. Variables are supported for all platforms. For more information and a list of supported variables, see [Create a notification message template](../protect/actions-for-noncompliance.md#create-a-notification-message-template).
+Use variables to personalize email notifications that are sent when a user's device becomes noncompliant. The variables included in the template, such as `{{username}}` and `{{devicename}}`, are replaced by the actual username or device name in the email that users receive. Variables are supported with all platforms. For more information and a list of supported variables, see [Create a notification message template](../protect/actions-for-noncompliance.md#create-a-notification-message-template).
 
 
 #### Updated report visualization for Microsoft Defender for Endpoint connector<!--  24762035  -->  
@@ -103,10 +103,10 @@ We updated the reporting visualization for the Microsoft Defender for Endpoint c
 ### Device security
 
 #### New settings for scheduling Antivirus scans added to Antivirus policy for Windows devices<!-- 26013546  -->  
-We’ve added two settings to the *Microsoft Defender Antivirus* profile for  [endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md#antivirus-profiles) that applies to Windows 10 and Windows 11 devices.  These two settings work together to first enable support for a random start time of a devices antivirus scan, and to then define a range of time during which the randomized scan start can begin. These settings are supported with devices managed by Intune and devices managed through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+We’ve added two settings to the *Microsoft Defender Antivirus* profile for  [endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md#antivirus-profiles) that applies to Windows 10 and Windows 11 devices.  These two settings work together to first enable support for a random start time of a device's antivirus scan, and to then define a range of time during which the randomized scan start can begin. These settings are supported with devices managed by Intune and devices managed through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
 - [**RandomizeScheduleTaskTimes**](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#admx-microsoftdefenderantivirus-randomizescheduletasktimes) – This setting enables randomization of the scan start time on devices.
-- [**SchedulerRandomizationTime**](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationschedulerrandomizationtime) – This setting  this setting, you can set boundaries for the random start time
+- [**SchedulerRandomizationTime**](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationschedulerrandomizationtime) – This setting  this setting, you can set boundaries for the random start time.
 
 In addition to being added to the Microsoft Defender Antivirus profile, both settings are now available from the [settings catalog](../configuration/settings-catalog.md).
 
