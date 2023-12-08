@@ -320,7 +320,7 @@ The following syntax is an example JSON script with all the available configurat
         },
         {
             "key": "enable_updated_user_experience",
-            "valueString": false
+            "valueBool": false
         },
         {
             "key": "header_primary_element",
