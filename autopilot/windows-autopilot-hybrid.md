@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 12/07/2023
+ms.date: 12/08/2023
 ms.topic: how-to
 ms.prod: windows-client
 ms.technology: itpro-deploy
@@ -31,7 +31,7 @@ You can use Intune and Windows Autopilot to set up Microsoft Entra hybrid joined
 ## Prerequisites
 
 - Successfully configured your [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
-- If you have configured [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
+- If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
 ### Device enrollment prerequisites
 
@@ -79,9 +79,9 @@ The Intune Connector for your Active Directory creates autopilot-enrolled comput
 
 In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where Microsoft Entra hybrid joined devices are created.
 
-The organizational unit that's granted the rights to create computers must match:
+The organizational unit that has the rights to create computers must match:
 
-- The organizational unit that's entered in the Domain Join profile.
+- The organizational unit entered in the Domain Join profile.
 - If no profile is selected, the computer's domain name for your domain.
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
@@ -120,7 +120,7 @@ The organizational unit that's granted the rights to create computers must match
 
 ## Install the Intune Connector
 
-Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) have been met.
+Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) are met.
 
 ### Install steps
 
@@ -223,7 +223,7 @@ A device object is precreated in Microsoft Entra ID once a device is registered 
 
 ## BYO VPNs
 
-The following VPN clients have been tested and validated:
+The following VPN clients are tested and validated:
 
 ### VPN clients
 
@@ -260,7 +260,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. On the **Basics** page, type a **Name** and optional **Description**.
 
-1. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
+1. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 
 1. Select **Next**.
 
@@ -284,7 +284,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 > [!NOTE]
 >
-> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
@@ -314,8 +314,8 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
 
-    - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
-    - Provide an OU in which you've delegated control to the root computers in your on-premises Active Directory.
+    - Provide an OU in which control is delegated to your Windows 2016 device that is running the Intune Connector.
+    - Provide an OU in which control is delegated to the root computers in your on-premises Active Directory.
     - If you leave this blank, the computer object is created in the Active Directory default container (`CN=Computers` if you never [changed it](/troubleshoot/windows-server/identity/redirect-users-computers-containers)).
 
     Here are some valid examples:
@@ -335,13 +335,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 > [!NOTE]
 >
-> The naming capabilities for Windows Autopilot for Microsoft Entra hybrid join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
+> The naming capability for Windows Autopilot for Microsoft Entra hybrid join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
 
 ## Uninstall the ODJ Connector
 
 The OSD connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
 
-To uninstall the ODJ Connector from the computer where it's installed, follow these steps:
+To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. Sign into the computer hosting the ODJ connector.
 1. Right-click on the **Start** menu and select **Settings**.
