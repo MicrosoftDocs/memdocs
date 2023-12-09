@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/10/2023
+ms.date: 12/08/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -51,7 +51,7 @@ Both marketplace and custom images must meet the following requirements:
 A custom image must also meet the following extra requirements:
 
 - Exist in an Azure subscription.
-- Is stored as a managed image in Azure.
+- Is stored as a [managed image](/azure/virtual-machines/capture-image-resource) in Azure.
 
 Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Intune.
 
