@@ -89,9 +89,10 @@ Default values for server health metrics:
   - *Warning* - 30 days or less
   - *Unhealthy* - The certificate is expired
 
-- **TLS certificate revocation** – The Tunnel Gateway attempts to check the revocation status of the Transport Layer Security (TLS) certificate using an Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate.
+- **TLS certificate revocation** – The Tunnel Gateway attempts to check the revocation status of the Transport Layer Security (TLS) certificate using an Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate. This requires the server has access to the OCSP endpoint or CRL address as defined in the certificate.
+
   - *Healthy* - The TLS certificate is not revoked.
-  - *Warning* - Unable to check if the TLS certificate is revoked.
+  - *Warning* - Unable to check if the TLS certificate is revoked. Ensure the endpoints defined in the certificate can be accessed from the Tunnel server. 
   - *Unhealthy* - The TLS certificate is revoked.
   
   Plan to replace a revoked TLS certificate.
