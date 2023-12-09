@@ -114,6 +114,26 @@ Applies to:
 
 - Windows 10, 11
 
+#### Microsoft Tunnel support for direct proxy exclusion list in VPN profiles for Android Enterprise<!-- 24139621 -->  
+Intune now supports configuration of a *Proxy exclusion list* when you [configure a VPN profile for Microsoft Tunnel](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) for Android devices. With an exclusion list, you can exclude specific domains from your proxy setup without requiring the use of a Proxy Auto-Configuration (PAC) file. The proxy exclusion list is available with both Microsoft Tunnel and Microsoft Tunnel for MAM
+
+The proxy exclusion list is supported in environments that use a single proxy. The exclusion list isn’t suitable or supported when you use multiple proxy servers, for which you should continue to use a .PAC file.
+
+Applies to:
+
+- Android Enterprise
+
+#### Microsoft Tunnel server health metric to report on TLS certificate  revocation<!-- 25853648  -->  
+We’ve added a new health metric for Microsoft Tunnel named **TLS certificate revocation**. This new health metric reports on the status of the Tunnel Servers TLS certificate by accessing the Online Certificate Status Protocol (OCSP) or CRL address as defined in the TLS certificate. You can view the status of this new check with all the health checks in the Microsoft Intune admin center by navigating to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**, selecting a server, and then selecting that servers **Health check** tab.
+
+This metric runs as part of the existing Tunnel Health checks, and supports the following status:
+
+- *Healthy*: The TLs certificate is not revoked
+- *Warning*: Unable to check if the TLS certificate is revoked
+- *Unhealthy*: The TLS certificate is revoked, and should be updated
+
+For details about the TLS certificate revocation check, see [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md).
+
 ### Intune apps
 
 #### Newly available protected app for Intune<!-- 25636619   -->  
