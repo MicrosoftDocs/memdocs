@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 09/11/2023
+ms.date: 12/08/2023
 ms.topic: how-to
 ms.prod: windows-client
 ms.technology: itpro-deploy
@@ -22,12 +22,16 @@ appliesto:
 
 # Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot
 
+> [!IMPORTANT]
+>
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+
 You can use Intune and Windows Autopilot to set up Microsoft Entra hybrid joined devices. To do so, follow the steps in this article.  For more information about Microsoft Entra hybrid join, see [Understanding Microsoft Entra hybrid join and co-management](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 
 ## Prerequisites
 
 - Successfully configured your [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/hybrid-azuread-join-plan). Be sure to [verify your device registration](/azure/active-directory/devices/howto-hybrid-join-verify) by using the [Get-MgDevice](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdevice) cmdlet.
-- If you have configured [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
+- If [Domain and OU-based filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#domain-and-ou-filtering) is configured as part of Microsoft Entra Connect, ensure that the default organizational unit (OU) or container intended for the Autopilot devices is included in the sync scope.
 
 ### Device enrollment prerequisites
 
@@ -63,7 +67,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 ## Set up Windows automatic MDM enrollment
 
-1. Sign in to Azure, in the left pane, select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+1. Sign in to the [Azure portal](https://portal.azure.com/). In the left pane, select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 
 1. Make sure users who deploy Microsoft Entra joined devices by using Intune and Windows are members of a group included in **MDM User scope**.
 
@@ -75,9 +79,9 @@ The Intune Connector for your Active Directory creates autopilot-enrolled comput
 
 In some domains, computers aren't granted the rights to create computers. Additionally, domains have a built-in limit (default of 10) that applies to all users and computers that aren't delegated rights to create computer objects. The rights must be delegated to computers that host the Intune Connector on the organizational unit where Microsoft Entra hybrid joined devices are created.
 
-The organizational unit that's granted the rights to create computers must match:
+The organizational unit that has the rights to create computers must match:
 
-- The organizational unit that's entered in the Domain Join profile.
+- The organizational unit entered in the Domain Join profile.
 - If no profile is selected, the computer's domain name for your domain.
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
@@ -116,7 +120,7 @@ The organizational unit that's granted the rights to create computers must match
 
 ## Install the Intune Connector
 
-Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) have been met.
+Before beginning the installation, make sure that all of the [Intune connector server prerequisites](#intune-connector-server-prerequisites) are met.
 
 ### Install steps
 
@@ -219,7 +223,7 @@ A device object is precreated in Microsoft Entra ID once a device is registered 
 
 ## BYO VPNs
 
-The following VPN clients have been tested and validated:
+The following VPN clients are tested and validated:
 
 ### VPN clients
 
@@ -256,7 +260,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. On the **Basics** page, type a **Name** and optional **Description**.
 
-1. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups will register with the Autopilot deployment service. Personally owned devices won't be registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
+1. If you want all devices in the assigned groups to automatically register to Autopilot, set **Convert all targeted devices to Autopilot** to **Yes**. All corporate owned, non-Autopilot devices in assigned groups register with the Autopilot deployment service. Personally owned devices aren't registered to Autopilot. Allow 48 hours for the registration to be processed. When the device is unenrolled and reset, Autopilot enrolls it again. After a device is registered in this way, disabling this setting or removing the profile assignment won't remove the device from the Autopilot deployment service. You must instead [remove the device directly](add-devices.md#delete-autopilot-devices).
 
 1. Select **Next**.
 
@@ -280,7 +284,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 > [!NOTE]
 >
-> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
 
 ## (Optional) Turn on the enrollment status page
 
@@ -310,8 +314,8 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 1. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
 
-    - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
-    - Provide an OU in which you've delegated control to the root computers in your on-premises Active Directory.
+    - Provide an OU in which control is delegated to your Windows 2016 device that is running the Intune Connector.
+    - Provide an OU in which control is delegated to the root computers in your on-premises Active Directory.
     - If you leave this blank, the computer object is created in the Active Directory default container (`CN=Computers` if you never [changed it](/troubleshoot/windows-server/identity/redirect-users-computers-containers)).
 
     Here are some valid examples:
@@ -331,13 +335,13 @@ Autopilot deployment profiles are used to configure the Autopilot devices.
 
 > [!NOTE]
 >
-> The naming capabilities for Windows Autopilot for Microsoft Entra hybrid join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
+> The naming capability for Windows Autopilot for Microsoft Entra hybrid join doesn't support variables such as **%SERIAL%**. It only supports prefixes for the computer name.
 
 ## Uninstall the ODJ Connector
 
 The OSD connector is installed locally on a computer via an executable file. If the ODJ connector needs to be uninstalled from a computer, it needs to also be done locally on the computer. The ODJ connector can't be removed through the Intune portal or through a graph API call.
 
-To uninstall the ODJ Connector from the computer where it's installed, follow these steps:
+To uninstall the ODJ Connector from the computer, follow these steps:
 
 1. Sign into the computer hosting the ODJ connector.
 1. Right-click on the **Start** menu and select **Settings**.
@@ -356,9 +360,9 @@ After you configure Windows Autopilot, learn how to manage those devices. For mo
 
 - [What is a device identity?](/azure/active-directory/devices/overview).
 - [Learn more about cloud-native endpoints](/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview).
-- [Azure AD joined vs. Hybrid Azure AD joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
+- [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined).
 - [Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Intune](/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints).
-- [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/device-join-plan).
+- [How to: Plan your Microsoft Entra join implementation](/azure/active-directory/devices/device-join-plan).
 - [A framework for Windows endpoint management transformation](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684).
 - [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201).
 - [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353).

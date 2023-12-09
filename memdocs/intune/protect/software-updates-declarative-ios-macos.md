@@ -39,7 +39,7 @@ You can use the Intune [settings catalog](../configuration/settings-catalog.md) 
 
 This feature applies to:
 
-- iOS/iPadOS 17.0 and later (supervised)
+- iOS/iPadOS 17.0 and later
 - macOS 14.0 and later
 
 Apple's declarative device management (DDM) allows you to install a specific update by an enforced deadline. The autonomous nature of DDM provides an improved user experience as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
@@ -47,6 +47,7 @@ Apple's declarative device management (DDM) allows you to install a specific upd
 > [!TIP]
 > To learn more about declarative software updates from Apple, go to:
 >
+> - [Apple Platform Deployment](https://support.apple.com/guide/deployment/software-update-declarative-configuration-depca14ecd4d/web) (opens Apple's website)
 > - [Apple's session on exploring advances in declarative device management](https://developer.apple.com/videos/play/wwdc2023/10041/) (opens Apple's website)
 > - [The software update configuration in Apple's developer documentation](https://developer.apple.com/documentation/devicemanagement/softwareupdateenforcementspecific#discussion) (opens Apple's website)
 
@@ -83,7 +84,7 @@ Use the following information to help you decide which policy type to use.
 | macOS | [Settings catalog](../configuration/settings-catalog.md) | [Update policies for macOS](software-updates-macos.md) |
 | &nbsp;|&nbsp; | &nbsp;|
 | **Minimum supported version** | &nbsp; | &nbsp; |
-| iOS/iPadOS | 17.0 and later (supervised) | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |
+| iOS/iPadOS | 17.0 and later | - iOS 10.3 (supervised)<br/>- iPadOS 13.0 (supervised) |
 | macOS | 14.0 and later | macOS 12.0 |
 
 ### Precedence
@@ -130,8 +131,8 @@ Declarative software updates have precedence over other policies that configure 
 
     - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. This setting uses the `yyyy-mm-ddThh:mm:sss` format. Make sure you enter the correct values. For example:
 
-      - To install an update on January 1, 2024 at 6 AM EST, enter `2024-01-01T06:00:000`.
-      - To install an update on December 31, 2023 at 9 PM PST, enter `2023-12-31T21:00:000`.
+      - To install an update on January 1, 2024 at 6 AM EST, enter `2024-01-01T06:00:00`.
+      - To install an update on December 31, 2023 at 9 PM PST, enter `2023-12-31T21:00:00`.
 
       If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
 

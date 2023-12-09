@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/31/2023
+ms.date: 11/30/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -30,16 +30,25 @@ ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
+- AIreviewed
 ---
 
 # What is Microsoft Intune app management?
 
-As an IT admin, you can use Microsoft Intune to manage the client apps that your company's workforce uses. This functionality is in addition to managing devices and protecting data. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work. This goal can be a challenge because:
-- There are a wide range of device platforms and app types.
-- You might need to manage apps on both company devices and users' personal devices.
-- You must ensure that your network and your data remain secure.
+Microsoft Intune is a cloud-based service that protects your organization's data by using mobile device management (MDM) and mobile application management (MAM). You can use Intune protect your organization's data at the app level (MAM) on both company devices and users' personal devices, such as smartphones, tablets, and laptops. Intune provide data protection for apps have been enhanced to support Intune and deployed using Intune, as well as data protection for devices that have been enrolled in Intune.
 
-Additionally, you might want to assign and manage apps on devices that are not enrolled with Intune.<p>
+The benefits of app management in Microsoft Intune include:
+- **Data protection**: Intune helps protect organization (corporate) data by controlling how apps are used and ensuring that sensitive information isn't leaked or shared inappropriately.
+- **Wide range of app support**: Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. In addition, Intune support several platforms, such as iOS/iPadOS and Android. This app support allows organizations to manage a diverse set of applications using Intune.
+- **Access control**: Intune enables organizations to manage access to organization resources, enforce compliance policies, and protect sensitive data.
+- **App configuration and updates**: Intune allows organizations to manage app settings and updates, ensuring that employees are using the latest and most secure versions of their apps.
+- **App management on personal devices**: You can specifically use MAM to assign, protect, and manage apps on devices that aren't enrolled with Intune.
+
+Examples of using app management with Microsoft Intune include:
+- Deploying, protecting, and managing apps for specific groups of users within your organization
+- Configuring app settings, such as data sharing restrictions, to ensure compliance with corporate policies
+- Implementing conditional access policies to control access to apps based on factors like device compliance, location, and user risk
+- Automating app updates to keep employees up-to-date with the latest features and security patches
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4MRyj]
 
@@ -78,7 +87,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 <sup>1</sup> Consider using  [Microsoft Purview Information Protection](/microsoft-365/compliance/information-protection) and [Microsoft Purview Data Loss Prevention](/microsoft-365/compliance/dlp-learn-about-dlp). Microsoft Purview simplifies the configuration set-up and provides an advanced set of capabilities. <br>
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
-<sup>4</sup> Intune does not provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
+<sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md#device-experience).<br> 
 <sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Play.
 
 ## Get started

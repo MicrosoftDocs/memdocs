@@ -376,13 +376,6 @@ Microsoft Defender SmartScreen is a feature that helps users avoid malicious sit
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled |**true** (default) Microsoft Defender SmartScreen is enabled. <br>**false**  Microsoft Defender SmartScreen is disabled.|
 
-#### Open external apps
-When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
-
-|Key |Value |
-|:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
-
 #### Certificate verification
 
 By default, Microsoft Edge for Android verifies server certificates using the built-in certificate verifier and the Microsoft Root Store as the source of public trust. Organizations can switch to system certificate verifier and system root certificates.
@@ -394,6 +387,19 @@ By default, Microsoft Edge for Android verifies server certificates using the bu
 > [!NOTE]
 > A use case for this policy is that you need to use system certificate verifier and system root certificates when using [Microsoft MAM Tunnel in Edge for Android](/mem/intune/protect/microsoft-tunnel-mam-android).
 
+#### SSL warning page control
+By default, users can click through warning pages shows when users navigate to sites that have SSL errors. Organizations can manage the behavior.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed |**true** (default) Allow users to click through SSL warning pages. <br>**false** Prevent users from clicking through SSL warning pages.|
+
+#### Open external apps
+When a web page requests to open an external app, users will see a pop-up asking them to open the external app or not. Organizations can manage the behavior.
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
 
 #### Bing Chat Enterprise 
 
@@ -562,8 +568,9 @@ As app configuration policies for managed devices needs device enrollment, any u
 |     com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |     EdgeShowBottomBarInKioskMode    |
 |     com.microsoft.intune.mam.managedbrowser.account.syncDisabled    |     EdgeSyncDisabled    |
 |     com.microsoft.intune.mam.managedbrowser.NetworkStackPref    |     EdgeNetworkStackPref    |
-|     com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled | MicrosoftRootStoreEnabled |
 | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | SmartScreenEnabled|
+|     com.microsoft.intune.mam.managedbrowser.MicrosoftRootStoreEnabled | MicrosoftRootStoreEnabled |
+| com.microsoft.intune.mam.managedbrowser.SSLErrorOverrideAllowed | SSLErrorOverrideAllowed|
 
 ## Deploy app configuration scenarios with Microsoft Intune
 

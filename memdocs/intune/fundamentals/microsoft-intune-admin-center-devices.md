@@ -145,7 +145,7 @@ Within this area, you can access the following subworkloads:
 * **Policies**: Create and manage device configuration policies.
 * **Import ADMX**: Import custom and partner ADMX and ADML templates that you can create device configuration policies from.
 
-For more information about device configuration, see [Apply features settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).  
+For more information about device configuration, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).  
 
 ### Compliance   
 

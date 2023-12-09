@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/13/2023
+ms.date: 07/13/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -105,7 +105,6 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 - **Automatic configuration script**: Use a file to configure the proxy server. Enter the proxy server URL that includes the configuration file. For example, enter `http://proxy.contoso.com/pac`.
 - **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
 - **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
-- **Proxy exclusion list**: This option is only available when you set the profile *Connection type* to Microsoft Tunnel. For information about when a proxy exclusion list is supported and how to configure it, see [Use a proxy exclusion list](../protect/microsoft-tunnel-configure.md#use-a-proxy-exclusion-list-for-android-enterprise) in the documentation for Microsoft Tunnel.
 
 ## Personally owned work profile
 
@@ -164,7 +163,6 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 - **Automatic configuration script**: Use a file to configure the proxy server. Enter the proxy server URL that includes the configuration file. For example, enter `http://proxy.contoso.com/pac`.
 - **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
 - **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
-- **Proxy exclusion list**: This option is only available when you set the profile *Connection type* to Microsoft Tunnel. For information about when a proxy exclusion list is supported and how to configure it, see [Use a proxy exclusion list](../protect/microsoft-tunnel-configure.md#use-a-proxy-exclusion-list-for-android-enterprise) in the documentation for Microsoft Tunnel.
 
 ## Next steps
 

@@ -76,7 +76,12 @@ Cloud identity provides users with many productivity benefits including device-w
 
 ## <a name="bkmk_provisioning"></a> Cloud provisioning
 
-Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Autopilot. The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](/autopilot/enrollment-autopilot).
+Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Autopilot. 
+
+> [!NOTE]
+> The **Autopilot profile assigned** metric indicates whether an Autopilot deployment profile is assigned to the device. If a device inherits a default Autopilot profile, it will not receive credit for having a deployment profile assigned.
+
+The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](/autopilot/enrollment-autopilot).
 
 
 > [!NOTE]

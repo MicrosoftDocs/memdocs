@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 08/10/2023
+  ms.date: 12/08/2023
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -117,9 +117,9 @@ sections:
           No. OEMs just send the CBRs as usual to Microsoft. No images are sent to Microsoft to enable Windows Autopilot. Windows Autopilot only customizes OOBE and allows policy configurations.
 
       - question: |
-          Are there any customer issues with upgrading from Windows 8 to Windows 10 or Windows 11?
+          Are there any customer issues with upgrading to a currently supported version of Windows?
         answer: |
-          The devices must be running a supported version of Windows 10 or Windows 11 general availability channel to enroll in Windows Autopilot deployment. Otherwise, there's generally no issue. For more information, see [Windows Autopilot - known issues](known-issues.md).
+          The devices must be running a supported version of Windows general availability channel to enroll in Windows Autopilot deployment. Otherwise, there's generally no issue. For more information, see [Windows Autopilot - known issues](known-issues.md).
 
       - question: |
           Will the existing CBR with 4K hardware hash ever change?
@@ -182,7 +182,7 @@ sections:
       - question: |
           If I need to replace hardware like the disk or network card, does that invalidate the hardware hash?
         answer: |
-          Yes. If you replace parts, you may need to generate a new hardware hash. It depends on what's replaced, and the characteristics of the parts.
+          Yes. If you replace parts, you might need to generate a new hardware hash. It depends on the parts that were replaced, and the characteristics of the parts.
 
           For example, if you replace the TPM or motherboard, it's a new device and you must get a new hardware hash. If you replace one network card, it's probably not a new device, and the device functions with the old hardware hash.
 
@@ -248,7 +248,7 @@ sections:
       - question: |
           If a device has multiple network cards or disks, how does the OA3 tool choose which MAC address and disk serial number to use?
         answer: |
-          All available values are used, although there may be specific usage rules. The serial number of the system disk is more important than the other disks available. Network interfaces that are removable shouldn't be used if detected as they're removable. LAN vs WLAN shouldn't matter, as both are used.
+          All available values are used, although there can be specific usage rules. The serial number of the system disk is more important than the other disks available. Network interfaces that are removable shouldn't be used if detected as they're removable. LAN vs WLAN shouldn't matter, as both are used.
 
   - name: End-user experience
     questions:
@@ -291,14 +291,14 @@ sections:
       - question: |
           How can I collect logs on Autopilot?
         answer: |
-          The best way to collect logs on Windows Autopilot performance is to collect a WPR trace during OOBE. The XML file (WPRP extension) for this trace may be provided upon request.
+          The best way to collect logs on Windows Autopilot performance is to collect a WPR trace during OOBE. The XML file (WPRP extension) for this trace can be provided upon request.
 
   - name: MDM
     questions:
       - question: |
           Does Autopilot require the use of Microsoft Intune?
         answer: |
-          No. Any MDM works with Autopilot, but others may not have the same full suite of Windows Autopilot features as Intune. The best experience is with Intune.
+          No. Any MDM works with Autopilot, but others might not have the same full suite of Windows Autopilot features as Intune. The best experience is with Intune.
 
       - question: |
           Does Intune support preinstalling Win32 apps?
@@ -308,7 +308,7 @@ sections:
       - question: |
           What is co-management?
         answer: |
-          Co-management enables you to concurrently manage Windows 10 or later devices by using both Microsoft Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
+          Co-management enables you to concurrently manage currently supported versions of Windows by using both Microsoft Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
 
           When a Windows device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
@@ -337,6 +337,10 @@ sections:
       - question: |
           What's Microsoft Entra hybrid join?
         answer: |
+          > [!IMPORTANT]
+          >
+          > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+
           Microsoft Entra hybrid joined devices connect to an on-premises Active Directory domain and Microsoft Entra ID.
 
           For more information, see [Introduction to device management in Microsoft Entra ID](/azure/active-directory/device-management-introduction).
@@ -360,7 +364,7 @@ sections:
       - question: |
           What's Autopilot for existing devices?
         answer: |
-          Autopilot for existing devices offers an upgrade path to Windows 10 or Windows 11 for all existing Windows 8.1 devices.
+          Autopilot for existing devices offers an upgrade path to currently supported versions of Windows for an existing Windows device.
 
           For more information, see [Autopilot for existing devices](existing-devices.md).
 
@@ -453,17 +457,17 @@ sections:
           - Azure Government
           
           If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot. 
-          While Autopilot is available in global tenants, users in China may experience poor connectivity and high latency when deploying due to ISP-related issues. If you're experiencing these issues when deploying in the region, contact your local ISP for support.
+          While Autopilot is available in global tenants, users in China can experience poor connectivity and high latency when deploying due to ISP-related issues. If you're experiencing these issues when deploying in the region, contact your local ISP for support.
 
       - question: |
           Why does TPM provisioning/attestation take longer during the first boot on a device?
         answer: |
-          TPM provisioning involves generating and processing strong cryptographic keys. Depending on the characteristics of the TPM hardware used on a device, it may take longer than a minute on first boot.
+          TPM provisioning involves generating and processing strong cryptographic keys. Depending on the characteristics of the TPM hardware used on a device, it can take longer than a minute on first boot.
 
       - question: |
-          Why don't applications install after the ESP has finished on an Intune managed device when using autologon with Windows Autopilot self-deploing mode?
+          Why don't applications install after the ESP is finished on an Intune managed device when using autologon with Windows Autopilot self-deploing mode?
         answer: |
-          When using autologon with Windows Autopilot self-deploing mode, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including the KioskUser0 local account, and a device token won't be issued until user ESP is processed. When using autologon, in order for applications to install after the ESP has finished, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
+          When autologon with Windows Autopilot self-deploing mode is used, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including the KioskUser0 local account, and a device token isn't issued until user ESP is processed. When using autologon, in order for applications to install after the ESP finishes, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
  
   - name: Glossary
     questions:

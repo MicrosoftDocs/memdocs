@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/13/2023
+ms.date: 12/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -238,7 +238,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Defender f
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. On the **Configuration settings** tab, set *Connection type* to **Microsoft Tunnel**, and then expand the following categories and configure the following details:
+4. For *Connection type* select **Microsoft Tunnel**, and then configure the following details:
 
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
@@ -254,13 +254,9 @@ After the Microsoft Tunnel installs and devices install the Microsoft Defender f
      - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If *Per-app VPN* is set to *Enable*, only the traffic from apps you select go through the tunnel.
 
    - **Proxy**:  
-     - Configure proxy server details for your environment.
-
-       > [!NOTE]
-       >
+     - Configure proxy server details for your environment.  
+       > [!NOTE]  
        > Proxy server configurations are not supported with versions of Android prior to version 10.  For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
-
-     - When you use a single proxy server in your environment, you can configure a **Proxy exclusion list**. For information about using this option, see [use a proxy exclusion list](#use-a-proxy-exclusion-list-for-android-enterprise) later in this article.
 
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 

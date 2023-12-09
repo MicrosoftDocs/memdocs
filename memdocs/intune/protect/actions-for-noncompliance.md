@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/17/2023
+ms.date: 12/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -169,46 +169,60 @@ To create a device compliance policy, see the following platform-specific guidan
 
 ## Create a notification message template
 
-To send email to your users, create a notification message template and associate that to your compliance policy as an action for noncompliance. Then, when a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
+To send email to your users, create a notification message template and associate that to your compliance policy as an action for noncompliance. Then, when a device is noncompliant, the details you enter in the template is shown in the email sent to your users.        
 
-A *notification message template* can include multiple messages that are each specified for a different locale. One local must be specified as the default.
+A *notification message template* can include multiple messages that are each for a different locale. When you specify multiple messages and locales, non-compliant end users receive the appropriate localized message based on their O365 preferred language. 
 
-When you specify multiple messages and locales, non-compliant end users receive the appropriate localized message based on their O365 preferred language. Intune sends the default message to users that haven’t set a preferred language or when the template doesn’t include a specific message for their locale.
+Add variables to the message to create a personalized email with dynamic content. The following table describes the variables you can use in the subject line and body of the message.  
+
+| Variable name | Token to use | Description |
+| --- | --- |--- |
+| User name | {{UserName}} | Add the name of the primary user for the noncompliant device. <br> Example: `John Doe` |
+| Device name| {{DeviceName}} | Add the name of the noncompliant device as it's recorded in Microsoft Intune. <br> Example: `John's iPad` |
+| Device ID | {{DeviceId}} | Add the Intune device ID that belongs to the noncompliant device. <br> Example: `12ab345c-6789-def0-1234-000000000000` |
+| Device OS version | {{OSAndVersion}} | Add the operating system and version of the noncompliant device. <br> Example: `Android 12` |  
 
 ### To create the template
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.
-3. On the **Basics** page, configure the following settings:
-
-   - **Name** - Give the template a friendly name to help you identify it.
-   - **Email header – Include company logo** (default = *Enable*) - The logo you upload as part of the Company Portal branding is used for email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
-   - **Email footer – Include company name** (default = *Enable*)
-   - **Email footer – Include contact information** (default = *Enable*)
-   - **Company Portal Website Link** (default = *Disable*) - When set to *Enable*, the email includes a link to the Company Portal website.
+3. On the **Basics** page, give the template a friendly name to help you identify it. Then select **Next**.  
+  
+4. On the **Header and footer settings** page, add your company details and logo. 
 
    > [!div class="mx-imgBorder"]
-   > ![Example of the basics page for a notification message in Intune](./media/actions-for-noncompliance/actions-for-noncompliance-1.png)
+   > ![Screenshot that shows example of the Header and footer settings page for a notification message in Intune.](./media/actions-for-noncompliance/actions-for-noncompliance-3.png)  
+
+   Your options:  
+   - **Email header – Show company logo** (default = *Enable*) - Upload a logo to add your organization's branding to the email templates. For more information about Company Portal branding, see [Company identity branding customization](../apps/company-portal-app.md#customizing-the-user-experience).
+   - **Email footer – Show company name** (default = *Enable*) - Enable this setting to show your company name in the email. See **Tenant Value** to review the company name on record.      
+   - **Email footer – Show contact information** (default = *Enable*) -  Enable this setting to show your organization's contact information, such as name, phone number, and email address, in the email. See **Tenant Value** to review the contact information on record.   
+   - **Email footer - Show company portal website link** (default = *Disable*) - Enable this setting to include a link to the Company Portal website in the email. See **Tenant Value** to review the website link shown to users. 
+
+   Select **Next** to continue.  
+
+5. On the **Notification message templates** page, configure one or more messages.  
+
+      > [!div class="mx-imgBorder"]
+   > ![Screenshot that shows example of the Notification messages templates page for a notification message in Intune, showing all required fields filled in.](./media/actions-for-noncompliance/actions-for-noncompliance-4.png)  
+
+
+   For each message, specify the following details:
+
+   - **Locale**: Select the language that correlates to the device user's locale.  
+   - **Subject**: Add the subject line for the email. You can enter up to 78 characters.     
+   - **Message**: Create a message explaining the reason for noncompliance. You can enter up to 2000 characters.    
+   
+   To create a template with dynamic content, insert the token of a supported variable in the subject line or message. For a list of supported variables, see the table under [Create a notification message template](#create-a-notification-message-template) in this article.  
+
+5. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
 
    Select **Next** to continue.
 
-4. On the **Notification message templates** page, configure one or more messages. For each message, specify the following details:
+6. On the **Scope tags** page, select tags to limit visibility and management of this message to specific Intune admin groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).  
 
-   - **Locale**
-   - **Subject**
-   - **Message body text**
-
-   > [!NOTE] 
-   > The maximum number of characters for the Subject is 78, and the maximum number of characters for the message body text is 2000.
-
-   Before continuing, you must select the checkbox for *Is Default* for one of the messages. Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Example of the Notification message temmplate page in Intune](./media/actions-for-noncompliance/actions-for-noncompliance-2.png)
-
-   Select **Next** to continue.
-
-5. Under **Review + create**, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.
+   Select **Next** to continue.  
+7. On the **Review + create** page, review your configurations to ensure the notification message template is ready to use. Select **Create** to complete creation of the notification.  
 
 ### View and edit notifications
 

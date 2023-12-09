@@ -81,8 +81,8 @@ If you are using the [co-management](../../comanage/overview.md) capabilities, y
     > [!NOTE] 
     > Windows 10, version 1709 and later, is a prerequisite for co-management
 - **Co-management status**: the breakdown of device success or failure in the following categories:
-   - Success, hybrid Azure AD Joined
-   - Success, Azure AD Joined
+   - Success, Microsoft Entra hybrid joined
+   - Success, Microsoft Entra joined
    - Failure: Auto-enrollment failed
 - **Workload transition**: a bar chart showing the number of devices that you transitioned to Microsoft Intune for the three available workloads: 
    - Compliance Policies

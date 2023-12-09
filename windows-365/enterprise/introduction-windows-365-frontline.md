@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/17/2023
+ms.date: 12/06/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -102,6 +102,7 @@ For the best user experience, make sure to:
 The following features aren't yet supported for Windows 365 Frontline.
 
 - GPU Cloud PCs
+- Reszie a Cloud PC remote action
 
 ## Next steps
 

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/15/2023
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -43,7 +43,7 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 - **iOS 12 and later**
 
-## Pre-requisites
+## Prerequisites
 
 - Microsoft Entra ID P1
 
@@ -77,6 +77,7 @@ When malicious apps such as malware are detected on devices, you can block devic
 *Access granted on remediation:*
 
 :::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+
 ### Control access based on threat to network
 
 Detect threats like **Man-in-the-middle** in network, and protect access to Wi-Fi networks based on the device risk.

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/15/2023
+ms.date: 12/06/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -37,6 +37,8 @@ Learn what new features are available in Windows 365 Enterprise.
 > [!NOTE]
 > Each monthly update may roll out over several weeks and might not be immediately available to all customers.
 
+For information about Windows App and its features, see [What's new in Windows App](/windows-app/whats-new?tabs=windows).
+
 <!-- Common categories:  
 ### App management
 ### Device configuration
@@ -53,6 +55,44 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of December 04, 2023 (Service release 2311)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 365 Boot is now available for Windows 365 Government<!--46030732-->
+
+Windows 365 Boot is now available for Windows 365 Government. For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End user experience
+
+#### Windows 365 Switch is now available for Windows 365 Government<!--46030732-->
+
+Windows 365 Switch is now available for Windows 365 Government. For more information, see [What is Windows 365 Switch?](windows-365-switch-overview.md).
+
+#### UI change in web client<!--46838016-->
+
+The gear icon menu has been updated. For details on the new menu, see [Windows 365 web client](end-user-access-cloud-pc.md#windows-365-web-client).
+
+#### New Microsoft Teams app is now generally available for Windows 365<!--47459639-->
+
+The new Microsoft Teams app has moved out of preview and into general availability. It's been optimized for faster performance and more efficient resource use on Cloud PCs. For more information, see [Upgrade to new Teams for Virtualized Desktop Infrastructure]( /microsoftteams/new-teams-vdi-requirements-deploy).
+
+The new Microsoft Teams app is not yet available in the Windows 365 gallery images.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New report: Action status (preview)<!--44871923-->
+
+A new report is now available that lets you know which actions have been performed successfully on Cloud PCs. For failed actions, possible reasons will also be provided. For more information, see [Cloud PC actions report](report-cloud-pc-actions.md).
+
+#### New filter option for the Connected Frontline Cloud PCs report<!--47323230-->
+
+A new filter is available in the Connected Frontline Cloud PCs report. This new filter shows hourly data for various data periods. For more information, see [Connected Frontline Cloud PCs report (preview)](report-connected-frontline-cloud-pcs.md). 
+
+<!-- ########################## -->
 ## Week of November 13, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -66,7 +106,7 @@ This feature isn’t supported on Android, iOS, or web clients. Enabling this fe
 
 #### Watermarking support in Windows 365 settings catalog<!--45779621-->
 
-You can now implement watermarking for your Cloud PCs by using the settings catalog. Alongside screen capture, watermarking is a deterrent to data leaks and data loss. For more information, see [Watermarking in Azure Virtual Desktop](/azure/virtual-desktop/screen-capture-protection) and [Configure the administrative template](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
+You can now implement watermarking for your Cloud PCs by using the settings catalog. Alongside screen capture, watermarking is a deterrent to data leaks and data loss. For more information, see [Watermarking in Azure Virtual Desktop](/azure/virtual-desktop/watermarking) and [Configure the administrative template](/azure/virtual-desktop/administrative-template?tabs=intune#configure-the-administrative-template).
 
 #### Customer Lockbox support (preview)<!--46807263-->
 

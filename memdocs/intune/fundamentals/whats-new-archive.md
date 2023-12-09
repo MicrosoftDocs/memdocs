@@ -7,7 +7,7 @@ keywords:
 author: dougeby  
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 11/17/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -295,7 +295,7 @@ Applies to:
 You can now update apps of type **macOS apps (DMG)** deployed using Intune. To edit a DMG app that's already created in Intune, upload the app update with the same bundle identifier as the original DMG app. For related information, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md).
 
 #### Install required apps during pre-provisioning<!-- 12716381 -->
-A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during the pre-provisioning (white glove) technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. If there's an app install failure, ESP continues except for the apps specified in the ESP profile. To enable this function, you need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting only appears if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
+A new toggle is available in the Enrollment Status Page (ESP) profile that allows you to select whether you want to attempt to install required applications during the Windows Autopilot pre-provisioning technician phase. We understand that installing as many applications as possible during pre-provisioning is desired to reduce the end user setup time. If there's an app install failure, ESP continues except for the apps specified in the ESP profile. To enable this function, you need to edit your Enrollment Status Page profile by selecting **Yes** on the new setting entitled **Only fail selected apps in technician phase**. This setting only appears if you have blocking apps selected. For information about ESP, go to [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).
 
 ## Week of March 20, 2023 (Service release 2303)
 
@@ -3213,7 +3213,7 @@ There's a new **Software updates** page for tenant attached devices. This page d
 #### Microsoft Defender for Endpoint support for App Sync on iOS/iPadOS<!-- 9768396 -->
 *Before you can use this capability, you must opt in to a Microsoft Defender for Endpoint Preview. To opt in, contact `mdatpmobile@microsoft.com`.* 
 
-When you use Microsoft Defender for Endpoint as your Mobile Threat Defense application, you can [configure Defender for Endpoint to request Application Inventory data](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
+When you use Microsoft Defender for Endpoint as your Mobile Threat Defense application, you can [configure Defender for Endpoint to request Application Inventory data](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
 
 - **Enable App Sync for iOS Devices**:  Set to **On** to allow Microsoft Defender for Endpoint to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
 
