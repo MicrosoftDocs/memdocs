@@ -44,7 +44,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 **Locate device** - The following platforms support this capability:
 
-- **Android Enterprise** – This is applicable to dedicated devices, fully-managed, and corporate-owned work profile devices. Requires the device to run *Google Play Services* version **20.06.16** or later and have Location services turned on.  For corporate-owned work profile devices, this also requires the end user to grant Intune app location permission by going to Settings -> Apps -> Intune (in the "Work" tab) -> Permissions -> Location -> Allow all the time.
+- **Android Enterprise** – This is applicable to dedicated devices, fully-managed, and corporate-owned work profile devices. Requires the device to run *Google Play Services* version **20.06.16** or later and have Location services turned on.  Corporate-owned work profile devices require the end user to grant Intune app location permission by going to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
 - **Windows 10**:
   - Version 20H2 (10.0.19042.789) or later
@@ -90,7 +90,7 @@ For fully managed, **Locate device** is set to **Not configured** as the default
 
 For dedicated devices, **Locate device** is set to **Not configured** as the default, which allows the feature. To turn this feature off, use device restrictions within **Device Configuration** and configure the toggle for **Locate device** to **Block**. When **Locate device** is allowed, users will receive a one-time notification, "Intune can access your location", indicating that Intune has the ability to use location permissions on the device.
 
-For corporate-owned work profile devices, the feature will also be blocked by default. To allow the feature, have the user of the device enable location permissions by navigating to Settings -> Apps -> Intune (in the "Work" tab) -> Permissions -> Location -> Allow all the time.
+For corporate-owned work profile devices, the feature is blocked *by default*. To *allow* the feature, have the user of the device enable location permissions by navigating to **Settings** > **Apps** > **Intune** (in the **Work** tab) > **Permissions** > **Location** > **Allow all the time**.
 
 ### Last known location
 
