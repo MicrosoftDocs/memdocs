@@ -89,18 +89,13 @@ Intune enrollment with Apple device enrollment has the following known issues an
 
 * Due to Apple restrictions, device users going through web based device enrollment must download the management profile in Safari. 
 
-* After the management profile downloads, device users have a limited amount of time to go to the Settings app and install the profile. If they wait too long to do it, they receive a message letting them know that the management profile can't be found. They must select **enroll again** to restart the enrollment process and download the management profile again. 
+* Reminder, as with Company Portal enrollment, once the management profile downloads, users have a limited amount of time to go to the Settings app and install the profile. If a user waits too long, they must re-download the management profile to continue.  
 
 * Device users may be unable to access work apps if they try signing in on their newly enrolled device while Microsoft Authenticator is still trying to deploy. Users should wait a few minutes while Authenticator catches up with the Intune service, and then try to sign into their work app again.  
 
-* If your organization uses Microsoft Defender for Endpoint, that app can't be the first app users sign in to after enrollment. JIT registration and compliance remediation may not work as expected if users authenticate in Microsoft Defender for Endpoint first.     
+* If your organization uses Microsoft Defender for Endpoint, that app can't be the first app users sign in to after enrollment. JIT registration and compliance remediation may not work as expected if users authenticate in Microsoft Defender for Endpoint first. Instead, authenticate into any other Microsoft app to complete enrollment. A fix is expected to be released in early 2024.  
 
-* Web based device enrollment can be used without JIT registration. However, users in that scenario can't currently use the Company Portal app to enroll. To prepare for this scenario, we recommend deploying a web clip of the Company Portal website to users, because the web clip functions the same as the Company Portal app during enrollment.
-
-* There's a bug that occurs during web based device enrollment on iPads running iPadOS version 17.0.3.  Safari incorrectly reports the device OS version, causing enrollment to fail. We are currently working to fix this issue, and recommend these solutions:  
-    * On the first web enrollment page, tell the device user to switch to mobile view in Safari. Then reload the page.   
-    * If the problem persists, tell the device user to clear their cookies in Safari and start enrollment over again.  
-    * Use another enrollment type if you want to apply more granular OS version restrictions.   
+* Web based device enrollment can be used without JIT registration. We recommend using the Web Company Portal instead of the iOS Company Portal to deploy apps to the device. If you are planning to use the iOS Company Portal for app deployment, MS Authenticator and the SSO extension policy must be sent to the device post web enrollment.  
 
 ## Next steps  
 
