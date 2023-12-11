@@ -81,8 +81,10 @@ Applies to:
 
 - macOS
 
-#### Windows MAM supported in government cloud environments<!-- 25273622 wndraft wnready wnstaged -->  
+#### Windows MAM supported in government cloud environments<!-- 25273622  -->  
 Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments are now able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md) and [Data protection for Windows MAM](../apps/protect-mam-windows.md).
+
+In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](../fundamentals/china.md)
 
 ### Device configuration
 
@@ -375,19 +377,19 @@ With this change, the default behavior for security settings management includes
 The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins do not need to create or manage groups of eligible and non-eligible devices.
 
 For more information on feature updates, go to [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
- 
+
 **Linux**:
- 
+
 - Microsoft Defender Antivirus
 - Microsoft Defender Antivirus exclusions
 - Endpoint detection and response
- 
+
 **MacOS**:
- 
+
 - Microsoft Defender Antivirus
 - Microsoft Defender Antivirus exclusions
 - Endpoint detection and response
- 
+
 For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) in the Intune documentation.
 
 ## Week of October 30, 2023
@@ -437,7 +439,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-#### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138 wn  -->  
+#### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138   -->  
 You can install and uninstall mandatory LOB apps on AOSP devices by using the **Required** and **Uninstall** group assignments. To learn more about managing LOB apps, see [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md).
 
 Applies to:
