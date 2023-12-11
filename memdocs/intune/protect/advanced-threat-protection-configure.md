@@ -151,7 +151,7 @@ To view the onboarded devices from Microsoft Defender for Endpoint within the Mi
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
-3. For **Platform**, select **Windows 10 and Later**.
+3. For **Platform**, select **Windows 10, Windows 11, and Windows Server**.
 4. For **Profile type**, select **Endpoint detection and response**, and then select **Create**.
 5. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
 6. On the **Configuration settings** page, configure the following options for **Endpoint Detection and Response**:
