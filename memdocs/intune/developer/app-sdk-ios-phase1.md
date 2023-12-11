@@ -185,7 +185,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 [Intune App SDK overview]:/mem/intune/developer/app-sdk
 [What is Microsoft Intune app management]:/mem/intune/apps/app-management
 [iOS app protection policy settings]:/mem/intune/apps/app-protection-policy-settings-ios
-[Plan for mobile application management in Microsoft Intune - Training | Microsoft Learn]:https://learn.microsoft.com/en-us/training/modules/plan-for-mobile-application-management
+[Plan for mobile application management in Microsoft Intune - Training | Microsoft Learn]:/training/modules/plan-for-mobile-application-management
 [Overview of the Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
 [Microsoft Entra ID]:https://azure.microsoft.com/services/active-directory/
