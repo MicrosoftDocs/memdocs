@@ -117,6 +117,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   - If you use a TLS certificate that's not publicly trusted, you must push the entire trust chain to devices using an Intune *Trusted certificate* profile.
 
   - The TLS certificate can be in **PEM** or **pfx** format.
+  
+  - To support the *TLS certificate revocation* health check, ensure the Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate is accessible from the server.
 
 - **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn't available, the connection can fall back to use TLS 1.2.
 
