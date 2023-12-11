@@ -46,7 +46,7 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 
 ## Step 1 - Introduction
 
-Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender for Endpoint, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
+Using this guided scenario, you'll set up a test user, enroll a device in Intune, and deploy the device with Intune-recommended settings, as well as Windows 10 and Microsoft 365 Apps. Your device will also be configured for Microsoft Defender for Endpoint, if you choose to [enable this protection in Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune). The user you set up and the device that you enroll will be added to a new security groups and will be configured with the recommended settings for security and productivity.
 
 ### What you will need to continue
 
