@@ -54,7 +54,7 @@ appliesto:
 
       When creating expressions:
 
-      - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -contains "[ZTDID]"))`.
+      - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDID]"))`.
 
       - Intune's group tag field maps to the `OrderID` attribute on Microsoft Entra devices. To create a group that includes all Autopilot devices with a specific group tag (the Microsoft Entra device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
 
