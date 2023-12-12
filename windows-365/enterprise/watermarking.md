@@ -71,7 +71,7 @@ To turn on watermarking for Cloud PCs, follow these steps:
   | Width of grid box in percent relevant to QR code bitmap width | 100 to 1000<br />(*default = 320*) | The distance between the QR codes in percent. When combined with the height, a value of 100 would make the QR codes appear side-by-side and fill the entire screen. |
   | Width of the grid box in percent relevant to the QR code bitmap width (device) | 100 to 1000<br />(default = 180) | The distance between the QR codes in percent. When combined with the width, a value of 100 would make the QR codes appear side-by-side and fill the entire screen. |
 
-  ![Screenshot of edit profile watermarking](./media/watermarking/edit-watermarking.png)
+  ![Screenshot of edit profile watermarking.](./media/watermarking/edit-watermarking.png)
 
    > [!TIP]
    > We recommend trying out different opacity values to find a balance between the readability of the remote session and being able to scan the QR code, but keeping the default values for the other parameters.
