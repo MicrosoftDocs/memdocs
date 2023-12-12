@@ -58,7 +58,7 @@ Before you can add a Win32 app to Microsoft Intune, you must prepare the app by 
 After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.md) by using the Microsoft Win32 Content Prep Tool, you can add the app to Intune. For more information and steps, see [Add, assign, and monitor a Win32 app in Microsoft Intune](apps-win32-add.md).
 
 > [!NOTE]
-> Windows application size is limited to 8 GB per app.
+> Windows application size is limited to 30 GB per app.
 
 ## Delivery optimization
 

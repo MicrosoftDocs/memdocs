@@ -131,6 +131,8 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
         > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. However, in both scenarios, it is expected for the error message **"0x87D13B9F / The VPP app is installed but there is a newer version available"** to be reported temporarily if the device has checked-in, but the update did not install. At next check-in, Intune will send the install command to the device as long as the user is still included in the **Required** or **Available** assignment. However, if the user or device is removed from the assignments, Intune will no longer push updates to that particular app, even if Intune originally installed the app. 
         >
         > When updating a VPP app, it can take up to 24 hours for the device to receive the updated VPP app. The device must be unlocked and available to install the update successfully.
+        > 
+        > If you changed app install intents of Apple VPP apps from **Required** to **Available**, the apps that are already installed will stop updating automatically. A manual install of the app after the intent has changed to Available should resume the automatic updates.
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
 7. Click **Next** to display the **Scope tags** page.
