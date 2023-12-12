@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 12/08/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -20,6 +20,10 @@ appliesto:
 
 # Step by step tutorial for Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join in Intune
 
+> [!IMPORTANT]
+>
+> Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+
 This step by step tutorial guides you through using Intune to perform a Windows Autopilot for pre-provisioned deployment scenario when the devices are also joined to an on-premises domain, also known as Microsoft Entra hybrid join.
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Autopilot for pre-provisioned deployment Microsoft Entra hybrid join deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
@@ -28,13 +32,19 @@ Before beginning, refer to the [Plan your Microsoft Entra hybrid join implementa
 
 > [!NOTE]
 >
-> Since Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join builds on top of [Windows Autopilot hybrid user-driven Microsoft Entra join](../user-driven/hybrid-azure-ad-join-workflow.md), it's recommended that the Windows Autopilot hybrid user-driven Microsoft Entra join scenario is set up, tested, and working first before attempting to use the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join scenario. If the Windows Autopilot user-driven Microsoft Entra hybrid join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra hybrid join scenario won't work either.
+> Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join builds on top of [Windows Autopilot user-driven Microsoft Entra hybrid join](../user-driven/hybrid-azure-ad-join-workflow.md). For this reason, Microsoft recommends that the Windows Autopilot user-driven Microsoft Entra hybrid join scenario is working before attempting to use the Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join scenario. If the Windows Autopilot user-driven Microsoft Entra hybrid join doesn't work, then most likely the Windows Autopilot pre-provisioned deployment Microsoft Entra hybrid join scenario won't work either.
 
 <a name='windows-autopilot-for-pre-provisioned-deployment-hybrid-azure-ad-join-overview'></a>
 
 ## Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join overview
 
-Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join is an Autopilot solution that automates the configuration of Windows on a new device delivered directly from an IT department, OEM, or reseller to the end-user. Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join is an Autopilot solution that automates the configuration of Windows on a new device. The device is normally delivered directly from one of the following sources to the end user:
+
+- IT department.
+- OEM.
+- Reseller.
+
+Windows Autopilot for pre-provisioned deployment uses the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
@@ -50,7 +60,7 @@ Windows Autopilot for pre-provisioned deployment can perform the following tasks
 - Installs applications.
 - Applies device configuration policies such as BitLocker and Windows Hello for Business.
 - Checks for compliance.
-- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it's fully configured.
+- The Enrollment Status Page (ESP) prevents an end-user from using the device until the device is fully configured.
 
 Windows Autopilot for pre-provisioned deployment consists of two phases:
 
@@ -71,9 +81,9 @@ The main difference between Windows Autopilot user-driven deployment and Windows
 
   - When the end-user receives the device, they turn it on for the first time, and the device undergoes the user ESP phase. A portion of device ESP also reruns to ensure there are no new applications or policies assigned to the device since the Technician flow ran. This phase is known as the **User flow**.
 
-The deployment is split up between the Technician flow and User flow phases so that the deployment is faster when the end-user receives the device. The deployment is faster when the end-user receives the device because the IT department, OEM, or reseller has completed the first portion of the deployment during the Technician flow.
+The deployment is split up between the Technician flow and User flow phases so that the deployment is faster when the end-user receives the device. The deployment is faster when the end-user receives the device because the IT department, OEM, or reseller completed the first portion of the deployment during the Technician flow.
 
-One possible disadvantage of Windows Autopilot for pre-provisioned deployment over Windows Autopilot user-driven deployment is that if the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department. The organization's IT department then needs to run the Technician flow once they receive the device followed by delivering the device to the end-user. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
+There's one possible disadvantage of Windows Autopilot for pre-provisioned deployment over Windows Autopilot user-driven deployment. If the OEM or reseller is unable to perform the Technician flow, then the device might need to first go to the organization's IT department. The organization's IT department then needs to run the Technician flow once they receive the device followed by delivering the device to the end-user. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
 
 ## Workflow
 
@@ -94,7 +104,7 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!NOTE]
 >
-> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps may make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step may make more sense in a production environment.
+> Although the workflow is designed for lab or testing scenarios, it can also be used in a production environment. Some of the steps in the workflow are interchangeable and interchanging some of the steps might make more sense in a production environment. For example, the **Create a device group** step followed by the **Register devices as Autopilot devices** step might make more sense in a production environment.
 
 ## Walkthrough
 
