@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 12/08/2023
+ms.date: 12/12/2023
 ms.topic: how-to
 ms.prod: windows-client
 ms.technology: itpro-deploy
@@ -62,6 +62,20 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
     > - [Hybrid Identity Required Ports and Protocols](/azure/active-directory/hybrid/reference-connect-ports)
 
 - To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
+
+<!-- MAXADO-8594181 -->
+
+- If your organization has multiple domains and you install multiple Intune Connectors, you must use a domain service account that can create computer objects in all domains, even if you plan to implement Microsoft Entra hybrid join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+
+  This connector service account must have the following permissions:
+
+  - [**Log on as a service**](/windows/security/threat-protection/security-policy-settings/log-on-as-a-service).
+  - Must be part of the **Domain user** group.
+  - Must be a member of the local **Administrators** group on the Windows server that hosts the connector.
+
+  > [!IMPORTANT]
+  >
+  > Managed service accounts aren't supported for the service account. The service account must be a domain account.
 
 - The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
 
