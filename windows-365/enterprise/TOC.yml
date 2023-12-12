@@ -156,7 +156,7 @@ items:
       - name: Enable screen capture protection
         href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
       - name: Watermarking
-        href: /azure/virtual-desktop/watermarking?context=/windows-365/context/pr-context
+        href: watermarking.md
       - name: Restrict Office 365 access to Cloud PCs 
         href: restrict-office-365-cloud-pcs.md
     - name: Identity and access management
