@@ -412,3 +412,12 @@ Execute the following test first to get familiar with the complete end user expe
 
 This is a *bare minimum- test to confirm that your app has properly registered the account, registered the authentication callback, and unregistered the account. 
 Execute the following tests to more thoroughly validate how other App Protection Policy settings modify the behavior of your application.
+
+## Next Steps
+
+After you've completed all the [Exit Criteria] above, continue to [Stage 4: Scenario-based guidance].
+
+<!-- Stage 3 links -->
+<!-- internal links -->
+[Exit Criteria]:#exit-criteria
+[Stage 4: Scenario-based guidance]:#app-sdk-ios-phase4.md
