@@ -39,7 +39,7 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows 8.1 (x86, x64) <!--8763780, 8740844-->
     - Windows Server 2012 R2 (x64) <!--8763780, 8740844-->
 
-  - Profile: **Windows Security experience (preview)** - Manage [Windows Security app settings for Configuration Manager devices](../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
+  - Profile: **Windows Security experience** - Manage [Windows Security app settings for Configuration Manager devices](../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     - Windows 10 and later (x86, x64, ARM64)
@@ -58,7 +58,7 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows Server 2016 (x64)
     - Windows Server 2012 R2 (x64)
 
-    - Profile: **Attack Surface Reduction Rules (ConfigMgr)(preview)** - Manage Attack Surface Reduction Rules for Configuration Manager devices as part of Attack surface reduction policy, when you use tenant attach.
+    - Profile: **Attack Surface Reduction Rules (ConfigMgr)** - Manage Attack Surface Reduction Rules for Configuration Manager devices as part of Attack surface reduction policy, when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
 
@@ -72,7 +72,7 @@ The following profiles are supported for devices you manage with Configuration M
 
 - Platform: **Windows 10 and later**
 
-  - Profile: **Microsoft Defender Firewall (ConfigMgr) (preview)** - Manage [firewall policy settings for Configuration Manager devices](../../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
+  - Profile: **Microsoft Defender Firewall (ConfigMgr)** - Manage [firewall policy settings for Configuration Manager devices](../../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     - Windows 10 and later (x86, x64, ARM64)
@@ -80,13 +80,13 @@ The following profiles are supported for devices you manage with Configuration M
     > [!Important]
     > A supported version of Configuration manager is required to support firewall policies.
 
-  - Profile: **Exploit Protection (ConfigMgr)(preview)** - Manage [Exploit Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
+  - Profile: **Exploit Protection (ConfigMgr)** - Manage [Exploit Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
 
     - Windows 10 and later (x86, x64, ARM64)
 
-  - Profile: **Web Protection (ConfigMgr)(preview)** - Manage [Web Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
+  - Profile: **Web Protection (ConfigMgr)** - Manage [Web Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
 

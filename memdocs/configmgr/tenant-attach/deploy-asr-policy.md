@@ -8,8 +8,8 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
