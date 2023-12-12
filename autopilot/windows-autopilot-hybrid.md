@@ -73,9 +73,9 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
   - Must be part of the **Domain user** group.
   - Must be a member of the local **Administrators** group on the Windows server that hosts the connector.
 
-    > [!IMPORTANT]
-    >
-    > Managed service accounts aren't supported for the service account. The service account must be a domain account.
+  > [!IMPORTANT]
+  >
+  > Managed service accounts aren't supported for the service account. The service account must be a domain account.
 
 - The Intune Connector requires the [same endpoints as Intune](/mem/intune/fundamentals/intune-endpoints).
 
