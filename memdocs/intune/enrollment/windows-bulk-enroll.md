@@ -35,16 +35,18 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-Join new Windows devices to Azure Active Directory and Intune. To bulk enroll devices for your Azure AD tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Azure AD tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Azure AD users to sign in.
+Join new Windows devices to Microsoft Entra ID and Intune. To bulk enroll devices for your Microsoft Entra tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Microsoft Entra tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Microsoft Entra users to sign in.
 
 > [!NOTE]
-> Users must have a specific Azure AD role assignment to create a bulk enrollment token. You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Tenant administration**. The roles are:  
+> To create a bulk enrollment token, you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:  
 > - Global Administrator
 > - Cloud Device Administrator
 > - Intune Administrator
-> - Password Administrator 
+> - Password Administrator  
+>
+> You can assign these roles in Intune for Education > **Tenant settings** or in the Microsoft Intune admin center > **Users**. For more details, see [Give admin permissions in Microsoft Intune admin center](../fundamentals/users-add.md#give-admin-permissions-in-microsoft-intune-admin-center).   
 
-Azure AD users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
+Microsoft Entra users are standard users on these devices and receive assigned Intune policies and required apps. Windows devices that are enrolled into Intune using Windows bulk enrollment can use the Company Portal app to install available apps. 
 
 ## Prerequisites for Windows devices bulk enrollment
 
@@ -53,8 +55,7 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 
 ## Create a provisioning package
 
-1. Download [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.
-   ![Screenshot of the Windows Configuration Designer app Store](./media/windows-bulk-enroll/bulk-enroll-store.png)
+1. Install [Windows Configuration Designer (WCD)](https://www.microsoft.com/p/windows-configuration-designer/9nblggh4tx22) from the Microsoft Store.  
 
 1. Open the **Windows Configuration Designer** app and select **Provision desktop devices**.
    ![Screenshot of selecting Provision desktop devices in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-select.png)
@@ -72,17 +73,16 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 1. Optionally, you can configure the Wi-Fi network devices connect to when they first start.  If the network devices aren't configured, a wired network connection is required when the device is first started.
    ![Screenshot of enabling Wi-Fi including Network SSID and Network type options in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-network.png)
 
-1. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.
-   ![Screenshot of account management in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-account.png)
+1. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.  
 
    > [!NOTE]
-   > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Azure AD.
+   > Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Microsoft Entra ID.
 
-1. Provide your Azure AD credentials to get a bulk token.
+1. Provide your Microsoft Entra credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
    > [!NOTE]
-   > The account used to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) that is specified in Azure AD.
+   > The account used to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) that is specified in Microsoft Entra ID.
 
 1. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
@@ -106,21 +106,21 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 3. After you apply the package, the device will automatically restart in one minute.
    ![Screenshot of project folder, specifying name, and description in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-add.png)
 
-4. When the device restarts, it connects to the Azure Active Directory and enrolls in Microsoft Intune.
+4. When the device restarts, it connects to the Microsoft Entra ID and enrolls in Microsoft Intune.
 
 ## Troubleshooting Windows bulk enrollment
 
 ### Provisioning issues
 Provisioning is intended to be used on new Windows devices. Provisioning failures might require a wipe of the device or device recovery from a boot image. These examples describe some reasons for provisioning failures:
 
-- A provisioning package that attempts to join an Active Directory domain or Azure Active Directory tenant that does not create a local account could make the device unreachable if the domain-join process fails due to lack of network connectivity.
+- A provisioning package that attempts to join an Active Directory domain or Microsoft Entra tenant that does not create a local account could make the device unreachable if the domain-join process fails due to lack of network connectivity.
 - Scripts run by the provisioning package are run in system context. The scripts are able to make arbitrary changes to the device file system and configurations. A malicious or bad script could put the device in a state that can only be recovered by reimaging or wiping the device.
 
 You can check for success/failure of the settings in your package in the **Provisioning-Diagnostics-Provider** Admin log in Event Viewer.
 
 > [!NOTE]
 > Bulk enrollment is considered a userless enrollment method, and because of it, only the "Default" enrollment restriction in Intune would apply during enrollment. Make sure Windows platform is allowed in the default restriction, otherwise, the enrollment will fail.
-> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](enrollment-method-capab.md).  
+> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](/mem/intune/fundamentals/deployment-guide-enrollment-windows).  
 
 ### Bulk enrollment with Wi-Fi 
 

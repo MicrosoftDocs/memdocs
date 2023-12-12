@@ -1,10 +1,10 @@
 ---
 title: Scores, baselines, and insights in Endpoint Analytics
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 07/07/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.date: 10/23/2023
+ms.service: microsoft-intune
+ms.subservice: endpoint-analytics
 ms.topic: conceptual
 author: smritib17
 ms.author: smbhardwaj
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # <a name="bkmk_device"></a> Endpoint analytics scores, baselines, and insights
 
-When you first open the **Overview** page in **Endpoint analytics**, you're presented with a few score charts. You'll also notice there's information about what affects the scores and how to improve them if needed. Understanding the following three items are central to understanding each of the reports:
+When you first open the **Overview** page in **Endpoint analytics**, you're presented with a few score charts. The page includes information about what affects the scores and how to improve them, if needed. Understanding the following three items are central to understanding each of the reports:
 
 - Scores
 - Baselines
@@ -24,7 +24,7 @@ When you first open the **Overview** page in **Endpoint analytics**, you're pres
 
 ## Understanding scores
 
-**Endpoint analytics** scores range from 0 to 100. Lower scores indicate there's room for improvement. Scores help you understand the relative impact of each metric in your environment. For instance, when reviewing your [startup score](startup-performance.md), you find that overall your score of 61 is higher than the [baseline](#baselines) of 50 for all organizations. When examining the startup score breakdown, you find that your environment excels during the core boot phase with a score of 77. However, based on the average time it takes to get to a responsive desktop, you suspect long running startup processes are lowering the core sign-in score to 46. Reviewing the top [insights and recommendations](#bkmk_insights) entry for the startup score confirms that long running processes are responsible for the impact on the score. 
+**Endpoint analytics** scores range from 0 to 100. Lower scores indicate there's room for improvement. Scores help you understand how each metric affects your environment. For instance, when reviewing your [startup score](startup-performance.md), you find that overall your score of 61 is higher than the [baseline](#baselines) of 50 for all organizations. When examining the startup score breakdown, you find that your environment excels during the core boot phase with a score of 77. However, based on the average time it takes to get to a responsive desktop, you suspect long running startup processes are lowering the core sign-in score to 46. Reviewing the top [insights and recommendations](#bkmk_insights) entry for the startup score confirms that long running processes are responsible for the effect on the score.
 
 :::image type="content" source="media/8816759-startup-score.png" alt-text="Screenshot of the startup score page showing an overall startup score of 61 and an all organizations baseline score of 50. Startup subscores are core boot phase at 77 and core sign-in at 46. Under the core sign-in subscore, the average time to responsive desktop is 54 seconds. Insights and recommendations show 40 devices are taking 166 seconds longer than other devices due to startup process delays" lightbox="media/8816759-startup-score.png":::
 
@@ -36,18 +36,19 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 
 :::image type="content" source="media/8816759-baseline.png" alt-text="Screenshot of Endpoint analytics score chart. A red square outline is around the baseline number and baseline triangle marker" lightbox="media/8816759-baseline.png":::
 
-> [!Important]  
+> [!IMPORTANT]
 > We anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date. You can [stop gathering data](data-collection.md#bkmk_stop) at any time.
 
 ## <a name="bkmk_insights"></a> Insights and recommendations
 
-**Insights and recommendations** is a prioritized list to improve your score. The whole list is displayed on the **Overview** page either beside or below the charts depending on the width of your browser window. **Insights and recommendations** are filtered to the subnode's context when you navigate through reports. The recommendation listed with each insight tells you how to increase the score and how many points the score will gain when the recommendation is complete.
-- Selecting the insight link from **Insights and recommendations** provides you with more information on devices and attributes related to the insight. 
+**Insights and recommendations** is a prioritized list to improve your score. The whole list is displayed on the **Overview** page either beside or below the charts depending on the width of your browser window. **Insights and recommendations** are filtered to the subnode's context when you navigate through reports. The recommendation listed with each insight tells you how to increase the score and how many points the score gains when the recommendation is complete.
+
+- Selecting the insight link from **Insights and recommendations** provides you with more information on devices and attributes related to the insight.
 - The `Learn more` link takes you to information about how the metric is scored and the recommended course of action is for the insight.  
 
 ## <a name="bkmk_per-device"></a> Per device scores
 <!--IN8462182-->
-To help you identify devices that could be impacting user experience, Endpoint analytics shows some scores per device. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk. From the **Endpoint analytics** main page, select the **Device scores** tab to display individual device scores. Sorting by scores can assist you in finding devices that might need attention.
+To help you identify devices that could be impacting user experience, Endpoint analytics shows some scores per device. Reviewing scores per device might help you find and resolve end-user impacting issues before a call is made to the help desk. From the **Endpoint analytics** main page, select the **Device scores** tab to display individual device scores. Sorting by scores can assist you in finding devices that might need attention.
 
 :::image type="content" source="media/8816759-per-device-scores-chart.png" alt-text="Screenshot of Endpoint analytics device scores chart from the overview page." lightbox="media/8816759-per-device-scores-chart.png":::
 
@@ -61,20 +62,20 @@ You can also access per device scores on a device's **User experience** page. Fr
 
 ### <a name="bkmk_drill-in"></a> Device level drill-in from reports
 
-When reviewing your organization's reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
+When reviewing your organization's reports, you can view individual device scores. To drill-in for information on a specific device, select the **Device performance** tab, then choose a device.
 
 :::image type="content" source="media/8816759-per-device-startup-score.png" alt-text="Screenshot of Endpoint analytics startup performance page for a single device." lightbox="media/8816759-per-device-startup-score.png":::
 
-> [!Note]
+> [!NOTE]
 > You may notice small differences in values when reviewing detailed reporting when compared to overall less granular scores for devices and models.
 
 ## <a name="bkmk_model"></a> Per model scores
 <!--IN14439211-->
-Endpoint analytics shows scores per device model. These scores help admins contextualize the user experience across device models in the environment. Reviewing model scores may help you project and prioritize your next hardware refresh cycle. It can also help you discover devices that no longer meet your organization's current hardware specifications. From the **Endpoint analytics** main page, select the **Model scores** tab to display scores per device model. Scores per device model are available in all Endpoint analytics reports.
+Endpoint analytics shows scores per device model. These scores help admins contextualize the user experience across device models in the environment. Reviewing model scores might help you project and prioritize your next hardware refresh cycle. It can also help you discover devices that no longer meet your organization's current hardware specifications. From the **Endpoint analytics** main page, select the **Model scores** tab to display scores per device model. Scores per device model are available in all Endpoint analytics reports.
 
 ## Filter reports
 <!--7207888-->
-Use the **Add filter** option on tables to display items that match your criteria. You can add more filters to drill further into your data. Using filters enables you to discover trends in your environment or spot potential issues. For instance, in the **Device performance** tab of the **Startup performance** report, you might use a filter to identify devices with a high **Time to responsive desktop**. After reviewing your filtered data, you add another filter to include devices with a high **Group Policy sign-in time**. With the additional filter, you can gauge the impact Group Policy has on the user experience for devices that take a long time to get to a responsive desktop.
+Use the **Add filter** option on tables to display items that match your criteria. You can add more filters to drill further into your data. Using filters enables you to discover trends in your environment or spot potential issues. For instance, in the **Device performance** tab of the **Startup performance** report, you might use a filter to identify devices with a high **Time to responsive desktop**. After reviewing your filtered data, you add another filter to include devices with a high **Group Policy sign-in time**. With the extra filter, you can gauge the effect of Group Policy on user experience for devices that take a long time to get to a responsive desktop.
 
 :::image type="content" source="media/7207888-filter.png" alt-text="Screenshot of a table filter in Endpoint analytics." lightbox="media/7207888-filter.png":::
 
@@ -89,4 +90,4 @@ Use the **Add filter** option on tables to display items that match your criteri
 
 ## Next steps
 
-- Use [Proactive remediations](proactive-remediations.md) to gather more data and take action on devices
+- Use [Remediations](../intune/fundamentals/remediations.md) to gather more data and take action on devices

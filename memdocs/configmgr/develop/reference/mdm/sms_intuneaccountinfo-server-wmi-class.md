@@ -10,7 +10,7 @@ ms.assetid: e9582b73-ef71-4cf6-963b-31ecf8dced26
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
@@ -42,7 +42,7 @@ Class SMS_IntuneAccountInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- The GUID of the Azure Active Directory account.  
+ The GUID of the Microsoft Entra account.  
 
  `IntuneAccountID`  
  Data type: `String`  

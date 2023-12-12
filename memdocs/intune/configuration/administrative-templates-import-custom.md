@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2022
+ms.date: 11/29/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -72,16 +72,20 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
   
   In the following example, the`kerberos.admx` file requires the `Windows.admx` file:
   
-```xml
- <policyNamespaces>
-    <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
-    <using prefix="windows" namespace="Microsoft.Policies.Windows" />
-  </policyNamespaces>
-```
+  ```xml
+   <policyNamespaces>
+      <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
+      <using prefix="windows" namespace="Microsoft.Policies.Windows" />
+    </policyNamespaces>
+  ```
 
   To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
 
 - Some files may require `Windows.admx` as a prerequisite. This file must be uploaded first. In a future release (no ETA), this namespace will be automatically included and eventually not be required.
+
+  If `Windows.admx` is required and not uploaded, then you can get the following error message:
+
+  `ADMX file referenced not found NamespaceMissing:Microsoft.Policies.Windows. Please upload it first.`
 
 - Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
 
@@ -108,6 +112,8 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 2. Select **Devices** > **Configuration profiles** > **Import ADMX** > **Import**:
 
     :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Intune admin center.":::
+    
+    Alternatively, you can also import from **Devices** > **Windows** > **Configuration profiles** > **Import ADMX**.
 
 3. Upload your files:
 

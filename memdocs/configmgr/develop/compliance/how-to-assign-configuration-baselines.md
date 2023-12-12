@@ -9,7 +9,7 @@ ms.assetid: 54a9b910-2ed2-480c-adc8-aa61201ae39e
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to assign a configuration baseline to a collection by creating an assignment instance, populated with a minimum set of required values, and saving.
 ms.reviewer: mstewart,aaroncz 

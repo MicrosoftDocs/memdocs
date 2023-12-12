@@ -10,7 +10,7 @@ ms.assetid: feda268d-16d9-43a0-8bef-d26070e5deca
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

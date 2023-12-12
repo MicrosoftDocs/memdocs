@@ -13,6 +13,8 @@ items:
   items:
   - name: Architecture
     href: architecture.md
+  - name: Architecture diagram
+    href: high-level-architecture.md
   - name: Identity and authentication
     href: identity-authentication.md
   - name: Lifecycle
@@ -31,6 +33,8 @@ items:
     href: device-configuration.md
   - name: What is Windows 365 Government
     href: introduction-windows-365-government.md
+  - name: What is Windows 365 Frontline
+    href: introduction-windows-365-frontline.md
   - name: Security
     items:
     - name: Windows 365 security
@@ -63,6 +67,8 @@ items:
         href: /mem/intune/fundamentals/role-based-access-control?context=/windows-365/context/pr-context
       - name: Cloud PC sizes
         href: cloud-pc-size-recommendations.md
+      - name: GPU Cloud PC
+        href: gpu-cloud-pc.md
     - name: Deploy
       items:
       - name: Deployment overview
@@ -95,12 +101,26 @@ items:
         items:
         - name: Set up tenants for Windows 365 Government
           href: set-up-tenants-windows-365-gcc.md
-      - name: Citrix HDX Plus for Windows 365
+      - name: Windows 365 Boot
         items:
-        - name: Requirements
+        - name: Windows 365 Boot overview
+          href: windows-365-boot-overview.md
+        - name: Windows 365 Boot guided scenario
+          href: windows-365-boot-guide.md
+        - name: Physical device requirements
+          href: windows-365-boot-physical-device-requirements.md
+        - name: Restrict access to physical device
+          href: windows-365-boot-restrict-user-access-physical-device.md
+      - name: Partner connectors for Windows 365
+        items:
+        - name: Citrix requirements
           href: requirements-citrix.md
         - name: Set up Citrix HDX Plus for Windows 365
           href: set-up-citrix.md
+        - name: VMware requirements
+          href: requirements-vmware-horizon.md
+        - name: Set up VMware Horizon for Windows 365
+          href: set-up-vmware-horizon.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
@@ -124,29 +144,35 @@ items:
       - name: Create device configuration profile
         href: create-device-configuration-profile.md
     - name: User settings
-      items:
-      - name: Assign users as Local Admin
-        href: assign-users-as-local-admin.md
+      href: assign-users-as-local-admin.md
     - name: Security
       items:
       - name: Security guidelines 
         href: security-guidelines.md
       - name: Deploy security baselines 
         href: deploy-security-baselines.md
-      - name: Set conditional access policies
-        href: set-conditional-access-policies.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
       - name: Enable screen capture protection
         href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
+      - name: Watermarking
+        href: /azure/virtual-desktop/watermarking?context=/windows-365/context/pr-context
       - name: Restrict Office 365 access to Cloud PCs 
         href: restrict-office-365-cloud-pcs.md
+    - name: Identity and access management
+      items:
+      - name: Set conditional access policies
+        href: set-conditional-access-policies.md
+      - name: Configure single sign-on
+        href: configure-single-sign-on.md
     - name: Apps
       items:
       - name: App overview
         href: app-overview.md
       - name: Assign apps
         href: assign-apps.md
+      - name: Install Windows 365 app
+        href: install-windows-365-app-intune.md
       - name: Microsoft Teams
         items:
         - name: Teams on Cloud PCs
@@ -171,10 +197,18 @@ items:
         href: remotely-manage-cloud-pc.md
       - name: RDP Shortpath for public networks 
         href: rdp-shortpath-public-networks.md
+      - name: RDP Shortpath for private networks  
+        href: rdp-shortpath-private-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
+      - name: Windows 365 Switch
+        href: windows-365-switch-overview.md
       - name: Resize a Cloud PC
         href: resize-cloud-pc.md
+      - name: Move a Cloud PC
+        href: move-cloud-pc.md
+      - name: Set idle session time limits
+        href: frontline-cloud-pc-session-time-limits.md
       - name: Restore a Cloud PC
         items:
         - name: Overview
@@ -203,16 +237,24 @@ items:
         href: report-resource-performance.md
       - name: Remoting connection report
         href: report-remoting-connection.md
+      - name: Cloud PC actions
+        href: report-cloud-pc-actions.md
       - name: Cloud PC utilization report
         href: report-cloud-pc-utilization.md
       - name: Cloud PC connection quality report
         href: report-cloud-pc-connection-quality.md
+      - name: Connected Frontline Cloud PCs report
+        href: report-connected-frontline-cloud-pcs.md
+      - name: Cloud PCs that aren't available
+        href: report-cloud-pcs-not-available.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
         href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
+      - name: Windows Updates and Windows 365 Frontline
+        href: windows-update-frontline-cloud-pc.md
     - name: End-user experience
       items:
       - name: End-user hardware requirements
@@ -237,10 +279,16 @@ items:
       href: connection-errors.md
     - name: Provisioning errors
       href: provisioning-errors.md
-    - name: Citrix HDX Plus
+    - name: Partner connectors
       href: troubleshoot-citrix-hdx-plus.md
     - name: Windows 365 app
       href: troubleshoot-windows-365-app.md
+    - name: Windows 365 Boot
+      href: troubleshoot-windows-365-boot.md
+    - name: Windows 365 Boot known issues
+      href: windows-365-boot-known-issues.md
+    - name: Windows 365 Switch known issues
+      href: windows-365-switch-known-issues.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell

@@ -5,6 +5,8 @@ items:
   href: overview.md
 - name: Compare Windows 365 Business and Enterprise 
   href: business-enterprise-comparison.md
+- name: Cloud PC size relative performance
+  href: relative-cloud-pc-performance.md
 - name: Export Cloud PC names 
   href: export-cloud-pc-names.md
 - name: Partners
@@ -13,6 +15,8 @@ items:
   href: public-preview.md
 - name: Windows 365 privacy and data 
   href: enterprise/privacy-personal-data.md
+- name: What if my subscription expires? 
+  href: subscription-ends.md
 - name: Windows 365 Business docs
   href: business/index.yml
 - name: Windows 365 Enterprise docs

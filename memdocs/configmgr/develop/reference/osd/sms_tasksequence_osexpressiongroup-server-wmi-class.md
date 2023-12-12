@@ -10,7 +10,7 @@ ms.assetid: 1d399a59-c2e6-44ae-a0d2-032f2f6e022a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---

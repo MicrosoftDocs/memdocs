@@ -2,7 +2,7 @@
 # required metadata
 
 title: Network requirements and bandwidth details for Microsoft Intune
-titleSuffix: 
+titleSuffix: Microsoft Intune
 description: Review network configuration requirements and bandwidth details for Intune.
 keywords:
 author: Smritib17
@@ -17,6 +17,7 @@ ms.technology:
 ms.assetid: 0f737d48-24bc-44cd-aadd-f0a1d59f6893
 
 # optional metadata
+# CustomerIntent: As an  IT admin, I want to gather the network requirements and bandwidth details so that I can understand what is needed for Intune deployments.
 
 #ROBOTS:
 #audience:

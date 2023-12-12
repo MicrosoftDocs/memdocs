@@ -9,7 +9,7 @@ ms.assetid: c6d0f7c3-d794-4f15-89ce-dbdbb57d133c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Windows Server Update Services (WSUS) component settings are configured in Configuration Manager by modifying the site control file.
 ms.reviewer: mstewart,aaroncz 

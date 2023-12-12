@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/17/2023
+ms.date: 05/25/2023
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 ms.technology:
 ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure

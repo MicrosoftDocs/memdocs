@@ -386,7 +386,7 @@ Client computers use the **network access account** when they can't use their lo
 
 A Configuration Manager client first tries to use its computer account to download the content. If it fails, it then automatically tries the network access account.
 
-If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Azure AD-joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
+If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Microsoft Entra joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center.<!--1358228,1358278--> For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).<!-- SCCMDocs#1345 -->
 
 > [!NOTE]
 > If you enable **Enhanced HTTP** to not require the network access account, the distribution point needs to be running Windows Server 2012 or later. <!--SCCMDocs-pr issue #2696-->
@@ -416,7 +416,7 @@ Create the account in any domain that provides the necessary access to resources
 #### Actions that require the network access account
 
 <!-- 4640345 -->
-The network access account is still required for the following actions:
+The network access account is still required for the following actions (including eHTTP & PKI scenarios):
 
 - Multicast. For more information, see [Use multicast to deploy Windows over the network](../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md).
 

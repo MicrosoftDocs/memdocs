@@ -40,7 +40,7 @@ For more information on these actions, see [Available remote actions](#available
 
 ## Case studies
 
-The global consulting firm Avanade regularly uses remote actions to manage the devices used by their 30,000 employees. In a [blog post](https://www.microsoft.com/microsoft-365/blog/2018/02/07/the-future-is-on-the-other-side-of-this-bridge/), the CIO of Avanade noted:
+The global consulting firm Avanade regularly uses remote actions to manage the devices used by their 30,000 employees. In a blog post, the CIO of Avanade noted:
 
 > *Our immediate win from having the Intune functionality was the ability to remotely reset Windows on a machine. This is important to us for lost or stolen machines, which is more common in our highly mobile workforce.*
 > *This is functionality that we otherwise would have had to build and maintain in a custom ConfigMgr package.*
@@ -94,7 +94,7 @@ For more information, see [Remotely restart devices with Intune](../../intune/re
 
 The **Fresh Start** device action removes any apps installed on a device running Windows 10, version 1703 or later. Fresh Start helps remove pre-installed (OEM) apps that are typically installed with a new device.
 
-If you choose not to retain user data, the device restores to its out-of-box state. It unenrolls from Azure AD and MDM.
+If you choose not to retain user data, the device restores to its out-of-box state. It unenrolls from Microsoft Entra ID and MDM.
 
 If you have predetermined standards regarding what apps should be on the device, then this action eliminates the ones that don't meet your criteria.
 

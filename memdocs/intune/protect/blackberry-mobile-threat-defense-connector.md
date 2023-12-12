@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/03/2022
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -37,7 +37,7 @@ Control mobile device access to corporate resources using Conditional Access bas
 
 You can configure Conditional Access policies based on a BlackBerry Protect risk assessment, enabled through Intune device compliance policies for enrolled devices. You can set up your policies to allow or block noncompliant devices from accessing corporate resources based on detected threats.
 
-For more information about how to integrate BlackBerry UES with Microsoft Intune, see the [BlackBerry UES documentation](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues).  
+For more information about how to integrate BlackBerry UES with Microsoft Intune, see the [BlackBerry UES documentation](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues).
 
 > [!NOTE]
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
@@ -50,11 +50,11 @@ For more information about how to integrate BlackBerry UES with Microsoft Intune
 
 ## Prerequisites
 
-- Azure Active Directory Premium
+- Microsoft Entra ID P1
 
-- Microsoft Intune subscription
+- Microsoft Intune Plan 1 subscription
 
-- BlackBerry UES account with access to UES management console 
+- BlackBerry UES account with access to UES management console
 
 ## How do Intune and the BlackBerry MTD connector help protect your company resources?
 

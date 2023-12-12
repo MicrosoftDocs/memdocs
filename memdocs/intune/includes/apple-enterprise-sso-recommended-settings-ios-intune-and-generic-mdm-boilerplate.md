@@ -4,7 +4,7 @@ description: include file
 author: miepping
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/19/2023
+ms.date: 04/18/2023
 ms.author: miepping
 ms.custom: include file
 ---
@@ -18,4 +18,4 @@ ms.custom: include file
 | **disable_explicit_app_prompt** | Integer | **Recommended value**: `1` <br/><br/> Some apps might incorrectly enforce end-user prompts at the protocol layer. If you see this problem, users are prompted to sign in, even though the Microsoft Enterprise SSO plug-in works for other apps. <br/><br/>When set to `1` (one), you reduce these prompts. |
 
 > [!TIP]
-> For more information on these properties, and other properties you can configure, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin#more-configuration-options).
+> For more information on these properties, and other properties you can configure, see [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin#more-configuration-options).

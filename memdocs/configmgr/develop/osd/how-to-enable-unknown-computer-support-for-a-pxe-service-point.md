@@ -9,7 +9,7 @@ ms.assetid: fbabd2ed-c3ee-48f0-8d9d-7d0c48f69af6
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to set an operating system deployment response to PXE service requests from unknown computers.
 ms.reviewer: mstewart,aaroncz 

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage devices with Microsoft Intune
-description: Review the devices you manage with Microsoft Intune, including exporting a devices list into csv format, view your Azure Active Directory-joined devices, review a change log of actions on the device, use TeamViewer Connector to allow IT admins remotely troubleshoot Android devices, and view all the actions you can run on your devices.
+description: Review the devices you manage with Microsoft Intune, including exporting a devices list into csv format, view your Microsoft Entra joined devices, review a change log of actions on the device, use TeamViewer Connector to allow IT admins remotely troubleshoot Android devices, and view all the actions you can run on your devices.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/17/2020
+ms.date: 11/20/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -31,8 +31,6 @@ ms.collection:
 
 # Manage devices with Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 As an IT admin, you must ensure that managed devices are providing the resources that your users need to do their work, while protecting that data from risk.
 
 The **Devices** workload gives you insights into the devices you manage, and lets you activate remote actions on those devices.
@@ -49,7 +47,7 @@ Not all device actions are available for every platform or device. Available act
 
      Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
+     Select any device to [view more details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
 
    - **By platform**: The items under By platform let you view lists of devices by the specific platform.
    - **Device enrollment**: This option takes you to the enrollment page.
@@ -58,6 +56,9 @@ Not all device actions are available for every platform or device. Available act
        - **Device cleanup rules**: This option lets you automatically remove inactive devices from Intune. For more information, see [Automatically delete devices with cleanup rules](devices-wipe.md#delete-devices-from-the-intune-admin-center).
        - **Device categories**: This option lets you create [device categories](../enrollment/device-group-mapping.md).
    - **Help and Support** provides a shortcut on troubleshooting tips, requesting support, or checking the status of Intune.
+     
+> [!NOTE]
+> The Retire, Wipe, and Delete actions take precendence over all others. It is expected that a device with multiple pending actions will only carry out a Retire, Wipe, or Delete and all other pending actions will be ignored.
 
 ## Available device actions
 
@@ -71,10 +72,9 @@ The available actions depend on the device platform and the device configuration
   - [Collect diagnostics](collect-diagnostics.md) (Windows 10 only)
   - [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center)
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
-  - [Erase](./device-erase.md) (macOS Only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
-  - [Locate device](device-locate.md) (iOS only)
+  - [Locate device](device-locate.md)
   - [Lost mode](device-lost-mode.md) (iOS only)
   - [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
   - [Remote control for Android](teamviewer-support.md)
@@ -83,6 +83,7 @@ The available actions depend on the device platform and the device configuration
   - [Reset passcode](device-passcode-reset.md)
   - [Restart](device-restart.md) (Windows only)
   - [Retire](devices-wipe.md#retire)
+  - [Rotate Local admin password](../protect/windows-laps-policy.md#manually-rotate-passwords) (Windows only)
   - [Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
   - [Windows 10 PIN reset](device-windows-pin-reset.md)
   - [Wipe](devices-wipe.md#wipe)

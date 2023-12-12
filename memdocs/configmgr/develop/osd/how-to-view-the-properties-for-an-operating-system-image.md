@@ -9,7 +9,7 @@ ms.assetid: 0d66813b-8579-48e7-a155-f90d4d7c4e10
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to view an image file's properties in XML format using a Microsoft operating system's image package.
 ms.reviewer: mstewart,aaroncz 

@@ -38,7 +38,7 @@ Intune is a cloud-based enterprise mobility management (EMM) service that helps 
 * Protect your company information by helping to control the way your workforce accesses and shares it.
 * Ensure devices and apps are compliant with company security requirements.
 
-Intune integrates closely with Azure Active Directory (Azure AD) for identity and access control, and Azure Information Protection for data protection. You can also integrate it with Configuration Manager to extend your management capabilities.
+Intune integrates closely with Microsoft Entra ID for identity and access control, and Azure Information Protection for data protection. You can also integrate it with Configuration Manager to extend your management capabilities.
 
 To learn more about how you can manage devices, apps, and protect corporate data with Intune, see the [Intune documentation](../index.yml).
 

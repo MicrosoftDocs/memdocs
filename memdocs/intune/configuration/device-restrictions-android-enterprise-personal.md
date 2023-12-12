@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/14/2022
+ms.date: 10/23/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, shthilla, chmaguir, chrisbal, priyar
+ms.reviewer: andreibiswas, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -47,7 +47,7 @@ This feature applies to:
 
 ## Before you begin
 
-- Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
+- Create an [Android device restrictions configuration profile](device-restrictions-configure.md).
 
 - When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 
@@ -74,7 +74,30 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
   You can also use an app configuration policy to grant permissions for individual apps (**Apps** > **App configuration policies**).
 
-- **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.  
+- **Add and remove accounts**: This setting allows or prevents accounts from being added in the work profile, including Google accounts. Your options:
+
+  - **Allow all accounts types, except Google accounts** (default): Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.
+
+    In a previous release, this setting was named **Not configured**.
+
+  - **Allow all account types**: Allows all accounts, including Google accounts. These Google accounts are blocked from installing apps from the **Managed Google Play Store**.
+
+    You can also configure:
+
+    - **Google domain allow-list**:  Restricts users to add only certain Google account domains in the work profile. You can import a list of allowed domains in the following format:
+
+      ```csv
+      contoso.com
+      microsoft.com
+      ```
+
+      Or, add the domains individually using the `contoso.com` format. When left blank, by default, the OS might allow adding all Google domains in the work profile.
+
+    This setting requires:
+
+    - Google Play app version 80970100 or higher
+
+  - **Block all account types**: Prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile.
 
   > [!NOTE]
   > On personally owned devices with a work profile (BYOD) and corporate owned devices with work profile (COPE), Google accounts can't be added to the **Settings** app > **Accounts** > **Work**.
@@ -97,7 +120,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
 - **Search work contacts from personal profile**: **Block** prevents users from searching for work contacts in apps in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow searching for work contacts in the personal profile.
 
-- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. The camera on the personal side isn't affected by the setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
+- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. This setting doesn't affect the camera on the personal side. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
 - **Allow widgets from work profile apps**: **Enable** allows users to put widgets exposed by apps on the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable this feature.
 
@@ -131,14 +154,18 @@ These password settings apply to the work profile password on personally owned d
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
+- **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile.
+
+  When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
+
 #### Android 12 and later
 
 - **Password complexity**: Use this setting to set the password complexity requirements. Your options:
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
   - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
-  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
-  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least four characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least eight characters. The alphabetic or alphanumeric length must be at least six characters.
 
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 
@@ -209,8 +236,8 @@ These password settings apply to the device password on personally owned devices
 
   - **None**: Intune doesn't change or update this setting. By default, the OS may not require a password.
   - **Low**: A pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are allowed.
-  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
-  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+  - **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least four characters.
+  - **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least eight characters. The alphabetic or alphanumeric length must be at least six characters.
 
   On personally owned devices with a work profile, there are two passwords affected by this **Password complexity** setting:
 

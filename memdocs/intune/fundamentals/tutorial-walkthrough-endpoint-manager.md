@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/02/2023
+ms.date: 05/25/2023
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -20,7 +20,7 @@ Customer intent: As an Intune admin, I want to learn where to find the different
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: tycast
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
@@ -36,7 +36,6 @@ Microsoft Intune provides the cloud infrastructure, the cloud-based mobile devic
 
 > [!NOTE]
 > Microsoft Intune is a single, integrated endpoint management platform for managing all your endpoints. The Microsoft Intune admin center integrates Microsoft Configuration Manager and Microsoft Intune.
->>>>>>> b6a35210265f377bc91f5d32f67510e4864bd671
 
 In this tutorial, you will:
 > [!div class="checklist"]
@@ -76,7 +75,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     
     Intune lets you manage your workforce's devices and apps, including how they access your company data. To use this mobile device management (MDM) service, the devices must first be enrolled in Intune. When a device is enrolled, it is issued an MDM certificate. This certificate is used to communicate with the Intune service. 
 
-    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deployment-plan-setup.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](../enrollment/device-enrollment.md)
+    There are several methods to enroll your workforce's devices into Intune. Each method depends on the device's ownership (personal or corporate), device type (iOS/iPadOS, Windows, Android), and management requirements (resets, affinity, locking). However, before you can enable device enrollment, you must set up your Intune infrastructure. In particular, device enrollment requires that you [set your MDM authority](mdm-authority-set.md). For more information about getting your Intune environment (tenant) ready, see [Set up Intune](deployment-plan-setup.md). Once you have your Intune tenant ready, you can enroll devices. For more information about device enrollment, see [What is device enrollment?](/mem/intune/fundamentals/deployment-guide-enrollment)
 
 3. From the navigation pane, select **Devices** to display details about the enrolled devices in your Intune tenant. 
 
@@ -100,7 +99,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device Compliance**.
 
     Compliance requirements are essentially rules, such as requiring a device PIN, or requiring device encryption. Device compliance policies define the rules and settings that a device must follow to be considered compliant. To use device compliance, you must have:
-    - An Intune and an Azure Active Directory (Azure AD) Premium subscription
+    - An Intune and a Microsoft Entra ID P1 or P2 subscription
     - Devices running a supported platform
     - Devices must be enrolled in Intune
     - Devices that are enrolled to either one user or no primary user.
@@ -174,7 +173,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     You can add users directly to Intune or synchronize users from your on-premises Active Directory. Once added, users can enroll devices and access company resources. You can also give users additional permissions to access Intune. For more information, see [Add users and grant administrative permission to Intune](users-add.md).
 
-11. From the navigation pane, select **Groups** to display details about the Azure Active Directory (Azure AD) groups included in Intune. As an Intune admin, you use groups to manage devices and users.
+11. From the navigation pane, select **Groups** to display details about the Microsoft Entra groups included in Intune. As an Intune admin, you use groups to manage devices and users.
 
     ![Screenshot of the Microsoft Intune admin center - Groups](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-11.png)
 
@@ -214,7 +213,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     ![Screenshot of the Microsoft Intune admin center - Help and support](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-14.png)
 
-    To create a support ticket, your account must be assigned as an administrator role in Azure Active Directory. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
+    To create a support ticket, your account must be assigned as an administrator role in Microsoft Entra ID. Administrator roles include, **Intune administrator**, **Global administrator**, and **Service administrator**.
 
     For more information, see [How to get support in Microsoft Intune](../../get-support.md).
 

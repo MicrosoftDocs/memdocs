@@ -9,7 +9,7 @@ ms.assetid: c576b3fd-5eb3-4e57-9c20-3158f8d0b7cb
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Creating a Deployment Type Extension File is the first step in installing the application management extension files. The application management extension must be installed on each Configuration Manager administrator console computer that will create a custom deployment technology.
 ms.reviewer: mstewart,aaroncz 

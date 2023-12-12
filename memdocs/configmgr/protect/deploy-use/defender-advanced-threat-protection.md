@@ -2,7 +2,7 @@
 title: Microsoft Defender for Endpoint
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
-ms.date: 08/12/2022
+ms.date: 08/01/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -23,9 +23,9 @@ Microsoft Defender for Endpoint's cloud-based portal is [Microsoft Defender Secu
 
 ## Prerequisites
 
-- Subscription to the Microsoft Defender for Endpoint online service  
+- Subscription to Microsoft Defender for Endpoint
 - Clients computers running the Configuration Manager client
-- Clients using an OS listed in the [Supported client operating systems](#bkmk_os) section below.
+- Clients using an OS listed in the [supported client operating systems](#bkmk_os) section below.
 - Your administrative user account needs the **Endpoint Protection Manager** security role.<!-- MEMDocs#698 -->
 
 ### <a name="bkmk_os"></a> Supported client operating systems
@@ -48,6 +48,8 @@ You can onboard the following operating systems using Configuration Manager:
 Instructions to [Onboarding to Microsoft Defender for Endpoint with Configuration Manager 2207 and later versions](#bkmk_2207)
 
 Instructions to [Onboarding to Microsoft Defender for Endpoint with Configuration Manager 2203 and earlier versions](#bkmk_2203)
+
+Instructions to [Updating onboarding information for Microsoft Defender for Endpoint devices with Configuration Manager](#bkmk_updateatp)
 
 ## <a name="bkmk_2207"></a> Onboarding to Microsoft Defender for Endpoint with Configuration Manager 2207 and later versions
 
@@ -329,6 +331,44 @@ Select **Deploy** to target the Microsoft Defender for Endpoint policy to client
 
 > [!IMPORTANT]
 > The Microsoft Defender for Endpoint configuration files contains sensitive information which should be kept secure.
+
+## <a name="bkmk_updateatp"></a> Updating the onboarding information for existing devices
+
+Organizations may need to update the onboarding information on a device via Microsoft Configuration Manager.
+
+This can be necessary due to a change in the onboarding payload for Microsoft Defender for Endpoint, or when directed by Microsoft support.
+
+Updating the onboarding information will direct the device to start utilizing the new onboarding payload at the next *Restart*.
+
+This process compromises of actions to update the existing onboarding policy, and executing a one time action on all existing devices to update the onboarding payload. Utilize the **Group Policy** onboarding script to perform a one time uplift of devices from the old payload to the new paylod.
+
+> [!NOTE]
+> This information will not necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
+
+### Validate the new onboarding payload
+
+1. Download the **Group Policy** onboarding package from the Microsoft Defender for Endpoint portal.
+
+1. **Create** a collection for validation of the new onboarding payload
+
+1. **Exclude** this collection from the existing Microsoft Defender for Endpoint collection targeted with the onboarding payload.
+
+1. **Deploy** the **Group Policy** onboarding script to the test collection.
+
+1. **Validate** the devices are utilizing the new onboarding payload.
+
+### Migrate to the new onboarding payload
+
+1. Download the **Microsoft Configuration Manager** onboarding package from the Microsoft Defender for Endpoint portal.
+
+1. **Update** the existing Microsoft Defender for Endpoint onboarding policy with the new onboarding payload.
+
+1. **Deploy** the script from [Validate the new onboarding payload](./defender-advanced-threat-protection.md#validate-the-new-onboarding-payload) to the existing target collection for the Microsoft Defender for Endpoint onboarding policy.
+
+1. **Validate** the devices are utilizing the new onboarding payload and successfully consuming the payload from the script
+
+> [!NOTE]
+> Once all devices are migrated you can remove the script and validation collections from your environment, using the onboarding policy moving forward.
 
 ## Next steps
 

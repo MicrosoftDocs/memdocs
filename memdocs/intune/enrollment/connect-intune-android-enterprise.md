@@ -48,7 +48,7 @@ Refer to the following support article from Google to ensure that Android Enterp
 Intune makes it easier for you to configure and use Android Enterprise management. After you connect your account to Google Play, these common apps for Android Enterprise are added to the admin center:  
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed, dedicated and corporate-owned work profile scenarios.
-- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification, and is also used for Android Enterprise dedicated devices that enroll with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices).
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification, and is also used for Android Enterprise dedicated devices that enroll with [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices).
 - **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for Android Enterprise personally-owned work profile scenarios, as well as App Protection Policies (APP). 
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for multi-app kiosk mode on Android Enterprise dedicated devices. [Learn more about Managed Home Screen](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060). 
 

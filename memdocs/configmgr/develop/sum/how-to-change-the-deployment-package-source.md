@@ -9,7 +9,7 @@ ms.assetid: d931362e-25f6-4316-ab95-32b5771f670c
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: You change the deployment package source for a software updates deployment package in Configuration Manager by obtaining an instance of the SMS_SoftwareUpdatesPackage class and using the ValidateNewPackageSource method.
 ms.reviewer: mstewart,aaroncz 

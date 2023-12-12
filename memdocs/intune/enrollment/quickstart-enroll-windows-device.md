@@ -39,6 +39,8 @@ ms.collection:
 
 Employees and students who want remote access to work or school resources can enroll their devices into Microsoft Intune. Enrollment ensures that all devices trying to access data within your organization are secure and compliant with your policies and requirements. Upon enrollment, the device gets access to resources like work email, files, VPN, and Wi-Fi. 
 
+[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
 In this task, you will: 
 
 * Try out the device user experience by enrolling a device running Windows 10/11 into Microsoft Intune.  
@@ -92,10 +94,9 @@ Additionally, before you begin enrollment, confirm the version of Windows runnin
 ## Confirm device enrollment  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
-2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
-3. Verify that you have an additional device enrolled within Intune.
+2. Select **Devices** > **All devices** to view the enrolled devices in Intune.  
+3. Verify that you have an additional device enrolled within Intune.  
 
-   ![Screenshot of Intune-enrolled devices](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
 
 ## Clean up resources
 

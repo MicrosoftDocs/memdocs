@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 09/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,10 +29,7 @@ ms.collection:
 
 # Deployment Considerations and frequently asked questions for Endpoint Privilege Management
 
-<!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
-
-> [!NOTE]  
-> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
 Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
@@ -53,34 +50,28 @@ Applies to:
 
 File name is an attribute that can be utilized to detect an application that needs to be elevated. However, it isn't protected by the signature of the file.
 
-This means that file names are *highly susceptible* to change, and files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which may not be your intended behavior.
+File names are *highly susceptible* to change, and files that are signed by a certificate that you trust could have their name changed to be *detected* and subsequently *elevated* which may not be your intended behavior.
 
 > [!IMPORTANT]
 > Always ensure that rules including a file name include other attributes that provide a strong assertion to the file's identity. Attributes like file hash or properties that are included in the files signature are good indicators that the file you intend is likely the one being elevated.
 
 ### Elevation settings policies may show conflict if changed in quick succession
 
-Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it may result device reporting conflict or falling back to the default behavior of *Denying* the elevation. This is a transient state and will resolve without further action (in less than 60 minutes). This issue will be fixed in a future release.
+Endpoint Privilege Management reports status of individual settings applied using the *Elevation Settings* profile. If settings in this profile (Default elevation behavior for instance) are changed multiple times in quick succession, it may result device reporting conflict or falling back to the default behavior of *Denying* the elevation. This is a transient state and resolves without further action (in less than 60 minutes). This issue will be fixed in a future release.
 
 ### Blocked files downloaded from the internet fail to elevate
 
-Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
+Behavior exists in Windows to set an attribute on files that are downloaded directly from the internet and prevent them from executing until validated. Windows has functionality to validate the reputation of files downloaded from the internet. When a files reputation isn't validated, it might fail to elevate. 
 
-### Certificate rules defined with a file path might fail to elevate
+To correct this behavior, unblock the file by unblocking the file from the file properties pane. *Unblocking a file should only be done when you trust the file*.
 
-When you define a certificate rule with a file path, Endpoint Privilege Management might fail to elevate files signed by the certificate as the administrator intended. To work around this issue, supply a file name in addition to the file path. This issue will be fixed in a future release.
+### Windows devices that are "workplace joined" fail to enable Endpoint Privilege Management
 
-### Certificate rules defined as Issuing Certificate Authority might not allow elevation
-
-When you define a certificate rule and specify the certificate as an 'Issuing CA', EPM might not allow elevation when the certificate is properly part of the certificate chain. To work around this issue, specify the publisher certificate of the file instead. This issue will be fixed in a future release.
-
-### On Windows 11, 'Run with elevated access' is shown under 'show more options' when I right-click on a file
-
-Windows 11 introduced a new paradigm for right-click context menus. EPM currently shows under the 'show more options' selection from that menu. This issue will be fixed in a future release.
+Devices that are workplace joined are not supported by Endpoint Privilege Management. These devices will not show success or process EPM policies (elevation settings or elevation rules) when deployed to the device.
 
 ### Rules for a network file might fail to elevate
 
-Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network share isn't allowed.
+Endpoint Privilege Management supports executing files that are locally stored on disk. Executing files from a network location, such as a network share or mapped drive, is not supported.
 
 ### Endpoint Privilege Management doesn't receive policy when I use a 'SSL-inspection' on my network infrastructure
 
@@ -88,9 +79,19 @@ Endpoint Privilege Management doesn't support SSL inspection, which is known as 
 
 ## Frequently asked questions
 
+### Why is my virtual device not onboarding to Endpoint Privilege Management?
+
+Currently, Endpoint Privilege Management isn't supported with Azure Virtual Desktop. This issue will be fixed in future release.
+
+Support for Windows 365 (Cloud PCs) was added in September 2023.
+
+### Why is my elevation settings policy showing error/not applicable?
+
+The elevation settings policy controls the enablement of EPM and the configuration of the client side components. When this policy is in error or shows not applicable, it indicates the device had an issue enabling EPM. The two most common reasons are missing the [required Windows updates](../protect/epm-overview.md#requirements) or failure to communicate with required [Intune Endpoints for Endpoint Privilege Management](../fundamentals/intune-endpoints.md#microsoft-intune-endpoint-privilege-management).
+
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 
-Endpoint Privilege Management doesn’t manage elevation requests by users that have administrative permissions on a device. There might be instances where an administrator launches a file that has an elevation rule (specifically an automatic elevation rule) that's defined on the device. This application launches as it normally does for the administrator.
+Endpoint Privilege Management doesn’t manage elevation requests by users that have administrative permissions on a device. There might be instances where an administrator launches a file that has an elevation rule (specifically an automatic elevation rule) that's defined on the device. This application launches as it normally does for the administrator and an event for an unmanaged elevation will be generated by EPM.
 
 ### What files can be elevated to administrator?
 
@@ -98,11 +99,7 @@ Endpoint Privilege Management supports executable files. Microsoft is currently 
 
 ### Why doesn't 'Run with elevated access" show on start menu items?
 
-Certain items that reside in the start menu or taskbar have a curated right-click menu and the EPM right-click context menu is not able to be added to those menus. We plan to fix this issue in a future release.
-
-### Some applications and shortcuts fail to elevate when command-line parameters are present
-
-Certain command line compositions can cause elevations to fail on the client. This issue will be fixed in future release.
+Certain items that reside in the start menu or taskbar have a curated right-click menu and the EPM right-click context menu isn't able to be added to those menus. We plan to fix this issue in a future release.
 
 ### Can I launch multiple files as elevated with the "Run with elevated access" right-click context menu?
 

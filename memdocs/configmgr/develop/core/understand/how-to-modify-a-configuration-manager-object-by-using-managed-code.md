@@ -9,7 +9,7 @@ ms.assetid: ebb14714-c951-479e-9fad-dd2d7a32e739
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to modify a configuration manager object by using managed code with the provided examples and links.
 ms.reviewer: mstewart,aaroncz 

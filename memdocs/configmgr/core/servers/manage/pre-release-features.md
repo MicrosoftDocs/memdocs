@@ -66,7 +66,6 @@ When you enable a pre-release feature, the Configuration Manager hierarchy manag
 <!-- With each current branch release, to help purge this list a bit, remove any entries that were added as a full feature in a version that's no longer supported -->
 | Feature          | Added as pre-release | Added as a full feature |
 |------------------|----------------------|-------------------------|
-| [Dark theme for the console](admin-console.md#bkmk_dark)<!--9070525--> | Version 2203 | ![Not yet](media/red-x.png) |
 | [Cloud management gateway with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040,8959690--> | Version 2010 | Version 2107 |
 | [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md) <!--3098816,290B66D8-C735-4895-B59A-DD732D84A697--> | Version 2002 | Version 2111 |
 | [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!--3555953,CB0CDFFB-9C6F-4B18-8954-A43A387302A2--> | Version 2002 | ![Not yet](media/red-x.png) |

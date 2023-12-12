@@ -9,7 +9,7 @@ ms.assetid: 56aed021-c205-4b29-9d2e-e67e279e044d
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how the AddDistributionPoints Method adds the distribution points for the task sequence package.
 ms.reviewer: mstewart,aaroncz 

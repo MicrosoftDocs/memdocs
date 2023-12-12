@@ -9,7 +9,7 @@ ms.assetid: 2b623f07-91ab-43cf-999c-7f868855eb3a
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.localizationpriority: null
+ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to update the OverrideServiceWindows property of deployment to configure software updates to override maintenance windows.
 ms.reviewer: mstewart,aaroncz 

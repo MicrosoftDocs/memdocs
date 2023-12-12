@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 08/10/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,9 +35,6 @@ ms.collection:
 
 # Add a macOS DMG app to Microsoft Intune
 
-> [!NOTE]
-> The feature is in public preview.
-
 Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple’s website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
 
 > [!NOTE]
@@ -50,6 +47,9 @@ The following prerequisites must be met before a macOS DMG app is installed on m
 - Devices are managed by Intune.
 - DMG app is smaller than 2GB in size.
 - The [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md) is installed.
+
+> [!NOTE]
+> The full disk access permission is required to update or delete DMG apps. Intune automatically requests the permission when a DMG app policy is assigned on macOS 13 and higher.
 
 ## Important considerations for deploying DMG apps
 

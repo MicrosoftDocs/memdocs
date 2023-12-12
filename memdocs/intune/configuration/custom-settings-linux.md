@@ -3,12 +3,12 @@
 
 title: Add custom settings to Linux devices in Microsoft Intune
 titleSuffix:
-description: Add Bash scripts to create a custom Linux profile in Microsoft Intune. Use the script create, use, and control custom settings and features on Linux devices. This custom profile can then be assigned or distributed to Linux devices in your organization to create a baseline or standard.
+description: Add Bash scripts to create a custom Linux profile in Microsoft Intune. Use the script to create, use, and control custom settings and features on Linux devices. This custom profile can then be assigned or distributed to Linux devices in your organization to create a baseline or standard.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2023
+ms.date: 12/04/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,8 +42,8 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
 ## Prerequisites
 
-- Linux Ubuntu Desktop: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
-- Linux devices are enrolled in Intune. For more information on Linux enrollment, go to [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md).
+- **Linux Ubuntu Desktop**: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+- **Linux devices are enrolled in Intune**. For more information on Linux enrollment, go to [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md).
 
 ## Import the script
 
@@ -63,7 +63,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
     - **Execution context**: Select the context the script is executed in. Your options:
       - **User** (default): When a user signs in to the device, the script runs. If a user never signs into the device, or there isn't any user affinity, then the script doesn't run.
-      - **Root**: Runs at the device level. The script runs if there are zero (0) users signed in, or if there are many users signed in to the device.
+      - **Root**: The script always runs (with or without users logged in) at the device level.
 
     - **Execution frequency**: Select how frequently the script is executed. The default is **Every 15 minutes**.
 

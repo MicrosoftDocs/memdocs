@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 05/09/2023
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection:
 
 # Overview of Windows 365 deployment
 
-After your organization has purchased one or more Windows 365 licenses, the Windows 365 node in Microsoft Endpoint Manager will become active for management. At this point, you can provision Cloud PCs. 
+After your organization has purchased one or more Windows 365 licenses, the Windows 365 node in Microsoft Intune will become active for management. At this point, you can provision Cloud PCs. 
 
 To set up your system to provision on-demand Cloud PCs to your users, follow these steps:
 

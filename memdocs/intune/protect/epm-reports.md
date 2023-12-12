@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/24/2023
+ms.date: 09/18/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,10 +29,9 @@ ms.collection:
 
 # Reports for Endpoint Privilege Management
 
-<!-- [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)] -->
+[!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-> [!NOTE]  
-> This capability is in public preview and available to use without a license. After public preview, it will be available as an Intune add-on. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+*Elevation reports for Endpoint Privilege Management are currently in preview.*
 
 Microsoft Intune Endpoint Privilege Management (EPM) allows your organization’s users to run as a standard user (without administrator rights) and complete tasks that require elevated privileges.
 
@@ -46,6 +45,7 @@ The EPM reports are available from the *Reports* tab of the *Endpoint Privilege 
 
 - Elevation report
 - Managed elevations report
+- Elevation report by applications
 
 > [!NOTE]
 > Data is processed once every 24 hours. There may be a delay before seeing data in the elevation usage reports.
@@ -65,6 +65,28 @@ By selecting an entry in the report, you can drill in to view more details about
 ## Managed elevation report
 
 The *Managed elevation report* displays the same types of detail as the *Elevation report*, but reports on only the elevations that are managed by a *Windows elevation rule policy*.
+
+## Elevation report by applications
+
+The *Elevation report by applications* report displays details for all managed and unmanaged elevations, aggregated by the application that elevated. Details include:
+
+- **Internal file name**
+- **File version**
+- **Publisher**
+- **Elevation type**
+- **Elevation count**
+
+The information in this report can help identify applications that might require elevation rules to function properly, including rules for child processes.
+
+## Elevation report by publisher
+
+The *Elevation report by publisher* report displays details for all managed and unmanaged elevations, aggregated by the publisher of the app that elevated. Details include:
+
+- **Publisher**
+- **Elevation type**
+- **Elevation count**
+
+The information in this report can help identify related applications as well as the source of an applications that are run elevated in your environment.
 
 ## Endpoint Privilege Management policy details
 

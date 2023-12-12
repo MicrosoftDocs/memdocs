@@ -2,7 +2,7 @@
 title: Create orchestration groups
 titleSuffix: Configuration Manager
 description: Create, edit, and use orchestration groups.
-ms.date: 12/28/2021
+ms.date: 03/28/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -50,7 +50,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
    - **Pre-Script**: A PowerShell script to run on each device *before* the deployment runs.
    - **Post-Script** page, enter a PowerShell script to run on each device *after* the deployment runs and a restart, if required, occurs. The behavior is otherwise the same as the PreScript.
 
-   The scripts should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->. Choose from the following options when adding or modifying a script on the **Script Picker** page:
+   The scripts should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used<!--9893550--> and the maximum script length is 50,000 bytes which is 25,000 characters (as we use Unicode encoding)<!-- MEMDocs#1575 -->. Choose from the following options when adding or modifying a script on the **Script Picker** page:
 
     - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
         - **Open**: Open a specific `.ps1` file
@@ -63,7 +63,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
 > [!WARNING]
 > - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**. Scripts that don't have approval will not run on clients.
-> - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 characters<!-- MEMDocs#1575 -->.
+> - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 bytes which is 25,000 characters (as we use Unicode encoding)<!-- MEMDocs#1575 -->.
 > - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages. 
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
 

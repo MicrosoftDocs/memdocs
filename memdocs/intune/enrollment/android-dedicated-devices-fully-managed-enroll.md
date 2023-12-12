@@ -51,13 +51,13 @@ After you've set up your Android Enterprise [dedicated devices](android-kiosk-en
 > Corporate-owned work profile (COPE) device management is available on Android version 8.0 and newer.
 
 > [!NOTE]
-> If you have an Azure AD Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Azure AD Conditional Access documentation](/azure/active-directory/conditional-access/).
+> If you have a Microsoft Entra Conditional Access policy defined that uses the *require a device to be marked as compliant* Grant control or a Block policy and applies to **All Cloud apps**, **Android**, and **Browsers**, you must exclude the **Microsoft Intune** cloud app from this policy. This is because the Android setup process uses a Chrome tab to authenticate your users during enrollment. For more information, see [Microsoft Entra Conditional Access documentation](/azure/active-directory/conditional-access/).
 
 ## Enroll by using Near Field Communication (NFC)
 
 Create a specially formatted NFC tag to provision NFC-supported devices running Android 8.0 or later. You can use your own app or any NFC tag-creation tool. For more information, see [C-based Android Enterprise device enrollment with Microsoft Intune](/archive/blogs/cbernier/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune) and [Google's Android Management API documentation](https://developers.google.com/android/management/provision-device#nfc_method).
 
-For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android versions 8.0 to 10.0. It's not supported with Android 11.0 or later. 
+For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
 
 ## Enroll by using a token  
 
@@ -65,7 +65,7 @@ Enroll new or factory-reset devices by providing device users with the enrollmen
 
 - For Android 8.0 and later devices, you can use the token value (example: `12345`) to enroll the device.  
 - When using the **afw#setup** enrollment method, you can scan the QR code to enroll devices running Android 8.0 and later.  
-- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is supported on devices running Android versions 8.0 to 10.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
+- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
 
 1. Turn on the device.  
 2. On the **Welcome** screen, select your language.  

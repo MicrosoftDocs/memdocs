@@ -4,8 +4,8 @@
 title: macOS device compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your macOS devices in Microsoft Intune. Require Apple's system integrity protection, set password restrictions, require a firewall, allow gatekeeper, and more.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 08/29/2022
 ms.topic: conceptual
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
 - tier2
 - M365-identity-device-management
+- compliance
 ---
 
 # Device Compliance settings for macOS settings in Intune
@@ -61,10 +62,10 @@ As an Intune administrator, use these compliance settings to help protect your o
   When a device uses an OS version later than the version in the rule, access to organization resources is blocked. The device user is asked to contact their IT administrator. The device can't access organization resources until a rule changes to allow the OS version.
 
 - **Minimum OS build version**  
-  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device.
+  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a minimum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `22E772610a`.
 
 - **Maximum OS build version**  
-  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device.
+  When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `22E772610a`.
 
 ## System security settings
 

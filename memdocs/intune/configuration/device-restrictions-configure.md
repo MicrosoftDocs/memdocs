@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 11/09/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,6 +33,9 @@ ms.collection:
 # Configure device restriction settings in Microsoft Intune
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+
+
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 Intune includes device restriction policies that help administrators control Android, iOS/iPadOS, macOS, and Windows devices. These restrictions let you control a wide range of settings and features to protect your organization's resources. For example, administrators can:
 
@@ -98,11 +101,11 @@ This article shows you how to create a device restrictions profile. You can also
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 

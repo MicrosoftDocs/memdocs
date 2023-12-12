@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/07/2023
+ms.date: 08/31/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -35,7 +35,7 @@ ms.collection:
 
 # Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune
 
-Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for windows 10/11 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10/11. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 > [!NOTE]
 > Microsoft Office 365 ProPlus has been renamed to **Microsoft 365 Apps for enterprise**. In our documentation, we'll commonly refer to it as **Microsoft 365 Apps**.
@@ -51,7 +51,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 >
 > Multiple required or available app assignments are not additive. A later app assignment will overwrite pre-existing installed app assignments.
 
-- Devices to which you deploy these apps must be running the Windows 10 Creators Update or later.
+- Devices to which you deploy these apps must be running the windows 10/11 Creators Update or later.
 - Intune supports adding Office apps from the Microsoft 365 Apps suite only.
 - If any Office apps are open when Intune installs the app suite, the installation might fail, and users might lose data from unsaved files.
 - This installation method is not supported on Windows Home, Windows Team, Windows Holographic, or Windows Holographic for Business devices.
@@ -65,7 +65,7 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. Select **Windows 10** in the **Microsoft 365 Apps** section of the **Select app type** pane.
+3. Select **Windows 10 and later** in the **Microsoft 365 Apps** section of the **Select app type** pane.
 4. Click **Select**. The **Add Microsoft 365 Apps** steps are displayed.
 
 ## Step 1 - App suite information
@@ -125,7 +125,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
     - **Use shared computer activation**: Select this option when multiple users share a computer. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Automatically accept the app end user license agreement**: Select this option if you don't require end users to accept the license agreement. Intune then automatically accepts the agreement.
     - **Languages**: Office is automatically installed in any of the supported languages that are installed with Windows on the end-user's device. Select this option if you want to install additional languages with the app suite. <p></p>
-        You can deploy additional languages for Microsoft 365 Apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10** under **Microsoft 365 Apps**. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Microsoft 365 Apps](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+        You can deploy additional languages for Microsoft 365 Apps managed through Intune. The list of available languages includes the **Type** of language pack (core, partial, and proofing). In the portal, select **Microsoft Intune** > **Apps** > **All apps** > **Add**. In the **App type** list of the **Add app** pane, select **Windows 10 and later** under **Microsoft 365 Apps**. Select **Languages** in the **App Suite Settings** pane. For additional information, see [Overview of deploying languages in Microsoft 365 Apps](/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 2. Click **Next** to display the **Scope tags** page.
 
 ## Step 2 - (**Option 2**) Configure app suite using XML data
@@ -204,7 +204,7 @@ In addition, monitor the size of the directory *C:\Program Files\Microsoft Offic
 
 Once you can conclude that both Intune and the network infrastructure work as expected, you should further analyze the issue from an OS perspective. Consider the following conditions:
 
-- The target device must run on Windows 10 Creators Update or later.
+- The target device must run on windows 10/11 Creators Update or later.
 - No existing Office apps are opened while Intune deploys the applications.
 - Existing MSI versions of Office have been properly removed from the device. Intune utilizes Office Click-to-Run which is not compatible with Office MSI. This behavior is further mentioned in this document:<br>
   [Office installed with Click-to-Run and Windows Installer on same computer isn't supported](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)

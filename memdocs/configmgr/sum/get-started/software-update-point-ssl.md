@@ -240,14 +240,14 @@ When you change the software update point to require SSL, Configuration Manager 
    Write-Host "CurrentSUP- $current"
    ```
    > [!TIP]
-   > [Open this script](https://communityhub.microsoft.com/item/8267) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
+   > Open this script in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 1. Run a software update scan cycle on your test client. You can force a scan with the following PowerShell script:
 
    ```powershell
    Invoke-WMIMethod -Namespace root\ccm -Class SMS_CLIENT -Name TriggerSchedule "{00000000-0000-0000-0000-000000000113}"
    ```
    > [!TIP]
-   > [Open this script](https://communityhub.microsoft.com/item/8268) in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
+   > Open this script in community hub. For more information, see [Direct links to community hub items](../../core/servers/manage/community-hub.md).
 
 1. Review the client's **ScanAgent.log** to verify the message to scan against the software update point was received.
 
