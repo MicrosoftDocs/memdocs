@@ -233,7 +233,7 @@ This can be necessary due to a change in the onboarding payload for Microsoft De
 
 Updating the onboarding information will direct the device to start utilizing the new onboarding payload at the next *Restart*.
 
-This process compromises of actions to update the existing onboarding policy, and executing a one time action on all existing devices to update the onboarding payload. Utilize the **Group Policy** onboarding script to perform a one time uplift of devices from the old payload to the new paylod.
+This process compromises of actions to update the existing onboarding policy, and executing a one time action on all existing devices to update the onboarding payload. Utilize the **Group Policy** onboarding script to perform a one time uplift of devices from the old payload to the new payload.
 
 > [!NOTE]
 > This information will not necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
