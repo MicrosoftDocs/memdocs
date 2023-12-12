@@ -52,7 +52,7 @@ To check the release version of your tenant, use the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Tenant status**. Your tenant's name, location, MDM authority, account status, and service release number are shown.
 
-In the following example, the tenant has the 2104 (April 2021) service release:
+In the following example, the tenant has the 2311 (November 2023) service release:
 
 :::image type="content" source="./media/intune-service-servicing-information/intune-admin-center-tenant-status.png" alt-text="In the Intune admin center, select tenant administration and then tenant status to see the service release version." lightbox="./media/intune-service-servicing-information/intune-admin-center-tenant-status.png":::
 
