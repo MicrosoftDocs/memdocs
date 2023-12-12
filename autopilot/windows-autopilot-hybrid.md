@@ -190,7 +190,7 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 1. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
 
-    - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
+    - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -startsWith "[ZTDId]")`.
     - Intune's Group Tag field maps to the OrderID attribute on Microsoft Entra devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
     - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
 
