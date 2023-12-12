@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2023
+ms.date: 12/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -20,7 +20,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: smithre4
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -163,6 +163,19 @@ To manage these, you can use the following key:
 |    com.microsoft.office.officemobile.TeamsApps.IsAllowed    |    **true** (default) enables Teams apps on Microsoft 365 (Office) for iOS and Android<br>**false** disables Teams apps on Microsoft 365 (Office) for iOS and Android    |
 
 This key can be used both by managed devices and managed apps.
+
+### Data protection settings in Microsoft 365 (Office)
+
+You can enable or disable offline caching when **Save As to Local Storage** is blocked by the [app protection policy](../apps/app-protection-policies.md). 
+
+> [!IMPORTANT]
+> This setting is only applicable to the Microsoft 365 (Office) app on Android.
+To configure this setting, you can use the following key:
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.IntuneMAMOnly.AllowOfflineCachingWhenSaveAsBlocked   |    **false** (default) disables offline caching when **Save As to local storage** is blocked<br>**true** enables offline caching when **Save As to local storage** is blocked    |
+
 
 ### Enable or disable Microsoft 365 Feed for iOS and Android
 

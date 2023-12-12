@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2023
+ms.date: 12/04/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -52,7 +52,7 @@ This reference section provides an overview of endpoints, supported HTTP methods
 
 You can access the Intune Data Warehouse data model through RESTful endpoints. To gain access to your data, your client must authorize with Microsoft Entra ID using OAuth 2.0. You first set up a web app and a client app in Azure, grant permissions to the client. Your local client gets authorization and can then communicate with the Data Warehouse endpoints.
 
-For more information, see [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md)
+For more information, see [Get data from the Data Warehouse API with a REST client](reports-proc-data-rest.md).
 
 > [!Note]  
 > You can access the [GitHub Intune Data Warehouse repo](https://github.com/Microsoft/Intune-Data-Warehouse) on Github for code samples.
@@ -74,5 +74,4 @@ Learn more about working with Microsoft Entra ID by reading the [Authentication 
 
 Find OData resources at [odata.org](https://www.odata.org).
   
-Review the OData Version 4.0 standard at [OData Version 4.0]
-(https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)
+Review the OData Version 4.0 standard at [OData Version 4.0](https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html).

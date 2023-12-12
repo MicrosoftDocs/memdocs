@@ -63,7 +63,7 @@ Configuration Manager extends and works alongside many Microsoft technologies an
 
 Configuration Manager also uses:  
 
-- Active Directory Domain Services and Azure Active Directory for security, service location, configuration, and to discover the users and devices that you want to manage.  
+- Active Directory Domain Services and Microsoft Entra ID for security, service location, configuration, and to discover the users and devices that you want to manage.  
 - Microsoft SQL Server as a distributed change management database—and integrates with SQL Server Reporting Services (SSRS) to produce reports to monitor and track management activities.  
 - Site system roles that extend management functionality and use the web services of Internet Information Services (IIS).
 - Delivery Optimization, Windows Low Extra Delay Background Transport (LEDBAT), Background Intelligent Transfer Service (BITS), BranchCache, and other peer caching technologies to help manage content on your networks and between devices.

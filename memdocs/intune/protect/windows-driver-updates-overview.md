@@ -60,13 +60,18 @@ Windows driver update management applies to:
 
 ## Prerequisites
 
+> [!IMPORTANT]
+> This feature is not supported on GCC cloud environment.
+>
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
+
 To use Windows Driver Update management, your organization must have the following licenses, subscriptions, and network configurations: 
 
 ### Subscriptions
 
 - **Intune**: Your tenant requires the *Microsoft Intune Plan 1* subscription.
 
-- **Azure Active Directory (Azure AD)**: *Azure AD Free* (or greater) subscription.
+- **Microsoft Entra ID**: *Microsoft Entra ID Free* (or greater) subscription.
 
 ### Device & Edition requirements
 
@@ -100,7 +105,7 @@ Driver updates are supported for the following Windows 10/11 editions:
 
 - Run a version of Windows 10/11 that remains in support.
 
-- Be enrolled in Intune MDM and be Hybrid AD joined or Azure AD joined.
+- Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
 
 - Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.  
 
@@ -157,7 +162,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
   
 **Windows Driver Update Management architecture**:
 
-1. Microsoft Intune provides the Azure Active Directory IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
+1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to WUfB-DS. Intune also provides the list of driver approvals and pause commands to WUfB-DS.
 2. WUfB-DS configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
 3. Devices send data to Microsoft so that Windows Update can identify the applicable driver updates for a device during its regular Windows Update scans for updates.  Any approved updates install on the device.
 4. WUfB-DS reports Windows diagnostic data back to Intune for reports.
@@ -274,6 +279,10 @@ To help avoid issues that require rolling back a driver from large numbers of de
 ### Is there a way to set a deadline for drivers?
 
 - The Quality Update deadline and grace period settings apply to drivers. The deadline starts from the time the driver is first offered to the device, but is not a deferral period. The deferral period delays when updates are first offered to a device.
+
+### Are the user experience settings from an Update Ring policy applied for driver updates?
+
+- Yes, user experience settings such as automatic update behavior, active hours, notifications, and so on are applied for driver updates as well.
 
 ### Why does it take up to 24 hours for the driver update inventory to be returned?
 

@@ -35,10 +35,8 @@ ms.collection:
 
 > [!NOTE]
 > The current Xamarin bindings for Android platform only support apps targeting Android 9.0 and lower and Xamarin Forms 4.4 and lower. Microsoft is working on improving support for newer versions on Android by providing Intune support on .NET MAUI. The beta release for .NET MAUI support is now available. For more information, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android). For .NET MAUI support on iOS, see [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS). See [Xamarin Support Policy](https://dotnet.microsoft.com/platform/support/policy/xamarin) and [Migrate your app from Xamarin.Forms](/dotnet/maui/get-started/migrate) for more information about Xamarin support and migrating your apps from Xamarin Forms to .NET MAUI.
-
-> [!NOTE]
+> 
 > You might wish to first read the [Get Started with Intune App SDK](app-sdk-get-started.md) article, which explains how to prepare for integration on each supported platform.
-
 ## Overview
 The [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) enable [Intune app protection policy](../apps/app-protection-policy.md) in iOS and Android apps built with Xamarin. The bindings allow developers to easily build-in Intune app protection features into their Xamarin-based app.
 
@@ -90,7 +88,7 @@ for more information.
 > Intune regularly releases updates to the Intune App SDK. Regularly check the [Intune App SDK Xamarin Bindings](https://github.com/msintuneappsdk/intune-app-sdk-xamarin) for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 1. Add the [Microsoft.Intune.MAM.Xamarin.iOS NuGet package](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.iOS) to your Xamarin.iOS project.
-2. Follow the general steps required for integrating the Intune App SDK into an iOS mobile app. You can begin with step 3 of the integration instructions from the [Intune App SDK for iOS Developer Guide](app-sdk-ios.md#build-the-sdk-into-your-mobile-app). You can skip the final step in that section of running the IntuneMAMConfigurator, as this tool is included in the Microsoft.Intune.MAM.Xamarin.iOS package and will be run automatically at build time.
+2. Follow the general steps required for integrating the Intune App SDK into an iOS mobile app. You can begin with step 3 of the integration instructions from the [Intune App SDK for iOS Developer Guide](../developer/app-sdk-ios-phase3.md#build-the-sdk-into-your-mobile-app). You can skip the final step in that section of running the IntuneMAMConfigurator, as this tool is included in the Microsoft.Intune.MAM.Xamarin.iOS package and will be run automatically at build time.
     **Important**: Enabling keychain sharing for an app is slightly different in Visual Studio from Xcode. Open the app's Entitlements plist and make sure the "Enable Keychain" option is enabled and the appropriate keychain sharing groups are added in that section. Then, ensure the Entitlements plist is specified in the "Custom Entitlements" field of the project's "iOS Bundle Signing" options for all the appropriate Configuration/Platform combinations.
 3. Once the bindings are added and the app is properly configured, your app can begin using the Intune SDK's APIs. To do so, you must include the following namespace:
 
@@ -106,7 +104,7 @@ for more information.
 
       Apps might pass in null if the user's UPN is unknown at the time of the call. In this case, users will be prompted to enter both their email address and password.
       
-      If your app already uses MSAL to authenticate users, you can configure a single-sign-on (SSO) experience between your app and the Intune SDK. First, you'll need to override the default Microsoft Entra settings used by the Intune SDK with those of your app. You can do so via the IntuneMAMSettings dictionary in the app's Info.plist, as mentioned in the [Intune App SDK for iOS Developer Guide](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk), or you can do so in code via the Microsoft Entra ID override properties of the IntuneMAMSettings class. The Info.plist approach is recommended for applications whose MSAL settings are static while the override properties are recommended for applications that determine those values at runtime. Once all of the SSO settings have been configured, your app should provide the user's UPN to the IntuneMAMEnrollmentManager's RegisterAndEnrollAccount method after it has successfully authenticated:
+      If your app already uses MSAL to authenticate users, you can configure a single-sign-on (SSO) experience between your app and the Intune SDK. First, you'll need to override the default Microsoft Entra settings used by the Intune SDK with those of your app. You can do so via the IntuneMAMSettings dictionary in the app's Info.plist, as mentioned in the [Intune App SDK for iOS Developer Guide](app-sdk-ios-phase2.md#configure-msal-settings-for-the-intune-app-sdk), or you can do so in code via the Microsoft Entra ID override properties of the IntuneMAMSettings class. The Info.plist approach is recommended for applications whose MSAL settings are static while the override properties are recommended for applications that determine those values at runtime. Once all of the SSO settings have been configured, your app should provide the user's UPN to the IntuneMAMEnrollmentManager's RegisterAndEnrollAccount method after it has successfully authenticated:
 
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);

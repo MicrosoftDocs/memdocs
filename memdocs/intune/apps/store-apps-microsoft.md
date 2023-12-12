@@ -21,7 +21,7 @@ ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -157,7 +157,7 @@ Apps that are deployed from the Microsoft Store are automatically kept up to dat
 
 ### Intune management of Microsoft Store Win32 apps
 
-When a Microsoft Store Win32 app is published to a device as **Required**, but it's already installed (either manually or via the [Microsoft Store for Business](../apps/windows-store-for-business.md)), Intune takes over the management of the application.
+When a Microsoft Store Win32 app is published to a device as **Required**, but the app is not detected due to a mismatch of the installed version or context, Intune will reinstall the app in the targeted installation context.
 
 For available Microsoft Store Win32 apps, the end user must select install in the Company Portal before Intune takes over management and automatic updates for the app. Intune doesn't try to reinstall the app.
 
@@ -222,18 +222,19 @@ For more information on the Microsoft Store integration with Intune due to the M
   - **Enabled**: When enabled, this setting:
 
     - Blocks end users from installing arbitrary apps from the Microsoft Store app.
-    - Blocks end users from installing arbitrary apps using `winget.exe`.
     - Blocks end users from using the Microsoft Store to manually install app updates.
 
   - **Disabled**: When disabled, this setting:
 
     - Allows end users to install arbitrary apps from the Microsoft Store app.
-    - Allows end users to install arbitrary apps using `winget.exe`.
     - Allows end users to use the Microsoft Store to manually install app updates.
+
+  > [!NOTE]
+  > The Windows Package Manager command-line tool `winget.exe` is not affected by this policy.
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | - [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>- [ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | - [Settings Catalog](../configuration/settings-catalog.md) </br>- [Administrative templates](../configuration/administrative-templates-windows.md) | Administrative Templates > Windows Components > Store |
+  | [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>[ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | [Settings Catalog](../configuration/settings-catalog.md) </br>[Administrative templates](../configuration/administrative-templates-windows.md) | **Windows Components** > **Store** > **Turn off the Store Application** <br/> **Administrative Templates** > **Windows Components** > **Store**|
 
 ### What you need to know
 

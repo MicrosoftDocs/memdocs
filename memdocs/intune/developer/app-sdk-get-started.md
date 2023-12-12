@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/29/2023
+ms.date: 11/14/2023
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -90,13 +90,16 @@ If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.
 * [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)
 * [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS)
   
+> [!NOTE]
+> Using the Intune APP SDK for .NET MAUI, you can develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
+
 It's a good idea to sign up for a GitHub account that you can use to fork and pull from our repositories. GitHub lets developers communicate with our product team, open issues and receive quick responses, view release notes, and provide feedback to Microsoft. For questions on the Intune App SDK GitHub, contact msintuneappsdk@microsoft.com.
 
 ## Enable your iOS or Android app for app protection policy
 
 You'll need one of the following developer guides to help you integrate the Intune App SDK into your app:
 
-* **[Intune App SDK for iOS Developer Guide](app-sdk-ios.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
+* **[Intune App SDK for iOS Developer Guide](app-sdk-ios-phase1.md)**: This document will walk you step-by-step through enabling your native iOS app with the Intune App SDK.
 
 * **[Intune App SDK for Android Developer Guide](/mem/intune/developer/app-sdk-android-phase1)**: This document will walk you step-by-step through enabling your native Android app with the Intune App SDK.
 
@@ -181,7 +184,7 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
   * If you're testing your app on a mobile device using an end user account, ensure that you have given that account an Intune license by in the Microsoft 365 admin center website after logging in with an admin account, see [Assign Microsoft Intune license](../fundamentals/licenses-assign.md).
 
-* **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but isn't listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting 'Custom Apps'. 
+* **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but isn't listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting **Custom Apps**. 
 
 * **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install). 
 

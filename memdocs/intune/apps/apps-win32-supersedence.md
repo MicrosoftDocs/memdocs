@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: 

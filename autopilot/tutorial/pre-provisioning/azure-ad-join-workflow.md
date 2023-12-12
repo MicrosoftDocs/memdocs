@@ -1,5 +1,5 @@
 ---
-title: Overview for Windows Autopilot for pre-provisioned deployment Microsoft Entra joins in Intune
+title: Overview for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune
 description: Overview for Windows Autopilot for pre-provisioned deployment Microsoft Entra join in Intune.
 ms.prod: windows-client
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 04/24/2023
+ms.date: 11/30/2023
 ms.topic: tutorial
 ms.collection: 
   - tier1
@@ -48,7 +48,7 @@ Windows Autopilot for pre-provisioned deployment can perform the following tasks
 - Installs applications.
 - Applies device configuration policies such as BitLocker and Windows Hello for Business.
 - Checks for compliance.
-- Enrollment Status Page (ESP) can be used to prevent an end-user from using the device until it's fully configured.
+- Enrollment Status Page (ESP) prevents an end-user from using the device until the device is fully configured.
 
 Windows Autopilot for pre-provisioned deployment consists of two phases:
 
@@ -71,7 +71,7 @@ The main difference between Windows Autopilot user-driven deployment and Windows
 
 The deployment is split up between the Technician flow and User flow phases so that the deployment is faster when the end-user receives the device. The deployment is faster when the end-user receives the device because the IT department, OEM, or reseller has completed the first portion of the deployment during the Technician flow.
 
-One possible disadvantage of Windows Autopilot for pre-provisioned deployment over Windows Autopilot user-driven deployment is that if the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department. The organization's IT department then needs to run the Technician flow once they receive the device followed by delivering the device to the end-user. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
+Windows Autopilot for pre-provisioned deployment may have one disadvantage over Windows Autopilot user-driven deployment. If the OEM or reseller is unable to perform the Technician flow, then the device may need to first go to the organization's IT department to complete the Technician flow. The organization's IT department then needs to run the Technician flow once they receive the device followed by delivering the device to the end-user. This extra step prevents the device from being shipped and delivered to the end-user directly from the OEM or reseller. This extra step can lengthen the amount of time before the end-user receives the device.
 
 ## Workflow
 

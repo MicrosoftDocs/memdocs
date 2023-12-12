@@ -175,7 +175,7 @@ The Configuration Manager client policy includes the CMG service name, `GraniteF
 
 ## Next steps
 
-Continue your CMG setup by configuring Azure Active Directory (Azure AD):
+Continue your CMG setup by configuring Microsoft Entra ID:
   
 > [!div class="nextstepaction"]
-> [Configure Azure AD](configure-azure-ad.md)
+> [Configure Microsoft Entra ID](configure-azure-ad.md)

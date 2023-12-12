@@ -21,7 +21,7 @@ ms.assetid: 51d45ce2-d81b-4584-8bc4-568c8c62653d
 #ROBOTS:
 #audience:
 
-ms.reviewer: manchen
+ms.reviewer: bryanke
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -194,7 +194,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 | Action | iOS/iPadOS | macOS |
 |------- | ---------- | ----- |
 | Remove app assignment | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you change the assignment to **Uninstall**. If the app assignment is removed while the app is installed and never assigned as **Uninstall**, it will remain installed, but it will no longer be offered for installation to the user or device. | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you change the assignment to **Uninstall**. If the app assignment is removed while the app is installed and never assigned as **Uninstall**, it will remain installed, but it will no longer be offered for installation to the user or device. |
-| Revoke app license | After changing the app assignment to **Uninstall**, you can reclaim an app license from the user or device using the **Revoke license** action. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. | After changing the app assignment to **Uninstall**, you can reclaim an app license from the user or device using the **Revoke license** action. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. |
+| Revoke app license | After removing the app assignment, you can reclaim an app license from the user or device using the **Revoke license** action. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. | After removing the app assignment, you can reclaim an app license from the user or device using the **Revoke license** action. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. |
 
 >[!NOTE]
 > - Intune reclaims app licenses when an employee leaves the company and is no longer part of the Microsoft Entra groups.

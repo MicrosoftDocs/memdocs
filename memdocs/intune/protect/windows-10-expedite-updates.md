@@ -66,6 +66,8 @@ The actual time that a device starts to update depends on the device being onlin
 
 > [!IMPORTANT]
 > This feature is not supported on GCC and GCC High/DoD cloud environments.
+>
+> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) is not applicable to GCC and GCC High/DoD cloud environments for WuFB-DS capabilities.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
@@ -100,7 +102,7 @@ Only update builds that are generally available are supported. Preview builds, i
 
 - Be [enrolled in Intune](/mem/intune/fundamentals/deployment-guide-enrollment) MDM, or be [co-managed](../../configmgr/comanage/overview.md) with the [Windows Update policies](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Intune or Pilot Intune.
 
-- Be Azure Active Directory (AD) Joined, or Hybrid Azure AD Joined. Workplace Join isn't supported.
+- Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
 
 - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 

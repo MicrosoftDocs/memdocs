@@ -121,7 +121,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 
 - To use SCEP certificate profiles:
   - Configure integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Setup includes following the instructions from the third-party CA to complete integration of their CA with Intune.
-  - [Create an application in Azure AD](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
+  - [Create an application in Microsoft Entra ID](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
 
 - PKCS imported certificates require you to [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
 
