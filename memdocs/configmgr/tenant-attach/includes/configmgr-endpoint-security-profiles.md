@@ -26,11 +26,10 @@ ms.collection: tier3
 
 
 The following profiles are supported for devices you manage with Configuration Manager current branch, through the tenant attach scenario:
-<!--The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:-->
 
 - Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
 
-  - Profile: **Microsoft Defender Antivirus Policy** - Manage [Antivirus policy settings for Configuration Manager devices](../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
+  - Profile: **Microsoft Defender Antivirus** - Manage [Antivirus policy settings for Configuration Manager devices](../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     - Windows 10 and later (x86, x64, ARM64)
@@ -39,7 +38,7 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows 8.1 (x86, x64) <!--8763780, 8740844-->
     - Windows Server 2012 R2 (x64) <!--8763780, 8740844-->
 
-  - Profile: **Windows Security experience** - Manage [Windows Security app settings for Configuration Manager devices](../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
+  - Profile: **Windows Security experience (ConfigMgr)** - Manage [Windows Security app settings for Configuration Manager devices](../../../intune/protect/antivirus-windows-security-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     - Windows 10 and later (x86, x64, ARM64)
