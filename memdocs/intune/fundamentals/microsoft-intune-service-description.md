@@ -68,7 +68,7 @@ Because the mobile device management ecosystem changes frequently with operating
 
   A few helpful hints:
 
-  * The messages in the Microsoft 365 Message Center are targeted. This means that if your company doesn't have an Intune for EDU offer, we won't message you about Intune for EDU.
+  * The messages in the Microsoft 365 Message Center are targeted. This means that if your company doesn't have an Intune for Education offer, we won't message you about Intune for Education.
 
   * Messages expire. For example, the notification that your service has been updated with a link to the What's new page will likely expire prior to the next service update notification. Otherwise, you'd have a large backlog of posts that may no longer be relevant.
 
