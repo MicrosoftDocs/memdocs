@@ -405,10 +405,10 @@ Execute the following test first to get familiar with the complete end user expe
       > Uninstalling other SDK-integrated apps helps ensure that you're exclusively testing your own app's integration.
 5. Install your application.
 6. Log in to your application with your test account that is targeted with App Protection Policy.
-10. Confirm that you're prompted with a Intune mamnaged screen and confirming the prompt will restart the app. This indicates that the SDK has successfully retrieved policy for this account.
-11. You should be prompted to set an app PIN. Create a PIN.
-13. Log the managed account out of your application.
-14. If possible without logging in, navigate around your application and confirm your app works as expected.
+7. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This indicates that the SDK has successfully retrieved policy for this account.
+8. You should be prompted to set an app PIN. Create a PIN.
+9. Log the managed account out of your application.
+10. If possible without logging in, navigate around your application and confirm your app works as expected.
 
 This is a *bare minimum- test to confirm that your app has properly registered the account, registered the authentication callback, and unregistered the account. 
 Execute the following tests to more thoroughly validate how other App Protection Policy settings modify the behavior of your application.
