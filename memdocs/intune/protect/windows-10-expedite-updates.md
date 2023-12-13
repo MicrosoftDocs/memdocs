@@ -200,8 +200,8 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    - A setting of **0 days** means that as soon as the device installs the update, the user is notified about the restart and has limited time to save their work.
 
-   > [!IMPORTANT]
-   > This experience can impact user productivity. Consider using it for those devices or updates that must complete and restart the device as soon as possible.
+     > [!IMPORTANT]
+     > This experience can impact user productivity. Consider using it for those devices or updates that must complete and restart the device as soon as possible.
 
    - A setting of **1 day** or **2 days** provides device users flexibility to manage a restart before it’s forced. These settings correspond to an automatic restart delay of 24 or 48 hours after the update installs on the device.
 
