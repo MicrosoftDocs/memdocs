@@ -164,10 +164,9 @@ All apps that you create by using the software installer installation type (for 
 Requirements for cloud storage space are as follows:
 
 - All app installation files must be in the same folder.
-- The maximum file size for any file that you upload is 8 GB.
-
-  > [!NOTE]
-  > Windows Line-of-business (LOB) apps, including Win32, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSI X, and Windows Universal MSI X bundle, have a maximum size limit of 8 GB per app. All other LOB apps, including iOS/iPadOS LOB apps, have a maximum size limit of 2 GB per app.
+- The maximum file size for Windows Line-of-business (LOB) apps, Windows Universal AppX, Windows Universal AppX bundle, Windows Universal MSIX, and Windows Universal MSIX bundle, have a maximum size limit of 8 GB per app.
+- Win32 apps have a maximum size limit of 30GB per app.
+- iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
 
 ## Create and edit categories for apps
 
