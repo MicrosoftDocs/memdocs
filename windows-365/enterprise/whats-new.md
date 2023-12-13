@@ -60,7 +60,7 @@ For information about Windows App and its features, see [What's new in Windows A
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
 
-#### Windows 365 support for Microsoft Purview Customer Key (preview)<!—46980464-->
+#### Windows 365 support for Microsoft Purview Customer Key (preview)<!--46980464-->
 
 Windows 365 now supports encrypting Cloud PCs by setting up Microsoft Purview Customer Key. For more information, see [Service encryption with Microsoft Purview Customer Key]( /purview/customer-key-overview).
 
