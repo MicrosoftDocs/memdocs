@@ -31,20 +31,25 @@ ms.collection:
 - iOS/iPadOS
 ---
 
-# Intune App SDK for iOS - MSAL prerequisite and setup
-
-## Setup MSAL
+# Stage 2: MSAL prerequisite and setup
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
-<a name='set-up-and-configure-an-aad-app-registration'></a>
+> [!NOTE]
+> This guide is divided into several distinct stages. Start by reviewing [Stage 1: Planning the Integration].
+
+## Stage Goals
+
+- Register your application with Microsoft Entra ID.
+- Integrate MSAL into your iOS application.
+- Verify that your application can obtain a token that grants access to protected resources.
 
 ### Set up and configure a Microsoft Entra app registration
 MSAL requires apps to [register](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be a Microsoft Entra app registration/client ID/redirect URI associated with the app. 
 
 If your app doesn't already use MSAL, you'll need to configure an app registration in Microsoft Entra ID and specify the client ID and redirect URI that the Intune SDK should use.  
 
-If your app currently uses ADAL to authenticate users, see [Migrate applications to MSAL for iOS and macOS](/azure/active-directory/develop/migrate-objc-adal-msal) for more information on migrating your app from ADAL to MSAL.
+If your app currently uses ADAL to authenticate users, see [Migrate applications to MSAL for iOS and macOS] for more information on migrating your app from ADAL to MSAL.
 
 It's recommended that your app links to the latest release of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
@@ -96,3 +101,44 @@ It's recommended that applications don't use SFSafariViewController, SFAuththent
 
 > [!WARNING]
 > This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application shouldn't show corporate data in any of those webview types.
+
+## Exit Criteria
+
+- Have you registered your app on the Microsoft Entra app registration page?
+- Have you integrated MSAL into your application?
+- Have you enabled broker authentication by generating a redirect URI and setting it in the MSAL configuration file?
+- Have you made sure the required configuration information for MSAL in your IntuneMAMSettings dictionary matched the ones in your Microsoft Entra App Registrations?
+- Have you tested brokered authentication, confirmed that a work account is added to iOS's Account Manager, and tested SSO with other Microsoft 365 apps?
+ 
+## FAQ
+
+### What about ADAL?
+
+Microsoft's previous authentication library, [Azure Active Directory Authentication Library (ADAL)], is **deprecated**.
+
+If your application has already integrated ADAL, see [Update your applications to use Microsoft Authentication Library (MSAL)].
+To migrate your app from ADAL to MSAL, see [Migrate applications to MSAL for iOS and macOS]
+
+**It is recommended to migrate from ADAL to MSAL prior to integrating the Intune App SDK.**
+
+## Next Steps
+
+After you've completed all the [Exit Criteria] above, continue to [Stage 3: Intune SDK integration into your iOS app].
+
+<!-- Stage 2 links -->
+<!-- internal links -->
+[Register your Application with Microsoft Entra ID]:#register-your-application-with-aad
+[Intune-specific MSAL configuration]:#intune-specific-msal-configuration
+[Exit Criteria]:#exit-criteria
+
+<!-- Microsoft Learn documentation: ADAL -->
+[Azure Active Directory Authentication Library (ADAL)]:/azure/active-directory/azuread-dev/active-directory-authentication-libraries
+
+<!-- Microsoft Learn documentation: ADAL to MSAL -->
+[Migrate applications to MSAL for iOS and macOS]:/azure/active-directory/develop/migrate-objc-adal-msal
+[Update your applications to use Microsoft Authentication Library (MSAL)]:https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363
+
+<!-- Other SDK Guide Markdown documentation -->
+[Stage 1: Planning the Integration]:app-sdk-ios-phase1.md
+[Stage 3: Intune SDK integration into your iOS app]:app-sdk-ios-phase3.md
+
