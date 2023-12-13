@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2023
+ms.date: 12/15/2023
 ms.topic: conceptual
 ms.service: windows-365
 ms.subservice:
@@ -53,6 +53,17 @@ For information about Windows App and its features, see [What's new in Windows A
 ### Windows 365 Government
 ### Windows 365 app
 -->
+
+<!-- ########################## -->
+## Week of December 10, 2023
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Windows 365 support for Microsoft Purview Customer Key (preview)<!—46980464-->
+
+Windows 365 now supports encrypting Cloud PCs by setting up Microsoft Purview Customer Key. For more information, see [Service encryption with Microsoft Purview Customer Key]( /purview/customer-key-overview).
+
 
 <!-- ########################## -->
 ## Week of December 04, 2023 (Service release 2311)
