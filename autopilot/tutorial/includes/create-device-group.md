@@ -60,7 +60,7 @@ To create a dynamic device group for use with Autopilot, follow these steps:
 
             The most common type of dynamic device group when using Autopilot is a device group that contains all Autopilot devices. A dynamic device group that contains all Autopilot devices has the following syntax:
 
-            `(device.devicePhysicalIDs -any (_ -contains "[ZTDID]"))`
+            `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`
 
             This rule can be entered in by selecting the **Edit** option in the **Rule syntax** section and then pasting in the rule in the **Edit rule syntax** screen under **Rule syntax**. Once the rule has been pasted in, select **OK**.
 
