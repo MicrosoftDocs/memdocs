@@ -40,7 +40,7 @@ To help you protect your organization's data, Windows 365 Enterprise and Busines
 
 This storage layer encryption provides the following benefits:
 
-- When persisting data to the cloud, data at rest on your Microsoft-hosted Cloud PC's disk is automatically encrypted.
+- When data is persisted to the cloud, data at rest on your Microsoft-hosted Cloud PC's disk is automatically encrypted.
 - Windows 365 Cloud PC disks are encrypted transparently using 256-bit Advanced Encryption Standard (AES) encryption, a modern block cipher, and is FIPS 140-2 compliant. The encryption at this layer doesn't affect Cloud PC performance.
 - The encryption is applied to every Cloud PC in every region at no extra cost.
 
