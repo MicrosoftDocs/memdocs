@@ -32,7 +32,7 @@ ms.collection:
 
 # Data encryption in Windows 365
 
-Windows 365 encrypts data at rest and in transit as explained below.
+Windows 365 encrypts data at rest and in transit as explained in this article.
 
 ## Encryption of data at rest
 
