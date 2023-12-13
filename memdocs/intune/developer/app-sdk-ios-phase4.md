@@ -629,3 +629,8 @@ IntuneMAMFrameworkPatcher -i $BUILT_PRODUCTS_DIR/$EXECUTABLE_FOLDER_PATH -resign
 ```
 
 For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started.md).
+
+<!-- Stage 4 links -->
+<!-- internal links -->
+[Enabling multi-identity]:#enable-multi-identity-optional
+[App Protection CA support]:#app-protection-ca-support-optional
