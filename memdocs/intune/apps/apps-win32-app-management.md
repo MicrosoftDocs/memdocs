@@ -43,7 +43,7 @@ To use Win32 app management, be sure the following criteria are met:
   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register)
   - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join)
   - [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid)
-- Windows application size must not be greater than 8 GB per app.
+- Windows application size must not be greater than 30 GB per app.
 
   > [!NOTE]
   >
