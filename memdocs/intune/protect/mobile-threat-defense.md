@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/05/2023
+ms.date: 12/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -133,4 +133,6 @@ Learn how to protect access to company resource based on device, network, and ap
 - [Trellix Mobile Security](trellix-mobile-threat-defense-connector.md)
 - [Trend Micro Mobile Security as a Service](trend-micro-mobile-threat-defense-connector.md)
 - [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Windows Security Center](../apps/protect-mam-windows.md) *(Supports integration with Windows MAM)*
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
+

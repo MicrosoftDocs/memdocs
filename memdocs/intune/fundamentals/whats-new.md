@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/01/2023
+ms.date: 12/13/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,83 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of December 13, 2023 (Service release 2312)
+
+### App management
+
+#### Support to add unmanaged PKG-type applications to managed macOS devices is now generally available<!-- 17296091   -->  
+You can now upload and deploy unmanaged PKG-type applications to managed macOS devices using the Intune MDM agent for macOS devices. This feature enables you to deploy custom PKG installers, such as unsigned apps and component packages. You can add a PKG app in the Intune admin center by selecting **Apps** > **macOS** > **Add** > **macOS app (PKG)** for app type.
+
+For more information, see [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md). To deploy managed PKG-type app, you can continue to [add macOS line-of-business (LOB) apps to Microsoft Intune](../apps/lob-apps-macos.md). For more information about the Intune MDM agent for macOS devices, see [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md).
+
+Applies to:
+
+- macOS
+
+#### Windows MAM supported in government cloud environments and in 21 Vianet in China<!-- 25273622  -->  
+Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments are now able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md) and [Data protection for Windows MAM](../apps/protect-mam-windows.md).
+
+In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](../fundamentals/china.md)
+
+### Device configuration
+
+#### Updated security baseline for Microsoft Edge v117<!-- 25021903 -->  
+We've released a new version of the Intune security baseline for  **Microsoft Edge**, version [**v117**](../protect/security-baselines.md#available-security-baselines). This update brings support for recent settings so you can continue to maintain best-practice configurations for Edge.
+
+We’ve also updated our [reference article](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) for this baseline where you can view the default configuration of the settings this baseline version includes.
+
+### Device management
+
+#### Support for variables in noncompliant email notifications<!-- 6111965  -->  
+Use variables to personalize email notifications that are sent when a user's device becomes noncompliant. The variables included in the template, such as `{{username}}` and `{{devicename}}`, are replaced by the actual username or device name in the email that users receive. Variables are supported with all platforms. For more information and a list of supported variables, see [Create a notification message template](../protect/actions-for-noncompliance.md#create-a-notification-message-template).
+
+
+#### Updated report visualization for Microsoft Defender for Endpoint connector<!--  24762035  -->  
+We updated the reporting visualization for the Microsoft Defender for Endpoint connector. This [report visualization](../protect/advanced-threat-protection-configure.md#view-the-count-of-devices-that-are-onboarded-to-microsoft-defender-for-endpoint) displays the count of devices that have onboarded to Defender for Endpoint based on status from the Defender CSP, and visually aligns to other recent report views that use a bar to represent the percentage of devices with different status values.
+
+### Device security
+
+#### New settings for scheduling Antivirus scans added to Antivirus policy for Windows devices<!-- 26013546  -->  
+We’ve added two settings to the *Microsoft Defender Antivirus* profile for  [endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md#antivirus-profiles) that applies to Windows 10 and Windows 11 devices.  These two settings work together to first enable support for a random start time of a device's antivirus scan, and to then define a range of time during which the randomized scan start can begin. These settings are supported with devices managed by Intune and devices managed through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+
+- [**RandomizeScheduleTaskTimes**](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#admx-microsoftdefenderantivirus-randomizescheduletasktimes) – This setting enables randomization of the scan start time on devices.
+- [**SchedulerRandomizationTime**](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationschedulerrandomizationtime) – This setting  this setting, you can set boundaries for the random start time.
+
+In addition to being added to the Microsoft Defender Antivirus profile, both settings are now available from the [settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+
+- Windows 10, 11
+
+#### Microsoft Tunnel support for direct proxy exclusion list in VPN profiles for Android Enterprise<!-- 24139621 -->  
+Intune now supports configuration of a *Proxy exclusion list* when you [configure a VPN profile for Microsoft Tunnel](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) for Android devices. With an exclusion list, you can exclude specific domains from your proxy setup without requiring the use of a Proxy Auto-Configuration (PAC) file. The proxy exclusion list is available with both Microsoft Tunnel and Microsoft Tunnel for MAM
+
+The proxy exclusion list is supported in environments that use a single proxy. The exclusion list isn’t suitable or supported when you use multiple proxy servers, for which you should continue to use a .PAC file.
+
+Applies to:
+
+- Android Enterprise
+
+#### Microsoft Tunnel server health metric to report on TLS certificate  revocation<!-- 25853648  -->  
+We’ve added a new health metric for Microsoft Tunnel named **TLS certificate revocation**. This new health metric reports on the status of the Tunnel Servers TLS certificate by accessing the Online Certificate Status Protocol (OCSP) or CRL address as defined in the TLS certificate. You can view the status of this new check with all the health checks in the Microsoft Intune admin center by navigating to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**, selecting a server, and then selecting that servers **Health check** tab.
+
+This metric runs as part of the existing Tunnel Health checks, and supports the following status:
+
+- *Healthy*: The TLs certificate is not revoked
+- *Warning*: Unable to check if the TLS certificate is revoked
+- *Unhealthy*: The TLS certificate is revoked, and should be updated
+
+For details about the TLS certificate revocation check, see [Monitor Microsoft Tunnel](../protect/microsoft-tunnel-monitor.md).
+
+### Intune apps
+
+#### Newly available protected app for Intune<!-- 25636619   -->  
+The following protected app is now available for Microsoft Intune:
+
+- Akumina EXP by Akumina Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of November 27, 2023
 
@@ -300,19 +377,19 @@ With this change, the default behavior for security settings management includes
 The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins do not need to create or manage groups of eligible and non-eligible devices.
 
 For more information on feature updates, go to [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
- 
+
 **Linux**:
- 
+
 - Microsoft Defender Antivirus
 - Microsoft Defender Antivirus exclusions
 - Endpoint detection and response
- 
+
 **MacOS**:
- 
+
 - Microsoft Defender Antivirus
 - Microsoft Defender Antivirus exclusions
 - Endpoint detection and response
- 
+
 For more information, see [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) in the Intune documentation.
 
 ## Week of October 30, 2023
@@ -362,7 +439,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-#### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138 wn  -->  
+#### Android (AOSP) supports line-of-business (LOB) apps<!-- 24823138   -->  
 You can install and uninstall mandatory LOB apps on AOSP devices by using the **Required** and **Uninstall** group assignments. To learn more about managing LOB apps, see [Add an Android line-of-business app to Microsoft Intune](../apps/lob-apps-android.md).
 
 Applies to:
