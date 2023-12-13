@@ -420,4 +420,4 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 4: Scen
 <!-- Stage 3 links -->
 <!-- internal links -->
 [Exit Criteria]:#exit-criteria
-[Stage 4: Scenario-based guidance]:#app-sdk-ios-phase4.md
+[Stage 4: Scenario-based guidance]:app-sdk-ios-phase4.md
