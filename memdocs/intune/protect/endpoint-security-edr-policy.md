@@ -110,7 +110,7 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
   
   - *Applies to Windows devices only*
 
-  After you configure the [service-to-service connection](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) between Intune and Microsoft Defender for Endpoint, the **Auto from connector** option becomes available for the setting **Microsoft Defender for Endpoint client configuration package type**. This option isn't available until you've configured the connection.
+  After you configure the [service-to-service connection](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint, the **Auto from connector** option becomes available for the setting **Microsoft Defender for Endpoint client configuration package type**. This option isn't available until you've configured the connection.
 
   When you select **Auto from connector**, Intune automatically gets the onboarding package (blob) from your Defender for Endpoint deployment. This replaces the need to manually configure an **Onboard** package for this profile. There's no option to automatically configure an offboard package.
 
