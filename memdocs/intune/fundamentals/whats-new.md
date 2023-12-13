@@ -81,7 +81,7 @@ Applies to:
 
 - macOS
 
-#### Windows MAM supported in government cloud environments<!-- 25273622  -->  
+#### Windows MAM supported in government cloud environments and in 21 Vianet in China<!-- 25273622  -->  
 Customer tenants in US Government Community (GCC), US Government Community (GCC) High, and Department of Defense (DoD) environments are now able to use Windows MAM. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md) and [Data protection for Windows MAM](../apps/protect-mam-windows.md).
 
 In addition, Windows MAM is available for Intune operated by 21Vianet in China. For more information, see [Intune operated by 21Vianet in China](../fundamentals/china.md)
