@@ -158,9 +158,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the media.  
 
         > [!IMPORTANT]  
-        > As a security best practice, always assign a password to help protect the media.  
+        > As a security best practice, always assign a password to help protect the stand-alone media. Assigning a password to the media not only prevents someone from running a task sequence using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
         >
-        > On stand-alone media, it only encrypts the task sequence steps and their variables. It doesn't encrypt the remaining content of the media. Don't include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
+        > On stand-alone media, using a password only encrypts the task sequence steps and their variables. It doesn't encrypt the remaining content of the media such as packages. Don't include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.
 
     - **Select date range for this stand-alone media to be valid**: Set optional start and expiration dates on the media. This setting is disabled by default. The dates are compared to the system time on the computer before the stand-alone media runs. When the system time is earlier than the start time or later than the expiration time, the stand-alone media doesn't start. These options are also available by using the [New-CMStandaloneMedia](/powershell/module/configurationmanager/new-cmstandalonemedia) PowerShell cmdlet.  
 
