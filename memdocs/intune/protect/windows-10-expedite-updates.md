@@ -116,7 +116,7 @@ Only update builds that are generally available are supported. Preview builds, i
   - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
   - As an Admin, run the following PowerShell script:
 
-   ``` PowerShell
+   ```PowerShell
    $Session = New-Object -ComObject Microsoft.Update.Session
    $Searcher = $Session.CreateUpdateSearcher()
    $historyCount = $Searcher.GetTotalHistoryCount()
@@ -168,7 +168,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 2. Select **Devices** > **Quality updates for Windows 10 and later** > **Create profile**.
 
-   :::image type="content" source="./media/windows-10-expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI":::
+   :::image type="content" source="./media/windows-10-expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI.":::
 
 3. In **Settings**, enter the following properties to identify this profile:
 
@@ -181,7 +181,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
    > [!TIP]
    > Optional Windows quality updates can’t be expedited and won’t be available to select.
 
-   :::image type="content" source="./media/windows-10-expedite-updates/select-update.png" alt-text="Screen capture of update selection UI":::
+   :::image type="content" alt-text="Screen capture of update selection UI." source="./media/windows-10-expedite-updates/select-update.png" lightbox="./media/windows-10-expedite-updates/select-update.png":::
 
    When selecting an update:
 
@@ -205,7 +205,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    - A setting of **1 day** or **2 days** provides device users flexibility to manage a restart before it’s forced. These settings correspond to an automatic restart delay of 24 or 48 hours after the update installs on the device.
 
-     :::image type="content" source="./media/windows-10-expedite-updates/select-reboot-time.png" alt-text="Screen capture of selecting days before forced reboot":::
+     :::image type="content" alt-text="Screen capture of selecting days before forced reboot." source="./media/windows-10-expedite-updates/select-reboot-time.png" lightbox="./media/windows-10-expedite-updates/select-reboot-time.png":::
 
 6. In **Assignments**, select **Add groups** and then select device or user groups to assign the policy.
 
@@ -305,7 +305,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
  
-   :::image type="content" source="./media/windows-10-expedite-updates/device-report.png" alt-text="Example of the device report":::
+   :::image type="content" alt-text="Example of the device report." source="./media/windows-10-expedite-updates/device-report.png" lightbox="./media/windows-10-expedite-updates/device-report.png":::
 
 ### Update states
 
