@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use the settings catalog to configure declarative software updates 
-description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure declarative software updates for iOS/iPadOS and managed macOS devices.
+title: Use the settings catalog to configure managed software updates 
+description: Use Microsoft Intune to configure Apple's declarative device management (DDM) settings to install a specific update by an enforced deadline. This feature uses the settings catalog to configure managed software updates for supervised iOS/iPadOS and managed macOS devices.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 12/14/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
