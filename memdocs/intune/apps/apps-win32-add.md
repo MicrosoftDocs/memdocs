@@ -36,7 +36,7 @@ To use Win32 app management, be sure you meet the following criteria:
 - Devices must be joined or registered to Microsoft Entra ID and be auto-enrolled. The Intune management extension supports devices that are Microsoft Entra joined, Microsoft Entra registered, hybrid domain joined, or group policy enrolled. 
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows 10 device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
-- Windows application size is capped at 8 GB per app.
+- Windows application size is capped at 30 GB per app.
 
 Much like a standard line-of-business (LOB) app, you can add a Win32 app to Microsoft Intune. This type of app is typically written in-house or by a third party. 
 

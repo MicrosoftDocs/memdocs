@@ -6,7 +6,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 12/12/2023
+ms.date: 12/13/2023
 ms.topic: how-to
 ms.prod: windows-client
 ms.technology: itpro-deploy
@@ -65,7 +65,7 @@ Although not required, configuring Microsoft Entra hybrid join for Active Direct
 
 <!-- MAXADO-8594181 -->
 
-- If your organization has multiple domains and you install multiple Intune Connectors, you must use a domain service account that can create computer objects in all domains, even if you plan to implement Microsoft Entra hybrid join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+- If your organization has multiple domains and you install multiple Intune Connectors, a domain service account that can create computer objects in all domains must be used. This requirement is true even if you plan to implement Microsoft Entra hybrid join only for a specific domain. If these domains are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
 
   This connector service account must have the following permissions:
 
