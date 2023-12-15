@@ -331,7 +331,7 @@ In the Microsoft Intune admin center, your account need permissions equal to End
 
 ## Onboard devices to Microsoft Defender for Endpoint
 
-Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboard devices and configure Microsoft Defender for Endpoint capabilities](/microsoft-365/security/defender-endpoint/onboard-configure) in the Defender for Endpoint documentation.
+Microsoft Defender for Endpoint supports several options to onboard devices. For current guidance, see [Onboard to Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/onboarding) in the Defender for Endpoint documentation.
 
 ## Coexistence with Microsoft Configuration Manager
 
