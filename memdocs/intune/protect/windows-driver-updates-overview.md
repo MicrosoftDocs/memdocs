@@ -277,7 +277,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
    1. Leave the [Windows Update](/mem/configmgr/comanage/workloads#windows-update-policies) workload set to Configuration Manager.
 
-   2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](mem/intune/protect/windows-driver-updates-policy).
+   2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
 
    3. Configure a domain-based group policy to configure **Windows Update** as the source for **Driver Updates** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus).
 
@@ -291,16 +291,16 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
       Configure the **Allow Diagnostic data** setting to **Optional** or **Required** using a domain-based group policy or Intune. For more information on how to complete this task, go to:
 
-         - [Use Group Policy to manage diagnostic data collection](windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-manage-diagnostic-data-collection)
+         - [Use Group Policy to manage diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-group-policy-to-manage-diagnostic-data-collection)
          
-         - [Use MDM to manage diagnostic data collection](windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-mdm-to-manage-diagnostic-data-collection)
+         - [Use MDM to manage diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-mdm-to-manage-diagnostic-data-collection)
 
-   5. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements) .
+   5. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements) .
 
       > [!NOTE]
       > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](/mem/configmgr/comanage/workloads#device-configuration) co-management workload to Intune.
 
-   You can move Feature update management to the cloud in Intune by configuring a [Feature update](mem/intune/protect/windows-10-feature-updates) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
+   You can move Feature update management to the cloud in Intune by configuring a [Feature update](windows-10-feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
    
    Using Update Ring policies in Intune for Quality or Feature Updates requires you to move the **Windows Update** workload to Intune.
 
