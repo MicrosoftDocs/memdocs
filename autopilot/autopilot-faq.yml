@@ -9,7 +9,7 @@ metadata:
   ms.author: frankroj
   ms.reviewer: jubaptis
   manager: aaroncz
-  ms.date: 12/08/2023
+  ms.date: 12/14/2023
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -467,7 +467,9 @@ sections:
       - question: |
           Why don't applications install after the ESP is finished on an Intune managed device when using autologon with Windows Autopilot self-deploing mode?
         answer: |
-          When autologon with Windows Autopilot self-deploing mode is used, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including the KioskUser0 local account, and a device token isn't issued until user ESP is processed. When using autologon, in order for applications to install after the ESP finishes, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
+          When autologon with Windows Autopilot self-deploying mode is used, autologon uses the KioskUser0 local account. By default, user ESP isn't processed for local accounts, including the KioskUser0 local account, and a device token isn't issued until user ESP is processed. When using autologon, in order for applications to install after the ESP finishes, skip user ESP by using the custom OMA-URI [SkipUserStatusPage](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device). For more information, see the following articles:
+          - [How can I disable the user ESP portion of the Enrollment Status Page (ESP) if an ESP has been configured on the device?](/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp#how-can-i-disable-the-user-esp-portion-of-the-enrollment-status-page-esp-if-an-esp-has-been-configured-on-the-device).
+          - [Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises](/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune).
  
   - name: Glossary
     questions:
