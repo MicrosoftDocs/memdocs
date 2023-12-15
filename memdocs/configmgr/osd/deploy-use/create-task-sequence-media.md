@@ -25,9 +25,9 @@ Media is used mostly to deploy an OS on computers that don't have a network conn
 Deployment media includes bootable media, standalone media, and prestaged media. The content of the media varies, depending on what type of media that you use. For example, standalone media contains the task sequence that deploys the OS. Other types of media retrieve task sequences from the management point.
 
 > [!IMPORTANT]  
-> As a security best practice, always assign a password to help protect task sequence media. Assigning a password to the media not only prevents someone from running a task sequence using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
+> As a security best practice, always assign a password to help protect the task sequence media. Assigning a password to the media not only prevents someone without the password from running a task sequence when using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
 >
-> On task sequence media, using a password only encrypts the task sequence steps and their variables. It doesn't encrypt the remaining content of the media such as packages. Don't include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.
+> Using a password doesn't encrypt the remaining content of the task sequence media such as packages. Don't include any sensitive information in task sequence packages such as scripts. Store and implement all sensitive information by using task sequence variables.
 
 > [!IMPORTANT]
 > To create task sequence media, you must be an administrator on the computer where you run the Configuration Manager console. If you're not an administrator, you're prompted for administrator credentials when you start the Create Task Sequence Media wizard.

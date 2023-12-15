@@ -2,7 +2,7 @@
 title: Create bootable media
 titleSuffix: Configuration Manager
 description: Use bootable media in Configuration Manager to install a new version of Windows or replace a computer.
-ms.date: 08/25/2021
+ms.date: 12/14/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -134,9 +134,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
     - **Protect media with a password**: Enter a strong password to help protect the media from unauthorized access. When you specify a password, the user must provide that password to use the bootable media.
 
         > [!IMPORTANT]  
-        > As a security best practice, always assign a password to help protect the bootable media. Assigning a password to the media not only prevents someone from running a task sequence using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
+        > As a security best practice, always assign a password to help protect the bootable media. Assigning a password to the media not only prevents someone without the password from running a task sequence when using the media, but it also properly encrypts the task sequence environment on the media. The task sequence environment includes the task sequence steps and their variables.
         >
-        > On bootable media, using a password only encrypts the task sequence steps and their variables. It doesn't encrypt the remaining content of the media such as packages. Don't include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
+        > Using a password doesn't encrypt the remaining content of the bootable media such as packages. Don't include any sensitive information in task sequence packages such as scripts. Store and implement all sensitive information by using task sequence variables.
 
     - For HTTP communications, select **Create self-signed media certificate**. Then specify the start and expiration date for the certificate.
 
