@@ -2277,7 +2277,7 @@
     },
     {
       "source_path": "memdocs/intune/protect/software-updates-declarative-ios-macos.md",
-      "redirect_url": "/mem/intune/protect/managed-software-updates-ios-macos.md",
+      "redirect_url": "/mem/intune/protect/managed-software-updates-ios-macos",
       "redirect_document_id": false
     }
   ]
