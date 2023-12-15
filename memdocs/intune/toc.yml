@@ -839,7 +839,7 @@ items:
             items:
             - name: Declarative software updates
               displayName: ddm
-              href: ./protect/software-updates-declarative-ios-macos.md    
+              href: ./protect/managed-software-updates-ios-macos.md    
             - name: iOS/iPadOS update policies
               href: ./protect/software-updates-ios.md
             - name: macOS update policies

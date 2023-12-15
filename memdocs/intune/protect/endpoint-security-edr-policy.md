@@ -70,7 +70,7 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
   - Devices enrolled with Intune
-  - Devices managed through the opt-in public preview for [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
+  - Devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
 
   EDR templates for Linux include two settings for the *Device tags* category from Defender for Endpoint:
 
@@ -83,7 +83,7 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
   - Devices enrolled with Intune
-  - Devices managed through the opt-in public preview for [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
+  - Devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
 
   EDR templates for macOS include two settings for the *Device tags* category from Defender for Endpoint:
 
@@ -97,7 +97,7 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
 
   - Devices enrolled with Intune
-  - Devices managed through the opt-in public preview for [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
+  - Devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
 
   > [!NOTE]  
   > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.

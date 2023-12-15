@@ -588,7 +588,7 @@ In the settings catalog, the following declarative software update settings are 
 - **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
-For more information on this feature, go to [Manage declarative software updates with the settings catalog](../protect/software-updates-declarative-ios-macos.md).
+For more information on this feature, go to [Manage software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
 
 In the settings catalog, the following declarative passcode settings are available at **Declarative device management > Passcode**:
 
