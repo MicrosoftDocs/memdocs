@@ -171,6 +171,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 |     Privacy statement link    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. If you set a link but don't set **Privacy statement title**, the   title will read "Custom privacy statement".    |     ❌          |
 
 > [!NOTE]
+> Managed Home Screen with Sign In enabled is not supported on GCC, GCC High or DoD Tenants.
+
+> [!NOTE]
 > Managed Home Screen uses the exact alarm permission to do the following actions:
 > - Automatically sign users out after a set time of inactivity on the device
 > - Launch a screen saver after a set period of inactivity
