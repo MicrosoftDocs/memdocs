@@ -1802,6 +1802,12 @@ items:
           href: ./developer/app-sdk-ios-phase3.md
         - name: Scenario-based guidance
           href: ./developer/app-sdk-ios-phase4.md
+        - name: Multi-Identity
+          href: ./developer/app-sdk-ios-phase5.md
+        - name: App Protection Conditional Access support
+          href: ./developer/app-sdk-ios-phase6.md
+        - name: Web-view features
+          href: ./developer/app-sdk-ios-phase7.md
         - name: Appendix
           href: ./developer/app-sdk-ios-appendix.md
       - name: App Wrapping Tool for Android
