@@ -171,7 +171,7 @@ Configuration Manager looks at the most recently used files on each device. It c
 - Macro-enabled Office file formats.
 - Older Office formats, which don't indicate if there's macro content.
 
-This report can be used to identify which devices have recently used files which may contain macros.
+This report can be used to identify which devices have recently used files that may contain macros.
 
 ## <a name="bkmk_pilot"></a> Office 365 Pilot and Health dashboard
 <!--4488272, 4488301-->
