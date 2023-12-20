@@ -419,7 +419,7 @@ After you've either configured the build plugin or integrated the command line t
 
 - Ensure that your build compiles and builds successfully.
 - Launch your compiled app, login with a Microsoft Entra user that isn't targeted with App Protection Policy, and confirm that app functions as expected.
-- Logout and repeat this test *with a Microsoft Entra user that is targeted with App Protection Policy and confirm that app is now managed by Intune and restarted.
+- Logout and repeat this test *with a Microsoft Entra user that is targeted with App Protection Policy* and confirm that app is now managed by Intune and restarted.
 
 At this point in the integration, your app can now receive and enforce App Protection Policy. 
 Execute the following tests to validate the integration.
@@ -430,26 +430,23 @@ Execute the following test first to get familiar with the complete end user expe
 
 1. Create an iOS App Protection Policy in the Microsoft Intune admin center. For this test, configure the policy:
     - Under Access Requirements, leave the default settings. Notably, "PIN for Access" should be "Require".
-2. Ensure the App Protection Policy is targeted to your application. You'll likely need to manually add the package name in the policy creation wizard.
+2. Ensure the App Protection Policy is targeted to your application. You'll likely need to manually add the bundle ID of the application in the policy creation wizard.
 3. Assign the App Protection Policy to a user group containing your test account.
-4. On a test iOS device, uninstall other SDK-integrated apps, like Microsoft Outlook, Teams, OneDrive, and Office. Also uninstall the Intune Company Portal app and Microsoft Authenticator app.
-    - > [!TIP]
-      > Uninstalling other SDK-integrated apps helps ensure that you're exclusively testing your own app's integration.
-5. Install your application.
-6. Log in to your application with your test account that is targeted with App Protection Policy.
-7. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This indicates that the SDK has successfully retrieved policy for this account.
-8. You should be prompted to set an app PIN. Create a PIN.
-9. Log the managed account out of your application.
-10. If possible without logging in, navigate around your application and confirm your app works as expected.
+4. Install your application.
+5. Log in to your application with your test account that is targeted with App Protection Policy.
+6. Confirm that you're prompted with an Intune managed screen and confirming the prompt will restart the app. This indicates that the SDK has successfully retrieved policy for this account.
+7. You should be prompted to set an app PIN. Create a PIN.
+8. Log the managed account out of your application.
+9. If possible without logging in, navigate around your application and confirm your app works as expected.
 
 This is a *bare minimum- test to confirm that your app has properly registered the account, registered the authentication callback, and unregistered the account. 
 Execute the following tests to more thoroughly validate how other App Protection Policy settings modify the behavior of your application.
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, continue to [Stage 4: Scenario-based guidance].
+After you've completed all the [Exit Criteria] above, continue to [Stage 4: App participation features].
 
 <!-- Stage 3 links -->
 <!-- internal links -->
 [Exit Criteria]:#exit-criteria
-[Stage 4: Scenario-based guidance]:app-sdk-ios-phase4.md
+[Stage 4: App participation features]:app-sdk-ios-phase4.md
