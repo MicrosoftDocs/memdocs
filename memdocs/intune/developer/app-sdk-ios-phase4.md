@@ -366,11 +366,50 @@ IntuneMAMFrameworkPatcher -i $BUILT_PRODUCTS_DIR/$EXECUTABLE_FOLDER_PATH -resign
 
 For more information about getting started and downloading the SDK, see [Get started with the Microsoft Intune App SDK](../developer/app-sdk-get-started.md).
 
+## Exit Criteria
+
+### Validating save to / open from restrictions
+
+Skip if you didn't [Implement save-as and open-from controls].
+
+Refamiliarize yourself with every scenario where your app can save data to cloud storages or local locations and open data from cloud storages or local locations.
+
+For simplicity, these tests will assume your app only includes support for saving to and opening data from OneDrive for Business from a single location within the app.
+However, you must validate every combination: every supported save location against every place your app allows saving data, and every supported open location against every place your app allows opening data.
+
+For these tests, install your app, integrate it with the SDK and log in with a managed account before starting the test.
+
+Additionally:
+
+- Set the managed account's policy as:
+  - "Send org data to other apps" to "Policy managed apps".
+  - "Receive data from other apps" to "Policy managed apps".
+
+| Scenario | Preconditions | Steps |
+| - | - | - |
+| Save to, fully allowed | "Save copies of org data" policy set to "Allow" | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is allowed. |
+| Save to, exempted | - "Save copies of org data" policy set to "Block" <br> - "Allow user to save copies to selected services" policy set to "OneDrive for Business" only | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is allowed. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it is blocked. |
+| Save to, blocked | "Save copies of org data" policy set to "Block" | - Navigate to where your app can save data to OneDrive for Business. <br> - Attempt to save a document to OneDrive for Business, to the same managed account logged into your app. <br> - Confirm the save is blocked. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it is blocked. |
+| Open from, fully allowed | "Open data into Org documents" policy set to "Allow" | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed. |
+| Open from, exempted | - "Open data into Org documents" policy set to "Block" <br> - "Allow users to open data from selected services" policy set to "OneDrive for Business" only | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it is blocked. |
+| Open from, blocked | "Open data into Org documents" policy set to "Block" | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is blocked. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it is blocked. |
+
+## Next Steps
+
+If you followed this guide in order and have completed all the [Exit Criteria] above, **congratulations**, your app is now fully integrated with the Intune App SDK and can enforce app protection policies!
+Please check out other important app participation features such as [Stage 5: Multi-Identity], [Stage 6: App Protection Conditional Access support] and [Stage 7: Web-view features] to integrate these into your app.
+
+App protection is now a core scenario for your app.
+Do continue to refer to this guide and the [Appendix] as you continue to develop your app.
+
 <!-- Stage 4 links -->
 <!-- internal links -->
+[Exit Criteria]:#exit-criteria
+[Implement save-as and open-from controls]:#implement-save-as-and-open-from-controls
 [Plan the Integration]:app-sdk-ios-phase1.md
 [Enabling multi-identity]:app-sdk-ios-phase5.md
 [Stage 5: Multi-Identity]:app-sdk-ios-phase5.md
 [Stage 6: App Protection Conditional Access support]:app-sdk-ios-phase6.md
 [Stage 7: Web-view features]:app-sdk-ios-phase7.md
 [App Protection CA support]:app-sdk-ios-phase6.md
+[Appendix]:app-sdk-ios-appendix.md
