@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for iOS developer guide - Scenario-based guidance
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. Scenario-based guidance
+title: Microsoft Intune App SDK for iOS developer guide - App participation features
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. App participation features
 keywords:
 author: Erikre
 ms.author: erikre
@@ -31,7 +31,51 @@ ms.collection:
 - iOS/iPadOS
 ---
 
-# Intune App SDK for iOS - Scenario-based guidance
+# Intune App SDK for iOS - App participation features
+
+The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native iOS app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+
+> [!NOTE]
+> This guide is divided into several distinct stages. Start by reviewing [Plan the Integration].
+
+## Stage 4: App participation features
+
+## Stage Goals
+
+- Learn about the various app participation features offered by the Intune App SDK.
+- Integrate app participation features relevant to your app and users.
+- Test the integration of those features.
+
+## What are "App Participation Features"?
+
+This SDK integration process attempts to minimize the amount of app-specific code that developers need to write.
+By successfully completing the prior stages of the SDK integration your app can now enforce the majority of app protection policy settings, such as file encryption, copy/paste restrictions, screenshot blocking, and data transfer restrictions.
+
+However, there are some settings that require app-specific code to enforce properly; these are called app participation features.
+Typically, the SDK doesn't have enough context about your application's code or the end user scenario to automatically enforce these settings, and thus relies on developers to call the SDK APIs appropriately.
+
+App participation features aren't necessarily optional.
+Depending on your app's existing features, these features may be required.
+
+The next stages of this guide will describe several important app participation features:
+
+- Multi-identity as covered in [Stage 5: Multi-Identity].
+- App Protection CA as covered in [Stage 6: App Protection Conditional Access support]
+- Web-view specific features covered in [Stage 7: Web-view features]
+
+The rest of this guide describes the remaining set of app participation features:
+
+- Implement Allowed Accounts
+- Implement File Encryption Required
+- Implement save-as and open-from controls
+- Share Data via UIActivityViewController
+- Enable targeted configuration (APP/MAM app config) for your iOS applications
+- Telemetry
+- Siri Intents
+- App Clips
+- Printing
+- Notifications
+- Post build script
 
 ## Customize your app's behavior with APIs
 
@@ -324,5 +368,9 @@ For more information about getting started and downloading the SDK, see [Get sta
 
 <!-- Stage 4 links -->
 <!-- internal links -->
+[Plan the Integration]:app-sdk-ios-phase1.md
 [Enabling multi-identity]:app-sdk-ios-phase5.md
+[Stage 5: Multi-Identity]:app-sdk-ios-phase5.md
+[Stage 6: App Protection Conditional Access support]:app-sdk-ios-phase6.md
+[Stage 7: Web-view features]:app-sdk-ios-phase7.md
 [App Protection CA support]:app-sdk-ios-phase6.md

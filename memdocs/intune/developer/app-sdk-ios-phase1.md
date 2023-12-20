@@ -171,7 +171,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 
 <!-- Stage 1 links -->
 <!-- internal links -->
-[Stage 1: Planning the Integration]:#stage-1-planning-the-integration
+[Stage 1: Planning the Integration]:#stage-1-plan-the-integration
 [Exit Criteria]:#exit-criteria
 
 <!-- Other SDK Guide Markdown documentation -->

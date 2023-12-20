@@ -1800,7 +1800,7 @@ items:
           href: ./developer/app-sdk-ios-phase2.md
         - name: Intune SDK integration into your iOS app
           href: ./developer/app-sdk-ios-phase3.md
-        - name: Scenario-based guidance
+        - name: App participation features
           href: ./developer/app-sdk-ios-phase4.md
         - name: Multi-Identity
           href: ./developer/app-sdk-ios-phase5.md
