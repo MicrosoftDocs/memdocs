@@ -91,7 +91,7 @@ If so, your application is **single-identity**.
 Does your application display multiple accounts' data on a shared screen?
 Does your application store multiple accounts' data?
 Does your application let users switch between different logged in accounts?
-If so, your application is **multi-identity** and you'll need to follow [Stage 4: Enable multi-identity]. **This section is required for your app.**
+If so, your application is **multi-identity** and you'll need to follow [Stage 5: Enable multi-identity]. **This section is required for your app.**
 
 Even if your application is multi-identity, follow this integration guide in order.
 Initially integrating and testing as single-identity will help ensure proper integration and prevent bugs where corporate data ends up unprotected.
@@ -171,15 +171,15 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 
 <!-- Stage 1 links -->
 <!-- internal links -->
-[Stage 1: Planning the Integration]:#stage-1-planning-the-integration
+[Stage 1: Planning the Integration]:#stage-1-plan-the-integration
 [Exit Criteria]:#exit-criteria
 
 <!-- Other SDK Guide Markdown documentation -->
 [Stage 2: MSAL prerequisite and setup]:app-sdk-ios-phase2.md
-[Stage 4: Enable multi-identity]:app-sdk-ios-phase4.md#enable-multi-identity-optional
+[Stage 5: Enable multi-identity]:app-sdk-ios-phase5.md#enable-multi-identity-optional
 [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications]:app-sdk-ios-phase4.md
 [Manage data transfer between iOS apps in Microsoft Intune]:/mem/intune/apps/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
-[Stage 4: App Protection CA support]:app-sdk-ios-phase4.md#app-protection-ca-support-optional
+[Stage 6: App Protection CA support]:app-sdk-ios-phase6.md#app-protection-ca-support-optional
 
 <!-- Microsoft Learn documentation: Intune overview -->
 [Intune App SDK overview]:/mem/intune/developer/app-sdk
