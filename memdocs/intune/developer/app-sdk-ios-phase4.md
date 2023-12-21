@@ -466,7 +466,7 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Implement save-as and open-from controls]:#implement-save-as-and-open-from-controls
 ['Copy To' actions]:#copy-to-actions
 [Printing]:#printing
-[Enable targeted app configuration for your iOS applications]:#enable-targeted-app-configuration-for-your-iOS-applications
+[Enable targeted app configuration for your iOS applications]:#enable-targeted-app-configuration-for-your-ios-applications
 
 [Plan the Integration]:app-sdk-ios-phase1.md
 [Enabling multi-identity]:app-sdk-ios-phase5.md
