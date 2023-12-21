@@ -284,9 +284,9 @@ The recommended and preferred path to embrace cloud based updates is to move the
       > [!NOTE]
       > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
 
-   4. Enable [data collection](../protect/windows-update-reports#enable-data-collection.md) in Intune for devices that you wish to deploy drivers and firmware to.
+   4. Enable [data collection](windows-update-reports#enable-data-collection.md) in Intune for devices that you wish to deploy drivers and firmware to.
 
-   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](../protect/windows-update-reports.md).
+   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](windows-update-reports.md).
 
       > [!NOTE]
       > By default, diagnostic data submission to Microsoft is allowed on Windows devices. Disabling diagnostic data collection prevents the use of Windows Update reports for Microsoft Intune from reporting any update information for your managed devices.
