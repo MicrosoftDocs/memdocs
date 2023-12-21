@@ -284,9 +284,9 @@ The recommended and preferred path to embrace cloud based updates is to move the
       > [!NOTE]
       > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
 
-   4. Enable [data collection](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-reports#enable-data-collection) in Intune for devices that you wish to deploy drivers and firmware to.
+   4. Enable [data collection](../protect/windows-update-reports#enable-data-collection.md) in Intune for devices that you wish to deploy drivers and firmware to.
 
-   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/protect/windows-update-reports).
+   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](../protect/windows-update-reports.md).
 
       > [!NOTE]
       > By default, diagnostic data submission to Microsoft is allowed on Windows devices. Disabling diagnostic data collection prevents the use of Windows Update reports for Microsoft Intune from reporting any update information for your managed devices.
@@ -297,7 +297,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
          
          - [Use MDM to manage diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#use-mdm-to-manage-diagnostic-data-collection)
 
-   6. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements) .
+   6. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements).
 
       > [!NOTE]
       > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](/mem/configmgr/comanage/workloads#device-configuration) co-management workload to Intune.
