@@ -274,7 +274,7 @@ New UI:
 
 ![Sharing data - iOS new sharing UI](./media/app-sdk-ios/sharing-ui-new.png)
 
-## Enable targeted configuration (APP/MAM app config) for your iOS applications
+## Enable targeted app configuration for your iOS applications
 
 MAM targeted configuration (also know as MAM app config) allows an app to receive configuration data through the Intune SDK. The format and variants of this data must be defined and communicated to Intune customers by the app owner/developer.
 
@@ -394,6 +394,64 @@ Additionally:
 | Open from, exempted | - "Open data into Org documents" policy set to "Block" <br> - "Allow users to open data from selected services" policy set to "OneDrive for Business" only | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it is blocked. |
 | Open from, blocked | "Open data into Org documents" policy set to "Block" | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is blocked. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it is blocked. |
 
+### Validating "Copy To" actions
+
+Skip if you didn't implement ['Copy To' actions].
+
+For simplicity, these tests will assume your app only includes support for copying data to Microsoft Office applications such as Microsoft Word, Excel, etc.
+However, you must validate every combination: every supported copy-to location against every place your app allows copying data to.
+
+For these tests, install your app, integrate it with the SDK and log in with a managed account before starting the test.
+
+Additionally:
+- Completed all the integration steps from ['Copy To' actions] with an Action Extension for Microsoft Word and build and run the app succesfully
+- Set the managed account's policy as:
+  - "Send org data to other apps" to "Policy managed apps".
+
+| Scenario | Preconditions | Steps |
+| - | - | - |
+| Select apps to exempt, None | "Send org data to other apps" policy set to "Policy managed apps" | - Navigate to where your app can copy data to Microsoft Word and launch the sharing option for that data. <br> - Confirm instead of seeing "Copy To Word" as an option, you can see "Open in Word". <br> - Press on "Open in Word" and confirm the document is copied and viewed successfully, given Word is also signed in with the same managed account.|
+
+### Validating Print actions
+
+Skip if you didn't implement [Printing].
+
+For this test, install your app, integrate it with the SDK and log in with a managed account before starting the test.
+
+Additionally:
+- Completed all the integration steps from [Printing] and build and run the app succesfully
+- Your app already implements alerts/action items to handle the case when printing is not allowed from the APP IT admin. In this test, assuming your app will prompt an alert to end users when printing is blocked.
+
+| Scenario | Steps |
+| - | - |
+| Printing org data, Block | - Navigate to where your app can view data and launch the sharing option for that data. <br> - Press on "Print". <br> - Confirm a block alert appears and printing is not allowed.|
+| Printing org data, Allow | - Navigate to where your app can view data and launch the sharing option for that data. <br> - Press on "Print". <br> - Confirm "Print" view appears and you can select a printer and complete the action successfully.|
+
+### Validating receiving App Configurations
+
+Skip if you didn't [Enable targeted app configuration for your iOS applications].
+
+Intune is responsible for delivering the app configuration policy values to your app; afterwards, your app is responsible for using those values to change behavior or UI inside the app.
+Thorough end-to-end testing should cover both components.
+
+To validate that Intune is properly delivering app configuration policy:
+
+1. Configure an app configuration policy, that is targeted to your app, and deployed to your test account.
+    - If your app supports app configuration for managed devices, see [application configuration policies for managed iOS Enterprise devices].
+    - If your app supports app configuration for managed apps, see [application configuration policies for managed apps].
+    - If your app supports both types of app configuration, create both types of policy for testing.
+2. Log in to your app with your test account.
+3. Navigate through your app to exercise each codepath that calls `IntuneMAMAppConfigManager`'s `appConfigForIdentity`.
+    - Logging the results of calls to `appConfigForIdentity` is a simple way to validate which settings are delivered. However, because administrators can enter any data for app configuration settings, be careful not to log any private user data.
+4. See [Validate the applied app configuration policy].
+
+Because app configurations are app-specific, only you know how to validate how your app should change behavior or UI for each app configuration setting.
+
+When testing, consider the following:
+
+- Ensuring all scenarios are covered by creating different test app configuration policy with every value your app supports.
+- Validating your app's conflict resolution logic by creating multiple test app configuration policies with different values for each setting.
+
 ## Next Steps
 
 If you followed this guide in order and have completed all the [Exit Criteria] above, **congratulations**, your app is now fully integrated with the Intune App SDK and can enforce app protection policies!
@@ -406,6 +464,10 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 <!-- internal links -->
 [Exit Criteria]:#exit-criteria
 [Implement save-as and open-from controls]:#implement-save-as-and-open-from-controls
+['Copy To' actions]:#copy-to-actions
+[Printing]:#printing
+[Enable targeted app configuration for your iOS applications]:#enable-targeted-app-configuration-for-your-iOS-applications
+
 [Plan the Integration]:app-sdk-ios-phase1.md
 [Enabling multi-identity]:app-sdk-ios-phase5.md
 [Stage 5: Multi-Identity]:app-sdk-ios-phase5.md
@@ -413,3 +475,9 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 [Stage 7: Web-view features]:app-sdk-ios-phase7.md
 [App Protection CA support]:app-sdk-ios-phase6.md
 [Appendix]:app-sdk-ios-appendix.md
+
+<!-- external links -->
+[application configuration policies for managed iOS Enterprise devices]:/mem/intune/apps/app-configuration-policies-use-ios
+[application configuration policies for managed apps]:/mem/intune/apps/app-configuration-policies-managed-app
+[App configuration policies for Microsoft Intune]:/mem/intune/apps/app-configuration-policies-overview
+[Validate the applied app configuration policy]:/mem/intune/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy
