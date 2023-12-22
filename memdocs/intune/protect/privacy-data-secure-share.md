@@ -8,7 +8,7 @@ keywords: privacy, data
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/08/2022
+ms.date: 12/07/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,7 +68,7 @@ For information about data shared with certain third parties, see the following 
 
 ### Microsoft Configuration Manager data sharing
 
-Microsoft Intune does not share any data with Configuration Manager. Configuration Manager is an on-premise product deployed, managed, and operated directly by the customer. The diagnostics and usage data that is collected by Configuration Manager are only to improve the installation experience, quality, and security of future releases.
+Microsoft Intune doesn't share any data with Configuration Manager. Configuration Manager is an on-premise product deployed, managed, and operated directly by the customer. The diagnostics and usage data that is collected by Configuration Manager are only to improve the installation experience, quality, and security of future releases.
 
 To learn more, see [Diagnostics and usage data for Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
