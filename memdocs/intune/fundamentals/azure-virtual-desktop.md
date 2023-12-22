@@ -46,6 +46,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
     - [Configuration Manager co-management](/configmgr/comanage/overview).
     - [User self-enrollment via Microsoft Entra join](/mem/intune/fundamentals/deployment-guide-enroll#user-self-enrollment-in-intune).
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
+- Under the same tenant as Intune
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
