@@ -444,6 +444,10 @@ When a web page requests to open an external app, users will see a pop-up asking
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
 
+> [!NOTE]
+> Starting from version 120, the app jump blocker feature is removed. Therefore, this policy is no longer valid
+
+
 #### Bing Chat Enterprise 
 
 Bing Chat Enterprise is available on Microsoft Edge for iOS and Android. Users can start Bing Chat Enterprise by clicking on Copilot button in bottom bar. 
