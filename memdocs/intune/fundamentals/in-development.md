@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 11/20/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -136,7 +136,7 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 <!-- *********************************************** -->
 
-<!-- ## Device security -->
+<!-- ## Device security   -->
 
 <!-- *********************************************** -->
 
