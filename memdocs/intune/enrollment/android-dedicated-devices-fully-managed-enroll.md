@@ -59,24 +59,6 @@ Create a specially formatted NFC tag to provision NFC-supported devices running 
 
 For corporate-owned work profile (COPE) devices, the NFC enrollment method is only supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
 
-## Enroll by using a token  
-
-Enroll new or factory-reset devices by providing device users with the enrollment token to type or scan. When you're ready for enrollment, share the token directly with targeted users or post it to your organization's support site for easy retrieval. The token works for all Intune-licensed users and doesn't expire. This enrollment method can't be used with device enrollment manager accounts. 
-
-- For Android 8.0 and later devices, you can use the token value (example: `12345`) to enroll the device.  
-- When using the **afw#setup** enrollment method, you can scan the QR code to enroll devices running Android 8.0 and later.  
-- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
-
-1. Turn on the device.  
-2. On the **Welcome** screen, select your language.  
-3. Connect to your wireless network, and then choose **NEXT**.  
-4. Accept the Google Terms and conditions, and then choose **NEXT**.  
-5. On the Google sign-in screen, enter **afw#setup** instead of a Gmail account, and then choose **NEXT**.
-6. Choose **INSTALL** for the Android Device Policy app.  
-7. Continue to install the policy. Some devices may require additional terms acceptance.
-8. On the **Enroll this device** screen, allow your device to scan the QR code. Or, enter the token manually.
-9. Follow the on-screen prompts to complete enrollment. 
-
 ## Enroll by using a QR code  
 
 Intune admins can scan the QR code directly from the enrollment profile to enroll a device.   
@@ -175,6 +157,24 @@ For more information about how to assign a default configuration or apply a conf
 
 ## Enroll by using Knox Mobile Enrollment
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
+
+## Enroll by using a token  
+
+Enroll new or factory-reset devices by providing device users with the enrollment token to type or scan. When you're ready for enrollment, share the token directly with targeted users or post it to your organization's support site for easy retrieval. The token works for all Intune-licensed users and doesn't expire. This enrollment method can't be used with device enrollment manager accounts. 
+
+- For Android 8.0 and later devices, you can use the token value (example: `12345`) to enroll the device.  
+- When using the **afw#setup** enrollment method, you can scan the QR code to enroll devices running Android 8.0 and later.  
+- For corporate-owned work profile (COPE) devices, the **afw#setup** enrollment method is supported on devices running Android versions 8.0 or later. It's not supported with Android 11.0. For more information, see the [Google developer docs](https://developers.google.com/android/management/provision-device#company-owned_devices_for_work_and_personal_use:~:text=Note%3A%20DPC%20identifier%20method%20only%20supports%20full%20device%20management%20provisioning%20and%20cannot%20be%20used%20for%20corporate%2Downed%2C%20personally%20enabled,(COPE)%20provisioning%20on%20Android%2011%20devices.,-Company%2Downed).  
+
+1. Turn on the device.  
+2. On the **Welcome** screen, select your language.  
+3. Connect to your wireless network, and then choose **NEXT**.  
+4. Accept the Google Terms and conditions, and then choose **NEXT**.  
+5. On the Google sign-in screen, enter **afw#setup** instead of a Gmail account, and then choose **NEXT**.
+6. Choose **INSTALL** for the Android Device Policy app.  
+7. Continue to install the policy. Some devices may require additional terms acceptance.
+8. On the **Enroll this device** screen, allow your device to scan the QR code. Or, enter the token manually.
+9. Follow the on-screen prompts to complete enrollment. 
 
 ## Next steps
 
