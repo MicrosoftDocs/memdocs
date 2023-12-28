@@ -70,7 +70,7 @@ If you enforce both Intune and Azure device limit restrictions, the following ta
 |Windows 10/11| BYOD: User enrollment | Yes | Yes | Yes |   
 |Windows 10/11| Automatic enrollment + group policy | No | No | No |  
 |Windows 10/11| Automatic enrollment + device enrollment manager | No | Yes | No | 
-|Windows 10/11| Automatic enrollment + bulk device enrollment | No | Yes | No |
+|Windows 10/11| Automatic enrollment + bulk device enrollment | No | No | No |
 |Windows 10/11| Windows Autopilot | Yes | Yes | No |  
 |Windows 10/11| Co-management with Configuration Manager | No | Yes | No |  
 
@@ -102,7 +102,7 @@ Intune device limit restrictions don't apply for the following Windows enrollmen
 
 Devices enrolled via these methods are enrolled automatically or by an Intune admin, not by an employee or student, and are considered shared devices.  
 
-Instead, you can set a [hard limit in Microsoft Entra ID](device-limit-intune-azure.md#azure-device-limit-restriction) to limit the number of devices that an employee can join or register with Microsoft Entra ID. The **Maximum number of devices per user** setting in Microsoft Entra ID applies to devices that are Microsoft Entra joined or Microsoft Entra registered. It doesn't apply to Microsoft Entra hybrid joined devices.  
+Instead, you can set a [hard limit in Microsoft Entra ID](device-limit-intune-azure.md#azure-device-limit-restriction) to limit the number of devices that an employee can join or register with Microsoft Entra ID except Bulk Microsoft Entra joined enrollments. The **Maximum number of devices per user** setting in Microsoft Entra ID applies to devices that are Microsoft Entra joined or Microsoft Entra registered. It doesn't apply to Microsoft Entra hybrid joined devices.  
 
 ### Windows 10/11 example 1
 
