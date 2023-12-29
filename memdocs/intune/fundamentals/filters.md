@@ -177,10 +177,10 @@ There are some general restrictions when creating filters:
 
     :::image type="content" source="./media/filters/preview-search.png" alt-text="Screenshot that shows how to search for devices when creating a filter in Microsoft Intune.":::
 
-    > [!NOTE]
+    > [!INFORMATION]
     >
-    > - When you use a property that is in preview, you get an information message that the property is experimental and you cannot use Preview devices feature. You can still continue using the property in filters.
-
+    > When you use a property that is in preview, you get an information message that the property is experimental and you cannot use Preview devices feature. You can still continue using the property in filters.
+    >
 :::image type="content" source="./media/filters/filter-preview.png" alt-text="Screenshot that shows informational message when clicking **Preview devices** with a preview property in rule syntax":::
 
 8. Select **Next**.
