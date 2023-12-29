@@ -177,6 +177,11 @@ There are some general restrictions when creating filters:
 
     :::image type="content" source="./media/filters/preview-search.png" alt-text="Screenshot that shows how to search for devices when creating a filter in Microsoft Intune.":::
 
+    > [!NOTE]
+    >
+    > - When you use a property that is in preview, you get an information message that the property is experimental and you cannot use Preview devices feature
+:::image type="content" source="./media/filters/filters-preview.png" alt-text="Screenshot that shows how to search for devices when creating a filter in Microsoft Intune.":::
+
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
