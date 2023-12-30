@@ -5,9 +5,9 @@ If you enable MDM automatic enrollment, enrollment in Intune will occur when:
 * A Microsoft Entra user adds their work or school account to their personal device.
 * A corporate-owned device joins to your Microsoft Entra ID. 
 
-1. Sign in to the [Azure portal](https://portal.azure.com), and select **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
-
-   ![Screenshot shows the Azure portal selections.](../enrollment/media/windows-enroll/auto-enroll-azure-select.png)
+1. Sign in to [Microsoft Azure](https://portal.azure.com).  
+2. Go to **Microsoft Entra ID** > **Mobility (MDM and MAM)**.  
+3. Select **Microsoft Intune**.  
 
 4. Configure **MDM User scope**. Specify which users' devices should be managed by Microsoft Intune. These Windows 10 devices can automatically enroll for management with Microsoft Intune.
 

@@ -392,7 +392,7 @@ After you've either configured the build plugin or integrated the command line t
   - If using the command line tool, include the `--report` flag.
 - If using the plugin, configure the `verify` flag and ensure it doesn't produce errors. See [Verification].
 - Double check all exclusions (`excludeProjects`, `excludeClasses`, and `excludeVariants`) in build.gradle. Confirm that each exclusion is necessary and doesn't deal with protected data. Historically many data leak errors have occurred because of over-aggressive exclusions.
-- *Without the Intune Company Portal installed*, launch your compiled app, login with an AAD user that isn't- targeted with App Protection Policy, and confirm that app functions as expected.
+- *Without the Intune Company Portal installed*, launch your compiled app, login with a Microsoft Entra user that isn't targeted with App Protection Policy, and confirm that app functions as expected.
    - Logout and repeat this test *with- the Intune Company Portal installed.
 
 ## FAQ

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Manage devices with Microsoft Intune
-description: Review the devices you manage with Microsoft Intune, including exporting a devices list into csv format, view your Microsoft Entra-joined devices, review a change log of actions on the device, use TeamViewer Connector to allow IT admins remotely troubleshoot Android devices, and view all the actions you can run on your devices.
+description: Review the devices you manage with Microsoft Intune, including exporting a devices list into csv format, view your Microsoft Entra joined devices, review a change log of actions on the device, use TeamViewer Connector to allow IT admins remotely troubleshoot Android devices, and view all the actions you can run on your devices.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/27/2023
+ms.date: 11/20/2023
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -47,7 +47,7 @@ Not all device actions are available for every platform or device. Available act
 
      Use the **Export** feature to create a .zip list of all the devices, in increments of 10,000 (Internet Explorer) or 30,000 (Microsoft Edge, Chrome).
 
-     Select any device to [view additional details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
+     Select any device to [view more details about that device](device-inventory.md), like hardware details, installed apps, policies, which remote actions are available for the device, and more.
 
    - **By platform**: The items under By platform let you view lists of devices by the specific platform.
    - **Device enrollment**: This option takes you to the enrollment page.
@@ -74,7 +74,7 @@ The available actions depend on the device platform and the device configuration
   - [Disable Activation Lock](device-activation-lock-disable.md) (iOS only)
   - [Fresh Start](device-fresh-start.md) (Windows only)
   - [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
-  - [Locate device](device-locate.md) (iOS only)
+  - [Locate device](device-locate.md)
   - [Lost mode](device-lost-mode.md) (iOS only)
   - [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (Windows 10 and 11 only)
   - [Remote control for Android](teamviewer-support.md)

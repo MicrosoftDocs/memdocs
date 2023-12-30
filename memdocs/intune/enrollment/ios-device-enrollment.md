@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 12/12/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -83,17 +83,19 @@ Employees and students can access management options for their personal devices 
 
 For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md).  
 
-## Limitations   
+## Known issues and limitations 
 
-* Device users must download the management profile in Safari. When a user gets blocked by conditional access policies, they are given a link that redirects them to device enrollment. The link opens in their default browser. If the default browser is not Safari, the users should copy and paste the link into Safari so that enrollment can continue. 
+Intune enrollment with Apple device enrollment has the following known issues and limitations. 
 
-* After the management profile downloads, device users have a limited amount of time to go to the Settings app and install the profile. If they wait top long to do it, they'll receive a message letting them know that the management profile can't be found. They must select **enroll again** to restart the enrollment process and download the management profile again. 
+* Due to Apple restrictions, device users going through web based device enrollment must download the management profile in Safari. 
+
+* Just like Company Portal enrollment, once the management profile downloads, users have a limited amount of time to go to the Settings app and install the profile. If they wait too long, they must download the management profile again to continue.  
 
 * Device users may be unable to access work apps if they try signing in on their newly enrolled device while Microsoft Authenticator is still trying to deploy. Users should wait a few minutes while Authenticator catches up with the Intune service, and then try to sign into their work app again.  
 
-* Device users can sign into any of their work or school apps to complete enrollment, except for Microsoft Defender. If they try to sign into Microsoft Defender before any other app, they will be redirected back to Safari for enrollment. 
+* If your organization uses Microsoft Defender for Endpoint, that app can't be the first app users sign in to after enrollment. JIT registration and compliance remediation may not work as expected if users authenticate in Microsoft Defender for Endpoint first. Users should authenticate in another Microsoft app to complete enrollment. We are actively working to fix this experience.   
 
-* Web based device enrollment can be used without JIT registration. However, users in that scenario can't currently use the Company Portal app to enroll. To prepare for this scenario, we recommend deploying a web clip of the Company Portal website to users, because the web clip functions the same as the Company Portal app during enrollment.   
+* Web based device enrollment can be used without JIT registration. We recommend using the Web Company Portal instead of the iOS Company Portal to deploy apps to the device. If you are planning to use the iOS Company Portal for app deployment, MS Authenticator and the SSO extension policy must be sent to the device post web enrollment.  
 
 ## Next steps  
 

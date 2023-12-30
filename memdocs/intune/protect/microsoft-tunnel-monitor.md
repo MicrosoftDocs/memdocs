@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/27/2023
+ms.date: 12/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,7 +35,7 @@ After installation of Microsoft Tunnel, you can view the server configuration an
 
 Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**.
 
-Select a server and then open the **Health check** tab to view that servers health status metrics. By default, each metric uses predefined threshold values that determine the status. The following metrics [support customization of these thresholds](#manage-health-status-thresholds):
+Next, select a server and then open the **Health check** tab to view that servers health status metrics. By default, each metric uses predefined threshold values that determine the status. The following metrics [support customization of these thresholds](#manage-health-status-thresholds):
 
 - CPU usage
 - Memory usage
@@ -59,32 +59,73 @@ Default values for server health metrics:
   - *Warning* - 96% to 99%
   - *Unhealthy* - 100% use
 
+- **CPU cores** – The number of CPU cores available on this server.
+  - *Healthy* - 4 or more cores
+  - *Warning* - 1, 2, or 3 cores
+  - *Unhealthy* -0 cores
+
 - **Memory usage** – The average memory use by the Tunnel Gateway server every 5 minutes.
   - *Healthy* - 95% or less
   - *Warning* - 96% to 99%
   - *Unhealthy* - 100% use
+
+- **Disk space usage** – The amount of disk space that's used by the Tunnel Gateway server.
+  - *Healthy* - Above 5 GB
+  - *Warning* - 3-5 GB
+  - *Unhealthy* - Below 3 GB
 
 - **Latency** – The average amount of time it takes for IP packets to arrive and then exit the network interface.
   - *Healthy* - Less than 10 milliseconds
   - *Warning* - 10 milliseconds to 20 milliseconds
   - *Unhealthy* - More than 20 milliseconds
 
-- **TLS certificate** - The number of days until the TLS certificate that secures traffic between clients and the Tunnel Gateway server will expire.
+- **Management agent certificate** – The management agent certificate is used by Tunnel Gateway to authenticate with Intune so it's important to renew it before it expires. However, it should automatically renew itself.
+  - *Healthy* - Certificate expiration is more than 30 days away.
+  - *Warning* - Certificate expiration is less than 30 days away.
+  - *Unhealthy* - Certificate has expired.
+
+- **TLS certificate** - The number of days until the Transport Layer Security (TLS) certificate that secures traffic between clients and the Tunnel Gateway server will expire.
   - *Healthy* - More than 30 days
   - *Warning* - 30 days or less
   - *Unhealthy* - The certificate is expired
 
+- **TLS certificate revocation** – The Tunnel Gateway attempts to check the revocation status of the Transport Layer Security (TLS) certificate using an Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate. This requires the server has access to the OCSP endpoint or CRL address as defined in the certificate.
+
+  - *Healthy* - The TLS certificate is not revoked.
+  - *Warning* - Unable to check if the TLS certificate is revoked. Ensure the endpoints defined in the certificate can be accessed from the Tunnel server. 
+  - *Unhealthy* - The TLS certificate is revoked.
+  
+  Plan to replace a revoked TLS certificate.
+
+  To learn  more about Online Certificate Status Protocol (OCSP), see [Online Certificate Status Protocol](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol) at wikipedia.org.
+
 - **Internal network accessibility** – Status from the most recent check of the internal URL. You configure the URL as part of a [Tunnel Site configuration](../protect/microsoft-tunnel-configure.md#to-create-a-site-configuration).
-  - **Healthy** - The server can access the URL specified in the site properties.
-  - **Unhealthy** - The server can't access the URL specified in the site properties.
-  - **Unknown** - This status appears when you haven't set a URL in the site properties. This status doesn’t affect the overall status of the site.
+  - *Healthy* - The server can access the URL specified in the site properties.
+  - *Unhealthy* - The server can't access the URL specified in the site properties.
+  - *Unknown* - This status appears when you haven't set a URL in the site properties. This status doesn’t affect the overall status of the site.
+
+- **Upgradeability** – The ability of the server to contact the Microsoft Container Repository, which permits Tunnel Gateway to upgrade when versions become available.
+  - *Healthy* - Server has been able to contact the Microsoft Container Repository within the last 5 minutes.
+  - *Unhealthy* - Server has not been able to contact the Microsoft Container Repository for more than 5 minutes.
 
 - **Server version** - The status of the Tunnel Gateway Server software, in relation to the most recent version.
-  - **Healthy** - Up to date with the most recent software version
-  - **Warning** - One version behind
-  - **Unhealthy** - Two or more versions behind, and out of support
+  - *Healthy* - Up to date with the most recent software version
+  - *Warning* - One version behind
+  - *Unhealthy* - Two or more versions behind, and out of support
 
   When *Server version* isn’t *Healthy*, plan to [install upgrades for Microsoft Tunnel](../protect/microsoft-tunnel-upgrade.md).
+
+- **Server container** – Determines if the container hosting the Microsoft Tunnel server is running.
+  - *Healthy* - Server container status is healthy.
+  - *Unhealthy* - Server container status is not healthy.
+
+- **Server configuration** – Determines if the server configuration has applied successfully to the Tunnel server from Microsoft Intune site settings.
+  - *Healthy* - Server configuration was successfully applied.
+  - *Unhealthy* - Server configuration could not be applied.
+
+- **Server logs** – Determines if logs have been uploaded to the server within the last 60 minutes.
+  - *Healthy* - Server logs were uploaded within the last 60 minutes.
+  - *Unhealthy* - Server logs were uploaded within the last 60 minutes.
 
 ## Manage health status thresholds
 
@@ -254,12 +295,6 @@ For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-micr
 **Solution**: Restart the server using `mst-cli server restart` after the Linux server reboots.
 
 If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*.
-
-#### Users can't connect to resources while using Microsoft Edge<!-- 13119847 -->
-
-**Issue**: After you've [migrated from the stand-alone tunnel client app to Microsoft Defender for Endpoint](../protect/microsoft-tunnel-migrate-app.md) and are then using Microsoft Edge, users are unable to access any internal or external websites. Users might also see a message similar to: `You’re not Connected`.
-
-**Solution**: This issue can occur when the standalone Tunnel client app remains installed while the Microsoft Defender for Endpoint app is in use. To resolve this issue, uninstall the standalone Tunnel client app. It's also possible to uninstall the standalone client app prior to installing Microsoft Defender for Endpoint, but doing so might leave your devices unable to use Microsoft Tunnel until the new Tunnel app is in place and fully configured.  
 
 ## Next steps
 

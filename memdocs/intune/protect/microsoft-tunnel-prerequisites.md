@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/16/2023
+ms.date: 12/11/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -117,6 +117,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   - If you use a TLS certificate that's not publicly trusted, you must push the entire trust chain to devices using an Intune *Trusted certificate* profile.
 
   - The TLS certificate can be in **PEM** or **pfx** format.
+  
+  - To support the *TLS certificate revocation* health check, ensure the Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate is accessible from the server.
 
 - **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn't available, the connection can fall back to use TLS 1.2.
 
@@ -443,7 +445,7 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 Before you start a server install, we recommend you download and run the most recent version of the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
-- Validates that the Microsoft Entra ID account you use to install Microsoft Tunnel has the required roles to complete enrollment.
+- Validates that the Microsoft Entra account you use to install Microsoft Tunnel has the required roles to complete enrollment.
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
 
@@ -477,7 +479,7 @@ To use the readiness tool:
 
 3. To validate that the account you'll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 
-   The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra and to Intune. The tool will report success or an error.
+   The script prompts you to use a different machine with a web browser, which you use to authenticate to Microsoft Entra ID and to Intune. The tool will report success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
 

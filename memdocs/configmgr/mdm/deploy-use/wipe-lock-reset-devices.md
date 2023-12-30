@@ -118,7 +118,7 @@ If a user forgets their passcode, use this action to force a new temporary passc
 | OS version | Passcode reset |
 |------------|----------------|
 | Windows 10 | Not supported |
-| Windows 10 mobile | Supported, excluding Azure Active Directory-joined devices |
+| Windows 10 mobile | Supported, excluding Microsoft Entra joined devices |
 | Windows Phone 8 and Windows Phone 8.1 | Supported |
 | Windows RT 8.1 | Not supported |
 | Windows 8.1 | Not supported |

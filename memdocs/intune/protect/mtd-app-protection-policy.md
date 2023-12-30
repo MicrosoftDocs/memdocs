@@ -46,7 +46,7 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > - SentinelOne (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android, iOS/iPadOS)
-> - Window Security Center (Windows)
+> - Windows Security Center (Windows)
 > - Zimperium (Android, iOS/iPadOS)
  
 ## Before you begin

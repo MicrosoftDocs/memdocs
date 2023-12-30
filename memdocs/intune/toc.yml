@@ -92,11 +92,7 @@ items:
 
       - name: Try new Devices experience (public preview) 
         href: ./fundamentals/microsoft-intune-admin-center-devices.md
-        displayName: devices, admin center, microsoft intune   
-
-      - name: Set up enrollment for Microsoft Entra shared device mode  
-        href: ./enrollment/automated-device-enrollment-shared-device-mode.md
-        displayName: devices, frontline worker, automated device enrollment  
+        displayName: devices, admin center, microsoft intune    
 
   - name: Security Copilot + Intune
     href: ./fundamentals/security-copilot.md
@@ -671,8 +667,6 @@ items:
             href: ./protect/microsoft-tunnel-upgrade.md
           - name: Microsoft Tunnel with Conditional Access
             href: ./protect/microsoft-tunnel-conditional-access.md
-          - name: Migrate to the Defender for Endpoint app
-            href: ./protect/microsoft-tunnel-migrate-app.md
         - name: Identity protection
           items:
           - name: Windows Hello at device enrollment
@@ -845,7 +839,7 @@ items:
             items:
             - name: Declarative software updates
               displayName: ddm
-              href: ./protect/software-updates-declarative-ios-macos.md    
+              href: ./protect/managed-software-updates-ios-macos.md    
             - name: iOS/iPadOS update policies
               href: ./protect/software-updates-ios.md
             - name: macOS update policies
@@ -1474,8 +1468,8 @@ items:
             href: ./enrollment/android-move-device-admin-work-profile.md  
         - name: Samsung Knox enrollment solutions  
           items: 
-          - name: Enable Samsung Knox Mobile Enrollment
-            href: ./enrollment/android-samsung-knox-mobile-enroll.md
+          - name: Use Samsung Knox Mobile Enrollment 
+            href: ./enrollment/android-samsung-knox-mobile-enroll.md  
         - name: Enrollment configurations    
           items:        
           - name: Security configuration framework for Android Enterprise  
@@ -1504,6 +1498,9 @@ items:
               href: ./enrollment/device-enrollment-program-enroll-ios.md
             - name: Choose enrollment authentication method   
               href: ./enrollment/automated-device-enrollment-authentication.md
+            - name: Set up enrollment for shared device mode    
+              href: ./enrollment/automated-device-enrollment-shared-device-mode.md
+              displayName: devices, frontline worker, automated device enrollment 
             - name: Walkthrough - Set up enrollment with Apple School Manager
               href: ./enrollment/apple-school-manager-set-up-ios.md
           - name: Set up Apple device enrollment
@@ -1796,7 +1793,23 @@ items:
       - name: App Wrapping Tool for iOS
         href: ./developer/app-wrapper-prepare-ios.md
       - name: Intune App SDK for iOS
-        href: ./developer/app-sdk-ios.md
+        items:
+        - name: Plan the integration
+          href: ./developer/app-sdk-ios-phase1.md
+        - name: MSAL prerequisite and setup
+          href: ./developer/app-sdk-ios-phase2.md
+        - name: Intune SDK integration into your iOS app
+          href: ./developer/app-sdk-ios-phase3.md
+        - name: App participation features
+          href: ./developer/app-sdk-ios-phase4.md
+        - name: Multi-Identity
+          href: ./developer/app-sdk-ios-phase5.md
+        - name: App Protection Conditional Access support
+          href: ./developer/app-sdk-ios-phase6.md
+        - name: Web-view features
+          href: ./developer/app-sdk-ios-phase7.md
+        - name: Appendix
+          href: ./developer/app-sdk-ios-appendix.md
       - name: App Wrapping Tool for Android
         href: ./developer/app-wrapper-prepare-android.md
         displayName: dex

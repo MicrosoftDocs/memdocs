@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2023
+ms.date: 11/15/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -67,7 +67,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
-After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After they've been reviewed, you can migrate the settings to a Settings Catalog policy.
+After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analytics), review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After you review them, you can migrate the settings to a Settings Catalog policy.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
@@ -160,7 +160,9 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   In some scenarios, some GPO settings don't migrate to the exact same setting in the Settings Catalog. Intune shows an alternate setting that has a similar effect.
 
-  For example, you may see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings.
+  You can see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings. In the following image, an older Office setting isn't supported. So, Intune suggests migrating to a supported version:
+
+  :::image type="content" source="./media/group-policy-analytics-migrate/setting-not-supported-migrate.png" alt-text="Screenshot that shows older Office setting that isn't supported and suggests migrating to a supported version in Microsoft Intune.":::
 
 - **Some settings fail to migrate**
 
@@ -168,7 +170,7 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   :::image type="content" source="./media/group-policy-analytics-migrate/notifications.png" alt-text="Screenshot that shows notifications with additional information when the policy is being created in Microsoft Intune.":::
 
-  Some common reasons a setting may show an error include:
+  Some common reasons a setting might show an error include:
 
   - The setting value is in an unexpected format.
   - A child setting is missing from the imported GPO and is required to configure the parent setting.
