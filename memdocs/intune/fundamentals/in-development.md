@@ -8,8 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/20/2023
-ms.topic: conceptual
+ms.date: 01/05/2024
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 
@@ -62,8 +61,14 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
-### Intune APP SDK for .NET MAUI<!-- 17696301   -->  
-Using the Intune APP SDK for .NET MAUI, you'll be able to develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
+### End-user app PIN reset<!-- 24605159   -->  
+For managed apps that require a PIN to access, allowed end-users will be able to reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
+
+### Route SMS/MMS messages to specific app<!-- 24594466  -->  
+You will be able to configure an app protection policy to determine which SMS/MMS app must be used when the end-user intends to send a SMS/MMS message after getting redirected from a policy managed app. When the end-user clicks on a number with the intent of sending an SMS/MMS message, the app protection settings are used to redirect to the configured SMS/MMS app. This capability applies to both Android and iOS/iPadOS platforms.
+
+### Added protection for iOS/iPadOS app widgets<!-- 14614429  -->  
+To protect organizational data for MAM managed accounts and apps, Intune app protection policies will provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
@@ -74,7 +79,7 @@ Enterprise Application Management provides a catalog of prepackaged applications
 ### Company Portal automatically installed on Android Enterprise dedicated devices<!-- 6423852  -->  
 Intune Company Portal will now be automatically installed on all Android Enterprise dedicated devices to ensure the appropriate handling of app protection policies. Users won't be able to see or launch the Company Portal, and there are no requirements for users to interact with it. Admins will notice that the Company Portal is automatically installed on their Android Enterprise dedicated devices, without the ability to uninstall.
 
-### Support for multi-SIM iOS/iPadOS device inventory<!--17016690  -->  
+### Support for multi-SIM iOS/iPadOS device inventory<!-- 17016690  -->  
 You'll be able to view the service subscription fields on devices that have multiple SIM cards installed under the per-device Hardware section. The inventory fields that are capable of reporting multiple values to Intune are:
 
 - **ICCID**
@@ -91,6 +96,29 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device configuration
+
+### Import up to 20 custom ADMX and ADML administrative templates<!-- 25780608  -->  
+You can import custom ADMX and ADML administrative templates in Microsoft Intune. Currently, you can import up to 10 files.
+
+You'll be able to upload 20 files.
+
+For more information on this feature, go to [Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)](../configuration/administrative-templates-import-custom.md).
+
+Applies to:
+
+- Windows 10/11
+
+### New setting that disables location on Android Enterprise devices<!-- 21060837  -->  
+
+On Android Enterprise devices, there's a new setting that allows admins to control the location (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile > Device Restrictions** for profile type > **General**):
+
+- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+
+For more information on the settings you can currently configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+
+- Android Enterprise
 
 ### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->  
 In Intune, you can configure the Enterprise single sign-on (SSO) plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Templates > Device features** for profile > **Single sign-on app extension**).
@@ -140,7 +168,10 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 <!-- *********************************************** -->
 
-<!-- ## Monitor and troubleshoot -->
+## Monitor and troubleshoot
+
+### Monitoring reports for devices<!-- 17744651 -->  
+In Intune, you will be able to view a new list of all device monitoring reports. You will be able to find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane will provide reports related to configuration, compliance, enrollment, and software updates. Additionally, there will be other reports that you can view, such as **Device actions**.
 
 <!-- *********************************************** -->
 
