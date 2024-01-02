@@ -82,7 +82,7 @@ Microsoft Entra users are standard users on these devices and receive assigned I
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
    > [!NOTE]
-   > The account used to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) that is specified in Microsoft Entra ID.
+   > The account used to request the bulk token must be included in the [MDM user scope](windows-enroll.md#enable-windows-automatic-enrollment) that is specified in Microsoft Entra ID. If this account is removed from a group that is tied to the [MDM user scope], bulk enrollment will stop working.
 
 1. In the **Stay signed in to all your apps** page, select **No, sign in to this app only**. If you keep the check box selected and press OK, the device you are using will become managed by your organization. If you do not intend for your device to be managed, make sure to select **No, sign in to this app only**. 
 
