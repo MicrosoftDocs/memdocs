@@ -164,7 +164,25 @@ For information on currently available Remote actions, see [Remote actions](../r
 
 <!-- *********************************************** -->
 
-<!-- ## Device security   -->
+## Device security
+
+### Support for Intune Device control and Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!-- 25470154, 15466620 -->  
+You’ll soon be able to use the Device control and Defender Update control profiles from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+
+- **Device control** profiles are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
+
+  Applies to:
+  - Windows 10/11
+
+- **Defender Update control** profiles are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).
+
+  Apples to:
+  - Linux
+  - macOS
+  - Windows 10/11
+
+Prepare for January 2024. This policy change is expected to be released with the January 2024 service update for Intune. When this change takes effect, devices that are managed by Defender for Endpoint but not enrolled with Intune, and that are assigned to either kind of profile, will start applying the settings from those profiles. Check your profiles to make sure only the devices you intend to receive these policies will get them.
+
 
 <!-- *********************************************** -->
 
