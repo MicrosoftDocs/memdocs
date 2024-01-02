@@ -8,7 +8,7 @@ keywords: Microsoft 365 Exchange email access
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 11/17/2023
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
