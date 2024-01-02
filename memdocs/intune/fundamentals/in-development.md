@@ -9,6 +9,7 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/05/2024
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 
