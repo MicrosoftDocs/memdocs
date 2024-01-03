@@ -63,6 +63,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
     > [!IMPORTANT]
     > This Azure endpoint only supports TLS 1.2 with specific cipher suites.<!-- 10424111 --> Make sure your environment supports these Azure configurations. For more information, see [Azure Front Door: TLS configuration FAQ](/azure/frontdoor/front-door-faq#tls-configuration).
 
+- `cmbitsstore.blob.core.windows.net`
+  
 - `ceuswatcab01.blob.core.windows.net`
 
 - `ceuswatcab02.blob.core.windows.net`

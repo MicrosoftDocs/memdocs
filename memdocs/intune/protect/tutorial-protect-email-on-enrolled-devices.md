@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2021
+ms.date: 11/16/2023
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -118,7 +118,6 @@ The Conditional Access policy will:
 - Require devices use the Outlook app for email access.
 
 Conditional Access policies are configurable in either the Microsoft Entra admin center or the Microsoft Intune admin center. Since we're already in the admin center, we can create the policy here.
-
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 

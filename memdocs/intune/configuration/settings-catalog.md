@@ -51,7 +51,7 @@ This feature applies to:
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
 
-  Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../protect/software-updates-declarative-ios-macos.md), passcode restrictions, and more.
+  Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../protect/managed-software-updates-ios-macos.md), passcode restrictions, and more.
 
 - **Windows 10/11**
 

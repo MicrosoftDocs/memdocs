@@ -57,7 +57,7 @@ The following supported versions of Configuration Manager are currently availabl
 
 | Version | Availability date | [Support end date](current-branch-versions-supported.md) | Baseline | In-console update |
 |-------------|-----------|------------|--------------|------------------------|
-| [**2309**](../../plan-design/changes/whats-new-in-version-2309.md)<br /> (5.00.9120) | October 9, 2023 | April 9, 2025 | No | Yes |
+| [**2309**](../../plan-design/changes/whats-new-in-version-2309.md)<br /> (5.00.9122) | October 9, 2023 | April 9, 2025 | No | Yes |
 | [**2303**](../../plan-design/changes/whats-new-in-version-2303.md)<br /> (5.00.9106) | April 10, 2023 | October 10, 2024 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
 | [**2211**](../../plan-design/changes/whats-new-in-version-2211.md)<br /> (5.00.9096) | December 5, 2022 | June 5, 2024 | No | Yes |
 | [**2207**](../../plan-design/changes/whats-new-in-version-2207.md)<br /> (5.00.9088) | August 12, 2022 | February 12, 2024 | No | Yes |

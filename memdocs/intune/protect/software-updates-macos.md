@@ -41,7 +41,7 @@ This feature applies to:
   > Prior to the macOS 12.5 release, devices may download and install additional updates before installing the latest update.
 
 > [!TIP]
-> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage declarative software updates with the settings catalog](software-updates-declarative-ios-macos.md).
+> You can use the [Intune settings catalog](../configuration/settings-catalog.md) to manage declarative software updates. Declarative device management (DDM) provides an improved user experience as the device handles the entire software update lifecycle. For more information, go to [Manage software updates with the settings catalog](managed-software-updates-ios-macos.md).
 
 With policies for macOS software updates, you can:
 

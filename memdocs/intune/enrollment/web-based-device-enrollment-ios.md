@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/27/2023
+ms.date: 11/27/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -70,7 +70,7 @@ Create an enrollment profile for devices enrolling via web-based device enrollme
 5. Select **Next**.  
 6. On the **Settings** page, for **Enrollment type**, select **Web based device enrollment**.  
 7. Select **Next**.  
-8. On the **Assignments** page, assign the profile to all devices, or select specific groups.
+8. On the **Assignments** page, assign the profile to all users or a group of users.
 9. Select **Next**.  
 10. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile. 
 
@@ -85,7 +85,9 @@ Alternatively, you can provide employees and students with a URL that opens the 
 
 This section provides the high-level enrollment steps for device users. We recommend using this information in your organization's device onboarding documentation or for troubleshooting and support. 
 
-1. Open Safari and sign in to the [Company Portal website](https://portal.manage.microsoft.com) with your work or school account.  
+1. Open Safari and sign in to the Company Portal website with your work or school account using one of the following links:
+   *  https://portal.manage.microsoft.com/conditionalaccess/enrollment  
+   *  https://portal.manage.microsoft.com/enrollment/webenrollment/ios  
 2. When prompted to, download the management profile. Wait in Safari while Company Portal downloads the management profile.  
 3. Go to your device settings app to view and install the management profile.  
 4. Wait until Microsoft Authenticator is installed on the device before signing into a work or school app. The device won't be ready for work use until Authenticator is on the device, which can take a few minutes. To verify that Authenticator installed, open your device settings and go to **Profile** > **Management Profile** > **Single Sign On Extension**. Authenticator should be listed as the SSO extension.  

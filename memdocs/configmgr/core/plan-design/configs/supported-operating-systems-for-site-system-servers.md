@@ -2,7 +2,7 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 10/19/2021
+ms.date: 12/01/2023
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -118,69 +118,12 @@ Site system server:
 
 - Distribution point <sup>[Note 1](#bkmk_note1)</sup>
 
-## Windows Server 2012 R2
+## Windows Server 2012/2012 R2
 
 _Applies to Standard and Datacenter_ 
 
 > [!NOTE]
 > On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 will enter the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
-
-Site servers:
-
-- Central administration site
-- Primary site
-- Secondary site
-
-Site system servers:
-
-- Asset Intelligence synchronization point
-- Certificate registration point
-- Cloud management gateway connection point
-- Data warehouse service point
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
-- Endpoint Protection point
-- Enrollment point
-- Enrollment proxy point
-- Fallback status point
-- Management point
-- Reporting services point
-- Service connection point
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>
-- SMS Provider
-- Software update point
-- State migration point
-
-## Windows Server 2012
-
-_Applies to Standard and Datacenter editions_
-
-> [!NOTE]
-> On October 10th, 2023, Windows Server 2012 and Windows Server 2012 R2 will enter the Extended Support Updates phase. Microsoft will no longer provide support for Configuration Manager site servers or roles installed to these Operating Systems. For more information, see [Extended Security Updates and Configuration Manager](supported-operating-systems-for-clients-and-devices.md#bkmk_ESU).
-
-Site servers:
-
-- Central administration site
-- Primary site
-- Secondary site
-
-Site system servers:
-
-- Asset Intelligence synchronization point
-- Certificate registration point
-- Cloud management gateway connection point
-- Data warehouse service point
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
-- Endpoint Protection point
-- Enrollment point
-- Enrollment proxy point
-- Fallback status point
-- Management point
-- Reporting services point
-- Service connection point
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>
-- SMS Provider
-- Software update point
-- State migration point
 
 ## Client OS versions
 
@@ -208,8 +151,6 @@ The server core installation of the following server OS versions is supported fo
 - Windows Server, version 1803
 - Windows Server, version 1709
 - Windows Server 2016
-- Windows Server 2012 R2
-- Windows Server 2012
 
 This support has the following limitation:
 
