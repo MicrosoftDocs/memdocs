@@ -97,7 +97,7 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
   - Obfuscated or otherwise suspicious scripts
   - Behaviors that apps don't usually start during normal day-to-day work
 
-Reducing your attack surface means offering attackers fewer ways to perform attacks.
+  Reducing your attack surface means offering attackers fewer ways to perform attacks.
 
   **Merge behavior for Attack surface reduction rules in Intune**:
 
