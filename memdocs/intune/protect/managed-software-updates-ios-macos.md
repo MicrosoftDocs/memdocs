@@ -105,16 +105,23 @@ Managed software updates have precedence over other policies that configure soft
 ## Configure the managed software updates policy
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
+
 3. Enter the following properties and select **Create**.
    - **Platform**: Select **iOS/iPadOS** or **macOS**.
    - **Profile**: Select **Settings catalog**.
+
 4. The **Create Profile** page is displayed. Add details as needed in the different tabs.    
+
    1. In the **Basics** tab, enter the following information:
    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+
    2.  Select **Next**.
+
    3. In the **Configuration settings** tab, select **Add settings** > Expand **Declarative Device Management** > **Software Update**.
+
    4. Configure the following settings:
    - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
    - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
@@ -125,23 +132,29 @@ Managed software updates have precedence over other policies that configure soft
       - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
       - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
    - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
+
    5. Select **Next**.
+
    6. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
    7.  Select **Next**.
+
    8. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
+
    9. Select **Next**.
+
    10. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
    > [!IMPORTANT]
    > Assignment filters are not supported for DDM-based policies.
 
-   ## Delay visibility of updates
+## Delay visibility of updates
 
-   When you configure managed software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
+When you configure managed software updates, you might want to hide updates from users for a specified time period. To hide the updates, use a settings catalog policy that configures an update restriction.
 
-   A restriction period gives you time to test an update before it's available to users. After the restriction period ends, users can see the update. If your update policies don't install it first, then users can choose to install the update.
+A restriction period gives you time to test an update before it's available to users. After the restriction period ends, users can see the update. If your update policies don't install it first, then users can choose to install the update.
 
-   To create a restrictions policy, go to the **Settings catalog** > **Restrictions**. Some settings you can use to defer an update include:
+To create a restrictions policy, go to the **Settings catalog** > **Restrictions**. Some settings you can use to defer an update include:
 
 - Enforced Software Update Delay
 - Enforced Software Update Major OS Deferred Install Delay (macOS)
