@@ -69,7 +69,7 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
 
 - Running Windows 10 multi-session, version 1903 or later, or running Windows 11 multi-session.
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
-- Under the same tennat as Intune
+- Under the same tenant as Intune.
 - Running an Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
 - [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Microsoft Intune using one of the following methods:
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Microsoft Entra hybrid joined.
