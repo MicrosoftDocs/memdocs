@@ -145,11 +145,20 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+## Device enrollment
+
+### RBAC changes coming to enrollment settings for Windows Hello for Business<!-- 25661866   -->  
+We're updating RBAC in the enrollment area for Windows Hello for Business. Enrollment settings related to Windows Hello for Business will be read-only for all roles except the Intune Service Administrator. The Intune Service Administrator will be able to edit enrollment settings.
+
+
 
 <!-- *********************************************** -->
 
 ## Device management
+
+#### Improvements to new device experience in admin center (public preview) <!-- 23692982   -->  
+After hearing your feedback, we're rearranging the tabs in the new Devices experience so that you can focus on management first, and monitoring second. When you select a workload, instead of landing on the **Monitor** tab, which is the current default experience in public preview, you will land on the primary management tab, such as **Policies** or **Update rings**.  Monitoring will still be available but will change from being the first tab in the list to the last.
+
 
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check-in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
@@ -163,6 +172,9 @@ For information on currently available Remote actions, see [Remote actions](../r
 <!-- *********************************************** -->
 
 ## Device security
+
+### HTML formatting supported in noncompliance email notifications <!-- 24197255   -->  
+HTML formatting will be supported in noncompliance email notifications for all platforms. You'll be able to use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
 
 ### Support for Intune Device control and Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!-- 25470154, 15466620 -->  
 You’ll soon be able to use the Device control and Defender Update control profiles from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
