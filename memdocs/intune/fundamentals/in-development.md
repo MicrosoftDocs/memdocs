@@ -181,13 +181,19 @@ You’ll soon be able to use the Device control and Defender Update control prof
 
 Prepare for January 2024. This policy change is expected to be released with the January 2024 service update for Intune. When this change takes effect, devices that are managed by Defender for Endpoint but not enrolled with Intune, and that are assigned to either kind of profile, will start applying the settings from those profiles. Check your profiles to make sure only the devices you intend to receive these policies will get them.
 
-
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
 
 ### Monitoring reports for devices<!-- 17744651 -->  
 In Intune, you will be able to view a new list of all device monitoring reports. You will be able to find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane will provide reports related to configuration, compliance, enrollment, and software updates. Additionally, there will be other reports that you can view, such as **Device actions**.
+
+### Run on-demand pivot queries on single devices<!--16719466  -->  
+Intune allows you to quickly gain on-demand information about the state of your device. When you enter a query on a selected device Intune will run a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
+
+Applies to:
+
+- Windows devices
 
 <!-- *********************************************** -->
 
