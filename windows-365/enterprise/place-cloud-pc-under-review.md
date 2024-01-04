@@ -56,6 +56,8 @@ As part of the process to place Cloud PCs under review, Windows 365 requires the
         - Minimum TLS version: **Version 1.2**
     - **Networking**
         - **Network access**: **Enable public access from all networks**
+
+   NOT SUPPORTED: Setting a [Permit scope for copy operations](/azure/storage/common/security-restrict-copy-operations). It must be (null), the default value, to allow copying from any storage account to the destination account.
 3. [Assign an Azure role for access to blob data](/azure/storage/blobs/assign-azure-role-data-access). The minimum permissions required for the Windows 365 service to place a Cloud PC under review are Storage Account Contributor and Storage Blob Data Contributor.
 
 ## Place a Cloud PC under review
