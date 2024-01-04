@@ -105,51 +105,48 @@ Managed software updates have precedence over other policies that configure soft
 ## Configure the managed software updates policy
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. Enter the following properties:
 
-    - **Platform**: Select **iOS/iPadOS** or **macOS**.
-    - **Profile**: Select **Settings catalog**.
+3. Enter the following properties and select **Create**.
+   - **Platform**: Select **iOS/iPadOS** or **macOS**.
+   - **Profile**: Select **Settings catalog**.
 
-    Select **Create**.
+4. The **Create Profile** page is displayed. Add details as needed in the different tabs.    
 
-4. In **Basics**, enter the following information:
+   1. In the **Basics** tab, enter the following information:
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
+   - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended.
+   2.  Select **Next**.
 
-    Select **Next**.
+   3. In the **Configuration settings** tab, select **Add settings** > Expand **Declarative Device Management** > **Software Update**.
 
-5. In **Configuration settings**, select **Add settings** > Expand **Declarative Device Management** > **Software Update**.
-
-    Configure the following settings:
-
-    - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
-    - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
-
-      If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
-
-    - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. This setting uses the `yyyy-mm-ddThh:mm:sss` format. Make sure you enter the correct values. For example:
-
+   4. Configure the following settings:
+   - **Details URL**: Enter a web page URL that has more information on the update. Typically, this URL is a web page hosted by your organization that users can select if they need organization-specific help with the update.
+   - **Target Build Version**: Enter the target build version to update the device to, like `20A242`. The build version can include a supplemental version identifier, like `20A242a`.
+   - If the build version you enter isn't consistent with the **Target OS Version** value you enter, then the **Target OS Version** value takes precedence.
+   - **Target Local Date Time**: Enter the local date time value that specifies when to force the installation of the software update. This setting uses the `yyyy-mm-ddThh:mm:sss` format. Make sure you enter the correct values. For example:
       - To install an update on January 1, 2024 at 6 AM EST, enter `2024-01-01T06:00:00`.
       - To install an update on December 31, 2023 at 9 PM PST, enter `2023-12-31T21:00:00`.
+      - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+      - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
+   - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
-      If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+   5. Select **Next**.
 
-      If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
+   6. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-    - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
+   7.  Select **Next**.
 
-6. Select **Next**.
-7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+   8. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-    Select **Next**.
+   9. Select **Next**.
 
-1. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
-> [!IMPORTANT]
-> Assignment filters are not supported for DDM-based policies.
- Select **Next**.
-9. In **Review + create**, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+   10. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+   > [!IMPORTANT]
+   > Assignment filters are not supported for DDM-based policies.
 
 ## Delay visibility of updates
 
