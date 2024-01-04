@@ -333,7 +333,7 @@ You can use filters for some common app policies on the following platforms. For
 | Trusted certificate | ✔️ |
 | VPN | ✔️ |
 | Wi-Fi | ✔️ |
-| Wired network | ✔️ |
+| Wired network | ❌ |
 | Windows health monitoring | ✔️ |
 | &nbsp; | &nbsp; |
 | **Endpoint Security profile** | &nbsp; |
