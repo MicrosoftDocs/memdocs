@@ -149,13 +149,18 @@ The **Custom** layout is the default one for the new tab page. It shows top site
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
-|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed`|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout |**focused** Focused is selected <br> **inspirational** Inspirational is selected <br> **informational** (iPad/Tablet only) Informational is selected <br> **custom** (Default) Custom is selected, top site shortcuts toggle is on, wallpaper toggle is off, and news feed toggle is on|
+|com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom |**topsites** Turn on top site shortcuts <br> **wallpaper** Turn on wallpaper <br> **newsfeed** Turn on news feed <br> In order for this policy to take effect, com.microsoft.intune.mam.managedbrowser.NewTabPageLayout must be set to **custom** <br><br> The default value is `topsites|newsfeed` |
 |com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable |**true** (Default) Users can change the page layout settings <br> **false** Users cannot change the page layout settings. The page layout is determined by the values specified via the policy or default values will be used |
 
 > [!NOTE]
 > **NewTabPageLayout** policy is intended to set the initial layout. Users can change page layout settings based on their reference. Therefore, **NewTabPageLayout** policy only takes affect if users do not change layout settings. You can enforce **NewTabPageLayout** policy by configuring **UserSelectable**=false.
 
+
+An example of turning off the news feeds
+- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout=**custom**
+- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom=**topsites|wallpaper**
+- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable=**false**
 
 ### New Tab Page experiences
 
@@ -443,6 +448,9 @@ When a web page requests to open an external app, users will see a pop-up asking
 |Key |Value |
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.OpeningExternalApps |**0** (default) Show the pop-up for users to choose stay in Edge or open by external apps. <br>**1** Always open within Edge without showing the pop-up.<br> **2** Always open with external apps without showing the pop-up. If external apps aren't installed, the behavior will be the same as value 1|
+
+> [!NOTE]
+> As of version 120.2210.99, the app jump blocker feature is removed. External apps will be opened from Edge by default. Therefore, this policy is no longer valid from version 120.2210.99
 
 #### Bing Chat Enterprise 
 
