@@ -68,9 +68,6 @@ For managed apps that require a PIN to access, allowed end-users will be able to
 #### Intune support of store-signed LOB apps for Surface Hub devices<!-- 25865620  -->  
 Intune will support the deployment of store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps will enable offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
 
-### Route SMS/MMS messages to specific app<!-- 24594466  -->  
-You will be able to configure an app protection policy to determine which SMS/MMS app must be used when the end-user intends to send a SMS/MMS message after getting redirected from a policy managed app. When the end-user clicks on a number with the intent of sending an SMS/MMS message, the app protection settings are used to redirect to the configured SMS/MMS app. This capability applies to both Android and iOS/iPadOS platforms.
-
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
