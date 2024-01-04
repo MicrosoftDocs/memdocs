@@ -23,11 +23,18 @@ The insights show not only how much your score can improve by replacing batterie
 
 ## Licensing Requirements
 
-The battery health report is part of advanced Endpoint analytics features and is included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+The battery health report is part of advanced analytics features and is included as an Intune-add on under [Microsoft Intune Suite](../intune/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Prerequisites
 
-In addition to the prerequisites for [advanced Endpoint analytics](advanced-endpoint-analytics.md#prerequisites), this report also requires that devices need to be battery-powered for them to show up in this report. For advanced analytics capabilities, including battery health, battery-powered devices should be either Intune-only managed or Co-managed.
+In addition to the prerequisites for [advanced analytics](advanced-endpoint-analytics.md#prerequisites), this report also requires that devices need to be battery-powered for them to show up in this report.
+
+For advanced analytics capabilities, including battery health, battery-powered devices should be either Intune-only managed or Co-managed.
+
+After enrollment, client devices require a restart to fully enable all analytics.
+
+> [!NOTE]
+> It may take up to 48 hours after you buy licenses or start a trial to see Battery health data in your tenant.
 
 ## Battery health report
 
@@ -36,7 +43,7 @@ In addition to the prerequisites for [advanced Endpoint analytics](advanced-endp
 3. The Battery health report page shows an **Overview** tab, **Device performance** tab, **Model performance** tab, **OS performance** tab, and an **App impact** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
 <!--  until I get a screenshot , I am commenting this out
 
-   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics"::: -->
+   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Battery Health tab in Overview section of Endpoint analytics"::: -->
 
 ## Battery Health Score
 
@@ -64,7 +71,7 @@ For example, devices that have lower than 3 hours of runtime typically also have
 
 **Good battery capacity but poor runtime**: Estimated runtimes might be low despite batteries having good maximum capacities. Low runtime is possible in two scenarios:
 
-1. The device is running apps that drain the battery quickly. Users run applications that are designed to use high power per unit of time or when the apps running are inefficiently utilizing power and need to be upgraded or replaced.
+1. The device is running apps that drain the battery quickly. Users run applications that are designed to use high power per unit of time or run apps that are inefficiently utilizing power and need to be upgraded or replaced. To ensure that both user productivity and experience are protected battery-powered devices can leverage the [battery saver Windows](/windows-hardware/design/component-guidelines/battery-saver) feature.
 
 2. The device has a battery that is designed to hold low charge. Procurement teams drive this decision.  
 
@@ -72,7 +79,7 @@ Insights for this scenario highlight the devices for which the **App Impact** ta
 
 ## Reporting Tabs
 
-The Battery health page has reporting tabs that provide support for insights:
+The Battery health page has reporting tabs that provide support for insights. The tabs are described in this section:
 
 ### Device performance tab
 
