@@ -65,6 +65,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 ### End-user app PIN reset<!-- 24605159   -->  
 For managed apps that require a PIN to access, allowed end-users will be able to reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
 
+#### Intune support of store-signed LOB apps for Surface Hub devices<!-- 25865620  -->  
+Intune will support the deployment of store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps will enable offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
+
 ### Route SMS/MMS messages to specific app<!-- 24594466  -->  
 You will be able to configure an app protection policy to determine which SMS/MMS app must be used when the end-user intends to send a SMS/MMS message after getting redirected from a policy managed app. When the end-user clicks on a number with the intent of sending an SMS/MMS message, the app protection settings are used to redirect to the configured SMS/MMS app. This capability applies to both Android and iOS/iPadOS platforms.
 
