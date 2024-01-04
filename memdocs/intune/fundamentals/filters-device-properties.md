@@ -298,7 +298,13 @@ You can use the following app properties in your managed app filter rules:
     This property applies to:
 
     - Android
+      
+  - `Android Enterprise`
 
+    This property applies to:
+
+    - Android
+      
   - `AOSP userless devices`
 
     This property applies to:
@@ -317,17 +323,6 @@ You can use the following app properties in your managed app filter rules:
 
     - Android
 
-  - `Corporate-owned fully managed`
-
-    This property applies to:
-
-    - Android
-
-  - `Personal-owned work profile`
-
-    This property applies to:
-
-    - Android
 
   Example:
 
