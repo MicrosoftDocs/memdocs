@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2023
+ms.date: 01/03/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -177,10 +177,11 @@ There are some general restrictions when creating filters:
 
     :::image type="content" source="./media/filters/preview-search.png" alt-text="Screenshot that shows how to search for devices when creating a filter in Microsoft Intune.":::
 
-    > [!Important]
+    > [!NOTE]
     >
-    > When you use a property that is in preview, you get an information message that the property is experimental and you cannot use Preview devices feature. You can still continue using the property in filters.
-    > :::image type="content" source="./media/filters/filter-preview.png" alt-text="Screenshot that shows informational message when clicking Preview devices with a preview property in rule syntax.":::
+    > When you select **Preview devices** for a property that is in preview, you get a `You cannot use Filter preview with experimental properties` message. Even though you can't preview the property, you can continue to use the property in your filters.
+    >
+    > :::image type="content" source="./media/filters/filter-preview.png" alt-text="Screenshot that shows cannot use filter preview message when clicking Preview devices with a preview property in filter rule syntax in Microsoft Intune.":::
 
 8. Select **Next**.
 9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
