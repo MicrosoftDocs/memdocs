@@ -36,7 +36,7 @@ Class SMS_DeploymentInfoFlat : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DeploymentInfoFlat` class does not define any methods.  
+ The `SMS_DeploymentInfoFlat` class doesn't define any methods.  
 
 ## Properties  
  `CollectionID`  
@@ -91,7 +91,7 @@ Class SMS_DeploymentInfoFlat : SMS_BaseClass
 
  Qualifiers: none  
 
- Package name, if the target is a package. Application name, if it is application. Update name, if it is update.  
+ Package name, if the target is a package. Application name, if it's application. Update name, if it's an update.  
 
  `TargetSecurityTypeID`  
  Data type: `UInt32`  
@@ -100,7 +100,7 @@ Class SMS_DeploymentInfoFlat : SMS_BaseClass
 
  Qualifiers: none  
 
- Security type identifier of the object type. For example, if the object is a package, it is `2`.  
+ Security type identifier of the object type. For example, if the object is a package, its `2`.  
 
  `TargetSubName`  
  Data type: `String`  
@@ -109,7 +109,7 @@ Class SMS_DeploymentInfoFlat : SMS_BaseClass
 
  Qualifiers: none  
 
- Program name if it is package, otherwise leave this value empty.  
+ Program name if it's package, otherwise leave this value empty.  
 
 ## Remarks  
 
