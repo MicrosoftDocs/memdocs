@@ -28,7 +28,7 @@ Class SMS_Category_LocalizedProperties
 ```  
 
 ## Methods  
- The `SMS_Category_LocalizedProperties` class does not define any methods.  
+ The `SMS_Category_LocalizedProperties` class doesn't define any methods.  
 
 ## Properties  
  `CategoryInstanceName`  
