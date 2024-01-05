@@ -116,7 +116,7 @@ Class SMS_DeploymentInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- Unique identifier of the target. For package, it's package ID, for a configuration item, it's the Unique_ID.  
+ Unique identifier of the target. For package, it is package ID, for a configuration item, it is the Unique_ID.  
 
  `TargetName`  
  Data type: `String`  
@@ -125,7 +125,7 @@ Class SMS_DeploymentInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- Package name, if the target is a package. Application name, if it's an application. Update name, if it's an update.  
+ Package name, if the target is a package. Application name, if it is application. Update name, if it is update.  
 
  `TargetSecurityTypeID`  
  Data type: `UInt32`  
@@ -134,7 +134,7 @@ Class SMS_DeploymentInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- Security type identifier of the deployment.  For example, if it's a package, this value is 2.  
+ Security type identifier of the deployment.  For example, if it is package, this value is 2.  
 
  `TargetSubName`  
  Data type: `String`  
@@ -143,7 +143,7 @@ Class SMS_DeploymentInfo : SMS_BaseClass
 
  Qualifiers: none  
 
- Program name if it's a package, otherwise leave this value is empty.  
+ Program name if it is package, otherwise leave this value is empty.  
 
 ## Remarks  
 

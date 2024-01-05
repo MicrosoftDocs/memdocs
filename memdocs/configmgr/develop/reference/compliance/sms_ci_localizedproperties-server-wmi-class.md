@@ -1,5 +1,5 @@
 ---
-description: Learn how to use the SMS_CI_LocalizedProperties class in Configuration Manager that contains the localized properties for a configuration item.
+description: Learn how to use the SMS_CI_LocalizedProperties class in Configuration Manager which contains the localized properties for a configuration item.
 title: SMS_CI_LocalizedProperties Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
@@ -32,7 +32,7 @@ Class SMS_CI_LocalizedProperties
 ```  
 
 ## Methods  
- The `SMS_CI_LocalizedProperties` class doesn't define any methods.  
+ The `SMS_CI_LocalizedProperties` class does not define any methods.  
 
 ## Properties  
  `Description`  

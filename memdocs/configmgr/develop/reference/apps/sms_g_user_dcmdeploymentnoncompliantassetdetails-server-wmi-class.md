@@ -34,7 +34,7 @@ Class SMS_G_USER_DCMDeploymentNonCompliantAssetDetails : SMS_G_User
 ```  
 
 ## Methods  
- The `SMS_G_USER_DCMDeploymentNonCompliantAssetDetails` class doesn't define any methods.  
+ The `SMS_G_USER_DCMDeploymentNonCompliantAssetDetails` class does not define any methods.  
 
 ## Properties  
  `AssignmentID`  
@@ -71,7 +71,7 @@ Class SMS_G_USER_DCMDeploymentNonCompliantAssetDetails : SMS_G_User
 
  Qualifiers: [not_null, read]  
 
- Unique ID, supplied by Configuration Manager, that identifies a client resource. This ID isn't unique across sites.  
+ Unique ID, supplied by Configuration Manager, that identifies a client resource. This ID is not unique across sites.  
 
  `Rule_ID`  
  Data type: `UInt32`  
