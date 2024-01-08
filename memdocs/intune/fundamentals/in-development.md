@@ -203,13 +203,15 @@ Intune will maintain your report search results when exporting report data. For 
 ### Battery report<!-- 9747162 -->  
 We're working on a battery health report to provide visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
 
-The battery health report is a part of the advanced analytics features and will be included as an Intune-add on under [Microsoft Intune Suite](../fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+The battery health report is a part of Microsoft Intune Advanced Analytics and will be included as an Intune-add on under [Microsoft Intune Suite](../fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ### Monitoring reports for devices<!-- 17744651 -->  
 In Intune, you will be able to view a new list of all device monitoring reports. You will be able to find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane will provide reports related to configuration, compliance, enrollment, and software updates. Additionally, there will be other reports that you can view, such as **Device actions**.
 
 ### Run on-demand pivot queries on single devices<!--16719466  -->  
 Intune allows you to quickly gain on-demand information about the state of your device. When you enter a query on a selected device Intune will run a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
+
+This feature will be available as part of Microsoft Intune Advanced Analytics, which is available as part of Microsoft Intune Suite, or as an individual add-on. For more information, see [Microsoft Intune add-ons](../fundamentals/intune-add-ons.md).
 
 Applies to:
 
