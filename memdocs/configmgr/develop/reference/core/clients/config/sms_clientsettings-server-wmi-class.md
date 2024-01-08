@@ -171,7 +171,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [read]  
 
- The name of the security scopes with which the setting is associated. The default value is "Default".  
+ The name of the security scopes with which the setting is associated. The default value is "Default."  
 
  `SettingsID`  
  Data type: `UInt32`  
@@ -189,7 +189,7 @@ Class SMS_ClientSettings : SMS_ClientSettingsBase
 
  Qualifiers: [notnull]  
 
- Type indicates whether the settings is applied to Device or User. The default value is 1 (Device).  
+ Type indicates whether the settings are applied to Device or User. The default value is 1 (Device).  
 
 |Value|Settings type|  
 |-|-|  

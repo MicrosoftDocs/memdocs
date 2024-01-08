@@ -30,7 +30,7 @@ Class SMS_BigGreenButtonConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_BigGreenButtonConfig` class does not define any methods.  
+ The `SMS_BigGreenButtonConfig` class doesn't define any methods.  
 
 ## Properties  
  `AgentID`  
@@ -49,7 +49,7 @@ Class SMS_BigGreenButtonConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- `false` to stop clients from connecting to the client notification server (a hidden role, co-located with management point). No active connections will be established between the clients and the client notification server. The default value is `true`.  
+ `false` to stop clients from connecting to the client notification server (a hidden role, co-located with management point). No active connections are established between the clients and the client notification server. The default value is `true`.  
 
  This setting is part of the client infrastructure and turned on by default. This value would likely only be changed to troubleshoot a significant performance issue.  
 

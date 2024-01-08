@@ -56,7 +56,7 @@ Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_SoftwareDistributionAgentConfig` class does not define any methods.  
+ The `SMS_SoftwareDistributionAgentConfig` class doesn't define any methods.  
 
 ## Properties  
  `AgentID`  
@@ -102,7 +102,7 @@ Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Minimum duration, in seconds, that content must be kept in the cache. This value does not set any extra time for the content to be kept in the cache after being tombstoned.  
+ Minimum duration, in seconds, that content must be kept in the cache. This value doesn't set any extra time for the content to be kept in the cache after being tombstoned.  
 
  `ContentLocationTimeoutInterval`  
  Data type: `UInt32`  
@@ -192,7 +192,7 @@ Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- true if the site settings are locked and cannot be overridden.  
+ true if the site settings are locked and can't be overridden.  
 
  `LogoffReturnCodes`  
  Data type: `UInt32 Array`  
@@ -201,7 +201,7 @@ Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Array of program return codes that indicate a logoff is required.  
+ Array of program return codes that indicate a sign out is required.  
 
  `NetworkFailureRetryCount`  
  Data type: `UInt32`  
@@ -305,7 +305,7 @@ Class SMS_SoftwareDistributionAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- The duration, in seconds, after which a pending mandatory program will run, if the user does not click Run on the Ready to Run dialog for their optional program. This timeout is used so that mandatory programs are not blocked forever by users not clicking Run on the Download Completed/Ready to Run dialog for optional requests.  
+ The duration, in seconds, after which a pending mandatory program will run, if the user doesn't click Run on the Ready to Run dialog for their optional program. This timeout is used so that mandatory programs aren't blocked forever by users not clicking Run on the Download Completed/Ready to Run dialog for optional requests.  
 
  `WhatsNewDuration`  
  Data type: `UInt32`  

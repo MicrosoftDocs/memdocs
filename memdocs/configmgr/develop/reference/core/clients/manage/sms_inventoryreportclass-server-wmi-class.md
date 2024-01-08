@@ -32,7 +32,7 @@ Class SMS_InventoryReportClass :
 ```  
 
 ## Methods  
- The `SMS_InventoryReportClass` class does not define any methods.  
+ The `SMS_InventoryReportClass` class doesn't define any methods.  
 
 ## Properties  
  `Filter`  
@@ -60,7 +60,7 @@ Class SMS_InventoryReportClass :
 
  Qualifiers: [key]  
 
- The class id that uniquely identifies this class.  
+ The class ID that uniquely identifies this class.  
 
  `Timeout`  
  Data type: `UInt32`  

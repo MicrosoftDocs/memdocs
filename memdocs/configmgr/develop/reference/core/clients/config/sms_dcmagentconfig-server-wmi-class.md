@@ -35,7 +35,7 @@ Class SMS_DCMAgentConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DCMAgentConfig` class does not define any methods.  
+ The `SMS_DCMAgentConfig` class doesn't define any methods.  
 
 ## Properties  
  `AgentID`  

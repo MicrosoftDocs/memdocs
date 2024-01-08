@@ -37,7 +37,7 @@ Class SMS_SoftwareMeteringAgentConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_SoftwareMeteringAgentConfig` class does not define any methods.  
+ The `SMS_SoftwareMeteringAgentConfig` class doesn't define any methods.  
 
 ## Properties  
  `AgentID`  
@@ -74,7 +74,7 @@ Class SMS_SoftwareMeteringAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Last updated time of the metering rules. This is not currently used.  
+ Last updated time of the metering rules. This isn't currently used.  
 
  `MaximumUsageInstancesPerReport`  
  Data type: `UInt32`  
@@ -92,7 +92,7 @@ Class SMS_SoftwareMeteringAgentConfig : SMS_ClientAgentConfig_BaseClass
 
  Qualifiers: none  
 
- Identifier list of metering rules. This is not currently used.  
+ Identifier list of metering rules. This isn't currently used.  
 
  `MRUAgeLimitInDays`  
  Data type: `UInt32`  

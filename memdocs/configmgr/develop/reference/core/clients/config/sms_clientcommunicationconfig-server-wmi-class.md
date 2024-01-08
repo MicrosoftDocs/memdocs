@@ -30,7 +30,7 @@ Class SMS_ClientCommunicationConfig : SMS_ClientAgentConfig_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ClientCommunicationConfig` class does not define any methods.  
+ The `SMS_ClientCommunicationConfig` class doesn't define any methods.  
 
 ## Properties  
  `MeteredNetworkUsage`  
@@ -45,7 +45,7 @@ Class SMS_ClientCommunicationConfig : SMS_ClientAgentConfig_BaseClass
 |Value|Metered network usage policy|  
 |-|-|  
 |1|Allow metered network use.|  
-|2|Only use the metered network for deployments that are marked to allow use of the metered network. This means meta-data such as policy will always use the metered network. And based on the policy, the client will decide whether or not to use the metered network for the deployment.|  
+|2|Only use the metered network for deployments that are marked to allow use of the metered network. This means meta-data such as policy will always use the metered network. And based on the policy, the client decides whether or not to use the metered network for the deployment.|  
 |4|Block metered network usage.|  
 
 ## Remarks  

@@ -30,7 +30,7 @@ Class SMS_DirFullCollMem : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DirFullCollMem` class does not define any methods.  
+ The `SMS_DirFullCollMem` class doesn't define any methods.  
 
 ## Properties  
  `CollectionID`  
