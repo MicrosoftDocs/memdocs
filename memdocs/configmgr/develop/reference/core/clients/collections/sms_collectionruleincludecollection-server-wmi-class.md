@@ -30,7 +30,7 @@ Class SMS_ CollectionRuleIncludeCollection : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ CollectionRuleIncludeCollection` class does not define any methods.  
+ The `SMS_ CollectionRuleIncludeCollection` class doesn't define any methods.  
 
 ## Properties  
  `IncludeCollectionID`  

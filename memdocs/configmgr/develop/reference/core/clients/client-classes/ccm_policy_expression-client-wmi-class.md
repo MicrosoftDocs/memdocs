@@ -32,7 +32,7 @@ Class CCM_Policy_Expression : CCM_Policy_Config
 ```  
 
 ## Methods  
- The `CCM_Policy_Expression` class does not define any methods.  
+ The `CCM_Policy_Expression` class doesn't define any methods.  
 
 ## Properties  
  `ExpressionData`  
@@ -75,8 +75,8 @@ Class CCM_Policy_Expression : CCM_Policy_Config
 | Value | Description |
 | ----- | ----------- |
 |Once|The expression is evaluated only once.|  
-|Until-true|The expression continues to be re-evaluated until evaluation returns `true`.|  
-|Continuous|The expression is always re-evaluated.|  
+|Until-true|The expression continues to be reevaluated until evaluation returns `true`.|  
+|Continuous|The expression is always reevaluated.|  
 
 ## Requirements  
 

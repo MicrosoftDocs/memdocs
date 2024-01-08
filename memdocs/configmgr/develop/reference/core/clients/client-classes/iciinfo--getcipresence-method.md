@@ -35,7 +35,7 @@ HRESULT GetCIPresence(
  Pointer to a [CIPresence Enumeration](../../../../../develop/reference/core/clients/client-classes/cipresence-enumeration.md) value indicating the current presence for the configuration item.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  

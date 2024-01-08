@@ -51,7 +51,7 @@ HRESULT NotifyError(
  Nothing is returned for this parameter.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  
