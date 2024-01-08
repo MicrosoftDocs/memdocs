@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 manager: aaroncz
 ms.reviewer: jubaptis
-ms.date: 11/17/2023
+ms.date: 01/05/2024
 ms.collection: 
   - M365-modern-desktop
   - tier2
@@ -28,9 +28,9 @@ The 2310 release of Intune adds more clarity to the manual hardware hash upload 
 
 :::image type="content" alt-text="Import error details." source="media/windows-autopilot-whats-new/importerror2.png":::
 
-## Unblock fix pending state for self-deploying mode for disabled OEMs
+## Unblock fix pending state for self-deploying and pre-provisioning mode for disabled OEMs
 
-Starting in 2310, we're making an update to the self-deployment mode for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time self-deployment mode block. This block means that the device could go through self-deployment mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices.  This update only works for OEMs that aren't within the [OEM list](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130) and doesn't work on the fix pending status.
+Starting in 2310, we're making an update to the self-deployment and pre-provisioning modes for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time device-based enrollment block in the self-deployment and pre-provisioning modes. This block means that the device could go through self-deployment or pre-provisioning mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices.  This update only works for OEMs that aren't within the [OEM list](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130) and doesn't work on the fix pending status.
 
 ### How to unblock devices
 
@@ -44,7 +44,7 @@ Starting in 2310, we're making an update to the self-deployment mode for manufac
 
 1. Under **Windows Autopilot Deployment Program**, select **Devices**.
 
-1. Select the device that you want to unblock and the select the **Unblock** button at the top of the page.
+1. Select the device that you want to unblock and the select the **Unblock device** button at the top of the page.
 
 ## Update to BitLocker Recovery Key Process for Windows Autopilot
 
