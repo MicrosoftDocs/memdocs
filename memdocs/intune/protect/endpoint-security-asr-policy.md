@@ -70,27 +70,11 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
 
 ### Devices managed by Intune
 
-**Platform: Windows 10 and later**: Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune. Profiles include:
+**Platform: Windows 10, Windows 11, and Windows Server**:
 
-- **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
+Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune, and on devices not enrolled with Intune that you manage with [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
-  To learn more, see [Application Guard](/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender for Endpoint documentation.
-
-- **Web protection (Microsoft Edge Legacy)** – Settings you can manage for Web protection in Microsoft Defender for Endpoint configure network protection to secure your machines against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web protection stops web threats without a web proxy and can protect machines while they're away or on-premises. Web protection stops access to:
-  - Phishing sites
-  - Malware vectors
-  - Exploit sites
-  - Untrusted or low-reputation sites
-  - Sites that you've blocked in your custom indicator list.
-
-  To learn more, see [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in the Microsoft Defender for Endpoint documentation.
-
-- **Application control** - Application control settings can help mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel). Manage settings that can block unsigned scripts and MSIs, and restrict Windows PowerShell to run in Constrained Language Mode.
-
-  To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
-  
-    > [!NOTE]
-    > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
+ Profiles include:
 
 - **Attack Surface Reduction Rules** – Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
   - Executable files and scripts used in Office apps or web mail that attempt to download or run files
@@ -112,6 +96,21 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
   - When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don't conflict are added to the superset policy that applies to a device.
   - Only the configurations for conflicting settings are held back.
 
+**Platform: Windows 10 and later**:
+
+Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune. Profiles include:
+
+- **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
+
+  To learn more, see [Application Guard](/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview) in the Microsoft Defender for Endpoint documentation.
+
+- **Application control** - Application control settings can help mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel). Manage settings that can block unsigned scripts and MSIs, and restrict Windows PowerShell to run in Constrained Language Mode.
+
+  To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
+  
+    > [!NOTE]
+    > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
+
 - **Device Control** – With settings for device control, you can configure devices for a layered approach to secure removable media. Microsoft Defender for Endpoint provides multiple monitoring and control features to help prevent threats in unauthorized peripherals from compromising your devices.
 
   Device control profiles support [policy merge](#policy-merge-for-settings) for USB device IDs.
@@ -119,6 +118,15 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
   To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit Protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of many mitigations that can apply to either the operating system or individual apps.
+
+- **Web protection (Microsoft Edge Legacy)** – Settings you can manage for Web protection in Microsoft Defender for Endpoint configure network protection to secure your machines against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web protection stops web threats without a web proxy and can protect machines while they're away or on-premises. Web protection stops access to:
+  - Phishing sites
+  - Malware vectors
+  - Exploit sites
+  - Untrusted or low-reputation sites
+  - Sites that you've blocked in your custom indicator list.
+
+  To learn more, see [Web protection](/windows/security/threat-protection/microsoft-defender-atp/web-protection-overview) in the Microsoft Defender for Endpoint documentation.
 
 #### Add reusable settings groups to profiles for Device control
 

@@ -131,9 +131,7 @@ End users can download the apps from the App store or Google Play. For more info
 
 
 ## Change existing policies
-You can edit an existing policy and apply it to the targeted users. However, when you change existing policies, users who are already signed in to the apps won't see the changes for an eight-hour period.
-
-To see the effect of the changes immediately, the end user must sign out of the app, and then sign back in.
+You can edit an existing policy and apply it to the targeted users. For more information on the policy delivery timing see, [Understand App Protection Policy delivery timing](app-protection-policy-delivery.md).
 
 ### To change the list of apps associated with the policy
 
