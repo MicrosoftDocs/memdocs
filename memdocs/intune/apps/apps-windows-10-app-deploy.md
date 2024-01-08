@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows 10/11 app deployment by using Microsoft Intune
+title: Windows app deployment by using Microsoft Intune
 titleSuffix: 
 description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
 keywords:
@@ -33,9 +33,9 @@ ms.collection:
 - highpri
 ---
 
-# Windows 10/11 app deployment by using Microsoft Intune
+# Windows app deployment by using Microsoft Intune
 
-Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows 10 scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
+Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
 
 Line-of-business (LOB) apps and Microsoft Store for Business apps are the app types supported on Windows 10 devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.  
 
@@ -83,8 +83,8 @@ Depending on the app type, you can install the app on a Windows device in one of
   - Modern LOB apps and Microsoft Store apps can be deployed in user context. The apps support both the Required and Available intents.
   - Win32 apps built as User Mode or Dual Mode can be deployed in user context, and support both the Required and Available intents.
 - **Device Context**: When an app is deployed in device context, the managed app is installed directly to the device by Intune.
-  - Modern LOB and Microsoft Store apps can be deployed in device context. These apps only support the Required intent.
-  - Win32 apps built as Machine Mode or Dual Mode can be deployed in device context, and support both the Required and Available intents.
+  - Modern LOB can be deployed in device context. These apps only support the Required intent.
+  - Win32 apps built as Machine Mode or Dual Mode and Microsoft Store apps can be deployed in device context, and support both the Required and Available intents.
 
 > [!NOTE]
 > For Win32 apps built as Dual Mode apps, the admin must choose if the app will install as a User Mode or Machine Mode app for all assignments associated with that instance. The deployment context can't be changed per assignment.  
