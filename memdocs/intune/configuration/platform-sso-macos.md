@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/04/2024
+ms.date: 01/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,13 +31,22 @@ ms.collection:
 
 # Configure platform SSO for macOS devices in Microsoft Intune
 
+On your macOS devices, you can configure platform SSO to enable single sign-on (SSO) using a Microsoft Entra ID. Platform SSO signs users into the device using their Microsoft Entra ID. Platform SSO works together with Enterprise SSO app extension. Enterprise SSO app extension signs users into apps and websites that use Microsoft Entra ID for authentication, including Microsoft 365 apps.
+
+So, you can use Platform SSO and Enterprise SSO together to provide a seamless sign-in experience for macOS users.
+
+Some benefits of platform SSO include:
+
+- Helps minimize the number of times users need to enter their Entra credentials.
+- Helps reduce the number of passwords users need to remember.
+
+[Enterprise SSO plug-in for macOS devices](use-enterprise-sso-plug-in-macos-with-intune.md)
+
 [settings catalog](settings-catalog.md)
 With it vs without it
 
 
 SSO app extensions turns on SSO for apps & websites
-
-With platform SSO, you can sign into the whole device using the Entra ID.
 
 Need both policies if you also want pSSO. You can still only use SSO app ext
 
@@ -60,13 +69,15 @@ This article applies to:
 
 This article shows how to deploy the Microsoft Enterprise SSO plug-in for macOS Apple devices with Intune, Jamf Pro, and other MDM solutions.
 
+This article shows you how to configure pSSO for macOS devices in Intune.
+
 ## Prerequisites
 
 - RBAC role?
 - Supported OS version: macOS 13*.
 - Supported Mac Company Portal version: 5.2307.99.2235 only
 
-## Create the configuration profile
+## Create the settings catalog configuration profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create** > **New policy**.
