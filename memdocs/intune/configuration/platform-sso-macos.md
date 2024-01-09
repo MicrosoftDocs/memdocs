@@ -74,7 +74,7 @@ This article shows you how to configure pSSO for macOS devices in Intune.
 ## Prerequisites
 
 - RBAC role?
-- Supported OS version: macOS 13*.
+- Supported OS version: macOS 13.0 and newer
 - Supported Mac Company Portal version: 5.2307.99.2235 only
 
 ## Create the settings catalog configuration profile

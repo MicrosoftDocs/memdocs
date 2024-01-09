@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 01/09/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,6 +33,10 @@ zone_pivot_groups: apple-enterprise-sso
 ## Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune
 
 Apple devices can use single sign-on (SSO) to access apps and websites. SSO lets users sign in and access multiple apps & websites without entering their credentials each time. This article describes the SSO options available for Apple devices in Microsoft Intune.
+
+Most apps, including Line of Business (LOB) apps, require some level of user authentication to support security. In many cases, the authentication requires users to enter the same credentials repeatedly. To improve the user experience, developers can create apps that use single sign-on (SSO).
+
+SSO provides a better authentication experience for users, and reduces the number of repeated prompts for credentials. On Apple devices, there are features in Intune that provide SSO.
 
 - An app that's coded to look for the user credential store in single sign-on on the device.
 - Intune policy
@@ -93,6 +97,14 @@ In Microsoft Intune, there's an SSO app extension that can use the Microsoft Ent
 - On-premises Active Directory accounts across all apps that support Apple's Enterprise SSO feature
 
 The Microsoft Entra SSO plug-in is a redirect-type SSO app extension. It's available for Microsoft Intune, Jamf Pro, and other MDM solutions. In Intune, the SSO app extension uses a device configuration policy with Microsoft Entra ID as the SSO app extension type.
+
+These settings configure redirect-type and credential-type SSO app extensions:
+
+- The **redirect** type is designed for modern authentication protocols, such as OpenID Connect, OAuth, and SAML2. You can choose between the Microsoft Entra SSO extension ([Microsoft Enterprise SSO plug-in](/azure/active-directory/develop/apple-sso-plugin)) and a generic redirect extension.
+
+- The **credential** type is designed for challenge-and-response authentication flows. You can choose between a Kerberos-specific credential extension provided by Apple, and a generic credential extension.
+
+  The Microsoft Entra macOS SSO app extension should work with any third party or partner MDM. The extension must be deployed as a kerberos SSO extension, or deployed as a custom configuration profile with all the required properties configured.
 
 For more information on the SSO app extension, go to:
 
@@ -157,7 +169,7 @@ The following table summarizes the Single sign-on features in Microsoft Intune. 
 
 ::: zone-end
 
-## Which option is right for me
+## Which option is right for me - in progress
 
 The following table compares the SSO options available for Apple devices in Microsoft Intune. Use this table to help you decide which option is right for you.
 
@@ -171,7 +183,7 @@ The following table compares the SSO options available for Apple devices in Micr
 | Handles Kerberos challenges for web pages and apps, supports password changes, and behaves better in enterprise networks | | Handles Kerberos challenges for web pages and apps |
 | Recommended | Recommended | Not recommended |
 
-## Get started with your MDM provider and platform
+## Get started with your MDM provider and platform - in progress
 
 For more information about these SSO options, and how to create the SSO policies, go to the following articles:
 
