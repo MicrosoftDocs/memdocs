@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ReplicationLinkStatus Server WMI Class
-The `SMS_ReplicationLinkStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the database link status between the child and parent site for each replication group.  
+The `SMS_ReplicationLinkStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the database link status between the child and parent site for each replication group.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -42,7 +42,7 @@ Class SMS_ReplicationLinkStatus : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ReplicationLinkStatus` class does not define any methods.  
+ The `SMS_ReplicationLinkStatus` class doesn't define any methods.  
 
 ## Properties  
  `ChildLastReceived`  
@@ -88,7 +88,7 @@ Class SMS_ReplicationLinkStatus : SMS_BaseClass
 
  Qualifiers: [read]  
 
- If the link status is status is failed, this will show the synchronization intervals from last synchronization finish time.  
+ If the link status is failed, this will show the synchronization intervals from last synchronization finish time.  
 
  `InitializationPercent`  
  Data type: `UInt32`  
@@ -97,7 +97,7 @@ Class SMS_ReplicationLinkStatus : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Re-initialization progress for this replication group.  
+ Reinitialization progress for this replication group.  
 
  `InitializationStatus`  
  Data type: `UInt32`  
@@ -106,7 +106,7 @@ Class SMS_ReplicationLinkStatus : SMS_BaseClass
 
  Qualifiers: [read]  
 
- Re-initialization status.  
+ Reinitialization status.  
 
  `ParentLastReceived`  
  Data type: `DateTime`  

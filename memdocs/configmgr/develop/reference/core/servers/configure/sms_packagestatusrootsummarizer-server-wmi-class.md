@@ -39,7 +39,7 @@ Class SMS_PackageStatusRootSummarizer : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_PackageStatusRootSummarizer` class does not define any methods.  
+ The `SMS_PackageStatusRootSummarizer` class doesn't define any methods.  
 
 ## Properties  
  `Failed`  
@@ -85,7 +85,7 @@ Class SMS_PackageStatusRootSummarizer : SMS_BaseClass
 
  Qualifiers: None  
 
- Total number of distribution points for this package that have had at least one failure during an installation or removal operation but have not yet exceeded the number of retries allowed and are currently in a state of installation-retrying or removal-retrying.  
+ Total number of distribution points for this package that have had at least one failure during an installation or removal operation but haven't yet exceeded the number of retries allowed and are currently in a state of installation-retrying or removal-retrying.  
 
  `SourceCompressedSize`  
  Data type: `UInt32`  
@@ -139,7 +139,7 @@ Class SMS_PackageStatusRootSummarizer : SMS_BaseClass
 
  Qualifiers: None  
 
- Total number of distribution points (including child sites) that are specified to have a copy of the package. A distribution point remains targeted until it is specified for removal.  
+ Total number of distribution points (including child sites) that are specified to have a copy of the package. A distribution point remains targeted until it's specified for removal.  
 
 ## Remarks  
  Class qualifiers for this class include:  

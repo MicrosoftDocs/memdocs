@@ -37,7 +37,7 @@ Class SMS_SystemResourceList : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_SystemResourceList` class does not define any methods.  
+ The `SMS_SystemResourceList` class doesn't define any methods.  
 
 ## Properties  
  `InternetEnabled`  
@@ -56,7 +56,7 @@ Class SMS_SystemResourceList : SMS_BaseClass
 
  Qualifiers: None  
 
- `true` if the site system resource instance can serve both internet clients as well as intranet clients. It has meaning only if the `InternetEnabled` property is also set to `true`.  
+ `true` if the site system resource instance can serve both internet clients and intranet clients. It has meaning only if the `InternetEnabled` property is also set to `true`.  
 
  `NALPath`  
  Data type: `String`  

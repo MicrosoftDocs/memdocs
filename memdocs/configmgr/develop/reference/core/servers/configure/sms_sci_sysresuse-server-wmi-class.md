@@ -42,7 +42,7 @@ Class SMS_SCI_SysResUse : SMS_SiteControlItem
 ```  
 
 ## Methods  
- The `SMS_SCI_SysResUse` class does not define any methods.  
+ The `SMS_SCI_SysResUse` class doesn't define any methods.  
 
 ## Properties  
  `FileType`  
@@ -184,7 +184,7 @@ Class SMS_SCI_SysResUse : SMS_SiteControlItem
 |1|The site system role is colocated on the secondary site server.|  
 |2|The site system role is colocated on the primary site server.|  
 |4|The site system role is colocated on the CAS site server.|  
-|8|The site system role is not colocated with any site server.|  
+|8|The site system role isn't colocated with any site server.|  
 
 ## Remarks  
 

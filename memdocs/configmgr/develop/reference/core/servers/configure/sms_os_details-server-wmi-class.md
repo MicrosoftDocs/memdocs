@@ -32,7 +32,7 @@ Class SMS_OS_Details
 ```  
 
 ## Methods  
- The `SMS_OS_Details` class does not define any methods.  
+ The `SMS_OS_Details` class doesn't define any methods.  
 
 ## Properties  
  `MaxVersion`  

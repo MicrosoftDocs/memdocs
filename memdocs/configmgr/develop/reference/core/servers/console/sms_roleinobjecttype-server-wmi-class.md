@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_RoleInObjectType Server WMI Class
-The `SMS_RoleInObjectType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps a role and its associated object types.  
+The `SMS_RoleInObjectType` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that maps a role and its associated object types.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -30,7 +30,7 @@ Class SMS_RoleInObjectType : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_RoleInObjectType` class does not define any methods.  
+ The `SMS_RoleInObjectType` class doesn't define any methods.  
 
 ## Properties  
  `ObjectTypeID`  

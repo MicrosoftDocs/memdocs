@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_EmbeddedPropertyList Server WMI Class
-The `SMS_EmbeddedPropertyList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a general-purpose embedded object that defines property lists. The property lists are used by the site control file to define the string array properties of a site control item.  
+The `SMS_EmbeddedPropertyList` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a general-purpose embedded object that defines property lists. The property lists are used by the site control file to define the string array properties of a site control item.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -31,7 +31,7 @@ Class SMS_EmbeddedPropertyList
 ```  
 
 ## Methods  
- The `SMS_EmbeddedPropertyList` class does not define any methods.  
+ The `SMS_EmbeddedPropertyList` class doesn't define any methods.  
 
 ## Properties  
  `ItemType`  
