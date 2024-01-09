@@ -63,7 +63,7 @@ This article shows you how to create a device restrictions profile. You can also
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Choose the platform of your devices. Your options:  
@@ -76,7 +76,7 @@ This article shows you how to create a device restrictions profile. You can also
         - **Windows 10 and later**
         - **Windows 8.1 and later**
 
-    - **Profile**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
+    - **Profile type**: Select **Device restrictions**. Or, select **Templates** > **Device restrictions**.
 
         To create a device restrictions profile for Windows 10 Team devices, such as Surface Hub, then choose **Device restrictions (Windows 10 Team)**.
 

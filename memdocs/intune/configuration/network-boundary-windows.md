@@ -51,11 +51,11 @@ This feature uses the [NetworkIsolation CSP](/windows/client-management/mdm/poli
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Network boundary**.
+    - **Profile type**: Select **Templates** > **Network boundary**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
