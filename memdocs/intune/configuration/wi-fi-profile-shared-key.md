@@ -60,11 +60,11 @@ This feature applies to:
 ## Create a custom profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Choose your platform.
-    - **Profile**: Select **Custom**. Or, select **Templates** > **Custom**.
+    - **Profile type**: Select **Custom**. Or, select **Templates** > **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

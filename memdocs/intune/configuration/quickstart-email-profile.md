@@ -52,14 +52,14 @@ For more information on the different roles in Intune, go to [Role-based access 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Configuration profiles** > **Create profile**:
+2. Go to **Devices** > **Configuration** > **Create**:
 
     :::image type="content" source="./media/quickstart-email-profile/ios-create-profile.png" alt-text="Create a new device configuration profile in Microsoft Intune using the Intune admin center.":::
 
 3. Enter the following properties:
 
    - **Platform**: Select **iOS/iPadOS**.
-   - **Profile**: Select **Email**.
+   - **Profile type**: Select **Email**.
   
 4. Select **Create**.
 

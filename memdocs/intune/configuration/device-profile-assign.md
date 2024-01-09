@@ -53,12 +53,12 @@ Be sure you have the correct role to assign policies and profiles. For more info
 ## Assign a policy to users or groups
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles**. All the profiles are listed.
+2. Select **Devices** > **Configuration**. All the profiles are listed.
 3. Select the profile you want to assign > **Properties** > **Assignments** > **Edit**:
 
     For example, to assign a device configuration profile:
 
-    1. Go to **Devices** > **Configuration profiles**. All the profiles are listed.
+    1. Go to **Devices** > **Configuration**. All the profiles are listed.
     2. Select the policy you want to assign > **Properties** > **Assignments** > **Edit**:
 
        :::image type="content" source="./media/device-profile-assign/properties-select-assignments.png" alt-text="Screenshot that shows how to select assignments to deploy the profile to users and groups in Microsoft Intune.":::

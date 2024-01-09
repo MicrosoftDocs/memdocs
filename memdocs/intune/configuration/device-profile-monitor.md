@@ -39,7 +39,7 @@ This article shows you how to view existing profiles for assignment status, maki
 ## View existing profiles
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles**.
+2. Select **Devices** > **Configuration**.
 
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
 
@@ -50,7 +50,7 @@ All of your profiles are shown. You also see the platform, the type of profile, 
 
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
 
-1. In **Devices** > **Configuration profiles**, select an existing profile.
+1. In **Devices** > **Configuration**, select an existing profile.
 2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:
 
     - **Succeeded**: Policy is applied successfully.
