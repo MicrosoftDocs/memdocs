@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SetAutoInstallRequiredSoftwaretoNonBusinessHours Method in Class CCM_ClientUXSettings
-The `SetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that sets the value for `AutomaticallyInstallSoftware`.   
+The `SetAutoInstallRequiredSoftwaretoNonBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that sets the value for `AutomaticallyInstallSoftware`.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -34,7 +34,7 @@ uint32 SetAutoInstallRequiredSoftwaretoNonBusinessHours
 
  Qualifiers: [id("0"), in]  
 
- `true` if required software should be automatically installed during non-business hours.    
+ `true` if necessary software should be automatically installed during nonbusiness hours.    
 
 ## Remarks  
 
