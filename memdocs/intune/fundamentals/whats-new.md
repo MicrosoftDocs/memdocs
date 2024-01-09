@@ -91,7 +91,7 @@ In addition, Windows MAM is available for Intune operated by 21Vianet in China. 
 #### Updated security baseline for Microsoft Edge v117<!-- 25021903 -->  
 We've released a new version of the Intune security baseline for  **Microsoft Edge**, version [**v117**](../protect/security-baselines.md#available-security-baselines). This update brings support for recent settings so you can continue to maintain best-practice configurations for Edge.
 
-We’ve also updated our [reference article](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) for this baseline where you can view the default configuration of the settings this baseline version includes.
+We've also updated our [reference article](../protect/security-baseline-v2-edge-settings.md?pivots=edge-v117) for this baseline where you can view the default configuration of the settings this baseline version includes.
 
 ### Device management
 
@@ -105,7 +105,7 @@ We updated the reporting visualization for the Microsoft Defender for Endpoint c
 ### Device security
 
 #### New settings for scheduling Antivirus scans added to Antivirus policy for Windows devices<!-- 26013546  -->  
-We’ve added two settings to the *Microsoft Defender Antivirus* profile for  [endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md#antivirus-profiles) that applies to Windows 10 and Windows 11 devices.  These two settings work together to first enable support for a random start time of a device's antivirus scan, and to then define a range of time during which the randomized scan start can begin. These settings are supported with devices managed by Intune and devices managed through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+We've added two settings to the *Microsoft Defender Antivirus* profile for  [endpoint security Antivirus policy](../protect/endpoint-security-antivirus-policy.md#antivirus-profiles) that applies to Windows 10 and Windows 11 devices.  These two settings work together to first enable support for a random start time of a device's antivirus scan, and to then define a range of time during which the randomized scan start can begin. These settings are supported with devices managed by Intune and devices managed through the [Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
 
 - [**RandomizeScheduleTaskTimes**](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#admx-microsoftdefenderantivirus-randomizescheduletasktimes) – This setting enables randomization of the scan start time on devices.
 - [**SchedulerRandomizationTime**](/windows/client-management/mdm/defender-csp?WT.mc_id=Portal-fx#configurationschedulerrandomizationtime) – This setting, you can set boundaries for the random start time.
@@ -119,14 +119,14 @@ Applies to:
 #### Microsoft Tunnel support for direct proxy exclusion list in VPN profiles for Android Enterprise<!-- 24139621 -->  
 Intune now supports configuration of a *Proxy exclusion list* when you [configure a VPN profile for Microsoft Tunnel](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) for Android devices. With an exclusion list, you can exclude specific domains from your proxy setup without requiring the use of a Proxy Auto-Configuration (PAC) file. The proxy exclusion list is available with both Microsoft Tunnel and Microsoft Tunnel for MAM
 
-The proxy exclusion list is supported in environments that use a single proxy. The exclusion list isn’t suitable or supported when you use multiple proxy servers, for which you should continue to use a .PAC file.
+The proxy exclusion list is supported in environments that use a single proxy. The exclusion list isn't suitable or supported when you use multiple proxy servers, for which you should continue to use a .PAC file.
 
 Applies to:
 
 - Android Enterprise
 
 #### Microsoft Tunnel server health metric to report on TLS certificate  revocation<!-- 25853648  -->  
-We’ve added a new health metric for Microsoft Tunnel named **TLS certificate revocation**. This new health metric reports on the status of the Tunnel Servers TLS certificate by accessing the Online Certificate Status Protocol (OCSP) or CRL address as defined in the TLS certificate. You can view the status of this new check with all the health checks in the Microsoft Intune admin center by navigating to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**, selecting a server, and then selecting that servers **Health check** tab.
+We've added a new health metric for Microsoft Tunnel named **TLS certificate revocation**. This new health metric reports on the status of the Tunnel Servers TLS certificate by accessing the Online Certificate Status Protocol (OCSP) or CRL address as defined in the TLS certificate. You can view the status of this new check with all the health checks in the Microsoft Intune admin center by navigating to **Tenant administration** > **Microsoft Tunnel Gateway** > **Health status**, selecting a server, and then selecting that servers **Health check** tab.
 
 This metric runs as part of the existing Tunnel Health checks, and supports the following status:
 
@@ -185,7 +185,7 @@ The Intune Company Portal app for Android and Microsoft Intune app for Android A
 #### New settings available in the Apple settings catalog<!-- 25189345  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
 
 **Managed Settings**:
 
@@ -216,9 +216,9 @@ For more information about configuring Settings Catalog profiles in Intune, go t
 #### Settings to manage Windows Subsystem for Linux are now available in the Windows settings catalog<!-- 17757930  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-We’ve added settings to the Windows settings catalog for *Windows Subsystem for Linux* (WSL). These settings enable Intune integration with WSL so admins can manage deployments of WSL and controls into Linux instances themselves.
+We've added settings to the Windows settings catalog for *Windows Subsystem for Linux* (WSL). These settings enable Intune integration with WSL so admins can manage deployments of WSL and controls into Linux instances themselves.
 
-To find these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Configuration profiles** > **Create** > **New Policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
+To find these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Configuration** > **Create** > **New Policy** > **Windows 10 and later** for platform > **Settings catalog** for profile type.
 
 **Windows Subsystem for Linux**:
 
@@ -261,7 +261,7 @@ Flip the toggle in the Microsoft Intune admin center to try out the new experien
 ### Device security
 
 #### Additional settings for the Linux Antivirus policy template<!-- 24191424 -->  
-We’ve expanded support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
+We've expanded support for Linux by adding the following settings to the *Microsoft Defender Antivirus* template for Linux devices:
 
 - cloudblocklevel
 - scanarhives
@@ -281,10 +281,10 @@ We've released a new version of the Intune security baseline for **Microsoft 365
 
 The Microsoft 365 Office Apps baseline can help you rapidly deploy configurations to your Office Apps that meet the security recommendations of the Office and security teams at Microsoft. As with all baselines, the default baseline represents the recommended configurations. You can modify the default baseline to meet the requirements of your organization.
 
-We’ve also updated our [reference article](../protect/security-baseline-v2-office-settings.md?pivots=v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
+We've also updated our [reference article](../protect/security-baseline-v2-office-settings.md?pivots=v2306) for this baseline where you can view the default configuration of the settings this baseline version includes.
 
 #### Deprecation and replacement of two  settings found in the Linux and macOS endpoint security Antivirus policies<!-- 25234740  -->  
-We have deprecated two settings that are found in the *Antivirus engine* category of [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profiles of both macOS and Linux. These profiles are available as part of  Intune’s endpoint security Antivirus policies.
+We have deprecated two settings that are found in the *Antivirus engine* category of [Microsoft Defender Antivirus](../protect/endpoint-security-antivirus-policy.md) profiles of both macOS and Linux. These profiles are available as part of  Intune's endpoint security Antivirus policies.
 
 For each platform, the two deprecated settings are replaced by a single new setting that aligns to how the device configurations are managed by Microsoft Defender for Endpoint.
 
@@ -469,7 +469,7 @@ Applies to:
 #### Use delegated scopes in your Managed Google Play apps that configure enhanced permissions on Android Enterprise devices<!-- 14029609  -->  
 In your Managed Google Play apps, you can give apps enhanced permissions using delegated scopes.
 
-When your apps include delegated scopes, you can configure the following settings in a device configuration profile (**Devices** > **Configuration profile** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**):
+When your apps include delegated scopes, you can configure the following settings in a device configuration profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device Restrictions** for profile type > **Applications**):
 
 - **Allow other apps to install and manage certificates**: Admins can select multiple apps for this permission. The selected apps are granted access to certificate installation and management.
 - **Allow this app to access Android security logs**: Admins can select one app for this permission. The selected app is granted access to security logs.
@@ -500,7 +500,7 @@ Applies to:
 - Android device administrator (DA)
 
 #### Import and export settings catalog policies<!-- 3470151  -->  
-The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration profiles** > **Create** > **New Policy** > Select your **platform** > For **Profile**, select **Settings catalog**).
+The Intune [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure, and all in one place (**Devices** > **Configuration** > **Create** > **New Policy** > Select your **platform** > For **Profile**, select **Settings catalog**).
 
 The settings catalog policies can be imported and exported:
 
@@ -515,7 +515,7 @@ For more information about the settings catalog, go to [Use the settings catalog
 #### New setting to block users from using the same password to unlock the device and access the work profile on Android Enterprise personally owned devices with a work profile<!-- 6167371  -->  
 On Android Enterprise personally owned devices with a work profile, users can use the same password to unlock the device and access the work profile.
 
-There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
+There's a new setting that can enforce different passwords to unlock the device and access the work profile (**Devices** > **Configuration** > **Create** > **Android Enterprise** > **Personally Owned Work Profile** for platform > **Device Restrictions** for profile type):
 
 - **One lock for device and work profile**: **Block** prevents users from using the same password for the lock screen on the device and work profile. End users are required to enter the device password to unlock the device and enter their work profile password to access their work profile. When set to **Not Configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access their work profile using a single password.
 
@@ -532,7 +532,7 @@ Applies to:
 #### New settings available in the macOS settings catalog <!-- 24950434  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.  
 
 **Privacy > Privacy Preferences Policy Control**:
 
@@ -575,7 +575,7 @@ For more information, see [Remote Help on Android](../fundamentals/remote-help-a
 
 #### Configure declarative software updates and passcode policies for Apple devices in the Settings Catalog<!-- 24989083  -->  
 
-You can manage software updates and passcode using Apple's declarative device management (DDM) configuration using the settings catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative device management**).
+You can manage software updates and passcode using Apple's declarative device management (DDM) configuration using the settings catalog (**Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative device management**).
 
 For more information about DDM, go to [Apple's declarative device management (DDM)](https://developer.apple.com/documentation/devicemanagement/leveraging_the_declarative_management_data_model_to_scale_devices) (opens Apple's website).
 
@@ -670,13 +670,13 @@ Sovereign cloud support is expected in the future. For more information, see [Ap
 
 #### OEMConfig profiles that don't deploy successfully aren't shown as "pending"<!-- 24284049 -->
 
-For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig** for profile type).
+For Android Enterprise devices, you can create a configuration policy that configures the OEMConfig app (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **OEMConfig** for profile type).
 
 Previously, OEMConfig profiles that exceed 350 KB show a "pending" state. This behavior changed. An OEMConfig profile that exceeds 350 KB isn't deployed to the device. Profiles in a pending state or profiles larger that 350 KB aren't shown. Only profiles that successfully deploy are shown.
 
 This change is a UI change only. No changes are made to the corresponding Microsoft Graph APIs.
 
-To monitor the profile pending status in the Intune admin center, go to **Devices** > **Configuration profiles** > Select the profile > **Device status**.
+To monitor the profile pending status in the Intune admin center, go to **Devices** > **Configuration** > Select the profile > **Device status**.
 
 For more information on OEM Configuration, go to [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
@@ -701,7 +701,7 @@ Applies to:
 #### Managed Settings now available in the Apple settings catalog <!-- 21083384  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** > **Settings catalog** for profile type.
+The settings within the Managed Settings command are available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** > **Settings catalog** for profile type.
 
 **Managed Settings > App Analytics**:
 
@@ -753,7 +753,7 @@ For more information on these settings, go to [Apple's developer website](https:
 #### New setting available in the macOS settings catalog<!-- 24809885  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There's a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.  
+There's a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.  
 
 **Microsoft Defender > Cloud delivered protection preferences**:
 
@@ -998,7 +998,7 @@ Applies to:
 #### New SSO, login, restrictions, passcode, and tamper protection settings available in the Apple settings catalog<!-- 24335541  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.
 
 **Authentication > Extensible Single Sign On (SSO)**:
 
@@ -1300,7 +1300,7 @@ You can now add scope tags when creating deployments using Zebra LifeGuard Over-
 #### New settings available in the macOS settings catalog <!-- 24167142  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** > **Settings catalog** for profile type.
 
 **Microsoft AutoUpdate (MAU)**:
 
@@ -1534,7 +1534,7 @@ To participate in the public preview, [complete the opt-in form](https://aka.ms/
 #### New settings available in the Apple settings catalog<!-- 19951554  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 **Authentication > Extensible Single Sign On (SSO)**:
 
@@ -1564,7 +1564,7 @@ Applies to:
 For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 #### Device Firmware Configuration Interface (DFCI) supports Asus devices <!-- 10249874 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Asus devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
@@ -1714,7 +1714,7 @@ For more information, see the following resources:
 
 ### Android Enterprise 11+ devices can use Zebra's latest OEMConfig app version<!-- 8675347 -->  
 
-On Android Enterprise devices, you can use OEMConfig to add, create, and customize OEM-specific settings in Microsoft Intune (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **OEMConfig**).
+On Android Enterprise devices, you can use OEMConfig to add, create, and customize OEM-specific settings in Microsoft Intune (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **OEMConfig**).
 
 There's a new **Zebra OEMConfig Powered by MX** OEMConfig app that aligns more closely to Google's standards. This app supports Android Enterprise 11.0 and newer devices.
 
@@ -1890,7 +1890,7 @@ Applies to:
 > [!NOTE]
 > This setting is coming in a future release, possibly the 2308 Intune release.
 
-You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
+You can create a device configuration profile that deploys a VPN connection to devices (**Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **VPN** for profile type).
 
 In this VPN connection, you can use the **Apps and Traffic rules** settings to create network traffic rules.
 
@@ -1908,7 +1908,7 @@ Applies to:
 #### New settings available in the macOS settings catalog <!-- 18430228  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
-A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+A new setting is available in the Settings Catalog. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings catalog** for profile type.
 
 **Microsoft Defender > Antivirus engine**:
 
@@ -1986,7 +1986,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device configuration
 
 #### Device Firmware Configuration Interface (DFCI) supports Dynabook devices<!-- 10249859 -->  
-For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type.
 
 Some Dynabook devices running Windows 10/11 are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
 
