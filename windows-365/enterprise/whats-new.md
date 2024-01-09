@@ -55,6 +55,16 @@ For information about Windows App and its features, see [What's new in Windows A
 -->
 
 <!-- ########################## -->
+## Week of January 8, 2024
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Windows 365 now supports Italy North and Poland Central<!--41741396-->
+
+Windows 365 Enterprise and Windows 365 Frontline Cloud PC now support the Italy North and Poland Central regions. For more information, see [Supported Azure regions for Cloud PC provisioning](supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
 ## Week of December 10, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
