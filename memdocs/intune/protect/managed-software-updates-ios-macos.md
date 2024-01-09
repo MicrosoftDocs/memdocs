@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -105,22 +105,20 @@ Managed software updates have precedence over other policies that configure soft
 ## Configure the managed software updates policy
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. Enter the following properties:
+
+3. Enter the following properties and select **Create**:
 
     - **Platform**: Select **iOS/iPadOS** or **macOS**.
     - **Profile**: Select **Settings catalog**.
 
-    Select **Create**.
-
-4. In **Basics**, enter the following information:
+4. In the **Basics** tab, enter the following information, and select **Next**:
 
     - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
-    Select **Next**.
-
-5. In **Configuration settings**, select **Add settings** > Expand **Declarative Device Management** > **Software Update**.
+5. In **Configuration settings**, select **Add settings** > expand **Declarative Device Management** > **Software Update**.
 
     Configure the following settings:
 
@@ -131,9 +129,8 @@ Managed software updates have precedence over other policies that configure soft
 
     - **Target Local Date Time**: Select the local date time value that specifies when to force the installation of the software update.
 
-      If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
-
-      If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
+      - If the user doesn't trigger the software update before this time, then a one minute countdown prompt is shown to the user. When the countdown ends, the device force installs the update and forces a restart.
+      - If the device is powered off when the deadline is met, then there's a one hour grace period when the device is powered back on. When the grace period ends, the device force installs the update and forces a restart.
 
       > [!IMPORTANT]
       > If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`.
@@ -143,15 +140,19 @@ Managed software updates have precedence over other policies that configure soft
     - **Target OS Version**: Enter the target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
 6. Select **Next**.
-7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+7. In the **Scope tags** tab (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, go [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-1. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
-> [!IMPORTANT]
-> Assignment filters are not supported for DDM-based policies.
- Select **Next**.
-9. In **Review + create**, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+8. In the **Assignments** tab, select the users or groups that will receive your profile. For more information on assigning profiles, go to [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+    Select **Next**.
+
+    > [!IMPORTANT]
+    > Assignment filters are not supported for DDM-based policies.
+
+9. In the **Review + create** tab, review the settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 ## Delay visibility of updates
 
@@ -174,4 +175,3 @@ To create a restrictions policy, go to the **Settings catalog** > **Restrictions
 - [macOS software update policies in Intune](software-updates-macos.md)
 - [Software updates planning guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)
 - [Software updates planning guide for managed macOS devices in Intune](software-updates-guide-macos.md)
-

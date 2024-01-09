@@ -53,7 +53,7 @@ This feature applies to:
 
 Common tasks when working with security baselines include:
 
-- [Create a new profile instnace](#create-a-profile-for-a-security-baseline) – Configure the settings you want to use and assign the baseline to groups.
+- [Create a new profile instance](#create-a-profile-for-a-security-baseline) – Configure the settings you want to use and assign the baseline to groups.
 - [Update a profile you've previously created to the latest baseline version](#update-a-profile-to-the-latest-version) – Change the baseline version in use by a profile.
 - [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
 
@@ -65,7 +65,7 @@ Common tasks when working with security baselines include:
   >
   > Intune provides an easy to use user interface to configure and deploy security baselines, but does not create nor define the security baselines. Outside of Intune, other options to deploy security baselines are available, like those available from the [***Security Compliance Toolkit***](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
 
-- Use of baselines through Intune requires you to have an active subscription for the managed product, when applicable. For example, use of the Microsoft Defender for Endpoint baseline does not grant rights to use Microsoft Defender. Instead, the baseline provides a method to configure and manage settings that are present on devices that are licensed for and managed by Microsoft Defender for Endpoint.
+- Use of baselines through Intune requires you to have an active subscription for the managed product, when applicable. For example, use of the Microsoft Defender for Endpoint baseline doesn't grant rights to use Microsoft Defender. Instead, the baseline provides a method to configure and manage settings that are present on devices that are licensed for and managed by Microsoft Defender for Endpoint.
 
 - To manage baselines in Intune, your account must have the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles) built-in role.
 
@@ -89,7 +89,7 @@ Common tasks when working with security baselines include:
 
 5. On the Configuration settings tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
    - Select a group to expand and review the available settings.
-   - The insights for a setting are available beside a lightbulb icon. Settings insight provides confidence in configurations by adding insights that similar organizations have successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).
+   - The insights for a setting are available beside a light bulb icon. Settings insight provides confidence in configurations by adding insights that similar organizations have successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).
    - Use the *Search* bar and specify keywords that filter the view to display only those groups that contain your search criteria.
 
    Each setting in a baseline has a default configuration for that baseline version. Reconfigure the default settings to meet your business needs. Different baselines might contain the same setting, and use different default values for the setting, depending on the intent of the baseline.
@@ -118,15 +118,15 @@ Common tasks when working with security baselines include:
 
 ## Update a profile to the latest version
 
-The information in this section applies to updating a baseline instance that was created *before May 2023*, to a version of that same baseline that was released *after May 2023*.
+The information in this section applies to updating a baseline instance that was created *before May  2023*, to a version of that same baseline that was released *after May 2023*.
 
 > [!NOTE]
 >
-> In May 2023, Intune began rollout of a new security baseline format for each new baseline release or update. Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing  behavior when *moving to* a baseline version released in May 2023 or later.
+> In May, 2023, Intune began rollout of a new security baseline format for each new baseline release or update. Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing  behavior when *moving to* a baseline version released in May 2023 or later.
 >
 > The previous behavior remains available for use when updating baselines that have not yet received a new version that uses the new format. For guidance, see [Update baselines that use the previous format](#update-baselines-that-use-the-previous-format).
 
-After May 2023, when a new version for a baseline is released, plan to update your existing profiles to the new version. When moving from an older format to the new baseline format (from a version released prior to May 2023 to one released in May 2023 or later):
+After May  2023, when a new version for a baseline is released, plan to update your existing profiles to the new version. When moving from an older format to the new baseline format (from a version released prior to May  2023 to one released in May  2023 or later):
 
 - All new profiles for the baseline type, like Microsoft Edge, use the new format. Creating a new baseline that uses an older baseline version isn't supported.
 
@@ -148,7 +148,7 @@ After May 2023, when a new version for a baseline is released, plan to update yo
 
 To update a baseline that was created before May 2023 to the new format, you must create a new baseline instance. To assist you in recreating the original baselines configuration, you can have Intune export your current baselines configuration as a .CSV file. The export includes:
 
-- Each setting from the older baseline is identified by using the name of the setting as it appears in the new baseline. While the name of the setting isn't presented verbatim in the .csv, you will find the path for the setting, which contains part of the setting name in it.
+- Each setting from the older baseline is identified by using the name of the setting as it appears in the new baseline. While the name of the setting isn't presented verbatim in the .csv, you can find the path for the setting, which contains part of the setting name in it.
 - How each setting in the older baseline was configured.
 - If the configuration of a setting from the old baseline matches the default configuration from the new baseline.
 
