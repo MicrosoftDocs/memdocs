@@ -108,7 +108,6 @@ It's recommended that applications don't use SFSafariViewController, SFAuththent
 - Have you integrated MSAL into your application?
 - Have you enabled broker authentication by generating a redirect URI and setting it in the MSAL configuration file?
 - Have you made sure the required configuration information for MSAL in your IntuneMAMSettings dictionary matched the ones in your Microsoft Entra App Registrations?
-- Have you tested brokered authentication, confirmed that a work account is added to iOS's Account Manager, and tested SSO with other Microsoft 365 apps?
  
 ## FAQ
 

@@ -80,7 +80,7 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Set screen orientation | integer | 1 | Allows you to set the orientation of the home   screen to portrait mode, landscape mode or allow auto rotate. You can set the   orientation by entering values 1 (for portrait mode), 2 (for Landscape mode),   3 (for Autorotate). | ✔️ |
 | Set device wall paper | string | Default | Allows you to set a wallpaper of your choice. Enter the URL of the image that you want to set as a wallpaper. | ✔️ |
 | Define theme color | string | light | Specify if you want Managed Home   Screen to run in "light" or "dark" mode.  | ❌ |
-| Block pinning browser web pages to MHS | bool | FALSE | Set this restriction to `true` to block users from pinning web pages from any browser onto Managed Home Screen.  | ✔️ |
+| Block pinning browser web pages to MHS | bool | FALSE | Set this restriction to `true` to block users from pinning web pages from any browser onto Managed Home Screen.  | ❌ |
 | Enable updated user experience | bool | FALSE  | (PREVIEW) Set to **true** to display the updated app design, with improvements to user workflows for usability and supportability, for MHS. If **false**, user will continue to see previous workflows on the app. | ❌ |
 | Top Bar Primary Element | choice |  | (PREVIEW) Use this key to select whether the primary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. This setting can only be used if **Enable sign in** key is set to **false**. If the **Enable sign in** key is set to **true**, the user's name will be shown as the primary element. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices.  | ❌ |
 | Top Bar Secondary Element | choice |  | (PREVIEW) Use this key to select whether the secondary element of the top bar will be the device Serial Number, Device Name, or Tenant Name. **Enable updated user experience** must be set to **true** to make the top bar visible on users devices.  | ❌ |
@@ -169,6 +169,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 |     Count down time on auto sign-out dialog    |     integer    |     60    |     The amount of time, in seconds, to give   notice to user before signing them out of Managed Home Screen.  This setting can only be used if **Enable   auto sign-out** and **Enable sign in** have been set to True.      |     ✔️          |
 |     Privacy statement title    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. Use this setting to name the link containing your organization’s   privacy statement, which is specified in **Privacy statement link**.    |     ❌          |
 |     Privacy statement link    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. If you set a link but don't set **Privacy statement title**, the   title will read "Custom privacy statement".    |     ❌          |
+
+> [!NOTE]
+> Managed Home Screen with Sign In enabled is not supported on GCC, GCC High or DoD Tenants.
 
 > [!NOTE]
 > Managed Home Screen uses the exact alarm permission to do the following actions:
