@@ -46,7 +46,7 @@ SMSFormatMessageCtl.FormatModuleMessage
 ## Remarks  
  `FormatModuleMessage` loads a string that is specified by `MessageID` from a message resource in the `ModuleName` module and inserts the supplied strings.  
 
- If insertion strings are not passed in, the message is returned without them. Note that insertion strings are an optional parameter. When retrieving the messages from the Configuration Manager database, you should OR the severity with the `MessageID` parameter. You should also keep the object alive between calls to `FormatModuleMessage` because the object caches module handles. Doing this saves an extra call to `LoadLibrary`.  
+ If insertion strings aren't passed in, the message is returned without them. Insertion strings are an optional parameter. When retrieving the messages from the Configuration Manager database, you should OR the severity with the `MessageID` parameter. You should also keep the object alive between calls to `FormatModuleMessage` because the object caches module handles. Doing this saves an extra call to `LoadLibrary`.  
 
 ## Requirements  
  FormatMessageCtl.dll.  

@@ -34,7 +34,7 @@ Class SMS_WinRTSideLoadingKey : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_WinRTSideLoadingKey` class does not define any methods.  
+ The `SMS_WinRTSideLoadingKey` class doesn't define any methods.  
 
 ## Properties  
  `Description`  

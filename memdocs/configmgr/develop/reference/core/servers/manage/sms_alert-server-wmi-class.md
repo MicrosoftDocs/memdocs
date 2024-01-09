@@ -153,7 +153,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: none  
 
- When disabled the condition is not evaluated.  
+ When disabled the condition isn't evaluated.  
 
  `FeatureArea`  
  Data type: `UInt32`  
@@ -224,7 +224,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: [read]  
 
- Whether this alert is ignored by the current user.  
+ Whether the current user ignores this alert.  
 
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
@@ -244,7 +244,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: none  
 
- Whether this alert is monitored by Operations Manager.  
+ Whether the Operations Manager monitors this alert.  
 
  `Name`  
  Data type: `String`  
@@ -337,7 +337,7 @@ Class SMS_Alert : SMS_AlertBase
 
  Qualifiers: none  
 
- Evaluation will not start until the specified time.  
+ Evaluation isn't starting until the specified time.  
 
  `SourceSiteCode`  
  Data type: `String`  
