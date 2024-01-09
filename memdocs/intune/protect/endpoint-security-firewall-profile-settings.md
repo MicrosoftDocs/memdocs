@@ -486,8 +486,8 @@ Specify the local and remote ports to which this rule applies:
   - **Wireless**
   - **Local area network**
   - **Not configured**
-  - **Mobile Broadband**
-  - **[Not Supported] Mobile Broadband** -This option there is in case setting had been configured before. If you did not configure this before, please do not select this one. 
+  - **Mobile Broadband** - This option replaces use of the previous entry for Mobile Broadband, which is deprecated and no longer supported.
+  - **[Not Supported] Mobile Broadband** - Do not use this option, which is the original Mobile Broadband option. This option no longer functions correctly. Replace use of this option with the newer version of *Mobile Broadband*.  
 
 - **Authorized users**  
   [FirewallRules/FirewallRuleName/LocalUserAuthorizationList](/windows/client-management/mdm/firewall-csp#localuserauthorizedlist)
