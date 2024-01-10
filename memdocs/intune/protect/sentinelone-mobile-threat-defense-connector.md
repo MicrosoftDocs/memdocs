@@ -83,7 +83,7 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/sentinelone-mtd-connector/malicious-apps-" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/sentinelone-mtd-connector/malicious-apps-unblocked-sentinelone.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
