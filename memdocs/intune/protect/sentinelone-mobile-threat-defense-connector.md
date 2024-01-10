@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 01/10/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -83,7 +83,7 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Access granted on remediation:*
 
-:::image type="content" source="./media/sentinelone-mtd-connector/malicious-apps-blocked-sentinelone.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
+:::image type="content" source="./media/sentinelone-mtd-connector/malicious-apps-" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
