@@ -52,7 +52,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 1. In **Devices** > **Configuration** > **Policies** tab, select an existing policy.
 
-2. The **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks-in with Intune, they receive the settings in your policy.
+2. The **Device and user check-in status** shows the number of all users or devices that checked-in with the policy. If one device has multiple users, this report shows the status for each user. When the user or device checks in with Intune, they receive the settings in your policy.
 
     The following statuses are shown:
 
