@@ -27,7 +27,7 @@ ms.collection:
 - tier1
 - M365-identity-device-management
 - highpri
-ms.reviewer: mattcall
+ms.reviewer: laarrizz
 
 ---
 
