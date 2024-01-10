@@ -55,6 +55,23 @@ For information about Windows App and its features, see [What's new in Windows A
 -->
 
 <!-- ########################## -->
+## Week of January 8, 2024 (Service release 2312)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### New alert rule: Cloud PCs that aren't available (preview)<!--47321010-->
+
+A new alert rule is now available to notify you when Cloud PCs aren't available. For more information about alerts in general, see [Alerts in Windows 365](alerts.md).  For more information about the report, see [report-cloud-pcs-not-available.md](Cloud PCs that aren't available report). This feature is not yet available for Windows 365 Frontline.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Windows 365 now supports Italy North and Poland Central<!--41741396-->
+
+Windows 365 Enterprise and Windows 365 Frontline Cloud PC now support the Italy North and Poland Central regions. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
 ## Week of December 10, 2023
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
