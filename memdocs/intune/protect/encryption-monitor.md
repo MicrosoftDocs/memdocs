@@ -113,7 +113,7 @@ When you select a device from the Encryption report, Intune displays the **Devic
 
 - **Profile state summary** – A summary of the profiles that apply to this device. The summary represents the least favorable condition across the applicable profiles. For example, if only one out of several applicable profiles results in an error, the *Profile state summary* displays *Error*.
 
-  To view more details of a status, go to **Intune** > **Device configuration** > **Profiles**, and select the profile. Optionally, select **Device status** and then select a device.
+  To view more details of a status in the Intune admin center, go to **Devices** > **Configuration** > select the profile. Optionally, select **Device status** and then select a device.
 
 - **Status details** – Advanced details about the device's encryption state.
 

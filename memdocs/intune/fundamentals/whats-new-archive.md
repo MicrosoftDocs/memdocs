@@ -548,7 +548,7 @@ The Enrollment Status Page (ESP) now supports the new Microsoft store applicatio
 
 You can now use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. With this feature, admins are able to locate lost or stolen corporate devices on-demand.
 
-In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you need to turn the feature on using **Device Restrictions** in **Device Configuration** for Android Enterprise.
+In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you need to turn the feature on using a device configuration profiles (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Device Restrictions** for profile type).
 
 Select **Allow** on the **Locate device** toggle for fully managed and corporate owned work profile devices and select applicable groups. **Locate device** is available when you select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
 
@@ -1174,9 +1174,9 @@ You can group Managed Google Play apps into collections and control the order th
 #### New password complexity setting for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068  -->  
 On Android Enterprise 11 and older personally owned devices with a work profile, you can set the following password settings:
 
-- **Compliance policies** > **Android Enterprise for platform** > **Personally owned work profile** > **System security** > **Required password type**, **Minimum password length**
-- **Device configuration profiles** > **Android Enterprise for platform** > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
-- **Device configuration profiles** > **Android Enterprise for platform** > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
+- **Devices** > **Compliance** > **Android Enterprise** for platform > **Personally owned work profile** > **System security** > **Required password type**, **Minimum password length**
+- **Devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Work profile settings** > **Required password type**, **Minimum password length**
+- **Devices** > **Configuration** > **Android Enterprise** for platform > **Personally owned work profile** > **Device restrictions** > **Password** > **Required password type**, **Minimum password length**
 
 Google is deprecating the **Required password type** and **Minimum password length** settings for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
 
@@ -5036,7 +5036,7 @@ Applies to:
 
 #### Device configuration reporting has been updated<!-- 10005568  -->
 
-All device configuration and endpoint security profiles are now merged into one report. You can view all the policies applied to your device in the new single report that contains improved data. For instance, you can see the distinction of profile types in the new **Policy type** field. Also, selecting a policy will provide more details about settings applied to the device and status of the device. Role-based access control (RBAC) permissions have been applied to filter the list of profiles based on your permissions. In Microsoft Endpoint Manger admin center, you will select **Devices** > **All devices** > *select a device* > **Device configuration** to see this report when it's available. For more information, see [Microsoft Intune reports](../fundamentals/reports.md).
+All device configuration and endpoint security profiles are now merged into one report. You can view all the policies applied to your device in the new single report that contains improved data. For instance, you can see the distinction of profile types in the new **Policy type** field. Also, selecting a policy will provide more details about settings applied to the device and status of the device. Role-based access control (RBAC) permissions have been applied to filter the list of profiles based on your permissions. In the Intune admin center, you will select **Devices** > **All devices** > *select a device* > **Device configuration** to see this report when it's available. For more information, see [Microsoft Intune reports](../fundamentals/reports.md).
 
 #### New details for the Intune antivirus reports<!-- 8504648   -->
 
@@ -10141,7 +10141,7 @@ Access your Intune Data Warehouse in Power BI Online using the [Intune Complianc
 ### Device configuration
 
 #### PowerShell scripts can run in a 64-bit host on 64-bit devices<!-- 1862675   -->
-When you add a PowerShell script to a device configuration profile, the script always executes in 32-bit, even on 64-bit operating systems. With this update, an administrator can run the script in a 64-bit PowerShell host on 64-bit devices (**Device configuration** > **PowerShell scripts** > **Add** > **Configure** > **Run script in 64 bit PowerShell Host**).
+When you add a PowerShell script to a device configuration profile, the script always executes in 32-bit, even on 64-bit operating systems. With this update, an administrator can run the script in a 64-bit PowerShell host on 64-bit devices (**Devices** > **Scripts and remediation** > **Platform scrpts** > **Add** > **Configure** > **Run script in 64 bit PowerShell Host**).
 
 For more information on using PowerShell, see [PowerShell scripts in Intune](../apps/intune-management-extension.md).
 
@@ -10328,7 +10328,7 @@ Administrative templates in Intune (**Device configuration** > **Administrative 
 
 - Administrative templates include about 300 settings that can be managed in Intune. Previously, these settings only existed in the group policy editor.
 - Administrative templates are available in public preview.
-- Administrative templates are moving from **Device configuration** > **Administrative templates** to **Devices** > **Configuration** > **Create** > in **Platform**, choose **Windows 10 and later** > in **Profile type**, choose **Administrative templates**.
+- Administrative templates are moving from **Device configuration** > **Administrative templates** to **Devices** > **Configuration** > **Create** > **Windows 10 and later** for platform > **Administrative templates** for profile type.
 - Reporting is enabled
 
 To read more about this feature, go to [Windows 10 templates to configure group policy settings](../configuration/administrative-templates-windows.md).
@@ -11159,10 +11159,10 @@ In this update, there is a Java API that enables third-party certificate authori
 Currently, Intune supports [SCEP requests using Active Directory Certificate Services](../protect/certificates-scep-configure.md).
 
 #### Toggle to show or not show the End Session button on a Kiosk browser<!-- 2455253 -->
-You can now configure whether or not Kiosk browsers show the End Session button. You can see the control at **Device configuration** > **Kiosk (preview)** > **Kiosk Web Browser**. If turned on, when a user selects the button, the app prompts for confirmation to end the session. When confirmed, the browser clears all browsing data and navigates back to the default URL.
+You can now configure whether or not Kiosk browsers show the End Session button. You can see the control at **Devices** > **Configuration** > **Kiosk (preview)** > **Kiosk Web Browser**. If turned on, when a user selects the button, the app prompts for confirmation to end the session. When confirmed, the browser clears all browsing data and navigates back to the default URL.
 
 #### Create an eSIM cellular configuration profile<!-- 2564077 -->
-In **Device configuration**, you can create an eSIM cellular profile. You can import a file that contains cellular activation codes provided by your mobile operator. You can then deploy these profiles to your eSIM LTE enabled Windows 10 devices, such as the Surface Pro LTE and other eSIM capable devices.
+In **Devices** > **Configuration**, you can create an eSIM cellular profile. You can import a file that contains cellular activation codes provided by your mobile operator. You can then deploy these profiles to your eSIM LTE enabled Windows 10 devices, such as the Surface Pro LTE and other eSIM capable devices.
 
 Check to see if your [devices support eSIM profiles](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
@@ -11179,7 +11179,7 @@ To use this feature, you must sync the `sAMAccountName` attribute from your on-p
 Applies to [Android](../configuration/email-settings-android.md), [iOS](../configuration/email-settings-ios.md), [Windows 10 and later](../configuration/email-settings-windows-10.md)
 
 #### See device configuration profiles in conflict<!-- 1556983 -->
-In **Device Configuration**, a list of the existing profiles is shown. With this update, a new column is added that provides details on profiles that have a conflict. You can select a conflicting row to see the setting and profile that has the conflict. 
+In **Devices** > **Configuration**, a list of the existing profiles is shown. With this update, a new column is added that provides details on profiles that have a conflict. You can select a conflicting row to see the setting and profile that has the conflict. 
 
 More on [manage configuration profiles](../configuration/device-profile-monitor.md#view-conflicts).
 
@@ -12024,7 +12024,7 @@ You can now shut down iOS 10.3 supervised devices. This action shuts down the de
 
 #### Disallow date/time changes to Samsung Knox devices<!-- 1468103 -->
 
-We've added a new feature that allows you to block date and time changes on Samsung Knox devices. You can find this feature in **Device configuration profiles** > **Device restrictions (Android)** > **General**.
+We've added a new feature that allows you to block date and time changes on Samsung Knox devices. You can find this feature in **Devices** > **Configuration** > **Device restrictions (Android)** > **General**.
 
 #### Surface Hub resource account supported<!-- 1566442  -->
 
