@@ -39,6 +39,8 @@ Learn what new features are available in Windows 365 Enterprise.
 
 For information about Windows App and its features, see [What's new in Windows App](/windows-app/whats-new?tabs=windows).
 
+For more information about public preview items, see [Public preview in Windows 365](../public-preview.md).
+
 <!-- Common categories:  
 ### App management
 ### Device configuration
