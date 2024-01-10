@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/25/2023
+ms.date: 01/22/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -281,7 +281,7 @@ The script is deployed to devices using in Intune. To add and deploy the script,
     > If you want to keep the Microsoft Store app on devices, then you can use the [script that removes built-in apps but keeps the Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2157781) instead. To use this script, download it instead and follow the same steps. This script tries to remove built-in apps but might not remove all of them. You might need to modify the script to remove all built-in apps on your devices.
 
 2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Devices** > **Windows** >  **Scripts** > **Platform scripts** > **Add**.
+3. Select **Devices** > **Windows** >  **Scripts and remediations** > **Platform scripts** > **Add**.
 4. In **Basics**, enter a name for your script policy and select **Next**.
 5. In **Script settings**, upload the script you downloaded. Leave the other settings unchanged and select **Next**.
 6. Assign the script to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
