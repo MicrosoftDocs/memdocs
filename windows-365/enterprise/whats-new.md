@@ -64,7 +64,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### New alert rule: Cloud PCs that aren't available (preview)<!--47321010-->
 
-A new alert rule is now available to notify you when Cloud PCs aren't available. For more information about alerts in general, see [Alerts in Windows 365](alerts.md).  For more information about the report, see [report-cloud-pcs-not-available.md](Cloud PCs that aren't available report). This feature is not yet available for Windows 365 Frontline.
+A new alert rule is now available to notify you when Cloud PCs aren't available. For more information about alerts in general, see [Alerts in Windows 365](alerts.md).  For more information about the report, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md). This feature is not yet available for Windows 365 Frontline.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
