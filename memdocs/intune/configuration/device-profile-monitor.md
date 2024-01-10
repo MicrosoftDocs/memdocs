@@ -34,7 +34,7 @@ ms.collection:
 
 Intune includes some features to help monitor and manage your device configuration policies. For example, you can check the status of a policy, go to the devices are assigned to the policy, and update the properties of an existing policy.
 
-This article shows you how to view existing policies for assignment status, making changes, and how to troubleshoot any conflicts.
+This article shows you how to view existing device configuration policies for assignment status, making changes, and how to troubleshoot any conflicts.
 
 ## View existing policies
 
@@ -70,7 +70,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 5. Back in **Device and user check-in status**, select **View report**:
 
-    :::image type="content" source="./media/device-profile-monitor/device-user-check-in-status-view-report.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/device-profile-monitor/device-user-check-in-status-view-report.png" alt-text="Screenshot that shows to select view report on a device configuration policy to get the device and user check-in status in Microsoft Intune and Intune admin center.":::
 
     **View report** shows more information on the devices assigned to that specific device configuration policy, including:
 
@@ -92,7 +92,7 @@ After you create your device configuration policy, Intune provides reporting dat
 
 1. Go to **Devices** > **Configuration** > **Monitor** tab:
 
-    :::image type="content" source="./media/device-profile-monitor/device-configuration-monitor-tab.png" alt-text="Screenshot that shows the Settings Catalog when you select Windows and Authentication in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/device-profile-monitor/device-configuration-monitor-tab.png" alt-text="Screenshot that shows to select the monitor tab in device configuration profiles in Microsoft Intune and Intune admin center.":::
 
 2. In this area, you have access to the **Configuration policy assignment failures** report. This report helps troubleshoot errors and conflicts for configuration policies that are assigned.
 
