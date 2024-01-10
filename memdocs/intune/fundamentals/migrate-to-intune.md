@@ -114,7 +114,7 @@ After the migration evaluation process activates, you can't make changes to your
 
 ## Step 2 - Evaluate and migrate your existing policies
 
-After you’ve prepared your licenses and reviewed the information in [Step 1 - Prepare](#step-1---prepare), use the [Microsoft Intune admin center Migration evaluation](https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
+After you've prepared your licenses and reviewed the information in [Step 1 - Prepare](#step-1---prepare), use the [Microsoft Intune admin center Migration evaluation](https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/MifoPolicyListBlade) to get Intune policy recommendations.
 
 The tool can migrate your existing Basic Mobility and Security device security policies to Intune as [compliance policies](../protect/device-compliance-get-started.md) and [device configuration profiles](../configuration/device-profiles.md). It also makes recommendations for which groups the new policies should be assigned.
 
@@ -138,8 +138,8 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 
     :::image type="content" source="./media/migrate-to-intune/recommendations-page.png" alt-text="Screenshot of migration evaluation example in the Microsoft Intune admin center after migrating Microsoft 365 Basic Mobility and Security policies to Intune":::
 
-    - Not all device settings correspond exactly to Intune settings and values. So, they can’t be moved with precise one-to-one mapping. You need to review and possibly adjust these settings.
-    - The conditional access (CA) settings that control the Office 365 services are the same CA policies in Microsoft Entra ID. So, you don’t need to review or make changes to them unless you want to.
+    - Not all device settings correspond exactly to Intune settings and values. So, they can't be moved with precise one-to-one mapping. You need to review and possibly adjust these settings.
+    - The conditional access (CA) settings that control the Office 365 services are the same CA policies in Microsoft Entra ID. So, you don't need to review or make changes to them unless you want to.
 
 4. Select an item in the list. The **Compliance policy recommendation overview** page opens. Review the instructions.
 5. Select **Details** to review the recommended settings and group assignments:
@@ -163,9 +163,9 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
 6. If you want to implement the recommended policy, then select **Open policy**. The policy page opens and the Intune policy is created. You can change or update the migrated policies.
 
     > [!NOTE]
-    > If you delete the policy, the **Open policy** link from the recommendation page won’t work.
+    > If you delete the policy, the **Open policy** link from the recommendation page won't work.
 
-At this point, the policy is created, but it’s not doing anything yet. The next step is to assign the policy to the recommended groups or other groups you choose.
+At this point, the policy is created, but it's not doing anything yet. The next step is to assign the policy to the recommended groups or other groups you choose.
 
 ## Step 3 - Assign the policies and complete the migration
 
@@ -173,7 +173,7 @@ After the policies are created, they're ready to be assigned. For this migration
 
 1. **Assign the recommended groups** to the policy. Select **Open policy** > **Properties** > **Edit** (next to **Assignments**) > use the assignments workflow to assign the groups.
 
-    When you assign groups, your newly migrated Intune policies replace the device settings configured in Basic Mobility and Security. If you don’t assign the groups, then devices managed by Basic Mobility and Security could lose settings and email configuration when their users are licensed for Intune. Remember, the Intune license assignment is a key step in the migration of devices from Basic Mobility and Security to Intune device management.
+    When you assign groups, your newly migrated Intune policies replace the device settings configured in Basic Mobility and Security. If you don't assign the groups, then devices managed by Basic Mobility and Security could lose settings and email configuration when their users are licensed for Intune. Remember, the Intune license assignment is a key step in the migration of devices from Basic Mobility and Security to Intune device management.
 
     For more information on the impact of existing Intune licenses, go to [Before you begin](#before-you-begin) (in this article).
 
@@ -213,8 +213,8 @@ This section describes what happens behind the scenes when you migrate from Basi
 
   | Intune policy type | Intune location |
   | --- | --- |
-  | [Compliance policies](../protect/device-compliance-get-started.md)</br></br>Specify the device settings as access requirements. | [Microsoft Intune Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance policies** |
-  | [Configuration profiles](../configuration/device-profiles.md) </br></br> Specify other settings that aren’t part of the access requirements, including email profiles. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration profiles** |
+  | [Compliance policies](../protect/device-compliance-get-started.md)</br></br>Specify the device settings as access requirements. | [Microsoft Intune Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
+  | [Configuration profiles](../configuration/device-profiles.md) </br></br> Specify other settings that aren't part of the access requirements, including email profiles. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Configuration** |
   | [Conditional access policies]( ../protect/conditional-access.md)</br></br> Microsoft Entra Conditional Access blocks access if the settings aren't compliant. | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional access** > **Classic policies** |
 
 ## Known issues
