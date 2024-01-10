@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/11/2023
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,7 +39,7 @@ This article shows you how to view existing profiles for assignment status, maki
 ## View existing profiles
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles**.
+2. Select **Devices** > **Configuration**.
 
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
 
@@ -50,8 +50,8 @@ All of your profiles are shown. You also see the platform, the type of profile, 
 
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
 
-1. In **Devices** > **Configuration profiles**, select an existing profile.
-2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:
+1. In **Devices** > **Configuration**, select an existing profile.
+2. The following statuses are shown:
 
     - **Succeeded**: Policy is applied successfully.
     - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
@@ -104,16 +104,18 @@ After you create your device profile, Intune provides graphical charts. These ch
 
 ## View conflicts
 
-In **Devices** > **All devices**, you can see any settings that are causing a conflict. When there's a conflict, you also see all the configuration profiles that contain this setting. Administrators can use this feature to help troubleshoot, and fix any discrepancies with the profiles.
+In **Devices** > **All devices**, you can see any settings that are causing a conflict. When there's a conflict, you also see all the configuration profiles that contain this setting.
+
+Administrators can use this feature to help troubleshoot, and fix any discrepancies with the profiles.
 
 1. In Intune, select **Devices** > **All Devices** > select an existing device in the list. An end user can get the device name from their Company Portal app.
-2. Select **Device configuration**. All configuration policies that apply to the device are listed.
+2. Select **Configuration**. All configuration policies that apply to the device are listed.
 3. Select the policy. It shows you all the settings in that policy that apply to the device. If a device has a **Conflict** state, select that row. In the new window, you see all the profiles, and the profile names that have the setting causing the conflict.
 
 Now that you know the conflicting setting, and the policies that include that setting, it should be easier to resolve the conflict.
 
 > [!TIP]
-> In **Devices** > **Monitor**, a list of all policies are shown. The **Assignment failures (preview)** report helps troubleshoot errors and conflicts for configuration profiles that are assigned. For more information on the available reporting data, go to [Intune reports](../fundamentals/reports.md).
+> In **Devices** > **Monitor**, a list of all reports are shown. The **Configuration policy assignment failures** report helps troubleshoot errors and conflicts for configuration profiles that are assigned. For more information on the available reporting data, go to [Intune reports](../fundamentals/reports.md).
 
 ## Device Firmware Configuration Interface (DFCI) profile reporting
 

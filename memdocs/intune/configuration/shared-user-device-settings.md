@@ -53,11 +53,11 @@ When the profile is created in Intune, you deploy or assign the profile to devic
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
    - **Platform**: Select **Windows 10 and later**.
-   - **Profile**: Select **Templates** > **Shared multi-user device**.
+   - **Profile type**: Select **Templates** > **Shared multi-user device**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
