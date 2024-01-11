@@ -55,7 +55,7 @@ You can complete the guided scenario before there are any devices in the group. 
 ## Step 1 - Introduction
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a user with the Intune Service Administrator role.
-2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Windows 365 Boot** (under Windows 365 guides). If you want to use public preview features, select **Windows 365 Boot - Public Preview". 
+2. Select **Devices** > **Windows 365** (under **Provisioning**) > **Windows 365 Boot** (under Windows 365 guides). If you want to use public preview features, select **Windows 365 Boot - Public Preview**.
 3. On the **Introduction** page, select **Next: Basics**.
 
 ## Step 2 - Basics
