@@ -41,10 +41,6 @@ When a user turns on their physical device and signs in, Windows 365 Boot signs 
 
 Windows 365 Boot supports both dedicated and shared PC scenarios.
 
-## Dedicated PC scenario
-
-In this scenario, the physical device is assigned to a specific user for them to connect to their Cloud PC. This scenario is in [public preview](../public-preview.md).
-
 ## Shared PC scenario
 
 Multiple users can use the same physical device to sign in to their own personal Cloud PCs. When each user signs in to the physical device, their unique identity takes them to their assigned and secure Cloud PC. This flexibility makes Windows 365 Boot a good solution for workers such as nursing, salespeople, and call centers, who share company physical devices. Such workers might frequently switch between physical tasks and computer interaction. Windows 365 Boot lets them bypass the lengthy startup process and boot directly into their secure Cloud PC to pick up right where they left off.
@@ -56,6 +52,10 @@ Such workers can:
 3. The next shift worker can use the same physical device to sign in to their Cloud PC.
 
 Signing out of the Windows 365 Cloud PC brings the device back to the Windows 11 login screen, ready for the next user.
+
+## Dedicated PC scenario
+
+In this scenario, the physical device is assigned to a specific user for them to connect to their Cloud PC. This scenario is in [public preview](../public-preview.md).
 
 ## Access to the physical device
 

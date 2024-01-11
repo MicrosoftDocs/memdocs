@@ -30,7 +30,7 @@ ms.collection:
 - tier2
 ---
 
-# Guided scenario - deploy Windows 365 Boot to shared physical devices
+# Guided scenario - deploy Windows 365 Boot to physical devices
 
 By following this guided scenario, you can deploy [Windows 365 Boot](windows-365-boot-overview.md) to shared Windows 11 Pro physical devices. Windows 365 Boot lets physical device users sign in directly to their Cloud PCs, without signing in to their physical devices.
 
