@@ -30,7 +30,7 @@ An Enterprise App Catalog app (Win32) in Microsoft Intune is a Windows app that 
 > [!NOTE]
 > For more information about Win32 apps in Intune, see [Win32 app management overview](../apps/apps-win32-app-management.md).
 
-Enterprise App Management (EAM) encompasses the aspects of working with Win32 apps from the Enterprise App Catalog. The catalog offers a variety of Win32 apps that have been either integrated with the [Intune App SDK](../developer/app-sdk.md) or has been wrapped using the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md#intune-app-wrapping-tool). In addition, these apps have been [prepared as Win32 apps](../apps/apps-win32-prepare.md).
+Enterprise App Management (EAM) encompasses the aspects of working with Win32 apps from the Enterprise App Catalog. The catalog offers a variety of Win32 apps that have been wrapped using the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md#intune-app-wrapping-tool). In addition, these apps have been [prepared as Win32 apps](../apps/apps-win32-prepare.md).
 
 The benefits of using Enterprise App Management are the following:
 
