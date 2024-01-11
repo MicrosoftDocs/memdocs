@@ -60,7 +60,7 @@ When clients download cloud-managed content, they use Delivery Optimization from
   - Endpoint Protection: Windows Defender definition updates
     
 - Intune Win32 apps
-- For a complete list visit: [Types of download content supported by Delivery Optimization and Microsoft Connected Cache](https://learn.microsoft.com/en-us/windows/deployment/do/waas-delivery-optimization#types-of-download-content-supported-by-delivery-optimization)
+- For a complete list visit: [Types of download content supported by Delivery Optimization and Microsoft Connected Cache](/windows/deployment/do/waas-delivery-optimization#types-of-download-content-supported-by-delivery-optimization)
   
 > [!NOTE]
 > Connected Cache doesn't support content that Configuration Manager manages, like software updates with an integrated software update point.<!--10729675-->
