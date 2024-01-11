@@ -78,10 +78,10 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
    - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix.
 
-   - **Boot device mode** ([preview](../public-preview.md)): Select one of the following options:
+   - **Boot device mode**: Select one of the following options:
 
       - **Shared PC mode**: For physical devices shared by multiple users.
-      - **Dedicated mode**: For a physical device used by one specific user.
+      - **Dedicated mode** ([preview](../public-preview.md)): For a physical device used by one specific user.
 
 2. **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created are named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
 
@@ -103,7 +103,7 @@ Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopa
 2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
 3. (Optional) Select the **Security baseline profile** to use for Windows 365 Boot physical devices.
 4. (Optional) Select a value for the **Set the maximum connection timeout value** for Windows 365 Boot. The operating system waits for a connection until the selected timeout value has been reached. For more information, see [SetMaxConnectionTimeout policy CSP](/windows/client-management/mdm/policy-csp-clouddesktop#setmaxconnectiontimeout).
-5. (Optional) (This feature is in [public preview](../public-preview.md)) If you want to customize the branding shown at the top of the sign-in screen, provide any or all of the following information:
+5. (Optional) (This feature is in [public preview](../public-preview.md).) If you want to customize the branding shown at the top of the sign-in screen, provide any or all of the following information:
     - **Company name**
     - **Company logo URL**
     - **Lock screen image URL**

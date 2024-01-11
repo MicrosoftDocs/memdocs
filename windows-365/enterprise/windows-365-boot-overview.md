@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/26/2023
+ms.date: 01/11/2024
 ms.topic: overview
 ms.service: windows-365
 ms.subservice:
@@ -43,7 +43,7 @@ Windows 365 Boot supports both dedicated and shared PC scenarios.
 
 ## Dedicated PC scenario
 
-In this scenario, the physical device is assigned to a specific user for them to connect to their Cloud PC.
+In this scenario, the physical device is assigned to a specific user for them to connect to their Cloud PC. This scenario is in [public preview](../public-preview.md).
 
 ## Shared PC scenario
 
