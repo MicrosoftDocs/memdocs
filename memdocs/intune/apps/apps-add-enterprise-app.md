@@ -30,7 +30,17 @@ An Enterprise App Catalog app (Win32) in Microsoft Intune is a Windows app that 
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
+When you add an app to Intune, commonly you'll want to accept the default installation, requirements, and detection settings. These default settings have been confirmed by Microsoft. You must be careful if you modify the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
+
+> [!IMPORTANT]
+> Microsoft does not assert compliance or authorizations for non-Microsoft apps. Customers are responsible for ensuring that apps meet their requirements.
+
+Once you have added an EAM app to Intune, you can assign that app to end-users. Intune will silently add the app to your tenant.
+
 ## Add a Windows App Catalog app to Intune
+
+> [!IMPORTANT]
+> Only 64-bit apps are supported for the initial EAM release. 32-bit apps are planned to be supported in the future.
 
 The following steps help you add a Windows App Catalog app to Intune:
 
@@ -115,13 +125,7 @@ The **Program** step provides the following options:
 - **Install behavior**: If available, you can set the install behavior to either **System** or **User**. Select **System** to install this app for all users if supported. Select **User** to install this app for the logged-in user on the device. For dual-purpose MSI apps, changes will prevent updates and uninstalls from successfully completing until the value applied to the device at the time of the original install is restored.
 
     > [!IMPORTANT]
-    > You can configure a Windows catalog app (Win32) to be installed in **User** or **System** context. **User** context refers to only a particular user. **System** context refers to all users of a Windows 10 device.
-    > 
-    > When a device is enrolled by being Microsoft Entra registered, select **System**.
-    >
-    > Users are not required to be logged in on the device to install Windows catalog apps (Win32).
-    > 
-    > The Windows catalog app (Win32) installation and uninstallation will happen under admin privilege (by default) when the app is set to install in user context and the user on the device has admin privileges.
+    > On initial release, EAM only supports the **System** install behavior.
     
 - **Device restart behavior**: Select the device restart behavior after the app has successfully installed, based on the following options:
     - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration, a hard reboot return code will immediately trigger a restart of the device and a soft reboot return code will notify the user that a restart is required to finish the installation.
