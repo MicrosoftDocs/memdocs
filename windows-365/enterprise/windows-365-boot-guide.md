@@ -103,7 +103,7 @@ Windows 365 Boot supports [Windows Autopatch](/windows/deployment/windows-autopa
 2. (Optional) If you don't want to use the operating system's default language, select a specific **Language (region)** > **Next: Assignments**.
 3. (Optional) Select the **Security baseline profile** to use for Windows 365 Boot physical devices.
 4. (Optional) Select a value for the **Set the maximum connection timeout value** for Windows 365 Boot. The operating system waits for a connection until the selected timeout value has been reached. For more information, see [SetMaxConnectionTimeout policy CSP](/windows/client-management/mdm/policy-csp-clouddesktop#setmaxconnectiontimeout).
-5. (Optional) (This feature is in [public preview](../public-preview.md.)) If you want to customize the branding shown at the top of the sign-in screen, provide any or all of the following information:
+5. (Optional) (This feature is in [public preview](../public-preview.md).) If you want to customize the branding shown at the top of the sign-in screen, provide any or all of the following information:
     - **Company name**
     - **Company logo URL**
     - **Lock screen image URL**
