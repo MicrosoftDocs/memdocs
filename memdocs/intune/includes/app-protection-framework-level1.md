@@ -20,15 +20,18 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 |-----------------|--------------------------------------------------------|-----------------------|----------------------------------------|
 | Data   Transfer |             Back up org data to…  |             Allow  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Send org   data to other apps  |             All apps  |             iOS/iPadOS, Android        |
+| Data   Transfer |       Send org data to  |             All destinations  |             Windows       |
 | Data   Transfer |       Receive   data from other apps  |             All apps  |             iOS/iPadOS, Android        |
+| Data   Transfer |       Receive data from  |             All sources  |             Windows        |
 | Data   Transfer |       Restrict   cut, copy, and paste between apps  |             Any app  |             iOS/iPadOS, Android        |
+| Data   Transfer |       Allow cut, copy, and paste for  |  Any destination and any source  |             Windows        |
 | Data   Transfer |       Third-party keyboards  |             Allow  |             iOS/iPadOS        |
 | Data   Transfer |       Approved keyboards  |             Not required  |             Android        |
 | Data   Transfer |       Screen   capture and Google Assistant  |             Allow  |             Android        |
 | Encryption |             Encrypt org data  |             Require  |             iOS/iPadOS, Android        |
 | Encryption |       Encrypt   org data on enrolled devices  |             Require  |             Android        |
 | Functionality  |             Sync app with native contacts app  |             Allow  |             iOS/iPadOS, Android        |
-| Functionality  |       Printing   org data  |             Allow  |             iOS/iPadOS, Android        |
+| Functionality  |       Printing   org data  |             Allow  |             iOS/iPadOS, Android, Windows        |
 | Functionality  |       Restrict   web content transfer with other apps  |             Any app  |             iOS/iPadOS, Android        |
 | Functionality  |       Org data notifications  |             Allow  |             iOS/iPadOS, Android        |
 
@@ -63,3 +66,9 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end-user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
 | Device conditions  |       Require device lock  |        Low/Warn |         Android  |          This setting ensures that Android devices have a device password that meets the minimum password requirements.                |
 
+#### Health checks
+
+| Setting | Setting description |          Value / Action  |          Platform        | Notes |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| App conditions |       Offline grace period  |          720 / Block access (minutes)  |         Windows  |                  |
+| App conditions |       Offline grace period  |          90 / Wipe data (days)  |         Windows  |                  |
