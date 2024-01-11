@@ -55,7 +55,7 @@ Signing out of the Windows 365 Cloud PC brings the device back to the Windows 11
 
 ## Dedicated PC scenario
 
-In this scenario, the physical device is assigned to a specific user for them to connect to their Cloud PC. This scenario is in [public preview](../public-preview.md).
+In this scenario, the physical device is assigned to a specific user for them to connect to their Cloud PC. Windows 365 Boot dedicated mode supports Windows Hello. This scenario is in [public preview](../public-preview.md).
 
 ## Access to the physical device
 
