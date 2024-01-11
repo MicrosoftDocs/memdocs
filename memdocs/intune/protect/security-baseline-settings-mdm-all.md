@@ -979,7 +979,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Internet Explorer restricted zone protected mode**:  
   Baseline default: *Enable*  
-  [Learn more](h/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneturnonprotectedmode)
+  [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#restrictedsiteszoneturnonprotectedmode)
 
 - **Internet Explorer restricted zone popup blocker**:  
   Baseline default: *Enable*  
