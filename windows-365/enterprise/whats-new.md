@@ -100,11 +100,11 @@ To speed up the sign-in process, Windows 365 Boot now detects network or applica
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Windows 365 Switch
 
-#### Windows 365 Switch improved disconnecting<!--48064527-->
+#### Windows 365 Switch improved disconnecting (preview)<!--48064527-->
 
 Users can now seamlessly disconnect from their Cloud PC without leaving their local desktop. For more information, see [Windows 365 Switch](https://support.microsoft.com/en-us/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
 
-#### Windows 365 Switch desktop identifiers<!--48064527-->
+#### Windows 365 Switch desktop identifiers (preview)<!--48064527-->
 
 When switching between desktops using Task view, each desktop is identified as a Cloud PC or Local PC.
 
