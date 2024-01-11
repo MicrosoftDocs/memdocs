@@ -6,7 +6,6 @@ titlesuffix: Microsoft Intune
 description: Your Windows device's operating system version isn't yet supported.
 keywords:
 author: lenewsad
-
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
