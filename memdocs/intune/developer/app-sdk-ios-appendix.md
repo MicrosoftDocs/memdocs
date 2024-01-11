@@ -42,7 +42,7 @@ The guide contains some iOS best practices to integrate Intune SDK, common FAQs 
 Here are recommended best practices for developing for iOS:
 
 * The iOS file system is case-sensitive. Ensure that the case is correct for file names like `IntuneMAMResources.bundle`.
-* Registering custom URL schemes allows specific URLs to redirect into your app. iOS and iPadOS allow multiple apps to register the same custom URL scheme and the OS determines which application is invoked. Please refer to the Apple documentation [Defining a custom URL scheme for your app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for recommendations to help avoid custom URL scheme collisions and security guidelines for handling malformed URLs.
+* Registering custom URL schemes allows specific URLs to redirect into your app. iOS and iPadOS allow multiple apps to register the same custom URL scheme and the OS determines which application is invoked. Refer to the Apple documentation [Defining a custom URL scheme for your app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for recommendations to help avoid custom URL scheme collisions and security guidelines for handling malformed URLs.
 
 ## FAQs
 
@@ -58,7 +58,7 @@ No. In fact, only work or school accounts should be registered with the Intune A
 
 The application is responsible for enrolling users after they have been successfully authenticated. The application is also responsible for enrolling any existing accounts that might have been present before the application had MDM-less MAM functionality.
 
-To do this, the application should make use of the `registeredAccounts:` method. This method returns an NSDictionary that has all of the accounts registered into the Intune MAM service. If any existing accounts in the application are not in the list, the application should register and enroll those accounts via `registerAndEnrollAccount:`.
+To do this, the application should make use of the `registeredAccounts:` method. This method returns an NSDictionary that has all of the accounts registered into the Intune MAM service. If any existing accounts in the application aren't in the list, the application should register and enroll those accounts via `registerAndEnrollAccount:`.
 
 ### How often does the SDK retry enrollments?
 
@@ -77,15 +77,15 @@ Deregistering a user notifies the SDK that the user will no longer use the appli
 
 ### Should I set the doWipe flag to true in the deregister method?
 
-This method should be called before the user is signed out of the application.  If the user's data is deleted from the application as part of the sign-out, `doWipe` can be set to false. But if the application doesn't remove the user's data, `doWipe` should be set to true so that the SDK can delete the data.
+This method should be called before the user is signed out of the application.  If the user's data is deleted from the application as part of the sign out, `doWipe` can be set to false. But if the application doesn't remove the user's data, `doWipe` should be set to true so that the SDK can delete the data.
 
-### Are there any other ways that an application can be un-enrolled?
+### Are there any other ways that an application can be unenrolled?
 
 Yes, the IT admin can send a selective wipe command to the application. This will deregister and unenroll the user, and it will wipe the user's data. The SDK automatically handles this scenario and sends a notification via the unenroll delegate method.
 
 ### Is there a sample app that demonstrates how to integrate the SDK?
 
-Yes! Please see the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
+Yes! See the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App).
 
 ### How can I troubleshoot my app?
 
