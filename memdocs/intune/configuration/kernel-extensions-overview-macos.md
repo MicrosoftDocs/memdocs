@@ -44,6 +44,10 @@ This feature applies to:
 
 This article describes system extensions and kernel extensions. It also shows you how to create a device configuration policy using kernel extensions in Intune.
 
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+
 ## System extensions
 
 System extensions run in the user space, and don't access the kernel. Their goal is to increase security, provide more end user control, and limit kernel level attacks. These extensions can be:

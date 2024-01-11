@@ -35,7 +35,9 @@ ms.collection:
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi device configuration policy using a preshared key. To create the profile, use the **Custom device profiles** feature within Intune.
+Pre-shared keys (PSK) are typically used to authenticate users in WiFi networks, or wireless LANs. With Intune, you can create a WiFi device configuration policy using a preshared key.
+
+To create the profile, use the **Custom device profiles** feature within Intune.
 
 This feature applies to:
 
@@ -52,6 +54,10 @@ This article shows you how to create the policy in Intune, and includes an XML e
 >
 > - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
 > - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
+
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## Before you begin
 

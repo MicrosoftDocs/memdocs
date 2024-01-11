@@ -39,7 +39,7 @@ This feature applies to:
 
 Property list files, also called preference files, include information about your macOS apps. You define app properties or settings that you want to preconfigure. When the file is ready, you can use Intune to deploy the file to your devices and configure the app settings in your file.
 
-Property list files are typically used for web browsers, [Microsoft Defender for Endpoint](microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac), and custom apps.
+Property list files are typically used for web browsers, [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac), and custom apps.
 
 > [!TIP]
 > For Microsoft Edge version 77 and newer, you can use the settings catalog. You don't have to use a preference file. For more information, go to [Settings catalog](settings-catalog.md).
@@ -49,6 +49,10 @@ For more information on `plist` files, go to [About Information Property List Fi
 This article describes the different property list file settings you can add to macOS devices. As part of your mobile device management (MDM) solution, use these settings to add the app bundle ID (`com.company.application`), and add the app's `.plist` file.
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
+
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## What you need to know
 

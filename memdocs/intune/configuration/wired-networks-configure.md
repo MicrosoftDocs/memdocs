@@ -56,6 +56,10 @@ You have a wired network named **Contoso wired network**. You want to set up all
 
 This article lists the steps to create a wired network profile in Intune. It also includes links that describe the different settings.
 
+## Prerequisites
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+
 ## Create the profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
