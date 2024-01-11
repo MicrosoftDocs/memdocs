@@ -366,8 +366,12 @@ items:
                   href: ./apps/lob-apps-ios.md
                 - name: Windows LOB apps
                   href: ./apps/lob-apps-windows.md
-                - name: Enterprise App Catalog app (Win32)
-                  href: ./apps/apps-add-enterprise-app.md                
+                - name: Enterprise App Management
+                  items:
+                  - name: Enterprise App Management overview
+                    href: ./apps/apps-enterprise-app-management.md
+                  - name: Add a Enterprise App Catalog app (Win32)
+                    href: ./apps/apps-add-enterprise-app.md                
                 - name: Sideload Windows LOB apps
                   href: ./apps/app-sideload-windows.md
                 - name: macOS LOB apps
