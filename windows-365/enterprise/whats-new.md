@@ -39,6 +39,8 @@ Learn what new features are available in Windows 365 Enterprise.
 
 For information about Windows App and its features, see [What's new in Windows App](/windows-app/whats-new?tabs=windows).
 
+For more information about public preview items, see [Public preview in Windows 365](../public-preview.md).
+
 <!-- Common categories:  
 ### App management
 ### Device configuration
@@ -62,7 +64,7 @@ For information about Windows App and its features, see [What's new in Windows A
 
 #### New alert rule: Cloud PCs that aren't available (preview)<!--47321010-->
 
-A new alert rule is now available to notify you when Cloud PCs aren't available. For more information about alerts in general, see [Alerts in Windows 365](alerts.md).  For more information about the report, see [report-cloud-pcs-not-available.md](Cloud PCs that aren't available report). This feature is not yet available for Windows 365 Frontline.
+A new alert rule is now available to notify you when Cloud PCs aren't available. For more information about alerts in general, see [Alerts in Windows 365](alerts.md).  For more information about the report, see [Cloud PCs that aren't available report](report-cloud-pcs-not-available.md). This feature is not yet available for Windows 365 Frontline.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
