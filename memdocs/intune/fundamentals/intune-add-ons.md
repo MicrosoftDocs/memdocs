@@ -61,7 +61,7 @@ The following table provides a list of add-on capabilities and associated Intune
 |Microsoft Tunnel for Mobile Application Management| |✔️|✔️|
 |Remote help|✔️| |✔️|
 |Specialized devices management| |✔️|✔️|
-|Enterprise App Management | |✔️|✔️|
+|Enterprise App Management |✔️| |✔️|
 
 <!-- original sequence >
 |Remote help|✔️| |✔️|
