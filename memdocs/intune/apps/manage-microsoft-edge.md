@@ -159,7 +159,7 @@ The **Custom** layout is the default one for the new tab page. It shows top site
 
 An example of turning off the news feeds
 - com.microsoft.intune.mam.managedbrowser.NewTabPageLayout=**custom**
-- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom=**topsites|wallpaper**
+- com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.Custom=**topsites**
 - com.microsoft.intune.mam.managedbrowser.NewTabPageLayout.UserSelectable=**false**
 
 ### New Tab Page experiences
@@ -374,11 +374,11 @@ By default, Microsoft Edge for Android will block network access with invalid or
 
 #### iOS Website data store
 
-As there's only one persistent website data store in Edge for iOS, by default the website data store is always statically used only by personal account. Work or school account cannot use the website data store, which causes the browsing data expect cookies lost after each session ends. Organizations can make the website data store used by work or school account so the browsing data will be persisted for a better users experience.
+The website data store in Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there is only one persistent website data store in Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts cannot utilize it. Consequently, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
 
 |Key |Value |
 |:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always statically used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account first regardless of the sign-in order |
+|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store will be used by the first signed-in account <br>**2** (Default) The website data store will be used by work or school account regardless of the sign-in order |
 
 #### Microsoft Defender SmartScreen
 
@@ -628,8 +628,8 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderEnabled	| DefaultSearchProviderEnabled|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderName | DefaultSearchProviderName|
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
-
-
+|com.microsoft.intune.mam.managedbrowser.Chat | EdgeChat|
+|com.microsoft.intune.mam.managedbrowser.ChatPageContext	| ChatPageContext|
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
