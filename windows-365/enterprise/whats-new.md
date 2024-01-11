@@ -73,6 +73,45 @@ A new alert rule is now available to notify you when Cloud PCs aren't available.
 
 Windows 365 Enterprise and Windows 365 Frontline Cloud PC now support the Italy North and Poland Central regions. For more information, see [Supported Azure regions for Cloud PC provisioning](requirements.md?tabs=enterprise%2Cent#supported-azure-regions-for-cloud-pc-provisioning).
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Boot
+
+#### Manage local PC settings through Windows 365 Boot (preview)<!--48416631-->
+
+Users can now access and manage local PC settings more easily from their Windows 365 Boot Cloud PC. These include sound, display, and other device specific settings of their local PC. Settings can be found by going to Start > **Settings** in the Cloud PC.
+
+#### Windows 365 Boot sign-in page customization (preview)<!--48416441-->
+
+Windows 365 Boot now supports customizing the Cloud PC sign-in page with company logo branding for Cloud PCs in shared PC mode. For more information, see [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot device modes - shared and dedicated (preview)<!--48065006-->
+
+Windows 365 Boot now supports two modes of signing in to a Cloud PC from a physical device:
+
+- Shared PC mode: Multiple users can use the same physical device to sign in to their own Cloud PCs through the Windows 11 sign-in screen.
+- (New) Dedicated PC mode: The physical device is assigned to a specific user to sign in to their Cloud PC through the Windows 11 sign-in screen.
+
+For more information, see [What is Windows 365 Boot?](windows-365-boot-overview.md) and [Guided scenario - deploy Windows 365 Boot to shared physical devices](windows-365-boot-guide.md).
+
+#### Windows 365 Boot fail fast notifications (preview)<!--48416583-->
+
+To speed up the sign-in process, Windows 365 Boot now detects network or application setup issues and notifies the users about them immediately during the sign-in process.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Windows 365 Switch
+
+#### Windows 365 Switch improved disconnecting<!--48064527-->
+
+Users can now seamlessly disconnect from their Cloud PC without leaving their local desktop. For more information, see [Windows 365 Switch](https://support.microsoft.com/en-us/windows/windows-365-switch-4ea65cc3-05ff-4166-ac8b-389af27108f8).
+
+#### Windows 365 Switch desktop identifiers<!--48064527-->
+
+When switching between desktops using Task view, each desktop is identified as a Cloud PC or Local PC.
+
+#### Windows 365 Switch connection status (preview)<!--48064527-->
+
+When using Windows 365 Switch with Windows 365 Frontline Cloud PCs, users now see connection status and timeout information on the connection screen. In case of an error, users can copy the correlation ID to help with resolving the issue.
+
 <!-- ########################## -->
 ## Week of December 10, 2023
 

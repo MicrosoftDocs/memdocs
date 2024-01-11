@@ -78,10 +78,10 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
    - **Resource name prefix**: When you deploy this guided scenario, several resources are automatically created. To distinguish the items used in this deployment, add a prefix.
 
-   - **Boot device mode** ([preview](../public-preview.md)): Select one of the following options:
+   - **Boot device mode**: Select one of the following options:
 
       - **Shared PC mode**: For physical devices shared by multiple users.
-      - **Dedicated mode**: For a physical device used by one specific user.
+      - **Dedicated mode** ([preview](../public-preview.md)): For a physical device used by one specific user.
 
 2. **Enter a resource prefix name**: Enter some text to put at the beginning of the items created. For example, enter `Windows 365 Boot`. All resources created are named something like **Windows 365 Boot Azure Virtual Desktop (HostApp)**.
 
