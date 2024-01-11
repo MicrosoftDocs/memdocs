@@ -44,10 +44,6 @@ This feature applies to:
 
 This article describes system extensions and kernel extensions. It also shows you how to create a device configuration policy using kernel extensions in Intune.
 
-## Prerequisites
-
-- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
-
 ## System extensions
 
 System extensions run in the user space, and don't access the kernel. Their goal is to increase security, provide more end user control, and limit kernel level attacks. These extensions can be:
@@ -102,6 +98,8 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
     - [Prepare for changes to kernel extensions in macOS High Sierra](https://support.apple.com/en-us/HT208019) (opens Apple's web site)
 
   For more information on the enrollment options for macOS devices, go to [Enrollment guide: Enroll macOS devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-macos.md).
+
+- [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
 ## What you need to know
 

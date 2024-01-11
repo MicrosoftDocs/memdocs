@@ -12,6 +12,8 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-<!-- This include file is used in the Windows 10 reference settings lists in /configuration. -->
+<!-- This include file is used in the device configuration profile articles in /configuration. -->
 
-To create the policy, at a minimum, sign into the Intune admin center with an account that has the **Policy and Profile Manager** built-in role. For more information on the built-in roles, go to [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+To create the policy, at a minimum, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Policy and Profile Manager** built-in role.
+
+For more information on the built-in roles, go to [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
