@@ -52,11 +52,11 @@ After you assign the policy to your Android device or user groups, users should 
 ## Step 1: Create a VPN profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android device administrator**.
-    - **Profile**: Select **VPN**.
+    - **Profile type**: Select **VPN**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -76,11 +76,11 @@ After you assign the policy to your Android device or user groups, users should 
 ## Step 2: Create a custom configuration policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Android device administrator**.
-    - **Profile**: Select **Custom**.
+    - **Profile type**: Select **Custom**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
