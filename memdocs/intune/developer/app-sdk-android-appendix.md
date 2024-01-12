@@ -334,7 +334,7 @@ If you need to test your application under Robolectric, the recommended workarou
 <!-- Appendix links -->
 <!-- internal links -->
 [some method calls must also be replaced]:#wrapped-system-services
-[configure MSAL]: #configure-microsoft-authentication-library-msal
+[configure MSAL]: app-sdk-android-phase2.md#configure-microsoft-authentication-library-msal
 
 <!-- Other SDK Guide Markdown docs -->
 [build tooling]:app-sdk-android-phase3.md#build-tooling
