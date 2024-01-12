@@ -3,8 +3,8 @@ title: Boundaries and boundary groups
 titleSuffix: Configuration Manager
 description: Use boundaries and boundary groups to define network locations for clients and site systems in your environment.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: sheetg09
 ms.author: sheetg
