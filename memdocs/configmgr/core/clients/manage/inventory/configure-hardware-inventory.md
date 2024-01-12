@@ -3,8 +3,8 @@ title: Configure hardware inventory
 titleSuffix: Configuration Manager
 description: Set up hardware inventory for all clients or for a collection in Configuration Manager.
 ms.date: 02/22/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
