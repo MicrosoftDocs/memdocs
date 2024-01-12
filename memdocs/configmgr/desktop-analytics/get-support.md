@@ -3,8 +3,8 @@ title: Get support for Desktop Analytics
 titleSuffix: Configuration Manager
 description: Get online and telephone support for Desktop Analytics paid and trial subscriptions.
 ms.date: 11/10/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
