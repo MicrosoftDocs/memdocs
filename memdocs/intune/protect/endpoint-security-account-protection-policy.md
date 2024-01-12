@@ -37,8 +37,6 @@ Use Intune endpoint security policies for account protection to protect the iden
 
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View the list of [settings that are available in account protection profiles](../protect/endpoint-security-account-protection-profile-settings.md).
-
 ## Prerequisites for Account protection profiles
 
 - To support the *Account protection (preview)* profile, devices must run Windows 10 or Windows 11.
@@ -59,9 +57,12 @@ View the list of [settings that are available in account protection profiles](..
 
   To learn more, see [Identity and access management](/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
+  View [settings for the account protection profile](../protect/endpoint-security-account-protection-profile-settings.md).
+
 - **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
 
   For more information in using Intune to manage Windows LAPS, see:
+  
   - Learn about [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
   - [Manage LAPS policy](../protect/windows-laps-policy.md)
 
