@@ -3,8 +3,8 @@ description: "Learn how to retrieve the baseline info for the specified configur
 title: "IDCMSDK::GetBaselineInfo"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.service: configuration-manager
-ms.subservice: sdk
+ms.prod: configuration-manager
+ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: cfb7ce37-44b3-4cd1-b0f7-16b7c2823c09
 author: Banreet

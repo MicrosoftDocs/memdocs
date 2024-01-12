@@ -3,8 +3,8 @@ title: CCM_Policy_Policy Class
 titleSuffix: Configuration Manager
 description: A client Windows Management Instrumentation class that defines a policy object for a client policy.
 ms.date: 09/20/2016
-ms.service: configuration-manager
-ms.subservice: sdk
+ms.prod: configuration-manager
+ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ba718ec2-df70-426d-a6df-997a8e98483d
 author: Banreet

@@ -3,8 +3,8 @@ title: SMS_DmInvVersion Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, The SMS_DmInvVersion class is a client Windows Management Instrumentation class that represents the device management inventory version.
 ms.date: 09/20/2016
-ms.service: configuration-manager
-ms.subservice: sdk
+ms.prod: configuration-manager
+ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 08db3d36-8ac8-4904-9466-eb2933023269
 author: Banreet

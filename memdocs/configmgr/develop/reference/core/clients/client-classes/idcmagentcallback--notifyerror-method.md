@@ -3,8 +3,8 @@ description: "Learn how to notify the caller that a Desired Configuration Manage
 title: "IDCMAgentCallback::NotifyError"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.service: configuration-manager
-ms.subservice: sdk
+ms.prod: configuration-manager
+ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 09b91edb-2191-4722-85b9-f7f8df78f948
 author: Banreet

@@ -3,8 +3,8 @@ description: Learn how to define the global logging configuration for the client
 title: SetGlobalLoggingConfiguration Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.service: configuration-manager
-ms.subservice: sdk
+ms.prod: configuration-manager
+ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4
 author: Banreet
