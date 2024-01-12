@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # GetBusinessHours Method in Class CCM_ClientUXSettings
-The `GetBusinessHours` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the values for business hours.   
+The `GetBusinessHours` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the values for business hours.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

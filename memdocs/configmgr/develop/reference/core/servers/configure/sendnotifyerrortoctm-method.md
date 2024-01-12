@@ -50,7 +50,7 @@ HRESULT stdcall SendNotifyErrorToCTM(
 
  Qualifiers: [in]  
 
- The client-specific data which was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData.)  
+ The client-specific data that was passed into the call to **ICcmAlternateDownloadProvider::DownloadContent** (szNotifyData.)  
 
  `hrErrorCode`  
  Data type: HRESULT  
@@ -67,7 +67,7 @@ HRESULT stdcall SendNotifyErrorToCTM(
  An extended status message. Must not be NULL.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # CheckPackageShareForTaskSequenceDeployment Method in Class SMS_Package
-The `CheckPackageShareForTaskSequenceDeployment` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether the package share type meets the requirements of a task sequence deployment.  
+The `CheckPackageShareForTaskSequenceDeployment` Windows Management Instrumentation (WMI) class method in Configuration Manager that checks whether the package share type meets the requirements of a task sequence deployment.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -51,14 +51,14 @@ uint32 CheckPackageShareForTaskSequenceDeployment
 
  Qualifiers: [id("2"), out]  
 
- Identifiers of task sequence deployments that are invalid because this package is not valid for task sequence use.  
+ Identifiers of task sequence deployments that are invalid because this package isn't valid for task sequence use.  
 
  `InvalidTaskSequenceDeploymentNames`  
  Data type: `String Array`  
 
  Qualifiers: [id("3"), out]  
 
- Names of task sequence deployments that are invalid because this package is not valid for task sequence use.  
+ Names of task sequence deployments that are invalid because this package isn't valid for task sequence use.  
 
 ## Remarks  
 

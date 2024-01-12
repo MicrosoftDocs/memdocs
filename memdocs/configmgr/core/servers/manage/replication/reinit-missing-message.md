@@ -26,7 +26,7 @@ Use the following diagram to start troubleshooting a missing message with SQL Se
 
 This diagram uses the following queries:
 
-### Check if site replication hasn't finished reinit
+### Check if reinit isn't finished for site replication
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt
@@ -71,7 +71,7 @@ WHERE it.RequestTrackingGUID=@trackingGuid
 
 Then use the `InitializeData` method on the `SMS_ReplicationGroup` WMI class with the following values:
 
-- ReplicationGroupID: from the SQL query above
+- ReplicationGroupID: from the preceding SQL query
 - SiteCode1: parent site
 - SiteCode2: child site
 
