@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Deployment Technology Registration File
-To define a deployment technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. Used in the installation process, the registration file registers the custom deployment technology with Configuration Manager.  The deployment technology registration file is required for the installation of the custom deployment technology.
+To define a deployment technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. This registration file is Used in the installation process, and it registers the custom deployment technology with Configuration Manager.  The deployment technology registration file is required for the installation of the custom deployment technology.
 
 ### To define the deployment technology registration file  
 
