@@ -3,8 +3,8 @@ title: CCM_ClientUtilities Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the CCM_ClientUtilities WMI class is an SMS Provider server class that provides a set of client utility methods.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9a9535b1-843d-41f8-b082-ba872bd4588c
 author: Banreet

@@ -3,8 +3,8 @@ title: Connect to an SMS Provider by Using WMI
 titleSuffix: Configuration Manager
 description: Connect to the SMS Provider on a Configuration Manager site server by using the WMI SWbemLocator object or by using the Windows Script Host GetObject method.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 8f5ee4ee-11bf-4ff3-95c9-4ec046308902
 author: Banreet

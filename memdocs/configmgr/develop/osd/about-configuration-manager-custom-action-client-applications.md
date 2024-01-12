@@ -3,8 +3,8 @@ title: Custom action client applications
 titleSuffix: Configuration Manager
 description: About custom action client applications.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

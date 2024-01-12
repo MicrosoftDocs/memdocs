@@ -3,8 +3,8 @@ title: SaveToXml Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SaveToXml WMI class method serializes a task sequence from WMI objects to XML.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b6ee24cd-893b-4342-ae0e-36ef4640a98c
 author: Banreet

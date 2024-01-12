@@ -3,8 +3,8 @@ description: "Learn how to submit an event that is stored by Windows Management 
 title: "ICCMEvent::SubmitPending Method"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 870c9736-ce62-4396-821c-6eedd8c00d6f
 author: Banreet

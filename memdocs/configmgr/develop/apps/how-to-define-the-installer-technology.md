@@ -3,8 +3,8 @@ description: Learn how to define the installer technology used to install a spec
 title: How To Define the Installer Technology
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c47f7a79-62de-4afa-a901-a25789329f32
 author: Banreet

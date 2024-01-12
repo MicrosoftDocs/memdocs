@@ -2,8 +2,8 @@
 title: Configure Software Updates to Override Maintenance Windows
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 2b623f07-91ab-43cf-999c-7f868855eb3a
 author: Banreet

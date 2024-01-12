@@ -3,8 +3,8 @@ title: CancelDistribution Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that cancels a package distribution.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bfc44693-3266-461f-988a-886333ac9aaf
 author: Banreet
