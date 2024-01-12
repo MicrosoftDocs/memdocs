@@ -34,13 +34,13 @@ ms.collection:
 # Backup and restore scenarios for iOS/iPadOS  
 *Applies to iOS/iPadOS*  
 
-This article describes scenarios in which you would need to back up and restore Intune-managed devices, and includes best practices for how to maintain the device's enrollment status. The backup and restore scenarios are specific to iOS/iPadOS devices enrolled via Apple Automated Device Enrollment, and include:   
+This article describes the backup and restore scenarios for Intune-managed iOS/iPadOS devices, and includes best practices for how to maintain the device's enrollment status when, for example:  
 
 - A device is factory reset and needs to be restored from a previous backup. 
 - A user receives a new device and wants to migrate the data from the old device.
 - A device is migrating to Intune from another EMM vendor.  
 
-For information about how to back up, restore, and transfer data for an Apple device, see the following Apple Support documentation:  
+The backup and restore scenarios are specific to enrollments via Apple Automated Device Enrollment. For information about how to back up, restore, and transfer data for an Apple device, see the following Apple Support documentation:  
 
 - [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977).
 - [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
@@ -61,12 +61,13 @@ Restoring a backup is only possible during Apple Setup Assistant. This backup is
 > Linking an Apple ID in device settings post-setup isn't the same as restoring a backup. While linking the Apple ID does link files and documents, it doesn't typically restore any user data and preferences such as wallpaper, widgets, installed apps, and user preferences. Only a limited set of data, such as iCloud Photo Library and messages, can be restored.
 
 ### Restore options and workflow  
-- The restore process workflow is different, depending on whether you restore the backup on the original device, or a different device.
-    - Restore backup on different device than the one on which the backup was performed: After the backup is successfully restored, Setup Assistant continues with the enrollment process starting on the **Remote management** screen onward. The result is that you enroll in the MDM vendor and maintain the content that's restored from your iCloud account.  
+The workflow for the restore process is different depending on where you restore the backup. Your options are:      
+
+    - Restore backup on different device than the one on which the backup was performed: After the backup is successfully restored, Setup Assistant continues with the enrollment process starting on the **Remote management** screen. The result is that you enroll in the MDM vendor and maintain the content that's restored from your iCloud account.  
     - Restore backup on same device the backup was performed: After the backup is successfully restored, Setup Assistant ends and you land on the device's home screen. The result is that you don't go through the subsequent enrollment steps. Your device keeps the management state and management profile that you had at the time the backup was done. This result is typically the desired outcome, unless this process is being performed as part of a [migration to a different EMM vendor](#migrating-to-intune-from-another-emm-vendor).  
 
 ### Reset options  
-There are two ways to reset a managed iOS/iPadOS device for these scenarios. Each reset method has a different effect on the device's enrollment state post-restoration:      
+There are two ways to reset a managed iOS/iPadOS device. Each reset method has a different effect on the device's enrollment state post-restoration:      
 * If you perform a local reset of the device, the device enrolls after you restore the backup, and shouldn't require any intervention. This behavior is typically the desired outcome.  
 * If you perform a remote wipe in the Intune admin center, the device unenrolls from Intune before it's wiped. After you restore the backup, the device will need to be re-enrolled in the Company Portal app.
 
@@ -84,15 +85,16 @@ If the prior EMM vendor locked the management profile on the device, the device 
 * Alternatively, if you can't ensure that the device was unenrolled when the backup was created, consider hiding the Setup Assistant *restore* screen. The setting that lets you hide the screen can be found in the Microsoft Intune admin center in your iOS/iPadOS enrollment profile. For more information, see step 18 in [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).  
 
 ## Migrating to Intune from another EMM vendor  
-Typically the MDM enrollment state at the time of backup isn't of any special significance. However, in a migration scenario where you're moving from one MDM vendor to another, it's important to be aware of the device's MDM enrollment state.    
+Typically the MDM enrollment state at the time of backup isn't of any special significance. However, in a migration scenario where you're moving from one MDM vendor to another, it's important to be aware of the device's MDM enrollment state so that it doesn't carry over its old management profile. 
 
-### Specific to backup/restore
-The following steps illustrate a scenario in which Intune enrollment fails after the user restores a backup on their device:    
+### Example  
+
+The following steps outline the sequence of events that lead to enrollment failing:    
 1. User creates a backup while enrolled in MDM vendor A. 
 2. User restores backup on same device. The backup is restored successfully with no errors indicated.
 3. User attempts to manually enroll device via Intune Company Portal app. However, the backup restored the management profile from MDM vendor A, so the user's device can't enroll in Intune.
 
-Company Portal app notifies the user of this conflict by explaining that *the new MDM payload doesn't match the old payload*. To remediate this error, the device user must remove the existing management profile belonging to MDM vendor A, and then re-enroll into Intune using Company Portal. You can expect the same behavior and outcome when migrating from one Intune tenant to another Intune tenant.     - 
+Company Portal app notifies the user of this conflict by explaining that *the new MDM payload doesn't match the old payload*. To remediate this error, the device user must remove the management profile belonging to MDM vendor A, and then re-enroll into Intune using Company Portal. You can expect the same behavior and outcome when migrating from one Intune tenant to another Intune tenant.     - 
 
 ### Migrating without wiping the device
 
