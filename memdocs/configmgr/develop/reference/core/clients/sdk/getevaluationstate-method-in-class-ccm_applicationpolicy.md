@@ -54,7 +54,7 @@ uint32 GetEvaluationState
 
  Qualifiers: [id("2"), in]  
 
- `true` if this is a device targeted application.    
+ `true` if it's a device targeted application.    
 
  `PolicyEvalState`  
  Data type: `CCM_EvaluationState`  
