@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 01/31/2022
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -37,7 +37,7 @@ Use Intune endpoint security policies for account protection to protect the iden
 
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View [settings for account protection profiles](../protect/endpoint-security-account-protection-profile-settings.md).
+View the list of [settings that are available in account protection profiles](../protect/endpoint-security-account-protection-profile-settings.md).
 
 ## Prerequisites for Account protection profiles
 
@@ -59,13 +59,19 @@ View [settings for account protection profiles](../protect/endpoint-security-acc
 
   To learn more, see [Identity and access management](/windows/security/identity-protection/) in the Windows identity and access management documentation.
 
+- **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
+
+  For more information in using Intune to manage Windows LAPS, see:
+  - Learn about [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+  - [Manage LAPS policy](../protect/windows-laps-policy.md)
+
 - **Local user group membership (preview)** – Use this profile to add, remove, or replace members of the built-in local groups on Windows devices. For example, the Administrators local group has broad rights. You can use this policy to edit the Admin group's membership to lock it down to a set of exclusively defined members.
 
   Use of this profile is detailed in the following section, [Manage local groups on Windows devices](#manage-local-groups-on-windows-devices).
 
 ## Manage local groups on Windows devices
 
-Use the Local user group membership (preview) profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
+Use the *Local user group membership (preview)* profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
 
 > [!TIP]
 > To learn more about support for managing administrator privileges using Microsoft Entra groups, see [Manage administrator privileges using Microsoft Entra groups](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) in the Microsoft Entra documentation.
