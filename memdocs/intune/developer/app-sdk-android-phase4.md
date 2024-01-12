@@ -171,7 +171,7 @@ If one account is already enrolled for your application, when it registers anoth
 ### Implementing registration
 
 > [!CAUTION]
-> If your app does not integrate MSAL (strongly recommended), see [Default Enrollment] in the [Appendix] instead of continuing this section.
+> If your app doesn't integrate MSAL (strongly recommended), see [Default Enrollment] in the [Appendix] instead of continuing this section.
 
 Your app must make three code changes to successfully register an account:
 
@@ -304,7 +304,7 @@ If a token isn't provided, the callback may still be called at the next check-in
 
 - Support for sovereign clouds requires providing the authority.
 
-- If `MAMServiceAuthenticationCallbackExtended` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` does not need to be implemented, as the `MAMServiceAuthenticationCallbackExtended` interface provides a default implementation.
+- If `MAMServiceAuthenticationCallbackExtended` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` doesn't need to be implemented, as the `MAMServiceAuthenticationCallbackExtended` interface provides a default implementation.
 
 ### MAMEnrollmentManager and Registration
 
@@ -324,7 +324,7 @@ Result getRegisteredAccountStatus(String upn, String aadId);
 1. To register an account for management, the app should call `registerAccountForMAM()`.
 An account is identified by both its UPN and its Microsoft Entra user ID.
 The tenant ID is also required to associate enrollment data with the account's Microsoft Entra tenant.
-The account's authority may also be provided to allow enrollment against specific sovereign clouds; for more information see [Sovereign Cloud Registration](#sovereign-cloud-registration).
+The account's authority may also be provided to allow enrollment against specific sovereign clouds; for more information, see [Sovereign Cloud Registration](#sovereign-cloud-registration).
 The SDK may attempt to enroll the app for the given account in the MAM service; if enrollment fails, it will periodically retry enrollment until enrollment succeeds or the account is unregistered.
 The retry period will typically be 12-24 hours.
 The SDK provides the status of enrollment attempts asynchronously via notifications.
@@ -390,7 +390,7 @@ If the enrollment attempt fails, the account's status may change over time as th
 | `UNENROLLMENT_SUCCEEDED` | Unenrollment was successful.|
 | `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this won't occur as long as the app passes a valid (neither null nor empty) UPN. There's no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, report as a bug to the Intune MAM team.|
 | `PENDING` | The initial enrollment attempt for the account is in progress.  The app can block access to corporate data until the enrollment result is known, but isn't required to do so. |
-| `COMPANY_PORTAL_REQUIRED` | The account is licensed for Intune, but the app can't be enrolled until the Company Portal app is installed on the device. The Intune App SDK will attempt to block access to the app for the given account and direct them to install the Company Portal app. When sending this notification to the app, the Intune App SDK will show a non-blocking UI on top of the current Activity if the Activity is currently visible to the user or the next time `onResume` is called. If the user cancels out this non-blocking UI, the Intune App SDK will show a blocking UI the next time `onCreate` is called for an Activity and the current identity is managed (see below for details on troubleshooting). |
+| `COMPANY_PORTAL_REQUIRED` | The account is licensed for Intune, but the app can't be enrolled until the Company Portal app is installed on the device. The Intune App SDK will attempt to block access to the app for the given account and direct them to install the Company Portal app. When sending this notification to the app, the Intune App SDK will show a nonblocking UI on top of the current Activity if the Activity is currently visible to the user or the next time `onResume` is called. If the user cancels out this nonblocking UI, the Intune App SDK will show a blocking UI the next time `onCreate` is called for an Activity and the current identity is managed (see below for details on troubleshooting). |
 
 ## (Recommended) Logging
 
@@ -473,7 +473,7 @@ Execute the following test first to get familiar with the complete end user expe
 6. Log in to your application with your test account that is targeted with App Protection Policy.
 7. Confirm that you're prompted to install the Intune Company Portal from Google Play.
     - > [!NOTE]
-      > If your test device does not have the Google Play Store app, confirm you are prompted to install the Intune Company Portal from either another app store or a Microsoft website.
+      > If your test device doesn't have the Google Play Store app, confirm you are prompted to install the Intune Company Portal from either another app store or a Microsoft website.
 8. Install the Company Portal. You don't need to launch the Company Portal or log in to the Company Portal.
 9. Return to your app and log in again, if necessary.
 10. Confirm that you're prompted with a Get Access screen. This indicates that the SDK has successfully retrieved policy for this account.
@@ -711,7 +711,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [MAMEnrollmentManager.Result]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
 [MAMLogHandlerWrapper]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/log/MAMLogHandlerWrapper.html
 [MAMServiceAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html
-[MAMServiceAuthenticationCallbackExtended]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html
+`MAMServiceAuthenticationCallbackExtended`
 [MAMStrictViolationHandler]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictViolationHandler.html
 [MAMStrictCheck]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictCheck.html
 
