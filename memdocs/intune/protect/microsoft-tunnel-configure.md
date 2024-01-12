@@ -377,7 +377,7 @@ Use the following information to configure the custom settings in a VPN profile 
 
 By end of calendar year 2022, all personal data, including customer Content (CC), EUII, EUPI and Support Data must be stored and processed in the European Union (EU) for EU tenants.  
 
-The Microsoft Tunnel VPN feature in Defender for Endpoint is European Union Data Boundary (EUDB) compliant. However, the Defender for Endpoint threat protection components related to logging are not yet EUDB compliant. EUBD compliance will become available in a future release.
+The Microsoft Tunnel VPN feature in Defender for Endpoint is European Union Data Boundary (EUDB) compliant. However, while the Defender for Endpoint threat protection components related to logging are not yet EUDB compliant, Defender for Endpoint is part of the [Data Protection Addendum](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) (DPA) and is compliant with the General Data Protection Regulation (GDPR).
 
 In the meantime, Microsoft Tunnel customers with EU tenants can enable *TunnelOnly* mode in the Defender for Endpoint Client app. To configure this, use the following steps:
 
