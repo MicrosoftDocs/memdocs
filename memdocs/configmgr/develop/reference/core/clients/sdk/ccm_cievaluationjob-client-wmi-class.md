@@ -38,7 +38,7 @@ Class CCM_CIEvaluationJob :
 ```  
 
 ## Methods  
- The `CCM_CIEvaluationJob` class does not define any methods.  
+ The `CCM_CIEvaluationJob` class doesn't define any methods.  
 
 ## Properties  
  `CIAgentJobId`  
