@@ -47,8 +47,7 @@ The backup and restore scenarios are specific to enrollments via Apple Automated
 - [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad, or iPod touch](https://support.apple.com/HT210217)  
 
 > [!NOTE] 
-> Device-to-device migration, a data transfer option that appears on the Quick Start screen after resetting an iOS device, isn't supported on devices enrolled via Apple Business Manager. For more information about Quick Start, see [Use Quick Start to transfer data to a new iPhone or iPad](https://support.apple.com/HT210216).  
-> Quick Start occurs before a Wi-fi connection is established on the device and before the Apple Business Managed profile downloads. As a result, the Quick Start screen can't be hidden via Apple Business Manager.  
+> Device-to-device migration, a data transfer option that appears on the Quick Start screen after resetting an iOS device, isn't supported on devices enrolled via Apple Business Manager. For more information about Quick Start, see [Use Quick Start to transfer data to a new iPhone or iPad](https://support.apple.com/HT210216). Quick Start occurs before a Wi-fi connection is established on the device and before the Apple Business Managed profile downloads. As a result, the Quick Start screen can't be hidden via Apple Business Manager.  
 
 ## Back up Microsoft Authenticator      
 If you're using the Microsoft Authenticator app, it's also important to back up your credentials and accounts. For more information, see [Back up and recover account credentials in the Authenticator app](https://support.microsoft.com/account-billing/back-up-and-recover-account-credentials-in-the-authenticator-app-bb939936-7a8d-4e88-bc43-49bc1a700a40#:~:text=The%20Microsoft%20Entra%20Authenticator%20app,or%20having%20to%20recreate%20accounts.).  
@@ -63,8 +62,8 @@ Restoring a backup is only possible during Apple Setup Assistant. This backup is
 ### Restore options and workflow  
 The workflow for the restore process is different depending on where you restore the backup. Your options are:      
 
-    - Restore backup on different device than the one on which the backup was performed: After the backup is successfully restored, Setup Assistant continues with the enrollment process starting on the **Remote management** screen. The result is that you enroll in the MDM vendor and maintain the content that's restored from your iCloud account.  
-    - Restore backup on same device the backup was performed: After the backup is successfully restored, Setup Assistant ends and you land on the device's home screen. The result is that you don't go through the subsequent enrollment steps. Your device keeps the management state and management profile that you had at the time the backup was done. This result is typically the desired outcome, unless this process is being performed as part of a [migration to a different EMM vendor](#migrating-to-intune-from-another-emm-vendor).  
+* Restore backup on different device than the one on which the backup was performed: After the backup is successfully restored, Setup Assistant continues with the enrollment process starting on the **Remote management** screen. The result is that you enroll in the MDM vendor and maintain the content that's restored from your iCloud account.  
+* Restore backup on same device the backup was performed: After the backup is successfully restored, Setup Assistant ends and you land on the device's home screen. The result is that you don't go through the subsequent enrollment steps. Your device keeps the management state and management profile that you had at the time the backup was done. This result is typically the desired outcome, unless this process is being performed as part of a [migration to a different EMM vendor](#migrating-to-intune-from-another-emm-vendor).  
 
 ### Reset options  
 There are two ways to reset a managed iOS/iPadOS device. Each reset method has a different effect on the device's enrollment state post-restoration:      
