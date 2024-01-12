@@ -63,26 +63,28 @@ Restoring a backup is only possible during Apple Setup Assistant. This backup is
 ### Restore options and workflow  
 - The restore process workflow is different, depending on whether you restore the backup on the original device, or a different device.
     - Restore backup on different device than the one on which the backup was performed: After the backup is successfully restored, Setup Assistant continues with the enrollment process starting on the **Remote management** screen onward. The result is that you enroll in the MDM vendor and maintain the content that's restored from your iCloud account.  
-    - Restore backup on same device the backup was performed: After the backup is successfully restored, Setup Assistant ends and you land on the device's home screen. The result is that you don't go through the subsequent enrollment steps. You retain the management state and management profile that you had at the time the backup was done. This result is typically the desired outcome, unless this process is being performed as part of a [migration to a different EMM vendor](#migrating-to-intune-from-another-emm-vendor).  
+    - Restore backup on same device the backup was performed: After the backup is successfully restored, Setup Assistant ends and you land on the device's home screen. The result is that you don't go through the subsequent enrollment steps. Your device keeps the management state and management profile that you had at the time the backup was done. This result is typically the desired outcome, unless this process is being performed as part of a [migration to a different EMM vendor](#migrating-to-intune-from-another-emm-vendor).  
 
 ### Reset options  
 There are two ways to reset a managed iOS/iPadOS device for these scenarios. Each reset method has a different effect on the device's enrollment state post-restoration:      
-* If you perform a local reset of the device, then the device will remain enrolled after you restore the backup, and shouldn't require any intervention. This behavior is typically the desired outcome.  
-* If you perform a remote wipe in the Intune admin center, the device will unenroll from Intune before it's wiped. After you restore the backup, the device will need to be re-enrolled in the Company Portal app.
+* If you perform a local reset of the device, the device enrolls after you restore the backup, and shouldn't require any intervention. This behavior is typically the desired outcome.  
+* If you perform a remote wipe in the Intune admin center, the device unenrolls from Intune before it's wiped. After you restore the backup, the device will need to be re-enrolled in the Company Portal app.
 
 ### Timing of backup      
 Consider the amount of time that has elapsed since the backup was taken, and how the device would be impacted if restored to the last backup. Although this scenario might be less common, we recommend being aware of when the backup was created and considering questions like:  
 * Has the corresponding device record in Intune been deleted, either by accident or intentionally for retirement or clean-up?
 * Has the Microsoft Entra ID record been deleted?
-* Has the the management certificate been deleted? These certificates are valid for a year for iOS/iPadOS.
+* Has the management certificate been deleted? These certificates are valid for a year for iOS/iPadOS and need to be renewed annually.    
 * Is the management certificate being restored still valid? Was the management certificate renewed after the backup was done? These scenarios might be less common, but they are worth being aware of – especially if the backup being restored isn't recent.  
   
-To avoid conflicts and issues, ensure that users do not perform a backup whilst the device is enrolled. Doing so can impact the management profile and related certificates. If the prior EMM vendor locked the management profileon the device, the device user won't have an option to remove the management profile. To facilitate a migration in this scenario, you can:
+To avoid conflicts and issues, user's shouldn't create a backup while the device is enrolled in device management. Doing so can impact the management profile and related certificates. 
+
+If the prior EMM vendor locked the management profile on the device, the device user can't remove the management profile. To facilitate a migration in this scenario, you can: 
 * Retire the device from the prior EMM before the user backs up the device.  
-* Alternatively, if you cannot ensure that the device was unenrolled when the backup was created, consider hiding the Setup Assistant *restore* screen. The setting that lets you hide the screen can be found in the Microsoft Intune admin center in your iOS/iPadOS enrollment profile. For more information, see step 18 in [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).  
+* Alternatively, if you can't ensure that the device was unenrolled when the backup was created, consider hiding the Setup Assistant *restore* screen. The setting that lets you hide the screen can be found in the Microsoft Intune admin center in your iOS/iPadOS enrollment profile. For more information, see step 18 in [Create an Apple enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).  
 
 ## Migrating to Intune from another EMM vendor  
-Typically the MDM enrollment state at the time of backup isn't of any special significance. However, in a migration scenario where you are moving from one MDM vendor to another, it is important to be aware of the device's MDM enrollment state.    
+Typically the MDM enrollment state at the time of backup isn't of any special significance. However, in a migration scenario where you're moving from one MDM vendor to another, it's important to be aware of the device's MDM enrollment state.    
 
 ### Specific to backup/restore
 The following steps illustrate a scenario in which Intune enrollment fails after the user restores a backup on their device:    
@@ -94,17 +96,15 @@ Company Portal app notifies the user of this conflict by explaining that *the ne
 
 ### Migrating without wiping the device
 
-There is a way to migrate devices to another MDM vendor without wiping the device. If a migration is performed from one MDM vendor to another without a device wipe, via a tool such as EBF Onboarder for example, there should be no negative impact to the device, as it is never restored. Instead, this method unenrolls and offboards the device from the previous MDM vendor. Then it removes the management profile from the device.
-  
-After the management profile is removed, the device user can manually enroll the device into Intune via the Company Portal app. The user's iCloud account remains connected and no backup is restored, as Setup Assistance isn't involved in this scenario.  
+There is a way to migrate devices to another MDM vendor without wiping the device. If a migration is performed from one MDM vendor to another without a device wipe, via a tool such as EBF OnBoarder, there should be no negative impact to the device, as it's never restored. Instead, this route unenrolls and removes the device from the previous MDM vendor. Then it removes the management profile from the device. After the management profile is removed, the device user can manually enroll the device into Intune via the Company Portal app. The user's iCloud account remains connected and no backup is restored, as Setup Assistance isn't involved in this scenario.  
 
 Other details to consider when migrating a device without performing a device wipe:  
-* If the device was supervised under the current EMM vendor, it will remain supervised.  
-* The Apple Activation Lock bypass code is only generated when the device is erased, so Activation Lock cannot be managed on these devices once they migrate MDM vendors. 
+* If the device was supervised under the current EMM vendor, it remains supervised.  
+* The Apple Activation Lock bypass code is only generated when the device is erased, so Activation Lock can't be managed on these devices once they migrate MDM vendors. 
 * The new Intune management profile can't be *locked*, meaning the user must be able to remove the management profile via device settings.  
 * These devices enroll into Intune as personal devices, rather than corporate-owned devices. This identification enables Intune to gather more details about app inventory and device information such as phone number. For more information that you can share with end users about what's visible on enrolled devices, see [What can my organization see on my enrolled device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 * If you want to designate devices as corporate devices, you have two options:  
-    * [Add corporate device identifiers](add-corporate-identifiers.md). This option requires the least amount of effort and avoids scripting, provided you can obtain a list of serial numbers from your current EMM vendor. The list must be imported prior to enrolling the devices in Intune.  
+    * [Add corporate device identifiers](corporate-identifiers-add.md). This option requires the least amount of effort and avoids scripting, provided you can obtain a list of serial numbers from your current EMM vendor. The list must be imported prior to enrolling the devices in Intune.  
     * Use a script to modify the `OwnershipType` from *personal* to *corporate-owned*. For a sample script that uses an exported list (.csv) of device serial numbers as input, see [Set ownership](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).  
 
 > [!NOTE] 
