@@ -35,14 +35,14 @@ SInt32 RemoveMemberships(
 
  Qualifiers: [in]  
 
- The array of object ids.  
+ The array of object IDs.  
 
  `ObjectTypeIDs`  
  Data type: `UInt32` Array  
 
  Qualifiers: [in]  
 
- The array of corresponding object type id.  
+ The array of corresponding object type ID.  
 
  `CategoryIDs`  
  Data type: `String` Array  

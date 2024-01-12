@@ -17,21 +17,21 @@ ms.reviewer: mstewart,aaroncz
 # About Compliance Settings (DCM) Extensibility
 The content in this section provides information about extending the functionality of desired configuration management configuration items in Configuration Manager.  
 
- In application configuration items, it is possible to detect applications or settings by using a script.  
+ In application configuration items, it's possible to detect applications or settings by using a script.  
 
- If the script returns a non-zero exit code, the result will be a discovery failure.  
+ If the script returns a non-zero exit code, the result is a discovery failure.  
 
- If the script returns a zero exit code, the script output will be evaluated.  
+ If the script returns a zero exit code, the script output is evaluated.  
 
- It is the echoed output of a script that is detected and evaluated. For example:  
+ It's the echoed output of a script that is detected and evaluated. For example:  
 
 - No echoed output equals no instances detected.  
 
 - "n" lines of output equals "n" instances detected.  
 
-  In the case of application detection, two lines of output would indicate that two instances of the application are detected.  
+  In there's an application detection, two lines of output would indicate that two instances of the application are detected.  
 
-  In the case of settings detection, no lines of output would indicate that no instances of the setting are detected.  
+  If there's a settings detection, no lines of output would indicate that no instances of the setting are detected.  
 
   In all cases, the evaluation of the script output is determined by the rule.  
 

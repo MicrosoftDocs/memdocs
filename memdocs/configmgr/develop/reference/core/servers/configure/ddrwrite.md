@@ -31,7 +31,7 @@ HRESULT DDRWrite();
 ## Return Values  
  If the function succeeds, the return value is S_OK.  
 
- If the [DDRNew](../../../../../develop/reference/core/servers/configure/ddrnew.md) function has not been called or a file error occurs, the return value is S_FALSE.  
+ If the [DDRNew](../../../../../develop/reference/core/servers/configure/ddrnew.md) function hasn't been called or a file error occurs, the return value is S_FALSE.  
 
 ## Remarks  
  Calling `DDRWrite` completes the DDR and writes the record to a binary file. The DDR must be copied to the Data Discovery Manager (DDM) inbox on the site server at a later time (SMS\Inboxes\Auth\Ddm.box).  
