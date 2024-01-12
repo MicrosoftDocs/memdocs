@@ -42,8 +42,8 @@ This article describes the backup and restore scenarios for Intune-managed iOS/i
 
 The backup and restore scenarios are specific to enrollments via Apple Automated Device Enrollment. For information about how to back up, restore, and transfer data for an Apple device, see the following Apple Support documentation:  
 
-- [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977).
-- [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
+- [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977)  
+- [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184)  
 - [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad, or iPod touch](https://support.apple.com/HT210217)  
 
 > [!NOTE] 
@@ -66,7 +66,7 @@ The workflow for the restore process is different depending on where you restore
 > Linking an Apple ID in device settings post-setup isn't the same as restoring a backup. While linking the Apple ID does link files and documents, it doesn't typically restore any user data and preferences such as wallpaper, widgets, installed apps, and user preferences. Only a limited set of data, such as iCloud Photo Library and messages, can be restored.  
 
 ### Reset options  
-There are two ways to reset a managed iOS/iPadOS device. Each reset method has a different effect on the device's enrollment state post-restoration:      
+There are two ways you can reset a device. Each reset method has a different effect on the device's enrollment state post-restoration:      
 * If you perform a local reset of the device, the device enrolls after you restore the backup, and shouldn't require any intervention. This behavior is typically the desired outcome.  
 * If you perform a remote wipe in the Intune admin center, the device unenrolls from Intune before it's wiped. After you restore the backup, the device needs to be re-enrolled in the Company Portal app.  
 
@@ -105,7 +105,7 @@ Other details to consider when migrating a device without wiping it:
 ### Corporate identifiers  
 Devices enroll into Intune as personal devices, rather than corporate-owned devices. This condition has an impact on the device details, such as app inventory and phone number, gathered from the device. For more information that you can share with end users about what's visible on enrolled devices, see [What can my organization see on my enrolled device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
-If you want to designate devices as corporate devices, you have two options:  
+If you want to designate devices as corporate-owned devices, you have two options:  
 * [Add corporate device identifiers](corporate-identifiers-add.md). This option is the easier of the two and avoids scripting, provided you can obtain a list of serial numbers from your current EMM vendor. The list must be imported prior to enrolling the devices in Intune.
 * Use a script to modify the `OwnershipType` from *personal* to *corporate-owned*. For a sample script that uses an exported list (.csv) of device serial numbers as input, see [Set ownership](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Devices/SetOwnership).  
 
