@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # GetDeviceId Method in Class CCM_SoftwareCatalogUtilities
-The `GetDeviceId` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that returns the device (client) identifier.   
+The `GetDeviceId` Windows Management Instrumentation (WMI) class method in Configuration Manager that returns the device (client) identifier.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
