@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 11/17/2023
+ms.date: 01/12/2024
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -46,7 +46,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
     > [!NOTE]
     >
-    > Using the setting **Converting all targeted devices to Autopilot** doesn't automatically convert existing Microsoft Entra hybrid device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+    > Using the setting **Convert all targeted devices to Autopilot** doesn't automatically convert existing Microsoft Entra hybrid device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
 1. Select **Next**.
 
@@ -70,7 +70,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
       > [!IMPORTANT]
       >
-      > The default value for the Diagnostic Data setting is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data)
+      > The default value for the Diagnostic Data setting is set to Full during the out-of-box experience. For more information, see [Windows Diagnostics Data](/windows/privacy/windows-diagnostic-data).
 
     - **Hide change account options**: Choose **Hide** to prevent change account options from displaying on the company sign-in and domain error pages. This option requires [company branding to be configured in Microsoft Entra ID](/azure/active-directory/fundamentals/customize-branding).
 
@@ -83,7 +83,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
       > When setting **Allow pre-provisioned deployment** to **No**, it's still possible to press the Windows key five times during OOBE to invoke pre-provisioning and progress down that path. However, Intune enforces this setting and a pre-provisioning failure with error code 0x80180005 occurs.
 
     - **Language (Region)**: Choose the language to use for the device. This option is available in all Deployment modes.
-    
+
     - **Automatically configure keyboard**: If a **Language (Region)** is selected, choose **Yes** to skip the keyboard selection page. This option is available in all Deployment modes.
 
         > [!NOTE]
@@ -108,7 +108,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
    > [!NOTE]
    >
-   > When the assignment **All Devices** is used, exclusions aren't supported. Attempting to exclude groups while targeting to all devices may cause assignment problems and may require uploading device hashes again.
+   > When the assignment **All Devices** is used, exclusions aren't supported. Attempting to exclude groups while targeting to all devices might cause assignment problems and might require uploading device hashes again.
 
 1. Select **Next**.
 
@@ -118,9 +118,9 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 
 > [!NOTE]
 >
-> Intune will periodically check for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include AAD groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time will vary depending on all the factors and variables involved in a specific scenario.
+> Intune periodically checks for new devices in the assigned groups, and then begin the process of assigning profiles to those devices. Due to several different factors involved in the process of Autopilot profile assignment, an estimated time for the assignment can vary from scenario to scenario. These factors can include Microsoft Entra ID groups, membership rules, hash of a device, Intune and Autopilot service, and internet connection. The assignment time varies depending on all the factors and variables involved in a specific scenario.
 >
-> Before deploying a device, ensure that this process has completed. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) where you should see the profile status change from **Unassigned** to **Assigning** and finally to **Assigned**. Once the device is showing **Assigned**, open the properties of the device by selecting it, and then ensuring that **Date assigned** is populated. If **Date assigned** isn't yet populated, wait until it's populated before deploying the device.
+> Before deploying a device, ensure that this process is complete. You can check under **Devices** > **Windows** > **Windows enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) where you should see the profile status change from **Unassigned** to **Assigning** and finally to **Assigned**. Once the device is showing **Assigned**, open the properties of the device by selecting it, and then ensuring that **Date assigned** is populated. If **Date assigned** isn't yet populated, wait until it populates before deploying the device.
 
 ## Edit an Autopilot deployment profile
 
@@ -136,7 +136,7 @@ After the Autopilot deployment profile is created, you can edit certain parts of
 
     > [!NOTE]
     >
-    > Changes to the profile are applied to devices assigned to that profile. However, the updated profile won't be applied to a device that has already enrolled in Intune until after the device is reset and enrolled again.
+    > Changes to the profile are applied to devices assigned to that profile. However, the updated profile won't be applied to a device that is already enrolled in Intune until after the device is reset and enrolled again.
 
 If a device is registered in Autopilot and a profile isn't assigned, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
 
@@ -177,14 +177,13 @@ This report is in preview. Only new Intune enrollment events trigger device depl
 
 The following articles are tutorials on configuring and assigning a Windows Autopilot deployment profile for each of the Windows Autopilot scenarios via Intune:
 
-- [User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Autopilot profile](tutorial/user-driven/azure-ad-join-autopilot-profile.md)
-- [User-driven Microsoft Entra hybrid join: Create and assign user-driven Microsoft Entra hybrid join Autopilot profile](tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md)
-- [Pre-provision Microsoft join: Create and assign a pre-provisioned Microsoft Entra join Autopilot profile](tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md)
-- [Pre-provision Microsoft Entra hybrid join: Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile](tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md)
-- [Self-deploying mode: Create and assign self-deploying Autopilot profile](tutorial/self-deploying/self-deploying-autopilot-profile.md)
+- [User-driven Microsoft Entra join: Create and assign user-driven Microsoft Entra join Autopilot profile](tutorial/user-driven/azure-ad-join-autopilot-profile.md).
+- [User-driven Microsoft Entra hybrid join: Create and assign user-driven Microsoft Entra hybrid join Autopilot profile](tutorial/user-driven/hybrid-azure-ad-join-autopilot-profile.md).
+- [Pre-provision Microsoft join: Create and assign a pre-provisioned Microsoft Entra join Autopilot profile](tutorial/pre-provisioning/azure-ad-join-autopilot-profile.md).
+- [Pre-provision Microsoft Entra hybrid join: Create and assign a pre-provisioned Microsoft Entra hybrid join Autopilot profile](tutorial/pre-provisioning/hybrid-azure-ad-join-autopilot-profile.md).
+- [Self-deploying mode: Create and assign self-deploying Autopilot profile](tutorial/self-deploying/self-deploying-autopilot-profile.md).
 
 ## Related articles
 
-- [Profile download](troubleshooting.md#profile-download)
-- [Registering devices](add-devices.md)
-
+- [Profile download](troubleshooting.md#profile-download).
+- [Registering devices](add-devices.md).

@@ -8,7 +8,7 @@ author: frankroj
 ms.author: frankroj
 ms.reviewer: jubaptis
 manager: aaroncz
-ms.date: 09/13/2023
+ms.date: 01/12/2024
 ms.collection: 
   - M365-modern-desktop
   - highpri
@@ -38,7 +38,7 @@ Modern desktop deployment with Windows Autopilot helps you easily deploy the lat
 
 > [!TIP]
 >
-> Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Converting all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
+> Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned group(s) into a Microsoft Entra device. The setting only registers the devices in the assigned group(s) for the Autopilot service.
 
 ## Prerequisites
 
@@ -73,11 +73,11 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
 > [!NOTE]
 >
-> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. The Microsoft Graph PowerShell modules may require approval of additional permissions in Microsoft Entra ID when they're first used. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
+> The PowerShell code snippets in this section were updated in July of 2023 to use the Microsoft Graph PowerShell modules instead of the deprecated AzureAD Graph PowerShell modules. The Microsoft Graph PowerShell modules might require approval of additional permissions in Microsoft Entra ID when they're first used. It was also updated to force using an updated version of the WindowsAutoPilot module. For more information, see [AzureAD](/powershell/module/azuread/) and [Important: Azure AD Graph Retirement and PowerShell Module Deprecation](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270).
 
 1. On an internet-connected Windows PC or server, open an elevated Windows PowerShell command window.
 
-2. Enter the following commands to install and import the necessary modules:
+1. Enter the following commands to install and import the necessary modules:
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
@@ -92,7 +92,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
     Import-Module Microsoft.Graph.Identity.DirectoryManagement
     ```
 
-3. Enter the following commands and provide Intune administrative credentials:
+1. Enter the following commands and provide Intune administrative credentials:
 
     Make sure the user account you specify has sufficient administrative rights.
 
@@ -187,7 +187,7 @@ Specifies that the device should require Microsoft Entra join and MDM enrollment
 
 _(GUID, required)_
 
-A unique GUID (without braces) that's provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutopilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration.
+A unique GUID (without braces) provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutopilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration.
 
 #### CloudAssignedAadServerData
 
@@ -203,7 +203,7 @@ For example:
 
 _(String, optional)_
 
-The name that's automatically assigned to the computer. This name follows the naming pattern convention configured in the Intune Autopilot profile. You can also specify an explicit name to use.
+The name automatically assigned to the computer. This name follows the naming pattern convention configured in the Intune Autopilot profile. You can also specify an explicit name to use.
 
 ## Create the JSON file
 
@@ -221,7 +221,7 @@ $AutopilotProfile | ForEach-Object {
 
 > [!TIP]
 >
-> If you use the PowerShell cmdlet **Out-File** to redirect the JSON output to a file, it uses Unicode encoding by default. This cmdlet may also truncate long lines. Use the **Set-Content** cmdlet with the `-Encoding ASCII` parameter to set the proper text encoding.
+> If you use the PowerShell cmdlet **Out-File** to redirect the JSON output to a file, it uses Unicode encoding by default. This cmdlet might also truncate long lines. Use the **Set-Content** cmdlet with the `-Encoding ASCII` parameter to set the proper text encoding.
 
 > [!IMPORTANT]
 >
@@ -237,7 +237,7 @@ After you save the file, move it to a location for a Microsoft Configuration Man
 >
 > The configuration file can only contain one profile. You can use multiple JSON profile files, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.
 >
-> If you save the file with Unicode or UTF-8 encoding, or save it with a different file name, the Windows OOBE won't follow the Autopilot experience.
+> If you save the file with Unicode or UTF-8 encoding, or save it with a different file name, the Windows OOBE doesn't follow the Autopilot experience.
 
 ## Create a package containing the JSON file
 
@@ -332,13 +332,9 @@ For more information, see [How to create collections in Configuration Manager](/
     >
     > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
     >
-    > Sysprep runs with the `/Generalize` parameter, which on Windows 10 version 1909 deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
+    > Sysprep runs with the `/Generalize` parameter, which on currently supported version of Windows deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues: Windows Autopilot for existing devices doesn't work for Windows 10, version 1903 or 1909](known-issues.md#windows-autopilot-for-existing-devices-doesnt-work-for-windows-10-version-1903-or-1909).
 
 1. On the **Install Configuration manager** page, add any necessary installation properties for your environment.
-
-    > [!TIP]
-    >
-    > The task sequence only needs this information if the Configuration Manager client components are needed during the task sequence before Sysprep runs. For example, to install software updates or applications. If you're not doing these actions, the client isn't needed. It's uninstalled before the task sequence runs Sysprep.
 
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
@@ -426,7 +422,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
 1. On the target Windows device, go to the **Start** menu, type `Software Center`, and open it.
 
-2. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**. For example:
+1. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**. For example:
 
     :::image type="content" source="images/sc.png" alt-text="Autopilot for existing devices task sequence in Software Center.":::
 
@@ -434,14 +430,17 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
 The task sequence runs and does the following actions:
 
-1. Download content
-1. Restart the device
-1. Format the drive
-1. Install Windows from the specified OS image
+1. Downloads content.
+
+1. Restarts the device into WinPE.
+
+1. Formats the drive.
+
+1. Installs Windows from the specified OS image.
 
     :::image type="content" source="images/up-1.PNG" alt-text="Task sequence installation progress applying image.":::
 
-1. Prepare for Autopilot
+1. Prepares for Autopilot.
 
     :::image type="content" source="images/up-2.PNG" alt-text="Task sequence installation progress running sysprep.":::
 
@@ -451,7 +450,7 @@ The task sequence runs and does the following actions:
 
 > [!NOTE]
 >
-> If you need to join devices to Active Directory for Microsoft Entra hybrid join scenario, create a **Domain Join** device configuration profile. Target the profile to **All Devices**, since there's no Microsoft Entra device object for the computer to do group-based targeting. For more information, see [User-driven mode for Microsoft Entra hybrid join](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+> If you need to join devices to Active Directory for Microsoft Entra hybrid join scenario, don't do so through the task sequence and the **Apply Network Settings** Task. Instead, create a **Domain Join** device configuration profile. Since there's no Microsoft Entra device object for the computer to do group-based targeting, target the profile to **All Devices**. For more information, see [User-driven mode for Microsoft Entra hybrid join](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
 
 ## Register the device for Windows Autopilot
 
@@ -463,7 +462,7 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 ## How to speed up the deployment process
 
-To remove around 20 minutes from the deployment process, see Michael Niehaus's blog with instructions for [Speeding up Windows Autopilot for existing devices](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices).
+To speed up the the deployment process, see [Windows Autopilot deployment for existing devices: Speed up the deployment process](tutorial/existing-devices/speed-up-deployment.md) section of the [Autopilot Tutorial](tutorial/autopilot-scenarios.md).
 
 ## Tutorial
 
@@ -473,4 +472,4 @@ For a detailed tutorial on configuring Windows Autopilot for existing devices, s
 
 ## Related articles
 
-- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/new-windows-autopilot-capabilities-and-expanded-partner-support/ba-p/260430)
+- [New Windows Autopilot capabilities and expanded partner support simplify modern device deployment](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/new-windows-autopilot-capabilities-and-expanded-partner-support/ba-p/260430).
