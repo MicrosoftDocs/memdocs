@@ -3,8 +3,8 @@ description: "Learn how to run a synchronous discovery operation for the provide
 title: "IAppManagementHandler::DiscoverApp"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.service: configuration-manager
+ms.subservice: sdk
 ms.topic: reference
 ms.assetid: 818e9387-2599-405e-913a-642e96c97fd2
 author: Banreet

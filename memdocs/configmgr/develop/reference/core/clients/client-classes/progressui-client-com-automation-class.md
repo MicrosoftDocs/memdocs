@@ -3,8 +3,8 @@ description: Learn how the ProgressUI is a COM automation class in Configuration
 title: ProgressUI Client COM Automation Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.service: configuration-manager
+ms.subservice: sdk
 ms.topic: reference
 ms.assetid: f60558cd-a2c9-401d-bca0-191cdf117bbe
 author: Banreet

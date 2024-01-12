@@ -3,8 +3,8 @@ title: "IAppManagementHandler::GetPendingComponentList"
 titleSuffix: Configuration Manager
 description: "The IAppManagementHandler::GetPendingComponentList method gets the pending component list for a specified deployment type."
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.service: configuration-manager
+ms.subservice: sdk
 ms.topic: reference
 ms.assetid: d769f0da-1b46-4a3b-9dc7-f14d7a489020
 author: Banreet

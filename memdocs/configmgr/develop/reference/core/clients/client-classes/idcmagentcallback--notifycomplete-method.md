@@ -3,8 +3,8 @@ title: "IDCMAgentCallback::NotifyComplete"
 titleSuffix: Configuration Manager
 description: The IDCMAgentCallback::NotifyComplete method, in Configuration Manager, notifies the caller that a Desired Configuration Management Agent job has completed.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.service: configuration-manager
+ms.subservice: sdk
 ms.topic: reference
 ms.assetid: 58e63e77-47ba-4d62-a032-9b77023e281d
 author: Banreet

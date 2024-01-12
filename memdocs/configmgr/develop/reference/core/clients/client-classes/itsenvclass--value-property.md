@@ -3,8 +3,8 @@ title: "ITSEnvClass::Value Property"
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the Value property contains the value of an operating system deployment task sequence environment variable.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.service: configuration-manager
+ms.subservice: sdk
 ms.topic: reference
 ms.assetid: af3dd230-5c84-485b-8335-9417ba863215
 author: Banreet
