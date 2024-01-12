@@ -34,7 +34,7 @@ SInt32 Refresh( );
  For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
 
 ## Remarks  
- This method is used in the rare case when a new component is added by Configuration Manager site setup and the SMS Provider is located on a remote SQL Server computer that might not be restarted. Generally it is not necessary for your application to call this method because the SMS Provider copy of the install map will be up to date.  
+ This method is used in the rare case when a new component is added by Configuration Manager site setup and the SMS Provider is located on a remote SQL Server computer that might not be restarted. Generally it isn't necessary for your application to call this method because the SMS Provider copy of the install map will be up to date.  
 
 ## Requirements  
 
