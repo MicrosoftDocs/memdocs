@@ -3,8 +3,8 @@ title: Technical Preview 1708
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview version 1708 for Configuration Manager.
 ms.date: 08/25/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
