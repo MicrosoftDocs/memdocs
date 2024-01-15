@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # VerifySignature Method in Class CCM_SoftwareCatalogUtilities
-The `VerifySignature` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that verifies the data signature.   
+The `VerifySignature` Windows Management Instrumentation (WMI) class method in Configuration Manager that verifies the data signature.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -1,5 +1,5 @@
 ---
-description: Learn how how to use the AddMemberships Windows Management Instrumentation (WMI) class method, in Configuration Manager, for a batch operation to assign objects to security categories.
+description: Learn how to use the AddMemberships Windows Management Instrumentation (WMI) class method, in Configuration Manager, for a batch operation to assign objects to security categories.
 title: AddMemberships Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
@@ -42,14 +42,14 @@ SInt32 AddMemberships(
 
  Qualifiers: [in]  
 
- Array of object type ids.  
+ Array of object type IDs.  
 
  `CategoryIDs`  
  Data type: `String` Array  
 
  Qualifiers: [in]  
 
- The security category IDs which the objects will be assigned to.  
+ The security category IDs that the objects will be assigned to.  
 
 ## Return Values  
  An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

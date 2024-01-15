@@ -31,7 +31,7 @@ Class SMS_BootImagePackage_DriverRef : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_BootImagePackage_DriverRef` class does not define any methods.  
+ The `SMS_BootImagePackage_DriverRef` class doesn't define any methods.  
 
 ## Properties  
  `CI_ID`  
@@ -61,7 +61,7 @@ Class SMS_BootImagePackage_DriverRef : SMS_BaseClass
 
  Location of the driver content. The default value is "".  
 
- The value of this property is typically the same as the `ContentSourcePath` property for the associated [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object. However, the value can be different if the original content location is not available.  
+ The value of this property is typically the same as the `ContentSourcePath` property for the associated [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object. However, the value can be different if the original content location isn't available.  
 
 ## Remarks  
  Class qualifiers for this class include:  

@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # GetPendingComponentList Method in Class CCM_Application
-The `GetPendingComponentList` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the pending component list for an application.   
+The `GetPendingComponentList` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets the pending component list for an application.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

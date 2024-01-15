@@ -43,7 +43,7 @@ Class CCM_SoftwareBase :
 ```  
 
 ## Methods  
- The `CCM_SoftwareBase` class does not define any methods.  
+ The `CCM_SoftwareBase` class doesn't define any methods.  
 
 ## Properties  
  `ContentSize`  
@@ -104,7 +104,7 @@ Class CCM_SoftwareBase :
 |-|-|-|  
 |0|Unknown|No state information is available.|  
 |1|Enforced|Application is enforced to desired/resolved state.|  
-|2|NotRequired|Application is not required on the client.|  
+|2|NotRequired|Application isn't required on the client.|  
 |3|ApplicationForEnforcement|Application is available for enforcement (install or uninstall based on resolved state). Content may or may not have been downloaded.|  
 |4|EnforcementFailed|Application last failed to enforce (install/uninstall).|  
 |5|Evaluating|Application is currently waiting for content download to complete. |  
@@ -120,8 +120,8 @@ Class CCM_SoftwareBase :
 |15|PendingUpdate|Update is available but pending installation.|  
 |16|EvaluationFailed|Application failed to evaluate.|  
 |17|WaitingUserReconnect|Application is currently waiting for an active user session to enforce.|  
-|18|WaitingforUserLogoff|Application is currently waiting for all users to logoff.|  
-|19|WaitingforUserLogon|Application is currently waiting for a user logon.|  
+|18|WaitingforUserLogoff|Application is currently waiting for all users to sign out.|  
+|19|WaitingforUserLogon|Application is currently waiting for a user sign in.|  
 |20|InProgressWaitingRetry|Application is in progress awaiting retry.|  
 |21|WaitingforPresModeOff|Application  is waiting for presentation mode to be switched off.|  
 |22|AdvanceDownloadingContent|Application is pre-downloading content (downloading outside of the install job).|  
