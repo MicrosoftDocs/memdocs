@@ -144,7 +144,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 
 2. Select **Configure thresholds**.
 
-3. On the *Configure thresholds* page, set new thresholds for each health check category that you want to customize.
+3. On the *Configured thresholds* page, set new thresholds for each health check category that you want to customize.
    - Threshold values apply to all servers at all sites.
    - Select **Revert to default** to restore *all* thresholds back to their default values.
 
@@ -213,7 +213,7 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
   Telemetry logs have the following format, with the values for *bytes_in*, *bytes_out*, and *duration* being used only for disconnect operations: `<operation><client_ip><server_ip><gateway_ip><assigned_ip><user_id><device_id><user_agent><bytes_in><bytes_out><duration>` For example:  
 
-  - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c,5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
+  - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c, 5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
 
   > [!IMPORTANT]
   > In **OCSERV_TELEMETRY**, the *deviceId* value identifies the unique installation instance of Microsoft Defender that runs on a device, and does not identify either the Intune device ID or Microsoft Entra device ID. If Defender is uninstalled and then reinstalled on a device, a new instance for the *DeviceId** is generated.
@@ -234,7 +234,7 @@ For more information about *journalctl*, see the documentation for the version o
 
 ## Easy upload of diagnostic logs for Tunnel servers
 
-As a diagnostic aid, you can use a single click within the Intune admin center to have Intune enable, collect, and submit verbose logs for a Tunnel Gateway Server directly to Microsoft. These verbose logs are then available directly to Microsoft when you’re working with Microsoft to identify or resolve issues with a Tunnel server.
+As a diagnostic aid, you can use a single click within the Intune admin center to have Intune enable, collect, and submit verbose logs from a Tunnel Gateway Server directly to Microsoft. These verbose logs are then available directly to Microsoft when you’re working with Microsoft to identify or resolve issues with a Tunnel server.
 
 You can collect and upload verbose logs from an event before opening a support incident, or upon request should you already be working with Microsoft to examine a Tunnel servers operation.
 
@@ -246,10 +246,10 @@ You can collect and upload verbose logs from an event before opening a support i
 
 When you select *Send logs* for a Tunnel server, the following process begins:
 
-- First, Intune captures the current set of Tunnel server logs, and uploads them directly to Microsoft. These logs are collected using the servers current log verbosity level. By default, the verbosity level is zero (0).
-- Next, Intune enables the greatest verbosity level available for the Tunnel server logs, which is level four (4). This verbosity level of detail is collected for eight hours.
+- First, Intune captures the current set of Tunnel server logs, and uploads them directly to Microsoft. These logs are collected using the servers current log verbosity level. By default, the server verbosity level is zero (0).
+- Next, Intune enables a verbosity level of four (4) for the Tunnel server logs. This verbosity level of detail is collected for eight hours.
 - During the eight hours of verbose log collection, the issue or operation being investigated should be reproduced to capture the verbose details in the logs.
-- After eight hours, Intune collects a second set of the server logs that include the verbose details, and uploads them to Microsoft. At the time of upload, Intune also resets the Tunnel server logs to use the default verbosity level of zero (0) for continued operation.
+- After eight hours, Intune collects a second set of the server logs that include the verbose details, and uploads them to Microsoft. At the time of upload, Intune also resets the Tunnel server logs to use the default verbosity level of zero (0). If you previously raised the verbosity level of the Server, after Intune resets the verbosity to zero you can then restore your custom verbosity level.
 
 Each set of logs that Intune collects and uploads is identified as a separate set with the following details appearing in the admin center below the *Send logs* button:
 
@@ -260,7 +260,7 @@ Each set of logs that Intune collects and uploads is identified as a separate se
 
 :::image type="content" source="./media/microsoft-tunnel-monitor/send-server-logs-tab.png" alt-text="Screen capture that shows the Send verbose server logs interface.":::
 
-After an issue is reproduced successfully during active capture of verbose logs, you can provide the *Incident id* of relevant log sets to Microsoft to help with investigation of the server operations.
+After capturing an issue while running verbose log collection, you can provide the *Incident id* of that log set to Microsoft to help with investigation.
 
 ### About log collection
 
