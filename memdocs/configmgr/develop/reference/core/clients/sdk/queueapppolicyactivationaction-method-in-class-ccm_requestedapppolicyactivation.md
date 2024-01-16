@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # QueueAppPolicyActivationAction Method in Class CCM_RequestedAppPolicyActivation
-The `QueueAppPolicyActivationAction` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that queues an application policy activation action.   
+The `QueueAppPolicyActivationAction` Windows Management Instrumentation (WMI) class method in Configuration Manager that queues an application policy activation action.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

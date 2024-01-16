@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # EvaluateAllPolicies Method in Class CCM_ApplicationPolicy
-The `EvaluateAllPolicies` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that evaluated all policies.   
+The `EvaluateAllPolicies` Windows Management Instrumentation (WMI) class method in Configuration Manager that evaluated all policies.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -36,7 +36,7 @@ uint32 EvaluateAllPolicies
 
  Qualifiers: [id("0"), in]  
 
- `True` if the action will be enforced.    
+ `True` if the action is enforced.    
 
  `JobIdUser`  
  Data type: `String`  

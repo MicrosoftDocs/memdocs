@@ -189,6 +189,8 @@ The Gradle plugin has a dependency on [Javassist], which must be made available 
 > [!NOTE]
 > Javassist versions may not be backwards compatible.
 > Generally, you should use the exact version expected by the Intune App SDK:
+>
+> - Intune App SDK ≥ 10.0.0 requires Javassist 3.29.2-GA
 > - Intune App SDK ≥ 7.0.0 requires Javassist 3.27.0-GA
 > - Intune App SDK < 7.0.0 requires Javassist 3.22.0-GA
 

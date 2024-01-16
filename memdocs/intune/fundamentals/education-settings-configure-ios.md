@@ -85,16 +85,20 @@ You can import information into SDS by using one of the following methods:
 ### Configure general settings
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. On the **Intune** pane, choose **Device configuration**.
-2. On the **Device configuration** pane under the **Manage** section, choose **Profiles**.
-5. On the profiles pane, choose **Create profile**.
-6. On the **Create profile** pane, enter a **Name** and **Description** for the iOS/iPadOS education profile.
-7. From the **Platform** drop-down list, choose **iOS**.
-8. From the **Profile type** drop-down list, choose **Education**.
-9. Choose **Settings** > **Configure**.
+2. Go to **Devices** > **Configuration** > **Create**.
+3. Enter the following properties:
 
+    - **Platform:** Select **iOS/iPadOS**.
+    - **Profile type**: Select **Templates** > **Secure assessment (Education)**.
 
-In the next section, you'll create certificates to establish a trust relationship between teacher and student iPads. Certificates are used to seamlessly and silently authenticate connections between devices without having to enter user names and passwords.
+    Select **Create**.
+
+4. In **Basics**, enter the following properties:
+
+    - **Name**: Enter a descriptive name for the profile. For example, enter **iOS/iPadOS education profile**.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+
+5. In **Configuration settings**, you'll create certificates to establish a trust relationship between teacher and student iPads. Certificates are used to seamlessly and silently authenticate connections between devices without having to enter user names and passwords.
 
 >[!IMPORTANT]
 >The teacher and student certificates you use must be issued by different certification authorities (CAs). You must create two new subordinate CAs connected to your existing certificate infrastructure; one for teachers, and one for students.

@@ -114,7 +114,7 @@ Data type: `String[]`
 
 Qualifiers: [id("10"), in, optional]  
 
-The collection identifier(s) for the collection(s) which the computer is added to. The default value is empty.  
+The collection identifier(s) for the collection(s) that the computer is added to. The default value is empty.  
 
 #### `WTGUniqueKey`
 
@@ -122,7 +122,7 @@ Data type: `String`
 
 Qualifiers: [id("11"), in, optional]  
 
-For a Windows To Go deployment, this is the USB unique key that will be used to identify the client, instead of the SMBIOS and MAC address.  
+For a Windows To Go deployment, this is the USB unique key that is used to identify the client, instead of the SMBIOS and MAC address.  
 
 #### `MachineExists`
 
