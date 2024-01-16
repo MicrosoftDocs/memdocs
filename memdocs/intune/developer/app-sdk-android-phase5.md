@@ -302,7 +302,7 @@ The optional [IdentitySwitchOption] enums can be passed to the [setUIPolicyIdent
 - **`IGNORE_INTENT`**: when requesting an identity switch at the UI layer, this option informs the SDK to skip comparing the requested identity parameter against the most recently stored intent identity.
 This is useful when your app is no longer displaying content belonging to that identity, and the SDK shouldn't block this identity switch.
 For example:
-  1. Your app is a document viewer. It can render documents passed in from other apps. It also contains a feature where users can switch accounts. Whenever the user uses this account-switch feature, the app navigates to a account-specific landing page with that account's recent documents.
+  1. Your app is a document viewer. It can render documents passed in from other apps. It also contains a feature where users can switch accounts. Whenever the user uses this account-switch feature, the app navigates to an account-specific landing page with that account's recent documents.
   2. Your app receives an intent to display a document. This intent is tagged with the managed identity.
   3. Your app is switched to the managed identity and displays this document, with protections properly applied.
   4. The user uses the account-switcher to change to their personal account.
