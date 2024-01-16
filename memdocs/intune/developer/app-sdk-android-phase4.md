@@ -220,7 +220,7 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. The app must implement the [MAMServiceAuthenticationCallback] interface or the [MAMServiceAuthenticationCallbackExtended] interface to allow the SDK to request a Microsoft Entra token for the given account and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its [registerAuthenticationCallback] method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's `Application` subclass.
+1. The app must implement the [MAMServiceAuthenticationCallback] interface or the `MAMServiceAuthenticationCallbackExtended` interface to allow the SDK to request a Microsoft Entra token for the given account and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its [registerAuthenticationCallback] method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's `Application` subclass.
 
 2. The `acquireToken` method should acquire the access token for the requested resource ID for the given account. If it can't acquire the requested token, it should return null.
 
@@ -304,7 +304,7 @@ If a token isn't provided, the callback may still be called at the next check-in
 
 - Support for sovereign clouds requires providing the authority.
 
-- If `MAMServiceAuthenticationCallbackExtended` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` doesn't need to be implemented, as the `MAMServiceAuthenticationCallbackExtended` interface provides a default implementation.
+- If `` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` doesn't need to be implemented, as the `` interface provides a default implementation.
 
 ### MAMEnrollmentManager and Registration
 
@@ -711,7 +711,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [MAMEnrollmentManager.Result]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.Result.html
 [MAMLogHandlerWrapper]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/log/MAMLogHandlerWrapper.html
 [MAMServiceAuthenticationCallback]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallback.html
-`MAMServiceAuthenticationCallbackExtended`
+<!-- [MAMServiceAuthenticationCallbackExtended]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMServiceAuthenticationCallbackExtended.html -->
 [MAMStrictViolationHandler]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictViolationHandler.html
 [MAMStrictCheck]:https://msintuneappsdk.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/strict/MAMStrictCheck.html
 
