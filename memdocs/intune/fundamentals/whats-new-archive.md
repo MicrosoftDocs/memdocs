@@ -2114,7 +2114,7 @@ In **Reports** > **Device Compliance** > **Reports**, there's a new **Noncomplia
 - Lists each noncompliant device.
 - For each noncompliant device, it shows the compliance policy settings that the devices aren't compliant with.
 
-For more information on this report, go to [Noncompliant devices and settings report (Organizational)](reports.md#noncompliant-devices-and-settings-report-organizational).
+For more information on this report, go to [Noncompliant devices and settings report (Organizational)](reports.md#noncompliant-devices-report-organizational).
 
 ## Week of August 1, 2022
 
@@ -6362,7 +6362,7 @@ The following settings are marked as **Not applicable** in the Policy reports:
 
 #### Noncompliant policies report helps troubleshoot devices in error or that are noncompliant<!-- 6471368    -->
 
-In preview, the new **Noncompliant policies** report is an operational report you can use to help troubleshoot errors and conflicts for compliance policies targeting devices. The [Noncompliant policies report](reports.md#noncompliant-policies-operational) displays a list of compliance policies that have one or more devices with errors or that are in a state of noncompliance to the policy.
+In preview, the new **Noncompliant policies** report is an operational report you can use to help troubleshoot errors and conflicts for compliance policies targeting devices. The [Noncompliant policies report](reports.md#noncompliant-policies-report-operational) displays a list of compliance policies that have one or more devices with errors or that are in a state of noncompliance to the policy.
 
 Use this report to:
 

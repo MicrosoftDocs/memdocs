@@ -198,7 +198,7 @@ Prepare for January 2024. This policy change is expected to be released with the
 ## Monitor and troubleshoot
 
 ### Exported report data maintains search results<!-- 17723620  -->  
-Intune will maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-and-settings-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability will also be available when calling the ExportJobs API directly.
+Intune will maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability will also be available when calling the ExportJobs API directly.
 
 ### Battery report<!-- 9747162 -->  
 We're working on a battery health report to provide visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.

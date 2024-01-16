@@ -229,7 +229,7 @@ You can view the **Noncompliant devices** report using the following steps:
 > [!NOTE]
 > This report is also known as the **Device compliance status per setting** report.
 
-You can view details about a devices compliance to the validity period setting. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
+You can view details about a devices compliance to the validity period setting. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](../protect/compliance-policy-monitor.md).
 
 You can view the **Settings compliance** report using the following steps:
 
@@ -241,7 +241,7 @@ You can view the **Settings compliance** report using the following steps:
 > [!NOTE]
 > This report is also known as the **Windows device health attestation status** report.
 
-You can view the status of enrolled hardware-attested Windows devices. For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
+You can view the status of enrolled hardware-attested Windows devices. For more information about this and related compliance status views, see [Monitor device compliance](../protect/compliance-policy-monitor.md).
 
 You can view the **Windows Health Attestation** report using the following steps:
 
