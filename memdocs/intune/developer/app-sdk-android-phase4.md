@@ -304,7 +304,7 @@ If a token isn't provided, the callback may still be called at the next check-in
 
 - Support for sovereign clouds requires providing the authority.
 
-- If `` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` doesn't need to be implemented, as the `` interface provides a default implementation.
+- If `MAMServiceAuthenticationCallbackExtended` interface is implemented, the inherited `acquireToken()` method from `MAMServiceAuthenticationCallback` doesn't need to be implemented, as the `MAMServiceAuthenticationCallbackExtended` interface provides a default implementation.
 
 ### MAMEnrollmentManager and Registration
 
