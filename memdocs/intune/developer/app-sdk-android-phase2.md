@@ -124,7 +124,7 @@ For more detail on Sovereign clouds, see [Use MSAL in a national cloud environme
 
 ## FAQ
 
-### What about Microsoft Authentication Library?
+### What about ADAL?
 
 Microsoft's previous authentication library, [Azure Active Directory Authentication Library (ADAL)], is **deprecated**.
 
