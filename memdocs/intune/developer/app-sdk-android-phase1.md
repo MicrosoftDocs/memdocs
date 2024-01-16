@@ -130,7 +130,7 @@ See [Policy for protecting backup data] in [Stage 7: App Participation Features]
 
 ### Does my application have resources that should be protected by Conditional Access?
 
-[Conditional Access (CA)] is an [Microsoft Entra ID]
+[Conditional Access (CA)] is a [Microsoft Entra ID]
 feature that can be used to control access to Microsoft Entra resources.
 Intune administrators can define CA rules that allow resource access only from devices or apps that are managed by Intune.
 
