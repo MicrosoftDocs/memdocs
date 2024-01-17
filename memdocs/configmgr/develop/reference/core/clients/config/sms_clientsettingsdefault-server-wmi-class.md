@@ -3,8 +3,8 @@ title: SMS_ClientSettingsDefault Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents simple read-only default client settings properties.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7519ce9f-c724-4985-808f-24268cfeb60b
 author: Banreet

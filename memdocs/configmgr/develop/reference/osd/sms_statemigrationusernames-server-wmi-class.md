@@ -3,8 +3,8 @@ title: SMS_StateMigrationUserNames Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class in Configuration Manager that represents a localized username during state migration.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 26d7ad7d-e8e6-41f4-9300-a4a4359dba31
 author: Banreet

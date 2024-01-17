@@ -3,8 +3,8 @@ title: SMS_ClientAdvertisementSummary Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_ClientAdvertisementSummary Windows Management Instrumentation class is an SMS Provider server class that represents a summary for an advertisement.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: bc249ca7-68d9-4e6a-965b-9428b68f9646
 author: Banreet

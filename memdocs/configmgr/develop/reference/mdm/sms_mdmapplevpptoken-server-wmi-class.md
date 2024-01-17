@@ -3,8 +3,8 @@ title: SMS_MDMAppleVppToken Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) token.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 38903d4e-d6de-4209-8c36-db66d8822e36
 author: Banreet

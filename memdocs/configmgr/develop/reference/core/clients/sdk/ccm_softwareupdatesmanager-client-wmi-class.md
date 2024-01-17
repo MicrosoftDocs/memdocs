@@ -3,8 +3,8 @@ title: CCM_SoftwareUpdatesManager Class
 titleSuffix: Configuration Manager
 description: The CCM_SoftwareUpdatesManager WMI class is a client class that exposes methods to install, schedule and other actions on set of software updates.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 21f63cf9-a39d-4e05-913b-65fca65b9e62
 author: Banreet

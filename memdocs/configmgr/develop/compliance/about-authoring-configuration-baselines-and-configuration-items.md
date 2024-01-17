@@ -2,8 +2,8 @@
 title: Author configuration baselines and items
 titleSuffix: Configuration Manager
 ms.date: 08/01/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 39e47528-ea59-4d32-8baf-d017d3a44426
 author: Banreet

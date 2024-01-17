@@ -3,8 +3,8 @@ description: The IDCMSDK::EvaluateBaseline method, in Configuration Manager, run
 title: "IDCMSDK::EvaluateBaseline"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e66ba88a-2b78-4b36-b932-ac15d144291e
 author: Banreet

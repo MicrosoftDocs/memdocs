@@ -3,8 +3,8 @@ description: Learn how to enhance the functionality of InstallStatusMIF in Confi
 title: InstallStatusMIFEx Function
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c7f89ba4-eaf4-4755-bc4d-90064d1ad918
 author: Banreet
