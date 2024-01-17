@@ -35,6 +35,14 @@ ms.collection:
 
 App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature requires changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources won't be able to acquire an access token unless they support this feature.
 
+## Stage 6: App Protection CA support
+
+## Stage Goals
+
+- Learn about different APIs that can be used to support App Protection Conditional Access within iOS app
+- Integrate App Protection Conditional Access to your app and users.
+- Test the above integration with your app and users.
+
 ### Dependencies
 In addition to the Intune SDK, you need these two components to enable App Protection CA in your app.
 
@@ -148,7 +156,7 @@ guard let authorityURL = URL(string: kAuthority) else {
 
 ```
 
-### How to test App Protection CA
+### Exit criteria
 
 #### Configuring a test user for App Protection CA
 
@@ -170,3 +178,11 @@ Test Case	| How to test	|	Expected Outcome	|
 MAM-CA always applied		| Ensure the user is targeted for both App Protection CA and MAM policy before enrolling in your app.|  Verify that your app handles the remediation cases described above and the app can get an access token.	|
 MAM-CA applied after user enrolled	| The user should be logged into the app already, but not targeted for App Protection CA.	| Target the user for App Protection CA in the console and verify that you correctly handle MAM remediation	|
 MAM-CA noncompliance	| Set up an App Protection CA policy, but don't assign a MAM policy.	| The user shouldn't be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
+
+## Next Steps
+
+After you've completed all the [Exit Criteria] above, your app is now successfully integrated with App Protection CA support. The subsequent section, [Stage 7: Web-view features], may or may not be required, depending on your app's desired app protection policy support.
+
+<!-- Stage 6 links -->
+[Exit Criteria]:#exit-criteria
+[Stage 7: Web-view features]:app-sdk-ios-phase7.md
