@@ -3,8 +3,8 @@ title: Proxy server support
 titleSuffix: Configuration Manager
 description: Learn how Configuration Manager systems use proxy servers.
 ms.date: 04/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
 ms.author: banreetkaur

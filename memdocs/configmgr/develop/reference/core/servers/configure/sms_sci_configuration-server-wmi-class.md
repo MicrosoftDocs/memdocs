@@ -3,8 +3,8 @@ title: SMS_SCI_Configuration Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_SCI_Configuration Windows Management Instrumentation class is an SMS Provider server class that represents a configuration item, which is a generic named container of properties and property lists, for a site server component.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2fae6449-b766-4353-83de-2c1de25e7932
 author: Banreet

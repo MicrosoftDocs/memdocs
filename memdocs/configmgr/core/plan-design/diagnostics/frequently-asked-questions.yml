@@ -4,8 +4,8 @@ metadata:
   titleSuffix: Configuration Manager
   description: Frequently asked questions about diagnostic and usage data for Configuration Manager
   ms.date: 12/01/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-core
+  ms.subservice: core-infra
+  ms.service: configuration-manager
   ms.topic: faq
   author: banreet
   ms.author: banreetkaur

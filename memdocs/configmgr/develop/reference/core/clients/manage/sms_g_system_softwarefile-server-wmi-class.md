@@ -3,8 +3,8 @@ title: SMS_G_System_SoftwareFile Class
 description: The SMS_G_System_SoftwareFile class is an SMS Provider server class that contains information about all software files that were inventoried on the client computer.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2b64ccf4-9ab2-498a-a4be-dbcecadb1886
 author: Banreet

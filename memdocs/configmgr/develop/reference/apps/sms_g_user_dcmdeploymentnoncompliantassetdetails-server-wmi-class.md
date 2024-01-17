@@ -3,8 +3,8 @@ title: SMS_G_USER_DCMDeploymentNonCompliantAssetDetails Class
 titleSuffix: Configuration Manager
 description: The SMS_G_USER_DCMDeploymentNonCompliantAssetDetails WMI class represents non-compliant asset details for a deployment.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6cc27c1a-0e86-4727-8809-83c850c157cb
 author: Banreet

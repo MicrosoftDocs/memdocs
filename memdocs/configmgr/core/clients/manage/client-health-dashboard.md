@@ -3,8 +3,8 @@ title: Client health dashboard
 titleSuffix: Configuration Manager
 description: Use a dashboard in the console to view information about the health of clients in your environment.
 ms.date: 12/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

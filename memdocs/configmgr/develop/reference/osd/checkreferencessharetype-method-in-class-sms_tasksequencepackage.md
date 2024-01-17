@@ -3,8 +3,8 @@ title: CheckReferencesShareType Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the CheckReferencesShareType WMI class method checks all referred packages for this task sequence and returns all packages that are not shared.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 25ae479d-c63e-4b45-a8e7-2de6ff4b3222
 author: Banreet

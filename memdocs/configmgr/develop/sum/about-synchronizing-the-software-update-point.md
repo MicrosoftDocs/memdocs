@@ -3,8 +3,8 @@ title: Synchronize the Software Update Point
 description: In Configuration Manager, software updates must be synchronized before the update information is available in the Configuration Manager console.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: b394b01f-a87b-4f15-b364-558184921871
 author: Banreet

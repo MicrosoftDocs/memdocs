@@ -3,8 +3,8 @@ title: Health attestation
 titleSuffix: Configuration Manager
 description: Learn about the device health attestation functionality in Configuration Manager.
 ms.date: 04/14/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 author: banreet
 ms.author: banreetkaur

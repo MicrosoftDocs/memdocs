@@ -3,8 +3,8 @@ title: Monitor co-management
 titleSuffix: Configuration Manager
 description: Use the co-management dashboard to review information about co-managed devices.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

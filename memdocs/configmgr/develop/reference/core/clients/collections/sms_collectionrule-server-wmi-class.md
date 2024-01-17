@@ -3,8 +3,8 @@ description: Learn how to represent a collection rule using SMS_CollectionRule c
 title: SMS_CollectionRule Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 43c23dda-0881-44b0-ac6b-65428b0c68c3
 author: Banreet

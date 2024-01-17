@@ -2,8 +2,8 @@
 title: Create a Console Node
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: df3f9be7-c724-40f9-8d1e-368de8018bbd
 author: Banreet

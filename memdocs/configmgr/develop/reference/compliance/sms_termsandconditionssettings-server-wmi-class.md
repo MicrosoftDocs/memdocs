@@ -3,8 +3,8 @@ title: SMS_TermsAndConditionsSettings Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents Terms and Conditions settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: daf3bd12-cb05-46a8-83c7-485b4460bb85
 author: Banreet

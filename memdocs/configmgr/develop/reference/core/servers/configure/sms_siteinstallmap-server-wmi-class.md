@@ -3,8 +3,8 @@ description: Learn how to represent the site install map, which describes the la
 title: SMS_SiteInstallMap Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 17514bfd-e80e-483d-98fd-12d39c2718eb
 author: Banreet

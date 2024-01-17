@@ -3,8 +3,8 @@ title: Role-Based Administration
 titleSuffix: Configuration Manager
 description: This section provides topics about programmatically managing role-based administration in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 20486f6b-b4f2-4e4a-9dbb-72fb90067ec0
 author: Banreet
