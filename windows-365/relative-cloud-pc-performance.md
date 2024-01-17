@@ -33,7 +33,7 @@ ms.collection:
 # Relative performance for different Cloud PC sizes
 
 This article examines the relative performance between three common Cloud PC sizes. This information can help Windows 365 admins decide on the right Cloud PC size for their users.
-For the purposes of the comparisons in this article, these following Cloud PC sizes were used:
+For the purposes of the comparisons in this article, the following Cloud PC sizes were used:
 
 - 2 vCPU/8-GB RAM/128-GB storage
 - 4 vCPU/16-GB RAM/128-GB storage
@@ -70,7 +70,7 @@ For the workloads we test, the performance improvement when moving from 4 vCPU t
 
 The 16 vCPU / 64-GB RAM / 512-GB storage size is meant to accommodate more processor intensive workloads. It's up to 14% faster than the 8 vCPU / 32-GB RAM / 512-GB storage size.
 
-If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads that require processing large datasets and have strict latency requirements during compilation work best with 16 vCPU sizes. For example, workloads like business analytics tools with large datasets in the 64-bit version of Microsoft Excel work best with 8 vCPU. By contrast, the 4 vCPU size is popular among Windows 365 customers with employees who only use Microsoft Teams, browsers, or Microsoft applications.
+If you plan on running CPU-intensive workloads, the differences are going to be more noticeable and favor a greater number of processors. For example, workloads that require processing large datasets and have strict latency requirements during compilation work best with 16 vCPU sizes. By contrast, the 4 vCPU size is popular among Windows 365 customers with employees who only use Microsoft Teams, browsers, or Microsoft applications.
 
 ## Choosing the Cloud PC size for your users
 
