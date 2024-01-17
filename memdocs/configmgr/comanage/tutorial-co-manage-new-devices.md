@@ -7,8 +7,8 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.date: 08/24/2021
 ms.topic: tutorial
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.localizationpriority: medium
 #Customer intent: As a Configuration Manager admin, I want enable co-management so I can manage some client workloads from Intune and others from Configuration Manager.
 ms.collection: tier3
