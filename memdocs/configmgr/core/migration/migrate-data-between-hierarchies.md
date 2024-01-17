@@ -3,8 +3,8 @@ title: Migrate data
 titleSuffix: Configuration Manager
 description: Learn how to transfer data from a source hierarchy to a Configuration Manager destination hierarchy.
 ms.date: 11/05/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
