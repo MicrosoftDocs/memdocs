@@ -53,7 +53,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Prerequisites
 
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
-- The device must be enrolled in Intune. For information on the enrollment options for macOS devices, go to [macOS enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-macos.md).
+- The device must be enrolled and MDM managed by Intune. For information on the enrollment options for macOS devices, go to [macOS enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-macos.md).
 
 ## What you need to know
 
