@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/18/2023
+ms.date: 01/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -46,6 +46,9 @@ The reporting framework provides a consistent and more comprehensive reporting e
 - **Data paging** – You can scan your data based on paging, either page-by-page or by jumping to a specific page.
 - **Performance** - You can quickly generate and view reports created from large tenants.
 - **Export** – You can quickly export reporting data generated from large tenants.
+
+> [!NOTE]
+> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-and-settings-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
 ## Who can access the data?
 
