@@ -3,8 +3,8 @@ title: What happened to hybrid MDM?
 titleSuffix: Configuration Manager
 description: Learn about the deprecation of hybrid mobile device management (MDM) in Configuration Manager
 ms.date: 12/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.subservice: other
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
