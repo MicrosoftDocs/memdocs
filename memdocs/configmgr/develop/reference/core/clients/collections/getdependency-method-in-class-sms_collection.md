@@ -3,8 +3,8 @@ title: GetDependency method
 titleSuffix: Configuration Manager
 description: Get the collection relationship info which the input collection depends on.
 ms.date: 11/30/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 32efccb1-4a3a-4811-902d-e26dd9c9c7ba
 author: Banreet

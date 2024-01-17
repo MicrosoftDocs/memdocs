@@ -3,8 +3,8 @@ title: Example of using boundary groups
 titleSuffix: Configuration Manager
 description: Use this boundary group example to help understand how clients locate and download content from a distribution point.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

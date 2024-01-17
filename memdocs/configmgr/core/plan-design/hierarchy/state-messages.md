@@ -3,8 +3,8 @@ title: State messages
 titleSuffix: Configuration Manager
 description: Descriptions of state messages in Configuration Manager.
 ms.date: 01/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur

@@ -3,8 +3,8 @@ title: GetAutoUpgradeConfigs Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that gets configurations for autoupgrade settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 01ad5660-fcae-4e18-bafd-453caa15bc30
 author: Banreet

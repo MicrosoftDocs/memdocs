@@ -3,8 +3,8 @@ description: Learn how to create a deployment template available to deploy a sof
 title: "SMS_Template Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 29b71ea3-7470-4f58-a3fb-89dbbe98b386
 author: banreet

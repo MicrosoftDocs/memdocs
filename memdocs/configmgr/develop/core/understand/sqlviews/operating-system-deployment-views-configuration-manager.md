@@ -3,8 +3,8 @@ title: Operating system deployment views
 titleSuffix: Configuration Manager
 description: Information about boot image packages, computer association state migrations, and operating system image packages.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

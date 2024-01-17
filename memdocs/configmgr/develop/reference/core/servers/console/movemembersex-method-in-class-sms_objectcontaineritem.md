@@ -3,8 +3,8 @@ description: Learn how the MoveMembersEx Windows Management Instrumentation (WMI
 title: MoveMembersEx Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4623e1b2-d5cf-4d91-a9d2-4f6b2e35dd7d
 author: Banreet

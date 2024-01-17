@@ -3,8 +3,8 @@ title: Command-line overview
 titleSuffix: Configuration Manager
 description: Learn how to run Configuration Manager setup at a command prompt for different kinds of site installations.
 ms.date: 02/16/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

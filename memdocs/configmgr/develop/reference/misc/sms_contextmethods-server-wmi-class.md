@@ -3,8 +3,8 @@ title: SMS_ContextMethods Class
 description: The SMS_ContextMethods Windows Management Instrumentation (WMI) class is an abstract class, in Configuration Manager, that contains methods for caching WMI context qualifiers with the SMS Provider.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 92b831f5-d232-4c63-b5fe-0565d07cad83
 author: Banreet

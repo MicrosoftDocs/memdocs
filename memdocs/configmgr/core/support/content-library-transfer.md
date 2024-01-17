@@ -3,8 +3,8 @@ title: Content Library Transfer tool
 titleSuffix: Configuration Manager
 description: Use the Content Library Transfer tool to transfer content from one disk drive to another on a Configuration Manager distribution point.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: baladell 
 author: BalaDelli

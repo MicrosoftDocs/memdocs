@@ -3,8 +3,8 @@ description: Learn how to represent configuration item rules using SMS_Configura
 title: SMS_ConfigurationItemRules Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 870fb139-d723-4d65-b4e8-a1ff15fd19b8
 author: Banreet

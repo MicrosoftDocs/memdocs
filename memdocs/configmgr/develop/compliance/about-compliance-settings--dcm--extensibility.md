@@ -3,8 +3,8 @@ title: About Compliance Settings Extensibility
 description: The content in this section provides information about extending the functionality of desired configuration management configuration items in Configuration Manager.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 0f9532cc-058c-46cf-8181-469cd6e1734b
 author: Banreet

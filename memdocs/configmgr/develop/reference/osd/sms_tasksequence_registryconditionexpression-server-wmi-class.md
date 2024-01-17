@@ -3,8 +3,8 @@ description: Learn how to represent a condition expression to check for the exis
 title: SMS_TaskSequence_RegistryConditionExpression Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 3229c0e7-f7cd-4105-957a-11ba2339f25d
 author: Banreet

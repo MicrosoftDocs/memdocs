@@ -3,8 +3,8 @@ title: Content management security and privacy
 titleSuffix: Configuration Manager
 description: Optimize security and privacy for content management in Configuration Manager.
 ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

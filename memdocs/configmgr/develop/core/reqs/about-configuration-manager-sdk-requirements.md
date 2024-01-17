@@ -2,8 +2,8 @@
 title: About Configuration Manager SDK Requirements
 description: Learn how developing applications and scripts for Microsoft Configuration Manager can be done using a number of development languages and tools.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: b605e20e-f0cb-44fe-99f8-6e291971aec3
 author: Banreet
