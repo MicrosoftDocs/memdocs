@@ -176,7 +176,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: MSAL
 
 <!-- Other SDK Guide Markdown documentation -->
 [Stage 2: MSAL prerequisite and setup]:app-sdk-ios-phase2.md
-[Stage 5: Enable multi-identity]:app-sdk-ios-phase5.md#enable-multi-identity-optional
+[Stage 5: Enable multi-identity]:app-sdk-ios-phase5.md
 [Stage 4: Enable targeted configuration (APP/MAM app config) for your iOS applications]:app-sdk-ios-phase4.md
 [Manage data transfer between iOS apps in Microsoft Intune]:/mem/intune/apps/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm
 [Stage 6: App Protection CA support]:app-sdk-ios-phase6.md#app-protection-ca-support-optional
