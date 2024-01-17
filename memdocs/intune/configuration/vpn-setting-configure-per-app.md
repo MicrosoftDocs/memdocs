@@ -51,7 +51,7 @@ Some VPNs allow username and password authentication with per-app VPN. Meaning, 
 
 ## Per-app VPN with Microsoft Tunnel or Zscaler
 
-Microsoft Tunnel and Zscaler Private Access (ZPA) integrate with Microsoft Entra ID for authentication. When using Tunnel or ZPA, you don't need the [trusted certificate](#create-a-trusted-certificate-profile) or [SCEP or PKCS certificate](#create-a-scep-or-pkcs-certificate-profile) profiles (described in this article).
+Microsoft Tunnel and Zscaler Private Access (ZPA) integrate with Microsoft Entra ID for authentication. When using Tunnel or ZPA, you don't need the [trusted certificate](#step-2---create-a-trusted-certificate-profile) or [SCEP or PKCS certificate](#step-3---create-a-scep-or-pkcs-certificate-profile) profiles (described in this article).
 
 If you have a per-app VPN profile set up for Zscaler, then opening one of the associated apps doesn't automatically connect to ZPA. Instead, the user needs to sign into the Zscaler app. Then, remote access is limited to the associated apps.
 

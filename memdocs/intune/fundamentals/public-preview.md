@@ -48,7 +48,7 @@ When working with features in public preview, these features:
 - Might only be available in selected geographic regions or cloud environments. For example, the feature might not exist in the [Azure Government](/azure/azure-government/documentation-government-welcome) cloud.
 - Individual features in preview can have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
 
-## Next steps
+## Resources
 
 - Review the [important notices](whats-new.md#notices).
 - See what's [in development](in-development.md).

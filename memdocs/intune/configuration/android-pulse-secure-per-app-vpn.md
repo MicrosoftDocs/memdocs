@@ -53,7 +53,7 @@ After you assign the policy to your Android DA device or user groups, users shou
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 - The device must be enrolled and MDM managed by Intune. For information on the enrollment options for Android devices, go to [Android enrollment guide for Microsoft Intune](../fundamentals/deployment-guide-enrollment-android.md).
 
-## Step 1: Create a VPN profile
+## Step 1 - Create a VPN profile
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -77,7 +77,7 @@ After you assign the policy to your Android DA device or user groups, users shou
 
 8. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
-## Step 2: Create a custom configuration policy
+## Step 2 - Create a custom configuration policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -118,7 +118,7 @@ Use the **BLACKLIST** value to enter a list of apps that can't use the VPN conne
 4. In **Data type**, enter **String**.
 5. In **Value**, enter **BLACKLIST** or **WHITELIST**.
 
-## Step 3: Assign both policies
+## Step 3 - Assign both policies
 
 [Assign both device profiles](device-profile-assign.md) to the required users or devices.
 
