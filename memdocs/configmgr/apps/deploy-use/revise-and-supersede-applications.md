@@ -3,8 +3,8 @@ title: Revise and supersede applications
 titleSuffix: Configuration Manager
 description: Learn how to work with Configuration Manager application versions and supersede applications.
 ms.date: 12/16/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: baladelli
 manager: apoorvseth

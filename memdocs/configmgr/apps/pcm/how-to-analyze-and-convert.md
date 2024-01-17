@@ -3,8 +3,8 @@ title: How to analyze and convert packages
 titleSuffix: Configuration Manager
 description: Learn how to analyze and convert packages with Package Conversion Manager in Configuration Manager.
 ms.date: 08/24/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: baladelli
 ms.author: baladell
