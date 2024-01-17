@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # GetProperty Method in Class CCM_Application
-The `GetProperty` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets an application property value.   
+The `GetProperty` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets an application property value.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

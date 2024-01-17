@@ -86,17 +86,9 @@ When a change is detected, the MAM service updates the device compliance state i
 The MAM Client communicates the client heath state (or health metadata) to the MAM Service upon check-in. The health state includes any failure of APP Health Checks for **Block** or **Wipe** conditions. In addition, Microsoft Entra ID guides end-users through remediation steps when they attempt to access a blocked CA resource.
 
 ### Conditional Access Compliance
-Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
-
-Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Microsoft Edge for Windows, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
-
->[!NOTE]
-> This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for Windows. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using policy managed applications on Windows. To do this, you'll need a conditional access policy that targets all potential users. Follow the steps in [Require an app protection policy on Windows devices](/azure/active-directory/conditional-access/how-to-app-protection-policy-windows), which allows Microsoft Edge for Windows, but blocks other web browsers from connecting to Microsoft 365 endpoints.
 
 With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Microsoft Entra application proxy](/azure/active-directory/active-directory-application-proxy-get-started).
-
-> [!NOTE]
-> To leverage app-based conditional access policies, the Microsoft Authenticator app must be installed on Windows devices. For more information, see [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 ## Threat Defense Health
 

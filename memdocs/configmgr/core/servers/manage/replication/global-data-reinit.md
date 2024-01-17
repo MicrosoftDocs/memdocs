@@ -26,7 +26,7 @@ Use the following diagram to start troubleshooting SQL Server replication reinit
 
 This diagram uses the following queries:
 
-### Check if site replication hasn't finished reinit
+### Check if renit isn't finished for site replication
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking dt

@@ -21,7 +21,7 @@ To define the custom deployment technology XML file, create an XML file based on
 
 1.  Create a Create Application Wizard XML file.  
 
-     The following example from the RDP sample project shows how to define the Create Application Wizard XML file. Note that wizards are not extensible for the UI.  However, by creating this custom deployment technology XML, the contents of the wizard now include the ability to create a RDP deployment type.  
+     The following example from the RDP sample project shows how to define the Create Application Wizard XML file. Wizards aren't extensible for the UI.  However, by creating this custom deployment technology XML, the contents of the wizard now include the ability to create an RDP deployment type.  
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>  

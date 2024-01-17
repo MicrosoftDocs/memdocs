@@ -34,7 +34,7 @@ Before using pre-release features, give consent to use pre-release features. Giv
 
 When you install an update that includes pre-release features, those features are visible in the Updates and Servicing Wizard with the regular features included in the update.
 
-### If you have given consent
+### If consent is given
 
 In the Updates and Servicing Wizard, enable pre-release features. Select the pre-release features as you would any other feature.
 

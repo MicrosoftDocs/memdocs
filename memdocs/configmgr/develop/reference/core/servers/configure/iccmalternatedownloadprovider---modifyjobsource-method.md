@@ -51,7 +51,7 @@ HRESULT ModifyJobSource(
  The new job flags. This can be ignored by alternate providers.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully. All other return values indicate failure.  

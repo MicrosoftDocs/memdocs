@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2023
-ms.topic: conceptual
+ms.date: 01/12/2024
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -31,7 +31,7 @@ ms.reviewer: mattcall
 ---
 # Account protection policy settings for endpoint security in Intune
 
-View the settings you can configure in profiles for *Account protection* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+View the settings you can configure in profiles for *Account protection (preview)*, which is available through the *Account protection* policy for Intune [Endpoint security](../protect/endpoint-security-policy.md).
 
 The settings in this article apply to:
 
@@ -42,6 +42,12 @@ Supported platforms and profiles:
 
 - **Windows 10 and later**:
   - Profile: **Account protection** *(Preview)*
+
+> [!TIP]
+> 
+> For *Local user group membership* profiles, see [Manage local groups on Windows devices](../protect/endpoint-security-account-protection-policy.md#manage-local-groups-on-windows-devices).
+>
+> For *Local admin password solution (Windows LAPS)* profiles, see [Manage LAPS policy](../protect/windows-laps-policy.md).
 
 ## Account protection profile
 
@@ -64,7 +70,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes**
 
-- **Turn on credential guard**  
+- **Turn on Credential Guard**  
   [CSP: DeviceGuard](https://go.microsoft.com/fwlink/?linkid=872424)
 
   Credential Guard uses Windows Hypervisor to provide protections. Credential Guard requires hardware support for Secure Boot and DMA protections. This setting is only successful on devices that meet the hardware requirements.

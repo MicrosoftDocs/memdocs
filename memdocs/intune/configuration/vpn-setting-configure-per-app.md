@@ -80,11 +80,11 @@ Create or choose an existing group in Microsoft Entra ID. This group must includ
 Import the VPN server's root certificate issued by the CA into a profile created in Intune. The trusted certificate profile instructs the iOS/iPadOS device to automatically trust the CA that the VPN server presents.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **iOS/iPadOS**.
-    - **Profile**: Select **Trusted certificate**.
+    - **Profile type**: Select **Trusted certificate**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -115,12 +115,12 @@ Be sure to configure the certificate for client authentication. You can set clie
 
 This VPN profile includes the SCEP or PKCS certificate that has the client credentials, the VPN connection information, and the per-app VPN flag that enables the per-app VPN used by the iOS/iPadOS application.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **iOS/iPadOS**.
-    - **Profile**: Select **VPN**.
+    - **Profile type**: Select **VPN**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
