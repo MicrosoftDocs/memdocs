@@ -132,75 +132,17 @@ Each profile is encapsulated within braces (`{ }`). The previous example display
 
 ### JSON file properties
 
-#### Version
-
-- _(Number, optional)_
-
-    The version number that identifies the format of the JSON file.
-
-#### CloudAssignedTenantId
-
-- _(GUID, required)_
-
-    The Microsoft Entra tenant ID that should be used. This property is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces.
-
-#### CloudAssignedTenantDomain
-
-- _(String, required)_
-
-    The Microsoft Entra tenant name that should be used. For example: `tenant.onmicrosoft.com`.
-
-#### CloudAssignedOobeConfig
-
-- _(Number, required)_
-
-    This property is a bitmap that shows which Autopilot settings were configured.
-
-    - 1: SkipCortanaOptIn
-    - 2: OobeUserNotLocalAdmin
-    - 4: SkipExpressSettings
-    - 8: SkipOemRegistration
-    - 16: SkipEula
-
-#### CloudAssignedDomainJoinMethod
-
-- _(Number, required)_
-
-    This property specifies whether the device should join Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).
-
-    - 0: Microsoft Entra joined
-    - 1: Microsoft Entra hybrid joined
-
-#### CloudAssignedForcedEnrollment
-
-- _(Number, required)_
-
-    Specifies that the device should require Microsoft Entra join and MDM enrollment.
-
-    - 0: Not required
-    - 1: required
-
-#### ZtdCorrelationId
-
-- _(GUID, required)_
-
-    A unique GUID (without braces) provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutopilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration.
-
-#### CloudAssignedAadServerData
-
-- _(Encoded JSON string, required)_
-
-    An embedded JSON string used for branding. It requires enabling Microsoft Entra organization branding.
-
-    For example:
-
-    `"CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}`
-
-#### CloudAssignedDeviceName
-
-- _(String, optional)_
-
-    The name automatically assigned to the computer. This name follows the naming pattern convention configured in the Intune Autopilot profile. An explicit name can also be specified.
+| Property | Type | Required | Description |
+| --- | --- | --- | --- |
+| **Version** | Number | Optional | The version number that identifies the format of the JSON file. |
+| **CloudAssignedTenantId** | GUID | Required | The Microsoft Entra tenant ID that should be used. This property is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces. |
+| **CloudAssignedTenantDomain** | String | Required | The Microsoft Entra tenant name that should be used. For example: `tenant.onmicrosoft.com`. |
+| **CloudAssignedOobeConfig** | Number | Required | This property is a bitmap that shows which Autopilot settings were configured.<br><br><ul><li>1: SkipCortanaOptIn</li><li>2: OobeUserNotLocalAdmin</li><li>4: SkipExpressSettings</li><li>8: SkipOemRegistration</li><li>16: SkipEula</li></ul> |
+| **CloudAssignedDomainJoinMethod** | Number | Required | This property specifies whether the device should join Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).<br><br><ul><li>0: Microsoft Entra joined</li><li>1: Microsoft Entra hybrid joined</li></ul> |
+| **CloudAssignedForcedEnrollment** | Number | Required | Specifies that the device should require Microsoft Entra join and MDM enrollment.<br><br><ul><li>0: Not required</li><li>1: required</li></ul>|
+| **ZtdCorrelationId** | GUID | Required | A unique GUID (without braces) provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutopilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration. |
+| **CloudAssignedAadServerData** | Encoded JSON string | Required |An embedded JSON string used for branding. It requires enabling Microsoft Entra organization branding. For example:<br><br>`"CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}` |
+| **CloudAssignedDeviceName** | String | Optional | The name automatically assigned to the computer. This name follows the naming pattern convention configured in the Intune Autopilot profile. An explicit name can also be specified. |
 
 ## Create the JSON file
 
@@ -414,11 +356,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
 1. On the target Windows device, go to the **Start** menu, type `Software Center`, and open it.
 
-1. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**. For example:
-
-    :::image type="content" source="images/sc.png" alt-text="Autopilot for existing devices task sequence in Software Center.":::
-
-    :::image type="content" source="images/sc1.png" alt-text="Software Center notice to confirming to upgrade the OS on this computer.":::
+1. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**.
 
 The task sequence runs and does the following actions:
 
@@ -430,15 +368,9 @@ The task sequence runs and does the following actions:
 
 1. Installs Windows from the specified OS image.
 
-    :::image type="content" source="images/up-1.PNG" alt-text="Task sequence installation progress applying image.":::
-
 1. Prepares for Autopilot.
 
-    :::image type="content" source="images/up-2.PNG" alt-text="Task sequence installation progress running sysprep.":::
-
 1. After the task sequence completes, the device boots into OOBE for the Autopilot experience:
-
-    :::image type="content" source="images/up-3.PNG" alt-text="Autopilot experience prompting for user account.":::
 
 > [!NOTE]
 >
