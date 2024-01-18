@@ -584,9 +584,6 @@ Target Edge for iOS with the following key/value pair, to enable Application Pro
 |:-------------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.AppProxyRedirection |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
 
-> [!NOTE]
-> Edge for Android does not consume this key. Instead, Edge for Android consumes Microsoft Entra application proxy configuration automatically as long as the signed-in Microsoft Entra account has an App Protection Policy applied.
-
 For more information about how to use Edge for iOS and Android and Microsoft Entra application proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Microsoft Entra team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Edge for iOS and Android as well.
 
 ### Manage NTLM single sign-on sites

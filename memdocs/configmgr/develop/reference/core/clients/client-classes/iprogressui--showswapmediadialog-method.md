@@ -3,8 +3,8 @@ title: "IProgressUI::ShowSwapMediaDialog"
 titleSuffix: Configuration Manager
 description: "IProgressUI::ShowSwapMediaDialog method"
 ms.date: 04/03/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e78bdee8-4e80-461a-8a0d-1db6a49a73db
 author: Banreet

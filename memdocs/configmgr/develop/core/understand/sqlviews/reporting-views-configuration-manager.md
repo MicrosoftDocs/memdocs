@@ -3,8 +3,8 @@ title: Reporting views
 titleSuffix: Configuration Manager
 description: Information about built-in and user-created reports.
 ms.date: 11/22/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

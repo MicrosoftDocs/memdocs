@@ -3,8 +3,8 @@ title: Console Management Class XML
 titleSuffix: Configuration Manager
 description: The MyClass node is a subclass of the SMS_SiteControlItem management class, which is defined in ManagementClassDescriptions.xml.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 32b5eea0-903b-4b54-92e8-d540973c6321
 author: Banreet

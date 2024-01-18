@@ -7,8 +7,8 @@ ms.author: sheetg
 manager: apoorvseth
 ms.date: 11/15/2021
 ms.topic: how-to
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 

@@ -3,8 +3,8 @@ description: Learn how to retrieve the targeted users of an application deployme
 title: GetTargetedUsers Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 125f04db-bfe4-4d5d-8d8c-d754eda35065
 author: Banreet

@@ -3,8 +3,8 @@ description: Learn how to notify the Content Transfer Manager of the success of 
 title: SendNotifySuccessToCTM Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 574ffb2f-b576-473e-b60f-8caf7f635f96
 author: Banreet

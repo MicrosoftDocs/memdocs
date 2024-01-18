@@ -3,8 +3,8 @@ title: "ICCMEvent::Submit Method"
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the ICCMEvent::Submit method submits an event to Windows Management Instrumentation.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cc15a6d7-3cd4-4718-a9ab-bf1654d05e8d
 author: Banreet

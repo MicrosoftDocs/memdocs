@@ -3,8 +3,8 @@ title: RemoveDistributionPoints Method
 titleSuffix: Configuration Manager
 description: The RemoveDistributionPoints WMI class method removes distribution points from this distribution point group.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9cfacf13-1d30-4a0c-9453-aaa3e9aa677b
 author: Banreet

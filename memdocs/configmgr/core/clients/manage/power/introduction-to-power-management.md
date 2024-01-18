@@ -3,8 +3,8 @@ title: Introduction to power management
 titleSuffix: Configuration Manager
 description: Get an introduction to power management in Configuration Manager.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth

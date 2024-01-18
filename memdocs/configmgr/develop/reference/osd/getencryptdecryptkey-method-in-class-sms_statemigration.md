@@ -3,8 +3,8 @@ title: GetEncryptDecryptKey Method
 titleSuffix: Configuration Manager
 description: The GetEncryptDecryptKey WMI class method retrieves the symmetric key that is used to encrypt and decrypt the user state during state migration.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 36957b2c-a2b1-46dc-86ca-e8604bfb4270
 author: Banreet

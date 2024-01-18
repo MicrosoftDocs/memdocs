@@ -3,8 +3,8 @@ title: Desktop Analytics
 titleSuffix: Configuration Manager
 description: An overview of the Desktop Analytics service integrated with Configuration Manager.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: overview
 author: gowdhamankarthikeyan
 ms.author: gokarthi

@@ -3,8 +3,8 @@ title: Remote actions with co-management
 titleSuffix: Configuration Manager
 description: Run remote actions from Intune for co-managed devices
 ms.date: 11/08/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center.
 ms.date: 03/21/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 ms.localizationpriority: high
