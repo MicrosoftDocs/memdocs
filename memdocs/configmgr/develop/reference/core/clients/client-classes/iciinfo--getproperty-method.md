@@ -34,7 +34,7 @@ HRESULT GetProperty(
 
  Qualifiers: [in, out]  
 
- Pointer to the language ID that is used to obtain the property. If there is no localized name for this ID, the method attempts to obtain the language-independent version of the property. If this does not exist, the method returns an error. On successful return from the method, this parameter indicates the language ID for the property retrieved.  
+ Pointer to the language ID that is used to obtain the property. If there's no localized name for this ID, the method attempts to obtain the language-independent version of the property. If this doesn't exist, the method returns an error. On successful return from the method, this parameter indicates the language ID for the property retrieved.  
 
  `pszPropName`  
  Data type: `LPCWSTR`  
@@ -51,7 +51,7 @@ HRESULT GetProperty(
  Pointer to a null-terminated string specifying the property value.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  
