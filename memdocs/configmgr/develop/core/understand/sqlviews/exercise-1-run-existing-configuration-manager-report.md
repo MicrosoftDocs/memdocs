@@ -3,8 +3,8 @@ title: 'Exercise 1: Run an existing report'
 titleSuffix: Configuration Manager
 description: Run an existing Configuration Manager report and review specific report elements.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

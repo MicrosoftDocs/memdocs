@@ -3,8 +3,8 @@ description: Learn how to represent an association between the admin account and
 title: SMS_AdminCategory Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: faf9793b-abb7-4a69-8277-5b7190dc435e
 author: Banreet

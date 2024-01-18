@@ -4,8 +4,8 @@ description: Content under construction
 ms.author: banreetkaur
 author: Banreet
 ms.date: 01/10/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.subservice: other
+ms.service: configuration-manager
 ms.topic: conceptual
 localization_priority: low
 robots: NOINDEX, NOFOLLOW

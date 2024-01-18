@@ -3,8 +3,8 @@ description: "Learn how to get the current operational state of the configuratio
 title: "ICIINFO::GetJobState"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 07a12352-3271-43a8-8ebd-fd31ceaf5ce4
 author: Banreet

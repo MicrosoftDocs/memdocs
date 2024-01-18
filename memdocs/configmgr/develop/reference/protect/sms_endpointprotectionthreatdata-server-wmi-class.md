@@ -3,8 +3,8 @@ title: SMS_EndpointProtectionThreatData Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents Microsoft official threats. It's a metadata table and all data is extracted from the signature update.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 845956a1-e322-4a3a-bf7b-ed6dfd55da08
 author: Banreet

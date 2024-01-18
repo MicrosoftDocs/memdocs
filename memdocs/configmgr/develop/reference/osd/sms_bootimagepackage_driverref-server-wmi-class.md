@@ -3,8 +3,8 @@ title: SMS_BootImagePackage_DriverRef Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents the association between a boot image package and a referenced driver.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a1006a04-8bc9-4e2d-b6e6-7b968208140b
 author: Banreet

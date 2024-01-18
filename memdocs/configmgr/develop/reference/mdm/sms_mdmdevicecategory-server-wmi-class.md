@@ -3,8 +3,8 @@ description: Learn how to use the SMS_MDMDeviceCategory class to represent an On
 title: SMS_MDMDeviceCategory Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 2369dea2-a365-48d8-8450-1629059f8fa9
 author: Banreet

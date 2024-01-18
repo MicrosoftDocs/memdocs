@@ -3,8 +3,8 @@ title: "ICcmAlternateDownloadProvider : ModifyJobPriority"
 titleSuffix: Configuration Manager
 description: A method that tells the provider to modify the priority for a given job.
 ms.date: 07/25/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a9dd8eee-87cc-48cd-b59f-6424d3e6dc4a
 author: Banreet

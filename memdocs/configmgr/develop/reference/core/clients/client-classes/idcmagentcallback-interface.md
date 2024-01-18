@@ -3,8 +3,8 @@ description: Learn how to use the IDCMAgentCallback interface to represent the c
 title: IDCMAgentCallback Interface
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 65f4a6ba-e72e-4449-abe2-39a67d3f915e
 author: Banreet

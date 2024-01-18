@@ -3,8 +3,8 @@ description: Learn how to resolve status messages in Srvmsgs.dll, Provmsgs.dd, a
 title: FormatModuleMessage Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a7f16c46-de10-4d93-b67b-409c7e3c2991
 author: Banreet

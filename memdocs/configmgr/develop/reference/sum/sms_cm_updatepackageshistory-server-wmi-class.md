@@ -3,8 +3,8 @@ title: SMS_CM_UpdatePackagesHistory Class
 titleSuffix: Configuration Manager
 description: The SMS_CM_UpdatePackagesHistory WMI class is used to get a list of all update packages.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d22e5e14-7035-4c8f-ad2a-1cf9475214f8
 author: Banreet

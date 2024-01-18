@@ -3,8 +3,8 @@ title: Package Transfer Manager
 titleSuffix: Configuration Manager
 description: Understand how Package Transfer Manager in Configuration Manager transfers content from a site server to remote distribution points.
 ms.date: 02/8/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

@@ -3,8 +3,8 @@ title: SMS Provider Fundamentals
 titleSuffix: Configuration Manager
 description: Use the SMS Provider to access and modify Configuration Manager data. It is a WMI provider that can be accessed through either WMI or managed classes.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: c308fa4a-8d8b-42dc-87ec-f42667e314fd
 author: Banreet

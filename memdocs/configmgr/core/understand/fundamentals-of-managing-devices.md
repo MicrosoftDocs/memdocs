@@ -3,8 +3,8 @@ title: Fundamentals of managing devices
 titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage devices.
 ms.date: 07/26/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

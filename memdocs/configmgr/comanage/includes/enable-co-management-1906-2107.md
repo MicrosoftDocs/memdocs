@@ -1,8 +1,8 @@
 ---
 ms.author: gokarthi
 author: gowdhamankarthikeyan
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 10/05/2021
 ms.localizationpriority: medium

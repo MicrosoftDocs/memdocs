@@ -3,8 +3,8 @@ title: Security and privacy for queries
 titleSuffix: Configuration Manager
 description: Understand best practices for security and privacy when you query for information from the site database.
 ms.date: 05/08/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

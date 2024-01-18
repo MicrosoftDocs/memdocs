@@ -3,8 +3,8 @@ title: Sample queries for hardware inventory
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join hardware inventory views to other views that contain system data.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

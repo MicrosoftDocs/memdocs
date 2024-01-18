@@ -3,8 +3,8 @@ title: Configure discovery
 titleSuffix: Configuration Manager
 description: Configure discovery methods to find resources to manage from your network, Active Directory, and Microsoft Entra ID.
 ms.date: 04/25/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 ms.author: gokarthi
 author: gowdhamankarthikeyan

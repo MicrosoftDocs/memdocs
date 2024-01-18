@@ -3,8 +3,8 @@ title: Monitor migration
 titleSuffix: Configuration Manager
 description: Learn how to use the Configuration Manager console to monitor the progress and success of migration jobs.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
