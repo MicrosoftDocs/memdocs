@@ -3,8 +3,8 @@ title: QueueRequestedAppPolicy Method
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the QueueRequestedAppPolicy Windows Management Instrumentation class method that queues an application policy request.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0fd7952e-eeed-4dc0-a66b-af6442156523
 author: Banreet

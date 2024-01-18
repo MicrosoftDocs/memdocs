@@ -3,8 +3,8 @@ title: Sample queries for the query view
 titleSuffix: Configuration Manager
 description: Sample queries that show how the query view can be joined to a security view.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

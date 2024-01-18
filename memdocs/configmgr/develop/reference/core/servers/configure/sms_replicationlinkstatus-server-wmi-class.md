@@ -3,8 +3,8 @@ description: Learn how to represent the database link status between the child a
 title: SMS_ReplicationLinkStatus Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: eb30cf7e-c3dc-4d9f-b70b-453dbf059896
 author: Banreet

@@ -3,8 +3,8 @@ description: Learn how to represent the base class for SMS_Alert, SMS_EPAlert, a
 title: SMS_AlertBase Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7de42b2c-4e70-4354-9bf0-ed9b829ff525
 author: Banreet

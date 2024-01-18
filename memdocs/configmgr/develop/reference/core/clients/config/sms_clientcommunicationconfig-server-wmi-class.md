@@ -3,8 +3,8 @@ description: Learn how to control how Windows 8 client computers communicate wit
 title: SMS_ClientCommunicationConfig Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a9007fe8-9150-40cc-9f37-6430e49718f4
 author: Banreet

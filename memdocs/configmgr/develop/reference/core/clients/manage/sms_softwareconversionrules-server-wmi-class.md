@@ -3,8 +3,8 @@ description: Learn how to use SMS_SoftwareConversionRules to describe rules to c
 title: SMS_SoftwareConversionRules Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b7b38ebe-43cf-496a-8cec-0fbef9b99ef9
 author: Banreet

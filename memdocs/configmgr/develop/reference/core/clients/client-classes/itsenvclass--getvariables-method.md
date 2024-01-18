@@ -3,8 +3,8 @@ title: "ITSEnvClass::GetVariables"
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the GetVariables method gets the variables for the operating system deployment task sequence environment.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 858509d5-771f-4bd3-9b5e-59545c11f8e6
 author: Banreet

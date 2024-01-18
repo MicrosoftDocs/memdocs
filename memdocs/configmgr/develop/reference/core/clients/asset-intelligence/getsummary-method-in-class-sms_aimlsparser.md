@@ -3,8 +3,8 @@ description: The GetSummary Windows Management Instrumentation (WMI) class metho
 title: GetSummary Method in Class SMS_AIMLSParser
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0c53d501-e55a-4224-bb40-154a16ff3855
 author: Banreet

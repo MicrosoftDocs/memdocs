@@ -3,8 +3,8 @@ description: Learn how to invoke the Content Transfer Manager using the ICcmCont
 title: ICcmContentTransferManager4 Interface
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0f3ed538-ef76-4549-96da-3b5182908e7c
 author: Banreet

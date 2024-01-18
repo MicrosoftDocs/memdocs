@@ -3,8 +3,8 @@ description: Learn how to use CCM_ServiceBITSConfiguration class which supports 
 title: CCM_Service_BITSConfiguration Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f7b19c4c-da0a-45ff-b07e-a0922afeb682
 author: Banreet

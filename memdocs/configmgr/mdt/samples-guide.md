@@ -3,8 +3,8 @@ title: MDT samples
 titleSuffix: Microsoft Deployment Toolkit
 description: Microsoft Deployment Toolkit (MDT) samples
 ms.date: 09/09/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-mdt
+ms.subservice: mdt
+ms.service: configuration-manager
 ms.topic: article
 author: BalaDelli
 ms.author: baladell

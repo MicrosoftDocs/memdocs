@@ -3,8 +3,8 @@ description: Learn how the SMS_DCMAgentConfig Windows Management Instrumentation
 title: SMS_DCMAgentConfig Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ce4ca4df-660b-426d-a362-d9025d2b28ef
 author: Banreet

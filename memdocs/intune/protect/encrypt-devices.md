@@ -154,7 +154,7 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 
   :::image type="content" source="./media/encrypt-devices/silent-encryption-configuration.png" alt-text="Two BitLocker settings required to enable silent encryption.":::
 
-  In addition to the two required settings, consider use of *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)*.  the storage of  encrypted devcies can
+  In addition to the two required settings, consider use of *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)*.
 
 - **Device configuration [Endpoint protection](../protect/endpoint-protection-configure.md) policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
@@ -171,12 +171,16 @@ When a TPM startup PIN or startup key is required on a device, BitLocker can't s
 
 Following are the relevant settings for each profile type:
 
-**Endpoint security disk encryption policy** - In the BitLocker profile you'll find the following settings in the *BitLocker - OS Drive Settings* category when *BitLocker system drive policy* is set to *Configure*, and then *Startup authentication required* is set to *Yes*.
+<!-- The following for Endpoint security has changed, and these options for TPM are no longer available in the BitLocker policy -->
 
-- **Compatible TPM startup** - Configure this as *Allowed* or *Required*
-- **Compatible TPM startup PIN** - Configure this as *Blocked*
-- **Compatible TPM startup key** - Configure this as *Blocked*
-- **Compatible TPM startup key and PIN** - Configure this as *Blocked*
+**Endpoint security disk encryption policy** - TPM settings are only visible after you expand the *Administrative Templates* category and then in the *Windows Components > BitLocker Drive Encryption > Operating System Drives* section set *Require additional authentication at startup* to *Enabled*. When configured, the following TPM settings are then available:
+
+- **Configure TPM startup key and PIN** - Configure this as *Do not allow startup key and PIN with TPM*
+- **Configure TPM startup PIN** - Configure this as *Do not allow startup PIN with TPM*
+
+- **Configure TPM startup** - Configure this as *Allow TPM* or *Require TPM*
+
+- **Configure TPM startup key** - Configure this as *Do not allow startup key with TPM*
 
 **Device configuration policy** - In the endpoint protection template you'l find the following settings in the *Windows Encryption* category:
 

@@ -3,8 +3,8 @@ title: IsClientOperationAllowed Method
 titleSuffix: Configuration Manager
 description: checks whether a user has permission to execute an operation.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ec0c0fe9-f5ab-4ab4-8ce1-5bb3592c60c4
 author: Banreet

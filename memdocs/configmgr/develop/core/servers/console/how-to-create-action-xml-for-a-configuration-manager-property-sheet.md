@@ -3,8 +3,8 @@ description: Learn how to use Create Action XML for a Property Sheet to you crea
 title: Create Action XML for a Property Sheet
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: ab60b75e-b64a-44c0-ad63-d96d289f39ca
 author: Banreet

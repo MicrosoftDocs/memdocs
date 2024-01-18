@@ -3,8 +3,8 @@ title: Monitor app usage with software metering
 titleSuffix: Configuration Manager
 description: Learn about operations that are available in Configuration Manager software metering.
 ms.date: 09/20/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: sheetg
 author: sheetg09 
