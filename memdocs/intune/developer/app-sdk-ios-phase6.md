@@ -35,6 +35,9 @@ ms.collection:
 
 App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature requires changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources won't be able to acquire an access token unless they support this feature.
 
+> [!NOTE]
+> This guide is divided into several distinct stages. Start by reviewing [Stage 1: Plan the Integration].
+
 ## Stage 6: App Protection CA support
 
 ## Stage Goals
@@ -185,4 +188,5 @@ After you've completed all the [Exit Criteria] above, your app is now successful
 
 <!-- Stage 6 links -->
 [Exit Criteria]:#exit-criteria
+[Stage 1: Plan the Integration]:app-sdk-ios-phase1.md
 [Stage 7: Web-view features]:app-sdk-ios-phase7.md
