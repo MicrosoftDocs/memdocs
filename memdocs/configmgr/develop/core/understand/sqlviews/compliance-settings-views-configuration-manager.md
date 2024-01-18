@@ -3,8 +3,8 @@ title: Compliance settings views
 titleSuffix: Configuration Manager
 description: Information about the compliance of devices with regard to a number of configurations.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: cf84f727-0993-455b-9184-313bc10a3ce2
 author: Banreet

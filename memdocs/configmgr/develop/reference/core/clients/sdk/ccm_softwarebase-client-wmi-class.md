@@ -3,8 +3,8 @@ description: Learn how to use the CCM_SoftwareBase class to represent the base c
 title: CCM_SoftwareBase Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: d01a7ab7-5edd-4534-926d-161ec05d813d
 author: Banreet

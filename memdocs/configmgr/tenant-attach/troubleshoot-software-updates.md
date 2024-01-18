@@ -3,8 +3,8 @@ title: Troubleshoot software updates for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: Troubleshooting software updates for Intune tenant attach
 ms.date: 07/11/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 author: Banreet
 ms.author: banreetkaur
 ms.manager: apoorvseth

@@ -3,8 +3,8 @@ title: SMS_TaskSequence_PackageInfo Class
 titleSuffix: Configuration Manager
 description: SMS_TaskSequence_PackageInfo WMI is an SMS provider server class that represents information about an operating system deployment task sequence.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 32df68b1-836a-4e85-a52c-c2a7574113c0
 author: Banreet

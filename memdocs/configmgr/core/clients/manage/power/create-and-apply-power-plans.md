@@ -3,8 +3,8 @@ title: Create and apply power plans
 titleSuffix: Configuration Manager
 description: Create and apply power plans in Configuration Manager.
 ms.date: 10/12/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
 manager: apoorvseth

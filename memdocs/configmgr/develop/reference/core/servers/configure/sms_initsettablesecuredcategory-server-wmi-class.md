@@ -3,8 +3,8 @@ title: SMS_InitSettableSecuredCategory Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_InitSettableSecuredCategory Windows Management Instrumentation class is an SMS Provider server class that represents the list of RBA security categories.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ec147358-e38e-4d43-ac89-d0fffb4511a3
 author: Banreet

@@ -3,8 +3,8 @@ title: Manage clients
 titleSuffix: Configuration Manager
 description: Learn how to manage clients in Configuration Manager.
 ms.date: 02/16/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

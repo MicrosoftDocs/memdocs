@@ -3,8 +3,8 @@ title: CCM_Policy_Config Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the CCM_Policy_Config class is a client WMI class that represents a policy configuration used by the Policy Agent that needs to be replicated.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 46196816-b705-429d-b646-fd8d1a0688e8
 author: Banreet

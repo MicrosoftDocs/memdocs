@@ -3,8 +3,8 @@ title: Upgrade the LTSB to current branch
 titleSuffix: Configuration Manager
 description: Learn how to convert a long-term servicing branch (LTSB) site to a current branch site.
 ms.date: 02/8/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

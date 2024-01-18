@@ -3,8 +3,8 @@ title: SMS_ObjectContentInfo Class
 description: Learn how to use the SMS_ObjectContentInfo class in Configuration Manager to set application or package content information.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e35cbfe6-ad35-4ffb-a480-3aee332f7171
 author: Banreet

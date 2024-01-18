@@ -3,8 +3,8 @@ title: Set up Desktop Analytics
 titleSuffix: Configuration Manager
 description: A how-to guide for setting up and onboarding to Desktop Analytics.
 ms.date: 11/03/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
