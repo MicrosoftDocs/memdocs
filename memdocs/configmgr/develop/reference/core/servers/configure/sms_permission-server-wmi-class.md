@@ -36,7 +36,7 @@ Class SMS_Permission : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_Permission` class does not define any methods.  
+ The `SMS_Permission` class doesn't define any methods.  
 
 ## Properties  
  `AdminID`  
@@ -96,7 +96,7 @@ Class SMS_Permission : SMS_BaseClass
 
  Qualifiers: None  
 
- Logon name of the user.  
+ Sign-in name of the user.  
 
  `RoleID`  
  Data type: `String`  
