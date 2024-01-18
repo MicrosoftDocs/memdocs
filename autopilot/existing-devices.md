@@ -220,17 +220,13 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. On the **Membership Rules** page, select **Add Rule**. Specify either a direct or query-based collection rule to add the target Windows devices to the new collection.
 
-    For example, if the hostname of the computer to be wiped and reloaded is `PC-01` and **Name** is being used as the attribute:
+    For example, if the hostname of the computer to be wiped and reloaded is `PC-01`, and **Name** is being used as the attribute:
 
     1. Select **Add Rule**, select **Direct Rule** to open the Create Direct Membership Rule Wizard, and select **Next** on the Welcome page.
 
     1. On the **Search for Resources** page, enter **PC-01** as the **Value**.
 
-        :::image type="content" source="images/pc-01a.png" alt-text="Enter PC-01 as the name to locate for a collection direct membership rule.":::
-
     1. Select **Next**, and select **PC-01** in the **Resources**.
-
-        :::image type="content" source="images/pc-01b.png" alt-text="Select PC-01 as the resource to add to the collection.":::
 
 1. Complete the wizard with the default settings.
 
