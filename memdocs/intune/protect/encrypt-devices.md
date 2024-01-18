@@ -95,7 +95,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
+2. Select **Devices** > **Configuration** > On the *Policies* tab, select **Create**.
 
 3. Set the following options:
    1. **Platform**: **Windows 10 and later**
@@ -299,7 +299,7 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 2. Select **Devices** > **All devices**.
 
-3. In the list of devices that you manage, select a device, select **More**, and then select the **BitLocker key rotation** device remote action.
+3. In the list of devices that you manage, select a device, and then select the **BitLocker key rotation** device remote action. If this option should be available but isn't visible, select the ellipsis (...) and then *BitLocker key rotation*.
 
 4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don't see this option, select the ellipsis (**…**) to show additional options, and then select the **BitLocker key rotation** device remote action.
 
