@@ -3,8 +3,8 @@ description: Learn how to map a role and its associated object types in Configur
 title: SMS_RoleInObjectType Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 849fb64d-23d4-4642-b5bc-92168a35b2c1
 author: Banreet

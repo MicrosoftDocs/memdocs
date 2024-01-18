@@ -3,8 +3,8 @@ description: Learn how to represent the last PXE advertisement using the SMS_Las
 title: SMS_LastPXEAdvertisement Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9522d5d9-b5f4-443d-a51a-518793d4c62b
 author: Banreet

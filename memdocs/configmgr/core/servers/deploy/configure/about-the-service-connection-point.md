@@ -3,8 +3,8 @@ title: Service connection point
 titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
 ms.date: 10/12/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

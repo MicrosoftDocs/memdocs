@@ -3,8 +3,8 @@ title: SMS_CombinedDeviceResources Class
 titleSuffix: Configuration Manager
 description: Details of the SMS_CombinedDeviceResources WMI class
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 751f3d1d-5fbe-4d98-aa44-81a4b52969b5
 author: Banreet

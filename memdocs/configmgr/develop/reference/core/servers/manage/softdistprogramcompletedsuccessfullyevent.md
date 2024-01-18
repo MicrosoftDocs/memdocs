@@ -3,8 +3,8 @@ description: Learn how to update the Advertisement Status in Configuration Manag
 title: SoftDistProgramCompletedSuccessfullyEvent
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 71fb1c06-d7fc-45d4-be40-356f829ea566
 author: Banreet

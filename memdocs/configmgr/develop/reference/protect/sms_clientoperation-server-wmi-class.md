@@ -3,8 +3,8 @@ title: SMS_ClientOperation Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a set of client actions.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f523822e-1638-42bc-8997-c52ac4d53a82
 author: Banreet

@@ -3,8 +3,8 @@ title: Set the Distribute on Demand Flag
 titleSuffix: Configuration Manager
 description: The following example shows how to set the "distribute on demand" flag property of an existing package by using the SMS_Package Server WMI Class class in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 0b87554c-cfd2-4f26-822d-b5b42d3d5bd0
 author: Banreet

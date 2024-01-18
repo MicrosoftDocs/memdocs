@@ -3,8 +3,8 @@ title: Scheduling Client WMI Classes
 titleSuffix: Configuration Manager
 description: The scheduling client Windows Management Instrumentation classes are used by client applications to manage scheduling on the client computer.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b98444ac-14b0-4b5c-bc55-976a28134e0f
 author: Banreet

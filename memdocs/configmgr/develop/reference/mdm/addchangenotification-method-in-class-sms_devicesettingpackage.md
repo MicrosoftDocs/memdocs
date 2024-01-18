@@ -3,8 +3,8 @@ description: Learn how to use Configuration Manager AddChangeNotification Window
 title: AddChangeNotification method in class SMS_DeviceSettingPackage
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ce743e27-8472-4763-95f6-81ed1af526c3
 author: Banreet

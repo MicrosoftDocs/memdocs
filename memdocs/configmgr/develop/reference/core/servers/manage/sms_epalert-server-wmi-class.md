@@ -3,8 +3,8 @@ description: Learn how to represent System Center Endpoint Protection alerts usi
 title: SMS_EPAlert Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 00fc69cf-c419-4b68-bfe3-737fd5c957f6
 author: Banreet

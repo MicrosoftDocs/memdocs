@@ -3,8 +3,8 @@ title: Operations and maintenance for reporting
 titleSuffix: Configuration Manager
 description: Learn the details of managing reports and report subscriptions in Configuration Manager.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 ms.author: gokarthi
 author: gowdhamankarthikeyan

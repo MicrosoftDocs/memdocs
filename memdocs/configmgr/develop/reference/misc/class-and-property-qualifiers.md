@@ -3,8 +3,8 @@ title: Class and Property Qualifiers
 titleSuffix: Configuration Manager
 description: This table shows the qualifiers that are specific to Microsoft Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 836a5204-4439-4fbd-a5d2-0b7796ae24ae
 author: Banreet

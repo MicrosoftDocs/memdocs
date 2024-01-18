@@ -1,8 +1,8 @@
 ---
 author: Banreet
 ms.author: banreetkaur
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: include
 ms.localizationpriority: high
 ms.date: 07/11/2022

@@ -3,8 +3,8 @@ title: SMS_InventoryReportClass Class
 titleSuffix: Configuration Manager
 description: The SMS_InventoryReportClass WMI class is an SMS Provider server class embedded in SMS_InventoryReport that represents the classes that are enabled to be collected in this inventory report.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c49d5284-56e0-46ae-9c3d-e29d677dcffc
 author: Banreet

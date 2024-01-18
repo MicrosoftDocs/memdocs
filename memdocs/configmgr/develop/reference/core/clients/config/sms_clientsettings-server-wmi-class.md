@@ -3,8 +3,8 @@ description: Learn how to represent the settings that apply to the clients which
 title: SMS_ClientSettings Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f46e48ff-60cd-4a68-a36e-9ece153d93c3
 author: Banreet

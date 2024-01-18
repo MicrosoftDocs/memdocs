@@ -3,8 +3,8 @@ title: Manage queries
 titleSuffix: Configuration Manager
 description: Learn how to manage your queries. Includes a table for detailed reference.
 ms.date: 04/29/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.author: gokarthi
 author: gowdhamankarthikeyan

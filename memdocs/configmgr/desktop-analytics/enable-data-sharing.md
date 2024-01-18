@@ -3,8 +3,8 @@ title: Enable data sharing
 titleSuffix: Configuration Manager
 description: A reference guide for sharing diagnostics data with Desktop Analytics.
 ms.date: 07/07/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

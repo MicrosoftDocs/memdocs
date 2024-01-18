@@ -3,8 +3,8 @@ title: Collections best practices
 titleSuffix: Configuration Manager
 description: Get recommendations for configuring collections and collection evaluation in Configuration Manager.
 ms.date: 04/13/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

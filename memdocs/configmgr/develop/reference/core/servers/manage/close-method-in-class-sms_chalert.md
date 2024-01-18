@@ -3,8 +3,8 @@ title: Close Method in Class SMS_CHAlert
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the Close Windows Management Instrumentation class method postpones the alert.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 803a62cb-bfa5-4384-91c9-3fa4bada3c06
 author: Banreet

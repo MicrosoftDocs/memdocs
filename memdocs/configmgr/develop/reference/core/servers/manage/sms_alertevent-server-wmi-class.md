@@ -3,8 +3,8 @@ title: SMS_AlertEvent Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents the event data for an alert.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e00ad156-746e-42da-97e1-e4ad0cdaca21
 author: Banreet

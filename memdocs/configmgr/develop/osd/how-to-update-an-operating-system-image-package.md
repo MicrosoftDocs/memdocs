@@ -3,8 +3,8 @@ title: Update an OS Image Package
 titleSuffix: Configuration Manager
 description: Update an operating system using a Windows Image file that is associated with the operating system package in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c24fa670-0424-4ba1-9ca0-53e005f0d50a
 author: Banreet

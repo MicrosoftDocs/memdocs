@@ -3,8 +3,8 @@ title: Microsoft Entra authentication workflow
 titleSuffix: Configuration Manager
 description: Details of the Configuration Manager client installation process on a Windows device with Microsoft Entra authentication.
 ms.date: 02/16/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: reference
 author: sheetg09
 ms.author: sheetg
