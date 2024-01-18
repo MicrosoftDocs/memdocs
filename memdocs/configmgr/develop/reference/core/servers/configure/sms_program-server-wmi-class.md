@@ -3,8 +3,8 @@ description: Learn how to represent a program or command to run when software is
 title: SMS_Program Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e4f5186a-6b63-4a06-80c9-45664b383edd
 author: Banreet

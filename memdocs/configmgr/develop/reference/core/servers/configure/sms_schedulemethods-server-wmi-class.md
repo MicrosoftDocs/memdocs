@@ -3,8 +3,8 @@ description: Learn how the SMS_ScheduleMethods abstract Windows Management Instr
 title: SMS_ScheduleMethods Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e7ccc430-34b6-4c65-8933-d13bf8e8202f
 author: Banreet

@@ -3,8 +3,8 @@ description: Learn how to check the state of an empty driver source folder with 
 title: CheckSourceFolder Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6b72a1e3-42c3-4481-ab79-f1199d187a28
 author: Banreet

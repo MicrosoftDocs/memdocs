@@ -3,8 +3,8 @@ title: Assign clients to a site
 titleSuffix: Configuration Manager
 description: Before you can manage a client, it needs to assign to a primary site.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: sheetg09
 ms.author: sheetg

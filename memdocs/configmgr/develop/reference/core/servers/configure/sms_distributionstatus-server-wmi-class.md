@@ -3,8 +3,8 @@ description: The SMS_DistributionStatus WMI class is an SMS Provider server clas
 title: SMS_DistributionStatus Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 25f4054e-d371-498f-8feb-c1f1cc8688c0
 author: Banreet

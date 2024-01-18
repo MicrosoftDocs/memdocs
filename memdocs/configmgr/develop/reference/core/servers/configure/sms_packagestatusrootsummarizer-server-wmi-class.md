@@ -3,8 +3,8 @@ description: The SMS_PackageStatusRootSummarizer Windows Management Instrumentat
 title: SMS_PackageStatusRootSummarizer Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7899997c-7846-44f5-882c-add161280dca
 author: Banreet

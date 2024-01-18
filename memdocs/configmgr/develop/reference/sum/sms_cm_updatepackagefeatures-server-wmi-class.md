@@ -3,8 +3,8 @@ title: SMS_CM_UpdatePackageFeatures Class
 description: Learn how to use the SMS_CM_UpdatePackageFeatures class in Configuration Manager to update feature extensions.
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1f1b0614-be4e-4e4a-a2a5-6df5a2d97c1c
 author: Banreet

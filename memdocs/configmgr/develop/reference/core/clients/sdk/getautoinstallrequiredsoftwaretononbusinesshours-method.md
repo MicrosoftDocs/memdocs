@@ -3,8 +3,8 @@ description: Learn how to use the GetAutoInstallRequiredSoftwaretoNonBusinessHou
 title: GetAutoInstallRequiredSoftwaretoNonBusinessHours Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ce5440c9-2d58-4793-b727-51b6ea030e29
 author: Banreet

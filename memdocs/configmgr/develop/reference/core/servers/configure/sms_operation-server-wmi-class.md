@@ -3,8 +3,8 @@ description: Learn how to use SMS_Operation class in Configuration Manager, whic
 title: SMS_Operation Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ea1053c7-f7e8-4641-8328-2e4c4d6bb93c
 author: Banreet

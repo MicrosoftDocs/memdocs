@@ -3,8 +3,8 @@ description: Learn how to map network abstraction layer (NAL) paths, resource ty
 title: SMS_SystemResourceList Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f43f66b7-5ec4-4a47-91f2-cdbd61654147
 author: Banreet

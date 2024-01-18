@@ -3,8 +3,8 @@ title: CCM_EvaluationState Class
 titleSuffix: Configuration Manager
 description: The CCM_EvaluationState WMI class is an SMS Provider server class in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cee8005f-1db4-4978-ae16-51901fd0ff1c
 author: Banreet

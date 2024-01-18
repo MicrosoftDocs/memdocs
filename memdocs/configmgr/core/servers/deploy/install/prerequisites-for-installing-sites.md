@@ -3,8 +3,8 @@ title: Prerequisites for sites
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

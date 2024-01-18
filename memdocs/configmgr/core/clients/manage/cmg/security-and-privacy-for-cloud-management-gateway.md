@@ -7,8 +7,8 @@ ms.author: baladell
 manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3

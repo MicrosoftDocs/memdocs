@@ -4,8 +4,8 @@ metadata:
   titleSuffix: Configuration Manager
   description: Frequently asked questions (FAQ) about the Configuration Manager administration service
   ms.date: 04/16/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-sdk
+  ms.subservice: sdk
+  ms.service: configuration-manager
   ms.topic: faq
   ms.assetid: 4902b9ea-eaff-4f59-a9cf-c600d008eade
   author: banreet

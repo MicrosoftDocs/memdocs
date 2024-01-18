@@ -3,8 +3,8 @@ description: Learn how to specify one supported platform for an operating system
 title: PlatformApplicabilityCondition
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: c264dab1-07c2-4cc6-95e2-6283b850fb54
 author: Banreet

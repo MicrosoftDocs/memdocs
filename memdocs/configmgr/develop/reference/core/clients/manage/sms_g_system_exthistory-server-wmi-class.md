@@ -3,8 +3,8 @@ description: Learn how to create an abstract base class representing operating s
 title: SMS_G_System_ExtHistory Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4d8e6146-36dc-4c88-9d38-15c89ca4ee6f
 author: Banreet

@@ -3,8 +3,8 @@ title: UpdateAutoUpgradeConfigs Method
 titleSuffix: Configuration Manager
 description: The UpdateAutoUpgradeConfigs Windows Management Instrumentation class method, in Configuration Manager, updates configurations for autoupgrade settings.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4214f7a0-03e3-4e3a-bb31-5b958e45c5d0
 author: Banreet

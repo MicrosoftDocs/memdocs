@@ -3,8 +3,8 @@ title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
 ms.date: 07/01/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

@@ -3,8 +3,8 @@ title: Tutorial - Deploy Windows 10
 titleSuffix: Configuration Manager
 description: A tutorial on using Desktop Analytics and Configuration Manager to deploy Windows 10 to a pilot group.
 ms.date: 08/24/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: tutorial
 author: gowdhamankarthikeyan
 ms.author: gokarthi
