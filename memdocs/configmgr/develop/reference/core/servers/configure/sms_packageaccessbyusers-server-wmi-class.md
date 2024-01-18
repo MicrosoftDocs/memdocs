@@ -31,7 +31,7 @@ Class SMS_PackageAccessByUsers : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_PackageAccessByUsers` class does not define any methods.  
+ The `SMS_PackageAccessByUsers` class doesn't define any methods.  
 
 ## Properties  
  `Access`  

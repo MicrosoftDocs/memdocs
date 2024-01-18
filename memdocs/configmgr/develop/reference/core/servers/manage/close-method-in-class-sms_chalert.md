@@ -41,7 +41,7 @@ sint32 Close(
 
  Qualifiers: `[out, optional]`  
 
- Do not start the evaluation until the specified time.  
+ Don't start the evaluation until the specified time.  
 
 ## Return Values  
  An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

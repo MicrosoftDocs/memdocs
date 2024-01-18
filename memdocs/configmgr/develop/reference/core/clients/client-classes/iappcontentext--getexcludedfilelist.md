@@ -41,17 +41,17 @@ HRESULT GetExcludedFileList(
 
  Qualifiers: [out]  
 
- The exclude file list is a single string separated by the ':' character. For example, "File1.txt:File2.exe".  
+ The exclude file list is a single string separated by the ':' character. For example, "File1.txt:File2.exe."  
 
  `pbForceFileExclusion`  
  Data type: `BOOL`  
 
  Qualifiers: [out]  
 
- `True` to force exclusion of files. If `False`, content framework will decide whether or not excluding them based on network condition and content configuration.  
+ `True` to force exclusion of files. If `False`, content framework decides whether or not excluding them based on network condition and content configuration.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Discovery was triggered successfully. All other return values indicate failure.  

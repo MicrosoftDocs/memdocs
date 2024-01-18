@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # ApplyPolicyEx Method in Class CCM_SoftwareCatalogUtilities
-The `ApplyPolicyEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that applies policy.   
+The `ApplyPolicyEx` Windows Management Instrumentation (WMI) class method in Configuration Manager that applies policy.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

@@ -56,7 +56,7 @@ Class SMS_DCMDeploymentNonCompliantAssetDetails : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DCMDeploymentNonCompliantAssetDetails` class does not define any methods.  
+ The `SMS_DCMDeploymentNonCompliantAssetDetails` class doesn't define any methods.  
 
 ## Properties  
  `AssetID`  

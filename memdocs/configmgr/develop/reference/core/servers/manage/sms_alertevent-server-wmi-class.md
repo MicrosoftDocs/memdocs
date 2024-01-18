@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AlertEvent Server WMI Class
-The `SMS_AlertEvent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the event data for an alert.  
+The `SMS_AlertEvent` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the event data for an alert.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -37,7 +37,7 @@ Class SMS_AlertEvent : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_AlertEvent` class does not define any methods.  
+ The `SMS_AlertEvent` class doesn't define any methods.  
 
 ## Properties  
  `AlertID`  
@@ -92,7 +92,7 @@ Class SMS_AlertEvent : SMS_BaseClass
 
  Qualifiers: none  
 
- Resource identifier of an associated computer for computer based events. Another identifier for non-computer based alerts.  
+ Resource identifier of an associated computer for computer based events. Another identifier for noncomputer based alerts.  
 
  `EventTime`  
  Data type: `DateTime`  

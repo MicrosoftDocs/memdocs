@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # Cancel Method in Class CCM_Application
-The `Cancel` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that cancels an application deployment.   
+The `Cancel` Windows Management Instrumentation (WMI) class method in Configuration Manager that cancels an application deployment.   
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
