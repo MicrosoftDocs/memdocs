@@ -39,7 +39,7 @@ Monitor the state of devices that have the Microsoft Defender for Endpoint compl
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance** > **Monitor** > **Noncompliant devices**.
+2. Select **Devices** > **Compliance** > On the *Monitor* tab, select **Noncompliant devices**.
 
 3. Find your Microsoft Defender for Endpoint policy in the list, and see which devices are compliant or noncompliant.
 
