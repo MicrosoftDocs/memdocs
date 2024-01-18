@@ -36,7 +36,7 @@ Class SMS_ServiceWindow
 ```  
 
 ## Methods  
- The `SMS_ServiceWindow` class does not define any methods.  
+ The `SMS_ServiceWindow` class doesn't define any methods.  
 
 ## Properties  
  `Description`  

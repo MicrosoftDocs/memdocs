@@ -32,7 +32,7 @@ Class SMS_SoftwareConversionRules : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_SoftwareConversionRules` class does not define any methods.  
+ The `SMS_SoftwareConversionRules` class doesn't define any methods.  
 
 ## Properties  
  `ConvertType`  

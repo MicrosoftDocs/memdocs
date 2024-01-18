@@ -29,7 +29,7 @@ SInt32 AddChangeNotification();
  None.  
 
 ## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+ An `SInt32` data type that is 0 to indicate success or nonzero to indicate failure.  
 
  For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
 

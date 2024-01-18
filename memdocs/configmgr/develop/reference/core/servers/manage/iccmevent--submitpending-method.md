@@ -43,13 +43,13 @@ HRESULT ICcmEvent::SubmitPending(
  Reserved. Must be zero.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded.  
 
 ## Remarks  
- Your application should use this method instead of the [Submit method](../../../../../develop/reference/core/servers/manage/iccmevent--submit-method.md) in situations where the Configuration Manager Agent Host (CCMEXEC) service might not be running. Instead of directly calling CCMEXEC to submit the event, this method stores it in WMI. If the service is running, the event is picked up immediately and issued. Otherwise, it is issued the next time the service starts.  
+ Your application should use this method instead of the [Submit method](../../../../../develop/reference/core/servers/manage/iccmevent--submit-method.md) in situations where the Configuration Manager Agent Host (CCMEXEC) service might not be running. Instead of directly calling CCMEXEC to submit the event, this method stores it in WMI. If the service is running, the event is picked up immediately and issued. Otherwise, it's issued the next time the service starts.  
 
 ## Requirements  
  Smscore.dll.  
