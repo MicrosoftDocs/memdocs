@@ -1,7 +1,7 @@
 ---
 title: SubmitCertificate Method
 titleSuffix: Configuration Manager
-description: The SubmitCertificate Windows Management Instrumentation (WMI) class method, in Configuration Manager, submits the specified certificate.
+description: The SubmitCertificate Windows Management Instrumentation (WMI) class method in Configuration Manager submits the specified certificate.
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SubmitCertificate Method in Class SMS_CertificateData
-The `SubmitCertificate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that submits the specified certificate.  
+The `SubmitCertificate` Windows Management Instrumentation (WMI) class method in Configuration Manager that submits the specified certificate.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

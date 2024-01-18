@@ -35,7 +35,7 @@ HRESULT DiscoverApp(
 
  Qualifiers: [in]  
 
- The user token. If it is null, the action is for computer. If it is not NULL, the action is for the user.  
+ The user token. If it's null, the action is for computer. If it isn't NULL, the action is for the user.  
 
  `szDeploymentTypeId`  
  Data type: `DWORD`  
@@ -59,7 +59,7 @@ HRESULT DiscoverApp(
  .   
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  Success implies that discovery was triggered successfully.  All other return values indicate failure.  

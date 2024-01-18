@@ -1,7 +1,7 @@
 ---
 title: CheckReferencesShareType Method
 titleSuffix: Configuration Manager
-description: In Configuration Manager, the CheckReferencesShareType WMI class method checks all referred packages for this task sequence and returns all packages that are not shared.
+description: In Configuration Manager, the CheckReferencesShareType WMI class method checks all referred packages for this task sequence and returns all packages that aren't shared.
 ms.date: 09/20/2016
 ms.subservice: sdk
 ms.service: configuration-manager
@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # CheckReferencesShareType Method in Class SMS_TaskSequencePackage
-The `CheckReferencesShareType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks all referred packages for this task sequence and returns all packages that are not shared.  
+The `CheckReferencesShareType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks all referred packages for this task sequence and returns all packages that aren't shared.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 
@@ -51,7 +51,7 @@ uint32 CheckReferencesShareType
 
  Qualifiers: [id("2"), out]  
 
- Package identifiers for all referred packages for this task sequence that are not shared.  
+ Package identifiers for all referred packages for this task sequence that aren't shared.  
 
 > [!NOTE]
 >  The incorrect spelling of the variable "PacakgeIds" is hardcoded in WMI.  
@@ -61,7 +61,7 @@ uint32 CheckReferencesShareType
 
  Qualifiers: [id("3"), out]  
 
- Package names for all referred packages for this task sequence that are not shared.  
+ Package names for all referred packages for this task sequence that aren't shared.  
 
 ## Remarks  
 

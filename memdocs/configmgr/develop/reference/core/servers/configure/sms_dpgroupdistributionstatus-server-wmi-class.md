@@ -34,7 +34,7 @@ Class SMS_DPGroupDistributionStatus : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DPGroupDistributionStatus` class does not define any methods.  
+ The `SMS_DPGroupDistributionStatus` class doesn't define any methods.  
 
 ## Properties  
  `Assets`  

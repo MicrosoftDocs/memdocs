@@ -42,7 +42,7 @@ HRESULT EvaluateBaseline(
 
  Qualifiers: [in]  
 
- Pointer to an [IDCMAgentCallback Interface](../../../../../develop/reference/core/clients/client-classes/idcmagentcallback-interface.md) object which is used to notify the agent of the progress, completion, or failure of the operation.
+ Pointer to an [IDCMAgentCallback Interface](../../../../../develop/reference/core/clients/client-classes/idcmagentcallback-interface.md) object that is used to notify the agent of the progress, completion, or failure of the operation.
 
  `bForce`  
  Data type: `BOOL`  
@@ -51,7 +51,7 @@ HRESULT EvaluateBaseline(
 
  `true` if the method is to force the evaluation scan of the baseline configuration item. This value requires administrator privileges.  
 
- A setting of `false` for this parameter allows the scan to run, but it does not run if the last evaluation of the baseline met the Desired Configuration Management TimeToLive threshold.  
+ A setting of `false` for this parameter allows the scan to run, but it doesn't run if the last evaluation of the baseline met the Desired Configuration Management TimeToLive threshold.  
 
  `pJobId`  
  Data type: `JobId`  
@@ -61,7 +61,7 @@ HRESULT EvaluateBaseline(
  Pointer to the ID of the new Desired Configuration Management Agent job for the baseline configuration item.  
 
 ## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+ An `HRESULT` code. Possible values include, but aren't limited to, the following one:  
 
  S_OK  
  The method succeeded. All other return values indicate failure.  

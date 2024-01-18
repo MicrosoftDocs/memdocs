@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DmInvVersion Client WMI Class
-The `SMS_DmInvVersion` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the device management inventory version.  
+The `SMS_DmInvVersion` class is a client Windows Management Instrumentation (WMI) class in Configuration Manager that represents the device management inventory version.  
 
 ## Syntax  
 
@@ -27,7 +27,7 @@ Class SMS_DmInvVersion
 ```  
 
 ## Methods  
- The `SMS_ActiveSyncConnectedDevice` class does not define any methods.  
+ The `SMS_ActiveSyncConnectedDevice` class doesn't define any methods.  
 
 ## Properties  
  `Version`  
