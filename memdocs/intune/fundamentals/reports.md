@@ -165,7 +165,7 @@ The report generates one row per device that hasn't been assigned a compliance p
 - **Device model** - Model information such as *Surface Book 2*, or *Galaxy Note 10*.
 - **Device ID**
 
-### Settings compliance
+### Settings compliance  (Organizational)
 
 This report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you’ll  see include:
 
@@ -186,7 +186,7 @@ To generate a report that uses current data:
 3. Use the drop-down to select which platforms the report will include.
 4. Select **Generate report** (or **Generate again**) to generate the report using updated data.
 
-### Policy compliance report
+### Policy compliance report (Organizational)
 
 > [!NOTE]
 > This report is also known as the **Per policy device compliance status** report.
@@ -224,7 +224,7 @@ You can view the **Noncompliant devices** report using the following steps:
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device compliance** > **Noncompliant devices**.
 
-### Settings compliance report
+### Settings compliance report (Operational)
 
 > [!NOTE]
 > This report is also known as the **Device compliance status per setting** report.
