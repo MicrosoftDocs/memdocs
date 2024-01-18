@@ -34,7 +34,7 @@ For devices that meet these requirements, the MDM service can ask the device for
 
 For more information on how to automatically register devices for Windows Autopilot with Microsoft Intune, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile) and review the description of the **Convert all targeted devices to Autopilot** setting. See the following example:
 
-:::image type="content" source="images/convert-devices.png" alt-text="Convert all targeted devices.":::
+:::image type="content" source="images/convert-devices.png" alt-text="Screenshot that shows how to convert all targeted devices.":::
 
 > [!NOTE]
 >
