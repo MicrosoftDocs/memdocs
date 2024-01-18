@@ -3,8 +3,8 @@ title: Allow Reboots Outside of a Maintenance Window
 titleSuffix: Configuration Manager
 description: This example shows how to configure an advertisement to allow reboots outside of a maintenance window by using the SMS_Advertisement class and the AdvertFlags class property.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: c2f7999b-533d-493f-b2b4-079b25c36f2d
 author: Banreet

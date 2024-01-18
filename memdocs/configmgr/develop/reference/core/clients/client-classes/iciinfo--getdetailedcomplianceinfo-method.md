@@ -3,8 +3,8 @@ description: Learn how the ICIINFO::GetDetailedComplianceInfo method, in Configu
 title: "ICIINFO::GetDetailedComplianceInfo"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: cdc74613-5c3d-4eb0-a6fd-d4e4c0ee05f6
 author: Banreet

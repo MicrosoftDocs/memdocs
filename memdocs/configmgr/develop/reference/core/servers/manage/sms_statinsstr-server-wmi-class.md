@@ -3,8 +3,8 @@ description: Learn how to use the SMS_StatInsStr Class to represent a high-perfo
 title: SMS_StatInsStr Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: a18643d4-b69c-4a2b-8acf-b897968e19be
 author: Banreet

@@ -3,8 +3,8 @@ description: "Learn how to set an event property in Configuration Manager using 
 title: "ICCMEvent::SetProperty Method"
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 44f3a746-4a3c-489d-bbfb-78cf0ed31fed
 author: Banreet

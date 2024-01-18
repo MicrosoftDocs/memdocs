@@ -3,8 +3,8 @@ title: Uninstall sites
 titleSuffix: Configuration Manager
 description: A guide for removing roles, and uninstalling sites and hierarchies
 ms.date: 02/16/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

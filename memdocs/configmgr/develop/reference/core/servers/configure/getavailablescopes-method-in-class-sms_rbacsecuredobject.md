@@ -3,8 +3,8 @@ description: The GetAvailableScopes Windows Management Instrumentation class met
 title: GetAvailableScopes Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0deba515-ebef-44c8-8059-8480d536f9b3
 author: Banreet

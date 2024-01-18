@@ -3,8 +3,8 @@ title: EvaluateAllPolicies Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that evaluates all policies.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 1d2b4471-ed93-42d5-b1d7-bf3990b69f84
 author: Banreet

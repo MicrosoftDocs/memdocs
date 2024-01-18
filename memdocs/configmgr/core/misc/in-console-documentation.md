@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
 ms.date: 10/11/2023
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.subservice: other
+ms.service: configuration-manager
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth

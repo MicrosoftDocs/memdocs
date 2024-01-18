@@ -3,8 +3,8 @@ title: SMS_WinPEOptionalComponentInfo Class
 titleSuffix: Configuration Manager
 description: Represents WinPE optional components information.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 5b4d124c-2eb3-4e32-9027-c076dc27e91f
 author: Banreet
