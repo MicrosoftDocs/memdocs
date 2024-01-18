@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/12/2024
+ms.date: 01/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -46,6 +46,9 @@ The reporting framework provides a consistent and more comprehensive reporting e
 - **Data paging** – You can scan your data based on paging, either page-by-page or by jumping to a specific page.
 - **Performance** - You can quickly generate and view reports created from large tenants.
 - **Export** – You can quickly export reporting data generated from large tenants.
+
+> [!NOTE]
+> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-and-settings-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
 ## Who can access the data?
 
@@ -218,11 +221,6 @@ You can view the **Noncompliant devices** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Noncompliant devices**.
-
-    ![Noncompliant device report](./media/intune-reports/intune-reports-02.png)
-
-    > [!TIP]
-    > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device compliance** > **Noncompliant devices**.
 
 ### Settings compliance report (Operational)
 

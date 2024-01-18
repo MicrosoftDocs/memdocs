@@ -3,8 +3,8 @@ title: CCM_NetworkSettings Class
 titleSuffix: Configuration Manager
 description: Details of the CCM_NetworkSettings Client WMI Class
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur

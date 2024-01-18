@@ -3,8 +3,8 @@ description: Learn how to use lazy properties, which are properties that exist a
 title: SMS object lazy properties
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: b6eb9f5c-78a8-4ded-b032-5d8c4f533694
 author: Banreet

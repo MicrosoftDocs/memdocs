@@ -3,8 +3,8 @@ description: Learn how to exclude scan paths from all members in a specified col
 title: ExcludeScanPaths Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: e45972d2-c41a-4532-ad84-b09c9aa17945
 author: Banreet

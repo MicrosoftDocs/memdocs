@@ -2,8 +2,8 @@
 title: Configuration Manager Actions
 ms.date: 09/20/2016
 description: Learn about the Configuration Manager console actions that let you perform routine or custom tasks.
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: e17c2d91-aecc-4697-8084-64a56cda49d9
 author: Banreet

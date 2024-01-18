@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,6 +44,7 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 >
 > - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
 > - Better Mobile (Android, iOS/iPadOS)
+> - BlackBerry Mobile (CylancePROTECT for Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - SentinelOne (Android, iOS/iPadOS)
@@ -79,6 +80,14 @@ However, should you wish to make the app available to end users via the Intune C
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section.
+
+### Making CylancePROTECT available to end users
+
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [CylancePROTECT - Play Store URL](https://play.google.com/store/apps/details?id=com.blackberry.protect) when completing the **Configure app information** section.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [CylancePROTECT - App Store URL](https://apps.apple.com/us/app/cylanceprotect/id1511209199) when completing the **Configure app information** section.
 
 ### Making Check Point Harmony Mobile Protect available to end users
 

@@ -2,8 +2,8 @@
 title: About Compliance Settings Setup and Configuration
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 0ec16fc6-0775-4c7b-92db-a28f079c3404
 author: Banreet

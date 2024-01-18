@@ -3,8 +3,8 @@ title: Windows Autopilot with co-management
 titleSuffix: Configuration Manager
 description: Use Windows Autopilot with co-management in Configuration Manager to simplify the set up of new Windows devices.
 ms.date: 11/08/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

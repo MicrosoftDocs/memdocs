@@ -3,8 +3,8 @@ description: Learn how the SMS_FailedImageUpdateView Windows Management Instrume
 title: SMS_FailedImageUpdateView Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 65a68dc4-f599-4e9e-b578-3600fc24a202
 author: Banreet

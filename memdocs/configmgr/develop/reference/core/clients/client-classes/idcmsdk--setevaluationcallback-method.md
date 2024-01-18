@@ -3,8 +3,8 @@ title: "IDCMSDK::SetEvaluationCallback"
 titleSuffix: Configuration Manager
 description: "In Configuration Manager, the IDCMSDK::SetEvaluationCallback method associates a callback object with an existing evaluation job specified by job ID."
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f7d77efb-c9ed-4d3b-80c9-ba792c72d6a8
 author: Banreet

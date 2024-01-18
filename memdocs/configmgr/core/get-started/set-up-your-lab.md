@@ -3,8 +3,8 @@ title: Set up your lab
 titleSuffix: Configuration Manager
 description: Set up a lab for evaluating Configuration Manager with simulated real-life activities.
 ms.date: 09/26/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 manager: apoorvseth

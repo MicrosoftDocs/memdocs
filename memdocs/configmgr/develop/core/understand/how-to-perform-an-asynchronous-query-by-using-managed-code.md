@@ -3,8 +3,8 @@ title: Perform an Asynchronous Query by Using Managed Code
 titleSuffix: Configuration Manager
 description: Use the ProcessQuery method to perform an asynchronous query by using the managed SMS Provider in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: cfbb34e8-9b47-48db-a8ef-408a0a89ad17
 author: Banreet
