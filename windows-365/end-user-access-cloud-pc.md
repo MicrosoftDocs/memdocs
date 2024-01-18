@@ -42,6 +42,10 @@ Users can access their Cloud PCs in accordance with the matrix below:
 
 For information on hardware requirements, see [End user hardware requirements](end-user-hardware-requirements.md).
 
+## Windows App
+
+For more information about the requirements of running and using Windows App, see [What is Windows App?](/windows-app/overview).
+
 ## Windows 365 web site
 
 Users can navigate to [windows365.microsoft.com](https://windows365.microsoft.com) to access their Cloud PCs.  

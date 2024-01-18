@@ -4,8 +4,8 @@ metadata:
   titleSuffix: Configuration Manager
   description: Frequently asked questions about using Configuration Manager on an Azure environment.
   ms.date: 07/23/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-core
+  ms.subservice: core-infra
+  ms.service: configuration-manager
   ms.topic: faq
   author: banreet
   ms.author: banreetkaur

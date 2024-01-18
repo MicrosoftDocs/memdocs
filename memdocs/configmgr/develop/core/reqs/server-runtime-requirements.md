@@ -3,8 +3,8 @@ title: Server Runtime Requirements
 titleSuffix: Configuration Manager
 description: Microsoft Configuration Manager server applications that are developed by using the Configuration Manager SDK, have the following runtime requirements.
 ms.date: 03/14/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 567e9945-ad60-4d10-8f67-edc4b31ee914
 author: Banreet

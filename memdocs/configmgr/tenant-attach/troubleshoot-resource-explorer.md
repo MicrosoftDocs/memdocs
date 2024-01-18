@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Troubleshooting resource explorer for Intune tenant attach
 ms.date: 01/25/2022
 ms.topic: troubleshooting
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur

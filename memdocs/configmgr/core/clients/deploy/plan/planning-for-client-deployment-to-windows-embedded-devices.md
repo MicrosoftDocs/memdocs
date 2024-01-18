@@ -3,8 +3,8 @@ title: Planning client deployment to Windows Embedded devices
 titleSuffix: Configuration Manager
 description: Plan for client deployment to Windows Embedded devices in Configuration Manager.
 ms.date: 10/11/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

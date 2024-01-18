@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/23/2024
+ms.date: 01/08/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -53,7 +53,7 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
 
 - There are some limits:
 
-  - A maximum of 20 ADMX files can be uploaded. Each file must be 1 MB or smaller.
+  - A maximum of 10 ADMX files can be uploaded. Each file must be 1 MB or smaller.
   - For each ADMX file, only one ADML file can be uploaded.
   - Each ADMX file supports one language.
 
@@ -109,10 +109,10 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 ## Add the ADMX and ADML files
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Import ADMX** > **Import**:
+2. Select **Devices** > **Configuration** > **Import ADMX** > **Import**:
 
     :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Intune admin center.":::
-    
+
     Alternatively, you can also import from **Devices** > **Windows** > **Configuration profiles** > **Import ADMX**.
 
 3. Upload your files:
@@ -135,11 +135,11 @@ When the import completes, your ADMX templates are shown in the list. You can al
 ## Create a profile using your imported files
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Imported Administrative templates (Preview)**:
+    - **Profile type**: Select **Templates** > **Imported Administrative templates (Preview)**:
 
       :::image type="content" source="./media/administrative-templates-import-custom/select-imported-administrative-templates.png" alt-text="Screenshot that shows how to select imported administrative templates to create a device configuration profile using the imported ADMX settings in Microsoft Intune and Intune admin center.":::
 

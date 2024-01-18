@@ -3,8 +3,8 @@ title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -58,7 +58,10 @@ When clients download cloud-managed content, they use Delivery Optimization from
   - Client apps: Microsoft Store apps (UWP) and updates
 
   - Endpoint Protection: Windows Defender definition updates
-
+    
+- Intune Win32 apps
+- For a complete list visit: [Types of download content supported by Delivery Optimization and Microsoft Connected Cache](/windows/deployment/do/waas-delivery-optimization#types-of-download-content-supported-by-delivery-optimization)
+  
 > [!NOTE]
 > Connected Cache doesn't support content that Configuration Manager manages, like software updates with an integrated software update point.<!--10729675-->
 

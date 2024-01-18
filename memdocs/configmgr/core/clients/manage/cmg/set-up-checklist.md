@@ -3,8 +3,8 @@ title: Set up checklist for CMG
 titleSuffix: Configuration Manager
 description: Get an overview of the cloud management gateway (CMG) setup process and make sure you have all prerequisites ready to start.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: overview
 author: BalaDelli
 ms.author: baladell

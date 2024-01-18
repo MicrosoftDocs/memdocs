@@ -3,8 +3,8 @@ description: Learn how to use the GetCurrentUser method to get the domain\user n
 title: GetCurrentUser Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: b156164d-d873-47fe-8fc8-043ccdb6b75a
 author: Banreet

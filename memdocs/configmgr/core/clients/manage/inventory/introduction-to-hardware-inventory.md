@@ -3,8 +3,8 @@ title: Hardware inventory
 titleSuffix: Configuration Manager
 description: Understand the basics of hardware inventory in Configuration Manager.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: overview
 author: gowdhamankarthikeyan
 ms.author: gokarthi

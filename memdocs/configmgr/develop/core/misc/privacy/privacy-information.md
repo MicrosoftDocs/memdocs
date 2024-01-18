@@ -3,8 +3,8 @@ description: Learn how information is handled by Configuration Manager SDK to be
 title: Privacy Information
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: d6ded6e9-1f9b-459a-8ef3-4b8f828e0232
 author: Banreet

@@ -3,8 +3,8 @@ title: Enroll devices in Desktop Analytics
 titleSuffix: Configuration Manager
 description: Learn how to enroll devices in Desktop Analytics.
 ms.date: 04/13/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-analytics
+ms.subservice: desktop-analytics
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

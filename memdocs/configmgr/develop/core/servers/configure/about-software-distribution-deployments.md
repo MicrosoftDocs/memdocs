@@ -3,8 +3,8 @@ title: Software Distribution Deployments
 titleSuffix: Configuration Manager
 description: In Configuration Manager, after a software distribution package has been created, with programs to tell client computers what to do with the package, you need to advertise the program.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 879be718-4ce0-46bc-a2e3-161b97f836a5
 author: Banreet

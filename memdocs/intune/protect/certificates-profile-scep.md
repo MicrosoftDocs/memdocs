@@ -52,7 +52,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select  and go to **Devices** > **Configuration profiles** > **Create profile**.
+2. Select  and go to **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
    - **Platform**: Choose the platform of your devices.
