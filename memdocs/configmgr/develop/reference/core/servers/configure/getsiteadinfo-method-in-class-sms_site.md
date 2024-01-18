@@ -3,8 +3,8 @@ description: Learn how to use the GetSiteADInfo method to get Active Directory i
 title: GetSiteADInfo Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 34cd1ffb-97f9-4177-8b1b-751203358528
 author: Banreet

@@ -3,8 +3,8 @@ title: Connect to an SMS Provider by Using Managed Code
 titleSuffix: Configuration Manager
 description: To connect to an SMS Provider, use WqlConnectionManager.Connect.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 2a435561-01b7-45d5-b7cf-89fc1845025f
 author: Banreet

@@ -3,8 +3,8 @@ title: Microsoft Store apps
 titleSuffix: Configuration Manager
 description: Manage and deploy apps from the Microsoft Store for Business and Education with Configuration Manager.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-app
+ms.subservice: app-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: baladelli
 ms.author: baladell

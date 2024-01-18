@@ -3,8 +3,8 @@ title: Use cloud services
 titleSuffix: Configuration Manager
 description: Provision cloud resources for Configuration Manager to supplement your on-premises infrastructure.
 ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

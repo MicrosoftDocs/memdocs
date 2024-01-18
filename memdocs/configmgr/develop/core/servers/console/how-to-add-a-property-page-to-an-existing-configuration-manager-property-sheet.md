@@ -3,8 +3,8 @@ description: Learn how to add a property page to an existing property sheet, in 
 title: Add a Property Page to an Existing Property Sheet
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 182335e6-3505-49a9-84a1-e16221a42ea3
 author: Banreet

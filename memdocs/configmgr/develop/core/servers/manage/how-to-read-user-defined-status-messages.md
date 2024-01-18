@@ -3,8 +3,8 @@ title: Read User-Defined Status Messages
 titleSuffix: Configuration Manager
 description: In Configuration Manager, you can read user-defined status messages, on the site server, by querying the SMS Provider.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 710c50b4-d898-4244-ba77-f5499d737ce4
 author: Banreet

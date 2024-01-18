@@ -3,8 +3,8 @@ title: InstallUpdates Method
 titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that installs software updates, which have been deployed to the client computer.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 32d00893-e70c-4dbf-b864-ed828b7d9487
 author: Banreet

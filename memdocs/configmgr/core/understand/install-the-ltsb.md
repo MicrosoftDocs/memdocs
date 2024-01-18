@@ -3,8 +3,8 @@ title: Install a site using the 1606 baseline media
 titleSuffix: Configuration Manager
 description: Install or upgrade to the LTSB for System Center Configuration Manager.
 ms.date: 09/06/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

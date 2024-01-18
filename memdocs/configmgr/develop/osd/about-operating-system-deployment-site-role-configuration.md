@@ -2,8 +2,8 @@
 title: OS Deployment Site Role Configuration
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 15ddea9d-e13a-4be2-a3f6-20eba1e4a678
 author: Banreet

@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Prerequisites for Microsoft Intune tenant attach.
 ms.date: 07/11/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur

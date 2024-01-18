@@ -2,8 +2,8 @@
 title: CCM_RequestedAppPolicyActivation Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9453f2e6-006a-4932-b67f-fda5e149133a
 author: Banreet

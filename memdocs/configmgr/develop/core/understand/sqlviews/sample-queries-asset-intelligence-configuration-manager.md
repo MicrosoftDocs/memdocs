@@ -3,8 +3,8 @@ title: Sample queries for asset intelligence
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common Asset Intelligence views to other views.
 ms.date: 12/09/2020
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 
 

@@ -3,8 +3,8 @@ description: Learn how to use the SMS_AppDeploymentRequirementsNotMetAssetDetail
 title: SMS_AppDeploymentRequirementsNotMetAssetDetails Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 9104a3c0-fd9c-4642-8c49-7945f522c496
 author: Banreet

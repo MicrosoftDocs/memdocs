@@ -3,8 +3,8 @@ title: Monitor and plan for power management
 titleSuffix: Configuration Manager
 description: Learn how to monitor and plan for power management in Configuration Manager.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/06/2023
+ms.date: 01/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,7 +50,7 @@ This scenario extends the Microsoft Intune Endpoint Security surface to devices 
 Applies to:
 
 - Windows 10 and Windows 11
-- Windows server (2012 R2 and up)
+- Windows Server (2012 R2 and up)
 - Linux
 - macOS
 

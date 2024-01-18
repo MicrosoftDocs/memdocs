@@ -3,8 +3,8 @@ description: Learn how the CancelDownload WMI class method, in Configuration Man
 title: CancelDownload method in class CCM_ProgramsManager
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 36538342-6f0d-4e64-84b8-aa56282c11c7
 author: Banreet

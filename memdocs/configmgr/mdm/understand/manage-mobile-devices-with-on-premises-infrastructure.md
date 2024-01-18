@@ -3,8 +3,8 @@ title: On-premises MDM
 titleSuffix: Configuration Manager
 description: Learn about on-premises mobile device management (MDM) in Configuration Manager
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-mdm
+ms.subservice: mdm
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
