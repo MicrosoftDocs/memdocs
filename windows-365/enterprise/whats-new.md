@@ -64,7 +64,7 @@ For more information about public preview items, see [Public preview in Windows 
 
 #### Updated documentation article: Relative performance for different Cloud PC sizes<!--48521010-->
 
-We’ve updated the article and added performance information for additional Cloud PC sizes. For more information, see [Relative performance for different Cloud PC sizes](relative-cloud-pc-performance.md).
+We’ve updated the article and added performance information for additional Cloud PC sizes. For more information, see [Relative performance for different Cloud PC sizes](../relative-cloud-pc-performance.md).
 
 <!-- ########################## -->
 ## Week of January 8, 2024 (Service release 2312)
