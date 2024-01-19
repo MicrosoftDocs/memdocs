@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 01/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -116,7 +116,14 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 
    - **Allow phone sign-in**:
 
-     If this option is set to **Yes**, users can use a remote passport to serve as a portable companion device for desktop computer authentication. The desktop computer must be Microsoft Entra joined, and the companion device must be configured with a Windows Hello for Business PIN.
+     If this option is set to **Yes**, users can use a remote passport to serve as a portable companion device for desktop computer authentication. The desktop computer must be Microsoft Entra joined, and the companion device must be configured with a Windows Hello for Business PIN.  
+
+   - **Enable enhanced sign in security**: 
+   
+      Configure [Windows Hello Enhanced Sign-in Security](/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security) on devices with capable hardware. Your options:  
+
+      * **Default. Enhanced sign-in security will be enabled on systems with capable hardware.** Device users can't use external peripherals to sign in to their device with Windows Hello. 
+      * **Enhanced sign-in security will be disabled on all systems.** Device users can use external peripherals that are compatible with Windows Hello to sign in to their device.  
 
    - **Use security keys for sign-in**:
 
