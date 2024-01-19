@@ -42,7 +42,7 @@ Class SMS_ClientSettingsBase : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ClientSettingsBase` class does not define any methods.  
+ The `SMS_ClientSettingsBase` class doesn't define any methods.  
 
 ## Properties  
  `AssignmentCount`  

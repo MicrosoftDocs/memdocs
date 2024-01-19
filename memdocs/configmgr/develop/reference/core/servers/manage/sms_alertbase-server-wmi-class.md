@@ -58,7 +58,7 @@ Class SMS_AlertBase : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_AlertBase` class does not define any methods.  
+ The `SMS_AlertBase` class doesn't define any methods.  
 
 ## Properties  
  `AlertState`  
@@ -149,7 +149,7 @@ Class SMS_AlertBase : SMS_BaseClass
 
  Qualifiers: none  
 
- `true` if this alert is enabled. When the alert is not enabled, the condition is not evaluated.  
+ `true` if this alert is enabled. When the alert isn't enabled, the condition isn't evaluated.  
 
  `FeatureArea`  
  Data type: `UInt32`  
@@ -333,7 +333,7 @@ Class SMS_AlertBase : SMS_BaseClass
 
  Qualifiers: none  
 
- Do not start the evaluation until the specified time.  
+ Don't start the evaluation until the specified time.  
 
  `SourceSiteCode`  
  Data type: `String`  

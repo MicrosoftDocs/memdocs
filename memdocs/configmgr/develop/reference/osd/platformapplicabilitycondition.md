@@ -32,7 +32,7 @@ ms.reviewer: mstewart,aaroncz
 |MaxVersion|The maximum supported version. For example, "5.20.9999.9999".|  
 |MinVersion|The minimum supported version. For example, "5.20.3790.0".|  
 |Name|The operating system name. For example, "Windows NT".|  
-|Platform|The supported platform. For example "x64".|  
+|Platform|The supported platform, for example, "x64".|  
 
 ## See Also  
  [Operating System Deployment Driver Supported Platforms Schema](../../../develop/reference/osd/operating-system-deployment-driver-supported-platforms-schema.md)   

@@ -15,7 +15,7 @@ ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DistributionStatus Server WMI Class
-The `SMS_DistributionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the status of a package that has been assigned to a distribution point.  
+The `SMS_DistributionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the status of a package that has been assigned to a distribution point.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -35,7 +35,7 @@ Class SMS_DistributionStatus : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_DistributionStatus` class does not define any methods.  
+ The `SMS_DistributionStatus` class doesn't define any methods.  
 
 ## Properties  
  `Assets`  

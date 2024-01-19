@@ -38,7 +38,7 @@ UInt32 RequestMachinePolicy(
 | Value | Description |
 | ----- | ----------- |
 |0|A machine policy retrieval cycle is initiated.|  
-|1|A machine policy validation cycle is initiated, and the server and client cyclical redundancy checks (CRCs) are compared to verify that the policies are in agreement. If the policies are not in agreement, then a resynchronization is initiated.|  
+|1|A machine policy validation cycle is initiated, and the server and client cyclical redundancy checks (CRCs) are compared to verify that the policies are in agreement. If the policies aren't in agreement, then a resynchronization is initiated.|  
 
 ## Return Values  
  A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  

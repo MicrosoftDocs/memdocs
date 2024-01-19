@@ -1,5 +1,5 @@
 ---
-description: Learn how to use the Stop method to stop a Microsoft Azure service which represents a cloud distribution point for Configuration Manager.
+description: Learn how to use the Stop method to stop a Microsoft Azure service that represents a cloud distribution point for Configuration Manager.
 title: Stop method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
@@ -17,7 +17,7 @@ ms.reviewer: mstewart,aaroncz
 
 # Stop method in class SMS_AzureService
 
-The `Stop` WMI class method in Configuration Manager, that's invoked to stop a Microsoft Azure service which represents a cloud distribution point for Configuration Manager.  
+The `Stop` WMI class method in Configuration Manager that's invoked to stop a Microsoft Azure service that represents a cloud distribution point for Configuration Manager.  
 
 The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
 

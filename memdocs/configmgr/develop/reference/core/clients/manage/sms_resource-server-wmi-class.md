@@ -29,7 +29,7 @@ Class SMS_Resource : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_Resource` class does not define any methods.  
+ The `SMS_Resource` class doesn't define any methods.  
 
 ## Properties  
  `ResourceID`  
@@ -39,7 +39,7 @@ Class SMS_Resource : SMS_BaseClass
 
  Qualifiers: [key]  
 
- Configuration Manager-supplied ID that uniquely identifies a Configuration Manager client resource. This ID is not unique across sites. The default value is ''".  
+ Configuration Manager-supplied ID that uniquely identifies a Configuration Manager client resource. This ID isn't unique across sites. The default value is ''".  
 
 ## Remarks  
  Class qualifiers for this class include:  

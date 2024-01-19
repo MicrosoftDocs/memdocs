@@ -45,7 +45,7 @@ Class SMS_ClientSettingsDefault : SMS_BaseClass
 ```  
 
 ## Methods  
- The `SMS_ClientSettingsDefault` class does not define any methods.  
+ The `SMS_ClientSettingsDefault` class doesn't define any methods.  
 
 ## Properties  
  `AssignmentCount`  
@@ -55,7 +55,7 @@ Class SMS_ClientSettingsDefault : SMS_BaseClass
 
  Qualifiers: [read]  
 
- `AssignmentCount` is 0 only. In general, the default client settings apply to all clients in the hierarchy, unless overridden by values defined in `SMS_ClientSettings` which applies to certain collections.  
+ `AssignmentCount` is 0 only. In general, the default client settings apply to all clients in the hierarchy, unless overridden by values defined in `SMS_ClientSettings`, which applies to certain collections.  
 
  `CreatedBy`  
  Data type: `String`  
@@ -136,7 +136,7 @@ Class SMS_ClientSettingsDefault : SMS_BaseClass
 
  Qualifiers: [notnull]  
 
- Compared to `SMS_ClientSettings`, the priority is the lowest for `SMS_ClientSettingsDefault` (highest number) and should not be changed.  
+ Compared to `SMS_ClientSettings`, the priority is the lowest for `SMS_ClientSettingsDefault` (highest number) and shouldn't be changed.  
 
  `SettingsID`  
  Data type: `UInt32`  
@@ -163,7 +163,7 @@ Class SMS_ClientSettingsDefault : SMS_BaseClass
 
  Qualifiers: [notnull]  
 
- Type is used to indicate if this setting is 'Device', 'User' or 'Default'. For `SMS_ClientSettingsDefault`, it is 0 meaning 'Default'.  
+ Type is used to indicate if this setting is 'Device,' 'User,' or 'Default.' For `SMS_ClientSettingsDefault`, it's 0 meaning 'Default.'  
 
 |Value|Setting type|  
 |-|-|  
