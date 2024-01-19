@@ -40,7 +40,6 @@ When using Conditional Access, a user who signs in to a Cloud PC for the first t
 
 **Troubleshooting steps**: [Follow the steps to investigate risk](/entra/id-protection/howto-identity-protection-investigate-risk) to verify that the activity matches the expected behavior for the user, based on their physical location and the location of the Cloud PC.
 
-
 ## Watermarking support in Windows 365
 
 Watermarking support is configured on session hosts and enforced by the Remote Desktop client. The settings for Watermarking support can be configured via Group Policy (GPO) or the Intune Settings Catalog. The default for the QR code embedded content setting doesn't allow administrators to look up device information from leaked images for Cloud PCs.  
