@@ -166,7 +166,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Quality updates for Windows 10 and later** > **Create profile**.
+2. Select **Devices** > **Windows 10 and later updates**> **Quality updates** > **Create profile**.
 
    :::image type="content" source="./media/windows-10-expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI.":::
 
