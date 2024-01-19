@@ -211,12 +211,14 @@ Add variables to the message to create a personalized email with dynamic content
 
    - **Locale**: Select the language that correlates to the device user's locale.  
    - **Subject**: Add the subject line for the email. You can enter up to 78 characters.   
-   - **Raw HTML editor**: Turn the HTML editor on to add HTML formatting and links to your message. You can use the `href` attribute to add a link (must be an HTTPS URL). Supported HTML tags include: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, `<th>`.  
+   - **Raw HTML editor**: Turn on the HTML editor to get suggestions while adding HTML formatting and links to your message. You can use the `href` attribute to add a link (must be an HTTPS URL). Supported HTML tags include: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, `<th>`. You aren't required to use the HTML editor, and can add supported HTML without turning the editor on.  
    - **Message**: Create a message explaining the reason for noncompliance. You can enter up to 2000 characters.  
-     >[!CAUTION]
-     > Be sure to only add Intune-supported HTML tags and attributes to the message body. Intune won't send messages that have invalid tags.  
    
    To create a template with dynamic content, insert the token of a supported variable in the subject line or message. For a list of supported variables, see the table under [Create a notification message template](#create-a-notification-message-template) in this article. 
+
+      
+   >[!CAUTION]
+   > Be sure to only add Intune-supported HTML tags to the message body. Intune won't send messages that have invalid tags.  
     
 
 5. Select the checkbox for **Is Default** for one of the messages. Intune sends your default message to users that haven't set a preferred language, or when the template doesn’t include a specific message for their locale.  Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**.  
