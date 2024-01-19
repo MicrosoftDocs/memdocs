@@ -168,6 +168,9 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Monitor and troubleshoot
 
+#### Monitoring reports for devices<!-- 17744651 -->
+In Intune, you can view a new list of all device monitoring reports. You can find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane provides reports related to configuration, compliance, enrollment, and software updates. Additionally, there are other reports that you can view, such as **Device actions**. For more information, see [Intune reports](../fundamentals/reports.md).
+
 #### Exported report data maintains search results<!-- 17723620 -->
 Intune can now maintain your report search and filter results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-and-settings-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
