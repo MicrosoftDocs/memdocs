@@ -3,8 +3,8 @@ description: Learn how to use the SMS_ReplicationLinkSummary class to represent 
 title: SMS_ReplicationLinkSummary Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f5817089-7c5d-48bb-a0a7-415e7ccc4450
 author: Banreet

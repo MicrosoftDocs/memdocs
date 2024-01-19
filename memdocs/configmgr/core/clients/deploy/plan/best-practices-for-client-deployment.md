@@ -3,8 +3,8 @@ title: Client deployment recommendations
 titleSuffix: Configuration Manager
 description: Understand product recommendation for client deployment.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: sheetg09
 ms.author: sheetg

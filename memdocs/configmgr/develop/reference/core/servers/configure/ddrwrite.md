@@ -3,8 +3,8 @@ title: DDRWrite
 titleSuffix: Configuration Manager
 description: The`DDRWrite function, in Configuration Manager, writes the data discovery records (DDRs) to a file.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 818ce2a2-5f8d-44c4-80f8-9683074c2508
 author: Banreet

@@ -3,8 +3,8 @@ description: The SMS_R_IPNetwork WMI class is an SMS Provider server class, in C
 title: SMS_R_IPNetwork Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 05cbc962-ac74-4b55-b58f-f2ccd4a9fe75
 author: Banreet

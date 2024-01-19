@@ -3,8 +3,8 @@ title: Status MIF Functions
 titleSuffix: Configuration Manager
 description: In Configuration Manager, status MIF functions are provided in separate libraries to create a status Management Information Format file.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 57b8ea8c-7cbd-45d1-8b68-a5ff817f2aa1
 author: Banreet

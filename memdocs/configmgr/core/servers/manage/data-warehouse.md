@@ -3,8 +3,8 @@ title: Data warehouse
 titleSuffix: Configuration Manager
 description: Data warehouse service point and database for Configuration Manager
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: how-to
 ms.author: sheetg
 author: sheetg09 

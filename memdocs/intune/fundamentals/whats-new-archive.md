@@ -6754,7 +6754,7 @@ You can configure automatic VPN profiles in **Devices** > **Configuration profil
 
 To see these settings, and other settings you can configure, go to [iOS/iPadOS VPN settings](../configuration/vpn-settings-ios.md) and [macOS VPN settings](../configuration/vpn-settings-macos.md).
 
-Set up [per-app Virtual Private Network (VPN) for iOS/iPadOS devices](../configuration/vpn-setting-configure-per-app.md#create-a-per-app-vpn-profile).
+Set up [per-app Virtual Private Network (VPN) for iOS/iPadOS devices](../configuration/vpn-setting-configure-per-app.md#step-4---create-a-per-app-vpn-profile).
 
 Applies to:
 - iOS/iPadOS 14 and newer

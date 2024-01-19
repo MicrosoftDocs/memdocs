@@ -3,8 +3,8 @@ title: View collection relationships
 titleSuffix: Configuration Manager
 description: You can view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.localizationpriority: medium
 author: gowdhamankarthikeyan

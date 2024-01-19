@@ -3,8 +3,8 @@ title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur

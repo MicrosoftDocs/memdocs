@@ -3,8 +3,8 @@ title: Evaluation of the computer information for a specific computer report
 titleSuffix: Configuration Manager
 description: A predefined report in Configuration Manager that combines multiple SQL views to obtain the required data.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.assetid: 3c4286f0-b210-4ea3-a58e-342b2f9a98f2
 author: Banreet

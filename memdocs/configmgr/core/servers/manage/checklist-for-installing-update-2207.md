@@ -3,8 +3,8 @@ title: Checklist for 2207
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2207.
 ms.date: 08/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
