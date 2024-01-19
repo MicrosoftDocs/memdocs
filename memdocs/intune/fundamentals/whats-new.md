@@ -130,7 +130,7 @@ You can now use Intune app protection policies with *BlackBerry Protect Mobile* 
  
 While configuring the CylancePROTECT Mobile connector (formerly BlackBerry Mobile), you now can select options to turn on *App protection policy evaluation* for both Android and iOS/iPadOS devices. 
 
-For more information, see [Set up BlackBerry Protect Mobile](https://learn.microsoft.com/en-us/mem/intune/protect/blackberry-mobile-threat-defense-connector), and [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+For more information, see [Set up BlackBerry Protect Mobile](../protect/blackberry-mobile-threat-defense-connector.md), and [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
 
 ### Device security
 
