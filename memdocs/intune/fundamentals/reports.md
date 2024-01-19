@@ -614,17 +614,6 @@ To view the **All devices** details:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices**.
 
-### Device configuration (Operational)
-
-The **Device configuration** details provides both device configuration and endpoint security profiles in one report.
-
-You can view all the policies applied to your device in the new single report that contains improved data. For instance, you can see the distinction of profile types in the new **Policy type** field. Also, selecting a policy will provide more details about settings applied to the device and status of the device. Role-based access control (RBAC) permissions have been applied to filter the list of profiles based on your permissions.
-
-To view the **Device configuration** details:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All devices** > *select a device* > **Device configuration**.
-
 ## Single policy reports
 
 ### Device and user check-in status report (Operational)
@@ -692,6 +681,17 @@ To see the report for a device, you can use the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > *select a device* > **Group Membership**.
+
+### Device configuration (Operational)
+
+The **Device configuration** details provides both device configuration and endpoint security profiles in one report.
+
+You can view all the policies applied to your device in the new single report that contains improved data. For instance, you can see the distinction of profile types in the new **Policy type** field. Also, selecting a policy will provide more details about settings applied to the device and status of the device. Role-based access control (RBAC) permissions have been applied to filter the list of profiles based on your permissions.
+
+To view the **Device configuration** details:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **All devices** > *select a device* > **Device configuration**.
 
 ## Cloud attached devices reports
 
