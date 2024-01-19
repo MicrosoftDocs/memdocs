@@ -37,7 +37,7 @@ Intune provides several options to monitor security baselines. You can:
 - Monitor the security baselines profile that applies to your users and devices.
 - View how the settings from a selected profile are set on a selected device.
 
-You can also view the [Device configuration report](../fundamentals/reports.md#device-configuration-report-operational) to see which device configuration based policies apply to individual devices, which include security baselines.
+You can also view the [Device configuration report](../fundamentals/reports.md#device-configuration-operational) to see which device configuration based policies apply to individual devices, which include security baselines.
 
 For more information about the feature, see [Security baselines in Intune](security-baselines.md).
 
@@ -178,7 +178,7 @@ Monitoring the profile gives insight into the deployment state of your devices, 
 
 ### Resolve conflicts for security baselines
 
-To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the [Device configuration report](../fundamentals/reports.md#device-configuration-report-operational) for a device. This report view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error.
+To help resolve a conflict or error for settings in your security baseline profiles or Endpoint security policies, view the [Device configuration report](../fundamentals/reports.md#device-configuration-operational) for a device. This report view helps you identify where your profiles and policies contain settings that drive a status of Conflict or Error.
 
 You can also reach information about settings in conflict or error through two paths from within Microsoft Intune admin center:
 
@@ -187,7 +187,7 @@ You can also reach information about settings in conflict or error through two p
 
 #### Drill in to identify and resolve conflicts
 
-1. While viewing the [Device configuration report](../fundamentals/reports.md#device-configuration-report-operational) for a device, select a policy to drill-in to learn more about the issue that results in a conflict or error status.
+1. While viewing the [Device configuration report](../fundamentals/reports.md#device-configuration-operational) for a device, select a policy to drill-in to learn more about the issue that results in a conflict or error status.
 
    When you drill-in, Intune displays a list of settings for that policy that includes each setting that wasn’t set as *Not configured*, and the status of that setting.
 
