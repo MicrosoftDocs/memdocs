@@ -3059,7 +3059,7 @@ You can now deploy macOS line-of-business (LOB) apps by uploading PKG-type insta
 To add a macOS LOB app from [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **macOS** > **Add** > **Line-of-business app**. Also, the App Wrapping Tool for macOS will no longer be required to deploy macOS LOB apps. For more information, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
 #### Improved report experience on the Managed Apps pane<!-- 10147133 -->
-The **Managed Apps** pane has been updated to better display managed app details for a device. You can switch between displaying managed app details for the primary user and other users on a device, or display app details for the device without any user. The generated app details are displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists. For more information, see [Managed Apps report](../fundamentals/reports.md#managed-apps-report-organizational).
+The **Managed Apps** pane has been updated to better display managed app details for a device. You can switch between displaying managed app details for the primary user and other users on a device, or display app details for the device without any user. The generated app details are displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists. For more information, see [Managed Apps report](../fundamentals/reports.md#managed-apps-report-operational).
 
 #### MSfB licenses and Apple VPP licenses<!-- 10742713a -->
 Removing an Intune license from a user will no longer revoke app licenses granted through the Microsoft Store for Business or through Apple VPP. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](../apps/windows-store-for-business.md), [Revoking iOS app licenses](../apps/vpp-apps-ios.md#revoking-app-licenses), and [Microsoft Intune licensing](../fundamentals/licenses.md).
@@ -4699,7 +4699,7 @@ You can now choose the following Android enrollment types when filtering by **OS
 - Android (dedicated)
 - Android (device administrator)
 
-In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices** and view the **OS** column for specific Android enrollment types. For more information about Android enrollment types, see [Intune reports](../fundamentals/reports.md#all-devices-report-operational).
+In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices** and view the **OS** column for specific Android enrollment types. For more information about Android enrollment types, see [Intune reports](../fundamentals/reports.md).
 
 #### Settings catalog policies for policy sets<!-- 8683467  -->
 
@@ -6362,7 +6362,7 @@ The following settings are marked as **Not applicable** in the Policy reports:
 
 #### Noncompliant policies report helps troubleshoot devices in error or that are noncompliant<!-- 6471368    -->
 
-In preview, the new **Noncompliant policies** report is an operational report you can use to help troubleshoot errors and conflicts for compliance policies targeting devices. The [Noncompliant policies report](reports.md#noncompliant-policies-report-operational) displays a list of compliance policies that have one or more devices with errors or that are in a state of noncompliance to the policy.
+In preview, the new **Noncompliant policies** report is an operational report you can use to help troubleshoot errors and conflicts for compliance policies targeting devices. The [Noncompliant policies report](reports.md#policy-noncompliance-report-operational) displays a list of compliance policies that have one or more devices with errors or that are in a state of noncompliance to the policy.
 
 Use this report to:
 
@@ -7025,7 +7025,7 @@ We're adding four new reports for Microsoft Defender Antivirus on Windows 10 in 
 For more information, see [Intune reports](../fundamentals/reports.md) and [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md).
 
 #### New Windows 10 feature update report<!-- 6473128  -->
-The **Windows 10 feature update** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Windows updates** to view the summary for this report. To see reports for specific policies, from the **Windows updates** workload, select the **Reports** tab and open the **Windows Feature Update Report**. For more information, see [Windows 10 feature updates](../fundamentals/reports.md#windows-10-and-later-feature-updates-organizational).
+The **Windows 10 feature update** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Windows updates** to view the summary for this report. To see reports for specific policies, from the **Windows updates** workload, select the **Reports** tab and open the **Windows Feature Update Report**. For more information, see [Windows 10 feature updates](../fundamentals/reports.md#windows-feature-update-organizational).
 
 
 <!-- ########################## -->

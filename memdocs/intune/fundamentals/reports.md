@@ -48,7 +48,7 @@ The reporting framework provides a consistent and more comprehensive reporting e
 - **Export** – You can quickly export reporting data generated from large tenants.
 
 > [!NOTE]
-> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-and-settings-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
+> Intune can maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices](../fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
 
 ## Who can access the data?
 
@@ -589,7 +589,7 @@ To see a generated report of device state, you can use the following steps:
 > [!NOTE]
 > If the device's platform differs from the application's platform, rather than showing **Not Applicable** for the **Status details** of the entry, the entry will not be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.
 
-## User Install Status for apps report (Operational)
+### User Install Status for apps report (Operational)
 
 Based on a selected app, the **User Install Status** report provides a list of users and status information related to the specific app. App installation details related to the user include **Name**, **UPN**, **Failures**, **Installs**, **Pending**, **Not Installed**, and **Not Applicable**. You have the ability to sort, filter, and search this report as well.
 
