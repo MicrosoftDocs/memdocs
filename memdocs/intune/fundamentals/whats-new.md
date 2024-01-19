@@ -125,6 +125,13 @@ For more information about configuring Managed software updates in Intune, go to
 
 ### Device management
 
+#### New device management experience in Microsoft Intune<!-- 17585897 -->
+We’re rolling out an update to the device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster. The new experience, previously in public preview, will be gradually rolled out for general availability over the coming weeks. The public preview experience will continue to be available until your tenant receives the update.  
+
+The availability of this new admin center experience will vary tenant by tenant. While a few will see this update immediately, many might not see the new experience for several weeks. For Government clouds, the availability of this experience is estimated around late February 2024.  
+
+Due to the rollout timelines, we are updating our documentation to the new experience as soon as possible to help ease the transition to the new admin center layout. We are unable to provide a side-by-side content experience during this transition and believe providing documentation that aligns to the newer experience brings more value to more customers. If you want to try the new experience and align with doc procedures before your tenant is updated, go to **Devices** > **Overview**, select the notification banner that reads **Preview upcoming changes to Devices and provide feedback**, and select **Try it now**.
+
 #### BlackBerry Protect Mobile now supports app protection policies<!-- 13357196 wnstaged -->  
 You can now use Intune app protection policies with *BlackBerry Protect Mobile* (powered by Cylance AI). With this change Intune supports BlackBerry Protect Mobile for mobile application management (MAM) scenarios for [unenrolled devices](../ protect/mtd-add-apps-unenrolled-devices). This includes the use of risk assessment with Conditional access and configuration of Conditional Launch settings for unenrolled devices.
  
