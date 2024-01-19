@@ -3,8 +3,8 @@ description: Learn how to represent asset level details about classic software d
 title: SMS_ClassicDeploymentAssetDetails Class
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ea789cfb-050d-4901-a79d-2a0df24efaa1
 author: Banreet

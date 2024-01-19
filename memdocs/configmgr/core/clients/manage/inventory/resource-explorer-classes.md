@@ -3,8 +3,8 @@ title: Resource Explorer default inventory classes
 titleSuffix: Configuration Manager
 description: Shows the classes that appear in Resource Explorer.
 ms.date: 08/02/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: gowdhamankarthikeyan
 ms.author: gokarthi

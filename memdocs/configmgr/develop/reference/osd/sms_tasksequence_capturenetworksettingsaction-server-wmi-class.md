@@ -3,8 +3,8 @@ title: SMS_TaskSequence_CaptureNetworkSettingsAction class
 titleSuffix: Configuration Manager
 description: Details of the SMS_TaskSequence_CaptureNetworkSettingsAction server WMI class
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 7180bd80-e003-4258-b21f-bf4d6964ac9f
 author: Banreet

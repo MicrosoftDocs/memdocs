@@ -3,8 +3,8 @@ title: Modify a CMG
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell

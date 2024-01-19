@@ -3,8 +3,8 @@ description: Learn how to reload the install map from the database, which repopu
 title: Refresh method in class SMS_SiteInstallMap
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3
 author: Banreet

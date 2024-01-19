@@ -79,6 +79,8 @@ Windows App lets users securely connect to Windows devices and apps. Supported r
 
 Windows App is available for Windows, macOS, iOS and iPadOS, and web browsers.
 
+For more information, see [Get started with Windows App](/en-us/windows-app/get-started-connect-devices-desktops-apps).
+
 <!-- ########################## -->
 ## Week of October 30, 2023 (Service release 2310)
 

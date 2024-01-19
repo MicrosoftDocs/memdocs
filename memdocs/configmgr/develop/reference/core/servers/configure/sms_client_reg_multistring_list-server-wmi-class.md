@@ -3,8 +3,8 @@ title: SMS_Client_Reg_MultiString_List Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a list of client registry multi-string items from the site control file.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: ff5fa70d-5bea-469d-bc84-a940d6558733
 author: Banreet

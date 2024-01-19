@@ -3,8 +3,8 @@ title: Console support
 titleSuffix: Configuration Manager
 description: Learn about which OS versions you can install the Configuration Manager console.
 ms.date: 12/01/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: Banreet
 ms.author: banreetkaur

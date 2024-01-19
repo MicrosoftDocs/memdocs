@@ -3,8 +3,8 @@ description: Learn to use AddAttributeToSMSStatusMessage to add a single optiona
 title: AddAttributeToSMSStatusMessage Function
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: fe906f97-a669-49aa-9fb3-09920f0d395e
 author: Banreet

@@ -3,8 +3,8 @@ title: Microsoft Configuration Manager documentation
 summary: "Official product documentation for Configuration Manager, co-management, and Desktop Analytics"
 metadata:
    ms.topic: hub-page
-   ms.prod: configuration-manager
-   ms.technology: configmgr-core
+   ms.subservice: core-infra
+   ms.service: configuration-manager
    ms.localizationpriority: high
    ms.date: 11/10/2021
    ms.collection: highpri

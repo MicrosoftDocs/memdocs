@@ -3,8 +3,8 @@ title: SMS_ARoleOperation Class
 titleSuffix: Configuration Manager
 description: An SMS Provider server class that SMS_Role embeds, and this class describes the operation granted to this role.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0631a5e5-4f9c-4e14-b662-684439588b55
 author: Banreet

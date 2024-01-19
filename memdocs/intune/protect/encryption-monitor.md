@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2023
+ms.date: 01/18/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,7 +40,7 @@ The Microsoft Intune encryption report is a centralized location to view details
 > - [Manage BitLocker policy](../protect/encrypt-devices.md)
 > - [Manage FileVault policy](encrypt-devices-filevault.md)
 
-To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Monitor**, and then under *Configuration*, select **Encryption report**.
+To find the report, Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Devices** > **Configuration**, select the *Monitor** tab, and then select **Device encryption status**.
 
 ## View encryption details
 

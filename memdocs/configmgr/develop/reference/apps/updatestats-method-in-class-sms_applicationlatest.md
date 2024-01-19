@@ -3,8 +3,8 @@ title: UpdateStats method in class SMS_ApplicationLatest
 titleSuffix: Configuration Manager
 description: The UpdateStats Windows Management Instrumentation class method, in Configuration Manager, updates the statistics for this application.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 6719d008-cc4d-43b2-ad11-08cb707a0631
 author: Banreet
