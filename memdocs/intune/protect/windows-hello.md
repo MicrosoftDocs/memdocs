@@ -52,9 +52,13 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 > In the Anniversary Update, these two PINS were merged into one single device PIN.
 > Any Intune configuration policies you set to control the device PIN, and additionally, any Windows Hello for Business policies you configured, now both set this new PIN value.
 > If you have set both policy types to control the PIN, the Windows Hello for Business policy is applied.
-> To ensure policy conflicts are resolved and that the PIN policy is applied correctly, update your Windows Hello for Business Policy to match the settings in your configuration policy, and ask your users to sync their devices in the Company Portal app.
+> To ensure policy conflicts are resolved and that the PIN policy is applied correctly, update your Windows Hello for Business Policy to match the settings in your configuration policy, and ask your users to sync their devices in the Company Portal app.  
 
-## Create a Windows Hello for Business policy
+## Role-based access control  
+
+You must be an Intune Service Administrator to create or edit a Windows Hello for Business policy in Windows enrollment. All other Intune roles have read-only access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
+
+## Create a Windows Hello for Business policy  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
