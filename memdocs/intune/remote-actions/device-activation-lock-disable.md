@@ -54,7 +54,7 @@ While Activation Lock helps secure Apple devices and improves the chances of rec
 To help solve these problems, Apple introduced the ability to disable Activation Lock for supervised devices, without the user's Apple ID and password. Supervised devices generate a device-specific Activation Lock bypass code, which is stored on Apple's activation server.
 
 >[!TIP]
-> Supervised mode can be configured through Apple Configurator to lock down a device and limit functionality to specific business purposes. Supervised mode is used only for corporate-owned devices.
+> Supervised mode can be configured through Apple Configurator to lock down a device and limit functionality to specific business purposes. This action is only supported on Supervised devices enrolled using Automated Device Enrollment program. [Apple's web site](https://developer.apple.com/documentation/devicemanagement/clear_the_bypass_code_for_activation_lock).
 
 You can read more about Activation Lock on [Apple's web site](https://support.apple.com/HT201365).
 
