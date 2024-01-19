@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/13/2023
+ms.date: 01/19/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,6 +67,119 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Role-based access control -->
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
+
+## Week of January 23, 2024 (Service release 2401)
+
+### App management
+
+#### Install DMG and PKG apps up to 8 GB in size on managed Macs<!-- 25766031 -->
+The size-limit of DMG and PKG apps that can be installed using Intune on managed Macs has been increased. The new limit is 8 GB and is applicable to apps (DMG and unmanaged PKG) that are installed using the Microsoft Intune management agent for macOS. For more information about DMG and PKG apps, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md) and [Add an unmanaged macOS PKG app to Microsoft Intune](../apps/macos-unmanaged-pkg.md).
+
+#### Intune support of store-signed LOB apps for Surface Hub devices<!-- 25865620 -->
+Intune now supports the deployment of store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps enables offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
+
+#### Route SMS/MMS messages to specific app<!-- 24594466 -->
+You can configure an app protection policy to determine which SMS/MMS app must be used when the end-user intends to send a SMS/MMS message after getting redirected from a policy managed app. When the end-user clicks on a number with the intent of sending an SMS/MMS message, the app protection settings are used to redirect to the configured SMS/MMS app. This capability relates to the **Transfer messaging data to** setting and applies to both iOS/iPadOS and Android platforms. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [Android app protection policy settings](../apps/app-protection-policy-settings-android.md).
+
+#### End-user app PIN reset<!-- 24605159 -->
+For managed apps that require a PIN to access, allowed end-users can now reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
+
+#### Maximum app package size<!-- 17546826 -->
+The maximum package size for uploading apps to Intune has changed from 8GB to 30GB for paid customers. Trial tenants are still restricted to 8GB. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md#prerequisites).
+
+### Device configuration
+
+#### New setting that disables location on Android Enterprise devices<!-- 21060837 -->
+
+On Android Enterprise devices, there's a new setting that allows admins to control the location (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile > Device Restrictions** for profile type > **General**):
+
+- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+
+For more information on the settings you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+
+- Android Enterprise
+
+#### Date and time picker for managed software updates in the settings catalog on iOS/iPadOS and macOS devices<!-- 26015175 -->
+
+Using the settings catalog, you can enforce managed updates on iOS/iPadOS and macOS devices by entering a date and time (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type > **Declarative Device Management > Software Update**).
+
+Previously, you had to manually type the date and time. Now, there's a date and time picker for the **Target Local Date Time** setting:
+
+**Declarative Device Management (DDM) > Software Update**:
+
+- Target Local Date Time
+
+> [!IMPORTANT]
+> If you create a policy using this setting before the January 2024 release, then this setting shows `Invalid Date` for the value. The updates are still scheduled correctly and use the values you originally configured, even though it shows `Invalid Date`.
+>
+> To configure a new date and time, you can delete the `Invalid Date` values, and select a new date and time using the date time picker. Or, you can create a new policy.
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about configuring Managed software updates in Intune, go to [Use the settings catalog to configure managed software updates](../protect/managed-software-updates-ios-macos.md).
+
+### Device management
+
+#### BlackBerry Protect Mobile now supports app protection policies<!-- 13357196 wnstaged -->  
+You can now use Intune app protection policies with *BlackBerry Protect Mobile* (powered by Cylance AI). With this change Intune supports BlackBerry Protect Mobile for mobile application management (MAM) scenarios for [unenrolled devices](../ protect/mtd-add-apps-unenrolled-devices). This includes the use of risk assessment with Conditional access and configuration of Conditional Launch settings for unenrolled devices.
+ 
+While configuring the CylancePROTECT Mobile connector (formerly BlackBerry Mobile), you now can select options to turn on *App protection policy evaluation* for both Android and iOS/iPadOS devices. 
+
+For more information, see [Set up BlackBerry Protect Mobile](https://learn.microsoft.com/en-us/mem/intune/protect/blackberry-mobile-threat-defense-connector), and [Create Mobile Threat Defense app protection policy with Intune](../protect/mtd-app-protection-policy.md).
+
+### Device security
+
+#### Support for Intune Device control and Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!-- 25470154, 15466620 -->  
+You can now use the endpoint security profiles for *Device control* (Attach surface reduction policy) and *Defender Update control* (Antivirus policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+ 
+- **Device control** profiles are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md). 
+
+  Applies to:
+  - Windows 10/11- - Available for the *Windows 10, Windows 11, and Windows Server* platform.
+ 
+- **Defender Update control** profiles are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).    
+  Apples to:  
+  - Linux 
+  - macOS
+  - Windows 10/11 - Available for the *Windows 10, Windows 11, and Windows Server* platform.
+
+With this support available, devices that are assigned either profile while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from those profiles. Check your profiles to make sure only the devices you intend to receive these policies will get them.
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 25765585, 26137219 -->
+The following protected apps are now available for Microsoft Intune:
+- PrinterOn Print by PrinterOn, Inc. (iOS/iPadOS)
+- Align for InTune by MFB Technologies, Inc. (iOS/iPadOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Monitor and troubleshoot
+
+#### Exported report data maintains search results<!-- 17723620 -->
+Intune can now maintain your report search and filter results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-and-settings-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability is also available when calling the `ExportJobs` API directly.
+
+#### Easy upload of diagnostic logs for Microsoft Tunnel servers<!-- 15728481 -->  
+You can now use a single click within the Intune admin center to have Intune enable, collect, and submit eight hours of verbose logs for a Tunnel Gateway Server to Microsoft. The verbose logs can then be referenced while working with Microsoft to identify or resolve issues with a Tunnel server.
+
+In contrast, the collection of verbose logs has previously required you to sign on to the server, run manual tasks and scripts to enable and collect verbose logs, and then copy them to a location from which you can transfer them to Microsoft.
+
+To find this new capability, in the admin center go to **Tenant administration** > **Microsoft Tunnel Gateway** > select a server > select the **Logs** tab.  On this tab you’ll see a new section named **Send verbose server logs**, with button labeled **Send logs**, and a list view that displays the various log sets that have been collected and submitted to Microsoft.
+
+When you select the **Send logs** button:
+
+- Intune captures and submits the current server logs as a baseline, prior to collecting verbose logs.
+- Verbose logging is automatically enabled at level 4, and runs for eight hours to provide time to reproduce an issue for capture in those logs.
+- After eight hours, Intune submits the verbose logs and then restores the server to it's default verbosity level of zero (0), for normal operations. If you have previously set logs to run at a higher verbosity level, you can restore your custom verbosity level after log collection and upload is complete. 
+- Each time Intune collects and submits logs, it updates the list view below the button. 
+- Below the button is a list of past log submissions, displaying their verbosity level and an Incident ID that you can use when working with Microsoft to reference a specific set of logs.
+
+For more information about this capability, see [Easy upload of diagnostic logs for Tunnel servers](./protect/ microsoft-tunnel-monitor.md# easy-upload-of-diagnostic-logs-for-tunnel-servers).
 
 ## Week of December 13, 2023 (Service release 2312)
 
