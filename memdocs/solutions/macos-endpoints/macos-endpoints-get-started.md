@@ -219,11 +219,7 @@ Follow the steps in [Deploy Microsoft Defender for Endpoint on macOS with Micros
 
 ### Endpoint Security - FileVault
 
-Follow the steps in [Encrypt macOS devices with FileVault disk encryption with Intune](/mem/intune/protect/encrypt-devices-filevault) to configure FileVault with Intune.
-
-You can silently enable FileVault during setup assistant by combining the enrollment profile setting for await configuration and this setting in settings catalog:
-- Full Disk Encryption > File Vault
-   - **Force Enable In Setup Assistant:** True
+Follow the steps in [Encrypt macOS devices with FileVault disk encryption with Intune](/mem/intune/protect/encrypt-devices-filevault) to configure FileVault with Intune using settings catalog.
 
 ### Endpoint Security - Firewall
 macOS has a built-in firewall that can be configured using Intune. For more information about the macOS firewall, go to [Change Firewall settings on Mac](https://support.apple.com/guide/mac-help/mh11783/mac).
