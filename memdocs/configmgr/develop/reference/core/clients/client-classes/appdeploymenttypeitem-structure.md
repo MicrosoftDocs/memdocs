@@ -3,8 +3,8 @@ title: AppDeploymentTypeItem Structure
 titleSuffix: Configuration Manager
 description: Learn about the AppDeploymentTypeItem structure that contains detection results for an individual deployment type.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: f5c6cf80-8c02-4a8e-aa33-de91ebef8053
 author: Banreet

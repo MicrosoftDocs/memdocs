@@ -3,8 +3,8 @@ title: Features and capabilities
 titleSuffix: Configuration Manager
 description: Learn about the primary management capabilities of Configuration Manager.
 ms.date: 07/15/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: Banreet
 ms.author: banreetkaur

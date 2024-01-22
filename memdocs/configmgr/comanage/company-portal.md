@@ -3,8 +3,8 @@ title: Apps in Company Portal
 titleSuffix: Configuration Manager
 description: Provide a consistent user experience for co-managed devices to use the Company Portal app.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-comanage
+ms.subservice: co-management
+ms.service: configuration-manager
 ms.topic: how-to
 author: gowdhamankarthikeyan
 ms.author: gokarthi

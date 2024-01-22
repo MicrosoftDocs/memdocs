@@ -3,8 +3,8 @@ title: Unlock Method
 titleSuffix: Configuration Manager
 description: Sets the source site to the current site, unlocking the device setting package in Configuration Manager.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 0d714937-63a5-4224-8c2a-16ffd1d25cd3
 author: Banreet

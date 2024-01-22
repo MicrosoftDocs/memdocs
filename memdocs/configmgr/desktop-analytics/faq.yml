@@ -4,8 +4,8 @@ metadata:
   titleSuffix: Configuration Manager
   description: Frequently asked questions for Desktop Analytics.
   ms.date: 11/03/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-analytics
+  ms.subservice: desktop-analytics
+  ms.service: configuration-manager
   ms.topic: faq
   author: banreet
   ms.author: banreetkaur
