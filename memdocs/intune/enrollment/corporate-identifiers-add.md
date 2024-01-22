@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/17/2023
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -114,7 +114,7 @@ This .csv file when viewed in a text editor appears as:
 5. Enter the **Identifier** and **Details** for each identifier you want to add. When you're done entering identifiers, select **Add**.  
 6. The **Review duplicate identifiers** pop-up window appears if your entries contain corporate identifiers that are already in Intune, but have different details.  Select the identifiers that you want to overwrite into Intune and choose **Ok** to add the identifiers. Intune only compares the first duplicate of each identifier. 
 
-You can select **Refresh** to see new device identifiers.  
+Select **Refresh** to reload your list. The corporate identifiers you added should now be visible.  
 
 Imported devices are not necessarily enrolled. Devices can have a state of either **Enrolled** or **Not contacted**. **Not contacted** means that the device has never communicated in with the Intune service.
 
@@ -144,6 +144,4 @@ Devices properties display **Ownership** for each device record in Intune. As an
 
 When a device's ownership type is changed from *corporate* to *personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
 
-When an iOS/iPad or Android device's ownership type is changed from *Personal* to *Corporate*, a push notification is sent through the Company Portal app to inform the devices user of this change.
-
-To access the setting in the admin center, go to **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).  
+When an iOS/iPad or Android device's ownership type is changed from *Personal* to *Corporate*, a push notification is sent through the Company Portal app to inform the devices user of this change.To configure push notifications, go to **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).  
