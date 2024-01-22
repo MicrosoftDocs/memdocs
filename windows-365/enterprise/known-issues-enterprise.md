@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 12/06/2023
+ms.date: 1/19/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -33,6 +33,12 @@ ms.collection:
 # Known issues: Windows 365 Enterprise and Frontline
 
 The following items are known issues for Windows 365 Enterprise.
+
+## First-time Cloud PC sign-in triggers Impossible Travel Location alert
+
+When using Conditional Access, a user who signs in to a Cloud PC for the first time might trigger an impossible travel location alert.
+
+**Troubleshooting steps**: [Follow the steps to investigate risk](/entra/id-protection/howto-identity-protection-investigate-risk) to verify that the activity matches the expected behavior for the user, based on their physical location and the location of the Cloud PC.
 
 ## Watermarking support in Windows 365
 
