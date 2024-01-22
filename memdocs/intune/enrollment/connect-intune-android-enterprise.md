@@ -43,21 +43,22 @@ To support the following Android enrollment types, you must connect your Intune 
 - [Android Enterprise fully managed](android-fully-managed-enroll.md)
 - [Android Enterprise dedicated devices](android-kiosk-enroll.md)
 
-Refer to the following support article from Google to ensure that Android Enterprise is available in your country or region: https://support.google.com/work/android/answer/6270910
-
-Intune makes it easier for you to configure and use Android Enterprise management. After you connect your account to Google Play, these common apps for Android Enterprise are added to the admin center:  
+After you connect your account to Google Play, these common apps for Android Enterprise are added to the admin center:  
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** - Used for Android Enterprise fully managed, dedicated and corporate-owned work profile scenarios.
-- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification, and is also used for Android Enterprise dedicated devices that enroll with [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices).
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** - Helps you sign in to your accounts if you use two-factor verification, and is also used for Android Enterprise dedicated devices that enroll with [Azure AD Shared device mode](/azure/active-directory/develop/msal-shared-devices).
 - **[Intune Company Portal](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** - Used for Android Enterprise personally-owned work profile scenarios, as well as App Protection Policies (APP). 
 - **[Managed Home Screen](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** - Used for multi-app kiosk mode on Android Enterprise dedicated devices. [Learn more about Managed Home Screen](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060). 
+
+To verify Android Enterprise availability in your country or region, see [Is Android Enterprise available in my country?](https://support.google.com/work/android/answer/6270910)
 
 > [!NOTE]
 > Due to interaction between Google and Microsoft domains, this step may require that you adjust your browser settings.  Make sure that "portal.azure.com" and "play.google.com" are in the same security zone in your browser.
 
-1. If you haven't already, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and [set the mobile device management authority](../fundamentals/mdm-authority-set.md) to **Microsoft Intune**.  
-2. Go to **Devices** > **Android**. 
-3. Select **Android enrollment** > **Managed Google Play**.  If you are using a custom Intune admin role, access to this option requires Organization Read and Update permissions.  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+2. Go to **Devices**. 
+3. Select the **Android** tab. 
+3. Under **Prerequisites**, choose **Managed Google Play**.  If you are using a custom Intune admin role, access to this option requires organization *read* and *update* permissions.  
    
    ![Android enterprise enrollment screen](./media/connect-intune-android-enterprise/android-work-bind.png)
 
@@ -96,8 +97,10 @@ You can turn off Android Enterprise enrollment and management by following these
     - Android Enterprise corporate-owned work profile devices
     - Android Enterprise fully managed
     - Android Enterprise dedicated devices  
-3. Go to **Devices** > **Android**.  
-4. Select **Android enrollment** > **Managed Google Play** > **Disconnect**.    
+2. Go to **Devices**. 
+3. Select the **Android** tab. 
+3. Under **Prerequisites**, choose **Managed Google Play**. 
+4. Select **Disconnect**.    
 4. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.  
 
 ## Next steps
