@@ -152,6 +152,7 @@ The following permissions are available when creating custom roles.
 | Managed devices/Read | View Intune managed devices.  | 
 | Managed devices/Set primary user | Choose, change, or remove the primary user of a managed device. This permission must be used in combination with the managed devices read and update permissions. | 
 | Managed devices/Update | Change settings or ownership properties of a managed device. This permission does not enable remote actions for devices. To perform remote actions on the device, grant one or more of the Remote Task permissions. | 
+| Managed devices/Query | Query data with devices that are managed by Intune. | 
 | Managed devices/View reports | Generate, view, or export reports for managed devices. | 
 | Managed Google Play/Modify | Modify the settings for synchronizing Managed Google Play apps with Microsoft Intune. | 
 | Managed Google Play/Read | Display the settings for synchronizing Managed Google Play apps with Microsoft Intune. | 
