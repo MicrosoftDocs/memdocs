@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/16/2022
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -124,17 +124,17 @@ admin.
 #### Step 2: Enable enrollment for corporate-owned devices  
 Verify that enrollment is enabled for corporate-owned, fully managed devices.   
 
-1. In the admin center, go to **Devices** > **Enroll devices**.  
-2. Select **Android enrollment**. 
-3. Under **Enrollment profiles**, choose **Corporate-owned, fully managed user devices**.  
-4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.             
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
+2. Select the **Android** tab.  
+3. Under **Android Enterprise** > **Enrollment Profiles**, choose **Corporate-owned, fully managed user devices**.  
+4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.          
 
 #### Step 3: Link zero-touch account to Intune    
 Link a zero-touch account with your Microsoft Intune account.   
 
-1. In the admin center, go to **Devices** > **Enroll devices**.  
-2. Select **Android enrollment**. 
-2. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.  
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
+2. Select the **Android** tab.  
+3. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.  
 3. The iframe opens.  Select **Next** to begin setup.   
 4. Sign in with the Google account you provided to your reseller. 
 5. Select the zero-touch account you want to link, and then select **Link**.  
