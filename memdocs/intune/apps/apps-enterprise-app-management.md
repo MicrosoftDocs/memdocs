@@ -66,6 +66,95 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 EAM offers support for self updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app will auto-update based on the app venders process, keeping your app up-to-date as quickly as possible. Also, you will be able to see the installed version on the device.
 
+## Frequently asked questions (FAQ)
+
+### How can I request to add an application the Enterprise application catalog?
+
+If you aren't already working with a Microsoft contact, fill out the [Enterprise app management app catalog request](https://aka.ms/EAM/AppRequest) form.
+
+> [!IMPORTANT]
+> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the app catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise application catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an application to the Enterprise application catalog.
+
+### Where are the applications coming from?
+
+Microsoft will host the 3rd party applications in Microsoft storage. When requested via the customer, the content will be copied over to customer tenant, making it available in seconds or minutes.
+
+### What modifications are added to the app packages?
+
+The app packages are not modified at all. This content is the exact same content that the customer would download if they went to the URL themselves and downloaded the binaries.
+
+### Is Microsoft providing any security around any of the packages provided in the enterprise application catalog?
+
+No. Microsoft makes no guarantee, express or implied, with respect to the security and compliance of the applications provided in the Enterprise application catalog.
+
+### What app types are in the Enterprise application catalog?
+
+The app types provided in the Enterprise application catalog are Win32 applications.
+
+### How will Microsoft detect if an Enterprise application from the Enterprise application catalog is in use?
+
+At this time, Intune provides no running application detection.
+
+### What is the Service Level Agreement (SLA) for application update notifications?
+
+No SLA is currently available. If an SLA is established, it will be in future iterations.
+
+### How many applications are in the catalog?
+
+At the time of general availability (GA) Microsoft is expects to have 100 applications available in the Enterprise application catalog.
+
+### How can working with Enterprise applications be automated?
+
+Customer can use Graph API to automate along with automation tools. Graph API will be available soon after GA.
+
+### Will Enterprise applications auto update?
+
+No. There is no automated processes available as of GA. Automation may be available in a future iteration.
+
+### Can you get licensed applications from this catalog?
+
+Yes. You can get licensed applications from the Enterprise application catalog, although you are responsible for purchasing the license from the vendor. Intune does not perform a license check.
+
+### How are licensed applications installed?
+
+If you install a licensed application where a license is not provided, the application will provide the end-user with the application's first run experience.
+
+### Are updates available for unmanaged applications?
+
+No. At the time of GA, unmanaged applications are not supported. Support for unmanaged applications may be available in a future iteration.
+
+### When will automated updates be available?
+
+Automated updates are planned for a future iteration.
+
+### Can this be purchased standalone
+
+Yes. Enterprise app management can be purchased as a standalone SKU or as part of the Microsoft Intune Suite.
+
+### Does using this app type require Microsoft Intune? Can Enterprise applications be leveraged with Configuration Manager?
+
+Using an Enterprise application is only provided by Microsoft Intune. Configuration Manager is not supported, however Enterprise applications will work for co-managed clients.
+
+### Do Enterprise application management use **Winget**?
+
+No. Enterprise application management leverages Win32.
+
+### For the application updating, will the app be upgraded, installed side-by-side, or will the previous version be uninstalled?
+
+You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
+
+### Is Enterprise application management available for GCC, GCC High, or DoD tenants?
+
+Support for GCC is planned to be available later in 2024.
+
+### Is Autopatch leveraged with Enterprise application management?
+
+Autopatch is not leveraged with Enterprise application management. We plan to evaluate Autopatch and other integrations in future iterations.
+
+### Is Enterprise application management available for co-managed devices?
+
+Yes. Enterprise application management is available for co-managed devices.
+
 ## Next steps
 
 - [Add an Enterprise App Catalog app (Win32) to Microsoft Intune](../apps/apps-add-enterprise-app.md)
