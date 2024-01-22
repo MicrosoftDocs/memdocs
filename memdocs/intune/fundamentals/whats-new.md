@@ -68,7 +68,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
-## Week of January 23, 2024 (Service release 2401)
+## Week of January 22, 2024 (Service release 2401)
 
 ### App management
 
@@ -191,7 +191,7 @@ When you select the **Send logs** button:
 
 For more information about this capability, see [Easy upload of diagnostic logs for Tunnel servers](./protect/ microsoft-tunnel-monitor.md# easy-upload-of-diagnostic-logs-for-tunnel-servers).
 
-## Week of December 13, 2023 (Service release 2312)
+## Week of December 11, 2023 (Service release 2312)
 
 ### App management
 
