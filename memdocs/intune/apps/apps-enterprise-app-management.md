@@ -40,7 +40,7 @@ The benefits of using Enterprise App Management are the following:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and package apps directly from the Intune console.
 - **Reduce security risks and vulnerabilities**: Mitigate risk and deploy app fixes immediately when security vulnerabilities are discovered.
-- **Stay current with updates**: You will be able to keep apps up-to-date and secure by identifying and updating outdated applications using guided updating and update signal.
+- **Stay current with updates**: You'll be able to keep apps up-to-date and secure by identifying and updating outdated applications using guided updating and update signal.
 
 When adding an Enterprise App Catalog app, you can specify the following installation details:
 
@@ -64,7 +64,7 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 ## Self updating apps
 
-EAM offers support for self updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app will auto-update based on the app venders process, keeping your app up-to-date as quickly as possible. Also, you will be able to see the installed version on the device.
+EAM offers support for self updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app auto-updates based on the app vendors process, keeping your app up-to-date as quickly as possible. Also, you'll be able to see the installed version on the device.
 
 ## Frequently asked questions (FAQ)
 
@@ -77,11 +77,11 @@ If you aren't already working with a Microsoft contact, fill out the [Enterprise
 
 ### Where are the applications coming from?
 
-Microsoft will host the 3rd party applications in Microsoft storage. When requested via the customer, the content will be copied over to customer tenant, making it available in seconds or minutes.
+Microsoft hosts the 3rd party applications in Microsoft storage. When requested via the customer, the content is copied over to customer tenant, making it available in seconds or minutes.
 
 ### What modifications are added to the app packages?
 
-The app packages are not modified at all. This content is the exact same content that the customer would download if they went to the URL themselves and downloaded the binaries.
+The app packages aren't modified at all. This content is the exact same content that the customer would download if they went to the URL themselves and downloaded the binaries.
 
 ### Is Microsoft providing any security around any of the packages provided in the enterprise application catalog?
 
@@ -101,7 +101,7 @@ No SLA is currently available. If an SLA is established, it will be in future it
 
 ### How many applications are in the catalog?
 
-At the time of general availability (GA) Microsoft is expects to have 100 applications available in the Enterprise application catalog.
+At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise application catalog.
 
 ### How can working with Enterprise applications be automated?
 
@@ -109,19 +109,19 @@ Customer can use Graph API to automate along with automation tools. Graph API wi
 
 ### Will Enterprise applications auto update?
 
-No. There is no automated processes available as of GA. Automation may be available in a future iteration.
+No. There's no automated processes available as of GA. Automation may be available in a future iteration.
 
 ### Can you get licensed applications from this catalog?
 
-Yes. You can get licensed applications from the Enterprise application catalog, although you are responsible for purchasing the license from the vendor. Intune does not perform a license check.
+Yes. You can get licensed applications from the Enterprise application catalog, although you're responsible for purchasing the license from the vendor. Intune doesn't perform a license check.
 
 ### How are licensed applications installed?
 
-If you install a licensed application where a license is not provided, the application will provide the end-user with the application's first run experience.
+If you install a licensed application where a license isn't provided, the application will provide the end-user with the application's first run experience.
 
 ### Are updates available for unmanaged applications?
 
-No. At the time of GA, unmanaged applications are not supported. Support for unmanaged applications may be available in a future iteration.
+No. At the time of GA, unmanaged applications aren't supported. Support for unmanaged applications may be available in a future iteration.
 
 ### When will automated updates be available?
 
@@ -133,7 +133,7 @@ Yes. Enterprise app management can be purchased as a standalone SKU or as part o
 
 ### Does using this app type require Microsoft Intune? Can Enterprise applications be leveraged with Configuration Manager?
 
-Using an Enterprise application is only provided by Microsoft Intune. Configuration Manager is not supported, however Enterprise applications will work for co-managed clients.
+Using an Enterprise application is only provided by Microsoft Intune. Configuration Manager isn't supported, however Enterprise applications will work for co-managed clients.
 
 ### Do Enterprise application management use **Winget**?
 
@@ -149,7 +149,7 @@ Support for GCC is planned to be available later in 2024.
 
 ### Is Autopatch leveraged with Enterprise application management?
 
-Autopatch is not leveraged with Enterprise application management. We plan to evaluate Autopatch and other integrations in future iterations.
+Autopatch isn't leveraged with Enterprise application management. We plan to evaluate Autopatch and other integrations in future iterations.
 
 ### Is Enterprise application management available for co-managed devices?
 
