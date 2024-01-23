@@ -30,7 +30,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Introduction to Intune data platform
+# Intune data platform
 
 *Applies to: Microsoft Intune*
 
@@ -42,8 +42,9 @@ Each table (entity) in this page lists the types of queries that are supported.
 
 ## BiosInfo
 
-Description: Provides basic BIOS Information.  
-Supported for: Device query, single device on-demand.
+**Description**: Provides basic BIOS Information.  
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -55,8 +56,8 @@ Supported for: Device query, single device on-demand.
 
 ## H2: Certificate
 
-Description: Certificate Authorities installed in Keychains/ca-bundles. Only certificates for computers are returned.
-Supported for: Device query, single device on-demand.
+**Description**: Certificate Authorities installed in Keychains/ca-bundles. Only certificates for computers are returned.
+ **Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -77,8 +78,9 @@ Supported for: Device query, single device on-demand.
 
 ## CPU
 
-Description: Retrieves CPU hardware info on the machine.
-Supported for: Device query, single device on-demand.
+**Description**: Retrieves CPU hardware info on the machine.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -98,8 +100,9 @@ Supported for: Device query, single device on-demand.
 
 ## DiskDrive
 
-Description: Retrieves basic information about the physical disks of a system.
-Supported for: Device query, single device on-demand.
+**Description**: Retrieves basic information about the physical disks of a system.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -117,8 +120,9 @@ Supported for: Device query, single device on-demand.
 
 ## EncryptableVolume
 
-Description: Retrieves encryptable volume status of the machine.
-Supported for: Device query, single device on-demand
+**Description**: Retrieves encryptable volume status of the machine.
+
+**Supported for**: Device query, single device on-demand
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -132,8 +136,9 @@ Supported for: Device query, single device on-demand
 
 ## FileInfo
 
-Description: Lists all file info of the passed file or files under the passed directory.
-Supported for: Device query, single device on-demand.
+**Description**: Lists all file info of the passed file or files under the passed directory.
+
+**Supported for**: Device query, single device on-demand.
 
 > [!NOTE]
 > This is a parameterized entity where you must pass in the path of the File you want to query. For example, pass in `FileInfo('c:\windows\system32\drivers\etc\hosts') | take 10`.
@@ -156,8 +161,9 @@ Supported for: Device query, single device on-demand.
 
 ## LocalGroup
 
-Description: Lists local user groups.  
-Supported for: Device query, single device on-demand.
+**Description**: Lists local user groups.  
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -167,8 +173,9 @@ Supported for: Device query, single device on-demand.
 
 ## LocalUserAccount
 
-Description: Lists local user accounts.
-Supported for: Device query, single device on-demand.
+**Description**: Lists local user accounts.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -180,8 +187,9 @@ Supported for: Device query, single device on-demand.
 
 ## LogicalDrive
 
-Description: Details for logical drives on the system. A logical drive generally represents a single partition.
-Supported for: Device query, single device on-demand.
+**Description**: Details for logical drives on the system. A logical drive generally represents a single partition.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -194,8 +202,9 @@ Supported for: Device query, single device on-demand.
 
 ## MemoryInfo
 
-Description: Memory Information.
-Supported for: Device query, single device on-demand.
+**Description**: Memory Information.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -206,8 +215,9 @@ Supported for: Device query, single device on-demand.
 
 ## OsVersion
 
-Description: A single row containing the operating system name and version.
-Supported for: Device query, single device on-demand,
+**Description**: A single row containing the operating system name and version.
+
+**Supported for**: Device query, single device on-demand,
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -222,8 +232,9 @@ Supported for: Device query, single device on-demand,
 
 ## Process
 
-Description: All running processes on the host system.  
-Supported for: Device query, single device on-demand.
+**Description**: All running processes on the host system.  
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -250,8 +261,9 @@ Supported for: Device query, single device on-demand.
 
 ## SystemEnclosure
 
-Description: Displays information pertaining to the chassis and its security status.
-Supported for: Device query, single device on-demand.
+**Description**: Displays information pertaining to the chassis and its security status.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -271,8 +283,9 @@ Supported for: Device query, single device on-demand.
 
 ## SystemInfo
 
-Description: System information of the device.  
-Supported for: Device query, single device on-demand.
+**Description**: System information of the device.  
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -286,8 +299,9 @@ Supported for: Device query, single device on-demand.
 
 ## Tpm
 
-Description: Provides TPM related information of the device.  
-Supported for: Device query, single device on-demand.
+**Description**: Provides TPM related information of the device.  
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -303,8 +317,9 @@ Supported for: Device query, single device on-demand.
 
 ## WindowsAppCrashEvent
 
-Description: Provides App Crash info in Windows event log file Application in look back time.
-Supported for: Device query, single device on-demand.
+**Description**: Provides App Crash info in Windows event log file Application in look back time.
+
+**Supported for**: Device query, single device on-demand.
 
 | ReportId(Key) | string (max 256 characters) | Report ID of the App crash |
 | --- | --- | --- |
@@ -316,8 +331,9 @@ Supported for: Device query, single device on-demand.
 
 ## WindowsDriver
 
-Description: Details for in-use Windows device drivers. This doesn't display installed but unused drivers.
-Supported for: Device query, single device on-demand.
+**Description**: Details for in-use Windows device drivers. This doesn't display installed but unused drivers.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
@@ -334,8 +350,9 @@ Supported for: Device query, single device on-demand.
 
 ## WindowsEvent
 
-Description: Get Windows Event logs in the specified log name and look back in time.  
-Supported for: Device query, single device on-demand.
+**Description**: Get Windows Event logs in the specified log name and look back in time.  
+
+**Supported for**: Device query, single device on-demand.
 
 > [!NOTE]
 > When constructing the query, you must specify the log name and look back time, for example: `WindowsEvent(Application, 1d) | take 1`.
@@ -353,8 +370,8 @@ possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 
 ## WindowsQfe
 
-Description: Information about security patches on the device.
-Supported for: Device query, single device on-demand.
+**Description**: Information about security patches on the device.
+**Supported for**: Device query, single device on-demand.
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -368,8 +385,9 @@ Supported for: Device query, single device on-demand.
 
 ## WindowsRegistry
 
-Description: Lists registry under the passed registry key.  
-Supported for: Device query, single device on-demand.
+**Description**: Lists registry under the passed registry key.  
+
+**Supported for**: Device query, single device on-demand.
 
 > [!NOTE]
 > You must pass in the registry key you are trying to query. For example, `WindowsRegistry('HKEY_LOCAL_MACHINE\\ServiceLastKnownStatus')`.
@@ -383,8 +401,9 @@ Supported for: Device query, single device on-demand.
 
 ## WindowsService
 
-Description: Lists all installed Windows services and their relevant data.
-Supported for: Device query, single device on-demand.
+**Description**: Lists all installed Windows services and their relevant data.
+
+**Supported for**: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
