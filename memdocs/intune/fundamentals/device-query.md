@@ -4,7 +4,7 @@
 title: Device query in Microsoft Intune
 description: Learn how to gain on-demand information about the state of your devices using device query.
 keywords: 
-ms.author: Smritib17
+ms.author: smritib17
 author: smbhardwaj 
 manager: dougeby
 ms.date: 02/01/2024
@@ -30,7 +30,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Introduction
+# Introduction to device query
 
 Device query allows you to quickly gain on-demand information about the state of your devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
