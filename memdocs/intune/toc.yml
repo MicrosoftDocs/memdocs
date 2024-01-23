@@ -1569,7 +1569,7 @@ items:
 
     - name: Initiate remote actions
       items:
-      - name: Using device actions
+      - name: Remote device actions
         href: ./remote-actions/device-management.md
 
       - name: Locks and passwords

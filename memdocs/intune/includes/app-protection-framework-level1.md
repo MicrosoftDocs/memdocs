@@ -42,7 +42,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Select Minimum PIN length  | 4  | iOS/iPadOS, Android  |   |
 | Touch ID instead of PIN for access (iOS 8+/iPadOS)  | Allow  | iOS/iPadOS  |   |
 | Override biometrics with PIN after timeout  | Require  | iOS/iPadOS, Android  |   |
-| Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
+| Timeout (minutes of activity)  | 1440  | iOS/iPadOS, Android  |   |
 | Face ID instead of PIN for access (iOS 11+/iPadOS)  | Allow  | iOS/iPadOS  |   |
 | Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
 | PIN reset after number of days  | No  | iOS/iPadOS, Android  |   |
@@ -56,7 +56,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | App conditions |       Max PIN   attempts  |          5 / Reset   PIN  |          iOS/iPadOS,   Android  |                  |
-| App conditions |       Offline   grace period  |          720 /   Block access (minutes)  |          iOS/iPadOS,   Android  |                  |
+| App conditions |       Offline   grace period  |          1440 /   Block access (minutes)  |          iOS/iPadOS,   Android  |                  |
 | App conditions |       Offline   grace period  |          90 / Wipe   data (days)  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google's SafetyNet Attestation on end-user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
