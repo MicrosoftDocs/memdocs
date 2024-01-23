@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/11/2023
+ms.date: 1/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -201,13 +201,7 @@ Add variables to the message to create a personalized email with dynamic content
 
    Select **Next** to continue.  
 
-5. On the **Notification message templates** page, configure one or more messages.  
-
-      > [!div class="mx-imgBorder"]
-   > ![Screenshot that shows example of the Notification messages templates page for a notification message in Intune, showing all required fields filled in.](./media/actions-for-noncompliance/actions-for-noncompliance-4.png)  
-
-
-   For each message, specify the following details:
+5. On the **Notification message templates** page, configure one or more messages. For each message, specify the following details:  
 
    - **Locale**: Select the language that correlates to the device user's locale.  
    - **Subject**: Add the subject line for the email. You can enter up to 78 characters.     
