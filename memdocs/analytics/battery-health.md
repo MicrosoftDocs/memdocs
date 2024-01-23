@@ -2,7 +2,7 @@
 title: Battery Health report in advanced Endpoint analytics
 titleSuffix: Microsoft Intune
 description: Learn about the battery health report as an advanced feature in Endpoint analytics
-ms.date: 11/16/2023
+ms.date: 01/23/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -13,7 +13,7 @@ ms.localizationpriority: high
 
 ---
 
-# Introduction
+# Battery health
 
 The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience.
 
