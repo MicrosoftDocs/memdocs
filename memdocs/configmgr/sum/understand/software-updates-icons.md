@@ -5,8 +5,8 @@ description: The Configuration Manager console contains icons that indicate a st
 manager: apoorvseth
 ms.date: 06/21/2021
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 author: BalaDelli
 ms.author: baladell
 ms.localizationpriority: medium
