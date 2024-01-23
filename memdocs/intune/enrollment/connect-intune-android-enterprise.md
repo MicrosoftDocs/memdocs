@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -93,9 +93,9 @@ You can turn off Android Enterprise enrollment and management by following these
     - Android Enterprise corporate-owned work profile devices
     - Android Enterprise fully managed
     - Android Enterprise dedicated devices  
-2. Go to **Devices**. 
+2. Go to **Devices** > **Enrollment**.   
 3. Select the **Android** tab. 
-3. Under **Prerequisites**, choose **Managed Google Play**. 
+3. Under **Prerequisites**, choose **Managed Google Play**.  
 4. Select **Disconnect**.    
 4. Choose **Yes** to disconnect and unenroll all Android enterprise devices from Intune.  
 

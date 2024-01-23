@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/20/2020
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -54,20 +54,21 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
 ## Create device compliance policy
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.  
+2. Select **Compliance** > **Create Policy**.  
 
     ![Create policy](./media/android-move-device-admin-work-profile/create-policy.png)
 
-2. On the **Create a policy** page, set **Platform** to **Android device administrator** > **Create**.
-3. On the **Basics** page, type in the **Name** and **Description** > **Next**.
+3. On the **Create a policy** page, set **Platform** to **Android device administrator** > **Create**.
+4. On the **Basics** page, type in the **Name** and **Description** > **Next**.
 
     ![Basics page](./media/android-move-device-admin-work-profile/basics.png)
     
-4. On the **Compliance settings** page, in the **Device Health** section, set **Block devices managed with device administrator** to **Yes** > **Next**.
+5. On the **Compliance settings** page, in the **Device Health** section, set **Block devices managed with device administrator** to **Yes** > **Next**.
 
     ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
 
-5. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
+6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
 
     ![Noncompliance actions](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
@@ -86,9 +87,9 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
     Choose **Next**.
 
-6. On the **Scope tags** page, select any scope tags you want to include.
-7. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
-8. On the **Review + create** page, confirm all your settings, and then select **Create**.
+7. On the **Scope tags** page, select any scope tags you want to include.
+8. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
+9. On the **Review + create** page, confirm all your settings, and then select **Create**.
 
 ## Troubleshooting
 
