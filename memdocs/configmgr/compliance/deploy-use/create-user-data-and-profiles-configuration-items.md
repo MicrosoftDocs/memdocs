@@ -3,8 +3,8 @@ title: Create user data and profiles configuration items
 titleSuffix: Configuration Manager
 description: Use data and profiles configuration items in Configuration Manager to manage folder redirection, offline files, and roaming profiles.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: how-to
 author: sheetg09
 manager: apoorvseth
