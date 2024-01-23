@@ -4,7 +4,7 @@ titleSuffix: Configuration Manager
 description: Site size-related performance test results, methodology, and guidance.
 author: Banreet
 ms.author: banreetkaur
-ms.prod: configuration-manager
+ms.service: configuration-manager
 ms.topic: conceptual
 ms.date: 04/13/2021
 ms.localizationpriority: medium

@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Learn about the client settings that are appropriate for software updates at your site after you install the software update point.
 ms.date: 11/30/2020
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 manager: apoorvseth
 author: BalaDelli
 ms.author: baladell
