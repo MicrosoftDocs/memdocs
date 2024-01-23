@@ -124,10 +124,10 @@ Supported for: Device query, single device on-demand
 | --- | --- | --- |
 | VolumeId | string(Max length 256 characters) | ID of the encrypted volume. |
 | WindowsDriveLetter | string(Max length 5 characters) | Drive letter of the encrypted drive. |
-| PersistentVolumeId | string(Max length 38 characters)This is a Guid | Persistent ID of the drive. |
+| PersistentVolumeId | string(Max length 38 characters) This is a Guid | Persistent ID of the drive. |
 | ProtectionStatus | string (max length 256 characters) | The BitLocker protection status of the drive. |
 | EncryptionMethod | string(256) | The encryption type of the device. |
-| EncryptionPercentage | long(This is an integer from 0 to 100 inclusive) | The percentage of the drive that is encrypted. |
+| EncryptionPercentage | long (An integer from 0 to 100 inclusive) | The percentage of the drive that is encrypted. |
 | Locked | bool | The accessibility status of the drive from Windows. |
 
 ## FileInfo
@@ -141,17 +141,17 @@ Supported for: Device query, single device on-demand.
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
 | Path | string(Max Length 260 characters) | Absolute file path |
-| Directory | string( Max Length 4096 characters) | Directory of file(s) |
+| Directory | string (Max Length 4096 characters) | Directory of file(s) |
 | FileName | string(Max Length 260 characters) | Namxxe portion of file path |
 | SizeBytes | long | Size of file in bytes |
 | LastAccessDateTime | datetime(UTC) | Last access time |
 | LastModifiedDateTime | datetime(UTC) | Last modification time |
 | LastStatusChangeDateTime | datetime(UTC) | Last status change time |
 | CreatedDateTime | datetime(UTC) | (B)irth or (cr)eate time |
-| Attributes | string | File attrib string. See: [https://ss64.com/nt/attrib.html](https://ss64.com/nt/attrib.html) |
+| Attributes | string | File attribute string. See: [https://ss64.com/nt/attrib.html](https://ss64.com/nt/attrib.html) |
 | FileVersion | string(Max length 256 characters) | File version |
 | ProductVersion | string(Max length 256 characters) | File product version |
-| ProductName | string(Max length 256 characters ) | File Product Name |
+| ProductName | string(Max length 256 characters) | File Product Name |
 | OriginalName | string(Max length 256 characters) | (Executable files only) Original filename |
 
 ## LocalGroup
@@ -172,7 +172,7 @@ Supported for: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| UserId | long , Result should be (\>=0) | User ID |
+| UserId | long, Result should be (\>=0) | User ID |
 | Username | string(max length 256 characters) | Username |
 | UserDescription | string(max length 256 characters) | Optional user description |
 | HomeDirectory | string(max length 4096 characters) | User's home directory |
@@ -185,9 +185,9 @@ Supported for: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| DriveIdentifier | string (Max length 5 characters) | The drive id, usually the drive name, e.g., 'C:'. |
+| DriveIdentifier | string (Max length 5 characters) | The drive ID, usually the drive name. For example, 'C:'. |
 | DriveType | string(Max length 100 character) | Drive type such as local disk or removal disk |
-| DiskDescription | string (Max length 256 characters) | The canonical description of the drive, e.g. 'Logical Fixed Disk', 'CD-ROM Disk'. |
+| DiskDescription | string (Max length 256 characters) | The canonical description of the drive. For example, 'Logical Fixed Disk', 'CD-ROM Disk'. |
 | FreeSpaceBytes | long, Result should be (\>=0) | The amount of free space, in bytes, of the drive (-1 on failure). |
 | DiskSizeBytes | long, Result should be (\>=0) | The total amount of space, in bytes, of the drive (-1 on failure). |
 | FileSystem | string(Max length 256 characters) | The file system of the drive. |
@@ -199,7 +199,7 @@ Supported for: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
-| PhysicalMemoryTotalBytes | Long, Result should be (\>=0) | Total amount of physical memory available to the operating system. This value does not necessarily indicate the true amount of physical memory, but what is reported to the operating system as available to it. |
+| PhysicalMemoryTotalBytes | Long, Result should be (\>=0) | Total amount of physical memory available to the operating system. This value doesn't necessarily indicate the true amount of physical memory, but what is reported to the operating system as available to it. |
 | PhysicalMemoryFreeBytes | LongResult should be (\>=0) |Number of bytes of physical memory currently unused and available. |
 | VirtualMemoryTotalBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory. |
 | VirtualMemoryFreeBytes | Long, Result should be (\>=0) | Number of bytes of virtual memory currently unused and available. |
@@ -242,7 +242,7 @@ Supported for: Device query, single device on-demand.
 | SystemTimeMilliseconds | long | CPU time in milliseconds spent in kernel space |
 | StartDateTime | Datetime(UTC)Need to convert this value to datetime | Process start datetime in UTC |
 | ElapsedTimeMilliseconds | long | Elapsed time in seconds this process has been running. |
-| ProcessorTimePercent | long | Returns elapsed time that all of the threads of this process used the processor to execute instructions in 100 nanoseconds ticks. |
+| ProcessorTimePercent | long | Returns elapsed time that all of the threads of this process used the processor to execute instructions in 100-nanoseconds ticks. |
 | ThreadCount | long | Number of threads used by process |
 | HandleCount | long | Total number of handles that the process has open. This number is the sum of the handles currently opened by each thread in the process. |
 | WindowsUserAccount | string | The owner of the process |
@@ -316,13 +316,13 @@ Supported for: Device query, single device on-demand.
 
 ## WindowsDriver
 
-Description: Details for in-use Windows device drivers. This does not display installed but unused drivers.
+Description: Details for in-use Windows device drivers. This doesn't display installed but unused drivers.
 Supported for: Device query, single device on-demand.
 
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
 | DriverDeviceId(Key) | string (Max 256 characters) | Device ID |
-| FriendlyName | string(Max 256 characters) | Such as ""Microsoft Device Association Root Enumerator" |
+| FriendlyName | string(Max 256 characters) | Such as "Microsoft Device Association Root Enumerator" |
 | DriverDescription | string (Max 256 characters) | Driver description |
 | DriverVersion | string (Max 20 characters) | Driver version |
 | InfName | string (Max 260 characters) | Associated inf file |
@@ -343,7 +343,7 @@ Supported for: Device query, single device on-demand.
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
 | LogName | string (max 256 characters) | the name of log |
-| EventId | long | event id |
+| EventId | long | event ID |
 | Level | string string (max 30 characters) | Level display name
 possible value:CRITICAL\_ERROR,ERROR,WARNING,INFORMATION,VERBOSE |
 | LoggedDateTime | datetime (UTC) | System UTC time at which the event occurred |
@@ -362,7 +362,7 @@ Supported for: Device query, single device on-demand.
 | ComputerName                   | string (max 256 characters) | The name of the computer the patch is installed on. |
 | Caption | string (max 256 characters) | A short textual description of the object. |
 | QfeDescription | string (max 256 characters) | A textual description of the object. |
-| FixComments | string (max 256 characters) | Additional comments about the Qfe. |
+| FixComments | string (max 256 characters) | More comments about the Qfe. |
 | InstalledByUserAccount | string (max 256 characters) | User account who installed the update. If this value is unknown, the property is empty. |
 | InstalledDate | datetime (UTC) | Date that the update was installed. If this value is unknown, the property is empty. |
 
@@ -379,7 +379,7 @@ Supported for: Device query, single device on-demand.
 | RegistryKey | string (max 16638 characters) | Full path to the value |
 | ValueName | string (max 16383 characters) | Name of the registry value entry |
 | ValueType | string (max 255) | Type of the registry value, or 'subkey' if item is a subkey |
-| ValueData | string (max size 1MB) | Data content of registry value |
+| ValueData | string (max size 1 MB) | Data content of registry value |
 
 ## WindowsService
 
@@ -399,6 +399,6 @@ Supported for: Device query, single device on-demand.
 | Path | string (max 4096 characters) | Path to Service Executable |
 | ModulePath | string (max 4096 characters) | Path to ServiceDll |
 | ServiceDescription | string (max 256 characters) | Service Description |
-| WindowsUserAccount | string (max 256 characters) | The name of the account that the service process will be logged on as when it runs. This name can be of the form Domain\UserName |
+| WindowsUserAccount | string (max 256 characters) | The name of the account that the service process is logged on as when it runs. This name can be of the form Domain\UserName |
 
 

@@ -63,13 +63,13 @@ For more information on Kusto Query Language, see [Learn more about Kusto Query 
 
 Device query supports only a subset of the operators supported in the Kusto Query Language (KQL). The following operators are currently supported:
 
-[Table operators]()
+[Table operators](#table-operators)
 
-[Scalar operators]()
+[Scalar operators](#scalar-operators)
 
-[Aggregation functions]()
+[Aggregation functions](#aggregation-functions)
 
-[Scalar functions]()
+[Scalar functions](#scalar-functions)
 
 ### Table operators
 
@@ -139,7 +139,7 @@ Scalar functions can be used in expressions. Currently the following scalar func
 |Function|Description|
 |---|---|
 |ago()|Subtracts the given timespan from the current UTC clock time|
-|bin()|Rounds values down to a number of datetime multiple of a given bin size|
+|bin()|Rounds values down to many datetime multiple of a given bin size|
 |case()|Evaluates a list of predicates and returns the first result expression whose predicate is satisfied|
 |datetime_add()|Calculates a new datetime from a specified datepart multiplied by a specified amount, added to a specified datetime|
 |datetime_diff()|Calculates the difference between two date time values|
