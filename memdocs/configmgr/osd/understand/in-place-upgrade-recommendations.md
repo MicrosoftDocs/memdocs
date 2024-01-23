@@ -3,8 +3,8 @@ title: In-place upgrade recommendations
 titleSuffix: Configuration Manager
 description: Recommended steps for using the task sequence to upgrade Windows.
 ms.date: 10/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell
