@@ -4,8 +4,8 @@
 title: Device query in Microsoft Intune
 description: Learn how to gain on-demand information about the state of your devices using device query.
 keywords: 
-ms.author: smritib17
-author: smbhardwaj 
+ms.author: smbhardwaj
+author: smritib17 
 manager: dougeby
 ms.date: 02/01/2024
 ms.topic: how-to

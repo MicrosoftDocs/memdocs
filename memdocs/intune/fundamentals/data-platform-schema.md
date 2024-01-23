@@ -4,8 +4,8 @@
 title: Intune data platform schema
 description: Overview of Intune data platform schema.
 keywords: 
-ms.author: smritib17
-author: smbhardwaj 
+ms.author: smbhardwaj
+author: smritib17 
 manager: dougeby
 ms.date: 02/01/2024
 ms.topic: conceptual
@@ -329,7 +329,7 @@ Supported for: Device query, single device on-demand.
 | Class | string (Max 256 characters) | Device/driver class name |
 | ProviderName | string (Max 256 characters) | Driver provider |
 | Manufacturer | string (Max 256 characters) | Device manufacturer |
-| BuildDate[Win32\_PnPSignedDriver class (Windows) | Microsoft Learn](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date |
+| BuildDate[Win32\_PnPSignedDriver class (Windows) | Microsoft Learn](https://learn.microsoft.com/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date |
 | Signed | bool | Whether the driver is signed or not |
 
 ## WindowsEvent
@@ -389,7 +389,7 @@ Supported for: Device query, single device on-demand.
 | **Property** | **Type** | **Description** |
 | --- | --- | --- |
 | ServiceName | string (max 256 characters) | Service name |
-| ServiceType | string (max 40)[Win32\_Service class - Win32 apps | Microsoft Learn](https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-service) | Service Type such as: OWN\_PROCESS, SHARE\_PROCESS, or Interactive |
+| ServiceType | string (max 40)[Win32\_Service class - Win32 apps | Microsoft Learn](https://learn.microsoft.com/windows/win32/cimwin32prov/win32-service) | Service Type such as: OWN\_PROCESS, SHARE\_PROCESS, or Interactive |
 | DisplayName | string (max 256 characters) | Service Display name |
 | State | string (max 40 characters) | Service Current status such as STOPPED, START\_PENDING, STOP\_PENDING, RUNNING, CONTINUE\_PENDING, PAUSE\_PENDING, PAUSED |
 | ProcessId | long | the Process ID of the service |
