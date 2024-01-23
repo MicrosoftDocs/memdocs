@@ -3,8 +3,8 @@ title: Replace an existing computer and transfer settings
 titleSuffix: Configuration Manager
 description: In Configuration Manager, choose from deployment methods, such as bootable media, multicast, or Software Center, to replace an existing computer with a new computer.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 author: BalaDelli
 ms.author: baladell
