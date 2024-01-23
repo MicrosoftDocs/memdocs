@@ -3,8 +3,8 @@ title: Available third-party software update catalogs
 titleSuffix: Configuration Manager
 description: List of third-party update catalogs available for import into Configuration Manager
 ms.date: 08/12/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: reference
 author: BalaDelli
 ms.author: baladell
