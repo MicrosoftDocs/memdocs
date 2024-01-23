@@ -44,7 +44,7 @@ This article describes how to set up Android (AOSP) device management and enroll
 ## You should know    
 Devices enrolled into Intune with this management mode are automatically set up with Microsoft Authenticator and Company Portal. These devices are enrolled into Intune without a user account and aren't associated with a specific user. 
 
-Devices are configured in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. Devices enable single sign-in and sign-out between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). By installing Company Portal, users can also single sign-out of [apps that are integrated with the Intune SDK](../apps/apps-supported-intune-apps.md), even apps that don't yet participate with shared device mode. 
+Devices are configured in [Microsoft Entra shared device mode](/azure/active-directory/develop/msal-shared-devices) during enrollment. Devices enable single sign-on (SSO) between users across [participating apps](/azure/active-directory/develop/msal-android-shared-devices#microsoft-applications-that-support-shared-device-mode). By installing Company Portal, users can also leverage SSO when signing out of [apps that are integrated with the Intune SDK](../apps/apps-supported-intune-apps.md), even apps that don't yet participate with shared device mode. 
 
 
 
@@ -91,7 +91,7 @@ Create an enrollment profile to enable enrollment on devices.
         - **Pre-shared key**: The pre-shared key that's used to authenticate with the network.  
 
 7. Select **Next**.
-8. Uptionally, select scope tags. 
+8. Optionally, select scope tags.  
 9. Select **Next**. 
 10. Review the details of your profile and then select **Create** to save the profile.  
 

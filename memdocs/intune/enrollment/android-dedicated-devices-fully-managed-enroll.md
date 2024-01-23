@@ -35,7 +35,7 @@ ms.collection:
 # Enroll your Android Enterprise dedicated, fully managed, or corporate-owned with work profile devices
 
 > [!IMPORTANT]
->  It's important that device users do not restart devices until enrollment is complete. If device users setting up fully managed devices or corporate-owned devices with a work profile restart their devices in the middle of enrollment, their devices may not be able to register with Microsoft Intune. Devices that restarted may appear to be enrolled but they won't be protected by your Intune policies.  
+>  Device users shouldn't restart devices until enrollment is complete. If device users setting up fully managed devices or corporate-owned devices with a work profile restart their devices in the middle of enrollment, their devices may not be able to register with Microsoft Intune. Devices that restarted may appear to be enrolled but they won't be protected by your Intune policies.  
 
 After you've set up your Android Enterprise [dedicated devices](android-kiosk-enroll.md), [fully managed devices](android-fully-managed-enroll.md), or [corporate-owned work profile devices](android-corporate-owned-work-profile-enroll.md) in Intune, you can enroll the devices. Intune enrollment for dedicated devices, fully managed devices, and corporate-owned with a work profile start with a factory reset. How you enroll your Android Enterprise devices depends on the operating system.
 
@@ -82,7 +82,7 @@ Enroll new or factory-reset devices by providing device users with the enrollmen
 Intune admins can scan the QR code directly from the enrollment profile to enroll a device.   
 
 1. After you wipe the device, tap the first screen you see repeatedly to launch the QR reader.    
-2. If prompted to, install a QR reader on your device. Devices running Android 9.0 and later are pre-installed with a QR reader.  
+2. If prompted to, install a QR reader on your device. Devices running Android 9.0 and later are preinstalled with a QR reader.  
 3. Scan the enrollment profile QR code, and then follow the on-screen prompts to complete enrollment.  
     > [!TIP]
     > Browser zoom settings may prevent your device from scanning the QR code. Zoom in and try again if your device has difficulty scanning the code.   
@@ -147,7 +147,7 @@ Link a zero-touch account with your Microsoft Intune account.
 8. Add support information to assist device users during setup.  
 9. Select **Save**.  
 
-Once your account is linked with Intune, the default configuration is applied to zero-touch enabled devices that do not already have a configuration, and to future devices added by a reseller. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center. 
+Once your account is linked with Intune, the default configuration is applied to zero-touch enabled devices that don't already have a configuration, and to future devices added by a reseller. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center. 
 
 ### Create configuration in zero-touch enrollment portal        
 
