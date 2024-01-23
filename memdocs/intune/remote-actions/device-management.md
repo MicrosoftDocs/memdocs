@@ -39,7 +39,7 @@ In Microsoft Intune, you can remotely run and execute commands on devices. For e
 - Do a quick scan or full scan of a device using Microsoft Defender Antivirus.
 - And more
 
-Use remote actions to help you manage your devices remotely, without having to physically touch the device. This feature is available for devices that are enrolled in Intune and devices that are enrolled in other mobile device management (MDM) services.
+Use remote device actions to help you manage your devices remotely, without having to physically touch the device. This feature is available for devices that are enrolled in Intune and devices that are enrolled in other mobile device management (MDM) services.
 
 This feature applies to:
 
@@ -77,9 +77,9 @@ This article shows you how to see the available remote actions, and lists some o
 
 ## Available remote actions
 
-The available actions depend on the device platform and the device configuration. Not all actions are available for all devices.
+The available device actions depend on the device platform and the device configuration. Not all actions are available for all devices.
 
-For a complete list of what can be done on your devices, in the Intune admin center, select **Devices** > **All devices**, and select a specific device. The available actions are shown at the top.
+For a complete list of what can be done on your devices, in the Intune admin center, select **Devices** > **All devices**, and select a specific device. The available device actions are shown at the top.
 
 The following list includes some common device actions:
 
@@ -88,17 +88,17 @@ The following list includes some common device actions:
 | [Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) | Restores a device to its original settings and removes personal files, apps, and settings. | Windows |
 | [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) | Changes the BitLocker recovery key for a device and uploads the new key to Intune. | Windows |
 | [Collect diagnostics](collect-diagnostics.md)  | Collects diagnostic logs from a device and uploads the logs to Intune. | Windows 10 |
-| [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center) | Removes a device from Intune management. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Delete](devices-wipe.md#delete-devices-from-the-intune-admin-center) | Removes a device from Intune management, any company data is removed, and the device is retired. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Disable Activation Lock](device-activation-lock-disable.md) | Removes the Activation Lock from a device that is enrolled with a device enrollment manager (DEM) account. | - iOS/iPadOS <br/>- macOS|
 | [Fresh Start](device-fresh-start.md) | Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed. | Windows |
 | [Full Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a full scan of the device by Microsoft Defender Antivirus. | Windows |
 | [Locate device](device-locate.md) | Shows the approximate location of a device on a map. | - Android <br/>- iOS/iPadOS <br/>- Windows |
 | [Lost mode](device-lost-mode.md) | Locks a device with a custom message and disables sound and vibration. | iOS/iPadOS |
-| [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a quick scan of the device by Microsoft Defender Antivirus. | Windows 10 and 11 |
+| [Quick Scan](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) | Initiates a quick scan of the device by Microsoft Defender Antivirus. | Windows |
 | [Remote control with Team Viewer](teamviewer-support.md) | Allows you to remotely control a device using TeamViewer. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Remote lock](device-remote-lock.md) | Locks a device and resets its password. | - Android <br/>- iOS/iPadOS <br/>- macOS  |
 | [Rename device](device-rename.md) | Changes the device name in Intune. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
-| [Reset passcode](device-passcode-reset.md) | Resets the device passcode. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
+| [Reset passcode](device-passcode-reset.md) | Resets the device passcode. | - Android <br/>- iOS/iPadOS |
 | [Restart](device-restart.md) | Restarts a device. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Retire](devices-wipe.md#retire) | Removes company data and settings from a device, and leaves personal data intact. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Rotate Local admin password](../protect/windows-laps-policy.md#manually-rotate-passwords) | Changes the local administrator password for a device and stores the password in Intune. | Windows |
@@ -106,7 +106,7 @@ The following list includes some common device actions:
 | [Synchronize device](device-sync.md) | Syncs a device with Intune to apply the latest policies and configurations. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 | [Update cellular data plan](update-cellular-data-plan.md) | Updates the cellular data plan settings for a device that uses an eSIM profile. | iOS/iPadOS |
 | [Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus) | Updates the security intelligence files for Microsoft Defender Antivirus. | Windows |
-| [Windows 10 PIN reset](device-windows-pin-reset.md) | Resets the PIN of a device that uses Microsoft Entra authentication. | Windows 10 |
+| [Windows 10 PIN reset](device-windows-pin-reset.md) | Resets the PIN of a device that uses Microsoft Entra authentication. | Windows 10 Mobile |
 | [Wipe](devices-wipe.md#wipe) | This action restores a device to its factory settings and removes all data and settings. | - Android <br/>- iOS/iPadOS <br/>- macOS <br/>- Windows |
 
 > [!NOTE]
