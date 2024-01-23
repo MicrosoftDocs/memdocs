@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -76,9 +76,11 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 
 ## Step 2: Verify CNAME 
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Windows** > **Windows enrollment**.  
-2. Select **CNAME Validation**.  
-2. For **Domain**, enter the company website, and then choose **Test**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to **Devices** > **Enrollment**.  
+1. Select the **Windows** tab.  
+1. Under **Enrollment options**, select **CNAME Validation**.  
+4. For **Domain**, enter the company website, and then choose **Test**.  
 
 ## Best practices and recommendations    
 
@@ -109,5 +111,3 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 |CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | 1 hour |  
 
 For more information about automatic enrollment for Windows, see [Set up automatic enrollment](../enrollment/windows-enroll.md).  
-
-## Next steps

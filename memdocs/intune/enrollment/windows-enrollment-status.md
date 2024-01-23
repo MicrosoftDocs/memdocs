@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,7 +40,6 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process.
 
@@ -59,11 +58,12 @@ This article describes the information that the enrollment status page tracks an
 
 ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track app installation.  
 
-## Create new profile
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-1. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-1. Select **Create**.
+## Create new profile  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to **Devices** > **Enrollment**.  
+1. Select the **Windows** tab.  
+1. Under **Windows Autopilot**, select **Enrollment Status Page**.  
+1. Select **Create**.  
 1. In **Basics**, enter the following properties:  
      - **Name**: Name your profile so you can easily identify it later.
      - **Description**: Enter a description for the profile. This setting is optional, but recommended.  
@@ -113,8 +113,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you're using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.
 
 1. Select **Next**.
-1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.
-
+1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.  
     > [!NOTE]
     >
     > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties aren't available.  
