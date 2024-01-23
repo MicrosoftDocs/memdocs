@@ -3,8 +3,7 @@ title: Technical preview 2401
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2401.
 ms.date: 01/24/2024
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.service: configuration-manager
 ms.topic: conceptual
 author: PalikaSingh
 ms.author: palsi
