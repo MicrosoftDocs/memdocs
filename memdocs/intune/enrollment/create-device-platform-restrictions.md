@@ -43,7 +43,7 @@ Create a device platform enrollment restriction policy to restrict devices from 
 * Device platform
 * OS version
 * Manufacturer
-* Ownership (personally-owned)
+* Ownership (personally owned)
 
  You can create a new device platform restriction policy in the Microsoft Intune admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
 
@@ -143,12 +143,12 @@ For more information about these properties, see [device properties](../fundamen
 
 ## Edit enrollment restrictions  
 
-Edits are applied to new enrollments and do not affect devices that are already enrolled.  
+Edits are applied to new enrollments and don't affect devices that are already enrolled.  
 
 1. Return to **Devices** > **Enrollment**.  
 2. Select **Device platform restrictions**.  
-2. In the **Device type restrictions** table, select the name of the policy you want to change.
+2. In the **Device type restrictions** table, select the name of the policy you want to change.  
 3. Select **Properties**.  
 4. Select **Edit**.   
-5. Make your changes and select **Review + save**. 
+5. Make your changes and select **Review + save**.  
 6. Review your changes and select **Save**.  

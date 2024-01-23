@@ -255,8 +255,8 @@ Now that you've installed your token, you can create an enrollment profile for a
 
     Locked enrollment works a little differently, at first, on devices not originally purchased through Apple Business Manager but later added to be a part of automated device enrollment: users on these devices will see the remove management button in the Settings app for the first 30 days after activating their device. After that provisional period, the option will be hidden. For more information, see [Prepare devices manually](https://help.apple.com/configurator/mac/2.8/#/cad99bc2a859) (opens Apple Configurator Help docs). 
   
-       > [!IMPORTANT]  
-       > This setting is different from the remove and reset options in the Company Portal app. Regardless of how you configure locked enrollment, the **Remove Device** or **Factory Reset** options in the Company Portal app remain unavailable on devices enrolled through automated device enrollment. Users won't be able to remove the device on the Company Portal website either. For more information about the self-service actions available on enrolled devices, see [Self-service actions](../apps/company-portal-app.md#self-service-actions).  
+    > [!IMPORTANT]  
+    > This setting is different from the remove and reset options in the Company Portal app. Regardless of how you configure locked enrollment, the **Remove Device** or **Factory Reset** options in the Company Portal app remain unavailable on devices enrolled through automated device enrollment. Users won't be able to remove the device on the Company Portal website either. For more information about the self-service actions available on enrolled devices, see [Self-service actions](../apps/company-portal-app.md#self-service-actions).  
 
 1. If you selected **Enroll without User Affinity** and **Supervised** in the previous steps, you need to decide whether to configure the devices to be [Apple Shared iPad for Business devices](https://support.apple.com/guide/mdm/shared-ipad-overview-cad7e2e0cf56/web). Select **Yes** for **Shared iPad** to enable multiple users to sign in to a single device. Users will authenticate by using their Managed Apple IDs and federated authentication accounts or by using a temporary session (like the Guest account). This option requires iOS/iPadOS 13.4 or later. With Shared iPad, all Setup Assistant panes after activation are automatically skipped. 
 
@@ -484,7 +484,7 @@ You'll sometimes need to renew your tokens:
 
 4. After you download the token, go to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 5. Select **Devices** > **Enrollment**.  
-6. Choose**Enrollment program tokens**. 
+6. Choose **Enrollment program tokens**. 
 7. Select the token.
 8. Select **Renew token**. Enter the **Apple ID** used to create the original token (if it's not automatically populated):  
 
@@ -510,7 +510,7 @@ To delete an enrollment profile token:
 
 1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab. 
-1. Select **Enrollment Program Tokens**
+1. Choose **Enrollment Program Tokens**
 1. Select the token, and then select **Devices**.
 1. Delete all the devices assigned to the token.
 1. Return to **Enrollment program tokens**. Select the token, and then select **Profiles**.  
