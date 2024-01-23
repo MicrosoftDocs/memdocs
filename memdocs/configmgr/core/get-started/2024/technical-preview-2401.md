@@ -3,8 +3,7 @@ title: Technical preview 2401
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2401.
 ms.date: 01/24/2024
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.service: configuration-manager
 ms.topic: conceptual
 author: PalikaSingh
 ms.author: palsi
@@ -25,18 +24,24 @@ Review the [technical preview](../technical-preview.md) article before installin
 The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2201/1234567.md)] -->
+[!INCLUDE [Automated diagnostic Dashboard for Software Update Issues](includes/2401/17668422.md)]
+[!INCLUDE [Introducing Centralized Search box: Effortlessly Find What You Need in the Console!](includes/2401/24501008.md)]
+[!INCLUDE [Microsoft Azure Active Directory re-branded to Microsoft Entra ID](includes/2401/24269502.md)]
+[!INCLUDE [Enhancement in Deploying Software Packages with Dynamic Variables](includes/2401/24334765.md)]
+[!INCLUDE [Enabling Auto-Image Patching for CMG Virtual Machine Scale Sets](includes/2401/14350148.md)]
+[!INCLUDE [Window 11 Readiness dashboard to support Windows 23H2](includes/2401/26021246.md)]
+[!INCLUDE [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](includes/2401/25601199.md)]
+[!INCLUDE [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](includes/2401/25990812.md)]
+[!INCLUDE [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](includes/2401/9519162.md)]
 
-## General known issues
+
+<!--## General known issues-->
 <!--16822959-->
-Update to the default value of supersedence age in months for software updates.
 
-Removing SUP role in Admin Console does not reset the supersedence age property in WMI. As a result, while reconfiguring the role, the previously configured value is shown in the configuration window. This property needs to be reset to default value on role removal. 
-<!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
 
-## Other Updates
+<!--## Other Updates-->
 <!--15358429-->
-Offset for recurring monthly maintenance window schedules. 
-Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.   
+
 
 ## Next steps
 
