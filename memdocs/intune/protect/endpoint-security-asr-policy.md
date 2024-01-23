@@ -70,7 +70,7 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
 
 ### Devices managed by Intune
 
-**Platform: Windows 10, Windows 11, and Windows Server**: 
+**Platform: Windows 10, Windows 11, and Windows Server**:
 
 Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune, and on devices not enrolled with Intune that you manage with [Defender for Endpoint security settings management](../protect/mde-security-integration.md).
 
@@ -96,7 +96,7 @@ Profiles for this platform are supported on Windows 10 and Windows 11 devices en
   - When two or more policies have conflicting settings, the conflicting settings aren't added to the combined policy, while settings that don't conflict are added to the superset policy that applies to a device.
   - Only the configurations for conflicting settings are held back.
 
-**Platform: Windows 10 and later**: 
+**Platform: Windows 10 and later**:
 
 Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune. Profiles include:
 

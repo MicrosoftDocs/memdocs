@@ -3,12 +3,12 @@
 
 title: Add corporate identifiers to Intune
 titleSuffix: 
-description: Learn how to add corporate identifiers (enrollment method, IMEI, and serial numbers) to Microsoft Intune.
+description: Add corporate identifiers (enrollment method, IMEI, and serial numbers) to Microsoft Intune.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -37,16 +37,16 @@ As an Intune admin, you can identify devices as corporate-owned to refine manage
 
 At the time of enrollment, Intune automatically assigns corporate-owned status to devices that are:
 
-- Enrolled with a [device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)
-- Enrolled by using [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch)
-- Enrolled by using [Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md)
-- Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)
-- [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS/iPadOS and Android)
+- Enrolled with a [device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms). 
+- Enrolled by using [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch). 
+- Enrolled by using [Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md). 
+- Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md)  (iOS/iPadOS only). 
+- [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS/iPadOS and Android).    
 - Enrolled as [Android Enterprise corporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
-- Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md)
-- Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md)
-- Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
-- Set as corporate in the [device's properties list](#change-device-ownership)
+- Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md).   
+- Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md).   
+- Joined to Microsoft Entra with work or school credentials. [Devices that are Microsoft Entra registered](/entra/identity/devices/concept-device-registration) will be marked as personal.    
+- Set as corporate in the [device's properties list](#change-device-ownership).  
 
 After enrollment, you can [change the ownership setting](#change-device-ownership) between **Personal** and **Corporate**.
 
@@ -63,8 +63,8 @@ This feature is supported for the following platforms:
 | macOS | Not supported | Supported |
 | Android device administrator, before Android v10 | Supported | Supported |
 | Android device administrator, Android v10 and later | Not supported | Not supported |
-| Android Enterprise personally-owned work profile, before Android 12 | Supported | Supported |
-| Android Enterprise personally-owned work profile, Android 12 and later | Not supported | Not supported |
+| Android Enterprise personally owned work profile, before Android 12 | Supported | Supported |
+| Android Enterprise personally owned work profile, Android 12 and later | Not supported | Not supported |
 | Android Enterprise corporate-owned work profile | Not supported | Not supported |
 | Android Enterprise fully managed | Not supported | Not supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
@@ -107,7 +107,7 @@ This .csv file when viewed in a text editor appears as:
 
 ## Manually enter corporate identifiers
 
-2. Go to **Devices** > **Enrollment**.     
+1. In the Microsoft Intune admin center, go to **Devices** > **Enrollment**.     
 2. Select the **Corporate device identifiers** tab.   
 3. Choose **Add** > **Enter manually**.  
 4. In **Add identifiers**, specify the identifier type: **IMEI** or **Serial**.  
@@ -120,7 +120,7 @@ Imported devices are not necessarily enrolled. Devices can have a state of eithe
 
 ## Delete corporate identifiers
 
-2. Go to **Devices** > **Enrollment**.     
+2. In the admin center, go to **Devices** > **Enrollment**.     
 2. Select the **Corporate device identifiers** tab.  
 3. Select the device identifiers you want to delete, and choose **Delete**.
 4. Confirm the deletion.  
