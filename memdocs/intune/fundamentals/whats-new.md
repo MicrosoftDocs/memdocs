@@ -141,7 +141,7 @@ For more information, see [Set up BlackBerry Protect Mobile](../protect/blackber
 
 ### Device security
 
-#### Support for Intune Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!—25470154 -->  
+#### Support for Intune Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!--25470154 -->  
 You can now use the endpoint security policy for *Defender Update control* (Antivirus policy) from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
  
 - **Defender Update control** policies are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).    
