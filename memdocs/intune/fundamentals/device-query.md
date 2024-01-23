@@ -57,7 +57,7 @@ To use Device query, navigate to **Devices** and select the device on which you 
 
 The supported properties you can query are listed in the **Properties** section. To run a query, enter a Kusto Query Language (KQL) query, and select **Run**. Results are displayed in the **Results** tab area.
 
-For more information on Kusto Query Language, see [Learn more about Kusto Query Language](https://learn.microsoft.com/azure/data-explorer/kusto/query/).
+For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 ## Supported Operators  
 
