@@ -53,10 +53,11 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
 2. Go to **Devices** > **Enrollment**.  
 3. Select the **Android** tab.  
 4. In the **Enrollment options** section, choose **Device platform restriction**.
-5. Select **Create restriction**.  
-6. On the **Basics** page, enter a name and description for the restriction so that you can distinguish it from other restrictions in the admin center. Device users don't see these details. 
-7. Select **Next** to continue to **Platform settings**.  
-8. Configure platform settings for **Android Enterprise (work profile)**. Your options:    
+5. Select the **Android restrictions** tab.  
+6. Select **Create restriction**.  
+7. On the **Basics** page, enter a name and description for the restriction so that you can distinguish it from other restrictions in the admin center. Device users don't see these details. 
+8. Select **Next** to continue to **Platform settings**.  
+9. Configure platform settings for **Android Enterprise (work profile)**. Your options:    
     - **Platform**: Select **Allow** to permit enrollment with Android Enterprise work profile. Select **Block** to prevent work profile enrollment. If you block work profile, devices enroll using the Android device administrator management solution, unless device administrator enrollment is also blocked.  
     - **Personally owned**: Select **Allow** to permit personal devices to enroll with a work profile. Personal devices are allowed by default. Select **Block** to prevent personal devices from enrolling with a work profile. Android devices that don't support Android Enterprise enroll using the Android device administrator solution, unless device administrator enrollment is blocked.  
 
@@ -67,12 +68,12 @@ Complete these steps to set up enrollment for Android Enterprise devices in BYOD
 
      [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
      
-9. Select **Next** to continue to **Scope tags**.    
-10. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).     
-11. Select **Next** to continue to **Assignments**. 
-12. Assign the restriction to all users, or select specific groups.  
-13. Select **Next** to continue to **Review + create**.  
-14. Review your choices, and then select **Create** to finish creating the restriction.  
+10. Select **Next** to continue to **Scope tags**.    
+11. Optionally, apply one or more scope tags to limit restriction visibility and management to certain admin users in Intune. For more information about how to use scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).     
+12. Select **Next** to continue to **Assignments**. 
+13. Assign the restriction to all users, or select specific groups.  
+14. Select **Next** to continue to **Review + create**.  
+15. Review your choices, and then select **Create** to finish creating the restriction.  
 
 ## Enroll devices  
 Communicate enrollment steps to device users. Users typically don't like enrolling themselves, and aren't familiar with the Company Portal app. Be sure to provide guidance, including what information to enter. For some guidance on communicating with your users, see [Planning guide: Step 5 - Create a rollout plan](../fundamentals/intune-planning-guide.md#step-5---create-a-rollout-plan).  
