@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Enable auto-discovery of Intune enrollment server
+title: Enable autodiscovery of Intune enrollment server
 titleSuffix:
 description: Simplify enrollment for users by enabling automatic discovery of the Intune enrollment server. 
 keywords:
@@ -50,8 +50,8 @@ If no enrollment CNAME record is found, users are prompted to manually enter the
 
 | Type | Host name | Points to | TTL |
 |----------|---------------|---------------|---|
-| CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | 1 hour |
+| CNAME | EnterpriseEnrollment.company_domain.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
+| CNAME | EnterpriseRegistration.company_domain.com | EnterpriseRegistration.windows.net | One hour |
 
 If your organization uses more than one UPN suffix, create one CNAME for each domain name and point each one to *EnterpriseEnrollment-s.manage.microsoft.com*. 
 
@@ -66,9 +66,9 @@ For example:
 
    | Type | Host name | Points to | TTL |  
    |----------|---------------|---------------|---|
-   | CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-   | CNAME | EnterpriseEnrollment.us.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
-   | CNAME | EnterpriseEnrollment.eu.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | 1 hour |
+   | CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
+   | CNAME | EnterpriseEnrollment.us.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
+   | CNAME | EnterpriseEnrollment.eu.contoso.com | EnterpriseEnrollment-s.manage.microsoft.com | One hour |
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – Supports a redirect to the Intune service with domain recognition from the email's domain name
 
@@ -84,7 +84,7 @@ Changes to DNS records might take up to 72 hours to propagate. You can't verify 
 
 ## Best practices and recommendations    
 
-*EnterpriseEnrollment-s.manage.microsoft.com* is the preferred FQDN for enrollment. *EnterpriseEnrollment.manage.microsoft.com* (without the *-s*) and *manage.microsoft.com* both work as the target for the auto-discovery server, but require users to acknowledge a confirmation message. We recommend using *EnterpriseEnrollment-s.manage.microsoft.com* because there is no confirmation required, which means one less step for the device user.  
+*EnterpriseEnrollment-s.manage.microsoft.com* is the preferred FQDN for enrollment. *EnterpriseEnrollment.manage.microsoft.com* (without the *-s*) and *manage.microsoft.com* both work as the target for the autodiscovery server, but require users to acknowledge a confirmation message. We recommend using *EnterpriseEnrollment-s.manage.microsoft.com* because there is no confirmation required, which means one less step for the device user.  
 
 Alternate redirection methods aren't supported with Intune. For example, you can't use a proxy server to redirect *enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc* to *enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc* or *manage.microsoft.com/EnrollmentServer/Discovery.svc*.  
 
@@ -94,7 +94,7 @@ Microsoft Entra ID uses a different CNAME during device registration for iOS/iPa
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-| CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | 1 hour |
+| CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | One hour |
 
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
@@ -107,7 +107,7 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
-|CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hour |
-|CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | 1 hour |  
+|CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.us | One hour |
+|CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | One hour |  
 
 For more information about automatic enrollment for Windows, see [Set up automatic enrollment](../enrollment/windows-enroll.md).  

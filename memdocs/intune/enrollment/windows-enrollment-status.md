@@ -105,8 +105,8 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings.
 
     - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](/autopilot/pre-provision). This setting is only available if *blocking apps* are added and only applies to devices going through pre-provisioning. Your options:  
-         - **No**: An attempt is made to install the blocking apps. Autopilot deployment fails if a blocking app fails to install. No attempt is made to install non-blocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the non-blocking apps.
-         - **Yes**: An attempt is made to install all required apps. Autopilot deployment fails if a blocking app fails to install. If a non-blocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't in the technician phase. This setting is the default setting for pre-provisioned deployments.
+         - **No**: An attempt is made to install the blocking apps. Autopilot deployment fails if a blocking app fails to install. No attempt is made to install nonblocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the nonblocking apps.
+         - **Yes**: An attempt is made to install all required apps. Autopilot deployment fails if a blocking app fails to install. If a nonblocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't in the technician phase. This setting is the default setting for pre-provisioned deployments.
 
          > [!TIP]
          >
@@ -285,7 +285,7 @@ It also tracks the following types of apps when they're assigned to all devices,
 - Per machine LoB MSI apps.
 - LoB store apps, online store apps, and offline store apps.
 
-If you're using Microsoft Entra hybrid join, Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning .
+If you're using Microsoft Entra hybrid join, Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning.  
 
 ### Known issues
 
@@ -297,7 +297,7 @@ This section lists the known issues for the enrollment status page.
 - The ESP always times out on devices running Windows 10, version 1903 and earlier, and
 enrolled via the *Add work and school account* option. The ESP waits for Microsoft Entra registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
 - Hybrid Microsoft Entra Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Microsoft Entra Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Microsoft Entra ID.  
-- Windows sign in page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
+- Windows sign in page isn't prepopulated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
 - ESP is stuck for a long time or never completes the "Identifying" phase. Intune computes the ESP policies during the identifying phase. A device may never complete computing ESP policies if the current user doesn't have an Intune licensed assigned.  

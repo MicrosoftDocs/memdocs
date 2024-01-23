@@ -43,7 +43,7 @@ Intune supports the enrollment of macOS devices using Direct Enrollment (DE) for
 - Physical access to macOS devices
 - [Set MDM authority](../fundamentals/mdm-authority-set.md)
 - [An Apple MDM push certificate](apple-mdm-push-certificate-get.md)
- - Administrator rights on the macOS devices you are enrolling
+ - Administrator rights on the macOS devices you're enrolling
 
 ## Create an Apple Configurator profile for devices
 
@@ -54,7 +54,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
 1. Go to **Profiles** > **Create**.  
-5. Under **Create Enrollment Profile** in the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Device users do not see these details.
+5. Under **Create Enrollment Profile** in the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Device users don't see these details.
 
   >[!TIP] 
   >You can use the name field to create a dynamic membership rule for Microsoft Entra groups. The *enrollmentProfileName* parameter lets you quickly assign devices with this enrollment profile to the appropriate groups. For more information, see [Dynamic group rule syntax](/azure/active-directory/enterprise-users/groups-dynamic-membership#rules-for-devices).  
@@ -67,7 +67,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 6. Select **Create** to save the profile.  
 
 ## Direct Enrollment
-Because Direct Enrollment only supports enrollment without user affinity, the company portal cannot be used to install available applications.
+Because Direct Enrollment only supports enrollment without user affinity, the company portal can't be used to install available applications.
 
 ### Export the profile and install on macOS devices  
 
@@ -81,7 +81,7 @@ Because Direct Enrollment only supports enrollment without user affinity, the co
      > A downloaded enrollment profile is valid for two weeks after download. You can download as many enrollment profiles using this link as you need. Downloading a new profile does not render the previous one invalid, however, it also doesn't extend the previously downloaded file expiry time. As mentioned before, make sure that you don't have a device platform restriction targeted to your iOS/iPadOS devices, because it will cause the enrollment profile to fail when you try exporting it to macOS devices.  
          
 1. Transfer the file to a macOS computer to install it directly.
-1. Double-click on the saved **.mobileconfig** to open the file in Profiles.
+1. Double-click the saved **mobileconfig** file to open the file in Profiles.  
 1. When prompted to install the management profile, select **Install**.
 1. Confirm on the next prompt you want to install the management profile by selecting **Install**.
 1. Sign in with an admin account on the macOS device, and then select **OK**.

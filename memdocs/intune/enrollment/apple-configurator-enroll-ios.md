@@ -37,7 +37,7 @@ ms.collection:
 Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment. You can enroll devices into Intune with Apple Configurator in two ways:  
 
 - **Setup Assistant enrollment** - Wipes the device and prepares it to enroll during Setup Assistant.
-- **Direct enrollment** - Does not wipe the device and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
+- **Direct enrollment** - Doesn't wipe the device, and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
 
 Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).  
 
@@ -52,18 +52,17 @@ Apple Configurator enrollment methods can't be used with the [device enrollment 
 
 ## Create an Apple Configurator profile for devices
 
-A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.
+A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.  
 
-<<<<<<< HEAD
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 1. Go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
 1. Go to **Profiles** > **Create**.  
-1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
+1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
     :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
-1. Click **Next** to display the **Settings** page.
+1. Select **Next** to go to the **Settings** page.
 
 1. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
 
@@ -91,7 +90,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 Enrollment with Apple Configuration has the following limitations:
 
 - The csv file can have up to 5,000 devices.     
-- The total number of devices, which includes the devices listed in the csv file and the Apple Configurator devices already in Intune, cannot exceed 75,000.    
+- The total number of devices, which includes the devices listed in the csv file and the Apple Configurator devices already in Intune, can't exceed 75,000.    
 
 ## Setup Assistant enrollment
 
@@ -104,7 +103,7 @@ Enrollment with Apple Configuration has the following limitations:
    `F7TLWCLBX196,iPad Air (5th generation) - Blue`  
     
    The current maximum for the list is 5,000 rows. For information about how to find an iOS/iPadOS device serial number, see [Find the serial number or IMEI on your iPhone, iPad, or iPod touch](https://support.apple.com/HT204073) (opens Apple Support website).  
-2. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 1. Go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
@@ -114,14 +113,13 @@ Enrollment with Apple Configuration has the following limitations:
 
 ### Reassign a profile to device serial numbers
 
-You can assign an enrollment profile when you import iOS/iPadOS serial numbers for Apple Configurator enrollment. You can also assign profiles from two plac1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**.  
-2. Select **Apple Configurator** and go to **Devices**. You can also asign profiles from two places in the Azure portal:  
+You can assign an enrollment profile when you import iOS/iPadOS serial numbers for Apple Configurator enrollment. You can also assign profiles from two places in the Azure portal:  
 - **Apple Configurator devices**
 - **AC profiles**
 
 #### Assign from Apple Configurator devices
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). go to **Devices** > **Enrollment**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
 1. Go to **Devices**.  Select a serial number. 
@@ -129,7 +127,7 @@ You can assign an enrollment profile when you import iOS/iPadOS serial numbers f
 1. Under **Assign Profile**, select the **New profile** you want to assign, and then choose **Assign**.  
 
 #### Assign from profiles
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).    
 1. Go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
@@ -140,7 +138,7 @@ You can assign an enrollment profile when you import iOS/iPadOS serial numbers f
 ### Export the profile
 After you create the profile and assign serial numbers, you must export the profile from Intune as a URL. You then import it into Apple Configurator on a Mac for deployment to devices.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). go to **Devices** > **Enrollment**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
 1. Go to **Profiles**. Choose a profile to export.  
@@ -173,13 +171,13 @@ The devices are now ready for corporate enrollment. Turn off the devices and dis
 After users receive their devices, they must complete Setup Assistant. Devices configured with user affinity can install and run the Company Portal app to download apps and manage devices.
 
 ## Direct enrollment
-When you directly enroll iOS/iPadOS devices with Apple Configurator, you can enroll a device without acquiring the device's serial number. You can also name the device for identification purposes before Intune captures the device name during enrollment. The Company Portal app is not supported for directly enrolled devices. This method does not wipe the device.
+When you directly enroll iOS/iPadOS devices with Apple Configurator, you can enroll a device without acquiring the device's serial number. You can also name the device for identification purposes before Intune captures the device name during enrollment. The Company Portal app is not supported for directly enrolled devices. This method doesn't wipe the device.
 
 Apps requiring user affiliation, including the Company Portal app used for installing line-of-business apps, cannot be installed.
 
 ### Export the profile as .mobileconfig to iOS/iPadOS devices  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). go to **Devices** > **Enrollment**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
 1. Go to **Profiles**. Choose a profile to export.  
@@ -195,7 +193,7 @@ Apps requiring user affiliation, including the Company Portal app used for insta
         ![Screenshot Export Profile for Setup Assistant Enrollment with Profile URL highlighted](./media/apple-configurator-enroll-ios/ios-apple-configurator-add-profile.png)
 
     4. Use the file picker to select the .mobileconfig file that you exported from Intune, and then choose **Add**. The profile is added to the device. If the device is Unsupervised, the installation requires acceptance on the device.
-5. Use the following steps to install the profile on the iOS/iPadOS device. The device must have already completed the Setup Assistant and be ready to use. If enrollment entails app deployments, the device should have an Apple ID set up because the app deployment requires that you have an Apple ID signed in for the App Store.
+1. Use the following steps to install the profile on the iOS/iPadOS device. The device must have already completed the Setup Assistant and be ready to use. If enrollment entails app deployments, the device should have an Apple ID set up because the app deployment requires that you have an Apple ID signed in for the App Store.
     1. Unlock the iOS/iPadOS device.
     2. In the **Install profile** dialog box for **Management profile**, choose **Install**.
     3. Provide the Device Passcode or Apple ID, if necessary.
@@ -203,9 +201,9 @@ Apps requiring user affiliation, including the Company Portal app used for insta
     5. Accept the **Remote Warning**, and choose **Trust**.
     6. When the **Profile Installed** box confirms the profile as Installed, choose **Done**.
 
-6. On the iOS/iPadOS device, open **Settings** and go to **General** > **Device Management** > **Management Profile**. Confirm that the profile installation is listed, and check the iOS/iPadOS policy restrictions and installed apps. Policy restrictions and apps might take up to 10 minutes to appear on the device.
+1. On the iOS/iPadOS device, open **Settings** and go to **General** > **Device Management** > **Management Profile**. Confirm that the profile installation is listed, and check the iOS/iPadOS policy restrictions and installed apps. Policy restrictions and apps might take up to 10 minutes to appear on the device.
 
-7. Distribute devices. The iOS/iPadOS device is now enrolled in Intune and managed.  
+1. Distribute devices. The iOS/iPadOS device is now enrolled in Intune and managed.  
 
 ## Next steps  
 

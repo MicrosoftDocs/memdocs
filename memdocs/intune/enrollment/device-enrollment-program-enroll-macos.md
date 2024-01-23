@@ -123,7 +123,7 @@ At the end of this procedure, you will assign this profile to Microsoft Entra de
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.   
 1. Select an enrollment program token.  
-. Select **Profiles** > **Create profile** > **macOS**.  
+1. Select **Profiles** > **Create profile** > **macOS**.  
 
     ![Create a profile screenshot.](./media/device-enrollment-program-enroll-macos/image04.png)  
 
