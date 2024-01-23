@@ -70,7 +70,6 @@ The public key certificate is needed to request a trust-relationship certificate
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Enrollment program tokens**.  
-1. Go to **Devices**.  Select a serial number.  
 1. Select **Add**.  
 1. Select **I agree** to grant permission to Microsoft to send user and device information to Apple.  
 1. Select **Download your public key** and save the key as a PEM file locally. The key will be used to get the MDM server token in the next step.  
