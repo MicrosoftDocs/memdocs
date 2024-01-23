@@ -68,7 +68,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 <!-- ### Scripts -->
 <!-- ### Tenant administration -->
 
-## Week of December 13, 2023 (Service release 2312)
+## Week of December 11, 2023 (Service release 2312)
 
 ### App management
 
