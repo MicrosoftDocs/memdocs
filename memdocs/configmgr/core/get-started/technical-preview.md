@@ -133,13 +133,13 @@ The following features are available with the most recent Configuration Manager 
 - [Automated diagnostic Dashboard for Software Update Issues](2024/technical-preview-2401.md)
 - [Introducing Centralized Search box: Effortlessly Find What You Need in the Console!](2024/technical-preview-2401.md)
 - [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](2024/technical-preview-2401.md)
-- [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
 - [Microsoft Azure Active Directory re-branded to Microsoft Entra ID](2024/technical-preview-2401.md)
-- [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](2024/technical-preview-2401.md)
 - [Enhancement in Deploying Software Packages with Dynamic Variables](2024/technical-preview-2401.md)
-- [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
 - [Enabling Auto-Image Patching for CMG Virtual Machine Scale Sets](2024/technical-preview-2401.md)
 - [Window 11 Readiness dashboard to support Windows 23H2](2024/technical-preview-2401.md)
+- [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](2024/technical-preview-2401.md)
+- [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
+- [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](2024/technical-preview-2401.md)
 
 
 > [!NOTE]
