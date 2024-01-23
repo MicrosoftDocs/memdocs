@@ -88,11 +88,11 @@ For the steps to create a new group, go to [Add groups to organize users and dev
 Import the VPN server's root certificate issued by the CA into an Intune profile. This root certificate is the `.cer` file you exported in [Prerequisites](#prerequisites) (in this article). The trusted certificate profile instructs the iOS/iPadOS device to automatically trust the CA that the VPN server presents.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **iOS/iPadOS**.
-    - **Profile**: Select **Trusted certificate**.
+    - **Profile type**: Select **Trusted certificate**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -125,20 +125,18 @@ Be sure to configure the certificate for client authentication. You can set clie
 
 This VPN profile includes the SCEP or PKCS certificate that has the client credentials, the VPN connection information, and the per-app VPN flag that enables the per-app VPN used by the iOS/iPadOS application.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
-3. Enter the following properties:
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration** > **Create**.
+2. Enter the following properties and select **Create**:
 
     - **Platform**: Select **iOS/iPadOS**.
-    - **Profile**: Select **VPN**.
+    - **Profile type**: Select **VPN**.
 
-4. Select **Create**.
-5. In **Basics**, enter the following properties:
+3. In **Basics**, enter the following properties:
 
     - **Name**: Enter a descriptive name for the custom profile. Name your profiles so you can easily identify them later. For example, a good profile name is **iOS/iPadOS per-app VPN profile for myApp**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
-6. In **Configuration settings**, configure the following settings:
+4. In **Configuration settings**, configure the following settings:
 
     - **Connection type**: Select your VPN client app.
     - **Base VPN**: Configure your settings. [iOS/iPadOS VPN settings](vpn-settings-ios.md) describes all the settings. When using per-app VPN, be sure you configure the following properties as listed:
@@ -155,7 +153,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
       :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png" alt-text="Screenshot that shows the Automatic VPN set to per-app VPN on iOS/iPadOS devices in Microsoft Intune.":::
 
-7. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
+5. Select **Next**, and continue creating your profile. For more information, go to [Create a VPN profile](vpn-settings-configure.md#step-2---create-the-profile).
 
 ## Step 5 - Associate an app with the VPN profile
 

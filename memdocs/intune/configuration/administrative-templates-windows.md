@@ -78,11 +78,11 @@ This article lists the steps to create a template for Windows client devices, an
 ## Create the template
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile**: To use a logical grouping of settings, select **Templates** > **Administrative Templates**. To see all the settings, select **Settings catalog**.
+    - **Profile type**: To use a logical grouping of settings, select **Templates** > **Administrative Templates**. To see all the settings, select **Settings catalog**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
