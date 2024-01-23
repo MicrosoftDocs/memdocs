@@ -141,21 +141,15 @@ For more information, see [Set up BlackBerry Protect Mobile](../protect/blackber
 
 ### Device security
 
-#### Support for Intune Device control and Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!-- 25470154, 15466620 -->  
-You can now use the endpoint security profiles for *Device control* (Attach surface reduction policy) and *Defender Update control* (Antivirus policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+#### Support for Intune Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!—25470154 -->  
+You can now use the endpoint security policy for *Defender Update control* (Antivirus policy) from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
  
-- **Device control** profiles are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md). 
-
-  Applies to:
-  - Windows 10/11- - Available for the *Windows 10, Windows 11, and Windows Server* platform.
- 
-- **Defender Update control** profiles are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).    
+- **Defender Update control** policies are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).    
   Apples to:  
-  - Linux 
-  - macOS
+
   - Windows 10/11 - Available for the *Windows 10, Windows 11, and Windows Server* platform.
 
-With this support available, devices that are assigned either profile while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from those profiles. Check your profiles to make sure only the devices you intend to receive these policies will get them.
+With this support available, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive the policy will get it.
 
 ### Intune apps
 
