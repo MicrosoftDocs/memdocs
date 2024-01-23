@@ -27,13 +27,13 @@ The following sections describe the new features to try out in this version:
 <!-- [!INCLUDE [Example feature name](includes/2201/1234567.md)] -->
 [!INCLUDE [Automated diagnostic Dashboard for Software Update Issues](includes/2401/17668422.md)]
 [!INCLUDE [Introducing Centralized Search box: Effortlessly Find What You Need in the Console!](includes/2401/24501008.md)]
-[!INCLUDE [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](includes/2401/25601199.md)]
-[!INCLUDE [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](includes/2401/25990812.md)]
 [!INCLUDE [Microsoft Azure Active Directory re-branded to Microsoft Entra ID](includes/2401/24269502.md)]
-[!INCLUDE [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](includes/2401/9519162.md)]
 [!INCLUDE [Enhancement in Deploying Software Packages with Dynamic Variables](includes/2401/24334765.md)]
 [!INCLUDE [Enabling Auto-Image Patching for CMG Virtual Machine Scale Sets](includes/2401/14350148.md)]
 [!INCLUDE [Window 11 Readiness dashboard to support Windows 23H2](includes/2401/26021246.md)]
+[!INCLUDE [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](includes/2401/25601199.md)]
+[!INCLUDE [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](includes/2401/25990812.md)]
+[!INCLUDE [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](includes/2401/9519162.md)]
 
 
 <!--## General known issues-->
