@@ -121,7 +121,7 @@ Create a Device group that includes the eSIM capable devices. [Add groups](../fu
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create Profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. For the **Platform** field, select **Windows 10 and later**.
 

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/11/2023
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -57,16 +57,16 @@ A device enrollment manager can use the following methods to enroll devices in I
 These Microsoft Entra roles can manage device enrollment managers: 
 
 * Global Administrator 
-* Intune Service Administrator role in Microsoft Entra ID    
+* Intune Service Administrator role in Microsoft Entra ID      
 
 People assigned these roles can add and delete device enrollment managers, and view all DEM users in the Microsoft Intune admin center.  
 
 ## Add a device enrollment manager
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Enroll devices**.
-3. Select **Device enrollment managers**.  
-4. Select **Add**.
+2. Go to **Devices** > **Enrollment**.  
+3. Select the **Device enrollment managers** tab.  
+4. Choose **Add**.
 3. In the **User name** field, enter the user principal name of the user you're adding.
 6. Select **Add**. The new device enrollment manager is added to the list of DEM users. 
 
@@ -97,9 +97,9 @@ AOSP does not support DEM accounts.
 ### Apple volume purchased apps  
 DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses. You can't use apps purchased through Apple VPP with Apple VPP user licenses, because of per-user Apple ID requirements for app management.  
 
-<a name='azure-ad'></a>
+<a name='azure-ad'></a>  
 
-### Microsoft Entra ID  
+### Microsofy Entra ID  
 Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
 
 ### Certificates  
@@ -112,7 +112,7 @@ Conditional access is only supported with DEM on devices running:
 * Windows 11     
 
 ### Device limit restrictions    
-DEM enrolls Windows 10/11 devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Microsoft Entra admin center. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).       
+DEM enrolls Windows 10/11 devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Microsoft Entra admin center. For more information, see [Manage device identities](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).       
 
 ### Intune Company Portal  
 Only the local device appears in the Company Portal app or Company Portal website. Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.  

@@ -69,11 +69,11 @@ For information on some features you can configure using the settings catalog, g
 ## Create the policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**, or select **Windows 10 and later**.
-    - **Profile**: Select **Settings catalog**.
+    - **Profile type**: Select **Settings catalog**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -163,7 +163,7 @@ There are thousands of settings available in the settings catalog. To make it ea
 
 Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
-1. Go to **Devices** > **Configuration profiles**.
+1. Go to **Devices** > **Configuration**.
 2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (`…`).
 3. Select **Duplicate**.  
 4. Enter a new name and description for the policy.
@@ -177,7 +177,7 @@ This feature applies to:
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 
-1. Go to **Devices** > **Configuration profiles**.
+1. Go to **Devices** > **Configuration**.
 
 2. To export an existing policy, select the profile > select the ellipsis context menu (`…`) > **Export JSON**:
 
