@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/17/2023
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,7 +40,6 @@ ms.collection:
 - Windows 10  
 - Windows 11  
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process.
 
@@ -59,11 +58,12 @@ This article describes the information that the enrollment status page tracks an
 
 ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track app installation.  
 
-## Create new profile
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-1. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-1. Select **Create**.
+## Create new profile  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to **Devices** > **Enrollment**.  
+1. Select the **Windows** tab.  
+1. Under **Windows Autopilot**, select **Enrollment Status Page**.  
+1. Select **Create**.  
 1. In **Basics**, enter the following properties:  
      - **Name**: Name your profile so you can easily identify it later.
      - **Description**: Enter a description for the profile. This setting is optional, but recommended.  
@@ -105,16 +105,15 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
          - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list. This option unlocks the **Blocking apps** settings.
 
     - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [technician flow](/autopilot/pre-provision). This setting is only available if *blocking apps* are added and only applies to devices going through pre-provisioning. Your options:  
-         - **No**: An attempt is made to install the blocking apps. Autopilot deployment fails if a blocking app fails to install. No attempt is made to install non-blocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the non-blocking apps.
-         - **Yes**: An attempt is made to install all required apps. Autopilot deployment fails if a blocking app fails to install. If a non-blocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't in the technician phase. This setting is the default setting for pre-provisioned deployments.
+         - **No**: An attempt is made to install the blocking apps. Autopilot deployment fails if a blocking app fails to install. No attempt is made to install nonblocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the nonblocking apps.
+         - **Yes**: An attempt is made to install all required apps. Autopilot deployment fails if a blocking app fails to install. If a nonblocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't in the technician phase. This setting is the default setting for pre-provisioned deployments.
 
          > [!TIP]
          >
          >  When using this feature, expect provisioning time to increase during the technican phase. The more apps assigned, the longer it could take. If you're using a third party to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time out.
 
 1. Select **Next**.
-1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.
-
+1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.  
     > [!NOTE]
     >
     > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties aren't available.  
@@ -286,7 +285,7 @@ It also tracks the following types of apps when they're assigned to all devices,
 - Per machine LoB MSI apps.
 - LoB store apps, online store apps, and offline store apps.
 
-If you're using Microsoft Entra hybrid join, Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning .
+If you're using Microsoft Entra hybrid join, Win32 and UWP apps assigned to the device with user installation context aren't tracked during provisioning.  
 
 ### Known issues
 
@@ -298,7 +297,7 @@ This section lists the known issues for the enrollment status page.
 - The ESP always times out on devices running Windows 10, version 1903 and earlier, and
 enrolled via the *Add work and school account* option. The ESP waits for Microsoft Entra registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
 - Hybrid Microsoft Entra Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Microsoft Entra Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-premises AD connector time to create the new device record to Microsoft Entra ID.  
-- Windows sign in page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
+- Windows sign in page isn't prepopulated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
   - the user credentials aren't preserved
   - the user must enter the credentials again before proceeding from Device Setup phase to the Account setup phase
 - ESP is stuck for a long time or never completes the "Identifying" phase. Intune computes the ESP policies during the identifying phase. A device may never complete computing ESP policies if the current user doesn't have an Intune licensed assigned.  
