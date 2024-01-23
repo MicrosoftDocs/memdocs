@@ -1,7 +1,7 @@
 ---
 ms.author: gokarthi
 author: gowdhamankarthikeyan
-ms.prod: configuration-manager
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 02/25/2021
 ms.localizationpriority: medium

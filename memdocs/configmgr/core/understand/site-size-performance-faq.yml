@@ -5,7 +5,7 @@ metadata:
   description: Answers to common Configuration Manager questions about site sizing and performance.
   author: banreet
   ms.author: banreetkaur
-  ms.prod: configuration-manager
+  ms.service: configuration-manager
   ms.topic: faq
   ms.date: 02/15/2022
     

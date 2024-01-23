@@ -3,8 +3,8 @@ title: Find a package family name (PFN) for per-app VPN
 titleSuffix: Configuration Manager
 description: Learn about the two ways to find a package family name so that you can configure a per-app VPN.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell

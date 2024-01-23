@@ -3,8 +3,8 @@ title: Create updates
 titleSuffix: Configuration Manager
 description: Create and bundle software updates with System Center Updates Publisher
 ms.date: 04/29/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
