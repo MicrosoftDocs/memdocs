@@ -63,8 +63,8 @@ This feature is supported for the following platforms:
 | macOS | Not supported | Supported |
 | Android device administrator, before Android v10 | Supported | Supported |
 | Android device administrator, Android v10 and later | Not supported | Not supported |
-| Android Enterprise personally-owned work profile, before Android 12 | Supported | Supported |
-| Android Enterprise personally-owned work profile, Android 12 and later | Not supported | Not supported |
+| Android Enterprise personally owned work profile, before Android 12 | Supported | Supported |
+| Android Enterprise personally owned work profile, Android 12 and later | Not supported | Not supported |
 | Android Enterprise corporate-owned work profile | Not supported | Not supported |
 | Android Enterprise fully managed | Not supported | Not supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
