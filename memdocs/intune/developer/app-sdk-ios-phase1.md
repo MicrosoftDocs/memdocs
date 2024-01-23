@@ -59,7 +59,7 @@ Before you start integrating the Intune App SDK into your iOS application, take 
   and where to find these features in the Microsoft Intune admin center.  
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Get Started with Intune App SDK Guide](app-sdk-get-started.md) explains how to prepare for integration on each supported platform.
-- [iOS app protection policy settings] describe each iOS setting in detail.
+- [iOS app protection policy settings] describes each iOS setting in detail.
   Your app will support these settings by integrating the SDK.
   During the SDK integration process, you'll also configure these settings in your own test tenant for validation.
 - (Optional) [Plan for mobile application management in Microsoft Intune - Training | Microsoft Learn] explains how to plan for mobile application management using Microsoft Intune, with a focus on adding apps to Intune, using app protection policies and app configuration policies, and troubleshooting app protection policy deployment.
