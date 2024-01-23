@@ -91,7 +91,7 @@ There are no users associated with a DEM-enrolled device, so apps can't be deplo
 DEM isn't compatible with Apple Automated Device Enrollment (ADE).
 
 ### Android open source project (AOSP)
-AOSP does not support DEM accounts.
+AOSP doesn't support DEM accounts.
 
 
 ### Apple volume purchased apps  
@@ -99,7 +99,7 @@ DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses
 
 <a name='azure-ad'></a>  
 
-### Microsofy Entra ID  
+### Microsoft Entra ID  
 Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
 
 ### Certificates  
@@ -121,4 +121,4 @@ Only the local device appears in the Company Portal app or Company Portal websit
 There's a limit of 150 DEM accounts in Microsoft Intune.  
 
 ### VPN profiles  
-User-based VPN profiles do not work with DEM-enrolled devices.  
+User-based VPN profiles don't work with DEM-enrolled devices.  

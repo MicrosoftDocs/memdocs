@@ -58,9 +58,6 @@ To verify Android Enterprise availability in your country or region, see [Is And
 2. Go to **Devices** > **Enrollment**.   
 3. Select the **Android** tab. 
 3. Under **Prerequisites**, choose **Managed Google Play**.  If you're using a custom Intune admin role, access to this option requires organization *read* and *update* permissions.  
-   
-   ![Android enterprise enrollment screen](./media/connect-intune-android-enterprise/android-work-bind.png)
-
 4. Select **I agree** to grant Microsoft permission to [send user and device information to Google](../protect/data-intune-sends-to-google.md). 
    
 5. Select **Launch Google to connect now** to open the Managed Google Play website. The website opens on a new tab in your browser.  
@@ -92,7 +89,7 @@ You can turn off Android Enterprise enrollment and management by following these
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your Intune administrator account.  
 2. [Retire](../remote-actions/devices-wipe.md#retire) all of the following devices:
-    - Android Enterprise personally-owned work profile devices
+    - Android Enterprise personally owned work profile devices
     - Android Enterprise corporate-owned work profile devices
     - Android Enterprise fully managed
     - Android Enterprise dedicated devices  
