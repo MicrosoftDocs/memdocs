@@ -99,7 +99,7 @@ To select an ANC, follow these steps:
     - Names can contain letters, numbers, and hyphens.
     - Names can't include blank spaces or underscores.
     - Optional. Use the %USERNAME:X% macro to add the first X letters of the username.
-    - Required. Use the %RAND:Y% macro to add a random string of numbers, where Y equals the number of digits to add. Y must be 5 or more. Names must contain a randomized string.
+    - Required. Use the %RAND:Y% macro to add a random string of characters, where Y equals the number of characters to add. Y must be 5 or more. Names must contain a randomized string.
   
     Examples of custom naming templates:
 
