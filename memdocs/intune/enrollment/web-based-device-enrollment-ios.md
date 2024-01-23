@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/27/2023
+ms.date: 01/23/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -34,7 +34,7 @@ ms.collection:
 # Set up web based device enrollment for iOS  
 **Applies to iOS/iPadOS**  
 
-Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal devices. This is one of two *Apple device enrollment* methods supported in Microsoft Intune, with the other being [device enrollment with the Company Portal app](ios-device-enrollment.md#app-or-web-based-enrollment). Both methods give you access to a limited but appropriate set of device management settings and actions for bring-your-own-device (BYOD) scenarios, so you can protect work data without affecting the device user's personal data or apps. 
+Set up web-based device enrollment in Microsoft Intune for iOS/iPadOS personal devices. This is one of two *Apple device enrollment* methods supported in Microsoft Intune, with the other being [device enrollment with the Company Portal app](ios-device-enrollment.md#app-or-web-based-enrollment). Both methods give you access to a limited but appropriate set of device management settings and actions for bring-your-own-device (BYOD) scenarios, so you can protect work data without affecting the device user's personal data or apps.  
 
 Web-based device enrollment provides a faster and more user-friendly enrollment experience. The Company Portal app isn't required because employees and students do everything in Safari and in their device settings. Additionally, web-based device enrollment works with JIT registration. When it's enabled, Intune uses JIT registration with the Microsoft Authenticator app for registration of the device and single sign-on (SSO) to reduce the number of times users have to sign in during enrollment and when accessing work apps. 
 
@@ -63,16 +63,17 @@ Create a device configuration, single sign-on app extension policy to enable jus
 ## Step 2: Create enrollment profile  
 Create an enrollment profile for devices enrolling via web-based device enrollment. The enrollment profile triggers the device user's enrollment experience, and enables them to initiate enrollment in Safari. 
 
-1. In the Microsoft Intune admin center, go to **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment**. 
-2. Select **Enrollment types**.  
-3. Select **Create profile** > **iOS/iPadOS**.  
-4. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details.  
-5. Select **Next**.  
-6. On the **Settings** page, for **Enrollment type**, select **Web based device enrollment**.  
-7. Select **Next**.  
-8. On the **Assignments** page, assign the profile to all users or a group of users.
-9. Select **Next**.  
-10. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile. 
+1. In the Microsoft Intune admin center, go to **Devices** > **Enrollment**.  
+1. Select the **Apple** tab.  
+1. Under **Enrollment Options**, choose **Enrollment types (preview)**.  
+1. Select **Create profile** > **iOS/iPadOS**.  
+1. On the **Basics** page, enter a name and description for the profile so that you can distinguish it from other profiles in the admin center. Device users don't see these details.  
+1. Select **Next**.  
+1. On the **Settings** page, for **Enrollment type**, select **Web based device enrollment**.  
+1. Select **Next**.  
+1. On the **Assignments** page, assign the profile to all users or a group of users.
+1. Select **Next**.  
+1. On the **Review + create** page, review your choices, and then select **Create** to finish creating the profile. 
 
 Return to **Enrollment types** to see a list of your enrollment profiles. Intune applies enrollment profiles in the order you prioritize them. If a conflict occurs because a user is assigned more than one profile, Intune applies the profile with the higher priority. Drag and drop the profiles in the list to reposition them and change the order in which they're applied.   
 
