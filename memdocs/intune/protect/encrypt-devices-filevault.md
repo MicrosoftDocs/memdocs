@@ -72,7 +72,8 @@ Following are the FileVault permissions, which are part of the **Remote tasks** 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+
+2. Select **Devices** > **Configuration** > On the *Policies* tab, select **+ Create**.
 
 3. On the **Create a profile** page, set the following options, and then click **Create**:
    - **Platform**: macOS

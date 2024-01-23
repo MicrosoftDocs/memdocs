@@ -3,8 +3,8 @@ description: Learn how to modify an Object by using WMI.
 title: Modify an Object by Using WMI
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 ms.assetid: 6101f903-172b-4e59-8801-4a9c5975e3c9
 author: Banreet

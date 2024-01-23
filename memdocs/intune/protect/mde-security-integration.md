@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/06/2023
+ms.date: 01/16/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,7 +50,7 @@ This scenario extends the Microsoft Intune Endpoint Security surface to devices 
 Applies to:
 
 - Windows 10 and Windows 11
-- Windows server (2012 R2 and up)
+- Windows Server (2012 R2 and up)
 - Linux
 - macOS
 
@@ -247,10 +247,11 @@ To support use with Microsoft Defender security settings management, your polici
 
 | Endpoint security policy | Profile | Defender for Endpoint security settings management  |  Microsoft Intune |
 |---------|----------|-----------|----------|
+| Antivirus              | Defender Update controls           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Windows Security Experience            | *Note 1*         | ![Supported](./media/mde-security-integration/green-check.png) |
-|Attack Surface Reduction |Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Attack Surface Reduction | Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall Rules      | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |

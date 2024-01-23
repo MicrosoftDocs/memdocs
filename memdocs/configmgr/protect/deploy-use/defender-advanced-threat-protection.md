@@ -3,8 +3,8 @@ title: Microsoft Defender for Endpoint
 titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
 ms.date: 08/01/2023
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -33,14 +33,14 @@ Microsoft Defender for Endpoint's cloud-based portal is [Microsoft Defender Secu
 <!--5229962-->
 You can onboard the following operating systems using Configuration Manager:
 
-- Windows 8.1
-- Windows 10, version  1709 or later
 - Windows 11
-- Windows Server 2012 R2
-- Windows Server 2016
-- Windows Server Semi-Annual Channel (SAC), version 1803 or later
+- Windows 10, version  1709 or newer
+- Windows 8.1
+- Windows Server 2022
 - Windows Server 2019
-- Windows Server 2022<!-- 10200029 -->
+- Windows Server Semi-Annual Channel (SAC), version 1803 or newer
+- Windows Server 2016
+- Windows Server 2012 R2<!-- 10200029 -->
 
 > [!IMPORTANT]
 > Operating systems that have reached the end of their [product lifecycle](/lifecycle/faq/general-lifecycle) aren't typically supported for onboarding unless they have been enrolled into the [Extended Security Updates (ESU program)](/lifecycle/faq/extended-security-updates). For more information about supported operating systems and capabilities with Microsoft Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions). <!-- MAX 6198973-->

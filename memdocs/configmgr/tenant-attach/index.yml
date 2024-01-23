@@ -8,8 +8,8 @@ metadata:
   title: Tenant attach documentation
   titleSuffix: Configuration Manager
   description: Upload your Configuration Manager devices to the cloud service and take actions on them.
-  ms.prod: configuration-manager
-  ms.technology: configmgr-core
+  ms.subservice: core-infra
+  ms.service: configuration-manager
   ms.topic: landing-page
   author: gowdhamankarthikeyan
   ms.author: gokarthi

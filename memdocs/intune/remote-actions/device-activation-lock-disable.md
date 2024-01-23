@@ -54,7 +54,7 @@ While Activation Lock helps secure Apple devices and improves the chances of rec
 To help solve these problems, Apple introduced the ability to disable Activation Lock for supervised devices, without the user's Apple ID and password. Supervised devices generate a device-specific Activation Lock bypass code, which is stored on Apple's activation server.
 
 >[!TIP]
-> Supervised mode can be configured through Apple Configurator to lock down a device and limit functionality to specific business purposes. Supervised mode is used only for corporate-owned devices.
+> Supervised mode can be configured through Apple Configurator to lock down a device and limit functionality to specific business purposes. This action is only supported on Supervised devices enrolled using Automated Device Enrollment program. [Apple's web site](https://developer.apple.com/documentation/devicemanagement/clear_the_bypass_code_for_activation_lock).
 
 You can read more about Activation Lock on [Apple's web site](https://support.apple.com/HT201365).
 
@@ -111,7 +111,7 @@ The Intune **Disable Activation Lock** remote device action removes the Activati
 1. Next, select the device for which you'd like to disable Activation Lock.
 1. Select **Hardware**, then find and copy the Activation Lock bypass code value under **Conditional Access**.
 1. In the **Overview** pane for the device, select the action **Wipe** in the Device action menu.
-1. After the device is reset, you're prompted for the Apple ID and password. Leave the ID field blank, and then enter the **Activation Lock bypass code** for the password. This removes the account from the device.
+1. After the device is reset, you're prompted for the Apple ID and password. Leave the ID field blank, and then enter the **Activation Lock bypass code** for the password. This step removes the account from the device. On a macOS device, select **Recovery Assistant** in the menu bar and then select **Activate with MDM key** option to enter the bypass code.
 
 ## Next steps
 

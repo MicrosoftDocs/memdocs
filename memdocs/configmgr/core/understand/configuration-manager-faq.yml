@@ -4,8 +4,8 @@ metadata:
   titleSuffix: Configuration Manager
   description: Frequently asked questions about Microsoft Configuration Manager
   ms.date: 04/16/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-core
+  ms.subservice: core-infra
+  ms.service: configuration-manager
   ms.topic: faq
   ms.assetid: be276b34-e283-4386-8b45-5629e431c50d
   author: banreet

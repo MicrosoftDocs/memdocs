@@ -5,7 +5,6 @@ title: My macOS version isn't yet supported | Microsoft Docs
 description: Explains why you're receiving a message that your macOS version isn't supported by Intune. 
 keywords:
 author: lenewsad
-
 ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2017
@@ -36,4 +35,4 @@ ms.collection:
 
 With the rapid pace of development of technology, sometimes your device could actually be ahead of what your company support has had the opportunity to test. It's possible that being on the newest version of macOS may not work with some of your company's other tools.
 
-You will need to contact your company support to resolve this issue. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+You'll need to contact your company support to resolve this issue. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

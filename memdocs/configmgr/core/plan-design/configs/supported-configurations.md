@@ -3,8 +3,8 @@ title: Supported configurations
 titleSuffix: Configuration Manager
 description: Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment.
 ms.date: 10/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: overview
 author: Banreet
 ms.author: banreetkaur

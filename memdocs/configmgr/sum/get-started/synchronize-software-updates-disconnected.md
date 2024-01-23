@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Run software updates synchronization on the top-level software update point that is disconnected from the Internet.
 ms.date: 02/13/2020
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 manager: apoorvseth
 author: BalaDelli
 ms.author: baladell

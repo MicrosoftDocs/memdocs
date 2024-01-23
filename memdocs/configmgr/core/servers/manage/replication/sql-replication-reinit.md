@@ -3,8 +3,8 @@ title: SQL Server replication reinit
 titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting SQL Server replication reinitialization between Configuration Manager sites
 ms.date: 08/09/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: reference
 author: banreet
 ms.author: banreetkaur
@@ -33,7 +33,7 @@ SELECT * FROM ServerData
 WHERE Status = 120
 ```
 
-### Check which replication group hasn't completed reinit
+### Check that reinit isn't completed for which replication group
 
 ```sql
 SELECT * FROM RCM_DrsInitializationTracking

@@ -3,8 +3,8 @@ description: The Enable Windows Management Instrumentation (WMI) class method, i
 title: Enable Method
 titleSuffix: Configuration Manager
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 11e5ed2e-12eb-415d-b98a-a9c1a1306e3f
 author: Banreet

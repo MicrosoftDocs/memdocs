@@ -3,8 +3,8 @@ title: Prepare for OS deployment
 titleSuffix: Configuration Manager
 description: Learn about how to prepare for operating system deployments in Configuration Manager
 ms.date: 02/22/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
