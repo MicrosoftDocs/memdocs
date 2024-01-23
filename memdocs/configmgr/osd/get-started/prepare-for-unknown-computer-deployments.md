@@ -3,8 +3,8 @@ title: Prepare for unknown computer deployments
 titleSuffix: Configuration Manager
 description: Learn how to deploy operating systems to computers that aren't managed by Configuration Manager in your Configuration Manager environment.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
