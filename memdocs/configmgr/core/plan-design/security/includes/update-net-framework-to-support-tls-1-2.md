@@ -1,7 +1,7 @@
 ---
 author: banreet
 ms.author: banreetkaur
-ms.prod: configuration-manager
+ms.service: configuration-manager
 ms.topic: include
 ms.date: 09/01/2021
 ms.localizationpriority: medium
