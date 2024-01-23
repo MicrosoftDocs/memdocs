@@ -125,16 +125,14 @@ Imported devices are not necessarily enrolled. Devices can have a state of eithe
 3. Select the device identifiers you want to delete, and choose **Delete**.
 4. Confirm the deletion.  
 
-Deleting a corporate identifier for an enrolled device does not change the device's ownership. To change a device's ownership, go **Devices**, select the device, choose **Properties**, and change **Device ownership**.
+Deleting a corporate identifier for an enrolled device does not change the device's ownership. 
 
 ## IMEI specifications
 For detailed specifications about International Mobile Equipment Identifiers, see [3GGPP TS 23.003](https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=729).
 
 ## Change device ownership
 
-Devices properties display **Ownership** for each device record in Intune. As an admin, you can specify devices as **Personal** or **Corporate**.
-
-**To change device ownership:**
+Devices properties display **Ownership** for each device record in Intune. As an admin, you can specify devices as *personal* or *corporate*.  
 1. Go to **Devices** > **All devices**.      
 2. Select a device.  
 3. Choose **Properties**.  
