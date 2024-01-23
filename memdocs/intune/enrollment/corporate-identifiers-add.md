@@ -3,12 +3,12 @@
 
 title: Add corporate identifiers to Intune
 titleSuffix: 
-description: Learn how to add corporate identifiers (enrollment method, IMEI, and serial numbers) to Microsoft Intune.
+description: Add corporate identifiers (enrollment method, IMEI, and serial numbers) to Microsoft Intune.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2024
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -45,7 +45,7 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 - Enrolled as [Android Enterprise corporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
 - Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md).   
 - Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md).   
-- Joined to Microsoft Entra with work or school credentials. [Devices that are Microsoft Entra registered](/identity/devices/concept-device-registration) will be marked as personal.    
+- Joined to Microsoft Entra with work or school credentials. [Devices that are Microsoft Entra registered](/entra/identity/devices/concept-device-registration) will be marked as personal.    
 - Set as corporate in the [device's properties list](#change-device-ownership).  
 
 After enrollment, you can [change the ownership setting](#change-device-ownership) between **Personal** and **Corporate**.
