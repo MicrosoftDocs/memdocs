@@ -124,7 +124,8 @@ Create an enrollment profile for corporate-owned iOS/iPadOS devices. A device en
 You must assign an enrollment program profile to devices before they can enroll. These devices are synced to Intune from Apple, and must be assigned to the proper MDM server token in the ABM, ASM, or ADE portal.
 
 1. In the admin center, choose your token from the list.  
-2. Choose **Devices** > choose devices in the list > **Assign profile**.  
+2. Select **Devices** and choose the devices you want to assign.
+3. Select **Assign profile**.  
 3. Under **Assign profile**, choose a profile for the devices > **Assign**.  
 
 > [!NOTE]
