@@ -50,7 +50,7 @@ Before you create a profile, review the following articles that detail the Endpo
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 
@@ -105,7 +105,7 @@ The Firewall rules that Intune can manage are detailed in the Windows [Firewall 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create Profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 
 3. Enter the following properties:
 

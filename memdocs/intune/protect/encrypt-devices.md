@@ -95,7 +95,7 @@ Use one of the following procedures to create the policy type you prefer.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > On the *Profiles* tab, select **Create profile**.
+2. Select **Devices** > **Configuration** > On the *Policies* tab, select **Create**.
 
 3. Set the following options:
    1. **Platform**: **Windows 10 and later**
@@ -269,7 +269,7 @@ All BitLocker recovery key accesses are audited. For more information on Audit L
 
 ### View recovery keys for tenant-attached devices
 
-When you’ve configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
+When you've configured the tenant attach scenario, Microsoft Intune can display recovery key data for tenant attached devices.
 
 - To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Microsoft Entra joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
@@ -299,7 +299,7 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 
 2. Select **Devices** > **All devices**.
 
-3. In the list of devices that you manage, select a device, select **More**, and then select the **BitLocker key rotation** device remote action.
+3. In the list of devices that you manage, select a device, and then select the **BitLocker key rotation** device remote action. If this option should be available but isn't visible, select the ellipsis (...) and then *BitLocker key rotation*.
 
 4. On the **Overview** page of the device, select the **BitLocker key rotation**. If you don't see this option, select the ellipsis (**…**) to show additional options, and then select the **BitLocker key rotation** device remote action.
 

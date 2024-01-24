@@ -85,7 +85,7 @@ To use the *Collect diagnostics* action:
 To view the diagnostics collected after an Autopilot failure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-2. Navigate to **Devices** > **Windows Devices**.
+2. Navigate to **Devices** > **Windows**.
 3. Select a device.
 4. Select **Diagnostics** > **Download**.
 5. The data zip file is added to your download tray and you can save it to your computer.
