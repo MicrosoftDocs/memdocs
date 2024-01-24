@@ -68,16 +68,18 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Compliance** > Oon the *Policies* tab, select **Create policy**. On the *Create a policy* page, for *Platform* select **iOS/iPadOS**. Select **Create** to continue.
+2. Select **Devices** > **Compliance**.  
+3. While on the **Policies** tab, choose **Create policy**. 
+4. On the *Create a policy* page, for *Platform* select **iOS/iPadOS**. Select **Create** to continue.  
 
-3. On the **Basics** tab, enter the following properties:
+5. On the **Basics** tab, enter the following properties:
 
    - **Name**: Enter a descriptive name for the new profile. For this example,  enter **iOS compliance policy test**.
    - **Description**: Optional - Enter **iOS compliance policy test**.
 
    Select **Next** to continue.
 
-4. On the **Compliance settings** tab:
+6. On the **Compliance settings** tab:
 
    1. Expand *Email*, and then set **Unable to set up email on the device** to **Require**.
    1. Expand *Device Health*, and set **Jailbroken** devices to **Block**.
@@ -100,13 +102,13 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
    :::image type="content" source="./media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-system-security.png" alt-text="Configureation of the iOS compliance policy.":::
 
-5. Select **Next** to skip **Actions for noncompliance**.
+7. Select **Next** to skip **Actions for noncompliance**.
 
-6. On the **Assignments** tab, for *Included groups*, select **Add all devices**, or select a group that contains only those devices that should receive this policy. Be sure to use the same assignment as you used for the [email device profile](#create-an-email-device-profile).
+8. On the **Assignments** tab, for *Included groups*, select **Add all devices**, or select a group that contains only those devices that should receive this policy. Be sure to use the same assignment as you used for the [email device profile](#create-an-email-device-profile).
 
    Select **Next** to continue.
 
-7. On the **Review + create** tab, review your settings. When you select **Create**, your changes are saved, and the profile is assigned.
+9. On the **Review + create** tab, review your settings. When you select **Create**, your changes are saved, and the profile is assigned.
 
 ## Create the Conditional Access policy
 

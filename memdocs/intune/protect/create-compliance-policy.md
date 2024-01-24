@@ -80,7 +80,7 @@ For more information about using custom compliance settings, including supported
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance policies** > **Policies** > **Create Policy**.
+2. Go to **Devices** > **Compliance** > **Policies**, and then select **Create policy**.   
 
 3. Select a **Platform** for this policy from the following options:
    - *Android device administrator*

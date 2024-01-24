@@ -61,19 +61,20 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 
 To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
 
-1. In the Intune admin center, select **Devices** > **Compliance policies** > **Notifications** > **Create notification**.
-2. Enter the following information for the **Basics** step:
+1. In the Intune admin center, go to **Devices** > **Compliance**.  
+2. Select the **Notifications** tab and then choose **Create notification**.  
+3. Enter the following information for the **Basics** step:
    - **Name**: *Contoso Admin*
    - **Email header – Include company logo**: Set to **Enabled** to show your organization's logo.
    - **Email footer – Include company name**: Set to **Enabled** to show your organization's name.
    - **Email footer – Include contact information**: Set to **Enabled** to show your organization's contact information.
    - **Company Portal Website Link**: Set to **Disabled**.
-3. Click **Next**.
-4. Enter the following information for the **Notification message templates** step:
+4. Click **Next**.
+5. Enter the following information for the **Notification message templates** step:
    - **Subject**: *Device compliance*
    - **Message**: *Your device is currently not meeting our organization's compliance requirements.*
-5. Click **Next** and review your notification. 
-6. Click **Create**. The notification message template is ready to use.
+6. Click **Next** and review your notification. 
+7. Click **Create**. The notification message template is ready to use.
 
    > [!NOTE]
    > You can also edit a Notification template that was previously created.
@@ -90,20 +91,21 @@ When you create a device compliance policy, Intune automatically creates an acti
 
 The following steps will create a compliance policy for Windows 10 devices:
 
-1. In the Intune admin center, select **Devices** > **Compliance Policies** > **Create Policy**.
-2. Under **Platform**, click **Windows 10 and later**.
-3. Click **Create**.
-4. Enter the following information in the **Basics** step followed by **Next**:
+1. In the Intune admin center, go to **Devices** > **Compliance**. 
+2. While on the **Policies** tab, choose **Create policy**.  
+3. Under **Platform**, click **Windows 10 and later**.
+4. Click **Create**.
+5. Enter the following information in the **Basics** step followed by **Next**:
 
    - **Name**: *Windows 10 compliance*
    - **Description**: *Windows 10 compliance policy*
 
-5. Select **System Security** to display the device security-related settings.
-6. Configure the following options:
+6. Select **System Security** to display the device security-related settings.
+7. Configure the following options:
 
    - Set **Require a password to unlock mobile devices** to **Require**. This setting specifies whether to require users to enter a password before access is granted to information on their mobile devices.
    - Set **Minimum password length** to **6**. This setting specifies the minimum number of digits or characters in the password.
-7. Select **Next** for each of the remaining steps until you reach the **Review + create** step. Click **Create** to create your compliance policy.
+8. Select **Next** for each of the remaining steps until you reach the **Review + create** step. Click **Create** to create your compliance policy.
 
 ## Add an action for noncompliance
 
@@ -111,12 +113,12 @@ After you have created a noncompliance policy, you can set an action to take pla
 
 The following steps will create an action for noncompliance for Windows 10 devices:
 
-1. In the Intune admin center, select **Devices** > **Windows** > **Compliance policies**.
+1. In the Intune admin center, select **Devices** > **Windows** > **Compliance policies**.  
 2. Select your Windows 10 compliance policy from the list.
-3. In the **Windows 10 compliance** policy overview pane, select **Properties**.
-4. Next to the **Action for noncompliance** section, click **Edit**.
+3. Select **Properties**.  
+4. Next to the **Action for noncompliance** section, choose **Edit**.
 5. In the **Action** drop-down box, select **Send email to end users**.
-6. In the **Schedule (days after noncompliance** drop-down box, select **0**.
+6. In the **Schedule (days after noncompliance)** drop-down box, select **0**.
 7. Under **Message template**,  click **None selected** to display the **Notification message templates** pane.
 8. Click the template you created earlier in this topic, and then click **Select** to select the message template.
 9. Click **Review + save** < **Save** to save your compliance policy.
@@ -125,7 +127,7 @@ The following steps will create an action for noncompliance for Windows 10 devic
 
 You can assign the compliance policy to a specific group of users or to all users. When Intune recognizes that a device is noncompliant, the user is notified that they must update their device to meet the compliance policy. Use the following steps to assign the policy.
 
-1. In Intune go to **Devices** > **Compliance policies** and select the **Windows 10 compliance** policy that you created earlier.
+1. In the admin center, go to **Devices** > **Compliance** and select the **Windows 10 compliance** policy that you created earlier.  
 2. Select **Properties**. 
 3. Next to **Assignments**, click **Edit**.
 4. In the **Assign to** drop-down box, select **All Users**. This will select all users. Any user that has a **Windows 10 and later** device that doesn't meet this compliance policy will be notified.

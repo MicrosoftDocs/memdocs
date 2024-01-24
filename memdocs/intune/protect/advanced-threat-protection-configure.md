@@ -245,7 +245,7 @@ If you're not familiar with creating compliance policy, reference the [Create a 
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance** > on the *Policies* tab, select  **+ Create policy**.
+2. Select **Devices** > **Compliance**. Then on the **Policies** tab, select  **+ Create policy**.  
 
 3. For **Platform**, use the drop-down box to select one of the following options:
    - **Android device administrator**
