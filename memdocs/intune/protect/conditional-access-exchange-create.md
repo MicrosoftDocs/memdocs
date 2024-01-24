@@ -77,17 +77,17 @@ Before you can configure Conditional Access, verify the following configurations
 - **Native email app on iOS/iPadOS** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 - **EAS mail clients such as Gmail on Android 4 or later** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
-- **EAS mail clients on Android Enterprise Personally-Owned Work Profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on [Android Enterprise personally-owned work profile](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles) devices. For Conditional Access to work with Android Enterprise Personally-Owned Work Profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app, you can set up device-based Conditional Access.
+- **EAS mail clients on Android Enterprise Personally-Owned Work Profile devices** - Only *Gmail* and *Nine Work for Android Enterprise* are supported on [Android Enterprise personally owned work profile](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles) devices. For Conditional Access to work with Android Enterprise personally owned work profiles, you must deploy an email profile for the *Gmail* or *Nine Work for Android Enterprise* app, and also deploy those apps as a required installation. After you deploy the app, you can set up device-based Conditional Access.
 
 - **EAS mail clients on Android device administrator** - To create Conditional Access policy, see [Create Conditional Access policies](../protect/create-conditional-access-intune.md)
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-#### To set up Conditional Access for Android Enterprise Personally-Owned Work Profile devices
+#### To set up Conditional Access for Android Enterprise personally owned work profile devices
 
   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
   
-  2. Deploy the Gmail or Nine Work app as **Required**.
+  2. Deploy the Gmail or Nine Work app as **Required**.  
 
   3. Go to **Devices** > **Configuration** and choose **Create*. 
   4. Enter a **Name** and **Description** for the profile.  
@@ -156,13 +156,13 @@ Before you can use the following procedure to set up Exchange on-premises access
    > [!div class="mx-imgBorder"]
    > ![Example screenshot of the Edit Organization workflow for advanced settings](./media/conditional-access-exchange-create/edit-organization-advanced-settings.png)
 
-   - For **Unmanaged device access**, set the global default rule for access from devices that are not affected by Conditional Access or other rules:
+   - For **Unmanaged device access**, set the global default rule for access from devices that aren't affected by Conditional Access or other rules:
 
      - **Allow access** - All devices can access Exchange on-premises immediately. Devices that belong to the users in the groups you configured as included in the previous procedure are blocked if they're later evaluated as not compliant with the compliant policies or not enrolled in Intune.
 
      - **Block access** and **Quarantine** – All devices are immediately blocked from accessing Exchange on-premises initially. Devices that belong to users in the groups you configured as included in the previous procedure get access after the device enrolls in Intune and is evaluated as compliant.
 
-       Android devices that *do not* run Samsung Knox standard don't support this setting and are always blocked.
+       This setting is supported on Android devices that run Samsung Knox standard. Other Android devices don't support this setting and are always blocked.  
 
    - For **Device platform exceptions**, select **Add**, and then specify details as needed for your environment.
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Monitor results of your device compliance policies in Microsoft Intune
-description: Use the device compliance dashboard to understand overall device compliance the per-policy and per-setting device compliance results.
+description: Use the device compliance dashboard to understand overall device compliance the per policy and per setting device compliance results.
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -138,7 +138,7 @@ By default, when you select a policy Intune opens the Monitor tab for that polic
 :::image type="content" source="./media/compliance-policy-monitor/select-compliance-policy.png" alt-text="View of the Intune admin center after selecting a compliance policy. ":::
 
 > [!TIP]
-> The Properties tab shows essential information about the policy such as name and platform type, as well as the configuration of each setting in that policy. On this tab you can choose to edit different details for the policy including the settings configurations, policy assignments, and more.  
+> The Properties tab shows essential information about the policy such as name and platform type. It also includes information about the configuration of each setting in that policy. From this tab, you can edit policy details such as settings and assignments.  
 
 ### Device status
 
@@ -181,7 +181,7 @@ In this report view:
 
 ### Per-setting status
 
-After selecting a compliance policy, you can select the *Per-setting status* tile to open the device compliance per-setting status view for that policy. This view displays the settings that the policy configures with columns for the various status conditions that can be reported. For each setting, each status column displays a count of devices that report that status.
+After selecting a compliance policy, you can select the *Per-setting status* tile to review the device compliance status for policy settings. This view shows the settings that the policy configures with columns for the various status conditions that can be reported. For each setting, each status column displays a count of devices that report that status.
 
 The following image displays a per-setting view of a policy for Android devices. This policy includes one setting and was deployed to four devices, all of which are compliant to that setting. In this view, you can sort by selecting a column, or using search:
 
