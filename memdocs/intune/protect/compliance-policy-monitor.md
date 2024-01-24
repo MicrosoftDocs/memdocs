@@ -127,7 +127,7 @@ If you select this tile, Intune displays a *Device status* view that lists each 
 
 ## Policy-based device compliance reports
 
-Each compliance policy you create directly supports compliance reporting. To view the reports for an individual policy, in the admin center go to **Devices** > **Compliance** > **Policies**, and then select the policy for which you want to view its report details.  
+Each compliance policy you create directly supports compliance reporting. To view the reports for an individual policy, in the admin center go to **Devices** > **Compliance**. Then select the policy for which you want to view its report details.  
 
 By default, when you select a policy Intune opens the Monitor tab for that policy, where Intune displays:
 

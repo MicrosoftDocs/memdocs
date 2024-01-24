@@ -80,9 +80,9 @@ For more information about using custom compliance settings, including supported
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Compliance** > **Policies**, and then select **Create policy**.   
+2. Go to **Devices** > **Compliance** and choose **Create policy**.   
 
-3. Select a **Platform** for this policy from the following options:
+4. Select a **Platform** for this policy from the following options:
    - *Android device administrator*
    - *Android (AOSP)*
    - *Android Enterprise*
@@ -100,11 +100,11 @@ For more information about using custom compliance settings, including supported
 
     Then, select **Create** to open the **Create policy** configuration window.
 
-4. On the **Basics** tab, specify a **Name** that helps you identify them later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
+5. On the **Basics** tab, specify a **Name** that helps you identify them later. For example, a good policy name is **Mark iOS/iPadOS jailbroken devices as not compliant**.
 
    You can also choose to specify a **Description**.
   
-5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the available compliance settings for each platform:
+6. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the available compliance settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
    - [Android (AOSP)](compliance-policy-create-android-aosp.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
@@ -114,7 +114,7 @@ For more information about using custom compliance settings, including supported
    - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
    - [Windows 10/11](compliance-policy-create-windows.md)  
 
-6. Add custom settings to policies for supported platforms.
+7. Add custom settings to policies for supported platforms.
 
    > [!TIP]  
    > This is an optional step that’s supported only for the following platforms:  
@@ -139,7 +139,7 @@ For more information about using custom compliance settings, including supported
 
    The JSON you enter is validated and any problems are displayed. After validation of the JSON contents, the rules from the JSON are displayed in table format.
 
-7. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
+8. On the **Actions for noncompliance** tab, specify a sequence of actions to apply automatically to devices that don't meet this compliance policy.
 
    You can add multiple actions and configure schedules and additional details for some actions. For example, you might change the schedule of the default action *Mark device noncompliant* to occur after one day. You can then add an action to send an email to the user when the device isn't compliant to warn them of that status. You can also add  actions that lock or retire devices that remain noncompliant.
 
@@ -147,17 +147,17 @@ For more information about using custom compliance settings, including supported
 
    Another example includes the use of Locations where you add at least one location to a compliance policy. In this case, the default action for noncompliance applies when you select at least one location. If the device isn't connected to any of the selected locations, it's considered not compliant. You can configure the schedule to give your users a grace period, such as one day.
 
-8. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
+9. On the **Scope tags** tab, select tags to help filter policies to specific groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. After you add the settings, you can also add a scope tag to your compliance policies. 
 
    For information on using scope tags, see [Use scope tags to filter policies](../fundamentals/scope-tags.md).
 
-9. On the **Assignments** tab, assign the policy to your groups.  
+10. On the **Assignments** tab, assign the policy to your groups.  
 
    Select **+ Select groups to include** and then assign the policy to one or more groups. The policy will apply to these groups when you save the policy after the next step.
 
    Policies for Linux don't support user-based assignments and can only be assigned to device groups.
 
-10. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
+11. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
 
     The users or devices targeted by your policy are evaluated for compliance when they check in with Intune.
 

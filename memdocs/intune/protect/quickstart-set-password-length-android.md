@@ -54,7 +54,7 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 Create a device compliance policy to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Compliance**. 
-2. While on the **Policies** tab, choose **Create policy**.  
+2. On the **Policies** tab, choose **Create policy**.  
 3. For **Platform**, select **Android Enterprise**.
 
 4. For **Profile type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
@@ -71,11 +71,11 @@ Create a device compliance policy to require your workforce's Android users to e
 
 7. When done, select **Next** until you reach the **Review + create** step. Then, click **Create** to create the policy.
 
-When you've successfully created the policy, it appears in your list of device complice policies.
+When you've successfully created the policy, it appears in your list of device compliance policies.
 
 ## Clean up resources
 
-When no longer needed, delete the policy. To do so, select the compliance policy and click **Delete**.
+When no longer needed, delete the policy. To do so, select the compliance policy and click **Delete**.  
 
 ## Next steps
 

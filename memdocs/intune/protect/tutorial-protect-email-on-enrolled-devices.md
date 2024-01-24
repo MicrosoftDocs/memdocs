@@ -69,7 +69,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Devices** > **Compliance**.  
-3. While on the **Policies** tab, choose **Create policy**. 
+3. On the **Policies** tab, choose **Create policy**. 
 4. On the *Create a policy* page, for *Platform* select **iOS/iPadOS**. Select **Create** to continue.  
 
 5. On the **Basics** tab, enter the following properties:

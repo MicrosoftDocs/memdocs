@@ -59,7 +59,7 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 
 ## Create a notification message template
 
-To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template is shown in the email sent to your users.
+To send email to your users, create a notification message template. When a device is noncompliant, the details you enter in the template is shown in the email sent to your users.  
 
 1. In the Intune admin center, go to **Devices** > **Compliance**.  
 2. Select the **Notifications** tab and then choose **Create notification**.  
@@ -92,9 +92,9 @@ When you create a device compliance policy, Intune automatically creates an acti
 The following steps will create a compliance policy for Windows 10 devices:
 
 1. In the Intune admin center, go to **Devices** > **Compliance**. 
-2. While on the **Policies** tab, choose **Create policy**.  
-3. Under **Platform**, click **Windows 10 and later**.
-4. Click **Create**.
+2. On the **Policies** tab, choose **Create policy**.  
+3. Under **Platform**, click **Windows 10 and later**.  
+4. Click **Create**.  
 5. Enter the following information in the **Basics** step followed by **Next**:
 
    - **Name**: *Windows 10 compliance*
@@ -121,7 +121,7 @@ The following steps will create an action for noncompliance for Windows 10 devic
 6. In the **Schedule (days after noncompliance)** drop-down box, select **0**.
 7. Under **Message template**,  click **None selected** to display the **Notification message templates** pane.
 8. Click the template you created earlier in this topic, and then click **Select** to select the message template.
-9. Click **Review + save** < **Save** to save your compliance policy.
+9. Click **Review + save** > **Save** to save your compliance policy.
 
 ## Assign the policy
 

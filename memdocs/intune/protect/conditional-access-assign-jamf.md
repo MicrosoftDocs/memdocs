@@ -66,7 +66,7 @@ After integration is configured, device users learn about Jamf Pro and Intune in
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Compliance** > **Policies**. If you're using a previously created policy, select that policy, and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
+2. Go to **Devices** > **Compliance**. If you're using a previously created policy, select that policy, and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
 3. Select **Properties**.  
 4. Go to **Assignments** > **Edit**. Use the available options to configure which Microsoft Entra users and security groups receive this policy. Jamf integration with Intune doesn't support compliance policy that targets device groups.  
