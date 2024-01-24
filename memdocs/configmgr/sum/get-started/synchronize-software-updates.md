@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Use these steps to schedule software updates synchronization, manually start software updates synchronization, and monitor software updates synchronization.
 ms.date: 7/25/2023
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-sum
+ms.service: configuration-manager
+ms.subservice: software-updates
 manager: apoorvseth
 author: BalaDelli
 ms.author: baladell

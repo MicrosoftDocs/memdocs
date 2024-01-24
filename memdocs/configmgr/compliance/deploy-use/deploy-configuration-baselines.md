@@ -3,8 +3,8 @@ title: Deploy configuration baselines
 titleSuffix: Configuration Manager
 description: Deploy configuration baselines to define configuration baseline deployments and to add or remove configuration baselines from deployments.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth

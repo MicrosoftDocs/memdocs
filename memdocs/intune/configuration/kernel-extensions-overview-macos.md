@@ -117,11 +117,11 @@ For more information on kernel extensions, go to [kernel extensions](https://dev
 ## Create the kernel extension policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Select **Devices** > **Configuration** > **Create**.
 3. Enter the following properties:
 
-    - **Platform**: Select **macOS**.
-    - **Profile**: Select **Templates** > **Extensions**.
+    - **Platform**: Select **macOS**
+    - **Profile type**: Select **Templates** > **Extensions**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:

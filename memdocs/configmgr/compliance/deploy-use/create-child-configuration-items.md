@@ -3,8 +3,8 @@ title: Create child configuration items
 titleSuffix: Configuration Manager
 description: Create child configuration items in Configuration Manager.
 ms.date: 05/07/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-compliance
+ms.service: configuration-manager
+ms.subservice: compliance
 ms.topic: conceptual
 author: sheetg09
 manager: apoorvseth

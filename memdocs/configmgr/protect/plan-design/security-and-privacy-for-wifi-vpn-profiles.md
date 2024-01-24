@@ -3,8 +3,8 @@ title: Wi-Fi and VPN profile security and privacy
 titleSuffix: Configuration Manager
 description: Learn about the security recommendations for managing Wi-Fi and VPN profiles for devices in Configuration Manager.
 ms.date: 03/29/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
