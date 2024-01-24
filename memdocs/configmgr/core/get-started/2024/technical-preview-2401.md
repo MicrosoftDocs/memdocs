@@ -33,6 +33,8 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [HTTPS or Enhanced HTTP should be enabled for client communication from this version of Configuration Manager](includes/2401/25601199.md)]
 [!INCLUDE [Upgrade to CM 2403 is blocked if CMG V1 is running as a cloud service (classic)](includes/2401/25990812.md)]
 [!INCLUDE [Windows Server 2012/2012 R2 operating system site system roles are not supported from this version of Configuration Manager](includes/2401/9519162.md)]
+[!INCLUDE [Improvements to Bitlocker](includes/2401/17667730.md)]
+<!--17667730,21659899,26419721-->
 
 
 <!--## General known issues-->
@@ -40,7 +42,7 @@ The following sections describe the new features to try out in this version:
 
 
 <!--## Other Updates-->
-<!--15358429-->
+
 
 
 ## Next steps
