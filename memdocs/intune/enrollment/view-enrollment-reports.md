@@ -58,8 +58,8 @@ Use the enrollment failures report to view enrollment failures for all users or 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Go to **Devices** > **Monitor**. 
 3. Select the **Enrollment failures** report.  
-2. Select **All users** or **Select user**, depending on the scenario you're troubleshooting.  
-3. Select a row in the table for more details about the failure and recommended remediation steps.    
+4. Select **All users** or **Select user**, depending on the scenario you're troubleshooting.  
+5. Select a row in the table for more details about the failure and recommended remediation steps.    
 
     > [!div class="mx-imgBorder"]
     > ![Example image of the enrollment failures report, showing the enrollment failure details for a selected row.](./media/enrollment-restrictions-set/enrollment-failure-report-details-2112.png)  

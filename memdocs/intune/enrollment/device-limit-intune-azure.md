@@ -60,7 +60,7 @@ If you enforce both Intune and Azure device limit restrictions, the following ta
 
 |Platform| Device management solution | User affinity | Does Microsoft Entra limitation apply? | Does Intune limitation apply? |  
 | -----| ----- | ----- | ----- | ----- |
-|Android| Android Enterprise personally-owned work profile | Yes | Yes | Yes|  
+|Android| Android Enterprise personally owned work profile | Yes | Yes | Yes|  
 |Android| Android Enterprise dedicated device | No | No | No |  
 |Android| Android Enterprise fully managed | Yes | Yes | Yes |  
 |Android| Android Enterprise corporate-owned work profile | Yes | Yes | Yes |  
