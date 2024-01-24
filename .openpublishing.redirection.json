@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "memdocs/intune/fundamentals/microsoft-intune-admin-center-devices.md",
+      "redirect_url": "/mem/intune/fundamentals/public-preview",
+      "redirect_document_id": false 
+    },
+    {
       "source_path": "memdocs/intune/user-help/you-are-asked-to-identify-your-device-when-trying-to-enroll-ios.md",
       "redirect_url": "/mem/intune/user-help/how-do-i-find-the-serial-number-on-my-device-ios",
       "redirect_document_id": false 
