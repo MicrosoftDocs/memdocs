@@ -136,7 +136,7 @@ When you create a Windows 10/11 device restrictions configuration profile, there
 
 ## Password
 
-- **Password**: **Require** forces users to enter a password to access the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to devices without a password. Applies to local accounts only. Domain account passwords remain configured by Active Directory (AD) and Azure AD.
+- **Password**: **Require** forces users to enter a password to access the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to devices without a password. Applies to local accounts only. Domain account passwords remain configured by Active Directory (AD) and Microsoft Entra ID.
 
   [DeviceLock/DevicePasswordEnabled CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-devicepasswordenabled)
 

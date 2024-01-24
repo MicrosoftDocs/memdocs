@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 01/23/2024
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: andreibiswas, shthilla, chmaguir, chrisbal, priyar
+ms.reviewer: andreibiswas, anuragjain
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -120,6 +120,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer
 
+- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action that admins use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+
 ### Fully managed and dedicated devices
 
 - **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the main volume. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the volume settings on the device.
@@ -136,6 +138,10 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 - **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show notifications.
 - **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show these suggestions when the app starts.
+
+### Fully managed and corporate-owned work profile devices
+
+- **Locate device**: **Allow** lets admins locate lost or stolen devices using a remote action. When set to **Allow**, end users receive a one-time notification stating that Intune has location permissions. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow locating devices using geolocation.
 
 ### Dedicated devices
 
@@ -177,6 +183,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
   - Android 9.0 and newer  
 
+- **Locate device**: **Block** prevents admins from locating lost or stolen devices using a remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow locating devices using geolocation.
+
 ### Corporate-owned work profile devices  
 
 - **Contact sharing via Bluetooth (work profile-level)**: **Block** prevents users from sharing their work profile contacts with devices over Bluetooth. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts via Bluetooth.  
@@ -208,7 +216,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 ## System security
 
-- **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
+- **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it might warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
 
 - **Common Criteria mode**: **Require** enables an elevated set of security standards that are most often used in highly sensitive organizations, such as government establishments. Those settings include but aren't limited to:
 
@@ -275,17 +283,17 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
 
         > [!IMPORTANT]
-        > When using multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices may lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
+        > When using multi-app mode, every app in the policy must be a required app, and must be assigned to the devices. If an app isn't required, or isn't assigned, then the devices can lock out users, and show a `Contact your IT admin. This phone will be erased.` message.
 
       - **Lock home screen**: **Enable** prevents users from moving app icons and folders. They're locked, and can't be dragged-and-dropped to different places on the grid. When set to **Not configured**, Intune doesn't change or update this setting. By default, users can move these items.
 
-      - **Folder icon**: Select the color and shape of the folder icon that's shown on the Managed Home Screen. Your options:
+      - **Folder icon**: Select the color and shape of the folder icon that's on the Managed Home Screen. Your options:
         - Not configured 
         - Dark theme rectangle
         - Dark theme circle
         - Light theme rectangle
         - Light theme circle
-      - **App and Folder icon size**: Select the size of the folder icon that's shown on the Managed Home Screen. Your options:
+      - **App and Folder icon size**: Select the size of the folder icon that's on the Managed Home Screen. Your options:
         - Not configured 
         - Extra small
         - Small
@@ -293,7 +301,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - Large
         - Extra large
 
-          Depending on the screen size, the actual icon size may be different.
+          Depending on the screen size, the actual icon size can be different.
 
       - **Screen orientation**: Select the direction the Managed Home Screen is shown on devices. Your options:
         - Not configured
@@ -361,7 +369,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         > 
         > - Users can't enable or disable Wi-Fi connections on devices. Users can switch between Wi-Fi networks, but can't turn Wi-Fi on or off.
         >
-        > - If a Wi-Fi network is password protected, then users must enter the password. After they enter the password, the configured network automatically connects. If they disconnect and then reconnect to the Wi-Fi network, then users may need to enter the password again.
+        > - If a Wi-Fi network is password protected, then users must enter the password. After they enter the password, the configured network automatically connects. If they disconnect and then reconnect to the Wi-Fi network, then users might need to enter the password again.
         >
         > - On Android 11 devices, when users connect to a network using the Managed Home Screen, they're prompted to consent. This prompt comes from Android, and isn't specific to the Managed Home Screen.
         >
@@ -410,7 +418,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         >  - If the system's lock screen timeout is longer than the number of seconds for device to show the screensaver, then the screensaver shows until the lock screen appears.
         >  - If the system's lock screen timeout is shorter than the number of seconds the device is inactive, then the screensaver shows as soon as the device's lock screen appears.
 
-      - **MHS Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with Azure AD Shared device mode.
+      - **MHS Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with Microsoft Entra shared device mode.
 
         When enabled, also configure:
 
@@ -424,7 +432,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
             For more information on this setting, see **Complexity of session PIN** at [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
-          - **Require user to enter session PIN if screensaver has appeared**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver has appeared. 
+          - **Require user to enter session PIN if screensaver has appeared**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver shows.
         - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign out of the Managed Home Screen based on inactivity. This setting must be enabled to show the subsettings.
           - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
           - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
@@ -451,7 +459,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Bottom**: Search bar is shown at the bottom of devices.
     - **Hide**: Search bar is hidden.
 
-<!-- MandiA (7.16.2020) The following setting may be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
+<!-- MandiA (7.16.2020) The following setting might be in a future release. Per PM, we can leave it in GitHub, not live. Remove comment tags if/when it releases.
   - **Allow user to change search bar placement**: **Enable** allows users to change the location of the search bar. **Enable** only forces this setting the first time the profile is assigned. Any future profile assignments don't force this setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, users are prevented from changing the location.
 End of comment -->
 
@@ -460,12 +468,12 @@ End of comment -->
 ### Fully managed, dedicated, and corporate-owned work profile devices
 
 - **Required password type**: Enter the required password complexity level, and whether biometric devices can be used. Your options:
-  - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set-up a passcode on their devices, configure this setting to something more secure than **Device default**.
+  - **Device default** (default): Most devices don't require a password when set to **Device default**. If you want to require users to set up a passcode on their devices, configure this setting to something more secure than **Device default**.
   - **Password required, no restrictions**
   - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Numeric**: Password must only be numbers, such as `123456789`. Also enter:
     - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
-  - **Numeric complex**: Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Also enter:
+  - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed. Also enter:
     - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
   - **Alphabetic**: Letters in the alphabet are required. Numbers and symbols aren't required. Also enter:
     - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
@@ -495,7 +503,7 @@ End of comment -->
 
 - **Disabled lock screen features**: When the device is locked, choose the features that can't be used. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
 
-  These features are available to users when the device is locked. Users won't see or access features that are checked.
+  These features are available to users when the device is locked. Users won't see or access the features that you check.
 
   - On corporate-owned work profile devices, only **Unredacted notifications**, **Trust agents**, and **Fingerprint unlock** can be disabled.
   - If users turn off the **Use one lock** setting on their device, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the corporate-owned work profile-level. If users turn on the **Use one lock** setting, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the device-level.
@@ -591,9 +599,9 @@ End of comment -->
 
 - **Clear local data in apps not optimized for Shared device mode**: Add any app not optimized for shared device mode to the list. The app's local data is cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later.
 
-  When you use this setting, users can't initiate sign out from non-optimized apps and get single sign-out.
-  - Users need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune's Managed Home Screen. 
-  - For apps that haven't been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. 
+  When you use this setting, users can't initiate sign out from non-optimized apps and don't get single sign out.
+  - Users need to sign out of an app that is optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune's Managed Home Screen.
+  - For apps that aren't optimized for Shared Device mode, deleting application data extends to local app storage only. Data can be left in other areas of the device. User identifying artifacts such as email address and username might be left behind on the app and visible by others.
   - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended.
   
   All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization's needs.
@@ -622,7 +630,7 @@ End of comment -->
   > - The VPN client you choose must be installed on the device, and it must support per-app VPN in corporate-owned work profiles. Otherwise, an error occurs. 
   > - You do need to approve the VPN client app in the **Managed Google Play Store**, sync the app to Intune, and deploy the app to the device. After you do this, then the app is installed in the user's corporate-owned work profile.
   > - You still need to configure the VPN client with a [VPN profile](vpn-settings-android-enterprise.md), or through an [app configuration profile](../apps/app-configuration-policies-use-android.md).
-  > - There may be known issues when using per-app VPN with F5 Access for Android 3.0.4. For more information, see [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+  > - There might be known issues when using per-app VPN with F5 Access for Android 3.0.4. For more information, see [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Lockdown mode**: **Enable** forces all network traffic to use the VPN tunnel. If a connection to the VPN isn't established, then the device won't have network access. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow traffic to flow through the VPN tunnel or through the mobile network.
 
@@ -655,7 +663,7 @@ These settings apply to corporate-owned work profiles.
   - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **Numeric**: Password must only be numbers, such as `123456789`. Also enter:
     - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
-  - **Numeric complex**: Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Also enter:
+  - **Numeric complex**: Repeated or consecutive numbers, such as `1111` or `1234`, aren't allowed. Also enter:
     - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
   - **Alphabetic**: Letters in the alphabet are required. Numbers and symbols aren't required. Also enter:
     - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
@@ -760,7 +768,7 @@ You can configure the following settings:
 
   When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
 
-  - `{{AADDeviceId}}`: Azure AD device ID
+  - `{{AADDeviceId}}`: Microsoft Entra device ID
   - `{{AccountId}}`: Intune tenant ID or account ID
   - `{{DeviceId}}`: Intune device ID
   - `{{DeviceName}}`: Intune device name
@@ -777,7 +785,7 @@ You can configure the following settings:
   - `{{userPrincipalName}}`: UPN of the user
 
   > [!NOTE]
-  > Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
+  > Variables aren't validated in the UI and are case sensitive. As a result, you can see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
 
 ## Next steps
 

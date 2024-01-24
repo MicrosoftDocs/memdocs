@@ -1,25 +1,23 @@
 ---
-title: Tenant attach - Create and deploy Attack surface reduction policies from the admin center (preview)
+title: Tenant attach - Create and deploy Attack surface reduction policies from the admin center
 titleSuffix: Configuration Manager
 description: Create and deploy Attack surface reduction policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 05/31/2022
 ms.topic: conceptual
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
 manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 
-# <a name="bkmk_atp"></a> Tenant attach: Create and deploy Attack surface reduction policies from the admin center (preview)
+# <a name="bkmk_atp"></a> Tenant attach: Create and deploy Attack surface reduction policies from the admin center
 <!--7323386-->
 *Applies to: Configuration Manager (current branch)*
 
-> [!IMPORTANT]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
  Create Attack surface reduction policies in the Microsoft Intune admin center and deploy them to Configuration Manager collections.
 
@@ -35,9 +33,9 @@ ms.collection: tier3
 
    - **Platform**: Windows 10 and later (ConfigMgr)
    - **Profile**: Choose one of the following profiles:
-     - Attack Surface Reduction Rules (ConfigMgr) (preview) 
-     - Exploit Protection (ConfigMgr) (preview)
-     - Web Protection (ConfigMgr) (preview)
+     - Attack Surface Reduction Rules (ConfigMgr)
+     - Exploit Protection (ConfigMgr)
+     - Web Protection (ConfigMgr)
 
 > [!NOTE]
 >The Microsoft Edge installer, Attack Surface Reduction rules engine for tenant attach, and [CMPivot](../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488)

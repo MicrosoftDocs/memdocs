@@ -3,8 +3,8 @@ title: Introduction to operating system deployment
 titleSuffix: Configuration Manager
 description: Understand the concepts before you deploy operating systems in your Configuration Manager environment.
 ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
@@ -17,7 +17,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-You can use Configuration Manager to deploy operating systems in a number of different ways. Use the information in this section to understand how to deploy operating systems and automate tasks. 
+You can use Configuration Manager to deploy operating systems in many ways. Use the information in this section to understand how to deploy operating systems and automate tasks. 
 
 ##  <a name="BKMK_OSDeploymentProcess"></a> The operating system deployment process  
  Configuration Manager provides several methods that you can use to deploy an operating system. There are several actions that you must take regardless of the deployment method that you use:  
@@ -26,7 +26,7 @@ You can use Configuration Manager to deploy operating systems in a number of dif
 
 -   Identify the boot image that you want to use to start the destination computer.  
 
--   Use a task sequence to capture an image of the operating system that you will deploy. Alternatively, you can use a default operating system image.  
+-   Use a task sequence to capture an image of the operating system that you'll deploy. Alternatively, you can use a default operating system image.  
 
 -   Distribute the boot image, operating system image, and any related content to a distribution point.  
 
@@ -56,17 +56,17 @@ You can use Configuration Manager to deploy operating systems in a number of dif
 
 - **Multicast deployments**: Multicast deployments conserve network bandwidth by concurrently sending data to multiple clients instead of sending a copy of the data to each client over a separate connection. In this method of deployment, the operating system image is sent to a distribution point. This in turn deploys the image when client computers request the deployment. For more information, see [Use multicast to deploy Windows over the network](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md).  
 
-- **Bootable media deployments**: Bootable media deployments let you deploy the operating system when the destination computer starts. When the destination computer starts, it retrieves the task sequence, the operating system image, and any other required content from the network. Because that content is not included on the media, you can update the content without having to re-create the media. For more information, see [Create bootable media](../deploy-use/create-bootable-media.md).  
+- **Bootable media deployments**: Bootable media deployments let you deploy the operating system when the destination computer starts. When the destination computer starts, it retrieves the task sequence, the operating system image, and any other required content from the network. Because that content isn't included on the media, you can update the content without having to re-create the media. For more information, see [Create bootable media](../deploy-use/create-bootable-media.md).  
 
 - **Stand-alone media deployments**: Stand-alone media deployments let you deploy operating systems in the following conditions:  
 
-  - In environments where it is not practical to copy an operating system image or other large packages over the network.  
+  - In environments where it isn't practical to copy an operating system image or other large packages over the network.  
 
   - In environments without network connectivity or low bandwidth network connectivity.  
 
     For more information, see [Create stand-alone media](../deploy-use/create-stand-alone-media.md).  
 
-- **Pre-staged media deployments**: Pre-staged media deployments let you deploy an operating system to a computer that is not fully provisioned. The pre-staged media is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that is not connected to the Configuration Manager environment.  
+- **Pre-staged media deployments**: Pre-staged media deployments let you deploy an operating system to a computer that isn't fully provisioned. The pre-staged media is a Windows Imaging Format (WIM) file that can be installed on a bare-metal computer by the manufacturer or at an enterprise staging center that isn't connected to the Configuration Manager environment.  
 
    Later in the Configuration Manager environment, the computer starts by using the boot image provided by the media, and then connects to the site management point for available task sequences that complete the download process. This method of deployment can reduce network traffic because the boot image and operating system image are already on the destination computer. You can specify applications, packages, and driver packages to include in the pre-staged media. For more information, see [Create prestaged media](../deploy-use/create-prestaged-media.md).  
 
@@ -99,21 +99,21 @@ You can use Configuration Manager to deploy operating systems in a number of dif
   For more information [Manage user state](../get-started/manage-user-state.md).  
 
 ##  <a name="BKMK_UnknownComputer"></a> Deploy to unknown computers  
- You can deploy an operating system to computers that are not managed by Configuration Manager. There is no record of these computers in the Configuration Manager database. These computers are referred to as unknown computers. Unknown computers include the following:  
+ You can deploy an operating system to computers that aren't managed by Configuration Manager. There's no record of these computers in the Configuration Manager database. These computers are referred to as unknown computers. Unknown computers include the following:  
 
-- A computer where the Configuration Manager client is not installed  
+- A computer where the Configuration Manager client isn't installed  
 
-- A computer that is not imported into Configuration Manager  
+- A computer that isn't imported into Configuration Manager  
 
-- A computer that is not discovered by Configuration Manager  
+- A computer that isn't discovered by Configuration Manager  
 
   For more information, see [Prepare for unknown computer deployments](../get-started/prepare-for-unknown-computer-deployments.md).  
 
 ##  <a name="BKMK_UDA"></a> Associate users with a computer  
- When you deploy an operating system, you can associate users with the destination computer to support user device affinity actions. When you associate a user with the destination computer, the administrative user can later perform actions on whichever computer is associated with that user, such as deploying an application to the computer of a specific user. However, when you deploy an operating system, you cannot deploy the operating system to the computer of a specific user. For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
+ When you deploy an operating system, you can associate users with the destination computer to support user device affinity actions. When you associate a user with the destination computer, the administrative user can later perform actions on whichever computer is associated with that user, such as deploying an application to the computer of a specific user. However, when you deploy an operating system, you can't deploy the operating system to the computer of a specific user. For more information, see [Associate users with a destination computer](../get-started/associate-users-with-a-destination-computer.md).  
 
 ##  <a name="BKMK_TaskSequences"></a> Use task sequences to automate steps  
- You can create task sequences to perform a variety of tasks within your Configuration Manager environment. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level without requiring user intervention. You can use task sequences for the following:  
+ You can create task sequences to perform various tasks within your Configuration Manager environment. The actions of the task sequence are defined in the individual steps of the sequence. When the task sequence is run, the actions of each step are performed at the command-line level without requiring user intervention. You can use task sequences for the following:  
 
 -   [Create a task sequence to install an operating system](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md)  
 

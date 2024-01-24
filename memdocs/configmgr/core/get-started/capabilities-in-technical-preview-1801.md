@@ -3,8 +3,8 @@ title: Technical Preview 1801 | Microsoft Docs
 titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview version 1801 for Configuration Manager.
 ms.date: 01/19/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -81,8 +81,8 @@ If you are using the [co-management](../../comanage/overview.md) capabilities, y
     > [!NOTE] 
     > Windows 10, version 1709 and later, is a prerequisite for co-management
 - **Co-management status**: the breakdown of device success or failure in the following categories:
-   - Success, hybrid Azure AD Joined
-   - Success, Azure AD Joined
+   - Success, Microsoft Entra hybrid joined
+   - Success, Microsoft Entra joined
    - Failure: Auto-enrollment failed
 - **Workload transition**: a bar chart showing the number of devices that you transitioned to Microsoft Intune for the three available workloads: 
    - Compliance Policies

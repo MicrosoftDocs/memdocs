@@ -3,8 +3,8 @@ title: Collections security and privacy
 titleSuffix: Configuration Manager
 description: Recommendations for security and privacy with collections in Configuration Manager.
 ms.date: 05/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.subservice: client-mgt
+ms.service: configuration-manager
 ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi

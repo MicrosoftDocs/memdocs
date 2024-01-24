@@ -3,8 +3,8 @@ title: Microsoft Connected Cache
 titleSuffix: Configuration Manager
 description: Use your Configuration Manager distribution point as a local cache server for Delivery Optimization.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur
@@ -45,7 +45,7 @@ Connected Cache supports the following three primary scenarios:
 
 When clients download cloud-managed content, they use Delivery Optimization from the cache server installed on your distribution point. Cloud-managed content includes the following types:
 
-- Microsoft Store apps
+- Microsoft Store apps (UWP)
 
 - If you enable [Windows Update for Business policies](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md): Windows feature and quality updates
 
@@ -55,10 +55,13 @@ When clients download cloud-managed content, they use Delivery Optimization from
 
   - Office Click-to-Run apps: Microsoft 365 Apps and updates
 
-  - Client apps: Microsoft Store apps and updates
+  - Client apps: Microsoft Store apps (UWP) and updates
 
   - Endpoint Protection: Windows Defender definition updates
-
+    
+- Intune Win32 apps
+- For a complete list visit: [Types of download content supported by Delivery Optimization and Microsoft Connected Cache](/windows/deployment/do/waas-delivery-optimization#types-of-download-content-supported-by-delivery-optimization)
+  
 > [!NOTE]
 > Connected Cache doesn't support content that Configuration Manager manages, like software updates with an integrated software update point.<!--10729675-->
 
@@ -103,11 +106,11 @@ You need one of the following license subscriptions for each device that gets co
 
 Connected Cache in Configuration Manager requires an _on-premises_ distribution point, with the following configurations:
 
-- Running Windows Server 2012 or later
+- Running Windows Server 2012 or later.
 
 - Microsoft .NET Framework version 4.7.2 or later. For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).<!-- MEMDocs#1105 -->
 
-- The default web site enabled on port 80
+- The default web site enabled on port 80.
 
 - Don't preinstall the IIS [Application Request Routing](/iis/extensions/planning-for-arr/application-request-routing-version-2-overview) (ARR) feature. Connected Cache installs ARR and configures its settings. Microsoft can't guarantee that the Connected Cache's ARR configuration won't conflict with other applications on the server that also use this feature.
 
@@ -212,29 +215,38 @@ When you enable Connected Cache on your Configuration Manager distribution point
 > All other content that Intune-managed devices download from Microsoft with Delivery Optimization can also be cached on Microsoft Connected Cache. This content includes software updates for Windows, Microsoft 365 apps, and Microsoft Edge.
 
 ### Prerequisites
-
 #### Client
 
 - Update the client to the latest version.
 
-- The client device needs to have at least 4 GB of memory.
+- For Delivery Optimization peer-to-peer: the client device needs to have at least 4 GB of memory.
 
     > [!TIP]
     > Use the following group policy setting: Computer Configuration > Administrative Templates > Windows Components > Delivery Optimization > **Minimum RAM capacity (inclusive) required to enable use of Peer Caching (in GB)**.
 
 #### Site
-
+For Microsoft Connected Cache:
 - Enable Connected Cache on a distribution point.
 
 - The client and the Connected Cache-enabled distribution point need to be in the same boundary group. If a client isn't in a boundary group with a Connected Cache-enabled distribution point, it won't download content from a Connected Cache-enabled distribution point in a neighbor or site default boundary group.
 
-  - Enable **Allow peer downloads in this boundary group** option for the Boundary Group that contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-group-options.md).
-
-- Enable the following client settings in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
-
-  - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID**
+- Enable the following **client settings** in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
   - **Enable devices managed by Configuration Manger to use Microsoft Connected Cache servers for content download**
 
+For Delivery Optimization peer-to-peer: 
+- Enable the following **client settings** in the [**Delivery Optimization**](../../clients/deploy/about-client-settings.md#delivery-optimization) group:
+  - **Use Configuration Manager Boundary Groups for Delivery Optimization Group ID:**
+- Enable **Allow peer downloads in this boundary group** option for the Boundary Group that contains the client and the distribution point. For more information, see [Boundary Group options](../../servers/deploy/configure/boundary-group-options.md).
+
+ > [!TIP]
+  > You do not need to set the options that enable Delivery Optimization peer-to-peer in order to use Microsoft Connected Cache.
+   
+#### Intune
+
+- For apps managed in Intune, this feature only supports the Intune Win32 app type.
+
+  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../intune/apps/apps-win32-app-management.md).
+ 
 - Enable co-management, and switch the **Client apps** workload to **Pilot Intune** or **Intune**. For more information, see the following articles:
 
   - [Workloads - Client apps](../../../comanage/workloads.md#client-apps)
@@ -242,12 +254,6 @@ When you enable Connected Cache on your Configuration Manager distribution point
   - [Switch workloads to Intune](../../../comanage/how-to-switch-workloads.md)
 
     If in pilot, add the client to the pilot collection for Client Apps.
-
-#### Intune
-
-- This feature only supports the Intune Win32 app type.
-
-  - Create and assign (deploy) a new app in Intune for this purpose. (Apps created before Intune version 1811 don't work.) For more information, see [Win32 app management in Microsoft Intune](../../../../intune/apps/apps-win32-app-management.md).
 
 ## Support for cloud-managed devices
 

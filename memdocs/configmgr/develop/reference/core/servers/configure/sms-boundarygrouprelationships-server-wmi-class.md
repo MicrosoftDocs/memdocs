@@ -3,8 +3,8 @@ description: Learn how to represent the fallback relationships for boundary grou
 title: SMS_BoundaryGroupRelationships Class
 titleSuffix: Configuration Manager
 ms.date: 03/13/2017
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 155ed51e-a6a9-4ed6-bddb-5eabbb77ec4c
 author: Banreet

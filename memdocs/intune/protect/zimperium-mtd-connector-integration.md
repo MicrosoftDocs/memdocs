@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/17/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,20 +38,17 @@ Complete the following steps to integrate the Zimperium Mobile Threat Defense so
 
 ## Before you begin
 
-The following steps are done in the [Zimperium MTD console](https://www.zimperium.com/platform) and will enable a connection to Zimperium's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+The following steps are done in the [Zimperium MTD console](https://www.zimperium.com/platform) and enable a connection to Zimperium's service for both Intune enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
 
 Before starting the process of integrating Zimperium with Intune, make sure you have the following subscription and credentials:
 
 - Microsoft Intune Plan 1 subscription
 
-- Microsoft Entra ID Global Administrator admin credentials to grant the following permissions:
+- Microsoft Entra Global Administrator admin credentials to grant the following permissions:
 
   - Sign in and read user profile
-
   - Access the directory as the signed-in user
-
   - Read directory data
-
   - Send device information to Intune
 
 - Admin credentials to access Zimperium MTD console.
@@ -63,13 +60,10 @@ The Zimperium app authorization process follows:
 - Grant the Zimperium service permissions to communicate information related to device health state back to Intune. To grant these permissions, you must use Global Administrator credentials. Granting permissions is a one-time operation. After the permissions are granted, the Global Administrator credentials aren't needed for day to day operation.
 
 - Zimperium syncs with Microsoft Entra Enrollment Group membership to populate its device's database.
-
 - Allow Zimperium admin console to use Microsoft Entra single sign-on (SSO).
-
 - Allow the Zimperium app to sign in using Microsoft Entra SSO.
 
 For more information about consent and Microsoft Entra applications, see [Introduction to permissions and consent](/azure/active-directory/develop/permissions-consent-overview) in the Microsoft Entra documentation.
-
 
 ## To set up Zimperium integration
 
@@ -81,10 +75,11 @@ For more information about consent and Microsoft Entra applications, see [Introd
 
 4. Choose **Add MDM,** then select **Microsoft Intune** from the **MDM provider** list.
 
-5. After you set Microsoft Intune as the MDM service, the **Microsoft Intune Configuration** window pops up, choose the **Add Microsoft Entra ID** for each option: **Zimperium zConsole**, **zIPS iOS and Android apps** to authorize Zimperium to communicate with Intune and Microsoft Entra through Microsoft Entra single sign-on.
+5. After you set Microsoft Intune as the MDM service, the **Microsoft Intune Configuration** window pops up, choose the **Add Microsoft Entra ID** for each option: **Zimperium zConsole**, **zIPS iOS and Android apps** to authorize Zimperium to communicate with Intune and Microsoft Entra ID through Microsoft Entra single sign-on.
 
-    > [!IMPORTANT]  
-    > You must add the Zimperium zConsole, zIPS iOS and Android apps to complete the integration process with Intune.
+   > [!IMPORTANT]
+   >
+   > You must add the Zimperium zConsole, zIPS iOS and Android apps to complete the integration process with Intune.
 
 6. Choose **Accept** to authorize the Zimperium app to communicate with Intune and Microsoft Entra.
 

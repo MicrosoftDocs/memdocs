@@ -3,8 +3,8 @@ title: Find site resources
 titleSuffix: Configuration Manager
 description: Learn how and when Configuration Manager clients use service location to find site resources.
 ms.date: 04/05/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

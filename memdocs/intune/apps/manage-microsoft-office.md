@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/01/2023
+ms.date: 12/01/2023
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -20,7 +20,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: smithre4
+ms.reviewer: scottduf
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,10 +40,10 @@ Microsoft 365 (Office) for iOS and Android delivers several key benefits includi
 - Integrating Microsoft Lens technology to unlock the power of the camera with capabilities like converting images into editable Word and Excel documents, scanning PDFs, and capturing whiteboards with automatic digital enhancements to make the content easier to read.
 - Adding new functionality for common tasks people often encounter when working on a phone—things like making quick notes, signing PDFs, scanning QR codes, and transferring files between devices.
 
-The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Azure Active Directory Premium features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Microsoft 365 (Office) for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
+The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Microsoft 365 (Office) for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 ## Apply Conditional Access
-Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Microsoft 365 (Office) for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Microsoft Entra Conditional Access policies to ensure that users can only access work or school content using Microsoft 365 (Office) for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 1. Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Microsoft 365 (Office) for iOS and Android, but blocks third-party OAuth capable mobile device clients from connecting to Microsoft 365 endpoints.
 
@@ -163,6 +163,19 @@ To manage these, you can use the following key:
 |    com.microsoft.office.officemobile.TeamsApps.IsAllowed    |    **true** (default) enables Teams apps on Microsoft 365 (Office) for iOS and Android<br>**false** disables Teams apps on Microsoft 365 (Office) for iOS and Android    |
 
 This key can be used both by managed devices and managed apps.
+
+### Data protection settings in Microsoft 365 (Office)
+
+You can enable or disable offline caching when **Save As to Local Storage** is blocked by the [app protection policy](../apps/app-protection-policies.md). 
+
+> [!IMPORTANT]
+> This setting is only applicable to the Microsoft 365 (Office) app on Android.
+To configure this setting, you can use the following key:
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.intune.mam.IntuneMAMOnly.AllowOfflineCachingWhenSaveAsBlocked   |    **false** (default) disables offline caching when **Save As to local storage** is blocked<br>**true** enables offline caching when **Save As to local storage** is blocked    |
+
 
 ### Enable or disable Microsoft 365 Feed for iOS and Android
 

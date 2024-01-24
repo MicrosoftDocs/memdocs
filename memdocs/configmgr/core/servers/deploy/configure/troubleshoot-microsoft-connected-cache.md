@@ -3,8 +3,8 @@ title: Troubleshoot Connected Cache
 titleSuffix: Configuration Manager
 description: Technical details for Microsoft Connected Cache to help you troubleshoot issues.
 ms.date: 11/23/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: troubleshooting
 ms.author: baladell 
 author: BalaDelli

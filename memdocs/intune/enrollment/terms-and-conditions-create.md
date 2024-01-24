@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,8 +33,6 @@ ms.collection:
 
 # Terms and conditions for user access
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 Use an Intune terms and conditions policy to present relevant disclaimers for legal or compliance requirements to device users. A terms and conditions policy requires targeted users to accept your terms in Company Portal before they can enroll devices or access protected resources. 
 
 This article describes how to get started with terms and conditions in Intune.  
@@ -42,8 +40,9 @@ This article describes how to get started with terms and conditions in Intune.
 ## Create terms and conditions
 Complete these steps to create an Intune terms and conditions policy. 
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Tenant administration** > **Terms and conditions**.
-2. Select **Create**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to **Tenant administration** > **Terms and conditions**.  
+2. Choose **Create**.
 3. On the **Basics** page, enter the following information:
 
    - **Name**: Give your policy a name so that you can recognize it in Intune later. Device users don't see this name.  
@@ -124,8 +123,8 @@ To edit terms and conditions:
 
 Users only have to accept the updated terms and conditions once. This means that a user associated with multiple enrolled devices won't need to accept the terms and conditions on each device.  
 
-## Use Azure AD Terms of use feature  
-You can use the [Azure Active Directory terms of use](/azure/active-directory/conditional-access/terms-of-use) feature to configure stricter compliance requirements. Capabilities include: 
+## Use Microsoft Entra Terms of use feature  
+You can use the [Microsoft Entra terms of use](/azure/active-directory/conditional-access/terms-of-use) feature to configure stricter compliance requirements. Capabilities include: 
 
 * Attach multiple localized versions to a single policy  
 * Render terms in PDF format for a richer experience that allows for branding, images, and hyperlinks
@@ -135,4 +134,4 @@ You can use the [Azure Active Directory terms of use](/azure/active-directory/co
 * Require users to reaccept terms after a certain period of time  
 * Provide terms for non-enrollment scenarios  
 
-These terms are shown to users when they sign in to targeted apps and resources. If you configure both Azure AD terms of use and Intune terms and conditions, users will be required to accept both. For a comparison of both solutions, see [Choosing the right Terms solution for your organization](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409). 
+These terms are shown to users when they sign in to targeted apps and resources. If you configure both Microsoft Entra terms of use and Intune terms and conditions, users will be required to accept both. For a comparison of both solutions, see [Choosing the right Terms solution for your organization](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409).  

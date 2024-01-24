@@ -3,8 +3,8 @@ title: SMS_TaskSequence_ConvertDiskAction Class
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_TaskSequence_ConvertDiskAction Windows Management Instrumentation class is an SMS Provider server class that represents a task sequence action that converts a physical disk from a basic disk type to a dynamic disk type.
 ms.date: 09/20/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: reference
 ms.assetid: 4f1715d5-4891-4b8d-8d0c-4b52e97afb6f
 author: Banreet

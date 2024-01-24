@@ -3,8 +3,8 @@ title: High-impact task sequence settings
 titleSuffix: Configuration Manager
 description: Configure a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
 ms.date: 04/08/2022
-ms.prod: configuration-manager
-ms.technology: configmgr-osd
+ms.service: configuration-manager
+ms.subservice: osd
 ms.topic: how-to
 ms.localizationpriority: medium
 author: BalaDelli

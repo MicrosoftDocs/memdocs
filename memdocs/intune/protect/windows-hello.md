@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/14/2023
+ms.date: 01/23/2023
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,14 +47,18 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 > Prior to the Anniversary Update (Windows version 1607), you could set two different PINS that could be used to authenticate to resources:
 >
 > - The **device PIN** could be used to unlock the device and connect to cloud resources.
-> - The **work PIN** was used to access Azure AD resources on user's personal devices (BYOD).
+> - The **work PIN** was used to access Microsoft Entra resources on user's personal devices (BYOD).
 >
 > In the Anniversary Update, these two PINS were merged into one single device PIN.
 > Any Intune configuration policies you set to control the device PIN, and additionally, any Windows Hello for Business policies you configured, now both set this new PIN value.
 > If you have set both policy types to control the PIN, the Windows Hello for Business policy is applied.
-> To ensure policy conflicts are resolved and that the PIN policy is applied correctly, update your Windows Hello for Business Policy to match the settings in your configuration policy, and ask your users to sync their devices in the Company Portal app.
+> To ensure policy conflicts are resolved and that the PIN policy is applied correctly, update your Windows Hello for Business Policy to match the settings in your configuration policy, and ask your users to sync their devices in the Company Portal app.  
 
-## Create a Windows Hello for Business policy
+## Role-based access control  
+
+You must be an Intune Service Administrator to create or edit a Windows Hello for Business policy in Windows enrollment. All other Intune roles have read-only access. For more information about role-based access control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).    
+
+## Create a Windows Hello for Business policy  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -116,7 +120,14 @@ After device enrollment, or when you choose not to use the tenant-wide enrollmen
 
    - **Allow phone sign-in**:
 
-     If this option is set to **Yes**, users can use a remote passport to serve as a portable companion device for desktop computer authentication. The desktop computer must be Azure Active Directory joined, and the companion device must be configured with a Windows Hello for Business PIN.
+     If this option is set to **Yes**, users can use a remote passport to serve as a portable companion device for desktop computer authentication. The desktop computer must be Microsoft Entra joined, and the companion device must be configured with a Windows Hello for Business PIN.  
+
+   - **Enable enhanced sign in security**: 
+   
+      Configure [Windows Hello Enhanced Sign-in Security](/windows-hardware/design/device-experiences/windows-hello-enhanced-sign-in-security) on devices with capable hardware. Your options:  
+
+      * **Default. Enhanced sign-in security will be enabled on systems with capable hardware.** Device users can't use external peripherals to sign in to their device with Windows Hello. 
+      * **Enhanced sign-in security will be disabled on all systems.** Device users can use external peripherals that are compatible with Windows Hello to sign in to their device.  
 
    - **Use security keys for sign-in**:
 

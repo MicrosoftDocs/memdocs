@@ -92,7 +92,7 @@ Following is an example workflow for an application. This same general workflow 
 - Configure a service-to-service connection with Microsoft Defender for Endpoint.
 - Deploy a device configuration policy with a profile type of **Microsoft Defender for Endpoint (desktop devices running Windows 10 or later)** to devices that will have risk assessed by Defender for Endpoint.
 
-  For information about how to set up Intune to work with Defender for Endpoint, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune).
+  For information about how to set up Intune to work with Defender for Endpoint, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune).
 
 ## Work with security tasks
 

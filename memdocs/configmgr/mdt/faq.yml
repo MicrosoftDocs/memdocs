@@ -3,8 +3,8 @@ metadata:
   title: MDT FAQ
   description: Frequently asked questions (FAQ) about the Microsoft Deployment Toolkit (MDT).
   ms.date: 10/05/2021
-  ms.prod: configuration-manager
-  ms.technology: configmgr-mdt
+  ms.subservice: mdt
+  ms.service: configuration-manager
   ms.topic: faq
   author: BalaDelli
   ms.author: baladell

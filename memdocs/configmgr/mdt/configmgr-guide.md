@@ -3,8 +3,8 @@ title: Quickstart - ZTI
 titleSuffix: Microsoft Deployment Toolkit
 description: A quickstart guide for Microsoft Deployment Toolkit (MDT) with System Center 2012 R2 Configuration Manager for the zero-touch installation (ZTI)
 ms.date: 09/09/2016
-ms.prod: configuration-manager
-ms.technology: configmgr-mdt
+ms.subservice: mdt
+ms.service: configuration-manager
 ms.topic: article
 author: BalaDelli
 ms.author: baladell

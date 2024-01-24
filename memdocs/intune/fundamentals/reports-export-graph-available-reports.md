@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: davidra
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -146,6 +146,7 @@ The following table contains the possible output when calling the `DeviceInstall
 |-|
 | DeviceName |
 | UserPrincipalName |
+| UserName |
 | Platform |
 | AppVersion |
 | DeviceId |
@@ -583,9 +584,9 @@ The following table contains the possible output when calling the `DevicesWithIn
 | DeviceName  | Device name  |
 | CreatedDate  | Enrollment date  |
 | LastContact  | Last check-in  |
-| ReferenceId  | Azure AD Device ID  |
+| ReferenceId  | Microsoft Entra Device ID  |
 | OSVersion  | OS version  |
-| GraphDeviceIsManaged  | Azure AD registered  |
+| GraphDeviceIsManaged  | Microsoft Entra registered  |
 | EasID  | EAS activation ID  |
 | SerialNumber  | Serial number  |
 | Manufacturer  | Manufacturer  |

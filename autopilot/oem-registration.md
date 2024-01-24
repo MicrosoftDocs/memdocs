@@ -40,7 +40,7 @@ Windows Autopilot is managed and maintained by Microsoft. This service provides 
 
 ### Customer consent
 
-Before an OEM can register devices for an organization, the organization must grant the OEM permission to do so. The OEM begins this process with approval granted by an Azure AD global administrator from your organization. For more information see [OEM authorization](registration-auth.md#oem-authorization).
+Before an OEM can register devices for an organization, the organization must grant the OEM permission to do so. The OEM begins this process with approval granted by a Microsoft Entra Global Administrator from your organization. For more information see [OEM authorization](registration-auth.md#oem-authorization).
 
 ## Microsoft Surface registration
 

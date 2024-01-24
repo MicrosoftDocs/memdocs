@@ -42,7 +42,7 @@ Before starting the process of integrating Better Mobile with Intune, make sure 
 
 - Microsoft Intune Plan 1 subscription
 
-- Microsoft Entra ID admin credentials to grant the following permissions:
+- Microsoft Entra admin credentials to grant the following permissions:
 
   - Sign in and read user profile
 

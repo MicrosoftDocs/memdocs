@@ -3,8 +3,8 @@ title: How to view the SQL Statement for reports
 titleSuffix: Configuration Manager
 description: Information to find out what SQL statement is used in a Configuration Manager report.
 ms.date: 04/30/2019
-ms.prod: configuration-manager
-ms.technology: configmgr-sdk
+ms.subservice: sdk
+ms.service: configuration-manager
 ms.topic: how-to
 
 

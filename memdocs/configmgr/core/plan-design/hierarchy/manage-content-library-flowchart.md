@@ -3,8 +3,8 @@ title: Flowchart - Manage content library
 titleSuffix: Configuration Manager
 description: Understand the process when the site moves the content library to a remote location.
 ms.date: 07/30/2018
-ms.prod: configuration-manager
-ms.technology: configmgr-core
+ms.subservice: core-infra
+ms.service: configuration-manager
 ms.topic: conceptual
 author: Banreet
 ms.author: banreetkaur

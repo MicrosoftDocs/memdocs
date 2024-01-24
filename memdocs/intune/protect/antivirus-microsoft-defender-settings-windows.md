@@ -118,12 +118,11 @@ These settings are available in the following profiles:
   - **Yes** - Enforce use of real-time monitoring. Device users can't change this setting.
 
 - **Enable on access protection**  
-  CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
-
+CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
   Configure virus protection that's continuously active, as opposed to on demand.
 
-  - **Not Configured** (*default*) - This policy doesn't alter the state of this setting on a device. The existing state on the device remains unchanged.
-  - **No** - Block On Access Protection on devices. Device users can't change this setting.
+   - **Not Configured** (*default*) - The setting is restored to the system default.
+   - **No** - Block On Access Protection on devices. Device users can't change this setting.
   - **Yes** - On Access Protection is active on devices.
 
 - **Monitoring for incoming and outgoing files**  
@@ -363,8 +362,11 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Allow user access to Microsoft Defender app**  
-  CSP: [AllowUserUIAccess](/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)  
+CSP: [AllowUserUIAccess](/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)  
 
-  - **Not Configured** (*default*) - The setting returns to client default in which UI and notifications are allowed.
-  - **No** - The Defender User Interface (UI) is inaccessible and notifications ware suppressed.
-  - **Yes**
+- **Not Configured** (*default*) - The setting returns to client default in which UI and notifications are allowed.
+
+- **No** - The Defender User Interface (UI) is inaccessible and notifications ware suppressed.
+
+- **Yes**
+
