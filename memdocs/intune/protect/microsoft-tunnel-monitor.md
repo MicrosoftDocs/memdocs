@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2023
+ms.date: 1/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,7 +46,7 @@ Default values for server health metrics:
 
 - **Last check-in** – When the Tunnel Gateway server last checked in with Intune.
   - *Healthy* – The last check-in was within the last five minutes.
-  - *Unhealthy* – More than five minutes have passed since the last check-in.
+  - *Unhealthy* – The last check-in was over five minutes ago.
 
 - **Current connections** – The number of unique connections that were active at the last server check-in.
   - *Healthy* – There were 4,990 or fewer connections
@@ -69,7 +69,7 @@ Default values for server health metrics:
   - *Warning* - 96% to 99%
   - *Unhealthy* - 100% use
 
-- **Disk space usage** – The amount of disk space that's used by the Tunnel Gateway server.
+- **Disk space usage** – The amount of disk space that the Tunnel Gateway server uses.
   - *Healthy* - Above 5 GB
   - *Warning* - 3-5 GB
   - *Unhealthy* - Below 3 GB
@@ -82,17 +82,17 @@ Default values for server health metrics:
 - **Management agent certificate** – The management agent certificate is used by Tunnel Gateway to authenticate with Intune so it's important to renew it before it expires. However, it should automatically renew itself.
   - *Healthy* - Certificate expiration is more than 30 days away.
   - *Warning* - Certificate expiration is less than 30 days away.
-  - *Unhealthy* - Certificate has expired.
+  - *Unhealthy* - Certificate is expired.
 
-- **TLS certificate** - The number of days until the Transport Layer Security (TLS) certificate that secures traffic between clients and the Tunnel Gateway server will expire.
+- **TLS certificate** - The number of days until the Transport Layer Security (TLS) certificate that secures traffic between clients and the Tunnel Gateway server expires.
   - *Healthy* - More than 30 days
   - *Warning* - 30 days or less
   - *Unhealthy* - The certificate is expired
 
-- **TLS certificate revocation** – The Tunnel Gateway attempts to check the revocation status of the Transport Layer Security (TLS) certificate using an Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate. This requires the server has access to the OCSP endpoint or CRL address as defined in the certificate.
+- **TLS certificate revocation** – The Tunnel Gateway attempts to check the revocation status of the Transport Layer Security (TLS) certificate using an Online Certificate Status Protocol (OCSP) or certificate revocation list (CRL) address as defined by the TLS certificate. This check requires the server to have access to the OCSP endpoint or CRL address as defined in the certificate.
 
-  - *Healthy* - The TLS certificate is not revoked.
-  - *Warning* - Unable to check if the TLS certificate is revoked. Ensure the endpoints defined in the certificate can be accessed from the Tunnel server. 
+  - *Healthy* - The TLS certificate isn't revoked.
+  - *Warning* - Unable to check if the TLS certificate is revoked. Ensure the endpoints defined in the certificate can be accessed from the Tunnel server.
   - *Unhealthy* - The TLS certificate is revoked.
   
   Plan to replace a revoked TLS certificate.
@@ -105,8 +105,8 @@ Default values for server health metrics:
   - *Unknown* - This status appears when you haven't set a URL in the site properties. This status doesn’t affect the overall status of the site.
 
 - **Upgradeability** – The ability of the server to contact the Microsoft Container Repository, which permits Tunnel Gateway to upgrade when versions become available.
-  - *Healthy* - Server has been able to contact the Microsoft Container Repository within the last 5 minutes.
-  - *Unhealthy* - Server has not been able to contact the Microsoft Container Repository for more than 5 minutes.
+  - *Healthy* - Server hasn't contacted the Microsoft Container Repository within the last 5 minutes.
+  - *Unhealthy* - Server hasn't contacted the Microsoft Container Repository for more than 5 minutes.
 
 - **Server version** - The status of the Tunnel Gateway Server software, in relation to the most recent version.
   - *Healthy* - Up to date with the most recent software version
@@ -117,11 +117,11 @@ Default values for server health metrics:
 
 - **Server container** – Determines if the container hosting the Microsoft Tunnel server is running.
   - *Healthy* - Server container status is healthy.
-  - *Unhealthy* - Server container status is not healthy.
+  - *Unhealthy* - Server container status isn't healthy.
 
-- **Server configuration** – Determines if the server configuration has applied successfully to the Tunnel server from Microsoft Intune site settings.
+- **Server configuration** – Determines if the server configuration is applied successfully to the Tunnel server from Microsoft Intune site settings.
   - *Healthy* - Server configuration was successfully applied.
-  - *Unhealthy* - Server configuration could not be applied.
+  - *Unhealthy* - Server configuration couldn't be applied.
 
 - **Server logs** – Determines if logs have been uploaded to the server within the last 60 minutes.
   - *Healthy* - Server logs were uploaded within the last 60 minutes.
@@ -144,7 +144,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 
 2. Select **Configure thresholds**.
 
-3. On the *Configure thresholds* page, set new thresholds for each health check category that you want to customize.
+3. On the *Configured thresholds* page, set new thresholds for each health check category that you want to customize.
    - Threshold values apply to all servers at all sites.
    - Select **Revert to default** to restore *all* thresholds back to their default values.
 
@@ -155,6 +155,7 @@ You can customize the following Microsoft Tunnel health status metrics to change
 After you modify thresholds, the values on a servers *Health check* tab automatically update to reflect its status, based on the current thresholds.
 
 :::image type="content" source="./media/microsoft-tunnel-monitor/server-health-check.png" alt-text="Screen capture of a servers Health check view.":::
+
 ## Health status trends for Tunnel servers
 
 View health status trends Microsoft Tunnel Gateway health metrics in the form of a chart. Data for the charts is averaged over a three-hour block and as such can be delayed up to three hours.
@@ -212,7 +213,7 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
   Telemetry logs have the following format, with the values for *bytes_in*, *bytes_out*, and *duration* being used only for disconnect operations: `<operation><client_ip><server_ip><gateway_ip><assigned_ip><user_id><device_id><user_agent><bytes_in><bytes_out><duration>` For example:  
 
-  - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c,5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
+  - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c, 5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
 
   > [!IMPORTANT]
   > In **OCSERV_TELEMETRY**, the *deviceId* value identifies the unique installation instance of Microsoft Defender that runs on a device, and does not identify either the Intune device ID or Microsoft Entra device ID. If Defender is uninstalled and then reinstalled on a device, a new instance for the *DeviceId** is generated.
@@ -231,6 +232,49 @@ More options for *journalctl*:
 - `man journalctl.conf` Display information on configuration
 For more information about *journalctl*, see the documentation for the version of Linux that you use.
 
+## Easy upload of diagnostic logs for Tunnel servers
+
+As a diagnostic aid, you can use a single click within the Intune admin center to have Intune enable, collect, and submit verbose logs from a Tunnel Gateway Server directly to Microsoft. These verbose logs are then available directly to Microsoft when you’re working with Microsoft to identify or resolve issues with a Tunnel server.
+
+You can collect and upload verbose logs from an event before opening a support incident, or upon request should you already be working with Microsoft to examine a Tunnel servers operation.
+
+**To use this capability**:
+
+1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Tenant administration** > **Microsoft Tunnel Gateway** > select a *server* > and then select the **Logs** tab.
+
+2. On the *Logs* tab, locate the *Send verbose server logs* section and select **Send logs**.
+
+When you select *Send logs* for a Tunnel server, the following process begins:
+
+- First, Intune captures the current set of Tunnel server logs, and uploads them directly to Microsoft. These logs are collected using the servers current log verbosity level. By default, the server verbosity level is zero (0).
+- Next, Intune enables a verbosity level of four (4) for the Tunnel server logs. This verbosity level of detail is collected for eight hours.
+- During the eight hours of verbose log collection, the issue or operation being investigated should be reproduced to capture the verbose details in the logs.
+- After eight hours, Intune collects a second set of the server logs that include the verbose details, and uploads them to Microsoft. At the time of upload, Intune also resets the Tunnel server logs to use the default verbosity level of zero (0). If you previously raised the verbosity level of the Server, after Intune resets the verbosity to zero you can then restore your custom verbosity level.
+
+Each set of logs that Intune collects and uploads is identified as a separate set with the following details appearing in the admin center below the *Send logs* button:
+
+- A *start* and *end* time of the log collection
+- When the upload was generated
+- The log sets *verbosity level*
+- An *Incident ID*  that can be used to identify that specific log set
+
+:::image type="content" source="./media/microsoft-tunnel-monitor/send-server-logs-tab.png" alt-text="Screen capture that shows the Send verbose server logs interface.":::
+
+After capturing an issue while running verbose log collection, you can provide the *Incident id* of that log set to Microsoft to help with investigation.
+
+### About log collection
+
+- Intune doesn't stop or restart the Tunnel server to enable or disable verbose logging.
+- The eight-hour verbose logging period can’t be extended or stopped early.
+- You can use the *Send logs* process as often as needed to capture an issue with verbose logging. However, increased log verbosity adds strain to the Tunnel Server and isn’t recommended as a regular configuration.
+- After verbose logging ends, the default verbosity level of zero is set for Tunnel server logs, regardless of previously set verbosity levels.
+- The following logs are collected through this process:
+  - **mstunnel-agent** (Agent logs)
+  - **mstunnel_monitor** (Monitoring task logs)
+  - **ocserv** (Server logs)
+
+The *ocserv-access* logs aren't collected or uploaded.
+
 ## Known issues
 
 The following are known issues for Microsoft Tunnel.
@@ -239,7 +283,7 @@ The following are known issues for Microsoft Tunnel.
 
 #### Clients can successfully use the Tunnel when Server health status shows as offline<!-- 14878305 -->
 
-**Issue**: On the [Tunnel *Health status* tab](../protect/microsoft-tunnel-monitor.md), a server’s health status reports as offline indicating it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.  
+**Issue**: On the [Tunnel *Health status* tab](../protect/microsoft-tunnel-monitor.md), a server’s health status reports as offline indicating that it's disconnected, even though users can reach the tunnel server and connect to the organization’s resources.  
 
 **Solution**: To resolve this issue, you must reinstall Microsoft Tunnel, which re-enrolls the Tunnel server agent with Intune. To prevent this issue, install updates for the Tunnel agent and server soon after they're released. Use the Tunnel server health metrics in the Microsoft Intune admin center to monitor server health.
 
@@ -247,7 +291,7 @@ The following are known issues for Microsoft Tunnel.
 
 **Issue**: Podman fails to identify or see the active containers are running, and reports “Error executing checkup” in the [mstunnel_monitor log](../protect/microsoft-tunnel-monitor.md#view-microsoft-tunnel-logs) of the Tunnel server.  The following are examples of the errors: 
 
-- Agent:  
+- Agent:
   ```
   Error executing Checkup
   Error details
@@ -282,7 +326,7 @@ The following are known issues for Microsoft Tunnel.
 
 This issue occurs due to differences in formatting dates between Podman and Tunnel Agent. These errors don't indicate a fatal issue or prevent connectivity.  Beginning with containers released after October 2022, the formatting issues should be resolved.  
 
-**Solution**: To resolve these issues, update the agent container (Podman or Docker) to the latest version. As new sources of these errors are discovered, we’ll continue to fix them in subsequent version updates.
+**Solution**: To resolve these issues, update the agent container (Podman or Docker) to the latest version. As new sources of these errors are discovered, we'll continue to fix them in subsequent version updates.
 
 ### Connectivity to Tunnel
 
