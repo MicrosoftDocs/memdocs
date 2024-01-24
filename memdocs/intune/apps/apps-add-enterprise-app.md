@@ -25,12 +25,12 @@ ms.collection:
 
 # Add an Enterprise App Catalog app (Win32) to Microsoft Intune
 
-An Enterprise App Catalog app (Win32) in Microsoft Intune is a Windows app that you can be added via the Enterprise App Catalog. This app type leverages the Win32 platform and has support for customizable capabilities. The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. 
+An Enterprise App Catalog app (Win32) is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. 
 
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-When you add an app to Intune, commonly you'll want to accept the default installation, requirements, and detection settings. These default settings have been confirmed by Microsoft. You must be careful if you modify the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
+When you add an app to Intune, commonly you'll want to accept the default installation, requirements, and detection settings. These default settings have been confirmed by Microsoft. You must be careful if you modify the package. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
 
 > [!IMPORTANT]
 > Microsoft does not assert compliance or authorizations for non-Microsoft apps. Customers are responsible for ensuring that apps meet their requirements.
@@ -52,7 +52,7 @@ The following steps help you add a Windows App Catalog app to Intune:
 
 ## Step 1: App information
 
-The **App information** steps allows you to select an app from the Enterprise App Catalog based on name and publisher. Once you've selected the app, you must choose specific a app package based on package name, language, architecture, and version. When you've completed selecting the app, the app information is displayed. Depending on the app that you chose, the values for this step will be automatically filled in.
+The **App information** steps allows you to select an app from the Enterprise App Catalog based on name and publisher. Once you've selected the app, you must choose a specific app package based on package name, language, architecture, and version. When you've completed selecting the app, the app information is displayed. Depending on the app that you chose, the values for this step will be automatically filled in.
 
 ### Select the app from the Enterprise App Catalog
 
@@ -268,7 +268,7 @@ Click **Select scope tags** to optionally add scope tags for the app. Then selec
 
     The **Overview** pane for the LOB app appears.
 
-At this point, you've completed steps to add a Windows catalog app (Win32) to Intune. For information about app assignment and monitoring, see [Assign apps to groups with Microsoft Intune](apps-deploy.md) and [Monitor app information and assignments with Microsoft Intune](apps-monitor.md).
+At this point, you've completed steps to add a Windows catalog app (Win32) to Intune. The next step is to assign the app and set the installation properties, such as end-user notifications, restart grace periods, and delivery optimization priority. For information about app assignment and monitoring, see [Assign apps to groups with Microsoft Intune](apps-deploy.md) and [Monitor app information and assignments with Microsoft Intune](apps-monitor.md).
 
 ## Next steps
 

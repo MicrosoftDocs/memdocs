@@ -25,9 +25,9 @@ ms.collection:
 
 # Enterprise App Management in Microsoft Intune
 
-Enterprise App Management (EAM) enables you to easily discover prepackaged Enterprise App Catalog apps (Win32) contained in the Enterprise App catalog in Microsoft Intune. The Enterprise App Catalog is a collection of Win32 apps that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. 
+Enterprise App Management (EAM) enables you to easily discover prepackaged Enterprise App Catalog apps (Win32) contained in the Enterprise App Catalog in Microsoft Intune. The Enterprise App Catalog is a collection of Win32 apps that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps.
 
-An Enterprise App Catalog app (Win32) in Microsoft Intune is a Windows app that you can be added via the Enterprise App Catalog. This app type leverages the Win32 platform and has support for customizable capabilities. The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. 
+An Enterprise App Catalog app (Win32) in Microsoft Intune is a Windows app that you can be added via the Enterprise App Catalog. This app type leverages the Win32 platform and has support for customizable capabilities. The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps.
 
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
@@ -42,7 +42,7 @@ The benefits of using Enterprise App Management are the following:
 - **Reduce security risks and vulnerabilities**: Mitigate risk and deploy app fixes immediately when security vulnerabilities are discovered.
 - **Stay current with updates**: You'll be able to keep apps up-to-date and secure by identifying and updating outdated applications using guided updating and update signal.
 
-When adding an Enterprise App Catalog app, you can specify the following installation details:
+When you add an Enterprise App Catalog app, Intune pre-populates the following installation details:
 
 - Commands to install and uninstall the app
 - Time required to install the app
@@ -50,7 +50,7 @@ When adding an Enterprise App Catalog app, you can specify the following install
 - Installation and device restart behavior
 - Return codes to indicate post-installation behavior
 
-You can specify the following requirements that devices must meet before the app is installed:
+Also, Intune pre-populates the requirements that devices must meet before the app is installed:
 
 - Windows OS architecture required
 - Minimum OS required
@@ -60,11 +60,14 @@ You can specify the following requirements that devices must meet before the app
 - Minimum CPU speed required
 - Additional File, Registry, and Script requirement rules
 
+> [!IMPORTANT]
+> Microsoft recommends using the pre-populated fields, however you can modify the pre-populated fields if needed.
+
 You can also configure app specific rules used to detect the presence of the Enterprise App Catalog app where you can choose to either manually configure the detection rules or use a custom script to detect the presence of the app before installing the app.
 
-## Self updating apps
+## Self-updating apps
 
-EAM offers support for self updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app auto-updates based on the app vendors process, keeping your app up-to-date as quickly as possible. Also, you'll be able to see the installed version on the device.
+EAM offers support for self-updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app auto-updates based on the app vendor's process, keeping your app up-to-date as quickly as possible. Also, you'll be able to see the installed version on the device.
 
 ## Frequently asked questions (FAQ)
 
@@ -135,25 +138,25 @@ Yes. Enterprise app management can be purchased as a standalone SKU or as part o
 
 Using an Enterprise application is only provided by Microsoft Intune. Configuration Manager isn't supported, however Enterprise applications will work for co-managed clients.
 
-### Do Enterprise application management use **Winget**?
+### Does Enterprise Application Management use **Winget**?
 
-No. Enterprise application management leverages Win32.
+No. Enterprise Application Management leverages Win32.
 
 ### For the application updating, will the app be upgraded, installed side-by-side, or will the previous version be uninstalled?
 
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
 
-### Is Enterprise application management available for GCC, GCC High, or DoD tenants?
+### Is Enterprise Application Management available for GCC, GCC High, or DoD tenants?
 
 Support for GCC is planned to be available later in 2024.
 
-### Is Autopatch leveraged with Enterprise application management?
+### Is Autopatch leveraged with Enterprise Application Management?
 
-Autopatch isn't leveraged with Enterprise application management. We plan to evaluate Autopatch and other integrations in future iterations.
+Autopatch isn't leveraged with Enterprise Application Management. We plan to evaluate Autopatch and other integrations in future iterations.
 
-### Is Enterprise application management available for co-managed devices?
+### Is Enterprise Application Management available for co-managed devices?
 
-Yes. Enterprise application management is available for co-managed devices.
+Yes. Enterprise Application Management is available for co-managed devices.
 
 ## Next steps
 
