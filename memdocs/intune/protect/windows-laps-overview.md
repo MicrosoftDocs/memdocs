@@ -138,7 +138,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 ## LAPS Architecture
 
-For information about Windows LAPS architecture, see [Key concepts in Windows LAPS](/windows-server/identity/laps/laps-concepts#windows-laps-architecture) in the Windows documentation.
+For information about Windows LAPS architecture, see [Key concepts in Windows LAPS](/windows-server/identity/laps/laps-concepts-overview#windows-laps-architecture) in the Windows documentation.
 
 ## Frequently Asked Questions
 
