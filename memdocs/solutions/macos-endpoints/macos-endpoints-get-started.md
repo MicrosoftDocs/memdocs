@@ -550,3 +550,4 @@ For more information, go to [Using Remote Help on macOS to assist authenticated 
 ### Custom attributes
 
 You can create custom attribute profiles which enable you to collect custom properties from managed macOS device using shell scripts. For more information, go to [Use shell scripts on macOS devices in Microsoft Intune](/mem/intune/apps/macos-shell-scripts#custom-attributes-for-macos).
+
