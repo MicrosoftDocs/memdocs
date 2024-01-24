@@ -42,14 +42,14 @@ Complete these steps to create an Intune terms and conditions policy.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 1. Go to **Tenant administration** > **Terms and conditions**.  
-2. Choose **Create**.
-3. On the **Basics** page, enter the following information:
+1. Choose **Create**.
+1. On the **Basics** page, enter the following information:
 
    - **Name**: Give your policy a name so that you can recognize it in Intune later. Device users don't see this name.  
    - **Description**: Optionally, describe the purpose or intended use for this specific set of terms.   
 
-4. Select **Next**.
-5. On the **Terms** page, enter the following information:
+1. Select **Next**.
+1. On the **Terms** page, enter the following information:
 
    - **Title**: The display name for your terms. Users see the title in the Company Portal app.  
    - **Terms and conditions**: The terms and conditions that users see and must either accept or reject.
@@ -57,16 +57,16 @@ Complete these steps to create an Intune terms and conditions policy.
    
       Example message: *By enrolling your device, you're agreeing to the terms of use set out by Contoso. Read the terms carefully before proceeding.*  
 
-5. Select **Next**.
+1. Select **Next**.
 
-6. On the **Select scope tags**, select a scope tag from the list to add it to the terms and conditions, or select the default scope tag. Then select **Next**. 
+1. On the **Select scope tags**, select a scope tag from the list to add it to the terms and conditions, or select the default scope tag. Then select **Next**. 
 
-7. On the **Assignments** page, choose who you want to assign the terms to. Your options:
+1. On the **Assignments** page, choose who you want to assign the terms to. Your options:
     - **Add all users**: Choose this option to assign these terms and conditions to all device users.
     - **Add groups**: Choose this option to assign these terms and conditions to users in select groups.  
 
-8. Select **Next**.
-9. Review the summary of your new terms and conditions, and then select **Create**.  
+1. Select **Next**.
+1. Review the summary of your new terms and conditions, and then select **Create**.  
 
 ## How it looks to users   
 Targeted users can see the terms and conditions in the Intune Company Portal app. The following image shows what the title and summary of terms look like in the app. Intune formats the title with bold font to make it stand out, with the summary of terms positioned directly under it.  
@@ -118,8 +118,8 @@ To edit terms and conditions:
 3. Select **Properties** and then next to **Terms**, select **Edit.**
 4. Adjust the existing content as needed. 
 5. If you edit the meaning of the terms at all, select the checkbox next to **Require users to re-accept, and increment the version number to *next version*.** In place of *next step*, you'll see the actual version number. 
-3. Select **Review + save**.  
-4. Review the summary for your terms and conditions, and then select **Save**.  
+6. Select **Review + save**.  
+7. Review the summary for your terms and conditions, and then select **Save**.  
 
 Users only have to accept the updated terms and conditions once. This means that a user associated with multiple enrolled devices won't need to accept the terms and conditions on each device.  
 

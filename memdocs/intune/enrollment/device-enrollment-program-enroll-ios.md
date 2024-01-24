@@ -131,7 +131,7 @@ Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School
 
 ### Step 1: Download the Intune public key certificate
 
-1. In [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab. 
 1. Select **Enrollment Program Tokens** > **Add**.
 
