@@ -88,25 +88,25 @@ You can use the following device properties in your managed device filter rules:
 
 - **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
-  For iOS/iPadOS and macOS devices, use the model identifier. Don't use the model name. Only model identifiers are recognized for Apple devices. For example, for iPhone 8 devices, enter the model identifier as `iPhone10,4` (no spaces).
-
-  Examples:
+  For iOS/iPadOS and macOS devices, use the model, not the product name. Only the model is recognized for Apple devices. For example, for iPhone 8 devices, enter the model as `iPhone 8`.
+  
+    Examples:
 
   - `(device.model -eq "Surface Book 3")`
   - `(device.model -in ["Surface Book 3", "Surface Book 2"])`
   - `(device.model -startsWith "Surface Book")`
-  - `(device.model -startsWith "MacBookPro18,2")`
-  - `(device.model -startsWith "iPhone10,4")`
-
-  This property applies to:
+  - `(device.model -startsWith "MacBookPro")`
+  - `(device.model -startsWith "iPhone 8")`
+    
+    This property applies to:
 
   - Android device administrator
-  - Android Enterprise
-  - Android (AOSP)
-  - iOS/iPadOS
-  - macOS
-  - Windows 11
-  - Windows 10
+- Android Enterprise
+- Android (AOSP)
+- iOS/iPadOS
+- macOS
+- Windows 11
+- Windows 10
 
 - **`deviceCategory` (Device Category)**: Create a filter rule based on the Intune device category property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
