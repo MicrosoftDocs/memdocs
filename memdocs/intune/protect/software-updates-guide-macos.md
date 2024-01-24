@@ -4,7 +4,7 @@ description: Guidance and advice for administrators that create and manage softw
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/08/2023
+ms.date: 01/24/2024
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-intune
@@ -85,7 +85,7 @@ This Intune policy manages **when** updates are installed.
 
 For example, you can manage when critical updates and firmware updates are installed. You can also manage how many times the user can defer an update before it's force installed.
 
-For most organizations, Microsoft recommends you configure the following settings:
+For most organizations, Microsoft recommends you configure the following settings in a [software update policy](software-updates-macos.md):
 
 - **Update policy behavior settings**
 
@@ -105,7 +105,9 @@ For most organizations, Microsoft recommends you configure the following setting
 
   - **Schedule type**: Update at next check-in
 
-You can change the values to your preferred scheduled times. Some of the values may only affect minor updates, and not major updates. For the specific steps, and more information on these settings & their values, go to [Manage macOS software update policies in Intune](../protect/software-updates-macos.md).
+You can change the values to your preferred scheduled times. Some of the values may only affect minor updates, and not major updates.
+
+For the specific steps, and more information on these settings & their values, go to [Manage macOS software update policies in Intune](software-updates-macos.md).
 
 With these settings, this policy locks these settings so users can't change them. The policy also:
 
@@ -132,7 +134,7 @@ For example, you can configure the device to automatically install updates, incl
 
 This settings catalog policy works with [Step 1 - Use a software update policy to manage when updates are installed](#-step-1---use-a-software-update-policy-to-manage-when-updates-are-installed) (in this article). It makes sure the devices are checking for updates and prompting users to install them. End users still need to take action to finish the installation.
 
-In your settings catalog policy, Microsoft recommends the following settings:
+In your [settings catalog](../configuration/settings-catalog.md) policy, Microsoft recommends the following settings:
 
 1. In the settings picker, search for **software update** and select **System Updates > Software Update**.
 2. **Select all these settings** and close the settings picker.
