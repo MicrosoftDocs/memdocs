@@ -89,7 +89,7 @@ Before you can configure Conditional Access, verify the following configurations
   
   2. Deploy the Gmail or Nine Work app as **Required**.
 
-  3. Select **Devices** > **Configuration profiles** > **Create profile**, enter **Name** and **Description** for the profile.
+  3. Select **Devices** > **Configuration** > **Create**, enter **Name** and **Description** for the profile.
 
   4. Select **Android enterprise** in **Platform**, select **Email** in **Profile type**.
 

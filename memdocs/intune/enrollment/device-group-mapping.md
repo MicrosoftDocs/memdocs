@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2023
+ms.date: 01/22/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -55,8 +55,8 @@ Decide if it's necessary to show the device category selection prompt to end use
 ### Step 1: Create device category in Intune  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose **Devices** > **Device categories**.
-3. Select **Create device category** to add a new category.
+2. Go to **Devices** > **Device categories**.  
+3. Choose **Create device category** to add a new category.  
 4. Enter the name of the new category, such as `HR` and an optional description.
 5. Select **Next**.  
 6. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the category to specific IT groups. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).  
@@ -65,7 +65,7 @@ Decide if it's necessary to show the device category selection prompt to end use
 
 You'll use the device category name when you create Microsoft Entra security groups in the next step.  
 
-<a name='step-2-create-azure-ad-security-groups'></a>
+<a name='step-2-create-azure-ad-security-groups'></a>   
 
 ### Step 2: Create Microsoft Entra security groups 
 
@@ -82,7 +82,7 @@ When you delete a category, devices assigned to it appear as **Unassigned**.
 ### Change the category of a device  
 If you edit a category, be sure to update any Microsoft Entra security groups that reference the category in their rules.  
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices**.  
+1. Go to **Devices** > **All devices**.  
 2. Select a device.  
 3. Select **Properties**.  
 4. Change the category listed under **Device category**.  
