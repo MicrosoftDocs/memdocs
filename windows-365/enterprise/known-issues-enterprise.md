@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 1/19/2024
+ms.date: 1/25/2024
 audience: Admin
 ms.topic: troubleshooting
 ms.service: windows-365
@@ -174,6 +174,14 @@ As a result, you can’t connect to your Cloud PC session.
 - through Group Policy.
 
 This change lets the web client/Safari browser store and use the `microsoft.us` cookies for connecting to your Cloud PC session.  
+
+## Windows Systems Information reports virtualization-based security is Enabled but not running<!--48643259-->
+
+In the Cloud PC's Windows Systems Information, the Virtualization-based security (VBS) row shows **Enabled but not running**.
+
+This can be caused when the Intune tenant configuration requires Direct Memory Access (DMA), which Cloud PCs don’t support. Currently, if DMA is required in a VBS policy used by a Cloud PC, the VBS policy won’t run.
+
+**Troubleshooting steps**: In the Intune policies used by the Cloud PC, remove the DMA requirement from **Virtualization-based security BS Required Security Properties**. Make sure your VBS configurations still provide your desired security.
 
 ## Next steps
 
