@@ -79,10 +79,10 @@ The size-limit of DMG and PKG apps that can be installed using Intune on managed
 Intune now supports the deployment of store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps enables offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
 
 #### Route SMS/MMS messages to specific app<!-- 24594466 -->
-You can configure an app protection policy to determine which SMS/MMS app must be used when the end-user intends to send a SMS/MMS message after getting redirected from a policy managed app. When the end-user clicks on a number with the intent of sending an SMS/MMS message, the app protection settings are used to redirect to the configured SMS/MMS app. This capability relates to the **Transfer messaging data to** setting and applies to both iOS/iPadOS and Android platforms. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [Android app protection policy settings](../apps/app-protection-policy-settings-android.md).
+You can configure an app protection policy to determine which SMS/MMS app must be used when the end user intends to send a SMS/MMS message after getting redirected from a policy managed app. When the end user clicks on a number with the intent of sending an SMS/MMS message, the app protection settings are used to redirect to the configured SMS/MMS app. This capability relates to the **Transfer messaging data to** setting and applies to both iOS/iPadOS and Android platforms. For more information, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md) and [Android app protection policy settings](../apps/app-protection-policy-settings-android.md).
 
-#### End-user app PIN reset<!-- 24605159 -->
-For managed apps that require a PIN to access, allowed end-users can now reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
+#### End user app PIN reset<!-- 24605159 -->
+For managed apps that require a PIN to access, allowed end users can now reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
 
 #### Maximum app package size<!-- 17546826 -->
 The maximum package size for uploading apps to Intune has changed from 8GB to 30GB for paid customers. Trial tenants are still restricted to 8GB. For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md#prerequisites).
@@ -133,7 +133,7 @@ The availability of this new admin center experience will vary tenant by tenant.
 Due to the rollout timelines, we are updating our documentation to the new experience as soon as possible to help ease the transition to the new admin center layout. We are unable to provide a side-by-side content experience during this transition and believe providing documentation that aligns to the newer experience brings more value to more customers. If you want to try the new experience and align with doc procedures before your tenant is updated, go to **Devices** > **Overview**, select the notification banner that reads **Preview upcoming changes to Devices and provide feedback**, and select **Try it now**.
 
 #### BlackBerry Protect Mobile now supports app protection policies<!-- 13357196 wnstaged -->  
-You can now use Intune app protection policies with *BlackBerry Protect Mobile* (powered by Cylance AI). With this change Intune supports BlackBerry Protect Mobile for mobile application management (MAM) scenarios for [unenrolled devices](../ protect/mtd-add-apps-unenrolled-devices). This includes the use of risk assessment with Conditional access and configuration of Conditional Launch settings for unenrolled devices.
+You can now use Intune app protection policies with *BlackBerry Protect Mobile* (powered by Cylance AI). With this change Intune supports BlackBerry Protect Mobile for mobile application management (MAM) scenarios for [unenrolled devices](../protect/mtd-add-apps-unenrolled-devices). This includes the use of risk assessment with Conditional access and configuration of Conditional Launch settings for unenrolled devices.
  
 While configuring the CylancePROTECT Mobile connector (formerly BlackBerry Mobile), you now can select options to turn on *App protection policy evaluation* for both Android and iOS/iPadOS devices. 
 
@@ -145,7 +145,7 @@ For more information, see [Set up BlackBerry Protect Mobile](../protect/blackber
 You can now use the endpoint security policy for *Defender Update control* (Antivirus policy) from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
  
 - **Defender Update control** policies are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).    
-  Apples to:  
+  Applies to:  
 
   - Windows 10/11 - Available for the *Windows 10, Windows 11, and Windows Server* platform.
 
@@ -183,7 +183,7 @@ When you select the **Send logs** button:
 - Each time Intune collects and submits logs, it updates the list view below the button. 
 - Below the button is a list of past log submissions, displaying their verbosity level and an Incident ID that you can use when working with Microsoft to reference a specific set of logs.
 
-For more information about this capability, see [Easy upload of diagnostic logs for Tunnel servers](./protect/ microsoft-tunnel-monitor.md# easy-upload-of-diagnostic-logs-for-tunnel-servers).
+For more information about this capability, see [Easy upload of diagnostic logs for Tunnel servers](./protect/microsoft-tunnel-monitor.md#easy-upload-of-diagnostic-logs-for-tunnel-servers).
 
 ## Week of December 11, 2023 (Service release 2312)
 
