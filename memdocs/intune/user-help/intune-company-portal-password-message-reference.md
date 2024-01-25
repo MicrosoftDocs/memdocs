@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/03/2023
+ms.date: 01/25/2024
 ms.topic: end-user-help
 ms.prod:
 ms.localizationpriority: high
@@ -110,16 +110,16 @@ These password-related messages are sent to Android devices.
 
 | Message | How to fix |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Set a work profile password | Create a work profile password or pattern.. Your organization requires that you enter a password to unlock your work profile. |
-| Set a stronger work profile password | Create a work profile PIN or password with at least 4 characters and no repeating (4444) or ordered (1234, 4321, 2468) sequences. |
-| Set a more complex work profile password | Create a work profile PIN or password that's at least 8 digits long with no repeating (4444) or ordered (1234, 4321, 2468) sequences; or create an alphabetic or alphanumeric password with at least 6 characters. |
+| Set a work profile password | Create a work profile password or pattern. Your organization requires that you enter a password to unlock your work profile. |
+| Set a stronger work profile password | Create a work profile PIN or password with at least four characters and no repeating (4444) or ordered (1234, 4321, 2468) sequences. |
+| Set a more complex work profile password | Create a work profile PIN or password that's at least eight digits long with no repeating or ordered sequences, or create an alphabetic or alphanumeric password with at least six characters. |
 | Set a longer work profile password | Update or set a password with more characters. Your organization requires that your password is a certain length.|
 | Work profile password require numbers | Set a password or PIN that contains numbers.|
 | Work profile password can't have repeating numbers |  Make sure that your password or PIN doesn't contain sequential or repeating numbers, such as 1234 or 1111. |
 | Work profile password requires a letter | Set a password that contains letters from the alphabet.|
 | Work profile password must have letters and numbers | Set a password that contains a mix of numbers and letters.|
 | Work profile password must include symbols | Set a password that contains a mix of letters, numbers, and special characters such as `&`, `!`, `$`, `%`, and `#`. |
-| Work profile password must use biometrics | Set up your work profile to use biometric authentication, such as fingerprint or facial recognition.
+| Work profile password must use biometrics | Set up your work profile to use biometric authentication, such as fingerprint or facial recognition. |
 | Work profile password expired | Set a new password. Your organization requires you to change your password after a certain number of days. |
 | Work profile password was recently used | Choose a password you haven't used before. Your organization requires that a certain amount of time passes before you reuse a password. |
 
