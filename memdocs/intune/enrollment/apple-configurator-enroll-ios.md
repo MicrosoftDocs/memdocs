@@ -107,7 +107,7 @@ Enrollment with Apple Configuration has the following limitations:
 1. Go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
-1. Go to **Devices** > **Add**.  
+1. Select **Devices** > **Add**.  
 1. Select an **Enrollment profile** to apply to the serial numbers you're importing. If you want the new serial number details to overwrite any existing details, choose **Overwrite details for existing identifiers**.  
 1. Under **Import Devices**, browse to the csv file of serial numbers, and select **Add**.  
 
@@ -122,7 +122,7 @@ You can assign an enrollment profile when you import iOS/iPadOS serial numbers f
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Enrollment**.  
 1. Select the **Apple** tab.  
 1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
-1. Go to **Devices**.  Select a serial number. 
+1. Select **Devices**. Then select a serial number. 
 1. Choose **Assign profile**.  
 1. Under **Assign Profile**, select the **New profile** you want to assign, and then choose **Assign**.  
 

@@ -3,8 +3,8 @@ title: BitLocker recovery service
 titleSuffix: Configuration Manager
 description: Learn about the BitLocker recovery service in Configuration Manager.
 ms.date: 12/01/2021
-ms.prod: configuration-manager
-ms.technology: configmgr-protect
+ms.service: configuration-manager
+ms.subservice: protect
 ms.topic: conceptual
 author: BalaDelli
 ms.author: baladell
