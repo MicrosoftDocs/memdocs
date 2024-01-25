@@ -64,7 +64,7 @@ To set up Android Enterprise dedicated device management, follow these steps:
 ### Create an enrollment profile
 
 > [!NOTE]
-> If a token has expired, the profile associated with it will not be displayed in **Device enrollment** > **Android enrollment** > **Corporate-owned dedicated devices**. To see all profiles associated with both active and inactive tokens, click on **Filter** and check the boxes for both "Active" and "Inactive" policy states.
+> After a token expires, the profile associated with it disappears from view in **Android enrollment** > **Corporate-owned dedicated devices**. To see all profiles associated with both active and inactive tokens, choose **Filter**. Then select the checkboxes for **Active** and **Inactive** policy states.  
 
 You must create an enrollment profile so that you can enroll your dedicated devices. When the profile is created, it provides you with an enrollment token in the form of a string and QR code.    
 

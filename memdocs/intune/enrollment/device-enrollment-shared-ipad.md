@@ -56,19 +56,19 @@ Follow these steps to set up Shared iPad in your environment.
     1. Select **Create profile** > **iOS/iPadOS**. 
 3. Configure these settings in the enrollment profile:  
      1. Go to **Management settings** and enable **Shared iPad**.  
-     2. Set **User affinity** to **Enroll without user affinity**.  
-     3. Set **Supervised** to **Yes**.  
-     4. Set **Shared iPad** to **Yes**. 
+     1. Set **User affinity** to **Enroll without user affinity**.  
+     1. Set **Supervised** to **Yes**.  
+     1. Set **Shared iPad** to **Yes**. 
 4. Select **Save** when you're done configuring the rest of your profile.
 5. Assign devices synced from Apple Business Manager. 
     1. Select the new enrollment profile.  
-    2. Select **Assign devices** > **Add devices**.  
+    1. Select **Assign devices** > **Add devices**.  
 6. Create a dynamic device group to automatically assign this profile to devices that fall within your rule parameters. 
     1. Go to **Groups** > **New group**. 
     1. For **Membership type**, select **Dynamic Device**. 
-    2. Select **Add dynamic query**.
-    4. In the **Property** column, select  **enrollmentProfileName**. 
-    5. In the **Value** column, enter the name of your enrollment profile.  
+    1. Select **Add dynamic query**.
+    1. In the **Property** column, select  **enrollmentProfileName**. 
+    1. In the **Value** column, enter the name of your enrollment profile.  
 7. Assign all required apps and configuration profiles to the dynamic device group.  
 8. Prepare new and existing devices for deployment:  
    * Turn on new devices and follow the onscreen prompts to set up Shared iPad. 
