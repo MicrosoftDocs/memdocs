@@ -66,14 +66,15 @@ After integration is configured, device users learn about Jamf Pro and Intune in
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Compliance policies**. If you're using a previously created policy, select that policy in the admin center and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
+2. Go to **Devices** > **Compliance**. If you're using a previously created policy, select that policy, and then go to the next step of this procedure. To create a new policy, select **Create Policy** and then specify details for a policy with a *Platform* of **macOS**. Configure *Settings* and *Actions for noncompliance* to meet your organizational requirements, and then select **Create** to save the policy.
 
-3. On the policies *Overview* pane, select **Assignments**. Use the available options to configure which Microsoft Entra users and security groups receive this policy. **Jamf integration with Intune doesn't support compliance policy that targets device groups.**
+3. Select **Properties**.  
+4. Go to **Assignments** > **Edit**. Use the available options to configure which Microsoft Entra users and security groups receive this policy. Jamf integration with Intune doesn't support compliance policy that targets device groups.  
 
    > [!NOTE]
    > Jamf integration with Intune only supports Microsoft Entra user groups. Device compliance policies that are targeted to device groups will not apply.
 
-4. When you select **Save**, the policy deploys to the users.
+5. When you select **Save**, the policy deploys to the users.
 
 Policies you deploy target the devices that are used by the assigned users. Those devices are evaluated for compliance. Compliant devices are marked as compliant for the setting "*Require device to be marked as compliant*" in Microsoft Entra ID.  
 
