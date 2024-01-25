@@ -91,9 +91,9 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     ![Screenshot of the Microsoft Intune admin center - Devices](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png)
 
-4. From the **Devices - Overview** pane, select **Compliance** to display details about compliance for devices managed by Intune. You will see details similar to the following image.
+4. From the **Devices - Overview** pane, select **Compliance** to display details about compliance for devices managed by Intune. You will see details similar to the following image.  
 
-    ![Screenshot of the Microsoft Intune admin center - Compliance policies](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-04.png)
+    :::image type="content" source="./media/microsoft-intune-admin-center-devices/compliance-devices-experience.png" alt-text="Screenshot of a tenant's Compliance page, highlighting the subworkloads." :::  
     
     > [!TIP]
     > If you have previously used Intune in the Azure portal, you found the above details in the Azure portal by signing in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) and selecting **Device Compliance**.
