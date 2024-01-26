@@ -53,6 +53,7 @@ The following resources describe how to secure devices running Windows 10/11, iO
 - [Set iOS device passcode](https://support.apple.com/HT204060#:~:text=%20Set%20up%20a%20passcode%20%201%20On,to%20confirm%20it%20and%20activate%20it.%20More%20) (opens Apple Support docs)  
 - [Change login password on Mac](https://support.apple.com/guide/mac-help/change-the-login-password-on-mac-mchlp1550/mac#:~:text=1%20On%20your%20Mac%2C%20choose%20Apple%20menu%20%3E,next%20to%20the%20New%20Password%20field.%20See%20More)  
 - [Set screen lock on Android device](https://support.google.com/android/answer/9079129) (opens Android Help docs)  
+- [Set Android work profile password](https://support.google.com/work/android/answer/7029958) (opens Android Help docs)
 
 ## Password-related messages  
 For a list and description of all password-related messages, see [Device password messages in Company Portal](intune-company-portal-password-message-reference.md).  

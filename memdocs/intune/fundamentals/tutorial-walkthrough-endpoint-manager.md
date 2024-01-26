@@ -86,12 +86,12 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
     - **Enrollment status** - Review details about Intune enrolled devices by platform and enrollment failures.
     - **Enrollment alerts** - Find more details about unassigned devices by platform. 
     - **Compliance status** - Review compliance status based on device, policy, setting, threats, and protection. Additionally, this pane provides a list of devices without a compliance policy.
-    - **Configuration status** - Review configuration status of device profiles, as well as profile deployment., and 
+    - **Configuration status** - Review configuration status of device profiles, as well as profile deployment.  
     - **Software update status** - See a visual of the deployment status for all devices and for all users.
 
     ![Screenshot of the Microsoft Intune admin center - Devices](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-03.png)
 
-4. From the **Devices - Overview** pane, select **Compliance policies** to display details about compliance for devices managed by Intune. You will see details similar to the following image.
+4. From the **Devices - Overview** pane, select **Compliance** to display details about compliance for devices managed by Intune. You will see details similar to the following image.  
 
     ![Screenshot of the Microsoft Intune admin center - Compliance policies](./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-04.png)
     
