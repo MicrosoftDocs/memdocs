@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/19/2023
+ms.date: 01/19/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -125,7 +125,7 @@ For more information about configuring Managed software updates in Intune, go to
 
 ### Device management
 
-#### New device management experience in Microsoft Intune<!-- 17585897 -->
+#### New device management experience in Microsoft Intune<!-- 17585897 23692982 -->
 We’re rolling out an update to the device management experience in the Intune admin center. The **Devices** area now has a more consistent UI, with more capable controls and an improved navigation structure so you can find what you need faster. The new experience, previously in public preview, will be gradually rolled out for general availability over the coming weeks. The public preview experience will continue to be available until your tenant receives the update.  
 
 The availability of this new admin center experience will vary tenant by tenant. While a few will see this update immediately, many might not see the new experience for several weeks. For Government clouds, the availability of this experience is estimated around late February 2024.  
