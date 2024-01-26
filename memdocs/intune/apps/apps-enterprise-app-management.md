@@ -36,7 +36,7 @@ Enterprise App Management (EAM) encompasses the aspects of working with Win32 ap
 
 The benefits of using Enterprise App Management are the following:
 
-- **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and package apps directly from the Intune console.
+- **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
 - **Reduce security risks and vulnerabilities**: Mitigate risk and deploy app fixes immediately when security vulnerabilities are discovered.
 - **Stay current with updates**: You'll be able to keep apps up-to-date and secure by identifying and updating outdated applications using guided updating.
 
@@ -44,7 +44,7 @@ When you add an Enterprise App Catalog app, Intune pre-populates the following i
 
 - Commands to install and uninstall the app
 - Time required to install the app
-- Option to allow the app to be uninstalled
+- Option to allow app uninstallation
 - Installation and device restart behavior
 - Return codes to indicate post-installation behavior
 
@@ -65,7 +65,7 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 ## Self-updating apps
 
-Enterprise App Management (EAM) offers support for self updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app auto-updates based on the app vendors process, keeping your app up-to-date as quickly as possible. Also, you'll be able to see the installed version on the device.
+EAM offers support for self updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app auto-updates based on the app vendor's process, keeping your app up-to-date as quickly as possible. Also, you'll be able to see the installed version on the device.
 
 ## Frequently asked questions (FAQ)
 
@@ -76,21 +76,21 @@ If you aren't already working with a Microsoft contact, fill out the [Enterprise
 > [!IMPORTANT]
 > Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprie App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an application to the Enterprise App Catalog.
 
-### Where are the applications coming from?
+### Where are the application installation packages located?
 
 Microsoft hosts the applications in Microsoft storage. When requested via the customer, the content is copied over to customer tenant, making it available in seconds or minutes.
 
 ### What modifications are added to the app packages?
 
-The app packages aren't modified at all. This content is the exact same content that the customer would download if they went to the URL themselves and downloaded the binaries.
+The app packages aren't modified at all. The content is the exact same that the customer can download using the app vendor's download URL directly to download the installation files.
 
-### Is Microsoft providing any security around any of the packages provided in the Enterprise App Catalog?
+### Is Microsoft providing any security around any of the app packages provided in the Enterprise App Catalog?
 
 No. Microsoft makes no guarantee, express or implied, with respect to the security and compliance of the applications provided in the Enterprise App Catalog.
 
 ### What app types are in the Enterprise App Catalog?
 
-The app types provided in the Enterprise application catalog are Win32 applications.
+The app types provided in the Enterprise application catalog are Win32 applications including both 64-bit and 32-bit apps.
 
 ### How will Microsoft detect if an application from the Enterprise App Catalog is in use?
 
@@ -106,7 +106,7 @@ At the time of general availability (GA), Microsoft expects to have 100 applicat
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
-Customer can use Graph API to automate along with automation tools. Graph API will be available soon after General Avaliability.
+Customers can use Graph API to automate along with Graph API capable automation tools. Graph API will be available soon after General Avaliability.
 
 ### Will Enterprise applications auto update?
 
@@ -118,7 +118,7 @@ Yes. You can get licensed applications from the Enterprise App Catalog, although
 
 ### How are licensed applications installed?
 
-If you install a licensed application where a license isn't provided, the application will provide the end-user with the application's first run experience.
+If you install a licensed application where a license or license key key isn't provided, the application may prompt the end-user with the application's first run experience or offer some other mechanism to supply the license or license key. The exact behavior is application specific.
 
 ### Are updates available for unmanaged applications?
 
@@ -134,13 +134,13 @@ Yes. Enterprise App Management can be purchased as a standalone SKU or as part o
 
 ### Does using this app type require Microsoft Intune? Can Enterprise applications be leveraged with Configuration Manager?
 
-Using an Enterprise App Management is only provided by Microsoft Intune. Configuration Manager isn't supported, however Enterprise App Management will work for co-managed clients.
+Enterprise App Management is only provided by Microsoft Intune for use on Intune managed Windows devices. Configuration Manager isn't supported, however Enterprise App Management will work for co-managed clients.
 
 ### Does Enterprise App Management use **Winget**?
 
-No. Enterprise App Management leverages Win32.
+No. Enterprise App Management leverages native Win32 app installation capabilities in Intune.
 
-### For the application updating, will the app be upgraded, installed side-by-side, or will the previous version be uninstalled?
+### For application updating, will the app be upgraded, installed side-by-side, or will the previous version be uninstalled?
 
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
 
