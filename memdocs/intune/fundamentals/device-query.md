@@ -231,4 +231,4 @@ Device query supports the following entities. To learn more about what propertie
 
 For more information, go to:
 
-- [What is Advanced Analytics](advanced-endpoint-analytics.md)
+- [What is Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
