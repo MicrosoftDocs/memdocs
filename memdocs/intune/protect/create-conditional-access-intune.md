@@ -80,10 +80,9 @@ To take advantage of device compliance status, configure Conditional Access poli
    - Use the **Exclude** tab if there are any apps or services you want to exclude from this policy.
   
      > [!IMPORTANT]
-     > **Ensure devices can still check in with Intune.** Avoid blocking access to the **Microsoft Intune** cloud app (0000000a-0000-0000-c000-000000000000). Blocking access to this app will prevent devices from checking into Intune. This would prevent the compliance status from being updated and could result in noncompliant devices being unable to access resources even if the compliance issues are remediated.
-     > You should either:
-     > - Make sure to not select the **Microsoft Intune** cloud app in the **Include** tab, or
-     > - Add the Microsoft Intune cloud app under the excluded cloud apps list in the **Exclude** tab
+     > Ensure devices can still check in with Intune. Avoid blocking access to the Microsoft Intune cloud app (resource ID: 0000000a-0000-0000-c000-000000000000). Blocking access to this app prevents devices from checking into Intune, which then prevents the compliance status from being updated. This could result in noncompliant devices being unable to access resources even if the compliance issues are remediated.  To avoid this scenario, you should either:   
+     > - Remove the Microsoft Intune cloud app from the included cloud apps list in the **Include** tab, or   
+     > - Add the Microsoft Intune cloud app to the excluded cloud apps list in the **Exclude** tab 
 
    For more information, see [Cloud apps or actions](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) in the Microsoft Entra documentation.
 
