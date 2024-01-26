@@ -106,7 +106,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 8. Configure the settings:
 
-    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer will automatically install. Select **Uninstall** to uninstall a printer.
+    - **Action**: Select **Install** to install a printer. When users receive the policy, the printer will automatically install.
     - **Cloud Device ID**: Enter the printer ID. This ID is created when the printer is registered in Microsoft Entra ID using the Universal Print service. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared ID**: Enter the Shared ID of the printer. To get the ID, use the [Universal Print portal](/universal-print/portal/navigate-up).
     - **Printer Shared Name**: Enter the Shared Name of the printer. To get the name, use the [Universal Print portal](/universal-print/portal/navigate-up).
