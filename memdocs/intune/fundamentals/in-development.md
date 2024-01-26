@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/25/2024
+ms.date: 01/26/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
+### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
+To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
+
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
@@ -88,6 +91,60 @@ Applies to:
 <!-- *********************************************** -->
 
 ## Device configuration
+
+### New settings available in the Apple settings catalog <!-- 25280353 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** > **Settings catalog** for profile type.  
+
+**Full Disk Encryption > FileVault**:
+
+- Force Enable In Setup Assistant
+
+Applies to:
+
+- macOS
+
+**Restrictions**:
+
+- Allow Live Voicemail
+- Force Preserve ESIM On Erase
+
+Applies to:
+
+- iOS/iPadOS
+
+**Restrictions**:
+
+- Force Classroom Unprompted Screen Observation
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### New setting for updating MAC address randomization on Android Enterprise devices <!-- 24259789 -->
+
+Admins will have a set of new settings to update MAC address randomization on Android Enterprise devices (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
+
+Starting with Android 10, when connecting to a network, devices present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+
+Your options:
+
+- **Use device default**: Intune doesn't change or update this setting. By default, when connecting to a network, devices will present a randomized MAC address instead of the physical MAC address when connecting to a new network. Any updates made by the user to the setting will persist.
+
+- **Use randomized MAC**: Enables MAC address randomization on devices. When connecting to a new network, devices present a randomized MAC address, instead of the physical MAC address. If the user changes this value on their device, it will reset to **Use randomized MAC** on the next Intune sync.
+
+- **Use device MAC**: Forces devices to present their actual Wi-Fi MAC address instead of a random MAC address. This setting allows devices to be tracked by their MAC address. Only use this value when necessary, such as for network access control (NAC) support. If the user changes this value on their device, it will reset to **Use device MAC** on next sync.
+
+Applies to:
+
+- Android 13 and newer
+
+For more information on the current Wi-Fi settings you can configure, go to [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
 
 ### Import up to 20 custom ADMX and ADML administrative templates<!-- 25780608  -->  
 You can import custom ADMX and ADML administrative templates in Microsoft Intune. Currently, you can import up to 10 files.
@@ -137,6 +194,11 @@ We're updating RBAC in the enrollment area for Windows Hello for Business. Enrol
 <!-- *********************************************** -->
 
 ## Device management
+
+### End-user access to BitLocker Recovery Keys for enrolled Windows devices<!-- 8077173 -->
+End-users will be able to view the BitLocker Recovery Key for enrolled Windows devices in the Web Company Portal. This capability will reduce helpdesk calls in the event they get locked out of their corporate machines. End users can access their enrolled Windows device's Recovery Key by clicking on **View Recovery Key** under their device after logging into the Web Company Portal. This is a similar experience to the MyAccount website which allows end users see their recovery keys as well.
+
+Access to BitLocker recovery keys by end-users can be prevented when not allowed within your organization by using the Entra ID toggle **Restrict non-admin users from recovering the BitLocker key(s) for their owned device**. For more information about how to prevent access to BitLocker recovery keys, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
 
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
@@ -193,7 +255,10 @@ Applies to:
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Customization pane support for excluding groups<!-- 17654599 -->
+The Customization pane will support setting groups to exclude when assigning policies. You will find this setting in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Customization**.
 
 <!-- *********************************************** -->
 
