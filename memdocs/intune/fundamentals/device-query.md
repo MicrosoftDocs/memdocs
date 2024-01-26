@@ -36,7 +36,7 @@ Device query allows you to quickly gain on-demand information about the state of
 
 ## Prerequisites
 
-To use Device query in your tenant, you must have a license that includes Advanced Endpoint Analytics. Advanced Endpoint Analytics is available with:
+To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
 
 - The Advanced Analytics Add-on
 - Microsoft Intune Suite
@@ -201,14 +201,34 @@ Device query supports the following entities. To learn more about what propertie
 
 ## Known limitations
 
-The result string of any query is limited to 148 K characters. If the result of your query is longer than 148 K characters, the result is truncated. An error message informs you about how many rows are truncated.  
+- The result string of any query is limited to 148 K characters. If the result of your query is longer than 148 K characters, the result is truncated. An error message informs you about how many rows are truncated.  
 
-You can only send 15 queries a minute. If you run into a **query limit exceeded** error, wait for a minute and try again.  
+- You can only send 15 queries a minute. If you run into a **query limit exceeded** error, wait for a minute and try again.  
 
-Query inputs have a length limit of 2048 characters. If you encounter a *query too long* error, then refine your query to have fewer characters and try again.  
+- Query inputs have a length limit of 2048 characters. If you encounter a *query too long* error, then refine your query to have fewer characters and try again.
 
-If you’re querying devices that are running on Windows 10, they must be on a minimum quality version.
+- The now() scalar function does not support the offset parameter.
 
-- If running Windows 10 21H2, ensure that it's running version 10.0.19044.3393.  
+- The input window auto-recommends double quotes when only single quotes are supported on the following operators:
+  - contains
+  - !contains
+  - startswith
+  - !startswith
+  - endswith
 
-- If running Windows 10 22H2, ensure that it's running version 10.0.19045.3393.
+- The WindowsRegistry entity will fail to return the RegistryKey for root
+
+- The WindowsRegistry entity will fail to return binary ValueData  
+
+- If you’re querying devices that are running on Windows 10, they must be on a minimum quality version.
+
+  - If running Windows 10 21H2, ensure that it's running version 10.0.19044.3393.  
+
+  - If running Windows 10 22H2, ensure that it's running version 10.0.19045.3393.
+
+
+## Next Steps
+
+For more information, go to:
+
+- [What is Advanced Analytics](advanced-endpoint-analytics.md)

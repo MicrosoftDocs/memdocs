@@ -50,7 +50,7 @@ Your organization can't see:
 - Calendar
 - Passwords
 - Pictures, including what's in the photos app or camera roll
-- Files
+- File content
 - Additionally, on corporate-owned Android devices with a work profile:
   - Apps and data in your personal profile
   - Phone number 
@@ -113,4 +113,25 @@ An IT admin can grant permission to apps in the work profile, both manually and 
 ###  Network information
 Some information about network connections for Android devices may be available to your organization. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it's connected.  
 
+### Additional device details
 
+On corporate-owned Windows devices, admins can query for:
+
+ - Hardware and operating system environment information
+
+ - Installed certificate details
+
+ - File paths and file names
+
+ - Operating system user and group information
+
+ - Registry and event log entries
+
+ - Details about running processes
+
+For more information go to [Device Query](../fundamentals/device-query.md)
+
+The following details are not collected:
+
+- public key/private key information
+- file content
