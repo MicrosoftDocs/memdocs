@@ -27,7 +27,7 @@ The Microsoft Intune Suite includes features for Advanced Analytics, such as:
 
 - An **Enhanced device timeline** includes more events and lower data latency to assist with troubleshooting device issues. For more information, see [Enhanced device timeline](enhanced-device-timeline.md).
 
-- **Device query** enables you to get near-real time access to data about the state and configuration of devices. For more information, see [Device query]().
+- **Device query** enables you to get near-real time access to data about the state and configuration of devices. For more information, see [Device query](../fundamentals/device-query.md).
 
 -A **Battery health** report to gain visibility into hardware performance issues impacting user technology experience. For more information, see [Battery health](battery-health.md)
 

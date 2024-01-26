@@ -21,7 +21,7 @@ The enhanced device timeline allows you to see a history of events that have occ
 :::image type="content" source="media/enhanced-device-timeline.png" alt-text="Enhanced device timeline in endpoint analytics" lightbox="media/enhanced-device-timeline.png":::
 
 > [!NOTE]
-> The **Device timeline** tab replaces the **Application reliability** tab in tenants that have advanced features in Endpoint analytics.
+> The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics features in Endpoint analytics.
 
 You can search by event name or details. Select the **Add filter** button to choose the source and level of events that appear on the device timeline and select a time range of interest.  
 
@@ -45,4 +45,4 @@ For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
-- [What is advanced Endpoint analytics](advanced-endpoint-analytics.md) 
+- [What is Advanced Analytics](advanced-endpoint-analytics.md) 
