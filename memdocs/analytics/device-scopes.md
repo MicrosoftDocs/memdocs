@@ -25,6 +25,8 @@ Custom device scopes are supported on the following Endpoint analytics reports:
 - [Work from anywhere](work-from-anywhere.md)
 
 - [Application reliability](app-reliability.md)
+ 
+- [Battery health](battery-health.md)
 
 ## Permissions  
 
@@ -100,4 +102,4 @@ For more information, go to:
 - [Enhanced device timeline](enhanced-device-timeline.md)
 - [Anomaly detection](anomaly-detection.md)
 - [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)  
-  
+- [Battery health](battery-health.md)

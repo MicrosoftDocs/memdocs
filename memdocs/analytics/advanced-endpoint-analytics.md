@@ -2,7 +2,7 @@
 title: What is advanced Endpoint analytics
 titleSuffix: Microsoft Intune
 description: Learn about advanced features in Endpoint analytics
-ms.date: 10/20/2023
+ms.date: 01/26/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -60,3 +60,4 @@ For more information, go to:
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
 - [Enhanced device timeline](enhanced-device-timeline.md)  
+- [Battery health](battery-health.md)

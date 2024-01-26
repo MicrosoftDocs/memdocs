@@ -2,7 +2,7 @@
 title: Battery Health report in advanced Endpoint analytics
 titleSuffix: Microsoft Intune
 description: Learn about the battery health report as an advanced feature in Endpoint analytics
-ms.date: 01/23/2024
+ms.date: 01/26/2024
 ms.service: microsoft-intune
 ms.subservice: endpoint-analytics
 ms.topic: conceptual
@@ -41,9 +41,9 @@ After enrollment, client devices require a restart to fully enable all analytics
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Report** > **Endpoint analytics** > **Battery health**.
 3. The Battery health report page shows an **Overview** tab, **Device performance** tab, **Model performance** tab, **OS performance** tab, and an **App impact** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
-<!--  until I get a screenshot , I am commenting this out
 
-   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Battery Health tab in Overview section of Endpoint analytics"::: -->
+
+   :::image type="content" source="media/battery-health/battery-health.png" lightbox="media/battery-health/battery-health.png" alt-text="This is a screenshot of the Battery Health tab in Advanced analytics":::
 
 ## Battery Health Score
 
