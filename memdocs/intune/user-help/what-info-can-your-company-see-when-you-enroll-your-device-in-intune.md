@@ -50,7 +50,7 @@ Your organization can't see:
 - Calendar
 - Passwords
 - Pictures, including what's in the photos app or camera roll
-- File content
+- Content of user created documents
 - Additionally, on corporate-owned Android devices with a work profile:
   - Apps and data in your personal profile
   - Phone number 
