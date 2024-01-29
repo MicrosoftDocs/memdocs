@@ -212,7 +212,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
 
-  - **Devices > Settings catalog > Authentication** > **Extensible Single Sign On (SSO)**: Add and configure the following settings:
+  - **Devices > Configuration > Settings catalog > Authentication** > **Extensible Single Sign On (SSO)**: Add and configure the following settings:
 
     | Name | Configuration |
     |---|---|
@@ -221,7 +221,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
     | Type | Redirect |
     | URLs | `https://login.microsoftonline.com` <br/> `https://login.microsoft.com` <br/> `https://sts.windows.net` <br/> `https://login.partner.microsoftonline.cn` <br/> `https://login.chinacloudapi.cn` <br/> `https://login.microsoftonline.us` <br/> `https://login-us.microsoftonline.com` |
 
-  - **Devices > Settings catalog > Microsoft AutoUpdate (MAU)**: Add and configure the following settings:
+  - **Devices > Configuration > Settings catalog > Microsoft AutoUpdate (MAU)**: Add and configure the following settings:
 
     - **Automatically acknowledge data collection policy**: Select **Acknowledge – send required and optional data**.
 
@@ -231,7 +231,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
       This setting forces Microsoft AutoUpdate to on. For more information about Microsoft AutoUpdate, which updates Microsoft 365 Apps and Company Portal, go to [Deploy updates for Office for Mac](/deployoffice/mac/deploy-updates-for-office-for-mac).
 
-  - **Devices > Settings catalog > Microsoft Office > Microsoft Office**: Add and configure the following settings:
+  - **Devices > Configuration > Settings catalog > Microsoft Office > Microsoft Office**: Add and configure the following settings:
 
     - **Office Activation Email Address**: Enter `{{userprincipalname}}`.
     - **Enable automatic sign-in**: Select **True**.
