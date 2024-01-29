@@ -1,10 +1,10 @@
-# Overview
+Overview
 
-## Learn how to contribute
+Learn how to contribute
 
 Anyone who is interested can contribute to the topics. When you contribute, your work will go directly into the content set after being merged. It will then be published to [Microsoft Learn](https://learn.microsoft.com/) and you will be listed as a contributor at: <https://github.com/MicrosoftDocs/memdocs/graphs/contributors>.
 
-### Quickly update an article using GitHub.com
+Quickly update an article using GitHub.com
 
 Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how. [This two-minute video](https://www.microsoft.com/videoplayer/embed/RE1XQTG) also covers how to contribute.
 
@@ -48,13 +48,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-### Contributing
+Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <https://cla.microsoft.com>.
 
 When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repos using our CLA.
 
-### Legal Notices
+Kegal Notices
 
 Microsoft and any contributors grant you a license to the Microsoft documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the [LICENSE-CODE](LICENSE-CODE) file.
 
