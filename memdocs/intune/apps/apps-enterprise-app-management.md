@@ -1,5 +1,5 @@
 ---
-title: Enterprise App Management in Microsoft Intune
+title: Microsoft Intune Enterprise Application Management
 titleSuffix:
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune. 
 keywords:
@@ -23,9 +23,9 @@ ms.collection:
 - highpri
 ---
 
-# Enterprise App Management in Microsoft Intune
+# Microsoft Intune Enterprise Application Management
 
-Microsoft Intune Enterprise App Management enables you to easily discover and deploy pre-packaged applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of pre-packaged Microsoft and non-Microsoft applications. These applications are Win32 apps that are downloaded and hosted by Microsoft so you can provision these applications in your tenant.
+Microsoft Intune Enterprise App Management enables you to easily discover and deploy pre-packaged applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of pre-packaged Microsoft and non-Microsoft applications. These applications are Win32 apps that are hosted by Microsoft so you can provision these applications in your tenant.
 
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
@@ -47,16 +47,19 @@ When you add an Enterprise App Catalog app, Intune pre-populates the following i
 - Option to allow app uninstallation
 - Installation and device restart behavior
 - Return codes to indicate post-installation behavior
+- Whether to install the app for system or user
+- Time required to install the app
+  
+Microsoft Intune pre-populates the detection rules that devices must meet before the app is installed:
+
+- File sive
+- File version
+- Registry
 
 Also, Intune pre-populates the requirements that devices must meet before the app is installed:
 
 - Windows OS architecture required
 - Minimum OS required
-- Disk spaced required
-- Physical memory required
-- Minimum number of processors required
-- Minimum CPU speed required
-- Additional File, Registry, and Script requirement rules
 
 > [!IMPORTANT]
 > Microsoft recommends using the pre-populated fields containing specific commands and rules, however you can modify the pre-populated fields if needed.
@@ -65,7 +68,7 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 ## Self-updating apps
 
-EAM offers support for self updating app capabilities. You can select a minimum target version. Intune will ensure the app is at least at the target minimum version, but will consider the app installed if the version of the app is above the minimum version. Your EAM app auto-updates based on the app vendor's process, keeping your app up-to-date as quickly as possible. Also, you'll be able to see the installed version on the device.
+The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, but will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps will update based on the vendors process. Intune will report the version of the app detected on the device.
 
 ## Frequently asked questions (FAQ)
 
@@ -76,41 +79,37 @@ If you aren't already working with a Microsoft contact, fill out the [Enterprise
 > [!IMPORTANT]
 > Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprie App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an application to the Enterprise App Catalog.
 
-### Where are the application installation packages located?
+### Where are the devices downloading the app content from?
 
 Microsoft hosts the applications in Microsoft storage. When requested via the customer, the content is copied over to customer tenant, making it available in seconds or minutes.
 
-### What modifications are added to the app packages?
-
-The app packages aren't modified at all. The content is the exact same that the customer can download using the app vendor's download URL directly to download the installation files.
-
-### Is Microsoft providing any security around any of the app packages provided in the Enterprise App Catalog?
+### Is Microsoft providing security around any of the content provided in the Enterprise App Catalog?
 
 No. Microsoft makes no guarantee, express or implied, with respect to the security and compliance of the applications provided in the Enterprise App Catalog.
 
-### What app types are in the Enterprise App Catalog?
+### What app installer types are in the Enterprise App Catalog?
 
-The app types provided in the Enterprise application catalog are Win32 applications including both 64-bit and 32-bit apps.
+The apps currently provided in the Enterprise application catalog are Windows Win32 applications (exe and msi).
 
 ### How will Microsoft detect if an application from the Enterprise App Catalog is in use?
 
 At this time, Intune provides no running application detection.
 
-### What is the Service Level Agreement (SLA) for application update notifications?
+### What is the Service Level Agreement (SLA) for when an app update is avaiable in the catalog?
 
-No SLA is currently available. If an SLA is established, it will be in future iterations.
+No SLA is currently available.
 
 ### How many applications are in the catalog?
 
-At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog.
+At the time of general availability (GA), Microsoft expects to have approximatly 100 applications available in the Enterprise App Catalog.
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
 Customers can use Graph API to automate along with Graph API capable automation tools. Graph API will be available soon after General Avaliability.
 
-### Will Enterprise applications auto update?
+### When will Enterprise App Catalog apps have the capability to automatically update to the latest version when its added to the catalog.
 
-No. There's no automated processes available as of General Avaliability. Automation may be available in a future iteration.
+No. There's no automated processes available as of General Avaliability.
 
 ### Can you get licensed applications from this catalog?
 
