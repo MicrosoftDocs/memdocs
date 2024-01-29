@@ -175,9 +175,11 @@ As a result, you can’t connect to your Cloud PC session.
 
 This change lets the web client/Safari browser store and use the `microsoft.us` cookies for connecting to your Cloud PC session.  
 
-## Windows Systems Information reports virtualization-based security is Enabled but not running<!--48643259-->
+## Windows Security reports Memory Integrity is off. Your device may be vulnerable.<!--48643259-->
 
-In the Cloud PC's Windows Systems Information, the Virtualization-based security (VBS) row shows **Enabled but not running**.
+Windows Security reports *Memory Integrity is off. Your device may be vulnerable.*
+
+In the Cloud PC's Windows Systems Information you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
 This can be caused when the Intune tenant configuration requires Direct Memory Access (DMA), which Cloud PCs don’t support. Currently, if DMA is required in a VBS policy used by a Cloud PC, the VBS policy won’t run.
 
