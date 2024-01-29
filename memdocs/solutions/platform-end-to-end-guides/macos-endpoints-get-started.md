@@ -231,7 +231,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
       This setting forces Microsoft AutoUpdate to on. For more information about Microsoft AutoUpdate, which updates Microsoft 365 Apps and Company Portal, go to [Deploy updates for Office for Mac](/deployoffice/mac/deploy-updates-for-office-for-mac).
 
-  - **Microsoft Office** > **Microsoft Office**: Add and configure the following settings:
+  - **Devices > Settings catalog > Microsoft Office > Microsoft Office**: Add and configure the following settings:
 
     - **Office Activation Email Address**: Enter `{{userprincipalname}}`.
     - **Enable automatic sign-in**: Select **True**.
@@ -243,7 +243,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 > [!NOTE]
 > Microsoft will be releasing support for [Platform SSO](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website). When it's available, it will be announced in [Intune What's New](/mem/intune/fundamentals/whats-new). For more information on platform SSO, go to [Coming Soon – Platform SSO for macOS](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/coming-soon-platform-sso-for-macos/ba-p/3902280).
 
-### Step 7 - Create and assign must-have apps
+### Step 7 - Add and assign must-have apps
 
 ✅ Add a minimum set of apps to Intune
 
@@ -410,7 +410,7 @@ On devices, software updates are critical and you must determine how the updates
 
     The **Settings Catalog > Declarative Device Management > Software Update** settings take precedence over the **Settings Catalog > Restrictions** settings. For more information, go to [Precedence of settings in macOS updates policy](../../intune/protect/managed-software-updates-ios-macos.md#precedence).
 
-- **Option 2 - macOS 13.0 and older (recommended)** - On macOS 13.0 and older devices, you can use a combination of the [Intune settings catalog](../../intune/configuration/settings-catalog.md) and an Intune [software updates policy](../../intune/protect/protect/managed-software-updates-ios-macos.md). These features use Apple's MDM settings.
+- **Option 2 - macOS 13.0 and older (recommended)** - On macOS 13.0 and older devices, you can use a combination of the [Intune settings catalog](../../intune/configuration/settings-catalog.md) and an Intune [software updates policy](../../intune/protect/managed-software-updates-ios-macos.md). These features use Apple's MDM settings.
 
   Specifically, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can configure the following settings:
 
@@ -485,7 +485,7 @@ In this phase, you apply organization-specific settings and apps, and review you
 
 ✅ Add more apps to Intune
 
-In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you added some apps that the devices must have. In this step, add other apps that can enhance the end user experience or productivity.
+In [Phase 1 - Set up your environment](#phase-1---set-up-your-environment), you added some apps that the devices must have. In this step, add other apps that can improve the end user experience or productivity.
 
 - **Line of business (LOB) apps**
 
