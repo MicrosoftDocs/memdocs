@@ -36,15 +36,16 @@ Enterprise App Management (EAM) encompasses the aspects of working with Win32 ap
 
 The benefits of using Enterprise App Management are the following:
 
-- **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and package apps directly from the Intune console.
+- **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
 - **Reduce security risks and vulnerabilities**: Mitigate risk and deploy app fixes immediately when security vulnerabilities are discovered.
 - **Stay current with updates**: You'll be able to keep apps up-to-date and secure by identifying and updating outdated applications using guided updating.
 
 When you add an Enterprise App Catalog app, Intune pre-populates the following installation details:
 
-- Commands to install and uninstall the app silently
-- Option to allow the app to be uninstalled by the enduser
-- Device restart behavioir after installation or uninstallation
+- Commands to install and uninstall the app
+- Time required to install the app
+- Option to allow app uninstallation
+- Installation and device restart behavior
 - Return codes to indicate post-installation behavior
 - Whether to install the app for system or user
 - Time required to install the app
@@ -104,7 +105,7 @@ At the time of general availability (GA), Microsoft expects to have approximatly
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
-Graph API support will be avaiable soon after general avaiablility. 
+Customers can use Graph API to automate along with Graph API capable automation tools. Graph API will be available soon after General Avaliability.
 
 ### When will Enterprise App Catalog apps have the capability to automatically update to the latest version when its added to the catalog.
 
@@ -116,7 +117,7 @@ Yes. You can get licensed applications from the Enterprise App Catalog, although
 
 ### How are licensed applications installed?
 
-If you install a licensed application where a license isn't provided, the application will provide the end-user with the application's first run experience.
+If you install a licensed application where a license or license key key isn't provided, the application may prompt the end-user with the application's first run experience or offer some other mechanism to supply the license or license key. The exact behavior is application specific.
 
 ### Are updates available for unmanaged applications?
 
@@ -132,13 +133,13 @@ Yes. Enterprise App Management can be purchased as a standalone SKU or as part o
 
 ### Does using this app type require Microsoft Intune? Can Enterprise applications be leveraged with Configuration Manager?
 
-Using an Enterprise App Management is only provided by Microsoft Intune. Configuration Manager isn't supported, however Enterprise App Management will work for co-managed clients.
+Enterprise App Management is only provided by Microsoft Intune for use on Intune managed Windows devices. Configuration Manager isn't supported, however Enterprise App Management will work for co-managed clients.
 
 ### Does Enterprise App Management use **Winget**?
 
-No. Enterprise App Management leverages Win32.
+No. Enterprise App Management leverages native Win32 app installation capabilities in Intune.
 
-### For the application updating, will the app be upgraded, installed side-by-side, or will the previous version be uninstalled?
+### For application updating, will the app be upgraded, installed side-by-side, or will the previous version be uninstalled?
 
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
 
