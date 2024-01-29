@@ -202,7 +202,7 @@ To ensure that all devices enrolled in Defender for Endpoint security settings m
 
 Use the following guidance for your Dynamic groups:
 
-- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, Windows Server, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
+- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceOSType* attribute (Windows, Windows Server, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
 
 - If necessary, dynamic groups containing exclusively devices that are managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices that are managed by Defender for Endpoint via the security settings management functionality, and devices remain in this group only while managed by Defender for Endpoint.
 
@@ -247,10 +247,11 @@ To support use with Microsoft Defender security settings management, your polici
 
 | Endpoint security policy | Profile | Defender for Endpoint security settings management  |  Microsoft Intune |
 |---------|----------|-----------|----------|
+| Antivirus              | Defender Update controls           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus           | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Microsoft Defender Antivirus exclusions| ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png) |
 | Antivirus              | Windows Security Experience            | *Note 1*         | ![Supported](./media/mde-security-integration/green-check.png) |
-|Attack Surface Reduction |Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
+| Attack Surface Reduction | Attack Surface Reduction Rules          | ![Supported](./media/mde-security-integration/green-check.png)  | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Endpoint detection and response | Endpoint detection and response | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall            | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
 | Firewall  | Firewall Rules      | ![Supported](./media/mde-security-integration/green-check.png) | ![Supported](./media/mde-security-integration/green-check.png)  |
@@ -379,7 +380,7 @@ You can create groups for these devices [in Microsoft Entra](/azure/active-direc
 :::image type="content" source="./media/mde-security-integration/linuxdevices.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Linux." lightbox="./media/mde-security-integration/linuxdevices.jpg":::
 
 > [!IMPORTANT]
-> In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
+> In May 2023, *deviceOSType* updated to distinguish between *Windows clients* and *Windows Servers*.
 >
 > Custom scripts and [Microsoft Entra dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* might exclude *Windows Servers* when used with the Security Management for Microsoft Defender for Endpoint solution. For example:
 >

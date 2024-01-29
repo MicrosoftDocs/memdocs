@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2023
+ms.date: 01/23/2024
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,6 +38,7 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 > [!NOTE]
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
+> - BlackBerry Mobile (Android, iOS/iPadOS)
 > - Better Mobile (Android,iOS/iPadOS)
 > - Check Point Harmony Mobile Protect (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
