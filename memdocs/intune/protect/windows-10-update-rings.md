@@ -53,6 +53,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
   - Windows 10/11 Pro
   - Windows 10/11 Enterprise
+  - Windows 10/11 Education
   - Windows 10/11 Team - for Surface Hub devices
   - Windows Holographic for Business - Windows Holographic for Business supports a subset of settings for Windows updates, including:
     - **Automatic update behavior**

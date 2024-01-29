@@ -150,16 +150,9 @@ When you are finished configuring certificates, choose **OK**.
 
 The profile is created and appears on the profiles list pane.
 
-## Step 3 - Create a device category
+## Step 3 - Create a device category  
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. On the **Intune** pane, choose **Device enrollment**.
-4. On the **Device enrollment - Overview** pane, choose **Device categories**.
-5. On the **Device enrollment - Device Categories** pane, choose **Create**.
-6. On the **Create device category** pane, enter a **Name** and **Description** for the category.
-7. On the **Create device category** pane, choose **Create**.
-
-The device category is created in the **Enrollment – Device Categories** pane.
+In the admin center, go to **Devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../enrollment/device-group-mapping.md#step-1-create-device-category-in-intune).  
 
 ## Step 4 – Create a dynamic group
 

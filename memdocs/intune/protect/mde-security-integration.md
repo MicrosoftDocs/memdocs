@@ -202,7 +202,7 @@ To ensure that all devices enrolled in Defender for Endpoint security settings m
 
 Use the following guidance for your Dynamic groups:
 
-- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceType* attribute (Windows, Windows Server, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
+- (Recommended) When targeting policy, use dynamic groups based on the device platform by using the *deviceOSType* attribute (Windows, Windows Server, macOS, Linux) to ensure policy continues to be delivered for devices that change management types, for example during MDM enrollment.
 
 - If necessary, dynamic groups containing exclusively devices that are managed by Defender for Endpoint can be targeted by defining a dynamic group using the *managementType* attribute **MicrosoftSense**. Use of this attribute targets all devices that are managed by Defender for Endpoint via the security settings management functionality, and devices remain in this group only while managed by Defender for Endpoint.
 
@@ -380,7 +380,7 @@ You can create groups for these devices [in Microsoft Entra](/azure/active-direc
 :::image type="content" source="./media/mde-security-integration/linuxdevices.jpg" alt-text="A screenshot of the Intune Dynamic Group for Windows Linux." lightbox="./media/mde-security-integration/linuxdevices.jpg":::
 
 > [!IMPORTANT]
-> In May 2023, *deviceType* updated to distinguish between *Windows clients* and *Windows Servers*.
+> In May 2023, *deviceOSType* updated to distinguish between *Windows clients* and *Windows Servers*.
 >
 > Custom scripts and [Microsoft Entra dynamic device groups](/azure/active-directory/enterprise-users/groups-dynamic-membership) created before this change that specify rules that reference only *Windows* might exclude *Windows Servers* when used with the Security Management for Microsoft Defender for Endpoint solution. For example:
 >
