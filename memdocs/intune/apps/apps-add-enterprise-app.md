@@ -25,22 +25,22 @@ ms.collection:
 
 # Add an Enterprise App Catalog app (Win32) to Microsoft Intune
 
-An Enterprise App Catalog app (Win32) is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. 
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and third-party apps. An Enterprise App Catalog app (Win32) is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type leverages the Win32 platform and has support for customizable capabilities. 
 
 > [!IMPORTANT]
-> Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+> The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-When you add an app to Intune, commonly you'll want to accept the default installation, requirements, and detection settings. These default settings have been confirmed by Microsoft. You must be careful if you modify the package. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
+When you add an app to Intune, you'll commonly want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings have been configured and confirmed by Microsoft. You must be careful if you modify the package as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
 
 > [!IMPORTANT]
 > Microsoft does not assert compliance or authorizations for non-Microsoft apps. Customers are responsible for ensuring that apps meet their requirements.
 
-Once you have added an EAM app to Intune, you can assign that app to end-users. Intune will silently add the app to your tenant.
+Once you add an Enterprise App Catalog app to Intune, you can assign that app to end-users or devices. Intune silently adds the app to your tenant.
 
 ## Add a Windows App Catalog app to Intune
 
 > [!IMPORTANT]
-> Only 64-bit apps are supported for the initial EAM release. 32-bit apps are planned to be supported in the future.
+> Only 64-bit apps are offered for the initial EAM release. 32-bit apps are planned to be supported in the future.
 
 The following steps help you add a Windows App Catalog app to Intune:
 
@@ -52,7 +52,7 @@ The following steps help you add a Windows App Catalog app to Intune:
 
 ## Step 1: App information
 
-The **App information** steps allows you to select an app from the Enterprise App Catalog based on name and publisher. Once you've selected the app, you must choose a specific app package based on package name, language, architecture, and version. When you've completed selecting the app, the app information is displayed. Depending on the app that you chose, the values for this step will be automatically filled in.
+The **App information** steps allows you to select an app from the Enterprise App Catalog based on name and publisher. Once you select the app, you must choose a specific app package based on package name, language, architecture, and version. When you've completed selecting the app, the app information is displayed. Based on the app that you chose, the values for this step are automatically filled in.
 
 ### Select the app from the Enterprise App Catalog
 
@@ -92,22 +92,23 @@ The **Program** step provides the following options:
 
 - **Install command**: (Required) Confirm, modify, or add the complete installation command line to install the app.
 
-    For example, if your app's file name is **MyApp123**, add the following:
+    For example, if your app installers's file name is `MyApp123.msi`, add the following:
 
-    `msiexec /p "MyApp123.msp"`
+    `msiexec /i "MyApp123.msi"`
     
-    If the application is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) that the package supports. For example:
+    If the app installer's file name is `ApplicationName.exe`, the command would be the application name followed by the command arguments (switches) that the package supports. For example:
 
     `ApplicationName.exe /quiet`
     
     In the preceding command, the `ApplicationName.exe` package supports the `/quiet` command argument.
     
     > [!NOTE]
-    > For the specific arguments that the application package supports, contact your application vendor.
+    > For the specific arguments that the application package supports, contact your application vendor or refer to their documentation for installing the app.
 
     > [!IMPORTANT]
-    > Admins must be careful when they use the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields.
-    >
+    > Admins must be careful when they use the command tools. Unexpected or harmful commands can be passed via the **Install command** and **Uninstall command** fields.
+
+    > [!NOTE]
     > Calling `powershell.exe` in either of these fields will result in a 32-bit Powershell instance being launched. To force 64-bit Powershell execution, use the following command:
     >
     > `%SystemRoot%\Sysnative\WindowsPowerShell\v1.0\powershell.exe`
