@@ -102,7 +102,7 @@ No SLA is currently available. If an SLA is established, it will be in future it
 
 ### How many applications are in the catalog?
 
-At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog.
+At the time of general availability (GA), Microsoft expects to have 100 applications available in the Enterprise App Catalog. Additional apps will be available on an on-going basis.
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
