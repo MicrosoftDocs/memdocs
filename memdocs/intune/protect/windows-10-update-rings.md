@@ -53,6 +53,8 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
   - Windows 10/11 Pro
   - Windows 10/11 Enterprise
+  - Windows 10/11 IoT Enterprise
+  - Windows 10/11 Education
   - Windows 10/11 Team - for Surface Hub devices
   - Windows Holographic for Business - Windows Holographic for Business supports a subset of settings for Windows updates, including:
     - **Automatic update behavior**
@@ -61,7 +63,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
     For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
-  - Windows 10/11 Enterprise LTSC - LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
+  - Windows 10/11 Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
     - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates  
     - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)  
     - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)  

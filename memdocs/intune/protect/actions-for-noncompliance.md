@@ -91,7 +91,7 @@ When you enable this action:
   - iOS/iPadOS
   - macOS
 
-- **Add device to retire list**: When this action is performed on a device, the device is added to a list at **Devices** > **Compliance policies** > **Retire Noncompliant Devices** in the Microsoft Intune admin center. However, the device isn't retired until an administrator explicitly initiates the retirement process. When an admin retires the device from that list, retirement removes all company data off the device and removes that device from Intune management. 
+- **Add device to retire list**: When this action is performed on a device, the device is added to a list of retired, noncompliant devices in the Intune admin center. You can go to **Devices** > **Compliance** and select the **Retire noncompliant devices** tab to view the list. However, the device isn't retired until an administrator explicitly initiates the retirement process. When an admin retires the device from that list, retirement removes all company data off the device and removes that device from Intune management. 
 
   The following platforms support this action:
   - Android device administrator
@@ -103,20 +103,18 @@ When you enable this action:
     - Personally Owned Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10/11
-
-  When this action applies to a device, that device is added to a list of devices in the Microsoft Intune admin center at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
+  - Windows 10/11  
   
   > [!NOTE]
-  > Only devices to which the **Add device to retire list** action has been triggered appear in the **Retire Selected Devices** view. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#other-compliance-reports).
+  > Only devices to which the **Add device to retire list** action has been triggered appear in the **Retire selected devices** tab. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#other-compliance-reports).  
 
-  To retire one or more devices from the list, select devices to retire and then select **Retire Selected Devices**. When you choose an action that retires devices, you're then presented with a dialog box to confirm the action. It's only after confirming the intent to retire the devices that they're cleared of company data and removed from Intune management. 
+  To retire one or more devices from the list, select devices to retire and then select **Retire selected devices**. When you choose an action that retires devices, you're then presented with a dialog box to confirm the action. It's only after confirming the intent to retire the devices that they're cleared of company data and removed from Intune management. 
 
-  Other options include *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Add device to retire list* is applied to that device again.
+  Other options include *Retire all devices*, *Clear all devices retire state*, and *Clear selected devices retire state*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Add device to retire list* is applied to that device again.
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
-- **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.
+- **Send push notification to end user**: Configure this action to send a push notification about non-compliance to a device through the Company Portal app or Intune App on the device.  
 
   The following platforms support this action:
   - Android device administrator
@@ -184,8 +182,8 @@ Add variables to the message to create a personalized email with dynamic content
 
 ### To create the template
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+2. Select **Endpoint security** > **Device compliance** > **Notifications** > **Create notification**.  
 3. On the **Basics** page, give the template a friendly name to help you identify it. Then select **Next**.  
   
 4. On the **Header and footer settings** page, add your company details and logo. 
@@ -239,16 +237,17 @@ When you create a device compliance policy, Intune automatically creates an acti
 
 You can add optional actions when you create a compliance policy, or update an existing policy.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. Select **Devices** > **Compliance policies** > **Policies**, select one of your policies, and then select **Properties**.
+2. Go to **Devices** > **Compliance**.
+3. Select a policy, and then select **Properties**.  
 
    Don't have a policy yet? Create an [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md), or other platform policy.
 
    > [!NOTE]
    > Devices managed by third-party device compliance partners that are targeted with device groups cannot receive compliance actions at this time.
 
-3. Select **Actions for noncompliance** > **Add**.
+3. Select **Actions for noncompliance** > **Edit**.  
 
 4. Select your **Action**:
 

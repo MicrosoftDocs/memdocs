@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/05/2024
+ms.date: 01/25/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,12 +62,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
-### End-user app PIN reset<!-- 24605159   -->  
-For managed apps that require a PIN to access, allowed end-users will be able to reset the app PIN at any time. You can require an app PIN in Intune by selecting the **PIN for access** setting in iOS/iPadOS and Android app protection policies. For more information about app protection policies, see [App protection policies overview](../apps/app-protection-policy.md).
-
-#### Intune support of store-signed LOB apps for Surface Hub devices<!-- 25865620  -->  
-Intune will support the deployment of store-signed LOB apps (single file *.appx*, *.msix*, *.appxbundle*, and *.msixbundle*) to Surface Hub devices. The support for store-signed LOB apps will enable offline store apps to be deployed to Surface Hub devices following the retirement of the Microsoft Store for Business.
-
 ### Intune migrating from SafetyNet Attestation API to Google Play Integrity API<!-- 15571389   -->  
 Google has deprecated the [SafetyNet Attestation API](https://developer.android.com/training/safetynet/attestation) and replaced it with the [Play Integrity API](https://developer.android.com/google/play/integrity). Intune will be migrating to the new API for app protection policies. The "SafetyNet device attestation" setting name will be updated to align with the new Google Play Integrity API for all policies in the Intune user interface (UI). For related information, see [Discontinuing the SafetyNet Attestation API](https://developer.android.com/training/safetynet/deprecation-timeline) and [Migrating from the SafetyNet Attestation API](https://developer.android.com/google/play/integrity/migrate).
 
@@ -105,18 +99,6 @@ For more information on this feature, go to [Import custom ADMX and ADML adminis
 Applies to:
 
 - Windows 10/11
-
-### New setting that disables location on Android Enterprise devices<!-- 21060837  -->  
-
-On Android Enterprise devices, there's a new setting that allows admins to control the location (**Devices** > **Configuration** > **Create** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile > Device Restrictions** for profile type > **General**):
-
-- **Location**: **Block** disables the **Location** setting on the device and prevents users from turning it on. When this setting is disabled, then any other setting that depends on the device location is affected, including the **Locate device** remote action. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
-
-For more information on the settings you can currently configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md).
-
-Applies to:
-
-- Android Enterprise
 
 ### The macOS Company Portal app will support platform SSO (public preview)<!-- 24325427  -->  
 In Intune, you can configure the Enterprise SSO plug-in on Apple devices using a device configuration profile (**Devices** > **Configuration** > **Create** > **macOS** for platform > **Settings Catalog** for profile > **Authentication** > **Extensible Single sign-on (SSO)**).
@@ -156,10 +138,6 @@ We're updating RBAC in the enrollment area for Windows Hello for Business. Enrol
 
 ## Device management
 
-#### Improvements to new device experience in admin center (public preview) <!-- 23692982   -->  
-After hearing your feedback, we're rearranging the tabs in the new Devices experience so that you can focus on management first, and monitoring second. When you select a workload, instead of landing on the **Monitor** tab, which is the current default experience in public preview, you'll land on the primary management tab, such as **Policies** or **Update rings**.  Monitoring will still be available but will change from being the first tab in the list to the last.
-
-
 ### Introducing a remote action to pause the config refresh enforcement interval<!--24249019  -->  
 In the Windows Settings Catalog, you can configure **Config Refresh**. This feature lets you set a cadence for Windows devices to reapply previously received policy settings, without requiring devices to check in to Intune. The device will replay and re-enforce settings based on previously received policy to minimize the chance for configuration drift.
 
@@ -176,37 +154,25 @@ For information on currently available Remote actions, see [Remote actions](../r
 ### HTML formatting supported in noncompliance email notifications <!-- 24197255   -->  
 HTML formatting will be supported in noncompliance email notifications for all platforms. You'll be able to use supported HTML tags to add formatting such as italics, URL links, and bulleted lists to your organization's messages.
 
-### Support for Intune Device control and Defender Update control policies for devices managed by Microsoft Defender for Endpoint<!-- 25470154, 15466620 -->  
-You’ll soon be able to use the Device control and Defender Update control profiles from the Microsoft Intune admin center with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620, 25470154  -->  
 
-- **Device control** profiles are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
+You will be able to use the endpoint security policy for *Device control* (Attack surface reduction policy) from the Microsoft Intune with the devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) capability.
+ 
+- **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
   Applies to:
-  - Windows 10/11
-
-- **Defender Update control** profiles are part of endpoint security [Antivirus policy](../protect/endpoint-security-antivirus-policy.md).
-
-  Apples to:
-  - Linux
-  - macOS
-  - Windows 10/11
-
-Prepare for January 2024. This policy change is expected to be released with the January 2024 service update for Intune. When this change takes effect, devices that are managed by Defender for Endpoint but not enrolled with Intune, and that are assigned to either kind of profile, will start applying the settings from those profiles. Check your profiles to make sure only the devices you intend to receive these policies will get them.
+  - Windows 10/11- - Available for the *Windows 10, Windows 11, and Windows Server* platform.
+ 
+Prepare for February 2024. This policy change is expected to be released with the February 2024 service update for Intune. When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
 <!-- *********************************************** -->
 
 ## Monitor and troubleshoot
 
-### Exported report data maintains search results<!-- 17723620  -->  
-Intune will maintain your report search results when exporting report data. For example, when you use the [Noncompliant devices and settings](../fundamentals/reports.md#noncompliant-devices-report-organizational) report, set the OS filter to "Windows", and search for "PC", the exported data will only contain Windows devices with "PC" in their name. This capability will also be available when calling the ExportJobs API directly.
-
 ### Battery report<!-- 9747162 -->  
 We're working on a battery health report to provide visibility into the health of batteries in your organization’s devices and its influence on user experience. The scores and insights in this report are aimed to help IT admins with asset management and purchase decisions that improve user experience while balancing hardware costs.
 
 The battery health report is a part of Microsoft Intune Advanced Analytics. It will be included as an Intune-add on under [Microsoft Intune Suite](../fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
-
-### Monitoring reports for devices<!-- 17744651 -->  
-In Intune, you'll be able to view a new list of all device monitoring reports. You'll be able to find these reports in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**. The **Monitor** pane will provide reports related to configuration, compliance, enrollment, and software updates. Additionally, there will be other reports that you can view, such as **Device actions**.
 
 ### Run on-demand pivot queries on single devices<!--16719466  -->  
 Intune allows you to quickly gain on-demand information about the state of your device. When you enter a query on a selected device, Intune will run a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.

@@ -250,9 +250,9 @@ When the test policies are no longer needed, you can remove them.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** > **Compliance**.
+2. Select **Devices** > **Compliance**.
 
-3. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **OK** to confirm.
+3. In the **Policy name** list, select the context menu (**...**) for your test policy, and then select **Delete**. Select **OK** to confirm.  
 
 4. Go to **Endpoint security** > **Conditional access** > Policies.
 
