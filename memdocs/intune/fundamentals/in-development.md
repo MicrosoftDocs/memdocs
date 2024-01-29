@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/26/2024
+ms.date: 01/29/2024
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -62,6 +62,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management  
 
+### Update to Intune Management Extension on Windows<!-- 26472055  -->  
+Intune Management Extension on Windows will be updated. To support this update, Windows clients must have a minimum of **.NET Framework 4.7.2** (available from Windows Update as of July 10, 2018).
+ 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies now provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
