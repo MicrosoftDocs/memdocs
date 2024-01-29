@@ -8,7 +8,7 @@ ms.topic: conceptual
 author: PalikaSingh
 ms.author: palsi
 manager: apoorvseth
-ROBOTS: NOINDEX
+ROBOTS: NOINDEX, NOFOLLOW
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
