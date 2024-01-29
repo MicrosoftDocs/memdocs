@@ -108,7 +108,7 @@ For more information about mobile threat defense, see [Install mobile threat def
 ### App permissions  
 *Applies to devices running Android 11 and earlier* 
 
-An IT admin can grant permission to apps in the work profile, both manually and by automation. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when someone grants permission to an app.    
+An IT admin can grant permission to apps in the work profile, both manually and by automation. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when someone grants permission to an app.
 
 ###  Network information
 Some information about network connections for Android devices may be available to your organization. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it's connected.  
@@ -130,8 +130,3 @@ On corporate-owned Windows devices, admins can query for:
  - Details about running processes
 
 For more information go to [Device Query](../fundamentals/device-query.md)
-
-The following details are not collected:
-
-- public key/private key information
-- file content

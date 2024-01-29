@@ -145,10 +145,6 @@ Your organization may enable optional features within Intune which enable collec
 
   When a customer enables Device query, the admin can query device details such as File Name and File Path. See a complete list of data here [Link].
 
-- Custom Compliance for Windows and Linux Devices
-
- Admins can check if there’s a registry setting on the device, whether a specific app is installed, and so on. [Link]
-
 Customers can control the collection of pseudonymized diagnostics and telemetry data from Intune components installed on their devices.  We think there are compelling reasons for people to share this optional data as it helps Microsoft improve the reliability and performance of its products and we understand the importance of providing users the opportunity to make these choices for themselves.
 
 Examples of the optional data fall into the following categories as defined by the [ISO/IEC 19944-1:2020 Information technology - Cloud computing - Cloud services and devices: Data flow, data categories](https://www.iso.org/standard/79573.html):
