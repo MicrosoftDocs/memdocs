@@ -70,6 +70,9 @@ You can also configure app specific rules used to detect the presence of the Ent
 
 The Enterprise App Catalog includes apps that self update. Intune will ensure the app is at least at a target minimum version, but will consider the app installed if the detected version of the app is at or above the minimum version. Self-updating apps will update based on the vendors process. Intune will report the version of the app detected on the device.
 
+> [!IMPORTANT]
+> Self-updating apps may require that your tenant has network rules configured to allow an update from the app vendor.
+
 ## Frequently asked questions (FAQ)
 
 ### How can I request to add an application the Enterprise App Catalog?
