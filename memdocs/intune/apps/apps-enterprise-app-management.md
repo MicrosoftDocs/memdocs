@@ -106,42 +106,29 @@ At the time of general availability (GA), Microsoft expects to have 100 applicat
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
-Customer can use Graph API to automate along with automation tools. Graph API will be available soon after General Avaliability.
+Graph API will be available soon after General Avaliability.
 
-### Will Enterprise applications auto update?
+### Will Enterprise catalog apps automaticlly update to a new version when a new version is avaiable in the Enterprise app catalog?
 
-No. There's no automated processes available as of General Avaliability. Automation may be available in a future iteration.
+No, the created app will remain at the version it was created at so the ITPro can have full control over the experience. 
 
 ### Can you get licensed applications from this catalog?
 
-Yes. You can get licensed applications from the Enterprise App Catalog, although you're responsible for purchasing the license from the vendor. Intune doesn't perform a license check.
+Yes. You can get licensed applications from the Enterprise App Catalog, although you're responsible for purchasing the license from the vendor and distribuiting it to your estate. Intune doesn't perform a license check.
 
-### How are licensed applications installed?
-
-If you install a licensed application where a license isn't provided, the application will provide the end-user with the application's first run experience.
-
-### Are updates available for unmanaged applications?
-
-No. At the time of General Avaliability, unmanaged applications aren't supported. Support for unmanaged applications may be available in a future iteration.
-
-### When will automated updates be available?
-
-Automated updates are planned for a future iteration.
-
-### Can this be purchased standalone
+### Can Enterprise App Management be purchased standalone?
 
 Yes. Enterprise App Management can be purchased as a standalone SKU or as part of the Microsoft Intune Suite.
 
-### Does using this app type require Microsoft Intune? Can Enterprise applications be leveraged with Configuration Manager?
+### Can Enterprise App Management be leveraged with Microsoft Endpoint Configuration Manager?
 
-Using an Enterprise App Management is only provided by Microsoft Intune. Configuration Manager isn't supported, however Enterprise App Management will work for co-managed clients.
+Enterprise App Management is only provided by Microsoft Intune. Configuration Manager does not directly support Enterprise App Management apps, however comanaged clients can get Enterprise App Catalog apps when targeted from Microsoft Intune.
 
 ### Does Enterprise App Management use **Winget**?
 
-No. Enterprise App Management leverages Win32.
+No. Enterprise App Catalog apps are directly installed by the Intune Management Extension.
 
-### For the application updating, will the app be upgraded, installed side-by-side, or will the previous version be uninstalled?
-
+### How do I update my Enterprise app catalog app?
 You can configure what experience you want related to uninstalling the previous version, however the behavior of the application upgrade is controlled by the vendor. 
 
 ### Is Enterprise App Management available for GCC, GCC High, or DoD tenants?
