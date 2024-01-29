@@ -177,7 +177,7 @@ This change lets the web client/Safari browser store and use the `microsoft.us` 
 
 ## Windows Security reports Memory Integrity is off. Your device may be vulnerable.<!--48643259-->
 
-Windows Security reports *Memory Integrity is off. Your device may be vulnerable.*
+Windows Security reports *Memory Integrity is off. Your device may be vulnerable.* 
 
 In the Cloud PC's Windows Systems Information you might also see that the Virtualization-based security (VBS) row shows **Enabled but not running**.
 
