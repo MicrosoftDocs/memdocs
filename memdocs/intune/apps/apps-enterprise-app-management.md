@@ -25,7 +25,7 @@ ms.collection:
 
 # Microsoft Intune Enterprise Application Management
 
-Microsoft Intune Enterprise App Management enables you to easily discover and deploy pre-packaged applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of pre-packaged Microsoft and non-Microsoft applications. These applications are Win32 apps that are hosted by Microsoft so you can provision these applications in your tenant.
+Microsoft Intune Enterprise App Management enables you to easily discover and deploy prepackaged applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepackaged Microsoft and non-Microsoft applications. These applications are Win32 apps that are hosted by Microsoft so you can provision these applications in your tenant.
 
 > [!IMPORTANT]
 > Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
@@ -38,9 +38,9 @@ The benefits of using Enterprise App Management are the following:
 
 - **Streamlined app management**: You can save time and reduce complexity by streamlining the app management process. Discover and add apps directly from the Intune console.
 - **Reduce security risks and vulnerabilities**: Mitigate risk and deploy app fixes immediately when security vulnerabilities are discovered.
-- **Stay current with updates**: You'll be able to keep apps up-to-date and secure by identifying and updating outdated applications using guided updating.
+- **Stay current with updates**: You are able to keep apps up-to-date and secure by identifying and updating outdated applications using guided updating.
 
-When you add an Enterprise App Catalog app, Intune pre-populates the following installation details:
+When you add an Enterprise App Catalog app, Intune prepopulates the following installation details:
 
 - Commands to install and uninstall the app
 - Time required to install the app
@@ -50,13 +50,13 @@ When you add an Enterprise App Catalog app, Intune pre-populates the following i
 - Whether to install the app for system or user
 - Time required to install the app
   
-Microsoft Intune pre-populates the detection rules that devices must meet before the app is installed:
+Microsoft Intune prepopulates the detection rules that devices must meet before the app is installed:
 
-- File sive
+- File size
 - File version
 - Registry
 
-Also, Intune pre-populates the requirements that devices must meet before the app is installed:
+Also, Intune prepopulates the requirements that devices must meet before the app is installed:
 
 - Windows OS architecture required
 - Minimum OS required
@@ -77,11 +77,11 @@ The Enterprise App Catalog includes apps that self update. Intune will ensure th
 If you aren't already working with a Microsoft contact, fill out the [Enterprise app management app catalog request](https://aka.ms/EAM/AppRequest) form.
 
 > [!IMPORTANT]
-> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprie App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an application to the Enterprise App Catalog.
+> Microsoft makes no guarantee, express or implied, with respect to adding a requested app to the Enterprie App Catalog. Once the submission is reviewed using the form provided above, the app may or may not be added to the Enterprise App Catalog. Microsoft does not offer or assume any Service Level Agreement (SLA) or timeline with regard to adding an app to the Enterprise App Catalog.
 
 ### Where are the devices downloading the app content from?
 
-Microsoft hosts the applications in Microsoft storage. When requested via the customer, the content is copied over to customer tenant, making it available in seconds or minutes.
+Microsoft hosts the applications in Microsoft storage. When the app is requested, the content is copied from Microsoft storage to your tenant, making it available in seconds or minutes.
 
 ### Is Microsoft providing security around any of the content provided in the Enterprise App Catalog?
 
@@ -95,7 +95,7 @@ The apps currently provided in the Enterprise application catalog are Windows Wi
 
 At this time, Intune provides no running application detection.
 
-### What is the Service Level Agreement (SLA) for when an app update is avaiable in the catalog?
+### What is the Service Level Agreement (SLA) for when an app update is available in the catalog?
 
 No SLA is currently available.
 
@@ -105,27 +105,27 @@ At the time of general availability (GA), Microsoft expects to have 100 applicat
 
 ### How can working with the applications in Enterprise App Catalog be automated?
 
-Graph API will be available soon after General Avaliability.
+Graph API will be available soon after general availability.
 
-### Will Enterprise catalog apps automaticlly update to a new version when a new version is avaiable in the Enterprise app catalog?
+### Will Enterprise catalog apps automatically update to a new version when a new version is available in the Enterprise app catalog?
 
 No, the created app will remain at the version it was created at so the ITPro can have full control over the experience. 
 
 ### Can you get licensed applications from this catalog?
 
-Yes. You can get licensed applications from the Enterprise App Catalog, although you're responsible for purchasing the license from the vendor and distribuiting it to your estate. Intune doesn't perform a license check.
+Yes. You can get licensed applications from the Enterprise App Catalog, although you're responsible for purchasing the license from the vendor and distributing it to your estate. Intune doesn't perform a license check.
 
 ### Can Enterprise App Management be purchased standalone?
 
 Yes. Enterprise App Management can be purchased as a standalone SKU or as part of the Microsoft Intune Suite.
 
-### Can Enterprise App Management be leveraged with Microsoft Endpoint Configuration Manager?
+### Can Enterprise App Management be leveraged with Microsoft Configuration Manager?
 
-Enterprise App Management is only provided by Microsoft Intune. Configuration Manager does not directly support Enterprise App Management apps, however comanaged clients can get Enterprise App Catalog apps when targeted from Microsoft Intune.
+Enterprise App Management is only provided by Microsoft Intune. Configuration Manager doesn't directly support Enterprise App Management apps, however co-managed clients can get Enterprise App Catalog apps when targeted from Microsoft Intune.
 
 ### Does Enterprise App Management use **Winget**?
 
-No. Enterprise App Catalog apps are directly installed by the Intune Management Extension.
+No. Enterprise App Catalog apps are directly installed by the Intune management extension (IME).
 
 ### How do I update my Enterprise app catalog app?
 
