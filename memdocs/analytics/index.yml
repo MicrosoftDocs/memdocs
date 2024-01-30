@@ -54,7 +54,7 @@ landingContent:
             url: troubleshoot.md
 
   # Card
-  - title: Advanced Analytics
+  - title: Intune Advanced Analytics
     linkLists:
       - linkListType: how-to-guide
         links:
